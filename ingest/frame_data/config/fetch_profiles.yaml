@@ -1,0 +1,27 @@
+official:
+  page_locale: ja-jp
+  fetcher_name: "Fetcher"
+  timeout_ms: 30000
+  retry_count: 2
+  retry_delay_ms: 1000
+  wait_ms: 0
+  network_idle: false
+  solve_cloudflare: false
+  wait_selector: null
+  challenge_markers: []
+
+supercombo:
+  page_locale: en
+  fetcher_name: "StealthyFetcher"
+  timeout_ms: 90000
+  retry_count: 3
+  retry_delay_ms: 2000
+  wait_ms: 1000
+  network_idle: true
+  solve_cloudflare: true
+  wait_selector: "main table"
+  challenge_markers:
+    - "Just a moment"
+    - "security verification"
+    - "縺励・繧峨￥縺雁ｾ・■縺上□縺輔＞"
+    - "繧ｻ繧ｭ繝･繝ｪ繝・ぅ讀懆ｨｼ"

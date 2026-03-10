@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sf6-frame-data-ingest"
+version = "3.0.0"
+description = "Deterministic Street Fighter 6 frame data ingestion pipeline."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "pydantic>=2.10,<3",
+  "PyYAML>=6.0",
+  "selectolax>=0.3.26",
+]
+
+[project.optional-dependencies]
+fetch = [
+  "scrapling[fetchers]>=0.4.2",
+]
+dev = [
+  "pytest>=8.3",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

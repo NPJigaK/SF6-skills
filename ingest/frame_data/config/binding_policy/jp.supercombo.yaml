@@ -1,0 +1,353 @@
+binding_policy_version: 1.0.0
+entries:
+  - raw_source_token: jp_5lp
+    binding_class: A
+    target_move_id: jp_001_5lp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5lk
+    binding_class: A
+    target_move_id: jp_002_5lk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5mp
+    binding_class: A
+    target_move_id: jp_003_5mp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5mk
+    binding_class: A
+    target_move_id: jp_004_5mk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5hp
+    binding_class: A
+    target_move_id: jp_005_5hp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5hk
+    binding_class: A
+    target_move_id: jp_006_5hk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_2lp
+    binding_class: A
+    target_move_id: jp_007_2lp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_2lk
+    binding_class: A
+    target_move_id: jp_008_2lk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_2mp
+    binding_class: A
+    target_move_id: jp_009_2mp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_2mk
+    binding_class: A
+    target_move_id: jp_010_2mk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_2hp
+    binding_class: A
+    target_move_id: jp_011_2hp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_2hk
+    binding_class: A
+    target_move_id: jp_012_2hk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_jlp
+    binding_class: B
+    target_move_id: jp_013_j_lp
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_jlk
+    binding_class: B
+    target_move_id: jp_014_j_lk
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_jmp
+    binding_class: B
+    target_move_id: jp_015_j_mp
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_jmk
+    binding_class: B
+    target_move_id: jp_016_j_mk
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_jhp
+    binding_class: B
+    target_move_id: jp_017_j_hp
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_jhk
+    binding_class: B
+    target_move_id: jp_018_j_hk
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_6mk
+    binding_class: A
+    target_move_id: jp_019_6mk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_3hp
+    binding_class: A
+    target_move_id: jp_020_3hp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_6hk
+    binding_class: A
+    target_move_id: jp_021_6hk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_4mp
+    binding_class: A
+    target_move_id: jp_022_4mp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_4mp_mp
+    binding_class: A
+    target_move_id: jp_023_4mp_mp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5hk_hp
+    binding_class: A
+    target_move_id: jp_024_5hk_hp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5hk_hp_hp
+    binding_class: A
+    target_move_id: jp_025_5hk_hp_hp
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_5hk_hp_hk
+    binding_class: A
+    target_move_id: jp_026_5hk_hp_hk
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_22p
+    binding_class: D
+    candidate_move_ids:
+      - jp_027_22lp_triglav
+      - jp_028_22mp_triglav
+      - jp_029_22hp_triglav
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_22pp
+    binding_class: D
+    candidate_move_ids:
+      - jp_030_22pp_triglav_od_weak
+      - jp_031_22pp_triglav_od_medium
+      - jp_032_22pp_triglav_od_heavy
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_236lp
+    binding_class: A
+    target_move_id: jp_033_236lp_stribog
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236mp
+    binding_class: A
+    target_move_id: jp_034_236mp_stribog
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236hp
+    binding_class: A
+    target_move_id: jp_035_236hp_stribog
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236pp
+    binding_class: A
+    target_move_id: jp_036_236pp_stribog_od
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_214p
+    binding_class: D
+    candidate_move_ids:
+      - jp_037_214lp_vihat
+      - jp_038_214mp_vihat
+      - jp_039_214hp_vihat
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_214pp
+    binding_class: D
+    candidate_move_ids:
+      - jp_040_214pp_vihat_od_weak
+      - jp_041_214pp_vihat_od_medium
+      - jp_042_214pp_vihat_od_heavy
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_214p_214lp_mp
+    binding_class: A
+    target_move_id: jp_043_214lpmp_vihat_akno
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_214p_214hp
+    binding_class: E
+    collision_group: jp_vihat_cheni_followup
+    conflicting_move_ids:
+      - jp_044_214hp_vihat_cheni
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_214pp_214hp
+    binding_class: E
+    collision_group: jp_vihat_cheni_followup
+    conflicting_move_ids:
+      - jp_044_214hp_vihat_cheni
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_22k
+    binding_class: A
+    target_move_id: jp_045_22k_amnesia
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_22kk
+    binding_class: A
+    target_move_id: jp_046_22kk_amnesia_od
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_22k_bomb
+    binding_class: G
+    publish_eligible: false
+    confirmation_status: not_required
+    notes: excluded bomb follow-up without canonical official move_id
+  - raw_source_token: jp_22kk_bomb
+    binding_class: G
+    publish_eligible: false
+    confirmation_status: not_required
+    notes: excluded bomb follow-up without canonical official move_id
+  - raw_source_token: jp_236lk
+    binding_class: A
+    target_move_id: jp_047_236lk_torbalan
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236mk
+    binding_class: A
+    target_move_id: jp_048_236mk_torbalan
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236hk
+    binding_class: A
+    target_move_id: jp_049_236hk_torbalan
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236kk
+    binding_class: A
+    target_move_id: jp_050_236kk_torbalan_od
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236k_hold
+    binding_class: G
+    publish_eligible: false
+    confirmation_status: not_required
+    notes: excluded hold state without canonical official move_id
+  - raw_source_token: jp_214k
+    binding_class: A
+    target_move_id: jp_051_214k_abhnumach
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_214kk
+    binding_class: A
+    target_move_id: jp_052_214kk_abhnumach_od
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236236p
+    binding_class: A
+    target_move_id: jp_053_sa1_236236p
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_214214p
+    binding_class: A
+    target_move_id: jp_054_sa2_214214p
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236236k
+    binding_class: A
+    target_move_id: jp_055_sa3_236236k
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_236236k(ca)
+    binding_class: C
+    target_move_id: jp_056_ca_236236k
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: publishable only when raw token suffix is preserved
+  - raw_source_token: jp_lplk
+    binding_class: A
+    target_move_id: jp_057_forward_throw
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_4lplk
+    binding_class: A
+    target_move_id: jp_058_back_throw
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_jlplk
+    binding_class: B
+    target_move_id: jp_059_air_throw
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: jump-token alias drift
+  - raw_source_token: jp_hphk
+    binding_class: A
+    target_move_id: jp_062_drive_impact
+    publish_eligible: true
+    confirmation_status: not_required
+  - raw_source_token: jp_6hphk
+    binding_class: A
+    target_move_id: jp_063_drive_reversal_guard
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: live source explicitly marks block variant
+  - raw_source_token: jp_6hphk_recovery
+    binding_class: F
+    target_move_id: jp_064_drive_reversal_wakeup
+    publish_eligible: true
+    confirmation_status: confirmed
+    notes: fixture-confirmed wakeup drive reversal
+  - raw_source_token: jp_mpmk
+    binding_class: D
+    candidate_move_ids:
+      - jp_065_drive_parry
+      - jp_066_just_parry_strike
+      - jp_067_just_parry_projectile
+    publish_eligible: false
+    confirmation_status: not_required
+  - raw_source_token: jp_mpmk_66_pdr
+    binding_class: B
+    target_move_id: jp_068_parry_drive_rush
+    publish_eligible: true
+    confirmation_status: not_required
+    notes: live token renamed from legacy registry token
+  - raw_source_token: jp_mpmk_66_drc
+    binding_class: F
+    target_move_id: jp_069_cancel_drive_rush
+    publish_eligible: true
+    confirmation_status: confirmed
+    notes: fixture-confirmed cancel drive rush
+  - raw_source_token: jp_4pppkkk
+    binding_class: G
+    publish_eligible: false
+    confirmation_status: not_required
+    notes: excluded taunt without canonical official move_id
+  - raw_source_token: jp_5pppkkk
+    binding_class: G
+    publish_eligible: false
+    confirmation_status: not_required
+    notes: excluded taunt without canonical official move_id
+  - raw_source_token: jp_6pppkkk
+    binding_class: G
+    publish_eligible: false
+    confirmation_status: not_required
+    notes: excluded taunt without canonical official move_id

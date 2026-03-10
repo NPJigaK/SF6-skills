@@ -1,0 +1,710 @@
+registry_version: 2.1.0
+moves:
+- move_id: jp_001_5lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ノーシ
+- move_id: jp_002_5lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_ニージニイ_ウダール
+- move_id: jp_003_5mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_シュトゥールム
+- move_id: jp_004_5mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_ウームヌィ_ウダール
+- move_id: jp_005_5hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_キンターヴル
+- move_id: jp_006_5hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_オボロートニ
+- move_id: jp_007_2lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ブィストルイ_ウダール
+- move_id: jp_008_2lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_リョーフキー_ウダール
+- move_id: jp_009_2mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_ズミヤー
+- move_id: jp_010_2mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_ズローバ
+- move_id: jp_011_2hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_マリートヴァ
+- move_id: jp_012_2hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_ジョーキル
+- move_id: jp_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ルイースイ
+- move_id: jp_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_ヴァローナ
+- move_id: jp_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_ローシャッチ
+- move_id: jp_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_コンダ
+- move_id: jp_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_イディナローク
+- move_id: jp_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ジャール_プチーツァ
+- move_id: jp_019_6mk
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MK
+    name_key: ギリオチーナ
+- move_id: jp_020_3hp
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HP
+    name_key: シャーロスチ
+- move_id: jp_021_6hk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    name_key: ヴィリーナ
+- move_id: jp_022_4mp
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MP
+    name_key: グロームストレルカ_1段目
+- move_id: jp_023_4mp_mp
+  group: target_combos
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MP
+    - '>'
+    - MP
+    name_key: グロームストレルカ_2段目
+- move_id: jp_024_5hk_hp
+  group: target_combos
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HK
+    - '>'
+    - HP
+    name_key: ジラント
+- move_id: jp_025_5hk_hp_hp
+  group: target_combos
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HK
+    - '>'
+    - HP
+    - '>'
+    - HP
+    name_key: ジラントルカー
+- move_id: jp_026_5hk_hp_hk
+  group: target_combos
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HK
+    - '>'
+    - HP
+    - '>'
+    - HK
+    name_key: ジラントナガー
+- move_id: jp_027_22lp_triglav
+  group: specials
+  sort_key: 27
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - LP
+    name_key: 弱_トリグラフ
+- move_id: jp_028_22mp_triglav
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - MP
+    name_key: 中_トリグラフ
+- move_id: jp_029_22hp_triglav
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - HP
+    name_key: 強_トリグラフ
+- move_id: jp_030_22pp_triglav_od_weak
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: od_弱_トリグラフ
+- move_id: jp_031_22pp_triglav_od_medium
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: od_中_トリグラフ
+- move_id: jp_032_22pp_triglav_od_heavy
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: od_強_トリグラフ
+- move_id: jp_033_236lp_stribog
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_ストリボーグ
+- move_id: jp_034_236mp_stribog
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_ストリボーグ
+- move_id: jp_035_236hp_stribog
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_ストリボーグ
+- move_id: jp_036_236pp_stribog_od
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_ストリボーグ
+- move_id: jp_037_214lp_vihat
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_ヴィーハト
+- move_id: jp_038_214mp_vihat
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_ヴィーハト
+- move_id: jp_039_214hp_vihat
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_ヴィーハト
+- move_id: jp_040_214pp_vihat_od_weak
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_弱_ヴィーハト
+- move_id: jp_041_214pp_vihat_od_medium
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_中_ヴィーハト
+- move_id: jp_042_214pp_vihat_od_heavy
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_強_ヴィーハト
+- move_id: jp_043_214lpmp_vihat_akno
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    - '|'
+    - MP
+    name_key: ヴィーハト_アクノ
+- move_id: jp_044_214hp_vihat_cheni
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: ヴィーハト_チェーニ
+- move_id: jp_045_22k_amnesia
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - K
+    name_key: アムネジア
+- move_id: jp_046_22kk_amnesia_od
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - K
+    - K
+    name_key: od_アムネジア
+- move_id: jp_047_236lk_torbalan
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_トルバラン
+- move_id: jp_048_236mk_torbalan
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_トルバラン
+- move_id: jp_049_236hk_torbalan
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_トルバラン
+- move_id: jp_050_236kk_torbalan_od
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_トルバラン
+- move_id: jp_051_214k_abhnumach
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: アブニマーチ
+- move_id: jp_052_214kk_abhnumach_od
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_アブニマーチ
+- move_id: jp_053_sa1_236236p
+  group: super_arts
+  sort_key: 53
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_チェルノボーグ
+- move_id: jp_054_sa2_214214p
+  group: super_arts
+  sort_key: 54
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_ラヴーシュカ
+- move_id: jp_055_sa3_236236k
+  group: super_arts
+  sort_key: 55
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa3_ザプリェット
+- move_id: jp_056_ca_236236k
+  group: super_arts
+  sort_key: 56
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: ca_ザプリェット
+- move_id: jp_057_forward_throw
+  group: throws
+  sort_key: 57
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: ラヴィーナ
+- move_id: jp_058_back_throw
+  group: throws
+  sort_key: 58
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: ウラガーン
+- move_id: jp_059_air_throw
+  group: throws
+  sort_key: 59
+  official_match:
+    section: throws
+    icon_tokens:
+    - LPLK
+    name_key: タルナード
+- move_id: jp_060_forward_dash
+  group: system
+  sort_key: 60
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: jp_061_back_dash
+  group: system
+  sort_key: 61
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: jp_062_drive_impact
+  group: system
+  sort_key: 62
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_エスパーダ
+- move_id: jp_063_drive_reversal_guard
+  group: system
+  sort_key: 63
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_エクシリオ
+- move_id: jp_064_drive_reversal_wakeup
+  group: system
+  sort_key: 64
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_エクシリオ
+- move_id: jp_065_drive_parry
+  group: system
+  sort_key: 65
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ
+- move_id: jp_066_just_parry_strike
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃
+- move_id: jp_067_just_parry_projectile
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具
+- move_id: jp_068_parry_drive_rush
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ
+- move_id: jp_069_cancel_drive_rush
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ

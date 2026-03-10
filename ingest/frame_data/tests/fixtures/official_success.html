@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JP フレームデータ</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>技名</th>
+          <th>動作フレーム 発生</th>
+          <th>持続</th>
+          <th>硬直</th>
+          <th>ヒット</th>
+          <th>ガード</th>
+          <th>キャンセル</th>
+          <th>ダメージ</th>
+          <th>コンボ補正値</th>
+          <th>Dゲージ増加 ヒット</th>
+          <th>Dゲージ減少 ガード</th>
+          <th>Dゲージ減少 パニッシュカウンター</th>
+          <th>SAゲージ増加</th>
+          <th>属性</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="15">通常技</td></tr>
+        <tr>
+          <td>
+            <span class="frame_arts__name">立ち弱P（ノーシ）</span>
+            <p class="frame_classic__input">
+              <img src="/6/assets/images/common/controller/icon_punch_l.png" alt="LP">
+            </p>
+          </td>
+          <td>6</td>
+          <td><p>6-8</p></td>
+          <td>10</td>
+          <td>4</td>
+          <td>-2</td>
+          <td><span>C</span></td>
+          <td>300</td>
+          <td><ul><li>始動補正20%</li></ul></td>
+          <td>250</td>
+          <td>-500</td>
+          <td>-2000</td>
+          <td>300</td>
+          <td>上</td>
+          <td><ul><li>連打キャンセル対応</li></ul></td>
+        </tr>
+        <tr><td colspan="15">共通システム</td></tr>
+        <tr>
+          <td>
+            <span class="frame_arts__name">ドライブパリィ</span>
+            <p class="frame_classic__input">
+              <img src="/6/assets/images/common/controller/icon_punch_m.png" alt="MP">
+              <img src="/6/assets/images/common/controller/icon_kick_m.png" alt="MK">
+            </p>
+          </td>
+          <td>1</td>
+          <td><p>[※2] 1-12</p></td>
+          <td>33</td>
+          <td></td>
+          <td></td>
+          <td><span>※1</span></td>
+          <td>0</td>
+          <td></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td>
+            <ul>
+              <li>※1 動作の4F目からドライブラッシュでキャンセル可</li>
+              <li>※2 ボタンホールドでパリィの持続を延長可</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="frame_arts__name">パリィドライブラッシュ</span>
+            <p class="frame_classic__input">
+              <img src="/6/assets/images/common/controller/key-r.png" alt="6">
+              <img src="/6/assets/images/common/controller/key-r.png" alt="6">
+            </p>
+          </td>
+          <td></td>
+          <td></td>
+          <td>全体 45</td>
+          <td></td>
+          <td></td>
+          <td><span>※</span></td>
+          <td>0</td>
+          <td><ul><li>乗算補正15％</li></ul></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td>
+            <ul>
+              <li>暗転10F</li>
+              <li>※動作9F目から攻撃行動にキャンセル可</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,417 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t022:jp_6hk",
+    "raw_source_token": "jp_6hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"6HK\",\"move_group\":\"command_normals\",\"move_name\":\"Bylina\",\"notes_sc\":\"Solid anti-air (but a little slow and cannot hit cross-up); launches opponent into limited juggle state; 1st hit forces stand on hit; 2nd hit whiffs on crouching opponents for 3f worse advantage on crouch block; only 2nd hit is cancelable, so JP cannot make himself safe on a crouch blocking opponent (but if 6HK hits and the 2nd hit whiffs, the cancel can still come out); useful in many Drive Rush juggle routes; special/DR cancel is delayed until after 4th active frame (2nd active frame of 2nd hit)\",\"punish_adv\":\"KD +38\",\"raw_source_token\":\"jp_6hk\"}",
+    "move_id": "jp_021_6hk",
+    "character_slug": "jp",
+    "move_name": "Bylina",
+    "input": "6HK",
+    "move_group": "command_normals",
+    "table_index": 22,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t039:jp_236mp",
+    "raw_source_token": "jp_236mp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236MP\",\"move_group\":\"specials\",\"move_name\":\"Stribog\",\"notes_sc\":\"1st hit is a strike hitbox that clashes with non-OD projectiles; 2nd hit is a 1-hit non-OD projectile (but can be Perfect Parried like a strike; together, both hits can nullify a 2-hit non-OD projectile; 2nd hit has more range than the 1st hit; puts opponents into limited juggle state on hit; in the corner, launched high enough to juggle into the first hit of SA1; cannot hit cross-up (behind JP); 8f hitstop when clashing with opponent's projectile; 2nd hit expands if the 1st hit connects (for combo consistency)\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"jp_236mp\"}",
+    "move_id": "jp_034_236mp_stribog",
+    "character_slug": "jp",
+    "move_name": "Stribog",
+    "input": "236MP",
+    "move_group": "specials",
+    "table_index": 39,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t040:jp_236hp",
+    "raw_source_token": "jp_236hp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236HP\",\"move_group\":\"specials\",\"move_name\":\"Stribog\",\"notes_sc\":\"1st hit is a strike hitbox that clashes with non-OD projectiles; 2nd hit is a 1-hit non-OD projectile (but can be Perfect Parried like a strike); together, both hits can nullify a 2-hit non-OD projectile (though the large gap between hits makes this impractical); 2nd hit has more range than the 1st hit; causes a wall bounce on hit (limited juggle state); cannot hit cross-up (behind JP); direct SA3 cancel will not usually juggle; 8f hitstop when clashing with opponent's projectile; 1st hit has 3f extra recovery when Perfect Parried, allowing a Drive Impact punish (recovery is unchanged if the 2nd attack hits opponent); 2nd hit expands if the 1st hit connects (for combo consistency)\",\"punish_adv\":\"KD +67(+87)\",\"raw_source_token\":\"jp_236hp\"}",
+    "move_id": "jp_035_236hp_stribog",
+    "character_slug": "jp",
+    "move_name": "Stribog",
+    "input": "236HP",
+    "move_group": "specials",
+    "table_index": 40,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t041:jp_236pp",
+    "raw_source_token": "jp_236pp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236PP\",\"move_group\":\"specials\",\"move_name\":\"Stribog\",\"notes_sc\":\"1st hit is a strike hitbox that clashes with OD projectiles; 2nd hit is a 1-hit OD projectile (but can be Perfect Parried like a strike); together, both hits can nullify a 2-hit OD projectile; 2nd hit has more range than the 1st hit; causes a wall bounce on hit (limited juggle state); cannot hit cross-up (behind JP); SA3 cancel will whiff at point blank (but works consistently after canceling normals into 236PP); 8f hitstop when clashing with opponent's projectile; 1st hit has 3f extra recovery when Perfect Parried, allowing a Drive Impact punish (recovery is unchanged if the 2nd attack hits opponent); 2nd hit expands if the 1st hit connects (for combo consistency); 2nd hit does double damage when the 1st hit whiffs\",\"punish_adv\":\"KD +56(+72)\",\"raw_source_token\":\"jp_236pp\"}",
+    "move_id": "jp_036_236pp_stribog_od",
+    "character_slug": "jp",
+    "move_name": "Stribog",
+    "input": "236PP",
+    "move_group": "specials",
+    "table_index": 41,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t042:jp_214p",
+    "raw_source_token": "jp_214p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214P\",\"move_group\":\"departure\",\"move_name\":\"Departure\",\"notes_sc\":\"Spawns a portal in the air according to button strength (LP close, MP mid, HP far); while the portal is active, JP cannot use 214P command grab; portal disappears if JP is hit or thrown; can manually input 214LP/MP or 214HP follow-up while portal is active; if no follow-up is input, the portal automatically spawns a 1-hit spike projectile toward the opponent 100f after JP recovers (150f total startup); spike puts opponents into a free juggle state; the automatic spike activation allows for strong mixups, as JP is free to move while it occurs (unlike 214P~214HP version where he snaps his fingers); cannot spawn another portal until the first has disappeared; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spike connects)\",\"punish_adv\":\"KD ~\",\"raw_source_token\":\"jp_214p\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Departure",
+    "input": "214P",
+    "move_group": "departure",
+    "table_index": 42,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "jp_037_214lp_vihat",
+      "jp_038_214mp_vihat",
+      "jp_039_214hp_vihat"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t045:jp_214p_214hp",
+    "raw_source_token": "jp_214p_214hp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214P~214HP\",\"move_group\":\"departure_shadow\",\"move_name\":\"Departure: Shadow\",\"notes_sc\":\"Spawns a 1-hit projectile spike from the active portal; spike is angled downward toward the opponent; 1st active frame only hits airborne or tall standing characters; 2nd active frame reaches regular-size standing characters; 3rd active frame reaches all crouching characters; useful tool for zoning, juggles, chip damage, and oki; puts opponent into free juggle state on hit; opponent builds 50% extra Drive meter when parrying the spike; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spike connects)\",\"punish_adv\":\"KD +58(+60)\",\"raw_source_token\":\"jp_214p_214hp\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Departure: Shadow",
+    "input": "214P~214HP",
+    "move_group": "departure_shadow",
+    "table_index": 45,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "jp_vihat_cheni_followup",
+    "conflicting_move_ids": [
+      "jp_044_214hp_vihat_cheni"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t043:jp_214pp",
+    "raw_source_token": "jp_214pp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214PP\",\"move_group\":\"departure\",\"move_name\":\"Departure\",\"notes_sc\":\"Spawns 2 portals in the air according to button strengths used (LP close, MP mid, HP far); while the portals are active, JP cannot use 214P command grab; portals disappear if JP is hit or thrown; can manually input 214LP/MP or 214HP follow-up while portals are active; if no follow-up is input, each portal automatically spawns a 1-hit OD spike projectile (starting with the closest portal) angled toward the opponent 70f after JP recovers (110f total startup); spikes put opponents into a free juggle state; the automatic spike activation allows for strong mixups, as JP is free to move while it occurs (unlike 214PP~214HP version where he snaps his fingers); cannot spawn another portal until both have disappeared; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spikes connect)\",\"punish_adv\":\"KD ~\",\"raw_source_token\":\"jp_214pp\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Departure",
+    "input": "214PP",
+    "move_group": "departure",
+    "table_index": 43,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "jp_040_214pp_vihat_od_weak",
+      "jp_041_214pp_vihat_od_medium",
+      "jp_042_214pp_vihat_od_heavy"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t046:jp_214pp_214hp",
+    "raw_source_token": "jp_214pp_214hp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214PP~214HP\",\"move_group\":\"departure_shadow\",\"move_name\":\"OD Departure: Shadow\",\"notes_sc\":\"Spawns 2 separate OD projectile spikes beginning from the closest portal; spikes are angled downward toward the opponent; for each spike, 1st active frame only hits airborne or tall standing characters; 2nd active frame reaches regular-size standing characters; 3rd active frame reaches all crouching characters; useful tool for zoning, juggles, chip damage, and oki; puts opponent into free juggle state on hit; opponent builds 40% extra Drive meter when parrying the spikes; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spikes connect)\",\"punish_adv\":\"KD +92\",\"raw_source_token\":\"jp_214pp_214hp\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "OD Departure: Shadow",
+    "input": "214PP~214HP",
+    "move_group": "departure_shadow",
+    "table_index": 46,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "jp_vihat_cheni_followup",
+    "conflicting_move_ids": [
+      "jp_044_214hp_vihat_cheni"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t055:jp_22k_bomb",
+    "raw_source_token": "jp_22k_bomb",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"22K\",\"move_group\":\"amnesia\",\"move_name\":\"(Bomb) Amnesia Bomb\",\"notes_sc\":\"Projectile hitbox; bomb tracks the opponent's location; before detonating, bomb destroys any non-Super projectile; bomb is destroyed if it interacts with Super projectile; bomb causes proximity guard, limiting the opponent's movement until it explodes; bomb detonates immediately if JP cancels a move into SA3 while active (preventing him from bypassing the damage scaling)\",\"punish_adv\":\"KD ~\",\"raw_source_token\":\"jp_22k_bomb\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "(Bomb) Amnesia Bomb",
+    "input": "22K",
+    "move_group": "amnesia",
+    "table_index": 55,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t057:jp_22kk_bomb",
+    "raw_source_token": "jp_22kk_bomb",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"22KK\",\"move_group\":\"amnesia\",\"move_name\":\"(Bomb) Amnesia Bomb\",\"notes_sc\":\"Projectile hitbox; bombs track the opponent's location; before detonating, bombs destroy any non-Super projectile; bombs are destroyed if they interact with Super projectile; bombs cause proximity guard, limiting the opponent's movement until they explode; bombs detonate immediately if JP cancels a move into SA3 while active (preventing him from bypassing the damage scaling); opponent builds 50% extra Drive meter from parrying the bombs\",\"punish_adv\":\"KD ~\",\"raw_source_token\":\"jp_22kk_bomb\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "(Bomb) Amnesia Bomb",
+    "input": "22KK",
+    "move_group": "amnesia",
+    "table_index": 57,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t036:jp_22p",
+    "raw_source_token": "jp_22p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"22P\",\"move_group\":\"triglav\",\"move_name\":\"Triglav\",\"notes_sc\":\"1-hit projectile; button strength determines spike position (LP close, MP mid, HP far); spike appears from the ground and travels upward (takes 3f to reach max height); in the corner, all versions stop at the edge of the screen; puts opponent into limited juggle state on hit; useful tool for zoning, juggles, and block pressure (can be very plus on block with meaty timing)\",\"punish_adv\":\"KD +44\",\"raw_source_token\":\"jp_22p\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Triglav",
+    "input": "22P",
+    "move_group": "triglav",
+    "table_index": 36,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "jp_027_22lp_triglav",
+      "jp_028_22mp_triglav",
+      "jp_029_22hp_triglav"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t037:jp_22pp",
+    "raw_source_token": "jp_22pp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"22PP\",\"move_group\":\"triglav\",\"move_name\":\"Triglav\",\"notes_sc\":\"Spawns two separate 1-hit OD projectiles; spike position depends on button combination (LP+MP close, LP+HP mid, MP+HP far); each spike appears from the ground and travels upward (takes 3f to reach max height); in the corner, all versions stop at the edge of the screen; puts opponent into limited juggle state on hit; useful tool for zoning, juggles, and block pressure (can be very plus on block with meaty timing); frame advantage can increase slightly if the 2 spike hits are staggered; Punish Counter causes first spike to launch higher for increased KD Adv\",\"punish_adv\":\"KD +57(+50)\",\"raw_source_token\":\"jp_22pp\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Triglav",
+    "input": "22PP",
+    "move_group": "triglav",
+    "table_index": 37,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "jp_030_22pp_triglav_od_weak",
+      "jp_031_22pp_triglav_od_medium",
+      "jp_032_22pp_triglav_od_heavy"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t051:jp_236k_hold",
+    "raw_source_token": "jp_236k_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236[K]\",\"move_group\":\"torbalan\",\"move_name\":\"Torbalan Feint\",\"notes_sc\":\"Great tool for baiting the opponent into whiffing Parry, jumping, or using anti-projectile attack\",\"punish_adv\":\"-\",\"raw_source_token\":\"jp_236k_hold\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Torbalan Feint",
+    "input": "236[K]",
+    "move_group": "torbalan",
+    "table_index": 51,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t064:jp_4pppkkk",
+    "raw_source_token": "jp_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"Is this fight not what you wanted?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"jp_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 64,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t062:jp_5pppkkk",
+    "raw_source_token": "jp_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Is... something the matter?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"jp_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 62,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t063:jp_6pppkkk",
+    "raw_source_token": "jp_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"Do you need to take a rest?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"jp_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 63,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260310T023617Z-3b8fa28a",
+    "source_row_id": "20260310T023617Z-3b8fa28a:t033:jp_mpmk",
+    "raw_source_token": "jp_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"jp_mpmk\"}",
+    "move_id": null,
+    "character_slug": "jp",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 33,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "jp_065_drive_parry",
+      "jp_066_just_parry_strike",
+      "jp_067_just_parry_projectile"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]
