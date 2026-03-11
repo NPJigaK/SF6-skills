@@ -41,9 +41,17 @@ def repo_root() -> Path:
     return Path(__file__).resolve().parents[4]
 
 
-def load_character(character_slug: str) -> CharacterConfig:
+def load_characters() -> dict[str, CharacterConfig]:
     payload = yaml.safe_load((package_root() / "config" / "characters.yaml").read_text(encoding="utf-8")) or {}
-    return CharacterConfig.model_validate(payload[character_slug])
+    return {slug: CharacterConfig.model_validate(config) for slug, config in payload.items()}
+
+
+def available_character_slugs() -> tuple[str, ...]:
+    return tuple(load_characters().keys())
+
+
+def load_character(character_slug: str) -> CharacterConfig:
+    return load_characters()[character_slug]
 
 
 def load_fetch_profile(source: SourceName) -> FetchProfile:

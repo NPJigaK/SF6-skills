@@ -3,6 +3,7 @@
 ## 目的
 - このリポジトリは SF6 の知識を concept-first で扱う。
 - current fact は published exports を正本として参照し、raw / normalized は監査や再解析に限る。
+- supported baseline characters は `jp`, `luke`。
 
 ## 回答ラベル
 - `[検証済み]`: `T1` または `T2` の根拠で current fact を確認した回答
@@ -19,16 +20,17 @@
 - current の仕様・数値・差分は `T1` または `T2` が無ければ断定しない。
 - 公式ソースが存在する領域では `T3` 単独を最終根拠にしない。
 - 概念質問にはまず概念で答え、current fact が必要な部分だけ published data を確認する。
+- supported baseline characters `jp`, `luke` の current fact の最終根拠は published exports only とする。
 - published data の責務は守る。
-  - `official_raw`: 正本
-  - `derived_metrics`: official からの機械計算結果
-  - `supercombo_enrichment`: 補完のみ
-- current fact を答えるときは `data/exports/jp/snapshot_manifest.json` を入口にし、`publication_state = available` の dataset だけ使う。
+  - `official_raw`: canonical な正本
+  - `derived_metrics`: official-only の機械計算結果
+  - `supercombo_enrichment`: supplemental な補完のみ
+- current fact を答えるときは `data/exports/<character_slug>/snapshot_manifest.json` を入口にし、`publication_state = available` の dataset だけ使う。
 - `*_manual_review.*`, `data/raw/...`, `data/normalized/...` は通常回答の最終根拠にしない。
 
 ## Knowledge と Skills
 - 不変概念は `.agents/skills/kb-sf6-core/` に寄せる。
-- current fact は `.agents/skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
+- supported baseline characters の current fact は `.agents/skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
 - knowledge の統合作業は `.agents/skills/sync-knowledge/` を使う。
 
 ## Ingestion / Data

@@ -1,15 +1,17 @@
-# SF6 JP Frame Data Ingestion v3
+# SF6 Frame Data Ingestion v3
 
-`ingest/frame_data` is the v3 ingestion package for Street Fighter 6 JP frame data.
+`ingest/frame_data` is the v3 ingestion package for Street Fighter 6 frame data.
 It keeps scraping/runtime code under `ingest/frame_data/` and does not place fetch code under `.agents/skills/`.
 
 The checked-in current artifact surface is:
 
 - v3 code
-- v3 published exports under `data/exports/jp/`
+- v3 published exports under `data/exports/<character_slug>/`
 - the minimal raw snapshots under `data/raw/` needed to reproduce those published exports
 
 `data/normalized/` is run-local audit state and is not part of the durable checked-in artifact surface.
+
+Configured characters are currently `jp` and `luke`.
 
 ## Contracts
 
@@ -60,36 +62,36 @@ Fetch raw snapshots:
 
 ```powershell
 cd ingest/frame_data
-python -m sf6_ingest.cli fetch --character jp --source all
+python -m sf6_ingest.cli fetch --character luke --source all
 ```
 
 Parse from saved raw snapshots:
 
 ```powershell
 cd ingest/frame_data
-python -m sf6_ingest.cli parse-from-raw --character jp --source all --official-snapshot-id <official_snapshot_id> --supercombo-snapshot-id <supercombo_snapshot_id>
+python -m sf6_ingest.cli parse-from-raw --character luke --source all --official-snapshot-id <official_snapshot_id> --supercombo-snapshot-id <supercombo_snapshot_id>
 ```
 
 Publish a normalized run:
 
 ```powershell
 cd ingest/frame_data
-python -m sf6_ingest.cli publish --character jp --run-id <run_id>
+python -m sf6_ingest.cli publish --character luke --run-id <run_id>
 ```
 
 End-to-end run:
 
 ```powershell
 cd ingest/frame_data
-python -m sf6_ingest.cli run --character jp --source all
+python -m sf6_ingest.cli run --character luke --source all
 ```
 
 Prune to latest published state only:
 
 ```powershell
 cd ingest/frame_data
-python -m sf6_ingest.cli prune --character jp --dry-run
-python -m sf6_ingest.cli prune --character jp --apply
+python -m sf6_ingest.cli prune --character luke --dry-run
+python -m sf6_ingest.cli prune --character luke --apply
 ```
 
 ## Data Layout
@@ -100,6 +102,10 @@ Raw snapshots:
 - `data/raw/official/jp/<snapshot_id>/metadata.json`
 - `data/raw/supercombo/jp/<snapshot_id>/page.html`
 - `data/raw/supercombo/jp/<snapshot_id>/metadata.json`
+- `data/raw/official/<character_slug>/<snapshot_id>/page.html`
+- `data/raw/official/<character_slug>/<snapshot_id>/metadata.json`
+- `data/raw/supercombo/<character_slug>/<snapshot_id>/page.html`
+- `data/raw/supercombo/<character_slug>/<snapshot_id>/metadata.json`
 
 Normalized runs:
 
@@ -107,6 +113,10 @@ Normalized runs:
 - `data/normalized/jp/<run_id>/official_raw/records.{json,csv}`
 - `data/normalized/jp/<run_id>/supercombo_enrichment/records.{json,csv}`
 - `data/normalized/jp/<run_id>/derived_metrics/records.{json,csv}`
+- `data/normalized/<character_slug>/<run_id>/run_manifest.json`
+- `data/normalized/<character_slug>/<run_id>/official_raw/records.{json,csv}`
+- `data/normalized/<character_slug>/<run_id>/supercombo_enrichment/records.{json,csv}`
+- `data/normalized/<character_slug>/<run_id>/derived_metrics/records.{json,csv}`
 
 Published exports:
 
@@ -114,6 +124,10 @@ Published exports:
 - `data/exports/jp/supercombo_enrichment.{json,csv}`
 - `data/exports/jp/derived_metrics.{json,csv}`
 - `data/exports/jp/snapshot_manifest.json`
+- `data/exports/<character_slug>/official_raw.{json,csv}`
+- `data/exports/<character_slug>/supercombo_enrichment.{json,csv}`
+- `data/exports/<character_slug>/derived_metrics.{json,csv}`
+- `data/exports/<character_slug>/snapshot_manifest.json`
 
 ## Manifest Rules
 

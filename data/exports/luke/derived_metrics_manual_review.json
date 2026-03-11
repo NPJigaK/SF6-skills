@@ -1,0 +1,48 @@
+[
+  {
+    "dataset": "derived_metrics",
+    "source": "official",
+    "snapshot_id": "20260310T121005Z-8ae3ec16",
+    "source_row_id": "20260310T121005Z-8ae3ec16:必殺技:062:od_ライジングアッパー",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"move_id\":\"luke_059_623pp_rising_uppercut_od\",\"punishable_threshold\":40,\"simple_punish_adv\":40,\"startup_bucket\":\"5_to_7\"}",
+    "move_id": "luke_059_623pp_rising_uppercut_od",
+    "character_slug": "luke",
+    "move_name": null,
+    "input": null,
+    "move_group": null,
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "derived_metrics",
+    "source": "official",
+    "snapshot_id": "20260310T121005Z-8ae3ec16",
+    "source_row_id": "20260310T121005Z-8ae3ec16:共通システム:078:ドライブパリィ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"move_id\":\"luke_072_drive_parry\",\"startup_bucket\":\"4f_or_faster\"}",
+    "move_id": "luke_072_drive_parry",
+    "character_slug": "luke",
+    "move_name": null,
+    "input": null,
+    "move_group": null,
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

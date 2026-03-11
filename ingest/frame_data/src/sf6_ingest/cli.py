@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import sys
 
-from .config import load_character, load_fetch_profile, repo_root
+from .config import available_character_slugs, load_character, load_fetch_profile, repo_root
 from .core.io import save_snapshot
 from .core.pipeline import parse_from_raw, publish_run
 from .core.prune import prune_latest_published_state
@@ -13,30 +13,31 @@ from .logging_utils import configure_logging
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="SF6 frame data ingestion v3")
     subparsers = parser.add_subparsers(dest="command", required=True)
+    character_choices = list(available_character_slugs())
 
     fetch_parser = subparsers.add_parser("fetch")
-    fetch_parser.add_argument("--character", choices=["jp"], required=True)
+    fetch_parser.add_argument("--character", choices=character_choices, required=True)
     fetch_parser.add_argument("--source", choices=["official", "supercombo", "all"], default="all")
 
     parse_parser = subparsers.add_parser("parse-from-raw")
-    parse_parser.add_argument("--character", choices=["jp"], required=True)
+    parse_parser.add_argument("--character", choices=character_choices, required=True)
     parse_parser.add_argument("--source", choices=["official", "supercombo", "all"], default="all")
     parse_parser.add_argument("--official-snapshot-id")
     parse_parser.add_argument("--supercombo-snapshot-id")
 
     publish_parser = subparsers.add_parser("publish")
-    publish_parser.add_argument("--character", choices=["jp"], required=True)
+    publish_parser.add_argument("--character", choices=character_choices, required=True)
     publish_parser.add_argument("--run-id", required=True)
 
     prune_parser = subparsers.add_parser("prune")
-    prune_parser.add_argument("--character", choices=["jp"], required=True)
+    prune_parser.add_argument("--character", choices=character_choices, required=True)
     mode_group = prune_parser.add_mutually_exclusive_group()
     mode_group.add_argument("--dry-run", action="store_true")
     mode_group.add_argument("--apply", action="store_true")
     prune_parser.add_argument("--verbose", action="store_true")
 
     run_parser = subparsers.add_parser("run")
-    run_parser.add_argument("--character", choices=["jp"], required=True)
+    run_parser.add_argument("--character", choices=character_choices, required=True)
     run_parser.add_argument("--source", choices=["official", "supercombo", "all"], default="all")
 
     return parser

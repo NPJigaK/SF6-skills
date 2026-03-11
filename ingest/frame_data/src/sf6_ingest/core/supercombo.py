@@ -5,6 +5,7 @@ from dataclasses import dataclass
 
 from selectolax.parser import HTMLParser, Node
 
+from ..config import load_character
 from ..binding_policy import LoadedSupercomboBindingPolicy, SupercomboBindingEntry
 from ..registry import LoadedRegistry
 from ..schemas import SnapshotMetadata, SourceRunStatus, SupercomboNormalizedRecord
@@ -87,6 +88,7 @@ def parse_supercombo_snapshot(
 
     headings = {"h2": "", "h3": "", "h4": "", "h5": ""}
     parsed_rows: list[ParsedSupercomboRow] = []
+    character_label = load_character(snapshot_metadata.character_slug).display_name
 
     table_index = -1
     for node in main.traverse():
@@ -104,7 +106,7 @@ def parse_supercombo_snapshot(
             continue
 
         table_index += 1
-        parsed_row, blocker = _parse_move_table(snapshot_metadata, node, table_index, headings)
+        parsed_row, blocker = _parse_move_table(snapshot_metadata, node, table_index, headings, character_label)
         if blocker:
             status.blockers.append(blocker)
             continue
@@ -128,18 +130,17 @@ def _parse_move_table(
     node: Node,
     table_index: int,
     headings: dict[str, str],
+    character_label: str,
 ) -> tuple[ParsedSupercomboRow | None, str | None]:
     rows = [_extract_row_cells(table_row) for table_row in node.css("tr")]
     if not rows:
         return None, None
 
     source_row = rows[0]
-    if len(source_row) != 1 or not source_row[0].startswith("JP "):
+    raw_source_token = _extract_raw_source_token(source_row, character_label)
+    if raw_source_token is None:
         return None, None
 
-    raw_source_token = compact_text(source_row[0][3:]) or ""
-    if not raw_source_token:
-        return None, f"supercombo table shape drift table_index={table_index} missing raw_source_token"
     if len(rows) != 19:
         return None, f"supercombo table shape drift table_index={table_index} raw_source_token={raw_source_token} rows={len(rows)}"
     if len(rows[1]) != 1:
@@ -244,6 +245,15 @@ def _apply_binding_review(payload: dict[str, object], binding: SupercomboBinding
 
 def _extract_row_cells(table_row: Node) -> list[str]:
     return [compact_text(cell.text(separator=" ", strip=True)) or "" for cell in table_row.css("th, td")]
+
+
+def _extract_raw_source_token(source_row: list[str], character_label: str) -> str | None:
+    if len(source_row) != 1:
+        return None
+    prefix = f"{character_label} "
+    if not source_row[0].startswith(prefix):
+        return None
+    return compact_text(source_row[0][len(prefix) :])
 
 
 def _parse_move_header(value: str) -> tuple[str | None, str | None]:

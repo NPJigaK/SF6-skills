@@ -1,0 +1,48 @@
+[
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260310T121005Z-8ae3ec16",
+    "source_row_id": "20260310T121005Z-8ae3ec16:必殺技:062:od_ライジングアッパー",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"active\":\"6-15 6-8, 9-15\",\"block_adv\":\"-40\",\"input\":\"623PP\",\"move_group\":\"specials\",\"move_name\":\"OD ライジングアッパー\",\"recovery\":\"35+着地後15\",\"startup\":\"6\"}",
+    "move_id": "luke_059_623pp_rising_uppercut_od",
+    "character_slug": "luke",
+    "move_name": "OD ライジングアッパー",
+    "input": "623PP",
+    "move_group": "specials",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260310T121005Z-8ae3ec16",
+    "source_row_id": "20260310T121005Z-8ae3ec16:共通システム:078:ドライブパリィ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"active\":\"[※2] 1-12\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"ドライブパリィ\",\"recovery\":\"33\",\"startup\":\"1\"}",
+    "move_id": "luke_072_drive_parry",
+    "character_slug": "luke",
+    "move_name": "ドライブパリィ",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

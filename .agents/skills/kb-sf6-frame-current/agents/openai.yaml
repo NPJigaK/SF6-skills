@@ -1,4 +1,4 @@
 interface:
   display_name: "SF6 Frame Current"
-  short_description: "Read published JP frame-data exports for current-fact answers."
-  default_prompt: "Use $kb-sf6-frame-current to answer JP frame-data current-fact questions from published exports."
+  short_description: "Read published frame-data exports for supported baseline current-fact answers."
+  default_prompt: "Use $kb-sf6-frame-current to answer current-fact questions for the supported baseline characters (`jp`, `luke`) from published exports."

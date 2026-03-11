@@ -55,7 +55,8 @@ DEFAULT_VALUES = {
 
 
 def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> str:
-    tables = [
+    return build_supercombo_contract_html_with_tables(
+        [
         (
             "Character Data",
             "Character Vitals",
@@ -68,7 +69,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Normals and Target Combos",
             "5LP",
             "jp_5lp",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_5lp",
                 notation="5LP",
                 move_name="Standing Light Punch",
@@ -80,7 +81,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Normals and Target Combos",
             "J.LP",
             "jp_jlp",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_jlp",
                 notation="j.LP",
                 move_name="Jumping Light Punch",
@@ -92,7 +93,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Supers",
             "236236K (CA)",
             "jp_236236k(ca)",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_236236k(ca)",
                 notation="236236K",
                 move_name="CA Zappriet",
@@ -104,7 +105,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Drive and Throw",
             "6HPHK Recovery",
             "jp_6hphk_recovery",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_6hphk_recovery",
                 notation="6HPHK",
                 move_name="Exilio (Recovery)",
@@ -116,7 +117,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Drive and Throw",
             "MPMK 66 DRC",
             "jp_mpmk_66_drc",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_mpmk_66_drc",
                 notation="66",
                 move_name="Cancel Drive Rush",
@@ -128,7 +129,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Special Moves",
             "22PP",
             "jp_22pp",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_22pp",
                 notation="22PP",
                 move_name="OD Triglav",
@@ -140,7 +141,7 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Special Moves",
             "214P~214HP",
             "jp_214p_214hp",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_214p_214hp",
                 notation="214P~214HP",
                 move_name="Vihaat Cheni",
@@ -152,16 +153,26 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
             "Special Moves",
             "22K Bomb",
             "jp_22k_bomb",
-            _move_table(
+            build_supercombo_move_table(
                 raw_source_token="jp_22k_bomb",
                 notation="22K",
                 move_name="Amnesia Bomb",
                 overrides={"Notes": "Excluded G row"},
             ),
         ),
-    ]
+        ],
+        include_tokens=include_tokens,
+    )
 
-    parts = ["<!doctype html>", "<html lang=\"en\">", "  <head>", "    <meta charset=\"utf-8\">", "    <title>Street Fighter 6/JP/Data - SuperCombo Wiki</title>", "  </head>", "  <body>", "    <main>"]
+
+def build_supercombo_contract_html_with_tables(
+    tables: list[tuple[str, str, str, str | None, str]],
+    *,
+    include_tokens: set[str] | None = None,
+    character_label: str = "JP",
+    page_title: str = "Street Fighter 6/JP/Data - SuperCombo Wiki",
+) -> str:
+    parts = ["<!doctype html>", "<html lang=\"en\">", "  <head>", "    <meta charset=\"utf-8\">", f"    <title>{page_title}</title>", "  </head>", "  <body>", "    <main>"]
     for h2, h4, h5, raw_source_token, table_html in tables:
         if include_tokens is not None and raw_source_token is not None and raw_source_token not in include_tokens:
             continue
@@ -176,10 +187,17 @@ def build_supercombo_contract_html(include_tokens: set[str] | None = None) -> st
     return "\n".join(parts) + "\n"
 
 
-def _move_table(*, raw_source_token: str, notation: str, move_name: str, overrides: dict[str, str]) -> str:
+def build_supercombo_move_table(
+    *,
+    raw_source_token: str,
+    notation: str,
+    move_name: str,
+    overrides: dict[str, str],
+    character_label: str = "JP",
+) -> str:
     values = {**DEFAULT_VALUES, **overrides}
     rows = [
-        f"        <tr><th colspan=\"6\">JP {raw_source_token}</th></tr>",
+        f"        <tr><th colspan=\"6\">{character_label} {raw_source_token}</th></tr>",
         f"        <tr><th colspan=\"6\">{notation} {move_name}</th></tr>",
         "        <tr><td colspan=\"6\"><img src=\"about:blank\" alt=\"\"></td></tr>",
     ]

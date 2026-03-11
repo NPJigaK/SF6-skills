@@ -12,8 +12,14 @@ from sf6_ingest.versioning import SCHEMA_VERSION
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
 SOURCE_URLS = {
-    "official": "https://www.streetfighter.com/6/ja-jp/character/jp/frame",
-    "supercombo": "https://wiki.supercombo.gg/w/Street_Fighter_6/JP/Data",
+    "official": {
+        "jp": "https://www.streetfighter.com/6/ja-jp/character/jp/frame",
+        "luke": "https://www.streetfighter.com/6/ja-jp/character/luke/frame",
+    },
+    "supercombo": {
+        "jp": "https://wiki.supercombo.gg/w/Street_Fighter_6/JP/Data",
+        "luke": "https://wiki.supercombo.gg/w/Street_Fighter_6/Luke/Data",
+    },
 }
 
 
@@ -38,6 +44,7 @@ def fixture_bytes(name: str) -> bytes:
 def build_snapshot_metadata(
     *,
     source: str,
+    character_slug: str = "jp",
     snapshot_id: str,
     raw_bytes: bytes,
     fetched_at: str,
@@ -53,10 +60,10 @@ def build_snapshot_metadata(
         {
             "schema_version": SCHEMA_VERSION,
             "source": source,
-            "character_slug": "jp",
+            "character_slug": character_slug,
             "snapshot_id": snapshot_id,
-            "source_url": source_url or SOURCE_URLS[source],
-            "final_url": source_url or SOURCE_URLS[source],
+            "source_url": source_url or SOURCE_URLS[source][character_slug],
+            "final_url": source_url or SOURCE_URLS[source][character_slug],
             "fetched_at": fetched_at,
             "page_locale": page_locale,
             "success": success,
@@ -84,6 +91,7 @@ def save_html_snapshot(
     repo_root: Path,
     *,
     source: str,
+    character_slug: str = "jp",
     snapshot_id: str,
     html: str,
     fetched_at: str,
@@ -97,6 +105,7 @@ def save_html_snapshot(
     raw_bytes = html.encode(response_encoding or "utf-8")
     metadata = build_snapshot_metadata(
         source=source,
+        character_slug=character_slug,
         snapshot_id=snapshot_id,
         raw_bytes=raw_bytes,
         fetched_at=fetched_at,
@@ -114,6 +123,7 @@ def save_fixture_snapshot(
     repo_root: Path,
     *,
     source: str,
+    character_slug: str = "jp",
     snapshot_id: str,
     fixture_name: str,
     fetched_at: str,
@@ -126,6 +136,7 @@ def save_fixture_snapshot(
     return save_html_snapshot(
         repo_root,
         source=source,
+        character_slug=character_slug,
         snapshot_id=snapshot_id,
         html=fixture_html(fixture_name),
         fetched_at=fetched_at,

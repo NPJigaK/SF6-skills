@@ -9,7 +9,11 @@ from sf6_ingest.core.supercombo import parse_supercombo_snapshot
 from sf6_ingest.registry import load_registry
 
 from .conftest import build_snapshot_metadata, fixture_bytes, fixture_html
-from .supercombo_fixture import build_supercombo_contract_html
+from .supercombo_fixture import (
+    build_supercombo_contract_html,
+    build_supercombo_contract_html_with_tables,
+    build_supercombo_move_table,
+)
 
 
 def test_official_parse_handles_total_active_and_structured_columns() -> None:
@@ -127,6 +131,144 @@ def test_supercombo_label_mismatch_withholds_row_without_snapshot_block() -> Non
     assert row.manual_review_needed is True
     assert row.hitconfirm_window is None
     assert any(reason.startswith("supercombo label mismatch") for reason in row.review_reasons)
+
+
+def test_supercombo_parse_accepts_character_specific_prefixes_without_jp_hardcoding() -> None:
+    registry = load_registry("luke")
+    binding_policy = load_supercombo_binding_policy("luke", registry)
+    html = build_supercombo_contract_html_with_tables(
+        [
+            (
+                "Character Data",
+                "Character Vitals",
+                "Vitals",
+                None,
+                '<table><tr><th>Vitals</th><th>Luke</th></tr><tr><td>HP</td><td>10000</td></tr></table>',
+            ),
+            (
+                "Normals",
+                "Standing Normals",
+                "5LP",
+                "Luke_5lp",
+                build_supercombo_move_table(
+                    raw_source_token="Luke_5lp",
+                    notation="5LP",
+                    move_name="Standing Light Punch",
+                    overrides={"Notes": "Luke prefix should parse"},
+                    character_label="Luke",
+                ),
+            ),
+            (
+                "Normals",
+                "Jumping Normals",
+                "j.LP",
+                "Luke_jlp",
+                build_supercombo_move_table(
+                    raw_source_token="Luke_jlp",
+                    notation="j.LP",
+                    move_name="Jumping Light Punch",
+                    overrides={"Notes": "Alias drift row"},
+                    character_label="Luke",
+                ),
+            ),
+            (
+                "Drive Moves",
+                "Drive Moves",
+                "6HPHK Recovery",
+                "Luke_6hphk_recovery",
+                build_supercombo_move_table(
+                    raw_source_token="Luke_6hphk_recovery",
+                    notation="6HPHK",
+                    move_name="Battering Ram (Recovery)",
+                    overrides={"Invuln": "1-20 Full", "Notes": "Confirmed Luke recovery row"},
+                    character_label="Luke",
+                ),
+            ),
+            (
+                "Drive Moves",
+                "Drive Moves",
+                "MPMK 66 DRC",
+                "luke_mpmk_66_drc",
+                build_supercombo_move_table(
+                    raw_source_token="luke_mpmk_66_drc",
+                    notation="66",
+                    move_name="Drive Rush Cancel",
+                    overrides={"After DR Hit": "+12", "After DR Blk": "+8"},
+                    character_label="Luke",
+                ),
+            ),
+            (
+                "Drive Moves",
+                "Drive Moves",
+                "MPMK",
+                "Luke_mpmk",
+                build_supercombo_move_table(
+                    raw_source_token="Luke_mpmk",
+                    notation="MPMK",
+                    move_name="Drive Parry",
+                    overrides={"Notes": "One-to-many withheld"},
+                    character_label="Luke",
+                ),
+            ),
+            (
+                "Super Arts",
+                "Super Arts",
+                "236236K (CA)",
+                "Luke_236236k(ca)",
+                build_supercombo_move_table(
+                    raw_source_token="Luke_236236k(ca)",
+                    notation="236236K",
+                    move_name="Pale Rider (CA)",
+                    overrides={"Punish Advantage": "KD +44", "Notes": "CA suffix must be preserved"},
+                    character_label="Luke",
+                ),
+            ),
+            (
+                "Taunts",
+                "Taunts",
+                "5PPPKKK",
+                "Luke_5pppkkk",
+                build_supercombo_move_table(
+                    raw_source_token="Luke_5pppkkk",
+                    notation="5PPPKKK",
+                    move_name="Neutral Taunt",
+                    overrides={"Notes": "Excluded taunt row"},
+                    character_label="Luke",
+                ),
+            ),
+        ],
+        character_label="Luke",
+        page_title="Street Fighter 6/Luke/Data - SuperCombo Wiki",
+    )
+    metadata = build_snapshot_metadata(
+        source="supercombo",
+        character_slug="luke",
+        snapshot_id="20260310T120000Z-luke0001",
+        raw_bytes=html.encode("utf-8"),
+        fetched_at="2026-03-10T12:00:00Z",
+        success=True,
+        page_locale="en",
+        page_title="Street Fighter 6/Luke/Data - SuperCombo Wiki",
+    )
+
+    records, status = parse_supercombo_snapshot(metadata, html, registry, binding_policy)
+
+    assert status.parse_state == "parsed"
+    assert status.blocker_count == 0
+    assert status.row_count == 7
+    by_token = {record.raw_source_token: record for record in records}
+    assert by_token["Luke_5lp"].move_id == "luke_001_5lp"
+    assert by_token["Luke_jlp"].binding_class == "B"
+    assert by_token["Luke_6hphk_recovery"].binding_class == "F"
+    assert by_token["Luke_6hphk_recovery"].confirmation_status == "confirmed"
+    assert by_token["luke_mpmk_66_drc"].move_id == "luke_076_cancel_drive_rush"
+    assert by_token["Luke_mpmk"].candidate_move_ids == [
+        "luke_072_drive_parry",
+        "luke_073_just_parry_strike",
+        "luke_074_just_parry_projectile",
+    ]
+    assert by_token["Luke_236236k(ca)"].binding_class == "C"
+    assert by_token["Luke_5pppkkk"].binding_class == "G"
 
 
 def test_decode_snapshot_bytes_is_deterministic() -> None:

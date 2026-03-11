@@ -1,0 +1,777 @@
+registry_version: 2.1.0
+moves:
+- move_id: luke_001_5lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ファーストスティンガー
+- move_id: luke_002_5lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_レッグハント
+- move_id: luke_003_5mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_トリガーフィスト
+- move_id: luke_004_5mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_アンブッシュスピア
+- move_id: luke_005_5hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_クラッシャー
+- move_id: luke_006_5hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_キャノンボール
+- move_id: luke_007_2lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ファストジャブ
+- move_id: luke_008_2lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_アンクルスナイプ
+- move_id: luke_009_2mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_スラッグショット
+- move_id: luke_010_2mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_カーフスカッシュ
+- move_id: luke_011_2hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_アンチエアランチャー
+- move_id: luke_012_2hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_トレンチブレイク
+- move_id: luke_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ワンバレット
+- move_id: luke_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_デルタニー
+- move_id: luke_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_エア_インターセプター
+- move_id: luke_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_バーチカルテイル
+- move_id: luke_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_ガンメタルハンマー
+- move_id: luke_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ヘブンリーストライク
+- move_id: luke_019_6mp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: ローハイド
+- move_id: luke_020_4hp
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: サプレッサー
+- move_id: luke_021_4hk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: アウトローキック
+- move_id: luke_022_6hp
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: ダブルインパクト_1段目
+- move_id: luke_023_6hp_hp
+  group: target_combos
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    - '>'
+    - HP
+    name_key: ダブルインパクト_2段目
+- move_id: luke_024_5lp_mp
+  group: target_combos
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    name_key: トリプルインパクト_2段目
+- move_id: luke_025_5lp_mp_hp
+  group: target_combos
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    - '>'
+    - HP
+    name_key: トリプルインパクト_3段目
+- move_id: luke_026_5mp_mp
+  group: target_combos
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    name_key: スナップバックコンボ_2段目
+- move_id: luke_027_2mk_2hp
+  group: target_combos
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - MK
+    - '>'
+    - '2'
+    - HP
+    name_key: ノーズブレイカー
+- move_id: luke_028_5mp_mp_mp
+  group: target_combos
+  sort_key: 28
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    - '>'
+    - MP
+    name_key: スナップバックコンボ_3段目
+- move_id: luke_029_5mp_mp_mp_mp
+  group: target_combos
+  sort_key: 29
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    - '>'
+    - MP
+    - '>'
+    - MP
+    name_key: スナップバックコンボ_4段目
+- move_id: luke_030_236lp_sand_blast
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_サンドブラスト
+- move_id: luke_031_236mp_sand_blast
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_サンドブラスト
+- move_id: luke_032_236hp_sand_blast
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_サンドブラスト
+- move_id: luke_033_236pp_sand_blast_od
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_サンドブラスト
+- move_id: luke_034_236pp_pp_fatal_shot
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: フェイタルショット
+- move_id: luke_035_214lp_flash_knuckle
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_フラッシュナックル
+- move_id: luke_036_214lp_flash_knuckle_hold
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_フラッシュナックル_ホールド
+- move_id: luke_037_214lp_flash_knuckle_perfect
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_フラッシュナックル_ジャスト
+- move_id: luke_038_214mp_flash_knuckle
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_フラッシュナックル
+- move_id: luke_039_214mp_flash_knuckle_hold
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_フラッシュナックル_ホールド
+- move_id: luke_040_214mp_flash_knuckle_perfect
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_フラッシュナックル_ジャスト
+- move_id: luke_041_214hp_flash_knuckle
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_フラッシュナックル
+- move_id: luke_042_214hp_flash_knuckle_hold
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_フラッシュナックル_ホールド
+- move_id: luke_043_214hp_flash_knuckle_perfect
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_フラッシュナックル_ジャスト
+- move_id: luke_044_214pp_flash_knuckle_od
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_フラッシュナックル
+- move_id: luke_045_214pp_flash_knuckle_od_2nd
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_フラッシュナックル_2段目
+- move_id: luke_046_214pp_pp_ddt
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: ddt
+- move_id: luke_047_j214p_aerial_flash_knuckle
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: エアフラッシュナックル
+- move_id: luke_048_j214p_aerial_flash_knuckle_hold
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: エアフラッシュナックル_ホールド
+- move_id: luke_049_j214pp_aerial_flash_knuckle_od
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_エアフラッシュナックル
+- move_id: luke_050_236k_avenger
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: アベンジャー
+- move_id: luke_051_236kk_avenger_od
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_アベンジャー
+- move_id: luke_052_236k_p_no_chaser
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: ノーチェイサー
+- move_id: luke_053_236kk_p_no_chaser_od
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: od_ノーチェイサー
+- move_id: luke_054_236k_k_impaler
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: インパラー
+- move_id: luke_055_236kk_k_impaler_od
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: od_インパラー
+- move_id: luke_056_623lp_rising_uppercut
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 弱_ライジングアッパー
+- move_id: luke_057_623mp_rising_uppercut
+  group: specials
+  sort_key: 57
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 中_ライジングアッパー
+- move_id: luke_058_623hp_rising_uppercut
+  group: specials
+  sort_key: 58
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 強_ライジングアッパー
+- move_id: luke_059_623pp_rising_uppercut_od
+  group: specials
+  sort_key: 59
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: od_ライジングアッパー
+- move_id: luke_060_623pp_pp_slam_dunk
+  group: specials
+  sort_key: 60
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: スラムダンク
+- move_id: luke_061_sa1_236236p
+  group: super_arts
+  sort_key: 61
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_バルカンブラスト
+- move_id: luke_062_sa2_214214p
+  group: super_arts
+  sort_key: 62
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_イレイザー
+- move_id: luke_063_sa3_236236k
+  group: super_arts
+  sort_key: 63
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa3_ペイルライダー
+- move_id: luke_064_ca_236236k
+  group: super_arts
+  sort_key: 64
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: ca_ペイルライダー
+- move_id: luke_065_forward_throw
+  group: throws
+  sort_key: 65
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: スウィーパー
+- move_id: luke_066_back_throw
+  group: throws
+  sort_key: 66
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: スクラッパー
+- move_id: luke_067_forward_dash
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: luke_068_back_dash
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: luke_069_drive_impact
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_マズルフラッシュ
+- move_id: luke_070_drive_reversal_guard
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_バッターリングラム
+- move_id: luke_071_drive_reversal_wakeup
+  group: system
+  sort_key: 71
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_バッターリングラム
+- move_id: luke_072_drive_parry
+  group: system
+  sort_key: 72
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ
+- move_id: luke_073_just_parry_strike
+  group: system
+  sort_key: 73
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃
+- move_id: luke_074_just_parry_projectile
+  group: system
+  sort_key: 74
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具
+- move_id: luke_075_parry_drive_rush
+  group: system
+  sort_key: 75
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ
+- move_id: luke_076_cancel_drive_rush
+  group: system
+  sort_key: 76
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ
