@@ -1,0 +1,20 @@
+{
+  "name": "sf6-skills-dev",
+  "description": "Development marketplace for the SF6 skills monorepo",
+  "owner": {
+    "name": "devkey",
+    "email": "tyu_mom@yahoo.co.jp"
+  },
+  "plugins": [
+    {
+      "name": "sf6-skills",
+      "description": "SF6 skill library for concept-first knowledge, current-fact lookups, and future analysis skills",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "devkey",
+        "email": "tyu_mom@yahoo.co.jp"
+      }
+    }
+  ]
+}
