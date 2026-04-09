@@ -34,6 +34,7 @@
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
 
 Repo-local compatibility copies may still remain during migration and should not be treated as canonical.
+Use the canonical path when that skill has already been migrated; otherwise use the repo-local compatibility copy under `.agents/skills/` until that specific skill moves.
 
 ## Ingestion / Data
 - 実装コードは `ingest/frame_data/` に置く。`.agents/skills/` に取得コードは置かない。
