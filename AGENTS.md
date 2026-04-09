@@ -33,6 +33,8 @@
 - supported baseline characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
 
+Repo-local compatibility copies may still remain during migration and should not be treated as canonical.
+
 ## Ingestion / Data
 - 実装コードは `ingest/frame_data/` に置く。`.agents/skills/` に取得コードは置かない。
 - raw snapshots は「現在 publish されている dataset を裏づけるために必要な最小限のものだけ」を保持する。

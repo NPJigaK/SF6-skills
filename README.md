@@ -24,6 +24,8 @@ SF6 の concept-first knowledge と、supported baseline characters `jp` / `luke
 - published current-fact artifacts
   - `data/exports/<character_slug>/`
 
+Monorepo migration is in progress, so some repo-local content may still live in legacy agent-scoped locations until the move tasks complete.
+
 ## Not Durable Surface
 
 - `.git/`
