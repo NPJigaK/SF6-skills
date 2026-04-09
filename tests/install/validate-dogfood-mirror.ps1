@@ -1,25 +1,47 @@
-$repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-$sourceRoot = Join-Path $repoRoot 'skills/kb-sf6-core'
-$targetRoot = Join-Path $repoRoot '.agents/skills/kb-sf6-core'
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+$sourceRoot = Join-Path $repoRoot 'skills'
+$targetRoot = Join-Path $repoRoot '.agents/skills'
 $syncScript = Join-Path $repoRoot 'scripts/dev/sync-dogfood-skills.ps1'
 
-if (-not (Test-Path $syncScript)) {
-  throw 'Missing sync script'
+if (-not (Test-Path -LiteralPath $syncScript)) {
+  throw "Missing sync script: $syncScript"
 }
 
-if (-not (Test-Path $sourceRoot)) {
-  throw 'Missing public source skill'
+if (-not (Test-Path -LiteralPath $sourceRoot)) {
+  throw "Missing public skills root: $sourceRoot"
 }
 
-if (-not (Test-Path $targetRoot)) {
-  throw 'Missing dogfood mirror target'
+$publicSkills = Get-ChildItem -LiteralPath $sourceRoot -Directory
+
+if (-not (Test-Path -LiteralPath $targetRoot)) {
+  throw "Missing dogfood mirror root: $targetRoot"
 }
 
-$sourceHash = Get-FileHash (Join-Path $sourceRoot 'SKILL.md')
-$targetHash = Get-FileHash (Join-Path $targetRoot 'SKILL.md')
+foreach ($skill in $publicSkills) {
+  $sourceSkillRoot = $skill.FullName
+  $targetSkillRoot = Join-Path $targetRoot $skill.Name
 
-if ($sourceHash.Hash -ne $targetHash.Hash) {
-  throw 'Dogfood mirror is out of sync with public source'
+  if (-not (Test-Path -LiteralPath $targetSkillRoot)) {
+    throw "Missing dogfood mirror target for public skill '$($skill.Name)': $targetSkillRoot"
+  }
+
+  $sourceSkillMd = Join-Path $sourceSkillRoot 'SKILL.md'
+  $targetSkillMd = Join-Path $targetSkillRoot 'SKILL.md'
+
+  if (-not (Test-Path -LiteralPath $sourceSkillMd)) {
+    throw "Missing public skill file for '$($skill.Name)': $sourceSkillMd"
+  }
+
+  if (-not (Test-Path -LiteralPath $targetSkillMd)) {
+    throw "Missing mirrored skill file for '$($skill.Name)': $targetSkillMd"
+  }
+
+  $sourceHash = Get-FileHash -LiteralPath $sourceSkillMd
+  $targetHash = Get-FileHash -LiteralPath $targetSkillMd
+
+  if ($sourceHash.Hash -ne $targetHash.Hash) {
+    throw "Dogfood mirror is out of sync for public skill '$($skill.Name)'"
+  }
 }
 
 Write-Host 'Dogfood mirror OK'
