@@ -31,9 +31,10 @@ def raw_snapshot_dir(repo_root: Path, source: str, character_slug: str, snapshot
 def decode_snapshot_bytes(raw_bytes: bytes, response_encoding: str | None) -> str:
     encoding = response_encoding or "utf-8"
     try:
-        return raw_bytes.decode(encoding, errors="strict")
+        decoded = raw_bytes.decode(encoding, errors="strict")
     except UnicodeDecodeError as exc:
         raise ValueError(f"failed to decode snapshot bytes with encoding={encoding}") from exc
+    return decoded.replace("\r\n", "\n").replace("\r", "\n")
 
 
 def save_snapshot(repo_root: Path, raw_bytes: bytes, metadata: SnapshotMetadata) -> LoadedSnapshot:
