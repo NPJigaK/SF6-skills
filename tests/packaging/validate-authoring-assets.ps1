@@ -28,10 +28,10 @@ if (-not $template.StartsWith('---')) {
 
 $checks = @(
   @{ Path = 'shared/templates/skill/SKILL.md.template'; MustContain = @('## Purpose', '## When To Use', '## Required Inputs', '## Workflow', '## Constraints') },
-  @{ Path = 'shared/templates/skill/README.md'; MustContain = @('skills/<skill-name>/', 'Keep skill-specific references, assets, scripts, and tests inside the skill directory until at least two skills need the same artifact') },
+  @{ Path = 'shared/templates/skill/README.md'; MustContain = @('skills/<skill-name>/', 'Keep skill-specific references, assets, scripts, and tests inside the skill directory until at least two skills need the same artifact', 'Treat this README as starter guidance for the generated skill, then replace or adapt it with skill-specific documentation as needed.') },
   @{ Path = 'shared/schemas/README.md'; MustContain = @('cross-skill schemas here only after more than one skill depends on the same contract') },
   @{ Path = 'packages/skill-validator/README.md'; MustContain = @('checking skill metadata, directory shape, and packaging outputs') },
-  @{ Path = 'docs/authoring/new-skill.md'; MustContain = @('## When to create a new skill', '## How to scaffold it', '## When to extract shared pieces', '## Public vs maintainer-only') }
+  @{ Path = 'docs/authoring/new-skill.md'; MustContain = @('## When to create a new skill', '## How to scaffold it', '## When to extract shared pieces', '## Public vs maintainer-only', 'Treat `shared/templates/skill/README.md` as a starting point, then replace or adapt it with skill-specific documentation.') }
 )
 
 foreach ($check in $checks) {
