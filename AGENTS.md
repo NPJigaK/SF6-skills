@@ -29,9 +29,9 @@
 - `*_manual_review.*`, `data/raw/...`, `data/normalized/...` は通常回答の最終根拠にしない。
 
 ## Knowledge と Skills
-- 不変概念は `.agents/skills/kb-sf6-core/` に寄せる。
-- supported baseline characters の current fact は `.agents/skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
-- knowledge の統合作業は `.agents/skills/sync-knowledge/` を使う。
+- 不変概念は `skills/kb-sf6-core/` に寄せる。
+- supported baseline characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
+- knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
 
 ## Ingestion / Data
 - 実装コードは `ingest/frame_data/` に置く。`.agents/skills/` に取得コードは置かない。

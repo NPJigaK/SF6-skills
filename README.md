@@ -9,17 +9,20 @@ SF6 の concept-first knowledge と、supported baseline characters `jp` / `luke
 
 ## Durable Checked-In Surface
 
+- public skills
+  - `skills/<skill-name>/`
+- maintainer-only skills
+  - `maintainer-skills/<skill-name>/`
+- shared infrastructure
+  - `packages/`
+  - `shared/`
+  - `docs/`
+  - `tests/`
+  - `scripts/`
 - code
   - `ingest/frame_data/`
-- docs
-  - `README.md`
-  - `AGENTS.md`
-  - `.agents/skills/`
 - published current-fact artifacts
   - `data/exports/<character_slug>/`
-- minimal backing raw snapshots only
-  - `data/raw/<source>/<character_slug>/<snapshot_id>/`
-  - currently published datasets を裏づけるために必要な最小限の raw snapshot のみを保持する
 
 ## Not Durable Surface
 
