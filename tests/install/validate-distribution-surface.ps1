@@ -1,3 +1,5 @@
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+
 $required = @(
   '.codex/INSTALL.md',
   '.opencode/INSTALL.md',
@@ -10,17 +12,20 @@ $required = @(
   'packages/skill-installers/README.md'
 )
 
-$missing = $required | Where-Object { -not (Test-Path $_) }
+$requiredPaths = $required | ForEach-Object { Join-Path $repoRoot $_ }
+$missing = $requiredPaths | Where-Object { -not (Test-Path -LiteralPath $_) }
 if ($missing.Count -gt 0) {
   throw "Missing distribution files: $($missing -join ', ')"
 }
 
-$marketplace = Get-Content '.claude-plugin/marketplace.json' -Raw | ConvertFrom-Json
+$marketplacePath = Join-Path $repoRoot '.claude-plugin/marketplace.json'
+$marketplace = Get-Content -LiteralPath $marketplacePath -Raw | ConvertFrom-Json
 if ($marketplace.plugins[0].name -ne 'sf6-skills') {
   throw 'Unexpected Claude plugin name'
 }
 
-$codex = Get-Content '.codex/INSTALL.md' -Raw
+$codexPath = Join-Path $repoRoot '.codex/INSTALL.md'
+$codex = Get-Content -LiteralPath $codexPath -Raw
 if ($codex -notmatch 'NPJigaK/SF6-skills') {
   throw 'Codex install guide missing repository URL'
 }
