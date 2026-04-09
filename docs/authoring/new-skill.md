@@ -9,6 +9,7 @@ Create a new skill when the workflow, data contract, or trigger conditions are d
 1. Copy `shared/templates/skill/` into `skills/<skill-name>/`.
 2. Rename `SKILL.md.template` to `SKILL.md`.
 3. Add only the references, assets, scripts, and tests that this skill needs.
+4. Treat `shared/templates/skill/README.md` as a starting point, then replace or adapt it with skill-specific documentation.
 
 ## When to extract shared pieces
 

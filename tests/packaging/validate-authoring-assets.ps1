@@ -26,4 +26,21 @@ if (-not $template.StartsWith('---')) {
   throw 'shared/templates/skill/SKILL.md.template must begin with frontmatter (`---`)'
 }
 
+$checks = @(
+  @{ Path = 'shared/templates/skill/SKILL.md.template'; MustContain = @('## Purpose', '## When To Use', '## Required Inputs', '## Workflow', '## Constraints') },
+  @{ Path = 'shared/templates/skill/README.md'; MustContain = @('skills/<skill-name>/', 'Keep skill-specific references, assets, scripts, and tests inside the skill directory until at least two skills need the same artifact') },
+  @{ Path = 'shared/schemas/README.md'; MustContain = @('cross-skill schemas here only after more than one skill depends on the same contract') },
+  @{ Path = 'packages/skill-validator/README.md'; MustContain = @('checking skill metadata, directory shape, and packaging outputs') },
+  @{ Path = 'docs/authoring/new-skill.md'; MustContain = @('## When to create a new skill', '## How to scaffold it', '## When to extract shared pieces', '## Public vs maintainer-only') }
+)
+
+foreach ($check in $checks) {
+  $content = Get-Content -LiteralPath (Join-Path $repoRoot $check.Path) -Raw
+  foreach ($needle in $check.MustContain) {
+    if ($content -notmatch [regex]::Escape($needle)) {
+      throw "$($check.Path) missing: $needle"
+    }
+  }
+}
+
 Write-Host 'Authoring assets OK'
