@@ -4,6 +4,7 @@ $checks = @(
   @{ Path = 'README.md'; MustContain = 'skills/'; MustNotContain = '.agents/skills/' },
   @{ Path = 'README.md'; MustContain = 'monorepo migration is in progress' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/'; MustNotContain = '.agents/skills/kb-sf6-core/' },
+  @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/'; MustNotContain = '.agents/skills/sync-knowledge/' },
   @{ Path = 'AGENTS.md'; MustContain = 'repo-local compatibility copies may still remain during migration and should not be treated as canonical' },
   @{ Path = 'AGENTS.md'; MustContain = 'Use the canonical path when that skill has already been migrated; otherwise use the repo-local compatibility copy under `.agents/skills/` until that specific skill moves.' },
