@@ -11,6 +11,19 @@ if ($missing.Count -gt 0) {
   throw "Missing maintainer assets: $($missing -join ', ')"
 }
 
+$skillPath = 'maintainer-skills/sync-knowledge/SKILL.md'
+$canonicalReferences = @(
+  '../../skills/kb-sf6-core/references/SOURCE_POLICY.md',
+  '../../skills/kb-sf6-core/references/KNOWLEDGE.md',
+  '../../skills/kb-sf6-core/references/REVIEW_QUEUE.md'
+)
+
+$skillContents = Get-Content $skillPath -Raw
+$missingReferences = $canonicalReferences | Where-Object { $skillContents -notmatch [regex]::Escape($_) }
+if ($missingReferences.Count -gt 0) {
+  throw "Missing canonical references in ${skillPath}: $($missingReferences -join ', ')"
+}
+
 if (Test-Path '.agents/skills/sync-knowledge') {
   throw 'Legacy maintainer skill still present in .agents/skills'
 }
