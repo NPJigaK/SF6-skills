@@ -15,8 +15,4 @@ foreach ($skill in $publicSkills) {
   Copy-Item -LiteralPath $skill.FullName -Destination $destination -Recurse
 }
 
-Get-ChildItem $targetRoot -Directory |
-  Where-Object { $_.Name -notin $publicNames } |
-  ForEach-Object { Remove-Item -LiteralPath $_.FullName -Recurse -Force }
-
 Write-Host "Synced $($publicSkills.Count) public skills to .agents/skills"

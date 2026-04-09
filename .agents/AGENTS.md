@@ -11,4 +11,4 @@ Refresh it from `skills/` with:
 powershell -ExecutionPolicy Bypass -File scripts/dev/sync-dogfood-skills.ps1
 ```
 
-Some compatibility skills may still remain here until they are migrated into `skills/` or `maintainer-skills/` as appropriate.
+The sync refreshes mirrored public skills and leaves non-public compatibility skills in place until their own migration tasks run.

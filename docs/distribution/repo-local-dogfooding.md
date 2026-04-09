@@ -8,4 +8,4 @@ For repo-local Codex discovery, mirror the public skills into `.agents/skills/`:
 powershell -ExecutionPolicy Bypass -File scripts/dev/sync-dogfood-skills.ps1
 ```
 
-Only distributed skills are mirrored. Maintainer-only skills stay outside `.agents/skills/`.
+The sync refreshes mirrored public skills and leaves non-public compatibility skills in place until their own migration tasks run.
