@@ -1,5 +1,6 @@
-# Repo Policy Moved
+# Compatibility Layer
 
-Repo-wide guidance is now defined in the root `AGENTS.md`.
+Repo-wide guidance is defined in the root `AGENTS.md`.
 
-Keep `.agents/` for skills and related assets only.
+`.agents/skills/` is generated compatibility output for repo-local dogfooding.
+Do not treat `.agents/skills/` as the canonical source for distributed skills.
