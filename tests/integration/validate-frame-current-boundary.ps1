@@ -7,7 +7,7 @@ if (-not (Test-Path -LiteralPath $docPath)) {
   throw "Missing boundary doc: $docPath"
 }
 
-$content = Get-Content -LiteralPath $docPath -Raw
+$content = (Get-Content -LiteralPath $docPath -Raw).Replace("`r`n", "`n").Replace("`r", "`n")
 $requiredHeadings = @(
   '## Current Runtime Inputs'
   '## Packaging Options'
