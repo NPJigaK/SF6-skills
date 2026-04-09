@@ -9,10 +9,10 @@ if (-not (Test-Path -LiteralPath $docPath)) {
 
 $content = (Get-Content -LiteralPath $docPath -Raw).Replace("`r`n", "`n").Replace("`r", "`n")
 $requiredHeadings = @(
-  '## Current Runtime Inputs'
-  '## Packaging Options'
-  '## Recommended Decision'
-  '## Next Plan Trigger'
+  '## Runtime Asset Layout'
+  '## Source Mapping'
+  '## Regeneration'
+  '## Publication Rules'
 )
 
 foreach ($heading in $requiredHeadings) {
@@ -23,19 +23,21 @@ foreach ($heading in $requiredHeadings) {
 }
 
 $requiredLines = @(
-  '- `snapshot_manifest.json`'
-  '- published `official_raw.*`'
-  '- published `derived_metrics.*`'
-  '- published `supercombo_enrichment.*`'
-  '- supported characters: `jp`, `luke`'
-  '1. Bundle skill-local published snapshots under `skills/kb-sf6-frame-current/assets/`'
-  '2. Generate a reduced runtime asset set during packaging'
-  '3. Keep the skill repo-local only until asset packaging is solved'
-  'For phase 1, do not migrate this skill into the public surface until a generated runtime asset subset is defined.'
-  'The follow-up plan should compare bundled full exports versus generated reduced assets and choose one explicit packaging contract.'
-  '- which files ship with the skill'
-  '- how those files are regenerated'
-  '- how published exports remain the final source of truth'
+  '- `skills/kb-sf6-frame-current/assets/runtime_manifest.json`'
+  '- `skills/kb-sf6-frame-current/assets/published/<character_slug>/snapshot_manifest.json`'
+  '- `skills/kb-sf6-frame-current/assets/published/<character_slug>/official_raw.json`'
+  '- `skills/kb-sf6-frame-current/assets/published/<character_slug>/derived_metrics.json`'
+  '- `skills/kb-sf6-frame-current/assets/published/<character_slug>/supercombo_enrichment.json`'
+  '- generated only from `data/exports/<character_slug>/...`'
+  '- never from `data/raw/...` or `data/normalized/...`'
+  '- exclude `*.csv` and `*_manual_review.*`'
+  '- `powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1`'
+  '- rerun after published exports change for `jp` or `luke`'
+  '- only supported characters `jp`, `luke`'
+  '- copy dataset files only when `publication_state = available`'
+  '- `official_raw` remains the source of truth'
+  '- `derived_metrics` remains official-only machine derivation'
+  '- `supercombo_enrichment` remains supplemental and must never override official'
 )
 
 foreach ($line in $requiredLines) {
