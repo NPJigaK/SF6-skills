@@ -6,8 +6,9 @@ $checks = @(
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/'; MustNotContain = '.agents/skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/'; MustNotContain = '.agents/skills/sync-knowledge/' },
   @{ Path = 'AGENTS.md'; MustContain = 'repo-local compatibility copies may still remain during migration and should not be treated as canonical' },
+  @{ Path = 'AGENTS.md'; MustContain = 'Use the canonical path when that skill has already been migrated; otherwise use the repo-local compatibility copy under `.agents/skills/` until that specific skill moves.' },
   @{ Path = '.agents/AGENTS.md'; MustContain = 'generated compatibility output'; MustNotContain = 'skills and related assets only' },
-  @{ Path = '.agents/AGENTS.md'; MustContain = 'some skills may still only exist there until the migration tasks copy them into `skills/`' }
+  @{ Path = '.agents/AGENTS.md'; MustContain = 'Some compatibility skills may still remain here until they are migrated into `skills/` or `maintainer-skills/` as appropriate.' }
 )
 
 foreach ($check in $checks) {
