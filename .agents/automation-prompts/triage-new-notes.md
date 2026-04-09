@@ -11,8 +11,8 @@ Classify each candidate item as one of:
 - insufficient-evidence
 
 Update only:
-- `.agents/skills/kb-sf6-core/references/KNOWLEDGE.md`
-- `.agents/skills/kb-sf6-core/references/REVIEW_QUEUE.md`
+- `skills/kb-sf6-core/references/KNOWLEDGE.md`
+- `skills/kb-sf6-core/references/REVIEW_QUEUE.md`
 
 Rules:
 - Promote only stable core concepts into `KNOWLEDGE.md`.
