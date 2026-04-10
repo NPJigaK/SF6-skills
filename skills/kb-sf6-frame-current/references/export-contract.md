@@ -33,7 +33,7 @@ Supported baseline characters for this skill are `jp` and `luke`.
 - `official_raw` is the source of truth and maps to the repo's T1 preference.
 - `derived_metrics` is acceptable only because it is computed mechanically from `official_raw`.
 - `supercombo_enrichment` is T3 supplemental data. Never let it override official.
-- `*_manual_review.*`, `data/raw/...`, and `data/normalized/...` are intentionally excluded from the packaged runtime subset.
+- `*_manual_review.*`, `*.csv` sidecars, `data/raw/...`, and `data/normalized/...` are intentionally excluded from the packaged runtime subset.
 
 ## Selection Rules
 
@@ -49,4 +49,4 @@ Supported baseline characters for this skill are `jp` and `luke`.
 
 - If the needed dataset is `unavailable`, say so and answer `[保留]`.
 - If a requested value would require manual-review outputs that are not packaged with the skill, answer `[保留]`.
-- If the user asks to audit parser behavior, selector drift, or ingestion state, leave this skill and inspect repo-local data directly.
+- If the user asks to audit parser behavior, selector drift, or ingestion state, stop here and hand off to a repo-local maintainer workflow instead.
