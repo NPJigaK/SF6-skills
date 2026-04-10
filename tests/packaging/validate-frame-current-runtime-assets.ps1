@@ -1,32 +1,10 @@
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
 $assetRoot = Join-Path $skillRoot 'assets'
+$datasets = @('official_raw', 'derived_metrics', 'supercombo_enrichment')
 
 if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
   throw "Missing public skill root: skills/kb-sf6-frame-current"
-}
-
-$requiredFiles = @(
-  'runtime_manifest.json'
-  'published/jp/snapshot_manifest.json'
-  'published/jp/official_raw.json'
-  'published/jp/derived_metrics.json'
-  'published/jp/supercombo_enrichment.json'
-  'published/luke/snapshot_manifest.json'
-  'published/luke/official_raw.json'
-  'published/luke/derived_metrics.json'
-  'published/luke/supercombo_enrichment.json'
-)
-
-$missingFiles = foreach ($relativePath in $requiredFiles) {
-  $fullPath = Join-Path $assetRoot $relativePath
-  if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
-    $relativePath
-  }
-}
-
-if ($missingFiles.Count -gt 0) {
-  throw "Missing runtime asset files: $($missingFiles -join ', ')"
 }
 
 $forbiddenFiles = @()
@@ -43,6 +21,10 @@ if ($forbiddenFiles.Count -gt 0) {
 }
 
 $runtimeManifestPath = Join-Path $assetRoot 'runtime_manifest.json'
+if (-not (Test-Path -LiteralPath $runtimeManifestPath -PathType Leaf)) {
+  throw 'Missing runtime manifest: runtime_manifest.json'
+}
+
 $runtimeManifest = Get-Content -LiteralPath $runtimeManifestPath -Raw | ConvertFrom-Json
 
 if ($runtimeManifest.source_root -ne 'data/exports') {
@@ -104,13 +86,14 @@ foreach ($characterSlug in @('jp', 'luke')) {
     }
   )
 
-  foreach ($datasetEntry in $sourceSnapshotManifest.datasets.PSObject.Properties) {
-    if ($datasetEntry.Value.publication_state -eq 'available') {
+  foreach ($datasetName in $datasets) {
+    $datasetInfo = $sourceSnapshotManifest.datasets.$datasetName
+    if ($datasetInfo.publication_state -eq 'available') {
       $expectedFiles += [ordered]@{
-        target = 'published/' + $characterSlug + '/' + $datasetEntry.Name + '.json'
-        source = 'data/exports/' + $characterSlug + '/' + $datasetEntry.Name + '.json'
-        sourcePath = Join-Path $sourceCharacterRoot ($datasetEntry.Name + '.json')
-        packagedPath = Join-Path $assetRoot ('published/' + $characterSlug + '/' + $datasetEntry.Name + '.json')
+        target = 'published/' + $characterSlug + '/' + $datasetName + '.json'
+        source = 'data/exports/' + $characterSlug + '/' + $datasetName + '.json'
+        sourcePath = Join-Path $sourceCharacterRoot ($datasetName + '.json')
+        packagedPath = Join-Path $assetRoot ('published/' + $characterSlug + '/' + $datasetName + '.json')
       }
     }
   }
@@ -147,10 +130,11 @@ foreach ($characterSlug in @('jp', 'luke')) {
     throw "runtime_manifest.json character inventory mismatch for $characterSlug"
   }
 
-  foreach ($datasetEntry in $sourceSnapshotManifest.datasets.PSObject.Properties) {
-    $packagedDatasetPath = Join-Path $assetRoot ('published/' + $characterSlug + '/' + $datasetEntry.Name + '.json')
-    if ($datasetEntry.Value.publication_state -ne 'available' -and (Test-Path -LiteralPath $packagedDatasetPath -PathType Leaf)) {
-      throw "Packaged dataset exists despite non-available source state: $characterSlug/$($datasetEntry.Name)"
+  foreach ($datasetName in $datasets) {
+    $datasetInfo = $sourceSnapshotManifest.datasets.$datasetName
+    $packagedDatasetPath = Join-Path $assetRoot ('published/' + $characterSlug + '/' + $datasetName + '.json')
+    if ($datasetInfo.publication_state -ne 'available' -and (Test-Path -LiteralPath $packagedDatasetPath -PathType Leaf)) {
+      throw "Packaged dataset exists despite non-available source state: $characterSlug/$datasetName"
     }
   }
 
