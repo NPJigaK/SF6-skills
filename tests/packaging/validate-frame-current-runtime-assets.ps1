@@ -1,5 +1,10 @@
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
-$assetRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current/assets'
+$skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
+$assetRoot = Join-Path $skillRoot 'assets'
+
+if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
+  throw "Missing public skill root: skills/kb-sf6-frame-current"
+}
 
 $requiredFiles = @(
   'runtime_manifest.json'
@@ -44,14 +49,122 @@ if ($runtimeManifest.source_root -ne 'data/exports') {
   throw "runtime_manifest.json source_root must be data/exports"
 }
 
+if ($runtimeManifest.skill_root -ne 'skills/kb-sf6-frame-current/assets') {
+  throw "runtime_manifest.json skill_root must be skills/kb-sf6-frame-current/assets"
+}
+
 $characterSlugs = @($runtimeManifest.characters.character_slug)
 if ($characterSlugs.Count -ne 2 -or $characterSlugs[0] -ne 'jp' -or $characterSlugs[1] -ne 'luke') {
   throw "runtime_manifest.json characters must be exactly jp,luke"
 }
 
-$fileTargets = @($runtimeManifest.characters.files.target)
-if ($fileTargets.Count -ne 8 -or ($fileTargets | Where-Object { $_ -notlike 'published/*' }).Count -gt 0) {
-  throw "runtime_manifest.json file targets must be relative to skill_root"
+function Get-RelativePath {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string] $BasePath,
+    [Parameter(Mandatory = $true)]
+    [string] $FullPath
+  )
+
+  return $FullPath.Substring($BasePath.Length + 1).Replace('\', '/')
+}
+
+function Get-CharacterManifestRecord {
+  param(
+    [Parameter(Mandatory = $true)]
+    $CharacterEntry,
+    [Parameter(Mandatory = $true)]
+    [string] $Target
+  )
+
+  return ($CharacterEntry.files | Where-Object { $_.target -eq $Target } | Select-Object -First 1)
+}
+
+$expectedInventory = @('runtime_manifest.json')
+
+foreach ($characterSlug in @('jp', 'luke')) {
+  $sourceCharacterRoot = Join-Path $repoRoot (Join-Path 'data/exports' $characterSlug)
+  $sourceSnapshotManifestPath = Join-Path $sourceCharacterRoot 'snapshot_manifest.json'
+  if (-not (Test-Path -LiteralPath $sourceSnapshotManifestPath -PathType Leaf)) {
+    throw "Missing source snapshot manifest: data/exports/$characterSlug/snapshot_manifest.json"
+  }
+
+  $sourceSnapshotManifest = Get-Content -LiteralPath $sourceSnapshotManifestPath -Raw | ConvertFrom-Json
+  $characterEntry = @($runtimeManifest.characters | Where-Object { $_.character_slug -eq $characterSlug } | Select-Object -First 1)
+  if ($characterEntry.Count -ne 1) {
+    throw "runtime_manifest.json missing character entry: $characterSlug"
+  }
+
+  $expectedFiles = @(
+    [ordered]@{
+      target = 'published/' + $characterSlug + '/snapshot_manifest.json'
+      source = 'data/exports/' + $characterSlug + '/snapshot_manifest.json'
+      sourcePath = $sourceSnapshotManifestPath
+      packagedPath = Join-Path $assetRoot ('published/' + $characterSlug + '/snapshot_manifest.json')
+    }
+  )
+
+  foreach ($datasetEntry in $sourceSnapshotManifest.datasets.PSObject.Properties) {
+    if ($datasetEntry.Value.publication_state -eq 'available') {
+      $expectedFiles += [ordered]@{
+        target = 'published/' + $characterSlug + '/' + $datasetEntry.Name + '.json'
+        source = 'data/exports/' + $characterSlug + '/' + $datasetEntry.Name + '.json'
+        sourcePath = Join-Path $sourceCharacterRoot ($datasetEntry.Name + '.json')
+        packagedPath = Join-Path $assetRoot ('published/' + $characterSlug + '/' + $datasetEntry.Name + '.json')
+      }
+    }
+  }
+
+  foreach ($expectedFile in $expectedFiles) {
+    $runtimeRecord = Get-CharacterManifestRecord -CharacterEntry $characterEntry -Target $expectedFile.target
+    if ($null -eq $runtimeRecord) {
+      throw "runtime_manifest.json missing target: $($expectedFile.target)"
+    }
+
+    if ($runtimeRecord.source -ne $expectedFile.source) {
+      throw "runtime_manifest.json source mismatch for $($expectedFile.target)"
+    }
+
+    if (-not (Test-Path -LiteralPath $expectedFile.packagedPath -PathType Leaf)) {
+      throw "Missing packaged file: $($expectedFile.target)"
+    }
+
+    $expectedHash = (Get-FileHash -LiteralPath $expectedFile.sourcePath -Algorithm SHA256).Hash.ToLowerInvariant()
+    $packagedHash = (Get-FileHash -LiteralPath $expectedFile.packagedPath -Algorithm SHA256).Hash.ToLowerInvariant()
+
+    if ($runtimeRecord.sha256 -ne $expectedHash -or $runtimeRecord.sha256 -ne $packagedHash) {
+      throw "runtime_manifest.json sha256 mismatch for $($expectedFile.target)"
+    }
+
+    if (-not $expectedFile.target.StartsWith('published/')) {
+      throw "runtime_manifest.json target must be relative to skill_root: $($expectedFile.target)"
+    }
+  }
+
+  $actualCharacterTargets = @($characterEntry.files.target)
+  $expectedCharacterTargets = @($expectedFiles.target)
+  if (Compare-Object ($actualCharacterTargets | Sort-Object) ($expectedCharacterTargets | Sort-Object)) {
+    throw "runtime_manifest.json character inventory mismatch for $characterSlug"
+  }
+
+  foreach ($datasetEntry in $sourceSnapshotManifest.datasets.PSObject.Properties) {
+    $packagedDatasetPath = Join-Path $assetRoot ('published/' + $characterSlug + '/' + $datasetEntry.Name + '.json')
+    if ($datasetEntry.Value.publication_state -ne 'available' -and (Test-Path -LiteralPath $packagedDatasetPath -PathType Leaf)) {
+      throw "Packaged dataset exists despite non-available source state: $characterSlug/$($datasetEntry.Name)"
+    }
+  }
+
+  $expectedInventory += $expectedFiles.target
+}
+
+$actualInventory = @(
+  Get-ChildItem -LiteralPath $assetRoot -Recurse -File | ForEach-Object {
+    Get-RelativePath -BasePath $assetRoot -FullPath $_.FullName
+  }
+)
+
+if (Compare-Object ($actualInventory | Sort-Object) ($expectedInventory | Sort-Object)) {
+  throw 'Packaged inventory does not match the expected runtime subset'
 }
 
 Write-Host 'Frame-current runtime assets OK'
