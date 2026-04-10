@@ -1,3 +1,5 @@
+Set-StrictMode -Version Latest
+
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
 $assetRoot = Join-Path $skillRoot 'assets'
@@ -9,8 +11,10 @@ if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
 
 $forbiddenFiles = @()
 if (Test-Path -LiteralPath $assetRoot -PathType Container) {
-  $forbiddenFiles = Get-ChildItem -LiteralPath $assetRoot -Recurse -File |
+  $forbiddenFiles = @(
+    Get-ChildItem -LiteralPath $assetRoot -Recurse -File |
     Where-Object { $_.Extension -eq '.csv' -or $_.Name -like '*_manual_review.*' }
+  )
 }
 
 if ($forbiddenFiles.Count -gt 0) {
@@ -40,6 +44,26 @@ if ($characterSlugs.Count -ne 2 -or $characterSlugs[0] -ne 'jp' -or $characterSl
   throw "runtime_manifest.json characters must be exactly jp,luke"
 }
 
+$manifestEntries = @{}
+foreach ($characterEntry in @($runtimeManifest.characters)) {
+  foreach ($fileEntry in @($characterEntry.files)) {
+    if ([string]::IsNullOrWhiteSpace($fileEntry.target) -or [string]::IsNullOrWhiteSpace($fileEntry.source) -or [string]::IsNullOrWhiteSpace($fileEntry.sha256)) {
+      throw "runtime_manifest.json contains incomplete file entry"
+    }
+
+    if ($manifestEntries.ContainsKey($fileEntry.target)) {
+      throw "Duplicate runtime_manifest.json target: $($fileEntry.target)"
+    }
+
+    $manifestEntries[$fileEntry.target] = [ordered]@{
+      character_slug = $characterEntry.character_slug
+      target = $fileEntry.target
+      source = $fileEntry.source
+      sha256 = $fileEntry.sha256
+    }
+  }
+}
+
 function Get-RelativePath {
   param(
     [Parameter(Mandatory = $true)]
@@ -49,17 +73,6 @@ function Get-RelativePath {
   )
 
   return $FullPath.Substring($BasePath.Length + 1).Replace('\', '/')
-}
-
-function Get-CharacterManifestRecord {
-  param(
-    [Parameter(Mandatory = $true)]
-    $CharacterEntry,
-    [Parameter(Mandatory = $true)]
-    [string] $Target
-  )
-
-  return ($CharacterEntry.files | Where-Object { $_.target -eq $Target } | Select-Object -First 1)
 }
 
 $expectedInventory = @('runtime_manifest.json')
@@ -88,6 +101,10 @@ foreach ($characterSlug in @('jp', 'luke')) {
 
   foreach ($datasetName in $datasets) {
     $datasetInfo = $sourceSnapshotManifest.datasets.$datasetName
+    if ($null -eq $datasetInfo) {
+      throw "Missing dataset entry in snapshot manifest: $characterSlug/$datasetName"
+    }
+
     if ($datasetInfo.publication_state -eq 'available') {
       $expectedFiles += [ordered]@{
         target = 'published/' + $characterSlug + '/' + $datasetName + '.json'
@@ -99,7 +116,7 @@ foreach ($characterSlug in @('jp', 'luke')) {
   }
 
   foreach ($expectedFile in $expectedFiles) {
-    $runtimeRecord = Get-CharacterManifestRecord -CharacterEntry $characterEntry -Target $expectedFile.target
+    $runtimeRecord = $manifestEntries[$expectedFile.target]
     if ($null -eq $runtimeRecord) {
       throw "runtime_manifest.json missing target: $($expectedFile.target)"
     }

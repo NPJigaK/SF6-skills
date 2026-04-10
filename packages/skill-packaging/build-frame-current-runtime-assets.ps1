@@ -1,3 +1,5 @@
+Set-StrictMode -Version Latest
+
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
 if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
