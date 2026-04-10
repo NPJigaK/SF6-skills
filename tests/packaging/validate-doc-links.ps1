@@ -6,10 +6,15 @@ $checks = @(
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/'; MustNotContain = '.agents/skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/'; MustNotContain = '.agents/skills/sync-knowledge/' },
-  @{ Path = 'AGENTS.md'; MustContain = 'repo-local compatibility copies may still remain during migration and should not be treated as canonical' },
-  @{ Path = 'AGENTS.md'; MustContain = 'Use the canonical path when that skill has already been migrated; otherwise use the repo-local compatibility copy under `.agents/skills/` until that specific skill moves.' },
-  @{ Path = '.agents/AGENTS.md'; MustContain = 'generated compatibility output'; MustNotContain = 'skills and related assets only' },
-  @{ Path = '.agents/AGENTS.md'; MustContain = 'Some compatibility skills may still remain here until they are migrated into `skills/` or `maintainer-skills/` as appropriate.' }
+  @{ Path = 'AGENTS.md'; MustContain = 'skills/` is the canonical public source.' },
+  @{ Path = 'AGENTS.md'; MustContain = 'Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.' },
+  @{ Path = 'AGENTS.md'; MustContain = 'The sync refresh removes stale extra directories.' },
+  @{ Path = '.agents/AGENTS.md'; MustContain = '`skills/` is the canonical public source.'; MustNotContain = 'skills and related assets only' },
+  @{ Path = '.agents/AGENTS.md'; MustContain = '`.agents/skills/` is the exact top-level mirror of `skills/` for repo-local dogfooding.' },
+  @{ Path = '.agents/AGENTS.md'; MustContain = 'The sync refresh removes stale extra directories.' },
+  @{ Path = 'docs/distribution/repo-local-dogfooding.md'; MustContain = '`skills/` is the canonical public source.' },
+  @{ Path = 'docs/distribution/repo-local-dogfooding.md'; MustContain = '`.agents/skills/` is the exact top-level mirror of `skills/` for repo-local dogfooding.' },
+  @{ Path = 'docs/distribution/repo-local-dogfooding.md'; MustContain = 'The sync refresh removes stale extra directories.' }
 )
 
 foreach ($check in $checks) {

@@ -2,9 +2,9 @@
 
 Repo-wide guidance is defined in the root `AGENTS.md`.
 
-`.agents/skills/` is generated compatibility output for repo-local dogfooding and the exact top-level mirror of `skills/`.
-Do not treat `.agents/skills/` as a separate compatibility layer or canonical source.
-Legacy wording retained for validator compatibility: Some compatibility skills may still remain here until they are migrated into `skills/` or `maintainer-skills/` as appropriate.
+`skills/` is the canonical public source.
+`.agents/skills/` is the exact top-level mirror of `skills/` for repo-local dogfooding.
+The sync refresh removes stale extra directories.
 
 Refresh it from `skills/` with:
 
