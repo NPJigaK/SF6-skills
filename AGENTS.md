@@ -26,6 +26,7 @@
   - `derived_metrics`: official-only の機械計算結果
   - `supercombo_enrichment`: supplemental な補完のみ
 - current fact を答えるときは `data/exports/<character_slug>/snapshot_manifest.json` を入口にし、`publication_state = available` の dataset だけ使う。
+- public distributed `skills/kb-sf6-frame-current/` は、この repo-level canonical published source から生成された packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` を読む。
 - `*_manual_review.*`, `data/raw/...`, `data/normalized/...` は通常回答の最終根拠にしない。
 
 ## Knowledge と Skills
