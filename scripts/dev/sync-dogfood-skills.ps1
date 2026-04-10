@@ -6,6 +6,13 @@ New-Item -ItemType Directory -Force -Path $targetRoot | Out-Null
 
 $publicSkills = Get-ChildItem $sourceRoot -Directory
 $publicNames = $publicSkills.Name
+$staleSkills = Get-ChildItem -LiteralPath $targetRoot -Directory | Where-Object {
+  $publicNames -notcontains $_.Name
+}
+
+foreach ($skill in $staleSkills) {
+  Remove-Item -LiteralPath $skill.FullName -Recurse -Force
+}
 
 foreach ($skill in $publicSkills) {
   $destination = Join-Path $targetRoot $skill.Name

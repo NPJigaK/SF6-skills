@@ -26,6 +26,7 @@
   - `derived_metrics`: official-only の機械計算結果
   - `supercombo_enrichment`: supplemental な補完のみ
 - current fact を答えるときは `data/exports/<character_slug>/snapshot_manifest.json` を入口にし、`publication_state = available` の dataset だけ使う。
+- public distributed `skills/kb-sf6-frame-current/` は、この repo-level canonical published source から生成された packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` を読む。
 - `*_manual_review.*`, `data/raw/...`, `data/normalized/...` は通常回答の最終根拠にしない。
 
 ## Knowledge と Skills
@@ -33,8 +34,9 @@
 - supported baseline characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
 
+`skills/` is the canonical public source.
 Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.
-Treat `skills/` as the canonical public source and keep the mirror in sync.
+The sync refresh removes stale extra directories.
 
 ## Ingestion / Data
 - 実装コードは `ingest/frame_data/` に置く。`.agents/skills/` に取得コードは置かない。
