@@ -44,6 +44,8 @@ Monorepo migration is in progress, so some repo-local content may still live in 
 
 - current fact は `data/exports/<character_slug>/snapshot_manifest.json` を entrypoint に確認する
 - `publication_state = available` の dataset だけを current-fact lookup に使う
+- repo-level canonical published data は `data/exports/<character_slug>/...`
+- public distributed `skills/kb-sf6-frame-current` は generated packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` を read し、これらは `data/exports/<character_slug>/...` から生成される
 - lookup order は `official_raw` -> `derived_metrics` -> `supercombo_enrichment`
 - `official_raw` を canonical source として先に読む
 - `derived_metrics` は official-only の機械計算結果として使う
