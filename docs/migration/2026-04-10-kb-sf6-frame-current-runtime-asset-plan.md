@@ -769,12 +769,19 @@ git commit -m "feat: package frame-current runtime assets"
 **Files:**
 
 - Generated output: `E:\github\SF6-skills\.agents\skills\kb-sf6-frame-current\...`
+- Modify: `E:\github\SF6-skills\scripts\dev\sync-dogfood-skills.ps1`
+- Modify: `E:\github\SF6-skills\tests\install\validate-dogfood-mirror.ps1`
 - Verify: `E:\github\SF6-skills\tests\install\validate-dogfood-mirror.ps1`
 - Verify: `E:\github\SF6-skills\tests\integration\validate-kb-sf6-frame-current-location.ps1`
 - Verify: `E:\github\SF6-skills\tests\packaging\validate-frame-current-runtime-assets.ps1`
 - Verify: `E:\github\SF6-skills\tests\integration\validate-frame-current-boundary.ps1`
 
 - [ ] **Step 1: Sync the repo-local compatibility mirror**
+
+Before rerunning the sync, update the mirror tooling so `.agents/skills/` becomes a true root-level mirror of `skills/`:
+
+- `scripts/dev/sync-dogfood-skills.ps1` must remove stale target skill directories whose names are present under `.agents/skills/` but not under `skills/`.
+- `tests/install/validate-dogfood-mirror.ps1` must assert that the top-level directory set under `.agents/skills/` exactly matches the top-level directory set under `skills/` before checking per-skill inventory and hashes.
 
 Run:
 
@@ -809,7 +816,7 @@ Expected:
 - [ ] **Step 3: Commit**
 
 ```bash
-git add .agents/skills/kb-sf6-frame-current
+git add scripts/dev/sync-dogfood-skills.ps1 tests/install/validate-dogfood-mirror.ps1 .agents/skills/kb-sf6-frame-current
 git commit -m "refactor: migrate frame-current to public skills surface"
 ```
 
