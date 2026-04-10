@@ -495,41 +495,145 @@ Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $assetRoot = Join-Path $repoRoot 'skills\kb-sf6-frame-current\assets'
-$publishedRoot = Join-Path $assetRoot 'published'
-$requiredFiles = @(
-  'runtime_manifest.json'
-  'published\jp\snapshot_manifest.json'
-  'published\jp\official_raw.json'
-  'published\jp\derived_metrics.json'
-  'published\jp\supercombo_enrichment.json'
-  'published\luke\snapshot_manifest.json'
-  'published\luke\official_raw.json'
-  'published\luke\derived_metrics.json'
-  'published\luke\supercombo_enrichment.json'
-)
+$runtimeManifestPath = Join-Path $assetRoot 'runtime_manifest.json'
+$characters = @('jp', 'luke')
+$datasets = @('official_raw', 'derived_metrics', 'supercombo_enrichment')
 
-foreach ($relativePath in $requiredFiles) {
-  $fullPath = Join-Path $assetRoot $relativePath
-  if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
-    throw "Missing frame-current runtime asset: $relativePath"
-  }
+if (-not (Test-Path -LiteralPath $runtimeManifestPath -PathType Leaf)) {
+  throw 'Missing runtime asset file: runtime_manifest.json'
 }
 
-$disallowed = Get-ChildItem -Path $assetRoot -Recurse -File | Where-Object {
+$disallowed = Get-ChildItem -LiteralPath $assetRoot -Recurse -File | Where-Object {
   $_.Extension -eq '.csv' -or $_.Name -like '*_manual_review.*'
 }
 if ($disallowed.Count -gt 0) {
-  throw "Disallowed runtime assets present: $($disallowed.FullName -join ', ')"
+  $relativeDisallowed = $disallowed | ForEach-Object {
+    $_.FullName.Substring($assetRoot.Length + 1).Replace('\', '/')
+  }
+  throw "Disallowed runtime assets present: $($relativeDisallowed -join ', ')"
 }
 
-$runtimeManifest = Get-Content -LiteralPath (Join-Path $assetRoot 'runtime_manifest.json') -Raw | ConvertFrom-Json -AsHashtable
+$runtimeManifest = Get-Content -LiteralPath $runtimeManifestPath -Raw | ConvertFrom-Json
 if ($runtimeManifest.source_root -ne 'data/exports') {
   throw 'runtime_manifest.json must record data/exports as the source root'
 }
+if ($runtimeManifest.skill_root -ne 'skills/kb-sf6-frame-current/assets') {
+  throw 'runtime_manifest.json must record the public skill asset root'
+}
 
-$characterSet = @($runtimeManifest.characters.character_slug)
+$characterSet = @($runtimeManifest.characters | ForEach-Object { $_.character_slug })
 if (($characterSet -join ',') -ne 'jp,luke') {
   throw "runtime_manifest.json must contain exactly jp and luke entries, got: $($characterSet -join ', ')"
+}
+
+$manifestEntries = @{}
+foreach ($characterEntry in @($runtimeManifest.characters)) {
+  foreach ($fileEntry in @($characterEntry.files)) {
+    if ([string]::IsNullOrWhiteSpace($fileEntry.target) -or
+        [string]::IsNullOrWhiteSpace($fileEntry.source) -or
+        [string]::IsNullOrWhiteSpace($fileEntry.sha256)) {
+      throw "runtime_manifest.json contains an incomplete file entry for character $($characterEntry.character_slug)"
+    }
+
+    if ($manifestEntries.ContainsKey($fileEntry.target)) {
+      throw "runtime_manifest.json contains duplicate target entries: $($fileEntry.target)"
+    }
+
+    $manifestEntries[$fileEntry.target] = $fileEntry
+  }
+}
+
+$expectedPackagedFiles = New-Object System.Collections.Generic.List[string]
+$expectedPackagedFiles.Add('runtime_manifest.json') | Out-Null
+
+foreach ($characterSlug in $characters) {
+  $sourceCharacterRoot = Join-Path $repoRoot "data\exports\$characterSlug"
+  $sourceSnapshotManifestPath = Join-Path $sourceCharacterRoot 'snapshot_manifest.json'
+  if (-not (Test-Path -LiteralPath $sourceSnapshotManifestPath -PathType Leaf)) {
+    throw "Missing source snapshot manifest: $sourceSnapshotManifestPath"
+  }
+
+  $packagedSnapshotTarget = "published/$characterSlug/snapshot_manifest.json"
+  $packagedSnapshotPath = Join-Path $assetRoot $packagedSnapshotTarget
+  if (-not (Test-Path -LiteralPath $packagedSnapshotPath -PathType Leaf)) {
+    throw "Missing packaged snapshot manifest: $packagedSnapshotTarget"
+  }
+
+  $expectedPackagedFiles.Add($packagedSnapshotTarget) | Out-Null
+  if (-not $manifestEntries.ContainsKey($packagedSnapshotTarget)) {
+    throw "runtime_manifest.json is missing target entry: $packagedSnapshotTarget"
+  }
+
+  $snapshotEntry = $manifestEntries[$packagedSnapshotTarget]
+  if ($snapshotEntry.source -ne "data/exports/$characterSlug/snapshot_manifest.json") {
+    throw "runtime_manifest.json has the wrong source for $packagedSnapshotTarget"
+  }
+  if ($snapshotEntry.sha256 -ne (Get-FileHash -LiteralPath $sourceSnapshotManifestPath -Algorithm SHA256).Hash.ToLowerInvariant()) {
+    throw "runtime_manifest.json has the wrong source hash for $packagedSnapshotTarget"
+  }
+  if ($snapshotEntry.sha256 -ne (Get-FileHash -LiteralPath $packagedSnapshotPath -Algorithm SHA256).Hash.ToLowerInvariant()) {
+    throw "runtime_manifest.json has the wrong packaged hash for $packagedSnapshotTarget"
+  }
+
+  $sourceSnapshotManifest = Get-Content -LiteralPath $sourceSnapshotManifestPath -Raw | ConvertFrom-Json
+
+  foreach ($datasetName in $datasets) {
+    $datasetInfo = $sourceSnapshotManifest.datasets.$datasetName
+    if ($null -eq $datasetInfo) {
+      throw "Source snapshot manifest is missing dataset entry: $characterSlug/$datasetName"
+    }
+
+    $packagedDatasetTarget = "published/$characterSlug/$datasetName.json"
+    $packagedDatasetPath = Join-Path $assetRoot $packagedDatasetTarget
+
+    if ($datasetInfo.publication_state -eq 'available') {
+      $sourceDatasetPath = Join-Path $sourceCharacterRoot "$datasetName.json"
+      if (-not (Test-Path -LiteralPath $sourceDatasetPath -PathType Leaf)) {
+        throw "Missing source dataset file: $sourceDatasetPath"
+      }
+      if (-not (Test-Path -LiteralPath $packagedDatasetPath -PathType Leaf)) {
+        throw "Missing packaged dataset file: $packagedDatasetTarget"
+      }
+
+      $expectedPackagedFiles.Add($packagedDatasetTarget) | Out-Null
+      if (-not $manifestEntries.ContainsKey($packagedDatasetTarget)) {
+        throw "runtime_manifest.json is missing target entry: $packagedDatasetTarget"
+      }
+
+      $datasetEntry = $manifestEntries[$packagedDatasetTarget]
+      if ($datasetEntry.source -ne "data/exports/$characterSlug/$datasetName.json") {
+        throw "runtime_manifest.json has the wrong source for $packagedDatasetTarget"
+      }
+      if ($datasetEntry.target -notlike 'published/*') {
+        throw "runtime_manifest.json target entries must stay relative to skill_root: $($datasetEntry.target)"
+      }
+      if ($datasetEntry.sha256 -ne (Get-FileHash -LiteralPath $sourceDatasetPath -Algorithm SHA256).Hash.ToLowerInvariant()) {
+        throw "runtime_manifest.json has the wrong source hash for $packagedDatasetTarget"
+      }
+      if ($datasetEntry.sha256 -ne (Get-FileHash -LiteralPath $packagedDatasetPath -Algorithm SHA256).Hash.ToLowerInvariant()) {
+        throw "runtime_manifest.json has the wrong packaged hash for $packagedDatasetTarget"
+      }
+    }
+    elseif (Test-Path -LiteralPath $packagedDatasetPath -PathType Leaf) {
+      throw "Packaged dataset should be absent when publication_state is not available: $packagedDatasetTarget"
+    }
+  }
+}
+
+$actualPackagedFiles = Get-ChildItem -LiteralPath $assetRoot -Recurse -File | ForEach-Object {
+  $_.FullName.Substring($assetRoot.Length + 1).Replace('\', '/')
+}
+
+$expectedList = @($expectedPackagedFiles | Sort-Object)
+$actualList = @($actualPackagedFiles | Sort-Object)
+if ($expectedList.Count -ne $actualList.Count) {
+  throw "Packaged runtime asset count mismatch: expected=$($expectedList.Count) actual=$($actualList.Count)"
+}
+
+for ($i = 0; $i -lt $expectedList.Count; $i++) {
+  if ($expectedList[$i] -ne $actualList[$i]) {
+    throw "Unexpected packaged runtime asset inventory mismatch at position $($i + 1): expected=$($expectedList[$i]) actual=$($actualList[$i])"
+  }
 }
 
 Write-Host 'Frame-current runtime assets OK'
