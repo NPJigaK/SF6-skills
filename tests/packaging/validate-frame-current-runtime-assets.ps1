@@ -49,4 +49,9 @@ if ($characterSlugs.Count -ne 2 -or $characterSlugs[0] -ne 'jp' -or $characterSl
   throw "runtime_manifest.json characters must be exactly jp,luke"
 }
 
+$fileTargets = @($runtimeManifest.characters.files.target)
+if ($fileTargets.Count -ne 8 -or ($fileTargets | Where-Object { $_ -notlike 'published/*' }).Count -gt 0) {
+  throw "runtime_manifest.json file targets must be relative to skill_root"
+}
+
 Write-Host 'Frame-current runtime assets OK'

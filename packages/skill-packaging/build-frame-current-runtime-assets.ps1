@@ -1,6 +1,10 @@
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
-$skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current/assets'
-$assetRoot = $skillRoot
+$skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
+if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
+  throw "Missing public skill root: skills/kb-sf6-frame-current"
+}
+
+$assetRoot = Join-Path $skillRoot 'assets'
 $publishedRoot = Join-Path $assetRoot 'published'
 $runtimeManifestPath = Join-Path $assetRoot 'runtime_manifest.json'
 
@@ -37,7 +41,7 @@ foreach ($characterSlug in $characters) {
   $snapshotManifest = Get-Content -LiteralPath $sourceSnapshotManifestPath -Raw | ConvertFrom-Json
   $fileRecords = @(
     [ordered]@{
-      target = 'skills/kb-sf6-frame-current/assets/published/' + $characterSlug + '/snapshot_manifest.json'
+      target = 'published/' + $characterSlug + '/snapshot_manifest.json'
       source = 'data/exports/' + $characterSlug + '/snapshot_manifest.json'
       sha256 = (Get-FileHash -LiteralPath $targetSnapshotManifestPath -Algorithm SHA256).Hash.ToLowerInvariant()
     }
@@ -59,7 +63,7 @@ foreach ($characterSlug in $characters) {
       Copy-Item -LiteralPath $sourceDatasetPath -Destination $targetDatasetPath -Force
 
       $fileRecords += [ordered]@{
-        target = 'skills/kb-sf6-frame-current/assets/published/' + $characterSlug + '/' + $datasetName + '.json'
+        target = 'published/' + $characterSlug + '/' + $datasetName + '.json'
         source = 'data/exports/' + $characterSlug + '/' + $datasetName + '.json'
         sha256 = (Get-FileHash -LiteralPath $targetDatasetPath -Algorithm SHA256).Hash.ToLowerInvariant()
       }
