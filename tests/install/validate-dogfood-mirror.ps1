@@ -51,9 +51,30 @@ function Get-SkillInventory {
     [string]$SkillRoot
   )
 
+  function Get-InventoryHash {
+    param(
+      [Parameter(Mandatory = $true)]
+      [string]$FilePath
+    )
+
+    $textExtensions = @('.json', '.md', '.yaml', '.yml', '.txt', '.csv')
+    $extension = [System.IO.Path]::GetExtension($FilePath).ToLowerInvariant()
+
+    if ($textExtensions -contains $extension) {
+      $content = Get-Content -LiteralPath $FilePath -Raw
+      $normalizedContent = $content.Replace("`r`n", "`n").Replace("`r", "`n")
+      $bytes = [System.Text.Encoding]::UTF8.GetBytes($normalizedContent)
+      return [System.BitConverter]::ToString(
+        [System.Security.Cryptography.SHA256]::Create().ComputeHash($bytes)
+      ).Replace('-', '')
+    }
+
+    return (Get-FileHash -LiteralPath $FilePath).Hash
+  }
+
   $inventory = Get-ChildItem -LiteralPath $SkillRoot -Recurse -File | ForEach-Object {
     $relativePath = Get-RelativeInventoryPath -RootPath $SkillRoot -FullPath $_.FullName
-    $fileHash = (Get-FileHash -LiteralPath $_.FullName).Hash
+    $fileHash = Get-InventoryHash -FilePath $_.FullName
     "$relativePath`t$fileHash"
   }
 
