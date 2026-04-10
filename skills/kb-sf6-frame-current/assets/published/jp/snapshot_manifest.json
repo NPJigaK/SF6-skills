@@ -1,0 +1,54 @@
+{
+  "character_slug": "jp",
+  "schema_version": "3.0.0",
+  "export_contract_version": "3.0.0",
+  "derivation_rule_version": "1.0.0",
+  "repo_generation_registry_version": "2.1.0",
+  "repo_generation_registry_sha256": "744d503e399106c1ad7235e8fccd1bb0f26225143fcf40f77faa60228d8f6c95",
+  "repo_generation_binding_policy_version": "1.0.0",
+  "repo_generation_binding_policy_sha256": "23a340b4de156c023c13cc96bdbe61e8a31bc8c161218701d3da5fa67c902889",
+  "datasets": {
+    "official_raw": {
+      "publication_state": "available",
+      "published_run_id": "20260310T023946391024Z-c21b1823",
+      "published_snapshot_ids": [
+        "20260310T023946Z-2de42572"
+      ],
+      "published_record_count": 61,
+      "withheld_review_count": 8,
+      "registry_version": "2.1.0",
+      "registry_sha256": "744d503e399106c1ad7235e8fccd1bb0f26225143fcf40f77faa60228d8f6c95",
+      "binding_policy_version": null,
+      "binding_policy_sha256": null,
+      "content_hash": "5cfc95d1afeed55154d80c8c54c978c00a0d43ae225804ad65db04d1922a7031"
+    },
+    "supercombo_enrichment": {
+      "publication_state": "available",
+      "published_run_id": "20260310T093620935383Z-50f30b25",
+      "published_snapshot_ids": [
+        "20260310T023617Z-3b8fa28a"
+      ],
+      "published_record_count": 47,
+      "withheld_review_count": 17,
+      "registry_version": "2.1.0",
+      "registry_sha256": "744d503e399106c1ad7235e8fccd1bb0f26225143fcf40f77faa60228d8f6c95",
+      "binding_policy_version": "1.0.0",
+      "binding_policy_sha256": "23a340b4de156c023c13cc96bdbe61e8a31bc8c161218701d3da5fa67c902889",
+      "content_hash": "64aa440a06913110bd8146f7da0b2f793766c44fc0cba0a4908af0782acbeb34"
+    },
+    "derived_metrics": {
+      "publication_state": "available",
+      "published_run_id": "20260310T023946391024Z-c21b1823",
+      "published_snapshot_ids": [
+        "20260310T023946Z-2de42572"
+      ],
+      "published_record_count": 61,
+      "withheld_review_count": 8,
+      "registry_version": "2.1.0",
+      "registry_sha256": "744d503e399106c1ad7235e8fccd1bb0f26225143fcf40f77faa60228d8f6c95",
+      "binding_policy_version": null,
+      "binding_policy_sha256": null,
+      "content_hash": "335c25d264a96632c9ef2793a057b57fa76f4d954162833292fd9df608da5744"
+    }
+  }
+}
