@@ -17,6 +17,21 @@ if (-not (Test-Path -LiteralPath $targetRoot)) {
   throw "Missing dogfood mirror root: $targetRoot"
 }
 
+$targetSkills = Get-ChildItem -LiteralPath $targetRoot -Directory
+
+$publicSkillNames = @($publicSkills.Name | Sort-Object)
+$targetSkillNames = @($targetSkills.Name | Sort-Object)
+
+if ($publicSkillNames.Count -ne $targetSkillNames.Count -or (@($publicSkillNames) -join "`n") -ne (@($targetSkillNames) -join "`n")) {
+  $diff = Compare-Object -ReferenceObject $publicSkillNames -DifferenceObject $targetSkillNames
+  $diffText = if ($diff) {
+    $diff | ForEach-Object { "$($_.SideIndicator) $($_.InputObject)" } | Sort-Object | Out-String
+  } else {
+    'unknown difference'
+  }
+  throw "Dogfood mirror top-level directory set mismatch:`n$diffText"
+}
+
 function Get-RelativeInventoryPath {
   param(
     [Parameter(Mandatory = $true)]
