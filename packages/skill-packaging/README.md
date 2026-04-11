@@ -2,6 +2,7 @@
 
 Shared packaging scripts live here.
 
-Current entrypoint:
+Current entrypoints:
 
 - `build-frame-current-runtime-assets.ps1`
+- `build-release-bundle.ps1`
