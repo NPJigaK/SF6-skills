@@ -1,13 +1,11 @@
 # OpenCode Install
 
-Add the monorepo as a plugin entry in `opencode.json`:
+Ask OpenCode to run this install flow for you.
 
-```json
-{
-  "plugins": [
-    "sf6-skills@git+https://github.com/NPJigaK/SF6-skills.git"
-  ]
-}
+```text
+Fetch https://raw.githubusercontent.com/NPJigaK/SF6-skills/main/packages/skill-installers/install-sf6-skills.ps1, save it locally, and run it for agent opencode using the latest sf6-skills-bundle.zip release from NPJigaK/SF6-skills.
 ```
 
-Use the git URL above so OpenCode can resolve the package directly from the repository.
+Target install path:
+
+- `~/.config/opencode/skills/sf6-skills`

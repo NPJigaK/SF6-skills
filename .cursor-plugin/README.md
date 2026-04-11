@@ -1,5 +1,5 @@
 # Cursor Plugin
 
-Cursor is documentation-first in phase 1.
+Cursor distribution uses the shared release-bundle installer.
 
-Do not publish marketplace metadata yet. Keep the surface limited to docs until the Cursor packaging plan is approved.
+See [INSTALL.md](./INSTALL.md).

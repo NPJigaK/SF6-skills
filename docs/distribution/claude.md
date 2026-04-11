@@ -1,9 +1,8 @@
 # Claude Distribution
 
-Claude distribution uses a development marketplace manifest for the SF6 skills monorepo.
+Claude distribution uses the shared release-bundle installer plus the development marketplace manifest.
 
-Primary install reference:
+Primary install references:
 
+- [`.claude-plugin/INSTALL.md`](../../.claude-plugin/INSTALL.md)
 - [`.claude-plugin/marketplace.json`](../../.claude-plugin/marketplace.json)
-
-Keep the Claude surface limited to the plugin manifest until the packaging format changes.

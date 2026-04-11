@@ -1,15 +1,11 @@
 # Codex Install
 
-Clone the repository:
+Ask Codex to run this install flow for you.
 
-```powershell
-git clone https://github.com/NPJigaK/SF6-skills.git
+```text
+Fetch https://raw.githubusercontent.com/NPJigaK/SF6-skills/main/packages/skill-installers/install-sf6-skills.ps1, save it locally, and run it for agent codex using the latest sf6-skills-bundle.zip release from NPJigaK/SF6-skills.
 ```
 
-Create the skills junction so Codex can load the repo-local skill library:
+Target install path:
 
-```powershell
-New-Item -ItemType Junction -Path "$HOME\.agents\skills\sf6-skills" -Target "E:\github\SF6-skills\skills"
-```
-
-This links `~/.agents/skills/sf6-skills` to the repository `skills/` directory.
+- `~/.agents/skills/sf6-skills`
