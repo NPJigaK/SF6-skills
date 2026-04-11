@@ -3,14 +3,39 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 
-$buildScriptPath = Join-Path $repoRoot 'packages/skill-packaging/build-release-bundle.ps1'
-if (-not (Test-Path -LiteralPath $buildScriptPath -PathType Leaf)) {
-  throw 'Missing release bundle build script: packages/skill-packaging/build-release-bundle.ps1'
-}
-
 $docPath = Join-Path $repoRoot 'docs/distribution/release-bundle.md'
 if (-not (Test-Path -LiteralPath $docPath -PathType Leaf)) {
   throw 'Missing release bundle doc: docs/distribution/release-bundle.md'
+}
+
+$docContent = Get-Content -LiteralPath $docPath -Raw
+$requiredDocStrings = @(
+  '# Release Bundle',
+  'sf6-skills-bundle.zip',
+  'powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-bundle.ps1',
+  '.dist/sf6-skills-bundle.zip',
+  'Release asset name: `sf6-skills-bundle.zip`',
+  'sf6-skills/',
+  '- `maintainer-skills/`',
+  '- `.agents/`',
+  '- `data/`',
+  '- `docs/`',
+  '- `ingest/`',
+  '- `packages/`',
+  '- `scripts/`',
+  '- `shared/`',
+  '- `tests/`'
+)
+
+foreach ($requiredDocString in $requiredDocStrings) {
+  if ($docContent -notmatch [regex]::Escape($requiredDocString)) {
+    throw "Missing release bundle doc content: $requiredDocString"
+  }
+}
+
+$buildScriptPath = Join-Path $repoRoot 'packages/skill-packaging/build-release-bundle.ps1'
+if (-not (Test-Path -LiteralPath $buildScriptPath -PathType Leaf)) {
+  throw 'Missing release bundle build script: packages/skill-packaging/build-release-bundle.ps1'
 }
 
 $bundlePath = Join-Path $repoRoot '.dist/sf6-skills-bundle.zip'
@@ -35,13 +60,58 @@ $forbiddenPrefixes = @(
   'sf6-skills/tests/'
 )
 
+function Test-SafeZipEntryName {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string] $EntryName
+  )
+
+  if ([string]::IsNullOrWhiteSpace($EntryName)) {
+    return $null
+  }
+
+  if ($EntryName.Contains('\') -or $EntryName.Contains(':')) {
+    return $null
+  }
+
+  if ($EntryName.StartsWith('/') -or $EntryName.StartsWith('\')) {
+    return $null
+  }
+
+  if ($EntryName -match '(^|/)\.\.(/|$)' -or $EntryName -match '(^|/)\.(/|$)' -or $EntryName -match '//') {
+    return $null
+  }
+
+  return $EntryName.Replace('\', '/')
+}
+
 $archive = [System.IO.Compression.ZipFile]::OpenRead($bundlePath)
 try {
   $entries = @(
     $archive.Entries |
     Where-Object { -not [string]::IsNullOrWhiteSpace($_.Name) } |
-    ForEach-Object { $_.FullName.Replace('\', '/') }
+    ForEach-Object {
+      $safeEntry = Test-SafeZipEntryName -EntryName $_.FullName
+      if ($null -eq $safeEntry) {
+        throw "Unsafe bundle entry name: $($_.FullName)"
+      }
+
+      $safeEntry
+    }
   )
+
+  $bundleRootPrefix = 'sf6-skills/'
+  $skillRootPrefix = 'sf6-skills/skills/'
+
+  foreach ($entry in $entries) {
+    if (-not $entry.StartsWith($bundleRootPrefix)) {
+      throw "Bundle entry outside sf6-skills root: $entry"
+    }
+
+    if (-not $entry.StartsWith($skillRootPrefix)) {
+      throw "Bundle entry outside sf6-skills/skills/: $entry"
+    }
+  }
 
   foreach ($requiredEntry in $requiredEntries) {
     if ($entries -notcontains $requiredEntry) {
