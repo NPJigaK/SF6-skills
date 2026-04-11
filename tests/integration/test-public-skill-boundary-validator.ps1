@@ -129,6 +129,29 @@ description: Standalone skill.
   }
   Assert-FailsLike -FixtureRoot $crossSkillRoot -Pattern 'skills/alpha/SKILL\.md references public skill directory skills/beta/'
 
+  $crossSkillBackslashRoot = Join-Path $tempRoot 'cross-skill-backslash'
+  New-FixtureRepo -Root $crossSkillBackslashRoot -Skills @{
+    'alpha' = @{
+      'SKILL.md' = @'
+---
+name: alpha
+description: Invalid skill.
+---
+
+Read `skills\beta\references\guide.md` before answering.
+'@
+    }
+    'beta' = @{
+      'SKILL.md' = @'
+---
+name: beta
+description: Standalone skill.
+---
+'@
+    }
+  }
+  Assert-FailsLike -FixtureRoot $crossSkillBackslashRoot -Pattern 'skills/alpha/SKILL\.md references public skill directory skills/beta/'
+
   $dogfoodPathRoot = Join-Path $tempRoot 'dogfood-path'
   New-FixtureRepo -Root $dogfoodPathRoot -Skills @{
     'alpha' = @{
@@ -152,6 +175,29 @@ description: Standalone skill.
   }
   Assert-FailsLike -FixtureRoot $dogfoodPathRoot -Pattern 'skills/alpha/SKILL\.md references repo-local dogfood skill directory \.agents/skills/beta/'
 
+  $dogfoodBackslashRoot = Join-Path $tempRoot 'dogfood-backslash'
+  New-FixtureRepo -Root $dogfoodBackslashRoot -Skills @{
+    'alpha' = @{
+      'SKILL.md' = @'
+---
+name: alpha
+description: Invalid skill.
+---
+
+Read `.agents\skills\beta\SKILL.md` before answering.
+'@
+    }
+    'beta' = @{
+      'SKILL.md' = @'
+---
+name: beta
+description: Standalone skill.
+---
+'@
+    }
+  }
+  Assert-FailsLike -FixtureRoot $dogfoodBackslashRoot -Pattern 'skills/alpha/SKILL\.md references repo-local dogfood skill directory \.agents/skills/beta/'
+
   $siblingTraversalRoot = Join-Path $tempRoot 'sibling-traversal'
   New-FixtureRepo -Root $siblingTraversalRoot -Skills @{
     'alpha' = @{
@@ -174,6 +220,29 @@ description: Standalone skill.
     }
   }
   Assert-FailsLike -FixtureRoot $siblingTraversalRoot -Pattern 'skills/alpha/SKILL\.md references sibling skill directory traversal \.\./beta/'
+
+  $siblingTraversalBackslashRoot = Join-Path $tempRoot 'sibling-traversal-backslash'
+  New-FixtureRepo -Root $siblingTraversalBackslashRoot -Skills @{
+    'alpha' = @{
+      'SKILL.md' = @'
+---
+name: alpha
+description: Invalid skill.
+---
+
+Read `..\beta\references\guide.md` before answering.
+'@
+    }
+    'beta' = @{
+      'SKILL.md' = @'
+---
+name: beta
+description: Standalone skill.
+---
+'@
+    }
+  }
+  Assert-FailsLike -FixtureRoot $siblingTraversalBackslashRoot -Pattern 'skills/alpha/SKILL\.md references sibling skill directory traversal \.\./beta/'
 } finally {
   if (Test-Path -LiteralPath $tempRoot) {
     Remove-Item -LiteralPath $tempRoot -Recurse -Force

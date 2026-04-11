@@ -47,7 +47,7 @@ function Assert-NoCrossSkillDirectoryDependency {
     [string[]]$AllSkillNames
   )
 
-  $content = Get-Content -LiteralPath $SkillManifest -Raw
+  $content = (Get-Content -LiteralPath $SkillManifest -Raw) -replace '\\', '/'
   $otherSkillNames = @($AllSkillNames | Where-Object { $_ -ne $SkillName })
 
   foreach ($otherSkillName in $otherSkillNames) {
