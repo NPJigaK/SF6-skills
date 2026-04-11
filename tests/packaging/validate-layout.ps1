@@ -15,6 +15,8 @@ $requiredDirectories = @(
   'shared/templates',
   'shared/templates/skill',
   'shared/schemas',
+  'ingest',
+  'data',
   'docs/architecture',
   'docs/authoring',
   'docs/authoring/automation-prompts',
