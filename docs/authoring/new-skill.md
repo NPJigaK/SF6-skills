@@ -30,4 +30,4 @@ Put repository-curation or editorial workflows under `maintainer-skills/`.
 
 ## What not to add to a public skill
 
-Do not add dependencies on another skill, ingestion code, installer or bundle machinery, or raw/review artifacts to a public skill.
+Do not add dependencies on another skill directory, ingestion code, installer or bundle machinery, or raw/review artifacts to a public skill.

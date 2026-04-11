@@ -82,7 +82,7 @@ $checks = @(
       '## What not to add to a public skill',
       'Add only the references, assets, and agent metadata that this skill needs.',
       'If a repo-level contract really needs protection, add the minimum validator under `tests/`.',
-      'Do not add dependencies on another skill, ingestion code, installer or bundle machinery, or raw/review artifacts to a public skill.'
+      'Do not add dependencies on another skill directory, ingestion code, installer or bundle machinery, or raw/review artifacts to a public skill.'
     )
   }
 )
