@@ -2,6 +2,8 @@
 
 How to verify layout, packaging, installation, and public-skill boundaries.
 
+`tests/integration/validate-public-skill-boundaries.ps1` checks explicit cross-skill path references in public `SKILL.md` files.
+
 Core local verification set:
 
 - `powershell -ExecutionPolicy Bypass -File tests/packaging/validate-layout.ps1`
