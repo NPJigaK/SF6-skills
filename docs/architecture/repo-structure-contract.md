@@ -170,6 +170,7 @@ This repository intentionally avoids pre-emptive abstraction.
 This repository keeps only the minimum validator set needed to protect structure:
 
 - layout contract
+- public skill dependency boundary checks
 - public skill location and mirror integrity
 - distribution surface boundary checks
 - release bundle boundary checks
