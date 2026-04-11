@@ -565,7 +565,7 @@ Create `.claude-plugin/marketplace.json` with:
   "description": "Development marketplace for the SF6 skills monorepo",
   "owner": {
     "name": "devkey",
-    "email": "tyu_mom@yahoo.co.jp"
+    "email": "noreply@example.invalid"
   },
   "plugins": [
     {
@@ -575,7 +575,7 @@ Create `.claude-plugin/marketplace.json` with:
       "source": "./",
       "author": {
         "name": "devkey",
-        "email": "tyu_mom@yahoo.co.jp"
+        "email": "noreply@example.invalid"
       }
     }
   ]
