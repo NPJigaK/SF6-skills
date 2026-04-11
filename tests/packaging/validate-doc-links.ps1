@@ -1,8 +1,6 @@
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..')
 
 $checks = @(
-  @{ Path = 'README.md'; MustContain = 'skills/'; MustNotContain = '.agents/skills/' },
-  @{ Path = 'README.md'; MustContain = 'monorepo migration is in progress' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/'; MustNotContain = '.agents/skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/'; MustNotContain = '.agents/skills/sync-knowledge/' },

@@ -7,24 +7,42 @@ SF6 の concept-first knowledge と、supported baseline characters `jp` / `luke
 - `jp`
 - `luke`
 
-## Durable Checked-In Surface
+## Repository Structure
 
 - public skills
   - `skills/<skill-name>/`
+  - canonical public source
 - maintainer-only skills
   - `maintainer-skills/<skill-name>/`
-- shared infrastructure
+  - repository-only workflows
+- repo-local dogfooding mirror
+  - `.agents/skills/`
+  - `.agents/skills/<skill-name>/`
+  - exact top-level mirror of `skills/`
+  - derived, never canonical source
+- shared executable infrastructure
   - `packages/`
+- shared non-code artifacts
   - `shared/`
+- repository docs and validators
   - `docs/`
   - `tests/`
   - `scripts/`
-- code
+- data production code
   - `ingest/frame_data/`
 - published current-fact artifacts
   - `data/exports/<character_slug>/`
 
-Monorepo migration is in progress, so some repo-local content may still live in legacy agent-scoped locations until the move tasks complete.
+## Repo Structure Contract
+
+- simple, explicit structure beats flexible abstraction
+- new public skills start as independent units under `skills/`
+- move artifacts to `packages/` or `shared/` only after a second real consumer exists
+- local PowerShell validators are the canonical structure guard
+
+Detailed contract:
+
+- [repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)
 
 ## Not Durable Surface
 
