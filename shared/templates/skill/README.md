@@ -1,6 +1,9 @@
 # Skill Template
 
-Use this directory as the starting point for a new public skill under `skills/<skill-name>/`.
+This README is maintainer and author guidance for a new public skill under `skills/<skill-name>/`.
+It is not part of the default public skill shape and should not be copied into every skill.
+
+Default public skill shape:
 
 Required:
 
@@ -16,4 +19,4 @@ Keep skill-specific references, assets, and agent metadata inside the skill dire
 
 Prefer repo-level tests only when a boundary contract needs protection.
 
-Treat this README as starter guidance for the generated skill, then replace or adapt it with skill-specific documentation as needed.
+Treat this README as starter guidance for the author, then replace or adapt it with skill-specific documentation as needed.

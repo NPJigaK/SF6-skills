@@ -6,11 +6,12 @@ Create a new skill when the workflow, data contract, or trigger conditions are d
 
 ## How to scaffold it
 
-1. Copy `shared/templates/skill/` into `skills/<skill-name>/`.
-2. Rename `SKILL.md.template` to `SKILL.md`.
-3. Add only the references, assets, and agent metadata that this skill needs.
-4. Keep skill-specific artifacts local to the skill directory.
-5. If a repo-level contract really needs protection, add the minimum validator under `tests/`.
+1. Create `skills/<skill-name>/`.
+2. Copy `shared/templates/skill/SKILL.md.template` to `skills/<skill-name>/SKILL.md`.
+3. Use `shared/templates/skill/README.md` as author guidance for the optional directories and constraints.
+4. Add only the references, assets, and agent metadata that the skill needs.
+5. Keep skill-specific artifacts local to the skill directory.
+6. If a repo-level contract really needs protection, add the minimum validator under `tests/`.
 
 ## When to extract shared pieces
 

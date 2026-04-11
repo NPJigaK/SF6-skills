@@ -45,6 +45,9 @@ $checks = @(
   @{
     Path = 'shared/templates/skill/README.md'
     MustContain = @(
+      'This README is maintainer and author guidance for a new public skill under `skills/<skill-name>/`.',
+      'It is not part of the default public skill shape and should not be copied into every skill.',
+      'Default public skill shape:',
       'Required:',
       'Optional:',
       'Keep skill-specific references, assets, and agent metadata inside the skill directory until a second skill needs the same artifact.',
@@ -80,7 +83,11 @@ $checks = @(
       '## When to extract shared pieces',
       '## Public vs maintainer-only',
       '## What not to add to a public skill',
-      'Add only the references, assets, and agent metadata that this skill needs.',
+      'Create `skills/<skill-name>/`.',
+      'Copy `shared/templates/skill/SKILL.md.template` to `skills/<skill-name>/SKILL.md`.',
+      'Use `shared/templates/skill/README.md` as author guidance for the optional directories and constraints.',
+      'Add only the references, assets, and agent metadata',
+      'Keep skill-specific artifacts local to the skill directory',
       'If a repo-level contract really needs protection, add the minimum validator under `tests/`.',
       'Do not add dependencies on another skill directory, ingestion code, installer or bundle machinery, or raw/review artifacts to a public skill.'
     )
