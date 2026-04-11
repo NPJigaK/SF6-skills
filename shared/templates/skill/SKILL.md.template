@@ -19,11 +19,13 @@ State the stable purpose of the skill in 2-3 sentences.
 
 ## Workflow
 
-1. Resolve scope.
-2. Read the minimum supporting references.
+1. Resolve scope and confirm this skill owns the request.
+2. Read the minimum supporting references or assets.
 3. Produce the answer or artifact.
+4. If the request crosses this skill's boundary, stop and hand off.
 
 ## Constraints
 
-- Constraint 1
-- Constraint 2
+- Do not depend on another skill directory.
+- Keep outputs inside this skill's purpose.
+- Move shared artifacts out only after a second real consumer exists.
