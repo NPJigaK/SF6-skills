@@ -1,0 +1,728 @@
+registry_version: 2.1.0
+moves:
+- move_id: alex_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_クイックジャブ_弱
+- move_id: alex_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_ローキック_弱
+- move_id: alex_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_ボディーブロー_中
+- move_id: alex_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_ミドルキック_中
+- move_id: alex_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_フェイスクラッシャー_強
+- move_id: alex_006_5_hp
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_フェイスクラッシャー_ホールド_強ホールド
+- move_id: alex_007_5_hk
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_ロングキック_強
+- move_id: alex_008_5_hk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_ロングキック_ホールド_強ホールド
+- move_id: alex_009_2_lp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ロークロー_弱
+- move_id: alex_010_2_lk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_グランドロー_弱
+- move_id: alex_011_2_mp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_地獄突き_中
+- move_id: alex_012_2_mk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_シンキック_中
+- move_id: alex_013_2_hp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ビッグスワイプ_強
+- move_id: alex_014_2_hk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_ラウンドキック_強
+- move_id: alex_015_j_lp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ハイジャブ_ジャンプ中に_弱
+- move_id: alex_016_j_lk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_フライングニー_ジャンプ中に_弱
+- move_id: alex_017_j_mp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_フライングニーチョップ_ジャンプ中に_中
+- move_id: alex_018_j_mk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_ニールキック_ジャンプ中に_中
+- move_id: alex_019_j_hp
+  group: normals
+  sort_key: 19
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_スカイハンマー_ジャンプ中に_強
+- move_id: alex_020_j_hk
+  group: normals
+  sort_key: 20
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ドロップキック_ジャンプ中に_強
+- move_id: alex_021_2_p_p
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - P
+    - P
+    name_key: ブレイカー_スタンス
+- move_id: alex_022_6
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    name_key: ステップイン_ブレイカー_スタンス中に
+- move_id: alex_023_4
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    name_key: ステップアウト_ブレイカー_スタンス中に
+- move_id: alex_024_6_lp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '|'
+    - '6'
+    - LP
+    name_key: 弱_スラッシュエルボー_ブレイカー_スタンス_ステップイン中に_弱
+- move_id: alex_025_6_mp
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '|'
+    - '6'
+    - MP
+    name_key: 中_スラッシュエルボー_ブレイカー_スタンス_ステップイン中に_中
+- move_id: alex_026_6_hp
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '|'
+    - '6'
+    - HP
+    name_key: 強_スラッシュエルボー_ブレイカー_スタンス_ステップイン中に_強
+- move_id: alex_027_lp
+  group: command_normals
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    name_key: パームコンタクト_ブレイカー_スタンス中に_弱
+- move_id: alex_028_mp
+  group: command_normals
+  sort_key: 28
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    name_key: ショルダーランチャー_ブレイカー_スタンス中に_中
+- move_id: alex_029_hp
+  group: command_normals
+  sort_key: 29
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    name_key: ヘビーラリアット_ブレイカー_スタンス中に_強
+- move_id: alex_030_hp
+  group: command_normals
+  sort_key: 30
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    name_key: ヘビーラリアット_ホールド_ブレイカー_スタンス中に_強ホールド
+- move_id: alex_031_lk
+  group: command_normals
+  sort_key: 31
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LK
+    name_key: タクティカルリープ_ブレイカー_スタンス中に_弱
+- move_id: alex_032_mk
+  group: command_normals
+  sort_key: 32
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MK
+    name_key: エアスタンピート_ブレイカー_スタンス中に_中
+- move_id: alex_033_hk
+  group: command_normals
+  sort_key: 33
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HK
+    name_key: スイープコンビネーション_1段目_ブレイカー_スタンス中に_強
+- move_id: alex_034_hk_hk
+  group: command_normals
+  sort_key: 34
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HK
+    - '>'
+    - HK
+    name_key: スイープコンビネーション_2段目_ブレイカー_スタンス中に_強_強
+- move_id: alex_035_lplk
+  group: command_normals
+  sort_key: 35
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LPLK
+    name_key: ハイパーリフト_ブレイカー_スタンス中に_近距離で_弱_弱
+- move_id: alex_036_2_lplk
+  group: command_normals
+  sort_key: 36
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - LPLK
+    name_key: デンジャラスアプローチ_ブレイカー_スタンス中に_立ち状態の相手に対して近距離で_弱_弱
+- move_id: alex_037_6_mp
+  group: command_normals
+  sort_key: 37
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: チョップ_中
+- move_id: alex_038_4_mk
+  group: command_normals
+  sort_key: 38
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MK
+    name_key: オブリークスタンプ_中
+- move_id: alex_039_2_hp
+  group: command_normals
+  sort_key: 39
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: フライングクロスチョップ_ジャンプ中に_強
+- move_id: alex_040_mp_hp
+  group: command_normals
+  sort_key: 40
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - HP
+    name_key: パームストライク_中_強
+- move_id: alex_041_2_lk_2_hk
+  group: command_normals
+  sort_key: 41
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - LK
+    - '>'
+    - '2'
+    - HK
+    name_key: ツイストドロップ_弱_強
+- move_id: alex_042_2_3_6_lp
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_フラッシュアックス_弱
+- move_id: alex_043_2_3_6_mp
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_フラッシュアックス_中
+- move_id: alex_044_2_3_6_hp
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: フラッシュチョップ_強
+- move_id: alex_045_2_3_6_p_p
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_フラッシュチョップ
+- move_id: alex_046_6_2_3_lk
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LK
+    name_key: 弱_エアニースマッシュ_弱
+- move_id: alex_047_6_2_3_mk
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MK
+    name_key: 中_エアニースマッシュ_中
+- move_id: alex_048_6_2_3_hk
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HK
+    name_key: 強_エアニースマッシュ_強
+- move_id: alex_049_6_2_3_k_k
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - K
+    - K
+    name_key: od_エアニースマッシュ
+- move_id: alex_050_6_3_2_1_4_lp
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_パワーボム_近距離で_弱
+- move_id: alex_051_6_3_2_1_4_mp
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_パワーボム_近距離で_中
+- move_id: alex_052_6_3_2_1_4_hp
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_パワーボム_近距離で_強
+- move_id: alex_053_6_3_2_1_4_p_p
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_パワーボム_近距離で
+- move_id: alex_054_6_3_2_1_4_p
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: パワードロップ_背面から近距離で
+- move_id: alex_055_6_3_2_1_4_p_p
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_パワードロップ_背面から近距離で
+- move_id: alex_056_6
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    name_key: ハイパーボム_odパワードロップ中に
+- move_id: alex_057_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 57
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_レイジングスピアー
+- move_id: alex_058_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 58
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_スレッジクロスハンマー
+- move_id: alex_059_p_p
+  group: super_arts
+  sort_key: 59
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - P
+    - P
+    name_key: sa2_オメガウィングバスター_odパワードロップ中に
+- move_id: alex_060_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 60
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa3_ファイナルキャプチュード
+- move_id: alex_061_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 61
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: ca_ファイナルキャプチュード
+- move_id: alex_062_5_6_lplk
+  group: throws
+  sort_key: 62
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: アームロック_近距離で_弱_弱
+- move_id: alex_063_4_lplk
+  group: throws
+  sort_key: 63
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: ギロチンハンマー_近距離で_弱_弱
+- move_id: alex_064_2_lplk
+  group: throws
+  sort_key: 64
+  official_match:
+    section: throws
+    icon_tokens:
+    - '2'
+    - LPLK
+    name_key: イリーガルキック_近距離で_弱_弱
+- move_id: alex_065_6_6
+  group: system
+  sort_key: 65
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: alex_066_4_4
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: alex_067_hphk
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_レッグラリアート_強_強
+- move_id: alex_068_6_hphk
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_ヘッドバッド_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: alex_069_6_hphk
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_ヘッドバッド_起き上がり時に_強_強
+- move_id: alex_070_mpmk
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: alex_071_mpmk
+  group: system
+  sort_key: 71
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: alex_072_mpmk
+  group: system
+  sort_key: 72
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: alex_073_6_6
+  group: system
+  sort_key: 73
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: alex_074_6_6
+  group: system
+  sort_key: 74
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に

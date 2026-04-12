@@ -6,11 +6,17 @@ if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
   throw "Missing public skill root: skills/kb-sf6-frame-current"
 }
 
+$rosterPath = Join-Path $repoRoot 'shared/roster/current-character-roster.json'
+if (-not (Test-Path -LiteralPath $rosterPath -PathType Leaf)) {
+  throw 'Missing canonical roster source: shared/roster/current-character-roster.json'
+}
+
 $assetRoot = Join-Path $skillRoot 'assets'
 $publishedRoot = Join-Path $assetRoot 'published'
 $runtimeManifestPath = Join-Path $assetRoot 'runtime_manifest.json'
 
-$characters = @('jp', 'luke')
+$roster = Get-Content -LiteralPath $rosterPath -Raw | ConvertFrom-Json
+$characters = @($roster.characters.character_slug)
 $datasets = @('official_raw', 'derived_metrics', 'supercombo_enrichment')
 
 if (Test-Path -LiteralPath $publishedRoot) {
@@ -23,6 +29,7 @@ New-Item -ItemType Directory -Path $publishedRoot -Force | Out-Null
 $runtimeManifest = [ordered]@{
   source_root = 'data/exports'
   skill_root = 'skills/kb-sf6-frame-current/assets'
+  roster_source = 'shared/roster/current-character-roster.json'
   characters = @()
 }
 

@@ -77,8 +77,9 @@ def _publish_baseline(temp_repo_root: Path) -> tuple[str, Path]:
 
 def test_checked_in_supercombo_main_is_subset_of_checked_in_official_main() -> None:
     repo_root = Path(__file__).resolve().parents[3]
-    for character_slug in ("jp", "luke"):
-        export_root = repo_root / "data" / "exports" / character_slug
+    export_root_parent = repo_root / "data" / "exports"
+    for export_root in sorted(path for path in export_root_parent.iterdir() if (path / "supercombo_enrichment.json").exists()):
+        character_slug = export_root.name
         official_move_ids = {row["move_id"] for row in _load_json(export_root / "official_raw.json")}
         supercombo_move_ids = {row["move_id"] for row in _load_json(export_root / "supercombo_enrichment.json")}
         assert supercombo_move_ids.issubset(official_move_ids)

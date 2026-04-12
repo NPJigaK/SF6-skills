@@ -9,4 +9,4 @@ They are not public distribution units.
 Current maintainer-only skills:
 
 - `sync-knowledge/`: knowledge integration and review-queue triage
-- `update-frame-data/`: official patch-driven `jp` / `luke` frame-data refresh workflow
+- `update-frame-data/`: official patch-driven current-roster frame-data refresh workflow

@@ -1,0 +1,52 @@
+{
+  "character_slug": "aki",
+  "schema_version": "3.0.0",
+  "export_contract_version": "3.0.0",
+  "derivation_rule_version": "1.0.0",
+  "repo_generation_registry_version": "2.1.0",
+  "repo_generation_registry_sha256": "27ce0ee1734f64c61821da38ccfc160d19e4a39e32de1235f832d098a38423cc",
+  "repo_generation_binding_policy_version": "1.0.0",
+  "repo_generation_binding_policy_sha256": "9886e83bd129e32c63eebe12606d80ce7e1f1e0ac629f1e0744f01ea3f2e7a29",
+  "datasets": {
+    "official_raw": {
+      "publication_state": "available",
+      "published_run_id": "20260412T162057799941Z-da860c59",
+      "published_snapshot_ids": [
+        "20260412T161520Z-7fbd27f7"
+      ],
+      "published_record_count": 54,
+      "withheld_review_count": 10,
+      "registry_version": "2.1.0",
+      "registry_sha256": "27ce0ee1734f64c61821da38ccfc160d19e4a39e32de1235f832d098a38423cc",
+      "binding_policy_version": null,
+      "binding_policy_sha256": null,
+      "content_hash": "6d61a217e08f1b33093d3b030839ebcce4a41311439ba1133bf8b17dcab1705f"
+    },
+    "supercombo_enrichment": {
+      "publication_state": "unavailable",
+      "published_run_id": null,
+      "published_snapshot_ids": [],
+      "published_record_count": 0,
+      "withheld_review_count": 0,
+      "registry_version": "2.1.0",
+      "registry_sha256": "27ce0ee1734f64c61821da38ccfc160d19e4a39e32de1235f832d098a38423cc",
+      "binding_policy_version": "1.0.0",
+      "binding_policy_sha256": "9886e83bd129e32c63eebe12606d80ce7e1f1e0ac629f1e0744f01ea3f2e7a29",
+      "content_hash": null
+    },
+    "derived_metrics": {
+      "publication_state": "available",
+      "published_run_id": "20260412T162057799941Z-da860c59",
+      "published_snapshot_ids": [
+        "20260412T161520Z-7fbd27f7"
+      ],
+      "published_record_count": 54,
+      "withheld_review_count": 10,
+      "registry_version": "2.1.0",
+      "registry_sha256": "27ce0ee1734f64c61821da38ccfc160d19e4a39e32de1235f832d098a38423cc",
+      "binding_policy_version": null,
+      "binding_policy_sha256": null,
+      "content_hash": "b4e571fc03ed11c5304c23f36acf0127b40cd178c22dbd3e0b57253383d45b87"
+    }
+  }
+}

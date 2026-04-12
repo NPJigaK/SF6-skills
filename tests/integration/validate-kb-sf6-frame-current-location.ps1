@@ -26,22 +26,22 @@ foreach ($relativePath in @(
 $expectedSkillContent = @'
 ---
 name: kb-sf6-frame-current
-description: Read generated runtime assets for the supported baseline characters (`jp`, `luke`) when the task needs exact or current move-specific values such as startup, active, recovery, total, hit or block advantage, cancel, damage, derived punish thresholds, or the current published snapshot status. Use together with kb-sf6-core when a question mixes concept explanation with current fact. Do not use for scraping, ingestion updates, manual review triage, or unsupported characters.
+description: Read generated runtime assets for the current published SF6 roster characters when the task needs exact or current move-specific values such as startup, active, recovery, total, hit or block advantage, cancel, damage, derived punish thresholds, or the current published snapshot status. Use together with kb-sf6-core when a question mixes concept explanation with current fact. Do not use for scraping, ingestion updates, or manual review triage.
 ---
 
-Read current facts for supported baseline characters from `assets/published/<character_slug>/` only.
+Read current facts for packaged roster characters from `assets/published/<character_slug>/` only.
 
 ## Supported Characters
 
-- `jp`
-- `luke`
+- The authoritative packaged character list is recorded in `assets/runtime_manifest.json`.
+- Use only `character_slug` values that appear there.
 
 ## Character Resolution
 
-1. If the user explicitly names a supported character, use that character.
-2. If strong thread context fixes the question to one supported character, infer it only when that inference is clear.
+1. If the user explicitly names a packaged character, use that character.
+2. If strong thread context fixes the question to one packaged character, infer it only when that inference is clear.
 3. Otherwise ask which character the user means.
-4. Do not silently default to `jp`.
+4. Do not silently default to any character.
 
 ## Quick Start
 
@@ -62,12 +62,12 @@ Read current facts for supported baseline characters from `assets/published/<cha
 
 ## Safe-Use Rules
 
-- `assets/runtime_manifest.json` records which published export files were copied into the skill package.
+- `assets/runtime_manifest.json` records the packaged character inventory and which published export files were copied into the skill package.
 - `snapshot_manifest.json` is the required entrypoint.
 - Use packaged published main exports only. They are safe-only and exclude withheld review rows.
 - Treat packaged `supercombo_enrichment.json` as a supplemental subset anchored to packaged `official_raw.json` safe rows by `move_id`.
 - Do not infer missing review data from the absence of packaged rows.
-- Do not answer unsupported characters from this skill.
+- If a requested character is not listed in `assets/runtime_manifest.json`, answer `[保留]`.
 
 ## References
 
@@ -77,7 +77,7 @@ Read current facts for supported baseline characters from `assets/published/<cha
 $expectedExportContractContent = @'
 # Export Contract
 
-Supported baseline characters for this skill are `jp` and `luke`.
+Supported characters for this skill are the `character_slug` entries recorded in `assets/runtime_manifest.json`.
 
 ## Files
 
@@ -114,16 +114,17 @@ Supported baseline characters for this skill are `jp` and `luke`.
 
 ## Selection Rules
 
-- If the user explicitly names a supported character, use that character.
-- If strong thread context fixes the question to one supported character, infer it only when that inference is clear.
-- Otherwise ask which supported character the user means.
-- Do not silently default to `jp`.
+- If the user explicitly names a packaged character, use that character.
+- If strong thread context fixes the question to one packaged character, infer it only when that inference is clear.
+- Otherwise ask which packaged character the user means.
+- Do not silently default to any character.
 - Prefer matching by exact `move_id` when it is already known.
 - Otherwise match by `input`, then `move_name`.
 - If multiple rows still match, do not guess. Ask for the exact variant or answer `[保留]`.
 
 ## Fallback Rules
 
+- If a requested character is not listed in `assets/runtime_manifest.json`, answer `[保留]`.
 - If the needed dataset is `unavailable`, say so and answer `[保留]`.
 - If a requested value would require manual-review outputs that are not packaged with the skill, answer `[保留]`.
 - If the user asks to audit parser behavior, selector drift, or ingestion state, stop here and hand off to a repo-local maintainer workflow instead.
@@ -132,8 +133,8 @@ Supported baseline characters for this skill are `jp` and `luke`.
 $expectedOpenAiYamlContent = @'
 interface:
   display_name: "SF6 Frame Current"
-  short_description: "Read generated frame-data runtime assets for supported baseline current-fact answers."
-  default_prompt: "Use $kb-sf6-frame-current to answer current-fact questions for the supported baseline characters (`jp`, `luke`) from generated runtime assets."
+  short_description: "Read generated frame-data runtime assets for packaged current-fact answers."
+  default_prompt: "Use $kb-sf6-frame-current to answer current-fact questions for the characters packaged in `assets/runtime_manifest.json` from generated runtime assets."
 '@
 
 $actualSkillContent = Normalize-Content (Get-Content -LiteralPath (Join-Path $skillRoot 'SKILL.md') -Raw)

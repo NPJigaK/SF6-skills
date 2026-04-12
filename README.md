@@ -1,11 +1,12 @@
 # SF6 Skills Repo
 
-SF6 の concept-first knowledge と、supported baseline characters `jp` / `luke` の v3 published frame-data exports を管理するリポジトリです。
+SF6 の concept-first knowledge と、現行 roster 全体の v3 published frame-data exports を管理するリポジトリです。
 
-## Supported Baseline Characters
+## Current Character Roster
 
-- `jp`
-- `luke`
+- canonical source: `shared/roster/current-character-roster.json`
+- current fact / runtime asset / packaging / validator の character inventory はこの roster source に追従する
+- roster source は checked-in official raw snapshot に含まれる character-select links を根拠に管理する
 
 ## Repository Structure
 
@@ -63,6 +64,7 @@ Detailed contract:
 - current fact は `data/exports/<character_slug>/snapshot_manifest.json` を entrypoint に確認する
 - `publication_state = available` の dataset だけを current-fact lookup に使う
 - repo-level canonical published data は `data/exports/<character_slug>/...`
+- current roster の canonical source は `shared/roster/current-character-roster.json`
 - public distributed `skills/kb-sf6-frame-current` は generated packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` を read し、これらは `data/exports/<character_slug>/...` から生成される
 - lookup order は `official_raw` -> `derived_metrics` -> `supercombo_enrichment`
 - `official_raw` を canonical source として先に読む

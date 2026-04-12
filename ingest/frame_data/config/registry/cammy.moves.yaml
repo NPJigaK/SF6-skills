@@ -1,0 +1,735 @@
+registry_version: 2.1.0
+moves:
+- move_id: cammy_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_フーリガンジャブ_弱
+- move_id: cammy_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_フーリガンローキック_弱
+- move_id: cammy_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_フーリガンストレート_中
+- move_id: cammy_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_トゥースマッシュ_中
+- move_id: cammy_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_スイングナックル_強
+- move_id: cammy_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_スティールスライサー_強
+- move_id: cammy_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ラピッドショット_弱
+- move_id: cammy_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_スタンレイピア_弱
+- move_id: cammy_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_ライトグレネード_中
+- move_id: cammy_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_トゥーバズソー_中
+- move_id: cammy_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_トーピードーシェル_強
+- move_id: cammy_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_グランドスイープ_強
+- move_id: cammy_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ダガーショット_ジャンプ中に_弱
+- move_id: cammy_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_レイダーニー_ジャンプ中に_弱
+- move_id: cammy_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_アラウンドブレード_ジャンプ中に_中
+- move_id: cammy_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_スナイピングスピア_ジャンプ中に_中
+- move_id: cammy_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_フィストボム_ジャンプ中に_強
+- move_id: cammy_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_クリティカルストライク_ジャンプ中に_強
+- move_id: cammy_019_4_mp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MP
+    name_key: リフトアッパー_中
+- move_id: cammy_020_6_hk
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    name_key: ディレイリーパー_強
+- move_id: cammy_021_4_hk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: アサルトブレード_強
+- move_id: cammy_022_4_mp_hk
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MP
+    - '>'
+    - HK
+    name_key: リフトコンビネーション_中_強
+- move_id: cammy_023_hp_hk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    - '>'
+    - HK
+    name_key: スイングコンビネーション_強_強
+- move_id: cammy_024_2_3_6_lk
+  group: specials
+  sort_key: 24
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_スパイラルアロー_弱
+- move_id: cammy_025_2_3_6_mk
+  group: specials
+  sort_key: 25
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_スパイラルアロー_中
+- move_id: cammy_026_2_3_6_hk
+  group: specials
+  sort_key: 26
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_スパイラルアロー_強
+- move_id: cammy_027_2_3_6_hk
+  group: specials
+  sort_key: 27
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_スパイラルアロー_ホールド_強ホールド
+- move_id: cammy_028_2_3_6_k_k
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_スパイラルアロー
+- move_id: cammy_029_6_2_3_lk
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LK
+    name_key: 弱_キャノンスパイク_弱
+- move_id: cammy_030_6_2_3_mk
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MK
+    name_key: 中_キャノンスパイク_中
+- move_id: cammy_031_6_2_3_hk
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HK
+    name_key: 強_キャノンスパイク_強
+- move_id: cammy_032_6_2_3_hk
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HK
+    name_key: 強_キャノンスパイク_ホールド_強ホールド
+- move_id: cammy_033_6_2_3_k_k
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - K
+    - K
+    name_key: od_キャノンスパイク
+- move_id: cammy_034_2_1_4_lp
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_アクセルスピンナックル_弱
+- move_id: cammy_035_2_1_4_mp
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_アクセルスピンナックル_中
+- move_id: cammy_036_2_1_4_hp
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_アクセルスピンナックル_強
+- move_id: cammy_037_2_1_4_p_p
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_アクセルスピンナックル
+- move_id: cammy_038_2_1_4_k
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: キャノンストライク_前ジャンプ中に
+- move_id: cammy_039_2_1_4_k_k
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_キャノンストライク_前ジャンプ中に
+- move_id: cammy_040_2_3_6_p
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: フーリガンコンビネーション
+- move_id: cammy_041_2_3_6_hp
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: フーリガンコンビネーション_ホールド_強ホールド
+- move_id: cammy_042_2_3_6_p_p
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_フーリガンコンビネーション
+- move_id: cammy_043_specials_043
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: レイザーエッジスライサー_フーリガンコンビネーション中に_入力なし
+- move_id: cammy_044_specials_044
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: レイザーエッジスライサー_ホールド_フーリガンコンビネーション中に_入力なし
+- move_id: cammy_045_specials_045
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: od_レイザーエッジスライサー_フーリガンコンビネーション中に_入力なし
+- move_id: cammy_046_k
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: キャノンストライク_フーリガンコンビネーション中に
+- move_id: cammy_047_k
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: キャノンストライク_ホールド_フーリガンコンビネーション中に
+- move_id: cammy_048_k
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: od_キャノンストライク_フーリガンコンビネーション中に
+- move_id: cammy_049_2_k
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - K
+    name_key: リバースエッジ_フーリガンコンビネーション中に
+- move_id: cammy_050_2_k
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - K
+    name_key: リバースエッジ_ホールド_フーリガンコンビネーション中に
+- move_id: cammy_051_2_k
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - K
+    name_key: od_リバースエッジ_フーリガンコンビネーション中に
+- move_id: cammy_052_lplk
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - LPLK
+    name_key: フェイタルレッグツイスター_フーリガンコンビネーション中に_立ち状態の相手に対して近距離で_弱_弱
+- move_id: cammy_053_lplk
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - LPLK
+    name_key: フェイタルレッグツイスター_ホールド_フーリガンコンビネーション中に_立ち状態の相手に対して近距離で_弱_弱
+- move_id: cammy_054_lplk
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - LPLK
+    name_key: od_フェイタルレッグツイスター_フーリガンコンビネーション中に_立ち状態の相手に対して近距離で_弱_弱
+- move_id: cammy_055_p
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: サイレントステップ_フーリガンコンビネーション中に
+- move_id: cammy_056_p
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: サイレントステップ_ホールド_フーリガンコンビネーション中に
+- move_id: cammy_057_p
+  group: specials
+  sort_key: 57
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: od_サイレントステップ_フーリガンコンビネーション中に
+- move_id: cammy_058_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 58
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_スピンドライブスマッシャー
+- move_id: cammy_059_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 59
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_キラービースピン
+- move_id: cammy_060_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 60
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_エアキラービースピン_前ジャンプ中に
+- move_id: cammy_061_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 61
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa3_デルタレッドアサルト
+- move_id: cammy_062_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 62
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: ca_デルタレッドアサルト_体力25_以下で
+- move_id: cammy_063_5_6_lplk
+  group: throws
+  sort_key: 63
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: ラフランディング_近距離で_弱_弱
+- move_id: cammy_064_4_lplk
+  group: throws
+  sort_key: 64
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: デルタスルー_近距離で_弱_弱
+- move_id: cammy_065_lplk
+  group: throws
+  sort_key: 65
+  official_match:
+    section: throws
+    icon_tokens:
+    - LPLK
+    name_key: レッグシザースチョーク_ジャンプ中に_近距離で_弱_弱
+- move_id: cammy_066_6_6
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: cammy_067_4_4
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: cammy_068_hphk
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_スピンレイダー_強_強
+- move_id: cammy_069_6_hphk
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_カウンタースナイプ_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: cammy_070_6_hphk
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_カウンタースナイプ_起き上がり時に_強_強
+- move_id: cammy_071_mpmk
+  group: system
+  sort_key: 71
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: cammy_072_mpmk
+  group: system
+  sort_key: 72
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: cammy_073_mpmk
+  group: system
+  sort_key: 73
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: cammy_074_6_6
+  group: system
+  sort_key: 74
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: cammy_075_6_6_5_6_mpmk
+  group: system
+  sort_key: 75
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

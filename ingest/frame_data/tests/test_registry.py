@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from sf6_ingest.config import available_character_slugs
 from sf6_ingest.binding_policy import load_supercombo_binding_policy
 from sf6_ingest.core.common import normalize_name_key
 from sf6_ingest.registry import load_registry
@@ -55,3 +56,15 @@ def test_luke_registry_and_binding_policy_are_loaded_without_jp_specific_contrac
         "luke_074_just_parry_projectile",
     ]
     assert policy.lookup("Luke_5pppkkk").binding_class == "G"
+
+
+def test_every_current_roster_character_has_registry_and_binding_policy() -> None:
+    for character_slug in available_character_slugs():
+        registry = load_registry(character_slug)
+        assert registry.version == "2.1.0"
+        assert registry.moves
+        assert len(registry.sha256) == 64
+
+        policy = load_supercombo_binding_policy(character_slug, registry)
+        assert policy.version == "1.0.0"
+        assert len(policy.sha256) == 64

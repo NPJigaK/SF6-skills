@@ -1,0 +1,960 @@
+registry_version: 2.1.0
+moves:
+- move_id: gouki_akuma_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_面割り_弱
+- move_id: gouki_akuma_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_脛斬り_弱
+- move_id: gouki_akuma_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_豪掌_中
+- move_id: gouki_akuma_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_腸潰し_中
+- move_id: gouki_akuma_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_岩砕突き_強
+- move_id: gouki_akuma_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_首撥ね_強
+- move_id: gouki_akuma_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_足止め_弱
+- move_id: gouki_akuma_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_楔打ち_弱
+- move_id: gouki_akuma_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_膝折り豪掌_中
+- move_id: gouki_akuma_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_踝払い_中
+- move_id: gouki_akuma_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_獄門掌_強
+- move_id: gouki_akuma_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_刎脚_強
+- move_id: gouki_akuma_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_眉間割り_ジャンプ中に_弱
+- move_id: gouki_akuma_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_飛び膝_ジャンプ中に_弱
+- move_id: gouki_akuma_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_跳び朱刀_ジャンプ中に_中
+- move_id: gouki_akuma_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_首斬り_ジャンプ中に_中
+- move_id: gouki_akuma_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_羅刹拳_ジャンプ中に_強
+- move_id: gouki_akuma_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_斬鉄脚_ジャンプ中に_強
+- move_id: gouki_akuma_019_6_mp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: 頭蓋破殺_中
+- move_id: gouki_akuma_020_6_mk
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MK
+    name_key: 裂槍脚_中
+- move_id: gouki_akuma_021_4_hk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: 羅豪脚_強
+- move_id: gouki_akuma_022_mp_mp
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    name_key: 六腑穿ち_中_中
+- move_id: gouki_akuma_023_mk_hk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MK
+    - '>'
+    - HK
+    name_key: 骸斬り_中_強
+- move_id: gouki_akuma_024_6_hp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: 鬼哭連撃_1段目_強
+- move_id: gouki_akuma_025_6_hp_6_hp
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    - '>'
+    - '6'
+    - HP
+    name_key: 鬼哭連撃_2段目_強_強
+- move_id: gouki_akuma_026_6_hp_6_hp_hk
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    - '>'
+    - '6'
+    - HP
+    - '>'
+    - HK
+    name_key: 鬼哭連撃_3段目_強_強_強
+- move_id: gouki_akuma_027_2_mk
+  group: command_normals
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: 天魔空刃脚_前ジャンプ中に_中
+- move_id: gouki_akuma_028_2_3_6_lp
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_豪波動拳_lv1_弱
+- move_id: gouki_akuma_029_2_3_6_lp
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_豪波動拳_lv2_弱ホールド
+- move_id: gouki_akuma_030_2_3_6_lp
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_豪波動拳_lv3_弱ホールド
+- move_id: gouki_akuma_031_2_3_6_mp
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_豪波動拳_lv1_中
+- move_id: gouki_akuma_032_2_3_6_mp
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_豪波動拳_lv2_中ホールド
+- move_id: gouki_akuma_033_2_3_6_mp
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_豪波動拳_lv3_中ホールド
+- move_id: gouki_akuma_034_2_3_6_hp
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_豪波動拳_lv1_強
+- move_id: gouki_akuma_035_2_3_6_hp
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_豪波動拳_lv2_強ホールド
+- move_id: gouki_akuma_036_2_3_6_hp
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_豪波動拳_lv3_強ホールド
+- move_id: gouki_akuma_037_2_3_6_p_p
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_豪波動拳
+- move_id: gouki_akuma_038_2_3_6_p_p
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_豪波動拳_ホールド_ホールド
+- move_id: gouki_akuma_039_2_3_6_lp
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_斬空波動拳_前ジャンプ中に_弱
+- move_id: gouki_akuma_040_2_3_6_mp
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_斬空波動拳_前ジャンプ中に_中
+- move_id: gouki_akuma_041_2_3_6_hp
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_斬空波動拳_前ジャンプ中に_強
+- move_id: gouki_akuma_042_2_3_6_p_p
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_斬空波動拳_垂直_or_前ジャンプ中に
+- move_id: gouki_akuma_043_6_2_3_lp
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 弱_豪昇龍拳_弱
+- move_id: gouki_akuma_044_6_2_3_mp
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 中_豪昇龍拳_中
+- move_id: gouki_akuma_045_6_2_3_hp
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 強_豪昇龍拳_強
+- move_id: gouki_akuma_046_6_2_3_p_p
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: od_豪昇龍拳
+- move_id: gouki_akuma_047_2_1_4_lk
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LK
+    name_key: 弱_竜巻斬空脚_弱
+- move_id: gouki_akuma_048_2_1_4_mk
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MK
+    name_key: 中_竜巻斬空脚_中
+- move_id: gouki_akuma_049_2_1_4_hk
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HK
+    name_key: 強_竜巻斬空脚_強
+- move_id: gouki_akuma_050_2_1_4_k_k
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_竜巻斬空脚
+- move_id: gouki_akuma_051_2_1_4_k
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: 空中竜巻斬空脚_前ジャンプ中に
+- move_id: gouki_akuma_052_2_1_4_k_k
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_空中竜巻斬空脚_前ジャンプ中に
+- move_id: gouki_akuma_053_2_1_4_lp
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_金剛灼火_1段目_弱
+- move_id: gouki_akuma_054_2_1_4_lp_6_p
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    - '>'
+    - '6'
+    - P
+    name_key: 弱_金剛灼火_2段目_弱
+- move_id: gouki_akuma_055_2_1_4_mp
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_金剛灼火_1段目_中
+- move_id: gouki_akuma_056_2_1_4_mp_6_p
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    - '>'
+    - '6'
+    - P
+    name_key: 中_金剛灼火_2段目_中
+- move_id: gouki_akuma_057_2_1_4_hp
+  group: specials
+  sort_key: 57
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_金剛灼火_1段目_強
+- move_id: gouki_akuma_058_2_1_4_hp_6_p
+  group: specials
+  sort_key: 58
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    - '>'
+    - '6'
+    - P
+    name_key: 強_金剛灼火_2段目_強
+- move_id: gouki_akuma_059_2_1_4_p_p
+  group: specials
+  sort_key: 59
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_金剛灼火_1段目
+- move_id: gouki_akuma_060_2_1_4_p_p_6_p
+  group: specials
+  sort_key: 60
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    - '>'
+    - '6'
+    - P
+    name_key: od_金剛灼火_2段目
+- move_id: gouki_akuma_061_2_3_6_lk
+  group: specials
+  sort_key: 61
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_百鬼襲_弱
+- move_id: gouki_akuma_062_2_3_6_mk
+  group: specials
+  sort_key: 62
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_百鬼襲_中
+- move_id: gouki_akuma_063_2_3_6_hk
+  group: specials
+  sort_key: 63
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_百鬼襲_強
+- move_id: gouki_akuma_064_2_3_6_k_k
+  group: specials
+  sort_key: 64
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_百鬼襲
+- move_id: gouki_akuma_065_specials_065
+  group: specials
+  sort_key: 65
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: 百鬼豪斬_百鬼襲中に_入力なし
+- move_id: gouki_akuma_066_p
+  group: specials
+  sort_key: 66
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: 百鬼豪衝_百鬼襲中に
+- move_id: gouki_akuma_067_k
+  group: specials
+  sort_key: 67
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: 百鬼豪刃_百鬼襲中に
+- move_id: gouki_akuma_068_specials_068
+  group: specials
+  sort_key: 68
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: 百鬼潜影_百鬼襲中に
+- move_id: gouki_akuma_069_2_3_6_p
+  group: specials
+  sort_key: 69
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: 百鬼豪斬空_od百鬼襲中に
+- move_id: gouki_akuma_070_2_1_4_k
+  group: specials
+  sort_key: 70
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: 百鬼豪螺旋_od百鬼襲中に
+- move_id: gouki_akuma_071_6_k_k
+  group: specials
+  sort_key: 71
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - K
+    - K
+    name_key: 阿修羅閃空_前方
+- move_id: gouki_akuma_072_4_k_k
+  group: specials
+  sort_key: 72
+  official_match:
+    section: specials
+    icon_tokens:
+    - '4'
+    - K
+    - K
+    name_key: 阿修羅閃空_後方
+- move_id: gouki_akuma_073_lplk
+  group: specials
+  sort_key: 73
+  official_match:
+    section: specials
+    icon_tokens:
+    - LPLK
+    name_key: 朧_阿修羅閃空_前方_中に_弱_弱
+- move_id: gouki_akuma_074_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 74
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_滅殺豪波動
+- move_id: gouki_akuma_075_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 75
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_天魔豪斬空_垂直_or_前ジャンプ中に
+- move_id: gouki_akuma_076_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 76
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_崩天劫火
+- move_id: gouki_akuma_077_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 77
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa3_禍坏
+- move_id: gouki_akuma_078_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 78
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: ca_禍坏_体力25_以下で
+- move_id: gouki_akuma_079_lp_lp_6_lk_hp
+  group: super_arts
+  sort_key: 79
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - LP
+    - '>'
+    - LP
+    - '>'
+    - '6'
+    - '>'
+    - LK
+    - '>'
+    - HP
+    name_key: ca_瞬獄殺_弱_弱_弱_強
+- move_id: gouki_akuma_080_5_6_lplk
+  group: throws
+  sort_key: 80
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: 豪衝破_近距離で_弱_弱
+- move_id: gouki_akuma_081_4_lplk
+  group: throws
+  sort_key: 81
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: 朱裂刀_近距離で_弱_弱
+- move_id: gouki_akuma_082_6_6
+  group: system
+  sort_key: 82
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: gouki_akuma_083_4_4
+  group: system
+  sort_key: 83
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: gouki_akuma_084_hphk
+  group: system
+  sort_key: 84
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_鬼殺し_強_強
+- move_id: gouki_akuma_085_6_hphk
+  group: system
+  sort_key: 85
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_双破_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: gouki_akuma_086_6_hphk
+  group: system
+  sort_key: 86
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_双破_起き上がり時に_強_強
+- move_id: gouki_akuma_087_mpmk
+  group: system
+  sort_key: 87
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: gouki_akuma_088_mpmk
+  group: system
+  sort_key: 88
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: gouki_akuma_089_mpmk
+  group: system
+  sort_key: 89
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: gouki_akuma_090_6_6
+  group: system
+  sort_key: 90
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: gouki_akuma_091_6_6_5_6_mpmk
+  group: system
+  sort_key: 91
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

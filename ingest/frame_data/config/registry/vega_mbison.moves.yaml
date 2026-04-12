@@ -1,0 +1,697 @@
+registry_version: 2.1.0
+moves:
+- move_id: vega_mbison_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ジャブ_弱
+- move_id: vega_mbison_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_ヘルニーキック_弱
+- move_id: vega_mbison_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_ヘルボディーブロー_中
+- move_id: vega_mbison_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_シャドーミドルキック_中
+- move_id: vega_mbison_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_サイコパイル_強
+- move_id: vega_mbison_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_シャドーサイス_強
+- move_id: vega_mbison_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ジャブ_弱
+- move_id: vega_mbison_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_ヘルレッグ_弱
+- move_id: vega_mbison_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_ストレート_中
+- move_id: vega_mbison_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_デスレッグ_中
+- move_id: vega_mbison_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_サイコアッパー_強
+- move_id: vega_mbison_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_シャドースイープ_強
+- move_id: vega_mbison_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ヘルフック_ジャンプ中に_弱
+- move_id: vega_mbison_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_ヒールスタンプ_ジャンプ中に_弱
+- move_id: vega_mbison_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_ヘルナックル_ジャンプ中に_中
+- move_id: vega_mbison_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_ニーミサイル_ジャンプ中に_中
+- move_id: vega_mbison_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_サイコエルボー_ジャンプ中に_強
+- move_id: vega_mbison_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_トマホークキック_ジャンプ中に_強
+- move_id: vega_mbison_019_6_hp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: サイコハンマー_強
+- move_id: vega_mbison_020_4_hk
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: イビルニー_強
+- move_id: vega_mbison_021_3_hk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HK
+    name_key: ホバーキック_強
+- move_id: vega_mbison_022_mp_6_hp
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - '6'
+    - HP
+    name_key: シャドウハンマー_中_強
+- move_id: vega_mbison_023_mp_2_hk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - '2'
+    - HK
+    name_key: シャドウスピア_中_強
+- move_id: vega_mbison_024_mp_mp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    name_key: ヘルアタック_ジャンプ中に_中_中
+- move_id: vega_mbison_025_6_lp
+  group: specials
+  sort_key: 25
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - LP
+    name_key: 弱_サイコクラッシャーアタック_弱
+- move_id: vega_mbison_026_6_lp
+  group: specials
+  sort_key: 26
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - LP
+    name_key: サイコマイン付与時_弱_サイコクラッシャーアタック_弱
+- move_id: vega_mbison_027_6_mp
+  group: specials
+  sort_key: 27
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: 中_サイコクラッシャーアタック_中
+- move_id: vega_mbison_028_6_mp
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: サイコマイン付与時_中_サイコクラッシャーアタック_中
+- move_id: vega_mbison_029_6_hp
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: 強_サイコクラッシャーアタック_強
+- move_id: vega_mbison_030_6_hp
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: サイコマイン付与時_強_サイコクラッシャーアタック_強
+- move_id: vega_mbison_031_6_p_p
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - P
+    - P
+    name_key: od_サイコクラッシャーアタック
+- move_id: vega_mbison_032_6_p_p
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - P
+    - P
+    name_key: サイコマイン付与時_od_サイコクラッシャーアタック
+- move_id: vega_mbison_033_2_3_6_lk
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_ダブルニープレス_弱
+- move_id: vega_mbison_034_2_3_6_mk
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_ダブルニープレス_中
+- move_id: vega_mbison_035_2_3_6_hk
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_ダブルニープレス_強
+- move_id: vega_mbison_036_2_3_6_k_k
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_ダブルニープレス
+- move_id: vega_mbison_037_2_1_4_lp
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_バックフィストコンボ_弱
+- move_id: vega_mbison_038_2_1_4_lp
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: サイコマイン付与時_弱_バックフィストコンボ_弱
+- move_id: vega_mbison_039_2_1_4_mp
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_バックフィストコンボ_中
+- move_id: vega_mbison_040_2_1_4_mp
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: サイコマイン付与時_中_バックフィストコンボ_中
+- move_id: vega_mbison_041_2_1_4_hp
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_バックフィストコンボ_強
+- move_id: vega_mbison_042_2_1_4_hp
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: サイコマイン付与時_強_バックフィストコンボ_強
+- move_id: vega_mbison_043_2_1_4_p_p
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_バックフィストコンボ
+- move_id: vega_mbison_044_2_1_4_p_p
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: サイコマイン付与時_od_バックフィストコンボ
+- move_id: vega_mbison_045_specials_045
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: サイコマイン_自動爆発
+- move_id: vega_mbison_046_8_lk
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '8'
+    - LK
+    name_key: 弱_シャドウライズ_弱
+- move_id: vega_mbison_047_8_mk
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '8'
+    - MK
+    name_key: 中_シャドウライズ_中
+- move_id: vega_mbison_048_8_hk
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '8'
+    - HK
+    name_key: 強_シャドウライズ_強
+- move_id: vega_mbison_049_8_k_k
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '8'
+    - K
+    - K
+    name_key: od_シャドウライズ
+- move_id: vega_mbison_050_k
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: ヘッドプレス_シャドウライズ中に
+- move_id: vega_mbison_051_k_k
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    - K
+    name_key: od_ヘッドプレス_シャドウライズ中に_odシャドウライズ中に
+- move_id: vega_mbison_052_p
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: サマーソルトスカルダイバー_ヘッドプレス後に
+- move_id: vega_mbison_053_p
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: デビルリバース_シャドウライズ中に
+- move_id: vega_mbison_054_p
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: サイコマイン付与時_デビルリバース_シャドウライズ中に
+- move_id: vega_mbison_055_p_p
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: od_デビルリバース_シャドウライズ中に_odシャドウライズ中に
+- move_id: vega_mbison_056_p_p
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: サイコマイン付与時_od_デビルリバース_シャドウライズ中に_odシャドウライズ中に
+- move_id: vega_mbison_057_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 57
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_ニープレスナイトメア
+- move_id: vega_mbison_058_2_1_4_2_1_4_k
+  group: super_arts
+  sort_key: 58
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: sa2_サイコパニッシャー
+- move_id: vega_mbison_059_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 59
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa3_アンリミテッドサイコクラッシャー
+- move_id: vega_mbison_060_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 60
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: ca_アンリミテッドサイコクラッシャー_体力25_以下で
+- move_id: vega_mbison_061_5_6_lplk
+  group: throws
+  sort_key: 61
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: デッドリースルー_近距離で_弱_弱
+- move_id: vega_mbison_062_4_lplk
+  group: throws
+  sort_key: 62
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: デスタワー_近距離で_弱_弱
+- move_id: vega_mbison_063_6_6
+  group: system
+  sort_key: 63
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: vega_mbison_064_4_4
+  group: system
+  sort_key: 64
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: vega_mbison_065_hphk
+  group: system
+  sort_key: 65
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_ヘルツイスト_強_強
+- move_id: vega_mbison_066_6_hphk
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_ヘルドライブ_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: vega_mbison_067_6_hphk
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_ヘルドライブ_起き上がり時に_強_強
+- move_id: vega_mbison_068_mpmk
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: vega_mbison_069_mpmk
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: vega_mbison_070_mpmk
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: vega_mbison_071_6_6
+  group: system
+  sort_key: 71
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: vega_mbison_072_6_6
+  group: system
+  sort_key: 72
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に

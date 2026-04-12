@@ -1,0 +1,873 @@
+registry_version: 2.1.0
+moves:
+- move_id: kimberly_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_裏拳_弱
+- move_id: kimberly_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_抜刀蹴_弱
+- move_id: kimberly_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_胴突き_中
+- move_id: kimberly_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_刹那蹴り_中
+- move_id: kimberly_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_旋回手刀_強
+- move_id: kimberly_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_旋風蹴り_強
+- move_id: kimberly_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_裏拳_弱
+- move_id: kimberly_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_連撃蹴_弱
+- move_id: kimberly_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_水平手刀_中
+- move_id: kimberly_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_脛割り_中
+- move_id: kimberly_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_肘打ち_強
+- move_id: kimberly_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_水面蹴り_強
+- move_id: kimberly_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_空平手_ジャンプ中に_弱
+- move_id: kimberly_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_跳び膝_ジャンプ中に_弱
+- move_id: kimberly_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_空裏拳_ジャンプ中に_中
+- move_id: kimberly_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_会心脚_ジャンプ中に_中
+- move_id: kimberly_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_空肘打ち_ジャンプ中に_強
+- move_id: kimberly_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_旋回蹴り_ジャンプ中に_強
+- move_id: kimberly_019_3_mk
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - MK
+    name_key: 水切り蹴り_中
+- move_id: kimberly_020_4_hk
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: 風車_強
+- move_id: kimberly_021_6_hk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    name_key: 飛箭蹴_強
+- move_id: kimberly_022_7_8_9
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '7'
+    - '|'
+    - '8'
+    - '|'
+    - '9'
+    name_key: 矢来越え_飛箭蹴後に
+- move_id: kimberly_023_2_mp
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: 肘落とし_前ジャンプの頂点付近で_中
+- move_id: kimberly_024_mp_hp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - HP
+    name_key: 武神虎連牙_中_強
+- move_id: kimberly_025_lp_mp
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    name_key: 武神天架拳_2段目_弱_中
+- move_id: kimberly_026_lp_mp_hp
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    - '>'
+    - HP
+    name_key: 武神天架拳_3段目_弱_中_強
+- move_id: kimberly_027_lp_mp_hp_hk
+  group: command_normals
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    - '>'
+    - HP
+    - '>'
+    - HK
+    name_key: 武神天架拳_4段目_弱_中_強_強
+- move_id: kimberly_028_lp_mp_2_hp
+  group: command_normals
+  sort_key: 28
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    - '>'
+    - '2'
+    - HP
+    name_key: 武神獄鎖拳_3段目_弱_中_強
+- move_id: kimberly_029_lp_mp_2_hp_hk
+  group: command_normals
+  sort_key: 29
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    - '>'
+    - '2'
+    - HP
+    - '>'
+    - HK
+    name_key: 武神獄鎖拳_4段目_弱_中_強_強
+- move_id: kimberly_030_lp_mp_2_hp_2_hk
+  group: command_normals
+  sort_key: 30
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - MP
+    - '>'
+    - '2'
+    - HP
+    - '>'
+    - '2'
+    - HK
+    name_key: 武神獄鎖投げ_弱_中_強_強
+- move_id: kimberly_031_2_1_4_lk
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LK
+    name_key: 弱_武神旋風脚_弱
+- move_id: kimberly_032_2_1_4_mk
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MK
+    name_key: 中_武神旋風脚_中
+- move_id: kimberly_033_2_1_4_hk
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HK
+    name_key: 強_武神旋風脚_強
+- move_id: kimberly_034_2_1_4_k_k
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_武神旋風脚
+- move_id: kimberly_035_2_1_4_k
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: 空中武神旋風脚_前ジャンプ中に
+- move_id: kimberly_036_2_1_4_k_k
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_空中武神旋風脚_前ジャンプ中に
+- move_id: kimberly_037_2_3_6_k
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: 疾駆け
+- move_id: kimberly_038_2_3_6_k_k
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_疾駆け
+- move_id: kimberly_039_p
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: 急停止_疾駆け中に
+- move_id: kimberly_040_p
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: od_急停止_od疾駆け中に
+- move_id: kimberly_041_lk
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - LK
+    name_key: 胴刎ね_疾駆け中に_弱
+- move_id: kimberly_042_lk
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - LK
+    name_key: od_胴刎ね_od疾駆け中に_弱
+- move_id: kimberly_043_mk
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - MK
+    name_key: 影すくい_疾駆け中に_中
+- move_id: kimberly_044_mk
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - MK
+    name_key: od_影すくい_od疾駆け中に_中
+- move_id: kimberly_045_hk
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - HK
+    name_key: 首狩り_疾駆け中に_強
+- move_id: kimberly_046_hk
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - HK
+    name_key: od_首狩り_od疾駆け中に_強
+- move_id: kimberly_047_specials_047
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: 弧空_疾駆けで相手に一定距離まで近付くと自動派生
+- move_id: kimberly_048_specials_048
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: od_弧空_od疾駆けで相手に一定距離まで近付くと自動派生
+- move_id: kimberly_049_p
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: 武神イズナ落とし_弧空中に
+- move_id: kimberly_050_p
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: od_武神イズナ落とし_od弧空中に
+- move_id: kimberly_051_k
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: 武神鉾刃脚_弧空中に
+- move_id: kimberly_052_k
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: od_武神鉾刃脚_od弧空中に
+- move_id: kimberly_053_2_3_6_lp
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_流転一文字_弱
+- move_id: kimberly_054_2_3_6_mp
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_流転一文字_中
+- move_id: kimberly_055_2_3_6_hp
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_流転一文字_強
+- move_id: kimberly_056_2_3_6_p_p
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_流転一文字
+- move_id: kimberly_057_2_1_4_p
+  group: specials
+  sort_key: 57
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: 彩隠形
+- move_id: kimberly_058_2_1_4_p_p
+  group: specials
+  sort_key: 58
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_彩隠形
+- move_id: kimberly_059_2_2_p
+  group: specials
+  sort_key: 59
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    name_key: 召雷細工
+- move_id: kimberly_060_2_2_p_p
+  group: specials
+  sort_key: 60
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: od_召雷細工
+- move_id: kimberly_061_2_2_lp
+  group: specials
+  sort_key: 61
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - LP
+    name_key: 弱_細工手裏剣_細工手裏剣ストックが1以上で_弱
+- move_id: kimberly_062_2_2_mp
+  group: specials
+  sort_key: 62
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - MP
+    name_key: 中_細工手裏剣_細工手裏剣ストックが1以上で_中
+- move_id: kimberly_063_2_2_hp
+  group: specials
+  sort_key: 63
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - HP
+    name_key: 強_細工手裏剣_細工手裏剣ストックが1以上で_強
+- move_id: kimberly_064_2_2_p_p
+  group: specials
+  sort_key: 64
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: 弱_乱れ細工手裏剣_細工手裏剣ストックが2以上で_弱_中
+- move_id: kimberly_065_2_2_p_p
+  group: specials
+  sort_key: 65
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: 中_乱れ細工手裏剣_細工手裏剣ストックが2以上で_弱_強
+- move_id: kimberly_066_2_2_p_p
+  group: specials
+  sort_key: 66
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    - P
+    name_key: 強_乱れ細工手裏剣_細工手裏剣ストックが2以上で_中_強
+- move_id: kimberly_067_2_3_6_p
+  group: specials
+  sort_key: 67
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: 荒鵺捻り_ジャンプ中に_近距離で
+- move_id: kimberly_068_2_3_6_p_p
+  group: specials
+  sort_key: 68
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_荒鵺捻り_ジャンプ中に_近距離で
+- move_id: kimberly_069_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 69
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_武神乱拍子
+- move_id: kimberly_070_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 70
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_武神乱拍子_雷譜_細工手裏剣ストックが1以上で_ホールド
+- move_id: kimberly_071_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 71
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_武神天翔亢竜
+- move_id: kimberly_072_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 72
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_空中武神天翔亢竜_前ジャンプ中に
+- move_id: kimberly_073_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 73
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa3_武神顕現神楽
+- move_id: kimberly_074_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 74
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: ca_武神顕現神楽_体力25_以下で
+- move_id: kimberly_075_5_6_lplk
+  group: throws
+  sort_key: 75
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: 縄掛背負い_近距離で_弱_弱
+- move_id: kimberly_076_4_lplk
+  group: throws
+  sort_key: 76
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: 鍾打巴_近距離で_弱_弱
+- move_id: kimberly_077_6_6
+  group: system
+  sort_key: 77
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: kimberly_078_4_4
+  group: system
+  sort_key: 78
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: kimberly_079_hphk
+  group: system
+  sort_key: 79
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_不動咎_強_強
+- move_id: kimberly_080_6_hphk
+  group: system
+  sort_key: 80
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_転_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: kimberly_081_6_hphk
+  group: system
+  sort_key: 81
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_転_起き上がり時に_強_強
+- move_id: kimberly_082_mpmk
+  group: system
+  sort_key: 82
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: kimberly_083_mpmk
+  group: system
+  sort_key: 83
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: kimberly_084_mpmk
+  group: system
+  sort_key: 84
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: kimberly_085_6_6
+  group: system
+  sort_key: 85
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: kimberly_086_6_6_5_6_mpmk
+  group: system
+  sort_key: 86
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

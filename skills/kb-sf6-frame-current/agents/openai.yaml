@@ -1,4 +1,4 @@
 interface:
   display_name: "SF6 Frame Current"
-  short_description: "Read generated frame-data runtime assets for supported baseline current-fact answers."
-  default_prompt: "Use $kb-sf6-frame-current to answer current-fact questions for the supported baseline characters (`jp`, `luke`) from generated runtime assets."
+  short_description: "Read generated frame-data runtime assets for packaged current-fact answers."
+  default_prompt: "Use $kb-sf6-frame-current to answer current-fact questions for the characters packaged in `assets/runtime_manifest.json` from generated runtime assets."

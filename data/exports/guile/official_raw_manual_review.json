@@ -1,0 +1,71 @@
+[
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260412T161511Z-2fcf0e43",
+    "source_row_id": "20260412T161511Z-2fcf0e43:通常技:013:しゃがみ強k_ドラゴンスイープ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"active\":\"9-29 9-10, 27-29\",\"block_adv\":\"-12\",\"input\":\"2HK\",\"move_group\":\"normals\",\"move_name\":\"しゃがみ強K （ドラゴンスイープ）\",\"recovery\":\"21\",\"startup\":\"9\"}",
+    "move_id": "guile_012_2_hk",
+    "character_slug": "guile",
+    "move_name": "しゃがみ強K （ドラゴンスイープ）",
+    "input": "2HK",
+    "move_group": "normals",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260412T161511Z-2fcf0e43",
+    "source_row_id": "20260412T161511Z-2fcf0e43:必殺技:063:ソニックブレイク_派生",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_total_parse_failed"
+    ],
+    "raw_excerpt": "{\"block_adv\":\"-2\",\"input\":\"P\",\"move_group\":\"specials\",\"move_name\":\"ソニックブレイク （派生）\",\"recovery\":\"全体 ※36\",\"startup\":\"11\"}",
+    "move_id": "guile_060_p",
+    "character_slug": "guile",
+    "move_name": "ソニックブレイク （派生）",
+    "input": "P",
+    "move_group": "specials",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260412T161511Z-2fcf0e43",
+    "source_row_id": "20260412T161511Z-2fcf0e43:共通システム:082:ドライブパリィ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"active\":\"[※2] 1-12\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"ドライブパリィ\",\"recovery\":\"33\",\"startup\":\"1\"}",
+    "move_id": "guile_076_mpmk",
+    "character_slug": "guile",
+    "move_name": "ドライブパリィ",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

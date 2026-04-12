@@ -76,6 +76,7 @@ def parse_official_snapshot(snapshot_metadata: SnapshotMetadata, html: str, regi
             status.blockers.append(f"official row length drift row={row_index} cells={len(cells)}")
             continue
 
+        raw_label_text = compact_text(cells[0].text(separator=" ", strip=True))
         move_name_node = cells[0].css_first('[class*="frame_arts__"]')
         move_name = compact_text(move_name_node.text(separator=" ", strip=True) if move_name_node else cells[0].text(separator=" ", strip=True))
         input_node = cells[0].css_first("p")
@@ -84,6 +85,7 @@ def parse_official_snapshot(snapshot_metadata: SnapshotMetadata, html: str, regi
         icon_tokens = tokenize_input_string(normalized_input)
         section = canonical_group(current_group)
         name_key = normalize_name_key(move_name)
+        contextual_name_key = normalize_name_key(raw_label_text)
         combo_scaling_items = [compact_text(node.text(separator=" ", strip=True)) for node in cells[8].css("li")]
         notes_items = [compact_text(node.text(separator=" ", strip=True)) for node in cells[14].css("li")]
         starter_scaling = join_nonempty(combo_scaling_items)
@@ -137,6 +139,8 @@ def parse_official_snapshot(snapshot_metadata: SnapshotMetadata, html: str, regi
         }
 
         matches = registry.match_official(section, icon_tokens, name_key)
+        if len(matches) != 1 and contextual_name_key and contextual_name_key != name_key:
+            matches = registry.match_official(section, icon_tokens, contextual_name_key)
         if len(matches) != 1:
             payload["move_id"] = f"unmatched:{payload['source_row_id']}"
             mark_manual_review(payload, "official registry mismatch", "low")

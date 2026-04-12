@@ -1,0 +1,947 @@
+registry_version: 2.1.0
+moves:
+- move_id: dhalsim_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_手刀チョップ_弱
+- move_id: dhalsim_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_合掌フロントローキック_弱
+- move_id: dhalsim_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_ズームストレート_中
+- move_id: dhalsim_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_合掌ズームローキック_中
+- move_id: dhalsim_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_ダブルズームパンチ_強
+- move_id: dhalsim_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_合掌ズームスピンキック_強
+- move_id: dhalsim_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_手刀水平チョップ_弱
+- move_id: dhalsim_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_スライディング_弱
+- move_id: dhalsim_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_しゃがみズームパンチ_中
+- move_id: dhalsim_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_ヨガスライディング_中
+- move_id: dhalsim_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ダブルヨガパンチ_強
+- move_id: dhalsim_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_ロングスライディング_強
+- move_id: dhalsim_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ジャンプ掌底_ジャンプ中に_弱
+- move_id: dhalsim_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_ジャンプヨガ前蹴り_ジャンプ中に_弱
+- move_id: dhalsim_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_ジャンプズームサイドパンチ_ジャンプ中に_中
+- move_id: dhalsim_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_合掌ジャンプアンダーキック_ジャンプ中に_中
+- move_id: dhalsim_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_合掌ハンマー_ジャンプ中に_強
+- move_id: dhalsim_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ジャンプズームハイキック_ジャンプ中に_強
+- move_id: dhalsim_019_4_mp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MP
+    name_key: ヨガアッパー_中
+- move_id: dhalsim_020_4_hp
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: ヨガランス_強
+- move_id: dhalsim_021_1_hp
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '1'
+    - HP
+    name_key: 涅槃パンチ_強
+- move_id: dhalsim_022_1_lk
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '1'
+    - LK
+    name_key: アジャイルキック_弱
+- move_id: dhalsim_023_4_mk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MK
+    name_key: 合掌キック_中
+- move_id: dhalsim_024_1_mk
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '1'
+    - MK
+    name_key: スラストキック_中
+- move_id: dhalsim_025_4_hk
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: ヨガマウンテン_強
+- move_id: dhalsim_026_1_hk
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '1'
+    - HK
+    name_key: 因果キック_強
+- move_id: dhalsim_027_2_lp
+  group: command_normals
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: ドリル頭突き_ジャンプ中に_弱
+- move_id: dhalsim_028_2_lk
+  group: command_normals
+  sort_key: 28
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: 弱_ドリルキック_ジャンプ中に_弱
+- move_id: dhalsim_029_2_mk
+  group: command_normals
+  sort_key: 29
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: 中_ドリルキック_ジャンプ中に_中
+- move_id: dhalsim_030_2_hk
+  group: command_normals
+  sort_key: 30
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: 強_ドリルキック_ジャンプ中に_強
+- move_id: dhalsim_031_2_hk
+  group: command_normals
+  sort_key: 31
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: ロングスライディング_強
+- move_id: dhalsim_032_2_3_6_lp
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_ヨガファイア_弱
+- move_id: dhalsim_033_2_3_6_lp
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_ヨガファイア_ホールド_弱ホールド
+- move_id: dhalsim_034_2_3_6_mp
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_ヨガファイア_中
+- move_id: dhalsim_035_2_3_6_mp
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_ヨガファイア_ホールド_中ホールド
+- move_id: dhalsim_036_2_3_6_hp
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_ヨガファイア_強
+- move_id: dhalsim_037_2_3_6_hp
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_ヨガファイア_ホールド_強ホールド
+- move_id: dhalsim_038_2_3_6_p_p
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_弱_ヨガファイア_弱_中
+- move_id: dhalsim_039_2_3_6_p_p
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_中_ヨガファイア_弱_強
+- move_id: dhalsim_040_2_3_6_p_p
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_強_ヨガファイア_中_強
+- move_id: dhalsim_041_2_3_6_lk
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_ヨガアーチ_弱
+- move_id: dhalsim_042_2_3_6_mk
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_ヨガアーチ_中
+- move_id: dhalsim_043_2_3_6_hk
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_ヨガアーチ_強
+- move_id: dhalsim_044_2_3_6_k_k
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_弱_ヨガアーチ_弱_中
+- move_id: dhalsim_045_2_3_6_k_k
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_中_ヨガアーチ_弱_強
+- move_id: dhalsim_046_2_3_6_k_k
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_強_ヨガアーチ_中_強
+- move_id: dhalsim_047_6_3_2_1_4_lp
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_ヨガフレイム_弱
+- move_id: dhalsim_048_6_3_2_1_4_mp
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_ヨガフレイム_中
+- move_id: dhalsim_049_6_3_2_1_4_hp
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_ヨガフレイム_強
+- move_id: dhalsim_050_6_3_2_1_4_p_p
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_ヨガフレイム
+- move_id: dhalsim_051_6_3_2_1_4_lk
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - LK
+    name_key: 弱_ヨガブラスト_弱
+- move_id: dhalsim_052_6_3_2_1_4_mk
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - MK
+    name_key: 中_ヨガブラスト_中
+- move_id: dhalsim_053_6_3_2_1_4_hk
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - HK
+    name_key: 強_ヨガブラスト_強
+- move_id: dhalsim_054_6_3_2_1_4_k_k
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_ヨガブラスト
+- move_id: dhalsim_055_6_3_2_1_4_lp
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_ヨガコメット_ジャンプ中に_弱
+- move_id: dhalsim_056_6_3_2_1_4_mp
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_ヨガコメット_ジャンプ中に_中
+- move_id: dhalsim_057_6_3_2_1_4_hp
+  group: specials
+  sort_key: 57
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_ヨガコメット_ジャンプ中に_強
+- move_id: dhalsim_058_6_3_2_1_4_p_p
+  group: specials
+  sort_key: 58
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_ヨガコメット_ジャンプ中に
+- move_id: dhalsim_059_2_k_k
+  group: specials
+  sort_key: 59
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - K
+    - K
+    name_key: ヨガフロート_その場
+- move_id: dhalsim_060_3_k_k
+  group: specials
+  sort_key: 60
+  official_match:
+    section: specials
+    icon_tokens:
+    - '3'
+    - K
+    - K
+    name_key: ヨガフロート_前方
+- move_id: dhalsim_061_2_k_k
+  group: specials
+  sort_key: 61
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - K
+    - K
+    name_key: 空中ヨガフロート_ジャンプ中に
+- move_id: dhalsim_062_6_p_p
+  group: specials
+  sort_key: 62
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - P
+    - P
+    name_key: p_ヨガテレポート_前方
+- move_id: dhalsim_063_6_k_k
+  group: specials
+  sort_key: 63
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - K
+    - K
+    name_key: k_ヨガテレポート_前方
+- move_id: dhalsim_064_6_p_p
+  group: specials
+  sort_key: 64
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - P
+    - P
+    name_key: p_空中ヨガテレポート_前方_ジャンプ中に
+- move_id: dhalsim_065_6_k_k
+  group: specials
+  sort_key: 65
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - K
+    - K
+    name_key: k_空中ヨガテレポート_前方_ジャンプ中に
+- move_id: dhalsim_066_4_p_p_4_k_k
+  group: specials
+  sort_key: 66
+  official_match:
+    section: specials
+    icon_tokens:
+    - '4'
+    - P
+    - P
+    - '|'
+    - '4'
+    - K
+    - K
+    name_key: ヨガテレポート_後方
+- move_id: dhalsim_067_4_p_p
+  group: specials
+  sort_key: 67
+  official_match:
+    section: specials
+    icon_tokens:
+    - '4'
+    - P
+    - P
+    name_key: p_空中ヨガテレポート_後方_ジャンプ中に
+- move_id: dhalsim_068_4_k_k
+  group: specials
+  sort_key: 68
+  official_match:
+    section: specials
+    icon_tokens:
+    - '4'
+    - K
+    - K
+    name_key: k_空中ヨガテレポート_後方_ジャンプ中に
+- move_id: dhalsim_069_2_3_6_2_3_6_lp
+  group: super_arts
+  sort_key: 69
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: sa1_弱_ヨガインフェルノ_弱
+- move_id: dhalsim_070_2_3_6_2_3_6_mp
+  group: super_arts
+  sort_key: 70
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: sa1_中_ヨガインフェルノ_中
+- move_id: dhalsim_071_2_3_6_2_3_6_hp
+  group: super_arts
+  sort_key: 71
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: sa1_強_ヨガインフェルノ_強
+- move_id: dhalsim_072_2_1_4_2_1_4_k
+  group: super_arts
+  sort_key: 72
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: sa2_ヨガサンバースト_lv1
+- move_id: dhalsim_073_2_1_4_2_1_4_k
+  group: super_arts
+  sort_key: 73
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: sa2_ヨガサンバースト_lv2_ホールド
+- move_id: dhalsim_074_2_1_4_2_1_4_k
+  group: super_arts
+  sort_key: 74
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: sa2_ヨガサンバースト_lv3_ホールド
+- move_id: dhalsim_075_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 75
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa3_ヨガマーシレス
+- move_id: dhalsim_076_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 76
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: ca_ヨガマーシレス_体力25_以下で
+- move_id: dhalsim_077_5_6_lplk
+  group: throws
+  sort_key: 77
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: ヨガスマッシュ_近距離で_弱_弱
+- move_id: dhalsim_078_4_lplk
+  group: throws
+  sort_key: 78
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: ヨガスルー_近距離で_弱_弱
+- move_id: dhalsim_079_2_lplk
+  group: throws
+  sort_key: 79
+  official_match:
+    section: throws
+    icon_tokens:
+    - '2'
+    - LPLK
+    name_key: ヨガスプラッシュ_近距離で_弱_弱
+- move_id: dhalsim_080_6_6
+  group: system
+  sort_key: 80
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: dhalsim_081_4_4
+  group: system
+  sort_key: 81
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: dhalsim_082_hphk
+  group: system
+  sort_key: 82
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_ヨガライズ_強_強
+- move_id: dhalsim_083_6_hphk
+  group: system
+  sort_key: 83
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_ヨガイリュージョン_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: dhalsim_084_6_hphk
+  group: system
+  sort_key: 84
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_ヨガイリュージョン_起き上がり時に_強_強
+- move_id: dhalsim_085_mpmk
+  group: system
+  sort_key: 85
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: dhalsim_086_mpmk
+  group: system
+  sort_key: 86
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: dhalsim_087_mpmk
+  group: system
+  sort_key: 87
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: dhalsim_088_6_6
+  group: system
+  sort_key: 88
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: dhalsim_089_6_6_5_6_mpmk
+  group: system
+  sort_key: 89
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

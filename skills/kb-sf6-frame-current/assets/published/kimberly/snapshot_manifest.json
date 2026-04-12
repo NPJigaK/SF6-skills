@@ -1,0 +1,52 @@
+{
+  "character_slug": "kimberly",
+  "schema_version": "3.0.0",
+  "export_contract_version": "3.0.0",
+  "derivation_rule_version": "1.0.0",
+  "repo_generation_registry_version": "2.1.0",
+  "repo_generation_registry_sha256": "aa59899e8545bc639c7cc1337244a22f7f31b7d0644292c66690eb7657d7e0c2",
+  "repo_generation_binding_policy_version": "1.0.0",
+  "repo_generation_binding_policy_sha256": "9886e83bd129e32c63eebe12606d80ce7e1f1e0ac629f1e0744f01ea3f2e7a29",
+  "datasets": {
+    "official_raw": {
+      "publication_state": "available",
+      "published_run_id": "20260412T162056318523Z-2db599d4",
+      "published_snapshot_ids": [
+        "20260412T161512Z-b0731b91"
+      ],
+      "published_record_count": 64,
+      "withheld_review_count": 22,
+      "registry_version": "2.1.0",
+      "registry_sha256": "aa59899e8545bc639c7cc1337244a22f7f31b7d0644292c66690eb7657d7e0c2",
+      "binding_policy_version": null,
+      "binding_policy_sha256": null,
+      "content_hash": "c39a639f337ab736c8bf10a632de92c988cdef40d6e02c023d7a694e9b098ed6"
+    },
+    "supercombo_enrichment": {
+      "publication_state": "unavailable",
+      "published_run_id": null,
+      "published_snapshot_ids": [],
+      "published_record_count": 0,
+      "withheld_review_count": 0,
+      "registry_version": "2.1.0",
+      "registry_sha256": "aa59899e8545bc639c7cc1337244a22f7f31b7d0644292c66690eb7657d7e0c2",
+      "binding_policy_version": "1.0.0",
+      "binding_policy_sha256": "9886e83bd129e32c63eebe12606d80ce7e1f1e0ac629f1e0744f01ea3f2e7a29",
+      "content_hash": null
+    },
+    "derived_metrics": {
+      "publication_state": "available",
+      "published_run_id": "20260412T162056318523Z-2db599d4",
+      "published_snapshot_ids": [
+        "20260412T161512Z-b0731b91"
+      ],
+      "published_record_count": 64,
+      "withheld_review_count": 22,
+      "registry_version": "2.1.0",
+      "registry_sha256": "aa59899e8545bc639c7cc1337244a22f7f31b7d0644292c66690eb7657d7e0c2",
+      "binding_policy_version": null,
+      "binding_policy_sha256": null,
+      "content_hash": "0913afc5bc7f7fbdd6b5669c32cab3b2abd4d5de4d8a98c7fe8648725b7bd208"
+    }
+  }
+}

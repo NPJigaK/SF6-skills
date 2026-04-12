@@ -1,0 +1,698 @@
+registry_version: 2.1.0
+moves:
+- move_id: ed_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ジャブ_弱
+- move_id: ed_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_フリッカー_弱
+- move_id: ed_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_ボディブロー_中
+- move_id: ed_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_ヒットマンフリッカー_中
+- move_id: ed_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_ソリッドナックル_強
+- move_id: ed_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_ライジングフリッカー_強
+- move_id: ed_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_アンダーブロー_弱
+- move_id: ed_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_ジャブフリッカー_弱
+- move_id: ed_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_アンダーフック_中
+- move_id: ed_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_オーバーフリッカー_中
+- move_id: ed_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ローフックパンチ_強
+- move_id: ed_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_ローフリッカー_強
+- move_id: ed_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_エアナックル_ジャンプ中に_弱
+- move_id: ed_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_アンダーフリッカー_ジャンプ中に_弱
+- move_id: ed_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_バーティカルナックル_ジャンプ中に_中
+- move_id: ed_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_ミドルフリッカー_ジャンプ中に_中
+- move_id: ed_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_ソリッドダイブ_ジャンプ中に_強
+- move_id: ed_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ハイフリッカー_ジャンプ中に_強
+- move_id: ed_019_hp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    name_key: サイコナックル_lv1_強ホールド
+- move_id: ed_020_hp
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    name_key: サイコナックル_lv2_強ホールド
+- move_id: ed_021_6_hp
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: コブラパンチ_強
+- move_id: ed_022_lk_lk
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LK
+    - '>'
+    - LK
+    name_key: フリッカーコンビネーション_2段目_弱_弱
+- move_id: ed_023_lk_lk_lk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LK
+    - '>'
+    - LK
+    - '>'
+    - LK
+    name_key: フリッカーコンビネーション_3段目_弱_弱_弱
+- move_id: ed_024_mp_hp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - HP
+    name_key: ボディブローコンビネーション_中_強
+- move_id: ed_025_mk_mk
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MK
+    - '>'
+    - MK
+    name_key: ヒットマンコンビネーション_2段目_中_中
+- move_id: ed_026_mk_mk_hp
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MK
+    - '>'
+    - MK
+    - '>'
+    - HP
+    name_key: ヒットマンコンビネーション_3段目_中_中_強
+- move_id: ed_027_2_hk_hp
+  group: command_normals
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HK
+    - '>'
+    - HP
+    name_key: ロースマッシュコンビネーション_強_強
+- move_id: ed_028_2_3_6_p
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: サイコスパーク
+- move_id: ed_029_2_3_6_p_p
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_サイコスパーク
+- move_id: ed_030_6_lp
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - LP
+    name_key: 弱_サイコシュート_サイコスパーク中に_弱
+- move_id: ed_031_6_mp
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: 中_サイコシュート_サイコスパーク中に_中
+- move_id: ed_032_6_hp
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: 強_サイコシュート_サイコスパーク中に_強
+- move_id: ed_033_6_lp
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - LP
+    name_key: od_弱_サイコシュート_odサイコスパーク中に_弱
+- move_id: ed_034_6_mp
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: od_中_サイコシュート_odサイコスパーク中に_中
+- move_id: ed_035_6_hp
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: od_強_サイコシュート_odサイコスパーク中に_強
+- move_id: ed_036_6_2_3_lp
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 弱_サイコアッパー_弱
+- move_id: ed_037_6_2_3_mp
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 中_サイコアッパー_中
+- move_id: ed_038_6_2_3_hp
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 強_サイコアッパー_強
+- move_id: ed_039_6_2_3_p_p
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: od_サイコアッパー
+- move_id: ed_040_2_1_4_lp
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_サイコブリッツ_弱
+- move_id: ed_041_2_1_4_mp
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_サイコブリッツ_中
+- move_id: ed_042_2_1_4_hp
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_サイコブリッツ_強
+- move_id: ed_043_2_1_4_p_p
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_サイコブリッツ
+- move_id: ed_044_2_3_6_lk
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_サイコフリッカー_弱
+- move_id: ed_045_2_3_6_lk
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_サイコフリッカー_ホールド_弱ホールド
+- move_id: ed_046_2_3_6_mk
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_サイコフリッカー_中
+- move_id: ed_047_2_3_6_mk
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_サイコフリッカー_ホールド_中ホールド
+- move_id: ed_048_2_3_6_hk
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_サイコフリッカー_強
+- move_id: ed_049_2_3_6_hk
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_サイコフリッカー_ホールド_強ホールド
+- move_id: ed_050_2_3_6_k_k
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_サイコフリッカー
+- move_id: ed_051_k_k
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    - K
+    name_key: キルステップ_前方
+- move_id: ed_052_6_p
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - P
+    name_key: キルスイッチ_ブレイク_キルステップ_前方_中に
+- move_id: ed_053_6_p
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - P
+    name_key: キルスイッチ_チェイス_キルステップ_前方_中に
+- move_id: ed_054_4_k_k
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - '4'
+    - K
+    - K
+    name_key: キルステップ_後方
+- move_id: ed_055_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 55
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_サイコストーム
+- move_id: ed_056_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 56
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_サイコキャノン
+- move_id: ed_057_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 57
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa3_サイコチェンバー
+- move_id: ed_058_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 58
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: ca_サイコチェンバー_体力25_以下で
+- move_id: ed_059_5_6_lplk
+  group: throws
+  sort_key: 59
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: フェイスバスター_近距離で_弱_弱
+- move_id: ed_060_4_lplk
+  group: throws
+  sort_key: 60
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: リブクラッシャー_近距離で_弱_弱
+- move_id: ed_061_6_6
+  group: system
+  sort_key: 61
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: ed_062_4_4
+  group: system
+  sort_key: 62
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: ed_063_hphk
+  group: system
+  sort_key: 63
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_ターンパンチ_強_強
+- move_id: ed_064_6_hphk
+  group: system
+  sort_key: 64
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_ハンマーブロー_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: ed_065_6_hphk
+  group: system
+  sort_key: 65
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_ハンマーブロー_起き上がり時に_強_強
+- move_id: ed_066_mpmk
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: ed_067_mpmk
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: ed_068_mpmk
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: ed_069_6_6
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: ed_070_6_6
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に

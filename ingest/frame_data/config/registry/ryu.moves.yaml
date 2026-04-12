@@ -1,0 +1,796 @@
+registry_version: 2.1.0
+moves:
+- move_id: ryu_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ジャブ_弱
+- move_id: ryu_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_ローキック_弱
+- move_id: ryu_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_鉤突き_中
+- move_id: ryu_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_横蹴り_中
+- move_id: ryu_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_正拳突き_強
+- move_id: ryu_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_後ろ回し蹴り_強
+- move_id: ryu_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ジャブ_弱
+- move_id: ryu_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_キック_弱
+- move_id: ryu_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_ストレート_中
+- move_id: ryu_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_くるぶしキック_中
+- move_id: ryu_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_突き上げアッパー_強
+- move_id: ryu_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_回転足払い_強
+- move_id: ryu_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_肘落とし_ジャンプ中に_弱
+- move_id: ryu_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_ひざ蹴り_ジャンプ中に_弱
+- move_id: ryu_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_すくい突き_ジャンプ中に_中
+- move_id: ryu_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_飛び蹴り_ジャンプ中に_中
+- move_id: ryu_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_ストレート_ジャンプ中に_強
+- move_id: ryu_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_跳び前蹴り_ジャンプ中に_強
+- move_id: ryu_019_6_mp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: 鎖骨割り_中
+- move_id: ryu_020_6_hp
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: 鳩尾砕き_強
+- move_id: ryu_021_4_hp
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: 上げ突き_強
+- move_id: ryu_022_4_hk
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HK
+    name_key: かかと落とし_強
+- move_id: ryu_023_6_hk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    name_key: 旋風脚_強
+- move_id: ryu_024_hp_hk
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    - '>'
+    - HK
+    name_key: 上段二連撃_強_強
+- move_id: ryu_025_mp_lk
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - LK
+    name_key: 不破三連撃_2段目_中_弱
+- move_id: ryu_026_mp_lk_hk
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - LK
+    - '>'
+    - HK
+    name_key: 不破三連撃_3段目_中_弱_強
+- move_id: ryu_027_2_3_6_lp
+  group: specials
+  sort_key: 27
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_波動拳_弱
+- move_id: ryu_028_2_3_6_mp
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_波動拳_中
+- move_id: ryu_029_2_3_6_hp
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_波動拳_強
+- move_id: ryu_030_2_3_6_p
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: 電刃錬気_波動拳
+- move_id: ryu_031_2_3_6_p_p
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_波動拳
+- move_id: ryu_032_2_3_6_p_p
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: 電刃錬気_od_波動拳
+- move_id: ryu_033_6_2_3_lp
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 弱_昇龍拳_弱
+- move_id: ryu_034_6_2_3_mp
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 中_昇龍拳_中
+- move_id: ryu_035_6_2_3_hp
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 強_昇龍拳_強
+- move_id: ryu_036_6_2_3_p_p
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: od_昇龍拳
+- move_id: ryu_037_2_1_4_lk
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LK
+    name_key: 弱_竜巻旋風脚_弱
+- move_id: ryu_038_2_1_4_mk
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MK
+    name_key: 中_竜巻旋風脚_中
+- move_id: ryu_039_2_1_4_hk
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HK
+    name_key: 強_竜巻旋風脚_強
+- move_id: ryu_040_2_1_4_k_k
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_竜巻旋風脚
+- move_id: ryu_041_2_1_4_k
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: 空中竜巻旋風脚_前ジャンプ中に
+- move_id: ryu_042_2_1_4_k_k
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_空中竜巻旋風脚_前ジャンプ中に
+- move_id: ryu_043_2_3_6_lk
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_上段足刀蹴り_弱
+- move_id: ryu_044_2_3_6_mk
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_上段足刀蹴り_中
+- move_id: ryu_045_2_3_6_hk
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_上段足刀蹴り_強
+- move_id: ryu_046_2_3_6_k_k
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_上段足刀蹴り
+- move_id: ryu_047_2_1_4_lp
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_波掌撃_弱
+- move_id: ryu_048_2_1_4_mp
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_波掌撃_中
+- move_id: ryu_049_2_1_4_hp
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_波掌撃_強
+- move_id: ryu_050_2_1_4_p
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: 電刃錬気_波掌撃
+- move_id: ryu_051_2_1_4_p_p
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_波掌撃
+- move_id: ryu_052_2_1_4_p_p
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: 電刃錬気_od_波掌撃
+- move_id: ryu_053_2_2_p
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '2'
+    - P
+    name_key: 電刃錬気
+- move_id: ryu_054_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 54
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_真空波動拳
+- move_id: ryu_055_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 55
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: 電刃錬気_sa1_真空波動拳
+- move_id: ryu_056_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 56
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_真波掌撃_lv1
+- move_id: ryu_057_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 57
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_真波掌撃_lv2
+- move_id: ryu_058_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 58
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_真波掌撃_lv3
+- move_id: ryu_059_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 59
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: 電刃錬気_sa2_真波掌撃_lv1
+- move_id: ryu_060_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 60
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: 電刃錬気_sa2_真波掌撃_lv2
+- move_id: ryu_061_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 61
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: 電刃錬気_sa2_真波掌撃_lv3
+- move_id: ryu_062_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 62
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa3_真_昇龍拳
+- move_id: ryu_063_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 63
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: ca_真_昇龍拳_体力25_以下で
+- move_id: ryu_064_5_6_lplk
+  group: throws
+  sort_key: 64
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: 背負い投げ_近距離で_弱_弱
+- move_id: ryu_065_4_lplk
+  group: throws
+  sort_key: 65
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: 巴投げ_近距離で_弱_弱
+- move_id: ryu_066_6_6
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: ryu_067_4_4
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: ryu_068_hphk
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_震撃_強_強
+- move_id: ryu_069_6_hphk
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_胸尖打ち_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: ryu_070_6_hphk
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_胸尖打ち_起き上がり時に_強_強
+- move_id: ryu_071_mpmk
+  group: system
+  sort_key: 71
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: ryu_072_mpmk
+  group: system
+  sort_key: 72
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: ryu_073_mpmk
+  group: system
+  sort_key: 73
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: ryu_074_6_6
+  group: system
+  sort_key: 74
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: ryu_075_6_6_5_6_mpmk
+  group: system
+  sort_key: 75
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

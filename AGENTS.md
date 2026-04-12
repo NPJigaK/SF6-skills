@@ -3,7 +3,7 @@
 ## 目的
 - このリポジトリは SF6 の知識を concept-first で扱う。
 - current fact は published exports を正本として参照し、raw / normalized は監査や再解析に限る。
-- supported baseline characters は `jp`, `luke`。
+- current roster characters の canonical source は `shared/roster/current-character-roster.json`。
 
 ## 回答ラベル
 - `[検証済み]`: `T1` または `T2` の根拠で current fact を確認した回答
@@ -20,7 +20,7 @@
 - current の仕様・数値・差分は `T1` または `T2` が無ければ断定しない。
 - 公式ソースが存在する領域では `T3` 単独を最終根拠にしない。
 - 概念質問にはまず概念で答え、current fact が必要な部分だけ published data を確認する。
-- supported baseline characters `jp`, `luke` の current fact の最終根拠は published exports only とする。
+- current roster characters の current fact の最終根拠は published exports only とする。
 - published data の責務は守る。
   - `official_raw`: canonical な正本
   - `derived_metrics`: official-only の機械計算結果
@@ -31,9 +31,9 @@
 
 ## Knowledge と Skills
 - 不変概念は `skills/kb-sf6-core/` に寄せる。
-- supported baseline characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
+- current roster characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
-- パッチ/調整対応の `jp` / `luke` frame-data 更新は `maintainer-skills/update-frame-data/` を使う。
+- パッチ/調整対応の current roster frame-data 更新は `maintainer-skills/update-frame-data/` を使う。
 
 `skills/` is the canonical public source.
 Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.

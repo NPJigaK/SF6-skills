@@ -1,7 +1,293 @@
 ﻿{
     "source_root":  "data/exports",
     "skill_root":  "skills/kb-sf6-frame-current/assets",
+    "roster_source":  "shared/roster/current-character-roster.json",
     "characters":  [
+                       {
+                           "character_slug":  "ryu",
+                           "files":  [
+                                         {
+                                             "target":  "published/ryu/snapshot_manifest.json",
+                                             "source":  "data/exports/ryu/snapshot_manifest.json",
+                                             "sha256":  "85fa8300fa7adda34e913c4773125753f3b0a78ebbd40506081fa5eb4108546c"
+                                         },
+                                         {
+                                             "target":  "published/ryu/official_raw.json",
+                                             "source":  "data/exports/ryu/official_raw.json",
+                                             "sha256":  "ea3984446a9cffa705c058720d04e18ac6c7427504902316ce9b89fad029274b"
+                                         },
+                                         {
+                                             "target":  "published/ryu/derived_metrics.json",
+                                             "source":  "data/exports/ryu/derived_metrics.json",
+                                             "sha256":  "a273d86177d22eaf396e06da30c0dc2c5c1424c51931f25a2fc88e87bf992203"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "luke",
+                           "files":  [
+                                         {
+                                             "target":  "published/luke/snapshot_manifest.json",
+                                             "source":  "data/exports/luke/snapshot_manifest.json",
+                                             "sha256":  "f86e58a52149310cd19c41bf9d3b3bd8bd96e1b277485cb23933c74c7361ec4e"
+                                         },
+                                         {
+                                             "target":  "published/luke/official_raw.json",
+                                             "source":  "data/exports/luke/official_raw.json",
+                                             "sha256":  "07e9332ba375f6d6d2295921ee5461d94de2125d14c609021524080beaf7acb6"
+                                         },
+                                         {
+                                             "target":  "published/luke/derived_metrics.json",
+                                             "source":  "data/exports/luke/derived_metrics.json",
+                                             "sha256":  "77f5cab3eb4dc906bc79c0ddfc45f6920c115d50e764f327cf649248fd76896b"
+                                         },
+                                         {
+                                             "target":  "published/luke/supercombo_enrichment.json",
+                                             "source":  "data/exports/luke/supercombo_enrichment.json",
+                                             "sha256":  "72602783d36fa69feef213f313f9dbaff23a73cc5f34375682f501b2eabef8b7"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "jamie",
+                           "files":  [
+                                         {
+                                             "target":  "published/jamie/snapshot_manifest.json",
+                                             "source":  "data/exports/jamie/snapshot_manifest.json",
+                                             "sha256":  "b43ce88e7bdca363d30c5327507a14c0497bd3b379bf3d058eebf6366e1df439"
+                                         },
+                                         {
+                                             "target":  "published/jamie/official_raw.json",
+                                             "source":  "data/exports/jamie/official_raw.json",
+                                             "sha256":  "edf0bbcafaa6a111be4da75a4d4033fdc3034143a8bc9a09477c14de030c1dc9"
+                                         },
+                                         {
+                                             "target":  "published/jamie/derived_metrics.json",
+                                             "source":  "data/exports/jamie/derived_metrics.json",
+                                             "sha256":  "31c102c8e5e7e3434d157515081e0ae2659ef625438fbec371c42688cc896fe2"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "chunli",
+                           "files":  [
+                                         {
+                                             "target":  "published/chunli/snapshot_manifest.json",
+                                             "source":  "data/exports/chunli/snapshot_manifest.json",
+                                             "sha256":  "5e420d15951ea16151fcf2dbb00f393a30e59bf80968ef18d275e98e55b69015"
+                                         },
+                                         {
+                                             "target":  "published/chunli/official_raw.json",
+                                             "source":  "data/exports/chunli/official_raw.json",
+                                             "sha256":  "77a4d4ecc076075a7066bdd299b356f942466889d2fe3c7b6d1ee62cd5db32fd"
+                                         },
+                                         {
+                                             "target":  "published/chunli/derived_metrics.json",
+                                             "source":  "data/exports/chunli/derived_metrics.json",
+                                             "sha256":  "a2cddce04ff57d2e7791f762f5402186abcdc080abc7363187a31d5c17b616de"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "guile",
+                           "files":  [
+                                         {
+                                             "target":  "published/guile/snapshot_manifest.json",
+                                             "source":  "data/exports/guile/snapshot_manifest.json",
+                                             "sha256":  "50508773181e8c2c9ab5f696840055ed5af74514850a5c457fc1a1e5df053487"
+                                         },
+                                         {
+                                             "target":  "published/guile/official_raw.json",
+                                             "source":  "data/exports/guile/official_raw.json",
+                                             "sha256":  "5859d0644c334ca72d8bbaf2a88dd9e7309e041a5641f7d2c8d50592fab5bae8"
+                                         },
+                                         {
+                                             "target":  "published/guile/derived_metrics.json",
+                                             "source":  "data/exports/guile/derived_metrics.json",
+                                             "sha256":  "9373ba93d7fb1b5ece5677a672c01cbbe8e10d32f97d17bb9b90b0bf20141278"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "kimberly",
+                           "files":  [
+                                         {
+                                             "target":  "published/kimberly/snapshot_manifest.json",
+                                             "source":  "data/exports/kimberly/snapshot_manifest.json",
+                                             "sha256":  "7dfd4c9e89824f656aecb06ed143791cd957681e8541c4cb5d1a21f40224bc49"
+                                         },
+                                         {
+                                             "target":  "published/kimberly/official_raw.json",
+                                             "source":  "data/exports/kimberly/official_raw.json",
+                                             "sha256":  "0a56cf02784af53ba88cba76bc57a145a2138550d7e2a690596dc465b16459eb"
+                                         },
+                                         {
+                                             "target":  "published/kimberly/derived_metrics.json",
+                                             "source":  "data/exports/kimberly/derived_metrics.json",
+                                             "sha256":  "2ab23e4dcf325ca82c56394ebcb432d9754576e6e1a09ea8490ed97f2165c42d"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "juri",
+                           "files":  [
+                                         {
+                                             "target":  "published/juri/snapshot_manifest.json",
+                                             "source":  "data/exports/juri/snapshot_manifest.json",
+                                             "sha256":  "9702c2ef5880c1a287c78f1af0f66dd344ab474ea13badeff7c36cb164e0da81"
+                                         },
+                                         {
+                                             "target":  "published/juri/official_raw.json",
+                                             "source":  "data/exports/juri/official_raw.json",
+                                             "sha256":  "46ab3e383f0482dc1f116e62f47ddfdd44ba9b3cdcb2047ae25fa97fd977aadf"
+                                         },
+                                         {
+                                             "target":  "published/juri/derived_metrics.json",
+                                             "source":  "data/exports/juri/derived_metrics.json",
+                                             "sha256":  "fda5236c58e5a2adb586267ed279e1276a79cf96cf19f06bc5d6deff5a66035b"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "ken",
+                           "files":  [
+                                         {
+                                             "target":  "published/ken/snapshot_manifest.json",
+                                             "source":  "data/exports/ken/snapshot_manifest.json",
+                                             "sha256":  "2003a136a0132a5ba03e38816cabca7970176f3b811806b9cebff969b6dcb830"
+                                         },
+                                         {
+                                             "target":  "published/ken/official_raw.json",
+                                             "source":  "data/exports/ken/official_raw.json",
+                                             "sha256":  "bfefaa957f138bcf426a9a01dbe801786df0af24a17934ed7480786f46d74dd6"
+                                         },
+                                         {
+                                             "target":  "published/ken/derived_metrics.json",
+                                             "source":  "data/exports/ken/derived_metrics.json",
+                                             "sha256":  "59a4af52e5f91a3c2137ea599013092ee023786fa402612cc2c3fdbad8558439"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "blanka",
+                           "files":  [
+                                         {
+                                             "target":  "published/blanka/snapshot_manifest.json",
+                                             "source":  "data/exports/blanka/snapshot_manifest.json",
+                                             "sha256":  "7e8b2567ca56df2b5e95e0e821718d319d5b3ba2da3892479dfd9996876a29f1"
+                                         },
+                                         {
+                                             "target":  "published/blanka/official_raw.json",
+                                             "source":  "data/exports/blanka/official_raw.json",
+                                             "sha256":  "657f8640c7e06f8d1ea41cd4946439d162feefa7a0e341da4dbf8cea8643ffa4"
+                                         },
+                                         {
+                                             "target":  "published/blanka/derived_metrics.json",
+                                             "source":  "data/exports/blanka/derived_metrics.json",
+                                             "sha256":  "725f0d857266ac46678dd0e5722614bab181873c2f21c854208985315c976a9d"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "dhalsim",
+                           "files":  [
+                                         {
+                                             "target":  "published/dhalsim/snapshot_manifest.json",
+                                             "source":  "data/exports/dhalsim/snapshot_manifest.json",
+                                             "sha256":  "92cfa81840cdac045de8abe3ff88f6c870a486529721e16c4804ec6effbd7fc0"
+                                         },
+                                         {
+                                             "target":  "published/dhalsim/official_raw.json",
+                                             "source":  "data/exports/dhalsim/official_raw.json",
+                                             "sha256":  "8bf63dafbb40894566dbc51e4e2a854bf4dbec0fb68bcbb94430010cb462374f"
+                                         },
+                                         {
+                                             "target":  "published/dhalsim/derived_metrics.json",
+                                             "source":  "data/exports/dhalsim/derived_metrics.json",
+                                             "sha256":  "b2685d64c3c38a4ee9c2a329b926795f6c29a40d3aea8332514ecc588fc891c3"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "ehonda",
+                           "files":  [
+                                         {
+                                             "target":  "published/ehonda/snapshot_manifest.json",
+                                             "source":  "data/exports/ehonda/snapshot_manifest.json",
+                                             "sha256":  "6759205e98201440c491e3e1cb1c7811b3128bd83d092e01142806a2cea0cd76"
+                                         },
+                                         {
+                                             "target":  "published/ehonda/official_raw.json",
+                                             "source":  "data/exports/ehonda/official_raw.json",
+                                             "sha256":  "45943a4840289ad5ea6808a98059cc20d17a0fc4b33f37eefdd549a5a3018015"
+                                         },
+                                         {
+                                             "target":  "published/ehonda/derived_metrics.json",
+                                             "source":  "data/exports/ehonda/derived_metrics.json",
+                                             "sha256":  "18c8fa1ad0222311ffc23eb57574b2105b1f5154ce396069bb589d997046d4c2"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "deejay",
+                           "files":  [
+                                         {
+                                             "target":  "published/deejay/snapshot_manifest.json",
+                                             "source":  "data/exports/deejay/snapshot_manifest.json",
+                                             "sha256":  "ba896a2a7fb6f81599668d0c15cf072d3e023247a3895c17980a1fd60a69fd74"
+                                         },
+                                         {
+                                             "target":  "published/deejay/official_raw.json",
+                                             "source":  "data/exports/deejay/official_raw.json",
+                                             "sha256":  "755c59c900ea47de4c1b75645a5111d2be5544b84d8ceeb7e4879c118a209f32"
+                                         },
+                                         {
+                                             "target":  "published/deejay/derived_metrics.json",
+                                             "source":  "data/exports/deejay/derived_metrics.json",
+                                             "sha256":  "fa3138d40cd011bda33976b3b241346c2548c65a3902ae1bfc11052a51989ede"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "manon",
+                           "files":  [
+                                         {
+                                             "target":  "published/manon/snapshot_manifest.json",
+                                             "source":  "data/exports/manon/snapshot_manifest.json",
+                                             "sha256":  "831c154f159fe5abdd67b5b3561dbae5c96e32541c4d2d6b76cb05f42fa778c1"
+                                         },
+                                         {
+                                             "target":  "published/manon/official_raw.json",
+                                             "source":  "data/exports/manon/official_raw.json",
+                                             "sha256":  "70ef9f1b3bbe5ba0dbc1548236f7517f08a2b3c4815d4cb01e15c6ae6c9cda51"
+                                         },
+                                         {
+                                             "target":  "published/manon/derived_metrics.json",
+                                             "source":  "data/exports/manon/derived_metrics.json",
+                                             "sha256":  "dae33b56512be2cb483bb8a325c578eadd3e4222dae812ad6a8d4ebc2a9fb669"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "marisa",
+                           "files":  [
+                                         {
+                                             "target":  "published/marisa/snapshot_manifest.json",
+                                             "source":  "data/exports/marisa/snapshot_manifest.json",
+                                             "sha256":  "56e1a8ba61e9a8ea7653d76d632d074cc321d4a82925e8648e17e2270b296bac"
+                                         },
+                                         {
+                                             "target":  "published/marisa/official_raw.json",
+                                             "source":  "data/exports/marisa/official_raw.json",
+                                             "sha256":  "c8666367c73fccc6b45431b469eb1375ecfbee35404beb08805b2f77e7c04c6e"
+                                         },
+                                         {
+                                             "target":  "published/marisa/derived_metrics.json",
+                                             "source":  "data/exports/marisa/derived_metrics.json",
+                                             "sha256":  "ae43a89fba0146307ea462db44e57069b6ef4ad4c8e0f569ae152dfda364f9f3"
+                                         }
+                                     ]
+                       },
                        {
                            "character_slug":  "jp",
                            "files":  [
@@ -28,27 +314,282 @@
                                      ]
                        },
                        {
-                           "character_slug":  "luke",
+                           "character_slug":  "zangief",
                            "files":  [
                                          {
-                                             "target":  "published/luke/snapshot_manifest.json",
-                                             "source":  "data/exports/luke/snapshot_manifest.json",
-                                             "sha256":  "f86e58a52149310cd19c41bf9d3b3bd8bd96e1b277485cb23933c74c7361ec4e"
+                                             "target":  "published/zangief/snapshot_manifest.json",
+                                             "source":  "data/exports/zangief/snapshot_manifest.json",
+                                             "sha256":  "4e4abc6fc9a4d7a20536c040ed58057971e227169e7f635e3a27be637fe2c995"
                                          },
                                          {
-                                             "target":  "published/luke/official_raw.json",
-                                             "source":  "data/exports/luke/official_raw.json",
-                                             "sha256":  "07e9332ba375f6d6d2295921ee5461d94de2125d14c609021524080beaf7acb6"
+                                             "target":  "published/zangief/official_raw.json",
+                                             "source":  "data/exports/zangief/official_raw.json",
+                                             "sha256":  "3011cbb9cc75b288045444b5fe6351aa33a184ae8a43e9b9cf501854fecb1427"
                                          },
                                          {
-                                             "target":  "published/luke/derived_metrics.json",
-                                             "source":  "data/exports/luke/derived_metrics.json",
-                                             "sha256":  "77f5cab3eb4dc906bc79c0ddfc45f6920c115d50e764f327cf649248fd76896b"
+                                             "target":  "published/zangief/derived_metrics.json",
+                                             "source":  "data/exports/zangief/derived_metrics.json",
+                                             "sha256":  "c0ccc9c7a9da8551cf5ea85b1d8086fa74a1a4625f517c5f6f8f2f3047aeac0b"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "lily",
+                           "files":  [
+                                         {
+                                             "target":  "published/lily/snapshot_manifest.json",
+                                             "source":  "data/exports/lily/snapshot_manifest.json",
+                                             "sha256":  "e2b6cb6f37e6f1b5b687e7fd804b5db44f369e669113f4fc3ccc74fb7c97ebb1"
                                          },
                                          {
-                                             "target":  "published/luke/supercombo_enrichment.json",
-                                             "source":  "data/exports/luke/supercombo_enrichment.json",
-                                             "sha256":  "72602783d36fa69feef213f313f9dbaff23a73cc5f34375682f501b2eabef8b7"
+                                             "target":  "published/lily/official_raw.json",
+                                             "source":  "data/exports/lily/official_raw.json",
+                                             "sha256":  "205a5c977ff74b2f66b1b2202218c836b4e3dd5f3e34a48d94cc4bf39b4434a1"
+                                         },
+                                         {
+                                             "target":  "published/lily/derived_metrics.json",
+                                             "source":  "data/exports/lily/derived_metrics.json",
+                                             "sha256":  "3591e488d1c8c61f88304b4dd1d0c42ff2601fab72ac037318ee384159fc1e82"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "cammy",
+                           "files":  [
+                                         {
+                                             "target":  "published/cammy/snapshot_manifest.json",
+                                             "source":  "data/exports/cammy/snapshot_manifest.json",
+                                             "sha256":  "6405a47d6d3bc68fdb7d8323dfabc28d478741c7fe25d07c9ed3e9ebb24f239d"
+                                         },
+                                         {
+                                             "target":  "published/cammy/official_raw.json",
+                                             "source":  "data/exports/cammy/official_raw.json",
+                                             "sha256":  "1cdbc5d3664b7d28dfe3f545bf6495e225a9cbc4a1de853fb9fd0a347fdbe671"
+                                         },
+                                         {
+                                             "target":  "published/cammy/derived_metrics.json",
+                                             "source":  "data/exports/cammy/derived_metrics.json",
+                                             "sha256":  "49a68bc917a59f4d6f7c30914f95f059d2f5d2e2191173d6891be8e7b5e87bad"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "rashid",
+                           "files":  [
+                                         {
+                                             "target":  "published/rashid/snapshot_manifest.json",
+                                             "source":  "data/exports/rashid/snapshot_manifest.json",
+                                             "sha256":  "d87725da330d63ccdc2feba3c0e8064a95ebea380562d1c1def4848102c522d2"
+                                         },
+                                         {
+                                             "target":  "published/rashid/official_raw.json",
+                                             "source":  "data/exports/rashid/official_raw.json",
+                                             "sha256":  "f97a8e1b28ad5a1c341ebc7a942fcbd21b49c8fe00086f6260ea847c0d6f6dec"
+                                         },
+                                         {
+                                             "target":  "published/rashid/derived_metrics.json",
+                                             "source":  "data/exports/rashid/derived_metrics.json",
+                                             "sha256":  "6e1eb577df1856829f832448a3ee30bfb3a420d370e0079a8f93821d9b76bc1f"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "aki",
+                           "files":  [
+                                         {
+                                             "target":  "published/aki/snapshot_manifest.json",
+                                             "source":  "data/exports/aki/snapshot_manifest.json",
+                                             "sha256":  "1122defa48ff2de80c0856118837b2e9d36997b2094d4398d588f2d9f422205f"
+                                         },
+                                         {
+                                             "target":  "published/aki/official_raw.json",
+                                             "source":  "data/exports/aki/official_raw.json",
+                                             "sha256":  "d7a7b4f2ca3fd1ed719bf0be57b07ea19ae604675ce1632a0c09e0e19c693d64"
+                                         },
+                                         {
+                                             "target":  "published/aki/derived_metrics.json",
+                                             "source":  "data/exports/aki/derived_metrics.json",
+                                             "sha256":  "95c334aed9c83d6dab1b4ccc617e43c8e85275dcf337e14e4a8a57033a8db97a"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "ed",
+                           "files":  [
+                                         {
+                                             "target":  "published/ed/snapshot_manifest.json",
+                                             "source":  "data/exports/ed/snapshot_manifest.json",
+                                             "sha256":  "9962a1f4cf693847f5b9c1832f805d24e207dcf7b187112149dedef2b37871ec"
+                                         },
+                                         {
+                                             "target":  "published/ed/official_raw.json",
+                                             "source":  "data/exports/ed/official_raw.json",
+                                             "sha256":  "73b5243adde64aa9d404200797cd3ac0c445f67a2438009112359a5415321944"
+                                         },
+                                         {
+                                             "target":  "published/ed/derived_metrics.json",
+                                             "source":  "data/exports/ed/derived_metrics.json",
+                                             "sha256":  "38197192dca22b268e57c6702e979b5d7e5fbda0b012a5a13ba43706e2a7e841"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "gouki_akuma",
+                           "files":  [
+                                         {
+                                             "target":  "published/gouki_akuma/snapshot_manifest.json",
+                                             "source":  "data/exports/gouki_akuma/snapshot_manifest.json",
+                                             "sha256":  "e320bd013b013137adee89527f902ba42313e4809a9d1dfb50dca3ff84071cab"
+                                         },
+                                         {
+                                             "target":  "published/gouki_akuma/official_raw.json",
+                                             "source":  "data/exports/gouki_akuma/official_raw.json",
+                                             "sha256":  "d0d5a843e9d82670016adbf9084dac9b9e8461cd777322ec5a6f4c394d7a993c"
+                                         },
+                                         {
+                                             "target":  "published/gouki_akuma/derived_metrics.json",
+                                             "source":  "data/exports/gouki_akuma/derived_metrics.json",
+                                             "sha256":  "3bf4f1432fcadd85555f10db7f065fc66f136e4c04ca8af5e5b02bc437b4f2a7"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "vega_mbison",
+                           "files":  [
+                                         {
+                                             "target":  "published/vega_mbison/snapshot_manifest.json",
+                                             "source":  "data/exports/vega_mbison/snapshot_manifest.json",
+                                             "sha256":  "886f33dbf2dc10e300d9c05177f355a7873be2caa1fb1439f932765ffffa1134"
+                                         },
+                                         {
+                                             "target":  "published/vega_mbison/official_raw.json",
+                                             "source":  "data/exports/vega_mbison/official_raw.json",
+                                             "sha256":  "9388c91faf7468acfe48f94da67d3c7e32f6fa35ba8585fe8b9df271b086cdea"
+                                         },
+                                         {
+                                             "target":  "published/vega_mbison/derived_metrics.json",
+                                             "source":  "data/exports/vega_mbison/derived_metrics.json",
+                                             "sha256":  "ab39c138c2842d8833991a99f741ecb098aadcb0543ba130d34ec652203564e8"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "terry",
+                           "files":  [
+                                         {
+                                             "target":  "published/terry/snapshot_manifest.json",
+                                             "source":  "data/exports/terry/snapshot_manifest.json",
+                                             "sha256":  "3cb006091429ffd0d41a10e016d61a8b782e27c495117cd59bf08039551de060"
+                                         },
+                                         {
+                                             "target":  "published/terry/official_raw.json",
+                                             "source":  "data/exports/terry/official_raw.json",
+                                             "sha256":  "80cde2c1a2091836bdfc7f95a271061ae816c7ed8b790982b6b6c75cda20c10a"
+                                         },
+                                         {
+                                             "target":  "published/terry/derived_metrics.json",
+                                             "source":  "data/exports/terry/derived_metrics.json",
+                                             "sha256":  "7b67b06429b93922852556f5a95cb3a46553059f3773d081f046277df20b5884"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "mai",
+                           "files":  [
+                                         {
+                                             "target":  "published/mai/snapshot_manifest.json",
+                                             "source":  "data/exports/mai/snapshot_manifest.json",
+                                             "sha256":  "830f0343a2b622965efb3f8ed16ad3558b6e41d2583665343c476f4d9eb4152e"
+                                         },
+                                         {
+                                             "target":  "published/mai/official_raw.json",
+                                             "source":  "data/exports/mai/official_raw.json",
+                                             "sha256":  "e75991e8a1baa1ad611f001f03d64946667a6d3ed0444018189961bb62f330f5"
+                                         },
+                                         {
+                                             "target":  "published/mai/derived_metrics.json",
+                                             "source":  "data/exports/mai/derived_metrics.json",
+                                             "sha256":  "9053fa8f305fa3d6fb28774781eb39581b860bc6ea9e4028a04e90c58d5832d4"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "elena",
+                           "files":  [
+                                         {
+                                             "target":  "published/elena/snapshot_manifest.json",
+                                             "source":  "data/exports/elena/snapshot_manifest.json",
+                                             "sha256":  "c3842594c199a9283a85d64d70273f7100ea6fd3c80fcf28ae0a432c0bae8136"
+                                         },
+                                         {
+                                             "target":  "published/elena/official_raw.json",
+                                             "source":  "data/exports/elena/official_raw.json",
+                                             "sha256":  "90420ef6a64b0a3017f27b596e18d535e534d83a986b6062ef43ff867aff6e5c"
+                                         },
+                                         {
+                                             "target":  "published/elena/derived_metrics.json",
+                                             "source":  "data/exports/elena/derived_metrics.json",
+                                             "sha256":  "a5e8d1c48eca437bbe316a08b693f0ed4cbb59676fabb83a86076b7954706207"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "sagat",
+                           "files":  [
+                                         {
+                                             "target":  "published/sagat/snapshot_manifest.json",
+                                             "source":  "data/exports/sagat/snapshot_manifest.json",
+                                             "sha256":  "423d18aa22549e180494323cbbe9f354379a23807687a88469dee45f5698855f"
+                                         },
+                                         {
+                                             "target":  "published/sagat/official_raw.json",
+                                             "source":  "data/exports/sagat/official_raw.json",
+                                             "sha256":  "aab8aaf88510670732b632d489c63d37e879a3e4d247b4cf2eda8f4809b16e8e"
+                                         },
+                                         {
+                                             "target":  "published/sagat/derived_metrics.json",
+                                             "source":  "data/exports/sagat/derived_metrics.json",
+                                             "sha256":  "8fe010ebc73890290e58bafe434615eedb4275164cf071ef277dfbbff3acfc73"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "cviper",
+                           "files":  [
+                                         {
+                                             "target":  "published/cviper/snapshot_manifest.json",
+                                             "source":  "data/exports/cviper/snapshot_manifest.json",
+                                             "sha256":  "2e886e410673f5e92311861b854cbd38e18775b093fda2ec4eda1ea19664f7e8"
+                                         },
+                                         {
+                                             "target":  "published/cviper/official_raw.json",
+                                             "source":  "data/exports/cviper/official_raw.json",
+                                             "sha256":  "5c2b9c09b58ff9d34db1a5dd137c2c8d9707f103f6ae707cbff68b7d8578892a"
+                                         },
+                                         {
+                                             "target":  "published/cviper/derived_metrics.json",
+                                             "source":  "data/exports/cviper/derived_metrics.json",
+                                             "sha256":  "a876297d46f8e1ae66065c35b5b7ba2821964c0fef589b1f05ed411cb0d65a44"
+                                         }
+                                     ]
+                       },
+                       {
+                           "character_slug":  "alex",
+                           "files":  [
+                                         {
+                                             "target":  "published/alex/snapshot_manifest.json",
+                                             "source":  "data/exports/alex/snapshot_manifest.json",
+                                             "sha256":  "b9e45fa96888d956426e87ba3812da66075b326e8af989e63ae7e906a8e75ffc"
+                                         },
+                                         {
+                                             "target":  "published/alex/official_raw.json",
+                                             "source":  "data/exports/alex/official_raw.json",
+                                             "sha256":  "d713c341d5060edd2f0799fc30c0866979bb664c78664ce1809883e880ce16da"
+                                         },
+                                         {
+                                             "target":  "published/alex/derived_metrics.json",
+                                             "source":  "data/exports/alex/derived_metrics.json",
+                                             "sha256":  "489c1bbc847364f26c55d1f31d8fa3888c620f8e1087fa3114560eaeb15ce13e"
                                          }
                                      ]
                        }

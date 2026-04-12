@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import sys
 
-from .config import available_character_slugs, load_character, load_fetch_profile, repo_root
+from .config import available_character_slugs, load_character, load_fetch_profile, repo_root, selected_sources
 from .core.io import save_snapshot
 from .core.pipeline import parse_from_raw, publish_run
 from .core.prune import prune_latest_published_state
@@ -91,7 +91,7 @@ def main(argv: list[str] | None = None) -> int:
 def _fetch_command(character_slug: str, source: str, base_repo_root) -> dict[str, str]:
     character = load_character(character_slug)
     snapshot_ids: dict[str, str] = {}
-    for source_name in _selected_sources(source):
+    for source_name in selected_sources(character_slug, source):
         profile = load_fetch_profile(source_name)
         if source_name == "official":
             from .fetch.official import fetch_official_snapshot
@@ -108,21 +108,16 @@ def _fetch_command(character_slug: str, source: str, base_repo_root) -> dict[str
 
 def _snapshot_ids_from_args(args: argparse.Namespace) -> dict[str, str]:
     snapshot_ids: dict[str, str] = {}
-    if args.source in {"official", "all"}:
+    chosen_sources = set(selected_sources(args.character, args.source))
+    if "official" in chosen_sources:
         if not args.official_snapshot_id:
             raise SystemExit("--official-snapshot-id is required for parse-from-raw when source includes official")
         snapshot_ids["official"] = args.official_snapshot_id
-    if args.source in {"supercombo", "all"}:
+    if "supercombo" in chosen_sources:
         if not args.supercombo_snapshot_id:
             raise SystemExit("--supercombo-snapshot-id is required for parse-from-raw when source includes supercombo")
         snapshot_ids["supercombo"] = args.supercombo_snapshot_id
     return snapshot_ids
-
-
-def _selected_sources(source: str) -> list[str]:
-    if source == "all":
-        return ["official", "supercombo"]
-    return [source]
 
 
 if __name__ == "__main__":

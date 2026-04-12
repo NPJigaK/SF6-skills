@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 
+from sf6_ingest.config import load_character
 from sf6_ingest.core.common import sha256_bytes
 from sf6_ingest.core.io import save_snapshot
 from sf6_ingest.schemas import SnapshotMetadata
@@ -62,8 +63,8 @@ def build_snapshot_metadata(
             "source": source,
             "character_slug": character_slug,
             "snapshot_id": snapshot_id,
-            "source_url": source_url or SOURCE_URLS[source][character_slug],
-            "final_url": source_url or SOURCE_URLS[source][character_slug],
+            "source_url": source_url or _default_source_url(source, character_slug),
+            "final_url": source_url or _default_source_url(source, character_slug),
             "fetched_at": fetched_at,
             "page_locale": page_locale,
             "success": success,
@@ -85,6 +86,15 @@ def build_snapshot_metadata(
             "error_message": error_message,
         }
     )
+
+
+def _default_source_url(source: str, character_slug: str) -> str:
+    if character_slug in SOURCE_URLS.get(source, {}):
+        return SOURCE_URLS[source][character_slug]
+    character = load_character(character_slug)
+    if source == "official":
+        return character.sources["official"]
+    return character.sources["supercombo_data"]
 
 
 def save_html_snapshot(

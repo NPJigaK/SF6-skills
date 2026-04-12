@@ -11,7 +11,9 @@ The checked-in current artifact surface is:
 
 `data/normalized/` is run-local audit state and is not part of the durable checked-in artifact surface.
 
-Configured characters are currently `jp` and `luke`.
+Configured character roster lives in `shared/roster/current-character-roster.json`.
+`official` is required for every roster character.
+Supplemental `supercombo` sources are character-specific and may be absent.
 
 ## Contracts
 
@@ -36,6 +38,7 @@ The authoritative raw artifact is the on-disk response byte payload. Any decoded
 
 - `official` is the canonical source for current published frame data
 - `supercombo` is enrichment-only and may be `unavailable` if it cannot be safely published under the current v3 path
+- `--source all` means all configured sources for the selected character
 - `/JP/Frame_data` is dropped in v3 and is not part of runtime ingestion
 
 ## Setup

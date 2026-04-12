@@ -1,0 +1,48 @@
+[
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260412T161526Z-9839b882",
+    "source_row_id": "20260412T161526Z-9839b882:特殊技:041:フライングクロスチョップ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"active\":\"21-着地まで\",\"block_adv\":\"-12～-1\",\"input\":\"2HP\",\"move_group\":\"command_normals\",\"move_name\":\"フライングクロスチョップ\",\"recovery\":\"着地後36\",\"startup\":\"21\"}",
+    "move_id": "alex_039_2_hp",
+    "character_slug": "alex",
+    "move_name": "フライングクロスチョップ",
+    "input": "2HP",
+    "move_group": "command_normals",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "official_raw",
+    "source": "official",
+    "snapshot_id": "20260412T161526Z-9839b882",
+    "source_row_id": "20260412T161526Z-9839b882:共通システム:076:ドライブパリィ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"active\":\"[※2] 1-12\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"ドライブパリィ\",\"recovery\":\"33\",\"startup\":\"1\"}",
+    "move_id": "alex_070_mpmk",
+    "character_slug": "alex",
+    "move_name": "ドライブパリィ",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

@@ -1,0 +1,767 @@
+registry_version: 2.1.0
+moves:
+- move_id: lily_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_コンドルビーク_弱
+- move_id: lily_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_ストマックプレスキック_弱
+- move_id: lily_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_タタンカホーン_中
+- move_id: lily_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_ロンリーキック_中
+- move_id: lily_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_メキシカンクロスホーン_強
+- move_id: lily_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_ヘビートラースキック_強
+- move_id: lily_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_リリーショット_弱
+- move_id: lily_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_ロープレスキック_弱
+- move_id: lily_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_ホーリーアース_中
+- move_id: lily_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_ヒールスライドキック_中
+- move_id: lily_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ハンマーアクス_強
+- move_id: lily_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_スコールキック_強
+- move_id: lily_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_アローシュート_ジャンプ中に_弱
+- move_id: lily_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_ビガーニーキック_ジャンプ中に_弱
+- move_id: lily_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_アングリーボウ_ジャンプ中に_中
+- move_id: lily_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_デザートトゥーキック_ジャンプ中に_中
+- move_id: lily_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_アズテックストライク_ジャンプ中に_強
+- move_id: lily_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_アングリードロップキック_ジャンプ中に_強
+- move_id: lily_019_3_hp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HP
+    name_key: スラストリッジ_強
+- move_id: lily_020_4_hp
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: ホーンブレイク_強
+- move_id: lily_021_2_hp
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: グレートスピン_ジャンプ中に_強
+- move_id: lily_022_mp_mp
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    name_key: ダブルアロー_ジャンプ中に_中_中
+- move_id: lily_023_6_hp
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    name_key: デザートストーム_1段目_強
+- move_id: lily_024_6_hp_hp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    - '>'
+    - HP
+    name_key: デザートストーム_2段目_強_強
+- move_id: lily_025_6_hp_hp_hp
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HP
+    - '>'
+    - HP
+    - '>'
+    - HP
+    name_key: デザートストーム_3段目_強_強_強
+- move_id: lily_026_2_1_4_lp
+  group: specials
+  sort_key: 26
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_コンドルウィンド_弱
+- move_id: lily_027_2_1_4_mp
+  group: specials
+  sort_key: 27
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_コンドルウィンド_中
+- move_id: lily_028_2_1_4_hp
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_コンドルウィンド_強
+- move_id: lily_029_2_1_4_p_p
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_コンドルウィンド
+- move_id: lily_030_2_3_6_lk
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_コンドルスパイア_弱
+- move_id: lily_031_2_3_6_mk
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_コンドルスパイア_中
+- move_id: lily_032_2_3_6_hk
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_コンドルスパイア_強
+- move_id: lily_033_2_3_6_k_k_k_k
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    - '|'
+    - K
+    - K
+    name_key: od_弱_コンドルスパイア_弱_中_弱_強
+- move_id: lily_034_2_3_6_k_k
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_強_コンドルスパイア_中_強
+- move_id: lily_035_2_3_6_lk
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 風纏い_弱_コンドルスパイア_弱
+- move_id: lily_036_2_3_6_mk
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 風纏い_中_コンドルスパイア_中
+- move_id: lily_037_2_3_6_hk
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 風纏い_強_コンドルスパイア_強
+- move_id: lily_038_2_3_6_k_k_k_k
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    - '|'
+    - K
+    - K
+    name_key: 風纏い_od_弱_コンドルスパイア_弱_中_弱_強
+- move_id: lily_039_2_3_6_k_k
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: 風纏い_od_強_コンドルスパイア_中_強
+- move_id: lily_040_6_2_3_lp
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 弱_トマホークバスター_弱
+- move_id: lily_041_6_2_3_mp
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 中_トマホークバスター_中
+- move_id: lily_042_6_2_3_hp
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 強_トマホークバスター_強
+- move_id: lily_043_6_2_3_p_p
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: od_トマホークバスター
+- move_id: lily_044_6_2_3_lp
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 風纏い_弱_トマホークバスター_弱
+- move_id: lily_045_6_2_3_mp
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 風纏い_中_トマホークバスター_中
+- move_id: lily_046_6_2_3_hp
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 風纏い_強_トマホークバスター_強
+- move_id: lily_047_6_2_3_p_p
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: 風纏い_od_トマホークバスター
+- move_id: lily_048_p_p
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: コンドルダイブ_垂直_or_前ジャンプ中に
+- move_id: lily_049_p_p
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: od_コンドルダイブ_垂直_or_前ジャンプ中に_odトマホークバスター中に
+- move_id: lily_050_p_p
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: 風纏い_コンドルダイブ_垂直_or_前ジャンプ中に
+- move_id: lily_051_p_p
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: 風纏い_od_コンドルダイブ_垂直_or_前ジャンプ中に_odトマホークバスター中に
+- move_id: lily_052_lp
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - LP
+    name_key: 弱_メキシカンタイフーン_近距離で_弱
+- move_id: lily_053_mp
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - MP
+    name_key: 中_メキシカンタイフーン_近距離で_中
+- move_id: lily_054_hp
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - HP
+    name_key: 強_メキシカンタイフーン_近距離で_強
+- move_id: lily_055_p_p
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - P
+    name_key: od_メキシカンタイフーン_近距離で
+- move_id: lily_056_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 56
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_ブリージングホーク
+- move_id: lily_057_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 57
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa2_サンダーバード
+- move_id: lily_058_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 58
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: 風纏い_sa2_サンダーバード
+- move_id: lily_059_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 59
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa2_スカイサンダーバード_ジャンプ中に
+- move_id: lily_060_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 60
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: 風纏い_sa2_スカイサンダーバード_ジャンプ中に
+- move_id: lily_061_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 61
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa3_レイジングタイフーン_近距離で
+- move_id: lily_062_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 62
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: ca_レイジングタイフーン_近距離で_体力25_以下で
+- move_id: lily_063_5_6_lplk
+  group: throws
+  sort_key: 63
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: キャニオンスロー_近距離で_弱_弱
+- move_id: lily_064_4_lplk
+  group: throws
+  sort_key: 64
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: クリフフォール_近距離で_弱_弱
+- move_id: lily_065_6_6
+  group: system
+  sort_key: 65
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: lily_066_4_4
+  group: system
+  sort_key: 66
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: lily_067_hphk
+  group: system
+  sort_key: 67
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_アースレイジ_強_強
+- move_id: lily_068_6_hphk
+  group: system
+  sort_key: 68
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_クロスハンマー_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: lily_069_6_hphk
+  group: system
+  sort_key: 69
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_クロスハンマー_起き上がり時に_強_強
+- move_id: lily_070_mpmk
+  group: system
+  sort_key: 70
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: lily_071_mpmk
+  group: system
+  sort_key: 71
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: lily_072_mpmk
+  group: system
+  sort_key: 72
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: lily_073_6_6
+  group: system
+  sort_key: 73
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: lily_074_6_6_5_6_mpmk
+  group: system
+  sort_key: 74
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

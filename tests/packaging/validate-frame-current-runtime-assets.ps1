@@ -3,10 +3,15 @@ Set-StrictMode -Version Latest
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
 $assetRoot = Join-Path $skillRoot 'assets'
+$rosterPath = Join-Path $repoRoot 'shared/roster/current-character-roster.json'
 $datasets = @('official_raw', 'derived_metrics', 'supercombo_enrichment')
 
 if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
   throw "Missing public skill root: skills/kb-sf6-frame-current"
+}
+
+if (-not (Test-Path -LiteralPath $rosterPath -PathType Leaf)) {
+  throw 'Missing canonical roster source: shared/roster/current-character-roster.json'
 }
 
 $forbiddenFiles = @()
@@ -30,6 +35,8 @@ if (-not (Test-Path -LiteralPath $runtimeManifestPath -PathType Leaf)) {
 }
 
 $runtimeManifest = Get-Content -LiteralPath $runtimeManifestPath -Raw | ConvertFrom-Json
+$roster = Get-Content -LiteralPath $rosterPath -Raw | ConvertFrom-Json
+$expectedCharacterSlugs = @($roster.characters.character_slug)
 
 if ($runtimeManifest.source_root -ne 'data/exports') {
   throw "runtime_manifest.json source_root must be data/exports"
@@ -40,8 +47,12 @@ if ($runtimeManifest.skill_root -ne 'skills/kb-sf6-frame-current/assets') {
 }
 
 $characterSlugs = @($runtimeManifest.characters.character_slug)
-if ($characterSlugs.Count -ne 2 -or $characterSlugs[0] -ne 'jp' -or $characterSlugs[1] -ne 'luke') {
-  throw "runtime_manifest.json characters must be exactly jp,luke"
+if ($runtimeManifest.roster_source -ne 'shared/roster/current-character-roster.json') {
+  throw "runtime_manifest.json roster_source must be shared/roster/current-character-roster.json"
+}
+
+if ((@($characterSlugs) -join "`n") -ne (@($expectedCharacterSlugs) -join "`n")) {
+  throw "runtime_manifest.json characters must match shared/roster/current-character-roster.json"
 }
 
 $manifestEntries = @{}
@@ -77,7 +88,7 @@ function Get-RelativePath {
 
 $expectedInventory = @('runtime_manifest.json')
 
-foreach ($characterSlug in @('jp', 'luke')) {
+foreach ($characterSlug in $expectedCharacterSlugs) {
   $sourceCharacterRoot = Join-Path $repoRoot (Join-Path 'data/exports' $characterSlug)
   $sourceSnapshotManifestPath = Join-Path $sourceCharacterRoot 'snapshot_manifest.json'
   if (-not (Test-Path -LiteralPath $sourceSnapshotManifestPath -PathType Leaf)) {

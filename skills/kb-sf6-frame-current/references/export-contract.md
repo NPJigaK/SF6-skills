@@ -1,6 +1,6 @@
 # Export Contract
 
-Supported baseline characters for this skill are `jp` and `luke`.
+Supported characters for this skill are the `character_slug` entries recorded in `assets/runtime_manifest.json`.
 
 ## Files
 
@@ -37,16 +37,17 @@ Supported baseline characters for this skill are `jp` and `luke`.
 
 ## Selection Rules
 
-- If the user explicitly names a supported character, use that character.
-- If strong thread context fixes the question to one supported character, infer it only when that inference is clear.
-- Otherwise ask which supported character the user means.
-- Do not silently default to `jp`.
+- If the user explicitly names a packaged character, use that character.
+- If strong thread context fixes the question to one packaged character, infer it only when that inference is clear.
+- Otherwise ask which packaged character the user means.
+- Do not silently default to any character.
 - Prefer matching by exact `move_id` when it is already known.
 - Otherwise match by `input`, then `move_name`.
 - If multiple rows still match, do not guess. Ask for the exact variant or answer `[保留]`.
 
 ## Fallback Rules
 
+- If a requested character is not listed in `assets/runtime_manifest.json`, answer `[保留]`.
 - If the needed dataset is `unavailable`, say so and answer `[保留]`.
 - If a requested value would require manual-review outputs that are not packaged with the skill, answer `[保留]`.
 - If the user asks to audit parser behavior, selector drift, or ingestion state, stop here and hand off to a repo-local maintainer workflow instead.

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from sf6_ingest.registry import LoadedRegistry, OfficialMatchRule, RegistryMove
 from sf6_ingest.binding_policy import load_supercombo_binding_policy
 from sf6_ingest.core.common import extract_explicit_total, parse_official_active
 from sf6_ingest.core.derive import derive_metrics
@@ -283,3 +284,132 @@ def test_total_and_active_helpers_are_strict() -> None:
     assert active.kind == "range"
     assert active.frames == 12
     assert active.ambiguous is True
+
+
+def test_official_parse_uses_full_label_name_key_for_contextual_followups() -> None:
+    registry = LoadedRegistry(
+        version="2.1.0",
+        sha256="0" * 64,
+        moves=[
+            RegistryMove(
+                move_id="ken_054_6_k_after_od_tatsu",
+                group="specials",
+                sort_key=54,
+                official_match=OfficialMatchRule(
+                    section="specials",
+                    icon_tokens=["6", "K"],
+                    name_key="火砕蹴_od風鎌蹴り後に",
+                ),
+            ),
+            RegistryMove(
+                move_id="ken_057_6_k_after_od_jinrai",
+                group="specials",
+                sort_key=57,
+                official_match=OfficialMatchRule(
+                    section="specials",
+                    icon_tokens=["6", "K"],
+                    name_key="火砕蹴_od轟雷落とし後に",
+                ),
+            ),
+        ],
+    )
+    html = """
+<!doctype html>
+<html lang="ja">
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>技名</th><th>動作フレーム 発生</th><th>持続</th><th>硬直</th><th>ヒット</th><th>ガード</th><th>キャンセル</th><th>ダメージ</th><th>コンボ補正値</th><th>Dゲージ増加 ヒット</th><th>Dゲージ減少 ガード</th><th>Dゲージ減少 パニッシュカウンター</th><th>SAゲージ増加</th><th>属性</th><th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="15">必殺技</td></tr>
+        <tr>
+          <td><span class="frame_arts__name">火砕蹴</span>（OD風鎌蹴り後に）<p><img src="/6/assets/images/common/controller/key-r.png"/><img src="/6/assets/images/common/controller/key-plus.png"/><img src="/6/assets/images/common/controller/icon_kick.png"/></p></td>
+          <td>15</td><td>15-17</td><td>29</td><td>D</td><td>-12</td><td>SA2</td><td>500</td><td><ul><li>始動補正40%</li></ul></td><td>0</td><td>-5000</td><td>-5000</td><td>600</td><td>上</td><td><ul><li>動作中常に被パニッシュカウンター判定</li></ul></td>
+        </tr>
+        <tr>
+          <td><span class="frame_arts__name">火砕蹴</span>（OD轟雷落とし後に）<p><img src="/6/assets/images/common/controller/key-r.png"/><img src="/6/assets/images/common/controller/key-plus.png"/><img src="/6/assets/images/common/controller/icon_kick.png"/></p></td>
+          <td>11</td><td>11-13</td><td>29</td><td>D</td><td>-12</td><td>SA2</td><td>500</td><td><ul><li>始動補正40%</li></ul></td><td>0</td><td>-5000</td><td>-5000</td><td>600</td><td>上</td><td><ul><li>動作中常に被パニッシュカウンター判定</li></ul></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+"""
+    metadata = build_snapshot_metadata(
+        source="official",
+        character_slug="ken",
+        snapshot_id="20260412T000000Z-kendup01",
+        raw_bytes=html.encode("utf-8"),
+        fetched_at="2026-04-12T00:00:00Z",
+        success=True,
+        page_locale="ja-jp",
+        page_title="Ken フレームデータ",
+    )
+
+    records, status = parse_official_snapshot(metadata, html, registry)
+
+    assert status.parse_state == "parsed"
+    assert status.blocker_count == 0
+    assert [record.move_id for record in records] == [
+        "ken_054_6_k_after_od_tatsu",
+        "ken_057_6_k_after_od_jinrai",
+    ]
+
+
+def test_official_parse_matches_contextual_rows_without_input_icons() -> None:
+    registry = LoadedRegistry(
+        version="2.1.0",
+        sha256="1" * 64,
+        moves=[
+            RegistryMove(
+                move_id="cammy_046_razor_edge_slicer",
+                group="specials",
+                sort_key=46,
+                official_match=OfficialMatchRule(
+                    section="specials",
+                    icon_tokens=[],
+                    name_key="レイザーエッジスライサー_フーリガンコンビネーション中に_入力なし",
+                ),
+            ),
+        ],
+    )
+    html = """
+<!doctype html>
+<html lang="ja">
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>技名</th><th>動作フレーム 発生</th><th>持続</th><th>硬直</th><th>ヒット</th><th>ガード</th><th>キャンセル</th><th>ダメージ</th><th>コンボ補正値</th><th>Dゲージ増加 ヒット</th><th>Dゲージ減少 ガード</th><th>Dゲージ減少 パニッシュカウンター</th><th>SAゲージ増加</th><th>属性</th><th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="15">必殺技</td></tr>
+        <tr>
+          <td><span class="frame_arts__name">レイザーエッジスライサー</span>（フーリガンコンビネーション中に）（入力なし）</td>
+          <td>10</td><td>10-18</td><td>13</td><td>D</td><td>2</td><td>SA3</td><td>1000</td><td><ul><li>始動補正20%</li></ul></td><td>2500</td><td>-3000</td><td>-7000</td><td>1000</td><td>下</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+"""
+    metadata = build_snapshot_metadata(
+        source="official",
+        character_slug="cammy",
+        snapshot_id="20260412T000000Z-cammydup1",
+        raw_bytes=html.encode("utf-8"),
+        fetched_at="2026-04-12T00:00:00Z",
+        success=True,
+        page_locale="ja-jp",
+        page_title="Cammy フレームデータ",
+    )
+
+    records, status = parse_official_snapshot(metadata, html, registry)
+
+    assert status.parse_state == "parsed"
+    assert status.blocker_count == 0
+    assert [record.move_id for record in records] == ["cammy_046_razor_edge_slicer"]

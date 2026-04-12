@@ -1,11 +1,12 @@
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
 from typing import Literal
 
-import yaml
 from pydantic import BaseModel, Field
+import yaml
 
 
 SourceName = Literal["official", "supercombo"]
@@ -15,6 +16,11 @@ class CharacterConfig(BaseModel):
     character_slug: str
     display_name: str
     sources: dict[str, str]
+
+
+class CharacterRosterDocument(BaseModel):
+    schema_version: str
+    characters: list[CharacterConfig]
 
 
 class FetchProfile(BaseModel):
@@ -41,9 +47,14 @@ def repo_root() -> Path:
     return Path(__file__).resolve().parents[4]
 
 
+def canonical_roster_path() -> Path:
+    return repo_root() / "shared" / "roster" / "current-character-roster.json"
+
+
 def load_characters() -> dict[str, CharacterConfig]:
-    payload = yaml.safe_load((package_root() / "config" / "characters.yaml").read_text(encoding="utf-8")) or {}
-    return {slug: CharacterConfig.model_validate(config) for slug, config in payload.items()}
+    payload = json.loads(canonical_roster_path().read_text(encoding="utf-8"))
+    document = CharacterRosterDocument.model_validate(payload)
+    return {character.character_slug: character for character in document.characters}
 
 
 def available_character_slugs() -> tuple[str, ...]:
@@ -52,6 +63,22 @@ def available_character_slugs() -> tuple[str, ...]:
 
 def load_character(character_slug: str) -> CharacterConfig:
     return load_characters()[character_slug]
+
+
+def _source_key(source: SourceName) -> str:
+    if source == "official":
+        return "official"
+    return "supercombo_data"
+
+
+def selected_sources(character_slug: str, requested_source: str) -> tuple[SourceName, ...]:
+    character = load_character(character_slug)
+    available_sources = tuple(source for source in ("official", "supercombo") if _source_key(source) in character.sources)
+    if requested_source == "all":
+        return available_sources
+    if requested_source not in available_sources:
+        raise ValueError(f"source '{requested_source}' is not configured for character '{character_slug}'")
+    return (requested_source,)  # type: ignore[return-value]
 
 
 def load_fetch_profile(source: SourceName) -> FetchProfile:

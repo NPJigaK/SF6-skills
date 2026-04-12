@@ -47,10 +47,12 @@ class LoadedRegistry:
             raise ValueError(f"duplicate sort_key(s) in registry: {duplicate_sort_keys}")
 
     def match_official(self, section: str | None, icon_tokens: list[str], name_key: str | None) -> list[RegistryMove]:
-        if not section or not icon_tokens:
+        if not section:
             return []
-        candidates = self.official_index.get((section, tuple(icon_tokens)), [])
+        candidates = self.official_index.get((section, tuple(icon_tokens or [])), [])
         if len(candidates) <= 1:
+            if not candidates and not icon_tokens and not name_key:
+                return []
             return list(candidates)
         if not name_key:
             return []

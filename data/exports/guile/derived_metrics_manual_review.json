@@ -1,0 +1,71 @@
+[
+  {
+    "dataset": "derived_metrics",
+    "source": "official",
+    "snapshot_id": "20260412T161511Z-2fcf0e43",
+    "source_row_id": "20260412T161511Z-2fcf0e43:通常技:013:しゃがみ強k_ドラゴンスイープ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"move_id\":\"guile_012_2_hk\",\"punishable_threshold\":12,\"simple_punish_adv\":12,\"startup_bucket\":\"8_to_10\"}",
+    "move_id": "guile_012_2_hk",
+    "character_slug": "guile",
+    "move_name": null,
+    "input": null,
+    "move_group": null,
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "derived_metrics",
+    "source": "official",
+    "snapshot_id": "20260412T161511Z-2fcf0e43",
+    "source_row_id": "20260412T161511Z-2fcf0e43:必殺技:063:ソニックブレイク_派生",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_total_parse_failed"
+    ],
+    "raw_excerpt": "{\"move_id\":\"guile_060_p\",\"punishable_threshold\":2,\"simple_punish_adv\":2,\"startup_bucket\":\"11_plus\"}",
+    "move_id": "guile_060_p",
+    "character_slug": "guile",
+    "move_name": null,
+    "input": null,
+    "move_group": null,
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "derived_metrics",
+    "source": "official",
+    "snapshot_id": "20260412T161511Z-2fcf0e43",
+    "source_row_id": "20260412T161511Z-2fcf0e43:共通システム:082:ドライブパリィ",
+    "raw_source_token": null,
+    "reason_codes": [
+      "official_active_ambiguous"
+    ],
+    "raw_excerpt": "{\"move_id\":\"guile_076_mpmk\",\"startup_bucket\":\"4f_or_faster\"}",
+    "move_id": "guile_076_mpmk",
+    "character_slug": "guile",
+    "move_name": null,
+    "input": null,
+    "move_group": null,
+    "table_index": null,
+    "binding_class": null,
+    "publish_eligible": null,
+    "confirmation_status": null,
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

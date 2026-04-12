@@ -1,0 +1,933 @@
+registry_version: 2.1.0
+moves:
+- move_id: marisa_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ライトパンチ_弱
+- move_id: marisa_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_ティビアブレイク_弱
+- move_id: marisa_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_ミドルパンチ_中
+- move_id: marisa_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_スターナムブレイク_中
+- move_id: marisa_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_ヘビィーパンチ_強
+- move_id: marisa_006_5_hp
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_ヘビィーパンチ_ホールド_強ホールド
+- move_id: marisa_007_5_hk
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_リブブレイク_強
+- move_id: marisa_008_5_hk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_リブブレイク_ホールド_強ホールド
+- move_id: marisa_009_2_lp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_アンダーライト_弱
+- move_id: marisa_010_2_lk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_フットバッシュ_弱
+- move_id: marisa_011_2_mp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_アンダーミドル_中
+- move_id: marisa_012_2_mk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_レッグバッシュ_中
+- move_id: marisa_013_2_hp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ハーフハート_強
+- move_id: marisa_014_2_hp
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ハーフハート_ホールド_強ホールド
+- move_id: marisa_015_2_hk
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_ガイアバッシュ_強
+- move_id: marisa_016_2_hk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_ガイアバッシュ_ホールド_強ホールド
+- move_id: marisa_017_j_lp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_ノックフィスト_ジャンプ中に_弱
+- move_id: marisa_018_j_lk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_シグナスフォール_ジャンプ中に_弱
+- move_id: marisa_019_j_mp
+  group: normals
+  sort_key: 19
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_ヴォラーレフィスト_ジャンプ中に_中
+- move_id: marisa_020_j_mk
+  group: normals
+  sort_key: 20
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_ラブリュスフォール_ジャンプ中に_中
+- move_id: marisa_021_j_hp
+  group: normals
+  sort_key: 21
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_アイテルフィスト_ジャンプ中に_強
+- move_id: marisa_022_j_hp
+  group: normals
+  sort_key: 22
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_アイテルフィスト_ホールド_ジャンプ中に_強ホールド
+- move_id: marisa_023_j_hk
+  group: normals
+  sort_key: 23
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ウラノスフォール_ジャンプ中に_強
+- move_id: marisa_024_j_hk
+  group: normals
+  sort_key: 24
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_ウラノスフォール_ホールド_ジャンプ中に_強ホールド
+- move_id: marisa_025_lp_lp
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - LP
+    - '>'
+    - LP
+    name_key: ライトワンツー_弱_弱
+- move_id: marisa_026_mp_mp
+  group: command_normals
+  sort_key: 26
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    name_key: ミドルワンツー_中_中
+- move_id: marisa_027_hp_hp
+  group: command_normals
+  sort_key: 27
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    - '>'
+    - HP
+    name_key: ヘビィーワンツー_強_強
+- move_id: marisa_028_mp_mp
+  group: command_normals
+  sort_key: 28
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MP
+    name_key: ヴォラーレコンボ_ジャンプ中に_中_中
+- move_id: marisa_029_2_hp
+  group: command_normals
+  sort_key: 29
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: カエルムアーク_垂直ジャンプ中に_強
+- move_id: marisa_030_2_hp
+  group: command_normals
+  sort_key: 30
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: カエルムアーク_ホールド_垂直ジャンプ中に_強ホールド
+- move_id: marisa_031_4_hp
+  group: command_normals
+  sort_key: 31
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: マグナバンカー_強
+- move_id: marisa_032_4_hp
+  group: command_normals
+  sort_key: 32
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: マグナバンカー_ホールド_強ホールド
+- move_id: marisa_033_6_mp
+  group: command_normals
+  sort_key: 33
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    name_key: ノバキュラスワイプ_ノバキュラシュート_1段目_中
+- move_id: marisa_034_6_mp_hp
+  group: command_normals
+  sort_key: 34
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    - '>'
+    - HP
+    name_key: ノバキュラスワイプ_中_強
+- move_id: marisa_035_6_mp_hk
+  group: command_normals
+  sort_key: 35
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - MP
+    - '>'
+    - HK
+    name_key: ノバキュラシュート_中_強
+- move_id: marisa_036_3_hp
+  group: command_normals
+  sort_key: 36
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HP
+    name_key: マレウスビート_1段目_強
+- move_id: marisa_037_3_hp
+  group: command_normals
+  sort_key: 37
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HP
+    name_key: マレウスビート_1段目_ホールド_強ホールド
+- move_id: marisa_038_3_hp_3_hp
+  group: command_normals
+  sort_key: 38
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HP
+    - '>'
+    - '3'
+    - HP
+    name_key: マレウスビート_2段目_強_強
+- move_id: marisa_039_6_hk
+  group: command_normals
+  sort_key: 39
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    name_key: ファルクスクラッシュ_1段目_強
+- move_id: marisa_040_6_hk
+  group: command_normals
+  sort_key: 40
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    name_key: ファルクスクラッシュ_1段目_ホールド_強ホールド
+- move_id: marisa_041_6_hk_6_hk
+  group: command_normals
+  sort_key: 41
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '6'
+    - HK
+    - '>'
+    - '6'
+    - HK
+    name_key: ファルクスクラッシュ_2段目_強_強
+- move_id: marisa_042_2_3_6_lp
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_グラディウス_弱
+- move_id: marisa_043_2_3_6_lp
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_グラディウス_ホールド_弱ホールド
+- move_id: marisa_044_2_3_6_mp
+  group: specials
+  sort_key: 44
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_グラディウス_中
+- move_id: marisa_045_2_3_6_mp
+  group: specials
+  sort_key: 45
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_グラディウス_ホールド_中ホールド
+- move_id: marisa_046_2_3_6_hp
+  group: specials
+  sort_key: 46
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_グラディウス_強
+- move_id: marisa_047_2_3_6_hp
+  group: specials
+  sort_key: 47
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_グラディウス_ホールド_強ホールド
+- move_id: marisa_048_2_3_6_p_p
+  group: specials
+  sort_key: 48
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_グラディウス
+- move_id: marisa_049_2_3_6_p_p
+  group: specials
+  sort_key: 49
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_グラディウス_ホールド_ホールド
+- move_id: marisa_050_2_1_4_lp
+  group: specials
+  sort_key: 50
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_ディマカイルス_1段目_弱
+- move_id: marisa_051_2_1_4_lp_6_p
+  group: specials
+  sort_key: 51
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    - '>'
+    - '6'
+    - P
+    name_key: 弱_ディマカイルス_2段目_弱
+- move_id: marisa_052_2_1_4_mp
+  group: specials
+  sort_key: 52
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_ディマカイルス_1段目_中
+- move_id: marisa_053_2_1_4_mp_6_p
+  group: specials
+  sort_key: 53
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    - '>'
+    - '6'
+    - P
+    name_key: 中_ディマカイルス_2段目_中
+- move_id: marisa_054_2_1_4_hp
+  group: specials
+  sort_key: 54
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_ディマカイルス_1段目_強
+- move_id: marisa_055_2_1_4_hp_6_p
+  group: specials
+  sort_key: 55
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    - '>'
+    - '6'
+    - P
+    name_key: 強_ディマカイルス_2段目_強
+- move_id: marisa_056_2_1_4_p_p
+  group: specials
+  sort_key: 56
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_ディマカイルス_1段目
+- move_id: marisa_057_2_1_4_p_p_6_p
+  group: specials
+  sort_key: 57
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    - '>'
+    - '6'
+    - P
+    name_key: od_ディマカイルス_2段目
+- move_id: marisa_058_6_2_3_lp
+  group: specials
+  sort_key: 58
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - LP
+    name_key: 弱_ファランクス_弱
+- move_id: marisa_059_6_2_3_mp
+  group: specials
+  sort_key: 59
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - MP
+    name_key: 中_ファランクス_中
+- move_id: marisa_060_6_2_3_hp
+  group: specials
+  sort_key: 60
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - HP
+    name_key: 強_ファランクス_強
+- move_id: marisa_061_6_2_3_p_p
+  group: specials
+  sort_key: 61
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '2'
+    - '3'
+    - P
+    - P
+    name_key: od_ファランクス
+- move_id: marisa_062_2_3_6_lk
+  group: specials
+  sort_key: 62
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_クアドリガ_弱
+- move_id: marisa_063_2_3_6_mk
+  group: specials
+  sort_key: 63
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_クアドリガ_中
+- move_id: marisa_064_2_3_6_hk
+  group: specials
+  sort_key: 64
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_クアドリガ_強
+- move_id: marisa_065_2_3_6_k_k
+  group: specials
+  sort_key: 65
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_クアドリガ
+- move_id: marisa_066_2_1_4_k
+  group: specials
+  sort_key: 66
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: スクトゥム
+- move_id: marisa_067_specials_067
+  group: specials
+  sort_key: 67
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: スクトゥム_当身派生版_スクトゥム中に打撃を受ける
+- move_id: marisa_068_2_1_4_k_k
+  group: specials
+  sort_key: 68
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_スクトゥム
+- move_id: marisa_069_specials_069
+  group: specials
+  sort_key: 69
+  official_match:
+    section: specials
+    icon_tokens: []
+    name_key: od_スクトゥム_当身派生版_odスクトゥム中に打撃を受ける
+- move_id: marisa_070_p
+  group: specials
+  sort_key: 70
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    name_key: トニトルス_1段目_スクトゥム中に
+- move_id: marisa_071_p_p
+  group: specials
+  sort_key: 71
+  official_match:
+    section: specials
+    icon_tokens:
+    - P
+    - '>'
+    - P
+    name_key: トニトルス_2段目_スクトゥム中に
+- move_id: marisa_072_k
+  group: specials
+  sort_key: 72
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: プロケッラ_スクトゥム中に
+- move_id: marisa_073_lplk
+  group: specials
+  sort_key: 73
+  official_match:
+    section: specials
+    icon_tokens:
+    - LPLK
+    name_key: エンフォルド_スクトゥム中に_弱_弱
+- move_id: marisa_074_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 74
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_マリーザジャベリン
+- move_id: marisa_075_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 75
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_マリーザジャベリン_ホールド_ホールド
+- move_id: marisa_076_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 76
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa1_マリーザジャベリン_当身派生版
+- move_id: marisa_077_2_1_4_2_1_4_p
+  group: super_arts
+  sort_key: 77
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    name_key: sa2_メテオリティス
+- move_id: marisa_078_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 78
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa3_アポロウーサ
+- move_id: marisa_079_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 79
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: ca_アポロウーサ_体力25_以下で
+- move_id: marisa_080_5_6_lplk
+  group: throws
+  sort_key: 80
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: マウントグレイズ_近距離で_弱_弱
+- move_id: marisa_081_4_lplk
+  group: throws
+  sort_key: 81
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: ミルヴィオブリッジ_近距離で_弱_弱
+- move_id: marisa_082_6_6
+  group: system
+  sort_key: 82
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: marisa_083_4_4
+  group: system
+  sort_key: 83
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: marisa_084_hphk
+  group: system
+  sort_key: 84
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_セクトール_強_強
+- move_id: marisa_085_6_hphk
+  group: system
+  sort_key: 85
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_アモルショック_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: marisa_086_6_hphk
+  group: system
+  sort_key: 86
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_アモルショック_起き上がり時に_強_強
+- move_id: marisa_087_mpmk
+  group: system
+  sort_key: 87
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: marisa_088_mpmk
+  group: system
+  sort_key: 88
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: marisa_089_mpmk
+  group: system
+  sort_key: 89
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: marisa_090_6_6
+  group: system
+  sort_key: 90
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: marisa_091_6_6_5_6_mpmk
+  group: system
+  sort_key: 91
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中

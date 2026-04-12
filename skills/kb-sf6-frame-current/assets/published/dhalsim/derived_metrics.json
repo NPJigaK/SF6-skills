@@ -1,0 +1,1642 @@
+[
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_001_5_lp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 1,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_002_5_lk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -3,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_003_5_mp",
+    "punishable_threshold": 5,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 2,
+    "meaty_block_adv_max": -3,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 5,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_004_5_mk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 0,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_005_5_hp",
+    "punishable_threshold": 11,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": -3,
+    "meaty_block_adv_max": -8,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 11,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_006_5_hk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_007_2_lp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 1,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_008_2_lk",
+    "punishable_threshold": 10,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 1,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 10,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_009_2_mp",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 2,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_010_2_mk",
+    "punishable_threshold": 10,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 9,
+    "meaty_block_adv_max": 2,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 10,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_011_2_hp",
+    "punishable_threshold": 8,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": -5,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 8,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_012_2_hk",
+    "punishable_threshold": 16,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 16,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_013_j_lp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_014_j_lk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_015_j_mp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_016_j_mk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_017_j_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_018_j_hk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_019_4_mp",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 7,
+    "meaty_block_adv_max": 2,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_020_4_hp",
+    "punishable_threshold": 16,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": -3,
+    "meaty_block_adv_max": -10,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 16,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_021_1_hp",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 0,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_022_1_lk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 3,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_023_4_mk",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 3,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_024_1_mk",
+    "punishable_threshold": 7,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": -1,
+    "meaty_block_adv_max": -5,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 7,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_025_4_hk",
+    "punishable_threshold": 9,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 9,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_026_1_hk",
+    "punishable_threshold": 7,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -5,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 7,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_031_2_hk",
+    "punishable_threshold": 16,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 16,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_032_2_3_6_lp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_033_2_3_6_lp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_034_2_3_6_mp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_035_2_3_6_mp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_036_2_3_6_hp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_037_2_3_6_hp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_038_2_3_6_p_p",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_039_2_3_6_p_p",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_040_2_3_6_p_p",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_041_2_3_6_lk",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_042_2_3_6_mk",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_043_2_3_6_hk",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_044_2_3_6_k_k",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_045_2_3_6_k_k",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_046_2_3_6_k_k",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_047_6_3_2_1_4_lp",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 10,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_048_6_3_2_1_4_mp",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 11,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_049_6_3_2_1_4_hp",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 12,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_050_6_3_2_1_4_p_p",
+    "punishable_threshold": 11,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 13,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 11,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_051_6_3_2_1_4_lk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 3,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_052_6_3_2_1_4_mk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 6,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_053_6_3_2_1_4_hk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 6,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_054_6_3_2_1_4_k_k",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 9,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_055_6_3_2_1_4_lp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_056_6_3_2_1_4_mp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_057_6_3_2_1_4_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_058_6_3_2_1_4_p_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_059_2_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_060_3_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_061_2_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_062_6_p_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_063_6_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_064_6_p_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_065_6_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_066_4_p_p_4_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_067_4_p_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_068_4_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_069_2_3_6_2_3_6_lp",
+    "punishable_threshold": 10,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 73,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 10,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_070_2_3_6_2_3_6_mp",
+    "punishable_threshold": 10,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 73,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 10,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_071_2_3_6_2_3_6_hp",
+    "punishable_threshold": 22,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 61,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 22,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_072_2_1_4_2_1_4_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_073_2_1_4_2_1_4_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_074_2_1_4_2_1_4_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_075_2_3_6_2_3_6_k",
+    "punishable_threshold": 62,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -58,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 62,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_076_2_3_6_2_3_6_k",
+    "punishable_threshold": 62,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -58,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 62,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_077_5_6_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_078_4_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_079_2_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_080_6_6",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_081_4_4",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_082_hphk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_086_mpmk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_087_mpmk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_088_6_6",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "dhalsim",
+    "move_id": "dhalsim_089_6_6_5_6_mpmk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  }
+]

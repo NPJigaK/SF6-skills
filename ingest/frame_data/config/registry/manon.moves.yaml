@@ -1,0 +1,604 @@
+registry_version: 2.1.0
+moves:
+- move_id: manon_001_5_lp
+  group: normals
+  sort_key: 1
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LP
+    name_key: 立ち弱p_ハジメ_弱
+- move_id: manon_002_5_lk
+  group: normals
+  sort_key: 2
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - LK
+    name_key: 立ち弱k_タンジュ_弱
+- move_id: manon_003_5_mp
+  group: normals
+  sort_key: 3
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MP
+    name_key: 立ち中p_ツリテ_中
+- move_id: manon_004_5_mk
+  group: normals
+  sort_key: 4
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - MK
+    name_key: 立ち中k_ラ_シェーヌ_中
+- move_id: manon_005_5_hp
+  group: normals
+  sort_key: 5
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HP
+    name_key: 立ち強p_ランドリ_強
+- move_id: manon_006_5_hk
+  group: normals
+  sort_key: 6
+  official_match:
+    section: normals
+    icon_tokens:
+    - '5'
+    - HK
+    name_key: 立ち強k_ピエ_ドンジュ_強
+- move_id: manon_007_2_lp
+  group: normals
+  sort_key: 7
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LP
+    name_key: しゃがみ弱p_ソデキリ_弱
+- move_id: manon_008_2_lk
+  group: normals
+  sort_key: 8
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - LK
+    name_key: しゃがみ弱k_シーニュ_ナジェ_弱
+- move_id: manon_009_2_mp
+  group: normals
+  sort_key: 9
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MP
+    name_key: しゃがみ中p_ヒキテ_中
+- move_id: manon_010_2_mk
+  group: normals
+  sort_key: 10
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - MK
+    name_key: しゃがみ中k_ストゥニュー_中
+- move_id: manon_011_2_hp
+  group: normals
+  sort_key: 11
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HP
+    name_key: しゃがみ強p_ヴィクトワール_ポーム_強
+- move_id: manon_012_2_hk
+  group: normals
+  sort_key: 12
+  official_match:
+    section: normals
+    icon_tokens:
+    - '2'
+    - HK
+    name_key: しゃがみ強k_クロワゼ_強
+- move_id: manon_013_j_lp
+  group: normals
+  sort_key: 13
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LP
+    name_key: ジャンプ弱p_シエル_クーデ_ジャンプ中に_弱
+- move_id: manon_014_j_lk
+  group: normals
+  sort_key: 14
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - LK
+    name_key: ジャンプ弱k_シエル_パッセ_ジャンプ中に_弱
+- move_id: manon_015_j_mp
+  group: normals
+  sort_key: 15
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MP
+    name_key: ジャンプ中p_クロワゼ_ドゥヴァン_ジャンプ中に_中
+- move_id: manon_016_j_mk
+  group: normals
+  sort_key: 16
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - MK
+    name_key: ジャンプ中k_アレグロ_ジャンプ中に_中
+- move_id: manon_017_j_hp
+  group: normals
+  sort_key: 17
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HP
+    name_key: ジャンプ強p_グロワール_ポーム_ジャンプ中に_強
+- move_id: manon_018_j_hk
+  group: normals
+  sort_key: 18
+  official_match:
+    section: normals
+    icon_tokens:
+    - j.
+    - HK
+    name_key: ジャンプ強k_カブリオール_ジャンプ中に_強
+- move_id: manon_019_4_hp
+  group: command_normals
+  sort_key: 19
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - HP
+    name_key: レベランス_強
+- move_id: manon_020_3_hk
+  group: command_normals
+  sort_key: 20
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '3'
+    - HK
+    name_key: トモエ_デリエール_強
+- move_id: manon_021_mp_mk
+  group: command_normals
+  sort_key: 21
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - MP
+    - '>'
+    - MK
+    name_key: ア_テール_中_中
+- move_id: manon_022_4_mk
+  group: command_normals
+  sort_key: 22
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MK
+    name_key: アン_オー_1段目_中
+- move_id: manon_023_4_mk_mk
+  group: command_normals
+  sort_key: 23
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '4'
+    - MK
+    - '>'
+    - MK
+    name_key: アン_オー_2段目_中_中
+- move_id: manon_024_hp_hp
+  group: command_normals
+  sort_key: 24
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - HP
+    - '>'
+    - HP
+    name_key: タン_リエ_強_強
+- move_id: manon_025_2_hp_hp
+  group: command_normals
+  sort_key: 25
+  official_match:
+    section: command_normals
+    icon_tokens:
+    - '2'
+    - HP
+    - '>'
+    - HP
+    name_key: アロンジェ_強_強
+- move_id: manon_026_6_3_2_1_4_lp
+  group: specials
+  sort_key: 26
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - LP
+    name_key: 弱_マネージュ_ドレ_メダルlvに応じて動作が変化_近距離で_弱
+- move_id: manon_027_6_3_2_1_4_mp
+  group: specials
+  sort_key: 27
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - MP
+    name_key: 中_マネージュ_ドレ_メダルlvに応じて動作が変化_近距離で_中
+- move_id: manon_028_6_3_2_1_4_hp
+  group: specials
+  sort_key: 28
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - HP
+    name_key: 強_マネージュ_ドレ_メダルlvに応じて動作が変化_近距離で_強
+- move_id: manon_029_6_3_2_1_4_p_p
+  group: specials
+  sort_key: 29
+  official_match:
+    section: specials
+    icon_tokens:
+    - '6'
+    - '3'
+    - '2'
+    - '1'
+    - '4'
+    - P
+    - P
+    name_key: od_マネージュ_ドレ_メダルlvに応じて動作が変化_近距離で
+- move_id: manon_030_2_3_6_lk
+  group: specials
+  sort_key: 30
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LK
+    name_key: 弱_ロン_ポワン_弱
+- move_id: manon_031_2_3_6_mk
+  group: specials
+  sort_key: 31
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MK
+    name_key: 中_ロン_ポワン_中
+- move_id: manon_032_2_3_6_hk
+  group: specials
+  sort_key: 32
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HK
+    name_key: 強_ロン_ポワン_強
+- move_id: manon_033_2_3_6_k_k
+  group: specials
+  sort_key: 33
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - K
+    - K
+    name_key: od_ロン_ポワン
+- move_id: manon_034_2_1_4_lk
+  group: specials
+  sort_key: 34
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - LK
+    name_key: 弱_デガジェ_弱
+- move_id: manon_035_2_1_4_mk
+  group: specials
+  sort_key: 35
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - MK
+    name_key: 中_デガジェ_中
+- move_id: manon_036_2_1_4_hk
+  group: specials
+  sort_key: 36
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - HK
+    name_key: 強_デガジェ_強
+- move_id: manon_037_2_1_4_k_k
+  group: specials
+  sort_key: 37
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - K
+    - K
+    name_key: od_デガジェ
+- move_id: manon_038_2_3_6_lp
+  group: specials
+  sort_key: 38
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - LP
+    name_key: 弱_ランヴェルセ_メダルlvに応じて動作が変化_弱
+- move_id: manon_039_2_3_6_mp
+  group: specials
+  sort_key: 39
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - MP
+    name_key: 中_ランヴェルセ_メダルlvに応じて動作が変化_中
+- move_id: manon_040_2_3_6_hp
+  group: specials
+  sort_key: 40
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - HP
+    name_key: 強_ランヴェルセ_メダルlvに応じて動作が変化_強
+- move_id: manon_041_2_3_6_p_p
+  group: specials
+  sort_key: 41
+  official_match:
+    section: specials
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - P
+    - P
+    name_key: od_ランヴェルセ_メダルlvに応じて動作が変化
+- move_id: manon_042_k
+  group: specials
+  sort_key: 42
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: グラン_フェッテ_ランヴェルセ中に
+- move_id: manon_043_k
+  group: specials
+  sort_key: 43
+  official_match:
+    section: specials
+    icon_tokens:
+    - K
+    name_key: od_グラン_フェッテ_odランヴェルセ中に
+- move_id: manon_044_2_3_6_2_3_6_k
+  group: super_arts
+  sort_key: 44
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - K
+    name_key: sa1_アラベスク
+- move_id: manon_045_2_1_4_2_1_4_k
+  group: super_arts
+  sort_key: 45
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '1'
+    - '4'
+    - '2'
+    - '1'
+    - '4'
+    - K
+    name_key: sa2_エトワール
+- move_id: manon_046_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 46
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: sa3_パ_ド_ドゥ_近距離で
+- move_id: manon_047_2_3_6_2_3_6_p
+  group: super_arts
+  sort_key: 47
+  official_match:
+    section: super_arts
+    icon_tokens:
+    - '2'
+    - '3'
+    - '6'
+    - '2'
+    - '3'
+    - '6'
+    - P
+    name_key: ca_パ_ド_ドゥ_近距離で_体力25_以下で
+- move_id: manon_048_5_6_lplk
+  group: throws
+  sort_key: 48
+  official_match:
+    section: throws
+    icon_tokens:
+    - '5'
+    - '|'
+    - '6'
+    - LPLK
+    name_key: オーウチガリ_近距離で_弱_弱
+- move_id: manon_049_4_lplk
+  group: throws
+  sort_key: 49
+  official_match:
+    section: throws
+    icon_tokens:
+    - '4'
+    - LPLK
+    name_key: ウチマタ_近距離で_弱_弱
+- move_id: manon_050_6_6
+  group: system
+  sort_key: 50
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: 前方ステップ
+- move_id: manon_051_4_4
+  group: system
+  sort_key: 51
+  official_match:
+    section: system
+    icon_tokens:
+    - '4'
+    - '4'
+    name_key: 後方ステップ
+- move_id: manon_052_hphk
+  group: system
+  sort_key: 52
+  official_match:
+    section: system
+    icon_tokens:
+    - HPHK
+    name_key: ドライブインパクト_グリッサード_強_強
+- move_id: manon_053_6_hphk
+  group: system
+  sort_key: 53
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: ガード時_ドライブリバーサル_エカルテ_ガード中_or_ドライブパリィ成立中に_強_強
+- move_id: manon_054_6_hphk
+  group: system
+  sort_key: 54
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - HPHK
+    name_key: 起き上がり時_ドライブリバーサル_エカルテ_起き上がり時に_強_強
+- move_id: manon_055_mpmk
+  group: system
+  sort_key: 55
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ドライブパリィ_中_中
+- move_id: manon_056_mpmk
+  group: system
+  sort_key: 56
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_打撃_ガード方向_中_中
+- move_id: manon_057_mpmk
+  group: system
+  sort_key: 57
+  official_match:
+    section: system
+    icon_tokens:
+    - MPMK
+    name_key: ジャストパリィ_飛び道具_中_中
+- move_id: manon_058_6_6
+  group: system
+  sort_key: 58
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    name_key: パリィドライブラッシュ_ドライブパリィ中に
+- move_id: manon_059_6_6_5_6_mpmk
+  group: system
+  sort_key: 59
+  official_match:
+    section: system
+    icon_tokens:
+    - '6'
+    - '6'
+    - '|'
+    - '5'
+    - '|'
+    - '6'
+    - MPMK
+    name_key: キャンセルドライブラッシュ_必殺技キャンセル可能な攻撃ヒット中に_中_中
