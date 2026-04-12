@@ -118,11 +118,11 @@
     "blockstun": "20",
     "hitstop": "13",
     "punish_adv": "+5",
-    "perf_parry_adv": "-24",
+    "perf_parry_adv": "-23",
     "dr_cancel_hit": "+17",
     "dr_cancel_blk": "+10",
     "after_dr_hit": "+5",
-    "after_dr_blk": "-2",
+    "after_dr_blk": "-1",
     "invuln": "-",
     "armor": "-",
     "airborne": "-",
@@ -603,9 +603,9 @@
     "hitstun": "-",
     "blockstun": "17",
     "hitstop": "12",
-    "punish_adv": "KD +20",
+    "punish_adv": "+2",
     "perf_parry_adv": "-34",
-    "dr_cancel_hit": "KD +46",
+    "dr_cancel_hit": "KD +46 (PC +28 )",
     "dr_cancel_blk": "+7",
     "after_dr_hit": "-",
     "after_dr_blk": "-",
@@ -618,7 +618,7 @@
     "proj_speed": "-",
     "atk_range": "-",
     "super_gain_blk": "250 (125)",
-    "notes_sc": "5f gap on block between hits"
+    "notes_sc": "5f gap on block between hits; causes a staggered tailspin when performed after Punish Counter 6HP (allows a cancel into fully charged Flash Knuckle of any strength or a +28 DR Cancel); this Punish Counter version forces stand and does not incur any extra damage scaling"
   },
   {
     "character_slug": "luke",
@@ -923,12 +923,12 @@
     "move_name": "LP Flash Knuckle",
     "input": "214LP",
     "move_group": "specials",
-    "hitconfirm_window": "17(19*)",
+    "hitconfirm_window": "19",
     "hitstun": "-",
-    "blockstun": "16",
+    "blockstun": "18",
     "hitstop": "15",
-    "punish_adv": "KD +32",
-    "perf_parry_adv": "-32",
+    "punish_adv": "KD +36",
+    "perf_parry_adv": "-28",
     "dr_cancel_hit": "-",
     "dr_cancel_blk": "-",
     "after_dr_hit": "-",
@@ -942,7 +942,7 @@
     "proj_speed": "-",
     "atk_range": "1.77 (1.618)",
     "super_gain_blk": "250 (125)",
-    "notes_sc": "Puts opponent into limited juggle state (will only combo to Super unless opponent is juggled very high); late cancel into SA3 will drop; no head hurtbox on frames 6-17 for improved anti-air"
+    "notes_sc": "Puts opponent into limited juggle state; no head hurtbox on frames 6-17 for improved anti-air; the final 2 recovery frames are cancelable on Hit into specials/Supers (enables a corner juggle into 623LP or SA2)"
   },
   {
     "character_slug": "luke",
@@ -994,7 +994,7 @@
     "jug_increase": "0,3",
     "jug_limit": "2,2",
     "proj_speed": "-",
-    "atk_range": "1.169 (1.118)",
+    "atk_range": "1.669 (1.618)",
     "super_gain_blk": "250,100 (125,50)",
     "notes_sc": "Hold LP 18-20f for perfect version; launches opponent high into a limited juggle state; active frames 3-4 can nullify normal 1-hit projectiles; canceling to SA3 will cause juggle to whiff; 1f more recovery on hit/block; no head hurtbox on frames 6-29 for improved anti-air"
   },
@@ -1131,7 +1131,7 @@
     "proj_speed": "-",
     "atk_range": "2.422 (2.336)",
     "super_gain_blk": "400,150 (200,75)",
-    "notes_sc": "1f extra recovery on hit/block; active frames 3-4 can nullify normal 1-hit projectiles; cancelable into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-25"
+    "notes_sc": "1f extra recovery on hit/block; active frames 3-4 can nullify normal 1-hit projectiles; cancelable into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-25; leaves opponent close on block for a 2LK~2LP hitconfirm or a 1f microwalk into throw (slightly longer if opponent walks back)"
   },
   {
     "character_slug": "luke",
@@ -1158,7 +1158,7 @@
     "proj_speed": "-",
     "atk_range": "2.422 (2.336)",
     "super_gain_blk": "400,200 (200,100)",
-    "notes_sc": "Hold HP 18-20f for perfect version; active frames 3-4 can nullify normal 1-hit projectiles; 1f more recovery on hit/block; cancelable into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-25"
+    "notes_sc": "Hold HP 18-20f for perfect version; active frames 3-4 can nullify normal 1-hit projectiles; 1f more recovery on hit/block; cancelable into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-25; leaves opponent close on block for a 2LK~2LP hitconfirm or a 1f microwalk into throw (slightly longer if opponent walks back)"
   },
   {
     "character_slug": "luke",
