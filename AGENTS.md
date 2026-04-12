@@ -33,6 +33,7 @@
 - 不変概念は `skills/kb-sf6-core/` に寄せる。
 - supported baseline characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
+- パッチ/調整対応の `jp` / `luke` frame-data 更新は `maintainer-skills/update-frame-data/` を使う。
 
 `skills/` is the canonical public source.
 Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.
