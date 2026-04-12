@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from sf6_ingest.registry import LoadedRegistry, OfficialMatchRule, RegistryMove
-from sf6_ingest.binding_policy import load_supercombo_binding_policy
+from sf6_ingest.binding_policy import LoadedSupercomboBindingPolicy, load_supercombo_binding_policy
 from sf6_ingest.core.common import extract_explicit_total, parse_official_active
 from sf6_ingest.core.derive import derive_metrics
 from sf6_ingest.core.io import decode_snapshot_bytes
@@ -270,6 +270,55 @@ def test_supercombo_parse_accepts_character_specific_prefixes_without_jp_hardcod
     ]
     assert by_token["Luke_236236k(ca)"].binding_class == "C"
     assert by_token["Luke_5pppkkk"].binding_class == "G"
+
+
+def test_supercombo_parse_accepts_character_label_variants_with_punctuation_and_underscores() -> None:
+    cases = [
+        ("ehonda", "E.Honda", "e.honda_5lp"),
+        ("deejay", "Dee_Jay", "dee_jay_5lp"),
+        ("vega_mbison", "M.Bison", "m.bison_5lp"),
+        ("cviper", "C.Viper", "c.viper_5lp"),
+    ]
+
+    for character_slug, source_label, raw_source_token in cases:
+        registry = load_registry(character_slug)
+        binding_policy = LoadedSupercomboBindingPolicy("1.0.0", "0" * 64, [], registry)
+        html = build_supercombo_contract_html_with_tables(
+            [
+                (
+                    "Normals",
+                    "Standing Normals",
+                    "5LP",
+                    raw_source_token,
+                    build_supercombo_move_table(
+                        raw_source_token=raw_source_token,
+                        notation="5LP",
+                        move_name="Standing Light Punch",
+                        overrides={"Notes": "Character label variant should still parse"},
+                        character_label=source_label,
+                    ),
+                )
+            ],
+            character_label=source_label,
+            page_title=f"Street Fighter 6/{source_label}/Data - SuperCombo Wiki",
+        )
+        metadata = build_snapshot_metadata(
+            source="supercombo",
+            character_slug=character_slug,
+            snapshot_id=f"20260412T120000Z-{character_slug}0001",
+            raw_bytes=html.encode("utf-8"),
+            fetched_at="2026-04-12T12:00:00Z",
+            success=True,
+            page_locale="en",
+            page_title=f"Street Fighter 6/{source_label}/Data - SuperCombo Wiki",
+        )
+
+        records, status = parse_supercombo_snapshot(metadata, html, registry, binding_policy)
+
+        assert status.parse_state == "parsed"
+        assert status.blocker_count == 0
+        assert status.row_count == 1
+        assert [record.raw_source_token for record in records] == [raw_source_token]
 
 
 def test_decode_snapshot_bytes_is_deterministic() -> None:

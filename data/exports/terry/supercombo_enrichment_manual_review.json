@@ -1,0 +1,401 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t040:terry_214lp",
+    "raw_source_token": "terry_214lp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214LP\",\"move_group\":\"specials\",\"move_name\":\"Quick Burn\",\"notes_sc\":\"2 hits; functionally 22f startup as an overhead; on hit, leaves Terry at close range for a strike/throw/shimmy mixup; short range, primarily used in light confirms\",\"punish_adv\":\"+6\",\"raw_source_token\":\"terry_214lp\"}",
+    "move_id": "terry_031_2_1_4_lp",
+    "character_slug": "terry",
+    "move_name": "Quick Burn",
+    "input": "214LP",
+    "move_group": "specials",
+    "table_index": 40,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t055:terry_214hk",
+    "raw_source_token": "terry_214hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214HK\",\"move_group\":\"specials\",\"move_name\":\"Crack Shoot\",\"notes_sc\":\"2 hits vs. grounded, up to 3 hits vs. airborne; first 7 active frames can only hit airborne opponents (functionally 30f startup); cannot hit cross-up; puts airborne opponent into limited juggle state; kicking leg is anti-air invuln on frames 28-30; can be spaced out to hit once with 2f better advantage; technically has 4 hits, but up to 3 can land at once; damage is highly variable depending on which hits connect (last hit does most damage, but landing all 3 airborne hits allows strong juggle extensions); can hop over many grounded attacks (even some standing); can be used for a sideswitch mid-combo or a corpse hop on downed opponents; strong vs. Burnout, dealing chip while staying close range with frame advantage (but too slow to cancel into for Burnout loops); last hit is lower to the ground than other versions and can beat moves that low profile other versions\",\"punish_adv\":\"KD +43~45\",\"raw_source_token\":\"terry_214hk\"}",
+    "move_id": "terry_042_2_1_4_hk",
+    "character_slug": "terry",
+    "move_name": "Crack Shoot",
+    "input": "214HK",
+    "move_group": "specials",
+    "table_index": 55,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t041:terry_214lpmp",
+    "raw_source_token": "terry_214lpmp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214LPMP\",\"move_group\":\"quick_burn\",\"move_name\":\"or 214LPHP Quick Burn\",\"notes_sc\":\"2 hits that transition to a 3rd attack on hit only; functionally 22f startup as an overhead\",\"punish_adv\":\"KD +33\",\"raw_source_token\":\"terry_214lpmp\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "or 214LPHP Quick Burn",
+    "input": "214LPMP",
+    "move_group": "quick_burn",
+    "table_index": 41,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "terry_032_2_1_4_p_p",
+      "terry_035_2_1_4_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t009:terry_2hp",
+    "raw_source_token": "terry_2hp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"2HP\",\"move_group\":\"normals\",\"move_name\":\"Crouching Heavy Punch\",\"notes_sc\":\"Forces stand; good anti-air on frames 10-13 but cannot hit cross-up; very short horizontal range; only first 2 active frames are cancelable; if the attack connects on the first 2 active frames, it has 2 fewer active and recovery frames (meaty timing can be up to 2f worse on hit/block if 3rd active frame connects); active frames 4-6 whiff on crouching opponents unless they extend a vertical hurtbox; delaying the cancel into 236PP can grant better frame advantage for combo extensions\",\"punish_adv\":\"+5\",\"raw_source_token\":\"terry_2hp\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Crouching Heavy Punch",
+    "input": "2HP",
+    "move_group": "normals",
+    "table_index": 9,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "terry_hp_followup",
+    "conflicting_move_ids": [
+      "terry_011_2_hp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t027:terry_2mk_2hk",
+    "raw_source_token": "terry_2mk_2hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"2MK~2HK\",\"move_group\":\"target_combos\",\"move_name\":\"Fire Kick\",\"notes_sc\":\"Puts opponent into limited juggle state; () refers to scaled damage from 2MK combo starter; can always be interrupted by an invincible reversal if DR canceled on block; DR cancel is delayed until after 2nd recovery frame; special cancel is delayed until after 3rd recovery frame\",\"punish_adv\":\"KD +35\",\"raw_source_token\":\"terry_2mk_2hk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Fire Kick",
+    "input": "2MK~2HK",
+    "move_group": "target_combos",
+    "table_index": 27,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "terry_mk_2_hk_followup",
+    "conflicting_move_ids": [
+      "terry_026_2_mk_2_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t066:terry_4pppkkk",
+    "raw_source_token": "terry_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"We gonna fight or what? I don't have all day. *whistle* Jeez.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 66,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t021:terry_5mp_hk",
+    "raw_source_token": "terry_5mp_hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5MP~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Power Shoot\",\"notes_sc\":\"Puts opponent into limited juggle state; does not combo naturally on grounded opponents (requires at least Counter-hit or meaty timing); can be used in juggle routes; can follow up with Power Dunk on hit only; 5f gap between hits if blocked\",\"punish_adv\":\"KD +39\",\"raw_source_token\":\"terry_5mp_hk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Power Shoot",
+    "input": "5MP~HK",
+    "move_group": "target_combos",
+    "table_index": 21,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "terry_006_5_hk",
+      "terry_012_2_hk",
+      "terry_018_j_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t022:terry_5mp_hk_hk",
+    "raw_source_token": "terry_5mp_hk_hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~HK~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Power Dunk\",\"notes_sc\":\"() refers to scaled damage from CH 5MP combo starter; this standard version occurs when buffering Power Dunk early or within the final 2f of the cancel window; KD advantage varies depending on timing (early input gives better advantage); can only be performed on hit; useful for corner carry and oki\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_5mp_hk_hk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Power Dunk",
+    "input": "5MP~HK~HK",
+    "move_group": "target_combos",
+    "table_index": 22,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "terry_hk_followup",
+    "conflicting_move_ids": [
+      "terry_021_mp_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t023:terry_5mp_hk_hk_just",
+    "raw_source_token": "terry_5mp_hk_hk_just",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~HK~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Power Dunk (Just Frame)\",\"notes_sc\":\"() refers to scaled damage from CH 5MP combo starter; extra damage when performed within a strict 2f timing window (success indicated by screen shake); can only be performed on hit; useful for corner carry and oki\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_5mp_hk_hk_just\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Power Dunk (Just Frame)",
+    "input": "5MP~HK~HK",
+    "move_group": "target_combos",
+    "table_index": 23,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "terry_hk_followup",
+    "conflicting_move_ids": [
+      "terry_021_mp_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t020:terry_5mp_hp",
+    "raw_source_token": "terry_5mp_hp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~HP\",\"move_group\":\"target_combos\",\"move_name\":\"Power Drive\",\"notes_sc\":\"() refers to scaled damage when comboed from 5MP; puts opponent into limited juggle state (no follow-up juggles possible); high pushback on block keeps Terry safe if well-spaced; 3f gap on block for a frame trap (but can lose to 3f startup counters/armor moves)\",\"punish_adv\":\"KD +29\",\"raw_source_token\":\"terry_5mp_hp\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Power Drive",
+    "input": "5MP~HP",
+    "move_group": "target_combos",
+    "table_index": 20,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "terry_hp_followup",
+    "conflicting_move_ids": [
+      "terry_011_2_hp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t024:terry_5mp_mk",
+    "raw_source_token": "terry_5mp_mk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~MK\",\"move_group\":\"target_combos\",\"move_name\":\"Passing Sway\",\"notes_sc\":\"Invuln applies during recovery on hit only; no collision box during invuln frames; can be followed up with Jumping Lariat or Jumping Knee; follow-ups cause invuln to be extended until the attack active frames (can significantly delay the follow-up for much longer invincibility); 1f gap between hits on block (can be delayed for a 2f gap)\",\"punish_adv\":\"+1\",\"raw_source_token\":\"terry_5mp_mk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Passing Sway",
+    "input": "5MP~MK",
+    "move_group": "target_combos",
+    "table_index": 24,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "terry_mk_2_hk_followup",
+    "conflicting_move_ids": [
+      "terry_026_2_mk_2_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t063:terry_5pppkkk",
+    "raw_source_token": "terry_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Hey, come on, come on!\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 63,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t064:terry_5pppkkk_burnout",
+    "raw_source_token": "terry_5pppkkk_burnout",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt (Burnout)\",\"notes_sc\":\"\\\"Hey buddy, I got tons of fight left in me!\\\"; only occurs when Terry is in Burnout\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_5pppkkk_burnout\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Neutral Taunt (Burnout)",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 64,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t065:terry_6pppkkk",
+    "raw_source_token": "terry_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"No line here? Alright\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 65,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t033:terry_mpmk",
+    "raw_source_token": "terry_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_mpmk\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 33,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "terry_021_mp_hk",
+      "terry_023_mp_mk",
+      "terry_055_5_6_lplk",
+      "terry_059_hphk",
+      "terry_062_mpmk",
+      "terry_063_mpmk",
+      "terry_064_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213442Z-a27a5cb6",
+    "source_row_id": "20260412T213442Z-a27a5cb6:t035:terry_mpmk_66_drc",
+    "raw_source_token": "terry_mpmk_66_drc",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"or 66 Drive Rush Cancel\",\"notes_sc\":\"See Drive Rush ; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties\",\"punish_adv\":\"-\",\"raw_source_token\":\"terry_mpmk_66_drc\"}",
+    "move_id": null,
+    "character_slug": "terry",
+    "move_name": "or 66 Drive Rush Cancel",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 35,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "terry_062_mpmk",
+      "terry_063_mpmk",
+      "terry_064_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

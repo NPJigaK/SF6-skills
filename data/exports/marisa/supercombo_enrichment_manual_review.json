@@ -1,0 +1,420 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t085:marisa_214214p",
+    "raw_source_token": "marisa_214214p",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214214P\",\"move_group\":\"super_arts\",\"move_name\":\"Meteorite\",\"notes_sc\":\"Useful anti-air, reversal, and juggle ender; can be steered by holding forward/back; this affects the range, allowing you to hold back for close anti-airs or hold forward in ranged juggles or fireball punishes; upward hit triggers a cinematic; on block/whiff, ends with a downward slam that does 500 less damage than the cinematic version (still does full Drive Damage on hit); Marisa's collision box extends far downward, preventing opponent from walking or dashing underneath (opponent can still jump to avoid 2nd hit)\",\"punish_adv\":\"HKD +17\",\"raw_source_token\":\"marisa_214214p\"}",
+    "move_id": "marisa_077_2_1_4_2_1_4_p",
+    "character_slug": "marisa",
+    "move_name": "Meteorite",
+    "input": "214214P",
+    "move_group": "super_arts",
+    "table_index": 85,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t064:marisa_214hp_6p",
+    "raw_source_token": "marisa_214hp_6p",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214HP~6P\",\"move_group\":\"dimachaerus_follow_up\",\"move_name\":\"HP Dimachaerus Follow-up\",\"notes_sc\":\"Only comes out after 214HP hits or is armor absorbed\",\"punish_adv\":\"KD +50 Bounce\",\"raw_source_token\":\"marisa_214hp_6p\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "HP Dimachaerus Follow-up",
+    "input": "214HP~6P",
+    "move_group": "dimachaerus_follow_up",
+    "table_index": 64,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_p_p_6_p_followup",
+    "conflicting_move_ids": [
+      "marisa_057_2_1_4_p_p_6_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t074:marisa_214k",
+    "raw_source_token": "marisa_214k",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214K\",\"move_group\":\"scutum\",\"move_name\":\"Scutum\",\"notes_sc\":\"Stance with 1-hit armor can be extended an extra 90f by holding the button, followed by 26 unarmored recovery frames; no armor on lower half of body; cancelable into follow-ups after 8f; stance cannot be canceled into from other attacks; absorbing an attack automatically triggers counterattack follow-up; Marisa takes a fixed 6f hitstop when absorbing attacks (causing the counterattack to often land as a Counter-hit rather than a Punish Counter against medium/heavy attacks)\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_214k\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Scutum",
+    "input": "214K",
+    "move_group": "scutum",
+    "table_index": 74,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_k_followup",
+    "conflicting_move_ids": [
+      "marisa_066_2_1_4_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t076:marisa_214k_counter",
+    "raw_source_token": "marisa_214k_counter",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214K\",\"move_group\":\"scutum\",\"move_name\":\"Scutum (Counter)\",\"notes_sc\":\"Automatically triggers counterattack after 214K absorbs attack; Marisa is in a Punish Counter state for entire duration; can hold button to remain in Scutum stance after counterattack; hit advantage depends on attack that is absorbed; Marisa's short 6f hitstop causes attack to land as a +1 Counter-hit against most Medium/Heavy normals, while landing as a +3 Punish Counter against Lights\",\"punish_adv\":\"+3\",\"raw_source_token\":\"marisa_214k_counter\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Scutum (Counter)",
+    "input": "214K",
+    "move_group": "scutum",
+    "table_index": 76,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_k_followup",
+    "conflicting_move_ids": [
+      "marisa_066_2_1_4_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t081:marisa_214k_lplk",
+    "raw_source_token": "marisa_214k_lplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214K~LPLK\",\"move_group\":\"enfold\",\"move_name\":\"Enfold\",\"notes_sc\":\"Marisa is in a Punish Counter state for entire duration; Range: 1.109 (final active frame: 1.164); range includes 0.218 forward movement from 214K startup\",\"punish_adv\":\"HKD +18\",\"raw_source_token\":\"marisa_214k_lplk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Enfold",
+    "input": "214K~LPLK",
+    "move_group": "enfold",
+    "table_index": 81,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_073_lplk_followup",
+    "conflicting_move_ids": [
+      "marisa_073_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t075:marisa_214kk",
+    "raw_source_token": "marisa_214kk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214KK\",\"move_group\":\"scutum\",\"move_name\":\"Scutum\",\"notes_sc\":\"Stance with 2-hit full-body armor can be extended an extra 30f by holding a kick button, followed by 29 unarmored recovery frames; cancelable into follow-ups after 8f; stance cannot be canceled into from other attacks; absorbing an attack automatically triggers counterattack follow-up; Marisa takes a fixed 6f hitstop when absorbing attacks (causing the counterattack to often land as a Counter-hit rather than a Punish Counter against medium/heavy attacks)\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_214kk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Scutum",
+    "input": "214KK",
+    "move_group": "scutum",
+    "table_index": 75,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_k_k_followup",
+    "conflicting_move_ids": [
+      "marisa_068_2_1_4_k_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t077:marisa_214kk_counter",
+    "raw_source_token": "marisa_214kk_counter",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214KK\",\"move_group\":\"scutum\",\"move_name\":\"Scutum (Counter)\",\"notes_sc\":\"Automatically triggers counterattack after 214KK absorbs attack; Marisa is in a Punish Counter state for entire duration; can hold button to remain in Scutum stance after counterattack; hit advantage depends on attack that is absorbed; Marisa's short 6f hitstop causes attack to land as a +1 Counter-hit against most Medium/Heavy normals, while landing as a +3 Punish Counter against Lights\",\"punish_adv\":\"+3\",\"raw_source_token\":\"marisa_214kk_counter\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Scutum (Counter)",
+    "input": "214KK",
+    "move_group": "scutum",
+    "table_index": 77,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_k_k_followup",
+    "conflicting_move_ids": [
+      "marisa_068_2_1_4_k_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t062:marisa_214lp_6p",
+    "raw_source_token": "marisa_214lp_6p",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214LP~6P\",\"move_group\":\"dimachaerus_follow_up\",\"move_name\":\"LP Dimachaerus Follow-up\",\"notes_sc\":\"Only comes out after 214LP hits or is armor absorbed\",\"punish_adv\":\"KD +31\",\"raw_source_token\":\"marisa_214lp_6p\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "LP Dimachaerus Follow-up",
+    "input": "214LP~6P",
+    "move_group": "dimachaerus_follow_up",
+    "table_index": 62,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_p_p_6_p_followup",
+    "conflicting_move_ids": [
+      "marisa_057_2_1_4_p_p_6_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t063:marisa_214mp_6p",
+    "raw_source_token": "marisa_214mp_6p",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214MP~6P\",\"move_group\":\"dimachaerus_follow_up\",\"move_name\":\"MP Dimachaerus Follow-up\",\"notes_sc\":\"Only comes out after 214MP hits or is armor absorbed; gives a slight ground bounce on hit (can follow up with juggle vs. airborne opponents)\",\"punish_adv\":\"KD +36\",\"raw_source_token\":\"marisa_214mp_6p\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "MP Dimachaerus Follow-up",
+    "input": "214MP~6P",
+    "move_group": "dimachaerus_follow_up",
+    "table_index": 63,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_p_p_6_p_followup",
+    "conflicting_move_ids": [
+      "marisa_057_2_1_4_p_p_6_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t065:marisa_214pp_6p",
+    "raw_source_token": "marisa_214pp_6p",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214PP~6P\",\"move_group\":\"dimachaerus_follow_up\",\"move_name\":\"OD Dimachaerus Follow-up\",\"notes_sc\":\"Only comes out after 214PP hits or is armor absorbed\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_214pp_6p\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "OD Dimachaerus Follow-up",
+    "input": "214PP~6P",
+    "move_group": "dimachaerus_follow_up",
+    "table_index": 65,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_1_4_p_p_6_p_followup",
+    "conflicting_move_ids": [
+      "marisa_057_2_1_4_p_p_6_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t090:marisa_4pppkkk",
+    "raw_source_token": "marisa_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"This will be fun! *crack*\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 90,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t088:marisa_5pppkkk",
+    "raw_source_token": "marisa_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"I may need a second helping of you!\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 88,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t089:marisa_6pppkkk",
+    "raw_source_token": "marisa_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"Come on, the first hit's free.\\\"; active frames refer to armored period\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 89,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t042:marisa_lplk",
+    "raw_source_token": "marisa_lplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"LPLK\",\"move_group\":\"throws\",\"move_name\":\"Mounted Grace\",\"notes_sc\":\"Can use Drive Rush for a corner throw loop with 2f timing on standard characters; a successful Throw Escape builds 1 Drive bar and 1000 Super gauge (10% bar); Throw Escape is awarded to a random player if input simultaneously\",\"punish_adv\":\"HKD +23\",\"raw_source_token\":\"marisa_lplk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Mounted Grace",
+    "input": "LPLK",
+    "move_group": "throws",
+    "table_index": 42,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "marisa_073_lplk_followup",
+    "conflicting_move_ids": [
+      "marisa_073_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t047:marisa_mpmk",
+    "raw_source_token": "marisa_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"marisa_mpmk\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 47,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "marisa_073_lplk",
+      "marisa_080_5_6_lplk",
+      "marisa_084_hphk",
+      "marisa_087_mpmk",
+      "marisa_088_mpmk",
+      "marisa_089_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t032:marisa_nj2hp",
+    "raw_source_token": "marisa_nj2hp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"NJ.2HP\",\"move_group\":\"normals\",\"move_name\":\"Caelum Arc\",\"notes_sc\":\"Can hit Cross-up; can hold button 20f for improved properties; causes spike knockdown vs. airborne opponents; lower body projectile invuln 9f until land except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+15(+19)\",\"raw_source_token\":\"marisa_nj2hp\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Caelum Arc",
+    "input": "NJ.2HP",
+    "move_group": "normals",
+    "table_index": 32,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T211012Z-72a84215",
+    "source_row_id": "20260412T211012Z-72a84215:t033:marisa_nj2hp_hold",
+    "raw_source_token": "marisa_nj2hp_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"NJ.2[HP]\",\"move_group\":\"normals\",\"move_name\":\"Caelum Arc (Hold)\",\"notes_sc\":\"Can hit Cross-up; releasing the button on frames 5-19 results in uncharged version with 4f startup; causes spike knockdown; lower body projectile invuln 28f until land except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"HKD +71(+75)\",\"raw_source_token\":\"marisa_nj2hp_hold\"}",
+    "move_id": null,
+    "character_slug": "marisa",
+    "move_name": "Caelum Arc (Hold)",
+    "input": "NJ.2[HP]",
+    "move_group": "normals",
+    "table_index": 33,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

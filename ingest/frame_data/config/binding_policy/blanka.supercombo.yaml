@@ -1,2 +1,468 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: blanka_5lp
+  binding_class: A
+  target_move_id: blanka_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_5mp
+  binding_class: A
+  target_move_id: blanka_003_5_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_5hp
+  binding_class: A
+  target_move_id: blanka_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_5lk
+  binding_class: A
+  target_move_id: blanka_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_5mk
+  binding_class: A
+  target_move_id: blanka_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_5hk
+  binding_class: A
+  target_move_id: blanka_006_5_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2lp
+  binding_class: A
+  target_move_id: blanka_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2mp
+  binding_class: A
+  target_move_id: blanka_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2hp
+  binding_class: A
+  target_move_id: blanka_011_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2lk
+  binding_class: A
+  target_move_id: blanka_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2mk
+  binding_class: A
+  target_move_id: blanka_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2hk
+  binding_class: A
+  target_move_id: blanka_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_jlp
+  binding_class: B
+  target_move_id: blanka_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: blanka_jmp
+  binding_class: B
+  target_move_id: blanka_015_j_mp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: blanka_jhp
+  binding_class: B
+  target_move_id: blanka_017_j_hp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: blanka_8jhp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_jlk
+  binding_class: B
+  target_move_id: blanka_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: blanka_jmk
+  binding_class: B
+  target_move_id: blanka_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: blanka_jhk
+  binding_class: B
+  target_move_id: blanka_018_j_hk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: blanka_6mp
+  binding_class: A
+  target_move_id: blanka_020_6_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_6mk
+  binding_class: A
+  target_move_id: blanka_021_6_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_4mk
+  binding_class: A
+  target_move_id: blanka_022_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_6hp
+  binding_class: A
+  target_move_id: blanka_023_6_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_3hp
+  binding_class: A
+  target_move_id: blanka_024_3_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_lplk
+  binding_class: A
+  target_move_id: blanka_081_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_4lplk
+  binding_class: A
+  target_move_id: blanka_080_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_jlplk
+  binding_class: D
+  candidate_move_ids:
+  - blanka_079_5_6_lplk
+  - blanka_080_4_lplk
+  - blanka_081_lplk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_hphk
+  binding_class: A
+  target_move_id: blanka_084_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_6hphk
+  binding_class: A
+  target_move_id: blanka_085_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_6hphk_recovery
+  binding_class: F
+  target_move_id: blanka_086_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: blanka_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - blanka_079_5_6_lplk
+  - blanka_081_lplk
+  - blanka_084_hphk
+  - blanka_087_mpmk
+  - blanka_088_mpmk
+  - blanka_089_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_mpmk_66_pdr
+  binding_class: B
+  target_move_id: blanka_090_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: blanka_mpmk_66_drc
+  binding_class: F
+  target_move_id: blanka_091_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: blanka_2pp
+  binding_class: A
+  target_move_id: blanka_025_2_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2pp_p
+  binding_class: A
+  target_move_id: blanka_026_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_2pp_k
+  binding_class: D
+  candidate_move_ids:
+  - blanka_027_j_k
+  - blanka_077_2_3_6_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_6kkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_4kkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_214p
+  binding_class: D
+  candidate_move_ids:
+  - blanka_030_2_1_4_p
+  - blanka_031_2_1_4_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_214pp
+  binding_class: D
+  candidate_move_ids:
+  - blanka_032_2_1_4_p_p
+  - blanka_033_2_1_4_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_46lp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46lp_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46mp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46mp_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46hp_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_46pp_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_j46p
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_j46p_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_j46pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_j46pp_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28lk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28lk_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28mk_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28hk_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_28kk_sa2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_63214lk
+  binding_class: D
+  candidate_move_ids:
+  - blanka_050_6_3_2_1_4_lk
+  - blanka_051_6_3_2_1_4_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214lk_sa2
+  binding_class: D
+  candidate_move_ids:
+  - blanka_050_6_3_2_1_4_lk
+  - blanka_051_6_3_2_1_4_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214mk
+  binding_class: D
+  candidate_move_ids:
+  - blanka_052_6_3_2_1_4_mk
+  - blanka_053_6_3_2_1_4_mk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214mk_sa2
+  binding_class: D
+  candidate_move_ids:
+  - blanka_052_6_3_2_1_4_mk
+  - blanka_053_6_3_2_1_4_mk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214hk
+  binding_class: D
+  candidate_move_ids:
+  - blanka_054_6_3_2_1_4_hk
+  - blanka_055_6_3_2_1_4_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214hk_sa2
+  binding_class: D
+  candidate_move_ids:
+  - blanka_054_6_3_2_1_4_hk
+  - blanka_055_6_3_2_1_4_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214kk
+  binding_class: D
+  candidate_move_ids:
+  - blanka_056_6_3_2_1_4_k_k
+  - blanka_057_6_3_2_1_4_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_63214kk_sa2
+  binding_class: D
+  candidate_move_ids:
+  - blanka_056_6_3_2_1_4_k_k
+  - blanka_057_6_3_2_1_4_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_236lk
+  binding_class: A
+  target_move_id: blanka_066_2_3_6_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_236mk
+  binding_class: A
+  target_move_id: blanka_067_2_3_6_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_236hk
+  binding_class: A
+  target_move_id: blanka_068_2_3_6_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_236kk
+  binding_class: A
+  target_move_id: blanka_069_2_3_6_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_22p
+  binding_class: A
+  target_move_id: blanka_070_2_2_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_22p_214p
+  binding_class: D
+  candidate_move_ids:
+  - blanka_030_2_1_4_p
+  - blanka_031_2_1_4_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_22p_214pp
+  binding_class: D
+  candidate_move_ids:
+  - blanka_032_2_1_4_p_p
+  - blanka_033_2_1_4_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_22p_236236p
+  binding_class: D
+  candidate_move_ids:
+  - blanka_074_2_3_6_2_3_6_p
+  - blanka_075_2_3_6_2_3_6_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: blanka_236236p
+  binding_class: A
+  target_move_id: blanka_074_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_214214p
+  binding_class: A
+  target_move_id: blanka_076_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_xp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: blanka_236236k
+  binding_class: A
+  target_move_id: blanka_077_2_3_6_2_3_6_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_236236k(ca)
+  binding_class: C
+  target_move_id: blanka_078_2_3_6_2_3_6_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: blanka_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: blanka_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: blanka_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

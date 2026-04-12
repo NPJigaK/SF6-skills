@@ -1,0 +1,514 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t021:c.viper_6hk",
+    "raw_source_token": "c.viper_6hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"6HK\",\"move_group\":\"command_normals\",\"move_name\":\"Double Kick\",\"notes_sc\":\"2 hits; carries counter-hit/Punish Counter advantage through both hits; if 1st hit is Perfect Parried, opponent can interrupt 2nd hit with 16f or faster attack; useful approach tool from Drive Rush (strike/throw mixup on block, 2MP link on hit); can be spaced effectively in neutral to keep C.Viper out of the opponent's throw range on block\",\"punish_adv\":\"+8\",\"raw_source_token\":\"c.viper_6hk\"}",
+    "move_id": "cviper_021_6_hk",
+    "character_slug": "cviper",
+    "move_name": "Double Kick",
+    "input": "6HK",
+    "move_group": "command_normals",
+    "table_index": 21,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t034:c.viper_214pp",
+    "raw_source_token": "c.viper_214pp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214PP\",\"move_group\":\"specials\",\"move_name\":\"Thunder Dash\",\"notes_sc\":\"2 hits with a large gap in between; range of the 1st hit is in between LP/MP versions (total range is longer but easily interruptible if 1st hit whiffs); combos from medium and heavy normals; allows an easy hitconfirm into SA2/SA3 while remaining safe on block; leaves C.Viper inside throw range with block advantage on burned out opponents, making it a strong chip and pressure tool; cannot perform feint cancels or Tracer Combination follow-ups; if Perfect Parried, opponent can interrupt 2nd hit with 18f or faster attack; extremely disjointed hitbox makes it a strong approach tool at midrange; sets up a safe jump on grounded hit (midscreen, can only connect with max range j.MK)\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"c.viper_214pp\"}",
+    "move_id": "cviper_027_2_1_4_p_p",
+    "character_slug": "cviper",
+    "move_name": "Thunder Dash",
+    "input": "214PP",
+    "move_group": "specials",
+    "table_index": 34,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t052:c.viper_214k",
+    "raw_source_token": "c.viper_214k",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214K\",\"move_group\":\"specials\",\"move_name\":\"Focus Force (Lv.1)\",\"notes_sc\":\"Lv.1 version when uncharged or when button is held up to 19f; can hold button longer to charge to a stronger version (20f Lv.2 / 59f Lv.3); 1-hit armor frames cover the full body, ending immediately if button is released after frame 13; absorbing a strike results in an automatic counter-attack with 10f startup (comes out on frame 14 at the earliest); absorbing an attack early in the armor frames makes it possible for the counter-attack to be blocked; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 12 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); 2f extra knockdown advantage on Punish Counter; only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke); Focus + Dash can be used to absorb projectiles when Drive gauge is too low for Parry; can be used against Drive Impact while in Burnout (but armor starts too late to work in most DI-cancel blockstrings)\",\"punish_adv\":\"KD +26\",\"raw_source_token\":\"c.viper_214k\"}",
+    "move_id": "cviper_047_2_1_4_k",
+    "character_slug": "cviper",
+    "move_name": "Focus Force (Lv.1)",
+    "input": "214K",
+    "move_group": "specials",
+    "table_index": 52,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t053:c.viper_214kk",
+    "raw_source_token": "c.viper_214kk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214KK\",\"move_group\":\"specials\",\"move_name\":\"Focus Force (Lv.1)\",\"notes_sc\":\"Lv.1 version when uncharged or when button is held up to 19f; can hold button longer to charge to a stronger version (20f Lv.2 / 57f Lv.3); 1-hit armor frames cover the full body, ending immediately if button is released after frame 10; absorbing a strike results in an automatic counter-attack with 10f startup (comes out on frame 11 at the earliest); absorbing an attack early in the armor frames makes it possible for the counter-attack to be blocked; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 9 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); 2f extra knockdown advantage on Punish Counter; only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)\",\"punish_adv\":\"KD +26\",\"raw_source_token\":\"c.viper_214kk\"}",
+    "move_id": "cviper_050_2_1_4_k_k",
+    "character_slug": "cviper",
+    "move_name": "Focus Force (Lv.1)",
+    "input": "214KK",
+    "move_group": "specials",
+    "table_index": 53,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t058:c.viper_236236k",
+    "raw_source_token": "c.viper_236236k",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Limit Decoupler\",\"notes_sc\":\"Puts C.Viper into an install state on frame 21 (after active frames) that removes the meter cost of her 1-bar moves (High Jump, extensions from Thunder Dash and Burning Kick) and also causes the 1-bar special follow-ups to build 3000 Drive gauge on hit/block; during Burnout, the install ends after one use of these moves; install lasts for 700 frames (11.7 seconds) and freezes during hitstop or cinematics; cannot build additional Super gauge while install is active; KD advantage varies slightly when used in juggles or as an anti-air; if 1st hit is Perfect Parried, opponent can interrupt 2nd hit with 5f or faster attack that reaches around standing chest-height; if 1st hit trades with a projectile at close range, C. Viper can pick up a juggle into 214HP, SA1, or SA2 depending on the distance and fireball hitstun (useful in blockstrings with a large gap, like Terry 5HP > Round Wave)\",\"punish_adv\":\"KD +21\",\"raw_source_token\":\"c.viper_236236k\"}",
+    "move_id": "cviper_054_2_3_6_2_3_6_k",
+    "character_slug": "cviper",
+    "move_name": "Limit Decoupler",
+    "input": "236236K",
+    "move_group": "super_arts",
+    "table_index": 58,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t056:c.viper_214k_hold",
+    "raw_source_token": "c.viper_214k_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214[K]\",\"move_group\":\"charged_focus_force\",\"move_name\":\"Focus Force (Lv.3)\",\"notes_sc\":\"Fully charged Lv.3 version when button is held at least 59f; Punish Counter causes a limited juggle crumple state (+29 before opponent falls to the ground); 1-hit armor frames cover the full body; attack hitbox starts up 10f after reaching full charge (no armor on these frames); absorbing a strike while charging results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 12-60 (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)\",\"punish_adv\":\"KD +77 Crumple\",\"raw_source_token\":\"c.viper_214k_hold\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Focus Force (Lv.3)",
+    "input": "214[K]",
+    "move_group": "charged_focus_force",
+    "table_index": 56,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_048_2_1_4_k",
+      "cviper_049_2_1_4_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t054:c.viper_214k_partial_hold",
+    "raw_source_token": "c.viper_214k_partial_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214{K}\",\"move_group\":\"charged_focus_force\",\"move_name\":\"Focus Force (Lv.2)\",\"notes_sc\":\"Partially charged Lv.2 version when button is held at least 20f (up to 58f); Punish Counter causes a limited juggle crumple state (+8 before opponent falls to the ground); 1-hit armor frames cover the full body, ending immediately if button is released after frame 13; attack hitbox starts up 10f after button release (no armor on these frames); absorbing a strike results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 12 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke); Focus + Dash can be used to absorb projectiles when Drive gauge is too low for Parry\",\"punish_adv\":\"KD +56 Crumple\",\"raw_source_token\":\"c.viper_214k_partial_hold\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Focus Force (Lv.2)",
+    "input": "214{K}",
+    "move_group": "charged_focus_force",
+    "table_index": 54,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_048_2_1_4_k",
+      "cviper_049_2_1_4_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t057:c.viper_214kk_hold",
+    "raw_source_token": "c.viper_214kk_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214[KK]\",\"move_group\":\"charged_focus_force\",\"move_name\":\"Focus Force (Lv.3)\",\"notes_sc\":\"Fully charged Lv.3 version when button is held at least 57f; Punish Counter causes a limited juggle crumple state (+29 before opponent falls to the ground); extremely powerful combo starter for Stun or punishing very unsafe Supers; 1-hit armor frames cover the full body; attack hitbox starts up 10f after reaching full charge (no armor on these frames); absorbing a strike while charging results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 9-58 (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)\",\"punish_adv\":\"KD +77 Crumple\",\"raw_source_token\":\"c.viper_214kk_hold\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Focus Force (Lv.3)",
+    "input": "214[KK]",
+    "move_group": "charged_focus_force",
+    "table_index": 57,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_051_2_1_4_k_k",
+      "cviper_052_2_1_4_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t055:c.viper_214kk_partial_hold",
+    "raw_source_token": "c.viper_214kk_partial_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214{KK}\",\"move_group\":\"charged_focus_force\",\"move_name\":\"Focus Force (Lv.2)\",\"notes_sc\":\"Partially charged Lv.2 version when button is held at least 20f (up to 56f); Punish Counter causes a limited juggle crumple state (+8 before opponent falls to the ground); 1-hit armor frames cover the full body, ending immediately if button is released after frame 10; attack hitbox starts up 10f after button release (no armor on these frames); absorbing a strike results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 9 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)\",\"punish_adv\":\"KD +56 Crumple\",\"raw_source_token\":\"c.viper_214kk_partial_hold\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Focus Force (Lv.2)",
+    "input": "214{KK}",
+    "move_group": "charged_focus_force",
+    "table_index": 55,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_051_2_1_4_k_k",
+      "cviper_052_2_1_4_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t042:c.viper_236kk",
+    "raw_source_token": "c.viper_236kk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236KK\",\"move_group\":\"burning_kick\",\"move_name\":\"Burning Kick\",\"notes_sc\":\"Best horizontal range for combo consistency; 2 hits (cannot be interrupted on block); cannot hit cross-up; recovery is cancelable into SA2/SA3 after 11f on hit or block; very difficult to space meaty for extra advantage due to minimal forward movement during 2nd hit's active frames; important juggle tool after launches into Air Burning Kick or juggled 5HK ground bounce; combo from 5HK > HJC requires a strict 2f input window (cannot buffer on the first High Jump frame, and results in air version on frame 4 onward)\",\"punish_adv\":\"KD +43\",\"raw_source_token\":\"c.viper_236kk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Burning Kick",
+    "input": "236KK",
+    "move_group": "burning_kick",
+    "table_index": 42,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_035_2_3_6_k_k",
+      "cviper_041_2_3_6_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t064:c.viper_4pppkkk",
+    "raw_source_token": "c.viper_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"Begins with \\\"You're a stubborn one —\\\" / \\\"You're becoming a pain in —\\\" / \\\"I have a few new tricks up —\\\" / \\\"Decouple power limiters —\\\" / \\\"This is going on far too —\\\" / \\\"I think it's about time I —\\\"; after being interrupted, plays out one of 6 potential phone conversations.\",\"punish_adv\":\"-\",\"raw_source_token\":\"c.viper_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 64,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t062:c.viper_5pppkkk",
+    "raw_source_token": "c.viper_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Ugh, could you just like, give up now? I have other work to do.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"c.viper_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 62,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t049:c.viper_623p",
+    "raw_source_token": "c.viper_623p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"623P\",\"move_group\":\"seismic_hammer\",\"move_name\":\"Seismic Hammer\",\"notes_sc\":\"1-hit standard projectile; button strength determines projectile distance (LP close, MP ~50% screen, HP ~80% screen); puts opponents into a limited juggle state; combos from 2HP or from High Jump canceled 5HP/5HK; cancelable into High Jump on hit or block for 1 extra Drive bar (no extra cost during SA1 install); all strengths will not go beyond the corner; can transition into Seismo Feint after 11f (total Feint duration 27f); HJC~214HP Feint cancel: KD +61 / -2 oB; great tool for Burnout pressure (can repeatedly chain Seismos together with High Jump cancels until pushed out of range); can connect 9 consecutive HP Seismos on a blocking cornered opponent (if starting from a canceled normal, 5HP > HJC Seismo is the best option with 8 consecutive Seismo chains); hitbox is very low to the ground, allowing opponent to block when landing from an empty jump\",\"punish_adv\":\"KD +53\",\"raw_source_token\":\"c.viper_623p\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Seismic Hammer",
+    "input": "623P",
+    "move_group": "seismic_hammer",
+    "table_index": 49,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_042_6_2_3_lp",
+      "cviper_043_6_2_3_mp",
+      "cviper_044_6_2_3_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t063:c.viper_6pppkkk",
+    "raw_source_token": "c.viper_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"I hate to admit, you're not half bad! Even messed up my makeup. Hmm, alright, all done up.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"c.viper_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 63,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t019:c.viper_8jhk",
+    "raw_source_token": "c.viper_8jhk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"8HK\",\"move_group\":\"normals\",\"move_name\":\"Neutral Jump Heavy Kick\",\"notes_sc\":\"Longest horizontal range of Viper's air normals; in the corner or against wide characters (Blanka/E.Honda/Zangief), can combo Punish Counter 5HK into High Jump cancel nj.HK for powerful combo extension; lower body projectile invuln 10-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+15(+20)\",\"raw_source_token\":\"c.viper_8jhk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Neutral Jump Heavy Kick",
+    "input": "8HK",
+    "move_group": "normals",
+    "table_index": 19,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t047:c.viper_j236hk",
+    "raw_source_token": "c.viper_j236hk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236HK\",\"move_group\":\"aerial_burning_kick\",\"move_name\":\"Aerial Burning Kick\",\"notes_sc\":\"Can be input from a forward/neutral jump or High Jump; maintains the most forward air momentum; effective approach tool when used from immediate High Jump; can hit crossup; 1f extra landing recovery frame when blocked as a cross-up; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +38 / -3 oB (regular jump), KD +41 / -1 oB (High Jump)\",\"punish_adv\":\"KD +36(+48)\",\"raw_source_token\":\"c.viper_j236hk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Aerial Burning Kick",
+    "input": "j.236HK",
+    "move_group": "aerial_burning_kick",
+    "table_index": 47,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t048:c.viper_j236kk",
+    "raw_source_token": "c.viper_j236kk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236KK\",\"move_group\":\"aerial_burning_kick\",\"move_name\":\"Aerial Burning Kick\",\"notes_sc\":\"Can be input from a forward/neutral jump or High Jump; same air trajectory as Heavy version; can hit crossup; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +37 / +2 oB (regular jump), KD +41 / +4 oB (High Jump)\",\"punish_adv\":\"KD +35(+48)\",\"raw_source_token\":\"c.viper_j236kk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Aerial Burning Kick",
+    "input": "j.236KK",
+    "move_group": "aerial_burning_kick",
+    "table_index": 48,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t045:c.viper_j236lk",
+    "raw_source_token": "c.viper_j236lk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236LK\",\"move_group\":\"aerial_burning_kick\",\"move_name\":\"Aerial Burning Kick\",\"notes_sc\":\"Can be input from a forward/neutral jump or High Jump; stops forward air momentum; can hit crossup; 1f extra landing recovery frame when blocked as a cross-up; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +39 / -2 oB (regular jump), KD +43 / +1 oB (High Jump)\",\"punish_adv\":\"KD +38(+43)\",\"raw_source_token\":\"c.viper_j236lk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Aerial Burning Kick",
+    "input": "j.236LK",
+    "move_group": "aerial_burning_kick",
+    "table_index": 45,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t046:c.viper_j236mk",
+    "raw_source_token": "c.viper_j236mk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236MK\",\"move_group\":\"aerial_burning_kick\",\"move_name\":\"Aerial Burning Kick\",\"notes_sc\":\"Can be input from a forward/neutral jump or High Jump; maintains some forward air momentum; can hit crossup; 1f extra landing recovery frame when blocked as a cross-up; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +40 / -1 oB (regular jump), KD +43 / +1 oB (High Jump); using this version after Seismic Hammer launch allows a midscreen juggle into MP Thunder Dash + Tracer Combination (great damage, oki, and potential SA3 cancel with less meter cost than OD Burning Kick routes)\",\"punish_adv\":\"KD +37(+48)\",\"raw_source_token\":\"c.viper_j236mk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Aerial Burning Kick",
+    "input": "j.236MK",
+    "move_group": "aerial_burning_kick",
+    "table_index": 46,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t027:c.viper_mpmk",
+    "raw_source_token": "c.viper_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"c.viper_mpmk\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 27,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_058_5_6_lplk",
+      "cviper_062_hphk",
+      "cviper_065_mpmk",
+      "cviper_066_mpmk",
+      "cviper_067_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214259Z-d1544e78",
+    "source_row_id": "20260412T214259Z-d1544e78:t029:c.viper_mpmk_66_drc",
+    "raw_source_token": "c.viper_mpmk_66_drc",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"or 66 Drive Rush Cancel\",\"notes_sc\":\"See Drive Rush ; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties\",\"punish_adv\":\"-\",\"raw_source_token\":\"c.viper_mpmk_66_drc\"}",
+    "move_id": null,
+    "character_slug": "cviper",
+    "move_name": "or 66 Drive Rush Cancel",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 29,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "cviper_065_mpmk",
+      "cviper_066_mpmk",
+      "cviper_067_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

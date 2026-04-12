@@ -1,2 +1,373 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: guile_5lp
+  binding_class: A
+  target_move_id: guile_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_5mp
+  binding_class: A
+  target_move_id: guile_003_5_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_5hp
+  binding_class: A
+  target_move_id: guile_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_5lk
+  binding_class: A
+  target_move_id: guile_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_5mk
+  binding_class: A
+  target_move_id: guile_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_5hk
+  binding_class: A
+  target_move_id: guile_006_5_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_2lp
+  binding_class: A
+  target_move_id: guile_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_2mp
+  binding_class: A
+  target_move_id: guile_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_2hp
+  binding_class: A
+  target_move_id: guile_011_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_2lk
+  binding_class: A
+  target_move_id: guile_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_2mk
+  binding_class: A
+  target_move_id: guile_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: guile_2hk
+  binding_class: A
+  target_move_id: guile_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_jlp
+  binding_class: B
+  target_move_id: guile_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Guile_jmp
+  binding_class: B
+  target_move_id: guile_015_j_mp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Guile_jhp
+  binding_class: B
+  target_move_id: guile_017_j_hp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Guile_jlk
+  binding_class: B
+  target_move_id: guile_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Guile_jmk
+  binding_class: B
+  target_move_id: guile_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Guile_jhk
+  binding_class: B
+  target_move_id: guile_018_j_hk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Guile_6mp
+  binding_class: A
+  target_move_id: guile_019_6_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_6hp
+  binding_class: A
+  target_move_id: guile_021_6_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_4hp
+  binding_class: E
+  collision_group: guile_hp_followup
+  conflicting_move_ids:
+  - guile_020_4_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_4lk
+  binding_class: A
+  target_move_id: guile_022_4_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_4mk_or_6mk
+  binding_class: A
+  target_move_id: guile_023_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_6hk
+  binding_class: A
+  target_move_id: guile_025_6_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_3hk
+  binding_class: A
+  target_move_id: guile_026_3_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_5mp_4hp
+  binding_class: E
+  collision_group: guile_hp_followup
+  conflicting_move_ids:
+  - guile_020_4_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_2mp_2mp
+  binding_class: A
+  target_move_id: guile_028_2_mp_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_2mk_6mp
+  binding_class: A
+  target_move_id: guile_029_2_mk_6_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_2hk_3hk
+  binding_class: A
+  target_move_id: guile_030_2_hk_3_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_lplk
+  binding_class: A
+  target_move_id: guile_067_5_6_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_4lplk
+  binding_class: A
+  target_move_id: guile_068_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_jlplk
+  binding_class: D
+  candidate_move_ids:
+  - guile_069_5_6_lplk
+  - guile_070_4_lplk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_j4lplk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_hphk
+  binding_class: A
+  target_move_id: guile_073_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_6hphk
+  binding_class: A
+  target_move_id: guile_074_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_6hphk_recovery
+  binding_class: F
+  target_move_id: guile_075_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: Guile_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - guile_067_5_6_lplk
+  - guile_069_5_6_lplk
+  - guile_073_hphk
+  - guile_076_mpmk
+  - guile_077_mpmk
+  - guile_078_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: guile_mpmk_66_pdr
+  binding_class: B
+  target_move_id: guile_079_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: guile_mpmk_66_drc
+  binding_class: F
+  target_move_id: guile_080_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: Guile_46lp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_46mp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_46hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_46pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_28lk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_28mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_28hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_28kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_214lp
+  binding_class: A
+  target_move_id: guile_045_2_1_4_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_214mp
+  binding_class: A
+  target_move_id: guile_046_2_1_4_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_214hp
+  binding_class: A
+  target_move_id: guile_047_2_1_4_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_214p_6p
+  binding_class: D
+  candidate_move_ids:
+  - guile_019_6_mp
+  - guile_021_6_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_214p_6pp
+  binding_class: A
+  target_move_id: guile_037_6_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_214pp
+  binding_class: D
+  candidate_move_ids:
+  - guile_048_2_1_4_p_p
+  - guile_049_2_1_4_p_p
+  - guile_050_2_1_4_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_214pp_6p
+  binding_class: D
+  candidate_move_ids:
+  - guile_048_2_1_4_p_p
+  - guile_049_2_1_4_p_p
+  - guile_050_2_1_4_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_214pp_6pp
+  binding_class: D
+  candidate_move_ids:
+  - guile_048_2_1_4_p_p
+  - guile_049_2_1_4_p_p
+  - guile_050_2_1_4_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_pp
+  binding_class: A
+  target_move_id: guile_059_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_46p_p_followup
+  binding_class: E
+  collision_group: guile_061_p_followup
+  conflicting_move_ids:
+  - guile_061_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_46pp_p_followup
+  binding_class: E
+  collision_group: guile_061_p_followup
+  conflicting_move_ids:
+  - guile_061_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Guile_4646p
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_4646hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_214214p
+  binding_class: A
+  target_move_id: guile_064_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Guile_4646k
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_4646k(ca)
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Guile_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Guile_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Guile_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Guile_2pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

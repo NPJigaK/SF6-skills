@@ -1,2 +1,447 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: lily_5lp
+  binding_class: A
+  target_move_id: lily_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_5mp
+  binding_class: A
+  target_move_id: lily_003_5_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_5hp
+  binding_class: A
+  target_move_id: lily_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_5lk
+  binding_class: A
+  target_move_id: lily_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_5mk
+  binding_class: A
+  target_move_id: lily_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_5hk
+  binding_class: A
+  target_move_id: lily_006_5_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_2lp
+  binding_class: A
+  target_move_id: lily_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_2mp
+  binding_class: A
+  target_move_id: lily_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_2hp
+  binding_class: D
+  candidate_move_ids:
+  - lily_011_2_hp
+  - lily_021_2_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_2lk
+  binding_class: A
+  target_move_id: lily_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_2mk
+  binding_class: A
+  target_move_id: lily_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_2hk
+  binding_class: A
+  target_move_id: lily_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_jlp
+  binding_class: B
+  target_move_id: lily_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: lily_jmp
+  binding_class: E
+  collision_group: lily_mp_followup
+  conflicting_move_ids:
+  - lily_015_j_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_jhp
+  binding_class: B
+  target_move_id: lily_017_j_hp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: lily_jlk
+  binding_class: B
+  target_move_id: lily_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: lily_jmk
+  binding_class: B
+  target_move_id: lily_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: lily_jhk
+  binding_class: B
+  target_move_id: lily_018_j_hk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: lily_6hp
+  binding_class: A
+  target_move_id: lily_023_6_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_4hp
+  binding_class: A
+  target_move_id: lily_020_4_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_3hp
+  binding_class: A
+  target_move_id: lily_019_3_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_j2hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_6hp_hp
+  binding_class: A
+  target_move_id: lily_024_6_hp_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_6hp_hp_hp
+  binding_class: A
+  target_move_id: lily_025_6_hp_hp_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_jmp_mp
+  binding_class: E
+  collision_group: lily_mp_followup
+  conflicting_move_ids:
+  - lily_015_j_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_lplk
+  binding_class: A
+  target_move_id: lily_063_5_6_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_4lplk
+  binding_class: A
+  target_move_id: lily_064_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_hphk
+  binding_class: A
+  target_move_id: lily_067_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_6hphk
+  binding_class: A
+  target_move_id: lily_068_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_6hphk_recovery
+  binding_class: F
+  target_move_id: lily_069_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: lily_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - lily_063_5_6_lplk
+  - lily_067_hphk
+  - lily_070_mpmk
+  - lily_071_mpmk
+  - lily_072_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_mpmk_66_pdr
+  binding_class: B
+  target_move_id: lily_073_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: lily_mpmk_66_drc
+  binding_class: F
+  target_move_id: lily_074_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: lily_214lp
+  binding_class: A
+  target_move_id: lily_026_2_1_4_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_214mp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: lily_214hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: lily_214pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: lily_214pp_hold
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: lily_236lk
+  binding_class: E
+  collision_group: lily_3_6_lk_followup
+  conflicting_move_ids:
+  - lily_030_2_3_6_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_236mk
+  binding_class: A
+  target_move_id: lily_031_2_3_6_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_236hk
+  binding_class: A
+  target_move_id: lily_032_2_3_6_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_236kk
+  binding_class: A
+  target_move_id: lily_034_2_3_6_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_236lk_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_030_2_3_6_lk
+  - lily_031_2_3_6_mk
+  - lily_032_2_3_6_hk
+  - lily_035_2_3_6_lk
+  - lily_036_2_3_6_mk
+  - lily_037_2_3_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_236mk_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_030_2_3_6_lk
+  - lily_031_2_3_6_mk
+  - lily_032_2_3_6_hk
+  - lily_035_2_3_6_lk
+  - lily_036_2_3_6_mk
+  - lily_037_2_3_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_236hk_1stock
+  binding_class: E
+  collision_group: lily_3_6_lk_followup
+  conflicting_move_ids:
+  - lily_030_2_3_6_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_236mkhk_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_034_2_3_6_k_k
+  - lily_039_2_3_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_236lkmk_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_034_2_3_6_k_k
+  - lily_039_2_3_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623lp
+  binding_class: A
+  target_move_id: lily_040_6_2_3_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_623mp
+  binding_class: E
+  collision_group: lily_2_3_mp_followup
+  conflicting_move_ids:
+  - lily_041_6_2_3_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623hp
+  binding_class: E
+  collision_group: lily_2_3_hp_followup
+  conflicting_move_ids:
+  - lily_042_6_2_3_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623pp
+  binding_class: E
+  collision_group: lily_2_3_p_p_followup
+  conflicting_move_ids:
+  - lily_043_6_2_3_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623lp_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_040_6_2_3_lp
+  - lily_041_6_2_3_mp
+  - lily_042_6_2_3_hp
+  - lily_044_6_2_3_lp
+  - lily_045_6_2_3_mp
+  - lily_046_6_2_3_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623mp_1stock
+  binding_class: E
+  collision_group: lily_2_3_hp_followup
+  conflicting_move_ids:
+  - lily_042_6_2_3_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623hp_1stock
+  binding_class: E
+  collision_group: lily_2_3_mp_followup
+  conflicting_move_ids:
+  - lily_041_6_2_3_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_623pp_1stock
+  binding_class: E
+  collision_group: lily_2_3_p_p_followup
+  conflicting_move_ids:
+  - lily_043_6_2_3_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_jpp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_jppp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_jpp_1stock
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_jppp_1stock
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_jpp_pp_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_048_p_p
+  - lily_049_p_p
+  - lily_050_p_p
+  - lily_051_p_p
+  - lily_055_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_jpp_ppp_1stock
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_360lp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_360mp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_360hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_360pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_236236p
+  binding_class: A
+  target_move_id: lily_056_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_236236k
+  binding_class: D
+  candidate_move_ids:
+  - lily_057_2_3_6_2_3_6_k
+  - lily_058_2_3_6_2_3_6_k
+  - lily_059_2_3_6_2_3_6_k
+  - lily_060_2_3_6_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_236236k_1stock
+  binding_class: D
+  candidate_move_ids:
+  - lily_057_2_3_6_2_3_6_k
+  - lily_058_2_3_6_2_3_6_k
+  - lily_059_2_3_6_2_3_6_k
+  - lily_060_2_3_6_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: lily_j236236k
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_j236236k_1stock
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: lily_214214p
+  binding_class: A
+  target_move_id: lily_061_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_214214p(ca)
+  binding_class: C
+  target_move_id: lily_062_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: lily_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: lily_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: lily_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

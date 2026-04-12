@@ -4,10 +4,15 @@ import argparse
 import sys
 
 from .config import available_character_slugs, load_character, load_fetch_profile, repo_root, selected_sources
-from .core.io import save_snapshot
+from .core.io import load_snapshot, save_snapshot
 from .core.pipeline import parse_from_raw, publish_run
 from .core.prune import prune_latest_published_state
 from .logging_utils import configure_logging
+from .registry import load_registry
+from .supercombo_binding_generation import (
+    build_supercombo_binding_policy_document,
+    write_supercombo_binding_policy_document,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -28,6 +33,11 @@ def build_parser() -> argparse.ArgumentParser:
     publish_parser = subparsers.add_parser("publish")
     publish_parser.add_argument("--character", choices=character_choices, required=True)
     publish_parser.add_argument("--run-id", required=True)
+
+    binding_parser = subparsers.add_parser("generate-supercombo-binding")
+    binding_parser.add_argument("--character", choices=character_choices, required=True)
+    binding_parser.add_argument("--supercombo-snapshot-id", required=True)
+    binding_parser.add_argument("--write", action="store_true")
 
     prune_parser = subparsers.add_parser("prune")
     prune_parser.add_argument("--character", choices=character_choices, required=True)
@@ -64,6 +74,17 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "publish":
         summary = publish_run(args.character, args.run_id, base_repo_root)
         logger.info("publish complete run_id=%s states=%s", summary.run_id, summary.dataset_states)
+        return 0
+
+    if args.command == "generate-supercombo-binding":
+        snapshot = load_snapshot(base_repo_root, "supercombo", args.character, args.supercombo_snapshot_id)
+        registry = load_registry(args.character)
+        document = build_supercombo_binding_policy_document(args.character, snapshot, registry)
+        if args.write:
+            path = write_supercombo_binding_policy_document(args.character, document)
+            logger.info("binding policy written character=%s path=%s entries=%s", args.character, path, len(document.entries))
+        else:
+            logger.info("binding policy generated character=%s entries=%s (use --write to persist)", args.character, len(document.entries))
         return 0
 
     if args.command == "prune":

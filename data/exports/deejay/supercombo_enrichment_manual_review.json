@@ -1,0 +1,1097 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t020:dee_jay_4hk",
+    "raw_source_token": "dee_jay_4hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"4HK\",\"move_group\":\"command_normals\",\"move_name\":\"Face Breaker\",\"notes_sc\":\"Forces Stand on hit; good anti-air but cannot hit cross-up; 1st hit puts airborne opponents into limited juggle state; 2nd hit causes air reset (Punish Counter causes both hits to juggle); if only 2nd hit connects, it deals the full 800 damage and Drive/Super meter gain; CH/PC advantage carries through both hits; [4]6LP cancel: +5/-5 1st hit, 0/-6 2nd hit; 236LK cancel: 0/-10 1st hit, -5/-11 2nd hit; 2nd hit special/DR cancel is delayed until after active frames; juggle limit of the 2nd hit is increased by 1 only when the first hit connects\",\"punish_adv\":\"+5\",\"raw_source_token\":\"dee_jay_4hk\"}",
+    "move_id": "deejay_021_4_hk",
+    "character_slug": "deejay",
+    "move_name": "Face Breaker",
+    "input": "4HK",
+    "move_group": "command_normals",
+    "table_index": 20,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t048:dee_jay_236hk",
+    "raw_source_token": "dee_jay_236hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236HK\",\"move_group\":\"specials\",\"move_name\":\"Double Rolling Sobat\",\"notes_sc\":\"Stays close to opponent for +2 strike/throw mixup on hit; Counter-hit/Punish Counter bonus frame advantage carries through both hits; when canceled to SA3, weaker than MK version due to missing the 2nd hit\",\"punish_adv\":\"+6\",\"raw_source_token\":\"dee_jay_236hk\"}",
+    "move_id": "deejay_042_2_3_6_hk",
+    "character_slug": "deejay",
+    "move_name": "Double Rolling Sobat",
+    "input": "236HK",
+    "move_group": "specials",
+    "table_index": 48,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t049:dee_jay_236kk",
+    "raw_source_token": "dee_jay_236kk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236KK\",\"move_group\":\"specials\",\"move_name\":\"Double Rolling Sobat\",\"notes_sc\":\"Low crush 14-28f (not airborne); puts opponent into limited juggle state (can only combo into SA2/SA3 vs. grounded, but much more lenient juggle state vs. airborne opponents); somewhat weak to Drive Impact because only 2nd hit is Super cancelable\",\"punish_adv\":\"KD +39\",\"raw_source_token\":\"dee_jay_236kk\"}",
+    "move_id": "deejay_043_2_3_6_k_k",
+    "character_slug": "deejay",
+    "move_name": "Double Rolling Sobat",
+    "input": "236KK",
+    "move_group": "specials",
+    "table_index": 49,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t061:dee_jay_214kk_lk",
+    "raw_source_token": "dee_jay_214kk_lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214KK~LK\",\"move_group\":\"jus_cool\",\"move_name\":\"Funky Slicer\",\"notes_sc\":\"Safe low ender; 5f extra recovery on whiff or vs. armor; good for whiff punishing after baiting opponent with 214KK; earliest timing on block gives 4f gap that can set up trade combos into 5HP\",\"punish_adv\":\"+16\",\"raw_source_token\":\"dee_jay_214kk_lk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Funky Slicer",
+    "input": "214KK~LK",
+    "move_group": "jus_cool",
+    "table_index": 61,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_051_lk_followup",
+    "conflicting_move_ids": [
+      "deejay_051_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t066:dee_jay_22pp",
+    "raw_source_token": "dee_jay_22pp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"22PP\",\"move_group\":\"speedy_maracas\",\"move_name\":\"Speedy Maracas\",\"notes_sc\":\"Can hold buttons to extend dance; counter-hit state for entire duration; can be canceled into from any version of [4]6P (remains in a Punish Counter state afterwards); builds Super Art gauge (2000 after 88f, then 49 per frame beginning on frame 109 when held); recovery starts after 88f when tapped or when buttons are released; takes 272f to build 1 bar; if Dee Jay reaches 2 bars of Super Gauge, transitions to a new dance animation with more recovery\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_22pp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Speedy Maracas",
+    "input": "22PP",
+    "move_group": "speedy_maracas",
+    "table_index": 66,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_2_p_p_followup",
+    "conflicting_move_ids": [
+      "deejay_030_2_2_p_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t067:dee_jay_22pp_2bar",
+    "raw_source_token": "dee_jay_22pp_2bar",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"22PP\",\"move_group\":\"speedy_maracas\",\"move_name\":\"Speedy Maracas (2+ Bars)\",\"notes_sc\":\"If Dee Jay reaches 2 bars of meter, he enters a second dance animation that lasts an extra 73f; can hold buttons to extend dance; counter-hit state for entire duration; can be canceled into from any version of [4]6P (remains in a Punish Counter state afterwards); builds Super Art gauge (2000 after 68f, then 49 per frame beginning on frame 96 when held); recovery starts after 95f when tapped (168f if tapping puts Dee Jay at 2 bars), or when buttons are released; takes 259f to go from 2 to 3 bars\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_22pp_2bar\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Speedy Maracas (2+ Bars)",
+    "input": "22PP",
+    "move_group": "speedy_maracas",
+    "table_index": 67,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_2_p_p_followup",
+    "conflicting_move_ids": [
+      "deejay_030_2_2_p_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t086:dee_jay_236236hp_lp",
+    "raw_source_token": "dee_jay_236236hp_lp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~LP\",\"move_group\":\"super_arts\",\"move_name\":\"(1) +LP (Headliner Hit 1)\",\"notes_sc\":\"Comes out on hit only; 9f timing window after 236236HP; KD +41~42 when juggled into (can juggle afterward)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(1) +LP (Headliner Hit 1)",
+    "input": "~LP",
+    "move_group": "super_arts",
+    "table_index": 86,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_3_6_2_3_6_lp_followup",
+    "conflicting_move_ids": [
+      "deejay_061_2_3_6_2_3_6_lp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t087:dee_jay_236236hp_lp_mp",
+    "raw_source_token": "dee_jay_236236hp_lp_mp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~MP\",\"move_group\":\"super_arts\",\"move_name\":\"(2) +MP (Headliner Hit 2)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 9f timing window after 236236HP~LP; KD +57 OTG Bounce when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp_mp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(2) +MP (Headliner Hit 2)",
+    "input": "~MP",
+    "move_group": "super_arts",
+    "table_index": 87,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_3_6_2_3_6_p_lp_mp_followup",
+    "conflicting_move_ids": [
+      "deejay_087_2_3_6_2_3_6_p_lp_mp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t088:dee_jay_236236hp_lp_mp_hp",
+    "raw_source_token": "dee_jay_236236hp_lp_mp_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HP\",\"move_group\":\"super_arts\",\"move_name\":\"(3) +HP (Headliner Hit 3)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 9f timing window after 236236HP~LP~MP; KD +49 when juggled into (can juggle afterward)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp_mp_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(3) +HP (Headliner Hit 3)",
+    "input": "~HP",
+    "move_group": "super_arts",
+    "table_index": 88,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t089:dee_jay_236236hp_lp_mp_hp_lk",
+    "raw_source_token": "dee_jay_236236hp_lp_mp_hp_lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~LK\",\"move_group\":\"super_arts\",\"move_name\":\"(4) +LK (Headliner Hit 4)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 9f timing window after 236236HP~LP~MP~HP; KD +41 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp_mp_hp_lk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(4) +LK (Headliner Hit 4)",
+    "input": "~LK",
+    "move_group": "super_arts",
+    "table_index": 89,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_051_lk_followup",
+    "conflicting_move_ids": [
+      "deejay_051_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t090:dee_jay_236236hp_lp_mp_hp_lk_mk",
+    "raw_source_token": "dee_jay_236236hp_lp_mp_hp_lk_mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~MK\",\"move_group\":\"super_arts\",\"move_name\":\"(5) +MK (Headliner Hit 5)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 13f timing window after 236236HP~LP~MP~HP~LK; KD +32 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp_mp_hp_lk_mk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(5) +MK (Headliner Hit 5)",
+    "input": "~MK",
+    "move_group": "super_arts",
+    "table_index": 90,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_052_mk",
+      "deejay_053_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t091:dee_jay_236236hp_lp_mp_hp_lk_mk_hk",
+    "raw_source_token": "dee_jay_236236hp_lp_mp_hp_lk_mk_hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HK\",\"move_group\":\"super_arts\",\"move_name\":\"(6) +HK (Headliner Hit 6)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 15f timing window after 236236HP~LP~MP~HP~LK~MK; KD +26~27 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp_mp_hp_lk_mk_hk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(6) +HK (Headliner Hit 6)",
+    "input": "~HK",
+    "move_group": "super_arts",
+    "table_index": 91,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_054_hk",
+      "deejay_055_hk",
+      "deejay_084_hk",
+      "deejay_085_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t092:dee_jay_236236hp_lp_mp_hp_lk_mk_hk_hp",
+    "raw_source_token": "dee_jay_236236hp_lp_mp_hp_lk_mk_hk_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HP\",\"move_group\":\"super_arts\",\"move_name\":\"(End) Climactic Strike\",\"notes_sc\":\"Switches sides; only possible after landing all rhythm timings; () refers to KD Adv. when juggled into; 42f timing window after 236236HP~LP~MP~HP~LK~MK~HK\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236hp_lp_mp_hp_lk_mk_hk_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(End) Climactic Strike",
+    "input": "~HP",
+    "move_group": "super_arts",
+    "table_index": 92,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t069:dee_jay_236236lp",
+    "raw_source_token": "dee_jay_236236lp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236236LP\",\"move_group\":\"super_arts\",\"move_name\":\"Lowkey Sunrise Festival\",\"notes_sc\":\"LP~MP~HP~LK~MK~HK follow-ups (on hit only) must be manually timed (LP sequence is easiest but lowest damage and cannot use cinematic HP/HK enders); all follow-ups up to MK are +6 on hit with no additional damage scaling; full invincibility extended 1-29f on hit; KD +27 when juggled into; forces stand; cannot hit cross-up; applies 30% scaling to Super Art gain until end of combo\",\"punish_adv\":\"+10\",\"raw_source_token\":\"dee_jay_236236lp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Lowkey Sunrise Festival",
+    "input": "236236LP",
+    "move_group": "super_arts",
+    "table_index": 69,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_3_6_2_3_6_lp_followup",
+    "conflicting_move_ids": [
+      "deejay_061_2_3_6_2_3_6_lp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t070:dee_jay_236236lp_lp",
+    "raw_source_token": "dee_jay_236236lp_lp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~LP\",\"move_group\":\"super_arts\",\"move_name\":\"(1) +LP (Lowkey Hit 1)\",\"notes_sc\":\"Comes out on hit only; 45f timing window after 236236LP; KD +41 when juggled into (can juggle afterwards)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236lp_lp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(1) +LP (Lowkey Hit 1)",
+    "input": "~LP",
+    "move_group": "super_arts",
+    "table_index": 70,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_3_6_2_3_6_lp_followup",
+    "conflicting_move_ids": [
+      "deejay_061_2_3_6_2_3_6_lp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t072:dee_jay_236236lp_lp_mp_hp",
+    "raw_source_token": "dee_jay_236236lp_lp_mp_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HP\",\"move_group\":\"super_arts\",\"move_name\":\"(3) +HP (Lowkey Hit 3)\",\"notes_sc\":\"Comes out on hit only; f timing window after 236236LP~LP~MP; KD +49 when juggled into (can juggle afterwards)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236lp_lp_mp_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(3) +HP (Lowkey Hit 3)",
+    "input": "~HP",
+    "move_group": "super_arts",
+    "table_index": 72,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t073:dee_jay_236236lp_lp_mp_hp_lk",
+    "raw_source_token": "dee_jay_236236lp_lp_mp_hp_lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~LK\",\"move_group\":\"super_arts\",\"move_name\":\"(4) +LK (Lowkey Hit 4)\",\"notes_sc\":\"Comes out on hit only; f timing window after 236236LP~LP~MP~HP; KD +41 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236lp_lp_mp_hp_lk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(4) +LK (Lowkey Hit 4)",
+    "input": "~LK",
+    "move_group": "super_arts",
+    "table_index": 73,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_051_lk_followup",
+    "conflicting_move_ids": [
+      "deejay_051_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t074:dee_jay_236236lp_lp_mp_hp_lk_mk",
+    "raw_source_token": "dee_jay_236236lp_lp_mp_hp_lk_mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~MK\",\"move_group\":\"super_arts\",\"move_name\":\"(5) +MK (Lowkey Hit 5)\",\"notes_sc\":\"Comes out on hit only; f timing window after 236236LP~LP~MP~HP~LK; KD +32 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236lp_lp_mp_hp_lk_mk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(5) +MK (Lowkey Hit 5)",
+    "input": "~MK",
+    "move_group": "super_arts",
+    "table_index": 74,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_052_mk",
+      "deejay_053_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t075:dee_jay_236236lp_lp_mp_hp_lk_mk_hk",
+    "raw_source_token": "dee_jay_236236lp_lp_mp_hp_lk_mk_hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HK\",\"move_group\":\"super_arts\",\"move_name\":\"(End) +HK (Lowkey Hit End)\",\"notes_sc\":\"Comes out on hit only; f timing window after 236236LP~LP~MP~HP~LK~MK; HKD +28 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236lp_lp_mp_hp_lk_mk_hk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(End) +HK (Lowkey Hit End)",
+    "input": "~HK",
+    "move_group": "super_arts",
+    "table_index": 75,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_054_hk",
+      "deejay_055_hk",
+      "deejay_084_hk",
+      "deejay_085_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t077:dee_jay_236236mp_lp",
+    "raw_source_token": "dee_jay_236236mp_lp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~LP\",\"move_group\":\"super_arts\",\"move_name\":\"(1) +LP (Marvelous Hit 1)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 11f timing window after 236236MP; KD +41 when juggled into (can juggle afterward)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(1) +LP (Marvelous Hit 1)",
+    "input": "~LP",
+    "move_group": "super_arts",
+    "table_index": 77,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_3_6_2_3_6_lp_followup",
+    "conflicting_move_ids": [
+      "deejay_061_2_3_6_2_3_6_lp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t078:dee_jay_236236mp_lp_mp",
+    "raw_source_token": "dee_jay_236236mp_lp_mp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~MP\",\"move_group\":\"super_arts\",\"move_name\":\"(2) +MP (Marvelous Hit 2)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 18f timing window after 236236MP~LP; KD +57 OTG Bounce when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp_mp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(2) +MP (Marvelous Hit 2)",
+    "input": "~MP",
+    "move_group": "super_arts",
+    "table_index": 78,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_3_6_2_3_6_p_lp_mp_followup",
+    "conflicting_move_ids": [
+      "deejay_087_2_3_6_2_3_6_p_lp_mp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t079:dee_jay_236236mp_lp_mp_hp",
+    "raw_source_token": "dee_jay_236236mp_lp_mp_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HP\",\"move_group\":\"super_arts\",\"move_name\":\"(3) +HP (Marvelous Hit 3)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 16f timing window after 236236MP~LP~MP; KD +48~49 when juggled into (can juggle afterward)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp_mp_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(3) +HP (Marvelous Hit 3)",
+    "input": "~HP",
+    "move_group": "super_arts",
+    "table_index": 79,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t080:dee_jay_236236mp_lp_mp_hp_lk",
+    "raw_source_token": "dee_jay_236236mp_lp_mp_hp_lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"~LK\",\"move_group\":\"super_arts\",\"move_name\":\"(4) +LK (Marvelous Hit 4)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 19f timing window after 236236MP~LP~MP~HP; KD +40~41 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp_mp_hp_lk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(4) +LK (Marvelous Hit 4)",
+    "input": "~LK",
+    "move_group": "super_arts",
+    "table_index": 80,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_051_lk_followup",
+    "conflicting_move_ids": [
+      "deejay_051_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t081:dee_jay_236236mp_lp_mp_hp_lk_mk",
+    "raw_source_token": "dee_jay_236236mp_lp_mp_hp_lk_mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~MK\",\"move_group\":\"super_arts\",\"move_name\":\"(5) +MK (Marvelous Hit 5)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 19f timing window after 236236MP~LP~MP~HP~LK; KD +32 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp_mp_hp_lk_mk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(5) +MK (Marvelous Hit 5)",
+    "input": "~MK",
+    "move_group": "super_arts",
+    "table_index": 81,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_052_mk",
+      "deejay_053_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t082:dee_jay_236236mp_lp_mp_hp_lk_mk_hk",
+    "raw_source_token": "dee_jay_236236mp_lp_mp_hp_lk_mk_hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HK\",\"move_group\":\"super_arts\",\"move_name\":\"(6) +HK (Marvelous Hit 6)\",\"notes_sc\":\"Comes out on hit only; () refers to correct rhythm timing; 22f timing window after 236236MP~LP~MP~HP~LK~MK; KD +26 when juggled into\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp_mp_hp_lk_mk_hk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(6) +HK (Marvelous Hit 6)",
+    "input": "~HK",
+    "move_group": "super_arts",
+    "table_index": 82,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_054_hk",
+      "deejay_055_hk",
+      "deejay_084_hk",
+      "deejay_085_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t083:dee_jay_236236mp_lp_mp_hp_lk_mk_hk_hp",
+    "raw_source_token": "dee_jay_236236mp_lp_mp_hp_lk_mk_hk_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"~HP\",\"move_group\":\"super_arts\",\"move_name\":\"(End) Climactic Strike\",\"notes_sc\":\"Switches sides; only possible after landing all rhythm timings; () refers to KD Adv. when juggled into; 42f timing window after 236236MP~LP~MP~HP~LK~MK~HK\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_236236mp_lp_mp_hp_lk_mk_hk_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "(End) Climactic Strike",
+    "input": "~HP",
+    "move_group": "super_arts",
+    "table_index": 83,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t044:dee_jay_28hk",
+    "raw_source_token": "dee_jay_28hk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[2]8HK\",\"move_group\":\"jackknife_maximum\",\"move_name\":\"Jackknife Maximum\",\"notes_sc\":\"40f charge time (holds charge for 12f after release); whiffs on crouching opponents unless they extend a vertical attack hurtbox; gives a perfect safe jump setup when connecting vs. grounded opponents; when juggled after [2]8MK, the +37 KD Adv. sets up a safe jump with j.2LK; last hit ends juggle state due to +100 juggle count increase; cannot hit cross-up\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"dee_jay_28hk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Jackknife Maximum",
+    "input": "[2]8HK",
+    "move_group": "jackknife_maximum",
+    "table_index": 44,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t045:dee_jay_28kk",
+    "raw_source_token": "dee_jay_28kk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[2]8KK\",\"move_group\":\"jackknife_maximum\",\"move_name\":\"Jackknife Maximum\",\"notes_sc\":\"40f charge time (holds charge for 12f after release); 2nd/3rd hits whiff on crouching opponents unless they extend a vertical hurtbox; puts opponent into limited juggle state; cannot hit cross-up; at close range, may cross over opponents on whiff/block; on hit only, Dee Jay performs 2 extra hits that spike the opponent to the ground\",\"punish_adv\":\"KD +23\",\"raw_source_token\":\"dee_jay_28kk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Jackknife Maximum",
+    "input": "[2]8KK",
+    "move_group": "jackknife_maximum",
+    "table_index": 45,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t042:dee_jay_28lk",
+    "raw_source_token": "dee_jay_28lk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[2]8LK\",\"move_group\":\"jackknife_maximum\",\"move_name\":\"Jackknife Maximum\",\"notes_sc\":\"40f charge time (holds charge for 12f after release); startup refers to earliest air normal timing; 6f landing recovery only applies to empty jump version (air normals have the usual 3f landing recovery)\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_28lk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Jackknife Maximum",
+    "input": "[2]8LK",
+    "move_group": "jackknife_maximum",
+    "table_index": 42,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t043:dee_jay_28mk",
+    "raw_source_token": "dee_jay_28mk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[2]8MK\",\"move_group\":\"jackknife_maximum\",\"move_name\":\"Jackknife Maximum\",\"notes_sc\":\"40f charge time (holds charge for 12f after release); whiffs on crouching opponents unless they extend a vertical attack hurtbox; puts opponent into limited juggle state (can follow up with [2]8HK/KK or SA1 depending on distance from opponent); can trade with jump-ins due to short invincibility window; cannot hit cross-up\",\"punish_adv\":\"KD +41\",\"raw_source_token\":\"dee_jay_28mk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Jackknife Maximum",
+    "input": "[2]8MK",
+    "move_group": "jackknife_maximum",
+    "table_index": 43,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t040:dee_jay_46hp",
+    "raw_source_token": "dee_jay_46hp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[4]6HP\",\"move_group\":\"air_slasher\",\"move_name\":\"Air Slasher\",\"notes_sc\":\"45 charge time (holds charge for 10f after release); throws two 1-hit projectiles; useful option in fireball wars but very vulnerable to jumps and anti-projectile moves; Counter-hit/Punish Counter bonus advantage applies to both hits; () refers to startup of 2nd fireball; recovery is counted after first projectile startup; 2nd projectile moves faster than the 1st; can be canceled into Speedy Maracas after 35f even on whiff\",\"punish_adv\":\"+7\",\"raw_source_token\":\"dee_jay_46hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Air Slasher",
+    "input": "[4]6HP",
+    "move_group": "air_slasher",
+    "table_index": 40,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t038:dee_jay_46lp",
+    "raw_source_token": "dee_jay_46lp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[4]6LP\",\"move_group\":\"air_slasher\",\"move_name\":\"Air Slasher\",\"notes_sc\":\"45 charge time (holds charge for 10f after release); feint that can be used to bait opponent's reaction or extend close range combos/blockstrings\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_46lp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Air Slasher",
+    "input": "[4]6LP",
+    "move_group": "air_slasher",
+    "table_index": 38,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t039:dee_jay_46mp",
+    "raw_source_token": "dee_jay_46mp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[4]6MP\",\"move_group\":\"air_slasher\",\"move_name\":\"Air Slasher\",\"notes_sc\":\"45 charge time (holds charge for 10f after release); 1-hit projectile; safest zoning option against jumps and anti-projectile moves; can be canceled into Speedy Maracas after 23f even on whiff\",\"punish_adv\":\"+4\",\"raw_source_token\":\"dee_jay_46mp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Air Slasher",
+    "input": "[4]6MP",
+    "move_group": "air_slasher",
+    "table_index": 39,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t041:dee_jay_46pp",
+    "raw_source_token": "dee_jay_46pp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"[4]6PP\",\"move_group\":\"air_slasher\",\"move_name\":\"Air Slasher\",\"notes_sc\":\"45 charge time (holds charge for 10f after release); throws two 1-hit projectiles at close range; Counter-hit/Punish Counter bonus advantage carries through both hits; from farther ranges, they merge into a single 2-hit projectile that knocks down on hit (puts opponent into limited juggle state); powerful option for zoning, pressure, Burnout chip sequences, and fireball wars; very low pushback on block, allowing for corner loops and pressure; puts airborne opponents into limited juggle state; projectile starts moving forward on frame 22; can be canceled into Speedy Maracas after 31f even on whiff\",\"punish_adv\":\"+9 (KD +69)\",\"raw_source_token\":\"dee_jay_46pp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Air Slasher",
+    "input": "[4]6PP",
+    "move_group": "air_slasher",
+    "table_index": 41,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t098:dee_jay_4pppkkk",
+    "raw_source_token": "dee_jay_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"Ey, wah gwan? Ya feelin' down?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 98,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t022:dee_jay_5lp_mk",
+    "raw_source_token": "dee_jay_5lp_mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5LP~MK\",\"move_group\":\"target_combos\",\"move_name\":\"Threebeat Combo 1\",\"notes_sc\":\"2-3f blockstring gap between hits; () refers to scaled damage after 5LP combo starter; can whiff on crouching opponents at max range (will not whiff if 5LP hits as a Punish Counter)\",\"punish_adv\":\"+6\",\"raw_source_token\":\"dee_jay_5lp_mk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Threebeat Combo 1",
+    "input": "5LP~MK",
+    "move_group": "target_combos",
+    "table_index": 22,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_052_mk",
+      "deejay_053_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t024:dee_jay_5mp_hp",
+    "raw_source_token": "dee_jay_5mp_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5MP~HP\",\"move_group\":\"target_combos\",\"move_name\":\"Dee Jay Special 1\",\"notes_sc\":\"At max 5MP range, HP hits late for improved frame advantage (but active frames 5-7 whiff on crouching opponents); always a true blockstring from 5MP; continues limited juggle state if juggled into (after Drive Rush, airborne crumple, or wall splat)\",\"punish_adv\":\"+2\",\"raw_source_token\":\"dee_jay_5mp_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Dee Jay Special 1",
+    "input": "5MP~HP",
+    "move_group": "target_combos",
+    "table_index": 24,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t025:dee_jay_5mp_hp_hk",
+    "raw_source_token": "dee_jay_5mp_hp_hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~HP~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Dee Jay Special 2\",\"notes_sc\":\"() refers to scaled damage after 5MP combo starter; puts opponent into spinning limited juggle state; Super cancel is delayed until after 1st recovery frame\",\"punish_adv\":\"KD +34\",\"raw_source_token\":\"dee_jay_5mp_hp_hk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Dee Jay Special 2",
+    "input": "5MP~HP~HK",
+    "move_group": "target_combos",
+    "table_index": 25,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_098_hphk_followup",
+    "conflicting_move_ids": [
+      "deejay_098_hphk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t096:dee_jay_5pppkkk",
+    "raw_source_token": "dee_jay_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Come on, let's dance!\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 96,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t097:dee_jay_6pppkkk",
+    "raw_source_token": "dee_jay_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"Seriously, your rhythm is not cool mon. *whistles*\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 97,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t032:dee_jay_hphk",
+    "raw_source_token": "dee_jay_hphk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"HPHK\",\"move_group\":\"system\",\"move_name\":\"Wild Beat\",\"notes_sc\":\"See Drive Impact . Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.\",\"punish_adv\":\"Crumple (Standing +21, Juggle +46, HKD +104)\",\"raw_source_token\":\"dee_jay_hphk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Wild Beat",
+    "input": "HPHK",
+    "move_group": "system",
+    "table_index": 32,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "deejay_098_hphk_followup",
+    "conflicting_move_ids": [
+      "deejay_098_hphk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t021:dee_jay_j2lk",
+    "raw_source_token": "dee_jay_j2lk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.2LK\",\"move_group\":\"normals\",\"move_name\":\"Knee Shot\",\"notes_sc\":\"Forward Jump only; alters jump trajectory (up to 5f faster than normal jump depending on timing); can get better advantage when spaced out or vs. crouching opponents (non-meaty Knee Shot vs. crouching is usually around +9 oH / +6 oB); Punish Counter state from 2nd active frame until end of landing recovery; lower body projectile invuln 6f~land around back leg only (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+9(+15)\",\"raw_source_token\":\"dee_jay_j2lk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Knee Shot",
+    "input": "j.2LK",
+    "move_group": "normals",
+    "table_index": 21,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t029:dee_jay_jmp_hp",
+    "raw_source_token": "dee_jay_jmp_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"j.MP~HP\",\"move_group\":\"target_combos\",\"move_name\":\"Party in the Air\",\"notes_sc\":\"Causes spike knockdown vs. airborne opponents\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_jmp_hp\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Party in the Air",
+    "input": "j.MP~HP",
+    "move_group": "target_combos",
+    "table_index": 29,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_082_hp",
+      "deejay_083_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T210554Z-b1ab66c9",
+    "source_row_id": "20260412T210554Z-b1ab66c9:t035:dee_jay_mpmk",
+    "raw_source_token": "dee_jay_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"dee_jay_mpmk\"}",
+    "move_id": null,
+    "character_slug": "deejay",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 35,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "deejay_022_lp_mk",
+      "deejay_094_5_6_lplk",
+      "deejay_098_hphk",
+      "deejay_101_mpmk",
+      "deejay_102_mpmk",
+      "deejay_103_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

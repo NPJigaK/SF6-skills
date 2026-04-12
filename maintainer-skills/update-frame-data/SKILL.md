@@ -36,8 +36,8 @@ If none of the above can be verified directly, patch metadata is not verified.
 2. Read `shared/roster/current-character-roster.json` and treat its character order as the canonical update order.
 3. Check the current worktree state with `git status --short`.
 4. For each roster character:
-   - use `--source all` when `sources.supercombo_data` is configured for that character
-   - otherwise use `--source official`
+   - use `--source all`
+   - if a future roster entry intentionally omits `sources.supercombo_data`, downgrade only that character to `--source official`
 5. Read `data/exports/<character_slug>/snapshot_manifest.json` for every roster character.
 6. Record each dataset state separately: `published`, `retained_last_known_good`, `unavailable`, or `not_selected`.
 7. Rebuild frame-current runtime assets:
@@ -97,7 +97,7 @@ Read the full output and confirm exit code `0` for all four.
 - Include exact `published_run_id` and `published_snapshot_ids` when they changed.
 - Explicitly call out any dataset that stayed on `retained_last_known_good`.
 - Distinguish official-published updates from supplemental enrichment updates.
-- Call out characters where `supercombo_enrichment` stayed `not_selected` because no supplemental source is configured.
+- Call out characters where `supercombo_enrichment` stayed `unavailable` despite `sources.supercombo_data` being configured.
 - If patch metadata is unverified, say that clearly and do not decorate the update with a guessed label.
 
 ## Commit Message Rules
@@ -117,4 +117,4 @@ Read the full output and confirm exit code `0` for all four.
 - Treating commit wording as exempt from source verification
 - Running runtime-asset build and dogfood sync in parallel
 - Reporting the whole roster as fully updated when one or more characters stayed on last-known-good
-- Forgetting that some characters may be official-only and should be run with `--source official`
+- Forgetting to investigate a roster character whose `supercombo_enrichment` fell back to `unavailable` or `retained_last_known_good`

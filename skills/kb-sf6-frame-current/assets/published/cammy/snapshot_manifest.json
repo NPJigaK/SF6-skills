@@ -6,7 +6,7 @@
   "repo_generation_registry_version": "2.1.0",
   "repo_generation_registry_sha256": "0b3cd1dfa15a62052bd77504fd534f9bb782f208ba210bfbdaef46bdf4f51a65",
   "repo_generation_binding_policy_version": "1.0.0",
-  "repo_generation_binding_policy_sha256": "9886e83bd129e32c63eebe12606d80ce7e1f1e0ac629f1e0744f01ea3f2e7a29",
+  "repo_generation_binding_policy_sha256": "33b458f09314c984ec4508b39431edcd80c4a3e52c733d33d9a1a14f2cbee11a",
   "datasets": {
     "official_raw": {
       "publication_state": "available",
@@ -23,16 +23,18 @@
       "content_hash": "d4a0033357feb360f7a76358aaa530c088c0279cf665c018dda94e0a64ad042b"
     },
     "supercombo_enrichment": {
-      "publication_state": "unavailable",
-      "published_run_id": null,
-      "published_snapshot_ids": [],
-      "published_record_count": 0,
-      "withheld_review_count": 0,
+      "publication_state": "available",
+      "published_run_id": "20260412T211716457989Z-e85fa115",
+      "published_snapshot_ids": [
+        "20260412T211715Z-583424e1"
+      ],
+      "published_record_count": 49,
+      "withheld_review_count": 25,
       "registry_version": "2.1.0",
       "registry_sha256": "0b3cd1dfa15a62052bd77504fd534f9bb782f208ba210bfbdaef46bdf4f51a65",
       "binding_policy_version": "1.0.0",
-      "binding_policy_sha256": "9886e83bd129e32c63eebe12606d80ce7e1f1e0ac629f1e0744f01ea3f2e7a29",
-      "content_hash": null
+      "binding_policy_sha256": "33b458f09314c984ec4508b39431edcd80c4a3e52c733d33d9a1a14f2cbee11a",
+      "content_hash": "20e00839d50e69e7ee7bde9394513cf34a8d71454fe587004c97433def0e0272"
     },
     "derived_metrics": {
       "publication_state": "available",

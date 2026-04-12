@@ -48,6 +48,7 @@ def test_load_character_reads_non_legacy_roster_entries() -> None:
     assert ryu.display_name == "Ryu"
     assert ryu.sources == {
         "official": "https://www.streetfighter.com/6/ja-jp/character/ryu/frame",
+        "supercombo_data": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu/Data",
     }
 
 
@@ -58,10 +59,18 @@ def test_load_character_keeps_existing_supercombo_configuration() -> None:
 
 
 def test_selected_sources_for_all_only_uses_configured_sources() -> None:
-    assert selected_sources("ryu", "all") == ("official",)
+    assert selected_sources("ryu", "all") == ("official", "supercombo")
     assert selected_sources("jp", "all") == ("official", "supercombo")
 
 
-def test_selected_sources_rejects_unconfigured_explicit_source() -> None:
-    with pytest.raises(ValueError):
-        selected_sources("ryu", "supercombo")
+def test_every_current_roster_character_has_supercombo_data_configured() -> None:
+    for character_slug in available_character_slugs():
+        character = load_character(character_slug)
+        assert character.sources["supercombo_data"].startswith("https://wiki.supercombo.gg/w/Street_Fighter_6/")
+        assert "supercombo_frame_data" not in character.sources
+
+
+def test_selected_sources_accepts_supercombo_for_every_current_roster_character() -> None:
+    for character_slug in available_character_slugs():
+        assert selected_sources(character_slug, "all") == ("official", "supercombo")
+        assert selected_sources(character_slug, "supercombo") == ("official", "supercombo")[1:]

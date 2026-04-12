@@ -250,10 +250,20 @@ def _extract_row_cells(table_row: Node) -> list[str]:
 def _extract_raw_source_token(source_row: list[str], character_label: str) -> str | None:
     if len(source_row) != 1:
         return None
-    prefix = f"{character_label} "
-    if not source_row[0].startswith(prefix):
+    source_label_and_token = compact_text(source_row[0])
+    if not source_label_and_token:
         return None
-    return compact_text(source_row[0][len(prefix) :])
+    parts = source_label_and_token.split()
+    if len(parts) < 2:
+        return None
+    source_label = " ".join(parts[:-1])
+    if _normalize_character_label(source_label) != _normalize_character_label(character_label):
+        return None
+    return compact_text(parts[-1])
+
+
+def _normalize_character_label(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
 
 
 def _parse_move_header(value: str) -> tuple[str | None, str | None]:

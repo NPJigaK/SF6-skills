@@ -1,2 +1,450 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: rashid_5lp
+  binding_class: A
+  target_move_id: rashid_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5mp
+  binding_class: A
+  target_move_id: rashid_003_5_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5hp
+  binding_class: A
+  target_move_id: rashid_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5lk
+  binding_class: A
+  target_move_id: rashid_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5mk
+  binding_class: A
+  target_move_id: rashid_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5hk
+  binding_class: E
+  collision_group: rashid_hk_followup
+  conflicting_move_ids:
+  - rashid_006_5_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_2lp
+  binding_class: A
+  target_move_id: rashid_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_2mp
+  binding_class: A
+  target_move_id: rashid_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_2hp
+  binding_class: A
+  target_move_id: rashid_011_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_2lk
+  binding_class: A
+  target_move_id: rashid_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_2mk
+  binding_class: A
+  target_move_id: rashid_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_2hk
+  binding_class: A
+  target_move_id: rashid_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_jlp
+  binding_class: B
+  target_move_id: rashid_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: rashid_jmp
+  binding_class: B
+  target_move_id: rashid_015_j_mp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: rashid_jhp
+  binding_class: B
+  target_move_id: rashid_017_j_hp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: rashid_jlk
+  binding_class: B
+  target_move_id: rashid_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: rashid_jmk
+  binding_class: B
+  target_move_id: rashid_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: rashid_jhk
+  binding_class: B
+  target_move_id: rashid_018_j_hk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: rashid_walljump
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_6mp
+  binding_class: A
+  target_move_id: rashid_023_6_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_6hp
+  binding_class: A
+  target_move_id: rashid_024_6_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_6hk
+  binding_class: A
+  target_move_id: rashid_025_6_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_j2hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_j8hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_66_hold
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: rashid_66_hold_6p
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: rashid_66_hold_6k
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: rashid_66_hold_6k_enhanced
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded hold state without canonical official move_id
+- raw_source_token: rashid_6kk
+  binding_class: E
+  collision_group: rashid_k_k_followup
+  conflicting_move_ids:
+  - rashid_029_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_6kk_kk
+  binding_class: A
+  target_move_id: rashid_030_4_5_6_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5mp_hk
+  binding_class: E
+  collision_group: rashid_hk_followup
+  conflicting_move_ids:
+  - rashid_006_5_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_lplk
+  binding_class: E
+  collision_group: rashid_075_lplk_followup
+  conflicting_move_ids:
+  - rashid_075_lplk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_4lplk
+  binding_class: A
+  target_move_id: rashid_074_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_jlplk
+  binding_class: E
+  collision_group: rashid_075_lplk_followup
+  conflicting_move_ids:
+  - rashid_075_lplk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_hphk
+  binding_class: A
+  target_move_id: rashid_078_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_6hphk
+  binding_class: A
+  target_move_id: rashid_079_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_6hphk_recovery
+  binding_class: F
+  target_move_id: rashid_080_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: rashid_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - rashid_028_mp_hk
+  - rashid_073_5_6_lplk
+  - rashid_075_lplk
+  - rashid_078_hphk
+  - rashid_081_mpmk
+  - rashid_082_mpmk
+  - rashid_083_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_mpmk_66_pdr
+  binding_class: B
+  target_move_id: rashid_084_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: rashid_mpmk_66_drc
+  binding_class: F
+  target_move_id: rashid_085_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: rashid_236lp
+  binding_class: D
+  candidate_move_ids:
+  - rashid_031_2_3_6_lp
+  - rashid_032_2_3_6_lp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236lp_enhanced
+  binding_class: D
+  candidate_move_ids:
+  - rashid_031_2_3_6_lp
+  - rashid_032_2_3_6_lp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236mp
+  binding_class: D
+  candidate_move_ids:
+  - rashid_033_2_3_6_mp
+  - rashid_034_2_3_6_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236mp_enhanced
+  binding_class: D
+  candidate_move_ids:
+  - rashid_033_2_3_6_mp
+  - rashid_034_2_3_6_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236hp
+  binding_class: D
+  candidate_move_ids:
+  - rashid_035_2_3_6_hp
+  - rashid_036_2_3_6_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236hp_enhanced
+  binding_class: D
+  candidate_move_ids:
+  - rashid_035_2_3_6_hp
+  - rashid_036_2_3_6_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236pp
+  binding_class: D
+  candidate_move_ids:
+  - rashid_037_2_3_6_p_p
+  - rashid_038_2_3_6_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236pp_enhanced
+  binding_class: D
+  candidate_move_ids:
+  - rashid_037_2_3_6_p_p
+  - rashid_038_2_3_6_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_214lk
+  binding_class: A
+  target_move_id: rashid_039_2_1_4_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214lk_enhanced
+  binding_class: A
+  target_move_id: rashid_040_2_1_4_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214mk
+  binding_class: A
+  target_move_id: rashid_041_2_1_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214mk_enhanced
+  binding_class: A
+  target_move_id: rashid_042_2_1_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214hk
+  binding_class: A
+  target_move_id: rashid_043_2_1_4_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214hk_enhanced
+  binding_class: A
+  target_move_id: rashid_044_2_1_4_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214kk
+  binding_class: A
+  target_move_id: rashid_045_2_1_4_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214kk_enhanced
+  binding_class: A
+  target_move_id: rashid_046_2_1_4_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_236k
+  binding_class: D
+  candidate_move_ids:
+  - rashid_047_2_3_6_lk
+  - rashid_050_2_3_6_mk
+  - rashid_053_2_3_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236k_partial_hold
+  binding_class: D
+  candidate_move_ids:
+  - rashid_048_2_3_6_lk
+  - rashid_051_2_3_6_mk
+  - rashid_054_2_3_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236k_hold
+  binding_class: D
+  candidate_move_ids:
+  - rashid_049_2_3_6_lk
+  - rashid_052_2_3_6_mk
+  - rashid_055_2_3_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_236kk
+  binding_class: A
+  target_move_id: rashid_056_2_3_6_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_236kk_hold
+  binding_class: A
+  target_move_id: rashid_057_2_3_6_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214lp
+  binding_class: A
+  target_move_id: rashid_058_2_1_4_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214mp
+  binding_class: A
+  target_move_id: rashid_059_2_1_4_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214hp
+  binding_class: A
+  target_move_id: rashid_060_2_1_4_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214pp
+  binding_class: A
+  target_move_id: rashid_061_2_1_4_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214p_4k
+  binding_class: A
+  target_move_id: rashid_062_4_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214p_6k
+  binding_class: A
+  target_move_id: rashid_063_6_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214p_6k_k
+  binding_class: E
+  collision_group: rashid_k_k_followup
+  conflicting_move_ids:
+  - rashid_029_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: rashid_j214lk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_j214mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_j214hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_j214kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: rashid_236236k
+  binding_class: A
+  target_move_id: rashid_069_2_3_6_2_3_6_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_214214k
+  binding_class: A
+  target_move_id: rashid_070_2_1_4_2_1_4_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_236236p
+  binding_class: A
+  target_move_id: rashid_071_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_236236p(ca)
+  binding_class: C
+  target_move_id: rashid_072_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: rashid_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: rashid_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: rashid_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

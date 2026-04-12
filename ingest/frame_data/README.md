@@ -13,7 +13,7 @@ The checked-in current artifact surface is:
 
 Configured character roster lives in `shared/roster/current-character-roster.json`.
 `official` is required for every roster character.
-Supplemental `supercombo` sources are character-specific and may be absent.
+The current roster also configures `supercombo` for every checked-in character through `sources.supercombo_data`.
 
 ## Contracts
 
@@ -28,7 +28,7 @@ Supplemental `supercombo` sources are character-specific and may be absent.
 ## Fetch Strategy
 
 - `official`: Scrapling `Fetcher`
-- `supercombo`: Scrapling `StealthyFetcher` against `/JP/Data`
+- `supercombo`: Scrapling `StealthyFetcher` against the per-character `sources.supercombo_data` URL from `shared/roster/current-character-roster.json`
 - raw snapshot first: fetch writes the authoritative byte payload plus `metadata.json` before parse
 - parser input is deterministically decoded from the stored raw bytes
 

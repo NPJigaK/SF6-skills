@@ -1,0 +1,971 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t009:elena_2hp",
+    "raw_source_token": "elena_2hp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"2HP\",\"move_group\":\"normals\",\"move_name\":\"Crouching Heavy Punch\",\"notes_sc\":\"2 hits; Upper Body/Legs are anti-air invuln on frames 8-19 (solid anti-air but cannot hit cross-up); causes air reset vs. airborne opponents; anti-airing with the first hit results in very little frame advantage as the 2nd hit continues to whiff; forces stand (important for 236K combo routes); cancel only comes out on the 2nd hit (will cancel on whiff if the first hit connects on airborne opponent); anti-air cancel into Lynx Song allows Elena to threaten with a meaty roll follow-up or feint to bait Parry (timing/advantage varies heavily based on anti-air timing); high pushback on hit; follow-up links require a Counter-hit, Punish Counter, Drive Rush starter into a ranged button; Counter-hit/Punish Counter bonus advantage carries through both hits; if 1st hit is Perfect Parried, opponent can interrupt 2nd hit with 5f or faster attack\",\"punish_adv\":\"+10\",\"raw_source_token\":\"elena_2hp\"}",
+    "move_id": "elena_011_2_hp",
+    "character_slug": "elena",
+    "move_name": "Crouching Heavy Punch",
+    "input": "2HP",
+    "move_group": "normals",
+    "table_index": 9,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t018:elena_jhk",
+    "raw_source_token": "elena_jhk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"B\",\"input\":\"j.HK\",\"move_group\":\"normals\",\"move_name\":\"Jumping Heavy Kick\",\"notes_sc\":\"2 hits; 1st hit puts airborne opponents into limited juggle state; 2nd hit causes spike knockdown vs. airborne opponents; 2nd hit has the most horizontal range of Elena's air normals; overall weaker as an air approach due to the damage being split between 2 hits (very specific timing required to land both hits vs. grounded opponents); if 1st hit is stand blocked, the 2nd hit will not hit overhead against crouch block; lower body projectile invuln 10-22f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+15(+19)\",\"raw_source_token\":\"elena_jhk\"}",
+    "move_id": "elena_018_j_hk",
+    "character_slug": "elena",
+    "move_name": "Jumping Heavy Kick",
+    "input": "j.HK",
+    "move_group": "normals",
+    "table_index": 18,
+    "binding_class": "B",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t028:elena_6hp_hp_hp",
+    "raw_source_token": "elena_6hp_hp_hp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"6HP~HP~HP\",\"move_group\":\"command_normals\",\"move_name\":\"Trunk Slap 3\",\"notes_sc\":\"() refers to scaled damage after a 6HP combo starter; good corner carry and knockdown advantage that can lead to auto-timed Lynx Whirl pressure on the opponent's wakeup; always a true blockstring from 6HP~HP\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_6hp_hp_hp\"}",
+    "move_id": "elena_026_hp_hp",
+    "character_slug": "elena",
+    "move_name": "Trunk Slap 3",
+    "input": "6HP~HP~HP",
+    "move_group": "command_normals",
+    "table_index": 28,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t040:elena_236lk",
+    "raw_source_token": "elena_236lk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236LK\",\"move_group\":\"specials\",\"move_name\":\"Rhino Horn\",\"notes_sc\":\"Shortest distance; whiffs on crouching opponents; Low Crush 15-34f; puts opponents into limited juggle state with follow-ups possible in the corner; 3f extra recovery on block/whiff; KD Advantage refers to grounded hits (varies against airborne opponents)\",\"punish_adv\":\"KD +39~44\",\"raw_source_token\":\"elena_236lk\"}",
+    "move_id": "elena_032_2_3_6_lk",
+    "character_slug": "elena",
+    "move_name": "Rhino Horn",
+    "input": "236LK",
+    "move_group": "specials",
+    "table_index": 40,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t041:elena_236mk",
+    "raw_source_token": "elena_236mk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236MK\",\"move_group\":\"specials\",\"move_name\":\"Rhino Horn\",\"notes_sc\":\"Medium distance; whiffs on crouching opponents; Low Crush 19-39f; puts opponents into limited juggle state with follow-ups possible in the corner; 4f extra recovery on block/whiff; KD Advantage refers to grounded hits (varies against airborne opponents)\",\"punish_adv\":\"KD +39~44\",\"raw_source_token\":\"elena_236mk\"}",
+    "move_id": "elena_033_2_3_6_mk",
+    "character_slug": "elena",
+    "move_name": "Rhino Horn",
+    "input": "236MK",
+    "move_group": "specials",
+    "table_index": 41,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t042:elena_236hk",
+    "raw_source_token": "elena_236hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236HK\",\"move_group\":\"specials\",\"move_name\":\"Rhino Horn\",\"notes_sc\":\"Farthest distance; whiffs on crouching opponents; Low Crush 23-43f; puts opponents into limited juggle state with follow-ups like 623HK possible in the corner; 4f extra recovery on block/whiff; KD Advantage refers to grounded hits (varies against airborne opponents)\",\"punish_adv\":\"KD +40~45\",\"raw_source_token\":\"elena_236hk\"}",
+    "move_id": "elena_034_2_3_6_hk",
+    "character_slug": "elena",
+    "move_name": "Rhino Horn",
+    "input": "236HK",
+    "move_group": "specials",
+    "table_index": 42,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t043:elena_236kk",
+    "raw_source_token": "elena_236kk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236KK\",\"move_group\":\"specials\",\"move_name\":\"Rhino Horn\",\"notes_sc\":\"Whiffs on crouching opponents; Low Crush 13-35f; puts opponents into limited juggle state with follow-ups possible anywhere on the screen; some hits can whiff under high airborne opponents (at certain heights, allows a sideswitch juggle); 6f extra recovery on block/whiff; KD Advantage refers to grounded hits (varies against airborne opponents)\",\"punish_adv\":\"KD +43~49\",\"raw_source_token\":\"elena_236kk\"}",
+    "move_id": "elena_035_2_3_6_k_k",
+    "character_slug": "elena",
+    "move_name": "Rhino Horn",
+    "input": "236KK",
+    "move_group": "specials",
+    "table_index": 43,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t047:elena_623kk",
+    "raw_source_token": "elena_623kk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"623KK\",\"move_group\":\"specials\",\"move_name\":\"Scratch Wheel\",\"notes_sc\":\"Elena's primary reversal; cannot hit cross-up; connecting with active frames 5-6 makes the first hit whiff (450 less damage), making early anti-air attempts weaker\",\"punish_adv\":\"KD +25\",\"raw_source_token\":\"elena_623kk\"}",
+    "move_id": "elena_039_6_2_3_k_k",
+    "character_slug": "elena",
+    "move_name": "Scratch Wheel",
+    "input": "623KK",
+    "move_group": "specials",
+    "table_index": 47,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t048:elena_214lk",
+    "raw_source_token": "elena_214lk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214LK\",\"move_group\":\"specials\",\"move_name\":\"Spinning Scythe\",\"notes_sc\":\"Lynx Whirl Cancels (on Hit/on Block/on PC): ~6LP -3/-12/+1, ~6MP -11/-20/-7, ~6HP -13/-22/-9; first 2 hits force stand (last 2 hits will whiff vs. crouch block); first 2 hits have an extended foot hurtbox that can only hit standing opponents (shorter range vs. crouching); block disadvantage refers to stand(crouch); 2nd hit is cancelable into Lynx Whirl (enhanced Roll) on hit/block (but not whiff); all follow-ups are interruptible on block (even if opponent is in Burnout); Lynx Whirl cancel allows Elena to keep up pressure, but does not naturally combo into the follow-ups; Counter-hit/Punish Counter bonus advantage carries through first 2 hits (CH combos into ~6MK, PC combos into ~6LK); empty ~6LP Roll is safe on hit and can bait Parry/DI/Reversals; last hit puts opponent into limited juggle state (only SA3 cancel will combo unless 214LK connects in a high juggle)\",\"punish_adv\":\"KD +34\",\"raw_source_token\":\"elena_214lk\"}",
+    "move_id": "elena_054_2_1_4_lk",
+    "character_slug": "elena",
+    "move_name": "Spinning Scythe",
+    "input": "214LK",
+    "move_group": "specials",
+    "table_index": 48,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t049:elena_214mk",
+    "raw_source_token": "elena_214mk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214MK\",\"move_group\":\"specials\",\"move_name\":\"Spinning Scythe\",\"notes_sc\":\"Lynx Whirl Cancels (on Hit/on Block/on PC): ~6LP -3/-12/+1, ~6MP -11/-20/-7, ~6HP -13/-22/-9; first 2 hits force stand (last 2 hits will whiff vs. crouch block); first 2 hits have an extended foot hurtbox that can only hit standing opponents (shorter range vs. crouching); block disadvantage refers to stand(crouch); 2nd hit is cancelable into Lynx Whirl (enhanced Roll) on hit/block (but not whiff); all follow-ups are interruptible on block (even if opponent is in Burnout); Lynx Whirl cancel allows Elena to keep up pressure, but does not naturally combo into the follow-ups; Counter-hit/Punish Counter bonus advantage carries through first 2 hits (CH combos into ~6MK, PC combos into ~6LK); empty ~6LP Roll is safe on hit and can bait Parry/DI/Reversals; last hit puts opponent into limited juggle state (only SA3 cancel will combo unless 214LK connects in a high juggle)\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"elena_214mk\"}",
+    "move_id": "elena_055_2_1_4_mk",
+    "character_slug": "elena",
+    "move_name": "Spinning Scythe",
+    "input": "214MK",
+    "move_group": "specials",
+    "table_index": 49,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t050:elena_214hk",
+    "raw_source_token": "elena_214hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214HK\",\"move_group\":\"specials\",\"move_name\":\"Spinning Scythe\",\"notes_sc\":\"Lynx Whirl Cancels (on Hit/on Block/on PC): ~6LP -3/-12/+1, ~6MP -11/-20/-7, ~6HP -13/-22/-9; first 2 hits force stand (last 2 hits will whiff vs. crouch block); first 2 hits have an extended foot hurtbox that can only hit standing opponents (shorter range vs. crouching); block disadvantage refers to stand(crouch); 2nd hit is cancelable into Lynx Whirl (enhanced Roll) on hit/block (but not whiff); all follow-ups are interruptible on block (even if opponent is in Burnout); Lynx Whirl cancel allows Elena to keep up pressure, but does not naturally combo into the follow-ups; Counter-hit/Punish Counter bonus advantage carries through first 2 hits (CH combos into ~6MK, PC combos into ~6LK); empty ~6LP Roll is safe on hit and can bait Parry/DI/Reversals; last hit puts opponent into limited juggle state, allowing follow-ups like 236MK, DR~2MP, SA2, canceled SA3, or corner 236LK~623HK\",\"punish_adv\":\"KD +52\",\"raw_source_token\":\"elena_214hk\"}",
+    "move_id": "elena_056_2_1_4_hk",
+    "character_slug": "elena",
+    "move_name": "Spinning Scythe",
+    "input": "214HK",
+    "move_group": "specials",
+    "table_index": 50,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t051:elena_214kk",
+    "raw_source_token": "elena_214kk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214KK\",\"move_group\":\"specials\",\"move_name\":\"Spinning Scythe\",\"notes_sc\":\"Lynx Whirl Cancels (on Hit/on Block/on PC): ~6LP -3/-10/+1, ~6MP -11/-18/-7, ~6HP -13/-20/-9; first 2 hits force stand (last 2 hits will whiff vs. crouch block); first 2 hits have an extended foot hurtbox that can only hit standing opponents (shorter range vs. crouching); block disadvantage refers to stand(crouch); 2nd hit is cancelable into Lynx Whirl (enhanced Roll) on hit/block (but not whiff); all follow-ups are interruptible on block (except ~6MK trades with 4f normals if the opponent is in Burnout); Lynx Whirl cancel allows Elena to keep up pressure, but does not naturally combo into the follow-ups; Counter-hit/Punish Counter bonus advantage carries through first 2 hits (CH combos into ~6MK, PC combos into ~6LK); empty ~6LP Roll is safe on hit and can bait Parry/DI/Reversals; last hit puts opponent into limited juggle state, allowing follow-ups like 236MK, DR~2MP, SA2, canceled SA3, or corner 236LK~623HK\",\"punish_adv\":\"KD +52\",\"raw_source_token\":\"elena_214kk\"}",
+    "move_id": "elena_057_2_1_4_k_k",
+    "character_slug": "elena",
+    "move_name": "Spinning Scythe",
+    "input": "214KK",
+    "move_group": "specials",
+    "table_index": 51,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t070:elena_214p_6p",
+    "raw_source_token": "elena_214p_6p",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214P~6P\",\"move_group\":\"specials\",\"move_name\":\"Moon Glider Follow-up\",\"notes_sc\":\"Hitconfirmable follow-up from safe sway starter; puts opponents into limited juggle state (into SA3)\",\"punish_adv\":\"KD +39\",\"raw_source_token\":\"elena_214p_6p\"}",
+    "move_id": "elena_061_2_1_4_p_6_p",
+    "character_slug": "elena",
+    "move_name": "Moon Glider Follow-up",
+    "input": "214P~6P",
+    "move_group": "specials",
+    "table_index": 70,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t071:elena_214pp_6p",
+    "raw_source_token": "elena_214pp_6p",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214PP~6P\",\"move_group\":\"specials\",\"move_name\":\"Moon Glider Follow-up\",\"notes_sc\":\"Hitconfirmable follow-up from safe sway starter; puts opponents into limited juggle state (into SA2/SA3); sets up a safe jump vs. grounded opponents near the corner\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"elena_214pp_6p\"}",
+    "move_id": "elena_063_2_1_4_p_p_6_p",
+    "character_slug": "elena",
+    "move_name": "Moon Glider Follow-up",
+    "input": "214PP~6P",
+    "move_group": "specials",
+    "table_index": 71,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t072:elena_236236k",
+    "raw_source_token": "elena_236236k",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Meteor Volley\",\"notes_sc\":\"Good anti-air with air invuln that fully covers the first 2 hits; cannot be used as an invincible reversal against grounded strikes/throws/projectiles (making it much more dangerous to be in Burnout); cannot hit cross-up; puts opponents into limited juggle state (can combo a 236KK full connect after a grounded hit); extreme block disadvantage allows many characters to set activate installs without sacrificing optimal punish starters\",\"punish_adv\":\"KD +44\",\"raw_source_token\":\"elena_236236k\"}",
+    "move_id": "elena_064_2_3_6_2_3_6_k",
+    "character_slug": "elena",
+    "move_name": "Meteor Volley",
+    "input": "236236K",
+    "move_group": "super_arts",
+    "table_index": 72,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t074:elena_236236p_2_hold",
+    "raw_source_token": "elena_236236p_2_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236236P~[2]\",\"move_group\":\"super_arts\",\"move_name\":\"Revival Dance (Healing)\",\"notes_sc\":\"Sacrifices damage and oki in exchange for healing 100 HP; the healing amount is not affected by damage scaling, making it more useful in a highly scaled combo; Elena builds 1 bar of Drive gauge when healing which also allows Drive regeneration to resume slightly earlier (also applies to Burnout gauge); excellent anti-fireball tool due to its invincibility and forward movement; slow startup makes it risky as a reversal (can be safely meatied by light normals); opponents can jump after the Super freeze to avoid a chip KO\",\"punish_adv\":\"HKD +1\",\"raw_source_token\":\"elena_236236p_2_hold\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Revival Dance (Healing)",
+    "input": "236236P~[2]",
+    "move_group": "super_arts",
+    "table_index": 74,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t064:elena_236p_6hk",
+    "raw_source_token": "elena_236p_6hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236P~6HK\",\"move_group\":\"mallet_smash\",\"move_name\":\"Mallet Smash\",\"notes_sc\":\"Low Crush 14-24f (final active frame is considered standing but still has a high hurtbox); projectile invuln disappears for a brief period after Lynx Song (less effective as a fireball counter); projectile invuln does not apply to the top of Elena's head; Elena immediately loses crouch-sized hurtbox from Lynx Song; safe overhead that can lead to a 5MK combo after baiting the opponent's throw tech; puts airborne opponents into limited juggle state on hit (can always pick up corner juggles, but midscreen juggles depend on height/spacing); total minimum startup depends on which strength of Lynx Song was used (LP 16+22, MP 18+22, HP 19+22, OD 18+22)\",\"punish_adv\":\"+6\",\"raw_source_token\":\"elena_236p_6hk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Mallet Smash",
+    "input": "236P~6HK",
+    "move_group": "mallet_smash",
+    "table_index": 64,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hk_followup",
+    "conflicting_move_ids": [
+      "elena_048_6_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t058:elena_236p_6hp",
+    "raw_source_token": "elena_236p_6hp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236P~6HP\",\"move_group\":\"lynx_whirl\",\"move_name\":\"Lynx Whirl\",\"notes_sc\":\"Accessible from a previous Lynx Song or Spin Scythe; performs an extra spin, enhancing the follow-up specials (~6LK, ~6MK, ~6HK); can continue rolling indefinitely with repeated ~6P inputs; crouch-sized hurtbox 1-26f (but still considered standing); startup refers to minimum number of frames before each follow-up can come out (15-21f ~6LK, 18-21f ~6MK/~6HK, 20-21f ~6P); total roll distance: 2.46; Elena is in a Counter-hit state for the entire roll duration\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_236p_6hp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Lynx Whirl",
+    "input": "236P~6HP",
+    "move_group": "lynx_whirl",
+    "table_index": 58,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hp_followup",
+    "conflicting_move_ids": [
+      "elena_027_6_hp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t060:elena_236p_6lk",
+    "raw_source_token": "elena_236p_6lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236P~6LK\",\"move_group\":\"leopard_snap\",\"move_name\":\"Leopard Snap\",\"notes_sc\":\"Elena immediately loses crouch-sized hurtbox and projectile invuln from Lynx Song (hard to use vs. projectiles); generally safe on block if spaced as a poke; punishable by most characters at closer ranges (notable exceptions: A.K.I. only gets 2LK, Mai gets nothing); combos when buffered from 2MP or 2MK~HK in neutral; puts the opponent into a limited juggle state (only into SA3 cancel except in high corner juggles); total minimum startup depends on which strength of Lynx Song was used (LP 13+10, MP 13+10, HP 16+10, OD 15+10)\",\"punish_adv\":\"KD +35\",\"raw_source_token\":\"elena_236p_6lk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Leopard Snap",
+    "input": "236P~6LK",
+    "move_group": "leopard_snap",
+    "table_index": 60,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_lk_followup",
+    "conflicting_move_ids": [
+      "elena_044_6_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t056:elena_236p_6lp",
+    "raw_source_token": "elena_236p_6lp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236P~6LP\",\"move_group\":\"lynx_whirl\",\"move_name\":\"Lynx Whirl\",\"notes_sc\":\"Accessible from a previous Lynx Song or Spin Scythe; performs an extra spin, enhancing the follow-up specials (~6LK, ~6MK, ~6HK); can continue rolling indefinitely with repeated ~6P inputs; crouch-sized hurtbox 1-26f (but still considered standing); startup refers to minimum number of frames before each follow-up can come out (15-21f ~6LK, 18-21f ~6MK/~6HK, 20-21f ~6P); total roll distance: 1.43; Elena is in a Counter-hit state for the entire roll duration; safest version of empty Roll to cancel into (e.g. Spinning Scythe ~ empty Lynx Whirl to bait DI/Parry/reversal)\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_236p_6lp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Lynx Whirl",
+    "input": "236P~6LP",
+    "move_group": "lynx_whirl",
+    "table_index": 56,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "elena_027_6_hp",
+      "elena_053_6_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t057:elena_236p_6mp",
+    "raw_source_token": "elena_236p_6mp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236P~6MP\",\"move_group\":\"lynx_whirl\",\"move_name\":\"Lynx Whirl\",\"notes_sc\":\"Accessible from a previous Lynx Song or Spin Scythe; performs an extra spin, enhancing the follow-up specials (~6LK, ~6MK, ~6HK); can continue rolling indefinitely with repeated ~6P inputs; crouch-sized hurtbox 1-26f (but still considered standing); startup refers to minimum number of frames before each follow-up can come out (15-21f ~6LK, 18-21f ~6MK/~6HK, 20-21f ~6P); total roll distance: 1.94; Elena is in a Counter-hit state for the entire roll duration\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_236p_6mp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Lynx Whirl",
+    "input": "236P~6MP",
+    "move_group": "lynx_whirl",
+    "table_index": 57,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "elena_027_6_hp",
+      "elena_053_6_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t065:elena_236pp_6hk",
+    "raw_source_token": "elena_236pp_6hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236PP~6HK\",\"move_group\":\"mallet_smash\",\"move_name\":\"or 236P~6P~6HK Mallet Smash\",\"notes_sc\":\"2 hits (if 1st hit is blocked, 2nd hit is no longer an overhead); Low Crush 5-22f (can avoid moves before becoming airborne); projectile invuln disappears for a brief period after Lynx Song/Whirl (less effective as a fireball counter); projectile invuln does not apply to the top of Elena's head; Elena immediately loses crouch-sized hurtbox from Lynx Song; overhead that gives strong follow-up pressure on block, a 2LP on hit, and a medium combo after baiting the opponent's low buttons or throw tech; puts airborne opponents into limited juggle state on hit (can always pick up a juggle, but exact route depends on height and distance)\",\"punish_adv\":\"+8\",\"raw_source_token\":\"elena_236pp_6hk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "or 236P~6P~6HK Mallet Smash",
+    "input": "236PP~6HK",
+    "move_group": "mallet_smash",
+    "table_index": 65,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hk_followup",
+    "conflicting_move_ids": [
+      "elena_048_6_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t061:elena_236pp_6lk",
+    "raw_source_token": "elena_236pp_6lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236PP~6LK\",\"move_group\":\"leopard_snap\",\"move_name\":\"or 236P~6P~6LK Leopard Snap\",\"notes_sc\":\"Elena immediately loses crouch-sized hurtbox and projectile invuln from Lynx Song (hard to use vs. projectiles); strong ender from Spinning Scythe on hit (3f gap) to reset pressure (but does not frame trap on block); useful for pressure on block (can beat 4f normals with 2LP, catch back walk with 2LK~2LP, and throw except vs. midscreen back walk); 1f extra recovery on whiff; the version used from OD Lynx Song is not considered an OD move for cancel purposes (no SA2 cancel); puts the opponent into a limited juggle state\",\"punish_adv\":\"KD +48\",\"raw_source_token\":\"elena_236pp_6lk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "or 236P~6P~6LK Leopard Snap",
+    "input": "236PP~6LK",
+    "move_group": "leopard_snap",
+    "table_index": 61,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_lk_followup",
+    "conflicting_move_ids": [
+      "elena_044_6_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t063:elena_236pp_6mk",
+    "raw_source_token": "elena_236pp_6mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236PP~6MK\",\"move_group\":\"harvest_circle\",\"move_name\":\"or 236P~6P~6MK Harvest Circle\",\"notes_sc\":\"2f extra recovery on block/whiff; 1st hit pulls opponents inward on hit/block for combo consistency; extended kicking foot hurtbox is anti-air invuln while active on frames 8-10 (can anti-air opponents jumping out of roll pressure, but cannot hit cross-up); maintains projectile invuln from Lynx Song/Whirl to counter fireballs more effectively; Elena immediately loses crouch-sized hurtbox from Lynx Song; can combo from Spinning Scythe ~ Lynx Whirl on Counter-hit/Punish Counter; puts opponent into a limited juggle state\",\"punish_adv\":\"KD +50\",\"raw_source_token\":\"elena_236pp_6mk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "or 236P~6P~6MK Harvest Circle",
+    "input": "236PP~6MK",
+    "move_group": "harvest_circle",
+    "table_index": 63,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "elena_022_6_mk",
+      "elena_046_6_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t012:elena_2hk",
+    "raw_source_token": "elena_2hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"2HK\",\"move_group\":\"normals\",\"move_name\":\"Root Breaker\",\"notes_sc\":\"Long range sweep; has juggle potential; punishable by most other sweeps even at max range\",\"punish_adv\":\"HKD +46\",\"raw_source_token\":\"elena_2hk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Root Breaker",
+    "input": "2HK",
+    "move_group": "normals",
+    "table_index": 12,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hk_followup",
+    "conflicting_move_ids": [
+      "elena_012_2_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t082:elena_2pppkkk",
+    "raw_source_token": "elena_2pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"2PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Down Taunt\",\"notes_sc\":\"\\\"What's up?\\\"\",\"punish_adv\":\"KD -46\",\"raw_source_token\":\"elena_2pppkkk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Down Taunt",
+    "input": "2PPPKKK",
+    "move_group": "taunts",
+    "table_index": 82,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t079:elena_4pppkkk",
+    "raw_source_token": "elena_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"And up!\\\"; can hold forward or back to transition into a hand-walking animation on frames 181-370\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 79,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t081:elena_4pppkkk_4",
+    "raw_source_token": "elena_4pppkkk_4",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK~4\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt ~ Back Walk\",\"notes_sc\":\"\\\"Hehe, over here!\\\"; cannot change walk animation once it has begun; total animation time depends on when Back was input during the initial Back Taunt\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_4pppkkk_4\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Back Taunt ~ Back Walk",
+    "input": "4PPPKKK~4",
+    "move_group": "taunts",
+    "table_index": 81,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t080:elena_4pppkkk_6",
+    "raw_source_token": "elena_4pppkkk_6",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK~6\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt ~ Forward Walk\",\"notes_sc\":\"\\\"Cool right? Give it a try!\\\"; cannot change walk animation once it has begun; total animation time depends on when Forward was input during the initial Back Taunt\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_4pppkkk_6\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Back Taunt ~ Forward Walk",
+    "input": "4PPPKKK~6",
+    "move_group": "taunts",
+    "table_index": 80,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t024:elena_5hp_hp",
+    "raw_source_token": "elena_5hp_hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5HP~HP\",\"move_group\":\"target_combos\",\"move_name\":\"Turning Tail\",\"notes_sc\":\"Whiffs on crouch blocking opponents; puts opponents into limited juggle state with a much more rewarding juggle after Punish Counter 5HP; if 5HP is stand blocked, the first hit of the follow-up will also be stand blocked, but the last hit still whiffs leaving Elena unsafe; starter scaling only applies if the 2nd HP begins the combo (e.g. opponent tries to jump out after crouch blocking 5HP)\",\"punish_adv\":\"KD +45\",\"raw_source_token\":\"elena_5hp_hp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Turning Tail",
+    "input": "5HP~HP",
+    "move_group": "target_combos",
+    "table_index": 24,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "elena_005_5_hp",
+      "elena_011_2_hp",
+      "elena_017_j_hp",
+      "elena_027_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t025:elena_5mk_hk",
+    "raw_source_token": "elena_5mk_hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MK~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Hind Kick\",\"notes_sc\":\"Puts opponent into limited juggle state; Elena's main Target Combo conversion on crouching opponents; Special/DI/DR cancel is delayed until after 1st recovery frame\",\"punish_adv\":\"KD +33\",\"raw_source_token\":\"elena_5mk_hk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Hind Kick",
+    "input": "5MK~HK",
+    "move_group": "target_combos",
+    "table_index": 25,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hk_followup",
+    "conflicting_move_ids": [
+      "elena_012_2_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t077:elena_5pppkkk",
+    "raw_source_token": "elena_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"It's such a lovely day. And I hope you're having a good one too!\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 77,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t019:elena_6hp",
+    "raw_source_token": "elena_6hp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"6HP\",\"move_group\":\"normals\",\"move_name\":\"Trunk Slap 1\",\"notes_sc\":\"Forward-moving ranged poke that can be hitconfirmed into a TC knockdown follow-up; TC is always a true blockstring; pushback keeps Elena safe (except at close range vs. Marisa/E.Honda/Sagat 2LP and Zangief 2LK); pushback also prevents a follow-up link even with Drive Rush (+5), but can link 5LK after a corner Punish Counter\",\"punish_adv\":\"+5\",\"raw_source_token\":\"elena_6hp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Trunk Slap 1",
+    "input": "6HP",
+    "move_group": "normals",
+    "table_index": 19,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hp_followup",
+    "conflicting_move_ids": [
+      "elena_027_6_hp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t078:elena_6pppkkk",
+    "raw_source_token": "elena_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"One, two, and spin! What do you say? How about you dance with me!\\\"; overrides the current background music with the Reniala Remains stage theme with increased volume\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 78,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t015:elena_jhp",
+    "raw_source_token": "elena_jhp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.HP\",\"move_group\":\"normals\",\"move_name\":\"Jumping Heavy Punch\",\"notes_sc\":\"Elena's strongest overall jump-in (reaches downward faster than j.HK and deals all its damage in one hit); lower body projectile invuln 10-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+13(+19)\",\"raw_source_token\":\"elena_jhp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Jumping Heavy Punch",
+    "input": "j.HP",
+    "move_group": "normals",
+    "table_index": 15,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hp_followup",
+    "conflicting_move_ids": [
+      "elena_017_j_hp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t030:elena_jlp_jmk",
+    "raw_source_token": "elena_jlp_jmk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.LP~J.MK\",\"move_group\":\"target_combos\",\"move_name\":\"Soaring Raid\",\"notes_sc\":\"Can hit after cross-up j.LP; can be done from any jump direction; does not work as an air-to-air even after a Forced Knockdown; will not connect if the j.LP hits a crouching opponent\",\"punish_adv\":\"+16\",\"raw_source_token\":\"elena_jlp_jmk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Soaring Raid",
+    "input": "j.LP~J.MK",
+    "move_group": "target_combos",
+    "table_index": 30,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_mk_followup",
+    "conflicting_move_ids": [
+      "elena_016_j_mk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t017:elena_jmk",
+    "raw_source_token": "elena_jmk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.MK\",\"move_group\":\"normals\",\"move_name\":\"Jumping Medium Kick\",\"notes_sc\":\"Cross-up with a wide hitbox in both directions; lower body projectile invuln 7-20f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+13(+17)\",\"raw_source_token\":\"elena_jmk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Jumping Medium Kick",
+    "input": "j.MK",
+    "move_group": "normals",
+    "table_index": 17,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_mk_followup",
+    "conflicting_move_ids": [
+      "elena_016_j_mk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t031:elena_jmp_jhp",
+    "raw_source_token": "elena_jmp_jhp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.MP~J.HP\",\"move_group\":\"target_combos\",\"move_name\":\"Raptor Range\",\"notes_sc\":\"Knockdown ender from air-to-air j.MP that puts opponent into a limited juggle state; can be done from any jump direction; cannot connect on a grounded opponent\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_jmp_jhp\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Raptor Range",
+    "input": "j.MP~J.HP",
+    "move_group": "target_combos",
+    "table_index": 31,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "elena_hp_followup",
+    "conflicting_move_ids": [
+      "elena_017_j_hp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t037:elena_mpmk",
+    "raw_source_token": "elena_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_mpmk\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 37,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "elena_030_lp_mk",
+      "elena_068_5_6_lplk",
+      "elena_072_hphk",
+      "elena_075_mpmk",
+      "elena_076_mpmk",
+      "elena_077_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T214050Z-b474cc50",
+    "source_row_id": "20260412T214050Z-b474cc50:t039:elena_mpmk_66_drc",
+    "raw_source_token": "elena_mpmk_66_drc",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"or 66 Drive Rush Cancel\",\"notes_sc\":\"See Drive Rush ; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties\",\"punish_adv\":\"-\",\"raw_source_token\":\"elena_mpmk_66_drc\"}",
+    "move_id": null,
+    "character_slug": "elena",
+    "move_name": "or 66 Drive Rush Cancel",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 39,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "elena_075_mpmk",
+      "elena_076_mpmk",
+      "elena_077_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

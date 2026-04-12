@@ -1,0 +1,718 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t071:Juri_623LP",
+    "raw_source_token": "Juri_623LP",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"623LP\",\"move_group\":\"specials\",\"move_name\":\"Tensenrin\",\"notes_sc\":\"Both hits are SA3 cancelable; not airborne; fairly consistent combo ender; 2nd hit has a combo-only hitbox for juggle consistency\",\"punish_adv\":\"KD +37\",\"raw_source_token\":\"Juri_623LP\"}",
+    "move_id": "juri_062_6_2_3_lp",
+    "character_slug": "juri",
+    "move_name": "Tensenrin",
+    "input": "623LP",
+    "move_group": "specials",
+    "table_index": 71,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t072:Juri_623MP",
+    "raw_source_token": "Juri_623MP",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"623MP\",\"move_group\":\"specials\",\"move_name\":\"Tensenrin\",\"notes_sc\":\"Strong anti-air but cannot hit cross-up; slightly less horizontal range than 623HP\",\"punish_adv\":\"KD +31\",\"raw_source_token\":\"Juri_623MP\"}",
+    "move_id": "juri_063_6_2_3_mp",
+    "character_slug": "juri",
+    "move_name": "Tensenrin",
+    "input": "623MP",
+    "move_group": "specials",
+    "table_index": 72,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t073:Juri_623HP",
+    "raw_source_token": "Juri_623HP",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"623HP\",\"move_group\":\"specials\",\"move_name\":\"Tensenrin\",\"notes_sc\":\"Only 1 hit connects vs. crouch block (4f worse oB, less chip damage); strong combo ender and anti-air but cannot hit cross-up; slightly more horizontal range than 623MP\",\"punish_adv\":\"KD +28\",\"raw_source_token\":\"Juri_623HP\"}",
+    "move_id": "juri_064_6_2_3_hp",
+    "character_slug": "juri",
+    "move_name": "Tensenrin",
+    "input": "623HP",
+    "move_group": "specials",
+    "table_index": 73,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t074:Juri_623PP",
+    "raw_source_token": "Juri_623PP",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"623PP\",\"move_group\":\"specials\",\"move_name\":\"Tensenrin\",\"notes_sc\":\"Juri's primary reversal option; final attack comes out on hit only; cannot hit cross-up\",\"punish_adv\":\"KD +5\",\"raw_source_token\":\"Juri_623PP\"}",
+    "move_id": "juri_065_6_2_3_p_p",
+    "character_slug": "juri",
+    "move_name": "Tensenrin",
+    "input": "623PP",
+    "move_group": "specials",
+    "table_index": 74,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t082:Juri_214214p_hold",
+    "raw_source_token": "Juri_214214p_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"214214[P]\",\"move_group\":\"super_arts\",\"move_name\":\"Feng Shui Engine (hold)\",\"notes_sc\":\"Holding the button performs a dash attack; puts airborne opponents into free juggle state or maintains existing juggle state; can cancel on hit/block into any normal; afterwards, has same properties as regular Feng Shui Engine activation; dash attack cannot hit cross-up\",\"punish_adv\":\"0 (+10)\",\"raw_source_token\":\"Juri_214214p_hold\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Feng Shui Engine (hold)",
+    "input": "214214[P]",
+    "move_group": "super_arts",
+    "table_index": 82,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t080:Juri_236236k_hold",
+    "raw_source_token": "Juri_236236k_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236236[K]\",\"move_group\":\"super_arts\",\"move_name\":\"Sakkai Fuhazan (hold)\",\"notes_sc\":\"Projectile hitbox; requires one Fuha stock to use (consumes this stock); active frames and KD Adv. are highly variable based on screen position; Full Dmg distribution: 200x4,300,1000\",\"punish_adv\":\"KD +26(+49)\",\"raw_source_token\":\"Juri_236236k_hold\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Sakkai Fuhazan (hold)",
+    "input": "236236[K]",
+    "move_group": "super_arts",
+    "table_index": 80,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t068:Juri_236hk",
+    "raw_source_token": "Juri_236hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236HK\",\"move_group\":\"go_ohsatsu\",\"move_name\":\"Go Ohsatsu\",\"notes_sc\":\"Puts airborne opponents into limited juggle state (only high airborne connect launches high enough for follow-up juggle besides SA3 cancel); good juggle ender for damage when canceling to SA3\",\"punish_adv\":\"KD +27\",\"raw_source_token\":\"Juri_236hk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Go Ohsatsu",
+    "input": "236HK",
+    "move_group": "go_ohsatsu",
+    "table_index": 68,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "juri_3_6_hk_followup",
+    "conflicting_move_ids": [
+      "juri_059_2_3_6_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t069:Juri_236hk_stock",
+    "raw_source_token": "Juri_236hk_stock",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236HK\",\"move_group\":\"go_ohsatsu\",\"move_name\":\"Go Ohsatsu (1 Stock)\",\"notes_sc\":\"Costs 1 Fuha stock; both hits are Super cancelable; can press LK or MK to cancel into other 236K specials for 1 Fuha stock; puts opponent into limited juggle state (only airborne hit launches high enough for follow-up juggle besides SA3 cancel); good for damage when comboing into SA3\",\"punish_adv\":\"KD +37\",\"raw_source_token\":\"Juri_236hk_stock\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Go Ohsatsu (1 Stock)",
+    "input": "236HK",
+    "move_group": "go_ohsatsu",
+    "table_index": 69,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "juri_3_6_hk_followup",
+    "conflicting_move_ids": [
+      "juri_059_2_3_6_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t070:Juri_236mkhk",
+    "raw_source_token": "Juri_236mkhk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236MKHK\",\"move_group\":\"go_ohsatsu\",\"move_name\":\"Go Ohsatsu\",\"notes_sc\":\"All 3 hits are Super cancelable; first hit keeps opponent grounded, 2nd and 3rd hits put opponent into limited juggle state; can press LK or MK to cancel any hit into other OD 236K specials for 1 Fuha stock and 1 Drive bar; SA2 cancel: +17/+17 (1st hit), KD+54/+15 (2nd hit), KD+52/+4 (3rd hit); 3rd hit cannot juggle into held SA2 dash attack\",\"punish_adv\":\"KD +32\",\"raw_source_token\":\"Juri_236mkhk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Go Ohsatsu",
+    "input": "236MKHK",
+    "move_group": "go_ohsatsu",
+    "table_index": 70,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_055_2_3_6_k_k",
+      "juri_058_2_3_6_k_k",
+      "juri_061_2_3_6_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t045:Juri_4hk",
+    "raw_source_token": "Juri_4hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"4HK\",\"move_group\":\"normals\",\"move_name\":\"Korenzan\",\"notes_sc\":\"Both hits are cancelable; 1st hit forces stand and puts airborne opponents into limited juggle state; 2nd hit causes OTG bounce vs. airborne opponents; 19f startup for 2nd hit only; carries counter-hit/Punish Counter advantage through both hits; SA2 cancel: +12/+6 (1st hit), +16/+8 (2nd hit)\",\"punish_adv\":\"+6\",\"raw_source_token\":\"Juri_4hk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Korenzan",
+    "input": "4HK",
+    "move_group": "normals",
+    "table_index": 45,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_045_4_hk",
+      "juri_046_4_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t046:Juri_4hk_fse",
+    "raw_source_token": "Juri_4hk_fse",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"4HK\",\"move_group\":\"normals\",\"move_name\":\"(FSE Chain) Korenzan\",\"notes_sc\":\"Chained version during SA2 (FSE); both hits knock down; 2nd hit causes OTG bounce vs. airborne opponents; 8f shorter hitconfirm window when chained into\",\"punish_adv\":\"KD +39\",\"raw_source_token\":\"Juri_4hk_fse\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "(FSE Chain) Korenzan",
+    "input": "4HK",
+    "move_group": "normals",
+    "table_index": 46,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_045_4_hk",
+      "juri_046_4_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t087:Juri_4pppkkk",
+    "raw_source_token": "Juri_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"What are you waiting for?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"Juri_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 87,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t009:Juri_5mk",
+    "raw_source_token": "Juri_5mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5MK\",\"move_group\":\"normals\",\"move_name\":\"Standing Medium Kick\",\"notes_sc\":\"8f startup for 2nd hit only; 1st hit can combo from 5LP and has enough hitstun to combo to 214HK for a launch and Fuha stock; great poke in neutral (1st hit can interrupt opponent's button while 2nd hit extends for long range); very effective when used out of Drive Rush; SA2 cancel: +19/+7 (1st hit)\",\"punish_adv\":\"+7\",\"raw_source_token\":\"Juri_5mk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Standing Medium Kick",
+    "input": "5MK",
+    "move_group": "normals",
+    "table_index": 9,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_007_5_mk",
+      "juri_008_5_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t010:Juri_5mk_fse",
+    "raw_source_token": "Juri_5mk_fse",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5MK\",\"move_group\":\"normals\",\"move_name\":\"(FSE Chain) Standing Medium Kick\",\"notes_sc\":\"Chained version during SA2 (FSE); 1st hit has 4f less hitstun (cannot combo into 214HK); when chained into, 4f shorter hitconfirm window (2f if 2nd hit only); maintains juggle state vs. airborne opponents\",\"punish_adv\":\"+7\",\"raw_source_token\":\"Juri_5mk_fse\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "(FSE Chain) Standing Medium Kick",
+    "input": "5MK",
+    "move_group": "normals",
+    "table_index": 10,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_007_5_mk",
+      "juri_008_5_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t085:Juri_5pppkkk",
+    "raw_source_token": "Juri_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"You gonna keep me waiting, babe?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"Juri_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 85,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t043:Juri_6hp",
+    "raw_source_token": "Juri_6hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"6HP\",\"move_group\":\"normals\",\"move_name\":\"Renko Kicks\",\"notes_sc\":\"3f extra recovery on whiff; both hits are cancelable; 23f startup for 2nd hit only; 1st hit has more hitstun and blockstun for cancels; both hits put airborne opponent into limited juggle state; carries counter-hit/Punish Counter advantage through both hits; extended whiff hurtbox lasts until the end of recovery; SA2 cancel: +18/+8 (1st hit), +17/+11 (2nd hit)\",\"punish_adv\":\"+6\",\"raw_source_token\":\"Juri_6hp\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Renko Kicks",
+    "input": "6HP",
+    "move_group": "normals",
+    "table_index": 43,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_043_6_hp",
+      "juri_044_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t044:Juri_6hp_fse",
+    "raw_source_token": "Juri_6hp_fse",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"6HP\",\"move_group\":\"normals\",\"move_name\":\"(FSE Chain) Renko Kicks\",\"notes_sc\":\"Chained version during SA2 (FSE); 3f extra recovery on whiff; maintains juggle state vs. airborne opponents; 4f shorter hitconfirm window when chained into; canceling the 1st hit uses less juggle potential, allowing alternate juggle routes in exchange for some initial damage; extended whiff hurtbox lasts until the end of recovery\",\"punish_adv\":\"KD +40\",\"raw_source_token\":\"Juri_6hp_fse\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "(FSE Chain) Renko Kicks",
+    "input": "6HP",
+    "move_group": "normals",
+    "table_index": 44,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_043_6_hp",
+      "juri_044_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t086:Juri_6pppkkk",
+    "raw_source_token": "Juri_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"Killer beam! Or whatever.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"Juri_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 86,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t037:Juri_8jhk",
+    "raw_source_token": "Juri_8jhk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"8HK\",\"move_group\":\"normals\",\"move_name\":\"Neutral Jump Heavy Kick\",\"notes_sc\":\"Hits on both sides (can cross-up if opponent tries to move underneath Juri); can be used as an air-to-air; when chained after FSE nj.MP, puts airborne opponents into juggle state; lower body projectile invuln 10-13f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+15(+19)\",\"raw_source_token\":\"Juri_8jhk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Neutral Jump Heavy Kick",
+    "input": "8HK",
+    "move_group": "normals",
+    "table_index": 37,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t038:Juri_8jhk_fse",
+    "raw_source_token": "Juri_8jhk_fse",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"8HK\",\"move_group\":\"normals\",\"move_name\":\"(FSE Chain) Neutral Jumping Heavy Kick\",\"notes_sc\":\"Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; lower body projectile invuln 10-13f\",\"punish_adv\":\"-\",\"raw_source_token\":\"Juri_8jhk_fse\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "(FSE Chain) Neutral Jumping Heavy Kick",
+    "input": "8HK",
+    "move_group": "normals",
+    "table_index": 38,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t075:Juri_j214K",
+    "raw_source_token": "Juri_j214K",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214K\",\"move_group\":\"shiku_sen\",\"move_name\":\"Shiku-sen\",\"notes_sc\":\"During forward jump only; can input follow-up on hit only; puts opponent into limited juggle state (lower connect allows better follow-up juggles); button strength does not affect trajectory\",\"punish_adv\":\"KD +34(+41)\",\"raw_source_token\":\"Juri_j214K\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Shiku-sen",
+    "input": "j.214K",
+    "move_group": "shiku_sen",
+    "table_index": 75,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t078:Juri_j214KK~K",
+    "raw_source_token": "Juri_j214KK~K",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"j.214KK~K\",\"move_group\":\"shiku_sen\",\"move_name\":\"OD Shiren-sen\",\"notes_sc\":\"Puts opponent into limited juggle state; comes out on hit only; can delay the input to get better juggle follow-ups and better KD Adv.; Juri is in a crouching state during landing recovery; total recovery time before landing varies by juggle height\",\"punish_adv\":\"KD +50(+57)\",\"raw_source_token\":\"Juri_j214KK~K\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "OD Shiren-sen",
+    "input": "j.214KK~K",
+    "move_group": "shiku_sen",
+    "table_index": 78,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_068_k",
+      "juri_069_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t076:Juri_j214K~K",
+    "raw_source_token": "Juri_j214K~K",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"j.214K~K\",\"move_group\":\"shiku_sen\",\"move_name\":\"Shiren-sen\",\"notes_sc\":\"Comes out on hit only; can delay the input to get better KD Advantage; no follow-up after juggle state; Juri is in a crouching state during landing recovery; total recovery time before landing varies by juggle height\",\"punish_adv\":\"KD +28(+33)\",\"raw_source_token\":\"Juri_j214K~K\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Shiren-sen",
+    "input": "j.214K~K",
+    "move_group": "shiku_sen",
+    "table_index": 76,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_068_k",
+      "juri_069_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t077:Juri_j214kk",
+    "raw_source_token": "Juri_j214kk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214KK\",\"move_group\":\"shiku_sen\",\"move_name\":\"OD Shiku-sen\",\"notes_sc\":\"During forward jump only; can input follow-up on hit only; puts opponent into limited juggle state\",\"punish_adv\":\"KD +37(+44)\",\"raw_source_token\":\"Juri_j214kk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "OD Shiku-sen",
+    "input": "j.214KK",
+    "move_group": "shiku_sen",
+    "table_index": 77,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t035:Juri_jhk",
+    "raw_source_token": "Juri_jhk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"7HK\",\"move_group\":\"normals\",\"move_name\":\"or 9HK Jumping Heavy Kick\",\"notes_sc\":\"During FSE forward jump, can cancel into divekick; lower body projectile invuln 10-13f and kicking leg 10-19f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+10(+19)\",\"raw_source_token\":\"Juri_jhk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "or 9HK Jumping Heavy Kick",
+    "input": "7HK",
+    "move_group": "normals",
+    "table_index": 35,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_035_j_hk",
+      "juri_037_j_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t036:Juri_jhk_fse",
+    "raw_source_token": "Juri_jhk_fse",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"j.HK\",\"move_group\":\"normals\",\"move_name\":\"(FSE Chain) Jumping Heavy Kick\",\"notes_sc\":\"Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; lower body projectile invuln 10-13f and kicking leg 10-19f\",\"punish_adv\":\"-\",\"raw_source_token\":\"Juri_jhk_fse\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "(FSE Chain) Jumping Heavy Kick",
+    "input": "j.HK",
+    "move_group": "normals",
+    "table_index": 36,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_036_j_hk",
+      "juri_038_j_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t051:Juri_jlplk",
+    "raw_source_token": "Juri_jlplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.LPLK\",\"move_group\":\"throws\",\"move_name\":\"Zanka-sen\",\"notes_sc\":\"KD Adv. varies based on height (lower height = worse advantage); switches sides; no oki after throwing opponent back into the corner\",\"punish_adv\":\"HKD +2(+4)\",\"raw_source_token\":\"Juri_jlplk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Zanka-sen",
+    "input": "j.LPLK",
+    "move_group": "throws",
+    "table_index": 51,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "juri_077_lplk_followup",
+    "conflicting_move_ids": [
+      "juri_077_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t049:Juri_lplk",
+    "raw_source_token": "Juri_lplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"LPLK\",\"move_group\":\"throws\",\"move_name\":\"Spider Fang Throw\",\"notes_sc\":\"Has access to corner throw loops by dashing (+3); a successful Throw Escape builds 1 Drive bar and 1000 Super gauge (10% bar); Throw Escape is awarded to a random player if input simultaneously\",\"punish_adv\":\"HKD +25\",\"raw_source_token\":\"Juri_lplk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Spider Fang Throw",
+    "input": "LPLK",
+    "move_group": "throws",
+    "table_index": 49,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "juri_077_lplk_followup",
+    "conflicting_move_ids": [
+      "juri_077_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T205838Z-3fba7e0e",
+    "source_row_id": "20260412T205838Z-3fba7e0e:t055:Juri_mpmk",
+    "raw_source_token": "Juri_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"Juri_mpmk\"}",
+    "move_id": null,
+    "character_slug": "juri",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 55,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "juri_075_5_6_lplk",
+      "juri_077_lplk",
+      "juri_080_hphk",
+      "juri_083_mpmk",
+      "juri_084_mpmk",
+      "juri_085_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

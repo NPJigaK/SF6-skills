@@ -1,0 +1,1047 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t006:akuma_5hk",
+    "raw_source_token": "akuma_5hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"5HK\",\"move_group\":\"normals\",\"move_name\":\"Standing Heavy Kick\",\"notes_sc\":\"2 hits; 1st hit forces stand (important for combos); both the 2nd hit and the farthest-reaching hitbox of 1st hit whiff on crouching opponents unless they extend a vertical hurtbox; if 1st hit is stand blocked, both hits will connect on block; 1f extra recovery when 2nd hit whiffs; Counter-hit/Punish Counter advantage carries through both hits; great punish starter since scaling doesn't apply; both hits put airborne opponents into limited juggle state\",\"punish_adv\":\"+11\",\"raw_source_token\":\"akuma_5hk\"}",
+    "move_id": "gouki_akuma_006_5_hk",
+    "character_slug": "gouki_akuma",
+    "move_name": "Standing Heavy Kick",
+    "input": "5HK",
+    "move_group": "normals",
+    "table_index": 6,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t019:akuma_6mp",
+    "raw_source_token": "akuma_6mp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"6MP\",\"move_group\":\"command_normals\",\"move_name\":\"Skull Splitter\",\"notes_sc\":\"2-hits; fast overhead with excellent reward (5MK) when used out of Drive Rush; if blocked, Akuma is out of throw range (can frame trap with CH 2LP into 5MK to punish reversal 4f jabs); 2nd hit is no longer an overhead if the first hit connects\",\"punish_adv\":\"+7\",\"raw_source_token\":\"akuma_6mp\"}",
+    "move_id": "gouki_akuma_019_6_mp",
+    "character_slug": "gouki_akuma",
+    "move_name": "Skull Splitter",
+    "input": "6MP",
+    "move_group": "command_normals",
+    "table_index": 19,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t050:akuma_214mk",
+    "raw_source_token": "akuma_214mk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214MK\",\"move_group\":\"specials\",\"move_name\":\"Tatsumaki Zanku-Kyaku\",\"notes_sc\":\"2 hits; whiffs on crouching opponents; cannot hit cross-up; puts opponent into limited juggle state (follow-up requires higher juggle connect, like after wallsplat); 2nd hit has 3f worse KD advantage; -28 oB refers to fuzzy guard scenario where 1st hit can connect vs. crouch block\",\"punish_adv\":\"KD +41(38)\",\"raw_source_token\":\"akuma_214mk\"}",
+    "move_id": "gouki_akuma_048_2_1_4_mk",
+    "character_slug": "gouki_akuma",
+    "move_name": "Tatsumaki Zanku-Kyaku",
+    "input": "214MK",
+    "move_group": "specials",
+    "table_index": 50,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t051:akuma_214hk",
+    "raw_source_token": "akuma_214hk",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214HK\",\"move_group\":\"specials\",\"move_name\":\"Tatsumaki Zanku-Kyaku\",\"notes_sc\":\"6f extra recovery on block/whiff; can hit crouching opponents; upward angle, primarily used as a juggle ender for damage and corner carry\",\"punish_adv\":\"KD +34\",\"raw_source_token\":\"akuma_214hk\"}",
+    "move_id": "gouki_akuma_049_2_1_4_hk",
+    "character_slug": "gouki_akuma",
+    "move_name": "Tatsumaki Zanku-Kyaku",
+    "input": "214HK",
+    "move_group": "specials",
+    "table_index": 51,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t062:akuma_214pp_6p",
+    "raw_source_token": "akuma_214pp_6p",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214PP~6P\",\"move_group\":\"specials\",\"move_name\":\"Adamant Flame Follow-Up\",\"notes_sc\":\"() refers to scaled damage from 214PP combo starter; 6f extra recovery on block; cannot come out on whiff; true blockstring from 214PP even at max delay; sends opponent to the edge of the screen for a wallsplat unless SA2 wallsplat occurred earlier in the combo (much less KD advantage, around +26~33); grounded wallsplat puts opponent into free juggle state (limited juggle state vs. airborne); allows a follow-up juggle if near the corner; KD advantage varies significantly depending on distance from corner\",\"punish_adv\":\"HKD +45(+63)\",\"raw_source_token\":\"akuma_214pp_6p\"}",
+    "move_id": "gouki_akuma_060_2_1_4_p_p_6_p",
+    "character_slug": "gouki_akuma",
+    "move_name": "Adamant Flame Follow-Up",
+    "input": "214PP~6P",
+    "move_group": "specials",
+    "table_index": 62,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t085:akuma_214214k",
+    "raw_source_token": "akuma_214214k",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"214214K\",\"move_group\":\"misogi\",\"move_name\":\"Misogi\",\"notes_sc\":\"Shin Akuma only (Back Taunt~Down Taunt); teleports above opponent from anywhere on screen; 3f less recovery on whiff or Perfect Parry; startup is functionally 9f on grounded opponents (10f vs. standard-height crouchers); much less KD advantage and 2f more recovery vs. airborne opponents; cannot be canceled into from OD specials like other Level 2 Supers; cannot be beaten with anti-air invincibility since Akuma is fully invuln and technically never goes airborne\",\"punish_adv\":\"KD +29(30)\",\"raw_source_token\":\"akuma_214214k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Misogi",
+    "input": "214214K",
+    "move_group": "misogi",
+    "table_index": 85,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t061:akuma_214hp_6p",
+    "raw_source_token": "akuma_214hp_6p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214HP~6P\",\"move_group\":\"adamant_flame_follow_up\",\"move_name\":\"Adamant Flame Follow-Up\",\"notes_sc\":\"Cannot come out on whiff; true blockstring from 214HP even at max delay; puts opponents into limited juggle state with follow-up juggles possible in the corner\",\"punish_adv\":\"KD +47\",\"raw_source_token\":\"akuma_214hp_6p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Adamant Flame Follow-Up",
+    "input": "214HP~6P",
+    "move_group": "adamant_flame_follow_up",
+    "table_index": 61,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_019_6_mp",
+      "gouki_akuma_024_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t052:akuma_214kk",
+    "raw_source_token": "akuma_214kk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214KK\",\"move_group\":\"tatsumaki_zanku_kyaku\",\"move_name\":\"Tatsumaki Zanku-Kyaku\",\"notes_sc\":\"Whiffs on crouching opponents; if 1st hit is stand blocked, opponent can crouch block after 2nd hit resulting in much worse disadvantage; cannot hit cross-up; puts opponent into limited juggle state (combos into 623LP/MP/PP); performs final kick on hit only\",\"punish_adv\":\"KD +47\",\"raw_source_token\":\"akuma_214kk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Tatsumaki Zanku-Kyaku",
+    "input": "214KK",
+    "move_group": "tatsumaki_zanku_kyaku",
+    "table_index": 52,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_050_2_1_4_k_k",
+      "gouki_akuma_052_2_1_4_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t059:akuma_214lp_6p",
+    "raw_source_token": "akuma_214lp_6p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214LP~6P\",\"move_group\":\"adamant_flame_follow_up\",\"move_name\":\"Adamant Flame Follow-Up\",\"notes_sc\":\"4f extra recovery on block; cannot come out on whiff; true blockstring from 214LP even at max delay; keeps opponent grounded for strike/throw mixup (requires microwalk if midscreen)\",\"punish_adv\":\"+7\",\"raw_source_token\":\"akuma_214lp_6p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Adamant Flame Follow-Up",
+    "input": "214LP~6P",
+    "move_group": "adamant_flame_follow_up",
+    "table_index": 59,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_019_6_mp",
+      "gouki_akuma_024_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t060:akuma_214mp_6p",
+    "raw_source_token": "akuma_214mp_6p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214MP~6P\",\"move_group\":\"adamant_flame_follow_up\",\"move_name\":\"Adamant Flame Follow-Up\",\"notes_sc\":\"Cannot come out on whiff; true blockstring from 214MP even at max delay; puts opponents into limited juggle state\",\"punish_adv\":\"KD +32\",\"raw_source_token\":\"akuma_214mp_6p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Adamant Flame Follow-Up",
+    "input": "214MP~6P",
+    "move_group": "adamant_flame_follow_up",
+    "table_index": 60,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_019_6_mp",
+      "gouki_akuma_024_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t086:akuma_22ppp",
+    "raw_source_token": "akuma_22ppp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"22PPP\",\"move_group\":\"kongou_kokuretsuzan\",\"move_name\":\"Kongou-Kokuretsuzan\",\"notes_sc\":\"Shin Akuma only (Back Taunt~Down Taunt); 9-hit Super projectile with a massive vertical hitbox; cannot be canceled into from OD specials like other Level 2 Supers; puts opponent into limited juggle state (but very difficult to launch high enough for a follow-up)\",\"punish_adv\":\"KD +38\",\"raw_source_token\":\"akuma_22ppp\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Kongou-Kokuretsuzan",
+    "input": "22PPP",
+    "move_group": "kongou_kokuretsuzan",
+    "table_index": 86,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t063:akuma_236k",
+    "raw_source_token": "akuma_236k",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236K\",\"move_group\":\"demon_raid\",\"move_name\":\"Demon Raid\",\"notes_sc\":\"Button strength determines trajectory (LK short, MK mid, HK far); counter-hit state for entire duration; cancelable into follow-ups on frames 18-40; on frame 41, automatically transitions to Demon Low Slash (or Demon Swoop if holding Down)\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_236k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Raid",
+    "input": "236K",
+    "move_group": "demon_raid",
+    "table_index": 63,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_061_2_3_6_lk",
+      "gouki_akuma_062_2_3_6_mk",
+      "gouki_akuma_063_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t071:akuma_236k_2_hold",
+    "raw_source_token": "akuma_236k_2_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236K~[2]\",\"move_group\":\"demon_swoop\",\"move_name\":\"Demon Swoop\",\"notes_sc\":\"Acts like an empty jump (with the same 45f duration) with adjustable distance; 5f extra landing recovery when crossing over opponent; useful for baiting opponent's anti-air, Drive Impact, or Parry; must be inputting any Down direction on frame 41 of 236K; cannot block during landing recovery, and Akuma is in a counter-hit state for entire duration; crouching state on final recovery frame\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_236k_2_hold\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Swoop",
+    "input": "236K~[2]",
+    "move_group": "demon_swoop",
+    "table_index": 71,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t069:akuma_236k_k",
+    "raw_source_token": "akuma_236k_k",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236K~K\",\"move_group\":\"demon_blade_kick\",\"move_name\":\"Demon Blade Kick\",\"notes_sc\":\"5f extra recovery on whiff; button strength determines angle (LK short, MK mid, HK far); puts airborne opponents into limited juggle state (or maintains juggle state if used mid-combo); extends a large projectile invincible hurtbox on frame 11 until landing (making the divekick easier to anti-air while still being useful for avoiding fireballs)\",\"punish_adv\":\"+4(+14)\",\"raw_source_token\":\"akuma_236k_k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Blade Kick",
+    "input": "236K~K",
+    "move_group": "demon_blade_kick",
+    "table_index": 69,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_k_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_067_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t065:akuma_236k_no_input",
+    "raw_source_token": "akuma_236k_no_input",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236K~NO\",\"move_group\":\"demon_low_slash\",\"move_name\":\"Input Demon Low Slash\",\"notes_sc\":\"4f extra recovery on whiff; recovery is in a crouching state until the final frame (final 5f on whiff); causes Akuma to auto-correct if Demon Raid crosses up; can be spaced for better frame advantage\",\"punish_adv\":\"HKD +54(+57)\",\"raw_source_token\":\"akuma_236k_no_input\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Input Demon Low Slash",
+    "input": "236K~NO",
+    "move_group": "demon_low_slash",
+    "table_index": 65,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_061_2_3_6_lk",
+      "gouki_akuma_062_2_3_6_mk",
+      "gouki_akuma_063_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t067:akuma_236k_p",
+    "raw_source_token": "akuma_236k_p",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236K~P\",\"move_group\":\"demon_guillotine\",\"move_name\":\"Demon Guillotine\",\"notes_sc\":\"Overhead with many active frames, making it good for meaty pressure; strong hitbox and mid-air pause makes it more difficult to anti-air; cannot hit cross-up; frames 4-8 of landing recovery have a crouch-sized hurtbox (but still standing)\",\"punish_adv\":\"KD +37(+41)\",\"raw_source_token\":\"akuma_236k_p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Guillotine",
+    "input": "236K~P",
+    "move_group": "demon_guillotine",
+    "table_index": 67,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_p_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_066_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t064:akuma_236kk",
+    "raw_source_token": "akuma_236kk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236KK\",\"move_group\":\"demon_raid\",\"move_name\":\"Demon Raid\",\"notes_sc\":\"Tracks opponent's location regardless of distance; counter-hit state for entire duration; cancelable into follow-ups on frames 16-40 (16-38 for Fireball/Tatsu and Air SA1 follow-ups); on frame 41, automatically transitions to Demon Low Slash (or Demon Swoop if holding Down)\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_236kk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Raid",
+    "input": "236KK",
+    "move_group": "demon_raid",
+    "table_index": 64,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_2_3_6_k_k_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_064_2_3_6_k_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t072:akuma_236kk_2_hold",
+    "raw_source_token": "akuma_236kk_2_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236KK~[2]\",\"move_group\":\"demon_swoop\",\"move_name\":\"Demon Swoop\",\"notes_sc\":\"Acts like an empty jump (with the same 45f duration) that puts Akuma point blank; 5f extra landing recovery when crossing over opponent; useful for baiting opponent's Drive Impact or Parry; must be inputting any Down direction on frame 41 of 236KK; cannot block during landing recovery, and Akuma is in a counter-hit state for entire duration; crouching state on final recovery frame\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_236kk_2_hold\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Swoop",
+    "input": "236KK~[2]",
+    "move_group": "demon_swoop",
+    "table_index": 72,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t074:akuma_236kk_j214k",
+    "raw_source_token": "akuma_236kk_j214k",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236KK~J.214K\",\"move_group\":\"demon_gou_rasen\",\"move_name\":\"Demon Gou Rasen\",\"notes_sc\":\"Can be input on frame 16-38 of 236KK (unless Gou Hadoken is on-screen); does not consume additional Drive gauge; cannot hit cross-up or against grounded opponents; stops Akuma's air momentum; performs final kick on hit only, which slams opponent down into a limited juggle OTG state; KD advantage depends on how high it connects (useful after 4HK launch, allowing most juggle enders to combo); Akuma is in a crouching state on frames 4-10 of landing recovery; lower foot/leg hurtbox is projectile invuln 1f~land\",\"punish_adv\":\"KD +46(+53)\",\"raw_source_token\":\"akuma_236kk_j214k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Gou Rasen",
+    "input": "236KK~J.214K",
+    "move_group": "demon_gou_rasen",
+    "table_index": 74,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t073:akuma_236kk_j236p",
+    "raw_source_token": "akuma_236kk_j236p",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"236KK~J.236P\",\"move_group\":\"demon_gou_zanku\",\"move_name\":\"Demon Gou Zanku\",\"notes_sc\":\"3-hit OD projectile; can be input on frame 16-38 of 236KK (unless Gou Hadoken is on-screen); does not consume additional Drive gauge; dissipates if Akuma is hit; creates stationary projectile on frames 6-20, then shoots downward at ~50 degree angle (this projectile will only have 2 hits if the initial hitbox collided with opponent); on hit only, landing recovery after 2f is cancelable into any action except walking/jumping; projectile hitbox is considered an airborne attack (can be avoided with anti-air invuln moves); puts airborne opponents into free juggle state (or maintains existing juggle state); puts grounded opponents into limited juggle state; advantage varies significantly depending on timing/spacing/angle; foot hurtbox is projectile invuln 1f~land\",\"punish_adv\":\"KD~ (varies)\",\"raw_source_token\":\"akuma_236kk_j236p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Gou Zanku",
+    "input": "236KK~J.236P",
+    "move_group": "demon_gou_zanku",
+    "table_index": 73,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t070:akuma_236kk_k",
+    "raw_source_token": "akuma_236kk_k",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236KK~K\",\"move_group\":\"demon_blade_kick\",\"move_name\":\"Demon Blade Kick\",\"notes_sc\":\"5f extra recovery on whiff; button strength determines angle (LK short, MK mid, HK far); puts airborne opponents into limited juggle state (or maintains juggle state if used mid-combo); extends a large projectile invincible hurtbox on frame 11 until landing (making the divekick easier to anti-air while still being useful for avoiding fireballs)\",\"punish_adv\":\"+4(+14)\",\"raw_source_token\":\"akuma_236kk_k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Blade Kick",
+    "input": "236KK~K",
+    "move_group": "demon_blade_kick",
+    "table_index": 70,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_k_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_067_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t066:akuma_236kk_no_input",
+    "raw_source_token": "akuma_236kk_no_input",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236KK~NO\",\"move_group\":\"demon_low_slash\",\"move_name\":\"Input Demon Low Slash\",\"notes_sc\":\"4f extra recovery on whiff; recovery is in a crouching state until the final frame (final 5f on whiff); causes Akuma to auto-correct if Demon Raid crosses up\",\"punish_adv\":\"HKD +54\",\"raw_source_token\":\"akuma_236kk_no_input\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Input Demon Low Slash",
+    "input": "236KK~NO",
+    "move_group": "demon_low_slash",
+    "table_index": 66,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_2_3_6_k_k_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_064_2_3_6_k_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t068:akuma_236kk_p",
+    "raw_source_token": "akuma_236kk_p",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236KK~P\",\"move_group\":\"demon_guillotine\",\"move_name\":\"Demon Guillotine\",\"notes_sc\":\"Overhead with many active frames, making it good for meaty pressure; strong hitbox and mid-air pause makes it more difficult to anti-air; cannot hit cross-up; frames 4-8 of landing recovery have a crouch-sized hurtbox (but still standing)\",\"punish_adv\":\"KD +37(+41)\",\"raw_source_token\":\"akuma_236kk_p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Demon Guillotine",
+    "input": "236KK~P",
+    "move_group": "demon_guillotine",
+    "table_index": 68,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_p_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_066_p"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t041:akuma_236p_hold",
+    "raw_source_token": "akuma_236p_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[P]\",\"move_group\":\"charged_gou_hadoken\",\"move_name\":\"Gou Hadoken Lv.3\",\"notes_sc\":\"4-hit projectile; 5f extra recovery if projectile does not make contact within the first 21 active frames; projectile speed depends on button strength; button must be held 49f to perform full charge; puts opponents into limited juggle state; extended arm hurtbox is projectile invuln while charging; has an extended leg hurtbox on frames 13~\",\"punish_adv\":\"KD +69\",\"raw_source_token\":\"akuma_236p_hold\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Gou Hadoken Lv.3",
+    "input": "236[P]",
+    "move_group": "charged_gou_hadoken",
+    "table_index": 41,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_030_2_3_6_lp",
+      "gouki_akuma_033_2_3_6_mp",
+      "gouki_akuma_036_2_3_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t040:akuma_236p_partial_hold",
+    "raw_source_token": "akuma_236p_partial_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236{P}\",\"move_group\":\"charged_gou_hadoken\",\"move_name\":\"Gou Hadoken Lv.2\",\"notes_sc\":\"2-hit projectile; projectile speed depends on button strength; button must be held at least 25f and up to 48f for Lv.2 version (total startup 31~54f); projectile hitbox comes out 6f after button release; puts opponents into limited juggle state; useful in certain combo/juggle routes and for zoning; extended arm hurtbox is projectile invuln while charging; has an extended leg hurtbox on frames 13~\",\"punish_adv\":\"KD +55\",\"raw_source_token\":\"akuma_236p_partial_hold\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Gou Hadoken Lv.2",
+    "input": "236{P}",
+    "move_group": "charged_gou_hadoken",
+    "table_index": 40,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_029_2_3_6_lp",
+      "gouki_akuma_032_2_3_6_mp",
+      "gouki_akuma_035_2_3_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t091:akuma_2pppkkk",
+    "raw_source_token": "akuma_2pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"2PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Down Taunt\",\"notes_sc\":\"\\\"滅 (Metsu!)\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_2pppkkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Down Taunt",
+    "input": "2PPPKKK",
+    "move_group": "taunts",
+    "table_index": 91,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t075:akuma_4kkk",
+    "raw_source_token": "akuma_4kkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4KKK\",\"move_group\":\"ashura_senku\",\"move_name\":\"Ashura Senku (Backward)\",\"notes_sc\":\"Cannot be canceled into; travels back ~1/2 screen; no collision box on frames 15-37; no invincibility whatsoever; counter-hit state for entire duration; Distance: 2.128\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_4kkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Ashura Senku (Backward)",
+    "input": "4KKK",
+    "move_group": "ashura_senku",
+    "table_index": 75,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t089:akuma_4pppkkk",
+    "raw_source_token": "akuma_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"You have piqued my interest. Attack if you dare.\\\" \\\"How disappointing.\\\" (if no attack); inputting a Down Taunt (2PPPKKK) on frames 592-628 causes Akuma to pull out a rice ball (gains 3 bars of Super meter and becomes Shin Akuma if fully consumed)\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 89,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t090:akuma_4pppkkk_2pppkkk",
+    "raw_source_token": "akuma_4pppkkk_2pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK~2PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back~Down Taunt\",\"notes_sc\":\"Inputting a Down Taunt on frames 592-628 of Back Taunt causes Akuma to pull out a rice ball; while eating, Akuma gains Super meter on each bite (1/2 bar on frames 931 and 1129, then 1 bar on frames 1353 and 1604); becomes Shin Akuma on frame 1604 (gains access to Hidden Arts: Double Zanku Hadoken, Misogi, and Kongou-Kokuretsuzan); if Akuma is hit before frame 1604, he does not become Shin Akuma\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_4pppkkk_2pppkkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Back~Down Taunt",
+    "input": "4PPPKKK~2PPPKKK",
+    "move_group": "taunts",
+    "table_index": 90,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t025:akuma_5mk_hk",
+    "raw_source_token": "akuma_5mk_hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"5MK~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Bone Crusher Axe Kick\",\"notes_sc\":\"Safe overhead Target Combo that's great for chipping Drive gauge; puts airborne opponents into limited juggle OTG state (can be used in juggles where 5MK connects, like wallsplat or DR~5MK routes); interruptible 5f gap between hits on block (up to 8f at max delay); will not combo on final 2 cancelable frames of 5MK without CH/PC/DR starter making it very difficult to hitconfirm\",\"punish_adv\":\"+5\",\"raw_source_token\":\"akuma_5mk_hk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Bone Crusher Axe Kick",
+    "input": "5MK~HK",
+    "move_group": "target_combos",
+    "table_index": 25,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_006_5_hk",
+      "gouki_akuma_012_2_hk",
+      "gouki_akuma_018_j_hk",
+      "gouki_akuma_021_4_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t024:akuma_5mp_mp",
+    "raw_source_token": "akuma_5mp_mp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~MP\",\"move_group\":\"target_combos\",\"move_name\":\"Viscera Piercer\",\"notes_sc\":\"Important combo/hitconfirm tool; always a true blockstring from 5MP\",\"punish_adv\":\"+3\",\"raw_source_token\":\"akuma_5mp_mp\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Viscera Piercer",
+    "input": "5MP~MP",
+    "move_group": "target_combos",
+    "table_index": 24,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_j_mp_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_015_j_mp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t087:akuma_5pppkkk",
+    "raw_source_token": "akuma_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Witness the abyss before you.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 87,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t076:akuma_6kkk",
+    "raw_source_token": "akuma_6kkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6KKK\",\"move_group\":\"ashura_senku\",\"move_name\":\"Ashura Senku (Forward)\",\"notes_sc\":\"Cannot be canceled into; no collision box on frames 17-35 (can pass through opponent); no invincibility whatsoever, but passing through opponent may cause attack hitbox to whiff; counter-hit state for entire duration; frames 24-38 are cancelable into Oboro Throw follow-up; Distance: 3.663\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_6kkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Ashura Senku (Forward)",
+    "input": "6KKK",
+    "move_group": "ashura_senku",
+    "table_index": 76,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t088:akuma_6pppkkk",
+    "raw_source_token": "akuma_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"Fullscreen proximity guard box on frames 107-570 (prevents opponent from walking back); \\\"Are you prepared to tread down this path? If you are afraid... run.\\\"; \\\"Hmph... you are a disgrace.\\\" (after opponent switches sides, resulting in shorter taunt animation)\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 88,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t053:akuma_j214k",
+    "raw_source_token": "akuma_j214k",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214K\",\"move_group\":\"aerial_tatsumaki_zanku_kyaku\",\"move_name\":\"Aerial Tatsumaki Zanku-Kyaku\",\"notes_sc\":\"During forward jump only; can hit cross-up but does not hit overhead; puts opponent into limited juggle state; KD and block advantage depends on how high it connects; 4f less blockstun on cross-up version; Akuma is in a crouching state on frames 4-16 of landing recovery; lower foot/leg hurtbox is projectile invuln 1f~land\",\"punish_adv\":\"KD +46(+52)\",\"raw_source_token\":\"akuma_j214k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Aerial Tatsumaki Zanku-Kyaku",
+    "input": "j.214K",
+    "move_group": "aerial_tatsumaki_zanku_kyaku",
+    "table_index": 53,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t054:akuma_j214kk",
+    "raw_source_token": "akuma_j214kk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214KK\",\"move_group\":\"aerial_tatsumaki_zanku_kyaku\",\"move_name\":\"Aerial Tatsumaki Zanku-Kyaku\",\"notes_sc\":\"During forward jump only; cannot hit cross-up or against grounded opponents; stops Akuma's jump momentum; performs final kick on hit only, which slams opponent down into a limited juggle OTG state (combos into 623LP/MP/PP on lower connect, but more lenient after high connect like j.MP > j.214KK); KD advantage depends on how high it connects; Akuma is in a crouching state on frames 4-16 of landing recovery; lower foot/leg hurtbox is projectile invuln 1f~land\",\"punish_adv\":\"KD +40(+53)\",\"raw_source_token\":\"akuma_j214kk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Aerial Tatsumaki Zanku-Kyaku",
+    "input": "j.214KK",
+    "move_group": "aerial_tatsumaki_zanku_kyaku",
+    "table_index": 54,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t084:akuma_j214pp",
+    "raw_source_token": "akuma_j214pp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214PP\",\"move_group\":\"double_zanku_hadoken\",\"move_name\":\"Double Zanku Hadoken\",\"notes_sc\":\"Shin Akuma only (Back Taunt~Down Taunt); forward Jump only on airborne frame 9-33; throws 2 consecutive 1-hit fireballs (2nd fireball travels faster and farther); dissipates if Akuma is hit; fireballs travel downward at ~45 degree angle; on hit only, landing recovery after 2f is cancelable into any action except walking/jumping; projectile hitbox is considered an airborne attack (can be avoided with anti-air invuln moves); puts airborne opponents into free juggle state (or maintains existing juggle state); advantage varies significantly depending on timing/spacing/angle (at worst, approximately +5 oB vs. tall characters, +7 oB vs. standard characters, and unsafe on Perfect Parry; always enough hit advantage to link); foot hurtbox is projectile invuln 1f~land; upper half of hitbox only connects on opponents mid-combo\",\"punish_adv\":\"varies\",\"raw_source_token\":\"akuma_j214pp\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Double Zanku Hadoken",
+    "input": "j.214PP",
+    "move_group": "double_zanku_hadoken",
+    "table_index": 84,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t079:akuma_j236236k",
+    "raw_source_token": "akuma_j236236k",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Tenma Gozanku\",\"notes_sc\":\"5-hit Super projectile; during Forward or Neutral Jump only; 10f extra landing recovery on block/whiff; KD advantage varies significantly depending on angle and distance from opponent; puts airborne opponents into limited juggle state; travels down at ~45 degree angle; projectile speed/angle is not affected by button strength; projectile hitbox is considered an airborne attack (can be avoided with anti-air invuln moves); dissipates if Akuma is hit; can be used while OD projectiles are on-screen; leg hurtbox is projectile invuln until landing; crouching state on final recovery frame\",\"punish_adv\":\"KD +49~\",\"raw_source_token\":\"akuma_j236236k\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Tenma Gozanku",
+    "input": "j.236236K",
+    "move_group": "super_arts",
+    "table_index": 79,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t043:akuma_j236p",
+    "raw_source_token": "akuma_j236p",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236P\",\"move_group\":\"zanku_hadoken\",\"move_name\":\"Zanku Hadoken\",\"notes_sc\":\"Forward Jump only on airborne frame 9-33; 1-hit projectile; dissipates if Akuma is hit; button strength determines fireball trajectory (LP ~35 degrees / MP ~45 degrees, HP ~50 degrees); on hit only, landing recovery after 2f is cancelable into any action except walking/jumping; projectile hitbox is considered an airborne attack (can be avoided with anti-air invuln moves); puts airborne opponents into free juggle state (or maintains existing juggle state); advantage varies significantly depending on timing/spacing/angle (at worst, approximately -5 oB vs. tall characters, -3 oB vs. standard characters, and unsafe on Perfect Parry; always enough hit advantage to link); foot hurtbox is projectile invuln 1f~land; upper half of hitbox only connects on opponents mid-combo\",\"punish_adv\":\"varies\",\"raw_source_token\":\"akuma_j236p\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Zanku Hadoken",
+    "input": "j.236P",
+    "move_group": "zanku_hadoken",
+    "table_index": 43,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t044:akuma_j236pp",
+    "raw_source_token": "akuma_j236pp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236PP\",\"move_group\":\"zanku_hadoken\",\"move_name\":\"Zanku Hadoken\",\"notes_sc\":\"Forward/Neutral Jump only on airborne frame 9-33; 3-hit OD projectile; dissipates if Akuma is hit; creates stationary projectile on frames 6-20, then shoots downward at ~50 degree angle (this projectile will only have 2 hits if the initial hitbox collided with opponent); on hit only, landing recovery after 2f is cancelable into any action except walking/jumping; projectile hitbox is considered an airborne attack (can be avoided with anti-air invuln moves); puts airborne opponents into free juggle state (or maintains existing juggle state); puts grounded opponents into limited juggle state; advantage varies significantly depending on timing/spacing/angle (at worst, approximately -3 oB vs. tall characters, -1 oB vs. standard characters, but +1~3 if all hits Perfect Parried); foot hurtbox is projectile invuln 1f~land; upper half of hitbox only connects on opponents mid-combo\",\"punish_adv\":\"KD~\",\"raw_source_token\":\"akuma_j236pp\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Zanku Hadoken",
+    "input": "j.236PP",
+    "move_group": "zanku_hadoken",
+    "table_index": 44,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t023:akuma_j2mk",
+    "raw_source_token": "akuma_j2mk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.2MK\",\"move_group\":\"normals\",\"move_name\":\"Tenmaku Blade Kick\",\"notes_sc\":\"Forward Jump only; 6f extra landing recovery on whiff; great tool for mixing up jump timings, especially against characters that rely on non-invincible anti-airs; much stronger hurtbox compared to other divekicks; cannot hit cross-up; all landing recovery after the first 2 frames has a crouch-sized hurtbox, and the final recovery frame is in a crouching state; kicking leg is projectile invuln on frame 14 until landing\",\"punish_adv\":\"+5(+15)\",\"raw_source_token\":\"akuma_j2mk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Tenmaku Blade Kick",
+    "input": "j.2MK",
+    "move_group": "normals",
+    "table_index": 23,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t014:akuma_jmp",
+    "raw_source_token": "akuma_jmp",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.MP\",\"move_group\":\"normals\",\"move_name\":\"Jumping Medium Punch\",\"notes_sc\":\"Puts airborne opponents into limited juggle state but no juggle potential on its own; lenient cancel window to juggle into j.214K/j.236P/Air SA1; lower body projectile invuln 8-23f (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+13(+15)\",\"raw_source_token\":\"akuma_jmp\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Jumping Medium Punch",
+    "input": "j.MP",
+    "move_group": "normals",
+    "table_index": 14,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "gouki_j_mp_followup",
+    "conflicting_move_ids": [
+      "gouki_akuma_015_j_mp"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212932Z-447e18a5",
+    "source_row_id": "20260412T212932Z-447e18a5:t033:akuma_mpmk",
+    "raw_source_token": "akuma_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"akuma_mpmk\"}",
+    "move_id": null,
+    "character_slug": "gouki_akuma",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 33,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "gouki_akuma_073_lplk",
+      "gouki_akuma_080_5_6_lplk",
+      "gouki_akuma_084_hphk",
+      "gouki_akuma_087_mpmk",
+      "gouki_akuma_088_mpmk",
+      "gouki_akuma_089_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

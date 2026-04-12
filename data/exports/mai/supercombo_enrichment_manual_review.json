@@ -1,0 +1,1161 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t009:mai_2hp",
+    "raw_source_token": "mai_2hp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"2HP\",\"move_group\":\"normals\",\"move_name\":\"Crouching Heavy Punch\",\"notes_sc\":\"2 hits; first hit has great hitbox priority for counter-poking and pulls the opponent closer on hit/block; useful as an approach or combo extension with Drive Rush; Counter-hit/Punish Counter advantage carries through both hits\",\"punish_adv\":\"+8\",\"raw_source_token\":\"mai_2hp\"}",
+    "move_id": "mai_011_2_hp",
+    "character_slug": "mai",
+    "move_name": "Crouching Heavy Punch",
+    "input": "2HP",
+    "move_group": "normals",
+    "table_index": 9,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t081:mai_214214p",
+    "raw_source_token": "mai_214214p",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"214214P\",\"move_group\":\"super_arts\",\"move_name\":\"Shiranui Ryuu: Enbu Ada Zakura\",\"notes_sc\":\"1st hit causes cinematic; non-cinematic version does less damage (varies based on how many hits connect), but can juggle into 623K to recover some lost damage; cinematic time regenerates ~2 Drive bars for Mai; 3f startup when canceled from 236K/KK only; slower startup makes it risky as a reversal (many light normals can be safe with meaty timing)\",\"punish_adv\":\"HKD +19 (KD +52)\",\"raw_source_token\":\"mai_214214p\"}",
+    "move_id": "mai_076_2_1_4_2_1_4_p",
+    "character_slug": "mai",
+    "move_name": "Shiranui Ryuu: Enbu Ada Zakura",
+    "input": "214214P",
+    "move_group": "super_arts",
+    "table_index": 81,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t082:mai_214214p(ca)",
+    "raw_source_token": "mai_214214p(ca)",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"C\",\"input\":\"214214P\",\"move_group\":\"super_arts\",\"move_name\":\"Shiranui Ryuu: Enbu Ada Zakura (CA)\",\"notes_sc\":\"1st hit causes cinematic; non-cinematic version does less damage (varies based on how many hits connect), but can juggle into 623K to recover some lost damage; available at 25% HP or below; cinematic time regenerates ~2.1 Drive bars for Mai; 3f startup when canceled from 236K/KK only; slower startup makes it risky as a reversal (many light normals can be safe with meaty timing)\",\"punish_adv\":\"HKD +20 (KD +52)\",\"raw_source_token\":\"mai_214214p(ca)\"}",
+    "move_id": "mai_077_2_1_4_2_1_4_p",
+    "character_slug": "mai",
+    "move_name": "Shiranui Ryuu: Enbu Ada Zakura (CA)",
+    "input": "214214P",
+    "move_group": "super_arts",
+    "table_index": 82,
+    "binding_class": "C",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t051:mai_214hp",
+    "raw_source_token": "mai_214hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214HP\",\"move_group\":\"ryuuenbu\",\"move_name\":\"Ryuuenbu\",\"notes_sc\":\"2 hits, () refers to startup of 2nd hit from longer range; whiffs on crouching opponents unless they extend a vertical hurtbox (unsafe on hit if 1st hit connects like this); puts opponent into a limited juggle state; head hurtbox is anti-air invincible on frames 6-17 (slow but rewarding anti-air); 2nd hit (frames 27-36) is a strike hitbox that can dissipate standard 1-hit projectiles\",\"punish_adv\":\"KD +43\",\"raw_source_token\":\"mai_214hp\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Ryuuenbu",
+    "input": "214HP",
+    "move_group": "ryuuenbu",
+    "table_index": 51,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_054_2_1_4_hp",
+      "mai_055_2_1_4_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t052:mai_214hp_flame",
+    "raw_source_token": "mai_214hp_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214HP\",\"move_group\":\"ryuuenbu\",\"move_name\":\"Ryuuenbu (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; 2 hits, () refers to startup of 2nd hit from longer range; whiffs on crouching opponents unless they extend a vertical hurtbox (unsafe on hit if 1st hit connects like this); puts opponent into a limited juggle state (higher launch gives more follow-up options like 236KK launch or Flame 214MP safe jump); head hurtbox is anti-air invincible on frames 6-17 (slow but rewarding anti-air); 2nd hit (frames 27-36) is a strike hitbox that can dissipate standard 1-hit projectiles; incurs no extra damage scaling, making it a significantly stronger combo tool than the non-flame version; 1st active frame can only hit grounded opponents (allows it to combo from 5LP)\",\"punish_adv\":\"KD +47\",\"raw_source_token\":\"mai_214hp_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Ryuuenbu (Flame)",
+    "input": "214HP",
+    "move_group": "ryuuenbu",
+    "table_index": 52,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_054_2_1_4_hp",
+      "mai_055_2_1_4_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t049:mai_214mp",
+    "raw_source_token": "mai_214mp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214MP\",\"move_group\":\"ryuuenbu\",\"move_name\":\"Ryuuenbu\",\"notes_sc\":\"2 hits, () refers to startup of 2nd hit from longer range; similar utility to LP version but grants a knockdown instead of a standing reset; combos from 5LP as a decent light chain ender; 1st hit can whiff when canceled from ranged pokes, making it unsafe; 2nd hit (frames 25-31) is a strike hitbox that can dissipate standard 1-hit projectiles; can be spaced relatively safely on block (only Ken SA2 can punish at max range)\",\"punish_adv\":\"KD +35\",\"raw_source_token\":\"mai_214mp\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Ryuuenbu",
+    "input": "214MP",
+    "move_group": "ryuuenbu",
+    "table_index": 49,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_052_2_1_4_mp",
+      "mai_053_2_1_4_mp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t050:mai_214mp_flame",
+    "raw_source_token": "mai_214mp_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214MP\",\"move_group\":\"ryuuenbu\",\"move_name\":\"Ryuuenbu (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; 2 hits, () refers to startup of 2nd hit from longer range; similar utility to LP version (grants a combo from 5LP as a decent light chain ender); forward movement ensures both hits connect when canceled (except in some whiff punish scenarios); 2nd hit (frames 25-31) is a strike hitbox that can dissipate standard 1-hit projectiles; can be spaced relatively safely on block (max range can be -4 unlike the non-flame version due to forward movement during active frames); puts opponents into limited juggle state (can juggle 623MK or SA1); sets up a perfect KD +42 safe jump on grounded or juggled hit (unless spaced out at max range where it becomes +44)\",\"punish_adv\":\"KD +42(+44)\",\"raw_source_token\":\"mai_214mp_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Ryuuenbu (Flame)",
+    "input": "214MP",
+    "move_group": "ryuuenbu",
+    "table_index": 50,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_052_2_1_4_mp",
+      "mai_053_2_1_4_mp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t053:mai_214pp",
+    "raw_source_token": "mai_214pp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214PP\",\"move_group\":\"ryuuenbu\",\"move_name\":\"Ryuuenbu\",\"notes_sc\":\"3 hits; puts opponent into a limited juggle state (free juggle state if only the final hit connects); 2nd/3rd hits (frames 30-34 and 42-46) are strike hitboxes that can dissipate 1-hit OD projectiles; 8f extra recovery on block; Super cancels always whiff or give partial animation (should always manually link the juggle afterward unless the opponent is armoring through your attack)\",\"punish_adv\":\"KD +48\",\"raw_source_token\":\"mai_214pp\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Ryuuenbu",
+    "input": "214PP",
+    "move_group": "ryuuenbu",
+    "table_index": 53,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_056_2_1_4_p_p",
+      "mai_057_2_1_4_p_p",
+      "mai_068_2_1_4_p_p",
+      "mai_069_2_1_4_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t054:mai_214pp_flame",
+    "raw_source_token": "mai_214pp_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"214PP\",\"move_group\":\"ryuuenbu\",\"move_name\":\"Ryuuenbu (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; 3 hits; puts opponent into a limited juggle state (free juggle state if only the final hit connects); allows more lenient juggle routes than non-flame version (Juggle Increase of 1 instead of 2); 2nd/3rd hits (frames 30-34 and 42-46) are strike hitboxes that can dissipate 1-hit OD projectiles; 8f extra recovery on block; Super cancels always whiff or give partial animation (should always manually link the juggle afterward unless the opponent is armoring through your attack)\",\"punish_adv\":\"KD +48\",\"raw_source_token\":\"mai_214pp_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Ryuuenbu (Flame)",
+    "input": "214PP",
+    "move_group": "ryuuenbu",
+    "table_index": 54,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_056_2_1_4_p_p",
+      "mai_057_2_1_4_p_p",
+      "mai_068_2_1_4_p_p",
+      "mai_069_2_1_4_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t077:mai_236236k",
+    "raw_source_token": "mai_236236k",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Chou Hissatsu Shinobi Bachi\",\"notes_sc\":\"11f extra recovery on block; solid range, but a short invincibility window that makes it difficult to use against slower projectiles; deals less damage from long range due to earlier hits whiffing; good reversal and juggle ender; generally should not be canceled into from OD specials (214PP: manually juggle afterward, 236KK: juggle j.MP > Air SA2)\",\"punish_adv\":\"KD +33\",\"raw_source_token\":\"mai_236236k\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Chou Hissatsu Shinobi Bachi",
+    "input": "236236K",
+    "move_group": "super_arts",
+    "table_index": 77,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "mai_3_6_2_3_6_k_followup",
+    "conflicting_move_ids": [
+      "mai_073_2_3_6_2_3_6_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t078:mai_236236k_flame",
+    "raw_source_token": "mai_236236k_flame",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Chou Hissatsu Shinobi Bachi (Flame)\",\"notes_sc\":\"Enhanced version for 1 Flame Stock; 6f extra recovery on block; moves forward much more quickly and has extra projectile invincibility compared to the standard version, making it an incredible anti-fireball and whiff punish tool; good reversal and juggle ender; deals less damage from long range due to earlier hits whiffing; puts opponents into limited juggle state (can juggle 623LK in the corner, and higher juggle/anti-air connects can give better juggles (e.g. midscreen Flame 214PP, juggle Flame SA2 + Flame 623KK); generally should not be canceled into from OD specials (214PP: manually juggle afterward, 236KK: juggle j.MP > Air SA2)\",\"punish_adv\":\"KD +38\",\"raw_source_token\":\"mai_236236k_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Chou Hissatsu Shinobi Bachi (Flame)",
+    "input": "236236K",
+    "move_group": "super_arts",
+    "table_index": 78,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "mai_3_6_2_3_6_k_followup",
+    "conflicting_move_ids": [
+      "mai_073_2_3_6_2_3_6_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t059:mai_236hk",
+    "raw_source_token": "mai_236hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236HK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi\",\"notes_sc\":\"Only the first 3 active frames of the 2nd hit are SA3 cancelable; puts the opponent into a limited juggle state (allows some follow-ups after high-connect juggles); SA3 cancel can occur on whiff when the first cartwheel connects (allows SA3 to connect during these high-connect juggles when the cancel window would normally have passed); combos from medium/heavy normals and Punish Counter 5LP, making it a solid combo ender and a great corner carry tool; reaches beyond full screen length; can be very plus if spaced perfectly or timed as a meaty (but very reactable startup in this scenario); 2nd hit active frames 7-15 whiff on crouching opponents unless they extend a vertical hurtbox; this makes it more interruptible by crouching attacks at long range, but makes it at least +2 when crouch blocked\",\"punish_adv\":\"KD +22(+38)\",\"raw_source_token\":\"mai_236hk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi",
+    "input": "236HK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 59,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_062_2_3_6_hk",
+      "mai_063_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t060:mai_236hk_flame",
+    "raw_source_token": "mai_236hk_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236HK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; only the first 7 active frames of the 2nd hit are SA3 cancelable; puts the opponent into a limited juggle state (allows some follow-ups after high-connect juggles); SA3 cancel can occur on whiff when the first cartwheel connects (allows SA3 to connect during these high-connect juggles when the cancel window would normally have passed); combos from medium/heavy normals and Punish Counter 5LP, making it a solid combo ender and a great corner carry tool; reaches beyond full screen length; can be very plus if spaced perfectly or timed as a meaty (but very reactable startup in this scenario); 2nd hit active frames 7-15 whiff on crouching opponents unless they extend a vertical hurtbox; this makes it more interruptible by crouching attacks at long range, but makes it at least +2 when crouch blocked\",\"punish_adv\":\"KD +22(+38)\",\"raw_source_token\":\"mai_236hk_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi (Flame)",
+    "input": "236HK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 60,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_062_2_3_6_hk",
+      "mai_063_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t061:mai_236kk",
+    "raw_source_token": "mai_236kk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236KK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi\",\"notes_sc\":\"Stops after the 2nd hit on block; on hit, puts opponent into a limited juggle state (can follow up with air normals/specials/supers on frames 54-74); canceling the 2nd hit into SA2 whiffs (partial connect in the corner); Mai still performs the jump animation on whiff, allowing her to come down with an air normal (mostly a gimmick during charged Kachousen pressure); only the first active frame of the 2nd hit can connect on grounded opponents (the remaining 16 active frames only hit airborne); combos from 5LP, making it a useful damage/corner carry option even from light starters\",\"punish_adv\":\"KD +27\",\"raw_source_token\":\"mai_236kk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi",
+    "input": "236KK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 61,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_064_2_3_6_k_k",
+      "mai_065_2_3_6_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t062:mai_236kk_flame",
+    "raw_source_token": "mai_236kk_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236KK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; no extra damage scaling, making it a much stronger combo route than regular version; stops after the 2nd hit on block; on hit, puts opponent into a limited juggle state (can follow up with air normals/specials/supers on frames 54-74); canceling the 2nd hit into SA2 whiffs (partial connect in the corner); Mai still performs the jump animation on whiff, allowing her to come down with an air normal (mostly a gimmick during charged Kachousen pressure); only the first active frame of the 2nd hit can connect on grounded opponents (the remaining 16 active frames only hit airborne); combos from 5LP, making it a useful damage/corner carry option even from light starters\",\"punish_adv\":\"KD +27\",\"raw_source_token\":\"mai_236kk_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi (Flame)",
+    "input": "236KK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 62,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_064_2_3_6_k_k",
+      "mai_065_2_3_6_k_k"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t055:mai_236lk",
+    "raw_source_token": "mai_236lk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236LK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi\",\"notes_sc\":\"Only the first 6 active frames of the 2nd hit are SA3 cancelable; puts the opponent into a limited juggle state (allows some follow-ups after high-connect juggles); SA3 cancel can occur on whiff when the first cartwheel connects (allows SA3 to connect during these high-connect juggles when the cancel window would normally have passed); combos from any light normal, making it Mai's most consistent combo ender and a great corner carry tool; reaches about 80% screen length; can be very plus if spaced perfectly or timed as a meaty (but very reactable startup in this scenario); 2nd hit active frames 7-13 whiff on crouching opponents unless they extend a vertical hurtbox; this makes it more interruptible by crouching attacks at long range, but makes it at least +3 when crouch blocked\",\"punish_adv\":\"KD +27(+43)\",\"raw_source_token\":\"mai_236lk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi",
+    "input": "236LK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 55,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_058_2_3_6_lk",
+      "mai_059_2_3_6_lk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t056:mai_236lk_flame",
+    "raw_source_token": "mai_236lk_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236LK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; only the first 7 active frames of the 2nd hit are SA3 cancelable; puts the opponent into a limited juggle state (allows some follow-ups after high-connect juggles); SA3 cancel can occur on whiff when the first cartwheel connects (allows SA3 to connect during these high-connect juggles when the cancel window would normally have passed); combos from any light normal, making it Mai's most consistent combo ender and a great corner carry tool; reaches about 80% screen length; can be very plus if spaced perfectly or timed as a meaty (but very reactable startup in this scenario); 2nd hit active frames 7-13 whiff on crouching opponents unless they extend a vertical hurtbox; this makes it more interruptible by crouching attacks at long range, but makes it at least +3 when crouch blocked\",\"punish_adv\":\"KD +27(+43)\",\"raw_source_token\":\"mai_236lk_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi (Flame)",
+    "input": "236LK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 56,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_058_2_3_6_lk",
+      "mai_059_2_3_6_lk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t057:mai_236mk",
+    "raw_source_token": "mai_236mk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236MK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi\",\"notes_sc\":\"Only the first 3 active frames of the 2nd hit are SA3 cancelable; puts the opponent into a limited juggle state (allows some follow-ups after high-connect juggles); SA3 cancel can occur on whiff when the first cartwheel connects (allows SA3 to connect during these high-connect juggles when the cancel window would normally have passed); combos from medium/heavy normals and Punish Counter light normals, making it a solid combo ender and a great corner carry tool; reaches about 99% screen length (barely whiffs on fullscreen standing opponents); can be very plus if spaced perfectly or timed as a meaty (but very reactable startup in this scenario); 2nd hit active frames 7-15 whiff on crouching opponents unless they extend a vertical hurtbox; this makes it more interruptible by crouching attacks at long range, but makes it at least +3 when crouch blocked; sets up a safe jab vs. 9f or slower reversals (close range hit grounded hit into Dash + 5LP or 2LP)\",\"punish_adv\":\"KD +23(+39)\",\"raw_source_token\":\"mai_236mk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi",
+    "input": "236MK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 57,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_060_2_3_6_mk",
+      "mai_061_2_3_6_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t058:mai_236mk_flame",
+    "raw_source_token": "mai_236mk_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236MK\",\"move_group\":\"hissatsu_shinobi_bachi\",\"move_name\":\"Hissatsu Shinobi Bachi (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; only the first 7 active frames of the 2nd hit are SA3 cancelable; puts the opponent into a limited juggle state (allows some follow-ups after high-connect juggles); SA3 cancel can occur on whiff when the first cartwheel connects (allows SA3 to connect during these high-connect juggles when the cancel window would normally have passed); combos from medium/heavy normals and Punish Counter light normals, making it a solid combo ender and a great corner carry tool; reaches about 99% screen length (barely whiffs on fullscreen standing opponents); can be very plus if spaced perfectly or timed as a meaty (but very reactable startup in this scenario); 2nd hit active frames 7-15 whiff on crouching opponents unless they extend a vertical hurtbox; this makes it more interruptible by crouching attacks at long range, but makes it at least +3 when crouch blocked; sets up a safe jab vs. 9f or slower reversals (close range hit grounded hit into Dash + 5LP or 2LP)\",\"punish_adv\":\"KD +23(+39)\",\"raw_source_token\":\"mai_236mk_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hissatsu Shinobi Bachi (Flame)",
+    "input": "236MK",
+    "move_group": "hissatsu_shinobi_bachi",
+    "table_index": 58,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_060_2_3_6_mk",
+      "mai_061_2_3_6_mk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t042:mai_236p_flame_hold",
+    "raw_source_token": "mai_236p_flame_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[P]\",\"move_group\":\"kachousen_hold\",\"move_name\":\"Kachousen (Flame+Hold)\",\"notes_sc\":\"Charged/Enhanced version acts as a standard 2-hit projectile (does not dissipate on contact with strike hitboxes); bounces upward on contact with the opponent, then drops downward for a follow-up hit (this bounce is higher/slower than the non-flame version); () refers to damage/hitstun values of the bouncing fan follow-up on hit or block; the listed frame advantage refers to the first hit at point blank range before the follow-up connects; any hit that connects after the follow-up bounce overwrites the fan's hitstun/blockstun; projectile speed depends on button strength (LP slow / MP medium / HP fast); bounce height depends on button strength (LP low / MP medium / HP high); the time difference between the first and second fan on hit or block varies based on this bounce height; puts airborne opponents into a limited juggle state; Counter-hit/Punish Counter advantage carries through both hits; Mai has an extended hurtbox vulnerable to strikes on her leg (32-62f) and arm (32-48f); LP Version frame gap before follow-up bounce: 10f stand / 16f crouch (on hit), 12f stand / 18f crouch (on block); MP Version frame gap before follow-up bounce: 27f stand / 33f crouch (on hit), 29f stand / 35f crouch (on block); HP Version frame gap before follow-up bounce: 39f stand / 45f crouch (on hit), 41f stand / 47f crouch (on block); all gaps are 1f smaller vs. standing Dee Jay, 2f smaller vs. standing JP/Marisa/Sagat/Zangief; the bouncing fan does not trigger proximity guard (allowing back walk) and counts as an air attack (allows anti-air invuln moves to pass through)\",\"punish_adv\":\"+5\",\"raw_source_token\":\"mai_236p_flame_hold\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Kachousen (Flame+Hold)",
+    "input": "236[P]",
+    "move_group": "kachousen_hold",
+    "table_index": 42,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_025_2_3_6_lp",
+      "mai_029_2_3_6_mp",
+      "mai_033_2_3_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t041:mai_236p_hold",
+    "raw_source_token": "mai_236p_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[P]\",\"move_group\":\"kachousen_hold\",\"move_name\":\"Kachousen (Hold)\",\"notes_sc\":\"Charged version acts as a standard 1-hit projectile (does not dissipate on contact with strike hitboxes); puts airborne opponents into a limited juggle state; bounces upward on contact with the opponent, then drops downward for a follow-up hit; () refers to damage/hitstun values of the bouncing fan follow-up on hit or block; the listed frame advantage refers to the first hit at point blank range before the follow-up connects; any hit that connects after the follow-up bounce overwrites the fan's hitstun/blockstun; projectile speed depends on button strength (LP slow / MP medium / HP fast); bounce height depends on button strength (LP low / MP medium / HP high); the time difference between the first and second fan on hit or block varies based on this bounce height; Mai has an extended hurtbox vulnerable to strikes on her leg (32-62f) and arm (32-48f); LP Version frame gap before follow-up bounce: 2f stand / 8f crouch (on hit), 6f stand / 12f crouch (on block); MP Version frame gap before follow-up bounce: 19f stand / 25f crouch (on hit), 23f stand / 29f crouch (on block); HP Version frame gap before follow-up bounce: 31f stand / 37f crouch (on hit), 35f stand / 41f crouch (on block); all gaps are 1f smaller vs. standing Dee Jay, and 2f smaller vs. standing JP/Marisa/Sagat/Zangief which allows the LP bounce follow-up to naturally combo; tall characters cannot punish a close range 236[LP] with Throw before the bouncing fan connects, making them more susceptible to corner fan pressure (but they can weaken the mixup by trading with an immediate crouching medium/heavy normal); the bouncing fan does not trigger proximity guard (allowing back walk) and counts as an air attack (allows anti-air invuln moves to pass through)\",\"punish_adv\":\"+3\",\"raw_source_token\":\"mai_236p_hold\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Kachousen (Hold)",
+    "input": "236[P]",
+    "move_group": "kachousen_hold",
+    "table_index": 41,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_025_2_3_6_lp",
+      "mai_029_2_3_6_mp",
+      "mai_033_2_3_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t044:mai_236pp_flame_hold",
+    "raw_source_token": "mai_236pp_flame_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[PP]\",\"move_group\":\"kachousen_hold\",\"move_name\":\"Kachousen (Flame+Hold)\",\"notes_sc\":\"Throws 2 fans that bounce on contact with the opponent for up to 4 hits total; has OD priority and cannot be dissipated by a strike; all 4 fan hits form a true combo or blockstring after the first one connects; the listed frame advantage is for point blank standing(crouching) characters (slightly less advantage taller characters like Dee Jay/JP/Marisa/Sagat/Zangief); cancelable into a follow-up (~6P) that throws 2 additional fans at no extra cost; puts airborne opponents into a limited juggle state (does not affect any existing juggle state); only the first hit is cancelable to SA2/SA3; Mai has an extended hurtbox vulnerable to strikes on her arm and head (28-58f); the bouncing fan does not trigger proximity guard (allowing back walk) and counts as an air attack (allows anti-air invuln moves to pass through)\",\"punish_adv\":\"+45(+52)\",\"raw_source_token\":\"mai_236pp_flame_hold\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Kachousen (Flame+Hold)",
+    "input": "236[PP]",
+    "move_group": "kachousen_hold",
+    "table_index": 44,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_037_2_3_6_p_p",
+      "mai_039_2_3_6_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t043:mai_236pp_hold",
+    "raw_source_token": "mai_236pp_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[PP]\",\"move_group\":\"kachousen_hold\",\"move_name\":\"Kachousen (Hold)\",\"notes_sc\":\"Throws 2 single-hit fans (these fans do NOT bounce on contact with the opponent); has OD priority and cannot be dissipated by a strike; cancelable into a follow-up (~6P) that throws 2 additional fans at no extra cost; puts airborne opponents into a limited juggle state (does not affect any existing juggle state); Counter-hit/Punish Counter advantage carries through both hits; only the first hit is cancelable to SA2/SA3; Mai has an extended hurtbox vulnerable to strikes on her arm and head (28-58f)\",\"punish_adv\":\"+18\",\"raw_source_token\":\"mai_236pp_hold\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Kachousen (Hold)",
+    "input": "236[PP]",
+    "move_group": "kachousen_hold",
+    "table_index": 43,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_037_2_3_6_p_p",
+      "mai_039_2_3_6_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t045:mai_236pp_hold_6p",
+    "raw_source_token": "mai_236pp_hold_6p",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[PP]~6P\",\"move_group\":\"kachousen_hold\",\"move_name\":\"Midare Kachousen\",\"notes_sc\":\"Throws an additional 2-hit projectile with OD priority (does not dissipate on contact with strike hitboxes); on contact with the opponent, the fan splits into 2 additional projectiles and bounces up before hitting on the way down; the two falling fans bounce at staggered heights, with the second hitting much later than the first; if 1 hit of the first Midare Kachousen is dissipated then the low bouncing fan does not appear; puts opponents into a limited juggle state if the initial Midare Kachousen fan connects, while the falling fans keep the opponent in grounded hitstun; () refers to damage/hitstun values of the bouncing follow-ups on hit or block; any hit that connects after the follow-up bounce overwrites the fan's hitstun/blockstun; Mai has an extended hurtbox vulnerable to strikes on her arm/head (28-79f); the listed frame advantage assumes Mai is at point blank range; there are small interruptible gaps on block before Midare Kachousen or the bouncing follow-ups connect; the exact gaps between falling fans varies greatly depending on spacing, standing/crouching, and character height; the bouncing fan does not trigger proximity guard (allowing back walk) and counts as an air attack (allows anti-air invuln moves to pass through)\",\"punish_adv\":\"KD +61~\",\"raw_source_token\":\"mai_236pp_hold_6p\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Midare Kachousen",
+    "input": "236[PP]~6P",
+    "move_group": "kachousen_hold",
+    "table_index": 45,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_040_6_p",
+      "mai_041_6_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t046:mai_236pp_hold_6p_flame",
+    "raw_source_token": "mai_236pp_hold_6p_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[PP]~6P\",\"move_group\":\"kachousen_hold\",\"move_name\":\"Midare Kachousen (Flame)\",\"notes_sc\":\"Throws an additional 2-hit projectile with OD priority (does not dissipate on contact with strike hitboxes); on contact with the opponent, the fan splits into 2 additional projectiles and bounces up before hitting on the way down; the two falling fans bounce at staggered heights, with the second hitting much later than the first; if 1 hit of the first Midare Kachousen is dissipated then the low bouncing fan does not appear; puts opponents into a limited juggle state if the initial Midare Kachousen fan connects, while the falling fans keep the opponent in grounded hitstun; () refers to damage/hitstun values of the bouncing follow-ups on hit or block; any hit that connects after the follow-up bounce overwrites the fan's hitstun/blockstun; Mai has an extended hurtbox vulnerable to strikes on her arm/head (28-79f); the listed frame advantage assumes Mai is at point blank range; all hits up to the first bouncing fan are a true blockstring (advantage is calculated from that point, ignoring the final delayed fan); the bouncing fan does not trigger proximity guard (allowing back walk) and counts as an air attack (allows anti-air invuln moves to pass through)\",\"punish_adv\":\"KD +60~\",\"raw_source_token\":\"mai_236pp_hold_6p_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Midare Kachousen (Flame)",
+    "input": "236[PP]~6P",
+    "move_group": "kachousen_hold",
+    "table_index": 46,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_040_6_p",
+      "mai_041_6_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t086:mai_4pppkkk",
+    "raw_source_token": "mai_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"Hey everyone, get ready to feast your eyes on... the strongest Shiranui fighter around!\\\"; creates an 8-hit projectile on the ground that launches on the final hit; holding any button will delay the fireworks and lead to a more powerful version if fully held\",\"punish_adv\":\"KD -171\",\"raw_source_token\":\"mai_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 86,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t087:mai_4pppkkk_hold",
+    "raw_source_token": "mai_4pppkkk_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4[PPPKKK]\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"Hey everyone, get ready to feast your eyes on... the most ravishing Shiranui fighter around! Thanks everyone!\\\"; hold any button for this enhanced taunt; creates an 8-hit projectile on the ground that launches on the final hit; the final hit has significantly better damage and drive damage compared to the unheld version\",\"punish_adv\":\"KD -148\",\"raw_source_token\":\"mai_4pppkkk_hold\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Back Taunt",
+    "input": "4[PPPKKK]",
+    "move_group": "taunts",
+    "table_index": 87,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t021:mai_5lk_lk",
+    "raw_source_token": "mai_5lk_lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5LK~LK\",\"move_group\":\"target_combos\",\"move_name\":\"Hien Ren Kyaku 1\",\"notes_sc\":\"() refers to scaled damage; forces stand on hit; stopping after the second LK can be useful in combo extensions where a bouncing fan is falling onto the opponent; always a true blockstring\",\"punish_adv\":\"+2\",\"raw_source_token\":\"mai_5lk_lk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hien Ren Kyaku 1",
+    "input": "5LK~LK",
+    "move_group": "target_combos",
+    "table_index": 21,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "mai_lk_followup",
+    "conflicting_move_ids": [
+      "mai_020_lk_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t022:mai_5lk_lk_lk",
+    "raw_source_token": "mai_5lk_lk_lk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5LK~LK~LK\",\"move_group\":\"target_combos\",\"move_name\":\"Hien Ren Kyaku 2\",\"notes_sc\":\"() refers to scaled damage; always a true blockstring; bounces far back into the air, usually keeping her safe due to pushback; can cancel the airborne frames into j.214P or Air SA2 (can be delayed significantly, allowing Mai to mix up her approach and gain better frame advantage); the divekick/SA2 can also let Mai avoid some moves that would otherwise punish the bounce; delaying too long will cause the follow-up to drop in combos (59f is the longest total hitconfirm window that still combos); divekick follow-up can lead to +42 safe jump if the initial 5LK is spaced out (e.g. DR~6MP, 5LK or DR~5LP, 5LP, 5LK)\",\"punish_adv\":\"-\",\"raw_source_token\":\"mai_5lk_lk_lk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hien Ren Kyaku 2",
+    "input": "5LK~LK~LK",
+    "move_group": "target_combos",
+    "table_index": 22,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "mai_lk_followup",
+    "conflicting_move_ids": [
+      "mai_020_lk_lk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t083:mai_5pppkkk",
+    "raw_source_token": "mai_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Hey, don't mess up!\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"mai_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 83,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t084:mai_5pppkkk_2pppkkk",
+    "raw_source_token": "mai_5pppkkk_2pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK~2PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Hey, what are you looking at? Up here.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"mai_5pppkkk_2pppkkk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK~2PPPKKK",
+    "move_group": "taunts",
+    "table_index": 84,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t067:mai_623hk",
+    "raw_source_token": "mai_623hk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"623HK\",\"move_group\":\"hishou_ryuuenjin\",\"move_name\":\"Hishou Ryuuenjin\",\"notes_sc\":\"Mid/farther range anti-air and juggle ender (slower startup limits its use in some juggle routes); cannot hit cross-up; puts opponents into limited juggle state on hit; first hit can whiff if used too early as an anti-air; second hit whiffs on block (except vs. standing Dee Jay/JP/Marisa/Sagat/Zangief) resulting in worse block advantage and reduced chip/drive damage\",\"punish_adv\":\"KD +31\",\"raw_source_token\":\"mai_623hk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hishou Ryuuenjin",
+    "input": "623HK",
+    "move_group": "hishou_ryuuenjin",
+    "table_index": 67,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_046_6_2_3_hk",
+      "mai_047_6_2_3_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t068:mai_623hk_flame",
+    "raw_source_token": "mai_623hk_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"623HK\",\"move_group\":\"hishou_ryuuenjin\",\"move_name\":\"Hishou Ryuuenjin (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock in exchange for slightly better damage, juggle potential, and KD advantage; mid/farther range anti-air and juggle ender (slower startup limits its use in some juggle routes); cannot hit cross-up; puts opponents into limited juggle state on hit; first/second hits can whiff if used too early as an anti-air; last 2 hits whiff on block (except vs. standing Dee Jay/JP/Marisa/Sagat/Zangief) resulting in worse block advantage and reduced chip/drive damage\",\"punish_adv\":\"KD +32\",\"raw_source_token\":\"mai_623hk_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hishou Ryuuenjin (Flame)",
+    "input": "623HK",
+    "move_group": "hishou_ryuuenjin",
+    "table_index": 68,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_046_6_2_3_hk",
+      "mai_047_6_2_3_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t063:mai_623lk",
+    "raw_source_token": "mai_623lk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"623LK\",\"move_group\":\"hishou_ryuuenjin\",\"move_name\":\"Hishou Ryuuenjin\",\"notes_sc\":\"Close range anti-air and juggle ender; cannot hit cross-up; puts opponents into limited juggle state on hit; first hit can whiff if used too early as an anti-air; second hit whiffs on crouch block (except vs. Dee Jay/JP/Marisa/Sagat/Zangief) resulting in worse block advantage and reduced chip/drive damage\",\"punish_adv\":\"KD +29\",\"raw_source_token\":\"mai_623lk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hishou Ryuuenjin",
+    "input": "623LK",
+    "move_group": "hishou_ryuuenjin",
+    "table_index": 63,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_042_6_2_3_lk",
+      "mai_043_6_2_3_lk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t064:mai_623lk_flame",
+    "raw_source_token": "mai_623lk_flame",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"623LK\",\"move_group\":\"hishou_ryuuenjin\",\"move_name\":\"Hishou Ryuuenjin (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock in exchange for slightly better damage, juggle potential, and KD advantage; close range anti-air and juggle ender; cannot hit cross-up; puts opponents into limited juggle state on hit; first/second hits can whiff if used too early as an anti-air; last 2 hits whiff on crouch block (except vs. Dee Jay/JP/Marisa/Sagat/Zangief) resulting in worse block advantage and reduced chip/drive damage\",\"punish_adv\":\"KD +31\",\"raw_source_token\":\"mai_623lk_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Hishou Ryuuenjin (Flame)",
+    "input": "623LK",
+    "move_group": "hishou_ryuuenjin",
+    "table_index": 64,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_042_6_2_3_lk",
+      "mai_043_6_2_3_lk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t085:mai_6pppkkk",
+    "raw_source_token": "mai_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"I like my fighters like I like my tea... very strong.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"mai_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 85,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t071:mai_j214p",
+    "raw_source_token": "mai_j214p",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214P\",\"move_group\":\"musasabi_no_mai\",\"move_name\":\"Musasabi no Mai\",\"notes_sc\":\"Can only be performed during Forward Jump or after 5LK~LK~LK; 7f extra landing recovery on whiff (10f extra when crossing behind the opponent); Mai is in a crouching state on the final frame of landing recovery (can affect punish routes); puts grounded opponents into limited juggle state; spike knockdown vs. airborne opponents that causes a very quick OTG bounce state (allows juggle into held 236PP with specific air-to-air timing); cannot hit cross-up; solid hitbox for a divekick but very unsafe if whiffed\",\"punish_adv\":\"KD +38(+45)\",\"raw_source_token\":\"mai_j214p\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Musasabi no Mai",
+    "input": "j.214P",
+    "move_group": "musasabi_no_mai",
+    "table_index": 71,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t072:mai_j214p_flame",
+    "raw_source_token": "mai_j214p_flame",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214P\",\"move_group\":\"musasabi_no_mai\",\"move_name\":\"Musasabi no Mai (Flame)\",\"notes_sc\":\"Can only be performed during Forward Jump or after 5LK~LK~LK; enhanced version with better frame advantage and damage; 7f extra landing recovery on whiff (10f extra when crossing behind the opponent); Mai is in a crouching state on the final frame of landing recovery (can affect punish routes); puts grounded opponents into limited juggle state; spike knockdown vs. airborne opponents that causes a very quick OTG bounce state (allows juggle into held 236PP with specific air-to-air timing); cannot hit cross-up; solid hitbox for a divekick but very unsafe if whiffed\",\"punish_adv\":\"KD +39(+46)\",\"raw_source_token\":\"mai_j214p_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Musasabi no Mai (Flame)",
+    "input": "j.214P",
+    "move_group": "musasabi_no_mai",
+    "table_index": 72,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t073:mai_j214pp",
+    "raw_source_token": "mai_j214pp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214PP\",\"move_group\":\"musasabi_no_mai\",\"move_name\":\"Musasabi no Mai\",\"notes_sc\":\"Can only be performed during Forward Jump or after 5LK~LK~LK; 7f extra landing recovery on whiff (10f extra when crossing behind the opponent); Mai is in a crouching state on the final frame of landing recovery (can affect punish routes); puts grounded opponents into limited juggle state; spike knockdown vs. airborne opponents that causes a very quick OTG bounce state (allows juggle into held 236PP with specific air-to-air timing, or more consistent Air SA2 juggles); SA2 cancelable until the 2nd to last airborne active frame on the way down (TK version vs. grounded opponents can hit too late for cancel); cannot hit cross-up; solid hitbox for a divekick but very unsafe if whiffed\",\"punish_adv\":\"KD +44(+51)\",\"raw_source_token\":\"mai_j214pp\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Musasabi no Mai",
+    "input": "j.214PP",
+    "move_group": "musasabi_no_mai",
+    "table_index": 73,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t074:mai_j214pp_flame",
+    "raw_source_token": "mai_j214pp_flame",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214PP\",\"move_group\":\"musasabi_no_mai\",\"move_name\":\"Musasabi no Mai (Flame)\",\"notes_sc\":\"Can only be performed during Forward Jump or after 5LK~LK~LK; enhanced version with better frame advantage and damage; 7f extra landing recovery on whiff (10f extra when crossing behind the opponent); Mai is in a crouching state on the final frame of landing recovery (can affect punish routes); puts grounded opponents into limited juggle state and causes a high OTG bounce vs. airborne opponents; does not cause spike knockdown vs. airborne like the non-flame version, making it better in juggles; SA2 cancelable until the 2nd to last airborne active frame on the way down (TK version vs. grounded opponents can hit too late for cancel); cannot hit cross-up; solid hitbox for a divekick but very unsafe if whiffed\",\"punish_adv\":\"KD +53(+60)\",\"raw_source_token\":\"mai_j214pp_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Musasabi no Mai (Flame)",
+    "input": "j.214PP",
+    "move_group": "musasabi_no_mai",
+    "table_index": 74,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t079:mai_j236236k",
+    "raw_source_token": "mai_j236236k",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Air Chou Hissatsu Shinobi Bachi\",\"notes_sc\":\"Can be input during forward or neutral jump; good air-to-air and combo tool; no invincibility of any kind, but can be very effective against projectiles when input at minimum height with a Tiger Knee motion (2362369K); deals less damage from long range due to earlier hits whiffing; frame advantage varies drastically depending on the height and distance it connects; very likely to fly over the opponent on block unless they are fully cornered; cannot hit cross-up\",\"punish_adv\":\"KD +6(+11)\",\"raw_source_token\":\"mai_j236236k\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Air Chou Hissatsu Shinobi Bachi",
+    "input": "j.236236K",
+    "move_group": "super_arts",
+    "table_index": 79,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t080:mai_j236236k_flame",
+    "raw_source_token": "mai_j236236k_flame",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.236236K\",\"move_group\":\"super_arts\",\"move_name\":\"Air Chou Hissatsu Shinobi Bachi (Flame)\",\"notes_sc\":\"Enhanced version that costs 1 Flame Stock; can be input during forward or neutral jump; good air-to-air and combo tool; no invincibility of any kind, but can be very effective against projectiles when input at minimum height with a Tiger Knee motion (2362369K); deals less damage from long range due to earlier hits whiffing; frame advantage varies drastically depending on the height and distance it connects; very likely to fly over the opponent on block unless they are fully cornered; cannot hit cross-up\",\"punish_adv\":\"KD +7(+17)\",\"raw_source_token\":\"mai_j236236k_flame\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Air Chou Hissatsu Shinobi Bachi (Flame)",
+    "input": "j.236236K",
+    "move_group": "super_arts",
+    "table_index": 80,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t026:mai_jlplk",
+    "raw_source_token": "mai_jlplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.LPLK\",\"move_group\":\"throws\",\"move_name\":\"Yume Zakura\",\"notes_sc\":\"No real midscreen oki (can chase with a spaced Drive Rush normal); in the corner, can dash for +2 oki or Drive Rush for stronger pressure\",\"punish_adv\":\"HKD +20\",\"raw_source_token\":\"mai_jlplk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Yume Zakura",
+    "input": "j.LPLK",
+    "move_group": "throws",
+    "table_index": 26,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "mai_080_lplk_followup",
+    "conflicting_move_ids": [
+      "mai_080_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t024:mai_lplk",
+    "raw_source_token": "mai_lplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"LPLK\",\"move_group\":\"throws\",\"move_name\":\"Shiranui Gourin\",\"notes_sc\":\"Can dash forward for a corner throw loop (+3, cannot walk back to shimmy); can walk for a throw loop vs. Zangief (2f timing) or Blanka/E.Honda (1f timing); DR~4HK sets up auto-timed +6 on Block (slightly out of throw range); a successful Throw Escape builds 1 Drive bar and 1000 Super gauge (10% bar); Throw Escape is awarded to a random player if input simultaneously\",\"punish_adv\":\"HKD +21\",\"raw_source_token\":\"mai_lplk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Shiranui Gourin",
+    "input": "LPLK",
+    "move_group": "throws",
+    "table_index": 24,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "mai_080_lplk_followup",
+    "conflicting_move_ids": [
+      "mai_080_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t030:mai_mpmk",
+    "raw_source_token": "mai_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"mai_mpmk\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 30,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_078_5_6_lplk",
+      "mai_080_lplk",
+      "mai_083_hphk",
+      "mai_086_mpmk",
+      "mai_087_mpmk",
+      "mai_088_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T213746Z-5ee126b8",
+    "source_row_id": "20260412T213746Z-5ee126b8:t032:mai_mpmk_66_drc",
+    "raw_source_token": "mai_mpmk_66_drc",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"or 66 Drive Rush Cancel\",\"notes_sc\":\"See Drive Rush ; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties\",\"punish_adv\":\"-\",\"raw_source_token\":\"mai_mpmk_66_drc\"}",
+    "move_id": null,
+    "character_slug": "mai",
+    "move_name": "or 66 Drive Rush Cancel",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 32,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "mai_086_mpmk",
+      "mai_087_mpmk",
+      "mai_088_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]

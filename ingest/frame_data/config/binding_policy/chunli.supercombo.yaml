@@ -1,2 +1,440 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: Chun-Li_5lp
+  binding_class: A
+  target_move_id: chunli_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_5mp
+  binding_class: A
+  target_move_id: chunli_003_5_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_5hp
+  binding_class: A
+  target_move_id: chunli_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_5lk
+  binding_class: A
+  target_move_id: chunli_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_5mk
+  binding_class: A
+  target_move_id: chunli_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_5hk
+  binding_class: A
+  target_move_id: chunli_006_5_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_2lp
+  binding_class: A
+  target_move_id: chunli_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_2mp
+  binding_class: A
+  target_move_id: chunli_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_2hp
+  binding_class: A
+  target_move_id: chunli_011_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_2lk
+  binding_class: A
+  target_move_id: chunli_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_2mk
+  binding_class: A
+  target_move_id: chunli_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_2hk
+  binding_class: A
+  target_move_id: chunli_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_jlp
+  binding_class: B
+  target_move_id: chunli_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Chun-Li_jmp
+  binding_class: B
+  target_move_id: chunli_015_j_mp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Chun-Li_jhp
+  binding_class: E
+  collision_group: chunli_hp_followup
+  conflicting_move_ids:
+  - chunli_017_j_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_jlk
+  binding_class: B
+  target_move_id: chunli_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Chun-Li_jmk
+  binding_class: B
+  target_move_id: chunli_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: Chun-Li_jhk
+  binding_class: D
+  candidate_move_ids:
+  - chunli_018_j_hk
+  - chunli_019_j_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_8jhk
+  binding_class: A
+  target_move_id: chunli_051_8_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_walljump
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_6mp
+  binding_class: E
+  collision_group: chunli_6_mp_followup
+  conflicting_move_ids:
+  - chunli_020_4_6_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_4hp
+  binding_class: A
+  target_move_id: chunli_021_4_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_3hp
+  binding_class: A
+  target_move_id: chunli_022_3_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_6hk
+  binding_class: A
+  target_move_id: chunli_023_6_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_3hk
+  binding_class: A
+  target_move_id: chunli_024_3_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_j2mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_jhp_jhp
+  binding_class: E
+  collision_group: chunli_hp_followup
+  conflicting_move_ids:
+  - chunli_017_j_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_j2mk_2
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_j2mk_3
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_214p
+  binding_class: E
+  collision_group: chunli_1_4_p_followup
+  conflicting_move_ids:
+  - chunli_029_2_1_4_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_214p
+  binding_class: E
+  collision_group: chunli_1_4_p_followup
+  conflicting_move_ids:
+  - chunli_029_2_1_4_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_lp
+  binding_class: A
+  target_move_id: chunli_030_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_mp
+  binding_class: A
+  target_move_id: chunli_031_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_hp
+  binding_class: A
+  target_move_id: chunli_032_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_lk
+  binding_class: A
+  target_move_id: chunli_033_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_mk
+  binding_class: A
+  target_move_id: chunli_034_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214p_hk
+  binding_class: A
+  target_move_id: chunli_035_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_lplk
+  binding_class: E
+  collision_group: chunli_068_lplk_followup
+  conflicting_move_ids:
+  - chunli_068_lplk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_4lplk
+  binding_class: A
+  target_move_id: chunli_067_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_jlplk
+  binding_class: E
+  collision_group: chunli_068_lplk_followup
+  conflicting_move_ids:
+  - chunli_068_lplk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_hphk
+  binding_class: A
+  target_move_id: chunli_071_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_6hphk
+  binding_class: A
+  target_move_id: chunli_072_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_6hphk_recovery
+  binding_class: F
+  target_move_id: chunli_073_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: Chun-Li_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - chunli_066_5_6_lplk
+  - chunli_068_lplk
+  - chunli_071_hphk
+  - chunli_074_mpmk
+  - chunli_075_mpmk
+  - chunli_076_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: chun-Li_mpmk_66_pdr
+  binding_class: B
+  target_move_id: chunli_077_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: chun-Li_mpmk_66_drc
+  binding_class: F
+  target_move_id: chunli_078_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: Chun-Li_46lp
+  binding_class: E
+  collision_group: chunli_6_mp_followup
+  conflicting_move_ids:
+  - chunli_020_4_6_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_46mp
+  binding_class: E
+  collision_group: chunli_6_mp_followup
+  conflicting_move_ids:
+  - chunli_020_4_6_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_46hp
+  binding_class: E
+  collision_group: chunli_6_mp_followup
+  conflicting_move_ids:
+  - chunli_020_4_6_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_46pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_236lk
+  binding_class: D
+  candidate_move_ids:
+  - chunli_040_2_3_6_lk
+  - chunli_045_2_3_6_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_236mk
+  binding_class: D
+  candidate_move_ids:
+  - chunli_041_2_3_6_mk
+  - chunli_046_2_3_6_mk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_236hk
+  binding_class: D
+  candidate_move_ids:
+  - chunli_042_2_3_6_hk
+  - chunli_047_2_3_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_236kk
+  binding_class: D
+  candidate_move_ids:
+  - chunli_043_2_3_6_k_k
+  - chunli_048_2_3_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_236kk_kk
+  binding_class: A
+  target_move_id: chunli_044_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_j236lk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_j236mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_j236hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_j236kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_28lk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_28mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_28hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_28kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_214lk
+  binding_class: A
+  target_move_id: chunli_053_2_1_4_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214mk
+  binding_class: A
+  target_move_id: chunli_054_2_1_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214hk
+  binding_class: A
+  target_move_id: chunli_055_2_1_4_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214kk
+  binding_class: A
+  target_move_id: chunli_056_2_1_4_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_22lk
+  binding_class: A
+  target_move_id: chunli_057_2_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_22mk
+  binding_class: A
+  target_move_id: chunli_058_2_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_22hk
+  binding_class: A
+  target_move_id: chunli_059_2_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_22kk
+  binding_class: A
+  target_move_id: chunli_060_2_2_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_236236p
+  binding_class: A
+  target_move_id: chunli_061_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_j236236p
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: Chun-Li_236236k
+  binding_class: A
+  target_move_id: chunli_063_2_3_6_2_3_6_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214214k
+  binding_class: A
+  target_move_id: chunli_064_2_1_4_2_1_4_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_214214k(ca)
+  binding_class: C
+  target_move_id: chunli_065_2_1_4_2_1_4_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Chun-Li_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Chun-Li_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Chun-Li_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

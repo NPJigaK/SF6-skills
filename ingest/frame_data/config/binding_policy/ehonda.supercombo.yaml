@@ -1,2 +1,361 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: e.honda_5lp
+  binding_class: A
+  target_move_id: ehonda_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5mp
+  binding_class: A
+  target_move_id: ehonda_003_5_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5hp
+  binding_class: A
+  target_move_id: ehonda_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5lk
+  binding_class: A
+  target_move_id: ehonda_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5mk
+  binding_class: A
+  target_move_id: ehonda_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5hk
+  binding_class: A
+  target_move_id: ehonda_006_5_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_2lp
+  binding_class: A
+  target_move_id: ehonda_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_2mp
+  binding_class: A
+  target_move_id: ehonda_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_2hp
+  binding_class: A
+  target_move_id: ehonda_011_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_2lk
+  binding_class: A
+  target_move_id: ehonda_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_2mk
+  binding_class: A
+  target_move_id: ehonda_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_2hk
+  binding_class: A
+  target_move_id: ehonda_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_jlp
+  binding_class: B
+  target_move_id: ehonda_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: e.honda_jmp
+  binding_class: B
+  target_move_id: ehonda_015_j_mp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: e.honda_jhp
+  binding_class: B
+  target_move_id: ehonda_017_j_hp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: e.honda_8jhp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_jlk
+  binding_class: B
+  target_move_id: ehonda_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: e.honda_jmk
+  binding_class: B
+  target_move_id: ehonda_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: e.honda_jhk
+  binding_class: B
+  target_move_id: ehonda_018_j_hk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: e.honda_6hk
+  binding_class: A
+  target_move_id: ehonda_020_6_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_3hk
+  binding_class: E
+  collision_group: ehonda_hk_followup
+  conflicting_move_ids:
+  - ehonda_021_3_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_j2mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_5lp_mp
+  binding_class: A
+  target_move_id: ehonda_024_mp_3_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5mp_3hk
+  binding_class: E
+  collision_group: ehonda_hk_followup
+  conflicting_move_ids:
+  - ehonda_021_3_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_lplk
+  binding_class: A
+  target_move_id: ehonda_059_5_6_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_4lplk
+  binding_class: A
+  target_move_id: ehonda_060_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_hphk
+  binding_class: A
+  target_move_id: ehonda_063_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_6hphk
+  binding_class: A
+  target_move_id: ehonda_064_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_6hphk_recovery
+  binding_class: F
+  target_move_id: ehonda_065_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: e.honda_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_059_5_6_lplk
+  - ehonda_063_hphk
+  - ehonda_066_mpmk
+  - ehonda_067_mpmk
+  - ehonda_068_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_mpmk_66_pdr
+  binding_class: B
+  target_move_id: ehonda_069_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: e.honda_mpmk_66_drc
+  binding_class: F
+  target_move_id: ehonda_070_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: e.honda_22k
+  binding_class: A
+  target_move_id: ehonda_054_2_2_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_214lp
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_025_2_1_4_lp
+  - ehonda_026_2_1_4_lp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_214mp
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_027_2_1_4_mp
+  - ehonda_028_2_1_4_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_214hp
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_029_2_1_4_hp
+  - ehonda_030_2_1_4_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_214pp
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_031_2_1_4_p_p
+  - ehonda_032_2_1_4_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_46lp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_46mp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_46hp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_46pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_28lk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_28mk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_28hk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_28kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_63214lk
+  binding_class: A
+  target_move_id: ehonda_041_6_3_2_1_4_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_63214mk
+  binding_class: A
+  target_move_id: ehonda_042_6_3_2_1_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_63214hk
+  binding_class: A
+  target_move_id: ehonda_043_6_3_2_1_4_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_63214kk
+  binding_class: A
+  target_move_id: ehonda_044_6_3_2_1_4_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_236k
+  binding_class: A
+  target_move_id: ehonda_045_2_3_6_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_236kk
+  binding_class: A
+  target_move_id: ehonda_046_2_3_6_k_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_236k_p
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_047_p
+  - ehonda_049_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_236kk_p
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_047_p
+  - ehonda_049_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_236k_p_p
+  binding_class: A
+  target_move_id: ehonda_048_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_236kk_p_p
+  binding_class: A
+  target_move_id: ehonda_050_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_236k_2p
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_051_2_p
+  - ehonda_052_2_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_236kk_2p
+  binding_class: D
+  candidate_move_ids:
+  - ehonda_051_2_p
+  - ehonda_052_2_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: e.honda_22p
+  binding_class: A
+  target_move_id: ehonda_053_2_2_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_236236p
+  binding_class: A
+  target_move_id: ehonda_055_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_4646k
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: e.honda_214214p
+  binding_class: A
+  target_move_id: ehonda_057_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_214214p(ca)
+  binding_class: C
+  target_move_id: ehonda_058_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: e.honda_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: e.honda_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: e.honda_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

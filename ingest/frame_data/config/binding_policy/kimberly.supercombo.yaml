@@ -1,2 +1,503 @@
 binding_policy_version: 1.0.0
-entries: []
+entries:
+- raw_source_token: kimberly_5lp
+  binding_class: A
+  target_move_id: kimberly_001_5_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5mp
+  binding_class: E
+  collision_group: kimberly_mp_followup
+  conflicting_move_ids:
+  - kimberly_003_5_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_5hp
+  binding_class: A
+  target_move_id: kimberly_005_5_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lk
+  binding_class: A
+  target_move_id: kimberly_002_5_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5mk
+  binding_class: A
+  target_move_id: kimberly_004_5_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5hk
+  binding_class: A
+  target_move_id: kimberly_006_5_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_2lp
+  binding_class: A
+  target_move_id: kimberly_007_2_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_2mp
+  binding_class: A
+  target_move_id: kimberly_009_2_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_2hp
+  binding_class: A
+  target_move_id: kimberly_011_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_2lk
+  binding_class: A
+  target_move_id: kimberly_008_2_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_2mk
+  binding_class: A
+  target_move_id: kimberly_010_2_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_2hk
+  binding_class: A
+  target_move_id: kimberly_012_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_jlp
+  binding_class: B
+  target_move_id: kimberly_013_j_lp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: kimberly_jmp
+  binding_class: B
+  target_move_id: kimberly_015_j_mp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: kimberly_jhp
+  binding_class: B
+  target_move_id: kimberly_017_j_hp
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: kimberly_jlk
+  binding_class: B
+  target_move_id: kimberly_014_j_lk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: kimberly_jmk
+  binding_class: B
+  target_move_id: kimberly_016_j_mk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: kimberly_jhk
+  binding_class: B
+  target_move_id: kimberly_018_j_hk
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: jump-token alias drift
+- raw_source_token: kimberly_j2mp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: kimberly_3mk
+  binding_class: A
+  target_move_id: kimberly_019_3_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_4hk
+  binding_class: A
+  target_move_id: kimberly_020_4_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_6hk
+  binding_class: E
+  collision_group: kimberly_hk_followup
+  conflicting_move_ids:
+  - kimberly_021_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_6hk_8
+  binding_class: E
+  collision_group: kimberly_hk_followup
+  conflicting_move_ids:
+  - kimberly_021_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_6hk_9
+  binding_class: E
+  collision_group: kimberly_hk_followup
+  conflicting_move_ids:
+  - kimberly_021_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_6hk_7
+  binding_class: E
+  collision_group: kimberly_hk_followup
+  conflicting_move_ids:
+  - kimberly_021_6_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lp_mp
+  binding_class: E
+  collision_group: kimberly_mp_followup
+  conflicting_move_ids:
+  - kimberly_003_5_mp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lp_mp_hp
+  binding_class: A
+  target_move_id: kimberly_024_mp_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lp_mp_hp_hk
+  binding_class: A
+  target_move_id: kimberly_027_lp_mp_hp_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lp_mp_2hp
+  binding_class: A
+  target_move_id: kimberly_028_lp_mp_2_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lp_mp_2hp_hk
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_027_lp_mp_hp_hk
+  - kimberly_029_lp_mp_2_hp_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_5lp_mp_2hp_2hk
+  binding_class: A
+  target_move_id: kimberly_030_lp_mp_2_hp_2_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_5mp_hp
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_005_5_hp
+  - kimberly_011_2_hp
+  - kimberly_017_j_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_lplk
+  binding_class: A
+  target_move_id: kimberly_075_5_6_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_4lplk
+  binding_class: A
+  target_move_id: kimberly_076_4_lplk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_hphk
+  binding_class: A
+  target_move_id: kimberly_079_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_6hphk
+  binding_class: A
+  target_move_id: kimberly_080_6_hphk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_6hphk_recovery
+  binding_class: F
+  target_move_id: kimberly_081_6_hphk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed wakeup drive reversal
+- raw_source_token: kimberly_mpmk
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_075_5_6_lplk
+  - kimberly_079_hphk
+  - kimberly_082_mpmk
+  - kimberly_083_mpmk
+  - kimberly_084_mpmk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_mpmk_66_pdr
+  binding_class: B
+  target_move_id: kimberly_085_6_6
+  publish_eligible: true
+  confirmation_status: not_required
+  notes: live token renamed from legacy registry token
+- raw_source_token: kimberly_mpmk_66_drc
+  binding_class: F
+  target_move_id: kimberly_086_6_6_5_6_mpmk
+  publish_eligible: true
+  confirmation_status: confirmed
+  notes: fixture-confirmed cancel drive rush
+- raw_source_token: kimberly_214lk
+  binding_class: A
+  target_move_id: kimberly_031_2_1_4_lk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_214mk
+  binding_class: A
+  target_move_id: kimberly_032_2_1_4_mk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_214hk
+  binding_class: A
+  target_move_id: kimberly_033_2_1_4_hk
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_214kk
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_034_2_1_4_k_k
+  - kimberly_036_2_1_4_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_j214k
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: kimberly_j214kk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: kimberly_236lp
+  binding_class: A
+  target_move_id: kimberly_053_2_3_6_lp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_236mp
+  binding_class: A
+  target_move_id: kimberly_054_2_3_6_mp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_236hp
+  binding_class: A
+  target_move_id: kimberly_055_2_3_6_hp
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_236pp
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_056_2_3_6_p_p
+  - kimberly_068_2_3_6_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k
+  binding_class: E
+  collision_group: kimberly_3_6_k_followup
+  conflicting_move_ids:
+  - kimberly_037_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_lk
+  binding_class: E
+  collision_group: kimberly_041_lk_followup
+  conflicting_move_ids:
+  - kimberly_041_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_mk
+  binding_class: E
+  collision_group: kimberly_043_mk_followup
+  conflicting_move_ids:
+  - kimberly_043_mk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_hk
+  binding_class: E
+  collision_group: kimberly_045_hk_followup
+  conflicting_move_ids:
+  - kimberly_045_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_p
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_039_p
+  - kimberly_040_p
+  - kimberly_049_p
+  - kimberly_050_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_prox
+  binding_class: E
+  collision_group: kimberly_3_6_k_followup
+  conflicting_move_ids:
+  - kimberly_037_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_prox_k
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_051_k
+  - kimberly_052_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236k_prox_p
+  binding_class: A
+  target_move_id: kimberly_049_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk
+  binding_class: E
+  collision_group: kimberly_3_6_k_k_followup
+  conflicting_move_ids:
+  - kimberly_038_2_3_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_lk
+  binding_class: E
+  collision_group: kimberly_041_lk_followup
+  conflicting_move_ids:
+  - kimberly_041_lk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_mk
+  binding_class: E
+  collision_group: kimberly_043_mk_followup
+  conflicting_move_ids:
+  - kimberly_043_mk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_hk
+  binding_class: E
+  collision_group: kimberly_045_hk_followup
+  conflicting_move_ids:
+  - kimberly_045_hk
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_p
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_039_p
+  - kimberly_040_p
+  - kimberly_049_p
+  - kimberly_050_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_prox
+  binding_class: E
+  collision_group: kimberly_3_6_k_k_followup
+  conflicting_move_ids:
+  - kimberly_038_2_3_6_k_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_prox_k
+  binding_class: A
+  target_move_id: kimberly_052_k
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_236kk_prox_p
+  binding_class: A
+  target_move_id: kimberly_050_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_214p
+  binding_class: A
+  target_move_id: kimberly_057_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_214pp
+  binding_class: A
+  target_move_id: kimberly_058_2_1_4_p_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_22p_0stock
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_061_2_2_lp
+  - kimberly_062_2_2_mp
+  - kimberly_063_2_2_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_22pp_0stock
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_064_2_2_p_p
+  - kimberly_065_2_2_p_p
+  - kimberly_066_2_2_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_22p_1stock
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_061_2_2_lp
+  - kimberly_062_2_2_mp
+  - kimberly_063_2_2_hp
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_22pp_2stock
+  binding_class: D
+  candidate_move_ids:
+  - kimberly_064_2_2_p_p
+  - kimberly_065_2_2_p_p
+  - kimberly_066_2_2_p_p
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_j236p
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: kimberly_j236pp
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: kimberly_236236k_0stock
+  binding_class: E
+  collision_group: kimberly_3_6_2_3_6_k_followup
+  conflicting_move_ids:
+  - kimberly_069_2_3_6_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_236236k_1stock
+  binding_class: E
+  collision_group: kimberly_3_6_2_3_6_k_followup
+  conflicting_move_ids:
+  - kimberly_069_2_3_6_2_3_6_k
+  publish_eligible: false
+  confirmation_status: not_required
+- raw_source_token: kimberly_214214p
+  binding_class: A
+  target_move_id: kimberly_071_2_1_4_2_1_4_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_j214214p
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded source row without canonical official move_id
+- raw_source_token: kimberly_236236p
+  binding_class: A
+  target_move_id: kimberly_073_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: kimberly_236236p(ca)
+  binding_class: C
+  target_move_id: kimberly_074_2_3_6_2_3_6_p
+  publish_eligible: true
+  confirmation_status: not_required
+- raw_source_token: Kimberly_5pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Kimberly_5pppkkk_install
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Kimberly_6pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id
+- raw_source_token: Kimberly_4pppkkk
+  binding_class: G
+  publish_eligible: false
+  confirmation_status: not_required
+  notes: excluded taunt without canonical official move_id

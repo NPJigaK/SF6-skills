@@ -1,0 +1,840 @@
+[
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t015:rashid_jhp",
+    "raw_source_token": "rashid_jhp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"B\",\"input\":\"j.HP\",\"move_group\":\"normals\",\"move_name\":\"Jumping Heavy Punch\",\"notes_sc\":\"1st hit puts airborne opponents into limited juggle state, 2nd hit causes spike knockdown; if 1st hit is stand blocked, the 2nd hit will not hit overhead against crouch block; lower body projectile invuln 8-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+15(+19)\",\"raw_source_token\":\"rashid_jhp\"}",
+    "move_id": "rashid_017_j_hp",
+    "character_slug": "rashid",
+    "move_name": "Jumping Heavy Punch",
+    "input": "j.HP",
+    "move_group": "normals",
+    "table_index": 15,
+    "binding_class": "B",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t020:rashid_6mp",
+    "raw_source_token": "rashid_6mp",
+    "reason_codes": [
+      "supercombo_missing_official_safe_row"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"A\",\"input\":\"6MP\",\"move_group\":\"command_normals\",\"move_name\":\"Flapping Spin\",\"notes_sc\":\"() refers to startup of 2nd hit; 1st hit puts airborne opponents into limited juggle state (or maintains juggle state when used mid-combo); 2nd hit causes air reset; counter-hit/Punish Counter bonus advantage applies to both hits; decent range for whiff punishing; can be affected by Air Current on frames 3-10 (travels fullscreen)\",\"punish_adv\":\"+5\",\"raw_source_token\":\"rashid_6mp\"}",
+    "move_id": "rashid_023_6_mp",
+    "character_slug": "rashid",
+    "move_name": "Flapping Spin",
+    "input": "6MP",
+    "move_group": "command_normals",
+    "table_index": 20,
+    "binding_class": "A",
+    "publish_eligible": true,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t068:rashid_214p_6k_k",
+    "raw_source_token": "rashid_214p_6k_k",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"214P~6K~K\",\"move_group\":\"nail_assault\",\"move_name\":\"Nail Assault\",\"notes_sc\":\"Puts opponent into limited juggle state; crouching state for entire move duration; cannot hit cross-ups behind Rashid; outside of juggles, only combos naturally from 214HP/214PP versions\",\"punish_adv\":\"KD +44\",\"raw_source_token\":\"rashid_214p_6k_k\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Nail Assault",
+    "input": "214P~6K~K",
+    "move_group": "nail_assault",
+    "table_index": 68,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "rashid_k_k_followup",
+    "conflicting_move_ids": [
+      "rashid_029_6_k_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t045:rashid_236hp",
+    "raw_source_token": "rashid_236hp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236HP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"Spinning Mixer\",\"notes_sc\":\"Good anti-air that can hit cross-ups; can be affected by Air Current on frames 2-5; if the final hit whiffs as an anti-air, Rashid can get a follow-up juggle\",\"punish_adv\":\"KD +33\",\"raw_source_token\":\"rashid_236hp\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Spinning Mixer",
+    "input": "236HP",
+    "move_group": "spinning_mixer",
+    "table_index": 45,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_035_2_3_6_hp",
+      "rashid_036_2_3_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t046:rashid_236hp_enhanced",
+    "raw_source_token": "rashid_236hp_enhanced",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236HP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"(Air Current) Spinning Mixer\",\"notes_sc\":\"Good anti-air that can hit cross-ups\",\"punish_adv\":\"KD +27\",\"raw_source_token\":\"rashid_236hp_enhanced\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "(Air Current) Spinning Mixer",
+    "input": "236HP",
+    "move_group": "spinning_mixer",
+    "table_index": 46,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_035_2_3_6_hp",
+      "rashid_036_2_3_6_hp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t057:rashid_236k",
+    "raw_source_token": "rashid_236k",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236K\",\"move_group\":\"whirlwind_shot\",\"move_name\":\"Whirlwind Shot\",\"notes_sc\":\"1-hit projectile that travels forward before arcing upward; can hold button to charge for a powered-up version; trajectory depends on button strength (LK = farthest/horizontal, MK = middle, HK = shortest/vertical); projectile comes out in 6f if button is released from frames 11-27 (total startup 17-33f); cannot use if SA2 is active\",\"punish_adv\":\"+3\",\"raw_source_token\":\"rashid_236k\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Whirlwind Shot",
+    "input": "236K",
+    "move_group": "whirlwind_shot",
+    "table_index": 57,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_047_2_3_6_lk",
+      "rashid_050_2_3_6_mk",
+      "rashid_053_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t059:rashid_236k_hold",
+    "raw_source_token": "rashid_236k_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236[K]\",\"move_group\":\"whirlwind_shot\",\"move_name\":\"Whirlwind Shot (Hold)\",\"notes_sc\":\"3-hit projectile; trajectory depends on button strength (LK = farthest/horizontal, MK = middle, HK = shortest/vertical); must hold button 48f for fully charged version; counter-hit/Punish Counter bonus advantage applies to all hits; creates Air Current effect on frame 51 next to Rashid that lasts 60f and enhances many of his moves; cannot use if SA2 is active\",\"punish_adv\":\"+20\",\"raw_source_token\":\"rashid_236k_hold\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Whirlwind Shot (Hold)",
+    "input": "236[K]",
+    "move_group": "whirlwind_shot",
+    "table_index": 59,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_049_2_3_6_lk",
+      "rashid_052_2_3_6_mk",
+      "rashid_055_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t058:rashid_236k_partial_hold",
+    "raw_source_token": "rashid_236k_partial_hold",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236{K}\",\"move_group\":\"whirlwind_shot\",\"move_name\":\"Whirlwind Shot (Partial Hold)\",\"notes_sc\":\"2-hit projectile; trajectory depends on button strength (LK = farthest/horizontal, MK = middle, HK = shortest/vertical); must hold button 28f; counter-hit/Punish Counter bonus advantage applies to both hits; projectile comes out in 6f if button is released from frames 28-47 (total startup 34-53f); cannot use if SA2 is active\",\"punish_adv\":\"+9\",\"raw_source_token\":\"rashid_236k_partial_hold\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Whirlwind Shot (Partial Hold)",
+    "input": "236{K}",
+    "move_group": "whirlwind_shot",
+    "table_index": 58,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_048_2_3_6_lk",
+      "rashid_051_2_3_6_mk",
+      "rashid_054_2_3_6_hk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t041:rashid_236lp",
+    "raw_source_token": "rashid_236lp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236LP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"Spinning Mixer\",\"notes_sc\":\"Great pressure tool that is safe on block and can blow throw armor; 5f extra recovery on whiff; Counter-hit/Punish Counter bonus advantage applies through all hits (allows for follow-up combo); can be affected by Air Current on frames 2-16; if the 3rd hit whiffs in a Burnout pressure sequence, Rashid is safe at -3 oB\",\"punish_adv\":\"+6\",\"raw_source_token\":\"rashid_236lp\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Spinning Mixer",
+    "input": "236LP",
+    "move_group": "spinning_mixer",
+    "table_index": 41,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_031_2_3_6_lp",
+      "rashid_032_2_3_6_lp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t042:rashid_236lp_enhanced",
+    "raw_source_token": "rashid_236lp_enhanced",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236LP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"(Air Current) Spinning Mixer\",\"notes_sc\":\"Fullscreen advancing move that gives a combo on hit and frame advantage on block; counter-hit/Punish Counter bonus advantage applies through all hits (allows for a stronger follow-up combo)\",\"punish_adv\":\"+8\",\"raw_source_token\":\"rashid_236lp_enhanced\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "(Air Current) Spinning Mixer",
+    "input": "236LP",
+    "move_group": "spinning_mixer",
+    "table_index": 42,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_031_2_3_6_lp",
+      "rashid_032_2_3_6_lp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t043:rashid_236mp",
+    "raw_source_token": "rashid_236mp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236MP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"Spinning Mixer\",\"notes_sc\":\"The last 11f of landing recovery is cancelable into special moves or supers on hit only; 4f worse advantage and 1 less hit when crouch blocked; cannot anti-air cross-ups; can be affected by Air Current on frames 2-8\",\"punish_adv\":\"KD +31\",\"raw_source_token\":\"rashid_236mp\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Spinning Mixer",
+    "input": "236MP",
+    "move_group": "spinning_mixer",
+    "table_index": 43,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_033_2_3_6_mp",
+      "rashid_034_2_3_6_mp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t044:rashid_236mp_enhanced",
+    "raw_source_token": "rashid_236mp_enhanced",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236MP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"(Air Current) Spinning Mixer\",\"notes_sc\":\"On block, gets +1 hit vs. tall standing characters, and -1 hit vs. crouching characters (affects block data, chip, meter gain, etc.); cannot anti-air cross-ups; travels fullscreen\",\"punish_adv\":\"KD +37\",\"raw_source_token\":\"rashid_236mp_enhanced\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "(Air Current) Spinning Mixer",
+    "input": "236MP",
+    "move_group": "spinning_mixer",
+    "table_index": 44,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_033_2_3_6_mp",
+      "rashid_034_2_3_6_mp"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t047:rashid_236pp",
+    "raw_source_token": "rashid_236pp",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236PP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"Spinning Mixer\",\"notes_sc\":\"Shorter animation with less landing recovery on block only; cannot anti-air cross-ups; can only hit twice vs. grounded opponents (will not break DI armor); 5f extra knockdown advantage if the final hit whiffs (keeps Rashid safe); can be affected by Air Current on frames 2-8\",\"punish_adv\":\"KD +9\",\"raw_source_token\":\"rashid_236pp\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Spinning Mixer",
+    "input": "236PP",
+    "move_group": "spinning_mixer",
+    "table_index": 47,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_037_2_3_6_p_p",
+      "rashid_038_2_3_6_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t048:rashid_236pp_enhanced",
+    "raw_source_token": "rashid_236pp_enhanced",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"236PP\",\"move_group\":\"spinning_mixer\",\"move_name\":\"(Air Current) Spinning Mixer\",\"notes_sc\":\"Cannot anti-air cross-ups; 12f worse advantage and 2 fewer hits when crouch blocked; on hit or block, Rashid can cancel into j.214K on frames 67-71 after the active period\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"rashid_236pp_enhanced\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "(Air Current) Spinning Mixer",
+    "input": "236PP",
+    "move_group": "spinning_mixer",
+    "table_index": 48,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_037_2_3_6_p_p",
+      "rashid_038_2_3_6_p_p"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t079:rashid_4pppkkk",
+    "raw_source_token": "rashid_4pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"4PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Back Taunt\",\"notes_sc\":\"\\\"Check this out! Now you try.\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_4pppkkk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Back Taunt",
+    "input": "4PPPKKK",
+    "move_group": "taunts",
+    "table_index": 79,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t006:rashid_5hk",
+    "raw_source_token": "rashid_5hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5HK\",\"move_group\":\"normals\",\"move_name\":\"Standing Heavy Kick\",\"notes_sc\":\"Puts airborne opponents into limited juggle state; Punish Counter launches grounded opponents into limited juggle state and causes airborne opponents to fall closer to Rashid; decent anti-air hitbox, but very slow and cannot hit cross-up; high pushback on hit and block; forces stand on hit; final 2 active frames whiff on crouching opponents unless they extend a vertical hurtbox; has an extended hurtbox 1f before active that is vulnerable to projectiles\",\"punish_adv\":\"KD +49 Launch\",\"raw_source_token\":\"rashid_5hk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Standing Heavy Kick",
+    "input": "5HK",
+    "move_group": "normals",
+    "table_index": 6,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "rashid_hk_followup",
+    "conflicting_move_ids": [
+      "rashid_006_5_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t031:rashid_5mp_hk",
+    "raw_source_token": "rashid_5mp_hk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"5MP~HK\",\"move_group\":\"target_combos\",\"move_name\":\"Rising Kick\",\"notes_sc\":\"Puts opponent into limited juggle state; both hits form a true blockstring and can cancel to 236LP for safety; special/DR cancel is delayed until after 4th recovery frame\",\"punish_adv\":\"KD +42\",\"raw_source_token\":\"rashid_5mp_hk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Rising Kick",
+    "input": "5MP~HK",
+    "move_group": "target_combos",
+    "table_index": 31,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "rashid_hk_followup",
+    "conflicting_move_ids": [
+      "rashid_006_5_hk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t077:rashid_5pppkkk",
+    "raw_source_token": "rashid_5pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"5PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Neutral Taunt\",\"notes_sc\":\"\\\"Do this... and this... and this. It's easy as pie.\\\"; hurtbox shifts as Rashid moves (lower body invuln frames 52-74, 83-107, 208-236; low profile 121-141, 169-186)\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_5pppkkk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Neutral Taunt",
+    "input": "5PPPKKK",
+    "move_group": "taunts",
+    "table_index": 77,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t025:rashid_66_hold",
+    "raw_source_token": "rashid_66_hold",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6[6]\",\"move_group\":\"normals\",\"move_name\":\"Run\",\"notes_sc\":\"Input by holding forward after a forward dash; cancelable into 6P or 6K follow-ups on frames 18-72; after 72f, Rashid has 18f stopping recovery if no follow-up is input (90f total); stopping the run early has 5f recovery; no stopping recovery if jumping forward out of the run animation (neutral/back jump still plays out the 5f recovery); counter-hit state during entire run animation; affected by Air Current for entire duration except for 18f recovery, causing Rashid to run faster\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_66_hold\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Run",
+    "input": "6[6]",
+    "move_group": "normals",
+    "table_index": 25,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t027:rashid_66_hold_6k",
+    "raw_source_token": "rashid_66_hold_6k",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6[6]~6K\",\"move_group\":\"normals\",\"move_name\":\"Tempest Moon\",\"notes_sc\":\"Counter-hit/Punish Counter bonus advantage applies to both hits; frames 1-3 can be affected by Air Current, becoming the Enhanced version\",\"punish_adv\":\"+7\",\"raw_source_token\":\"rashid_66_hold_6k\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Tempest Moon",
+    "input": "6[6]~6K",
+    "move_group": "normals",
+    "table_index": 27,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t028:rashid_66_hold_6k_enhanced",
+    "raw_source_token": "rashid_66_hold_6k_enhanced",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6[6]~6K\",\"move_group\":\"normals\",\"move_name\":\"(Air Current) Tempest Moon (Air Current)\",\"notes_sc\":\"Puts opponent into limited juggle OTG state if first hit connects (regular knockdown if first hit doesn't connect)\",\"punish_adv\":\"KD +56 OTG / KD +22\",\"raw_source_token\":\"rashid_66_hold_6k_enhanced\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "(Air Current) Tempest Moon (Air Current)",
+    "input": "6[6]~6K",
+    "move_group": "normals",
+    "table_index": 28,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t026:rashid_66_hold_6p",
+    "raw_source_token": "rashid_66_hold_6p",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6[6]~6P\",\"move_group\":\"normals\",\"move_name\":\"Backup\",\"notes_sc\":\"Crouching state for entire move duration; on hit, connects twice and switches sides, remaining projectile invincible throughout the entire animation; on block, connects once and stays on the same side; if opponent is cornered, Rashid is close enough for a follow-up combo; counter-hit/Punish Counter bonus advantage applies to both hits; frames 1-17 can be affected by Air Current\",\"punish_adv\":\"+11\",\"raw_source_token\":\"rashid_66_hold_6p\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Backup",
+    "input": "6[6]~6P",
+    "move_group": "normals",
+    "table_index": 26,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t029:rashid_6kk",
+    "raw_source_token": "rashid_6kk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"6KK\",\"move_group\":\"normals\",\"move_name\":\"Side Flip\",\"notes_sc\":\"Can input 4KK/5KK/6KK follow-up on frames 19-25; collision box disappears frames 8-23, allowing Rashid to pass through opponents; can be affected by Air Current on frames 2-20, traveling nearly fullscreen; travel distance: 1.7 (3.62 enhanced)\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_6kk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Side Flip",
+    "input": "6KK",
+    "move_group": "normals",
+    "table_index": 29,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "rashid_k_k_followup",
+    "conflicting_move_ids": [
+      "rashid_029_6_k_k"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t078:rashid_6pppkkk",
+    "raw_source_token": "rashid_6pppkkk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"6PPPKKK\",\"move_group\":\"taunts\",\"move_name\":\"Forward Taunt\",\"notes_sc\":\"\\\"Hmm? Hey look, just relax and have fun, alright?\\\"\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_6pppkkk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Forward Taunt",
+    "input": "6PPPKKK",
+    "move_group": "taunts",
+    "table_index": 78,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t071:rashid_j214hk",
+    "raw_source_token": "rashid_j214hk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214HK\",\"move_group\":\"arabian_skyhigh\",\"move_name\":\"Arabian Skyhigh\",\"notes_sc\":\"From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle state on hit; has minimum height restriction (will not activate after low-height j.2HP); KD Advantage varies greatly based on the height it connects; performs a double-jump after the initial flip kick (longest trajectory); can be affected by Air Current on frames 1-21\",\"punish_adv\":\"KD +20(+22)~\",\"raw_source_token\":\"rashid_j214hk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Arabian Skyhigh",
+    "input": "j.214HK",
+    "move_group": "arabian_skyhigh",
+    "table_index": 71,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t072:rashid_j214kk",
+    "raw_source_token": "rashid_j214kk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214KK\",\"move_group\":\"arabian_skyhigh\",\"move_name\":\"Arabian Skyhigh\",\"notes_sc\":\"From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle OTG state on hit; has minimum height restriction (will not activate after low-height j.2HP); performs a double-jump after the initial flip kick; on hit, transitions into a follow-up divekick that is projectile invincible; can be affected by Air Current on frames 1-13\",\"punish_adv\":\"KD +34(+35)~\",\"raw_source_token\":\"rashid_j214kk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Arabian Skyhigh",
+    "input": "j.214KK",
+    "move_group": "arabian_skyhigh",
+    "table_index": 72,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t069:rashid_j214lk",
+    "raw_source_token": "rashid_j214lk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214LK\",\"move_group\":\"arabian_skyhigh\",\"move_name\":\"Arabian Skyhigh\",\"notes_sc\":\"From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle state on hit; has minimum height restriction (will not activate after low-height j.2HP); KD Advantage varies greatly based on the height it connects; performs a double-jump after the initial flip kick (shortest trajectory); can be affected by Air Current on frames 1-13\",\"punish_adv\":\"KD +16(+18)~\",\"raw_source_token\":\"rashid_j214lk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Arabian Skyhigh",
+    "input": "j.214LK",
+    "move_group": "arabian_skyhigh",
+    "table_index": 69,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t070:rashid_j214mk",
+    "raw_source_token": "rashid_j214mk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.214MK\",\"move_group\":\"arabian_skyhigh\",\"move_name\":\"Arabian Skyhigh\",\"notes_sc\":\"From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle state on hit; has minimum height restriction (will not activate after low-height j.2HP); KD Advantage varies greatly based on the height it connects; performs a double-jump after the initial flip kick (medium trajectory, similar to normal jump); can be affected by Air Current on frames 1-18\",\"punish_adv\":\"KD +18(+20)~\",\"raw_source_token\":\"rashid_j214mk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Arabian Skyhigh",
+    "input": "j.214MK",
+    "move_group": "arabian_skyhigh",
+    "table_index": 70,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t023:rashid_j2hp",
+    "raw_source_token": "rashid_j2hp",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.2HP\",\"move_group\":\"normals\",\"move_name\":\"Blitz Strike\",\"notes_sc\":\"Can be performed during forward jump or after j.214K; causes spike knockdown and OTG juggle state vs. airborne opponents; cancelable into j.214K; bounces off opponent on hit/block/parry, allowing Rashid to follow up with another airborne move (except another j.2HP) on frames 12-23; if Rashid hits airborne opponent 1f before landing, he lands immediately rather than bouncing; listed frame advantage assumes a grounded opponent and no follow-up air attack; juggle data in () refers to version after j.214K; lower body projectile invuln 10-19f except around attack hitbox\",\"punish_adv\":\"-5 (+3)\",\"raw_source_token\":\"rashid_j2hp\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Blitz Strike",
+    "input": "j.2HP",
+    "move_group": "normals",
+    "table_index": 23,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t024:rashid_j8hk",
+    "raw_source_token": "rashid_j8hk",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"j.8HK\",\"move_group\":\"normals\",\"move_name\":\"Aerial Shot\",\"notes_sc\":\"During neutral jump only; puts airborne opponents into limited juggle state, making it a useful air-to-air; lower body projectile invuln 8-19f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)\",\"punish_adv\":\"+16(+19)\",\"raw_source_token\":\"rashid_j8hk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Aerial Shot",
+    "input": "j.8HK",
+    "move_group": "normals",
+    "table_index": 24,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t034:rashid_jlplk",
+    "raw_source_token": "rashid_jlplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"j.LPLK\",\"move_group\":\"throws\",\"move_name\":\"Desert Slider\",\"notes_sc\":\"Useful air-to-air against close range jumps; in the corner, can get oki with Drive Rush\",\"punish_adv\":\"HKD +27\",\"raw_source_token\":\"rashid_jlplk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Desert Slider",
+    "input": "j.LPLK",
+    "move_group": "throws",
+    "table_index": 34,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "rashid_075_lplk_followup",
+    "conflicting_move_ids": [
+      "rashid_075_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t032:rashid_lplk",
+    "raw_source_token": "rashid_lplk",
+    "reason_codes": [
+      "supercombo_binding_collision"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"E\",\"input\":\"LPLK\",\"move_group\":\"throws\",\"move_name\":\"Riding Glider\",\"notes_sc\":\"Allows for a corner throw loop by holding Run for 18-20f, then letting go before throwing (17-20f for Blanka/E.Honda/Zangief); a successful Throw Escape builds 1 Drive bar and 1000 Super gauge (10% bar); Throw Escape is awarded to a random player if input simultaneously\",\"punish_adv\":\"HKD +27\",\"raw_source_token\":\"rashid_lplk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Riding Glider",
+    "input": "LPLK",
+    "move_group": "throws",
+    "table_index": 32,
+    "binding_class": "E",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": "rashid_075_lplk_followup",
+    "conflicting_move_ids": [
+      "rashid_075_lplk"
+    ]
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t038:rashid_mpmk",
+    "raw_source_token": "rashid_mpmk",
+    "reason_codes": [
+      "supercombo_binding_one_to_many"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"D\",\"input\":\"MPMK\",\"move_group\":\"system\",\"move_name\":\"Drive Parry\",\"notes_sc\":\"See Drive Parry . Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_mpmk\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "Drive Parry",
+    "input": "MPMK",
+    "move_group": "system",
+    "table_index": 38,
+    "binding_class": "D",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [
+      "rashid_028_mp_hk",
+      "rashid_073_5_6_lplk",
+      "rashid_075_lplk",
+      "rashid_078_hphk",
+      "rashid_081_mpmk",
+      "rashid_082_mpmk",
+      "rashid_083_mpmk"
+    ],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  },
+  {
+    "dataset": "supercombo_enrichment",
+    "source": "supercombo",
+    "snapshot_id": "20260412T212019Z-7e4c58e2",
+    "source_row_id": "20260412T212019Z-7e4c58e2:t019:rashid_walljump",
+    "raw_source_token": "rashid_walljump",
+    "reason_codes": [
+      "supercombo_binding_excluded"
+    ],
+    "raw_excerpt": "{\"binding_class\":\"G\",\"input\":\"9\",\"move_group\":\"wall_jump\",\"move_name\":\"(against wall) Wall Jump\",\"notes_sc\":\"Counter-hit state during entire duration; can be done from Back or Neutral jump if fully against the wall, or after Forward Jump against a cornered opponent; cannot be performed after j.2HP or j.214K\",\"punish_adv\":\"-\",\"raw_source_token\":\"rashid_walljump\"}",
+    "move_id": null,
+    "character_slug": "rashid",
+    "move_name": "(against wall) Wall Jump",
+    "input": "9",
+    "move_group": "wall_jump",
+    "table_index": 19,
+    "binding_class": "G",
+    "publish_eligible": false,
+    "confirmation_status": "not_required",
+    "candidate_move_ids": [],
+    "collision_group": null,
+    "conflicting_move_ids": []
+  }
+]
