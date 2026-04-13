@@ -1,0 +1,76 @@
+{
+  "case_id": "match-mid",
+  "description": "Mid-length match slice smoke case for longer actor-binding and phase stability.",
+  "expected_use_case": "A longer neutral-to-engagement match segment where actor-local, interaction, and global-phase tracks should remain stable over time.",
+  "required_inputs": [
+    "video"
+  ],
+  "optional_inputs": [
+    "transcript"
+  ],
+  "expected_invariants": [
+    {
+      "id": "schema-valid",
+      "type": "schema_valid",
+      "description": "Output passes the canonical video-analysis v0 schema."
+    },
+    {
+      "id": "segments-non-empty",
+      "type": "segments_non_empty",
+      "description": "Segments are present."
+    },
+    {
+      "id": "actor-a-track",
+      "type": "track_present",
+      "track": "actor_a_local",
+      "minimum_count": 1,
+      "description": "Actor A local observations are present."
+    },
+    {
+      "id": "actor-b-track",
+      "type": "track_present",
+      "track": "actor_b_local",
+      "minimum_count": 1,
+      "description": "Actor B local observations are present."
+    },
+    {
+      "id": "interaction-track",
+      "type": "track_present",
+      "track": "interaction",
+      "minimum_count": 1,
+      "description": "Interaction observations are present."
+    },
+    {
+      "id": "global-phase-track",
+      "type": "track_present",
+      "track": "global_phase",
+      "minimum_count": 1,
+      "description": "At least one coarse global phase segment is present."
+    },
+    {
+      "id": "segment-intervals-valid",
+      "type": "segment_intervals_valid",
+      "description": "Segment and evidence frame ranges stay ordered and inside clip bounds."
+    },
+    {
+      "id": "unique-ids",
+      "type": "unique_ids",
+      "description": "Segment, evidence, and derived-event identifiers are document-wide unique."
+    },
+    {
+      "id": "derived-events-have-sources",
+      "type": "derived_events_have_source_segment_ids",
+      "description": "If derived events are present, each carries source_segment_ids."
+    },
+    {
+      "id": "no-saved-artifact-paths",
+      "type": "no_saved_artifact_paths",
+      "description": "Canonical output does not carry saved artifact path fields."
+    }
+  ],
+  "notes": [
+    "Primary review target: whether actor bindings and coarse phase labels remain stable over a longer clip.",
+    "Use this case to observe side-switch pressure and whether long-form interaction segmentation stays readable.",
+    "Do not invent coverage requirements for every frame; sparse segments are still canonical."
+  ]
+}
