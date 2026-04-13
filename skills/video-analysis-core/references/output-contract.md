@@ -17,6 +17,7 @@ This skill emits observation-first SF6 video analysis output. `segments` are the
 - `segment_id` and `evidence_id` are document-wide unique strings.
 - Segment `confidence` and `binding_confidence` use numeric `[0, 1]`.
 - Document-wide ID uniqueness is a semantic invariant for runtime outputs and is not fully enforced by this shell-only validator.
+- Interval ordering (`start_frame < end_frame`) and clip-bound checks (`end_frame <= clip_metadata.total_frames`) are semantic invariants for runtime outputs and are not fully enforced by this shell-only validator or schema package.
 
 ## Clip Metadata
 
@@ -76,7 +77,7 @@ This skill emits observation-first SF6 video analysis output. `segments` are the
 ### `transcript`
 
 - `utterance_span`
-- metadata: `speaker_ref`, `speaker_role`, optional `actor_ref`, `text`, optional `language`, optional `source_subtype`
+- metadata: `speaker_ref`, `speaker_role`, optional `actor_ref`, `text`, optional `language` (`string | null`), optional `source_subtype`
 
 ## Evidence
 

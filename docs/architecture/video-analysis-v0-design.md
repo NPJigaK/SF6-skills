@@ -63,6 +63,7 @@ derived_events   # optional
 - `start_frame` and `end_frame` are integers.
 - `0 <= start_frame < end_frame <= clip_metadata.total_frames`
 - A one-frame interval is represented as `[k, k+1)`.
+- Interval ordering (`start_frame < end_frame`) and clip-bound checks (`end_frame <= clip_metadata.total_frames`) are semantic invariants for runtime outputs and are not fully enforced by this schema package.
 
 ## Track Model
 
@@ -227,7 +228,7 @@ Additional notes:
 - `speaker_role` is separate metadata such as `commentary`, `actor_voice`, `system_voice`, or `unknown`.
 - `actor_ref` is optional metadata and is separate from `speaker_ref`.
 - `text` must be present for transcript segments.
-- `language` should be present and may be `null` when unknown.
+- `language` is optional and may be `null` when unknown.
 - `source_subtype` is optional metadata such as `provided_transcript`, `asr`, `subtitle_ocr`, or `unknown`.
 
 ## Actor Binding Rules
@@ -320,4 +321,4 @@ These items are intentionally not final and should be confirmed against real sam
 - `evidence_refs.source_type` uses `video | key_display | transcript`.
 - `roi_hint` is a discriminated object using `full_frame`, `named_roi`, or `xywh_box`.
 - `key_display` segments may carry optional `observed_input_text`.
-- JSON Schema enforces actor-binding coverage, while document-wide ID uniqueness remains a semantic invariant for future concrete-output validation.
+- JSON Schema enforces actor-binding coverage, while document-wide ID uniqueness and interval invariants (`start_frame < end_frame`, `end_frame <= clip_metadata.total_frames`) remain semantic invariants for future concrete-output validation.
