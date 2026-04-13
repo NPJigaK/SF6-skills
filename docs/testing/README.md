@@ -12,5 +12,6 @@ Core local verification set:
 - `powershell -ExecutionPolicy Bypass -File tests/integration/validate-public-skill-boundaries.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/integration/validate-kb-sf6-core-location.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/integration/validate-kb-sf6-frame-current-location.ps1`
+- `powershell -ExecutionPolicy Bypass -File tests/integration/validate-video-analysis-core-location.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/install/validate-dogfood-mirror.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/install/validate-distribution-surface.ps1`

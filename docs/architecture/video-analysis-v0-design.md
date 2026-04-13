@@ -126,6 +126,9 @@ Every canonical segment must carry these common fields:
 - `confidence`
 - `evidence_refs[]`
 
+- `segment_id` is a document-wide unique string.
+- `confidence` is always present and uses a numeric `[0, 1]` scale.
+
 Track-specific metadata may add fields such as:
 
 - `family`
@@ -209,6 +212,7 @@ Additional notes:
 - `charge_window` and `button_chord_window` are not canonical first-cut kinds.
 - `actor_ref` is segment metadata.
 - `overlay_lane` may be added as metadata if simultaneous overlays need disambiguation.
+- `observed_input_text` may be carried as optional segment metadata for observed input notation.
 
 ### Transcript
 
@@ -282,7 +286,12 @@ evidence_refs[]:
 
 ### Evidence Rules
 
+- `source_type` uses the stable vocabulary `video | key_display | transcript`.
 - `frame_range` uses the normalized 60fps 0-based half-open convention.
+- `roi_hint` uses one of these shapes:
+  - `{ "kind": "full_frame" }`
+  - `{ "kind": "named_roi", "name": "key_display_left" }`
+  - `{ "kind": "xywh_box", "x": 120, "y": 640, "width": 400, "height": 140 }`
 - Evidence points back to the source clip, not to required saved artifacts.
 - Saved frame or crop artifact paths are not canonical required fields.
 - Future materialization may use optional debug or sidecar outputs, not the canonical schema.
@@ -305,9 +314,10 @@ These items are intentionally not final and should be confirmed against real sam
 
 ## Open Schema Details
 
-These items are still unresolved schema details even though the higher-level design is agreed:
-
-- The exact scale or encoding for `binding_confidence`
-- The stable vocabulary for `evidence_refs.source_type`
-- The exact shape for `roi_hint`
-- The concrete field or encoding used to store observed key-display input content
+- `actor_bindings` must contain exactly one `actor_a` binding and exactly one `actor_b` binding.
+- `segment_id` and `evidence_id` are document-wide unique strings.
+- Segment `confidence` and `binding_confidence` both use numeric `[0, 1]`.
+- `evidence_refs.source_type` uses `video | key_display | transcript`.
+- `roi_hint` is a discriminated object using `full_frame`, `named_roi`, or `xywh_box`.
+- `key_display` segments may carry optional `observed_input_text`.
+- JSON Schema enforces actor-binding coverage, while document-wide ID uniqueness remains a semantic invariant for future concrete-output validation.
