@@ -89,12 +89,18 @@ derived_events   # optional
 
 First-cut `clip_metadata` stays frame-native.
 
-Required or expected fields:
+Fields that are always present:
 
 - `clip_id`
 - `source_fps`
 - `normalized_fps = 60`
 - `total_frames`
+
+Field value rules:
+
+- `source_fps` must be present and may be `null` when the source rate cannot be established reliably.
+- `normalized_fps` must be present and is fixed at `60`.
+- `total_frames` must be present and is counted on the normalized timeline.
 
 Optional provenance or display fields:
 
@@ -107,6 +113,32 @@ Not canonical required:
 - `normalized_duration_sec`
 
 `normalized_duration_sec` is derived from `total_frames / 60`.
+
+### Canonical Segment Record
+
+Every canonical segment must carry these common fields:
+
+- `segment_id`
+- `track`
+- `kind`
+- `start_frame`
+- `end_frame`
+- `confidence`
+- `evidence_refs[]`
+
+Track-specific metadata may add fields such as:
+
+- `family`
+- `actor_ref`
+- `screen_side`
+- `overlay_lane`
+- `speaker_ref`
+- `speaker_role`
+- `text`
+- `language`
+- `source_subtype`
+
+The common record stays stable across tracks. Track-specific payload should extend it without changing the core segment identity and interval model.
 
 ## Per-Track Kind Vocabulary
 
@@ -190,6 +222,9 @@ Additional notes:
 - `speaker_ref` is a clip-local speaker token such as `speaker_1`, `speaker_2`, or `unknown`.
 - `speaker_role` is separate metadata such as `commentary`, `actor_voice`, `system_voice`, or `unknown`.
 - `actor_ref` is optional metadata and is separate from `speaker_ref`.
+- `text` must be present for transcript segments.
+- `language` should be present and may be `null` when unknown.
+- `source_subtype` is optional metadata such as `provided_transcript`, `asr`, `subtitle_ocr`, or `unknown`.
 
 ## Actor Binding Rules
 
@@ -205,13 +240,14 @@ First-cut canonical fields for each actor binding:
 ### Binding Semantics
 
 - `actor_ref` identifies `actor_a` or `actor_b`.
-- `slot_id` is `p1 | p2 | unknown`.
-- `character_slug` is a single resolved roster slug or `null`.
+- `slot_id` is always present and uses `p1 | p2 | unknown`.
+- `character_slug` is always present and is a single resolved roster slug or `null`.
+- Non-null `character_slug` values must use the current roster slug namespace defined by `shared/roster/current-character-roster.json` and the packaged roster inventory recorded in `skills/kb-sf6-frame-current/assets/runtime_manifest.json`.
 - `character_candidates[]` is not part of the first-cut canonical schema.
 - Same-character matchups are allowed.
-- Appearance does not need to be usable for binding. `appearance_hint` may be null or empty.
-- `binding_confidence` expresses how stable the chosen binding is.
-- `binding_basis[]` records why the binding was made.
+- Appearance does not need to be usable for binding. `appearance_hint` is expected to be present and may be `null` or empty.
+- `binding_confidence` is always present and expresses how stable the chosen binding is.
+- `binding_basis[]` is always present and records why the binding was made.
 
 ### Binding Basis Tags
 
@@ -227,6 +263,7 @@ First-cut stable tag vocabulary:
 - `unknown`
 
 `binding_basis[]` is a coarse tag array, not free text and not a debug artifact surface.
+If no stronger basis exists, use `unknown`.
 
 ## Evidence Model
 
@@ -254,7 +291,7 @@ evidence_refs[]:
 
 - `derived_events` is optional.
 - `derived_events` is downstream-friendly but not the canonical truth surface.
-- Each derived event should carry `source_segment_ids` so the event can be traced back to canonical segments.
+- Each derived event must carry `source_segment_ids` so the event can be traced back to canonical segments.
 - If an interpretation only exists as a derived event and cannot be supported by source segments, it should not be treated as canonical.
 
 ## Provisional Items Requiring Real Video Review
@@ -273,4 +310,4 @@ These items are still unresolved schema details even though the higher-level des
 - The exact scale or encoding for `binding_confidence`
 - The stable vocabulary for `evidence_refs.source_type`
 - The exact shape for `roi_hint`
-
+- The concrete field or encoding used to store observed key-display input content
