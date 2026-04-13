@@ -1,10 +1,16 @@
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..')
+$videoAnalysisBehaviorGuidance = (
+  '`skills/video-analysis-core/` ' +
+  [char]0x306F + ' raw video ' + [char]0x3092 + ' 60fps ' +
+  [char]0x306B + [char]0x6B63 + [char]0x898F + [char]0x5316 + [char]0x3057 + [char]0x305F +
+  ' observation-first surface ' + [char]0x3092 + [char]0x8FD4 + [char]0x3059 + [char]0x3002
+)
 
 $checks = @(
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/'; MustNotContain = '.agents/skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/'; MustNotContain = '.agents/skills/sync-knowledge/' },
-  @{ Path = 'AGENTS.md'; MustContain = 'skills/video-analysis-core/' },
+  @{ Path = 'AGENTS.md'; MustContain = $videoAnalysisBehaviorGuidance },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/` is the canonical public source.' },
   @{ Path = 'AGENTS.md'; MustContain = 'Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.' },
   @{ Path = 'AGENTS.md'; MustContain = 'The sync refresh removes stale extra directories.' },
@@ -19,7 +25,7 @@ $checks = @(
 )
 
 foreach ($check in $checks) {
-  $content = Get-Content -LiteralPath (Join-Path $repoRoot $check.Path) -Raw -ErrorAction Stop
+  $content = Get-Content -LiteralPath (Join-Path $repoRoot $check.Path) -Raw -Encoding UTF8 -ErrorAction Stop
   if ($content -notmatch [regex]::Escape($check.MustContain)) {
     throw "$($check.Path) missing: $($check.MustContain)"
   }

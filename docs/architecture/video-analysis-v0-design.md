@@ -1,9 +1,9 @@
 # Video Analysis V0 Design
 
-Status: Draft for review
+Status: Implemented (v0)
 Date: 2026-04-13
 
-This document records the current agreed design for the first public video-analysis skill. It is a design artifact only. It does not authorize implementation yet.
+This document records the current agreed and implemented design for the first public video-analysis skill, and serves as a maintained reference for the v0 behavior.
 
 ## Verified Repo Constraints
 
