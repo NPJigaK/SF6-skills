@@ -32,6 +32,9 @@
 ## Knowledge と Skills
 - 不変概念は `skills/kb-sf6-core/` に寄せる。
 - current roster characters の current fact は `skills/kb-sf6-frame-current/` を使い、published exports だけを読む。
+- 動画観測の canonical segment timeline は `skills/video-analysis-core/` に寄せる。
+- `skills/video-analysis-core/` は raw video を 60fps に正規化した observation-first surface を返す。
+- exact current fact や verdict-heavy interpretation はこの skill で断定しない。
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
 - パッチ/調整対応の current roster frame-data 更新は `maintainer-skills/update-frame-data/` を使う。
 
