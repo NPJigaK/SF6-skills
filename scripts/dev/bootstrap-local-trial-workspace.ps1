@@ -3,6 +3,7 @@ $ErrorActionPreference = 'Stop'
 
 $scriptDir = Split-Path -Parent $PSCommandPath
 $repoRoot = (Resolve-Path (Join-Path $scriptDir '..\..')).Path
+$runningOnWindows = [System.Environment]::OSVersion.Platform -eq [System.PlatformID]::Win32NT
 $localRoot = Join-Path $repoRoot 'local'
 $adapterRoot = Join-Path (Join-Path $localRoot '.agents') 'skills'
 $targetPath = Join-Path $adapterRoot 'sf6-skills'
@@ -16,10 +17,26 @@ if (Test-Path -LiteralPath $targetPath) {
         throw "Refusing to remove existing non-link path: $targetPath"
     }
 
-    Remove-Item -LiteralPath $targetPath -Force
+    $resolvedTargetPath = @($targetItem.Target | ForEach-Object { $_.ToString() }) | Select-Object -First 1
+    if (-not $resolvedTargetPath) {
+        throw "Unable to resolve existing discovery link target: $targetPath"
+    }
+    $matchesSource = if ($runningOnWindows) {
+        [System.StringComparer]::OrdinalIgnoreCase.Equals($resolvedTargetPath, $sourcePath)
+    }
+    else {
+        $resolvedTargetPath -eq $sourcePath
+    }
+
+    if ($matchesSource) {
+        Write-Host "Bootstrapped local trial discovery at $targetPath"
+        return
+    }
+
+    throw "Existing discovery link points elsewhere. Remove it manually and rerun: $targetPath -> $resolvedTargetPath"
 }
 
-if ($IsWindows) {
+if ($runningOnWindows) {
     cmd /c mklink /J "$targetPath" "$sourcePath" | Out-Null
 } else {
     New-Item -ItemType SymbolicLink -Path $targetPath -Target $sourcePath | Out-Null
