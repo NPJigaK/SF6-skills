@@ -111,6 +111,6 @@ Read the full output and confirm exit code `0` for all four.
 - Inferring the patch date from search-engine snippets
 - Reusing an older patch label because the frame page changed recently
 - Treating commit wording as exempt from source verification
-- Running runtime-asset build and dogfood sync in parallel
+- Treating local trial surfaces or discovery setup as part of this shared maintainer workflow
 - Reporting the whole roster as fully updated when one or more characters stayed on last-known-good
 - Forgetting to investigate a roster character whose `supercombo_enrichment` fell back to `unavailable` or `retained_last_known_good`
