@@ -43,14 +43,24 @@ foreach ($agent in @('codex', 'opencode', 'claude', 'cursor')) {
 
   $agentFixtureRoot = Join-Path $fixtureRoot $agent
   $installOutput = & powershell -ExecutionPolicy Bypass -File $installerPath -Agent $agent -Source $bundlePath -TargetRoot $agentFixtureRoot
-  $expectedMessage = "Installed sf6-skills for $agent"
+  $installedRoot = Join-Path $agentFixtureRoot 'sf6-skills'
+  $expectedMessage = "Installed sf6-skills for $agent to $installedRoot (source:"
   if ($installOutput -notmatch [regex]::Escape($expectedMessage)) {
     throw "Install output mismatch for ${agent}: $installOutput"
   }
 
-  $installedRoot = Join-Path $agentFixtureRoot 'sf6-skills'
+  if (-not (Test-Path -LiteralPath $installedRoot)) {
+    throw "Missing installed target for ${agent}: $installedRoot"
+  }
+
+  $installedItem = Get-Item -LiteralPath $installedRoot
+  if ($installedItem.LinkType -notin @('Junction', 'SymbolicLink')) {
+    throw "Installed target is not a link for ${agent}: $($installedItem.LinkType)"
+  }
+
+  $resolvedRoot = (Resolve-Path -LiteralPath $installedRoot).Path
   foreach ($relativePath in @('kb-sf6-core/SKILL.md', 'kb-sf6-frame-current/SKILL.md')) {
-    $installedPath = Join-Path $installedRoot $relativePath
+    $installedPath = Join-Path $resolvedRoot $relativePath
     if (-not (Test-Path -LiteralPath $installedPath -PathType Leaf)) {
       throw "Missing installed file for ${agent}: $installedPath"
     }

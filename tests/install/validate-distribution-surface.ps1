@@ -49,6 +49,12 @@ foreach ($path in $installDocs) {
 }
 
 $codex = Get-Content -LiteralPath (Join-Path $repoRoot '.codex/INSTALL.md') -Raw
+if ($codex -notmatch [regex]::Escape('private source checkout')) {
+  throw '.codex/INSTALL.md missing private source checkout wording'
+}
+if ($codex -notmatch [regex]::Escape('links the Codex discovery target to that source')) {
+  throw '.codex/INSTALL.md missing source-plus-link wording'
+}
 if ($codex -match [regex]::Escape('git clone')) {
   throw '.codex/INSTALL.md still contains git clone'
 }
