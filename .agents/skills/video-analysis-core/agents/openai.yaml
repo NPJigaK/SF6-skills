@@ -1,4 +1,0 @@
-interface:
-  display_name: "SF6 Video Analysis Core"
-  short_description: "Normalize raw SF6 video to 60fps and emit the canonical observation-first segment timeline."
-  default_prompt: "Use $video-analysis-core to turn raw SF6 video into the canonical segment timeline defined by `references/output-contract.md` and `assets/video-analysis-v0.schema.json`."
