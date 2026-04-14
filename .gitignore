@@ -6,4 +6,11 @@ __pycache__/
 data/normalized/
 *.zip
 .dist/
-local/
+local/*
+!local/.gitignore
+!local/AGENTS.md
+!local/.codex/
+!local/.codex/INSTALL.md
+!local/.agents/
+!local/.agents/AGENTS.md
+!local/.agents/.gitignore
