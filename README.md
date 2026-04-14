@@ -10,29 +10,14 @@ SF6 の concept-first knowledge と、現行 roster 全体の v3 published frame
 
 ## Repository Structure
 
-- public skills
-  - `skills/<skill-name>/`
-  - canonical public source
-- maintainer-only skills
-  - `maintainer-skills/<skill-name>/`
-  - repository-only workflows
-- repo-local dogfooding mirror
-  - `.agents/skills/`
-  - `.agents/skills/<skill-name>/`
-  - exact top-level mirror of `skills/`
-  - derived, never canonical source
-- shared executable infrastructure
-  - `packages/`
-- shared non-code artifacts
-  - `shared/`
-- repository docs and validators
-  - `docs/`
-  - `tests/`
-  - `scripts/`
-- data production code
-  - `ingest/frame_data/`
-- published current-fact artifacts
-  - `data/exports/<character_slug>/`
+- public skills live under `skills/<skill-name>/`
+- maintainer-only workflows live under `maintainer-skills/<skill-name>/`
+- personal trial workspace lives under `local/`
+- shared executable infrastructure lives under `packages/`
+- shared non-code artifacts live under `shared/`
+- repository docs, tests, and scripts live under `docs/`, `tests/`, and `scripts/`
+- data production code lives under `ingest/frame_data/`
+- published current-fact artifacts live under `data/exports/<character_slug>/`
 
 ## Repo Structure Contract
 

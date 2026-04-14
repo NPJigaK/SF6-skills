@@ -13,7 +13,7 @@ Core local verification set:
 - `powershell -ExecutionPolicy Bypass -File tests/integration/validate-kb-sf6-core-location.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/integration/validate-kb-sf6-frame-current-location.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/integration/validate-video-analysis-core-location.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/install/validate-dogfood-mirror.ps1`
+- `powershell -ExecutionPolicy Bypass -File tests/integration/validate-local-trial-surface.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/install/validate-distribution-surface.ps1`
 
 Ad-hoc or personal smoke runs should stay under ignored `local/` scratch space, not in the tracked core verification surface.

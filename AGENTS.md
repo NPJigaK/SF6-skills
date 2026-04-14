@@ -21,6 +21,9 @@
 - 公式ソースが存在する領域では `T3` 単独を最終根拠にしない。
 - 概念質問にはまず概念で答え、current fact が必要な部分だけ published data を確認する。
 - current roster characters の current fact の最終根拠は published exports only とする。
+- `skills/` is the canonical public source.
+- `local/` is the personal trial workspace for trying distributed skills.
+- Do not treat repo-root `.agents/` as a tracked source or mirror surface.
 - published data の責務は守る。
   - `official_raw`: canonical な正本
   - `derived_metrics`: official-only の機械計算結果
@@ -37,10 +40,6 @@
 - exact current fact や verdict-heavy interpretation はこの skill で断定しない。
 - knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
 - パッチ/調整対応の current roster frame-data 更新は `maintainer-skills/update-frame-data/` を使う。
-
-`skills/` is the canonical public source.
-Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.
-The sync refresh removes stale extra directories.
 
 ## Ingestion / Data
 - 実装コードは `ingest/frame_data/` に置く。`.agents/skills/` に取得コードは置かない。

@@ -11,7 +11,7 @@ This document records the current agreed and implemented design for the first pu
 - Repo-level canonical published current-fact data lives under `data/exports/<character_slug>/...`.
 - Public distributed `skills/kb-sf6-frame-current` reads generated packaged runtime assets under `skills/kb-sf6-frame-current/assets/published/<character_slug>/...`.
 - Public skills must start as independent units under `skills/<skill-name>/`.
-- `skills/` is the canonical public source. `.agents/skills/` is an exact top-level mirror for repo-local dogfooding.
+- `skills/` is the canonical public source, and `local/` is the personal trial workspace for trying distributed skills from this repository.
 - Shared extraction to `packages/` or `shared/` should happen only after a second real consumer exists.
 - Public skills must not depend on another skill directory.
 

@@ -8,4 +8,5 @@ Required per skill: `SKILL.md`.
 
 Optional per skill: `references/`, `assets/`, `agents/`.
 
-`.agents/skills/` is a dogfooding mirror, not the canonical source.
+There is no tracked repo-root `.agents/skills/` mirror.
+Use `local/` for personal trials and environment-level install adapters for discovery.

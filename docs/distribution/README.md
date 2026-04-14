@@ -6,4 +6,5 @@ Front doors:
 - [`.opencode/INSTALL.md`](../../.opencode/INSTALL.md)
 - [`.claude-plugin/INSTALL.md`](../../.claude-plugin/INSTALL.md)
 - [`.cursor-plugin/INSTALL.md`](../../.cursor-plugin/INSTALL.md)
+- [`local-trial-workspace.md`](./local-trial-workspace.md)
 - [`release-bundle.md`](./release-bundle.md)

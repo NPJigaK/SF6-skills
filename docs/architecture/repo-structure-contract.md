@@ -42,12 +42,6 @@ The structure contract exists to keep three things true:
 - not part of the public distribution unit
 - used for curation, sync, review, and other maintainer tasks
 
-### `.agents/skills/`
-
-- exact top-level mirror of `skills/` for repo-local dogfooding
-- derived from `skills/`
-- must not be treated as canonical source
-
 ### `packages/`
 
 - shared executable infrastructure
@@ -90,10 +84,16 @@ The structure contract exists to keep three things true:
 
 ### `local/`
 
-- ignored maintainer-private scratch space
-- used for personal experiments, raw fixtures, generated outputs, and temporary notes
-- never canonical source and never a shared workflow surface
+- tracked skeleton for a personal trial workspace
+- used for trying distributed skills from this repository
+- local discovery helpers may create ignored links under `local/.agents/skills/`
+- those links are not source
 - if a workflow needs to be shared, move an explicit version into `maintainer-skills/` or another tracked contract surface
+
+### Environment-Level Discovery
+
+- install-time discovery adapters such as `~/.agents/skills/<library-name>` may point to a checked-out `skills/` directory
+- these are environment-level discovery endpoints, not repository source surfaces
 
 ### Agent Entry Surfaces
 
@@ -145,12 +145,6 @@ This repository intentionally avoids pre-emptive abstraction.
 
 ## Derived Surface Contract
 
-### Repo-Local Dogfooding
-
-- `.agents/skills/` is an exact top-level mirror of `skills/`
-- it exists for local usage only
-- sync should remove stale extra directories
-
 ### Runtime Packaged Assets
 
 - packaged runtime assets inside a skill are derived outputs
@@ -170,7 +164,7 @@ This repository intentionally avoids pre-emptive abstraction.
 - `skills/<skill-name>/` must not import or read another skill as a dependency
 - `packages/` must stay skill-agnostic
 - `shared/` must stay skill-agnostic
-- `.agents/skills/` must not become a hand-maintained parallel tree
+- repository-root `.agents/` must not become a tracked source surface
 
 ## Validator Policy
 
@@ -178,7 +172,8 @@ This repository keeps only the minimum validator set needed to protect structure
 
 - layout contract
 - public skill `SKILL.md` path boundary checks
-- public skill location and mirror integrity
+- public skill location integrity
+- local trial surface boundary checks
 - distribution surface boundary checks
 - release bundle boundary checks
 - packaged runtime asset boundary checks where a skill needs packaged data

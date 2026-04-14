@@ -11,6 +11,7 @@ Repository-only workflow for patch-driven frame-data refreshes.
 - Use this for maintainer operations in this repository only.
 - Do not use this for public distribution skills, concept answers, or current-fact lookup answers.
 - Do not use this for knowledge curation; that belongs to `maintainer-skills/sync-knowledge/`.
+- Do not include personal trial workspaces or `local/.agents/skills/` links in this shared workflow.
 
 ## Hard Rules
 
@@ -42,12 +43,9 @@ If none of the above can be verified directly, patch metadata is not verified.
 6. Record each dataset state separately: `published`, `retained_last_known_good`, `unavailable`, or `not_selected`.
 7. Rebuild frame-current runtime assets:
    - `powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1`
-8. Sync the dogfood mirror after the build finishes:
-   - `powershell -ExecutionPolicy Bypass -File scripts/dev/sync-dogfood-skills.ps1`
-9. Do not run steps 7 and 8 in parallel. Build must finish before mirror sync starts.
-10. Run prune in `--dry-run --verbose` mode for every roster character.
-11. Confirm prune keeps the current published exports and only the minimum raw snapshots needed to reproduce them.
-12. Apply prune for every roster character.
+8. Run prune in `--dry-run --verbose` mode for every roster character.
+9. Confirm prune keeps the current published exports and only the minimum raw snapshots needed to reproduce them.
+10. Apply prune for every roster character.
 
 ## Commands
 
@@ -74,7 +72,6 @@ Run from the repo root:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1
-powershell -ExecutionPolicy Bypass -File scripts/dev/sync-dogfood-skills.ps1
 ```
 
 ## Verification
@@ -85,7 +82,6 @@ Before claiming success or creating a commit, run:
 powershell -ExecutionPolicy Bypass -File tests/packaging/validate-frame-current-runtime-assets.ps1
 powershell -ExecutionPolicy Bypass -File tests/integration/validate-kb-sf6-frame-current-location.ps1
 powershell -ExecutionPolicy Bypass -File tests/integration/validate-frame-current-boundary.ps1
-powershell -ExecutionPolicy Bypass -File tests/install/validate-dogfood-mirror.ps1
 ```
 
 Read the full output and confirm exit code `0` for all four.
