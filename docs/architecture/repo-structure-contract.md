@@ -88,6 +88,13 @@ The structure contract exists to keep three things true:
 - repository maintenance helpers
 - convenience layer only, not source of truth
 
+### `local/`
+
+- ignored maintainer-private scratch space
+- used for personal experiments, raw fixtures, generated outputs, and temporary notes
+- never canonical source and never a shared workflow surface
+- if a workflow needs to be shared, move an explicit version into `maintainer-skills/` or another tracked contract surface
+
 ### Agent Entry Surfaces
 
 - `.codex/`

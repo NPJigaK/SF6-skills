@@ -3,11 +3,6 @@ $required = @(
   'maintainer-skills/sync-knowledge/references/SYNC_POLICY.md',
   'maintainer-skills/sync-knowledge/templates/ENTRY_TEMPLATE.md',
   'maintainer-skills/sync-knowledge/templates/REVIEW_TEMPLATE.md',
-  'maintainer-skills/smoke-video-analysis/SKILL.md',
-  'maintainer-skills/smoke-video-analysis/references/smoke-cases/combo-short.json',
-  'maintainer-skills/smoke-video-analysis/references/smoke-cases/match-mid.json',
-  'maintainer-skills/smoke-video-analysis/references/smoke-cases/commentary-align.json',
-  'scripts/dev/run-video-analysis-smoke.ps1',
   'docs/authoring/automation-prompts/triage-new-notes.md'
 )
 
@@ -33,8 +28,14 @@ if (Test-Path '.agents/skills/sync-knowledge') {
   throw 'Legacy maintainer skill still present in .agents/skills'
 }
 
-if (Test-Path '.agents/skills/smoke-video-analysis') {
-  throw 'Maintainer smoke workflow must not exist in .agents/skills'
+foreach ($forbiddenPath in @(
+  'maintainer-skills/smoke-video-analysis',
+  'scripts/dev/run-video-analysis-smoke.ps1',
+  '.agents/skills/smoke-video-analysis'
+)) {
+  if (Test-Path $forbiddenPath) {
+    throw "Personal smoke workflow must stay out of tracked maintainer and mirror surfaces: $forbiddenPath"
+  }
 }
 
 if (Test-Path '.agents/automation-prompts/triage-new-notes.md') {
