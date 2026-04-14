@@ -1,27 +1,19 @@
+Set-StrictMode -Version Latest
+
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..')
-$videoAnalysisBehaviorGuidance = (
-  '`skills/video-analysis-core/` ' +
-  [char]0x306F + ' raw video ' + [char]0x3092 + ' 60fps ' +
-  [char]0x306B + [char]0x6B63 + [char]0x898F + [char]0x5316 + [char]0x3057 + [char]0x305F +
-  ' observation-first surface ' + [char]0x3092 + [char]0x8FD4 + [char]0x3059 + [char]0x3002
-)
 
 $checks = @(
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/'; MustNotContain = '.agents/skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
-  @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/'; MustNotContain = '.agents/skills/sync-knowledge/' },
-  @{ Path = 'AGENTS.md'; MustContain = $videoAnalysisBehaviorGuidance },
-  @{ Path = 'AGENTS.md'; MustContain = 'skills/` is the canonical public source.' },
-  @{ Path = 'AGENTS.md'; MustContain = 'Repo-local dogfooding uses `.agents/skills/` as an exact top-level mirror of `skills/`.' },
-  @{ Path = 'AGENTS.md'; MustContain = 'The sync refresh removes stale extra directories.' },
-  @{ Path = 'docs/architecture/README.md'; MustContain = 'video-analysis-v0-design.md' },
-  @{ Path = 'docs/architecture/README.md'; MustContain = 'video-analysis-v0-implementation-plan.md' },
-  @{ Path = '.agents/AGENTS.md'; MustContain = '`skills/` is the canonical public source.'; MustNotContain = 'skills and related assets only' },
-  @{ Path = '.agents/AGENTS.md'; MustContain = '`.agents/skills/` is the exact top-level mirror of `skills/` for repo-local dogfooding.' },
-  @{ Path = '.agents/AGENTS.md'; MustContain = 'The sync refresh removes stale extra directories.' },
-  @{ Path = 'docs/distribution/repo-local-dogfooding.md'; MustContain = '`skills/` is the canonical public source.' },
-  @{ Path = 'docs/distribution/repo-local-dogfooding.md'; MustContain = '`.agents/skills/` is the exact top-level mirror of `skills/` for repo-local dogfooding.' },
-  @{ Path = 'docs/distribution/repo-local-dogfooding.md'; MustContain = 'The sync refresh removes stale extra directories.' }
+  @{ Path = 'AGENTS.md'; MustContain = 'skills/video-analysis-core/'; MustNotContain = '.agents/skills/video-analysis-core/' },
+  @{ Path = 'AGENTS.md'; MustContain = '`skills/` is the canonical public source.' },
+  @{ Path = 'AGENTS.md'; MustContain = '`local/` is the personal trial workspace for trying distributed skills.' },
+  @{ Path = 'README.md'; MustContain = '`skills/<skill-name>/`' },
+  @{ Path = 'README.md'; MustContain = '`local/`' },
+  @{ Path = 'skills/README.md'; MustContain = 'There is no tracked repo-root `.agents/skills/` mirror.' },
+  @{ Path = 'docs/distribution/local-trial-workspace.md'; MustContain = '`local/` is the personal trial workspace.' },
+  @{ Path = 'docs/distribution/local-trial-workspace.md'; MustContain = 'bootstrap-local-trial-workspace.ps1' },
+  @{ Path = 'docs/testing/README.md'; MustContain = 'validate-local-trial-surface.ps1' }
 )
 
 foreach ($check in $checks) {

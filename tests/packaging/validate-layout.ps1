@@ -5,8 +5,9 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $requiredDirectories = @(
   'skills',
   'maintainer-skills',
-  '.agents',
-  '.agents/skills',
+  'local',
+  'local/.codex',
+  'local/.agents',
   'packages',
   'packages/skill-installers',
   'packages/skill-validator',
@@ -32,17 +33,6 @@ $requiredDirectories = @(
   '.opencode'
 )
 
-$missingDirectories = foreach ($relativePath in $requiredDirectories) {
-  $fullPath = Join-Path $repoRoot $relativePath
-  if (-not (Test-Path -LiteralPath $fullPath -PathType Container)) {
-    $relativePath
-  }
-}
-
-if (@($missingDirectories).Count -gt 0) {
-  throw "Missing required paths: $($missingDirectories -join ', ')"
-}
-
 $requiredFiles = @(
   'README.md',
   'docs/architecture/README.md',
@@ -60,10 +50,6 @@ $missingFiles = foreach ($relativePath in $requiredFiles) {
   }
 }
 
-if (@($missingFiles).Count -gt 0) {
-  throw "Missing required files: $($missingFiles -join ', ')"
-}
-
 $contentChecks = @(
   @{
     Path = 'README.md'
@@ -71,7 +57,7 @@ $contentChecks = @(
       '## Repository Structure',
       '## Repo Structure Contract',
       '[repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)',
-      '`.agents/skills/`'
+      '`local/`'
     )
   },
   @{
@@ -110,11 +96,13 @@ $contentChecks = @(
   }
 )
 
+$validationIssues = @()
+
 foreach ($check in $contentChecks) {
   $content = Get-Content -LiteralPath (Join-Path $repoRoot $check.Path) -Raw
   foreach ($needle in $check.MustContain) {
     if ($content -notmatch [regex]::Escape($needle)) {
-      throw "$($check.Path) missing: $needle"
+      $validationIssues += "$($check.Path) missing: $needle"
     }
   }
 }
@@ -152,11 +140,29 @@ foreach ($skillName in $maintainerSkillNames) {
   }
 }
 
-$dogfoodRoot = Join-Path $repoRoot '.agents/skills'
-$dogfoodSkillNames = Get-DirectChildDirectoryNames -Root $dogfoodRoot
+$legacyDogfoodRoot = Join-Path $repoRoot '.agents'
 
-if (Compare-Object ($publicSkillNames | Sort-Object) ($dogfoodSkillNames | Sort-Object)) {
-  throw 'Dogfood mirror top-level skill inventory does not match skills/'
+$missingDirectories = foreach ($relativePath in $requiredDirectories) {
+  $fullPath = Join-Path $repoRoot $relativePath
+  if (-not (Test-Path -LiteralPath $fullPath -PathType Container)) {
+    $relativePath
+  }
+}
+
+if (@($missingDirectories).Count -gt 0) {
+  $validationIssues += "Missing required paths: $($missingDirectories -join ', ')"
+}
+
+if (@($missingFiles).Count -gt 0) {
+  $validationIssues += "Missing required files: $($missingFiles -join ', ')"
+}
+
+if (Test-Path -LiteralPath $legacyDogfoodRoot -PathType Container) {
+  $validationIssues += 'Repo-root .agents must not exist'
+}
+
+if (@($validationIssues).Count -gt 0) {
+  throw ($validationIssues -join '; ')
 }
 
 Write-Host 'Layout OK'
