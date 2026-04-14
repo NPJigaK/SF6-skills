@@ -11,7 +11,12 @@ $sourcePath = Join-Path $repoRoot 'skills'
 New-Item -ItemType Directory -Path $adapterRoot -Force | Out-Null
 
 if (Test-Path -LiteralPath $targetPath) {
-    Remove-Item -LiteralPath $targetPath -Recurse -Force
+    $targetItem = Get-Item -LiteralPath $targetPath -Force
+    if ($targetItem.LinkType -notin @('Junction', 'SymbolicLink')) {
+        throw "Refusing to remove existing non-link path: $targetPath"
+    }
+
+    Remove-Item -LiteralPath $targetPath -Force
 }
 
 if ($IsWindows) {
