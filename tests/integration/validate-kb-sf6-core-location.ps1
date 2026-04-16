@@ -2,6 +2,15 @@
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 
+function Normalize-Content {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string] $Content
+  )
+
+  return ($Content -replace "`r`n", "`n").TrimEnd("`r", "`n")
+}
+
 $required = @(
   'skills/kb-sf6-core/SKILL.md',
   'skills/kb-sf6-core/references/CORE_QUESTIONS.md',
@@ -92,14 +101,14 @@ $expectedSourcePolicy = [string]::Join("`n", @(
 )) + "`n"
 
 $skillPath = Join-Path $repoRoot 'skills/kb-sf6-core/SKILL.md'
-$skillContent = [System.IO.File]::ReadAllText($skillPath)
-if ($skillContent -ne $expectedSkill) {
+$skillContent = Normalize-Content ([System.IO.File]::ReadAllText($skillPath))
+if ($skillContent -ne (Normalize-Content $expectedSkill)) {
   throw 'skills/kb-sf6-core/SKILL.md does not match the expected public shell contract'
 }
 
 $sourcePolicyPath = Join-Path $repoRoot 'skills/kb-sf6-core/references/SOURCE_POLICY.md'
-$sourcePolicyContent = [System.IO.File]::ReadAllText($sourcePolicyPath)
-if ($sourcePolicyContent -ne $expectedSourcePolicy) {
+$sourcePolicyContent = Normalize-Content ([System.IO.File]::ReadAllText($sourcePolicyPath))
+if ($sourcePolicyContent -ne (Normalize-Content $expectedSourcePolicy)) {
   throw 'skills/kb-sf6-core/references/SOURCE_POLICY.md does not match the expected public shell contract'
 }
 

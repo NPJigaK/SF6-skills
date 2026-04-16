@@ -44,28 +44,19 @@ Detailed contract:
   - `SF6skill.zip` のような shared zip artifact を含む
   - durable checked-in artifact surface ではない
 
-## Current Fact Policy
+## Current Fact Surfaces
 
-- current fact は `data/exports/<character_slug>/snapshot_manifest.json` を entrypoint に確認する
-- `publication_state = available` の dataset だけを current-fact lookup に使う
-- repo-level canonical published data は `data/exports/<character_slug>/...`
+- repo-level canonical published current-fact source lives under `data/exports/<character_slug>/...`
 - current roster の canonical source は `shared/roster/current-character-roster.json`
-- public distributed `skills/kb-sf6-frame-current` は generated packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` を read し、これらは `data/exports/<character_slug>/...` から生成される
-- lookup order は `official_raw` -> `derived_metrics` -> `supercombo_enrichment`
-- `official_raw` を canonical source として先に読む
-- `derived_metrics` は official-only の機械計算結果として使う
-- `supercombo_enrichment` は supplemental join のみで、official を上書きしない
-- `*_manual_review.*`, `data/raw/...`, `data/normalized/...` は通常の current-fact 回答の最終根拠にしない
+- exact runtime answer rules live in `skills/kb-sf6-frame-current/`
+- concept-only runtime guidance lives in `skills/kb-sf6-core/`
+- generated packaged runtime assets under `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` are built from `data/exports/<character_slug>/...`
 
 ## Data Layout
 
 - `data/exports/<character_slug>/`
-  - shared published surface
-  - `snapshot_manifest.json`
-  - `official_raw.*`
-  - `derived_metrics.*`
-  - `supercombo_enrichment.*`
-  - `*_manual_review.*`
+  - shared published export surface for one character
+  - exact runtime lookup contract lives in `skills/kb-sf6-frame-current/references/export-contract.md`
 - `data/raw/<source>/<character_slug>/<snapshot_id>/`
   - currently published datasets を裏づける minimal backing raw snapshots
 
