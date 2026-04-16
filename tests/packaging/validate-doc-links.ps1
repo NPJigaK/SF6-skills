@@ -16,6 +16,31 @@ $LabelVerified = New-Text 91, 0x691C, 0x8A3C, 0x6E08, 0x307F, 93
 $LabelConcept = New-Text 91, 0x6982, 0x5FF5, 0x306E, 0x307F, 93
 $LabelPending = New-Text 91, 0x4FDD, 0x7559, 93
 
+$readme = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
+
+$readmeHeadingChecks = @(
+  @{ Pattern = '(?m)^# SF6 Skills$'; Label = '# SF6 Skills' },
+  @{ Pattern = '(?m)^## How it works$'; Label = '## How it works' },
+  @{ Pattern = '(?m)^## Installation$'; Label = '## Installation' },
+  @{ Pattern = '(?m)^## Verify installation$'; Label = '## Verify installation' },
+  @{ Pattern = '(?m)^## Basic usage$'; Label = '## Basic usage' },
+  @{ Pattern = '(?m)^## Current fact policy$'; Label = '## Current fact policy' },
+  @{ Pattern = '(?m)^## What''s inside$'; Label = "## What's inside" },
+  @{ Pattern = '(?m)^## Contributing$'; Label = '## Contributing' },
+  @{ Pattern = '(?m)^## Updating$'; Label = '## Updating' }
+)
+
+$readmeBlockChecks = @(
+  @{
+    Pattern = '(?ms)^## How it works\s+After installation, this repo exposes SF6 knowledge as agent-readable skills\. The agent can usually choose a matching skill automatically\. You can also mention a skill by name explicitly\.\s+Use `kb-sf6-core` for stable concepts and terminology that should not depend on the current patch\. Use `kb-sf6-frame-current` when the task needs exact current values for supported current roster characters\. Use `video-analysis-core` for observation-first video analysis from raw footage\.\s+Concept explanation and current-fact lookup are intentionally separated\. Current facts are grounded in published exports rather than raw or audit surfaces\.\s+'
+    Label = 'How it works skill-selection guidance'
+  },
+  @{
+    Pattern = '(?ms)^## Current fact policy\s+For current roster characters, current fact is grounded in published exports only\.\s+- Start from `data/exports/<character_slug>/snapshot_manifest.json`\.\s+- Use only datasets whose `publication_state = available`\.\s+- The current roster canonical source is `shared/roster/current-character-roster.json`\.\s+- `official_raw` is canonical\.\s+- `derived_metrics` is official-only computed output\.\s+- `supercombo_enrichment` is supplemental only\.\s+'
+    Label = 'Current fact policy trust model'
+  }
+)
+
 $checks = @(
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/' },
@@ -79,9 +104,16 @@ $checks = @(
   @{ Path = 'skills/README.md'; MustNotContain = '.agents/skills/video-analysis-core/' }
 )
 
-$readme = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
-if ($readme -notmatch '(?m)^# SF6 Skills$') {
-  throw 'README.md missing: # SF6 Skills'
+foreach ($readmeHeadingCheck in $readmeHeadingChecks) {
+  if ($readme -notmatch $readmeHeadingCheck.Pattern) {
+    throw "README.md missing heading: $($readmeHeadingCheck.Label)"
+  }
+}
+
+foreach ($readmeBlockCheck in $readmeBlockChecks) {
+  if ($readme -notmatch $readmeBlockCheck.Pattern) {
+    throw "README.md missing block: $($readmeBlockCheck.Label)"
+  }
 }
 
 foreach ($check in $checks) {
