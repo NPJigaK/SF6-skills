@@ -4,8 +4,8 @@ Supported characters for this skill are the `character_slug` entries recorded in
 
 ## Runtime Labels
 
-- `[検証済み]`: use when the answer is grounded in `snapshot_manifest.json` plus packaged `available` datasets and the lookup chain defined below.
-- `[保留]`: use when the requested character, dataset, field, or match is unavailable, ambiguous, or would require manual-review data that is not packaged with the skill.
+- `[検証済み]`: use when the answer is grounded in `snapshot_manifest.json` plus packaged `available` datasets and the lookup chain defined below, with an official published row remaining the final authority.
+- `[保留]`: use when the requested character, dataset, field, or match is unavailable, ambiguous, would require manual-review data that is not packaged with the skill, or exists only in `supercombo_enrichment`.
 
 ## Files
 
@@ -39,6 +39,7 @@ Supported characters for this skill are the `character_slug` entries recorded in
 - `derived_metrics` is acceptable only because it is computed mechanically from `official_raw`.
 - `supercombo_enrichment` is T3 supplemental data. Never let it override official.
 - When packaged official data exists, do not use T3 alone as the final authority.
+- If a requested fact exists only in `supercombo_enrichment`, answer `[保留]`.
 - `*_manual_review.*`, `*.csv` sidecars, `data/raw/...`, and `data/normalized/...` are intentionally excluded from the packaged runtime subset.
 
 ## Selection Rules

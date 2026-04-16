@@ -34,13 +34,13 @@ Read current facts for packaged roster characters from `assets/published/<charac
 
 ## Answer Rules
 
-- Use `[検証済み]` when the answer is grounded in packaged published exports that satisfy the runtime lookup rules above.
-- Use `[保留]` when the needed dataset or field is unavailable, ambiguous, or only present in manual-review outputs that are not packaged with the skill.
+- Use `[検証済み]` when the answer is grounded in packaged published exports that satisfy the runtime lookup rules above and an official published row remains the final authority.
+- Use `[保留]` when the needed dataset or field is unavailable, ambiguous, only present in manual-review outputs that are not packaged with the skill, or available only from `supercombo_enrichment`.
 - Treat `official_raw` as the final authority for exact packaged current fact.
 - Treat `derived_metrics` as acceptable only for machine-derived helper values anchored to `official_raw`.
 - Do not use T3 alone as the final authority when packaged official data exists.
 - When the user asks a concept question, explain the concept first and use `kb-sf6-core`.
-- Mention the exact dataset used when it matters: `official_raw`, `derived_metrics`, or `supercombo_enrichment`.
+- Mention the exact dataset used when it matters: `official_raw`, `derived_metrics`, or supplemental `supercombo_enrichment`.
 
 ## Safe-Use Rules
 
