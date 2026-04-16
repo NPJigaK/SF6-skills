@@ -50,14 +50,25 @@ $missingFiles = foreach ($relativePath in $requiredFiles) {
   }
 }
 
+$readme = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
+if ($readme -notmatch '(?m)^## Installation$') {
+  throw 'README.md missing: ## Installation'
+}
+
 $contentChecks = @(
   @{
     Path = 'README.md'
     MustContain = @(
-      '## Repository Structure',
-      '## Repo Structure Contract',
       '[repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)',
+      '[ingest/frame_data/README.md](./ingest/frame_data/README.md)',
       '`local/`'
+    )
+  },
+  @{
+    Path = 'README.md'
+    MustContain = @(
+      '## Current fact policy',
+      '## What''s inside'
     )
   },
   @{

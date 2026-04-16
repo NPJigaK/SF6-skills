@@ -23,9 +23,6 @@ $checks = @(
   @{ Path = 'AGENTS.md'; MustNotContain = '.agents/skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'AGENTS.md'; MustNotContain = '.agents/skills/video-analysis-core/' },
-  @{ Path = 'README.md'; MustNotContain = '.agents/skills/kb-sf6-core/' },
-  @{ Path = 'README.md'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
-  @{ Path = 'README.md'; MustNotContain = '.agents/skills/video-analysis-core/' },
   @{ Path = 'AGENTS.md'; MustContain = '`skills/` is the canonical public source.' },
   @{ Path = 'AGENTS.md'; MustContain = '`local/` is the personal trial workspace for trying distributed skills.' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/' },
@@ -47,13 +44,35 @@ $checks = @(
   @{ Path = 'skills/kb-sf6-frame-current/references/export-contract.md'; MustContain = $LabelVerified },
   @{ Path = 'skills/kb-sf6-frame-current/references/export-contract.md'; MustContain = $LabelPending },
   @{ Path = 'skills/video-analysis-core/SKILL.md'; MustContain = "Do not label observations as ``$LabelVerified`` current fact." },
-  @{ Path = 'README.md'; MustContain = 'skills/<skill-name>/' },
-  @{ Path = 'README.md'; MustContain = 'local/' },
-  @{ Path = 'README.md'; MustContain = 'exact runtime answer rules live in `skills/kb-sf6-frame-current/`' },
-  @{ Path = 'README.md'; MustContain = 'concept-only runtime guidance lives in `skills/kb-sf6-core/`' },
-  @{ Path = 'README.md'; MustNotContain = 'snapshot_manifest.json' },
-  @{ Path = 'README.md'; MustNotContain = 'publication_state = available' },
-  @{ Path = 'README.md'; MustNotContain = 'lookup order は `official_raw` -> `derived_metrics` -> `supercombo_enrichment`' },
+  @{ Path = 'README.md'; MustContain = '# SF6 Skills' },
+  @{ Path = 'README.md'; MustContain = '## How it works' },
+  @{ Path = 'README.md'; MustContain = '## Installation' },
+  @{ Path = 'README.md'; MustContain = '## Verify installation' },
+  @{ Path = 'README.md'; MustContain = '## Basic usage' },
+  @{ Path = 'README.md'; MustContain = '## Current fact policy' },
+  @{ Path = 'README.md'; MustContain = '## What''s inside' },
+  @{ Path = 'README.md'; MustContain = '## Contributing' },
+  @{ Path = 'README.md'; MustContain = '## Updating' },
+  @{ Path = 'README.md'; MustContain = 'The agent can usually choose a matching skill automatically.' },
+  @{ Path = 'README.md'; MustContain = 'You can also mention a skill by name explicitly.' },
+  @{ Path = 'README.md'; MustContain = '.codex/INSTALL.md' },
+  @{ Path = 'README.md'; MustContain = '.claude-plugin/INSTALL.md' },
+  @{ Path = 'README.md'; MustContain = '.cursor-plugin/INSTALL.md' },
+  @{ Path = 'README.md'; MustContain = '.opencode/INSTALL.md' },
+  @{ Path = 'README.md'; MustContain = '`kb-sf6-core`' },
+  @{ Path = 'README.md'; MustContain = '`kb-sf6-frame-current`' },
+  @{ Path = 'README.md'; MustContain = 'data/exports/<character_slug>/snapshot_manifest.json' },
+  @{ Path = 'README.md'; MustContain = 'publication_state = available' },
+  @{ Path = 'README.md'; MustContain = 'shared/roster/current-character-roster.json' },
+  @{ Path = 'README.md'; MustContain = '`official_raw` is canonical' },
+  @{ Path = 'README.md'; MustContain = '`derived_metrics` is official-only computed output' },
+  @{ Path = 'README.md'; MustContain = '`supercombo_enrichment` is supplemental only' },
+  @{ Path = 'README.md'; MustContain = '`data/raw/...`, `data/normalized/...`, and `*_manual_review.*` are not the final evidence surface' },
+  @{ Path = 'README.md'; MustContain = '[ingest/frame_data/README.md](./ingest/frame_data/README.md)' },
+  @{ Path = 'README.md'; MustContain = '[repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)' },
+  @{ Path = 'README.md'; MustNotContain = '.agents/skills/kb-sf6-core/' },
+  @{ Path = 'README.md'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
+  @{ Path = 'README.md'; MustNotContain = '.agents/skills/video-analysis-core/' },
   @{ Path = 'docs/distribution/local-trial-workspace.md'; MustContain = '`local/` is the personal trial workspace.' },
   @{ Path = 'docs/distribution/local-trial-workspace.md'; MustContain = 'bootstrap-local-trial-workspace.ps1' },
   @{ Path = 'docs/distribution/local-trial-workspace.md'; MustNotContain = '.agents/skills/kb-sf6-core/' },
@@ -69,6 +88,11 @@ $checks = @(
   @{ Path = 'skills/README.md'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'skills/README.md'; MustNotContain = '.agents/skills/video-analysis-core/' }
 )
+
+$readme = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
+if ($readme -notmatch '(?m)^# SF6 Skills$') {
+  throw 'README.md missing: # SF6 Skills'
+}
 
 foreach ($check in $checks) {
   $content = Get-Content -LiteralPath (Join-Path $repoRoot $check.Path) -Raw -Encoding UTF8 -ErrorAction Stop
