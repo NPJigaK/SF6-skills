@@ -55,6 +55,48 @@ if ($readme -notmatch '(?m)^## Installation$') {
   throw 'README.md missing: ## Installation'
 }
 
+function Get-HeadingLineNumber {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Text,
+    [Parameter(Mandatory = $true)]
+    [string]$Heading
+  )
+
+  $pattern = "(?m)^$([regex]::Escape($Heading))$"
+  $match = [regex]::Match($Text, $pattern)
+  if (-not $match.Success) {
+    return $null
+  }
+
+  return 1 + (($Text.Substring(0, $match.Index) -split "`n").Count - 1)
+}
+
+$orderedHeadings = @(
+  '## How it works',
+  '## Installation',
+  '## Verify installation',
+  '## Basic usage',
+  '## Current fact policy',
+  '## What''s inside',
+  '## Contributing',
+  '## Updating'
+)
+
+$previousLine = 0
+foreach ($heading in $orderedHeadings) {
+  $lineNumber = Get-HeadingLineNumber -Text $readme -Heading $heading
+  if ($null -eq $lineNumber) {
+    throw "README.md missing heading: $heading"
+  }
+
+  if ($lineNumber -lt $previousLine) {
+    throw "README.md heading order invalid: $heading"
+  }
+
+  $previousLine = $lineNumber
+}
+
 $contentChecks = @(
   @{
     Path = 'README.md'
@@ -62,13 +104,6 @@ $contentChecks = @(
       '[repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)',
       '[ingest/frame_data/README.md](./ingest/frame_data/README.md)',
       '`local/`'
-    )
-  },
-  @{
-    Path = 'README.md'
-    MustContain = @(
-      '## Current fact policy',
-      '## What''s inside'
     )
   },
   @{
