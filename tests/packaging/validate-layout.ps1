@@ -72,6 +72,18 @@ function Get-HeadingLineNumber {
   return 1 + (($Text.Substring(0, $match.Index) -split "`n").Count - 1)
 }
 
+function Get-HeadingMatchCount {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Text,
+    [Parameter(Mandatory = $true)]
+    [string]$Heading
+  )
+
+  $pattern = "(?m)^$([regex]::Escape($Heading))$"
+  return [regex]::Matches($Text, $pattern).Count
+}
+
 $orderedHeadings = @(
   '## How it works',
   '## Installation',
@@ -85,6 +97,11 @@ $orderedHeadings = @(
 
 $previousLine = 0
 foreach ($heading in $orderedHeadings) {
+  $matchCount = Get-HeadingMatchCount -Text $readme -Heading $heading
+  if ($matchCount -ne 1) {
+    throw "README.md heading match count invalid for ${heading}: expected exactly 1, found $matchCount"
+  }
+
   $lineNumber = Get-HeadingLineNumber -Text $readme -Heading $heading
   if ($null -eq $lineNumber) {
     throw "README.md missing heading: $heading"
