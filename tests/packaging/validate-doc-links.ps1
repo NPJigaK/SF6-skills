@@ -37,7 +37,7 @@ $checks = @(
   @{ Path = 'skills/kb-sf6-frame-current/SKILL.md'; MustContain = 'Do not use T3 alone as the final authority when packaged official data exists.' },
   @{ Path = 'skills/kb-sf6-frame-current/references/export-contract.md'; MustContain = $LabelVerified },
   @{ Path = 'skills/kb-sf6-frame-current/references/export-contract.md'; MustContain = $LabelPending },
-  @{ Path = 'skills/video-analysis-core/SKILL.md'; MustContain = "Do not label observations as $LabelVerified current fact." },
+  @{ Path = 'skills/video-analysis-core/SKILL.md'; MustContain = "Do not label observations as ``$LabelVerified`` current fact." },
   @{ Path = 'skills/README.md'; MustContain = 'Canonical public source for distributed skills lives here.' },
   @{ Path = 'skills/README.md'; MustContain = 'Runtime guidance belongs in each skill''s `SKILL.md` and local references.' }
 )
