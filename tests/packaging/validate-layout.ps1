@@ -50,7 +50,9 @@ $missingFiles = foreach ($relativePath in $requiredFiles) {
   }
 }
 
-$readme = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
+$readme = (
+  Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
+) -replace "`r`n", "`n" -replace "`r", "`n"
 if ($readme -notmatch '(?m)^## Installation$') {
   throw 'README.md missing: ## Installation'
 }
