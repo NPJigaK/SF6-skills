@@ -22,7 +22,8 @@ current fact / exact 数値 / パッチ差分はここに混ぜない。
 ## Runtime Answer Boundary
 - この knowledge の outward label は `[概念のみ]` を基本とする。
 - この knowledge 単体では current verification や exact current values を断定しない。
-- exact 数値、current 仕様、patch-specific behavior が必要なときは `kb-sf6-frame-current` 側の published current-fact surface に切り替える。
+- packaged move-specific current facts / exact current values が必要なときは `kb-sf6-frame-current` 側の published current-fact surface に切り替える。
+- packaged frame-data exports だけでは結論できない current behavior / patch-specific question は `REVIEW_QUEUE.md` に残すか maintainer workflow に回す。
 
 ## ルール
 - exact 数値や current 仕様は T1/T2 が無ければ knowledge に昇格しない。

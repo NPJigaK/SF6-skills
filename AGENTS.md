@@ -21,7 +21,7 @@
 
 ## Published Data Responsibilities
 - published data の責務は守る。
-  - `official_raw`: canonical な published official source
+  - `official_raw`: repo-level canonical published current-fact source
   - `derived_metrics`: official-only の機械計算結果
   - `supercombo_enrichment`: supplemental な補完のみ
 - packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` は repo-level canonical published source `data/exports/<character_slug>/...` から生成される。
