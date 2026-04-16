@@ -20,6 +20,9 @@ $checks = @(
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-core/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/kb-sf6-frame-current/' },
   @{ Path = 'AGENTS.md'; MustContain = 'skills/video-analysis-core/' },
+  @{ Path = 'AGENTS.md'; MustNotContain = '.agents/skills/kb-sf6-core/' },
+  @{ Path = 'AGENTS.md'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
+  @{ Path = 'AGENTS.md'; MustNotContain = '.agents/skills/video-analysis-core/' },
   @{ Path = 'AGENTS.md'; MustContain = '`skills/` is the canonical public source.' },
   @{ Path = 'AGENTS.md'; MustContain = '`local/` is the personal trial workspace for trying distributed skills.' },
   @{ Path = 'AGENTS.md'; MustContain = 'maintainer-skills/sync-knowledge/' },
@@ -38,6 +41,11 @@ $checks = @(
   @{ Path = 'skills/kb-sf6-frame-current/references/export-contract.md'; MustContain = $LabelVerified },
   @{ Path = 'skills/kb-sf6-frame-current/references/export-contract.md'; MustContain = $LabelPending },
   @{ Path = 'skills/video-analysis-core/SKILL.md'; MustContain = "Do not label observations as ``$LabelVerified`` current fact." },
+  @{ Path = 'README.md'; MustContain = 'skills/<skill-name>/' },
+  @{ Path = 'README.md'; MustContain = 'local/' },
+  @{ Path = 'docs/distribution/local-trial-workspace.md'; MustContain = '`local/` is the personal trial workspace.' },
+  @{ Path = 'docs/distribution/local-trial-workspace.md'; MustContain = 'bootstrap-local-trial-workspace.ps1' },
+  @{ Path = 'docs/testing/README.md'; MustContain = 'validate-local-trial-surface.ps1' },
   @{ Path = 'skills/README.md'; MustContain = 'Canonical public source for distributed skills lives here.' },
   @{ Path = 'skills/README.md'; MustContain = 'Runtime guidance belongs in each skill''s `SKILL.md` and local references.' }
 )
