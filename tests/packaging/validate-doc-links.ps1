@@ -18,18 +18,6 @@ $LabelPending = New-Text 91, 0x4FDD, 0x7559, 93
 
 $readme = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
 
-$readmeHeadingChecks = @(
-  @{ Pattern = '(?m)^# SF6 Skills$'; Label = '# SF6 Skills' },
-  @{ Pattern = '(?m)^## How it works$'; Label = '## How it works' },
-  @{ Pattern = '(?m)^## Installation$'; Label = '## Installation' },
-  @{ Pattern = '(?m)^## Verify installation$'; Label = '## Verify installation' },
-  @{ Pattern = '(?m)^## Basic usage$'; Label = '## Basic usage' },
-  @{ Pattern = '(?m)^## Current fact policy$'; Label = '## Current fact policy' },
-  @{ Pattern = '(?m)^## What''s inside$'; Label = "## What's inside" },
-  @{ Pattern = '(?m)^## Contributing$'; Label = '## Contributing' },
-  @{ Pattern = '(?m)^## Updating$'; Label = '## Updating' }
-)
-
 $readmeBlockChecks = @(
   @{
     Pattern = '(?ms)^## How it works\s+After installation, this repo exposes SF6 knowledge as agent-readable skills\. The agent can usually choose a matching skill automatically\. You can also mention a skill by name explicitly\.\s+Use `kb-sf6-core` for stable concepts and terminology that should not depend on the current patch\. Use `kb-sf6-frame-current` when the task needs exact current values for supported current roster characters\. Use `video-analysis-core` for observation-first video analysis from raw footage\.\s+Concept explanation and current-fact lookup are intentionally separated\. Current facts are grounded in published exports rather than raw or audit surfaces\.\s+'
@@ -103,12 +91,6 @@ $checks = @(
   @{ Path = 'skills/README.md'; MustNotContain = '.agents/skills/kb-sf6-frame-current/' },
   @{ Path = 'skills/README.md'; MustNotContain = '.agents/skills/video-analysis-core/' }
 )
-
-foreach ($readmeHeadingCheck in $readmeHeadingChecks) {
-  if ($readme -notmatch $readmeHeadingCheck.Pattern) {
-    throw "README.md missing heading: $($readmeHeadingCheck.Label)"
-  }
-}
 
 foreach ($readmeBlockCheck in $readmeBlockChecks) {
   if ($readme -notmatch $readmeBlockCheck.Pattern) {
