@@ -112,9 +112,13 @@ if ($sourcePolicyContent -ne (Normalize-Content $expectedSourcePolicy)) {
   throw 'skills/kb-sf6-core/references/SOURCE_POLICY.md does not match the expected public shell contract'
 }
 
-$legacyRoot = Join-Path $repoRoot '.agents'
-if (Test-Path -LiteralPath $legacyRoot -PathType Container) {
-  throw 'Repo-root .agents must not exist'
+$trackedLegacyEntries = @(& git -C $repoRoot ls-files -- '.agents')
+if ($LASTEXITCODE -ne 0) {
+  throw 'Failed to inspect repo-root .agents tracking state'
+}
+
+if (@($trackedLegacyEntries).Count -gt 0) {
+  throw "Repo-root .agents must not be tracked: $($trackedLegacyEntries -join ', ')"
 }
 
 Write-Host 'kb-sf6-core public shell OK'
