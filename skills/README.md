@@ -8,5 +8,7 @@ Required per skill: `SKILL.md`.
 
 Optional per skill: `references/`, `assets/`, `agents/`.
 
+Runtime guidance belongs in each skill's `SKILL.md` and local references.
+
 There is no tracked repo-root `.agents/skills/` mirror.
 Use `local/` for personal trials and environment-level install adapters for discovery.

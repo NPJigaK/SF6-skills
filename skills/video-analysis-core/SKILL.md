@@ -40,6 +40,7 @@ Analyze raw SF6 video by normalizing the working timeline to 60fps and emitting 
 - Do not depend on another skill directory.
 - Do not require saved frame or crop paths in canonical output.
 - Do not emit move taxonomy or `move_id` as canonical segment data.
+- Do not label observations as [検証済み] current fact.
 - Do not make commentary verdicts, combo verdicts, or match verdicts part of this skill's canonical output.
 
 ## References

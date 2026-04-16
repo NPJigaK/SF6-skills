@@ -2,6 +2,11 @@
 
 Supported characters for this skill are the `character_slug` entries recorded in `assets/runtime_manifest.json`.
 
+## Runtime Labels
+
+- `[検証済み]`: use when the answer is grounded in `snapshot_manifest.json` plus packaged `available` datasets and the lookup chain defined below.
+- `[保留]`: use when the requested character, dataset, field, or match is unavailable, ambiguous, or would require manual-review data that is not packaged with the skill.
+
 ## Files
 
 - `assets/runtime_manifest.json`
@@ -30,9 +35,10 @@ Supported characters for this skill are the `character_slug` entries recorded in
 ## Source Policy
 
 - The packaged runtime assets are generated only from published exports under `data/exports/<character_slug>/`.
-- `official_raw` is the source of truth and maps to the repo's T1 preference.
+- `official_raw` is the runtime source of truth and corresponds to the repo's T1/T2-preferred published surface.
 - `derived_metrics` is acceptable only because it is computed mechanically from `official_raw`.
 - `supercombo_enrichment` is T3 supplemental data. Never let it override official.
+- When packaged official data exists, do not use T3 alone as the final authority.
 - `*_manual_review.*`, `*.csv` sidecars, `data/raw/...`, and `data/normalized/...` are intentionally excluded from the packaged runtime subset.
 
 ## Selection Rules

@@ -5,6 +5,12 @@ description: Read generated runtime assets for the current published SF6 roster 
 
 Read current facts for packaged roster characters from `assets/published/<character_slug>/` only.
 
+## Purpose
+
+- Answer exact current move-specific questions from packaged published exports.
+- Keep official published data and supplemental enrichment separate.
+- Return `[検証済み]` or `[保留]` based on packaged availability and lookup certainty.
+
 ## Supported Characters
 
 - The authoritative packaged character list is recorded in `assets/runtime_manifest.json`.
@@ -28,10 +34,12 @@ Read current facts for packaged roster characters from `assets/published/<charac
 
 ## Answer Rules
 
-- Use `[検証済み]` when the answer is grounded in packaged published exports.
+- Use `[検証済み]` when the answer is grounded in packaged published exports that satisfy the runtime lookup rules above.
 - Use `[保留]` when the needed dataset or field is unavailable, ambiguous, or only present in manual-review outputs that are not packaged with the skill.
+- Treat `official_raw` as the final authority for exact packaged current fact.
+- Treat `derived_metrics` as acceptable only for machine-derived helper values anchored to `official_raw`.
+- Do not use T3 alone as the final authority when packaged official data exists.
 - When the user asks a concept question, explain the concept first and use `kb-sf6-core`.
-- When official and supercombo differ, prefer official and describe supercombo as supplemental only.
 - Mention the exact dataset used when it matters: `official_raw`, `derived_metrics`, or `supercombo_enrichment`.
 
 ## Safe-Use Rules
@@ -41,8 +49,10 @@ Read current facts for packaged roster characters from `assets/published/<charac
 - Use packaged published main exports only. They are safe-only and exclude withheld review rows.
 - Treat packaged `supercombo_enrichment.json` as a supplemental subset anchored to packaged `official_raw.json` safe rows by `move_id`.
 - Do not infer missing review data from the absence of packaged rows.
+- Do not use `*_manual_review.*`, `data/raw/...`, or `data/normalized/...` as the final runtime source for this skill.
 - If a requested character is not listed in `assets/runtime_manifest.json`, answer `[保留]`.
+- If the task becomes a patch audit, parser audit, or ingestion-debugging request, stop and hand off to a repo-local maintainer workflow instead.
 
 ## References
 
-- Read `references/export-contract.md` for file roles, lookup order, and fallback rules.
+- Read `references/export-contract.md` for file roles, runtime labels, lookup order, and fallback rules.
