@@ -1,63 +1,134 @@
-# SF6 Skills Repo
+# SF6 Skills
 
-SF6 の concept-first knowledge と、現行 roster 全体の v3 published frame-data exports を管理するリポジトリです。
+SF6 Skills is a repository of concept-first Street Fighter 6 knowledge and published current-fact surfaces for agent workflows. It distributes public skills from `skills/`, keeps current roster facts grounded in published exports, and exposes install front doors for Codex, Claude, Cursor, and OpenCode.
 
-## Current Character Roster
+## How it works
 
-- canonical source: `shared/roster/current-character-roster.json`
-- current fact / runtime asset / packaging / validator の character inventory はこの roster source に追従する
-- roster source は checked-in official raw snapshot に含まれる character-select links を根拠に管理する
+After installation, this repo exposes SF6 knowledge as agent-readable skills. The agent can usually choose a matching skill automatically. You can also mention a skill by name explicitly.
 
-## Repository Structure
+Use `kb-sf6-core` for stable concepts and terminology that should not depend on the current patch. Use `kb-sf6-frame-current` when the task needs exact current values for supported current roster characters. Use `video-analysis-core` for observation-first video analysis from raw footage.
 
-- public skills live under `skills/<skill-name>/`
-- maintainer-only workflows live under `maintainer-skills/<skill-name>/`
-- personal trial workspace lives under `local/`
-- shared executable infrastructure lives under `packages/`
-- shared non-code artifacts live under `shared/`
-- repository docs, tests, and scripts live under `docs/`, `tests/`, and `scripts/`
-- data production code lives under `ingest/frame_data/`
-- published current-fact artifacts live under `data/exports/<character_slug>/`
+Concept explanation and current-fact lookup are intentionally separated. Current facts are grounded in published exports rather than raw or audit surfaces.
 
-## Repo Structure Contract
+## Installation
 
-- simple, explicit structure beats flexible abstraction
-- new public skills start as independent units under `skills/`
-- move artifacts to `packages/` or `shared/` only after a second real consumer exists
-- local PowerShell validators are the canonical structure guard
+Installation differs by agent. This root README currently documents Codex, Claude, Cursor, and OpenCode.
 
-Detailed contract:
+### Codex
 
-- [repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)
+Ask Codex:
 
-## Not Durable Surface
+```text
+Fetch https://raw.githubusercontent.com/NPJigaK/SF6-skills/main/packages/skill-installers/install-sf6-skills.ps1, save it locally, and run it for agent codex using the latest sf6-skills-bundle.zip release from NPJigaK/SF6-skills. The installer downloads the bundle into a private source checkout and links the Codex discovery target to that source.
+```
 
-- `.git/`
-  - repository metadata
-  - durable checked-in artifact surface ではない
-- `data/normalized/<character_slug>/<run_id>/`
-  - run-local audit state
-  - durable checked-in artifact surface ではない
-- `__pycache__/`, `.pytest_cache/`
-  - local / generated state
-- review zip artifacts
-  - `SF6skill.zip` のような shared zip artifact を含む
-  - durable checked-in artifact surface ではない
+Detailed docs: [.codex/INSTALL.md](./.codex/INSTALL.md)
 
-## Current Fact Surfaces
+### Claude
 
-- repo-level canonical published current-fact source lives under `data/exports/<character_slug>/...`
-- current roster の canonical source は `shared/roster/current-character-roster.json`
-- exact runtime answer rules live in `skills/kb-sf6-frame-current/`
-- concept-only runtime guidance lives in `skills/kb-sf6-core/`
-- generated packaged runtime assets under `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` are built from `data/exports/<character_slug>/...`
+Ask Claude:
 
-## Data Layout
+```text
+Fetch https://raw.githubusercontent.com/NPJigaK/SF6-skills/main/packages/skill-installers/install-sf6-skills.ps1, save it locally, and run it for agent claude using the latest sf6-skills-bundle.zip release from NPJigaK/SF6-skills. The installer downloads the bundle into a private source checkout and links the Claude discovery target to that source.
+```
 
-- `data/exports/<character_slug>/`
-  - shared published export surface for one character
-  - exact runtime lookup contract lives in `skills/kb-sf6-frame-current/references/export-contract.md`
-- `data/raw/<source>/<character_slug>/<snapshot_id>/`
-  - currently published datasets を裏づける minimal backing raw snapshots
+Detailed docs: [.claude-plugin/INSTALL.md](./.claude-plugin/INSTALL.md)
 
-詳説は `ingest/frame_data/README.md` を参照してください。
+### Cursor
+
+Ask Cursor:
+
+```text
+Fetch https://raw.githubusercontent.com/NPJigaK/SF6-skills/main/packages/skill-installers/install-sf6-skills.ps1, save it locally, and run it for agent cursor using the latest sf6-skills-bundle.zip release from NPJigaK/SF6-skills. The installer downloads the bundle into a private source checkout and links the Cursor discovery target to that source.
+```
+
+Detailed docs: [.cursor-plugin/INSTALL.md](./.cursor-plugin/INSTALL.md)
+
+### OpenCode
+
+Ask OpenCode:
+
+```text
+Fetch https://raw.githubusercontent.com/NPJigaK/SF6-skills/main/packages/skill-installers/install-sf6-skills.ps1, save it locally, and run it for agent opencode using the latest sf6-skills-bundle.zip release from NPJigaK/SF6-skills. The installer downloads the bundle into a private source checkout and links the OpenCode discovery target to that source.
+```
+
+Detailed docs: [.opencode/INSTALL.md](./.opencode/INSTALL.md)
+
+## Verify installation
+
+Start a new session in your agent, then try one concept question and one current-fact question.
+
+Concept check:
+
+```text
+Explain what plus frames mean in SF6 and why they matter on offense.
+```
+
+Current-fact check:
+
+```text
+Use kb-sf6-frame-current to check the current published frame data for Luke's crouching medium punch.
+```
+
+If the agent selects the expected public skill automatically or responds correctly when you name the skill directly, installation is working.
+
+## Basic usage
+
+The agent can usually choose a matching skill automatically. You can also mention a skill by name explicitly.
+
+### Concept-first usage with `kb-sf6-core`
+
+```text
+Use kb-sf6-core to explain what a shimmy is in SF6 and why it beats throw tech attempts.
+```
+
+### Current-fact usage with `kb-sf6-frame-current`
+
+```text
+Use kb-sf6-frame-current to check the current published startup and block advantage for Luke's crouching medium punch.
+```
+
+## Current fact policy
+
+For current roster characters, current fact is grounded in published exports only.
+
+- Start from `data/exports/<character_slug>/snapshot_manifest.json`.
+- Use only datasets whose `publication_state = available`.
+- The current roster canonical source is `shared/roster/current-character-roster.json`.
+- `official_raw` is canonical.
+- `derived_metrics` is official-only computed output.
+- `supercombo_enrichment` is supplemental only.
+- `data/raw/...`, `data/normalized/...`, and `*_manual_review.*` are not the final evidence surface for normal current-fact answers.
+- Packaged runtime assets under `skills/kb-sf6-frame-current/assets/published/...` are generated from repo-level canonical published data under `data/exports/...`.
+
+For more detail, see [ingest/frame_data/README.md](./ingest/frame_data/README.md) and [repo-structure-contract.md](./docs/architecture/repo-structure-contract.md).
+
+## What's inside
+
+- `skills/`
+  - canonical public source for distributable skills
+- `maintainer-skills/`
+  - repository-only workflows for maintainers
+- `shared/`
+  - shared non-code artifacts such as roster and stable vocabulary
+- `data/exports/`
+  - repo-level canonical published current-fact surface
+- `ingest/`
+  - ingestion, normalization, and publishing implementation
+- `local/`
+  - tracked personal trial workspace for trying distributed skills
+
+## Contributing
+
+Contributors should work from the repository checkout rather than only from installed discovery links.
+
+- New public skills belong under `skills/<skill-name>/`.
+- Maintainer-only workflows belong under `maintainer-skills/`.
+- Ingestion and publication code belongs under `ingest/frame_data/`.
+- Read [repo-structure-contract.md](./docs/architecture/repo-structure-contract.md) before changing repository surfaces.
+
+## Updating
+
+- Installed users should follow the current install or update flow for their agent, using the linked install docs above.
+- Contributors should pull the repository directly and work from the repo checkout.
+- If an agent-specific flow changes, treat the linked install docs as the source of truth.
