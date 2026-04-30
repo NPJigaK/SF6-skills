@@ -1,4 +1,4 @@
-﻿# Generated Knowledge Index
+# Generated Knowledge Index
 
 GENERATED FILE - DO NOT EDIT
 generator: packages/knowledge-generation/build-sf6-agent-knowledge.ps1

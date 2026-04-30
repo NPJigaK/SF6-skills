@@ -170,6 +170,7 @@ $conceptLines += @(
 )
 
 foreach ($page in $pages) {
+  $reviewAfter = if ([string]::IsNullOrWhiteSpace($page.ReviewAfter)) { 'null' } else { $page.ReviewAfter }
   $conceptLines += @(
     "## $($page.Title)",
     '',
@@ -182,7 +183,7 @@ foreach ($page in $pages) {
     "- volatility: $($page.Volatility)",
     "- patch_sensitivity: $($page.PatchSensitivity)",
     "- review_status: $($page.ReviewStatus)",
-    "- review_after: $($page.ReviewAfter)",
+    "- review_after: $reviewAfter",
     "- summary: $($page.Summary)",
     '',
     $page.Body,
@@ -190,8 +191,19 @@ foreach ($page in $pages) {
   )
 }
 
-Set-Content -LiteralPath (Join-Path $targetRoot 'generated-knowledge-index.md') -Value ($indexLines -join "`r`n") -Encoding UTF8
-Set-Content -LiteralPath (Join-Path $targetRoot 'generated-concepts.md') -Value ($conceptLines -join "`r`n") -Encoding UTF8
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+$indexText = (($indexLines -join "`n").TrimEnd("`n") + "`n")
+$conceptText = (($conceptLines -join "`n").TrimEnd("`n") + "`n")
+[System.IO.File]::WriteAllText(
+  (Join-Path $targetRoot 'generated-knowledge-index.md'),
+  $indexText,
+  $utf8NoBom
+)
+[System.IO.File]::WriteAllText(
+  (Join-Path $targetRoot 'generated-concepts.md'),
+  $conceptText,
+  $utf8NoBom
+)
 
 Write-Host "Generated skills/sf6-agent/references/generated-knowledge-index.md"
 Write-Host "Generated skills/sf6-agent/references/generated-concepts.md"

@@ -1,4 +1,4 @@
-﻿# Generated Concepts
+# Generated Concepts
 
 GENERATED FILE - DO NOT EDIT
 generator: packages/knowledge-generation/build-sf6-agent-knowledge.ps1
@@ -22,7 +22,7 @@ The entries below are derived summaries and concept text from curated v2 knowled
 - volatility: stable
 - patch_sensitivity: low
 - review_status: accepted
-- review_after: 
+- review_after: null
 - summary: Frames are the shared timing unit for comparing move speed, recovery, advantage, and punishability without asserting exact current values.
 
 Frames are the common timing unit for discussing how long actions take and who can move first after interaction. They are useful for reasoning about speed, recovery, pressure, and punishment, but this page does not provide exact current move values.
@@ -60,7 +60,7 @@ Use this concept to explain how punishability is determined. Do not use it as ev
 - volatility: stable
 - patch_sensitivity: low
 - review_status: accepted
-- review_after: 
+- review_after: null
 - summary: Hit confirming and wake-up pressure describe how players choose followups, pressure, throws, delays, and checks without asserting character-specific current routes.
 
 Offensive decisions often depend on observing whether the previous action connected, whether the opponent is waking up, and which defensive options the opponent is likely to choose. This page gives stable concept boundaries only.
@@ -94,4 +94,3 @@ The concept is stable, but the actual setup depends on knockdown type, spacing, 
 Shimmie is a community term for a pressure bait. The attacker threatens throw, briefly moves out of throw range, and then punishes the defender's throw-tech attempt, delayed throw tech, or other delayed defensive response.
 
 Use the term as community terminology, not as official game wording. Whether a shimmie works in a specific situation depends on spacing, timing, throw range, walk speed, available buttons, defensive choices, and the current move environment.
-
