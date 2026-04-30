@@ -4,6 +4,7 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 
 $scopedRoots = @(
   'knowledge/curated',
+  'knowledge/review',
   'skills/sf6-agent/references'
 )
 
@@ -13,10 +14,11 @@ foreach ($relativeRoot in $scopedRoots) {
   if (Test-Path -LiteralPath $root -PathType Container) {
     $files += Get-ChildItem -LiteralPath $root -Recurse -File |
       Where-Object {
-        ($_.Extension -in @('.md', '.yaml', '.yml', '.json')) -and
+          ($_.Extension -in @('.md', '.yaml', '.yml', '.json')) -and
         (
           ($_.Name -like 'generated-*') -or
-          ($_.FullName.Replace('\', '/') -match '/knowledge/curated/')
+          ($_.FullName.Replace('\', '/') -match '/knowledge/curated/') -or
+          ($_.FullName.Replace('\', '/') -match '/knowledge/review/')
         )
       }
   }

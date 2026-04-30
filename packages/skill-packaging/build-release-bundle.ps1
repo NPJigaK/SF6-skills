@@ -7,10 +7,25 @@ $agentRoot = Join-Path $repoRoot 'skills\sf6-agent'
 $distRoot = Join-Path $repoRoot '.dist'
 $stagingRoot = Join-Path $distRoot 'bundle-root'
 $bundlePath = Join-Path $distRoot 'sf6-agent-bundle.zip'
+$knowledgeGenerator = Join-Path $repoRoot 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
+$frameAssetBuilder = Join-Path $repoRoot 'packages/skill-packaging/build-frame-current-runtime-assets.ps1'
+$generatedValidator = Join-Path $repoRoot 'tests/validation/validate-generated-knowledge.ps1'
+$frameAssetValidator = Join-Path $repoRoot 'tests/validation/validate-frame-current-assets.ps1'
 
 if (-not (Test-Path -LiteralPath $agentRoot -PathType Container)) {
   throw 'Missing agent source: skills/sf6-agent'
 }
+
+foreach ($requiredScript in @($knowledgeGenerator, $frameAssetBuilder, $generatedValidator, $frameAssetValidator)) {
+  if (-not (Test-Path -LiteralPath $requiredScript -PathType Leaf)) {
+    throw "Missing release preflight script: $requiredScript"
+  }
+}
+
+& $knowledgeGenerator
+& $frameAssetBuilder
+& $generatedValidator
+& $frameAssetValidator
 
 if (Test-Path -LiteralPath $bundlePath) {
   Remove-Item -LiteralPath $bundlePath -Force

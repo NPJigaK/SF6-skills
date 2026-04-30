@@ -7,6 +7,7 @@ $legacyPaths = @(
   'skills/kb-sf6-frame-current',
   'skills/video-analysis-core',
   'maintainer-skills',
+  'shared',
   'shared/roster',
   'local',
   '.codex',

@@ -1,3 +1,7 @@
+param(
+  [string]$OutputRoot = $null
+)
+
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
@@ -7,7 +11,15 @@ $targetRootRelativePath = 'skills/sf6-agent/references'
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $sourceRoot = Join-Path $repoRoot $sourceRootRelativePath
-$targetRoot = Join-Path $repoRoot $targetRootRelativePath
+$targetRoot = if ([string]::IsNullOrWhiteSpace($OutputRoot)) {
+  Join-Path $repoRoot $targetRootRelativePath
+}
+elseif ([System.IO.Path]::IsPathRooted($OutputRoot)) {
+  $OutputRoot
+}
+else {
+  Join-Path $repoRoot $OutputRoot
+}
 
 function ConvertTo-RepoRelativePath {
   param([Parameter(Mandatory = $true)][string]$Path)
@@ -112,9 +124,25 @@ function Read-CuratedPage {
 }
 
 function New-GeneratedHeader {
-  param([Parameter(Mandatory = $true)][string]$Title)
+  param(
+    [Parameter(Mandatory = $true)][string]$Title,
+    [Parameter(Mandatory = $true)][string]$TargetPath,
+    [Parameter(Mandatory = $true)][string[]]$SourcePaths
+  )
 
-  return @(
+  $lines = @(
+    '---',
+    'generated: true',
+    "generator: $generatorRelativePath",
+    'source_paths:'
+  )
+  foreach ($sourcePath in $SourcePaths) {
+    $lines += "  - $sourcePath"
+  }
+  $lines += @(
+    "target_path: $TargetPath",
+    '---',
+    '',
     "# $Title",
     '',
     'GENERATED FILE - DO NOT EDIT',
@@ -125,6 +153,8 @@ function New-GeneratedHeader {
     'It must not contain exact current frame values; exact current move values belong outside curated generated knowledge.',
     ''
   )
+
+  return $lines
 }
 
 if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
@@ -142,7 +172,11 @@ if (@($pages).Count -eq 0) {
 
 New-Item -ItemType Directory -Path $targetRoot -Force | Out-Null
 
-$indexLines = New-GeneratedHeader 'Generated Knowledge Index'
+$sourcePaths = @($pages | ForEach-Object { $_.RelativePath })
+$indexTargetPath = "$targetRootRelativePath/generated-knowledge-index.md"
+$conceptTargetPath = "$targetRootRelativePath/generated-concepts.md"
+
+$indexLines = New-GeneratedHeader 'Generated Knowledge Index' $indexTargetPath $sourcePaths
 $indexLines += @(
   '## Sources',
   '',
@@ -161,7 +195,7 @@ $indexLines += @(
   'This generated index is a derived navigation aid. Use the cited curated source files for review decisions, and do not add exact current frame values here.'
 )
 
-$conceptLines = New-GeneratedHeader 'Generated Concepts'
+$conceptLines = New-GeneratedHeader 'Generated Concepts' $conceptTargetPath $sourcePaths
 $conceptLines += @(
   '## Boundary',
   '',

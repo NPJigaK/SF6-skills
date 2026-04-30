@@ -29,8 +29,18 @@ foreach ($relativePath in $questionFiles) {
       throw "$relativePath missing eval metadata: $needle"
     }
   }
+  $modeMatches = [regex]::Matches($content, 'expected_answer_mode:\s*([A-Za-z0-9_/-]+)')
+  foreach ($modeMatch in $modeMatches) {
+    $mode = $modeMatch.Groups[1].Value
+    if ($mode -notin @('stable_concept', 'verified_current_fact', 'strategy_or_matchup_knowledge', 'observation', 'unresolved_or_hold')) {
+      throw "$relativePath has unsupported expected_answer_mode: $mode"
+    }
+  }
   if ($content -match '\[概念のみ\]|\[検証済み\]|\[保留\]') {
     throw "$relativePath must check answer modes, not legacy bracket labels"
+  }
+  if ($content -match '\bT[1-4]\b|source_tier|core / mixed / current-fact') {
+    throw "$relativePath must not preserve legacy taxonomy in eval metadata"
   }
 }
 

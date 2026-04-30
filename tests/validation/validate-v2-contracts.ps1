@@ -38,7 +38,7 @@ foreach ($relativePath in $requiredDocs) {
 }
 
 $sourceSchema = Get-Content -LiteralPath (Join-Path $repoRoot 'contracts/source-metadata.schema.json') -Raw -Encoding UTF8
-foreach ($needle in @('source_kind', 'source_role', 'evidence_basis', 'verification_state', 'confidence', 'volatility', 'patch_sensitivity', 'review_status', 'source_refs', 'review_after')) {
+foreach ($needle in @('source_kind', 'source_role', 'evidence_basis', 'verification_state', 'confidence', 'volatility', 'patch_sensitivity', 'review_status', 'source_refs', 'review_after', 'source_revision')) {
   if ($sourceSchema -notmatch [regex]::Escape($needle)) {
     throw "source metadata contract missing field: $needle"
   }
@@ -46,6 +46,25 @@ foreach ($needle in @('source_kind', 'source_role', 'evidence_basis', 'verificat
 
 if ($sourceSchema -match '"source_tier"') {
   throw 'source metadata contract must not preserve source_tier as canonical metadata'
+}
+
+$knowledgeSchema = Get-Content -LiteralPath (Join-Path $repoRoot 'contracts/knowledge-page.schema.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$knowledgeRequired = @($knowledgeSchema.required)
+foreach ($field in @('source_kind', 'source_role', 'evidence_basis', 'verification_state', 'confidence', 'volatility', 'patch_sensitivity', 'review_status', 'source_refs', 'review_after')) {
+  if ($knowledgeRequired -notcontains $field) {
+    throw "knowledge page contract must use flat front matter field: $field"
+  }
+}
+if ($knowledgeRequired -contains 'evidence') {
+  throw 'knowledge page contract must not require nested evidence object while authored pages use flat front matter'
+}
+
+$generatedSchema = Get-Content -LiteralPath (Join-Path $repoRoot 'contracts/generated-surface.schema.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$generatedRequired = @($generatedSchema.required)
+foreach ($field in @('generated', 'generator', 'source_paths', 'target_path')) {
+  if ($generatedRequired -notcontains $field) {
+    throw "generated surface contract missing required field: $field"
+  }
 }
 
 Write-Host 'V2 contracts OK'

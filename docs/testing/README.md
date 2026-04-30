@@ -2,7 +2,21 @@
 
 The v2 validation suite protects schemas, boundaries, generated markers, distribution contents, and legacy cleanup.
 
-Core local verification set:
+Run the full local verification sequence with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
+```
+
+The sequence intentionally builds derived payloads before validation:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File packages/knowledge-generation/build-sf6-agent-knowledge.ps1
+powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1
+powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-bundle.ps1
+```
+
+Manual validator set:
 
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-v2-surfaces.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-v2-contracts.ps1`

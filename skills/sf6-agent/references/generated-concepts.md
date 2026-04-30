@@ -1,3 +1,13 @@
+---
+generated: true
+generator: packages/knowledge-generation/build-sf6-agent-knowledge.ps1
+source_paths:
+  - knowledge/curated/concepts/frame-timing.md
+  - knowledge/curated/concepts/offense-decision-making.md
+  - knowledge/curated/glossary/shimmy.md
+target_path: skills/sf6-agent/references/generated-concepts.md
+---
+
 # Generated Concepts
 
 GENERATED FILE - DO NOT EDIT
@@ -77,9 +87,9 @@ Wake-up pressure means applying offense as the opponent rises from knockdown. Co
 
 The concept is stable, but the actual setup depends on knockdown type, spacing, recovery timing, available reversals, defensive system choices, and current move behavior. Treat exact meaty setups and guaranteed followups as separate claims that need current verification.
 
-## Shimmie
+## Shimmy
 
-- source: knowledge/curated/glossary/shimmie.md
+- source: knowledge/curated/glossary/shimmy.md
 - claim_kind: stable_concept
 - source_kind: community
 - source_role: community terminology boundary
@@ -89,8 +99,8 @@ The concept is stable, but the actual setup depends on knockdown type, spacing, 
 - patch_sensitivity: low
 - review_status: accepted
 - review_after: 2026-10-30
-- summary: A shimmie is a community term for baiting a throw-tech or delayed defensive response by threatening throw, moving just out of range, and punishing the whiff or response.
+- summary: A shimmy is a community term for baiting a throw-tech or delayed defensive response by threatening throw, moving just out of range, and punishing the whiff or response.
 
-Shimmie is a community term for a pressure bait. The attacker threatens throw, briefly moves out of throw range, and then punishes the defender's throw-tech attempt, delayed throw tech, or other delayed defensive response.
+Shimmy is a community term for a pressure bait. The attacker threatens throw, briefly moves out of throw range, and then punishes the defender's throw-tech attempt, delayed throw tech, or other delayed defensive response.
 
-Use the term as community terminology, not as official game wording. Whether a shimmie works in a specific situation depends on spacing, timing, throw range, walk speed, available buttons, defensive choices, and the current move environment.
+Use the term as community terminology, not as official game wording. Whether a shimmy works in a specific situation depends on spacing, timing, throw range, walk speed, available buttons, defensive choices, and the current move environment.

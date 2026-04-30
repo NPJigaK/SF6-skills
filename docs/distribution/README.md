@@ -6,6 +6,9 @@ Canonical human-readable install docs:
 - [Claude](./agents/claude.md)
 - [Cursor](./agents/cursor.md)
 - [OpenCode](./agents/opencode.md)
+
+Optional maintainer harness guidance:
+
 - [Hermes](./agents/hermes.md)
 
 Supporting docs:

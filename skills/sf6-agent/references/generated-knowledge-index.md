@@ -1,3 +1,13 @@
+---
+generated: true
+generator: packages/knowledge-generation/build-sf6-agent-knowledge.ps1
+source_paths:
+  - knowledge/curated/concepts/frame-timing.md
+  - knowledge/curated/concepts/offense-decision-making.md
+  - knowledge/curated/glossary/shimmy.md
+target_path: skills/sf6-agent/references/generated-knowledge-index.md
+---
+
 # Generated Knowledge Index
 
 GENERATED FILE - DO NOT EDIT
@@ -13,7 +23,7 @@ It must not contain exact current frame values; exact current move values belong
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Frame Timing And Advantage | Concepts | stable_concept | knowledge/curated/concepts/frame-timing.md | verified | 0.9 | stable | low | accepted |
 | Offensive Decision Concepts | Concepts | stable_concept | knowledge/curated/concepts/offense-decision-making.md | verified | 0.86 | stable | low | accepted |
-| Shimmie | Glossary | stable_concept | knowledge/curated/glossary/shimmie.md | partially_verified | 0.74 | stable | low | accepted |
+| Shimmy | Glossary | stable_concept | knowledge/curated/glossary/shimmy.md | partially_verified | 0.74 | stable | low | accepted |
 
 ## Boundary
 

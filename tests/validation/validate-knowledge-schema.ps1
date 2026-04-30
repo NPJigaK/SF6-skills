@@ -135,6 +135,9 @@ foreach ($file in $files) {
   }
 
   $content = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
+  if ($relativePath -match '^knowledge/curated/' -and $content -notmatch '(?m)^\s+path:\s*') {
+    $violations += "$relativePath source_refs must include a reviewable path"
+  }
   foreach ($forbidden in @('source_tier', '[概念のみ]', 'T1 / T2 / T3 / T4', 'core / mixed / current-fact')) {
     if ($content -match [regex]::Escape($forbidden)) {
       $violations += "$relativePath contains legacy canonical taxonomy text: $forbidden"

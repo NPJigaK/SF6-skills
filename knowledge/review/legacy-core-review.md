@@ -13,12 +13,14 @@ patch_sensitivity: unknown
 review_status: needs_review
 source_refs:
   - label: "Legacy stable concept notes reviewed during v2 migration"
+    path: "skills/kb-sf6-core/references/KNOWLEDGE.md"
+    source_revision: "efd7a8ae251bd2600e58a675d9066673711351e3"
 review_after: "2026-07-30"
 ---
 
 # Legacy Core Migration Holding Review
 
-> Temporary holding warning: this file is non-canonical review material. Do not use entries here as final answer evidence, do not generate runtime knowledge from it, and do not treat it as accepted v2 taxonomy.
+> Temporary holding warning: this file is canonical review tracking, but it is not accepted curated knowledge or final answer evidence. Do not generate runtime knowledge from it, and do not treat it as accepted v2 taxonomy.
 
 ## Held Material
 
@@ -52,8 +54,8 @@ Review requirement: record knockdown source, spacing, timing method, defender op
 
 ## Community Term Application Claims
 
-- Claims that a shimmie is official game terminology.
-- Claims that a specific shimmie route is guaranteed in a named matchup or current setup.
+- Claims that a shimmy is official game terminology.
+- Claims that a specific shimmy route is guaranteed in a named matchup or current setup.
 - Claims that a throw-bait situation is universal across characters or spacing.
 
 Review requirement: keep the glossary definition separate from setup-specific strategy claims.

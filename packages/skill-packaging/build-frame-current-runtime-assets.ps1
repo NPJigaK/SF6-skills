@@ -86,6 +86,8 @@ foreach ($characterSlug in $characters) {
   }
 }
 
-$runtimeManifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $runtimeManifestPath -Encoding utf8
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+$runtimeManifestJson = ((($runtimeManifest | ConvertTo-Json -Depth 8) -replace "`r`n", "`n").TrimEnd() + "`n")
+[System.IO.File]::WriteAllText($runtimeManifestPath, $runtimeManifestJson, $utf8NoBom)
 
 Write-Host 'Frame-current runtime assets built'

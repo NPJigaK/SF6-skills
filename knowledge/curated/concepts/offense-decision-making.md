@@ -14,6 +14,8 @@ patch_sensitivity: low
 review_status: accepted
 source_refs:
   - label: "Legacy stable concept notes reviewed during v2 migration"
+    path: "skills/kb-sf6-core/references/KNOWLEDGE.md"
+    source_revision: "efd7a8ae251bd2600e58a675d9066673711351e3"
 review_after: null
 summary: "Hit confirming and wake-up pressure describe how players choose followups, pressure, throws, delays, and checks without asserting character-specific current routes."
 generated_allowed: true
