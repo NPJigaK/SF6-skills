@@ -1,6 +1,6 @@
 # Release Bundle
 
-Phase 1 distributes the public skill library as a GitHub Release artifact named `sf6-skills-bundle.zip`.
+The public distribution bundle is a GitHub Release artifact named `sf6-agent-bundle.zip`.
 
 ## Build
 
@@ -10,21 +10,21 @@ powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-
 
 ## Output
 
-- Local build path: `.dist/sf6-skills-bundle.zip`
-- Release asset name: `sf6-skills-bundle.zip`
+- Local build path: `.dist/sf6-agent-bundle.zip`
+- Release asset name: `sf6-agent-bundle.zip`
 
 ## Bundle Layout
 
 ```text
-sf6-skills/
-  skills/
-    kb-sf6-core/
-    kb-sf6-frame-current/
+sf6-agent/
+  SKILL.md
+  references/
+  assets/
 ```
 
 ## Excluded Content
 
-The release bundle excludes:
+The release bundle includes only `skills/sf6-agent/**`. It excludes:
 
 - `maintainer-skills/`
 - `.agents/`
@@ -35,3 +35,4 @@ The release bundle excludes:
 - `scripts/`
 - `shared/`
 - `tests/`
+- legacy public skill directories such as `kb-sf6-core/`, `kb-sf6-frame-current/`, and `video-analysis-core/`

@@ -1,7 +1,3 @@
 # OpenCode Distribution
 
-OpenCode distribution uses the shared release-bundle installer.
-
-Primary install reference:
-
-- [`.opencode/INSTALL.md`](../../.opencode/INSTALL.md)
+Canonical install instructions moved to [agents/opencode.md](./agents/opencode.md).

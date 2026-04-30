@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/knowledge-page.schema.json",
+  "title": "Knowledge Page Frontmatter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "claim_kind",
+    "summary",
+    "source_kind",
+    "source_role",
+    "evidence_basis",
+    "verification_state",
+    "confidence",
+    "volatility",
+    "patch_sensitivity",
+    "review_status",
+    "source_refs",
+    "review_after"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_kind": {
+      "type": "string",
+      "enum": [
+        "stable_concept",
+        "strategy_or_matchup",
+        "observation",
+        "unresolved"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_kind": {
+      "type": "string",
+      "enum": [
+        "official",
+        "reproducible_observation",
+        "maintained_third_party",
+        "community",
+        "maintainer_note",
+        "unknown"
+      ]
+    },
+    "source_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_basis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "verification_state": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "partially_verified",
+        "unverified",
+        "conflicting",
+        "not_applicable"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "volatility": {
+      "type": "string",
+      "enum": [
+        "stable",
+        "patch_sensitive",
+        "volatile",
+        "unknown"
+      ]
+    },
+    "patch_sensitivity": {
+      "type": "string",
+      "enum": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "needs_review",
+        "rejected",
+        "deprecated"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "source_revision": {
+            "type": "string"
+          },
+          "accessed_at": {
+            "type": "string"
+          },
+          "captured_at": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "review_after": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generated_allowed": {
+      "type": "boolean"
+    },
+    "must_not_include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

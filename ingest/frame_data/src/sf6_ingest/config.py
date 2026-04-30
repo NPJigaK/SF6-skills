@@ -48,7 +48,7 @@ def repo_root() -> Path:
 
 
 def canonical_roster_path() -> Path:
-    return repo_root() / "shared" / "roster" / "current-character-roster.json"
+    return repo_root() / "data" / "roster" / "current-character-roster.json"
 
 
 def load_characters() -> dict[str, CharacterConfig]:

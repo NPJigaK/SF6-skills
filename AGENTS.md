@@ -1,37 +1,46 @@
-# SF6 Codex Repo Guidance
+# SF6 Knowledge Agent Kit Repo Guidance
 
-## 目的
-- このリポジトリは SF6 の知識を concept-first で扱う。
-- repo-level canonical published current-fact source は `data/exports/<character_slug>/...`。
-- current roster characters の canonical source は `shared/roster/current-character-roster.json`。
+## Core Identity
 
-## Repo Surfaces
-- `skills/` is the canonical public source.
-- `local/` is the personal trial workspace for trying distributed skills.
-- Do not treat repo-root `.agents/` as a tracked source or mirror surface.
-- 不変概念の runtime guidance は `skills/kb-sf6-core/` に置く。
-- current roster characters の current-fact runtime guidance は `skills/kb-sf6-frame-current/` に置く。
-- observation-first video-analysis guidance は `skills/video-analysis-core/` に置く。
+- This repo is SF6 Knowledge Agent Kit.
+- It is a GitHub-reviewable source of truth and distribution kit for AI agents answering Street Fighter 6 questions.
+- Do not preserve legacy skill-collection structure as a competing source of truth.
 
-## ソース階層
-- `T1`: 公式一次情報
-- `T2`: 公式相当の再現可能なゲーム内観測
-- `T3`: 継続メンテされている第三者情報
-- `T4`: コミュニティ知見・仮説
+## Canonical Surfaces
 
-## Published Data Responsibilities
-- published data の責務は守る。
-  - `official_raw`: repo-level canonical published current-fact source
-  - `derived_metrics`: official-only の機械計算結果
-  - `supercombo_enrichment`: supplemental な補完のみ
-- packaged runtime assets `skills/kb-sf6-frame-current/assets/published/<character_slug>/...` は repo-level canonical published source `data/exports/<character_slug>/...` から生成される。
-- `*_manual_review.*`, `data/raw/...`, `data/normalized/...` は distributed skills の通常回答における最終根拠として扱わない。
+- `knowledge/` is canonical.
+- `data/exports/` and `data/roster/` are exact current fact authority.
+- `contracts/` is canonical for schemas and artifact contracts.
+- `workflows/` are canonical maintainer procedures.
+- `evals/` is canonical for answer-quality cases and rubrics.
+- `skills/sf6-agent/SKILL.md` and hand-written files under `skills/sf6-agent/references/` are canonical adapter behavior only.
 
-## Maintainer Workflows
-- knowledge の統合作業は `maintainer-skills/sync-knowledge/` を使う。
-- パッチ/調整対応の current roster frame-data 更新は `maintainer-skills/update-frame-data/` を使う。
+## Derived Surfaces
 
-## Ingestion / Data
-- 実装コードは `ingest/frame_data/` に置く。`.agents/skills/` に取得コードは置かない。
-- raw snapshots は「現在 publish されている dataset を裏づけるために必要な最小限のものだけ」を保持する。
-- published main exports は safe-only とし、review 行は `*_manual_review.{json,csv}` に分離する。
+- `skills/sf6-agent/references/generated-*` is derived from `knowledge/curated/`.
+- `skills/sf6-agent/assets/frame-current/` is derived from `data/exports/` and `data/roster/`.
+- Release bundles and generated agent-specific front doors are derived distribution outputs.
+- Generated surfaces must identify their generator and source paths.
+- Do not make generated surfaces canonical.
+
+## Current Fact Rules
+
+- Do not put exact current values in `knowledge/curated/` or generated knowledge references.
+- Exact move-specific current facts must stay grounded in `data/exports/` and generated frame-current assets.
+- `data/raw/...`, `data/normalized/...`, and `*_manual_review.*` are not final evidence for normal public answers.
+- Runtime frame-current assets must exclude CSV sidecars and manual-review outputs.
+
+## Evidence And Taxonomy
+
+- Do not preserve legacy taxonomy such as T1/T2/T3/T4 or fixed bracket labels as canonical v2 metadata.
+- Use generic evidence metadata such as `source_kind`, `source_role`, `evidence_basis`, `verification_state`, `confidence`, `volatility`, `patch_sensitivity`, `review_status`, `source_refs`, and `review_after`.
+- Answer quality should be evaluated by answer modes and evidence-boundary behavior, not literal legacy labels.
+
+## Workflow Rules
+
+- Maintainer procedures belong under `workflows/`, not `maintainer-skills/`.
+- Ingestion and publishing implementation belongs under `ingest/frame_data/`.
+- Public adapter packaging belongs under `packages/skill-packaging/`.
+- Knowledge-generation tooling belongs under `packages/knowledge-generation/`.
+- Hermes is optional maintainer harness, not canonical memory.
+- Do not store full copyrighted articles, videos, or transcripts by default.

@@ -1,6 +1,0 @@
-- 項目:
-- 種別: mixed / current fact / community / insufficient-evidence
-- 根拠階層: T1 / T2 / T3 / T4 / none
-- 状態: pending / needs-review / rejected / promoted
-- 理由:
-- 次に必要な確認:
