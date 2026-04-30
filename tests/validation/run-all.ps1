@@ -8,17 +8,20 @@ $derivedOutputPaths = @(
   'skills/sf6-agent/assets/frame-current'
 )
 
-function Assert-NoTrackedDerivedDiff {
+function Assert-NoDerivedOutputStatus {
   param([Parameter(Mandatory = $true)][string]$Context)
 
   if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Host "WARNING: git is unavailable; skipping tracked derived output check after $Context"
+    Write-Host "WARNING: git is unavailable; skipping derived output status check after $Context"
     return
   }
 
-  & git -C $repoRoot diff --exit-code -- $derivedOutputPaths
+  $status = @(& git -C $repoRoot status --porcelain -- $derivedOutputPaths)
   if ($LASTEXITCODE -ne 0) {
-    throw "Tracked derived outputs changed during $Context. Review and commit regenerated generated-* references and frame-current assets before relying on validation."
+    throw "Unable to inspect derived output status during $Context"
+  }
+  if ($status.Count -gt 0) {
+    throw "Tracked or untracked derived outputs changed during $Context. Review and commit regenerated generated-* references and frame-current assets before relying on validation."
   }
 }
 
@@ -52,7 +55,7 @@ foreach ($relativePath in $preflightScripts + $validationScripts) {
 foreach ($relativePath in $preflightScripts) {
   Write-Host "Running preflight: $relativePath"
   & (Join-Path $repoRoot $relativePath)
-  Assert-NoTrackedDerivedDiff $relativePath
+  Assert-NoDerivedOutputStatus $relativePath
 }
 
 foreach ($relativePath in $validationScripts) {

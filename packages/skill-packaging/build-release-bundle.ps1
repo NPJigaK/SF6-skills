@@ -17,17 +17,20 @@ $derivedOutputPaths = @(
   'skills/sf6-agent/assets/frame-current'
 )
 
-function Assert-NoTrackedDerivedDiff {
+function Assert-NoDerivedOutputStatus {
   param([Parameter(Mandatory = $true)][string]$Context)
 
   if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Host "WARNING: git is unavailable; skipping tracked derived output check after $Context"
+    Write-Host "WARNING: git is unavailable; skipping derived output status check after $Context"
     return
   }
 
-  & git -C $repoRoot diff --exit-code -- $derivedOutputPaths
+  $status = @(& git -C $repoRoot status --porcelain -- $derivedOutputPaths)
   if ($LASTEXITCODE -ne 0) {
-    throw "Tracked derived outputs changed during $Context. Commit regenerated generated-* references and frame-current assets before building a release bundle."
+    throw "Unable to inspect derived output status during $Context"
+  }
+  if ($status.Count -gt 0) {
+    throw "Tracked or untracked derived outputs changed during $Context. Commit regenerated generated-* references and frame-current assets before building a release bundle."
   }
 }
 
@@ -42,12 +45,12 @@ foreach ($requiredScript in @($knowledgeGenerator, $frameAssetBuilder, $generate
 }
 
 & $knowledgeGenerator
-Assert-NoTrackedDerivedDiff 'knowledge generation'
+Assert-NoDerivedOutputStatus 'knowledge generation'
 & $frameAssetBuilder
-Assert-NoTrackedDerivedDiff 'frame-current asset generation'
+Assert-NoDerivedOutputStatus 'frame-current asset generation'
 & $generatedValidator
 & $frameAssetValidator
-Assert-NoTrackedDerivedDiff 'release preflight validation'
+Assert-NoDerivedOutputStatus 'release preflight validation'
 
 if (Test-Path -LiteralPath $bundlePath) {
   Remove-Item -LiteralPath $bundlePath -Force
