@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/knowledge-page.schema.json",
+  "title": "Knowledge Page",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "claim_kind",
+    "summary",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_kind": {
+      "type": "string",
+      "enum": [
+        "stable_concept",
+        "strategy_or_matchup",
+        "observation",
+        "unresolved"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "$ref": "source-metadata.schema.json"
+    },
+    "generated_allowed": {
+      "type": "boolean"
+    },
+    "must_not_include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
