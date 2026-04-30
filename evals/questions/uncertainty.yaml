@@ -1,8 +1,0 @@
-cases:
-  - id: uncertainty-conflicting-sources
-    question: "A current exact value differs between official data and a third-party page. Which should I use?"
-    expected_answer_mode: unresolved_or_hold
-    evidence_boundary: "Prefer official current fact authority and hold on conflicts until reviewed."
-    must_not_include:
-      - "third-party override of official data"
-      - "invented reconciliation"

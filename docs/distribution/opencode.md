@@ -1,3 +1,7 @@
 # OpenCode Distribution
 
-Canonical install instructions moved to [agents/opencode.md](./agents/opencode.md).
+OpenCode distribution uses the shared release-bundle installer.
+
+Primary install reference:
+
+- [`.opencode/INSTALL.md`](../../.opencode/INSTALL.md)

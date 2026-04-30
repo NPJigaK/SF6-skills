@@ -1,0 +1,233 @@
+Set-StrictMode -Version Latest
+
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+
+$requiredDirectories = @(
+  'skills',
+  'maintainer-skills',
+  'local',
+  'local/.codex',
+  'local/.agents',
+  'packages',
+  'packages/skill-installers',
+  'packages/skill-validator',
+  'packages/skill-packaging',
+  'shared',
+  'shared/templates',
+  'shared/templates/skill',
+  'shared/schemas',
+  'ingest',
+  'data',
+  'docs/architecture',
+  'docs/authoring',
+  'docs/authoring/automation-prompts',
+  'docs/distribution',
+  'docs/testing',
+  'tests/install',
+  'tests/integration',
+  'tests/packaging',
+  'scripts/dev',
+  '.claude-plugin',
+  '.cursor-plugin',
+  '.codex',
+  '.opencode'
+)
+
+$requiredFiles = @(
+  'README.md',
+  'docs/architecture/README.md',
+  'docs/architecture/repo-structure-contract.md',
+  'packages/README.md',
+  'shared/README.md',
+  'skills/README.md',
+  'maintainer-skills/README.md'
+)
+
+$missingFiles = foreach ($relativePath in $requiredFiles) {
+  $fullPath = Join-Path $repoRoot $relativePath
+  if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
+    $relativePath
+  }
+}
+
+$readme = (
+  Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding UTF8 -ErrorAction Stop
+) -replace "`r`n", "`n" -replace "`r", "`n"
+if ($readme -notmatch '(?m)^## Installation$') {
+  throw 'README.md missing: ## Installation'
+}
+
+function Get-HeadingLineNumber {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Text,
+    [Parameter(Mandatory = $true)]
+    [string]$Heading
+  )
+
+  $pattern = "(?m)^$([regex]::Escape($Heading))$"
+  $match = [regex]::Match($Text, $pattern)
+  if (-not $match.Success) {
+    return $null
+  }
+
+  return 1 + (($Text.Substring(0, $match.Index) -split "`n").Count - 1)
+}
+
+function Get-HeadingMatchCount {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Text,
+    [Parameter(Mandatory = $true)]
+    [string]$Heading
+  )
+
+  $pattern = "(?m)^$([regex]::Escape($Heading))$"
+  return [regex]::Matches($Text, $pattern).Count
+}
+
+$orderedHeadings = @(
+  '## How it works',
+  '## Installation',
+  '## Verify installation',
+  '## Basic usage',
+  '## Current fact policy',
+  '## What''s inside',
+  '## Contributing',
+  '## Updating'
+)
+
+$previousLine = 0
+foreach ($heading in $orderedHeadings) {
+  $matchCount = Get-HeadingMatchCount -Text $readme -Heading $heading
+  if ($matchCount -ne 1) {
+    throw "README.md heading match count invalid for ${heading}: expected exactly 1, found $matchCount"
+  }
+
+  $lineNumber = Get-HeadingLineNumber -Text $readme -Heading $heading
+  if ($null -eq $lineNumber) {
+    throw "README.md missing heading: $heading"
+  }
+
+  if ($lineNumber -lt $previousLine) {
+    throw "README.md heading order invalid: $heading"
+  }
+
+  $previousLine = $lineNumber
+}
+
+$contentChecks = @(
+  @{
+    Path = 'README.md'
+    MustContain = @(
+      '[repo-structure-contract.md](./docs/architecture/repo-structure-contract.md)',
+      '[ingest/frame_data/README.md](./ingest/frame_data/README.md)',
+      '`local/`'
+    )
+  },
+  @{
+    Path = 'docs/architecture/README.md'
+    MustContain = @(
+      'repo-structure-contract.md',
+      'kb-sf6-frame-current-packaging.md'
+    )
+  },
+  @{
+    Path = 'packages/README.md'
+    MustContain = @(
+      'Use `packages/` only after a second real consumer exists.'
+    )
+  },
+  @{
+    Path = 'shared/README.md'
+    MustContain = @(
+      'Use `shared/` only after a second real consumer exists.'
+    )
+  },
+  @{
+    Path = 'skills/README.md'
+    MustContain = @(
+      'Each direct child under `skills/` is an independent public skill unit.',
+      'Required per skill: `SKILL.md`.',
+      'Optional per skill: `references/`, `assets/`, `agents/`.'
+    )
+  },
+  @{
+    Path = 'maintainer-skills/README.md'
+    MustContain = @(
+      'These skills are repository-only workflows.',
+      'They are not public distribution units.'
+    )
+  }
+)
+
+$validationIssues = @()
+
+foreach ($check in $contentChecks) {
+  $content = Get-Content -LiteralPath (Join-Path $repoRoot $check.Path) -Raw
+  foreach ($needle in $check.MustContain) {
+    if ($content -notmatch [regex]::Escape($needle)) {
+      $validationIssues += "$($check.Path) missing: $needle"
+    }
+  }
+}
+
+function Get-DirectChildDirectoryNames {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root
+  )
+
+  return @(
+    Get-ChildItem -LiteralPath $Root -Directory |
+      Sort-Object Name |
+      ForEach-Object { $_.Name }
+  )
+}
+
+$publicSkillsRoot = Join-Path $repoRoot 'skills'
+$publicSkillNames = Get-DirectChildDirectoryNames -Root $publicSkillsRoot
+
+foreach ($skillName in $publicSkillNames) {
+  $skillManifest = Join-Path $publicSkillsRoot (Join-Path $skillName 'SKILL.md')
+  if (-not (Test-Path -LiteralPath $skillManifest -PathType Leaf)) {
+    throw "Public skill missing SKILL.md: skills/$skillName"
+  }
+}
+
+$maintainerSkillsRoot = Join-Path $repoRoot 'maintainer-skills'
+$maintainerSkillNames = Get-DirectChildDirectoryNames -Root $maintainerSkillsRoot
+
+foreach ($skillName in $maintainerSkillNames) {
+  $skillManifest = Join-Path $maintainerSkillsRoot (Join-Path $skillName 'SKILL.md')
+  if (-not (Test-Path -LiteralPath $skillManifest -PathType Leaf)) {
+    throw "Maintainer skill missing SKILL.md: maintainer-skills/$skillName"
+  }
+}
+
+$legacyDogfoodRoot = Join-Path $repoRoot '.agents'
+
+$missingDirectories = foreach ($relativePath in $requiredDirectories) {
+  $fullPath = Join-Path $repoRoot $relativePath
+  if (-not (Test-Path -LiteralPath $fullPath -PathType Container)) {
+    $relativePath
+  }
+}
+
+if (@($missingDirectories).Count -gt 0) {
+  $validationIssues += "Missing required paths: $($missingDirectories -join ', ')"
+}
+
+if (@($missingFiles).Count -gt 0) {
+  $validationIssues += "Missing required files: $($missingFiles -join ', ')"
+}
+
+if (Test-Path -LiteralPath $legacyDogfoodRoot -PathType Container) {
+  $validationIssues += 'Repo-root .agents must not exist'
+}
+
+if (@($validationIssues).Count -gt 0) {
+  throw ($validationIssues -join '; ')
+}
+
+Write-Host 'Layout OK'

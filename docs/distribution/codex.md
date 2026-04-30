@@ -1,3 +1,7 @@
 # Codex Distribution
 
-Canonical install instructions moved to [agents/codex.md](./agents/codex.md).
+Codex distribution uses the shared release-bundle installer.
+
+Primary install reference:
+
+- [`.codex/INSTALL.md`](../../.codex/INSTALL.md)

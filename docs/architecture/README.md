@@ -1,5 +1,10 @@
-# Architecture
+# Architecture Docs
 
-Architecture docs define the v2 source-of-truth model.
+Repository-level architecture notes and dependency-boundary decisions.
 
-- [v2-architecture.md](./v2-architecture.md)
+Primary entrypoints:
+
+- `repo-structure-contract.md`
+- `kb-sf6-frame-current-packaging.md`
+- `video-analysis-v0-design.md`
+- `video-analysis-v0-implementation-plan.md`
