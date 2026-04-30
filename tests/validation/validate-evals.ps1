@@ -42,6 +42,11 @@ foreach ($relativePath in $questionFiles) {
       if ($key -notin $allowedTopLevelKeys) {
         $violations += "$relativePath has unsupported top-level eval key: $key"
       }
+    } elseif ($line -match '^ {2}-\s+([A-Za-z0-9_]+):') {
+      $key = $Matches[1]
+      if ($key -notin $allowedCaseKeys) {
+        $violations += "$relativePath has unsupported eval case key: $key"
+      }
     } elseif ($line -match '^ {4}([A-Za-z0-9_]+):') {
       $key = $Matches[1]
       if ($key -notin $allowedCaseKeys) {
