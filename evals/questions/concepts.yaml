@@ -6,6 +6,22 @@ cases:
     must_not_include:
       - "exact current move frame values"
       - "generated surface as canonical source"
+  - id: concept-plus-frames-not-guaranteed-pressure
+    question: "If I am plus after a blocked attack, does that mean my next option is guaranteed?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Explain the stable turn-advantage concept while separating advantage from guaranteed outcomes."
+    must_not_include:
+      - "guaranteed follow-up"
+      - "specific current block advantage"
+      - "character-specific setup validity"
+  - id: concept-punishability
+    question: "What does punishable mean in SF6?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Explain the stable punishability concept without asserting current move-specific punish windows."
+    must_not_include:
+      - "specific current startup"
+      - "specific current recovery"
+      - "runtime asset value quoted from memory"
   - id: concept-shimmy
     question: "What is a shimmy and why does it beat throw tech?"
     expected_answer_mode: stable_concept
@@ -13,3 +29,35 @@ cases:
     must_not_include:
       - "official-definition claim without support"
       - "character-specific guaranteed setup"
+  - id: concept-shimmy-community-term
+    question: "Is shimmy an official SF6 term, and what does it usually mean?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Use the community terminology boundary and avoid claiming official wording."
+    must_not_include:
+      - "official game terminology"
+      - "guaranteed in the current patch"
+      - "exact matchup prescription"
+  - id: concept-hit-confirm
+    question: "What is a hit confirm?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Explain the stable concept without naming current character-specific confirm routes as verified facts."
+    must_not_include:
+      - "current optimal route"
+      - "specific current frame window"
+      - "unreviewed character route"
+  - id: concept-meaty-timing
+    question: "What does meaty timing mean on an opponent's wake-up?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Explain the timing concept without claiming a setup is current-patch verified."
+    must_not_include:
+      - "verified current setup"
+      - "specific active-frame value"
+      - "guaranteed against all wake-up options"
+  - id: concept-okizeme-wakeup-pressure
+    question: "What is okizeme or wake-up pressure in SF6?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Explain the stable post-knockdown pressure concept while keeping matchup and patch-specific claims out."
+    must_not_include:
+      - "universal best option"
+      - "current patch guarantee"
+      - "specific character setup as fact"
