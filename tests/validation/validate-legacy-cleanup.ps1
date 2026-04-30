@@ -34,12 +34,12 @@ $canonicalRoots = @(
 )
 
 $legacyMetadataPatterns = @(
-  'source_tier',
-  '回答ラベル',
-  '根拠階層',
-  'core-community-label',
-  'concept-stable',
-  'community-labeled'
+  @{ Label = 'source_tier'; Pattern = [regex]::Escape('source_tier') },
+  @{ Label = 'legacy answer label metadata'; Pattern = '\u56de\u7b54\u30e9\u30d9\u30eb' },
+  @{ Label = 'legacy evidence tier metadata'; Pattern = '\u6839\u62e0\u968e\u5c64' },
+  @{ Label = 'core-community-label'; Pattern = [regex]::Escape('core-community-label') },
+  @{ Label = 'concept-stable'; Pattern = [regex]::Escape('concept-stable') },
+  @{ Label = 'community-labeled'; Pattern = [regex]::Escape('community-labeled') }
 )
 
 foreach ($relativeRoot in $canonicalRoots) {
@@ -56,8 +56,8 @@ foreach ($relativeRoot in $canonicalRoots) {
     $relativePath = $file.FullName.Substring($repoRoot.Length + 1).Replace('\', '/')
     $content = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
     foreach ($pattern in $legacyMetadataPatterns) {
-      if ($content -match [regex]::Escape($pattern)) {
-        $violations += "$relativePath contains legacy canonical metadata: $pattern"
+      if ($content -match $pattern.Pattern) {
+        $violations += "$relativePath contains legacy canonical metadata: $($pattern.Label)"
       }
     }
   }
