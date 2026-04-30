@@ -36,7 +36,7 @@ foreach ($relativePath in $questionFiles) {
       throw "$relativePath has unsupported expected_answer_mode: $mode"
     }
   }
-  if ($content -match '\[概念のみ\]|\[検証済み\]|\[保留\]') {
+  if ($content -match '\[\u6982\u5ff5\u306e\u307f\]|\[\u691c\u8a3c\u6e08\u307f\]|\[\u4fdd\u7559\]') {
     throw "$relativePath must check answer modes, not legacy bracket labels"
   }
   if ($content -match '\bT[1-4]\b|source_tier|core / mixed / current-fact') {

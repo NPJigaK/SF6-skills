@@ -142,9 +142,15 @@ foreach ($file in $files) {
   if ($relativePath -match '^knowledge/curated/' -and $content -notmatch '(?m)^\s+path:\s*') {
     $violations += "$relativePath source_refs must include a reviewable path"
   }
-  foreach ($forbidden in @('source_tier', '[概念のみ]', 'T1 / T2 / T3 / T4', 'core / mixed / current-fact')) {
-    if ($content -match [regex]::Escape($forbidden)) {
-      $violations += "$relativePath contains legacy canonical taxonomy text: $forbidden"
+  $forbiddenPatterns = @(
+    @{ Label = 'source_tier'; Pattern = [regex]::Escape('source_tier') },
+    @{ Label = 'legacy concept-only bracket label'; Pattern = '\[\u6982\u5ff5\u306e\u307f\]' },
+    @{ Label = 'T1 / T2 / T3 / T4'; Pattern = [regex]::Escape('T1 / T2 / T3 / T4') },
+    @{ Label = 'core / mixed / current-fact'; Pattern = [regex]::Escape('core / mixed / current-fact') }
+  )
+  foreach ($forbidden in $forbiddenPatterns) {
+    if ($content -match $forbidden.Pattern) {
+      $violations += "$relativePath contains legacy canonical taxonomy text: $($forbidden.Label)"
     }
   }
 }
