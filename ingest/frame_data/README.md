@@ -11,7 +11,7 @@ The checked-in current artifact surface is:
 
 `data/normalized/` is run-local audit state and is not part of the durable checked-in artifact surface.
 
-Configured character roster lives in `shared/roster/current-character-roster.json`.
+Configured character roster lives in `data/roster/current-character-roster.json`.
 `official` is required for every roster character.
 The current roster also configures `supercombo` for every checked-in character through `sources.supercombo_data`.
 
@@ -28,7 +28,7 @@ The current roster also configures `supercombo` for every checked-in character t
 ## Fetch Strategy
 
 - `official`: Scrapling `Fetcher`
-- `supercombo`: Scrapling `StealthyFetcher` against the per-character `sources.supercombo_data` URL from `shared/roster/current-character-roster.json`
+- `supercombo`: Scrapling `StealthyFetcher` against the per-character `sources.supercombo_data` URL from `data/roster/current-character-roster.json`
 - raw snapshot first: fetch writes the authoritative byte payload plus `metadata.json` before parse
 - parser input is deterministically decoded from the stored raw bytes
 

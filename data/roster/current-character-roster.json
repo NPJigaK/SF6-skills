@@ -1,13 +1,26 @@
 {
   "schema_version": "1.0.0",
   "verified_from": {
-    "source_tier": "T1",
-    "source_kind": "official_character_select_links",
-    "character_slug": "jp",
-    "snapshot_id": "20260412T151014Z-6aeeace2",
-    "source_url": "https://www.streetfighter.com/6/ja-jp/character/jp/frame",
-    "fetched_at": "2026-04-12T15:10:14Z",
-    "evidence": "Character-select links embedded in the checked-in official raw frame page."
+    "source_kind": "official",
+    "source_role": "canonical_current_roster",
+    "evidence_basis": [
+      "official_character_select_links",
+      "checked_in_official_raw_snapshot"
+    ],
+    "verification_state": "verified",
+    "confidence": 1,
+    "volatility": "patch_sensitive",
+    "patch_sensitivity": "medium",
+    "review_status": "accepted",
+    "source_refs": [
+      {
+        "label": "Official JP frame page character-select links",
+        "url": "https://www.streetfighter.com/6/ja-jp/character/jp/frame",
+        "path": "data/raw/official/jp/20260412T151014Z-6aeeace2/page.html",
+        "captured_at": "2026-04-12T15:10:14Z"
+      }
+    ],
+    "review_after": null
   },
   "characters": [
     {
