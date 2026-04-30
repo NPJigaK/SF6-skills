@@ -22,25 +22,54 @@ foreach ($relativePath in $questionFiles + $rubricFiles) {
   }
 }
 
+$allowedTopLevelKeys = @('cases')
+$allowedCaseKeys = @(
+  'id',
+  'question',
+  'expected_answer_mode',
+  'evidence_boundary',
+  'must_not_include'
+)
+
 foreach ($relativePath in $questionFiles) {
   $content = Get-Content -LiteralPath (Join-Path $repoRoot $relativePath) -Raw -Encoding UTF8
+  $normalized = $content -replace "`r`n", "`n"
+  $violations = @()
+
+  foreach ($line in ($normalized -split "`n")) {
+    if ($line -match '^([A-Za-z0-9_]+):') {
+      $key = $Matches[1]
+      if ($key -notin $allowedTopLevelKeys) {
+        $violations += "$relativePath has unsupported top-level eval key: $key"
+      }
+    } elseif ($line -match '^ {2}-\s+([A-Za-z0-9_]+):') {
+      $key = $Matches[1]
+      if ($key -notin $allowedCaseKeys) {
+        $violations += "$relativePath has unsupported eval case key: $key"
+      }
+    } elseif ($line -match '^ {4}([A-Za-z0-9_]+):') {
+      $key = $Matches[1]
+      if ($key -notin $allowedCaseKeys) {
+        $violations += "$relativePath has unsupported eval case key: $key"
+      }
+    }
+  }
+
   foreach ($needle in @('id:', 'question:', 'expected_answer_mode:', 'evidence_boundary:', 'must_not_include:')) {
     if ($content -notmatch [regex]::Escape($needle)) {
-      throw "$relativePath missing eval metadata: $needle"
+      $violations += "$relativePath missing eval metadata: $needle"
     }
   }
   $modeMatches = [regex]::Matches($content, 'expected_answer_mode:\s*([A-Za-z0-9_/-]+)')
   foreach ($modeMatch in $modeMatches) {
     $mode = $modeMatch.Groups[1].Value
     if ($mode -notin @('stable_concept', 'verified_current_fact', 'strategy_or_matchup_knowledge', 'observation', 'unresolved_or_hold')) {
-      throw "$relativePath has unsupported expected_answer_mode: $mode"
+      $violations += "$relativePath has unsupported expected_answer_mode: $mode"
     }
   }
-  if ($content -match '\[\u6982\u5ff5\u306e\u307f\]|\[\u691c\u8a3c\u6e08\u307f\]|\[\u4fdd\u7559\]') {
-    throw "$relativePath must check answer modes, not legacy bracket labels"
-  }
-  if ($content -match '\bT[1-4]\b|source_tier|core / mixed / current-fact') {
-    throw "$relativePath must not preserve legacy taxonomy in eval metadata"
+
+  if ($violations.Count -gt 0) {
+    throw ($violations -join '; ')
   }
 }
 

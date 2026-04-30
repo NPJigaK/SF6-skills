@@ -22,6 +22,12 @@ $requiredFields = @(
   'review_after'
 )
 
+$allowedFields = $requiredFields + @(
+  'summary',
+  'generated_allowed',
+  'must_not_include'
+)
+
 $allowedClaimKinds = @('stable_concept', 'strategy_or_matchup', 'observation', 'unresolved')
 $allowedSourceKinds = @('official', 'reproducible_observation', 'maintained_third_party', 'community', 'maintainer_note', 'unknown')
 $allowedVerificationStates = @('verified', 'partially_verified', 'unverified', 'conflicting', 'not_applicable')
@@ -106,6 +112,12 @@ foreach ($file in $files) {
   $relativePath = $file.FullName.Substring($repoRoot.Length + 1).Replace('\', '/')
   $metadata = Read-FrontMatter $file
 
+  foreach ($field in $metadata.Keys) {
+    if ($field -notin $allowedFields) {
+      $violations += "$relativePath has unsupported metadata field: $field"
+    }
+  }
+
   foreach ($field in $requiredFields) {
     if (-not $metadata.Contains($field)) {
       $violations += "$relativePath missing metadata field: $field"
@@ -141,17 +153,6 @@ foreach ($file in $files) {
   $content = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
   if ($relativePath -match '^knowledge/curated/' -and $content -notmatch '(?m)^\s+path:\s*') {
     $violations += "$relativePath source_refs must include a reviewable path"
-  }
-  $forbiddenPatterns = @(
-    @{ Label = 'source_tier'; Pattern = [regex]::Escape('source_tier') },
-    @{ Label = 'legacy concept-only bracket label'; Pattern = '\[\u6982\u5ff5\u306e\u307f\]' },
-    @{ Label = 'T1 / T2 / T3 / T4'; Pattern = [regex]::Escape('T1 / T2 / T3 / T4') },
-    @{ Label = 'core / mixed / current-fact'; Pattern = [regex]::Escape('core / mixed / current-fact') }
-  )
-  foreach ($forbidden in $forbiddenPatterns) {
-    if ($content -match $forbidden.Pattern) {
-      $violations += "$relativePath contains legacy canonical taxonomy text: $($forbidden.Label)"
-    }
   }
 }
 
