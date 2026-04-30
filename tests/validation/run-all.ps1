@@ -2,6 +2,25 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+$derivedOutputPaths = @(
+  'skills/sf6-agent/references/generated-knowledge-index.md',
+  'skills/sf6-agent/references/generated-concepts.md',
+  'skills/sf6-agent/assets/frame-current'
+)
+
+function Assert-NoTrackedDerivedDiff {
+  param([Parameter(Mandatory = $true)][string]$Context)
+
+  if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    Write-Host "WARNING: git is unavailable; skipping tracked derived output check after $Context"
+    return
+  }
+
+  & git -C $repoRoot diff --exit-code -- $derivedOutputPaths
+  if ($LASTEXITCODE -ne 0) {
+    throw "Tracked derived outputs changed during $Context. Review and commit regenerated generated-* references and frame-current assets before relying on validation."
+  }
+}
 
 $preflightScripts = @(
   'packages/knowledge-generation/build-sf6-agent-knowledge.ps1',
@@ -33,6 +52,7 @@ foreach ($relativePath in $preflightScripts + $validationScripts) {
 foreach ($relativePath in $preflightScripts) {
   Write-Host "Running preflight: $relativePath"
   & (Join-Path $repoRoot $relativePath)
+  Assert-NoTrackedDerivedDiff $relativePath
 }
 
 foreach ($relativePath in $validationScripts) {

@@ -16,6 +16,8 @@ powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-cu
 powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-bundle.ps1
 ```
 
+After each generation step, the suite fails if tracked derived outputs changed. Regenerated `skills/sf6-agent/references/generated-*` or `skills/sf6-agent/assets/frame-current/` files must be reviewed and committed before validation or release packaging is treated as reliable.
+
 Manual validator set:
 
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-v2-surfaces.ps1`

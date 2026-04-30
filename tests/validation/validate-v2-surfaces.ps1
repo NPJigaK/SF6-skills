@@ -21,7 +21,13 @@ $requiredFiles = @(
 $requiredDirectories = @(
   'knowledge/curated/concepts',
   'knowledge/curated/glossary',
+  'knowledge/sources',
+  'knowledge/evidence/claims',
+  'knowledge/evidence/video-observations',
   'knowledge/review',
+  'knowledge/review/unresolved',
+  'knowledge/review/contested',
+  'knowledge/review/current-fact-candidates',
   'evals/questions',
   'evals/rubrics',
   'contracts',

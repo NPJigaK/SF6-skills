@@ -43,6 +43,11 @@ foreach ($needle in @('source_kind', 'source_role', 'evidence_basis', 'verificat
     throw "source metadata contract missing field: $needle"
   }
 }
+$sourceSchemaObject = $sourceSchema | ConvertFrom-Json
+$sourceRequired = @($sourceSchemaObject.required)
+if ($sourceRequired -notcontains 'review_after') {
+  throw 'source metadata contract must require review_after; use null when no review date is needed'
+}
 
 if ($sourceSchema -match '"source_tier"') {
   throw 'source metadata contract must not preserve source_tier as canonical metadata'

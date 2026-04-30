@@ -11,6 +11,25 @@ $knowledgeGenerator = Join-Path $repoRoot 'packages/knowledge-generation/build-s
 $frameAssetBuilder = Join-Path $repoRoot 'packages/skill-packaging/build-frame-current-runtime-assets.ps1'
 $generatedValidator = Join-Path $repoRoot 'tests/validation/validate-generated-knowledge.ps1'
 $frameAssetValidator = Join-Path $repoRoot 'tests/validation/validate-frame-current-assets.ps1'
+$derivedOutputPaths = @(
+  'skills/sf6-agent/references/generated-knowledge-index.md',
+  'skills/sf6-agent/references/generated-concepts.md',
+  'skills/sf6-agent/assets/frame-current'
+)
+
+function Assert-NoTrackedDerivedDiff {
+  param([Parameter(Mandatory = $true)][string]$Context)
+
+  if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    Write-Host "WARNING: git is unavailable; skipping tracked derived output check after $Context"
+    return
+  }
+
+  & git -C $repoRoot diff --exit-code -- $derivedOutputPaths
+  if ($LASTEXITCODE -ne 0) {
+    throw "Tracked derived outputs changed during $Context. Commit regenerated generated-* references and frame-current assets before building a release bundle."
+  }
+}
 
 if (-not (Test-Path -LiteralPath $agentRoot -PathType Container)) {
   throw 'Missing agent source: skills/sf6-agent'
@@ -23,9 +42,12 @@ foreach ($requiredScript in @($knowledgeGenerator, $frameAssetBuilder, $generate
 }
 
 & $knowledgeGenerator
+Assert-NoTrackedDerivedDiff 'knowledge generation'
 & $frameAssetBuilder
+Assert-NoTrackedDerivedDiff 'frame-current asset generation'
 & $generatedValidator
 & $frameAssetValidator
+Assert-NoTrackedDerivedDiff 'release preflight validation'
 
 if (Test-Path -LiteralPath $bundlePath) {
   Remove-Item -LiteralPath $bundlePath -Force
