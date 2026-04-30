@@ -79,7 +79,9 @@ if (Test-Path -LiteralPath $candidateRoot -PathType Container) {
     $content = Get-Content -LiteralPath $candidateFile.FullName -Raw -Encoding UTF8
     foreach ($pattern in @(
       'generated_allowed:\s*true',
-      'review_status:\s*accepted'
+      '"generated_allowed"\s*:\s*true',
+      'review_status:\s*accepted',
+      '"review_status"\s*:\s*"accepted"'
     )) {
       if ($content -match $pattern) {
         $violations += "$relativePath violates current-fact candidate review-only boundary: $pattern"
