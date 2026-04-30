@@ -1,0 +1,1362 @@
+[
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_001_5_lp",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 4,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_002_5_lp",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 4,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_003_5_lk",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": -1,
+    "meaty_block_adv_max": -3,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_004_5_mp",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": 1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_005_5_mk",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 4,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_006_5_hp",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_007_5_hp",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 5,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_008_5_hk",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_009_2_lp",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 7,
+    "meaty_block_adv_max": 2,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_010_2_lp",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 7,
+    "meaty_block_adv_max": 2,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_011_2_lk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 2,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_012_2_lk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 2,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_013_2_mp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": 1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_014_2_mk",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": 0,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_015_2_hp",
+    "punishable_threshold": 20,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -12,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 20,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_016_2_hk",
+    "punishable_threshold": 13,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -11,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 13,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_017_j_lp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_018_j_lk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_019_j_mp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_020_j_mk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_021_j_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_022_j_hk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_023_j_hk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_024_3_mp",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 1,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_025_6_mk",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 7,
+    "meaty_block_adv_max": 2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_026_6_hp",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 12,
+    "meaty_block_adv_max": 8,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_027_6_hk",
+    "punishable_threshold": 9,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -3,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 9,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_028_3_hk",
+    "punishable_threshold": 18,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -15,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 18,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_029_2_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_030_8_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_031_mp_mp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -3,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_032_mp_mp_mp",
+    "punishable_threshold": 17,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -15,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 17,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_033_2_2_mk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_034_2_2_mk_mk",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": -1,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_035_2_2_mk_mk_mk",
+    "punishable_threshold": 10,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": false,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 0,
+    "meaty_block_adv_max": -8,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 10,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_038_lp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_039_mp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_040_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_041_p_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_042_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_043_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_044_6_3_2_1_4_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_045_6_3_2_1_4_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_046_6_3_2_1_4_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_047_6_3_2_1_4_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_048_6_3_2_1_4_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_049_6_3_2_1_4_k_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_050_2_2_hk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_051_2_3_6_2_3_6_k",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_053_2_3_6_2_3_6_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_054_2_3_6_2_3_6_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_055_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_056_p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_057_5_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_058_4_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_059_6_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_060_3_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_061_1_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_062_2_lplk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_063_6_6",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_064_4_4",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_065_hphk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_066_6_hphk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_067_6_hphk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_069_mpmk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_070_mpmk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_071_6_6",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "zangief",
+    "move_id": "zangief_072_6_6_5_6_mpmk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  }
+]

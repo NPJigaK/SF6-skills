@@ -1,0 +1,1222 @@
+[
+  {
+    "character_slug": "jp",
+    "move_id": "jp_001_5lp",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": 0,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_002_5lk",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": 0,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_003_5mp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 3,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_004_5mk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_005_5hp",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 4,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_006_5hk",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": 10,
+    "meaty_block_adv_max": 5,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_007_2lp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": 0,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_008_2lk",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 3,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_009_2mp",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 9,
+    "meaty_block_adv_max": 1,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_010_2mk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_011_2hp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 6,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_012_2hk",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_013_j_lp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_014_j_lk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_015_j_mp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_016_j_mk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_017_j_hp",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_018_j_hk",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_019_6mk",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 4,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_020_3hp",
+    "punishable_threshold": 14,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -12,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 14,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_022_4mp",
+    "punishable_threshold": 1,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 7,
+    "meaty_block_adv_max": 1,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 1,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_023_4mp_mp",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_024_5hk_hp",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -1,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_025_5hk_hp_hp",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_026_5hk_hp_hk",
+    "punishable_threshold": 4,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": 5,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 4,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_027_22lp_triglav",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 7,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_028_22mp_triglav",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 7,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_029_22hp_triglav",
+    "punishable_threshold": 2,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 7,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 2,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_030_22pp_triglav_od_weak",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 22,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_031_22pp_triglav_od_medium",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 22,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_032_22pp_triglav_od_heavy",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": 22,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_033_236lp_stribog",
+    "punishable_threshold": 10,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -5,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 10,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_037_214lp_vihat",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_038_214mp_vihat",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_039_214hp_vihat",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_043_214lpmp_vihat_akno",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_044_214hp_vihat_cheni",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_045_22k_amnesia",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_046_22kk_amnesia_od",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_047_236lk_torbalan",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_048_236mk_torbalan",
+    "punishable_threshold": 8,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 8,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_049_236hk_torbalan",
+    "punishable_threshold": 8,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": true,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 8,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_050_236kk_torbalan_od",
+    "punishable_threshold": 0,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": true,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 0,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_051_214k_abhnumach",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_052_214kk_abhnumach_od",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_053_sa1_236236p",
+    "punishable_threshold": 33,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "8_to_10",
+    "simple_punish_adv": 33,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_054_sa2_214214p",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_055_sa3_236236k",
+    "punishable_threshold": 50,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -45,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 50,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_056_ca_236236k",
+    "punishable_threshold": 50,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -45,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 50,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_057_forward_throw",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_058_back_throw",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_059_air_throw",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "5_to_7",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_060_forward_dash",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_061_back_dash",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_062_drive_impact",
+    "punishable_threshold": 3,
+    "is_safe_on_block": true,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -2,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 3,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_063_drive_reversal_guard",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_064_drive_reversal_wakeup",
+    "punishable_threshold": 6,
+    "is_safe_on_block": false,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": false,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": -4,
+    "startup_bucket": "11_plus",
+    "simple_punish_adv": 6,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_066_just_parry_strike",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_067_just_parry_projectile",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": "4f_or_faster",
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_068_parry_drive_rush",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  },
+  {
+    "character_slug": "jp",
+    "move_id": "jp_069_cancel_drive_rush",
+    "punishable_threshold": null,
+    "is_safe_on_block": null,
+    "is_plus_on_hit": null,
+    "is_plus_on_block": null,
+    "meaty_hit_adv_max": null,
+    "meaty_block_adv_max": null,
+    "startup_bucket": null,
+    "simple_punish_adv": null,
+    "derivation_notes": [
+      "derived from official_raw only",
+      "ignores spacing/pushback",
+      "ignores character-specific punish options",
+      "ignores invuln/armor/special exceptions",
+      "4F baseline",
+      "derivation_rule_version=1.0.0"
+    ]
+  }
+]

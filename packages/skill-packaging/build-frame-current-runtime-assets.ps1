@@ -1,17 +1,17 @@
 Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
-$skillRoot = Join-Path $repoRoot 'skills/kb-sf6-frame-current'
+$skillRoot = Join-Path $repoRoot 'skills/sf6-agent'
 if (-not (Test-Path -LiteralPath $skillRoot -PathType Container)) {
-  throw "Missing public skill root: skills/kb-sf6-frame-current"
+  throw "Missing public adapter root: skills/sf6-agent"
 }
 
-$rosterPath = Join-Path $repoRoot 'shared/roster/current-character-roster.json'
+$rosterPath = Join-Path $repoRoot 'data/roster/current-character-roster.json'
 if (-not (Test-Path -LiteralPath $rosterPath -PathType Leaf)) {
-  throw 'Missing canonical roster source: shared/roster/current-character-roster.json'
+  throw 'Missing canonical roster source: data/roster/current-character-roster.json'
 }
 
-$assetRoot = Join-Path $skillRoot 'assets'
+$assetRoot = Join-Path $skillRoot 'assets/frame-current'
 $publishedRoot = Join-Path $assetRoot 'published'
 $runtimeManifestPath = Join-Path $assetRoot 'runtime_manifest.json'
 
@@ -28,8 +28,9 @@ New-Item -ItemType Directory -Path $publishedRoot -Force | Out-Null
 
 $runtimeManifest = [ordered]@{
   source_root = 'data/exports'
-  skill_root = 'skills/kb-sf6-frame-current/assets'
-  roster_source = 'shared/roster/current-character-roster.json'
+  asset_root = 'skills/sf6-agent/assets/frame-current'
+  roster_source = 'data/roster/current-character-roster.json'
+  generator = 'packages/skill-packaging/build-frame-current-runtime-assets.ps1'
   characters = @()
 }
 
