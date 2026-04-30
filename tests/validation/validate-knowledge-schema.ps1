@@ -89,7 +89,11 @@ foreach ($relativeRoot in $knowledgeRoots) {
   $root = Join-Path $repoRoot $relativeRoot
   if (Test-Path -LiteralPath $root -PathType Container) {
     $files += Get-ChildItem -LiteralPath $root -Recurse -File -Filter '*.md' |
-      Where-Object { $_.Name -ne 'README.md' }
+      Where-Object {
+        $normalizedPath = $_.FullName.Replace('\', '/')
+        ($_.Name -ne 'README.md') -and
+        ($normalizedPath -notmatch '/knowledge/review/current-fact-candidates/')
+      }
   }
 }
 
