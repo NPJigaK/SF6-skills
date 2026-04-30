@@ -3,7 +3,7 @@ param(
   [ValidateSet('codex', 'opencode', 'claude', 'cursor')]
   [string]$Agent,
 
-  [string]$LibraryName = 'sf6-skills',
+  [string]$LibraryName = 'sf6-agent',
 
   [string]$TargetRoot = $null
 )
@@ -16,15 +16,15 @@ if ($PSBoundParameters.ContainsKey('TargetRoot')) {
 
 switch ($Agent) {
   'codex' {
-    return (Join-Path $HOME '.agents\skills\sf6-skills')
+    return (Join-Path $HOME ".agents\skills\$LibraryName")
   }
   'opencode' {
-    return (Join-Path $HOME '.config\opencode\skills\sf6-skills')
+    return (Join-Path $HOME ".config\opencode\skills\$LibraryName")
   }
   'claude' {
-    return (Join-Path $HOME '.claude\skills\sf6-skills')
+    return (Join-Path $HOME ".claude\skills\$LibraryName")
   }
   'cursor' {
-    return (Join-Path $HOME '.cursor\skills\sf6-skills')
+    return (Join-Path $HOME ".cursor\skills\$LibraryName")
   }
 }

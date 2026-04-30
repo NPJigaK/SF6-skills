@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/claim.schema.json",
+  "title": "Claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "claim_kind",
+    "statement",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_kind": {
+      "type": "string",
+      "enum": [
+        "stable_concept",
+        "strategy_or_matchup",
+        "observation",
+        "current_fact",
+        "unresolved"
+      ]
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string"
+    },
+    "evidence": {
+      "$ref": "source-metadata.schema.json"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
