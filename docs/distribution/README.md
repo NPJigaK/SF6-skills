@@ -1,10 +1,15 @@
 # Distribution Docs
 
-Front doors:
+Canonical human-readable install docs:
 
-- [`.codex/INSTALL.md`](../../.codex/INSTALL.md)
-- [`.opencode/INSTALL.md`](../../.opencode/INSTALL.md)
-- [`.claude-plugin/INSTALL.md`](../../.claude-plugin/INSTALL.md)
-- [`.cursor-plugin/INSTALL.md`](../../.cursor-plugin/INSTALL.md)
-- [`local-trial-workspace.md`](./local-trial-workspace.md)
-- [`release-bundle.md`](./release-bundle.md)
+- [Codex](./agents/codex.md)
+- [Claude](./agents/claude.md)
+- [Cursor](./agents/cursor.md)
+- [OpenCode](./agents/opencode.md)
+- [Hermes](./agents/hermes.md)
+
+Supporting docs:
+
+- [release-bundle.md](./release-bundle.md)
+
+The public distribution surface is the single `sf6-agent` adapter. Agent-specific front-door files are not canonical hand-written surfaces in v2; this directory owns the canonical install instructions.

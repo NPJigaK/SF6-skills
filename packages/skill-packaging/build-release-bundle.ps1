@@ -3,14 +3,13 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 Add-Type -AssemblyName System.IO.Compression
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
-$skillsRoot = Join-Path $repoRoot 'skills'
+$agentRoot = Join-Path $repoRoot 'skills\sf6-agent'
 $distRoot = Join-Path $repoRoot '.dist'
 $stagingRoot = Join-Path $distRoot 'bundle-root'
-$stagedRepoRoot = Join-Path $stagingRoot 'sf6-skills'
-$bundlePath = Join-Path $distRoot 'sf6-skills-bundle.zip'
+$bundlePath = Join-Path $distRoot 'sf6-agent-bundle.zip'
 
-if (-not (Test-Path -LiteralPath $skillsRoot -PathType Container)) {
-  throw 'Missing skills source: skills/'
+if (-not (Test-Path -LiteralPath $agentRoot -PathType Container)) {
+  throw 'Missing agent source: skills/sf6-agent'
 }
 
 if (Test-Path -LiteralPath $bundlePath) {
@@ -22,10 +21,10 @@ if (Test-Path -LiteralPath $stagingRoot) {
 }
 
 New-Item -ItemType Directory -Path $distRoot -Force | Out-Null
-New-Item -ItemType Directory -Path $stagedRepoRoot -Force | Out-Null
+New-Item -ItemType Directory -Path $stagingRoot -Force | Out-Null
 
 try {
-  Copy-Item -LiteralPath $skillsRoot -Destination (Join-Path $stagedRepoRoot 'skills') -Recurse -Force
+  Copy-Item -LiteralPath $agentRoot -Destination $stagingRoot -Recurse -Force
   $bundleStream = [System.IO.File]::Open($bundlePath, [System.IO.FileMode]::Create, [System.IO.FileAccess]::ReadWrite, [System.IO.FileShare]::None)
   try {
     $archive = New-Object System.IO.Compression.ZipArchive($bundleStream, [System.IO.Compression.ZipArchiveMode]::Create, $false)
@@ -62,4 +61,4 @@ finally {
   }
 }
 
-Write-Host 'Release bundle built'
+Write-Host "Release bundle built: $bundlePath"

@@ -16,7 +16,8 @@ Set-StrictMode -Version Latest
 
 $repoOwner = 'NPJigaK'
 $repoName = 'SF6-skills'
-$bundleName = 'sf6-skills-bundle.zip'
+$libraryName = 'sf6-agent'
+$bundleName = 'sf6-agent-bundle.zip'
 $resolverPath = Join-Path $PSScriptRoot 'resolve-install-target.ps1'
 
 if (-not (Test-Path -LiteralPath $resolverPath -PathType Leaf)) {
@@ -34,21 +35,21 @@ if (-not $Source) {
 
 $resolverArgs = @{
   Agent = $Agent
-  LibraryName = 'sf6-skills'
+  LibraryName = $libraryName
 }
 if ($PSBoundParameters.ContainsKey('TargetRoot')) {
   $resolverArgs.TargetRoot = $TargetRoot
 }
 $targetPath = & $resolverPath @resolverArgs
-if ((Split-Path -Path $targetPath -Leaf) -ne 'sf6-skills') {
-  throw "Resolved target leaf must be sf6-skills: $targetPath"
+if ((Split-Path -Path $targetPath -Leaf) -ne $libraryName) {
+  throw "Resolved target leaf must be ${libraryName}: $targetPath"
 }
 
 $privateInstallRoot = if ($PSBoundParameters.ContainsKey('TargetRoot')) {
   Join-Path $TargetRoot '_install-root'
 }
 else {
-  Join-Path $HOME '.sf6-skills'
+  Join-Path $HOME '.sf6-agent'
 }
 $checkoutRoot = Join-Path $privateInstallRoot $Agent
 
@@ -64,7 +65,7 @@ if ($DryRun) {
 $tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ([System.Guid]::NewGuid().ToString())
 $bundlePath = Join-Path $tempRoot $bundleName
 $extractRoot = Join-Path $tempRoot 'extract'
-$bundledSkillsRoot = Join-Path $extractRoot 'sf6-skills\skills'
+$bundledAgentRoot = Join-Path $extractRoot $libraryName
 
 try {
   New-Item -ItemType Directory -Path $tempRoot -Force | Out-Null
@@ -77,8 +78,13 @@ try {
 
   Expand-Archive -LiteralPath $bundlePath -DestinationPath $extractRoot -Force
 
-  if (-not (Test-Path -LiteralPath $bundledSkillsRoot -PathType Container)) {
-    throw "Missing bundled skills root: $bundledSkillsRoot"
+  if (-not (Test-Path -LiteralPath $bundledAgentRoot -PathType Container)) {
+    throw "Missing bundled agent root: $bundledAgentRoot"
+  }
+
+  $skillEntryPath = Join-Path $bundledAgentRoot 'SKILL.md'
+  if (-not (Test-Path -LiteralPath $skillEntryPath -PathType Leaf)) {
+    throw "Missing bundled skill entrypoint: $skillEntryPath"
   }
 
   if (Test-Path -LiteralPath $checkoutRoot) {
@@ -86,7 +92,7 @@ try {
   }
   New-Item -ItemType Directory -Path $checkoutRoot -Force | Out-Null
 
-  Get-ChildItem -LiteralPath $bundledSkillsRoot -Force | ForEach-Object {
+  Get-ChildItem -LiteralPath $bundledAgentRoot -Force | ForEach-Object {
     Copy-Item -LiteralPath $_.FullName -Destination $checkoutRoot -Recurse -Force
   }
 
@@ -106,4 +112,4 @@ finally {
   }
 }
 
-Write-Output "Installed sf6-skills for $Agent to $targetPath (source: $checkoutRoot)"
+Write-Output "Installed sf6-agent for $Agent to $targetPath (source: $checkoutRoot)"
