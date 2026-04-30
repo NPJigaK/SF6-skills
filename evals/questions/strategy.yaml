@@ -1,0 +1,8 @@
+cases:
+  - id: strategy-pressure-after-plus-frames
+    question: "What should I generally do after a plus normal is blocked?"
+    expected_answer_mode: strategy_or_matchup_knowledge
+    evidence_boundary: "Give scoped strategic guidance and avoid claiming universal guaranteed outcomes."
+    must_not_include:
+      - "exact current frame values"
+      - "unconditional matchup verdict"
