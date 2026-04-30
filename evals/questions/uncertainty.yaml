@@ -1,10 +1,11 @@
 cases:
-  - id: uncertainty-conflicting-sources
-    question: "A current exact value differs between official data and a third-party page. Which should I use?"
+  - id: uncertainty-conflicting-third-party-without-runtime-asset
+    question: "Two third-party pages disagree about a current exact value, and the frame-current runtime asset is unavailable. Can sf6-agent verify it?"
     expected_answer_mode: unresolved_or_hold
-    evidence_boundary: "Prefer official current fact authority and hold on conflicts until reviewed."
+    evidence_boundary: "Hold when exact current values are unavailable in packaged runtime assets and only conflicting third-party evidence exists."
     must_not_include:
-      - "third-party override of official data"
+      - "verified current fact"
+      - "third-party final authority"
       - "invented reconciliation"
   - id: uncertainty-patch-sensitive-setup
     question: "Is this wake-up setup still guaranteed in the current patch?"
