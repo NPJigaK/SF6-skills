@@ -8,6 +8,8 @@ Run the full local verification sequence with:
 powershell -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
 
+GitHub Actions uses the same entrypoint in `.github/workflows/v2-validation.yml` for pull requests targeting `main` and pushes to `main`.
+
 The sequence intentionally builds derived payloads before validation:
 
 ```powershell
