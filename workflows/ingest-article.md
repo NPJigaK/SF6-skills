@@ -9,7 +9,7 @@ Article ingest does not automatically create accepted knowledge. It creates sour
 - Do not store full copyrighted articles by default.
 - Do not copy long verbatim passages into the repo.
 - Do not put exact current move values into `knowledge/curated/`.
-- Use only the v2 evidence metadata and answer-mode model for classification.
+- Classify claims using `contracts/claim.schema.json` and `contracts/source-metadata.schema.json`.
 - Do not treat a community article as final authority for current frame values when `data/exports/` covers the fact.
 
 ## Inputs
@@ -30,7 +30,7 @@ Record these before extracting claims:
 2. Search existing `knowledge/curated/` and `knowledge/review/` for the same topic or claim.
 3. Extract atomic claims. Split mixed claims so each candidate has one statement and one evidence boundary.
 4. Assign `claim_kind` from `contracts/claim.schema.json`: `stable_concept`, `strategy_or_matchup`, `observation`, `current_fact`, or `unresolved`.
-5. Create v2 evidence metadata for each claim.
+5. Create evidence metadata for each claim.
 6. Mark exact current facts as `current_fact` and route them to the frame-data workflow unless the claim is only contextual evidence.
 7. Mark claims as `unresolved` when the source is vague, patch-sensitive, contradicted, or missing reproducible evidence.
 8. Keep the article summary and extracted candidates in `knowledge/review/` until claim review accepts them.

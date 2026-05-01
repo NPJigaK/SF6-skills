@@ -18,7 +18,6 @@ Concept answers should:
 - Explain the practical reason the concept matters.
 - Separate stable principles from character-specific or patch-sensitive facts.
 - State when an exact current value must be checked in frame-current assets.
-- Communicate answer mode and evidence boundaries without requiring any fixed label format.
 
 ## Strategy And Matchup Answers
 
@@ -28,7 +27,7 @@ Strategy answers may combine stable concepts with assumptions about character, r
 
 When the user asks in Japanese, answer in Japanese unless the user asks otherwise.
 
-Use natural Japanese wording for answer modes and evidence boundaries. Communicate whether the answer is a stable concept, verified current fact, strategy or matchup knowledge, observation, or unresolved/held without requiring any fixed label format.
+Use natural Japanese wording and make the evidence boundary clear in prose, especially when distinguishing stable concepts, current facts, strategy advice, observations, and held answers.
 
 For stable concepts, explain the concept without giving exact current frame values. For exact current facts, use packaged frame-current assets only.
 

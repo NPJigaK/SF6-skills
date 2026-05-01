@@ -28,7 +28,7 @@ cases:
     must_not_include:
       - "invented move lookup"
       - "nearest move substituted as fact"
-      - "legacy skill path as authority"
+      - "removed skill path as authority"
   - id: current-fact-community-only-rejection
     question: "A community page lists a current frame value that is not in the packaged data. Can sf6-agent answer it as verified?"
     expected_answer_mode: unresolved_or_hold
