@@ -36,7 +36,7 @@ Frame-current assets come from `data/exports/` plus `data/roster/` only. They mu
 
 V2 uses generic evidence metadata. Canonical artifacts should describe source kind, source role, evidence basis, verification state, confidence, volatility, patch sensitivity, review status, source references, and review timing.
 
-Historical labels and source-tier names may appear only when documenting deprecated v1 behavior. They are not v2 metadata fields.
+These fields are the metadata vocabulary used by current contracts, evals, and validators.
 
 ## Answer Modes
 
@@ -48,7 +48,7 @@ Public answers should communicate the mode and evidence boundary naturally:
 - `observation`
 - `unresolved_or_hold`
 
-Evals check whether the answer mode and boundary behavior are correct. They do not require legacy bracket labels.
+Evals check whether the answer mode and boundary behavior are correct.
 
 ## Hermes
 
