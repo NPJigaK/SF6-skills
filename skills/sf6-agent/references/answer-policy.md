@@ -18,11 +18,20 @@ Concept answers should:
 - Explain the practical reason the concept matters.
 - Separate stable principles from character-specific or patch-sensitive facts.
 - State when an exact current value must be checked in frame-current assets.
-- Avoid fixed bracket labels and legacy source tiers.
 
 ## Strategy And Matchup Answers
 
 Strategy answers may combine stable concepts with assumptions about character, range, resource, round state, and player intent. They should state those assumptions and avoid presenting matchup advice as a verified exact current fact.
+
+## Japanese Questions
+
+When the user asks in Japanese, answer in Japanese unless the user asks otherwise.
+
+Use natural Japanese wording and make the evidence boundary clear in prose, especially when distinguishing stable concepts, current facts, strategy advice, observations, and held answers.
+
+For stable concepts, explain the concept without giving exact current frame values. For exact current facts, use packaged frame-current assets only.
+
+Japanese terms and shorthand such as `しゃがみ中P`, `屈中P`, `2MP`, `ガード硬直差`, `確反`, `起き攻め`, and `シミー` may require normalization before exact current fact lookup. If the adapter cannot confidently resolve the Japanese term to a packaged character, move, and field, use `unresolved / hold`.
 
 ## Generated References
 

@@ -9,7 +9,7 @@ Article ingest does not automatically create accepted knowledge. It creates sour
 - Do not store full copyrighted articles by default.
 - Do not copy long verbatim passages into the repo.
 - Do not put exact current move values into `knowledge/curated/`.
-- Do not use legacy source tiers, bracket labels, or old canonical taxonomies.
+- Classify claims using `contracts/claim.schema.json` and `contracts/source-metadata.schema.json`.
 - Do not treat a community article as final authority for current frame values when `data/exports/` covers the fact.
 
 ## Inputs
@@ -30,7 +30,7 @@ Record these before extracting claims:
 2. Search existing `knowledge/curated/` and `knowledge/review/` for the same topic or claim.
 3. Extract atomic claims. Split mixed claims so each candidate has one statement and one evidence boundary.
 4. Assign `claim_kind` from `contracts/claim.schema.json`: `stable_concept`, `strategy_or_matchup`, `observation`, `current_fact`, or `unresolved`.
-5. Create v2 evidence metadata for each claim.
+5. Create evidence metadata for each claim.
 6. Mark exact current facts as `current_fact` and route them to the frame-data workflow unless the claim is only contextual evidence.
 7. Mark claims as `unresolved` when the source is vague, patch-sensitive, contradicted, or missing reproducible evidence.
 8. Keep the article summary and extracted candidates in `knowledge/review/` until claim review accepts them.
@@ -86,6 +86,22 @@ Use `contracts/claim.schema.json` as the machine-readable contract. A Markdown r
   "notes": "Short paraphrase, conflicts, and follow-up checks."
 }
 ```
+
+## Japanese Sources
+
+For Japanese SF6 sources:
+
+- Preserve the original Japanese title and source URL.
+- Summarize in Japanese by default.
+- Optionally include an English maintainer summary when useful.
+- Extract claims into repo artifacts, not private agent memory.
+- Do not store full article text.
+- Use short excerpts only when necessary for review.
+- Normalize Japanese terminology cautiously.
+- Do not turn Japanese community shorthand into official terminology unless supported.
+- Do not promote patch-sensitive setup claims to curated knowledge without current evidence.
+
+Common Japanese terms and shorthand such as `しゃがみ中P`, `屈中P`, `2MP`, `ガード硬直差`, `確反`, `起き攻め`, and `シミー` may require normalization before exact current fact lookup. If the source or claim cannot be confidently mapped to a packaged character, move, and field, keep it in review or route it to the appropriate current-fact workflow.
 
 ## Routing Rules
 

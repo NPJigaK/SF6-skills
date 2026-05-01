@@ -47,3 +47,11 @@ cases:
       - "verified current fact"
       - "exact current value from memory"
       - "concept knowledge as current fact authority"
+  - id: ja-uncertainty-patch-sensitive-setup
+    question: "この起き攻め、今のパッチでも確定？"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "現在パッチのデータとセットアップ固有の検証がなければ保留する。"
+    must_not_include:
+      - "確定と断定"
+      - "現在値を推測"
+      - "動画や記事だけで現在パッチの事実として断定"
