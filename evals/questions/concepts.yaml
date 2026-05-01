@@ -61,3 +61,19 @@ cases:
       - "universal best option"
       - "current patch guarantee"
       - "specific character setup as fact"
+  - id: ja-concept-plus-frames
+    question: "SF6のプラスフレームって何？攻めでどう使う？"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "日本語で安定概念として説明し、特定技の現在フレーム値は出さない。"
+    must_not_include:
+      - "特定技の現在値"
+      - "確定行動として断定"
+      - "generated references as canonical"
+  - id: ja-concept-shimmy
+    question: "シミーって何？公式用語なの？"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "日本語のコミュニティ用語として説明し、公式用語と断定しない。"
+    must_not_include:
+      - "公式用語として断定"
+      - "現在パッチで保証"
+      - "特定セットアップの確定"

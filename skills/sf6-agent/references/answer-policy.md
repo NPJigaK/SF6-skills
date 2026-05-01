@@ -24,6 +24,16 @@ Concept answers should:
 
 Strategy answers may combine stable concepts with assumptions about character, range, resource, round state, and player intent. They should state those assumptions and avoid presenting matchup advice as a verified exact current fact.
 
+## Japanese Questions
+
+When the user asks in Japanese, answer in Japanese unless the user asks otherwise.
+
+Use natural Japanese wording for answer modes and evidence boundaries. Do not require fixed bracket labels such as `[概念のみ]`, `[検証済み]`, or `[保留]`.
+
+For stable concepts, explain the concept without giving exact current frame values. For exact current facts, use packaged frame-current assets only.
+
+Japanese terms and shorthand such as `しゃがみ中P`, `屈中P`, `2MP`, `ガード硬直差`, `確反`, `起き攻め`, and `シミー` may require normalization before exact current fact lookup. If the adapter cannot confidently resolve the Japanese term to a packaged character, move, and field, use `unresolved / hold`.
+
 ## Generated References
 
 Files named `generated-*` are derived runtime references. Treat their generated marker and source path list as provenance, but do not treat them as the canonical authoring location.

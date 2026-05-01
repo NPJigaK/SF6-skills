@@ -87,6 +87,22 @@ Use `contracts/claim.schema.json` as the machine-readable contract. A Markdown r
 }
 ```
 
+## Japanese Sources
+
+For Japanese SF6 sources:
+
+- Preserve the original Japanese title and source URL.
+- Summarize in Japanese by default.
+- Optionally include an English maintainer summary when useful.
+- Extract claims into repo artifacts, not private agent memory.
+- Do not store full article text.
+- Use short excerpts only when necessary for review.
+- Normalize Japanese terminology cautiously.
+- Do not turn Japanese community shorthand into official terminology unless supported.
+- Do not promote patch-sensitive setup claims to curated knowledge without current evidence.
+
+Common Japanese terms and shorthand such as `しゃがみ中P`, `屈中P`, `2MP`, `ガード硬直差`, `確反`, `起き攻め`, and `シミー` may require normalization before exact current fact lookup. If the source or claim cannot be confidently mapped to a packaged character, move, and field, keep it in review or route it to the appropriate current-fact workflow.
+
 ## Routing Rules
 
 - Accepted stable concepts go through claim review before entering `knowledge/curated/`.
