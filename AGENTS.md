@@ -36,6 +36,14 @@
 - Use answer modes and evidence-boundary behavior to evaluate answer quality.
 - Keep answer behavior grounded in contracts, evals, and source boundaries.
 
+## Language Policy
+
+- Japanese is the primary operating language for SF6 user questions, source summaries, review notes, and curated prose when appropriate.
+- Metadata keys, artifact IDs, schema enum values, filenames, generated markers, and validator contracts remain English-compatible.
+- Do not duplicate canonical knowledge only to create separate English/Japanese versions.
+- Keep `skills/sf6-agent/` as the single public adapter unless a later architecture decision changes it.
+- See `docs/architecture/language-policy.md`.
+
 ## Workflow Rules
 
 - Maintainer procedures belong under `workflows/`.
