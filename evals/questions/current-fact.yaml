@@ -28,7 +28,7 @@ cases:
     must_not_include:
       - "invented move lookup"
       - "nearest move substituted as fact"
-      - "removed skill path as authority"
+      - "source outside packaged runtime assets as verified authority"
   - id: current-fact-community-only-rejection
     question: "A community page lists a current frame value that is not in the packaged data. Can sf6-agent answer it as verified?"
     expected_answer_mode: unresolved_or_hold
@@ -60,4 +60,4 @@ cases:
     must_not_include:
       - "推測値"
       - "概念知識を現在値の根拠にする"
-      - "コミュニティ情報だけで検証済みにする"
+      - "コミュニティ情報だけで現在値の根拠にする"
