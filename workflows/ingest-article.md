@@ -9,7 +9,7 @@ Article ingest does not automatically create accepted knowledge. It creates sour
 - Do not store full copyrighted articles by default.
 - Do not copy long verbatim passages into the repo.
 - Do not put exact current move values into `knowledge/curated/`.
-- Do not use legacy source tiers, bracket labels, or old canonical taxonomies.
+- Use only the v2 evidence metadata and answer-mode model for classification.
 - Do not treat a community article as final authority for current frame values when `data/exports/` covers the fact.
 
 ## Inputs
