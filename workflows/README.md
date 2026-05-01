@@ -6,6 +6,7 @@ Workflow docs are readable by humans and agents without requiring a skill runtim
 
 ## Canonical Procedures
 
+- [GitHub management](github-management.md)
 - [Update frame data](update-frame-data.md)
 - [Ingest article](ingest-article.md)
 - [Review claims](review-claims.md)

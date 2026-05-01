@@ -44,3 +44,10 @@
 - Knowledge-generation tooling belongs under `packages/knowledge-generation/`.
 - Hermes is optional maintainer harness, not canonical memory.
 - Do not store full copyrighted articles, videos, or transcripts by default.
+
+## GitHub Management
+
+- Use GitHub CLI (`gh`) as the default tool for reproducible issue, pull request, CI status, label, milestone, and merge operations.
+- Canonical workflow: `workflows/github-management.md`.
+- Use the GitHub web UI when it is safer, clearer, or required by GitHub settings.
+- Do not include secrets, tokens, credentials, or private local state in commands, logs, issue comments, PR bodies, or smoke reports.
