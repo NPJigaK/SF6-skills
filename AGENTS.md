@@ -38,7 +38,7 @@
 
 ## Workflow Rules
 
-- Maintainer procedures belong under `workflows/`, not `maintainer-skills/`.
+- Maintainer procedures belong under `workflows/`.
 - Ingestion and publishing implementation belongs under `ingest/frame_data/`.
 - Public adapter packaging belongs under `packages/skill-packaging/`.
 - Knowledge-generation tooling belongs under `packages/knowledge-generation/`.
