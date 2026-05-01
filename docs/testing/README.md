@@ -5,6 +5,7 @@ The v2 validation suite protects schemas, boundaries, generated markers, distrib
 Manual adapter behavior checks:
 
 - `docs/testing/sf6-agent-smoke.md`
+- `docs/testing/smoke-runs/`
 
 Run the full local verification sequence with:
 
