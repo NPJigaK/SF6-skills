@@ -4,7 +4,7 @@
 
 - This repo is SF6 Knowledge Agent Kit.
 - It is a GitHub-reviewable source of truth and distribution kit for AI agents answering Street Fighter 6 questions.
-- Do not preserve legacy skill-collection structure as a competing source of truth.
+- Keep source-of-truth responsibilities aligned with the canonical surfaces below.
 
 ## Canonical Surfaces
 
@@ -30,11 +30,11 @@
 - `data/raw/...`, `data/normalized/...`, and `*_manual_review.*` are not final evidence for normal public answers.
 - Runtime frame-current assets must exclude CSV sidecars and manual-review outputs.
 
-## Evidence And Taxonomy
+## Evidence Metadata And Answer Modes
 
-- Do not preserve legacy taxonomy such as T1/T2/T3/T4 or fixed bracket labels as canonical v2 metadata.
 - Use generic evidence metadata such as `source_kind`, `source_role`, `evidence_basis`, `verification_state`, `confidence`, `volatility`, `patch_sensitivity`, `review_status`, `source_refs`, and `review_after`.
-- Answer quality should be evaluated by answer modes and evidence-boundary behavior, not literal legacy labels.
+- Use answer modes and evidence-boundary behavior to evaluate answer quality.
+- Keep answer behavior grounded in contracts, evals, and source boundaries.
 
 ## Workflow Rules
 
