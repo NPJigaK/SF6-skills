@@ -216,10 +216,44 @@ Hermes assisted with candidate decomposition for this pilot, but Hermes memory i
 }
 ```
 
+## Claim 7
+
+```json
+{
+  "id": "claim-mizen-image-observed-mixup-matrices-007",
+  "claim_kind": "observation",
+  "statement": "The source uses embedded images or tables to visually frame simplified mixup structures, including which offensive options are shown as succeeding or failing against defensive responses.",
+  "scope": "Image-derived observation about the source's explanatory structure; not a gameplay fact or setup validity claim.",
+  "evidence": {
+    "source_kind": "community",
+    "source_role": "japanese_article_visual_explanation",
+    "evidence_basis": [
+      "Image-aware observation pass recorded in knowledge/sources/articles/mizen-2025-simple-yomi.md.",
+      "Embedded visual examples were observed at a high level without storing screenshots or copied image assets."
+    ],
+    "verification_state": "unverified",
+    "confidence": 0.35,
+    "volatility": "patch_sensitive",
+    "patch_sensitivity": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      {
+        "label": "Mizen: simple yomi article",
+        "path": "knowledge/sources/articles/mizen-2025-simple-yomi.md",
+        "accessed_at": "2026-05-02"
+      }
+    ],
+    "review_after": "2026-08-01"
+  },
+  "notes": "Keep as observation / needs_review. Do not use the image observation to assert current setup validity, universal matchup advice, or accepted curated strategy without separate review."
+}
+```
+
 ## Pilot Notes
 
-- Candidate claim count: 5 strategy candidates and 1 unresolved guardrail claim.
+- Candidate claim count: 5 strategy candidates, 1 unresolved guardrail claim, and 1 image-derived observation claim.
 - Claims promoted to curated knowledge in this PR: 0.
 - Generated references updated in this PR: no.
 - Exact current values stored in this PR: no.
+- Article images or screenshots stored in this PR: no.
 - Hermes-assisted output was useful for decomposition, but required path normalization and manual review before becoming repo artifacts.

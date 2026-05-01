@@ -27,6 +27,12 @@ review_after: "2026-08-01"
 - Useful for: candidate strategy claims about reducing decision complexity and identifying options that break a simplified mixup structure.
 - Not useful for: accepting universal matchup advice, current setup validity, exact timing, exact current move properties, or character-specific okizeme coverage without separate verification.
 
+## Image Observation Scope
+
+An image-aware observation pass was performed on 2026-05-02. The article contains several embedded visual examples used to explain simplified mixup structures, including command-grab okizeme, invincible reversal disruption, throw/shimmy structures, and alternate simplified pairs based on opponent defensive habits.
+
+The images were observed at a high level only. No article images, screenshots, or copied image assets are stored in this repository. Image-derived statements remain review-only observations and are not final public answer evidence.
+
 ## Short Excerpts
 
 No verbatim excerpt is stored for this pilot. The claims below are based on a short source summary and should be reviewed against the linked article before any curated promotion.

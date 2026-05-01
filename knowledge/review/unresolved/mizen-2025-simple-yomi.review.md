@@ -35,6 +35,8 @@ This review note tracks a Hermes-assisted Japanese article ingest pilot. It is c
 - Candidate claims artifact created: yes.
 - Hermes used as maintainer harness: yes.
 - Hermes memory treated as canonical: no.
+- Image-aware observation pass performed: yes.
+- Article images or screenshots stored in repo: no.
 - Curated promotion performed: no.
 - Generated references changed: no.
 - Exact current values stored: no.
@@ -50,6 +52,7 @@ The following categories stay unresolved:
 - Move-specific defensive or offensive interactions.
 - Setup-specific reliability.
 - Timing, spacing, punish, or current-patch interaction claims.
+- Image-derived readings of visual matchup or payoff tables.
 - Japanese terminology normalization for future curated wording.
 
 ## Review Notes
@@ -57,6 +60,7 @@ The following categories stay unresolved:
 - The high-level framing may later support strategy or concept knowledge after review.
 - Accepted wording should avoid implying a universal flowchart or guaranteed answer.
 - Claims involving command grabs, invincible reversals, throw, shimmy, backdash, or jump should remain scoped to strategy framing unless independently verified.
+- Image-derived observations should remain `observation` / `needs_review` until reviewed against the full source context and any relevant gameplay verification.
 - The article should not be used as final public answer evidence until relevant claims are reviewed and promoted into an appropriate canonical surface.
 
 ## Workflow Findings
@@ -65,4 +69,5 @@ The following categories stay unresolved:
 - Hermes output needed manual path correction because it proposed noncanonical review paths.
 - Hermes output correctly identified that memory is not canonical.
 - A dedicated ingest profile was created, but profile-scoped Hermes runtime authentication had not been completed there. The actual run used the existing isolated smoke profile with memory and curator disabled.
-- There is no dedicated validator yet for `knowledge/sources/` source artifacts or `knowledge/evidence/claims/` claim artifacts.
+- Follow-up validation for `knowledge/sources/` source artifacts and `knowledge/evidence/claims/` claim artifacts now exists in `tests/validation/validate-ingest-artifacts.ps1`.
+- The image-aware pass confirmed that visual examples can add useful observation context, but Hermes `sf6ingest` had browser available and vision unavailable in `hermes doctor`; image-aware ingest should record tool limits instead of implying full visual extraction.
