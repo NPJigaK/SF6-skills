@@ -58,8 +58,12 @@ Before using `sf6ingest` for article ingest:
 
 ```bash
 test -n "$HERMES_HOME"
+repo_root="$(git rev-parse --show-toplevel)"
 case "$HERMES_HOME" in
-  /absolute/path/to/SF6-skills/*) echo "HERMES_HOME is inside the repo; stop" ;;
+  "$repo_root"/*)
+    echo "HERMES_HOME is inside the repo; stop"
+    exit 1
+    ;;
   *) echo "HERMES_HOME is outside the repo" ;;
 esac
 
