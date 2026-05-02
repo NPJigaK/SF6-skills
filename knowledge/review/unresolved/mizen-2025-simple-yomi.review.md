@@ -70,4 +70,4 @@ The following categories stay unresolved:
 - Hermes output correctly identified that memory is not canonical.
 - A dedicated ingest profile was created, but profile-scoped Hermes runtime authentication had not been completed there. The actual run used the existing isolated smoke profile with memory and curator disabled.
 - Follow-up validation for `knowledge/sources/` source artifacts and `knowledge/evidence/claims/` claim artifacts now exists in `tests/validation/validate-ingest-artifacts.ps1`.
-- The image-aware pass confirmed that visual examples can add useful observation context, but Hermes `sf6ingest` had browser available and vision unavailable in `hermes doctor`; image-aware ingest should record tool limits instead of implying full visual extraction.
+- The image-aware pass confirmed that visual examples can add useful observation context. Six article images were inspected through a repo-external temporary vision-capable path, while Hermes `sf6ingest` had browser available and Hermes vision unavailable in `hermes doctor`; future Hermes-specific image ingest should verify Hermes vision separately before claiming Hermes vision extraction.

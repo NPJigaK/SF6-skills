@@ -222,17 +222,19 @@ Hermes assisted with candidate decomposition for this pilot, but Hermes memory i
 {
   "id": "claim-mizen-image-observed-mixup-matrices-007",
   "claim_kind": "observation",
-  "statement": "The source uses embedded images or tables to visually frame simplified mixup structures, including which offensive options are shown as succeeding or failing against defensive responses.",
-  "scope": "Image-derived observation about the source's explanatory structure; not a gameplay fact or setup validity claim.",
+  "statement": "The source uses embedded payoff-style images to visually frame simplified mixup structures, including command grab / strike, throw / shimmy, and added defender escape or reversal options.",
+  "scope": "Image-derived observation about the source's explanatory structure; not a gameplay fact, current-property claim, or setup validity claim.",
   "evidence": {
     "source_kind": "community",
     "source_role": "japanese_article_visual_explanation",
     "evidence_basis": [
       "Image-aware observation pass recorded in knowledge/sources/articles/mizen-2025-simple-yomi.md.",
-      "Embedded visual examples were observed at a high level without storing screenshots or copied image assets."
+      "Six embedded images were inspected through a repo-external temporary vision-capable path.",
+      "Observed labels included 打撃, コマ投げ, 様子見, 投げ, シミー, ガード, バクステ(ジャンプ), 無敵技(Dリバ), 遅らせグラ(無敵技), and table-style success/failure markers.",
+      "No screenshots or copied image assets were stored in the repository."
     ],
     "verification_state": "unverified",
-    "confidence": 0.35,
+    "confidence": 0.5,
     "volatility": "patch_sensitive",
     "patch_sensitivity": "medium",
     "review_status": "needs_review",

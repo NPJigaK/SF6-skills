@@ -29,9 +29,9 @@ review_after: "2026-08-01"
 
 ## Image Observation Scope
 
-An image-aware observation pass was performed on 2026-05-02. The article contains several embedded visual examples used to explain simplified mixup structures, including command-grab okizeme, invincible reversal disruption, throw/shimmy structures, and alternate simplified pairs based on opponent defensive habits.
+An image-aware observation pass was performed on 2026-05-02. The article contains several embedded visual examples used to explain simplified mixup structures, including command-grab okizeme, invincible reversal disruption, throw/shimmy structures, backdash or jump disruption, and alternate simplified pairs based on opponent defensive habits.
 
-The images were observed at a high level only. No article images, screenshots, or copied image assets are stored in this repository. Image-derived statements remain review-only observations and are not final public answer evidence.
+The images were inspected through a repo-external temporary vision-capable path. Hermes `sf6ingest` had browser tooling available, but Hermes vision tooling was unavailable during this run. No article images, screenshots, or copied image assets are stored in this repository. Image-derived statements remain review-only observations and are not final public answer evidence.
 
 ## Short Excerpts
 
