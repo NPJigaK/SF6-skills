@@ -94,7 +94,7 @@ After media ingest work, verify the repository did not receive raw media or loca
 ```bash
 git status --porcelain
 
-find . -maxdepth 4 \
+find . \
   \( -name ".hermes" -o -name ".env" -o -iname "*session*" -o -iname "*memory*" -o -iname "*cron*" \
      -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \
      -o -iname "*.mp4" -o -iname "*.mov" -o -iname "*.mkv" \) \
