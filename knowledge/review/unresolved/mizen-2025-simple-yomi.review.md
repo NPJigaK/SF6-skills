@@ -61,6 +61,7 @@ The following categories stay unresolved:
 - Accepted wording should avoid implying a universal flowchart or guaranteed answer.
 - Claims involving command grabs, invincible reversals, throw, shimmy, backdash, or jump should remain scoped to strategy framing unless independently verified.
 - Image-derived observations should remain `observation` / `needs_review` until reviewed against the full source context and any relevant gameplay verification.
+- Image-derived Claim 7 is grounded only in the Image 1 through Image 6 observation records in `docs/testing/smoke-runs/2026-05-02-image-aware-japanese-ingest.md`.
 - The article should not be used as final public answer evidence until relevant claims are reviewed and promoted into an appropriate canonical surface.
 
 ## Workflow Findings

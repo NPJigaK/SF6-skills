@@ -230,6 +230,7 @@ Hermes assisted with candidate decomposition for this pilot, but Hermes memory i
     "evidence_basis": [
       "Image-aware observation pass recorded in knowledge/sources/articles/mizen-2025-simple-yomi.md.",
       "Six embedded images were inspected through a repo-external temporary vision-capable path.",
+      "Image-level observation records are listed as Image 1 through Image 6 in docs/testing/smoke-runs/2026-05-02-image-aware-japanese-ingest.md.",
       "Observed labels included 打撃, コマ投げ, 様子見, 投げ, シミー, ガード, バクステ(ジャンプ), 無敵技(Dリバ), 遅らせグラ(無敵技), and table-style success/failure markers.",
       "No screenshots or copied image assets were stored in the repository."
     ],
