@@ -216,10 +216,47 @@ Hermes assisted with candidate decomposition for this pilot, but Hermes memory i
 }
 ```
 
+## Claim 7
+
+```json
+{
+  "id": "claim-mizen-image-observed-mixup-matrices-007",
+  "claim_kind": "observation",
+  "statement": "The source uses embedded payoff-style images to visually frame simplified mixup structures, including command grab / strike, throw / shimmy, and added defender escape or reversal options.",
+  "scope": "Image-derived observation about the source's explanatory structure; not a gameplay fact, current-property claim, or setup validity claim.",
+  "evidence": {
+    "source_kind": "community",
+    "source_role": "japanese_article_visual_explanation",
+    "evidence_basis": [
+      "Image-aware observation pass recorded in knowledge/sources/articles/mizen-2025-simple-yomi.md.",
+      "Six embedded images were inspected through a repo-external temporary vision-capable path.",
+      "Image-level observation records are listed as Image 1 through Image 6 in docs/testing/smoke-runs/2026-05-02-image-aware-japanese-ingest.md.",
+      "Observed labels included 打撃, コマ投げ, 様子見, 投げ, シミー, ガード, バクステ(ジャンプ), 無敵技(Dリバ), 遅らせグラ(無敵技), and table-style success/failure markers.",
+      "No screenshots or copied image assets were stored in the repository."
+    ],
+    "verification_state": "unverified",
+    "confidence": 0.5,
+    "volatility": "patch_sensitive",
+    "patch_sensitivity": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      {
+        "label": "Mizen: simple yomi article",
+        "path": "knowledge/sources/articles/mizen-2025-simple-yomi.md",
+        "accessed_at": "2026-05-02"
+      }
+    ],
+    "review_after": "2026-08-01"
+  },
+  "notes": "Keep as observation / needs_review. Do not use the image observation to assert current setup validity, universal matchup advice, or accepted curated strategy without separate review."
+}
+```
+
 ## Pilot Notes
 
-- Candidate claim count: 5 strategy candidates and 1 unresolved guardrail claim.
+- Candidate claim count: 5 strategy candidates, 1 unresolved guardrail claim, and 1 image-derived observation claim.
 - Claims promoted to curated knowledge in this PR: 0.
 - Generated references updated in this PR: no.
 - Exact current values stored in this PR: no.
+- Article images or screenshots stored in this PR: no.
 - Hermes-assisted output was useful for decomposition, but required path normalization and manual review before becoming repo artifacts.
