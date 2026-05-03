@@ -24,7 +24,7 @@ source_refs:
     path: "knowledge/review/unresolved/hameko-2023-combo-scaling.review.md"
     accessed_at: "2026-05-01"
 review_after: "2026-11-03"
-summary: "コンボ補正は、コンボ中のダメージを状況に応じて調整する仕組みです。具体的な補正率や例外は現在仕様として別途確認が必要です。"
+summary: "コンボ補正は、コンボ中のダメージを状況に応じて調整する仕組みです。技ごとの現在値はframe-current runtime assetsを参照し、このページでは計算を見るための概念だけを扱います。"
 generated_allowed: true
 must_not_include:
   - "exact scaling percentages"
@@ -63,11 +63,11 @@ must_not_include:
 - コンボが進んだことによる補正。
 - 始動やルート、システム行動による補正。
 - 最低保証や技、キャラクター、操作方式に関係する例外。
-- 現行patchで別途確認が必要な具体値。
+- 現行patchで確認する具体値。
 
-このページは、この分解の考え方だけを扱います。具体的な補正率、最低保証の値、例外の条件、現行patchでの正確な計算式は扱いません。
+技ごとの基礎ダメージや、技に紐づく始動補正・コンボ補正の現在値は、このページでは扱いません。必要な場合は `skills/sf6-agent/assets/frame-current/` のruntime assetsを参照します。各キャラクターのpublished runtime dataには、moveごとのraw official fieldsが含まれる場合があります。
 
-実際に計算する時は、数値をこのページから推測せず、現在の公式情報、ゲーム内検証、または将来のsystem-mechanics fact workflowで確認してください。
+このページで扱うのは、補正率そのものではなく、コンボ補正を読むための考え方です。コンボ全体の最終ダメージ計算、システム行動、最低保証、キャラクター固有・技固有の例外、現行patchでの正確な計算式は、frame-current runtime assets、現在の公式情報、ゲーム内検証、または将来のsystem-mechanics fact workflowで確認してください。
 
 ## 回答で使ってよいこと
 
@@ -81,11 +81,12 @@ must_not_include:
 
 このページは安定概念だけをcurated knowledgeとして受け入れています。
 
-次の内容は、引き続きreviewまたはcurrent-system verificationの対象です。
+次の内容は、このcurated pageには複製しません。必要に応じてframe-current runtime assets、review、またはcurrent-system verificationで扱います。
 
 - 具体的な補正率。
-- 弱攻撃始動、システム行動、SA最低保証などの現在仕様。
+- 技ごとの基礎ダメージ、始動補正、コンボ補正の現在値。
+- システム行動、SA最低保証などの現在仕様。
 - キャラクター固有、技固有、操作方式固有の例外。
 - 現行patchでの正確なコンボダメージや最適ルート。
 
-Hameko 2023記事は、この概念を整理するための有用な日本語sourceですが、現在仕様の最終根拠としては扱いません。数値や例外を回答に使う場合は、別のcurrent-system workflowで確認してください。
+Hameko 2023記事は、この概念を整理するための有用な日本語sourceですが、現在仕様の最終根拠としては扱いません。数値や例外を回答に使う場合は、このページから推測せず、適切なcurrent-fact surfaceやcurrent-system workflowで確認してください。
