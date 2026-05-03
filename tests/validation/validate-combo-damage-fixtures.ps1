@@ -13,6 +13,9 @@ function ConvertFrom-ScalarValue {
   if ($trimmed.Length -ge 2 -and $trimmed.StartsWith('"') -and $trimmed.EndsWith('"')) {
     return $trimmed.Substring(1, $trimmed.Length - 2)
   }
+  if ($trimmed.Length -ge 2 -and $trimmed.StartsWith("'") -and $trimmed.EndsWith("'")) {
+    return $trimmed.Substring(1, $trimmed.Length - 2)
+  }
   return $trimmed
 }
 
@@ -143,11 +146,11 @@ function Assert-NoBoundaryBreaks {
   )
 
   foreach ($pattern in @(
-    '(?m)^\s*generated_allowed:\s*"?true"?\s*$',
+    "(?m)^\s*generated_allowed:\s*['""]?true['""]?\s*$",
     '"generated_allowed"\s*:\s*true',
-    '(?m)^\s*generated_references_allowed:\s*"?true"?\s*$',
+    "(?m)^\s*generated_references_allowed:\s*['""]?true['""]?\s*$",
     '"generated_references_allowed"\s*:\s*true',
-    '(?m)^\s*review_status:\s*"?accepted"?\s*$',
+    "(?m)^\s*review_status:\s*['""]?accepted['""]?\s*$",
     '"review_status"\s*:\s*"accepted"'
   )) {
     if ($Content -match $pattern) {
