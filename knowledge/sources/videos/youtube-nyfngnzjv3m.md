@@ -29,8 +29,8 @@ review_after: "2026-08-04"
 - Published/uploaded date from YouTube metadata: 2025-10-25.
 - Duration from YouTube metadata: 1503 seconds.
 - Source language: Japanese.
-- Captions/transcript: Japanese auto-generated captions were available for temporary inspection, but the full captions/transcript are not stored in this repository.
-- Pilot scope: `00:08-00:57` basic light combo chapter.
+- Captions/transcript: YouTube caption availability and embedded explanatory text were checked during temporary observation, but the full captions/transcript are not stored in this repository.
+- Pilot scope: `00:08-02:00` basic light and mid-attack combo chapters.
 - Useful for: building a JP combo/damage oracle fixture and testing the separation between video observation, combo notation, observed damage, and later calculation evaluation.
 - Not useful for: accepting current patch combo damage rules, route-level damage formulas, scaling tables, minimum guarantees, or system-mechanics exact values without separate verification.
 
