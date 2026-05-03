@@ -1,0 +1,62 @@
+fixture_id: jp-ryusei-nyfngnzjv3m
+fixture_kind: combo_damage_oracle
+schema_version: "0.1.0"
+source:
+  type: youtube
+  url: "https://www.youtube.com/watch?v=nyFNgnzjV3M"
+  video_id: nyFNgnzjV3M
+  title: "これ一本で全てわかるJPコンボ講座【りゅうせい・スト６】"
+  channel: "りゅうせい"
+  character: jp
+  accessed_at: "2026-05-04"
+scope:
+  chapter: basic_light_combos
+  start_time: "00:08"
+  end_time: "00:57"
+boundary:
+  fixture_role: damage_oracle
+  not_curated_knowledge: true
+  not_current_system_authority: true
+  raw_media_stored_in_repo: false
+  full_transcript_stored_in_repo: false
+  generated_references_allowed: false
+source_refs:
+  - knowledge/sources/videos/youtube-nyfngnzjv3m.md
+  - knowledge/evidence/video-observations/youtube-nyfngnzjv3m-jp-combos.observations.md
+cases:
+  - id: jp-basic-light-stribog-001
+    timestamp: "00:23"
+    combo_notation_jp: "しゃがみ小P > 立ち小P > 弱ストリボーグ"
+    combo_notation_normalized: "2LP > 5LP > weak Stribog"
+    observed_damage: 1240
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: true
+    notation_confidence: high
+    damage_confidence: high
+    review_status: needs_review
+    notes: "Visible overlay and damage label are clear. Use as the first oracle seed only; do not treat as curated knowledge or current-system authority."
+  - id: jp-basic-light-rush-extension-1482
+    timestamp: "00:45"
+    combo_notation_jp: "小P > 小Pキャンセル > しゃがみ中P or 引き中Pタゲコン > 中ストリボーグ"
+    combo_notation_normalized: null
+    observed_damage: 1482
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: false
+    notation_confidence: low
+    damage_confidence: high
+    review_status: needs_review
+    notes: "The overlay lists alternative branches, so route-to-damage mapping needs manual review before this case can be used for damage-hidden calculation."
+  - id: jp-basic-light-rush-extension-1527
+    timestamp: "00:56"
+    combo_notation_jp: "小P > 小Pキャンセル > しゃがみ中P or 引き中Pタゲコン > 中ストリボーグ"
+    combo_notation_normalized: null
+    observed_damage: 1527
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: false
+    notation_confidence: medium
+    damage_confidence: high
+    review_status: needs_review
+    notes: "Likely the higher-damage crouching medium punch branch based on commentary, but keep disabled until notation and branch mapping are reviewed."
