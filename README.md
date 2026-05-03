@@ -60,4 +60,6 @@ Human-readable install docs live under `docs/distribution/agents/`.
 
 Before moving knowledge or current facts, read [v2-architecture.md](./docs/architecture/v2-architecture.md).
 
+Japanese-speaking maintainers can start with [docs/maintainers/README.md](./docs/maintainers/README.md).
+
 Do not store full copyrighted articles, videos, or transcripts by default. Store source references, short necessary excerpts, summaries, extracted claims, frame ranges or timestamps, review notes, and generic evidence metadata.
