@@ -30,6 +30,16 @@ Use `unresolved / hold` when:
 - The answer would require manual-review rows, raw snapshots, normalized working data, scraping, or patch audit work.
 - A value appears only in supplemental enrichment and not in the official published rows.
 
+## System-Mechanics Current Facts
+
+Some exact current questions are about system mechanics rather than a single packaged move field.
+
+Examples include route-level combo damage formulas, minimum guarantee values, system action modifiers, and exception rules that are not directly available as packaged frame-current fields.
+
+Answer these only when the requested exact value is available in packaged frame-current assets. If the value is not packaged, use `unresolved / hold`.
+
+Do not infer exact system-mechanics values from generated concept references, article claims, video observations, or review candidates.
+
 ## Provenance In Answers
 
 When an answer depends on exact current data, mention the relevant packaged dataset names when useful. Do not expose internal repository paths as if the user must have the repository checkout.

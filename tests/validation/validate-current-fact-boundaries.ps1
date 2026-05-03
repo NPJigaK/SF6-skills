@@ -78,9 +78,9 @@ if (Test-Path -LiteralPath $candidateRoot -PathType Container) {
     $relativePath = $candidateFile.FullName.Substring($repoRoot.Length + 1).Replace('\', '/')
     $content = Get-Content -LiteralPath $candidateFile.FullName -Raw -Encoding UTF8
     foreach ($pattern in @(
-      'generated_allowed:\s*true',
+      '(?m)^\s*generated_allowed:\s*"?true"?\s*$',
       '"generated_allowed"\s*:\s*true',
-      'review_status:\s*accepted',
+      '(?m)^\s*review_status:\s*"?accepted"?\s*$',
       '"review_status"\s*:\s*"accepted"'
     )) {
       if ($content -match $pattern) {

@@ -9,6 +9,7 @@ Workflow docs are readable by humans and agents without requiring a skill runtim
 - [GitHub management](github-management.md)
 - [Hermes ingest profile setup](hermes-ingest-profile-setup.md)
 - [Media scratch cache policy](media-scratch-cache-policy.md)
+- [System mechanics fact workflow](system-mechanics-fact-workflow.md)
 - [Update frame data](update-frame-data.md)
 - [Ingest article](ingest-article.md)
 - [Review claims](review-claims.md)
