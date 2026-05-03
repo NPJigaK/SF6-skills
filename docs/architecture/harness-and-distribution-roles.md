@@ -34,6 +34,8 @@ The following are repo-local maintainer surfaces:
 
 Maintainers use these after cloning the repository. They are not public answer skills and do not need to be externally distributed as a public repo-maintainer skill package.
 
+“Repo-local” describes distribution and access boundaries; it does not mean non-canonical. Some repo-local surfaces, such as `contracts/` and `workflows/`, are canonical within the repository.
+
 ## Hermes Maintainer Harness
 
 Hermes is an optional maintainer harness for knowledge ingest, review, image observation, video observation, and repeated workflow execution.
