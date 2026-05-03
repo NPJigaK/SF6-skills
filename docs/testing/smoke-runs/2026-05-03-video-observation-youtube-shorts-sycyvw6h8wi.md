@@ -34,7 +34,7 @@
 | Japanese auto-caption availability | Pass | Japanese auto-generated captions were available; full transcript was not stored in repo. |
 | Temporary video access | Pass | 360x640 MP4, 30 fps, 69.077 seconds; stored only in scratch. |
 | Frame sampling | Pass | Sparse frames and one contact sheet were generated only in scratch. |
-| Hermes-native browser check | Partial | `sf6ingest` doctor shows browser/vision available, but this pilot used direct scratch-based observation for the video workflow. |
+| Hermes/browser tooling | Out of scope | This pilot did not rely on Hermes-native browser/vision. It used repo-external scratch-based video observation with `yt-dlp`, `ffprobe`, `ffmpeg`, sparse frame sampling, contact-sheet inspection, and Japanese auto-caption inspection. |
 
 ## Timestamped Observation Summary
 
