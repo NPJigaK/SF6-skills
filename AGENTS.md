@@ -44,6 +44,15 @@
 - Keep `skills/sf6-agent/` as the single public adapter unless a later architecture decision changes it.
 - See `docs/architecture/language-policy.md`.
 
+## Harness And Distribution Roles
+
+- `skills/sf6-agent/` is the public answer adapter.
+- `AGENTS.md`, `workflows/*`, `tests/validation/*`, `packages/*`, and `contracts/*` are repo-local maintainer surfaces.
+- Hermes is a recommended optional maintainer harness when configured, but Hermes memory and profile state are not canonical.
+- `packs/hermes-sf6/*` is repo-local optional harness support, not public answer-skill behavior.
+- APM / Agent Skills may support public `sf6-agent` distribution or repo-local setup manifests, but do not create a public repo-maintainer skill package without a later architecture decision.
+- See `docs/architecture/harness-and-distribution-roles.md`.
+
 ## Workflow Rules
 
 - Maintainer procedures belong under `workflows/`.
