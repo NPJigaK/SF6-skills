@@ -14,6 +14,14 @@ cases:
       - "knowledge/curated as final authority"
       - "community-only final authority"
       - "guessed exact values"
+  - id: current-fact-luke-2mp-starter-scaling
+    question: "What is Luke 2MP starter scaling in the packaged current data?"
+    expected_answer_mode: verified_current_fact
+    evidence_boundary: "Use packaged frame-current runtime assets when a move-specific starter/combo scaling field exists."
+    must_not_include:
+      - "combo-scaling curated page as exact value authority"
+      - "article source as current authority"
+      - "guessed scaling percentage"
   - id: current-fact-unpackaged-character
     question: "Give the current exact frame data for a character not present in the roster source."
     expected_answer_mode: unresolved_or_hold
@@ -61,3 +69,11 @@ cases:
       - "推測値"
       - "概念知識を現在値の根拠にする"
       - "コミュニティ情報だけで現在値の根拠にする"
+  - id: ja-current-fact-luke-2mp-starter-scaling
+    question: "Luke 2MPの始動補正は、packaged frame-current assetsではどうなってる？"
+    expected_answer_mode: verified_current_fact
+    evidence_boundary: "日本語質問でも、move-specific scaling fieldがpackaged frame-current assetsにある場合だけverified current factとして答える。"
+    must_not_include:
+      - "knowledge/curatedを現在値の根拠にする"
+      - "記事由来の補正率を現在値として使う"
+      - "packaged assetに無い値を推測する"

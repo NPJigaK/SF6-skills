@@ -61,6 +61,14 @@ cases:
       - "universal best option"
       - "current patch guarantee"
       - "specific character setup as fact"
+  - id: concept-combo-scaling
+    question: "What is combo scaling in SF6, and how should I think about combo damage calculation?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Use curated mechanics knowledge to explain the calculation model; do not provide exact scaling rates or route formulas."
+    must_not_include:
+      - "exact scaling percentage"
+      - "route-level final damage formula"
+      - "generated concept knowledge as current system authority"
   - id: ja-concept-plus-frames
     question: "SF6のプラスフレームって何？攻めでどう使う？"
     expected_answer_mode: stable_concept
@@ -69,6 +77,14 @@ cases:
       - "特定技の現在値"
       - "確定行動として断定"
       - "generated references as canonical"
+  - id: ja-concept-combo-scaling
+    question: "SF6のコンボ補正って何？ダメージ計算ではどう考えればいい？"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "日本語で安定概念と計算を見るための考え方を説明し、具体補正率や現在patchの計算式は断定しない。"
+    must_not_include:
+      - "具体補正率"
+      - "現在patchの正確な計算式"
+      - "技ごとの現在値をcurated knowledgeから答える"
   - id: ja-concept-shimmy
     question: "シミーって何？公式用語なの？"
     expected_answer_mode: stable_concept

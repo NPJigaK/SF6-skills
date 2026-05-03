@@ -47,6 +47,22 @@ cases:
       - "verified current fact"
       - "exact current value from memory"
       - "concept knowledge as current fact authority"
+  - id: uncertainty-combo-route-final-formula
+    question: "What is the exact current formula for final damage in this full combo route?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Route-level combo damage formulas are system-mechanics current facts and require an accepted authority path before verified use."
+    must_not_include:
+      - "exact route formula from generated concepts"
+      - "accepted current system value without authority path"
+      - "article or video observation as final authority"
+  - id: uncertainty-hameko-scaling-rates-current
+    question: "A 2023 article lists combo scaling rates. Can sf6-agent present those rates as current accepted values?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Article-derived scaling rates are source/review context, not current system authority, unless resolved into an accepted current-fact surface."
+    must_not_include:
+      - "article-only current authority"
+      - "copied exact scaling rates as accepted"
+      - "generated concept knowledge as current system authority"
   - id: ja-uncertainty-patch-sensitive-setup
     question: "この起き攻め、今のパッチでも確定？"
     expected_answer_mode: unresolved_or_hold
@@ -55,3 +71,11 @@ cases:
       - "確定と断定"
       - "現在値を推測"
       - "動画や記事だけで現在パッチの事実として断定"
+  - id: ja-uncertainty-combo-system-formula
+    question: "SF6のコンボ補正の最終計算式とSA最低保証の正確な値を教えて。"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "route-level計算式や最低保証はsystem-mechanics current factとして、accepted authority pathがなければ保留する。"
+    must_not_include:
+      - "generated conceptから正確な値を推測"
+      - "現在patchの正確な値として断定"
+      - "review candidateをfinal evidenceにする"
