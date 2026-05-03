@@ -104,6 +104,18 @@ review_after: "2026-08-01"
 
 This policy does not require adding front matter to every localized doc immediately. It defines the expected direction when localized companions are introduced.
 
+## Maintainer-critical English Docs
+
+Maintainer-critical docs should not remain English-only when that blocks Japanese-speaking maintainers from understanding repository operation.
+
+For each maintainer-critical doc, choose one of these approaches:
+
+1. Write the canonical prose in Japanese while keeping paths, metadata, commands, and schema terms English-compatible.
+2. Keep the canonical prose in English and add a `.ja.*` human-readable companion with a clear localization role.
+3. Add an inline Japanese summary when a full companion would be too heavy.
+
+This does not mean every file needs a strict 1:1 translation. Fast-changing workflows should prefer Japanese-first canonical prose or an inline Japanese summary unless a sync policy exists.
+
 ## Workflows
 
 Frequently changing maintainer workflows should avoid strict English/Japanese translation pairs unless a sync policy exists.
