@@ -44,6 +44,14 @@
 - Keep `skills/sf6-agent/` as the single public adapter unless a later architecture decision changes it.
 - See `docs/architecture/language-policy.md`.
 
+## Japanese Maintainer Documentation
+
+- Maintainer-facing prose may be Japanese-first when it improves repo operation.
+- Required repo and skill behavior must stay in canonical entrypoints such as `AGENTS.md` and `skills/sf6-agent/SKILL.md`; do not rely on `.ja.*` companion files for required behavior.
+- Do not duplicate canonical knowledge only to create separate English/Japanese versions.
+- Use `.ja.*` files for human-facing localized docs only when their canonical, companion, or summary role is clear.
+- See `docs/architecture/japanese-maintainer-docs-policy.md`.
+
 ## Harness And Distribution Roles
 
 - `skills/sf6-agent/` is the public answer adapter.
