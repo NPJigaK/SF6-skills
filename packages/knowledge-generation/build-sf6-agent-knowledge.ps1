@@ -99,7 +99,15 @@ function Read-CuratedPage {
   }
 
   $relativePath = ConvertTo-RepoRelativePath $File.FullName
-  $section = if ($relativePath -match '/glossary/') { 'Glossary' } else { 'Concepts' }
+  $section = if ($relativePath -match '/glossary/') {
+    'Glossary'
+  }
+  elseif ($relativePath -match '/mechanics/') {
+    'Mechanics'
+  }
+  else {
+    'Concepts'
+  }
   $bodyWithoutTitle = ($body -replace '(?m)^# .+\n?', '').Trim()
   $bodyWithoutTitle = $bodyWithoutTitle -replace '(?m)^### ', '#### '
   $bodyWithoutTitle = $bodyWithoutTitle -replace '(?m)^## ', '### '
