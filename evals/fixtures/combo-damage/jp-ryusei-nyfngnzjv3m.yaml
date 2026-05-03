@@ -10,9 +10,9 @@ source:
   character: jp
   accessed_at: "2026-05-04"
 scope:
-  chapter: basic_light_combos
+  chapter: basic_light_and_mid_attack_combos
   start_time: "00:08"
-  end_time: "00:57"
+  end_time: "02:00"
 boundary:
   fixture_role: damage_oracle
   not_curated_knowledge: true
@@ -60,3 +60,51 @@ cases:
     damage_confidence: high
     review_status: needs_review
     notes: "Likely the higher-damage crouching medium punch branch based on commentary, but keep disabled until notation and branch mapping are reviewed."
+  - id: jp-mid-rush-triglav-1824
+    timestamp: "01:10"
+    combo_notation_jp: "中攻撃キャンセルラッシュ > しゃがみ大P > 強ストリボーグ > 中トルバラン > トリグラフ"
+    combo_notation_normalized: "medium_normal xx Drive Rush > 2HP > heavy Stribog > medium Torbalan > Triglav"
+    observed_damage: 1824
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: false
+    notation_confidence: medium
+    damage_confidence: high
+    review_status: needs_review
+    notes: "The visible overlay and damage label are clear, but the starter is generic `中攻撃` rather than an exact move. Keep disabled until the combo notation contract can represent or resolve the starter."
+  - id: jp-mid-rush-od-triglav-3260
+    timestamp: "01:18"
+    combo_notation_jp: "中攻撃キャンセルラッシュ > しゃがみ大P > 強ストリボーグ > 中トルバラン > ODトリグラフ追撃"
+    combo_notation_normalized: "medium_normal xx Drive Rush > 2HP > heavy Stribog > medium Torbalan > OD Triglav follow-up"
+    observed_damage: 3260
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: false
+    notation_confidence: medium
+    damage_confidence: high
+    review_status: needs_review
+    notes: "The damage label is clear, but the overlay only states that replacing the final Triglav with OD Triglav adds another Triglav hit. Keep disabled until the full route and OD follow-up notation are reviewed."
+  - id: jp-mid-corner-carry-rush-fhk-2763
+    timestamp: "01:33"
+    combo_notation_jp: "中攻撃キャンセルラッシュ > しゃがみ大P > 強ストリボーグ > 前ステ > ラッシュ前大K(ちょい遅らせ) > トリグラフ"
+    combo_notation_normalized: "medium_normal xx Drive Rush > 2HP > heavy Stribog > forward dash > Drive Rush 6HK(delayed) > Triglav"
+    observed_damage: 2763
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: false
+    notation_confidence: medium
+    damage_confidence: high
+    review_status: needs_review
+    notes: "This adds corner-carry coverage, but the generic medium starter and delayed forward-heavy-kick timing need notation review before damage-hidden evaluation."
+  - id: jp-mid-position-carry-1484
+    timestamp: "01:56"
+    combo_notation_jp: "しゃがみ中P始動から端まで運ぶ位置別ルート"
+    combo_notation_normalized: null
+    observed_damage: 1484
+    observed_damage_source: training_ui_combo_damage
+    damage_visible: true
+    enabled_for_damage_hidden_eval: false
+    notation_confidence: low
+    damage_confidence: high
+    review_status: needs_review
+    notes: "The damage label is visible, but the route overlay is not complete in the inspected frame. Keep as a disabled position/carry candidate."
