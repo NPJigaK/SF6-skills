@@ -4,6 +4,16 @@ SF6 Knowledge Agent Kit is maintained primarily for Japanese-speaking maintainer
 
 This policy clarifies how maintainer-facing docs can use Japanese prose without creating duplicate canonical sources of truth.
 
+## 日本語要約
+
+このrepoでは、メンテナー向けの説明文やworkflow本文は日本語を正本として書いてよいです。
+
+ただし、metadata key、artifact ID、schema enum、filename、validator contract、command名などは英語互換を保ちます。
+
+`AGENTS.md` や `skills/sf6-agent/SKILL.md` のようにagentが実際に読む入口では、必須ルールを `.ja.*` companion に逃がさず、entrypoint本体に書きます。
+
+`knowledge/curated/` は英語版と日本語版で二重正本化しません。
+
 ## Core Principle
 
 Maintainer-facing prose may be Japanese-first when it improves repository operation.
