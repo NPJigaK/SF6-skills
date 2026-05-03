@@ -105,6 +105,18 @@ function Assert-FieldValue {
   }
 }
 
+function Assert-ReviewStatusNotAccepted {
+  param(
+    [Parameter(Mandatory = $true)][string]$RelativePath,
+    [Parameter(Mandatory = $true)][System.Collections.IDictionary]$Metadata,
+    [Parameter(Mandatory = $true)][ref]$Violations
+  )
+
+  if ($Metadata.Contains('review_status') -and $Metadata['review_status'] -eq 'accepted') {
+    $Violations.Value += "$RelativePath review_status must not be accepted for review-only video artifacts"
+  }
+}
+
 function Assert-RequiredSections {
   param(
     [Parameter(Mandatory = $true)][string]$RelativePath,
@@ -230,6 +242,7 @@ else {
     Assert-RequiredFields $relativePath $metadata $sourceRequiredFields ([ref]$violations)
     Assert-EnumValue $relativePath $metadata 'source_kind' $allowedSourceKinds ([ref]$violations)
     Assert-EnumValue $relativePath $metadata 'review_status' $allowedReviewStatus ([ref]$violations)
+    Assert-ReviewStatusNotAccepted $relativePath $metadata ([ref]$violations)
 
     Assert-RequiredSections $relativePath $content @('# Source Summary', '## Extracted Scope', '## Media Handling', '## Reviewer Notes') ([ref]$violations)
     Assert-RequiredText $relativePath $content @(
