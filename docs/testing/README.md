@@ -31,6 +31,7 @@ Manual validator set:
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-v2-contracts.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-schema.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-ingest-artifacts.ps1`
+- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-video-artifacts.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-evals.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-roster-source.ps1`
 - `powershell -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1`
