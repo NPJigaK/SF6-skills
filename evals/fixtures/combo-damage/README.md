@@ -37,14 +37,14 @@ Disabled caseの例:
 
 ## Notation
 
-Fixture may include both human-facing Japanese notation and a provisional normalized notation.
+Fixture cases include both human-facing Japanese notation and normalized notation.
 
-Examples:
+- `combo_notation_jp`: human-facing Japanese notation from visible overlays, source-local wording, or maintainer review.
+- `combo_notation_normalized`: provisional machine-facing notation following `contracts/combo-notation.md`.
 
-- `combo_notation_jp`
-- `combo_notation_normalized`
+The normalized notation is still not a complete damage calculator input contract. It is a reviewed bridge for future damage-hidden evals.
 
-The normalized notation is provisional until a combo notation contract is defined. Do not treat the current strings as a stable machine-readable contract.
+Cases with generic starters such as `中攻撃`, inherited route context, unresolved branches, or timing ambiguity must remain disabled unless later review resolves the notation precisely enough for `enabled_for_damage_hidden_eval: true`.
 
 ## Relationship To Current Facts
 
@@ -56,8 +56,7 @@ Move-specific current values still come from `data/exports/`, `data/roster/`, an
 
 ## Expected Follow-ups
 
-- Add a validator for `evals/fixtures/combo-damage/*.yaml`.
+- Maintain `tests/validation/validate-combo-damage-fixtures.ps1` as fixture shape evolves.
 - Expand fixture coverage with high-confidence cases across different route types.
-- Define a combo notation contract.
 - Define combo damage calculation input/output contracts.
 - Add damage-hidden calculation evals only after fixture and notation boundaries are reviewed.

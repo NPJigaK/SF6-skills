@@ -7,3 +7,9 @@ Contracts distinguish canonical surfaces from derived surfaces and use generic s
 Some contracts describe Markdown front matter or agent-readable artifacts that are enforced by dedicated validators rather than by a generic JSON Schema runtime. Validators under `tests/validation/` are the executable contract layer for the current repo.
 
 When `source_refs.path` points to a migrated legacy file, `source_revision` identifies the commit where that historical path can be reviewed.
+
+## Human-Readable Contracts
+
+- `combo-notation.md`: notation rules for `evals/fixtures/combo-damage/*.yaml`.
+- `frame-current-runtime-assets.md`: runtime asset boundary for generated frame-current payloads.
+- `video-observation.md`: timestamped video observation artifact contract.
