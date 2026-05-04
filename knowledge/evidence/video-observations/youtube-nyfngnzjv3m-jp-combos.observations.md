@@ -35,6 +35,19 @@ This artifact records timestamped observations from a limited section of one Jap
 | 01:37-01:48 | visual + commentary | The route demonstration continues while explanatory text warns that inputting forward heavy kick too early can reduce damage because only one hit connects. | Embedded explanatory text cautions about timing and lower damage when forward heavy kick is too early. | medium | This is explanatory context, not an oracle case. |
 | 01:56-02:00 | visual + commentary | A later frame shows combo damage `1484` while on-screen text says this spacing lets crouching medium punch carry to the corner. | Embedded explanatory text discusses carrying to the corner when crouching medium punch hits from this position. | low/medium | Damage is visible, but the route overlay is incomplete in the inspected frame. Keep as disabled position/carry candidate. |
 
+## Branch Mapping Re-Review
+
+Existing disabled fixture candidates were re-inspected on 2026-05-04 using the same repo-external scratch policy. This did not introduce a new source video or broaden the observed source scope.
+
+| Case | Re-inspected evidence | Review result | Notes |
+|---|---|---|---|
+| `jp-basic-light-rush-extension-1482` | Damage label `1482`, alternative-branch overlay, and visible input history. | keep disabled | The branch cannot be uniquely mapped to `しゃがみ中P` or `引き中Pタゲコン` from visible evidence alone. |
+| `jp-basic-light-rush-extension-1527` | Damage label `1527`, commentary/visible context around the higher-damage branch, and visible input history. | keep disabled | The crouching-medium-punch branch remains plausible, but still inferred rather than exact. |
+| `jp-mid-rush-triglav-1824` | Mid-attack cancel-rush overlay, damage label context, and visible input history. | keep disabled | `中攻撃` remains generic; exact starter was not safely resolved to `2MP`, `5MP`, or another exact move. |
+| `jp-mid-rush-od-triglav-3260` | Magenta explanatory overlay saying OD Triglav adds one more Triglav hit. | keep disabled | OD follow-up context is clearer, but the full route still inherits generic starter context from the previous overlay. |
+| `jp-mid-corner-carry-rush-fhk-2763` | Corner-carry overlay with `ラッシュ前大K(ちょい遅らせ)` and damage label `2763`. | keep disabled | Delayed `Drive Rush 6HK` wording is confirmed, but timing semantics and generic starter remain unresolved. |
+| `jp-mid-position-carry-1484` | Damage label `1484` and position/carry explanatory text. | keep disabled | The inspected frame still lacks a complete route overlay. |
+
 ## Contract-Shaped Observation Payload
 
 This payload follows the shape of `contracts/video-observation.schema.json` at a coarse fixture-build level. Segment text is paraphrased; no full transcript is stored.

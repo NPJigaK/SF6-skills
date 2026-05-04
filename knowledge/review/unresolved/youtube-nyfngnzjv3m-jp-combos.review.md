@@ -78,6 +78,21 @@ The fixture candidates were re-reviewed against `contracts/combo-notation.md` on
 
 No additional disabled cases were enabled in this review. The next enabling step requires exact starter or branch review, not more video candidates.
 
+## Exact Starter And Branch Mapping Re-Review
+
+The existing disabled candidates were re-inspected on 2026-05-04 with temporary repo-external media. The review focused only on the existing candidate sections and did not add new video sources or new coverage chapters.
+
+| Case | Re-review result | Reason |
+|---|---|---|
+| `jp-basic-light-rush-extension-1482` | keep disabled | Damage label and branch overlay are clear, but visible evidence does not uniquely map `1482` to either `しゃがみ中P` or `引き中Pタゲコン`. |
+| `jp-basic-light-rush-extension-1527` | keep disabled | The crouching-medium-punch branch remains plausible from commentary/context, but the branch-to-damage mapping is still inferred. |
+| `jp-mid-rush-triglav-1824` | keep disabled | Mid-attack route and damage context remain clear, but `中攻撃` was not resolved to an exact starter token. |
+| `jp-mid-rush-od-triglav-3260` | keep disabled | OD follow-up context was clarified as `OD Triglav > Triglav`, but the route still inherits generic starter context. |
+| `jp-mid-corner-carry-rush-fhk-2763` | keep disabled | Delayed `Drive Rush 6HK` wording was confirmed, but generic starter, corner-carry context, and timing semantics remain unresolved. |
+| `jp-mid-position-carry-1484` | keep disabled | A complete route overlay was still not visible for the `1484` damage label. |
+
+No case was newly enabled. The next practical step is either a more targeted manual branch/starter review with stronger evidence, or a separate combo damage calculation input/output contract that can describe unresolved requirements explicitly.
+
 ## Review Notes
 
 - Observed damage is an eval oracle label only.
@@ -93,3 +108,4 @@ No additional disabled cases were enabled in this review. The next enabling step
 - The fixture introduces a new eval support surface under `evals/fixtures/combo-damage/`.
 - `contracts/combo-notation.md` now defines the notation review boundary before damage-hidden calculation evals depend on ambiguous notation.
 - The coverage expansion confirms that route notation, not observed damage visibility, is the main blocker for enabling more damage-hidden eval cases.
+- The exact starter/branch re-review confirms that observed damage labels alone are still insufficient for enabling additional damage-hidden eval cases.

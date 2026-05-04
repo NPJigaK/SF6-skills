@@ -47,7 +47,7 @@ cases:
     notation_confidence: low
     damage_confidence: high
     review_status: needs_review
-    notes: "Contract review: remains disabled. The overlay lists alternative branches, normalized notation is unresolved, and route-to-damage mapping is not precise enough for damage-hidden evaluation."
+    notes: "Branch mapping re-review: remains disabled. Re-inspection confirmed the 1482 damage label and the alternative-branch overlay, but input history and visible text do not uniquely map 1482 to either the crouching-medium-punch branch or the back-medium-punch target-combo branch."
   - id: jp-basic-light-rush-extension-1527
     timestamp: "00:56"
     combo_notation_jp: "小P > 小Pキャンセル > しゃがみ中P or 引き中Pタゲコン > 中ストリボーグ"
@@ -59,7 +59,7 @@ cases:
     notation_confidence: medium
     damage_confidence: high
     review_status: needs_review
-    notes: "Contract review: remains disabled. This is likely the higher-damage crouching medium punch branch, but `likely` branch mapping is not enough for enabled status under the notation contract."
+    notes: "Branch mapping re-review: remains disabled. Commentary/visible context still suggests this may be the higher-damage crouching-medium-punch branch, but the route-to-damage mapping remains inferred rather than exact under the notation contract."
   - id: jp-mid-rush-triglav-1824
     timestamp: "01:10"
     combo_notation_jp: "中攻撃キャンセルラッシュ > しゃがみ大P > 強ストリボーグ > 中トルバラン > トリグラフ"
@@ -71,11 +71,11 @@ cases:
     notation_confidence: medium
     damage_confidence: high
     review_status: needs_review
-    notes: "Contract review: remains disabled. `medium_normal` represents generic `中攻撃`; generic starters are not precise enough for enabled status until mapped to an exact move such as `2MP` or `5MP`."
+    notes: "Exact starter re-review: remains disabled. Re-inspection confirmed the mid-attack cancel-rush overlay and 1824 damage label, but the visible overlay and input history do not safely map generic `medium_normal` to an exact starter such as `2MP` or `5MP`."
   - id: jp-mid-rush-od-triglav-3260
     timestamp: "01:18"
     combo_notation_jp: "中攻撃キャンセルラッシュ > しゃがみ大P > 強ストリボーグ > 中トルバラン > ODトリグラフ追撃"
-    combo_notation_normalized: "medium_normal xx Drive Rush > 2HP > heavy Stribog > medium Torbalan > OD Triglav follow-up"
+    combo_notation_normalized: "medium_normal xx Drive Rush > 2HP > heavy Stribog > medium Torbalan > OD Triglav > Triglav"
     observed_damage: 3260
     observed_damage_source: training_ui_combo_damage
     damage_visible: true
@@ -83,7 +83,7 @@ cases:
     notation_confidence: medium
     damage_confidence: high
     review_status: needs_review
-    notes: "Contract review: remains disabled. The route uses generic `medium_normal` and inherited OD follow-up context; the full route-to-damage mapping is not reviewed enough for enabled status."
+    notes: "OD follow-up re-review: remains disabled. The magenta overlay clarifies that replacing the final Triglav with OD Triglav adds one more Triglav hit, so the normalized notation records `OD Triglav > Triglav`; however, the route still inherits generic starter context and is not precise enough for enabled status."
   - id: jp-mid-corner-carry-rush-fhk-2763
     timestamp: "01:33"
     combo_notation_jp: "中攻撃キャンセルラッシュ > しゃがみ大P > 強ストリボーグ > 前ステ > ラッシュ前大K(ちょい遅らせ) > トリグラフ"
@@ -95,7 +95,7 @@ cases:
     notation_confidence: medium
     damage_confidence: high
     review_status: needs_review
-    notes: "Contract review: remains disabled. The route has generic `medium_normal`, corner-carry context, and `Drive Rush 6HK(delayed)` timing that a future damage calculator input contract cannot yet represent."
+    notes: "Delayed timing re-review: remains disabled. Re-inspection confirmed the corner-carry overlay and delayed `Drive Rush 6HK` wording, but the generic starter, corner-carry context, and timing semantics are not precise calculator input."
   - id: jp-mid-position-carry-1484
     timestamp: "01:56"
     combo_notation_jp: "しゃがみ中P始動から端まで運ぶ位置別ルート"
@@ -107,4 +107,4 @@ cases:
     notation_confidence: low
     damage_confidence: high
     review_status: needs_review
-    notes: "Contract review: remains disabled. The damage label is visible, but the route overlay is incomplete and position/carry context is not an exact calculator input."
+    notes: "Position/carry re-review: remains disabled. Re-inspection did not reveal a complete route overlay for the 1484 damage label, and position/carry context remains unresolved."
