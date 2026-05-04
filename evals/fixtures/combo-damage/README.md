@@ -56,7 +56,7 @@ Move-specific current values still come from `data/exports/`, `data/roster/`, an
 
 ## Expected Follow-ups
 
-- Add a validator for `evals/fixtures/combo-damage/*.yaml`.
+- Maintain `tests/validation/validate-combo-damage-fixtures.ps1` as fixture shape evolves.
 - Expand fixture coverage with high-confidence cases across different route types.
 - Define combo damage calculation input/output contracts.
 - Add damage-hidden calculation evals only after fixture and notation boundaries are reviewed.

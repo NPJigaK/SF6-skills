@@ -75,10 +75,15 @@ Generic starters are not precise enough for `enabled_for_damage_hidden_eval: tru
 
 Use `>` between sequential hits or actions.
 
-Use `xx` when a move is canceled into another action:
+At the current fixture layer, `>` may represent observed hit/action order. It can be used when a cancel point is not yet confirmed or when the exact cancel point is not important to the reviewed fixture notation.
+
+Use `xx` when a move is canceled into another action and the cancel point is confirmed and relevant to the reviewed notation:
 
 - `2LP > 5LP > weak Stribog`
+- `5LP xx weak Stribog`
 - `2MP xx Drive Rush > 2HP > heavy Stribog`
+
+A later damage calculation input contract may require explicit cancel points for all cancel routes. This combo notation contract does not require that level of precision yet.
 
 If the source only says "cancel rush" without a confirmed source move, keep the generic starter:
 
