@@ -62,6 +62,22 @@ The following categories stay unresolved:
 - Whether observed damage values reproduce in-game under the same conditions.
 - Whether a future damage calculation engine has sufficient current-system data to compute the oracle values.
 
+## Combo Notation Contract Review
+
+The fixture candidates were re-reviewed against `contracts/combo-notation.md` on 2026-05-04.
+
+| Case | Contract verdict | Reason |
+|---|---|---|
+| `jp-basic-light-stribog-001` | keep enabled | Exact starter and route order are visible enough for the current fixture layer. The `>` separator is acceptable as observed hit/action order under the contract. |
+| `jp-basic-light-rush-extension-1482` | keep disabled | The overlay lists alternative branches and normalized notation is unresolved. Branch notation is allowed only for disabled candidates. |
+| `jp-basic-light-rush-extension-1527` | keep disabled | The route is likely a crouching-medium-punch branch, but the branch mapping is still inferred rather than reviewed as exact. |
+| `jp-mid-rush-triglav-1824` | keep disabled | `medium_normal` represents generic `中攻撃`. Generic starters are not precise enough for enabled damage-hidden eval. |
+| `jp-mid-rush-od-triglav-3260` | keep disabled | The route has generic starter context and inherited OD Triglav follow-up context. The full route-to-damage mapping is not reviewed. |
+| `jp-mid-corner-carry-rush-fhk-2763` | keep disabled | The route has generic starter context, corner-carry context, and delayed `Drive Rush 6HK` timing not yet representable as calculator input. |
+| `jp-mid-position-carry-1484` | keep disabled | The inspected frame has a visible damage label, but the route overlay is incomplete and position/carry context remains unresolved. |
+
+No additional disabled cases were enabled in this review. The next enabling step requires exact starter or branch review, not more video candidates.
+
 ## Review Notes
 
 - Observed damage is an eval oracle label only.
@@ -69,10 +85,11 @@ The following categories stay unresolved:
 - Do not use the fixture to answer public questions about JP combo damage unless a later calculation workflow and current-system authority path define that behavior.
 - Do not promote the fixture into `knowledge/curated/`.
 - `tests/validation/validate-combo-damage-fixtures.ps1` now checks the fixture boundary and enabled/disabled case fields.
+- `contracts/combo-notation.md` now explains why generic starters, inherited route context, unresolved branches, and timing ambiguity keep candidates disabled.
 
 ## Workflow Findings
 
 - `workflows/ingest-video.md` and `workflows/media-scratch-cache-policy.md` were enough for source metadata, observation, review, and cleanup boundaries.
 - The fixture introduces a new eval support surface under `evals/fixtures/combo-damage/`.
-- A future issue should define a combo notation contract before damage-hidden calculation evals depend on ambiguous notation.
+- `contracts/combo-notation.md` now defines the notation review boundary before damage-hidden calculation evals depend on ambiguous notation.
 - The coverage expansion confirms that route notation, not observed damage visibility, is the main blocker for enabling more damage-hidden eval cases.
