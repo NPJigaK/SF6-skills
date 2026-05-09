@@ -6,6 +6,10 @@ Hermes v2.1 establishes Hermes as the primary repo-local orchestration harness w
 
 This does not make Hermes state canonical, does not make Hermes a public distribution target, and does not replace `skills/sf6-agent/`. The public answer adapter remains `skills/sf6-agent/`; reusable maintainer output must remain as repository artifacts.
 
+Hermes v2.1 is not only a safety boundary for answer orchestration. It is also the repo-local growth engine for improving the SF6 skill behavior, workflows, validators, ingest procedures, aliases, and review artifacts over time.
+
+Hermes may learn procedural repo-maintenance skills locally. Reusable improvements from that learning loop must be promoted into repository artifacts through review.
+
 This roadmap records the completed v2.1 foundation work, the dependency model, the non-goals, and the current Hermes capability coverage.
 
 ## Invariants
@@ -137,6 +141,8 @@ The v2.1 initial foundation work does not implement:
 - Hermes memory as canonical knowledge.
 - Any replacement for `skills/sf6-agent/`.
 - Any change to packaged frame-current authority.
+- Automatic promotion from Hermes memory, session search, agent-created skills, Curator output, or Kanban workers into canonical repo surfaces.
+- Autonomous current-fact updates without the frame-data refresh workflow and review.
 
 ## Hermes Capability Coverage
 
@@ -144,13 +150,18 @@ The v2.1 initial foundation work does not implement:
 |---|---|---|---|
 | Profiles | constrained / prepared | ingest and smoke profile guidance | profile state outside repo; not executable config yet |
 | Subagents | active operational pattern | read-only scope/docs/validator reviews | summaries are not source of truth |
-| Memory | constrained / deferred | local preferences and operator notes only | never canonical SF6 knowledge |
+| Agent-managed skills | constrained / recommended | learn recurring SF6 repo-maintenance procedures | local skills are non-canonical until promoted through PR |
+| Skill self-improvement | constrained / recommended | improve repeated maintainer workflows, validator patterns, review guards, and ingest procedures | improves procedure only; does not canonicalize SF6 facts |
+| Curator | recommended for local skills | prune, patch, and consolidate agent-created procedural skills | must not mutate repo canonical surfaces directly |
+| Memory | constrained / recommended | local preferences and operator notes only | never canonical SF6 knowledge |
 | Skills / wrappers | prepared | thin wrappers around workflows/contracts | wrappers do not replace workflows |
+| Durable Kanban | deferred / planned | coordinate multi-agent backlog work for aliases, ingest, validators, and reviews | workers draft/propose; promotion requires review |
+| /goal + checkpoints | recommended for bounded repo tasks | keep long-running maintainer tasks aligned and resumable | checkpoints are non-canonical state |
 | Cron | deferred | freshness audits / review reminders | no automatic canonical promotion |
 | Web/browser/vision | policy-defined, implementation deferred | article/video research and freshness checks | evidence gate required |
 | MCP | deferred | possible future external tool bridge | filtered tools and no authority change |
 | Gateway / notifications | deferred | optional notifications | no secrets or sessions in repo |
-| Session search | deferred | recall workflow context | not evidence |
+| Session search | constrained / recommended | recall prior workflow decisions and PR patterns | not SF6 evidence or current-fact authority |
 | Execution sandbox | deferred | safer ingest execution | profiles are not sandbox |
 
 This table is documentation-only. It does not add Hermes runtime config, prompts, profile files, cron jobs, MCP configuration, gateway configuration, or runtime assets.
@@ -168,3 +179,8 @@ These are candidate follow-up issues, not implemented by this roadmap PR:
 - Hermes memory usage policy.
 - Hermes cron/freshness audit policy.
 - Hermes MCP/tooling evaluation.
+- Hermes skill self-improvement and promotion policy.
+- Hermes Curator policy for agent-created SF6 maintainer skills.
+- Hermes durable Kanban policy for multi-agent repo artifact work.
+- Hermes `/goal` and checkpoint usage policy for bounded maintainer tasks.
+- Hermes session search policy for non-canonical workflow recall.
