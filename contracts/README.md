@@ -11,5 +11,13 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 ## Human-Readable Contracts
 
 - `combo-notation.md`: notation rules for `evals/fixtures/combo-damage/*.yaml`.
+- `evidence-gate.md`: answer evidence authority boundaries for current facts, review claims, observations, and Hermes state.
 - `frame-current-runtime-assets.md`: runtime asset boundary for generated frame-current payloads.
 - `video-observation.md`: timestamped video observation artifact contract.
+- `web-research-policy.md`: web source ranking, freshness, and current-fact conflict policy.
+
+## Answer Orchestration Schemas
+
+- `answer-intent.schema.json`: intent and answer-mode classification contract.
+- `evidence-card.schema.json`: evidence authority and source-boundary card contract.
+- `answer-plan.schema.json`: answer planning contract combining intent, evidence cards, web state, hold reasons, and response requirements.

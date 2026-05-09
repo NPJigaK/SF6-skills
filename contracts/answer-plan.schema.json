@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/answer-plan.schema.json",
+  "title": "Answer Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "plan_id",
+    "answer_mode",
+    "intent",
+    "evidence_cards",
+    "web_research",
+    "hold_reasons",
+    "response_requirements"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "answer-plan/v1"
+    },
+    "plan_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answer_mode": {
+      "type": "string",
+      "enum": [
+        "current_fact",
+        "stable_concept",
+        "strategy",
+        "observation",
+        "hold",
+        "web_needed"
+      ]
+    },
+    "intent": {
+      "$ref": "answer-intent.schema.json"
+    },
+    "evidence_cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "evidence-card.schema.json"
+      }
+    },
+    "web_research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "web_required",
+        "web_allowed",
+        "web_used",
+        "web_forbidden_for_current_fact_override",
+        "conflict_requires_hold"
+      ],
+      "properties": {
+        "web_required": {
+          "type": "boolean"
+        },
+        "web_allowed": {
+          "type": "boolean"
+        },
+        "web_used": {
+          "type": "boolean"
+        },
+        "web_forbidden_for_current_fact_override": {
+          "type": "boolean"
+        },
+        "conflict_requires_hold": {
+          "type": "boolean"
+        },
+        "required_source_authority": {
+          "type": "string",
+          "enum": [
+            "none",
+            "official_sources_required",
+            "supplemental_sources_allowed"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "hold_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "response_requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cite_evidence",
+        "state_authority_boundary",
+        "state_confidence",
+        "boundary_notes"
+      ],
+      "properties": {
+        "cite_evidence": {
+          "type": "boolean"
+        },
+        "state_authority_boundary": {
+          "type": "boolean"
+        },
+        "state_confidence": {
+          "type": "boolean"
+        },
+        "boundary_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,12 +8,17 @@ $requiredJsonSchemas = @(
   'contracts/knowledge-page.schema.json',
   'contracts/generated-surface.schema.json',
   'contracts/eval-case.schema.json',
-  'contracts/video-observation.schema.json'
+  'contracts/video-observation.schema.json',
+  'contracts/answer-intent.schema.json',
+  'contracts/evidence-card.schema.json',
+  'contracts/answer-plan.schema.json'
 )
 
 $requiredDocs = @(
   'contracts/frame-current-runtime-assets.md',
-  'contracts/video-observation.md'
+  'contracts/video-observation.md',
+  'contracts/evidence-gate.md',
+  'contracts/web-research-policy.md'
 )
 
 foreach ($relativePath in $requiredJsonSchemas) {
