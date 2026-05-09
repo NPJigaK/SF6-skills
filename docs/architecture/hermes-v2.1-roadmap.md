@@ -12,6 +12,28 @@ Hermes may learn procedural repo-maintenance skills locally. Reusable improvemen
 
 This roadmap records the completed v2.1 foundation work, the dependency model, the non-goals, and the current Hermes capability coverage.
 
+## Operating Lanes
+
+### Repo Implementation Lane
+
+Repo implementation remains Codex-first. Codex may implement issue-scoped PRs, validators, contracts, docs, packaging changes, and GitHub workflow operations.
+
+Hermes does not replace Codex as the repo implementation executor. Hermes can assist with review patterns, procedural learning, and reusable workflow improvements, but committed changes must still land as reviewed repository artifacts.
+
+### Hermes Growth Lane
+
+Hermes is preferred when available for repeated knowledge-growth and maintainer-growth workflows, including source analysis, claim decomposition, observation drafting, review drafting, smoke report drafting, workflow learning, validator-pattern learning, and local procedural skill self-improvement.
+
+Codex may be the entrypoint for this work and may delegate suitable knowledge-growth workflows to a configured Hermes maintainer profile. Hermes may draft artifacts, claims, observations, review notes, and smoke reports, but Hermes memory, sessions, and local skills are not canonical. Canonical promotion still requires repository artifacts, validators, and review.
+
+Agent-managed skills, Curator, session search, subagents, `/goal` checkpoints, durable Kanban, and cron/freshness audits should not be disabled by default. They are useful for SF6 repo artifact growth when they stay within the boundaries in this roadmap.
+
+### Public User Lane
+
+End users do not need Hermes. Codex, Claude, Hermes, or other agents may use `skills/sf6-agent/` as the public answer adapter when they can import the skill.
+
+`skills/sf6-agent/` remains the distribution surface for user answers. Hermes is repo-local maintainer orchestration support, not a requirement for public use.
+
 ## Invariants
 
 - Hermes is primary only when a configured maintainer profile is available.
@@ -24,6 +46,9 @@ This roadmap records the completed v2.1 foundation work, the dependency model, t
 - Web sources do not override packaged frame-current `official_raw`.
 - Query-normalization aliases are not exact current-fact authority.
 - Future normalization runtime assets must remain separate from `skills/sf6-agent/assets/frame-current/`.
+- Codex remains the normal repo implementation executor.
+- Hermes may assist or receive delegated knowledge-growth workflows when configured.
+- End users do not need Hermes to use `skills/sf6-agent/`.
 
 ## Completed v2.1 PR Sequence
 
@@ -143,6 +168,7 @@ The v2.1 initial foundation work does not implement:
 - Any change to packaged frame-current authority.
 - Automatic promotion from Hermes memory, session search, agent-created skills, Curator output, or Kanban workers into canonical repo surfaces.
 - Autonomous current-fact updates without the frame-data refresh workflow and review.
+- Treating Hermes self-improvement output as canonical before it is promoted through reviewed repository artifacts.
 
 ## Hermes Capability Coverage
 
@@ -157,7 +183,7 @@ The v2.1 initial foundation work does not implement:
 | Skills / wrappers | prepared | thin wrappers around workflows/contracts | wrappers do not replace workflows |
 | Durable Kanban | deferred / planned | coordinate multi-agent backlog work for aliases, ingest, validators, and reviews | workers draft/propose; promotion requires review |
 | /goal + checkpoints | recommended for bounded repo tasks | keep long-running maintainer tasks aligned and resumable | checkpoints are non-canonical state |
-| Cron | deferred | freshness audits / review reminders | no automatic canonical promotion |
+| Cron | deferred / planned | freshness audits / review reminders | no automatic canonical promotion |
 | Web/browser/vision | policy-defined, implementation deferred | article/video research and freshness checks | evidence gate required |
 | MCP | deferred | possible future external tool bridge | filtered tools and no authority change |
 | Gateway / notifications | deferred | optional notifications | no secrets or sessions in repo |
@@ -170,6 +196,7 @@ This table is documentation-only. It does not add Hermes runtime config, prompts
 
 These are candidate follow-up issues, not implemented by this roadmap PR:
 
+- Codex-to-Hermes delegation policy for knowledge-growth workflows.
 - Normalization runtime asset generator.
 - Hermes answer smoke skeleton.
 - Article ingest templates and validator.
