@@ -61,6 +61,15 @@ $requiredFixtures = @(
   'web-needed.json'
 )
 
+$expectedFixtureModes = @{
+  'current-fact.json' = 'current_fact'
+  'stable-concept.json' = 'stable_concept'
+  'strategy.json' = 'strategy'
+  'observation.json' = 'observation'
+  'hold.json' = 'hold'
+  'web-needed.json' = 'web_needed'
+}
+
 $answerModes = @(
   'current_fact',
   'stable_concept',
@@ -138,6 +147,7 @@ foreach ($relativePath in $requiredDocs) {
 
 foreach ($fileName in $requiredFixtures) {
   $relativePath = "$fixtureRoot/$fileName"
+  $expectedMode = $expectedFixtureModes[$fileName]
   $path = Join-Path $repoRoot $relativePath
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
     $issues += "Missing answer orchestration fixture: $relativePath"
@@ -155,6 +165,9 @@ foreach ($fileName in $requiredFixtures) {
 
   if (Test-Property $fixture 'answer_mode') {
     Assert-ValueIn $fixture.answer_mode $answerModes "$relativePath answer_mode" ([ref]$issues)
+    if ([string]$fixture.answer_mode -ne $expectedMode) {
+      $issues += "$relativePath answer_mode must be $expectedMode"
+    }
   }
 
   if (Test-Property $fixture 'intent') {
@@ -166,9 +179,15 @@ foreach ($fileName in $requiredFixtures) {
     }
     if (Test-Property $fixture.intent 'intent_kind') {
       Assert-ValueIn $fixture.intent.intent_kind $answerModes "$relativePath intent_kind" ([ref]$issues)
+      if ([string]$fixture.intent.intent_kind -ne $expectedMode) {
+        $issues += "$relativePath intent_kind must be $expectedMode"
+      }
     }
     if (Test-Property $fixture.intent 'answer_mode') {
       Assert-ValueIn $fixture.intent.answer_mode $answerModes "$relativePath intent answer_mode" ([ref]$issues)
+      if ([string]$fixture.intent.answer_mode -ne $expectedMode) {
+        $issues += "$relativePath intent answer_mode must be $expectedMode"
+      }
     }
   }
 
@@ -199,6 +218,10 @@ foreach ($fileName in $requiredFixtures) {
 
       $supportsExact = (Test-Property $card 'supports_exact_current_fact') -and [bool]$card.supports_exact_current_fact
       $mayOverride = (Test-Property $card 'may_override_official_raw') -and [bool]$card.may_override_official_raw
+
+      if ($supportsExact -and $family -ne 'frame_current_official_raw') {
+        $issues += "$relativePath allows non-official_raw evidence to support exact current facts: $family"
+      }
 
       if ($family -eq 'hermes_memory_session_profile_state') {
         if ($canonicality -notin @('non_canonical', 'forbidden')) {
@@ -258,6 +281,21 @@ foreach ($fileName in $requiredFixtures) {
     })
     if ($officialRawCards.Count -eq 0) {
       $issues += 'current-fact fixture must contain existing packaged frame-current official_raw evidence'
+    }
+
+    if (Test-Property $fixture 'web_research') {
+      if ([bool]$fixture.web_research.web_required) {
+        $issues += 'current-fact fixture must not require web research'
+      }
+      if ([bool]$fixture.web_research.web_used) {
+        $issues += 'current-fact fixture must not use web research'
+      }
+      if (-not [bool]$fixture.web_research.web_forbidden_for_current_fact_override) {
+        $issues += 'current-fact fixture must forbid web current-fact override'
+      }
+      if (-not [bool]$fixture.web_research.conflict_requires_hold) {
+        $issues += 'current-fact fixture must hold on web/current-fact conflict'
+      }
     }
   }
 
