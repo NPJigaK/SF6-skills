@@ -102,19 +102,37 @@ if (-not (Test-Path -LiteralPath $packRoot -PathType Container)) {
   foreach ($item in Get-ChildItem -LiteralPath $packRoot -Force -Recurse -File) {
     $name = $item.Name.ToLowerInvariant()
     $relativePath = Get-PackRelativePath $item.FullName
+    $relativePathLower = $relativePath.ToLowerInvariant()
 
     if (
       $name -eq '.env' -or
+      $name -like '.env.*' -or
+      $name -eq '.envrc' -or
       $name -like '*secret*' -or
       $name -like '*token*' -or
       $name -like '*credential*' -or
       $name -like '*session*' -or
+      $name -like '*sessions*' -or
       $name -like '*memory*' -or
       $name -like '*cron*' -or
       $name -like 'browser-state*' -or
       $name -like 'profile-state*' -or
       $name -like '*.sqlite' -or
-      $name -like '*.db'
+      $name -like '*.db' -or
+      $relativePathLower -like '*/.env' -or
+      $relativePathLower -like '*/.env.*' -or
+      $relativePathLower -like '*/.envrc' -or
+      $relativePathLower -like '*secret*' -or
+      $relativePathLower -like '*token*' -or
+      $relativePathLower -like '*credential*' -or
+      $relativePathLower -like '*session*' -or
+      $relativePathLower -like '*sessions*' -or
+      $relativePathLower -like '*memory*' -or
+      $relativePathLower -like '*cron*' -or
+      $relativePathLower -like '*browser-state*' -or
+      $relativePathLower -like '*profile-state*' -or
+      $relativePathLower -like '*.sqlite' -or
+      $relativePathLower -like '*.db'
     ) {
       $issues += "Forbidden Hermes local-state or secret-like file under pack: $relativePath"
     }
