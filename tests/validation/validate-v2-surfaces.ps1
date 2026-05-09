@@ -71,8 +71,7 @@ if ($issues.Count -eq 0) {
     '`knowledge/` is canonical.',
     '`data/exports/` and `data/roster/` are exact current fact authority.',
     '`workflows/` are canonical maintainer procedures.',
-    'Do not put exact current values in `knowledge/curated/` or generated knowledge references.',
-    'Hermes is optional maintainer harness, not canonical memory.'
+    'Do not put exact current values in `knowledge/curated/` or generated knowledge references.'
   )) {
     if ($agents -notmatch [regex]::Escape($needle)) {
       $issues += "AGENTS.md missing v2 guidance: $needle"
