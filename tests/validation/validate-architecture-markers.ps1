@@ -112,6 +112,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $decisionPath) -PathType L
   $metadata = [hashtable]$frontMatter.Metadata
 
   Assert-FieldEquals $metadata 'id' 'adr-0001' ([ref]$issues)
+  Assert-FieldEquals $metadata 'status' 'accepted' ([ref]$issues)
   Assert-FieldEquals $metadata 'decision_type' 'architecture_decision' ([ref]$issues)
   Assert-FieldEquals $metadata 'scope' 'repo_local_maintainer_orchestration' ([ref]$issues)
   Assert-FieldEquals $metadata 'public_answer_adapter' 'skills/sf6-agent' ([ref]$issues)
@@ -129,8 +130,11 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $decisionPath) -PathType L
   ) ([ref]$issues)
 
   Assert-ListContains $metadata 'repo_artifact_outputs' @(
+    'knowledge/sources',
     'knowledge/evidence/claims',
+    'knowledge/evidence/video-observations',
     'knowledge/review',
+    'knowledge/curated',
     'docs/testing/smoke-runs'
   ) ([ref]$issues)
 

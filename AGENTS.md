@@ -57,6 +57,7 @@
 - `skills/sf6-agent/` is the public answer adapter.
 - `AGENTS.md`, `workflows/*`, `tests/validation/*`, `packages/*`, and `contracts/*` are repo-local maintainer surfaces.
 - Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available, but Hermes memory and profile state are not canonical.
+- Hermes does not replace `skills/sf6-agent/` as the public answer adapter.
 - `packs/hermes-sf6/*` is repo-local orchestration support, not public answer-skill behavior.
 - APM / Agent Skills may support public `sf6-agent` distribution or repo-local setup manifests, but do not create a public repo-maintainer skill package without a later architecture decision.
 - See `docs/architecture/harness-and-distribution-roles.md` and `docs/architecture/decisions/0001-hermes-primary-orchestration.md`.
