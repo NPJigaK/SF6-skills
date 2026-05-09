@@ -44,6 +44,13 @@ function Get-RelativePath {
 
 $issues = @()
 $allowedAliasKinds = @('character', 'move_input', 'field', 'term', 'query_fixture')
+$allowedNormalizedProperties = @(
+  'character_slug',
+  'move_input',
+  'field',
+  'term_key',
+  'question_text'
+)
 $expectedQuery = -join ([int[]]@(
   0x30EA,
   0x30E5,
@@ -165,6 +172,9 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $fixturePath) -PathType Leaf) {
           $issues += "$fixturePath entry $entryId must include normalized properties"
         }
         foreach ($propertyName in $normalizedProperties) {
+          if ($allowedNormalizedProperties -notcontains $propertyName) {
+            $issues += "$fixturePath entry $entryId has invalid normalized property: $propertyName"
+          }
           if ($forbiddenTokens -contains $propertyName) {
             $issues += "$fixturePath entry $entryId uses forbidden normalized property: $propertyName"
           }
