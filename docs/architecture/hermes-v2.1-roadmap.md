@@ -26,7 +26,7 @@ Hermes is preferred when available for repeated knowledge-growth and maintainer-
 
 Codex may be the entrypoint for this work and may delegate suitable knowledge-growth workflows to a configured Hermes maintainer profile. Hermes may draft artifacts, claims, observations, review notes, and smoke reports, but Hermes memory, sessions, and local skills are not canonical. Canonical promotion still requires repository artifacts, validators, and review.
 
-Agent-managed skills, Curator, session search, subagents, `/goal` checkpoints, durable Kanban, and cron/freshness audits should not be disabled by default. They are useful for SF6 repo artifact growth when they stay within the boundaries in this roadmap.
+Agent-managed skills, Curator, session search, subagents, `/goal` checkpoints, durable Kanban, and cron/freshness audits should remain available in the roadmap and should not be permanently disabled by policy. Their actual use must follow the boundaries in this roadmap and any follow-up policy.
 
 ### Public User Lane
 

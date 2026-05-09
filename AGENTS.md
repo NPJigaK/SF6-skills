@@ -62,6 +62,15 @@
 - APM / Agent Skills may support public `sf6-agent` distribution or repo-local setup manifests, but do not create a public repo-maintainer skill package without a later architecture decision.
 - See `docs/architecture/harness-and-distribution-roles.md` and `docs/architecture/decisions/0001-hermes-primary-orchestration.md`.
 
+## Operating Lanes
+
+- Repo implementation is Codex-first for issue-scoped PRs, validators, contracts, docs, packaging changes, and GitHub workflow operations.
+- Hermes is the repo-local growth engine for repeated knowledge-growth and maintainer-growth workflows when a configured maintainer profile is available.
+- Codex may delegate suitable source analysis, claim decomposition, observation drafting, review drafting, smoke drafting, workflow learning, validator-pattern learning, and procedural skill self-improvement tasks to Hermes.
+- Hermes memory, sessions, local skills, Curator output, Kanban workers, and checkpoints are non-canonical until promoted through reviewed repository artifacts.
+- End users do not need Hermes; `skills/sf6-agent/` remains the public answer adapter.
+- See `docs/architecture/hermes-v2.1-roadmap.md`.
+
 ## Workflow Rules
 
 - Maintainer procedures belong under `workflows/`.
