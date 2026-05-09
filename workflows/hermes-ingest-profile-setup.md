@@ -1,8 +1,8 @@
 # Hermes Ingest Profile Setup
 
-This workflow documents how maintainers should set up and verify a dedicated Hermes profile for SF6 Knowledge Agent Kit article ingest and review assistance.
+This workflow documents how maintainers should set up and verify a dedicated Hermes profile for SF6 Knowledge Agent Kit article ingest and review orchestration.
 
-Hermes is an optional maintainer harness. It is not required for article ingest, and Hermes memory is not canonical SF6 knowledge.
+Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available. It is not required for article ingest when maintainers use Codex, humans, or other agents as fallback executors, and Hermes memory is not canonical SF6 knowledge.
 
 ## Profile Roles
 

@@ -7,7 +7,7 @@ Canonical human-readable install docs:
 - [Cursor](./agents/cursor.md)
 - [OpenCode](./agents/opencode.md)
 
-Optional maintainer harness guidance:
+Repo-local maintainer orchestration guidance:
 
 - [Hermes](./agents/hermes.md)
 

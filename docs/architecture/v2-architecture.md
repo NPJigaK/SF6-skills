@@ -52,4 +52,10 @@ Evals check whether the answer mode and boundary behavior are correct.
 
 ## Hermes
 
-Hermes may be used as an optional maintainer harness. It is not canonical memory, and no Hermes memory, cron state, secrets, or user session state should be shipped.
+Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available.
+
+Hermes is not canonical memory and is not a public answer adapter. No Hermes memory, sessions, profile state, browser state, cron state, secrets, local managed skills, local config, or chat transcripts should be shipped.
+
+`skills/sf6-agent/` remains the single public answer adapter. Canonical maintainer procedures remain under `workflows/*`, and reusable Hermes-assisted output must be committed as repo artifacts.
+
+See [decisions/0001-hermes-primary-orchestration.md](./decisions/0001-hermes-primary-orchestration.md).

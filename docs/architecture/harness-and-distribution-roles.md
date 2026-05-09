@@ -36,11 +36,13 @@ Maintainers use these after cloning the repository. They are not public answer s
 
 “Repo-local” describes distribution and access boundaries; it does not mean non-canonical. Some repo-local surfaces, such as `contracts/` and `workflows/`, are canonical within the repository.
 
-## Hermes Maintainer Harness
+## Hermes Repo-Local Orchestration
 
-Hermes is an optional maintainer harness for knowledge ingest, review, image observation, video observation, and repeated workflow execution.
+Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available.
 
-Hermes is recommended when a configured maintainer profile is available, but it is not required. Maintainers may use Codex, other agents, or manual workflows when Hermes is unavailable.
+Hermes coordinates knowledge ingest, review, image observation, video observation, validation, smoke workflows, and repo-local answer orchestration. It is not a public answer adapter and is not required for public distribution.
+
+Hermes is primary when configured, but it is not a hard dependency for using or maintaining the repository. Maintainers may use Codex, other agents, or manual workflows as fallback executors when Hermes is unavailable.
 
 Hermes memory, sessions, profile state, browser state, cron state, and local managed skills are not canonical SF6 knowledge.
 
@@ -55,7 +57,7 @@ Final outputs must be repo artifacts, such as:
 
 ## Hermes Wrappers
 
-`packs/hermes-sf6/*` is repo-local optional Hermes harness support.
+`packs/hermes-sf6/*` is repo-local Hermes orchestration support.
 
 Hermes wrappers, if added later, should be thin wrappers around canonical workflows such as:
 
@@ -66,6 +68,8 @@ Hermes wrappers, if added later, should be thin wrappers around canonical workfl
 - `workflows/hermes-ingest-profile-setup.md`
 
 Wrappers must not become independent source-of-truth procedures. If a wrapper discovers a better procedure, update the canonical workflow first or in the same PR.
+
+The accepted v2.1 decision is [decisions/0001-hermes-primary-orchestration.md](./decisions/0001-hermes-primary-orchestration.md).
 
 ## Codex And Repo Development
 
