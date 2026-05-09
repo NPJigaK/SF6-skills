@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/normalization-aliases.schema.json",
+  "title": "Normalization Aliases",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "authority",
+    "not_current_fact_authority",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "normalization-aliases/v1"
+    },
+    "kind": {
+      "type": "string",
+      "const": "query_normalization_aliases"
+    },
+    "authority": {
+      "type": "string",
+      "const": "query_normalization_only"
+    },
+    "not_current_fact_authority": {
+      "type": "boolean",
+      "const": true
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "alias_kind",
+          "aliases",
+          "normalized"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alias_kind": {
+            "type": "string",
+            "enum": [
+              "character",
+              "move_input",
+              "field",
+              "term",
+              "query_fixture"
+            ]
+          },
+          "aliases": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "normalized": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "character_slug": {
+                "type": "string",
+                "minLength": 1
+              },
+              "move_input": {
+                "type": "string",
+                "minLength": 1
+              },
+              "field": {
+                "type": "string",
+                "minLength": 1
+              },
+              "term_key": {
+                "type": "string",
+                "minLength": 1
+              },
+              "question_text": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

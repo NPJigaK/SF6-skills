@@ -11,7 +11,8 @@ $requiredJsonSchemas = @(
   'contracts/video-observation.schema.json',
   'contracts/answer-intent.schema.json',
   'contracts/evidence-card.schema.json',
-  'contracts/answer-plan.schema.json'
+  'contracts/answer-plan.schema.json',
+  'contracts/normalization-aliases.schema.json'
 )
 
 $requiredDocs = @(

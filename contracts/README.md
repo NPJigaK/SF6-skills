@@ -21,3 +21,8 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 - `answer-intent.schema.json`: intent and answer-mode classification contract.
 - `evidence-card.schema.json`: evidence authority and source-boundary card contract.
 - `answer-plan.schema.json`: answer planning contract combining intent, evidence cards, web state, hold reasons, and response requirements.
+
+## Query Normalization Contracts
+
+- `normalization-aliases.schema.json`: query-normalization alias contract for mapping user language to structured lookup inputs.
+- `data/aliases/`: canonical query-normalization support, not exact current-fact authority. Exact current facts remain grounded in `data/exports/` and `data/roster/`.
