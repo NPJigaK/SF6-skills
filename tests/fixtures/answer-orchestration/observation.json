@@ -1,0 +1,54 @@
+{
+  "schema_version": "answer-plan/v1",
+  "plan_id": "fixture-observation-video-segment",
+  "answer_mode": "observation",
+  "intent": {
+    "schema_version": "answer-intent/v1",
+    "question_text": "この動画のこの場面で何が見える？",
+    "normalized_question_text": "Describe a video segment observation",
+    "intent_kind": "observation",
+    "answer_mode": "observation",
+    "entities": {
+      "media_context": {
+        "source_id": "youtube-example",
+        "timestamp": "00:42",
+        "segment_id": "seg-0042"
+      }
+    }
+  },
+  "evidence_cards": [
+    {
+      "id": "video-observation-seg-0042",
+      "evidence_family": "video_observation",
+      "authority_role": "observation_only",
+      "canonicality": "observation_only",
+      "source_ref": {
+        "label": "Video observation artifact",
+        "path": "knowledge/evidence/video-observations/example.observations.md"
+      },
+      "supports_exact_current_fact": false,
+      "may_override_official_raw": false,
+      "confidence": 0.65,
+      "limitations": [
+        "Observation-only evidence cannot become match verdict, combo verdict, or exact current fact authority."
+      ]
+    }
+  ],
+  "web_research": {
+    "web_required": false,
+    "web_allowed": false,
+    "web_used": false,
+    "web_forbidden_for_current_fact_override": true,
+    "conflict_requires_hold": true,
+    "required_source_authority": "none"
+  },
+  "hold_reasons": [],
+  "response_requirements": {
+    "cite_evidence": true,
+    "state_authority_boundary": true,
+    "state_confidence": true,
+    "boundary_notes": [
+      "Describe only visible observations and avoid inferred exact move facts."
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "answer-plan/v1",
+  "plan_id": "fixture-strategy-ryu-fireball",
+  "answer_mode": "strategy",
+  "intent": {
+    "schema_version": "answer-intent/v1",
+    "question_text": "リュウの波動拳にどう対応する？",
+    "normalized_question_text": "Strategy response to Ryu fireball",
+    "intent_kind": "strategy",
+    "answer_mode": "strategy",
+    "entities": {
+      "character_slug": "ryu",
+      "strategy_context": "fireball counterplay"
+    }
+  },
+  "evidence_cards": [
+    {
+      "id": "strategy-curated-fireball",
+      "evidence_family": "generated_curated_reference",
+      "authority_role": "strategy_support",
+      "canonicality": "derived_reference",
+      "source_ref": {
+        "label": "Generated concept strategy reference",
+        "path": "skills/sf6-agent/references/generated-concepts.md"
+      },
+      "supports_exact_current_fact": false,
+      "may_override_official_raw": false,
+      "confidence": 0.7,
+      "limitations": [
+        "Strategy guidance should state assumptions and patch sensitivity."
+      ]
+    },
+    {
+      "id": "ryu-frame-context",
+      "evidence_family": "frame_current_official_raw",
+      "authority_role": "primary_current_fact_authority",
+      "canonicality": "packaged_runtime_authority",
+      "source_ref": {
+        "label": "Ryu packaged official_raw",
+        "path": "skills/sf6-agent/assets/frame-current/published/ryu/official_raw.json"
+      },
+      "supports_exact_current_fact": true,
+      "may_override_official_raw": false,
+      "confidence": 1,
+      "limitations": [
+        "Use only for exact packaged fields; strategy conclusions still require boundary notes."
+      ]
+    }
+  ],
+  "web_research": {
+    "web_required": false,
+    "web_allowed": true,
+    "web_used": false,
+    "web_forbidden_for_current_fact_override": true,
+    "conflict_requires_hold": true,
+    "required_source_authority": "supplemental_sources_allowed",
+    "notes": "Recent meta context may supplement strategy if freshness and confidence are stated."
+  },
+  "hold_reasons": [],
+  "response_requirements": {
+    "cite_evidence": true,
+    "state_authority_boundary": true,
+    "state_confidence": true,
+    "boundary_notes": [
+      "State assumptions and confidence boundaries for strategy advice.",
+      "Do not let web strategy sources override official_raw exact current facts."
+    ]
+  }
+}

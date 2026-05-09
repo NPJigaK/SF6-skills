@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/answer-intent.schema.json",
+  "title": "Answer Intent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "question_text",
+    "intent_kind",
+    "answer_mode",
+    "entities"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "answer-intent/v1"
+    },
+    "question_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "normalized_question_text": {
+      "type": "string"
+    },
+    "intent_kind": {
+      "type": "string",
+      "enum": [
+        "current_fact",
+        "stable_concept",
+        "strategy",
+        "observation",
+        "hold",
+        "web_needed"
+      ]
+    },
+    "answer_mode": {
+      "type": "string",
+      "enum": [
+        "current_fact",
+        "stable_concept",
+        "strategy",
+        "observation",
+        "hold",
+        "web_needed"
+      ]
+    },
+    "entities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "character_slug": {
+          "type": "string"
+        },
+        "move_input": {
+          "type": "string"
+        },
+        "move_ref": {
+          "type": "string"
+        },
+        "requested_field": {
+          "type": "string"
+        },
+        "matchup": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "player_character_slug": {
+              "type": "string"
+            },
+            "opponent_character_slug": {
+              "type": "string"
+            }
+          }
+        },
+        "strategy_context": {
+          "type": "string"
+        },
+        "media_context": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source_id": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string"
+            },
+            "segment_id": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
