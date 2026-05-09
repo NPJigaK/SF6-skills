@@ -1,0 +1,63 @@
+{
+  "schema_version": "normalization-aliases/v1",
+  "kind": "query_normalization_aliases",
+  "authority": "query_normalization_only",
+  "not_current_fact_authority": true,
+  "entries": [
+    {
+      "id": "ja-character-ryu",
+      "alias_kind": "character",
+      "aliases": [
+        "リュウ",
+        "Ryu",
+        "ryu"
+      ],
+      "normalized": {
+        "character_slug": "ryu"
+      },
+      "notes": "Maps character names to a character slug for query routing."
+    },
+    {
+      "id": "ja-move-ryu-2mp",
+      "alias_kind": "move_input",
+      "aliases": [
+        "屈中P",
+        "しゃがみ中P",
+        "2中P",
+        "2MP",
+        "cr.MP"
+      ],
+      "normalized": {
+        "move_input": "2MP"
+      },
+      "notes": "Maps notation variants to an input token for query routing."
+    },
+    {
+      "id": "ja-field-block-adv",
+      "alias_kind": "field",
+      "aliases": [
+        "ガードで何F",
+        "ガード硬直差",
+        "ガード有利不利",
+        "on block"
+      ],
+      "normalized": {
+        "field": "block_adv"
+      },
+      "notes": "Maps user wording to the block advantage lookup field."
+    },
+    {
+      "id": "ja-query-ryu-2mp-block-adv",
+      "alias_kind": "query_fixture",
+      "aliases": [
+        "リュウの屈中Pってガードで何F？"
+      ],
+      "normalized": {
+        "character_slug": "ryu",
+        "move_input": "2MP",
+        "field": "block_adv"
+      },
+      "notes": "End-to-end query normalization fixture."
+    }
+  ]
+}
