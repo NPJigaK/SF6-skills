@@ -45,6 +45,32 @@ function Get-ToolchainRelativePath {
   return "$toolchainRootRelative/$($relative -replace '\\', '/')"
 }
 
+function Get-JsonPropertyNames {
+  param([AllowNull()][object]$Object)
+
+  if ($null -eq $Object) {
+    return
+  }
+
+  if ($Object -is [pscustomobject]) {
+    foreach ($property in $Object.PSObject.Properties) {
+      $property.Name
+      if ($null -ne $property.Value) {
+        Get-JsonPropertyNames $property.Value
+      }
+    }
+    return
+  }
+
+  if ($Object -is [System.Collections.IEnumerable] -and -not ($Object -is [string])) {
+    foreach ($item in $Object) {
+      if ($null -ne $item) {
+        Get-JsonPropertyNames $item
+      }
+    }
+  }
+}
+
 $issues = @()
 $requiredFiles = @(
   'docs/architecture/agent-toolchain-freshness.md',
@@ -53,7 +79,37 @@ $requiredFiles = @(
   $manifestPath,
   'workflows/check-agent-toolchain-freshness.md'
 )
+$allowedRootProperties = @(
+  'schema_version',
+  'last_reviewed',
+  'tools',
+  'boundaries'
+)
+$allowedToolProperties = @(
+  'id',
+  'role',
+  'recommended_channel',
+  'known_good_version',
+  'required_capabilities',
+  'planned_capabilities',
+  'version_command',
+  'version_command_review_note',
+  'update_guidance',
+  'freshness_review_cadence'
+)
+$allowedToolIds = @('codex-cli', 'hermes-cli')
+$allowedRoles = @('repo_implementation_executor', 'repo_local_growth_engine')
+$allowedRecommendedChannels = @('latest_stable', 'known_good', 'manual_review_required')
 $forbiddenManifestFields = @(
+  'secret',
+  'token',
+  'credential',
+  'session',
+  'cache',
+  'log',
+  'config',
+  'local_state',
+  'local_path',
   'local_installed_version',
   'installed_version',
   'current_version',
@@ -102,6 +158,12 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
   $manifestRaw = Get-Content -LiteralPath (Join-Path $repoRoot $manifestPath) -Raw -Encoding UTF8
   $manifest = $manifestRaw | ConvertFrom-Json
 
+  foreach ($propertyName in @($manifest.PSObject.Properties.Name)) {
+    if ($allowedRootProperties -notcontains $propertyName) {
+      $issues += "$manifestPath contains unsupported root property: $propertyName"
+    }
+  }
+
   foreach ($field in @('schema_version', 'last_reviewed', 'tools', 'boundaries')) {
     Assert-Property $manifest $field $manifestPath ([ref]$issues)
   }
@@ -110,9 +172,13 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
     $issues += "$manifestPath must use schema_version agent-toolchain/v1"
   }
 
-  foreach ($field in $forbiddenManifestFields) {
-    if ($manifestRaw -match ('"(?i:' + [regex]::Escape($field) + ')"\s*:')) {
-      $issues += "$manifestPath contains forbidden local-state field: $field"
+  foreach ($propertyName in @(Get-JsonPropertyNames $manifest)) {
+    $propertyNameLower = $propertyName.ToLowerInvariant()
+    foreach ($field in $forbiddenManifestFields) {
+      if ($propertyNameLower.Contains($field)) {
+        $issues += "$manifestPath contains forbidden local-state or secret-like property: $propertyName"
+        break
+      }
     }
   }
 
@@ -147,6 +213,11 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
 
     foreach ($tool in $tools) {
       $toolId = if (Test-Property $tool 'id') { [string]$tool.id } else { '<missing-id>' }
+      foreach ($propertyName in @($tool.PSObject.Properties.Name)) {
+        if ($allowedToolProperties -notcontains $propertyName) {
+          $issues += "$manifestPath tool $toolId contains unsupported property: $propertyName"
+        }
+      }
       foreach ($field in @(
         'recommended_channel',
         'known_good_version',
@@ -160,6 +231,15 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
         Assert-Property $tool $field "$manifestPath tool $toolId" ([ref]$issues)
       }
 
+      if ((Test-Property $tool 'id') -and $allowedToolIds -notcontains [string]$tool.id) {
+        $issues += "$manifestPath tool $toolId has unsupported id: $($tool.id)"
+      }
+      if ((Test-Property $tool 'role') -and $allowedRoles -notcontains [string]$tool.role) {
+        $issues += "$manifestPath tool $toolId has unsupported role: $($tool.role)"
+      }
+      if ((Test-Property $tool 'recommended_channel') -and $allowedRecommendedChannels -notcontains [string]$tool.recommended_channel) {
+        $issues += "$manifestPath tool $toolId has unsupported recommended_channel: $($tool.recommended_channel)"
+      }
       if ((Test-Property $tool 'required_capabilities') -and @($tool.required_capabilities).Count -eq 0) {
         $issues += "$manifestPath tool $toolId must include required_capabilities"
       }
