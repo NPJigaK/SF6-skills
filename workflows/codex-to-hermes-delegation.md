@@ -62,6 +62,8 @@ Use this request shape when handing a subtask to Hermes:
 ```yaml
 task_id:
 tracking_issue:
+target_issue:
+target_scope_summary:
 source_material:
 requested_artifact_type:
 allowed_outputs:
@@ -70,6 +72,13 @@ authority_boundaries:
 validators_to_run:
 review_checklist:
 ```
+
+`target_issue` is required for issue-scoped work. It identifies the child
+issue whose scope, non-goals, acceptance, and dependencies control the
+delegation.
+
+`target_scope_summary` should restate the relevant scope, non-goals, and
+acceptance before Hermes begins work.
 
 `source_material` is input for analysis. It is not automatically canonical
 evidence. The request should identify whether the source material is an
@@ -128,6 +137,7 @@ frame-current assets, and normalization assets have no residual diff.
 
 Before opening a PR, check:
 
+- The delegation request included the target issue and target scope summary.
 - The target issue explicitly allows the delegated artifact type.
 - The PR body identifies that Hermes output was draft input, if relevant.
 - `source_refs` and `evidence_candidate_notes` are not presented as canonical
