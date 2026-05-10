@@ -24,7 +24,7 @@ work such as:
 - video observation boundary reminders
 - alias maintenance patterns
 - smoke report drafting patterns
-- Codex-to-Hermes delegation prompt patterns
+- Codex-to-Hermes delegation request/response patterns
 - handoff and reporting pattern improvements
 
 These skills may help future maintainer sessions become more consistent. They
@@ -79,6 +79,11 @@ Promotion must not bypass issue scope, validators, or review. If a proposed
 improvement crosses issue scope, record it as a follow-up instead of expanding
 the current PR.
 
+Do not promote by committing raw local Hermes skill files, local skill
+directories, Curator archives, memory snapshots, session logs, or local state
+into the repo. Promotion means distilling the reusable procedure into an
+in-scope reviewed repo artifact.
+
 ## Curator Boundaries
 
 Curator may prune, patch, consolidate, or archive local agent-created
@@ -102,5 +107,8 @@ Before promoting any self-improvement output into the repo, check:
 - Are validators required and listed?
 - Is any local state or secret excluded?
 - Is the target issue scope respected?
+- Is the proposed improvement distilled into a repo artifact instead of
+  committing raw local Hermes skill files, Curator output, memory snapshots,
+  session logs, or local state?
 - Does the PR make clear that local Hermes skill output was draft input, not
   canonical evidence?
