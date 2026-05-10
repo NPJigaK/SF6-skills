@@ -96,4 +96,3 @@ normalization runtime assets have no residual diff.
 | MCP and gateway config | External tool bridges and notifications need separate authority and secret-handling policy |
 | Automatic Curator-to-repo promotion | Curator may manage local agent-created skills, but repo promotion requires PR review |
 | Runtime answer behavior changes for normalization assets | #100 may package assets for future use, but lookup, routing, and answer composition need separate review |
-
