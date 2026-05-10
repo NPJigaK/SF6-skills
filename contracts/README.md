@@ -26,3 +26,8 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 
 - `normalization-aliases.schema.json`: query-normalization alias contract for mapping user language to structured lookup inputs.
 - `data/aliases/`: canonical query-normalization support, not exact current-fact authority. Exact current facts remain grounded in `data/exports/` and `data/roster/`.
+
+## Maintainer Toolchain Contracts
+
+- `agent-toolchain.schema.json`: maintainer agent toolchain policy contract for reviewed capabilities and freshness expectations.
+- `data/toolchain/`: canonical maintainer-toolchain policy data, not SF6 gameplay knowledge or exact current-fact authority.
