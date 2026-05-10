@@ -7,8 +7,10 @@ operations for v2.2.
 
 External harness engineering material is reference input only. It is not
 canonical SF6 repo authority. SF6 repo architecture decisions, contracts,
-workflows, validators, GitHub issues, pull requests, and reviewed repository
-artifacts remain authoritative.
+workflows, validators, and reviewed repository artifacts remain authoritative
+for repository behavior and canonical surfaces. GitHub issues and pull
+requests are authoritative for task scope, progress state, review, and handoff;
+they are not canonical SF6 gameplay knowledge or exact current-fact authority.
 
 v2.2 uses this map to keep Hermes Growth Operations concrete. Hermes is the
 repo-local growth engine when a configured maintainer profile is available,
