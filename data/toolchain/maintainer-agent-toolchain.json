@@ -1,0 +1,48 @@
+{
+  "schema_version": "agent-toolchain/v1",
+  "last_reviewed": "2026-05-10",
+  "tools": [
+    {
+      "id": "codex-cli",
+      "role": "repo_implementation_executor",
+      "recommended_channel": "latest_stable",
+      "known_good_version": null,
+      "required_capabilities": [
+        "repo_file_editing",
+        "validator_execution",
+        "draft_pr_creation"
+      ],
+      "planned_capabilities": [],
+      "version_command": null,
+      "version_command_review_note": "Record only if verified from official OpenAI Codex CLI docs.",
+      "update_guidance": "Use official OpenAI Codex CLI docs.",
+      "freshness_review_cadence": "before_v2_2_prs"
+    },
+    {
+      "id": "hermes-cli",
+      "role": "repo_local_growth_engine",
+      "recommended_channel": "latest_stable",
+      "known_good_version": null,
+      "required_capabilities": [
+        "repo_local_orchestration",
+        "subagent_review",
+        "local_skill_operations"
+      ],
+      "planned_capabilities": [
+        "curator",
+        "session_search",
+        "goal_checkpoints",
+        "cron_freshness_audits"
+      ],
+      "version_command": null,
+      "version_command_review_note": "Confirm from official Hermes CLI docs before pinning this command.",
+      "update_guidance": "Use official Hermes release or install documentation.",
+      "freshness_review_cadence": "before_growth_workflows"
+    }
+  ],
+  "boundaries": [
+    "toolchain policy is not SF6 gameplay knowledge",
+    "local tool state is non-canonical",
+    "CI must not call the internet for latest-version checks"
+  ]
+}
