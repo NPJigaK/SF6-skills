@@ -7,6 +7,8 @@ $assetRoot = Join-Path $repoRoot $assetRootRelativePath
 $manifestRelativePath = "$assetRootRelativePath/runtime_manifest.json"
 $aliasesRelativePath = "$assetRootRelativePath/aliases.json"
 $generatorRelativePath = 'packages/skill-packaging/build-normalization-runtime-assets.ps1'
+$aliasesSourceRootRelativePath = 'data/aliases'
+$aliasesSourceRoot = [System.IO.Path]::GetFullPath((Join-Path $repoRoot $aliasesSourceRootRelativePath))
 
 function Read-Json {
   param([Parameter(Mandatory = $true)][string]$RelativePath)
@@ -30,6 +32,58 @@ function Assert-Property {
   )
   if (-not (Test-Property $Object $Name)) {
     $Issues.Value += "$Context missing property: $Name"
+  }
+}
+
+function Test-PathUnderDirectory {
+  param(
+    [Parameter(Mandatory = $true)][string]$CandidatePath,
+    [Parameter(Mandatory = $true)][string]$DirectoryPath
+  )
+
+  $resolvedCandidate = [System.IO.Path]::GetFullPath($CandidatePath)
+  $resolvedDirectory = [System.IO.Path]::GetFullPath($DirectoryPath).TrimEnd(
+    [System.IO.Path]::DirectorySeparatorChar,
+    [System.IO.Path]::AltDirectorySeparatorChar
+  )
+  $directoryPrefix = $resolvedDirectory + [System.IO.Path]::DirectorySeparatorChar
+
+  return (
+    $resolvedCandidate.Equals($resolvedDirectory, [System.StringComparison]::OrdinalIgnoreCase) -or
+    $resolvedCandidate.StartsWith($directoryPrefix, [System.StringComparison]::OrdinalIgnoreCase)
+  )
+}
+
+function Assert-DataAliasesSourcePath {
+  param(
+    [Parameter(Mandatory = $true)][string]$RelativePath,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues,
+    [AllowNull()][string]$ExpectedSha256 = $null
+  )
+
+  if ([System.IO.Path]::IsPathRooted($RelativePath)) {
+    $Issues.Value += "$Context source path must be repo-relative under data/aliases/: $RelativePath"
+    return
+  }
+
+  $candidatePath = [System.IO.Path]::GetFullPath((Join-Path $repoRoot $RelativePath))
+  if (-not (Test-PathUnderDirectory $candidatePath $aliasesSourceRoot)) {
+    $Issues.Value += "$Context source path must resolve under data/aliases/: $RelativePath"
+    return
+  }
+
+  if (-not (Test-Path -LiteralPath $candidatePath -PathType Leaf)) {
+    $Issues.Value += "$Context source path does not exist: $RelativePath"
+    return
+  }
+
+  if ($null -ne $ExpectedSha256 -and $ExpectedSha256 -ne '') {
+    $expectedHash = ([string]$ExpectedSha256).ToLowerInvariant()
+    $actualHash = (Get-FileHash -LiteralPath $candidatePath -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($expectedHash -ne $actualHash) {
+      $Issues.Value += "$Context source hash mismatch: $RelativePath"
+    }
   }
 }
 
@@ -122,11 +176,12 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestRelativePath) -PathType
       foreach ($field in @('path', 'sha256')) {
         Assert-Property $sourcePathRecord $field "$manifestRelativePath source_paths entry" ([ref]$issues)
       }
-      if ((Test-Property $sourcePathRecord 'path') -and -not ([string]$sourcePathRecord.path).StartsWith('data/aliases/')) {
-        $issues += "$manifestRelativePath source path must point under data/aliases/: $($sourcePathRecord.path)"
-      }
-      if ((Test-Property $sourcePathRecord 'path') -and -not (Test-Path -LiteralPath (Join-Path $repoRoot $sourcePathRecord.path) -PathType Leaf)) {
-        $issues += "$manifestRelativePath source path does not exist: $($sourcePathRecord.path)"
+      if ((Test-Property $sourcePathRecord 'path') -and (Test-Property $sourcePathRecord 'sha256')) {
+        Assert-DataAliasesSourcePath `
+          -RelativePath ([string]$sourcePathRecord.path) `
+          -Context "$manifestRelativePath source_paths entry" `
+          -Issues ([ref]$issues) `
+          -ExpectedSha256 ([string]$sourcePathRecord.sha256)
       }
     }
   }
@@ -148,9 +203,10 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestRelativePath) -PathType
       }
       if ((Test-Property $fileEntry 'source_paths')) {
         foreach ($sourcePath in @($fileEntry.source_paths)) {
-          if (-not ([string]$sourcePath).StartsWith('data/aliases/')) {
-            $issues += "$manifestRelativePath file source path must point under data/aliases/: $sourcePath"
-          }
+          Assert-DataAliasesSourcePath `
+            -RelativePath ([string]$sourcePath) `
+            -Context "$manifestRelativePath files entry" `
+            -Issues ([ref]$issues)
         }
       }
       if ((Test-Property $fileEntry 'sha256') -and (Test-Path -LiteralPath (Join-Path $repoRoot $aliasesRelativePath) -PathType Leaf)) {
@@ -211,9 +267,10 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $aliasesRelativePath) -PathType 
   }
   if (Test-Property $aliases 'source_paths') {
     foreach ($sourcePath in @($aliases.source_paths)) {
-      if (-not ([string]$sourcePath).StartsWith('data/aliases/')) {
-        $issues += "$aliasesRelativePath source path must point under data/aliases/: $sourcePath"
-      }
+      Assert-DataAliasesSourcePath `
+        -RelativePath ([string]$sourcePath) `
+        -Context $aliasesRelativePath `
+        -Issues ([ref]$issues)
     }
   }
   if ((Test-Property $aliases 'entries') -and @($aliases.entries).Count -eq 0) {
