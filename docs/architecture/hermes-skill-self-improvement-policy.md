@@ -89,6 +89,11 @@ in-scope reviewed repo artifact.
 Curator may prune, patch, consolidate, or archive local agent-created
 procedural skills.
 
+Hand-authored or relied-upon local skills should be protected, for example by
+pinning, before Curator or agent-managed skill updates are allowed to touch
+them. Repo promotion still requires distilling any reusable procedure into a
+reviewed repository artifact.
+
 Curator output is local procedural maintenance input. It is not canonical SF6
 knowledge and is not repo behavior. Curator must not mutate canonical repo
 surfaces directly.
