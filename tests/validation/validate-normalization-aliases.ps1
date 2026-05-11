@@ -226,10 +226,6 @@ if (Test-Path -LiteralPath $aliasesPath -PathType Container) {
   }
 }
 
-if (Test-Path -LiteralPath (Join-Path $repoRoot 'skills/sf6-agent/assets/normalization')) {
-  $issues += 'skills/sf6-agent/assets/normalization/ must not be created by this issue'
-}
-
 if (Get-Command git -ErrorAction SilentlyContinue) {
   $frameCurrentStatus = @(& git -C $repoRoot status --porcelain -- 'skills/sf6-agent/assets/frame-current')
   if ($LASTEXITCODE -ne 0) {

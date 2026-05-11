@@ -32,7 +32,9 @@ try {
     'sf6-agent/references/answer-policy.md',
     'sf6-agent/references/current-fact-policy.md',
     'sf6-agent/references/generated-knowledge-index.md',
-    'sf6-agent/assets/frame-current/runtime_manifest.json'
+    'sf6-agent/assets/frame-current/runtime_manifest.json',
+    'sf6-agent/assets/normalization/runtime_manifest.json',
+    'sf6-agent/assets/normalization/aliases.json'
   )) {
     if ($entries -notcontains $requiredEntry) {
       throw "Bundle missing required entry: $requiredEntry"

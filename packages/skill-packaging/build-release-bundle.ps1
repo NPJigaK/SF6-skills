@@ -9,12 +9,15 @@ $stagingRoot = Join-Path $distRoot 'bundle-root'
 $bundlePath = Join-Path $distRoot 'sf6-agent-bundle.zip'
 $knowledgeGenerator = Join-Path $repoRoot 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
 $frameAssetBuilder = Join-Path $repoRoot 'packages/skill-packaging/build-frame-current-runtime-assets.ps1'
+$normalizationAssetBuilder = Join-Path $repoRoot 'packages/skill-packaging/build-normalization-runtime-assets.ps1'
 $generatedValidator = Join-Path $repoRoot 'tests/validation/validate-generated-knowledge.ps1'
 $frameAssetValidator = Join-Path $repoRoot 'tests/validation/validate-frame-current-assets.ps1'
+$normalizationAssetValidator = Join-Path $repoRoot 'tests/validation/validate-normalization-runtime-assets.ps1'
 $derivedOutputPaths = @(
   'skills/sf6-agent/references/generated-knowledge-index.md',
   'skills/sf6-agent/references/generated-concepts.md',
-  'skills/sf6-agent/assets/frame-current'
+  'skills/sf6-agent/assets/frame-current',
+  'skills/sf6-agent/assets/normalization'
 )
 
 function Assert-NoDerivedOutputStatus {
@@ -38,7 +41,7 @@ if (-not (Test-Path -LiteralPath $agentRoot -PathType Container)) {
   throw 'Missing agent source: skills/sf6-agent'
 }
 
-foreach ($requiredScript in @($knowledgeGenerator, $frameAssetBuilder, $generatedValidator, $frameAssetValidator)) {
+foreach ($requiredScript in @($knowledgeGenerator, $frameAssetBuilder, $normalizationAssetBuilder, $generatedValidator, $frameAssetValidator, $normalizationAssetValidator)) {
   if (-not (Test-Path -LiteralPath $requiredScript -PathType Leaf)) {
     throw "Missing release preflight script: $requiredScript"
   }
@@ -48,8 +51,11 @@ foreach ($requiredScript in @($knowledgeGenerator, $frameAssetBuilder, $generate
 Assert-NoDerivedOutputStatus 'knowledge generation'
 & $frameAssetBuilder
 Assert-NoDerivedOutputStatus 'frame-current asset generation'
+& $normalizationAssetBuilder
+Assert-NoDerivedOutputStatus 'normalization asset generation'
 & $generatedValidator
 & $frameAssetValidator
+& $normalizationAssetValidator
 Assert-NoDerivedOutputStatus 'release preflight validation'
 
 if (Test-Path -LiteralPath $bundlePath) {
