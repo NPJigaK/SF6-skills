@@ -10,6 +10,7 @@ Architecture docs define the v2 source-of-truth model.
 - [codex-hermes-bridge-policy.md](./codex-hermes-bridge-policy.md)
 - [hermes-cli-capability-reference.md](./hermes-cli-capability-reference.md)
 - [sf6-video-analysis-protocol.md](./sf6-video-analysis-protocol.md)
+- [external-frame-atlas-policy.md](./external-frame-atlas-policy.md)
 - [hermes-skill-self-improvement-policy.md](./hermes-skill-self-improvement-policy.md)
 - [article-ingest-v2.2-plan.md](./article-ingest-v2.2-plan.md)
 - [video-observation-v2.2-plan.md](./video-observation-v2.2-plan.md)
