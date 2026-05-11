@@ -5,7 +5,8 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $derivedOutputPaths = @(
   'skills/sf6-agent/references/generated-knowledge-index.md',
   'skills/sf6-agent/references/generated-concepts.md',
-  'skills/sf6-agent/assets/frame-current'
+  'skills/sf6-agent/assets/frame-current',
+  'skills/sf6-agent/assets/normalization'
 )
 
 function Assert-NoDerivedOutputStatus {
@@ -28,6 +29,7 @@ function Assert-NoDerivedOutputStatus {
 $preflightScripts = @(
   'packages/knowledge-generation/build-sf6-agent-knowledge.ps1',
   'packages/skill-packaging/build-frame-current-runtime-assets.ps1',
+  'packages/skill-packaging/build-normalization-runtime-assets.ps1',
   'packages/skill-packaging/build-release-bundle.ps1'
 )
 
@@ -39,6 +41,7 @@ $validationScripts = @(
   'tests/validation/validate-agent-toolchain.ps1',
   'tests/validation/validate-answer-orchestration-contracts.ps1',
   'tests/validation/validate-normalization-aliases.ps1',
+  'tests/validation/validate-normalization-runtime-assets.ps1',
   'tests/validation/validate-knowledge-schema.ps1',
   'tests/validation/validate-ingest-artifacts.ps1',
   'tests/validation/validate-video-artifacts.ps1',
