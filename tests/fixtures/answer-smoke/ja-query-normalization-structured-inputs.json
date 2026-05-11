@@ -16,7 +16,7 @@
     "structured_inputs": {
       "character_slug": "ryu",
       "move_input": "2MP",
-      "requested_field": "block_adv"
+      "field": "block_adv"
     }
   },
   "answer_plan": {
@@ -34,7 +34,7 @@
         "move_input": "2MP",
         "requested_field": "block_adv"
       },
-      "notes": "Japanese query normalization maps wording to structured inputs; it does not provide exact current facts."
+      "notes": "Japanese query normalization maps runtime field to answer intent requested_field; it does not provide exact current facts."
     },
     "evidence_cards": [
       {
@@ -75,6 +75,7 @@
   "smoke_expectations": {
     "must_reference_normalization_runtime_assets": true,
     "normalization_exact_current_fact_authority": false,
-    "structured_inputs_expected": true
+    "structured_inputs_expected": true,
+    "normalization_field_maps_to_requested_field": true
   }
 }

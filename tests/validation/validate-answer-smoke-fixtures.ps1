@@ -65,6 +65,19 @@ function Get-StringArray {
   return @($Value | ForEach-Object { [string]$_ })
 }
 
+function Test-NormalizedValue {
+  param(
+    [Parameter(Mandatory = $true)][object]$Normalized,
+    [Parameter(Mandatory = $true)][string]$Name,
+    [Parameter(Mandatory = $true)][string]$Expected
+  )
+
+  return (
+    (Test-Property $Normalized $Name) -and
+    [string]$Normalized.$Name -eq $Expected
+  )
+}
+
 $requiredCoverage = @(
   'current_fact',
   'stable_concept',
@@ -172,6 +185,10 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $templateRelativePath) -Pa
 
 Assert-PathExists $normalizationManifestRelativePath 'Japanese normalization smoke' ([ref]$issues)
 Assert-PathExists $normalizationAssetRelativePath 'Japanese normalization smoke' ([ref]$issues)
+$normalizationRuntimeAssets = $null
+if (Test-Path -LiteralPath (Join-Path $repoRoot $normalizationAssetRelativePath) -PathType Leaf) {
+  $normalizationRuntimeAssets = Read-Json $normalizationAssetRelativePath
+}
 
 if (Test-Path -LiteralPath $fixtureRoot -PathType Container) {
   $fixtureFiles = @(
@@ -408,17 +425,44 @@ if (Test-Path -LiteralPath $fixtureRoot -PathType Container) {
       }
       if (Test-Property $fixture.normalization 'structured_inputs') {
         $structured = $fixture.normalization.structured_inputs
-        foreach ($field in @('character_slug', 'move_input', 'requested_field')) {
+        foreach ($field in @('character_slug', 'move_input', 'field')) {
           Assert-Property $structured $field "$relativePath structured_inputs" ([ref]$issues)
         }
         if ((Test-Property $plan 'intent') -and (Test-Property $plan.intent 'entities')) {
-          foreach ($field in @('character_slug', 'move_input', 'requested_field')) {
+          foreach ($field in @('character_slug', 'move_input')) {
             if ((Test-Property $structured $field) -and (Test-Property $plan.intent.entities $field)) {
               if ([string]$structured.$field -ne [string]$plan.intent.entities.$field) {
                 $issues += "$relativePath structured input mismatch for $field"
               }
             }
           }
+          if (
+            (Test-Property $structured 'field') -and
+            (Test-Property $plan.intent.entities 'requested_field') -and
+            [string]$structured.field -ne [string]$plan.intent.entities.requested_field
+          ) {
+            $issues += "$relativePath normalization field must map to intent requested_field"
+          }
+        }
+      }
+      if (
+        (Test-Property $plan 'intent') -and
+        (Test-Property $plan.intent 'question_text') -and
+        (Test-Property $fixture.normalization 'structured_inputs') -and
+        $null -ne $normalizationRuntimeAssets -and
+        (Test-Property $normalizationRuntimeAssets 'entries')
+      ) {
+        $structured = $fixture.normalization.structured_inputs
+        $runtimeMatches = @($normalizationRuntimeAssets.entries | Where-Object {
+          $_.alias_kind -eq 'query_fixture' -and
+          @($_.aliases) -contains [string]$plan.intent.question_text -and
+          (Test-Property $_ 'normalized') -and
+          (Test-NormalizedValue $_.normalized 'character_slug' ([string]$structured.character_slug)) -and
+          (Test-NormalizedValue $_.normalized 'move_input' ([string]$structured.move_input)) -and
+          (Test-NormalizedValue $_.normalized 'field' ([string]$structured.field))
+        })
+        if ($runtimeMatches.Count -eq 0) {
+          $issues += "$relativePath must match a query_fixture entry in $normalizationAssetRelativePath"
         }
       }
     }
