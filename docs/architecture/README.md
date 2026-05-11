@@ -9,6 +9,7 @@ Architecture docs define the v2 source-of-truth model.
 - [agent-toolchain-freshness.md](./agent-toolchain-freshness.md)
 - [hermes-skill-self-improvement-policy.md](./hermes-skill-self-improvement-policy.md)
 - [article-ingest-v2.2-plan.md](./article-ingest-v2.2-plan.md)
+- [video-observation-v2.2-plan.md](./video-observation-v2.2-plan.md)
 - [language-policy.md](./language-policy.md)
 - [harness-and-distribution-roles.md](./harness-and-distribution-roles.md)
 - [japanese-maintainer-docs-policy.md](./japanese-maintainer-docs-policy.md)
