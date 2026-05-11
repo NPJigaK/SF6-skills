@@ -87,7 +87,117 @@ function Assert-DataAliasesSourcePath {
   }
 }
 
+function ConvertTo-OrderedNormalizedObject {
+  param(
+    [Parameter(Mandatory = $true)][object]$Normalized,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues
+  )
+
+  $orderedNormalized = [ordered]@{}
+  if ($Normalized -isnot [pscustomobject]) {
+    $Issues.Value += "$Context normalized must be an object"
+    return $orderedNormalized
+  }
+
+  foreach ($property in @($Normalized.PSObject.Properties | Sort-Object Name)) {
+    if ($allowedNormalizedProperties -notcontains $property.Name) {
+      $Issues.Value += "$Context normalized contains unsupported property: $($property.Name)"
+      continue
+    }
+    $orderedNormalized[$property.Name] = $property.Value
+  }
+
+  return $orderedNormalized
+}
+
+function ConvertTo-ComparableRuntimeEntry {
+  param(
+    [Parameter(Mandatory = $true)][object]$Entry,
+    [Parameter(Mandatory = $true)][string]$SourcePath,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues,
+    [switch]$RequireSourcePathProperty
+  )
+
+  $requiredFields = @('id', 'alias_kind', 'aliases', 'normalized')
+  if ($RequireSourcePathProperty) {
+    $requiredFields += 'source_path'
+  }
+
+  $hasRequiredFields = $true
+  foreach ($field in $requiredFields) {
+    if (-not (Test-Property $Entry $field)) {
+      $Issues.Value += "$Context missing property: $field"
+      $hasRequiredFields = $false
+    }
+  }
+  if (-not $hasRequiredFields) {
+    return $null
+  }
+
+  if ($allowedAliasKinds -notcontains ([string]$Entry.alias_kind)) {
+    $Issues.Value += "$Context has unsupported alias_kind: $($Entry.alias_kind)"
+  }
+
+  Assert-DataAliasesSourcePath `
+    -RelativePath $SourcePath `
+    -Context $Context `
+    -Issues $Issues
+
+  return [ordered]@{
+    id = [string]$Entry.id
+    alias_kind = [string]$Entry.alias_kind
+    aliases = @($Entry.aliases | ForEach-Object { [string]$_ })
+    normalized = ConvertTo-OrderedNormalizedObject `
+      -Normalized $Entry.normalized `
+      -Context $Context `
+      -Issues $Issues
+    source_path = $SourcePath
+  }
+}
+
+function ConvertTo-CompactJson {
+  param([Parameter(Mandatory = $true)][object]$Value)
+  return ConvertTo-Json -InputObject $Value -Depth 20 -Compress
+}
+
+function Assert-StringListEqual {
+  param(
+    [Parameter(Mandatory = $true)][string[]]$Expected,
+    [Parameter(Mandatory = $true)][object[]]$Actual,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues
+  )
+
+  $actualList = @($Actual | ForEach-Object { [string]$_ })
+  if ($Expected.Count -ne $actualList.Count) {
+    $Issues.Value += "$Context must match data/aliases source path count"
+    return
+  }
+
+  for ($index = 0; $index -lt $Expected.Count; $index++) {
+    if ($Expected[$index] -ne $actualList[$index]) {
+      $Issues.Value += "$Context source path mismatch at index $index`: expected $($Expected[$index]), got $($actualList[$index])"
+    }
+  }
+}
+
 $issues = @()
+$allowedAliasKinds = @(
+  'character',
+  'move_input',
+  'field',
+  'term',
+  'query_fixture'
+)
+$allowedNormalizedProperties = @(
+  'character_slug',
+  'move_input',
+  'field',
+  'term_key',
+  'question_text'
+)
 $forbiddenTokens = @(
   'startup',
   'active',
@@ -101,6 +211,60 @@ $forbiddenTokens = @(
   'strategy',
   'recommendation'
 )
+
+$expectedSourcePaths = @()
+$expectedRuntimeEntries = @()
+
+if (-not (Test-Path -LiteralPath $aliasesSourceRoot -PathType Container)) {
+  $issues += "Missing normalization alias source root: $aliasesSourceRootRelativePath"
+} else {
+  $sourceFiles = @(
+    Get-ChildItem -LiteralPath $aliasesSourceRoot -File -Filter '*.json' |
+      Sort-Object Name
+  )
+
+  foreach ($sourceFile in $sourceFiles) {
+    $sourceRelativePath = $sourceFile.FullName.Substring($repoRoot.Length + 1).Replace('\', '/')
+    $expectedSourcePaths += $sourceRelativePath
+    $sourceDocument = Get-Content -LiteralPath $sourceFile.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+
+    foreach ($field in @(
+      'schema_version',
+      'kind',
+      'authority',
+      'not_current_fact_authority',
+      'entries'
+    )) {
+      Assert-Property $sourceDocument $field $sourceRelativePath ([ref]$issues)
+    }
+
+    if ((Test-Property $sourceDocument 'schema_version') -and $sourceDocument.schema_version -ne 'normalization-aliases/v1') {
+      $issues += "$sourceRelativePath must use schema_version normalization-aliases/v1"
+    }
+    if ((Test-Property $sourceDocument 'kind') -and $sourceDocument.kind -ne 'query_normalization_aliases') {
+      $issues += "$sourceRelativePath must use kind query_normalization_aliases"
+    }
+    if ((Test-Property $sourceDocument 'authority') -and $sourceDocument.authority -ne 'query_normalization_only') {
+      $issues += "$sourceRelativePath must use authority query_normalization_only"
+    }
+    if ((Test-Property $sourceDocument 'not_current_fact_authority') -and $sourceDocument.not_current_fact_authority -ne $true) {
+      $issues += "$sourceRelativePath must set not_current_fact_authority true"
+    }
+
+    if (Test-Property $sourceDocument 'entries') {
+      foreach ($entry in @($sourceDocument.entries)) {
+        $comparableEntry = ConvertTo-ComparableRuntimeEntry `
+          -Entry $entry `
+          -SourcePath $sourceRelativePath `
+          -Context "$sourceRelativePath entries entry" `
+          -Issues ([ref]$issues)
+        if ($null -ne $comparableEntry) {
+          $expectedRuntimeEntries += $comparableEntry
+        }
+      }
+    }
+  }
+}
 
 foreach ($relativePath in @($generatorRelativePath, $manifestRelativePath, $aliasesRelativePath)) {
   if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $relativePath) -PathType Leaf)) {
@@ -184,6 +348,11 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestRelativePath) -PathType
           -ExpectedSha256 ([string]$sourcePathRecord.sha256)
       }
     }
+    Assert-StringListEqual `
+      -Expected ([string[]]$expectedSourcePaths) `
+      -Actual @($manifest.source_paths | ForEach-Object { $_.path }) `
+      -Context "$manifestRelativePath source_paths" `
+      -Issues ([ref]$issues)
   }
 
   if (Test-Property $manifest 'files') {
@@ -272,9 +441,48 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $aliasesRelativePath) -PathType 
         -Context $aliasesRelativePath `
         -Issues ([ref]$issues)
     }
+    Assert-StringListEqual `
+      -Expected ([string[]]$expectedSourcePaths) `
+      -Actual @($aliases.source_paths) `
+      -Context "$aliasesRelativePath source_paths" `
+      -Issues ([ref]$issues)
   }
   if ((Test-Property $aliases 'entries') -and @($aliases.entries).Count -eq 0) {
     $issues += "$aliasesRelativePath must include runtime alias entries"
+  }
+  if (Test-Property $aliases 'entries') {
+    $actualRuntimeEntries = @()
+    foreach ($entry in @($aliases.entries)) {
+      $entrySourcePath = ''
+      if (Test-Property $entry 'source_path') {
+        $entrySourcePath = [string]$entry.source_path
+      }
+
+      $comparableEntry = ConvertTo-ComparableRuntimeEntry `
+        -Entry $entry `
+        -SourcePath $entrySourcePath `
+        -Context "$aliasesRelativePath entries entry" `
+        -Issues ([ref]$issues) `
+        -RequireSourcePathProperty
+      if ($null -ne $comparableEntry) {
+        $actualRuntimeEntries += $comparableEntry
+      }
+    }
+
+    $expectedSortedEntries = @(
+      $expectedRuntimeEntries |
+        Sort-Object @{ Expression = { $_['source_path'] } }, @{ Expression = { $_['id'] } }
+    )
+    $actualSortedEntries = @(
+      $actualRuntimeEntries |
+        Sort-Object @{ Expression = { $_['source_path'] } }, @{ Expression = { $_['id'] } }
+    )
+
+    $expectedEntriesJson = ConvertTo-CompactJson -Value @($expectedSortedEntries)
+    $actualEntriesJson = ConvertTo-CompactJson -Value @($actualSortedEntries)
+    if ($expectedEntriesJson -ne $actualEntriesJson) {
+      $issues += "$aliasesRelativePath entries must exactly match entries derived from data/aliases/"
+    }
   }
 
   foreach ($token in $forbiddenTokens) {
