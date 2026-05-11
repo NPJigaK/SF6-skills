@@ -69,7 +69,7 @@ Hermes installed or configured.
 | Capability | Reviewed command or surface | Status | SF6 repo policy |
 | --- | --- | --- | --- |
 | One-shot chat | `hermes chat --query "..."` / `hermes chat -q "..."` | `allowed_manual` | May support bounded local delegation. Output is draft input and must be reviewed before becoming repo artifacts. |
-| Scripted final-answer mode | `hermes -z "..."` | `planned` | May be useful for future local scripting, but #121 does not wire it into validators, CI, or repo automation. |
+| Scripted one-shot mode | `hermes -z "..."` | `planned` | May be useful for future local scripting, but #121 does not wire it into validators, CI, repo automation, or public answer behavior. |
 | Provider/model override | `hermes chat --provider <provider> --model <model>` and `hermes -z ... --provider ... --model ...` | `allowed_manual` | Local maintainer choice only. Do not commit credentials, provider config, or local model inventory. |
 | Toolsets | `hermes chat --toolsets <csv>` and `hermes tools` | `allowed_manual` | Tool availability is environment and toolset dependent. Future pack guidance should request only issue-appropriate toolsets. |
 | Skill preload | `hermes chat --skills <name>` / `hermes chat -s <name>` | `allowed_manual` | Local Hermes skills remain procedural local state. Do not commit raw local skills or treat them as canonical. |
@@ -83,12 +83,12 @@ Hermes installed or configured.
 | Curator protection | `hermes curator pin <skill>`, `hermes curator unpin <skill>` | `allowed_manual` | Protect relied-upon local skills before Curator or agent-managed updates. Pinned/local skill state remains outside repo authority. |
 | Curator restore | `hermes curator restore <name>` | `allowed_manual` | Local recovery only. Restored skills are not repo artifacts unless distilled through issue scope, validators, PR review, and merge. |
 | Vision analysis | `vision_analyze` tool through appropriate toolsets | `planned` | Candidate support for future observation workflows. Output remains draft input and cannot become exact current-fact authority. |
-| Video analysis | `video_analyze` tool through the `video` toolset | `planned` | Official docs list a `video` toolset with `video_analyze`; release notes mention native video understanding on Gemini and compatible multimodal models. #123 must define SF6-specific protocol before normal use. |
+| Video analysis | `video_analyze` tool, with exact toolset and invocation details to remain verified against official docs and the maintainer environment | `planned` | Official release notes mention native video understanding on Gemini and compatible multimodal models. Provider, model, and toolset availability is environment-dependent. #123 must define SF6-specific protocol before normal use. |
 | Cron | `hermes cron create ...` and cronjob tool operations | `deferred` | #121 does not enable scheduled Hermes operation. Cron output and `~/.hermes/cron/*` are local state and must not enter the repo. |
 | Gateway | `hermes gateway <subcommand>` | `deferred` | Messaging gateway is not enabled by this issue. #119 owns plugin/gateway planning if local CLI access is insufficient. |
 | MCP | `hermes mcp` | `deferred` | MCP config is not enabled by this issue. Do not add production MCP config, credentials, or gateway state. |
 | ACP server | `hermes acp` | `deferred` | Editor integration is outside #121 scope and must not become a CI or public `sf6-agent` requirement. |
-| Kanban | no reviewed repo command encoded here | `nullable` | Release notes mention Kanban as a Hermes capability, but #121 does not verify or enable a command path. Treat Kanban state as non-canonical local state unless a later issue verifies details. |
+| Kanban | official Hermes Kanban CLI surface | `deferred` | Official docs describe Kanban, but #121 does not enable Kanban workflows. Kanban board state is local and non-canonical unless a later scoped issue verifies and approves details. |
 | Update | `hermes update`, `hermes update --check`, `hermes update --backup` | `deferred` | Do not auto-update Hermes from repo workflows. Tool freshness remains reviewed policy, not newest-at-any-cost automation. |
 
 ## Video Capability Boundary
