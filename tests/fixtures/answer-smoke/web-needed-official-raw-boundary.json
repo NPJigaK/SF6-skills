@@ -1,0 +1,88 @@
+{
+  "schema_version": "answer-smoke-fixture/v1",
+  "fixture_id": "smoke-web-needed-official-raw-boundary",
+  "coverage": "web_needed",
+  "smoke_level": "contract_fixture",
+  "execution": {
+    "requires_live_hermes": false,
+    "requires_live_web_research": false,
+    "is_executed_answer": false
+  },
+  "answer_plan": {
+    "schema_version": "answer-plan/v1",
+    "plan_id": "smoke-web-needed-official-boundary",
+    "answer_mode": "web_needed",
+    "intent": {
+      "schema_version": "answer-intent/v1",
+      "question_text": "公式の最新情報確認が必要？",
+      "normalized_question_text": "Official freshness metadata check needed",
+      "intent_kind": "web_needed",
+      "answer_mode": "web_needed",
+      "entities": {
+        "character_slug": "ryu",
+        "move_input": "2MP",
+        "requested_field": "official_freshness_metadata"
+      }
+    },
+    "evidence_cards": [
+      {
+        "id": "official-web-freshness-required-smoke",
+        "evidence_family": "official_web",
+        "authority_role": "official_metadata",
+        "canonicality": "supplemental",
+        "source_ref": {
+          "label": "Official source required before metadata summary"
+        },
+        "supports_exact_current_fact": false,
+        "may_override_official_raw": false,
+        "confidence": 0.6,
+        "limitations": [
+          "Official web may be used as freshness metadata only; it must not override packaged official_raw."
+        ]
+      },
+      {
+        "id": "packaged-official-raw-conflict-boundary-smoke",
+        "evidence_family": "frame_current_official_raw",
+        "authority_role": "primary_current_fact_authority",
+        "canonicality": "packaged_runtime_authority",
+        "source_ref": {
+          "label": "Ryu packaged official_raw",
+          "path": "skills/sf6-agent/assets/frame-current/published/ryu/official_raw.json"
+        },
+        "supports_exact_current_fact": true,
+        "may_override_official_raw": false,
+        "confidence": 1,
+        "limitations": [
+          "If web metadata conflicts with packaged official_raw, route to hold or refresh workflow."
+        ]
+      }
+    ],
+    "web_research": {
+      "web_required": true,
+      "web_allowed": true,
+      "web_used": false,
+      "web_forbidden_for_current_fact_override": true,
+      "conflict_requires_hold": true,
+      "required_source_authority": "official_sources_required",
+      "notes": "This smoke fixture marks web as needed but does not run live web research."
+    },
+    "hold_reasons": [
+      "official freshness metadata requires source review before user-facing summary"
+    ],
+    "response_requirements": {
+      "cite_evidence": true,
+      "state_authority_boundary": true,
+      "state_confidence": true,
+      "boundary_notes": [
+        "Web may be used for freshness metadata only.",
+        "Web must not override packaged official_raw exact current facts."
+      ]
+    }
+  },
+  "smoke_expectations": {
+    "web_needed": true,
+    "web_used": false,
+    "web_must_not_override_official_raw": true,
+    "conflict_requires_hold": true
+  }
+}

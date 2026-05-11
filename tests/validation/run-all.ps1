@@ -40,6 +40,7 @@ $validationScripts = @(
   'tests/validation/validate-v2-contracts.ps1',
   'tests/validation/validate-agent-toolchain.ps1',
   'tests/validation/validate-answer-orchestration-contracts.ps1',
+  'tests/validation/validate-answer-smoke-fixtures.ps1',
   'tests/validation/validate-normalization-aliases.ps1',
   'tests/validation/validate-normalization-runtime-assets.ps1',
   'tests/validation/validate-knowledge-schema.ps1',

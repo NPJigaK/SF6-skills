@@ -1,0 +1,69 @@
+{
+  "schema_version": "answer-smoke-fixture/v1",
+  "fixture_id": "smoke-hold-ambiguous-current-fact",
+  "coverage": "hold",
+  "smoke_level": "contract_fixture",
+  "execution": {
+    "requires_live_hermes": false,
+    "requires_live_web_research": false,
+    "is_executed_answer": false
+  },
+  "answer_plan": {
+    "schema_version": "answer-plan/v1",
+    "plan_id": "smoke-hold-ambiguous-current-fact",
+    "answer_mode": "hold",
+    "intent": {
+      "schema_version": "answer-intent/v1",
+      "question_text": "この技は今何F有利？",
+      "normalized_question_text": "Ambiguous current fact request",
+      "intent_kind": "hold",
+      "answer_mode": "hold",
+      "entities": {
+        "requested_field": "frame_advantage"
+      },
+      "notes": "Character and move are unresolved."
+    },
+    "evidence_cards": [
+      {
+        "id": "missing-current-fact-authority-smoke",
+        "evidence_family": "unknown",
+        "authority_role": "unresolved_context",
+        "canonicality": "non_canonical",
+        "source_ref": {
+          "label": "No usable packaged authority selected"
+        },
+        "supports_exact_current_fact": false,
+        "may_override_official_raw": false,
+        "confidence": 0,
+        "limitations": [
+          "Missing character and move identity; no packaged official_raw lookup can be selected."
+        ]
+      }
+    ],
+    "web_research": {
+      "web_required": false,
+      "web_allowed": false,
+      "web_used": false,
+      "web_forbidden_for_current_fact_override": true,
+      "conflict_requires_hold": true,
+      "required_source_authority": "none"
+    },
+    "hold_reasons": [
+      "character unresolved",
+      "move unresolved",
+      "exact current fact authority cannot be selected"
+    ],
+    "response_requirements": {
+      "cite_evidence": false,
+      "state_authority_boundary": true,
+      "state_confidence": true,
+      "boundary_notes": [
+        "Hold rather than guessing current frame values."
+      ]
+    }
+  },
+  "smoke_expectations": {
+    "must_hold": true,
+    "must_not_guess_current_fact": true
+  }
+}
