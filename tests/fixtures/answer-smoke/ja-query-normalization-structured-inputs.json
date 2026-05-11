@@ -1,0 +1,80 @@
+{
+  "schema_version": "answer-smoke-fixture/v1",
+  "fixture_id": "smoke-ja-query-normalization-structured-inputs",
+  "coverage": "japanese_query_normalization",
+  "smoke_level": "contract_fixture",
+  "execution": {
+    "requires_live_hermes": false,
+    "requires_live_web_research": false,
+    "is_executed_answer": false
+  },
+  "normalization": {
+    "source_manifest": "skills/sf6-agent/assets/normalization/runtime_manifest.json",
+    "source_asset": "skills/sf6-agent/assets/normalization/aliases.json",
+    "runtime_authority": "query_normalization_only",
+    "not_current_fact_authority": true,
+    "structured_inputs": {
+      "character_slug": "ryu",
+      "move_input": "2MP",
+      "requested_field": "block_adv"
+    }
+  },
+  "answer_plan": {
+    "schema_version": "answer-plan/v1",
+    "plan_id": "smoke-ja-normalized-current-fact-boundary",
+    "answer_mode": "current_fact",
+    "intent": {
+      "schema_version": "answer-intent/v1",
+      "question_text": "リュウの屈中Pってガードで何F？",
+      "normalized_question_text": "Ryu 2MP block advantage current fact",
+      "intent_kind": "current_fact",
+      "answer_mode": "current_fact",
+      "entities": {
+        "character_slug": "ryu",
+        "move_input": "2MP",
+        "requested_field": "block_adv"
+      },
+      "notes": "Japanese query normalization maps wording to structured inputs; it does not provide exact current facts."
+    },
+    "evidence_cards": [
+      {
+        "id": "ja-normalized-official-raw-smoke",
+        "evidence_family": "frame_current_official_raw",
+        "authority_role": "primary_current_fact_authority",
+        "canonicality": "packaged_runtime_authority",
+        "source_ref": {
+          "label": "Ryu packaged official_raw",
+          "path": "skills/sf6-agent/assets/frame-current/published/ryu/official_raw.json"
+        },
+        "supports_exact_current_fact": true,
+        "may_override_official_raw": false,
+        "confidence": 1,
+        "limitations": [
+          "Normalization selects structured inputs; official_raw remains exact current-fact authority."
+        ]
+      }
+    ],
+    "web_research": {
+      "web_required": false,
+      "web_allowed": false,
+      "web_used": false,
+      "web_forbidden_for_current_fact_override": true,
+      "conflict_requires_hold": true,
+      "required_source_authority": "none"
+    },
+    "hold_reasons": [],
+    "response_requirements": {
+      "cite_evidence": true,
+      "state_authority_boundary": true,
+      "state_confidence": true,
+      "boundary_notes": [
+        "Normalization runtime assets are query-normalization support, not exact current-fact authority."
+      ]
+    }
+  },
+  "smoke_expectations": {
+    "must_reference_normalization_runtime_assets": true,
+    "normalization_exact_current_fact_authority": false,
+    "structured_inputs_expected": true
+  }
+}

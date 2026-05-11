@@ -1,0 +1,75 @@
+{
+  "schema_version": "answer-smoke-fixture/v1",
+  "fixture_id": "smoke-strategy-assumptions-boundaries",
+  "coverage": "strategy",
+  "smoke_level": "contract_fixture",
+  "execution": {
+    "requires_live_hermes": false,
+    "requires_live_web_research": false,
+    "is_executed_answer": false
+  },
+  "answer_plan": {
+    "schema_version": "answer-plan/v1",
+    "plan_id": "smoke-strategy-ryu-fireball",
+    "answer_mode": "strategy",
+    "intent": {
+      "schema_version": "answer-intent/v1",
+      "question_text": "リュウの波動拳にどう対応する？",
+      "normalized_question_text": "Strategy response boundary for Ryu fireball",
+      "intent_kind": "strategy",
+      "answer_mode": "strategy",
+      "entities": {
+        "character_slug": "ryu",
+        "strategy_context": "fireball counterplay assumptions"
+      }
+    },
+    "evidence_cards": [
+      {
+        "id": "generated-strategy-context-smoke",
+        "evidence_family": "generated_curated_reference",
+        "authority_role": "strategy_support",
+        "canonicality": "derived_reference",
+        "source_ref": {
+          "label": "Generated concepts reference",
+          "path": "skills/sf6-agent/references/generated-concepts.md"
+        },
+        "supports_exact_current_fact": false,
+        "may_override_official_raw": false,
+        "confidence": 0.7,
+        "limitations": [
+          "Strategy smoke checks assumptions and confidence boundaries, not final matchup advice."
+        ]
+      }
+    ],
+    "web_research": {
+      "web_required": false,
+      "web_allowed": true,
+      "web_used": false,
+      "web_forbidden_for_current_fact_override": true,
+      "conflict_requires_hold": true,
+      "required_source_authority": "supplemental_sources_allowed",
+      "notes": "Supplemental sources may be allowed later, but this smoke fixture does not run web research."
+    },
+    "hold_reasons": [],
+    "response_requirements": {
+      "cite_evidence": true,
+      "state_authority_boundary": true,
+      "state_confidence": true,
+      "boundary_notes": [
+        "State assumptions before giving strategy guidance.",
+        "Do not present strategy guidance as exact current-fact authority."
+      ]
+    }
+  },
+  "smoke_expectations": {
+    "assumptions": [
+      "The user asks for general counterplay, not a guaranteed matchup verdict.",
+      "Exact move data is outside this smoke fixture unless separately grounded in official_raw."
+    ],
+    "confidence_boundaries": [
+      "Strategy guidance must state confidence and patch sensitivity.",
+      "Strategy support must not override packaged current facts."
+    ],
+    "strategy_conclusion_as_authority": false
+  }
+}
