@@ -204,12 +204,13 @@ public `sf6-agent` requirement.
 
 ## Non-Goals
 
-This document does not implement #115 or close #114. It does not implement a
-plugin, gateway, MCP, cron, Kanban workflow, remote Hermes access, production
-config, credentials, network config, allowlist config, live Hermes execution,
-live web research, live video analysis, `video_analyze` testing, dry-run
-fixtures, external asset scraping, external asset download or cache creation,
-GIF/image/video binaries, public `sf6-agent` behavior changes, frame-current
-changes, normalization changes, generated output changes, `.dist` changes,
-historical smoke report rewrites, raw transcript storage, sessions, memory,
-local skills, Curator output, logs, caches, credentials, or secrets.
+This document does not add or modify Codex-to-Hermes dry-run fixtures and does
+not close the v2.3 tracking issue. It does not implement a plugin, gateway,
+MCP, cron, Kanban workflow, remote Hermes access, production config,
+credentials, network config, allowlist config, live Hermes execution, live web
+research, live video analysis, `video_analyze` testing, external asset
+scraping, external asset download or cache creation, GIF/image/video binaries,
+public `sf6-agent` behavior changes, frame-current changes, normalization
+changes, generated output changes, `.dist` changes, historical smoke report
+rewrites, raw transcript storage, sessions, memory, local skills, Curator
+output, logs, caches, credentials, or secrets.
