@@ -167,6 +167,24 @@ function Assert-StringArrayValues {
   }
 }
 
+function Assert-StrictArray {
+  param(
+    [Parameter(Mandatory = $true)][object]$Object,
+    [Parameter(Mandatory = $true)][string]$Name,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues
+  )
+
+  if (-not (Test-Property $Object $Name)) {
+    $Issues.Value += "$Context missing property: $Name"
+    return
+  }
+
+  if ($Object.$Name -isnot [System.Array]) {
+    $Issues.Value += "$Context.$Name must be an array"
+  }
+}
+
 function Assert-ObjectArray {
   param(
     [Parameter(Mandatory = $true)][object]$Object,
@@ -225,6 +243,17 @@ function Assert-NoForbiddenRawContent {
   $binaryPathPattern = '(?i)(^|["''\s:/\\])([A-Za-z0-9_.-]+[\\/])*[A-Za-z0-9_.-]+\.(gif|png|jpg|jpeg|webp|mp4|mov|avi|mkv)(["''\s,}\]]|$)'
   if ($Raw -match $binaryPathPattern) {
     $Issues.Value += "$RelativePath contains a binary asset path"
+  }
+
+  foreach ($urlPattern in @(
+    '(?i)https?://',
+    '(?i)\byoutube\.com\b',
+    '(?i)\byoutu\.be\b',
+    '(?i)\btwitch\.tv\b'
+  )) {
+    if ($Raw -match $urlPattern) {
+      $Issues.Value += "$RelativePath contains a live or fetchable URL; taxonomy fixtures must use non-fetching placeholders or existing repo source references"
+    }
   }
 
   foreach ($cachePathPattern in @(
@@ -328,6 +357,7 @@ if ($issues.Count -eq 0) {
       }
     }
 
+    Assert-StrictArray $fixture 'video_type' $relativePath ([ref]$issues)
     Assert-StringArrayValues $fixture 'video_type' $allowedVideoTypes $relativePath ([ref]$issues)
     if ($file.Name -eq 'unknown-mixed.json') {
       Assert-ArrayIncludes $fixture 'video_type' @('unknown_or_mixed') $relativePath ([ref]$issues)
@@ -355,6 +385,8 @@ if ($issues.Count -eq 0) {
         $sourceRef = [string]$sourcePolicy.source_ref
         if ($sourceRef.Length -eq 0) {
           $issues += "$relativePath existing_repo_source must include source_ref"
+        } elseif ($sourceRef -notmatch '^knowledge/sources/videos/[^/]+\.md$') {
+          $issues += "$relativePath existing_repo_source must point under knowledge/sources/videos/*.md"
         } elseif (-not (Test-Path -LiteralPath (Join-Path $repoRoot $sourceRef) -PathType Leaf)) {
           $issues += "$relativePath references missing existing repo source: $sourceRef"
         }
