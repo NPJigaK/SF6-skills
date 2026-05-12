@@ -48,9 +48,11 @@ Gaps or uncertainty:
 - It has no explicit source-level metadata relationship; source artifacts carry
   that separately.
 - Some historical "contract-shaped" payloads are not strict schema instances.
-  For example, one uses non-enum actor refs and time fields instead of the
-  required frame fields. This should be treated as historical evidence of shape
-  pressure, not silently rewritten in #134.
+  For example,
+  `knowledge/evidence/video-observations/youtube-nyfngnzjv3m-jp-combos.observations.md`
+  uses non-enum actor refs and time fields instead of the required frame
+  fields. This should be treated as historical evidence of shape pressure, not
+  silently rewritten in #134.
 - The schema's root is strict while `segments` are permissive. That may be
   enough for observation details but not enough for a stable taxonomy contract.
 
@@ -257,6 +259,11 @@ move-frequency evaluation planning. #140 should align binary cache validation.
 
 Current role: source metadata records for video sources.
 
+Audited examples:
+
+- `knowledge/sources/videos/youtube-nyfngnzjv3m.md`
+- `knowledge/sources/videos/youtube-shorts-sycyvw6h8wi.md`
+
 Strengths:
 
 - Existing records capture source URL, title, author/publisher, dates,
@@ -287,6 +294,11 @@ to source records. #136 should reference source metadata in learning reports.
 
 Current role: review-only video observation artifacts.
 
+Audited examples:
+
+- `knowledge/evidence/video-observations/youtube-nyfngnzjv3m-jp-combos.observations.md`
+- `knowledge/evidence/video-observations/youtube-shorts-sycyvw6h8wi.observations.md`
+
 Strengths:
 
 - Existing records separate visible observations from speaker/commentary
@@ -300,8 +312,9 @@ Gaps or uncertainty:
 
 - The payloads are coarse and partly illustrative. They should not be treated
   as strict validator fixtures without cleanup in a scoped issue.
-- One payload uses non-contract tracks such as `chapter` and
-  `combo_observation`, time strings, and actor refs outside the schema enum.
+- `knowledge/evidence/video-observations/youtube-nyfngnzjv3m-jp-combos.observations.md`
+  uses non-contract tracks such as `chapter` and `combo_observation`, time
+  strings, and actor refs outside the schema enum.
 - They do not have source-format taxonomy, layout fields, audio fields,
   capability ratings, or standardized gap/failure categories.
 
@@ -316,6 +329,13 @@ rewriting observations. Later scoped issues may normalize observation payloads.
 
 Current role: sanitized maintainer smoke reports for video observation and
 video-derived combo fixture work.
+
+Audited examples:
+
+- `docs/testing/smoke-runs/2026-05-03-video-observation-youtube-shorts-sycyvw6h8wi.md`
+- `docs/testing/smoke-runs/2026-05-04-jp-combo-damage-oracle-fixture.md`
+- `docs/testing/smoke-runs/2026-05-04-jp-combo-damage-oracle-coverage.md`
+- `docs/testing/smoke-runs/hermes-bridge-smoke-gap-report.md`
 
 Strengths:
 
