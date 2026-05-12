@@ -1,0 +1,62 @@
+{
+  "schema_version": "video-observation-taxonomy-fixture/v1",
+  "fixture_id": "commentary-only",
+  "video_type": [
+    "commentary_only"
+  ],
+  "relationship_to_video_observation_schema": {
+    "mode": "metadata_layer",
+    "replaces_video_observation_schema": false,
+    "maps_to_existing_fields": true,
+    "mapping_notes": [
+      "Commentary-only classification does not create actor bindings.",
+      "Source-local claims require separate review before promotion."
+    ]
+  },
+  "source_reference_policy": {
+    "source_ref_type": "none",
+    "source_ref": null,
+    "non_fetching_reference": true
+  },
+  "visual_layout": {
+    "gameplay_visibility": "none",
+    "hud_visibility": "none",
+    "input_display_visibility": "not_present",
+    "damage_label_visibility": "not_present",
+    "subtitles": "unknown",
+    "webcam_or_wipe_overlay": "none",
+    "overlay_obstruction": "none",
+    "vertical_crop": "unknown",
+    "multi_match_compilation": false,
+    "replay_speed_uncertainty": "unknown",
+    "compression_resolution_limitation": "unknown"
+  },
+  "audio_context": {
+    "audio_type": "commentary_only",
+    "commentary_claims_are_source_local": true
+  },
+  "analysis_capability": {
+    "candidate_move_identification": "not_safe",
+    "hit_block_whiff_candidate_labeling": "not_safe",
+    "timing_frame_window_observation": "not_safe",
+    "matchup_strategy_summary": "limited",
+    "input_hud_observation": "not_safe",
+    "exact_current_fact": "forbidden"
+  },
+  "unsafe_inferences": [
+    "exact_current_fact_from_video",
+    "official_raw_override"
+  ],
+  "gap_notes": [
+    "commentary_claims_not_visible"
+  ],
+  "follow_up_candidate": {
+    "taxonomy_update_needed": false,
+    "report_template_update_needed": false,
+    "fixture_candidate": true,
+    "validator_update_needed": false,
+    "notes": [
+      "Ensures commentary-only sources do not imply visual observation capability."
+    ]
+  }
+}

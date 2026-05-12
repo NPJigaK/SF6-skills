@@ -1,0 +1,63 @@
+{
+  "schema_version": "video-observation-taxonomy-fixture/v1",
+  "fixture_id": "unknown-mixed",
+  "video_type": [
+    "unknown_or_mixed"
+  ],
+  "relationship_to_video_observation_schema": {
+    "mode": "metadata_layer",
+    "replaces_video_observation_schema": false,
+    "maps_to_existing_fields": true,
+    "mapping_notes": [
+      "Unknown or mixed formats are accepted instead of forced into false categories.",
+      "Classification gaps should feed later scoped taxonomy review."
+    ]
+  },
+  "source_reference_policy": {
+    "source_ref_type": "none",
+    "source_ref": null,
+    "non_fetching_reference": true
+  },
+  "visual_layout": {
+    "gameplay_visibility": "unknown",
+    "hud_visibility": "unknown",
+    "input_display_visibility": "unknown",
+    "damage_label_visibility": "unknown",
+    "subtitles": "unknown",
+    "webcam_or_wipe_overlay": "unknown",
+    "overlay_obstruction": "unknown",
+    "vertical_crop": "unknown",
+    "multi_match_compilation": "unknown",
+    "replay_speed_uncertainty": "unknown",
+    "compression_resolution_limitation": "unknown"
+  },
+  "audio_context": {
+    "audio_type": "unknown",
+    "commentary_claims_are_source_local": true
+  },
+  "analysis_capability": {
+    "candidate_move_identification": "unknown",
+    "hit_block_whiff_candidate_labeling": "unknown",
+    "timing_frame_window_observation": "unknown",
+    "matchup_strategy_summary": "unknown",
+    "input_hud_observation": "unknown",
+    "exact_current_fact": "forbidden"
+  },
+  "unsafe_inferences": [
+    "exact_current_fact_from_video",
+    "official_raw_override"
+  ],
+  "gap_notes": [
+    "unknown_or_mixed_source_format",
+    "mixed_source_context"
+  ],
+  "follow_up_candidate": {
+    "taxonomy_update_needed": true,
+    "report_template_update_needed": true,
+    "fixture_candidate": true,
+    "validator_update_needed": true,
+    "notes": [
+      "Use when a source cannot be safely classified by current labels."
+    ]
+  }
+}

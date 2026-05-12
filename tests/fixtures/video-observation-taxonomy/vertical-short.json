@@ -1,0 +1,65 @@
+{
+  "schema_version": "video-observation-taxonomy-fixture/v1",
+  "fixture_id": "vertical-short",
+  "video_type": [
+    "vertical_short",
+    "social_short"
+  ],
+  "relationship_to_video_observation_schema": {
+    "mode": "fixture_only_mapping",
+    "replaces_video_observation_schema": false,
+    "maps_to_existing_fields": true,
+    "mapping_notes": [
+      "Overall short-form layout remains sidecar metadata.",
+      "Only directly visible events should become observation segments."
+    ]
+  },
+  "source_reference_policy": {
+    "source_ref_type": "existing_repo_source",
+    "source_ref": "knowledge/sources/videos/youtube-shorts-sycyvw6h8wi.md",
+    "non_fetching_reference": true
+  },
+  "visual_layout": {
+    "gameplay_visibility": "partial",
+    "hud_visibility": "cropped",
+    "input_display_visibility": "unknown",
+    "damage_label_visibility": "unknown",
+    "subtitles": "present_non_obstructing",
+    "webcam_or_wipe_overlay": "present_non_obstructing",
+    "overlay_obstruction": "minor",
+    "vertical_crop": "major",
+    "multi_match_compilation": false,
+    "replay_speed_uncertainty": "possible",
+    "compression_resolution_limitation": "major"
+  },
+  "audio_context": {
+    "audio_type": "gameplay_plus_commentary",
+    "commentary_claims_are_source_local": true
+  },
+  "analysis_capability": {
+    "candidate_move_identification": "limited",
+    "hit_block_whiff_candidate_labeling": "limited",
+    "timing_frame_window_observation": "not_safe",
+    "matchup_strategy_summary": "limited",
+    "input_hud_observation": "unknown",
+    "exact_current_fact": "forbidden"
+  },
+  "unsafe_inferences": [
+    "exact_current_fact_from_video",
+    "official_raw_override"
+  ],
+  "gap_notes": [
+    "vertical_crop_removes_hud",
+    "low_resolution",
+    "compression_artifacts"
+  ],
+  "follow_up_candidate": {
+    "taxonomy_update_needed": false,
+    "report_template_update_needed": false,
+    "fixture_candidate": true,
+    "validator_update_needed": false,
+    "notes": [
+      "Confirms vertical crops reduce HUD and timing confidence."
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "video-observation-taxonomy-fixture/v1",
+  "fixture_id": "livestream-layout-webcam-overlay",
+  "video_type": [
+    "livestream_layout",
+    "webcam_overlay"
+  ],
+  "relationship_to_video_observation_schema": {
+    "mode": "metadata_layer",
+    "replaces_video_observation_schema": false,
+    "maps_to_existing_fields": true,
+    "mapping_notes": [
+      "Layout classification stays separate from timestamped segments.",
+      "Obstruction may map to global_phase notes only when time-bound."
+    ]
+  },
+  "source_reference_policy": {
+    "source_ref_type": "none",
+    "source_ref": null,
+    "non_fetching_reference": true
+  },
+  "visual_layout": {
+    "gameplay_visibility": "partial",
+    "hud_visibility": "blocked",
+    "input_display_visibility": "unknown",
+    "damage_label_visibility": "blocked",
+    "subtitles": "none",
+    "webcam_or_wipe_overlay": "present_obstructing",
+    "overlay_obstruction": "major",
+    "vertical_crop": "none",
+    "multi_match_compilation": false,
+    "replay_speed_uncertainty": "possible",
+    "compression_resolution_limitation": "minor"
+  },
+  "audio_context": {
+    "audio_type": "mixed_voice_chat",
+    "commentary_claims_are_source_local": true
+  },
+  "analysis_capability": {
+    "candidate_move_identification": "limited",
+    "hit_block_whiff_candidate_labeling": "limited",
+    "timing_frame_window_observation": "not_safe",
+    "matchup_strategy_summary": "limited",
+    "input_hud_observation": "not_safe",
+    "exact_current_fact": "forbidden"
+  },
+  "unsafe_inferences": [
+    "exact_current_fact_from_video",
+    "official_raw_override"
+  ],
+  "gap_notes": [
+    "overlay_blocks_important_area"
+  ],
+  "follow_up_candidate": {
+    "taxonomy_update_needed": false,
+    "report_template_update_needed": false,
+    "fixture_candidate": true,
+    "validator_update_needed": false,
+    "notes": [
+      "Exercises reduced capability when stream overlays block gameplay or HUD regions."
+    ]
+  }
+}
