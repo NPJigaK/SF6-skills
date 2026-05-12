@@ -219,6 +219,13 @@ Required boundary values:
 - `license_status` must be explicit
 - `redistribution_status` must be explicit before any binary storage decision
 
+Binary-derived fields such as `asset_sha256`, `perceptual_hash`,
+`frame_count`, and `dimensions` are conditional. They may be null until an
+approved repo-external cache or dataset workflow obtains the asset under
+explicit scope and permission review. Their presence must not imply that this
+issue authorizes fetching, downloading, storing, or redistributing binary
+assets.
+
 ## Repo-External Cache Policy
 
 Fetching on every analysis run is discouraged.
@@ -303,6 +310,8 @@ This policy forbids:
 - including external GIFs or images in public `sf6-agent` bundles
 - inferring exact startup, active, or recovery from visual matching alone
 - inferring exact current facts from video alone
+- treating visual descriptor or perceptual hash matches as exact move
+  confirmation without review
 - treating observed damage labels as current-system authority
 - treating training UI observations as current-system authority by default
 - using stale external assets without freshness review
@@ -318,6 +327,11 @@ Future observation artifacts that use external visual references should record
 candidate status, confidence, what was directly observed, and what was not
 inferred.
 
+External visual reference observations must preserve the #123 source-fps
+boundary: game-native 60fps assumptions are not the same as source-video fps,
+and exact frame-window inference must hold when source fps, dropped frames,
+edits, or playback speed are uncertain.
+
 Example:
 
 ```json
@@ -326,8 +340,13 @@ Example:
   "source_video": "match1",
   "segment": "round1",
   "timestamp": "01:23.400-01:24.100",
-  "assumed_fps": 60,
-  "frame_window": "candidate_window",
+  "source_video_fps": "unknown",
+  "effective_fps": "unknown",
+  "game_fps_assumption": 60,
+  "frame_window": {
+    "kind": "candidate_window",
+    "notes": "Source fps is unknown; do not infer exact frame count."
+  },
   "candidate_move": "blanka_rolling_attack",
   "candidate_move_confidence": "medium",
   "visual_reference": {
