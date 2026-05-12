@@ -1,0 +1,82 @@
+{
+  "schema_version": "codex-hermes-delegation-fixture/v1",
+  "scenario_id": "external-atlas-binary-import-forbidden",
+  "scenario_kind": "external_atlas_binary_forbidden",
+  "codex_request": {
+    "target_issue": "#115",
+    "target_scope_summary": "Validate rejection of a request to download, cache, or commit external GIF/image/frame-atlas binaries.",
+    "source_material": [
+      {
+        "source_kind": "external_visual_atlas",
+        "source_role": "unreviewed_visual_reference",
+        "ref": "external-atlas-candidate-placeholder"
+      }
+    ],
+    "requested_artifact_type": "external atlas binary import",
+    "allowed_outputs": [
+      "rejection",
+      "defer note",
+      "metadata-only source evaluation guidance"
+    ],
+    "forbidden_outputs": [
+      "download external GIF assets",
+      "download external image assets",
+      "commit frame-atlas binaries",
+      "repo-local binary asset path",
+      "public bundle inclusion"
+    ],
+    "authority_boundaries": [
+      "external visual atlas sources are visual reference inputs only",
+      "binary storage requires a future explicit issue",
+      "official_raw cannot be overridden"
+    ],
+    "validators_to_run": [
+      "tests/validation/validate-codex-hermes-delegation-fixtures.ps1",
+      "tests/validation/run-all.ps1"
+    ],
+    "review_checklist": [
+      "confirm binary import request is rejected",
+      "confirm no file writes are proposed",
+      "confirm no repo cache paths are proposed",
+      "confirm metadata-only guidance is optional and safe"
+    ]
+  },
+  "hermes_draft_response": {
+    "summary": "Reject the binary import request and defer any asset work to a future explicit issue.",
+    "proposed_artifacts": [
+      "metadata-only source evaluation note"
+    ],
+    "source_refs": [
+      "docs/architecture/external-frame-atlas-policy.md"
+    ],
+    "evidence_candidate_notes": [
+      "External GIF, image, and frame-atlas binaries are not allowed in this scope.",
+      "Future source evaluation may assess feasibility without downloading assets."
+    ],
+    "uncertainty_or_hold_reasons": [
+      "permission, license, redistribution, and freshness are not reviewed",
+      "binary storage is not approved"
+    ],
+    "boundary_notes": [
+      "reject external atlas binary import",
+      "no file writes",
+      "no public bundle inclusion",
+      "official_raw remains authority"
+    ],
+    "follow_up_recommendations": [
+      "Create a later source evaluation matrix before any asset workflow."
+    ]
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "local_state_committed": false,
+    "raw_transcript_committed": false
+  },
+  "expected_boundary_outcome": {
+    "status": "reject",
+    "reason": "External GIF/image/frame-atlas binary import is forbidden by default and must be deferred."
+  }
+}
