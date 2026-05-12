@@ -10,7 +10,7 @@
 | Report type | Sanitized maintainer-local smoke report |
 | Raw transcript | Not included |
 | Canonical status | Not canonical Hermes output |
-| Hermes version | Hermes Agent v0.12.0 (2026.4.30) |
+| Hermes version | Hermes Agent v0.13.0 (2026.5.7), updated from v0.12.0 |
 | Live Hermes executed | Yes, bounded one-shot smoke only |
 | `video_analyze` tested | No |
 | Live video analysis | No |
@@ -49,8 +49,9 @@ No raw command transcript is included.
 |---|---|---|
 | Hermes command available | Yes | `hermes` was available in the maintainer environment. |
 | Hermes one-shot execution | Pass | Bounded one-shot smoke prompts completed. |
+| Hermes doctor | Pass with limitations | Doctor was run after update; optional integrations and some tool access remain environment-gated. |
 | Provider/model inventory | Not recorded | Local provider, model, and credential details were not printed or committed. |
-| Toolset inventory | Limited | The smoke did not require web, browser, video, or external asset toolsets. |
+| Toolset inventory | Limited | Doctor showed additional local tool surfaces after update, but this smoke did not exercise web, browser, video, Kanban, or external asset toolsets. |
 | `video_analyze` availability | Not tested | #123 keeps this provider/model/toolset dependent and optional. |
 | External asset access | Not tested | #124 forbids fetching or caching assets in this scope. |
 | CI requirement | None | Live Hermes remains maintainer-local only. |
@@ -61,16 +62,38 @@ credentials, or secrets are recorded here, and none were committed.
 
 ## Version And Capability Gap
 
-This smoke ran with Hermes Agent v0.12.0 in the maintainer environment.
+This smoke was first run with Hermes Agent v0.12.0, then repeated after a
+maintainer-local update to Hermes Agent v0.13.0.
 
-The smoke validates only the local bridge usability available in that
-environment. It does not validate newer or provider/model/toolset-dependent
-capabilities such as `video_analyze`, Kanban workflows, gateway behavior, or
-other deferred v2.3 capabilities.
+The current report validates only the local bridge usability available in the
+updated maintainer environment. It does not validate provider, model,
+credential, runtime, or toolset-dependent behavior such as live
+`video_analyze`, Kanban workflows, gateway behavior, browser automation, web
+tools, or other deferred v2.3 capabilities.
 
 This is not a failure. It is a recorded capability limitation. Future #115
 fixtures should not assume latest Hermes capabilities are available and should
 cover unavailable or deferred tool behavior.
+
+## Version Update And Post-Update Smoke
+
+The maintainer-local Hermes update was performed outside the repository.
+
+| Item | Result |
+|---|---|
+| Previous version | Hermes Agent v0.12.0 (2026.4.30) |
+| Pre-update check | Update available; local install was behind upstream. |
+| Update command | `hermes update --backup` |
+| Backup behavior | A pre-update backup was created outside the repository; raw backup path is not recorded here. |
+| Updated version | Hermes Agent v0.13.0 (2026.5.7) |
+| Post-update check | Still reported one commit behind `origin/main`; not chased because the stable release version was reached and repo workflows must not auto-update Hermes. |
+| `hermes doctor` | Run after update; no repo changes were required. |
+| Post-update smoke | Bounded one-shot scenarios still passed. |
+| Behavior change from pre-update smoke | No material behavior change observed for repo-file pack discoverability or boundary handling. |
+
+The update synced bundled Hermes skills and local Hermes operational state
+outside the repository. Those changes are maintainer-local tool state, not repo
+artifacts, and are not committed.
 
 ## Local State Observation
 
@@ -78,7 +101,9 @@ Raw local state paths were not enumerated or committed.
 
 The smoke intentionally avoided recording private maintainer paths. The only
 recorded observation is categorical: Hermes may maintain user-level
-operational state outside the repository, and that state is non-canonical.
+operational state outside the repository, and that state is non-canonical. The
+Hermes update also created maintainer-local backup and bundled-skill sync
+state outside the repository.
 
 No repo-local Hermes state files were added. No sessions, memory files, local
 skills, Curator output, checkpoints, Kanban state, logs, caches, credentials,
@@ -88,6 +113,10 @@ Repository diff review found no committed Hermes local state or generated
 media/cache artifacts.
 
 ## Scenarios
+
+The scenario results below reflect the post-update v0.13.0 rerun. The rerun
+found no material behavior change from the earlier v0.12.0 smoke for these
+repo-file and boundary-check scenarios.
 
 | Scenario | Result | Boundary Status | #115 Fixture Recommendation |
 |---|---|---|---|
