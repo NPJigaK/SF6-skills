@@ -1,0 +1,81 @@
+{
+  "schema_version": "codex-hermes-delegation-fixture/v1",
+  "scenario_id": "source-analysis-valid",
+  "scenario_kind": "source_analysis",
+  "codex_request": {
+    "target_issue": "#115",
+    "target_scope_summary": "Validate a dry-run article/source analysis delegation shape without live Hermes, live web research, raw excerpts, or claim promotion.",
+    "source_material": [
+      {
+        "source_kind": "repo_artifact",
+        "source_role": "reviewed_policy",
+        "ref": "docs/architecture/codex-hermes-bridge-policy.md"
+      }
+    ],
+    "requested_artifact_type": "source analysis draft",
+    "allowed_outputs": [
+      "summary draft",
+      "source_refs",
+      "evidence_candidate_notes",
+      "uncertainty notes",
+      "boundary_notes"
+    ],
+    "forbidden_outputs": [
+      "raw excerpts",
+      "full copied source text",
+      "exact current facts promoted from draft output",
+      "public answer behavior"
+    ],
+    "authority_boundaries": [
+      "Hermes output remains draft input",
+      "source_refs are review inputs, not canonical evidence by themselves",
+      "exact current facts remain grounded in data exports, roster data, and packaged official_raw"
+    ],
+    "validators_to_run": [
+      "tests/validation/validate-codex-hermes-delegation-fixtures.ps1",
+      "tests/validation/run-all.ps1"
+    ],
+    "review_checklist": [
+      "confirm source_refs are non-canonical review inputs",
+      "confirm no raw excerpts are present",
+      "confirm no current facts are promoted",
+      "confirm Codex review and validators are still required"
+    ]
+  },
+  "hermes_draft_response": {
+    "summary": "The bridge policy allows bounded source analysis as maintainer draft input only.",
+    "proposed_artifacts": [
+      "review note draft for Codex"
+    ],
+    "source_refs": [
+      "docs/architecture/codex-hermes-bridge-policy.md"
+    ],
+    "evidence_candidate_notes": [
+      "Codex remains the implementation entrypoint.",
+      "Hermes output must be reviewed before becoming a repo artifact."
+    ],
+    "uncertainty_or_hold_reasons": [
+      "This is a dry-run fixture and not an executed delegation."
+    ],
+    "boundary_notes": [
+      "Hermes output remains draft input.",
+      "No exact current facts are promoted.",
+      "No public sf6-agent behavior changes."
+    ],
+    "follow_up_recommendations": [
+      "Use this fixture to validate source_refs and boundary_notes handling."
+    ]
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "local_state_committed": false,
+    "raw_transcript_committed": false
+  },
+  "expected_boundary_outcome": {
+    "status": "accept_draft",
+    "reason": "A source analysis draft is acceptable when it keeps source_refs non-canonical and promotes no exact current facts."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "codex-hermes-delegation-fixture/v1",
+  "scenario_id": "stale-pr-active-source-rejection",
+  "scenario_kind": "stale_pr_rejection",
+  "codex_request": {
+    "target_issue": "#115",
+    "target_scope_summary": "Validate rejection of stale PR #71 or PR #83 as active source material.",
+    "source_material": [
+      {
+        "source_kind": "closed_pull_request",
+        "source_role": "historical_debt",
+        "ref": "PR #71 and PR #83"
+      }
+    ],
+    "requested_artifact_type": "active source import",
+    "allowed_outputs": [
+      "rejection",
+      "fresh scoped issue recommendation"
+    ],
+    "forbidden_outputs": [
+      "active source use",
+      "stale PR content promotion",
+      "old branch import",
+      "current-fact promotion"
+    ],
+    "authority_boundaries": [
+      "closed PRs are historical debt",
+      "old ideas require fresh scoped issue recreation",
+      "repo artifacts and current contracts remain authoritative"
+    ],
+    "validators_to_run": [
+      "tests/validation/validate-codex-hermes-delegation-fixtures.ps1",
+      "tests/validation/run-all.ps1"
+    ],
+    "review_checklist": [
+      "confirm PR #71 and PR #83 are rejected as active sources",
+      "confirm fresh scoped issue recreation is required",
+      "confirm no stale content is promoted"
+    ]
+  },
+  "hermes_draft_response": {
+    "summary": "Reject PR #71 and PR #83 as active source material.",
+    "proposed_artifacts": [
+      "fresh scoped issue outline if a narrow idea is worth reconsidering"
+    ],
+    "source_refs": [
+      "docs/architecture/codex-hermes-bridge-policy.md",
+      "packs/codex-hermes-sf6/resources/stale-debt-boundary.md"
+    ],
+    "evidence_candidate_notes": [
+      "PR #71 and PR #83 are closed historical debt.",
+      "Old ideas must be recreated under current contracts and validators."
+    ],
+    "uncertainty_or_hold_reasons": [
+      "stale material is non-canonical"
+    ],
+    "boundary_notes": [
+      "reject active-source use",
+      "no stale PR content is promoted",
+      "fresh scoped issue recreation is required"
+    ],
+    "follow_up_recommendations": [
+      "Open a new narrow issue if a specific old idea should be reconsidered."
+    ]
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "local_state_committed": false,
+    "raw_transcript_committed": false
+  },
+  "expected_boundary_outcome": {
+    "status": "reject",
+    "reason": "Stale PR #71 and PR #83 must not be used as active source material."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "codex-hermes-delegation-fixture/v1",
+  "scenario_id": "video-analyze-unavailable-fallback",
+  "scenario_kind": "video_fallback",
+  "codex_request": {
+    "target_issue": "#115",
+    "target_scope_summary": "Validate fallback behavior when video_analyze is unavailable or unverified.",
+    "source_material": [
+      {
+        "source_kind": "video_reference",
+        "source_role": "observation_request",
+        "ref": "provided-video-reference-placeholder"
+      }
+    ],
+    "requested_artifact_type": "video observation draft",
+    "allowed_outputs": [
+      "tool_unavailable note",
+      "tool_limitations",
+      "manual review fallback",
+      "hold status",
+      "not_inferred list"
+    ],
+    "forbidden_outputs": [
+      "live video analysis",
+      "video_analyze execution",
+      "exact frame values",
+      "exact current facts from video",
+      "official_raw override"
+    ],
+    "authority_boundaries": [
+      "video_analyze is provider-model-toolset dependent",
+      "video observations are draft input only",
+      "official_raw remains authority for current facts"
+    ],
+    "validators_to_run": [
+      "tests/validation/validate-codex-hermes-delegation-fixtures.ps1",
+      "tests/validation/run-all.ps1"
+    ],
+    "review_checklist": [
+      "confirm tool_unavailable is recorded",
+      "confirm not_inferred includes exact frame/current facts",
+      "confirm official_raw check is required",
+      "confirm review_status is hold"
+    ]
+  },
+  "hermes_draft_response": {
+    "summary": "video_analyze is unavailable for this dry-run fixture, so the request must use fallback or hold.",
+    "proposed_artifacts": [
+      "video observation hold draft"
+    ],
+    "source_refs": [
+      "docs/architecture/sf6-video-analysis-protocol.md"
+    ],
+    "evidence_candidate_notes": [
+      "tool_unavailable: video_analyze unavailable",
+      "tool_limitations: no live video analysis in this fixture"
+    ],
+    "uncertainty_or_hold_reasons": [
+      "source fps is unknown",
+      "tool availability is not verified",
+      "exact frame-window inference is unsafe"
+    ],
+    "boundary_notes": [
+      "not_inferred: exact startup, exact active frames, exact recovery, exact block advantage, current-system frame fact",
+      "official_raw check is required before any current-fact promotion",
+      "review_status: hold"
+    ],
+    "follow_up_recommendations": [
+      "Use manual review or frame sampling only in a later scoped workflow."
+    ]
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "local_state_committed": false,
+    "raw_transcript_committed": false
+  },
+  "expected_boundary_outcome": {
+    "status": "hold",
+    "reason": "Unavailable video_analyze must produce tool_unavailable, limitations, not_inferred, and official_raw review requirements instead of fabricated observations."
+  }
+}

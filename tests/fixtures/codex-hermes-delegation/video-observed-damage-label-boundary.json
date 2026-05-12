@@ -1,0 +1,81 @@
+{
+  "schema_version": "codex-hermes-delegation-fixture/v1",
+  "scenario_id": "video-observed-damage-label-boundary",
+  "scenario_kind": "observed_damage_label_boundary",
+  "codex_request": {
+    "target_issue": "#115",
+    "target_scope_summary": "Validate that observed damage labels in video are review context only, not current-system authority.",
+    "source_material": [
+      {
+        "source_kind": "video_reference",
+        "source_role": "observation_request",
+        "ref": "provided-video-reference-placeholder"
+      }
+    ],
+    "requested_artifact_type": "observed damage label note",
+    "allowed_outputs": [
+      "candidate observed damage label",
+      "review context",
+      "uncertainty notes",
+      "official_raw check requirement"
+    ],
+    "forbidden_outputs": [
+      "damage formula authority",
+      "current-system damage fact",
+      "combo verdict",
+      "route verdict",
+      "official_raw override"
+    ],
+    "authority_boundaries": [
+      "observed damage labels are eval or review context only",
+      "training UI observations are not current-system authority by default",
+      "official_raw remains authority for current facts"
+    ],
+    "validators_to_run": [
+      "tests/validation/validate-codex-hermes-delegation-fixtures.ps1",
+      "tests/validation/run-all.ps1"
+    ],
+    "review_checklist": [
+      "confirm observed damage label is not current-system authority",
+      "confirm official_raw check is required",
+      "confirm no damage verdict is promoted"
+    ]
+  },
+  "hermes_draft_response": {
+    "summary": "An observed damage label can be recorded as review context only.",
+    "proposed_artifacts": [
+      "observed damage label review note"
+    ],
+    "source_refs": [
+      "docs/architecture/sf6-video-analysis-protocol.md"
+    ],
+    "evidence_candidate_notes": [
+      "The visible label may help review a candidate interaction.",
+      "The label is not accepted as current-system authority."
+    ],
+    "uncertainty_or_hold_reasons": [
+      "source video context and patch context may be unknown",
+      "training UI observations require separate authority review"
+    ],
+    "boundary_notes": [
+      "observed damage label is review context only",
+      "official_raw check is required before current-fact promotion",
+      "no combo or damage verdict is accepted"
+    ],
+    "follow_up_recommendations": [
+      "Cover observed damage label handling in video dry-run fixtures."
+    ]
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "local_state_committed": false,
+    "raw_transcript_committed": false
+  },
+  "expected_boundary_outcome": {
+    "status": "accept_draft",
+    "reason": "Observed damage labels may be review context only and cannot become current-system authority."
+  }
+}
