@@ -29,6 +29,20 @@ or binary assets.
 Hermes output from this run is draft input only. This report records reviewed,
 sanitized observations and recommendations for later repository work.
 
+## Smoke Invocation Mode
+
+This smoke used bounded maintainer-local one-shot Hermes prompts.
+
+The pack was evaluated as repo-local context and file-backed playbook material
+from `packs/codex-hermes-sf6/`. It was not treated as public `sf6-agent` skill
+distribution, public answer behavior, or canonical SF6 knowledge.
+
+Local Hermes skill installation or `--skills` preload behavior was not
+required by this smoke. If skill preload behavior is needed later, test it in
+a separate scoped issue or follow-up smoke.
+
+No raw command transcript is included.
+
 ## Environment Availability
 
 | Item | Result | Notes |
@@ -44,6 +58,34 @@ sanitized observations and recommendations for later repository work.
 Hermes user-level installation or operational state may exist outside the
 repository. No raw local state paths, sessions, memory, logs, caches,
 credentials, or secrets are recorded here, and none were committed.
+
+## Version And Capability Gap
+
+This smoke ran with Hermes Agent v0.12.0 in the maintainer environment.
+
+The smoke validates only the local bridge usability available in that
+environment. It does not validate newer or provider/model/toolset-dependent
+capabilities such as `video_analyze`, Kanban workflows, gateway behavior, or
+other deferred v2.3 capabilities.
+
+This is not a failure. It is a recorded capability limitation. Future #115
+fixtures should not assume latest Hermes capabilities are available and should
+cover unavailable or deferred tool behavior.
+
+## Local State Observation
+
+Raw local state paths were not enumerated or committed.
+
+The smoke intentionally avoided recording private maintainer paths. The only
+recorded observation is categorical: Hermes may maintain user-level
+operational state outside the repository, and that state is non-canonical.
+
+No repo-local Hermes state files were added. No sessions, memory files, local
+skills, Curator output, checkpoints, Kanban state, logs, caches, credentials,
+or secrets were committed.
+
+Repository diff review found no committed Hermes local state or generated
+media/cache artifacts.
 
 ## Scenarios
 
