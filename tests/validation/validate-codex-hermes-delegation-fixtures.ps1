@@ -40,7 +40,14 @@ function Assert-BooleanValue {
     return
   }
 
-  if ([bool]$Object.$Name -ne $Expected) {
+  $value = $Object.$Name
+
+  if ($value -isnot [bool]) {
+    $Issues.Value += "$Context.$Name must be a boolean"
+    return
+  }
+
+  if ($value -ne $Expected) {
     $Issues.Value += "$Context.$Name must be $Expected"
   }
 }
@@ -121,6 +128,12 @@ foreach ($fileName in $expectedFixtures.Keys) {
 
 if ($issues.Count -eq 0) {
   $fixtureFiles = @(Get-ChildItem -LiteralPath $fixtureRoot -Filter '*.json' -File | Sort-Object Name)
+
+  foreach ($file in $fixtureFiles) {
+    if (-not $expectedFixtures.Contains($file.Name)) {
+      $issues += "Unexpected Codex-Hermes delegation fixture: $fixtureRootRelative/$($file.Name)"
+    }
+  }
 
   foreach ($file in $fixtureFiles) {
     $fixtureRecord = Read-Fixture $file
