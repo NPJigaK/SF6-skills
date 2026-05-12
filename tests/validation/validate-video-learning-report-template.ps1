@@ -139,6 +139,7 @@ Assert-RequiredSections $raw @(
   '## Visual Layout',
   '## Audio And Commentary Context',
   '## Analysis Capability',
+  '## Unsafe Inferences',
   '## Observed-Safe Notes',
   '## Not-Inferred Notes',
   '## Gap / Failure Findings',
@@ -149,6 +150,9 @@ Assert-RequiredSections $raw @(
 
 foreach ($taxonomyField in @('video_type', 'unknown_or_mixed', 'exact_current_fact', 'official_raw')) {
   Assert-Contains $raw $taxonomyField 'taxonomy or authority field' ([ref]$issues)
+}
+foreach ($unsafeInference in @('unsafe_inferences', 'exact_current_fact_from_video', 'official_raw_override')) {
+  Assert-Contains $raw $unsafeInference 'unsafe inference field or category' ([ref]$issues)
 }
 Assert-Matches $raw '(?is)exact_current_fact.{0,160}forbidden|forbidden.{0,160}exact_current_fact' 'exact_current_fact forbidden boundary' ([ref]$issues)
 

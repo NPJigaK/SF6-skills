@@ -176,6 +176,27 @@ Align this section with `tests/fixtures/video-observation-taxonomy/`.
 | input_hud_observation | `likely` / `limited` / `not_safe` / `unknown` | `<notes>` |
 | exact_current_fact | `forbidden` | exact_current_fact must always be forbidden from video alone |
 
+## Unsafe Inferences
+
+Record `unsafe_inferences` categories aligned with
+`tests/fixtures/video-observation-taxonomy/`.
+
+Required baseline categories for executed reports:
+
+- `exact_current_fact_from_video`
+- `official_raw_override`
+
+Optional categories when applicable:
+
+- `exact_frame_data_from_video`
+- `raw_tool_output_promotion`
+- `training_ui_damage_label_as_current_fact`
+- `commentary_claim_as_current_fact`
+- `external_visual_atlas_as_current_fact`
+
+These are unsafe inferences to reject, hold, or route to reviewed authority
+checks. They are not conclusions accepted by the report.
+
 ## Observed-Safe Notes
 
 Use paraphrased, safe observations only.
