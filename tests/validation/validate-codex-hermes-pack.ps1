@@ -106,7 +106,7 @@ if ($issues.Count -eq 0) {
     }
   }
 
-  $activeStoragePattern = '(?im)^\s*(commit|store|save|persist|include|write|add)\b.*\b(memory|sessions?|local skills?|curator|browser state|cron state|kanban state|checkpoints?|local configs?|logs?|caches?|credentials?|secrets?|tokens?)\b'
+  $activeStoragePattern = '(?im)^\s*(?:[-*+]\s+|\d+[.)]\s+)?(commit|store|save|persist|include|write|add)\b.*\b(memory|sessions?|local skills?|curator|browser state|cron state|kanban state|checkpoints?|local configs?|logs?|caches?|credentials?|secrets?|tokens?)\b'
   $activeStalePattern = '(?i)\b(use|treat|list|include)\b.*\b(PR #71|PR #83)\b.*\bactive source\b'
   foreach ($relativePath in $requiredFiles) {
     $lineNumber = 0
