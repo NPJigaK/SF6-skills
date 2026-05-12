@@ -84,6 +84,20 @@ They may support review and observation. They must not become:
 - public `sf6-agent` answer behavior
 - canonical SF6 knowledge by default
 
+## Candidate Source Roles
+
+External visual source roles must stay narrow:
+
+- SF6Frames is a primary candidate for visual hitbox and hurtbox frame-atlas
+  reference, not a numeric frame-data ingestion source.
+- Ultimate Frame Data is a candidate broad move-table and hitbox image
+  reference source for source evaluation and cross-check context only, not a
+  numeric frame-data ingestion source in this policy.
+- Packaged `official_raw` remains current-fact authority.
+- SuperCombo, when referenced by existing repo workflows, is an auxiliary
+  text/reference source only and is not an external visual atlas source by
+  default.
+
 ## Dual Visual Variants
 
 ### Hitbox-Overlay Variant
@@ -117,6 +131,21 @@ Do not use clean or no-hitbox variants for:
 - exact startup, active, or recovery inference
 - exact hit, block, or whiff conclusion without uncertainty
 - current-system authority
+
+## Numeric Frame-Data Boundary
+
+External visual atlas sources must not be used as new numeric frame-data
+ingestion sources in this policy.
+
+External visual atlas sources may provide visual reference support, frame
+labels, animation frame counts, or review hints. Do not ingest startup,
+active, recovery, total frames, hit advantage, block advantage, damage,
+invulnerability, or patch values as authoritative data through this policy.
+
+Packaged `official_raw` remains the current-fact authority. If numeric values
+from an external visual source appear to conflict with packaged
+`official_raw`, the result is a consistency review item, hold, or frame-data
+refresh workflow, not automatic replacement.
 
 ## Storage Options And Policy
 
@@ -209,22 +238,35 @@ Future source manifests should include:
 - `public_bundle_allowed`
 - `analysis_use`
 - `forbidden_use`
+- `numeric_frame_data_ingestion_allowed`
+- `official_raw_consistency_check`
+  - `not_checked`
+  - `consistent`
+  - `inconsistent`
+  - `inconclusive`
+- `consistency_review_notes`
+- `frame_count_source`
+  - `visual_frame_count`
+  - `visible_frame_labels`
+  - `source_claim`
+  - `unknown`
 
 Required boundary values:
 
 - `not_current_fact_authority: true`
 - `may_override_official_raw: false`
 - `public_bundle_allowed: false` by default
+- `numeric_frame_data_ingestion_allowed: false` by default
 - `permission_status` must be explicit
 - `license_status` must be explicit
 - `redistribution_status` must be explicit before any binary storage decision
 
 Binary-derived fields such as `asset_sha256`, `perceptual_hash`,
-`frame_count`, and `dimensions` are conditional. They may be null until an
-approved repo-external cache or dataset workflow obtains the asset under
-explicit scope and permission review. Their presence must not imply that this
-issue authorizes fetching, downloading, storing, or redistributing binary
-assets.
+`frame_count`, `dimensions`, and some `fps_assumption` values are conditional.
+They may be null until an approved repo-external cache or dataset workflow
+obtains the asset under explicit scope and permission review. Their presence
+must not imply that this issue authorizes fetching, downloading, storing, or
+redistributing binary assets.
 
 ## Repo-External Cache Policy
 
@@ -269,6 +311,32 @@ Source manifest or hash updates may be committed only if explicitly in scope.
 External visual cache sync is local and optional by default. Binary asset
 storage requires a future explicit issue.
 
+## Visual Atlas Consistency Check
+
+Future workflows may compare visual atlas metadata against packaged
+`official_raw`.
+
+Allowed comparison inputs include:
+
+- visual frame count
+- visible frame labels
+- animation date or patch/freshness notes
+- move identifier
+- variant type
+- visible active, hitbox, or hurtbox frame ranges when available
+- source metadata and hashes
+
+The comparison output must be review status only:
+
+- `consistent`
+- `inconsistent`
+- `inconclusive`
+- `not_checked`
+
+The comparison must not promote visual atlas data into exact current facts.
+Inconsistent or inconclusive results require hold, reviewer notes, or a
+frame-data refresh workflow.
+
 ## Video-Analysis Use Cases
 
 Allowed future use cases include:
@@ -312,6 +380,11 @@ This policy forbids:
 - inferring exact current facts from video alone
 - treating visual descriptor or perceptual hash matches as exact move
   confirmation without review
+- importing external visual-source numeric frame values as authoritative
+  current facts
+- replacing official frame data with external visual-source frame counts
+- treating visual frame counts as exact startup, active, or recovery values
+  without an accepted review path
 - treating observed damage labels as current-system authority
 - treating training UI observations as current-system authority by default
 - using stale external assets without freshness review
