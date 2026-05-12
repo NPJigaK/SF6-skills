@@ -86,7 +86,7 @@ The maintainer-local Hermes update was performed outside the repository.
 | Update command | `hermes update --backup` |
 | Backup behavior | A pre-update backup was created outside the repository; raw backup path is not recorded here. |
 | Updated version | Hermes Agent v0.13.0 (2026.5.7) |
-| Post-update check | Still reported one commit behind `origin/main`; not chased because the stable release version was reached and repo workflows must not auto-update Hermes. |
+| Post-update check | Hermes updater still reported the local Hermes install one commit behind Hermes upstream `origin/main`; this does not refer to SF6-skills `origin/main`. The commit was not chased because the stable release version was reached and repo workflows must not auto-update Hermes. |
 | `hermes doctor` | Run after update; no repo changes were required. |
 | Post-update smoke | Bounded one-shot scenarios still passed. |
 | Behavior change from pre-update smoke | No material behavior change observed for repo-file pack discoverability or boundary handling. |
