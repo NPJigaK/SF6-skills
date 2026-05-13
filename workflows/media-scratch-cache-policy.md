@@ -184,7 +184,6 @@ find . \
      -o -iname "*.info.json" \
      -o -iname "*frame*dump*" -o -iname "*contact*sheet*" \) \
   -not -path "./.git/*" \
-  -not -path "./skills/sf6-agent/assets/frame-current/*" \
   | sort
 ```
 

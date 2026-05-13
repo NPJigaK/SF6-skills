@@ -24,6 +24,7 @@ $repoLocalCacheRoots = @(
 $forbiddenBinarySurfaces = @(
   '.dist',
   'skills/sf6-agent',
+  'skills/sf6-agent/assets/frame-current',
   'skills/sf6-agent/assets/normalization',
   'data/raw',
   'data/normalized',
@@ -32,9 +33,6 @@ $forbiddenBinarySurfaces = @(
   'knowledge',
   'docs/testing/smoke-runs'
 ) + $repoLocalCacheRoots
-$approvedBinaryPrefixes = @(
-  'skills/sf6-agent/assets/frame-current'
-)
 $suspiciousDirectoryNames = @(
   'frames',
   'frame-dump',
@@ -197,9 +195,6 @@ if ($issues.Count -eq 0) {
     $relativePath = ConvertTo-RepoRelativePath $item.FullName
 
     if (Test-RelativePathUnder $relativePath '.git') {
-      continue
-    }
-    if (Test-RelativePathUnderAny $relativePath $approvedBinaryPrefixes) {
       continue
     }
 
