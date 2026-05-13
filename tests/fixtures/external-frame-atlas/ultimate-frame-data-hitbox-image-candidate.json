@@ -1,0 +1,74 @@
+{
+  "schema_version": "external-frame-atlas-source/v1",
+  "manifest_id": "ultimate-frame-data-hitbox-image-candidate",
+  "manifest_kind": "metadata_only_external_frame_atlas_source",
+  "source_id": "ultimate_frame_data",
+  "source_name": "Ultimate Frame Data",
+  "source_url": "https://ultimateframedata.com/sf6/",
+  "source_evaluation_ref": "data/external-frame-atlas/evaluation/source-evaluation-matrix.json#source_id=ultimate_frame_data",
+  "source_evaluation_status": "hold_terms_or_permission",
+  "character_slug": "luke",
+  "character_display_name": "Luke",
+  "move_id": null,
+  "move_name": "source-local hitbox image candidate",
+  "move_input": null,
+  "variant_type": "hitbox_image",
+  "asset_type": "metadata_only",
+  "candidate_asset_type": "hitbox_image",
+  "permission_status": "not_reviewed",
+  "license_status": "not_reviewed",
+  "redistribution_status": "permission_required",
+  "cache_policy": {
+    "cache_sync_status": "later_explicit_issue_required",
+    "repo_external_cache_only": true,
+    "local_cache_path_recorded": false,
+    "cache_path_policy": "not_recorded",
+    "ci_cache_allowed": false,
+    "public_bundle_cache_allowed": false
+  },
+  "binary_storage_allowed": false,
+  "numeric_frame_data_ingestion_allowed": false,
+  "not_current_fact_authority": true,
+  "may_override_official_raw": false,
+  "public_bundle_allowed": false,
+  "official_raw_consistency_check_status": "not_checked",
+  "official_raw_consistency_notes": "Review metadata only; this visual reference cannot promote source-local values into current-fact authority.",
+  "move_mapping_status": "unmapped",
+  "analysis_use": [
+    "visual reference source evaluation",
+    "candidate move identification review support",
+    "human reviewer cross-check context"
+  ],
+  "forbidden_use": [
+    "numeric frame-data ingestion",
+    "official_raw override",
+    "current-fact authority",
+    "binary storage approval",
+    "public bundle binary inclusion",
+    "normal public answer scrape or cache"
+  ],
+  "binary_derived_fields": {
+    "asset_sha256": null,
+    "perceptual_hash": null,
+    "frame_count": null,
+    "fps_assumption": null,
+    "dimensions": null,
+    "retrieved_at": null,
+    "source_asset_url": null,
+    "local_cache_path": null
+  },
+  "future_acquisition": {
+    "existing_fetch_tooling_alignment": "align_with_ingest_frame_data_scrapling_stack_if_later_approved",
+    "future_acquisition_tooling": "scrapling_candidate_not_implemented",
+    "new_fetch_dependency_required": false,
+    "future_cache_sync_scope": "later_explicit_maintainer_local_repo_external_cache_issue_required",
+    "checked_in_raw_snapshot_allowed": false
+  },
+  "review_status": "needs_review",
+  "notes": [
+    "This fixture is metadata-only and does not point to a binary asset.",
+    "The source evaluation matrix keeps this candidate on hold for permission and terms review.",
+    "The character and move fields are mapping placeholders, not accepted current facts.",
+    "Actual GIF or image usability against real video remains a future gated local-only experiment after #140/#141 boundaries, not part of #139."
+  ]
+}

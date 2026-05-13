@@ -1,0 +1,74 @@
+{
+  "schema_version": "external-frame-atlas-source/v1",
+  "manifest_id": "sf6frames-hitbox-overlay-candidate",
+  "manifest_kind": "metadata_only_external_frame_atlas_source",
+  "source_id": "sf6frames",
+  "source_name": "SF6Frames",
+  "source_url": "https://sf6frames.com/",
+  "source_evaluation_ref": "data/external-frame-atlas/evaluation/source-evaluation-matrix.json#source_id=sf6frames",
+  "source_evaluation_status": "hold_terms_or_permission",
+  "character_slug": "jp",
+  "character_display_name": "JP",
+  "move_id": null,
+  "move_name": "source-local hitbox overlay candidate",
+  "move_input": null,
+  "variant_type": "hitbox_overlay",
+  "asset_type": "metadata_only",
+  "candidate_asset_type": "gif",
+  "permission_status": "reviewed_no_explicit_permission",
+  "license_status": "no_explicit_license_found",
+  "redistribution_status": "permission_required",
+  "cache_policy": {
+    "cache_sync_status": "later_explicit_issue_required",
+    "repo_external_cache_only": true,
+    "local_cache_path_recorded": false,
+    "cache_path_policy": "not_recorded",
+    "ci_cache_allowed": false,
+    "public_bundle_cache_allowed": false
+  },
+  "binary_storage_allowed": false,
+  "numeric_frame_data_ingestion_allowed": false,
+  "not_current_fact_authority": true,
+  "may_override_official_raw": false,
+  "public_bundle_allowed": false,
+  "official_raw_consistency_check_status": "not_checked",
+  "official_raw_consistency_notes": "Review metadata only; any consistency concern would be routed to current-fact authority review rather than accepted from this visual reference.",
+  "move_mapping_status": "unmapped",
+  "analysis_use": [
+    "candidate visual reference review support",
+    "human reviewer hitbox or hurtbox context",
+    "candidate move identification review prompt"
+  ],
+  "forbidden_use": [
+    "numeric frame-data ingestion",
+    "official_raw override",
+    "current-fact authority",
+    "binary storage approval",
+    "public bundle binary inclusion",
+    "normal public answer scrape or cache"
+  ],
+  "binary_derived_fields": {
+    "asset_sha256": null,
+    "perceptual_hash": null,
+    "frame_count": null,
+    "fps_assumption": null,
+    "dimensions": null,
+    "retrieved_at": null,
+    "source_asset_url": null,
+    "local_cache_path": null
+  },
+  "future_acquisition": {
+    "existing_fetch_tooling_alignment": "align_with_ingest_frame_data_scrapling_stack_if_later_approved",
+    "future_acquisition_tooling": "scrapling_candidate_not_implemented",
+    "new_fetch_dependency_required": false,
+    "future_cache_sync_scope": "later_explicit_maintainer_local_repo_external_cache_issue_required",
+    "checked_in_raw_snapshot_allowed": false
+  },
+  "review_status": "needs_review",
+  "notes": [
+    "This fixture is metadata-only and does not point to a binary asset.",
+    "The source evaluation matrix keeps this candidate on hold for permission and terms review.",
+    "The character and move fields are mapping placeholders, not accepted current facts.",
+    "Actual GIF or image usability against real video remains a future gated local-only experiment after #140/#141 boundaries, not part of #139."
+  ]
+}
