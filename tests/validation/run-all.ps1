@@ -50,6 +50,7 @@ $validationScripts = @(
   'tests/validation/validate-video-artifacts.ps1',
   'tests/validation/validate-video-observation-taxonomy-fixtures.ps1',
   'tests/validation/validate-video-learning-report-template.ps1',
+  'tests/validation/validate-external-frame-atlas-source-evaluation.ps1',
   'tests/validation/validate-combo-damage-fixtures.ps1',
   'tests/validation/validate-evals.ps1',
   'tests/validation/validate-roster-source.ps1',

@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/external-frame-atlas-source-evaluation.schema.json",
+  "title": "External Frame Atlas Source Evaluation Matrix",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "matrix_kind",
+    "issue",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "external-frame-atlas-source-evaluation/v1"
+    },
+    "matrix_kind": {
+      "const": "metadata_only_source_evaluation"
+    },
+    "issue": {
+      "const": "#138"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "$ref": "#/$defs/source_evaluation_record"
+      }
+    }
+  },
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source_evaluation_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_name",
+        "source_kind",
+        "source_url",
+        "candidate_role",
+        "coverage_notes",
+        "move_category_coverage",
+        "hitbox_overlay_available",
+        "clean_visual_available",
+        "frame_numbers_visible",
+        "update_cadence_notes",
+        "machine_readability_notes",
+        "asset_url_stability_notes",
+        "robots_or_terms_reviewed",
+        "rate_limit_policy",
+        "attribution_required",
+        "permission_status",
+        "license_status",
+        "redistribution_status",
+        "risk_level",
+        "recommended_status",
+        "not_current_fact_authority",
+        "may_override_official_raw",
+        "numeric_frame_data_ingestion_allowed",
+        "public_bundle_allowed",
+        "binary_asset_storage_allowed",
+        "repo_external_cache_candidate",
+        "future_cache_sync_status",
+        "analysis_use",
+        "forbidden_use",
+        "existing_fetch_tooling_alignment",
+        "future_acquisition_tooling",
+        "new_fetch_dependency_required",
+        "future_cache_sync_scope",
+        "checked_in_raw_snapshot_allowed"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "source_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_kind": {
+          "enum": [
+            "external_visual_atlas",
+            "maintainer_local_placeholder",
+            "current_fact_authority_boundary",
+            "text_reference_context"
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_role": {
+          "$ref": "#/$defs/string_array"
+        },
+        "coverage_notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "move_category_coverage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hitbox_overlay_available": {
+          "enum": [
+            "yes",
+            "partial",
+            "no",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "clean_visual_available": {
+          "enum": [
+            "yes",
+            "partial",
+            "no",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "frame_numbers_visible": {
+          "enum": [
+            "yes",
+            "partial",
+            "no",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "update_cadence_notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "machine_readability_notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asset_url_stability_notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "robots_or_terms_reviewed": {
+          "enum": [
+            "not_reviewed",
+            "limited_manual_review",
+            "reviewed_no_explicit_cache_permission",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "rate_limit_policy": {
+          "enum": [
+            "not_reviewed",
+            "unknown",
+            "not_applicable",
+            "requires_later_review"
+          ]
+        },
+        "attribution_required": {
+          "enum": [
+            "not_reviewed",
+            "unknown",
+            "yes",
+            "no",
+            "not_applicable"
+          ]
+        },
+        "permission_status": {
+          "enum": [
+            "not_reviewed",
+            "reviewed_no_explicit_permission",
+            "permission_required",
+            "permission_granted",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "license_status": {
+          "enum": [
+            "not_reviewed",
+            "unknown",
+            "explicit_license_found",
+            "no_explicit_license_found",
+            "permission_required",
+            "not_applicable"
+          ]
+        },
+        "redistribution_status": {
+          "enum": [
+            "not_allowed_by_default",
+            "unknown",
+            "permission_required",
+            "metadata_only_allowed",
+            "binary_redistribution_not_allowed",
+            "not_applicable"
+          ]
+        },
+        "risk_level": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ]
+        },
+        "recommended_status": {
+          "enum": [
+            "candidate_metadata_only",
+            "hold_terms_or_permission",
+            "hold_rate_limit_or_robots",
+            "hold_unstable_assets",
+            "reference_context_only",
+            "not_recommended",
+            "comparison_boundary"
+          ]
+        },
+        "not_current_fact_authority": {
+          "type": "boolean"
+        },
+        "may_override_official_raw": {
+          "type": "boolean"
+        },
+        "numeric_frame_data_ingestion_allowed": {
+          "type": "boolean"
+        },
+        "public_bundle_allowed": {
+          "type": "boolean"
+        },
+        "binary_asset_storage_allowed": {
+          "type": "boolean"
+        },
+        "repo_external_cache_candidate": {
+          "type": "boolean"
+        },
+        "future_cache_sync_status": {
+          "enum": [
+            "not_in_scope",
+            "candidate_requires_terms_review",
+            "candidate_requires_permission",
+            "candidate_metadata_only_until_approved",
+            "not_recommended"
+          ]
+        },
+        "analysis_use": {
+          "$ref": "#/$defs/string_array"
+        },
+        "forbidden_use": {
+          "$ref": "#/$defs/string_array"
+        },
+        "existing_fetch_tooling_alignment": {
+          "enum": [
+            "align_with_ingest_frame_data_scrapling_stack_if_later_approved",
+            "not_applicable",
+            "unknown"
+          ]
+        },
+        "future_acquisition_tooling": {
+          "enum": [
+            "not_in_scope",
+            "scrapling_candidate_not_implemented",
+            "manual_review_only",
+            "not_recommended"
+          ]
+        },
+        "new_fetch_dependency_required": {
+          "type": "boolean"
+        },
+        "future_cache_sync_scope": {
+          "enum": [
+            "not_in_scope",
+            "later_explicit_maintainer_local_repo_external_cache_issue_required",
+            "not_recommended"
+          ]
+        },
+        "checked_in_raw_snapshot_allowed": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
