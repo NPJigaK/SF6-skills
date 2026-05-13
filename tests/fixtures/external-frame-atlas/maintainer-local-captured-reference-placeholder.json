@@ -1,0 +1,71 @@
+{
+  "schema_version": "external-frame-atlas-source/v1",
+  "manifest_id": "maintainer-local-captured-reference-placeholder",
+  "manifest_kind": "metadata_only_external_frame_atlas_source",
+  "source_id": "maintainer_local_captured_references",
+  "source_name": "Maintainer-local captured references",
+  "source_url": "maintainer-local:captured-reference-placeholder",
+  "source_evaluation_ref": "data/external-frame-atlas/evaluation/source-evaluation-matrix.json#source_id=maintainer_local_captured_references",
+  "source_evaluation_status": "candidate_metadata_only",
+  "character_slug": "unknown",
+  "character_display_name": null,
+  "move_id": null,
+  "move_name": null,
+  "move_input": null,
+  "variant_type": "unknown",
+  "asset_type": "metadata_only",
+  "candidate_asset_type": "unknown",
+  "permission_status": "permission_required",
+  "license_status": "permission_required",
+  "redistribution_status": "not_allowed_by_default",
+  "cache_policy": {
+    "cache_sync_status": "later_explicit_issue_required",
+    "repo_external_cache_only": true,
+    "local_cache_path_recorded": false,
+    "cache_path_policy": "not_recorded",
+    "ci_cache_allowed": false,
+    "public_bundle_cache_allowed": false
+  },
+  "binary_storage_allowed": false,
+  "numeric_frame_data_ingestion_allowed": false,
+  "not_current_fact_authority": true,
+  "may_override_official_raw": false,
+  "public_bundle_allowed": false,
+  "official_raw_consistency_check_status": "not_checked",
+  "official_raw_consistency_notes": "No capture exists in this fixture; any later review would remain non-canonical until separately approved.",
+  "move_mapping_status": "not_applicable",
+  "analysis_use": [
+    "future maintainer-local visual review placeholder",
+    "future metadata-only manifest candidate"
+  ],
+  "forbidden_use": [
+    "repo binary storage",
+    "public bundle binary inclusion",
+    "official_raw override",
+    "current-fact authority",
+    "CI external asset fetch"
+  ],
+  "binary_derived_fields": {
+    "asset_sha256": null,
+    "perceptual_hash": null,
+    "frame_count": null,
+    "fps_assumption": null,
+    "dimensions": null,
+    "retrieved_at": null,
+    "source_asset_url": null,
+    "local_cache_path": null
+  },
+  "future_acquisition": {
+    "existing_fetch_tooling_alignment": "not_applicable",
+    "future_acquisition_tooling": "manual_review_only",
+    "new_fetch_dependency_required": false,
+    "future_cache_sync_scope": "later_explicit_maintainer_local_repo_external_cache_issue_required",
+    "checked_in_raw_snapshot_allowed": false
+  },
+  "review_status": "candidate",
+  "notes": [
+    "This placeholder represents a possible future maintainer-local reference without storing a capture.",
+    "No local path, hash, dimensions, or asset URL is recorded.",
+    "This is not public answer behavior and not current-fact authority."
+  ]
+}

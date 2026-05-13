@@ -1,0 +1,410 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/external-frame-atlas-source.schema.json",
+  "title": "External Frame Atlas Source Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "manifest_id",
+    "manifest_kind",
+    "source_id",
+    "source_name",
+    "source_url",
+    "source_evaluation_ref",
+    "source_evaluation_status",
+    "character_slug",
+    "character_display_name",
+    "move_id",
+    "move_name",
+    "move_input",
+    "variant_type",
+    "asset_type",
+    "candidate_asset_type",
+    "permission_status",
+    "license_status",
+    "redistribution_status",
+    "cache_policy",
+    "binary_storage_allowed",
+    "numeric_frame_data_ingestion_allowed",
+    "not_current_fact_authority",
+    "may_override_official_raw",
+    "public_bundle_allowed",
+    "official_raw_consistency_check_status",
+    "official_raw_consistency_notes",
+    "move_mapping_status",
+    "analysis_use",
+    "forbidden_use",
+    "binary_derived_fields",
+    "future_acquisition",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "external-frame-atlas-source/v1"
+    },
+    "manifest_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "manifest_kind": {
+      "const": "metadata_only_external_frame_atlas_source"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "source_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_evaluation_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_evaluation_status": {
+      "enum": [
+        "candidate_metadata_only",
+        "hold_terms_or_permission",
+        "hold_rate_limit_or_robots",
+        "hold_unstable_assets",
+        "reference_context_only",
+        "not_recommended",
+        "comparison_boundary"
+      ]
+    },
+    "character_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "character_display_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "move_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "move_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "move_input": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "variant_type": {
+      "enum": [
+        "hitbox_overlay",
+        "hurtbox_overlay",
+        "hitbox_image",
+        "clean_visual",
+        "unknown",
+        "not_applicable",
+        "unsupported"
+      ]
+    },
+    "asset_type": {
+      "enum": [
+        "metadata_only",
+        "gif",
+        "png_sequence",
+        "webp",
+        "sprite_sheet",
+        "frame_sequence",
+        "hitbox_image",
+        "unknown"
+      ]
+    },
+    "candidate_asset_type": {
+      "enum": [
+        "gif",
+        "png_sequence",
+        "webp",
+        "sprite_sheet",
+        "frame_sequence",
+        "hitbox_image",
+        "unknown",
+        "not_applicable",
+        "unsupported"
+      ]
+    },
+    "permission_status": {
+      "enum": [
+        "not_reviewed",
+        "reviewed_no_explicit_permission",
+        "permission_required",
+        "permission_granted",
+        "unknown",
+        "not_applicable"
+      ]
+    },
+    "license_status": {
+      "enum": [
+        "not_reviewed",
+        "unknown",
+        "explicit_license_found",
+        "no_explicit_license_found",
+        "permission_required",
+        "not_applicable"
+      ]
+    },
+    "redistribution_status": {
+      "enum": [
+        "not_allowed_by_default",
+        "unknown",
+        "permission_required",
+        "metadata_only_allowed",
+        "binary_redistribution_not_allowed",
+        "not_applicable"
+      ]
+    },
+    "cache_policy": {
+      "$ref": "#/$defs/cache_policy"
+    },
+    "binary_storage_allowed": {
+      "type": "boolean"
+    },
+    "numeric_frame_data_ingestion_allowed": {
+      "type": "boolean"
+    },
+    "not_current_fact_authority": {
+      "type": "boolean"
+    },
+    "may_override_official_raw": {
+      "type": "boolean"
+    },
+    "public_bundle_allowed": {
+      "type": "boolean"
+    },
+    "official_raw_consistency_check_status": {
+      "enum": [
+        "not_checked",
+        "consistent",
+        "inconsistent",
+        "inconclusive",
+        "not_applicable"
+      ]
+    },
+    "official_raw_consistency_notes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "move_mapping_status": {
+      "enum": [
+        "mapped",
+        "ambiguous",
+        "unmapped",
+        "not_applicable"
+      ]
+    },
+    "analysis_use": {
+      "$ref": "#/$defs/string_array"
+    },
+    "forbidden_use": {
+      "$ref": "#/$defs/string_array"
+    },
+    "binary_derived_fields": {
+      "$ref": "#/$defs/binary_derived_fields"
+    },
+    "future_acquisition": {
+      "$ref": "#/$defs/future_acquisition"
+    },
+    "review_status": {
+      "enum": [
+        "candidate",
+        "needs_review",
+        "unsupported",
+        "rejected"
+      ]
+    },
+    "notes": {
+      "$ref": "#/$defs/string_array"
+    }
+  },
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "cache_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cache_sync_status",
+        "repo_external_cache_only",
+        "local_cache_path_recorded",
+        "cache_path_policy",
+        "ci_cache_allowed",
+        "public_bundle_cache_allowed"
+      ],
+      "properties": {
+        "cache_sync_status": {
+          "enum": [
+            "not_in_scope",
+            "later_explicit_issue_required"
+          ]
+        },
+        "repo_external_cache_only": {
+          "type": "boolean"
+        },
+        "local_cache_path_recorded": {
+          "type": "boolean"
+        },
+        "cache_path_policy": {
+          "const": "not_recorded"
+        },
+        "ci_cache_allowed": {
+          "type": "boolean"
+        },
+        "public_bundle_cache_allowed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "binary_derived_fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_sha256",
+        "perceptual_hash",
+        "frame_count",
+        "fps_assumption",
+        "dimensions",
+        "retrieved_at",
+        "source_asset_url",
+        "local_cache_path"
+      ],
+      "properties": {
+        "asset_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "perceptual_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "frame_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fps_assumption": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "dimensions": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "width",
+            "height"
+          ],
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "retrieved_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_asset_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "local_cache_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "future_acquisition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "existing_fetch_tooling_alignment",
+        "future_acquisition_tooling",
+        "new_fetch_dependency_required",
+        "future_cache_sync_scope",
+        "checked_in_raw_snapshot_allowed"
+      ],
+      "properties": {
+        "existing_fetch_tooling_alignment": {
+          "enum": [
+            "align_with_ingest_frame_data_scrapling_stack_if_later_approved",
+            "not_applicable"
+          ]
+        },
+        "future_acquisition_tooling": {
+          "enum": [
+            "scrapling_candidate_not_implemented",
+            "manual_review_only",
+            "not_in_scope",
+            "not_recommended"
+          ]
+        },
+        "new_fetch_dependency_required": {
+          "type": "boolean"
+        },
+        "future_cache_sync_scope": {
+          "enum": [
+            "later_explicit_maintainer_local_repo_external_cache_issue_required",
+            "not_in_scope",
+            "not_recommended"
+          ]
+        },
+        "checked_in_raw_snapshot_allowed": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
