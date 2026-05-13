@@ -114,11 +114,11 @@ analysis and not final accuracy evaluation.
 | Tool / Capability | Value | Notes |
 |---|---|---|
 | Manual review used | yes | Existing repo surfaces, maintainer sample notes, source artifact shape, report boundaries, and representative local visual review were reviewed manually. |
-| Maintainer-local Hermes used | no | Hermes availability was not used for video review; no Hermes prompt or raw output was committed. |
+| Maintainer-local Hermes used | no | Intentionally skipped for this #137 smoke. Hermes is allowed when configured but not required; this run used manual bounded visual review via `yt-dlp`. No Hermes prompt, raw output, session, memory, local skill, log, cache, or state was created or committed. |
 | `video_analyze` used | no | Not tested and not required. |
 | Vision analysis used | yes | Temporary scratch-only contact sheets were used for layout/obstruction review and deleted; no images were committed. |
 | yt-dlp | used | Used only for bounded local review of the five maintainer-selected sample URLs represented by repo source artifacts. |
-| External asset fetch | no | No external visual asset scrape, mirror, alternate video search, or cache was performed. |
+| External visual atlas / non-sample asset fetch | no | The only external media access was bounded review of the five maintainer-selected samples via `yt-dlp` under the policy scratch root, followed by cleanup. No external atlas assets, alternate videos, scrape, mirror, or non-sample cache were used. |
 | Tool limitations | bounded representative review only | Findings are layout/taxonomy learning notes, not full-video observations or final accuracy evaluation. |
 | Unavailable tools | none required | Hermes and `video_analyze` were intentionally skipped. |
 | Hold reasons | none for sample availability | Exact facts, move recognition, frame windows, and coaching conclusions remain held by authority boundaries. |
@@ -343,9 +343,9 @@ Per-sample follow-up:
 |---|---|
 | Scratch cleanup status | done; the policy-defined per-run scratch directory and temporary media/review derivatives were deleted before commit |
 | Retained repo-external cache reason | none |
-| Git diff/status confirmation | to be recorded in the PR after validation |
+| Git diff/status confirmation | PASS; worktree clean after commit; `git diff --check` and `git diff --check origin/main...HEAD` passed |
 | Validator commands | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-video-artifacts.ps1`; `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-video-learning-report-template.ps1`; `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-video-observation-taxonomy-fixtures.ps1`; `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1`; `git diff --check`; `git diff --check origin/main...HEAD` |
-| Raw-media/local-state check | to be recorded in the PR after validation |
+| Raw-media/local-state check | PASS; scan reported only the pre-existing `./workflows/maintainer-agent-session.md` name-match false positive; no new raw media or local-state artifact was added |
 | No raw media / transcript / local state committed confirmation | no raw media, downloaded clips, frames, screenshots, contact sheets, transcripts, raw tool output, local state, cookies, credentials, secrets, or external binary assets were added |
 
 Final confirmation:
