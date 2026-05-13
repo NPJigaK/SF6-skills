@@ -22,21 +22,23 @@ knowledge, and not accepted strategy/current-fact knowledge.
 ## Extracted Scope
 
 - Sample ID: `yt-sample-vertical-01`.
-- Canonical URL: `https://www.youtube.com/shorts/aylEXtw2jic`.
+- Canonical URL: see the front matter `url` field.
 - Expected format from maintainer notes: vertical-short.
 - Intended v2.4 taxonomy coverage: `vertical_short`, `social_short`, and
   possibly `subtitle_overlay`.
-- #137 video-content review status: held because `yt-dlp` was not available
-  in the maintainer-local command environment and no live Hermes,
-  `video_analyze`, or browser-video review path was used.
-- Useful for: future testing of vertical crop, subtitle obstruction, low
+- #137 video-content review status: bounded representative local review
+  completed after `yt-dlp` became available in the maintainer-local
+  environment. No live Hermes, `video_analyze`, browser profile, cookies, or
+  credentials were used.
+- Useful for: testing vertical crop, subtitle obstruction, low
   resolution, and HUD/input visibility.
 - Not useful for: accepting exact setup validity, exact current facts,
   matchup advice, or current-system authority without separate verification.
 
 ## Media Handling
 
-- Raw video was not downloaded for #137.
+- Temporary bounded media was used only under the policy-defined scratch/cache
+  root for #137 maintainer-local review and was deleted.
 - Raw video, frames, screenshots, contact sheets, browser cache, session
   state, and full captions/transcript are not stored in this repository.
 - Scratch/cache handling followed `workflows/media-scratch-cache-policy.md`.
@@ -44,7 +46,7 @@ knowledge, and not accepted strategy/current-fact knowledge.
 ## Reviewer Notes
 
 - Treat this source as review-only metadata for the #137 learning smoke.
-- Direct vertical-crop or subtitle observations were not recorded in #137
-  because safe local content review was unavailable.
+- Direct vertical-crop and subtitle observations are recorded only as sanitized
+  learning-report notes, not as canonical observation artifacts.
 - Future observation should preserve `unknown_or_mixed` if crop, subtitles, or
   edits make the format unsafe to classify precisely.

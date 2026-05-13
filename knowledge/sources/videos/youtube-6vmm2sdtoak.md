@@ -22,22 +22,23 @@ not accepted strategy/current-fact knowledge.
 ## Extracted Scope
 
 - Sample ID: `yt-sample-commentary-01`.
-- Canonical URL: `https://www.youtube.com/watch?v=6Vmm2sDTOak`.
+- Canonical URL: see the front matter `url` field.
 - Expected format from maintainer notes: commentary.
 - Intended v2.4 taxonomy coverage: `commentary_only`,
-  `gameplay_with_commentary`, or `coaching_review` depending on future visual
-  review.
-- #137 video-content review status: held because `yt-dlp` was not available
-  in the maintainer-local command environment and no live Hermes,
-  `video_analyze`, or browser-video review path was used.
-- Useful for: future testing of source-local commentary boundaries, coaching
+  `gameplay_with_commentary`, or `coaching_review` depending on visual review.
+- #137 video-content review status: bounded representative local review
+  completed after `yt-dlp` became available in the maintainer-local
+  environment. No live Hermes, `video_analyze`, browser profile, cookies, or
+  credentials were used.
+- Useful for: testing source-local commentary boundaries, coaching
   claim holds, and transcript-free summarized reporting.
 - Not useful for: accepting matchup advice, beginner-coaching conclusions,
   exact current facts, or patch-specific claims without separate review.
 
 ## Media Handling
 
-- Raw video was not downloaded for #137.
+- Temporary bounded media was used only under the policy-defined scratch/cache
+  root for #137 maintainer-local review and was deleted.
 - Raw video, frames, screenshots, contact sheets, browser cache, session
   state, and full captions/transcript are not stored in this repository.
 - Scratch/cache handling followed `workflows/media-scratch-cache-policy.md`.
@@ -45,7 +46,7 @@ not accepted strategy/current-fact knowledge.
 ## Reviewer Notes
 
 - Treat this source as review-only metadata for the #137 learning smoke.
-- Direct commentary observations were not recorded in #137 because safe local
-  content review was unavailable.
+- Direct commentary/source-layout observations are recorded only as sanitized
+  learning-report notes, not as canonical observation artifacts.
 - Any future paraphrase must remain source-local review input and must not be
   promoted as accepted coaching or current-system authority without review.

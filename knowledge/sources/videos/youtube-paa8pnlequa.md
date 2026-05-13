@@ -23,22 +23,24 @@ strategy/current-fact knowledge.
 ## Extracted Scope
 
 - Sample ID: `yt-sample-gameplay-only-01`.
-- Canonical URL: `https://www.youtube.com/watch?v=PaA8PNLeQUA`.
+- Canonical URL: see the front matter `url` field.
 - Expected format from maintainer notes: gameplay-only.
 - Intended v2.4 taxonomy coverage: `gameplay_only`.
-- #137 video-content review status: held because `yt-dlp` was not available
-  in the maintainer-local command environment and no live Hermes,
-  `video_analyze`, or browser-video review path was used.
-- Useful for: future testing of straightforward gameplay visibility,
+- #137 video-content review status: bounded representative local review
+  completed after `yt-dlp` became available in the maintainer-local
+  environment. No live Hermes, `video_analyze`, browser profile, cookies, or
+  credentials were used.
+- Useful for: testing straightforward gameplay visibility,
   candidate move identification, hit/block/whiff candidate labeling, and HUD
-  visibility when a safe local review tool is available.
+  visibility as review input only.
 - Not useful for: accepting player rank, matchup claims, exact move facts,
   exact frame data, patch status, or current-system facts without separate
   current-fact authority.
 
 ## Media Handling
 
-- Raw video was not downloaded for #137.
+- Temporary bounded media was used only under the policy-defined scratch/cache
+  root for #137 maintainer-local review and was deleted.
 - Raw video, frames, screenshots, contact sheets, browser cache, session
   state, and full captions/transcript are not stored in this repository.
 - Scratch/cache handling followed `workflows/media-scratch-cache-policy.md`.
@@ -46,8 +48,8 @@ strategy/current-fact knowledge.
 ## Reviewer Notes
 
 - Treat this source as review-only metadata for the #137 learning smoke.
-- Direct video observations were not recorded in #137 because safe local
-  content review was unavailable.
+- Direct source observations are recorded only as sanitized learning-report
+  notes, not as canonical observation artifacts.
 - Future observation work should keep any player status, rank, and matchup
   descriptions source-local until separately verified through accepted
   current-fact authority.
