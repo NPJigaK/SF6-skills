@@ -5,11 +5,13 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $schemaRelativePath = 'contracts/external-frame-atlas-source.schema.json'
 $fixtureRootRelative = 'tests/fixtures/external-frame-atlas'
 $evaluationMatrixRelativePath = 'data/external-frame-atlas/evaluation/source-evaluation-matrix.json'
+$rosterRelativePath = 'data/roster/current-character-roster.json'
 $runAllRelativePath = 'tests/validation/run-all.ps1'
 
 $schemaPath = Join-Path $repoRoot $schemaRelativePath
 $fixtureRoot = Join-Path $repoRoot $fixtureRootRelative
 $evaluationMatrixPath = Join-Path $repoRoot $evaluationMatrixRelativePath
+$rosterPath = Join-Path $repoRoot $rosterRelativePath
 $runAllPath = Join-Path $repoRoot $runAllRelativePath
 
 $expectedFixtures = @(
@@ -353,6 +355,7 @@ $issues = @()
 
 Assert-FileExists $schemaPath $schemaRelativePath ([ref]$issues)
 Assert-FileExists $evaluationMatrixPath $evaluationMatrixRelativePath ([ref]$issues)
+Assert-FileExists $rosterPath $rosterRelativePath ([ref]$issues)
 Assert-FileExists $runAllPath $runAllRelativePath ([ref]$issues)
 
 if (-not (Test-Path -LiteralPath $fixtureRoot -PathType Container)) {
@@ -369,9 +372,11 @@ foreach ($fileName in $expectedFixtures) {
 if ($issues.Count -eq 0) {
   $schemaRaw = Get-Content -LiteralPath $schemaPath -Raw -Encoding UTF8
   $evaluationMatrixRaw = Get-Content -LiteralPath $evaluationMatrixPath -Raw -Encoding UTF8
+  $rosterRaw = Get-Content -LiteralPath $rosterPath -Raw -Encoding UTF8
   $runAllRaw = Get-Content -LiteralPath $runAllPath -Raw -Encoding UTF8
   $schema = $schemaRaw | ConvertFrom-Json
   $evaluationMatrix = $evaluationMatrixRaw | ConvertFrom-Json
+  $roster = $rosterRaw | ConvertFrom-Json
 
   Assert-Contains $runAllRaw 'tests/validation/validate-external-frame-atlas-source-fixtures.ps1' 'run-all.ps1' ([ref]$issues)
   Assert-NoForbiddenRawContent $schemaRaw $schemaRelativePath ([ref]$issues)
@@ -394,6 +399,10 @@ if ($issues.Count -eq 0) {
   }
 
   $evaluationSourceIds = @($evaluationMatrix.records | ForEach-Object { [string]$_.source_id })
+  $rosterSlugs = @($roster.characters | ForEach-Object { [string]$_.character_slug })
+  if ($rosterSlugs.Count -eq 0) {
+    $issues += "$rosterRelativePath must include current roster character slugs"
+  }
   foreach ($expectedSourceId in @('sf6frames', 'ultimate_frame_data', 'maintainer_local_captured_references')) {
     if ($evaluationSourceIds -notcontains $expectedSourceId) {
       $issues += "$evaluationMatrixRelativePath missing expected source evaluation record: $expectedSourceId"
@@ -431,7 +440,7 @@ if ($issues.Count -eq 0) {
       Assert-Property $fixture $field $relativePath ([ref]$issues)
     }
 
-    foreach ($field in @('schema_version', 'manifest_id', 'manifest_kind', 'source_id', 'source_name', 'source_url', 'source_evaluation_ref', 'official_raw_consistency_notes', 'character_slug')) {
+    foreach ($field in @('schema_version', 'manifest_id', 'manifest_kind', 'source_id', 'source_name', 'source_url', 'source_evaluation_ref', 'official_raw_consistency_notes')) {
       Assert-NonEmptyString $fixture $field $relativePath ([ref]$issues)
     }
 
@@ -449,6 +458,35 @@ if ($issues.Count -eq 0) {
     }
     if ((Test-Property $fixture 'source_evaluation_ref') -and [string]$fixture.source_evaluation_ref -notmatch '^data/external-frame-atlas/evaluation/source-evaluation-matrix\.json#(source_id=[a-z0-9_=-]+|boundary=[a-z0-9_-]+)$') {
       $issues += "$relativePath source_evaluation_ref must point to the #138 evaluation matrix"
+    }
+
+    if (Test-Property $fixture 'character_slug') {
+      if ($null -eq $fixture.character_slug) {
+        if ((Test-Property $fixture 'move_mapping_status') -and [string]$fixture.move_mapping_status -notin @('not_applicable', 'unmapped')) {
+          $issues += "$relativePath move_mapping_status must be not_applicable or unmapped when character_slug is null"
+        }
+        if ((Test-Property $fixture 'source_id') -and [string]$fixture.source_id -in @('sf6frames', 'ultimate_frame_data')) {
+          $issues += "$relativePath external visual candidates must use a current roster character_slug"
+        }
+        if ((Test-Property $fixture 'variant_type') -and [string]$fixture.variant_type -notin @('unknown', 'not_applicable', 'unsupported')) {
+          $issues += "$relativePath null character_slug must be limited to placeholder, unsupported, or not-applicable context"
+        }
+        if ((Test-Property $fixture 'review_status') -and [string]$fixture.review_status -notin @('candidate', 'unsupported', 'rejected')) {
+          $issues += "$relativePath null character_slug must use placeholder, unsupported, or rejected review status"
+        }
+      }
+      else {
+        $characterSlug = [string]$fixture.character_slug
+        if ($characterSlug -eq 'unknown') {
+          $issues += "$relativePath must not use unknown as a character_slug; use null for placeholder or unsupported records"
+        }
+        if ($characterSlug -notmatch '^[a-z0-9][a-z0-9_]*$') {
+          $issues += "$relativePath character_slug is not roster-style: $characterSlug"
+        }
+        if ($rosterSlugs -notcontains $characterSlug) {
+          $issues += "$relativePath character_slug is not in $rosterRelativePath`: $characterSlug"
+        }
+      }
     }
 
     Assert-StringInSet $fixture 'source_evaluation_status' $allowedSourceEvaluationStatuses $relativePath ([ref]$issues)
