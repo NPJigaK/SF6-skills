@@ -1,6 +1,6 @@
 # Media Scratch Cache Policy
 
-This workflow defines how maintainers should handle temporary images, screenshots, videos, browser artifacts, and vision artifacts during image-aware or video ingest.
+This workflow defines how maintainers should handle temporary images, screenshots, videos, browser artifacts, frame-atlas assets, and vision artifacts during image-aware or video ingest.
 
 Raw media is working material. It is not canonical SF6 knowledge and should not be committed to this repository by default.
 
@@ -25,11 +25,17 @@ Forbidden repo artifacts by default include:
 - screenshots
 - copied article image assets
 - downloaded videos or clips
+- GIFs, WebP files, frame dumps, contact sheets, thumbnails, or generated visual derivatives
 - full transcripts
+- raw captions or subtitle files
 - large excerpts
 - browser cache artifacts
+- local media cache directories
+- external frame-atlas binary assets
 - session, memory, cron, or profile state
 - credentials, tokens, or local `.env` files
+
+`official_raw` remains the current-fact authority. Local media caches, retained scratch files, external visual atlas assets, and visual review artifacts are not current-fact authority and do not override `official_raw`.
 
 ## Scratch Root
 
@@ -47,7 +53,82 @@ Optional Windows equivalent:
 %LOCALAPPDATA%\sf6-skills\media-ingest\
 ```
 
+Future external frame-atlas cache sync, if approved by a later explicit issue, must also use a repo-external root such as:
+
+```bash
+atlas_cache_root="${XDG_CACHE_HOME:-$HOME/.cache}/sf6-skills/external-frame-atlas"
+```
+
 Do not use repo-local paths such as `tmp/`, `.cache/`, `downloads/`, or `assets/raw/` for media ingest scratch files.
+
+## External Frame-Atlas Boundary
+
+External frame-atlas assets are visual references only. They are not numeric frame-data ingestion sources, current-fact authority, public answer behavior, or permission to store binaries in the repository.
+
+Future external frame-atlas cache sync or GIF/image video-usability smoke must be:
+
+- a later explicit issue only;
+- maintainer-local only;
+- repo-external by default;
+- disabled from CI;
+- excluded from public `sf6-agent` behavior and release bundles;
+- sanitized into reports or metadata only;
+- unable to override `official_raw`;
+- unable to become current-fact authority;
+- unable to ingest numeric frame data from external visual sources.
+
+This policy does not authorize #140 to scrape, download, cache, or sync external frame-atlas assets. If a later issue approves acquisition, it should align with existing repo acquisition discipline before adding any new fetch technology, but #140 implements no acquisition.
+
+Recommended future gated sequence, not implemented here:
+
+1. External frame-atlas local cache sync smoke:
+   - later explicit issue only;
+   - after this binary/cache guard is merged;
+   - after permission, terms, robots, and rate-limit review;
+   - maintainer-local only;
+   - repo-external cache only;
+   - CI disabled;
+   - no raw binary commit;
+   - sanitized report and metadata only.
+2. External frame-atlas video usability smoke:
+   - later explicit issue only;
+   - after local cache sync smoke succeeds or is safely held;
+   - tiny sample only;
+   - compare hitbox overlay, clean visual, GIF/contact-sheet style review support;
+   - evaluate candidate move identification as useful, limited, not_safe, or unsupported;
+   - record false-positive risks, overlay/crop/compression failure modes, and source/effective FPS or GIF timing uncertainty;
+   - preserve not-inferred fields;
+   - no exact startup/active/recovery inference;
+   - no exact hit/block advantage inference;
+   - no current-fact promotion;
+   - no `official_raw` override.
+
+## Forbidden Repo Locations
+
+Repo-tracked binary media, media cache, and external atlas binary artifacts are forbidden by default in:
+
+- `skills/sf6-agent/`
+- public release bundle paths
+- `.dist`
+- `skills/sf6-agent/assets/frame-current/`
+- `skills/sf6-agent/assets/normalization/`
+- `data/raw`
+- `data/normalized`
+- `data/exports`
+- `tests/fixtures/` unless metadata-only
+- `knowledge/` unless metadata-only source, evidence, or report artifacts
+- `docs/testing/smoke-runs/` except sanitized reports
+- `tmp/`
+- `.cache/`
+- `downloads/`
+- `assets/raw/`
+- `.external-cache/`
+- `.external-assets/`
+- `.local-media/`
+- `.video-cache/`
+- `.frame-atlas-cache/`
+
+Maintainer-configured scratch paths are allowed only when they are outside the repository. Ignored local scratch inside the repository requires a later explicit issue, `.gitignore` coverage, and validator coverage.
 
 ## Per-run Directory
 
@@ -97,7 +178,11 @@ git status --porcelain
 find . \
   \( -name ".hermes" -o -name ".env" -o -iname "*session*" -o -iname "*memory*" -o -iname "*cron*" \
      -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \
-     -o -iname "*.mp4" -o -iname "*.mov" -o -iname "*.mkv" \) \
+     -o -iname "*.gif" \
+     -o -iname "*.mp4" -o -iname "*.mov" -o -iname "*.mkv" -o -iname "*.avi" \
+     -o -iname "*.vtt" -o -iname "*.srt" -o -iname "*.ass" \
+     -o -iname "*.info.json" \
+     -o -iname "*frame*dump*" -o -iname "*contact*sheet*" \) \
   -not -path "./.git/*" \
   -not -path "./skills/sf6-agent/assets/frame-current/*" \
   | sort
