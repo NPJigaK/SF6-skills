@@ -38,6 +38,69 @@ Record:
 9. Emit `derived_events` only when each event lists the source segment IDs it came from.
 10. Stop at the observation layer when a conclusion requires current frame data, matchup judgment, or claim review.
 
+## Pre-Analysis Repo Context Loading
+
+Before any source-unit video analysis or calibration run, perform a repo-context
+loading pass. This applies before raw-local calibration, damage/scaling
+interpretation, move/action identification, frame/timing analysis, and
+commentary or terminology extraction.
+
+Load only reviewed repository artifacts that are relevant to the source and
+analysis question. Select candidates by sample ID, source URL or video ID,
+character, topic, previous issue/PR links, and explicit parent-issue follow-up
+maps.
+
+Relevant context can include:
+
+- same-sample source metadata, video observations, review notes, and prior
+  calibration reports;
+- accepted curated glossary pages for stable terminology used in the source;
+- source-derived system-mechanics candidates for damage, scaling, timing, or
+  route interpretation;
+- current-fact boundary workflows when exact current facts may be implicated;
+- external visual atlas manifests, when a later approved issue creates them;
+- current-fact authority surfaces when the task touches exact values.
+
+For damage or scaling calibration, explicitly load these combo-scaling context
+artifacts before analysis:
+
+- `knowledge/curated/mechanics/combo-scaling.md`
+- `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md`
+- `knowledge/evidence/claims/hameko-2023-combo-scaling.claims.md`
+
+Record the loaded context in each calibration report or review note under a
+`Loaded Repo Context` section. For each loaded artifact, list:
+
+- artifact path;
+- why it was loaded;
+- whether it is accepted curated knowledge, review-only candidate evidence,
+  source metadata, observation, or calibration report;
+- what it can guide;
+- what it cannot authorize.
+
+Loaded repo knowledge may guide analysis, prompts, oracle comparison, and
+failure classification. It does not automatically become public answer
+authority. In particular:
+
+- curated glossary pages can support stable terminology only;
+- review-only mechanics candidates can guide analysis but are not accepted
+  current facts;
+- observations and raw-video reports are calibration evidence only;
+- external visual atlas references are visual references only;
+- Hermes memory, local skills, session history, Curator output, logs, and local
+  state are non-canonical;
+- exact current facts must route to the repo's current-fact authority surfaces;
+- video observations, external visual references, and Hermes memory must not
+  override packaged `official_raw`.
+
+If relevant repo context exists but was not loaded, record that as a workflow
+failure. If no relevant context exists, record that explicitly. Do not silently
+proceed as if the repository had no prior knowledge.
+
+When loaded context is insufficient, create or reference a follow-up issue. Add
+validators, policies, or schema changes only when a concrete source execution
+exposes a repeated or review-blocking failure.
+
 ## Raw Local Video Analysis Calibration
 
 Raw local videos may be used to calibrate analysis accuracy when a sanitized
