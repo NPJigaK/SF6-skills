@@ -176,22 +176,44 @@ Terminal state remains review-only calibration evidence. The command-prompt
 oracle can support #176 and #177, but it does not establish accepted move order,
 route validity, current frame facts, or damage/scaling authority.
 
+## 2026-05-15 Frame/Input Alignment Follow-Up
+
+#176 created a bounded frame/input alignment calibration using the #175
+sanitized command-prompt oracle.
+
+Report:
+`docs/testing/video-analysis-calibration/raw-video-training-mode-01-frame-input-alignment-20260515.md`.
+
+Result: command prompt rows, input-history clusters, action phases,
+hit-event candidates, and damage-label changes were aligned to approximate
+frame/timestamp windows where the sampled evidence supported it. The result is
+PARTIAL: rows 1-2 and the super/cinematic row have useful coarse windows, but
+the mid-sequence rows remain partial or ambiguous because input-history
+scrolling, visual effects, and cinematic occlusion prevent exact row-to-action
+mapping.
+
+Terminal state remains review-only calibration evidence. #176 does not accept
+exact current frame facts, route validity, move execution timing, or
+damage/scaling authority. #177 remains required before hit/damage/scaling labels
+can be attributed to hit/action candidates.
+
 ## Resolved Follow-Up Routing
 
 | Previously mapped gap | Follow-up issue | Resolution |
 |---|---|---|
 | Hameko-sourced SF6 combo-scaling candidates were not loaded into damage/scaling calibration. | #174 | Resolved in #174 / PR #182: candidates extracted from the Hameko article were loaded and compared against the #173 oracle. The result remains insufficient for attribution without #175/#176/#177. |
 | Combo-trial command prompts were visible but not normalized to canonical move candidates. | #175 | Resolved in #175: a sanitized command-prompt oracle and review-only candidate move mappings were created. Exact move order remains blocked until #176/#177 align rows to frames, inputs, hits, and damage labels. |
+| Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Resolved in #176 as PARTIAL calibration evidence: approximate frame/timestamp windows were recorded where supported, while exact execution and attribution remain blocked until #177. |
 | Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
 
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
 |---|---|---|
-| Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Should use the #175 sanitized command-prompt oracle while avoiding exact frame/current-fact claims. |
-| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle, #174 SF6 combo-scaling comparison, and #175 command-prompt candidates where applicable. |
+| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle, #174 SF6 combo-scaling comparison, #175 command-prompt candidates, and #176 approximate frame/input/damage-label windows where applicable. |
 | External visual atlas acquisition is missing. | #178 | Needed for move/action identification support without committing GIFs/images. |
 | JP move/action matching against visual references was not attempted. | #179 | Depends on gated repo-external visual reference acquisition. |
+| SF6 system-mechanics math reasoning fixtures are missing. | #183 | Should cover combo-scaling arithmetic, insufficient-evidence detection, and current-fact authority boundaries after #177 has stronger attribution examples. |
 
 Open questions that remain after #173:
 
