@@ -140,6 +140,18 @@ Reasons:
 
 ## Next Review Questions
 
+| Residual gap | Follow-up issue | Notes |
+|---|---|---|
+| Hameko combo-scaling candidates from #160 / PR #171 were not loaded into this damage/scaling calibration. | #174 | This is a workflow/context-loading failure, not a failure of #171. |
+| Combo-trial command prompts were not normalized to canonical move candidates. | #175 | Needed before predicted move order can be compared to an answer key. |
+| Coarse frame ranges were not aligned with input history, action phases, hit events, or damage labels. | #176 | Needed for frame-level calibration without claiming current frame data. |
+| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle plus #171 model candidates where applicable. |
+| External visual atlas acquisition is missing. | #178 | Needed for move/action identification support without committing GIFs/images. |
+| JP move/action matching against visual references was not attempted. | #179 | Depends on gated repo-external visual reference acquisition. |
+| Source-derived repo knowledge is not automatically loaded before later video analysis. | #180 | Should add a checklist for loading reviewed repo artifacts rather than Hermes local memory. |
+
+Open questions that remain after #173:
+
 - Should a later raw-local gameplay source create claim artifacts when it
   contains a reviewable source-derived concept beyond visual observation?
 - Should future raw-local reports distinguish direct playback review from

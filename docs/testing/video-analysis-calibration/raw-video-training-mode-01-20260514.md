@@ -199,6 +199,27 @@ Residual gaps:
 - damage/scaling attribution requires hit-by-hit mapping and a verified formula
   surface.
 
+## Follow-Up Issue Map
+
+PR #173 intentionally stops at `analysis-calibration PARTIAL`. The residual gaps
+are mapped to executable follow-up issues so they do not remain as vague report
+notes.
+
+| Residual gap | Follow-up issue | Expected next execution |
+|---|---|---|
+| #171 combo-scaling candidates were not loaded into the #170 damage/scaling calibration. | #174 | Compare the #173 visible damage/scaling oracle against Hameko source-derived combo-scaling model candidates. |
+| Combo-trial command prompts were visible but not normalized to canonical move candidates. | #175 | Extract sanitized command-list prompt rows and map them to canonical move-name candidates where possible. |
+| Coarse frame ranges were not aligned with right-side input history, action phases, hit events, or damage-label changes. | #176 | Run bounded frame stepping and input-history alignment with explicit uncertainty. |
+| Visible damage/scaling labels were sampled but not attributed hit-by-hit or move-by-move. | #177 | Map each visible damage/scaling label to hit/action candidates or mark it unknown. |
+| Move identification lacks a repo-external visual reference atlas. | #178 | Build a gated Scrapling-aligned external visual atlas acquisition path that commits metadata/report only. |
+| JP move/action matching was not attempted against visual references. | #179 | Compare raw-video segments against repo-external JP visual references and record candidate matches. |
+| Merged repo knowledge did not automatically affect later video analysis. | #180 | Add a context-loading checklist so source-derived mechanics candidates, prior calibration reports, and other reviewed artifacts are loaded before analysis. |
+
+#171 / PR #171 is not the failure here. The failure is that #170 did not
+explicitly load the merged source-derived combo-scaling model before attempting
+damage/scaling calibration. That context-loading gap is tracked in #180, and
+the concrete damage/scaling follow-up is tracked in #174.
+
 ## Terminal State
 
 | State | Result | Reason |
