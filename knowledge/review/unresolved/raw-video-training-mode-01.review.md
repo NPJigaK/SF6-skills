@@ -138,6 +138,23 @@ Reasons:
   local sample descriptor with no private path.
 - No schema, policy, or validator change was needed.
 
+## 2026-05-14 Combo-Scaling Context Follow-Up
+
+#174 loaded the #160 / PR #171 Hameko combo-scaling source-derived mechanics
+candidates and compared them against the sanitized #173 damage/scaling oracle.
+
+Report:
+`docs/testing/video-analysis-calibration/raw-video-training-mode-01-combo-scaling-context-20260514.md`.
+
+Result: the Hameko candidates are useful analysis context, but insufficient to
+complete scaling attribution without command/move normalization, frame/action
+alignment, and hit-by-hit damage mapping. The visible #173 labels remain
+calibration observations only; Hameko values remain review-only, unverified
+system-mechanics candidates.
+
+Terminal state remains review-only calibration evidence. #175, #176, and #177
+remain required before damage/scaling attribution can be evaluated.
+
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
