@@ -56,6 +56,32 @@ The following categories stay unresolved:
 - Future review should decide whether combo-scaling facts belong in a mechanics-specific contract, a reproducible observation workflow, or a current-system data surface.
 - The article should not be used as final public answer evidence until relevant claims are reviewed and promoted into an appropriate canonical surface.
 
+## 2026-05-14 Tranche 1 Fresh Content Review
+
+As part of #158 Tranche 1, the article URL was accessed through public
+no-cookie HTML and reviewed at a bounded, paraphrased category level. The raw
+HTML, full article body, article images, and long verbatim excerpts were not
+stored in the repository.
+
+The fresh review confirmed the existing routing:
+
+- The source is suitable for explaining the stable concept that combo damage is
+  adjusted by combo context rather than every hit being treated as independent
+  full damage.
+- The source also discusses numeric scaling rules, system-action modifiers,
+  super-art guarantee behavior, Modern-control modifiers, and character-specific
+  exception categories.
+- Those numeric and exception categories remain patch-sensitive
+  current-system candidates and are not accepted into curated knowledge here.
+- `knowledge/curated/mechanics/combo-scaling.md` already holds the accepted
+  stable concept boundary; this Tranche 1 review did not create new curated
+  knowledge.
+
+Review decision for this tranche: keep the candidate claims in `needs_review`
+unless and until a dedicated current-system or mechanics-fact workflow verifies
+the numeric and exception details. No exact values from the article were copied
+into the review note.
+
 ## Workflow Findings
 
 - The source and candidate-claim locations work for a Japanese article with mixed concept and numeric/system content.

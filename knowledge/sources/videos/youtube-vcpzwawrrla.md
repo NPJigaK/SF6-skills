@@ -45,6 +45,26 @@ behavior.
   state, and full captions/transcript are not stored in this repository.
 - Scratch/cache handling followed `workflows/media-scratch-cache-policy.md`.
 
+## Tranche 1 Content Execution Boundary
+
+For #158 Tranche 1, this source was reviewed only through no-download metadata:
+title, channel, duration, URL, description, and chapter outline. The public
+description identifies the source as a beginner-oriented terminology explainer
+and lists chapter-level topics such as okizeme-style pressure, cross-up, whiff
+or empty-jump style situations, screen-line control, throw-tech terminology, and
+shimmy-like terminology.
+
+Definition-level content review was not completed in this PR because that would
+require video, audio, caption, or transcript access. Those materials were not
+downloaded and are not committed.
+
+Terminal state for this source in Tranche 1:
+
+- metadata-only source artifact: PASS
+- terminology/content extraction: HOLD
+- accepted terminology knowledge: not created
+- public `sf6-agent` behavior: unchanged
+
 ## Reviewer Notes
 
 - Treat this source as review-only metadata for #158 Tranche 1 validation.
