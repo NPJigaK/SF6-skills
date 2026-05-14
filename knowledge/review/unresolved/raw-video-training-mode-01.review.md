@@ -1,0 +1,128 @@
+---
+id: sf6-review-raw-video-training-mode-01
+title: Raw Local Training-Mode Video Review
+claim_kind: observation
+source_kind: reproducible_observation
+source_role: raw_local_training_mode_review
+evidence_basis:
+  - "Sanitized local source descriptor recorded in knowledge/sources/videos/raw-video-training-mode-01.md."
+  - "Timestamped observations recorded in knowledge/evidence/video-observations/raw-video-training-mode-01.observations.md."
+  - "Temporary frames and contact sheet were created only in repo-external scratch."
+  - "No raw media, private path, frames, screenshots, contact sheet, transcript, or raw tool output was committed."
+verification_state: partially_verified
+confidence: 0.46
+volatility: patch_sensitive
+patch_sensitivity: high
+review_status: needs_review
+source_refs:
+  - label: "Source metadata: raw-video-training-mode-01"
+    path: "knowledge/sources/videos/raw-video-training-mode-01.md"
+    accessed_at: "2026-05-14"
+  - label: "Video observations: raw-video-training-mode-01"
+    path: "knowledge/evidence/video-observations/raw-video-training-mode-01.observations.md"
+    accessed_at: "2026-05-14"
+review_after: "2026-08-14"
+summary: "Review note for #170 source E2E on a maintainer-local raw SF6 training-mode video; source-derived observations are sanitized and held as report-only/review-only evidence."
+---
+
+# Raw Local Training-Mode Video Review
+
+This review note tracks #170 one-source E2E execution for a maintainer-local raw
+training-mode video. It is canonical review tracking, but it is not accepted
+curated knowledge and must not feed generated knowledge references.
+
+## Review Status
+
+- Sanitized local source descriptor created: yes.
+- Timestamped raw-local observation artifact created: yes.
+- Candidate claims artifact created: no; the source did not support a
+  reviewable claim beyond sanitized observation/report-only routing.
+- Raw local video accessible through out-of-band mapping: yes.
+- Private local path recorded in repo: no.
+- Raw video stored in repo: no.
+- Raw frames or screenshots stored in repo: no.
+- Contact sheet stored in repo: no.
+- Full captions or transcript stored in repo: no.
+- Raw tool output or logs stored in repo: no.
+- Scratch/cache policy followed: yes.
+- Curated promotion performed: no.
+- Generated references changed: no.
+- Exact current values accepted: no.
+- Current verification required before using visual labels as facts: yes.
+
+## Content Execution Record
+
+| Field | Result |
+|---|---|
+| Source sample ID | `raw-video-training-mode-01` |
+| Source family | maintainer-local raw video |
+| Private path recorded? | no |
+| Access method | maintainer-provided out-of-band mapping; path not committed or recorded |
+| Metadata inspection | `ffprobe` metadata inspection |
+| Media summary | MP4-family container, HEVC video, 1920x1080, about 37.93 seconds, 60 fps nominal, 2272 reported video frames, AAC stereo audio stream present |
+| Content execution depth | metadata inspection plus temporary frame/contact-sheet visual review |
+| Direct video playback reviewed? | no |
+| Temporary frame/contact sheet reviewed? | yes |
+| Direct audio reviewed? | no |
+| Captions/transcript reviewed? | no |
+| Raw media or derivatives committed? | no |
+| Scratch cleanup | completed before commit |
+
+## Source-Derived Knowledge Units
+
+The output of this source E2E is not a video summary and not a combo proof. The
+source was analyzed for observation units, then routed through the source-unit
+promotion decision gate.
+
+| knowledge_unit_id | extracted observation or knowledge | terminal route | reason |
+|---|---|---|---|
+| `ku-raw-training-context` | Training/combo-trial style UI with command list and input history visible. | sanitized observation/report only | Useful to prove raw-local video ingest and observation handling; not a stable concept needing curated promotion. |
+| `ku-raw-training-actors` | JP and Ryu labels/characters are visible in the sample. | review-only hold | Visual labels are source-local and must not become roster/current-fact authority. |
+| `ku-raw-training-sequence` | A guided player-side sequence with hit effects, airborne/cinematic phases, and success/completion context is visible. | sanitized observation/report only | No exact route, move recognition, damage authority, or combo validity is accepted. |
+| `ku-raw-training-current-fact-like-labels` | Training UI combo/damage labels are visible in sampled frames. | review-only hold | Values are current-fact-like visual labels and require a separate authority/reproduction path before use. |
+
+## Promotion Decision
+
+No unit was promoted to curated knowledge.
+
+Reasons:
+
+- The source is a single maintainer-local raw clip, not a stable terminology or
+  strategy source.
+- The useful result is sanitized evidence that the repo can process raw-local
+  training-mode video without leaking private path or raw media.
+- The visible sequence is source-local and does not safely establish an
+  accepted combo route, exact damage, current-system mechanic, or public answer
+  behavior.
+- Observed UI labels and visible character labels are review input only.
+- Any future claim about route validity, damage, move identity, or system
+  mechanics must use a separate current-fact/reproducible verification path.
+
+## Terminal Decisions
+
+| Candidate | Decision | Reason |
+|---|---|---|
+| Raw local source descriptor | metadata/source descriptor created | Needed to identify the sanitized sample and private-path boundary. |
+| Raw local visual observations | sanitized report / observation artifact created | Bounded visual review occurred through repo-external temporary derivatives. |
+| Candidate claim artifact | not created | No source-derived claim was safe or useful beyond observation/report-only routing. |
+| Curated knowledge | not promoted | Single raw local clip cannot establish stable knowledge without separate review. |
+| Current-fact-like labels | review-only hold | Training UI damage/combo labels and visible action details do not override canonical current-fact authority surfaces. |
+| Rejected unsafe | none | No unsupported unsafe claim was created; no rejection was fabricated for coverage. |
+
+## Workflow Findings
+
+- `workflows/ingest-video.md`, `workflows/review-claims.md`, and
+  `workflows/media-scratch-cache-policy.md` were sufficient for this raw-local
+  video source-unit execution.
+- The existing video source and observation validators accepted a sanitized
+  local sample descriptor with no private path.
+- No workflow, schema, policy, or validator change was needed.
+
+## Next Review Questions
+
+- Should a later raw-local gameplay source create claim artifacts when it
+  contains a reviewable source-derived concept beyond visual observation?
+- Should future raw-local reports distinguish direct playback review from
+  contact-sheet review as separate execution-depth fields in a shared template?
+- Should the repo define a dedicated sanitized local-source descriptor contract
+  if more raw-local samples are added?
