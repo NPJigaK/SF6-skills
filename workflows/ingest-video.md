@@ -122,6 +122,31 @@ For calibration runs:
 7. Treat character, move, damage, timing, and scaling observations as
    calibration evidence, not accepted current facts or public answer authority.
 
+### Combo-Trial Command Prompt Normalization
+
+When a training-mode or combo-trial UI exposes command-list prompts, create a
+sanitized command-prompt oracle before attempting move order, frame alignment,
+or damage attribution.
+
+For command-prompt normalization:
+
+1. Load relevant repo context first, including same-sample calibration reports,
+   source descriptors, observations, review notes, and character move metadata.
+2. Use repo-external scratch only for crops, frame samples, OCR attempts, and
+   manual visual inspection. Do not commit raw visuals, raw OCR, raw tool output,
+   private paths, or raw media.
+3. Record row order, sanitized input tokens, source-local context labels,
+   confidence, and ambiguity.
+4. Normalize visible direction and button icons conservatively. Use `unknown`
+   when the prompt is occluded or uncertain.
+5. Map prompt rows to candidate move IDs with the character move registry and
+   packaged frame-current metadata when available.
+6. Map system-action prompts to system-action registry candidates when present.
+7. Keep all candidate mappings review-only. Prompt rows do not establish
+   accepted route validity, exact execution timing, or current-fact authority.
+8. Route frame/input/action alignment to later calibration work before using the
+   prompt oracle for hit, damage, or scaling attribution.
+
 ## Track Guidance
 
 Use these tracks from the video observation contract:
