@@ -34,7 +34,7 @@ These claims are extracted for review only. They are not accepted curated knowle
     "evidence_basis": [
       "Source summary from Hameko's 2023 combo scaling article."
     ],
-    "verification_state": "reviewed",
+    "verification_state": "partially_verified",
     "confidence": 0.7,
     "volatility": "stable",
     "patch_sensitivity": "low",
@@ -48,7 +48,7 @@ These claims are extracted for review only. They are not accepted curated knowle
     ],
     "review_after": "2026-08-01"
   },
-  "notes": "Accepted only at the stable concept level already represented by knowledge/curated/mechanics/combo-scaling.md. Do not include concrete scaling percentages unless separately verified and routed through an appropriate current/system-fact process."
+  "notes": "Accepted as stable concept only through knowledge/curated/mechanics/combo-scaling.md. Exact scaling sequence, counting rules, exception rules, character/move/control-scheme details, and current-system numeric claims remain excluded from curated knowledge and routed to review-only system-mechanics candidates. This embedded claim stays review-only because claim artifacts must not contain accepted review_status values."
 }
 ```
 
@@ -155,10 +155,14 @@ the source's structure without storing the full article body or long excerpts.
 Exact values are recorded only in the review-only current-fact candidate
 artifact named in the terminal decision.
 
+Artifact-level `review_status` remains `needs_review` because this file also
+contains current-system, exception, and source-claimed mechanics candidates that
+remain held. Individual terminal decisions are recorded per claim row.
+
 | Claim ID | claim_kind | Statement | Scope | Evidence metadata | Volatility | Patch sensitivity | Review status | Terminal decision | Target repo surface | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `claim-hameko-combo-scaling-concept-001` | `stable_concept` | Combo damage is adjusted by combo context rather than every hit dealing independent full damage. | General combo-scaling concept. | Hameko article, bounded fresh review on 2026-05-14. | stable | low | accepted at terminal decision level | accepted stable concept | `knowledge/curated/mechanics/combo-scaling.md` | No new curated text needed; claim artifact remains review-only by contract. |
-| `claim-hameko-combo-scaling-route-reading-002` | `strategy_or_matchup` | Combo damage interpretation should consider starter, route, system actions, and special-case rules rather than hit count alone. | Strategy/concept explanation for reading combo routes. | Hameko article, bounded fresh review on 2026-05-14. | patch_sensitive | medium | partially_reviewed | accepted only at stable concept level; examples held | curated page plus current-fact candidate | Concrete examples route to current-fact candidates. |
+| `claim-hameko-combo-scaling-concept-001` | `stable_concept` | Combo damage is adjusted by combo context rather than every hit dealing independent full damage. | General combo-scaling concept. | Hameko article, bounded fresh review on 2026-05-14. | stable | low | needs_review | accepted stable concept | `knowledge/curated/mechanics/combo-scaling.md` | No new curated text needed; claim artifact remains review-only by contract. |
+| `claim-hameko-combo-scaling-route-reading-002` | `strategy_or_matchup` | Combo damage interpretation should consider starter, route, system actions, and special-case rules rather than hit count alone. | Strategy/concept explanation for reading combo routes. | Hameko article, bounded fresh review on 2026-05-14. | patch_sensitive | medium | needs_review | accepted only at stable concept level; examples held | curated page plus current-fact candidate | Concrete examples route to current-fact candidates. |
 | `claim-hameko-combo-scaling-global-progression-003` | `current_fact` | The article describes a global combo-scaling progression and floor. | Numeric system mechanics. | Hameko article, bounded fresh review on 2026-05-14. | patch_sensitive | high | needs_review | current-fact/system-mechanics route | `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` | See `cf-hameko-global-progression` and `model-hameko-global-sequence`. |
 | `claim-hameko-combo-scaling-counting-unit-004` | `current_fact` | The article describes scaling-unit progression by move kind / technique category rather than simple hit count. | Combo-scaling counting rule. | Hameko article, bounded fresh review on 2026-05-14. | patch_sensitive | high | needs_review | current-fact/system-mechanics route | current-fact candidate | See `model-hameko-counting-unit`. |
 | `claim-hameko-combo-scaling-hit-vs-type-005` | `current_fact` | The article distinguishes hit count from move/type count when explaining when the floor is reached. | Combo-scaling counting semantics. | Hameko article, bounded fresh review on 2026-05-14. | patch_sensitive | high | needs_review | current-fact/system-mechanics route | current-fact candidate | Records the `10種類目` vs hit-count distinction as review-only knowledge. |
