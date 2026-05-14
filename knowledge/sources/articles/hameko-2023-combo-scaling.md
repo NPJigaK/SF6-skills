@@ -24,7 +24,8 @@ review_after: "2026-08-01"
 
 - Topic: SF6 combo scaling and damage-adjustment mechanics.
 - Source language: Japanese.
-- Useful for: candidate claims about how combo scaling should be decomposed into stable concepts and review-only current/system claims.
+- Useful for: source-derived combo-scaling calculation model candidates,
+  counting-rule candidates, exception candidates, and stable concept claims.
 - Not useful for: accepting current scaling percentages, character-specific exceptions, move-specific exceptions, or current patch behavior without separate verification.
 - Source E2E status: fetched and reviewed through public no-cookie article
   access on 2026-05-14 for #160; raw HTML, full article text, article images,
@@ -44,4 +45,6 @@ bounded article review and short paraphrased summaries.
 - Unverified source-claimed values are recorded only in
   `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md`
   for future review.
+- This source is treated as input for structured mechanics knowledge extraction,
+  not merely as an article summary.
 - Do not turn this source artifact into final public answer evidence.
