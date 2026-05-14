@@ -38,9 +38,10 @@ This review note tracks a Japanese article ingest pilot. It is canonical review 
 - Candidate claims artifact created: yes.
 - Stable curated concept already represented: yes, in `knowledge/curated/mechanics/combo-scaling.md`.
 - New curated promotion performed in #160: no.
-- Current-fact/system-mechanics route created: yes.
+- Current-fact/system-mechanics route created: yes, with review-only source-claimed values.
 - Generated references changed: no.
-- Exact scaling values stored: no.
+- Exact scaling values stored in curated/generated surfaces: no.
+- Source-claimed exact values stored as review-only current-fact candidates: yes.
 - Current verification required: yes.
 
 ## Held Claims
@@ -92,6 +93,33 @@ terminal routing for this article:
 - Character-, move-, and control-scheme-specific exception categories: routed to
   the same current-fact/system-mechanics candidate artifact.
 - Rejected unsafe: none found. No rejection was fabricated for coverage.
+
+## Article Structure And Claim Extraction Map
+
+This map records the article structure observed during #160 bounded review. It
+does not preserve the full article body, raw HTML, images, or long excerpts.
+Rows with `source_claimed_value_recorded: yes` point to review-only entries in
+`knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md`.
+
+| article_topic_id | paraphrased_source_claim | specificity_level | source_claimed_value_recorded | terminal_decision | repo_surface | why |
+|---|---|---|---|---|---|---|
+| `topic-stable-combo-scaling-concept` | Combo damage is adjusted by combo context; not every hit should be read as independent full damage. | stable_concept | no | accepted stable curated knowledge | `knowledge/curated/mechanics/combo-scaling.md` | Safe concept already exists without exact values. |
+| `topic-basic-global-scaling` | The article describes a global progression and floor for combo damage scaling. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` | Exact progression/floor values are patch-sensitive and need authority review. |
+| `topic-route-reading-concept` | Starter, route, hit progression, system actions, and exception categories can change how damage should be read. | stable_concept | no | accepted only at stable concept level; examples held | curated page plus current-fact candidate | The broad reading concept is useful, but article examples include exact mechanics. |
+| `topic-starter-related-scaling` | Some starter categories apply special scaling when they begin the combo. | conditional_rule | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Starter-specific details are exact current-system mechanics. |
+| `topic-weak-attack-starter` | The article gives a weak-attack starter category and follow-up damage behavior. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Source-claimed values need current verification before public use. |
+| `topic-first-hit-only-starters` | Drive Impact, cancelable crouching medium kick, and anti-air invincible attacks are discussed as first-hit-only scaling cases. | conditional_rule | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Move category membership and values are patch-sensitive. |
+| `topic-route-hit-count-behavior` | The article says some moves or follow-ups advance scaling by more than one step even inside a route. | exception_category | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Route examples are useful for review but not authority. |
+| `topic-drive-rush-system-action` | Drive Rush / Parry Rush attacks can add a system-action modifier during combo routes. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Exact multiplier and edge cases need authority review. |
+| `topic-drive-impact-guard` | Drive Impact guard wall-splat routes are described as having a distinct guarded-impact modifier. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Guard-hit distinction and floor values are current-system facts. |
+| `topic-just-parry` | Just Parry punish follow-ups are described as carrying a large modifier. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Exact modifier and route behavior are current-system facts. |
+| `topic-super-art-minimum-guarantee` | Super Art minimum guarantees and super-cancel behavior are described separately from ordinary scaling. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Minimum guarantee values and super-cancel details need authority review. |
+| `topic-modern-control-modifier` | Modern special-button use is described as adding a separate modifier while Super Art minimum guarantees still matter. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Control-scheme modifier values are patch-sensitive current facts. |
+| `topic-character-specific-exception` | The article treats character-specific damage modifiers as a separate exception category. | exception_category | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Character-specific values must not be accepted from this article alone. |
+| `topic-jamie-exception` | Jamie drink level is described as changing damage output by level. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Character-resource values require current authority review. |
+| `topic-kimberly-exception` | Kimberly is described as having different damage behavior after Lv3/CA and different baseline damage examples. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Character-state values and examples require current authority review. |
+| `topic-move-specific-exception` | The article names move-specific examples for throw, follow-up, and special move scaling exceptions. | example | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Move-specific exceptions need current-game verification. |
+| `topic-current-version-caveat` | The article is a 2023 source and includes an update-style caveat around exception coverage. | unclear | no | unresolved / needs_review | review note | The source may be stale; missing or changed exceptions must be checked elsewhere. |
 
 ## Terminal Decisions
 

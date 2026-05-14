@@ -39,5 +39,9 @@ bounded article review and short paraphrased summaries.
 
 - The article was published in 2023, so concrete scaling values and exception lists may be stale.
 - Treat numeric, character-specific, move-specific, and current-system claims as review-needed current-fact/system-mechanics candidates.
-- The 2026-05-14 source E2E run confirms article access and content review, not acceptance of combo-scaling values.
+- The 2026-05-14 source E2E run confirms article access and content review,
+  but it does not accept combo-scaling values as current facts.
+- Unverified source-claimed values are recorded only in
+  `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md`
+  for future review.
 - Do not turn this source artifact into final public answer evidence.
