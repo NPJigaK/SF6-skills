@@ -230,7 +230,7 @@ else {
       }
     }
 
-    if ($content -notmatch '(?m)^\s+path:\s*"knowledge/sources/articles/') {
+    if ($content -notmatch '(?m)^\s+path:\s*"knowledge/sources/(articles|videos)/') {
       $violations += "$relativePath source_refs must include a reviewable source artifact path"
     }
 
