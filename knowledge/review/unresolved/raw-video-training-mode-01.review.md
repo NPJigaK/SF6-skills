@@ -138,17 +138,40 @@ Reasons:
   local sample descriptor with no private path.
 - No schema, policy, or validator change was needed.
 
+## 2026-05-14 Combo-Scaling Context Follow-Up
+
+#174 loaded the #160 / PR #171 SF6 combo-scaling system-mechanics candidates
+extracted from the Hameko article and compared them against the sanitized #173
+damage/scaling oracle.
+
+Report:
+`docs/testing/video-analysis-calibration/raw-video-training-mode-01-combo-scaling-context-20260514.md`.
+
+Result: the Hameko-sourced SF6 combo-scaling candidates are useful analysis
+context, but insufficient to complete scaling attribution without command/move
+normalization, frame/action alignment, and hit-by-hit damage mapping. The
+visible #173 labels remain calibration observations only; values extracted from
+the Hameko article remain review-only, unverified system-mechanics candidates.
+
+Terminal state remains review-only calibration evidence. #175, #176, and #177
+remain required before damage/scaling attribution can be evaluated.
+
+## Resolved Follow-Up Routing
+
+| Previously mapped gap | Follow-up issue | Resolution |
+|---|---|---|
+| Hameko-sourced SF6 combo-scaling candidates were not loaded into damage/scaling calibration. | #174 | Resolved in #174 / PR #182: candidates extracted from the Hameko article were loaded and compared against the #173 oracle. The result remains insufficient for attribution without #175/#176/#177. |
+| Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
+
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
 |---|---|---|
-| Hameko combo-scaling candidates from #160 / PR #171 were not loaded into this damage/scaling calibration. | #174 | This is a workflow/context-loading failure, not a failure of #171. |
 | Combo-trial command prompts were not normalized to canonical move candidates. | #175 | Needed before predicted move order can be compared to an answer key. |
 | Coarse frame ranges were not aligned with input history, action phases, hit events, or damage labels. | #176 | Needed for frame-level calibration without claiming current frame data. |
-| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle plus #171 model candidates where applicable. |
+| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle plus #171 SF6 combo-scaling candidates where applicable. |
 | External visual atlas acquisition is missing. | #178 | Needed for move/action identification support without committing GIFs/images. |
 | JP move/action matching against visual references was not attempted. | #179 | Depends on gated repo-external visual reference acquisition. |
-| Source-derived repo knowledge is not automatically loaded before later video analysis. | #180 | Should add a checklist for loading reviewed repo artifacts rather than Hermes local memory. |
 
 Open questions that remain after #173:
 
