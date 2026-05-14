@@ -1,0 +1,47 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "dependencyDashboard": true,
+  "timezone": "Asia/Tokyo",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update the Renovate Docker image version used by the Renovate workflow.",
+      "managerFilePatterns": [
+        "/^\\.github\\/workflows\\/renovate\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "renovate-version:\\s*(?<currentValue>\\S+)\\s+#\\s*renovate:\\s*datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)"
+      ]
+    }
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "mise"
+      ],
+      "groupName": "maintainer toolchain"
+    },
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "github actions"
+    },
+    {
+      "matchDatasources": [
+        "pypi"
+      ],
+      "groupName": "python dependencies"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ Workflow docs are readable by humans and agents without requiring a skill runtim
 ## Canonical Procedures
 
 - [GitHub management](github-management.md)
+- [Manage maintainer toolchain](manage-maintainer-toolchain.md)
 - [Maintainer agent session](maintainer-agent-session.md)
 - [Codex-to-Hermes delegation](codex-to-hermes-delegation.md)
 - [Hermes ingest profile setup](hermes-ingest-profile-setup.md)
