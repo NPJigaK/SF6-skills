@@ -161,8 +161,13 @@ For frame/input alignment:
 2. Use repo-external scratch only for frame sequences, crops, contact sheets,
    OCR attempts, and manual visual inspection. Do not commit raw visuals, raw
    OCR, raw tool output, private paths, or raw media.
-3. Normalize reporting to 60 fps and record the source fps, total frames,
-   timestamp-to-frame conversion, sampling interval, and tolerance.
+3. Normalize SF6 system analysis to a 60 game-frame timeline, while separately
+   recording source capture fps/cadence, total frames, timestamp-to-game-frame
+   conversion, sampling interval, and uncertainty.
+   Source capture fps/cadence does not replace the SF6 game-frame basis.
+   Sources with 30 fps capture, VFR, dropped frames, or duplicated frames require
+   larger uncertainty, and exact frame claims require sufficient capture
+   evidence.
 4. Align command-prompt rows to approximate frame/timestamp ranges only when
    input-history changes, visible action phases, hit-event candidates, or UI
    label changes support the window.

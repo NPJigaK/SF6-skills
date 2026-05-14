@@ -52,7 +52,7 @@ local state are non-canonical.
 |---|---|
 | Raw local mapping used? | yes, through maintainer-provided out-of-band mapping only |
 | Private path recorded? | no |
-| Frame stepping method | nominal 60 fps timeline with targeted 4 fps action/input sheets and 2 fps damage-label sheets in repo-external scratch |
+| Frame stepping method | projected 60 SF6 game-frame timeline with targeted 4 fps action/input sheets and 2 fps damage-label sheets in repo-external scratch |
 | Sampling density | 0.25 second action/input samples; 0.5 second damage-label samples |
 | Targeted crop method | full-frame sheets plus right-side input-history crop and top damage-label crop |
 | OCR attempted? | no |
@@ -69,15 +69,25 @@ ranges. It does not commit raw visual derivatives.
 
 | Field | Value |
 |---|---|
-| Source fps | about 59.95 fps from media metadata; nominal display cadence treated as 60 fps |
-| Normalized fps | 60 |
+| game_timeline_basis | 60 SF6 game frames per second |
+| source_capture_fps | about 59.95 fps from media metadata |
+| normalized_game_fps | 60 |
 | Reported total video frames | 2272 |
 | Reported duration | about 37.93 seconds |
-| Timestamp conversion | `approx_frame = round(timestamp_seconds * 60)` |
+| timestamp_to_game_frame_conversion | `approx_game_frame = round(timestamp_seconds * 60)` |
 | Frame interval convention | approximate closed ranges for human-readable calibration tables, not exact half-open observation segments |
 | Sampling tolerance | about +/-15 frames for 4 fps action/input sheets; about +/-30 frames for 2 fps damage-label sheets; larger during cinematic occlusion |
-| VFR / encoding ambiguity | MP4-family container with nominal 60 fps; this report does not prove constant frame-perfect capture cadence |
+| capture_cadence_uncertainty | MP4-family container with source metadata close to 60 fps; this report does not prove constant frame-perfect capture cadence |
+| analysis_boundary | frame ranges are projected onto the 60f SF6 game-frame timeline, but exact game-frame claims are not accepted unless capture evidence supports them |
 | Exactness boundary | no startup, active, recovery, hitstop, hit advantage, cancel window, or route-validity frame data is claimed |
+
+SF6 mechanics reasoning uses the 60 game-frame basis. Source fps is the
+observation/capture cadence, not the system-mechanics frame basis. For this
+sample, source metadata is close to 60 fps, so projecting timestamps onto the
+60f game-frame timeline is reasonable as calibration evidence. If a future
+source is 30 fps, VFR, dropped-frame, or duplicated-frame, observations should
+still be projected to 60f game frames, but uncertainty must increase and exact
+frame events must not be claimed when the capture evidence cannot support them.
 
 Frame ranges were chosen from sampled visual changes, input-history updates, and
 visible damage-label changes. They are calibration windows for later analysis,
@@ -154,7 +164,7 @@ remain unknown.
 | canonical move candidates | #175 produced review-only candidates | Candidate labels helped organize windows, but exact action execution is not proven. | partial | authority boundary | Candidate IDs remain review-only. |
 | input-history visibility | #173 saw input history but did not align it | Input history is visible through most of the sequence, but scrolling/occlusion prevents exact row mapping. | partial | visibility / overwrite | Good for broad clusters, weak for exact event frames. |
 | damage labels | #173/#174 recorded visible labels | Label-change windows are now bounded approximately. | partial | sampling tolerance | Useful for #177, not damage authority. |
-| frame-level timing | #173 held exact timing unresolved | #176 provides coarse 60 fps windows with tolerance. | partial | exactness limitation | No exact startup/contact/hit/recovery frames are claimed. |
+| frame-level timing | #173 held exact timing unresolved | #176 provides coarse 60f game-frame projected windows with tolerance. | partial | exactness limitation | No exact startup/contact/hit/recovery frames are claimed. |
 | hit-by-hit attribution | unresolved | still unresolved | unknown | out of scope | Routed to #177. |
 
 ## Failure Analysis
@@ -184,7 +194,9 @@ history or local memory.
    - Record what each artifact can guide and cannot authorize.
 
 2. Frame stepping / sampling plan
-   - Normalize the timeline to 60 fps for reporting.
+   - Normalize SF6 system analysis to a 60 game-frame timeline for reporting.
+   - Record source capture fps/cadence separately as observation quality and
+     uncertainty.
    - Inspect broad full-frame samples first, then targeted input-history and
      damage-label crops.
    - Use denser sampling only for windows where sparse samples expose a
@@ -287,4 +299,3 @@ fact promotion.
 | Raw OCR/tool output committed? | no |
 | Private paths committed? | no |
 | Validators run | see PR body |
-
