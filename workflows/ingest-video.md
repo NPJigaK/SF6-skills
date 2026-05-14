@@ -147,6 +147,40 @@ For command-prompt normalization:
 8. Route frame/input/action alignment to later calibration work before using the
    prompt oracle for hit, damage, or scaling attribution.
 
+### Frame Stepping And Input-History Alignment
+
+When a command-prompt oracle exists and the next task is timing or attribution,
+perform bounded frame/input alignment before assigning hits, damage, or scaling
+to moves.
+
+For frame/input alignment:
+
+1. Load relevant repo context first, including the same-sample source
+   descriptor, observations, review notes, prior calibration reports, and the
+   command-prompt oracle.
+2. Use repo-external scratch only for frame sequences, crops, contact sheets,
+   OCR attempts, and manual visual inspection. Do not commit raw visuals, raw
+   OCR, raw tool output, private paths, or raw media.
+3. Normalize SF6 system analysis to a 60 game-frame timeline, while separately
+   recording source capture fps/cadence, total frames, timestamp-to-game-frame
+   conversion, sampling interval, and uncertainty.
+   Source capture fps/cadence does not replace the SF6 game-frame basis.
+   Sources with 30 fps capture, VFR, dropped frames, or duplicated frames require
+   larger uncertainty, and exact frame claims require sufficient capture
+   evidence.
+4. Align command-prompt rows to approximate frame/timestamp ranges only when
+   input-history changes, visible action phases, hit-event candidates, or UI
+   label changes support the window.
+5. Record right-side input-history clusters as sanitized observations and note
+   scrolling, overwrite, crop, or occlusion limits.
+6. Record action phases, hit-event candidates, and damage-label changes as
+   separate review-only alignment rows.
+7. Keep candidate move mappings review-only. Do not infer exact startup,
+   active, recovery, hitstop, hit advantage, route validity, or current damage
+   facts from video alignment.
+8. Route hit/damage/scaling attribution to later calibration work when exact
+   action-to-label mapping is still unresolved.
+
 ## Track Guidance
 
 Use these tracks from the video observation contract:
