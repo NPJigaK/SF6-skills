@@ -10,7 +10,7 @@ evidence_basis:
   - "Candidate claims recorded in knowledge/evidence/claims/youtube-vcpzwawrrla-terminology.claims.md."
   - "Temporary captions were reviewed in repo-external scratch and were not committed."
 verification_state: partially_verified
-confidence: 0.48
+confidence: 0.42
 volatility: stable
 patch_sensitivity: medium
 review_status: needs_review
@@ -25,7 +25,7 @@ source_refs:
     path: "knowledge/evidence/claims/youtube-vcpzwawrrla-terminology.claims.md"
     accessed_at: "2026-05-14"
 review_after: "2026-08-14"
-summary: "Review note for #168 source E2E on a commentary-only terminology video; source-derived terminology candidates are captured as review-only knowledge."
+summary: "Review note for #168 source E2E on a commentary-only terminology video; source-derived terminology candidates are captured as review-only knowledge from caption-level content review."
 ---
 
 # YouTube VCPzwAwRrLA Commentary Terminology Review
@@ -39,8 +39,10 @@ curated knowledge and must not feed generated knowledge references.
 - Source metadata artifact created: yes.
 - Timestamped observation artifact created: yes.
 - Candidate terminology claims artifact created: yes.
-- Actual content review occurred: yes, via temporary Japanese caption review in
-  repo-external scratch.
+- Caption-level content review occurred: yes, via temporary auto-generated
+  Japanese captions in repo-external scratch.
+- Direct audio review occurred: no.
+- Direct video review occurred: no.
 - Raw video stored in repo: no.
 - Raw audio stored in repo: no.
 - Raw frames or screenshots stored in repo: no.
@@ -88,8 +90,13 @@ are not accepted public-answer authority until reviewed and promoted.
 | Field | Result |
 |---|---|
 | Source URL | `https://www.youtube.com/watch?v=VCPzwAwRrLA` |
-| Access method | Public no-cookie YouTube metadata access plus temporary Japanese caption review. |
-| Actual content review occurred? | yes. |
+| Access method | Public no-cookie YouTube metadata access plus temporary auto-generated Japanese caption review. |
+| Caption provenance | auto-generated; `yt-dlp --list-subs` reported no uploaded/manual subtitles. |
+| Content execution depth | caption-level commentary review. |
+| Direct audio reviewed? | no. |
+| Direct video reviewed? | no. |
+| Caption-level content review occurred? | yes. |
+| Main limitation | Caption transcription, speaker nuance, and chapter segmentation may be imperfect. |
 | Raw video/audio committed? | no. |
 | Captions/transcript committed? | no. |
 | Frames/screenshots/contact sheets committed? | no. |

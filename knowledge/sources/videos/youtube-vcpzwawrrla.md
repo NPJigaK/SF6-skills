@@ -28,8 +28,9 @@ terminology authority or current-system authority by itself.
 - Canonical URL: see the front matter `url` field.
 - Declared format: commentary-only / article-like terminology explainer.
 - Source language: Japanese.
-- Source E2E status: content reviewed on 2026-05-14 through no-cookie metadata
-  access and a temporary Japanese caption review in repo-external scratch.
+- Source E2E status: caption-level content reviewed on 2026-05-14 through
+  no-cookie metadata access and temporary auto-generated Japanese captions in
+  repo-external scratch.
 - Useful for: source-derived terminology/concept candidates, review-only
   fighting-game glossary extraction, and commentary-claim boundary testing.
 - Not useful for: accepting official game terminology, exact current-system
@@ -40,8 +41,14 @@ terminology authority or current-system authority by itself.
 
 - `yt-dlp` was used without cookies, credentials, browser profiles, or
   authenticated state.
-- Temporary Japanese captions were used only as repo-external scratch input and
-  were deleted before commit.
+- Caption review provenance: `yt-dlp --list-subs` reported no uploaded/manual
+  subtitles and available automatic captions. The temporary Japanese caption
+  review used an automatic-caption track as repo-external scratch input.
+- Direct audio reviewed? no.
+- Direct video reviewed? no.
+- Content execution depth: `caption_level_content_review`; not
+  `direct_audio_review` or `direct_video_review`.
+- Temporary Japanese captions were deleted before commit.
 - Raw video, frames, screenshots, contact sheets, raw audio, downloaded media,
   and full captions/transcript are not stored in this repository.
 - Scratch/cache handling followed `workflows/media-scratch-cache-policy.md`.
@@ -49,6 +56,9 @@ terminology authority or current-system authority by itself.
 ## Reviewer Notes
 
 - Treat the extracted terms as review-only community terminology candidates.
+- Caption-derived terminology claims remain review-only because automatic
+  caption transcription can misrecognize Japanese terms, omit speaker nuance, or
+  segment commentary imperfectly.
 - A later glossary PR may promote stable terms only after review and without
   copying source-local wording.
 - Existing accepted `knowledge/curated/glossary/shimmy.md` was not changed by

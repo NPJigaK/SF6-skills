@@ -4,7 +4,7 @@ title: "Candidate terminology claims from YouTube VCPzwAwRrLA"
 source_kind: community
 source_role: commentary_only_terminology_claims
 verification_state: partially_verified
-confidence: 0.52
+confidence: 0.45
 volatility: stable
 patch_sensitivity: medium
 review_status: needs_review
@@ -26,6 +26,18 @@ These claims are extracted for review only. They are not accepted curated knowle
 The source was analyzed for terminology and concept knowledge units, not for a
 video summary. Temporary caption review happened outside the repository; the raw
 captions and transcript-like text are not stored here.
+
+## Caption-Level Review Boundary
+
+- Claims are derived from temporary auto-generated caption-level content review.
+- Direct audio reviewed? no.
+- Direct video reviewed? no.
+- Claim wording is paraphrased; exact source wording is not preserved.
+- Official terminology authority is not claimed.
+- Automatic captions can misrecognize Japanese terms, omit speaker nuance, or
+  segment commentary imperfectly.
+- Any term requiring exact definition wording, official terminology authority,
+  move-specific current behavior, or exact setup validity remains `needs_review`.
 
 ## Source-Derived Terminology Units
 
@@ -63,7 +75,7 @@ changed by this PR.
         "Timestamped sanitized observation recorded in knowledge/evidence/video-observations/youtube-vcpzwawrrla-terminology.observations.md."
       ],
       "verification_state": "partially_verified",
-      "confidence": 0.62,
+      "confidence": 0.52,
       "volatility": "stable",
       "patch_sensitivity": "medium",
       "review_status": "needs_review",
@@ -90,7 +102,7 @@ changed by this PR.
         "Temporary Japanese caption review of YouTube VCPzwAwRrLA on 2026-05-14."
       ],
       "verification_state": "partially_verified",
-      "confidence": 0.65,
+      "confidence": 0.54,
       "volatility": "stable",
       "patch_sensitivity": "low",
       "review_status": "needs_review",
@@ -118,7 +130,7 @@ changed by this PR.
         "Existing curated shimmy page was inspected but not changed."
       ],
       "verification_state": "partially_verified",
-      "confidence": 0.68,
+      "confidence": 0.56,
       "volatility": "stable",
       "patch_sensitivity": "low",
       "review_status": "needs_review",
@@ -145,7 +157,7 @@ changed by this PR.
         "Temporary Japanese caption review of YouTube VCPzwAwRrLA on 2026-05-14."
       ],
       "verification_state": "partially_verified",
-      "confidence": 0.62,
+      "confidence": 0.52,
       "volatility": "stable",
       "patch_sensitivity": "medium",
       "review_status": "needs_review",
@@ -172,7 +184,7 @@ changed by this PR.
         "Temporary Japanese caption review of YouTube VCPzwAwRrLA on 2026-05-14."
       ],
       "verification_state": "partially_verified",
-      "confidence": 0.64,
+      "confidence": 0.52,
       "volatility": "stable",
       "patch_sensitivity": "medium",
       "review_status": "needs_review",

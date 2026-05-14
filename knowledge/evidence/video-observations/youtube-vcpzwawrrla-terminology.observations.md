@@ -18,8 +18,9 @@ must not feed generated references without later review.
 - Source metadata: `knowledge/sources/videos/youtube-vcpzwawrrla.md`
 - Source URL: `https://www.youtube.com/watch?v=VCPzwAwRrLA`
 - Accessed: 2026-05-14
-- Observation method: no-cookie YouTube metadata access plus temporary Japanese
-  caption review in a repo-external scratch/cache location.
+- Observation method: no-cookie YouTube metadata access plus temporary
+  auto-generated Japanese caption review in a repo-external scratch/cache
+  location.
 - Reviewed duration: full source structure by chapter, approximately 20:14.
 - Raw media stored in repo: no.
 - Full transcript stored in repo: no.
@@ -28,16 +29,34 @@ must not feed generated references without later review.
 
 | Time | Observation kind | Visible observation | Speaker/commentary claim | Confidence | Notes |
 |---|---|---|---|---|---|
-| 00:46-02:01 | commentary terminology | Commentary chapter introduces `重ね`. | Source explains the term as timing an attack or special move against a waking opponent, and treats a failed overlap as a missed meaty timing. | high | Review-only terminology candidate; exact wake-up setups remain outside this artifact. |
-| 02:01-03:31 | commentary terminology | Commentary chapter introduces `めくり`. | Source explains the term through a jump attack that crosses or hits behind the opponent so the guard direction is reversed; it also connects the idea to cross-up wording. | high | Stable glossary candidate, but source-local wording is not copied. |
+| 00:46-02:01 | commentary terminology | Commentary chapter introduces `重ね`. | Source explains the term as timing an attack or special move against a waking opponent, and treats a failed overlap as a missed meaty timing. | medium | Review-only terminology candidate; confidence reflects broad topic identification from automatic captions, not exact definition wording. |
+| 02:01-03:31 | commentary terminology | Commentary chapter introduces `めくり`. | Source explains the term through a jump attack that crosses or hits behind the opponent so the guard direction is reversed; it also connects the idea to cross-up wording. | medium | Stable glossary candidate, but source-local wording is not copied and exact wording remains needs_review. |
 | 03:31-04:49 | commentary terminology | Commentary chapter introduces `すかし`. | Source frames it as withholding the expected jump attack and instead landing into another option such as a low or throw-like threat. | medium | Keep as terminology candidate; exact option coverage is context-dependent. |
 | 04:49-06:50 | commentary terminology | Commentary chapter introduces `ライン`. | Source uses line to describe screen-position pressure: advancing the line pushes the opponent toward the corner, while retreating lowers the line. | medium | Strategy concept candidate; no exact screen-position rule is accepted. |
 | 06:50-08:44 | commentary terminology | Commentary chapter introduces `グラップ`. | Source uses the term as throw escape / throw-tech wording in SF6 commentary and connects it to delayed throw-tech situations. | medium | Community terminology candidate; not official terminology authority. |
-| 08:44-11:20 | commentary terminology | Commentary chapter introduces `シミー`. | Source explains shimmy as baiting an opponent's throw-tech / grapple response, making it whiff, and punishing it. | high | Existing curated shimmy page was not modified; this row is review input only. |
+| 08:44-11:20 | commentary terminology | Commentary chapter introduces `シミー`. | Source explains shimmy as baiting an opponent's throw-tech / grapple response, making it whiff, and punishing it. | medium | Existing curated shimmy page was not modified; this row is review input only and caption-derived. |
 | 11:20-14:44 | commentary terminology | Commentary chapter introduces `暴れ`. | Source frames the term as pressing an attack from a disadvantage or expected-block situation, such as wake-up or after guarding pressure. | medium | Exact advantage examples are held as current-fact-like and are not recorded as accepted values. |
 | 14:44-16:06 | commentary terminology | Commentary chapter introduces `固め`. | Source explains it as using normals, specials, or pressure strings to make the defender hard to move, while noting SF6-specific pressure caveats. | medium | General concept candidate; SF6-specific pressure strength remains review-needed. |
-| 16:06-18:01 | commentary terminology | Commentary chapter introduces `キャンセル`. | Source explains cancel as cutting off the later recovery of one action, especially a normal, into another action such as a special. | high | Stable terminology candidate; move-specific cancelability remains current fact. |
-| 18:01-20:14 | commentary terminology | Commentary chapter introduces `リーサル`. | Source explains lethal as an option or combo that can finish the opponent from the current life total. | high | Stable concept candidate; exact route kill thresholds are current or matchup facts. |
+| 16:06-18:01 | commentary terminology | Commentary chapter introduces `キャンセル`. | Source explains cancel as cutting off the later recovery of one action, especially a normal, into another action such as a special. | medium | Stable terminology candidate; move-specific cancelability remains current fact and exact wording remains needs_review. |
+| 18:01-20:14 | commentary terminology | Commentary chapter introduces `リーサル`. | Source explains lethal as an option or combo that can finish the opponent from the current life total. | medium | Stable concept candidate; exact route kill thresholds are current or matchup facts. |
+
+## Caption Review Provenance And Limits
+
+- Caption provenance: auto-generated. `yt-dlp --list-subs` reported no
+  uploaded/manual subtitles and available automatic captions for this source.
+- Direct audio reviewed? no.
+- Direct video reviewed? no.
+- Content execution depth: `caption_level_content_review`.
+- Timestamped observations are paraphrased from temporary caption-level review
+  plus chapter metadata; raw captions and transcript-like text are not
+  committed.
+- Automatic caption errors may affect Japanese terminology extraction,
+  especially source-local wording, speaker nuance, and homophones.
+- Confidence values mean confidence in broad chapter/topic identification and
+  paraphrased concept extraction, not official definition accuracy or exact
+  source wording.
+- Terms requiring exact wording, official terminology authority, or
+  move/system-specific claims remain `needs_review`.
 
 ## Contract-Shaped Observation Payload
 
@@ -79,7 +98,7 @@ or raw captions are stored.
       "kind": "term_meaty_source_claim",
       "start_frame": 2760,
       "end_frame": 7260,
-      "confidence": 0.8,
+      "confidence": 0.62,
       "summary": "Source-derived `重ね` explanation candidate.",
       "evidence_refs": [
         "knowledge/sources/videos/youtube-vcpzwawrrla.md"
@@ -91,7 +110,7 @@ or raw captions are stored.
       "kind": "term_crossup_source_claim",
       "start_frame": 7260,
       "end_frame": 12660,
-      "confidence": 0.85,
+      "confidence": 0.65,
       "summary": "Source-derived `めくり` explanation candidate.",
       "evidence_refs": [
         "knowledge/sources/videos/youtube-vcpzwawrrla.md"
@@ -103,7 +122,7 @@ or raw captions are stored.
       "kind": "term_shimmy_source_claim",
       "start_frame": 31440,
       "end_frame": 40800,
-      "confidence": 0.85,
+      "confidence": 0.65,
       "summary": "Source-derived `シミー` explanation candidate.",
       "evidence_refs": [
         "knowledge/sources/videos/youtube-vcpzwawrrla.md"
@@ -115,7 +134,7 @@ or raw captions are stored.
       "kind": "term_cancel_and_lethal_source_claim",
       "start_frame": 57960,
       "end_frame": 72840,
-      "confidence": 0.8,
+      "confidence": 0.62,
       "summary": "Source-derived `キャンセル` and `リーサル` explanation candidates.",
       "evidence_refs": [
         "knowledge/sources/videos/youtube-vcpzwawrrla.md"
@@ -140,6 +159,7 @@ or raw captions are stored.
 ## Boundary Notes
 
 - These are review-only observations.
+- They are based on caption-level content review, not direct audio/video review.
 - The extracted terminology candidates are not accepted current facts.
 - Commentary definitions are source-derived review input, not official
   terminology authority.
