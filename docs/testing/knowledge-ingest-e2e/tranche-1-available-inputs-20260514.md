@@ -56,27 +56,44 @@ state, or local state.
 
 | Method | Used for | Result | Repo boundary |
 |---|---|---|---|
-| Bounded no-cookie article fetch | A3 | HTTP 200 HTML access succeeded; only metadata and existing repo artifacts were used in this report. | No full article body or long verbatim excerpt stored. |
+| Bounded no-cookie article metadata/access check | A3 | HTTP 200 HTML access succeeded; only metadata and existing repo artifacts were used in this report. Fresh full live extraction was not performed. | No full article body or long verbatim excerpt stored. |
 | `yt-dlp --skip-download` metadata access | D1-D4, D6, D6b, D7-D9 | All ready video-link rows returned title, duration, channel, and canonical URL metadata without downloading media. | No video, subtitles, thumbnails, info JSON, or transcript files were written to the repo. |
-| Existing video source artifact reuse | D1-D4, D6, D7 | Existing metadata-only source artifacts were reused. | Existing review-only boundaries preserved. |
+| Existing bounded review reuse | D1-D4, D7 | Existing #137 source artifacts and `docs/testing/smoke-runs/video-analysis-learning-report-20260513-first-smoke-batch.md` were reused. No new video-content review was performed for these rows in this PR. | Existing review-only boundaries preserved. |
+| Existing source/observation artifact reuse | D6 | Existing metadata-only source and review-only observation artifacts were reused. No new video-content review was performed for this row in this PR. | Existing review-only boundaries preserved. |
 | New metadata-only video source artifacts | D6b, D8, D9 | Three missing source artifacts were added. | Metadata-only; no raw media or transcript. |
 | `ffprobe` raw local video check | E7 | Maintainer-local file was available and probed outside the repo. | Private absolute path is not recorded in repo artifacts. |
 | Scratch-only contact sheet review | E7 | A temporary contact sheet confirmed training/combo-trial visual context. | Scratch directory was deleted before commit; no images committed. |
+
+## Execution Depth And Proof Scope
+
+| Row | Execution depth | Proof scope |
+|---|---|---|
+| A3 | `live_metadata_access_only`; `existing_artifact_reuse`; `fresh_live_extraction_not_performed` | Proves only current access plus the existing source/claim/review artifact path ending in `needs_review`. It does not prove full article URL live-fetch/extraction E2E. |
+| D1 | `live_metadata_access_only`; `existing_bounded_review_reuse` | Content-review proof is inherited from the existing #137 bounded review report and source artifact, not newly performed in this PR. |
+| D2 | `live_metadata_access_only`; `existing_bounded_review_reuse` | Content-review proof is inherited from the existing #137 bounded review report and source artifact, not newly performed in this PR. |
+| D3 | `live_metadata_access_only`; `existing_bounded_review_reuse` | Content-review proof is inherited from the existing #137 bounded review report and source artifact, not newly performed in this PR. |
+| D4 | `live_metadata_access_only`; `existing_bounded_review_reuse` | Content-review proof is inherited from the existing #137 bounded review report and source artifact, not newly performed in this PR. |
+| D6 | `live_metadata_access_only`; `existing_artifact_reuse`; `bounded_content_review_not_performed` | Reuses existing source and review-only observation artifacts. No new video-content review occurred in this PR. |
+| D6b | `live_metadata_access_only`; `metadata_only_source_artifact_created`; `bounded_content_review_not_performed` | Proves metadata-only source artifact creation. It does not prove clipped video-content review or matchup/counterplay validity. |
+| D7 | `live_metadata_access_only`; `existing_bounded_review_reuse` | Content-review proof is inherited from the existing #137 bounded review report and source artifact, not newly performed in this PR. |
+| D8 | `live_metadata_access_only`; `metadata_only_source_artifact_created`; `bounded_content_review_not_performed` | Proves metadata-only source artifact creation for a commentary/terminology source. It does not prove terminology content review. |
+| D9 | `live_metadata_access_only`; `metadata_only_source_artifact_created`; `bounded_content_review_not_performed` | Proves metadata-only source artifact creation. It does not prove unknown/mixed video-content classification, exact frame-advantage routing, or current-fact review. |
+| E7 | `raw_local_bounded_review_performed` | Proves actual bounded raw-local review of the provided local sample through `ffprobe` and scratch-only contact sheet review; raw media and private path were not committed. |
 
 ## Executed Rows
 
 | Row | Sample ID | Input family | Workflow used | Execution attempted? | Terminal status | Terminal state | Artifacts created or reused | Why terminal state is correct |
 |---|---|---|---|---:|---|---|---|---|
-| A3 | `article-live-japanese-01` | Article URL live fetch/extraction | `workflows/ingest-article.md`, `workflows/review-claims.md` | yes | PASS | unresolved / needs_review | Reused `knowledge/sources/articles/hameko-2023-combo-scaling.md`, `knowledge/evidence/claims/hameko-2023-combo-scaling.claims.md`, and `knowledge/review/unresolved/hameko-2023-combo-scaling.review.md`; this ledger added current execution evidence. | The source/claim/review path already exists and remains review-only. Live metadata access succeeded, but concrete scaling values and exception details remain patch-sensitive and unaccepted. |
-| D1 | `video-link-gameplay-only-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | sanitized report only | Reused `knowledge/sources/videos/youtube-paa8pnlequa.md`; this ledger records Tranche 1 execution. | No-download metadata access succeeded. The row supports source metadata and sanitized reporting only; exact current facts, player status, matchup conclusions, and move recognition were not inferred. |
-| D2 | `video-link-gameplay-commentary-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only | Reused `knowledge/sources/videos/youtube-6vmm2sdtoak.md`; this ledger records Tranche 1 execution. | Commentary and coaching claims remain source-local review input. No transcript was stored and no accepted knowledge was created. |
-| D3 | `video-link-livestream-overlay-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only | Reused `knowledge/sources/videos/youtube-ztqbhcrtsnc.md`; this ledger records Tranche 1 execution. | Overlay/webcam/layout analysis remains review-only. Playstyle analysis and player-status claims are not current-fact authority. |
-| D4 | `video-link-vertical-short-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only | Reused `knowledge/sources/videos/youtube-shorts-aylextw2jic.md`; this ledger records Tranche 1 execution. | The short-form source can be represented as metadata and sanitized report context. Vertical crop and subtitle/overlay issues remain limitations, not accepted observations. |
-| D6 | `video-link-clip-compilation-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | sanitized report only | Reused `knowledge/sources/videos/youtube-nyfngnzjv3m.md` and existing review-only observation artifact `knowledge/evidence/video-observations/youtube-nyfngnzjv3m-jp-combos.observations.md`; this ledger records Tranche 1 execution. | The existing source and observation artifacts are review-only and keep observed damage labels out of current-fact authority. No new move recognition or damage authority was created. |
-| D6b | `video-link-clip-compilation-02` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | metadata-only source artifact only / sanitized report only | Added `knowledge/sources/videos/youtube-pfxq7gifuqa.md`; this ledger records Tranche 1 execution. | The clipped counterplay explanation is safe as metadata-only source context. Matchup verdicts and counterplay claims require later claim review. |
-| D7 | `video-link-training-mode-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only | Reused `knowledge/sources/videos/youtube-hwradk0bero.md`; this ledger records Tranche 1 execution. | Training-mode/coaching claims remain source-local. Training UI labels and exact frame facts were not treated as authority. |
-| D8 | `video-link-commentary-only-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | metadata-only source artifact only | Added `knowledge/sources/videos/youtube-vcpzwawrrla.md`; this ledger records Tranche 1 execution. | The terminology/commentary source is represented as source metadata only. No transcript or accepted terminology knowledge was created. |
-| D9 | `video-link-unknown-mixed-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only | Added `knowledge/sources/videos/youtube-ryxbclscdsw.md`; this ledger records Tranche 1 execution. | Frame-advantage concept discussion remains review-only. Exact frame advantage and current move facts require current-fact authority surfaces and were not accepted. |
+| A3 | `article-live-japanese-01` | Article URL live fetch/extraction | `workflows/ingest-article.md`, `workflows/review-claims.md` | yes | PASS | unresolved / needs_review | Reused `knowledge/sources/articles/hameko-2023-combo-scaling.md`, `knowledge/evidence/claims/hameko-2023-combo-scaling.claims.md`, and `knowledge/review/unresolved/hameko-2023-combo-scaling.review.md`; this ledger added current access verification. | The source/claim/review path already exists and remains review-only. Live metadata access succeeded, but fresh full live extraction was not performed and concrete scaling values remain unaccepted. |
+| D1 | `video-link-gameplay-only-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | sanitized report only via existing bounded review reuse | Reused `knowledge/sources/videos/youtube-paa8pnlequa.md` and `docs/testing/smoke-runs/video-analysis-learning-report-20260513-first-smoke-batch.md`. | No-download metadata access succeeded. Content-review proof comes from the existing #137 bounded review, not from new content review in this PR. |
+| D2 | `video-link-gameplay-commentary-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only via existing bounded review reuse | Reused `knowledge/sources/videos/youtube-6vmm2sdtoak.md` and the #137 report. | Commentary and coaching boundaries are supported by existing #137 review; no new transcript or content review was created in this PR. |
+| D3 | `video-link-livestream-overlay-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only via existing bounded review reuse | Reused `knowledge/sources/videos/youtube-ztqbhcrtsnc.md` and the #137 report. | Overlay/webcam/layout boundaries are supported by existing #137 review; no new content review occurred in this PR. |
+| D4 | `video-link-vertical-short-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only via existing bounded review reuse | Reused `knowledge/sources/videos/youtube-shorts-aylextw2jic.md` and the #137 report. | Short-form crop/subtitle limitations are supported by existing #137 review; no new content review occurred in this PR. |
+| D6 | `video-link-clip-compilation-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | sanitized report only via existing artifact reuse | Reused `knowledge/sources/videos/youtube-nyfngnzjv3m.md` and existing review-only observation artifact `knowledge/evidence/video-observations/youtube-nyfngnzjv3m-jp-combos.observations.md`. | Existing source and observation artifacts remain review-only and keep observed damage labels out of current-fact authority. No new video-content review occurred in this PR. |
+| D6b | `video-link-clip-compilation-02` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | metadata-only source artifact only | Added `knowledge/sources/videos/youtube-pfxq7gifuqa.md`; no bounded content review was performed. | This proves metadata-only source artifact creation. Matchup/counterplay conclusions remain future claim-review holds and are not content-review proof. |
+| D7 | `video-link-training-mode-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | review-only hold / sanitized report only via existing bounded review reuse | Reused `knowledge/sources/videos/youtube-hwradk0bero.md` and the #137 report. | Training-mode/coaching boundaries are supported by existing #137 review; no new content review occurred in this PR. |
+| D8 | `video-link-commentary-only-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | metadata-only source artifact only | Added `knowledge/sources/videos/youtube-vcpzwawrrla.md`; no bounded content review was performed. | This proves metadata-only source artifact creation for an article-like video source. It does not prove terminology content review. |
+| D9 | `video-link-unknown-mixed-01` | YouTube/video link | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | metadata-only source artifact only | Added `knowledge/sources/videos/youtube-ryxbclscdsw.md`; no bounded content review was performed. | This proves metadata-only source artifact creation. Unknown/mixed content classification and exact frame-advantage/current-fact routing remain unproven until future bounded content review. |
 | E7 | `raw-video-training-mode-01` | Raw local video | `workflows/ingest-video.md`, `workflows/media-scratch-cache-policy.md` | yes | PASS | sanitized report only | This ledger only. No source URL or private local path artifact was created. | The maintainer-local file was available, basic video metadata was probed, and a scratch-only contact sheet confirmed training/combo-trial context. The private path, raw media, frames, and contact sheet were not committed. |
 
 ## Held Rows
@@ -118,11 +135,12 @@ Held rows were not executed and must not be counted as proof for #155 or #158.
 |---|---|
 | A3 | Existing claims remain `needs_review`; exact scaling values and character/move/control-scheme exceptions are not accepted into curated knowledge. |
 | D1 | Gameplay visibility does not create accepted player-status, matchup, move-recognition, frame-data, or current-system facts. |
-| D2/D3/D7/D9 | Commentary, coaching, playstyle, terminology, and frame-advantage claims remain source-local review input. |
+| D2/D3/D7 | Commentary, coaching, and playstyle claims remain source-local review input based on existing bounded review reuse. |
 | D4 | Vertical/short-form visual context is useful for sanitized reporting only; crop/subtitle limitations reduce observation confidence. |
 | D6 | Existing observed damage labels remain review/eval context only, not current-system authority. |
-| D6b | Matchup/counterplay conclusions from clipped context require later claim review. |
-| D8 | Terminology explanations require later article-like claim review before curated promotion. |
+| D6b | Only metadata was reviewed in this PR. Matchup/counterplay conclusions from clipped context require later bounded content review and claim review. |
+| D8 | Only metadata was reviewed in this PR. Terminology explanations require later article-like claim review before curated promotion. |
+| D9 | Only metadata was reviewed in this PR. Unknown/mixed content classification, frame-advantage routing, and current-fact review remain unproven until later bounded content review. |
 | E7 | Training UI and combo-trial observations are not current facts; no exact move properties or frame data were inferred. |
 
 ## Terminal-State Coverage Summary
@@ -131,12 +149,12 @@ Held rows were not executed and must not be counted as proof for #155 or #158.
 |---|---|---|
 | accepted stable curated knowledge | not proven / HOLD | No input was selected specifically for safe stable curated acceptance. |
 | accepted strategy/concept knowledge | not proven / needs_review | A3 has possible concept candidates, but existing review keeps them unaccepted. |
-| current-fact authority route | not proven as full route | A3 includes current-fact-like claim categories, but this tranche did not update a current-fact authority surface. |
-| review-only hold | proven | D2, D3, D7, D9, and E7 reached review-only/sanitized-report terminal states. |
+| current-fact authority route | not proven / HOLD | A1/C2 remain unavailable. A3 includes current-fact-like claim categories, but this tranche did not exercise a current-fact authority route. |
+| review-only hold | proven by existing bounded review reuse and actual raw-local review | D2, D3, D4, and D7 reuse #137 bounded review; E7 performed actual bounded raw-local review. D6b/D8/D9 are not counted as content-review proof. |
 | rejected unsafe | not proven / HOLD | B3/C3 were unavailable and no executed row produced a rejected unsafe candidate. |
 | unresolved / needs_review | proven | A3 reused existing source/claim/review artifacts with `needs_review` status. |
-| sanitized report only | proven | D1-D4, D6, D6b, D7, D9, and E7 are represented by this ledger and source metadata without raw media or claim promotion. |
-| metadata-only source artifact only | proven | D8 added a metadata-only source artifact and did not create claim or observation artifacts. |
+| sanitized report only | proven by existing report/artifact reuse and actual E7 review | D1-D4 and D7 reuse the #137 report; D6 reuses existing source/observation artifacts; E7 performed actual bounded raw-local review. D6b/D9 are not counted as video-content report proof. |
+| metadata-only source artifact only | proven | D6b, D8, and D9 added metadata-only source artifacts and did not create claim or observation artifacts. |
 
 This tranche does not complete #155. It proves only the terminal states
 demonstrated above for the provided rows.
@@ -144,6 +162,12 @@ demonstrated above for the provided rows.
 ## Unresolved Gaps And Residual Tasks
 
 - D5 subtitle-overlay video-link coverage remains HOLD.
+- Full article live-fetch/extraction remains not fully proven; A3 verified
+  live metadata/access and reused existing source/claim/review artifacts.
+- D6b/D8/D9 bounded video content review remains not proven; these rows prove
+  metadata-only source artifact creation only.
+- Unknown/mixed video-content classification remains not proven for D9 unless
+  future bounded content review is performed.
 - All article URL with maintainer-provided context rows remain HOLD.
 - All local article/note rows remain HOLD.
 - All raw local video formats except E7 remain HOLD.
