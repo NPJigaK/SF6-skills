@@ -72,7 +72,7 @@ not raw OCR output and not official input authority.
 | `cmd-raw-jp-adv5-003` | 3 | `2MP` | down plus medium punch icon | `中` | none visible | 0.85 | targeted command-list crop | no | Treated as crouching medium punch candidate. |
 | `cmd-raw-jp-adv5-004` | 4 | `214 + MP` | down, down-back, back, plus medium punch icon | `中` | `ヴィーハト設置中に` | 0.82 | targeted command-list crop | no | Prompt explicitly depends on an existing Veehat/Departure setup state. |
 | `cmd-raw-jp-adv5-005` | 5 | `j.MP` | medium punch icon while jumping | `中` | `ジャンプ中に` | 0.80 | targeted command-list crop | no | Jump context is visible; exact air-action timing is out of scope. |
-| `cmd-raw-jp-adv5-006` | 6 | `66` | forward, forward | none | `ドライブパリィ中に` | 0.84 | targeted command-list crop | no | Treated as Drive Rush style system-action prompt, not a JP move. |
+| `cmd-raw-jp-adv5-006` | 6 | `66` | forward, forward | none | `ドライブパリィ中に` | 0.84 | targeted command-list crop | no | Treated as a Parry Drive Rush style system-action prompt; exact execution/timing remains unresolved. |
 | `cmd-raw-jp-adv5-007` | 7 | `HP` | heavy punch icon | `強` | none visible | 0.84 | targeted command-list crop | no | Same sanitized token pattern as row 2. |
 | `cmd-raw-jp-adv5-008` | 8 | `236HP` | down, down-forward, forward, plus heavy punch icon | `強` | none visible | 0.86 | targeted command-list crop | no | Candidate special input is visible; hit timing is not inferred. |
 | `cmd-raw-jp-adv5-009` | 9 | `HP` | heavy punch icon | `強` | none visible | 0.82 | targeted command-list crop | no | Same sanitized token pattern as rows 2 and 7. |
@@ -97,7 +97,7 @@ route validity, or current-system authority for the raw video.
 | `cmd-raw-jp-adv5-003` | `2MP` | `しゃがみ中P（ズミヤー）` | `jp_009_2mp` | `jp.moves.yaml`; `official_raw.json` | 0.78 | down plus medium punch prompt matches crouching medium punch. | Button-icon taxonomy is manual visual interpretation. | Review-only candidate. |
 | `cmd-raw-jp-adv5-004` | `214 + MP` while Veehat is set | `ヴィーハト・アクノ` / `Departure: Window` family | `jp_043_214lpmp_vihat_akno` | `jp.moves.yaml`; `official_raw.json`; `supercombo_enrichment.json` | 0.68 | context text says Veehat is set; `214MP` fits the LP/MP follow-up candidate row. | The prompt depends on portal/setup state and does not prove the exact follow-up behavior. | Review-only candidate. |
 | `cmd-raw-jp-adv5-005` | `j.MP` | `ジャンプ中P（ローシャッチ）` | `jp_015_j_mp` | `jp.moves.yaml`; `official_raw.json` | 0.70 | jump context plus medium punch prompt. | Manual icon reading; no frame/action alignment. | Review-only candidate. |
-| `cmd-raw-jp-adv5-006` | `66` during Drive Parry | Drive Rush / forward dash from parry context | no JP move id; system-action prompt | command-list prompt text; workflow boundary | 0.72 | context text says during Drive Parry and shows forward, forward. | Repo frame-current JP move registry is not the right authority surface for system action prompts. | Calibration prompt only; not an accepted system-action fact. |
+| `cmd-raw-jp-adv5-006` | `66` during Drive Parry | `パリィドライブラッシュ` / `Parry Drive Rush` | `jp_068_parry_drive_rush` | `jp.moves.yaml`; `official_raw.json` | 0.70 | context text says during Drive Parry, visible input token is `66`, and the JP registry contains system-action candidate `jp_068_parry_drive_rush`. | Context text and prompt-row reading are source-local; exact action timing/execution still requires #176; generic `jp_060_forward_dash` is a related caution if the context is misread. | Review-only system-action candidate; not accepted current-system authority, exact action execution, or route validity. |
 | `cmd-raw-jp-adv5-007` | `HP` | `立ち強P（キンターヴル）` | `jp_005_5hp` | `jp.moves.yaml`; `official_raw.json` | 0.72 | standalone heavy punch prompt with no direction. | Same ambiguity as row 2. | Review-only candidate. |
 | `cmd-raw-jp-adv5-008` | `236HP` | `強 ストリボーグ` / `Stribog` | `jp_035_236hp_stribog` | `jp.moves.yaml`; `official_raw.json`; `supercombo_enrichment.json` | 0.80 | input token `236HP` matches JP heavy Stribog row. | Does not prove hit/contact timing or whether this action connected. | Review-only candidate. |
 | `cmd-raw-jp-adv5-009` | `HP` | `立ち強P（キンターヴル）` | `jp_005_5hp` | `jp.moves.yaml`; `official_raw.json` | 0.70 | standalone heavy punch prompt with no direction. | Same ambiguity as rows 2 and 7. | Review-only candidate. |
@@ -111,7 +111,7 @@ route validity, or current-system authority for the raw video.
 |---|---|---|---|
 | OD Veehat/Departure variant in row 1 | ambiguous | `214PP` maps to multiple OD Veehat/Departure variants in the registry; the command-list row does not expose portal distance/strength selection. | #176 frame/input alignment or maintainer/oracle confirmation. |
 | Veehat-set follow-up in row 4 | candidate only | Context text is visible, but the row depends on prior portal state and may require route-specific interpretation. | #176 timing plus #179 visual-reference matching if needed. |
-| Drive Parry context row 6 | system-action prompt, not JP move id | JP move registry is not designed for Drive Rush/system-action prompt rows. | Later system-action representation if #176/#177 need it. |
+| Drive Parry context row 6 | mapped to review-only system-action candidate | The row maps to `jp_068_parry_drive_rush`, but exact action execution and timing remain unresolved until #176 aligns prompt rows with frames and input history. It is not character move authority and not current-system authority. | #176 frame/input/action alignment; use `jp_060_forward_dash` only as a caution if the Drive Parry context is later contradicted. |
 | OD Triglav variant in row 10 | ambiguous | `22PP` maps to multiple OD Triglav variants. | #176 input/action alignment and visible spike position. |
 | SA3 vs CA in row 12 | ambiguous | `236236K` maps to both SA3 and CA candidate rows. | Health/resource state and UI context, or official trial answer key. |
 | Success-overlay prompt echo | excluded from ordered list | It appears as post-completion UI echo rather than a separate ordered command-list row. | Dense UI-state review only if later issues need it. |
@@ -133,8 +133,8 @@ After #175, the repo has:
   combo-trial UI;
 - candidate move IDs for rows whose input patterns match existing JP
   registry/frame-current metadata;
-- explicit held rows for ambiguous OD variants, Drive Rush/system-action
-  context, and SA3/CA ambiguity.
+- a review-only system-action candidate for the Drive Parry `66` row;
+- explicit held rows for ambiguous OD variants and SA3/CA ambiguity.
 
 The remaining blocker for #176/#177 is not the absence of command-prompt rows;
 it is alignment: the rows must still be tied to frame ranges, input-history
@@ -146,7 +146,7 @@ changes, hit events, and damage-label changes.
 |---|---|---|
 | No accepted canonical move order | Command-list rows are visible, but the row-to-action execution timing is not aligned. | #176 must align prompt rows to frame/input/action segments. |
 | OD variant ambiguity | Several JP OD prompts use shared input tokens with variant choice determined by button combination, portal/spike position, or route context. | Candidate mapping can identify a move family but not a single accepted variant. |
-| System-action row is outside JP move registry | Drive Rush from Drive Parry context is not a character move row in the JP registry. | Needs separate representation if #176/#177 consume it. |
+| System-action row needs timing confirmation | The Drive Parry `66` row maps to `jp_068_parry_drive_rush`, but the report has not aligned it to frames, input history, or action execution. | #176 must verify timing/execution before #177 uses it for attribution. |
 | Button-icon taxonomy is manually inspected | No raw OCR output or screenshot is committed; icon interpretation is sanitized. | Confidence is bounded and must be rechecked if attribution depends on a row. |
 | Prompt rows are not official route authority | Combo-trial UI shows a prompt sequence, but this PR does not verify current route validity or exact hit behavior. | No accepted current facts or public runtime behavior are created. |
 

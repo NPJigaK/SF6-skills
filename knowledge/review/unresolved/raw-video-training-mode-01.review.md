@@ -167,8 +167,10 @@ Report:
 
 Result: ordered prompt rows were extracted as sanitized text, and candidate JP
 move IDs were produced for many rows. Several prompts remain review-only holds:
-OD Veehat/Departure variant, Veehat-set follow-up behavior, Drive Rush/system
-action context, OD Triglav variant, and SA3/CA distinction.
+OD Veehat/Departure variant, Veehat-set follow-up behavior, OD Triglav variant,
+and SA3/CA distinction. The Drive Parry `66` row is mapped to review-only
+system-action candidate `jp_068_parry_drive_rush`, with exact execution and
+timing held for #176.
 
 Terminal state remains review-only calibration evidence. The command-prompt
 oracle can support #176 and #177, but it does not establish accepted move order,
