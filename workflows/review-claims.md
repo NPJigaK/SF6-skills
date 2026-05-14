@@ -45,6 +45,20 @@ Do not encode decisions with legacy source tiers, bracket labels, or old taxonom
 9. Update or create the smallest appropriate curated page only for accepted knowledge.
 10. Preserve unresolved, rejected, or conflicting candidates in `knowledge/review/` with the decision reason.
 
+## Source-Unit Promotion Decision Gate
+
+For source-unit PRs, do not stop at source-derived claim candidates by default.
+
+After extracting knowledge units from a real source, check whether an existing curated surface can safely hold any stable units. For each unit, record one terminal route:
+
+- Promoted to curated knowledge.
+- Routed to current-fact authority or a current-fact candidate surface.
+- Left as review-only hold.
+- Rejected as unsafe or unsupported.
+- Left unresolved / needs_review.
+
+If no unit is promoted, record why each extracted unit remains held or unresolved. Validators and policy changes should be added only when the concrete source execution exposes a failure; do not add speculative constraints before analysis.
+
 ## Acceptance Criteria
 
 A claim may be accepted when all of these are true:
