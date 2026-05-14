@@ -4,6 +4,10 @@ generator: packages/knowledge-generation/build-sf6-agent-knowledge.ps1
 source_paths:
   - knowledge/curated/concepts/frame-timing.md
   - knowledge/curated/concepts/offense-decision-making.md
+  - knowledge/curated/glossary/cancel.md
+  - knowledge/curated/glossary/cross-up.md
+  - knowledge/curated/glossary/lethal.md
+  - knowledge/curated/glossary/meaty.md
   - knowledge/curated/glossary/shimmy.md
   - knowledge/curated/mechanics/combo-scaling.md
 target_path: skills/sf6-agent/references/generated-concepts.md
@@ -87,6 +91,97 @@ Confirm difficulty depends on the situation, visual cue, buffer window, cancel r
 Wake-up pressure means applying offense as the opponent rises from knockdown. Common pressure choices include strikes, throws, delayed actions, movement baits, and waiting to react.
 
 The concept is stable, but the actual setup depends on knockdown type, spacing, recovery timing, available reversals, defensive system choices, and current move behavior. Treat exact meaty setups and guaranteed followups as separate claims that need current verification.
+
+## Cancel
+
+- source: knowledge/curated/glossary/cancel.md
+- claim_kind: stable_concept
+- source_kind: community
+- source_role: community terminology boundary
+- verification_state: partially_verified
+- confidence: 0.62
+- volatility: stable
+- patch_sensitivity: low
+- review_status: accepted
+- review_after: 2026-10-14
+- summary: Cancel, or キャンセル, is community terminology for ending the later recovery of one action into another action, such as a normal into a special, without asserting current move-specific cancel routes.
+
+Cancel, often called `キャンセル` in Japanese SF6 discussion, is community
+terminology for ending the later recovery of one action into another action.
+For example, players often discuss a normal attack being canceled into a special
+move as a general concept.
+
+Use this page for the stable term only. Whether a specific move can cancel, when
+it can cancel, and what routes are valid are current move or route facts that
+need separate evidence.
+
+## Cross-Up
+
+- source: knowledge/curated/glossary/cross-up.md
+- claim_kind: stable_concept
+- source_kind: community
+- source_role: community terminology boundary
+- verification_state: partially_verified
+- confidence: 0.64
+- volatility: stable
+- patch_sensitivity: low
+- review_status: accepted
+- review_after: 2026-10-14
+- summary: Cross-up, or めくり, is community terminology for an attack that crosses or threatens from the opposite side and changes or obscures the defender's guard direction.
+
+Cross-up, often called `めくり` in Japanese SF6 discussion, is community
+terminology for an attack that crosses or threatens from the opposite side and
+therefore changes or obscures the defender's guard direction.
+
+Use this as a terminology boundary. Do not treat it as evidence that a specific
+current jump attack, setup, spacing, or character route crosses up without
+separate verification.
+
+## Lethal
+
+- source: knowledge/curated/glossary/lethal.md
+- claim_kind: stable_concept
+- source_kind: community
+- source_role: community terminology boundary
+- verification_state: partially_verified
+- confidence: 0.62
+- volatility: stable
+- patch_sensitivity: low
+- review_status: accepted
+- review_after: 2026-10-14
+- summary: Lethal, or リーサル, is community terminology for an option or combo that can finish the opponent from the current life total.
+
+Lethal, often called `リーサル` in Japanese SF6 discussion, is community
+terminology for an option, sequence, or combo that can finish the opponent from
+the current life total.
+
+Use this as a stable term only. Whether something is actually lethal depends on
+current health, character, resources, scaling, route damage, positioning, and
+patch-specific behavior.
+
+## Meaty
+
+- source: knowledge/curated/glossary/meaty.md
+- claim_kind: stable_concept
+- source_kind: community
+- source_role: community terminology boundary
+- verification_state: partially_verified
+- confidence: 0.62
+- volatility: stable
+- patch_sensitivity: low
+- review_status: accepted
+- review_after: 2026-10-14
+- summary: Meaty, or 重ね, is community terminology for timing an attack to overlap a defender's wake-up or recovery timing without asserting a specific guaranteed setup.
+
+Meaty, often called `重ね` in Japanese SF6 discussion, is community terminology
+for timing an attack so it overlaps the defender's wake-up or recovery timing.
+The basic idea is that the attacker places an active threat where the defender
+is about to become able to act.
+
+Use this as a stable terminology explanation only. Whether a particular meaty
+setup works depends on knockdown type, spacing, recovery timing, active
+duration, invincible options, defensive system choices, and current move
+behavior.
 
 ## Shimmy
 
