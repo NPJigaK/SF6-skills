@@ -17,10 +17,10 @@ Maintainer-local raw SF6 video source for `raw-video-training-mode-01`. The
 source is a sanitized local sample ID only; the private absolute file path is
 not recorded in this repository.
 
-This source is not final public answer evidence. It is useful for testing
-raw-local video handling, repo-external scratch review, and sanitized
-observation routing, but it is not accepted gameplay, combo, move, frame-data,
-or current-system authority by itself.
+This source is not final public answer evidence. It is useful for raw-local
+video analysis calibration, repo-external scratch review, sanitized observation
+routing, and prediction-vs-oracle comparison, but it is not accepted gameplay,
+combo, move, frame-data, or current-system authority by itself.
 
 ## Extracted Scope
 
@@ -32,7 +32,8 @@ or current-system authority by itself.
 - Source E2E status: raw local metadata inspection plus bounded visual review
   through temporary repo-external frames/contact sheet on 2026-05-14.
 - Useful for: sanitized raw-local video observation, scratch/cache boundary
-  validation, and review-only routing for visual observations.
+  validation, prediction-vs-oracle calibration, and review-only routing for
+  visual observations.
 - Not useful for: accepting exact combo routes, exact move properties, exact
   frame data, exact damage authority, current patch facts, or public answer
   authority without separate review.
@@ -58,6 +59,8 @@ or current-system authority by itself.
 - Training UI labels, observed combo counters, observed damage labels, visible
   character labels, command-list UI, and input-history UI are source-local
   observations only.
-- Exact current facts, exact combo validity, move recognition, damage authority,
-  frame data, route reliability, and public answer behavior are out of scope for
-  this source-unit PR.
+- Calibration report:
+  `docs/testing/video-analysis-calibration/raw-video-training-mode-01-20260514.md`.
+- Exact current facts, exact combo validity, move recognition runtime, damage
+  authority, frame data, route reliability, and public answer behavior are out
+  of scope for this source-unit PR.

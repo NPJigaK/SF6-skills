@@ -7,6 +7,7 @@ source_role: raw_local_training_mode_review
 evidence_basis:
   - "Sanitized local source descriptor recorded in knowledge/sources/videos/raw-video-training-mode-01.md."
   - "Timestamped observations recorded in knowledge/evidence/video-observations/raw-video-training-mode-01.observations.md."
+  - "Analysis calibration report recorded in docs/testing/video-analysis-calibration/raw-video-training-mode-01-20260514.md."
   - "Temporary frames and contact sheet were created only in repo-external scratch."
   - "No raw media, private path, frames, screenshots, contact sheet, transcript, or raw tool output was committed."
 verification_state: partially_verified
@@ -22,7 +23,7 @@ source_refs:
     path: "knowledge/evidence/video-observations/raw-video-training-mode-01.observations.md"
     accessed_at: "2026-05-14"
 review_after: "2026-08-14"
-summary: "Review note for #170 source E2E on a maintainer-local raw SF6 training-mode video; source-derived observations are sanitized and held as report-only/review-only evidence."
+summary: "Review note for #170 source E2E on a maintainer-local raw SF6 training-mode video; source-derived observations are sanitized and the analysis-calibration result is held as partial calibration evidence."
 ---
 
 # Raw Local Training-Mode Video Review
@@ -35,6 +36,7 @@ curated knowledge and must not feed generated knowledge references.
 
 - Sanitized local source descriptor created: yes.
 - Timestamped raw-local observation artifact created: yes.
+- Analysis calibration report created: yes.
 - Candidate claims artifact created: no; the source did not support a
   reviewable claim beyond sanitized observation/report-only routing.
 - Raw local video accessible through out-of-band mapping: yes.
@@ -49,6 +51,7 @@ curated knowledge and must not feed generated knowledge references.
 - Generated references changed: no.
 - Exact current values accepted: no.
 - Current verification required before using visual labels as facts: yes.
+- Analysis-calibration terminal state: PARTIAL.
 
 ## Content Execution Record
 
@@ -68,6 +71,17 @@ curated knowledge and must not feed generated knowledge references.
 | Raw media or derivatives committed? | no |
 | Scratch cleanup | completed before commit |
 
+## Calibration Result
+
+The analysis-calibration terminal state is **PARTIAL**.
+
+Character, control-mode, training/combo-trial context, and final visible damage
+were interpreted correctly after targeted UI crops. Exact move naming,
+frame-level action/contact timing, hit-by-hit scaling attribution, and input
+history alignment remain unresolved because the first-pass contact sheet and
+sampled frames do not provide enough reliable evidence without a stronger OCR,
+move-recognition, or frame-by-frame analysis method.
+
 ## Source-Derived Knowledge Units
 
 The output of this source E2E is not a video summary and not a combo proof. The
@@ -80,6 +94,7 @@ promotion decision gate.
 | `ku-raw-training-actors` | JP and Ryu labels/characters are visible in the sample. | review-only hold | Visual labels are source-local and must not become roster/current-fact authority. |
 | `ku-raw-training-sequence` | A guided player-side sequence with hit effects, airborne/cinematic phases, and success/completion context is visible. | sanitized observation/report only | No exact route, move recognition, damage authority, or combo validity is accepted. |
 | `ku-raw-training-current-fact-like-labels` | Training UI combo/damage labels are visible in sampled frames. | review-only hold | Values are current-fact-like visual labels and require a separate authority/reproduction path before use. |
+| `ku-raw-training-analysis-method` | Contact-sheet-only review was insufficient for exact move/timing/damage interpretation; targeted UI crops improved oracle extraction. | analysis-method knowledge | Captured in calibration report and workflow note. |
 
 ## Promotion Decision
 
@@ -90,7 +105,9 @@ Reasons:
 - The source is a single maintainer-local raw clip, not a stable terminology or
   strategy source.
 - The useful result is sanitized evidence that the repo can process raw-local
-  training-mode video without leaking private path or raw media.
+  training-mode video without leaking private path or raw media, plus
+  calibration evidence about what the current analysis method can and cannot
+  infer.
 - The visible sequence is source-local and does not safely establish an
   accepted combo route, exact damage, current-system mechanic, or public answer
   behavior.
@@ -104,6 +121,7 @@ Reasons:
 |---|---|---|
 | Raw local source descriptor | metadata/source descriptor created | Needed to identify the sanitized sample and private-path boundary. |
 | Raw local visual observations | sanitized report / observation artifact created | Bounded visual review occurred through repo-external temporary derivatives. |
+| Analysis calibration | PARTIAL | Prediction/oracle comparison exists; character/control/context/final damage are correct or partial, while exact move/timing/scaling remain unresolved. |
 | Candidate claim artifact | not created | No source-derived claim was safe or useful beyond observation/report-only routing. |
 | Curated knowledge | not promoted | Single raw local clip cannot establish stable knowledge without separate review. |
 | Current-fact-like labels | review-only hold | Training UI damage/combo labels and visible action details do not override canonical current-fact authority surfaces. |
@@ -111,12 +129,14 @@ Reasons:
 
 ## Workflow Findings
 
-- `workflows/ingest-video.md`, `workflows/review-claims.md`, and
-  `workflows/media-scratch-cache-policy.md` were sufficient for this raw-local
-  video source-unit execution.
+- `workflows/ingest-video.md` needed a narrow raw-local analysis calibration
+  note so future runs separate prediction, oracle, comparison, failure analysis,
+  and improvement.
+- `workflows/review-claims.md` and `workflows/media-scratch-cache-policy.md`
+  were sufficient for this raw-local video source-unit execution.
 - The existing video source and observation validators accepted a sanitized
   local sample descriptor with no private path.
-- No workflow, schema, policy, or validator change was needed.
+- No schema, policy, or validator change was needed.
 
 ## Next Review Questions
 
