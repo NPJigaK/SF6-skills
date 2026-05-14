@@ -38,6 +38,27 @@ Record:
 9. Emit `derived_events` only when each event lists the source segment IDs it came from.
 10. Stop at the observation layer when a conclusion requires current frame data, matchup judgment, or claim review.
 
+## Raw Local Video Analysis Calibration
+
+Raw local videos may be used to calibrate analysis accuracy when a sanitized
+oracle or answer key is available from combo-trial UI, visible HUD labels, or
+maintainer-provided context.
+
+For calibration runs:
+
+1. Keep raw video and visual derivatives in repo-external scratch only.
+2. Record a first-pass prediction before using the oracle where feasible.
+3. Store the oracle only as sanitized text; do not commit screenshots, frames,
+   contact sheets, raw OCR, raw tool output, private paths, or raw media.
+4. Compare prediction vs oracle for characters, control mode, context,
+   sequence, timing, damage, and any visible UI labels.
+5. Record correct, partial, wrong, unknown, and not-available fields with
+   failure reasons.
+6. Apply a concrete workflow, prompt, report, schema, or tooling improvement
+   only when the source execution exposes a failure.
+7. Treat character, move, damage, timing, and scaling observations as
+   calibration evidence, not accepted current facts or public answer authority.
+
 ## Track Guidance
 
 Use these tracks from the video observation contract:
