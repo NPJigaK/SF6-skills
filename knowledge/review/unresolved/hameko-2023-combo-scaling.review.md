@@ -7,7 +7,8 @@ source_role: japanese_article_ingest_pilot_review
 evidence_basis:
   - "Source summary recorded in knowledge/sources/articles/hameko-2023-combo-scaling.md."
   - "Candidate claims recorded in knowledge/evidence/claims/hameko-2023-combo-scaling.claims.md."
-  - "No claim was promoted to curated knowledge during the pilot."
+  - "Stable concept boundary recorded in knowledge/curated/mechanics/combo-scaling.md."
+  - "System-mechanics current-fact candidates recorded in knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md."
 verification_state: partially_verified
 confidence: 0.35
 volatility: patch_sensitive
@@ -16,12 +17,15 @@ review_status: needs_review
 source_refs:
   - label: "Source metadata: Hameko 2023 combo scaling"
     path: "knowledge/sources/articles/hameko-2023-combo-scaling.md"
-    accessed_at: "2026-05-01"
+    accessed_at: "2026-05-14"
   - label: "Candidate claims: Hameko 2023 combo scaling"
     path: "knowledge/evidence/claims/hameko-2023-combo-scaling.claims.md"
-    accessed_at: "2026-05-01"
+    accessed_at: "2026-05-14"
+  - label: "System-mechanics current-fact candidates: Hameko 2023 combo scaling"
+    path: "knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md"
+    accessed_at: "2026-05-14"
 review_after: "2026-08-01"
-summary: "Review holding note for a Japanese article ingest pilot about combo scaling; source and claims remain review-only."
+summary: "Review note for #160 source E2E on a Japanese combo-scaling article; stable concept is accepted in curated knowledge while exact system-mechanics categories remain review-only."
 ---
 
 # Hameko 2023 Combo Scaling Article Pilot Review
@@ -32,9 +36,12 @@ This review note tracks a Japanese article ingest pilot. It is canonical review 
 
 - Source metadata artifact created: yes.
 - Candidate claims artifact created: yes.
-- Curated promotion performed: no.
+- Stable curated concept already represented: yes, in `knowledge/curated/mechanics/combo-scaling.md`.
+- New curated promotion performed in #160: no.
+- Current-fact/system-mechanics route created: yes, with review-only source-claimed values.
 - Generated references changed: no.
-- Exact scaling values stored: no.
+- Exact scaling values stored in curated/generated surfaces: no.
+- Source-claimed exact values stored as review-only current-fact candidates: yes.
 - Current verification required: yes.
 
 ## Held Claims
@@ -56,9 +63,115 @@ The following categories stay unresolved:
 - Future review should decide whether combo-scaling facts belong in a mechanics-specific contract, a reproducible observation workflow, or a current-system data surface.
 - The article should not be used as final public answer evidence until relevant claims are reviewed and promoted into an appropriate canonical surface.
 
+## 2026-05-14 Source E2E Review
+
+This section records #160 one-source E2E execution for
+`article-live-japanese-01`.
+
+| Field | Result |
+|---|---|
+| Source URL | `https://note.com/hameko/n/n933d2911d655` |
+| Access method | Public no-cookie article access. |
+| Fresh content review occurred? | yes, bounded category-level article review. |
+| Raw article body committed? | no. |
+| Raw HTML committed? | no. |
+| Article images committed? | no. |
+| Long excerpts copied? | no. |
+| Credentials/cookies/browser profile used? | no. |
+| Public adapter behavior changed? | no. |
+
+The source E2E review confirmed that the existing artifact split is the right
+terminal routing for this article:
+
+- Stable concept: accepted through existing
+  `knowledge/curated/mechanics/combo-scaling.md`. No curated text change was
+  needed in this PR.
+- Strategy/concept explanation: partially represented by the existing curated
+  stable concept page; source-specific examples remain review-only.
+- Numeric and current-system categories: routed to
+  `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md`.
+- Character-, move-, and control-scheme-specific exception categories: routed to
+  the same current-fact/system-mechanics candidate artifact.
+- Rejected unsafe: none found. No rejection was fabricated for coverage.
+
+## Source-Derived Knowledge Units
+
+The output of this source E2E is not an article summary. The source was analyzed
+for knowledge units and each unit was routed to the repo surface that can hold
+it safely. Review-only current-fact candidates are still repo knowledge: they
+are structured source-derived mechanics knowledge, but they are not accepted
+current authority and must not feed generated public-answer references.
+
+| knowledge_unit_id | extracted knowledge | knowledge type | repo surface | terminal state | authority boundary |
+|---|---|---|---|---|---|
+| `ku-hameko-stable-combo-scaling-concept` | Combo damage should be read as context-adjusted rather than independent full damage per hit. | stable curated concept | `knowledge/curated/mechanics/combo-scaling.md` | accepted stable curated knowledge already represented | No exact values or formulas are accepted in curated knowledge. |
+| `ku-hameko-source-claimed-scaling-sequence` | Source-claimed scaling sequence and floor. | source-claimed calculation model | `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` | current-fact/system-mechanics route, `needs_review` | Exact sequence is unverified and not generated-answer authority. |
+| `ku-hameko-counting-unit-rule` | Scaling progression is source-claimed as move-kind / technique-category based, so `10種類目` is not simply tenth hit. | source-claimed counting rule | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Counting semantics require current-system authority or reproducible verification. |
+| `ku-hameko-hit-count-vs-move-type-distinction` | The article distinguishes hit count from scaling-unit progression. | source-claimed reasoning rule | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Useful for future combo math, but not accepted runtime behavior. |
+| `ku-hameko-multihit-single-operation` | A single operation producing multiple hits is source-claimed to often count as one scaling unit. | source-claimed counting rule | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Needs controlled route verification. |
+| `ku-hameko-additional-input-followup` | Follow-up attacks caused by additional input may count as separate scaling units. | source-claimed counting rule | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Luke OD Rising Upper -> Slam Dunk and Jamie rekka-style examples were confirmed as source examples, but remain unverified. |
+| `ku-hameko-heavy-starter-exceptions` | Some starter categories carry heavier source-claimed scaling. | exception category | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Starter categories and values are current-system facts. |
+| `ku-hameko-mid-combo-multistage-exceptions` | Some mid-combo moves or routes are source-claimed to advance scaling by multiple stages. | exception category | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Move-specific behavior needs current verification. |
+| `ku-hameko-super-art-minimum-guarantee` | Super Art minimum guarantee and super-cancel modifier categories are source-claimed. | system-mechanics category | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Exact floors/modifiers are not accepted from the article alone. |
+| `ku-hameko-modern-control-modifier` | Modern special-button modifier category and floor interaction are source-claimed. | control-scheme mechanics candidate | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Control-scheme exact behavior requires authority verification. |
+| `ku-hameko-character-specific-exceptions` | Character-specific exception categories are source-claimed. | exception category | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Jamie and Kimberly examples are source-confirmed but unverified. |
+| `ku-hameko-move-specific-exceptions` | Move-specific exception categories are source-claimed. | exception category | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Luke, throw, and throw-SA examples are source-confirmed but unverified. |
+| `ku-hameko-control-scheme-exceptions` | Control-scheme-specific modifier behavior is source-claimed. | exception category | current-fact candidate | current-fact/system-mechanics route, `needs_review` | Must not bypass future system-mechanics authority. |
+
+## Article Structure And Claim Extraction Map
+
+This map records the article structure observed during #160 bounded review. It
+does not preserve the full article body, raw HTML, images, or long excerpts.
+Rows with `source_claimed_value_recorded: yes` point to review-only entries in
+`knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md`.
+
+| article_topic_id | paraphrased_source_claim | specificity_level | source_claimed_value_recorded | terminal_decision | repo_surface | why |
+|---|---|---|---|---|---|---|
+| `topic-stable-combo-scaling-concept` | Combo damage is adjusted by combo context; not every hit should be read as independent full damage. | stable_concept | no | accepted stable curated knowledge | `knowledge/curated/mechanics/combo-scaling.md` | Safe concept already exists without exact values. |
+| `topic-basic-global-scaling` | The article describes a global progression and floor for combo damage scaling. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` | Exact progression/floor values are patch-sensitive and need authority review. |
+| `topic-route-reading-concept` | Starter, route, hit progression, system actions, and exception categories can change how damage should be read. | stable_concept | no | accepted only at stable concept level; examples held | curated page plus current-fact candidate | The broad reading concept is useful, but article examples include exact mechanics. |
+| `topic-starter-related-scaling` | Some starter categories apply special scaling when they begin the combo. | conditional_rule | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Starter-specific details are exact current-system mechanics. |
+| `topic-weak-attack-starter` | The article gives a weak-attack starter category and follow-up damage behavior. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Source-claimed values need current verification before public use. |
+| `topic-first-hit-only-starters` | Drive Impact, cancelable crouching medium kick, and anti-air invincible attacks are discussed as first-hit-only scaling cases. | conditional_rule | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Move category membership and values are patch-sensitive. |
+| `topic-route-hit-count-behavior` | The article says some moves or follow-ups advance scaling by more than one step even inside a route. | exception_category | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Route examples are useful for review but not authority. |
+| `topic-drive-rush-system-action` | Drive Rush / Parry Rush attacks can add a system-action modifier during combo routes. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Exact multiplier and edge cases need authority review. |
+| `topic-drive-impact-guard` | Drive Impact guard wall-splat routes are described as having a distinct guarded-impact modifier. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Guard-hit distinction and floor values are current-system facts. |
+| `topic-just-parry` | Just Parry punish follow-ups are described as carrying a large modifier. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Exact modifier and route behavior are current-system facts. |
+| `topic-super-art-minimum-guarantee` | Super Art minimum guarantees and super-cancel behavior are described separately from ordinary scaling. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Minimum guarantee values and super-cancel details need authority review. |
+| `topic-modern-control-modifier` | Modern special-button use is described as adding a separate modifier while Super Art minimum guarantees still matter. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Control-scheme modifier values are patch-sensitive current facts. |
+| `topic-character-specific-exception` | The article treats character-specific damage modifiers as a separate exception category. | exception_category | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Character-specific values must not be accepted from this article alone. |
+| `topic-jamie-exception` | Jamie drink level is described as changing damage output by level. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Character-resource values require current authority review. |
+| `topic-kimberly-exception` | Kimberly is described as having different damage behavior after Lv3/CA and different baseline damage examples. | exact_numeric | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Character-state values and examples require current authority review. |
+| `topic-move-specific-exception` | The article names move-specific examples for throw, follow-up, and special move scaling exceptions. | example | yes | current-fact/system-mechanics route, `needs_review` | current-fact candidate | Move-specific exceptions need current-game verification. |
+| `topic-current-version-caveat` | The article is a 2023 source and includes an update-style caveat around exception coverage. | unclear | no | unresolved / needs_review | review note | The source may be stale; missing or changed exceptions must be checked elsewhere. |
+
+## Terminal Decisions
+
+| Candidate | Decision | Reason |
+|---|---|---|
+| Stable combo-scaling concept | accepted stable curated knowledge | Existing curated page already explains the safe stable concept without exact values. |
+| Combo-damage factor explanation | accepted only at stable concept level; examples held | The broad reading concept is safe, but concrete examples and exact rules remain patch-sensitive. |
+| Numeric scaling and system-action categories | current-fact/system-mechanics route, `needs_review` | Exact values and formulas require a dedicated current-system authority path or packaged current-fact field. |
+| Exception categories | current-fact/system-mechanics route, `needs_review` | Character-, move-, and control-scheme-specific exception details are patch-sensitive and not accepted from this article alone. |
+
+## SF6 Math / Combo Optimization Relevance
+
+The extracted model candidates are useful because combo optimization questions
+need more than a prose definition of combo scaling. Future tooling or review can
+use these source-derived units to ask concrete questions such as which move
+counts as the next scaling unit, whether a multi-hit move advances one or
+multiple units, when a follow-up input creates a new unit, and when a Super Art
+minimum guarantee changes route value.
+
+These rows are not accepted current facts. They are review-only
+system-mechanics knowledge candidates. A future combo-damage reasoning surface
+must verify them through an accepted system-mechanics authority path or
+reproducible fixtures before using exact values in generated answers,
+calculators, or public `sf6-agent` behavior.
+
 ## Workflow Findings
 
 - The source and candidate-claim locations work for a Japanese article with mixed concept and numeric/system content.
 - `knowledge/review/unresolved/` can hold a review-only note using the existing knowledge-page metadata model.
-- There is no dedicated validator yet for `knowledge/sources/` source artifacts or `knowledge/evidence/claims/` claim artifacts.
-- System-mechanics numeric facts may need a future workflow distinct from frame-current runtime assets.
+- There is no dedicated validator yet for `knowledge/sources/` source artifacts or `knowledge/evidence/claims/` claim artifacts; #160 did not add one because no concrete validator failure was observed.
+- `workflows/system-mechanics-fact-workflow.md` is sufficient for this source-unit run. Accepted system-mechanics exact values still need a future authority surface before they can become runtime-answer authority.
