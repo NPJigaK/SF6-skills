@@ -31,8 +31,9 @@ terminology authority or current-system authority by itself.
 - Source E2E status: caption-level content reviewed on 2026-05-14 through
   no-cookie metadata access and temporary auto-generated Japanese captions in
   repo-external scratch.
-- Useful for: source-derived terminology/concept candidates, review-only
-  fighting-game glossary extraction, and commentary-claim boundary testing.
+- Useful for: source-derived terminology/concept candidates, limited curated
+  glossary promotion with clear boundaries, and commentary-claim boundary
+  testing.
 - Not useful for: accepting official game terminology, exact current-system
   facts, exact frame advantage, guaranteed setup validity, or public answer
   authority without separate review.
@@ -55,10 +56,12 @@ terminology authority or current-system authority by itself.
 
 ## Reviewer Notes
 
-- Treat the extracted terms as review-only community terminology candidates.
-- Caption-derived terminology claims remain review-only because automatic
-  caption transcription can misrecognize Japanese terms, omit speaker nuance, or
-  segment commentary imperfectly.
+- Treat the extracted terms as community terminology. #168 promotes only the
+  low-risk stable boundaries for `重ね`, `めくり`, `キャンセル`, and `リーサル`;
+  other source-derived units remain review-only.
+- Caption-derived claim payloads remain review-only because automatic caption
+  transcription can misrecognize Japanese terms, omit speaker nuance, or segment
+  commentary imperfectly.
 - A later glossary PR may promote stable terms only after review and without
   copying source-local wording.
 - Existing accepted `knowledge/curated/glossary/shimmy.md` was not changed by

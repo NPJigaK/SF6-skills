@@ -39,6 +39,8 @@ curated knowledge and must not feed generated knowledge references.
 - Source metadata artifact created: yes.
 - Timestamped observation artifact created: yes.
 - Candidate terminology claims artifact created: yes.
+- Curated glossary entries created: yes, limited to `重ね` / meaty, `めくり` /
+  cross-up, `キャンセル` / cancel, and `リーサル` / lethal.
 - Caption-level content review occurred: yes, via temporary auto-generated
   Japanese captions in repo-external scratch.
 - Direct audio review occurred: no.
@@ -48,8 +50,8 @@ curated knowledge and must not feed generated knowledge references.
 - Raw frames or screenshots stored in repo: no.
 - Full captions or transcript stored in repo: no.
 - Scratch/cache policy followed: yes.
-- Curated promotion performed: no.
-- Generated references changed: no.
+- Curated promotion performed: yes, limited to stable glossary boundaries.
+- Generated references changed: yes, regenerated from curated glossary changes.
 - Exact current-system values accepted: no.
 - Current verification required before public use: yes for setup-, frame-, or
   move-specific claims.
@@ -57,22 +59,23 @@ curated knowledge and must not feed generated knowledge references.
 ## Source-Derived Knowledge Units
 
 The output of this source E2E is not a video summary. The source was analyzed
-for terminology and concept knowledge units, then routed into review-only repo
-surfaces. Review-only terminology candidates are still repo knowledge, but they
-are not accepted public-answer authority until reviewed and promoted.
+for terminology and concept knowledge units, then routed into curated or
+review-only repo surfaces. Review-only terminology candidates are still repo
+knowledge, but they are not accepted public-answer authority until reviewed and
+promoted.
 
 | knowledge_unit_id | extracted knowledge | knowledge type | repo surface | terminal state | authority boundary |
 |---|---|---|---|---|---|
-| `ku-vcpzwawrrla-meaty` | `重ね` as wake-up-overlap attack timing. | source-derived terminology candidate | claims + observation + review | review-only hold, `needs_review` | Exact setup timing and guaranteed followups are not accepted. |
-| `ku-vcpzwawrrla-crossup` | `めくり` as cross-side jump attack / guard-direction reversal concept. | source-derived terminology candidate | claims + observation + review | review-only hold, `needs_review` | Current move-specific cross-up capability is not accepted. |
+| `ku-vcpzwawrrla-meaty` | `重ね` as wake-up-overlap attack timing. | source-derived terminology candidate | `knowledge/curated/glossary/meaty.md` plus claims/review | accepted stable glossary boundary | Exact setup timing and guaranteed followups are not accepted. |
+| `ku-vcpzwawrrla-crossup` | `めくり` as cross-side jump attack / guard-direction reversal concept. | source-derived terminology candidate | `knowledge/curated/glossary/cross-up.md` plus claims/review | accepted stable glossary boundary | Current move-specific cross-up capability is not accepted. |
 | `ku-vcpzwawrrla-sukashi` | `すかし` as withholding an expected jump attack and landing into another option. | source-derived terminology candidate | claims + review | review-only hold, `needs_review` | Option coverage and setup validity are context-dependent. |
 | `ku-vcpzwawrrla-line` | `ライン` as screen-position pressure and corner-push concept. | source-derived strategy concept candidate | claims + review | review-only hold, `needs_review` | No exact positioning rule is accepted. |
 | `ku-vcpzwawrrla-grapple` | `グラップ` as throw escape / throw-tech wording in commentary. | source-derived terminology candidate | claims + review | review-only hold, `needs_review` | Community wording, not official terminology authority. |
 | `ku-vcpzwawrrla-shimmy` | `シミー` as baiting throw-tech / grapple and punishing the whiff. | source-derived terminology candidate | claims + existing curated boundary | review-only corroboration; no new curated promotion | Existing shimmy page remains the accepted surface; this source does not alter it. |
 | `ku-vcpzwawrrla-abare` | `暴れ` as attacking from disadvantage or expected-block situations. | source-derived terminology / strategy candidate | claims + review | review-only hold, `needs_review` | Source-local frame examples are held. |
 | `ku-vcpzwawrrla-katame` | `固め` as pressure strings that make the defender hard to move. | source-derived terminology / strategy candidate | claims + review | review-only hold, `needs_review` | SF6-specific pressure strength claims remain held. |
-| `ku-vcpzwawrrla-cancel` | `キャンセル` as ending later recovery into another action. | source-derived terminology candidate | claims + review | review-only hold, `needs_review` | Move-specific cancelability is current-system information. |
-| `ku-vcpzwawrrla-lethal` | `リーサル` as an option or combo that can finish the opponent from the current life total. | source-derived terminology candidate | claims + review | review-only hold, `needs_review` | Exact kill thresholds depend on current route, resources, health, and character state. |
+| `ku-vcpzwawrrla-cancel` | `キャンセル` as ending later recovery into another action. | source-derived terminology candidate | `knowledge/curated/glossary/cancel.md` plus claims/review | accepted stable glossary boundary | Move-specific cancelability is current-system information. |
+| `ku-vcpzwawrrla-lethal` | `リーサル` as an option or combo that can finish the opponent from the current life total. | source-derived terminology candidate | `knowledge/curated/glossary/lethal.md` plus claims/review | accepted stable glossary boundary | Exact kill thresholds depend on current route, resources, health, and character state. |
 
 ## Terminal Decisions
 
@@ -80,7 +83,8 @@ are not accepted public-answer authority until reviewed and promoted.
 |---|---|---|
 | Source metadata | metadata-only source artifact created | Needed to identify the public video and content-review boundary. |
 | Commentary observations | sanitized report / observation artifact created | Content was reviewed through temporary captions without committing raw transcript or media. |
-| Terminology/concept candidates | review-only hold, `needs_review` | The source is community commentary and should not become accepted glossary or strategy authority without review. |
+| Stable glossary boundaries | accepted curated glossary entries for `重ね`, `めくり`, `キャンセル`, and `リーサル` | These entries define only stable community terminology and preserve setup/current-fact boundaries. |
+| Remaining terminology/concept candidates | review-only hold, `needs_review` | `すかし`, `ライン`, `グラップ`, `暴れ`, and `固め` need normalization, second-source corroboration, or tighter scope before curated promotion. |
 | Existing shimmy curated page | unchanged | The source corroborates the broad concept, but #168 does not alter accepted curated knowledge. |
 | Current-fact-like examples | held | Exact advantage, guaranteed setup validity, move-specific cancelability, and route-specific lethal thresholds require separate verification. |
 | Rejected unsafe | none | No unsupported unsafe claim was found; no rejection was fabricated for coverage. |
@@ -101,8 +105,8 @@ are not accepted public-answer authority until reviewed and promoted.
 | Captions/transcript committed? | no. |
 | Frames/screenshots/contact sheets committed? | no. |
 | Credentials/cookies/browser profile used? | no. |
-| Public adapter behavior changed? | no. |
-| Curated promotion? | no. |
+| Public adapter behavior changed? | yes, generated references were updated from curated glossary additions. |
+| Curated promotion? | yes, limited to `重ね`, `めくり`, `キャンセル`, and `リーサル` stable glossary boundaries. |
 
 ## Workflow Findings
 
@@ -118,9 +122,8 @@ are not accepted public-answer authority until reviewed and promoted.
 
 ## Next Review Questions
 
-- Should `重ね`, `めくり`, `すかし`, `グラップ`, `暴れ`, `固め`, `キャンセル`, and
-  `リーサル` get dedicated glossary pages after a second source or maintainer
-  review?
+- Should `すかし`, `ライン`, `グラップ`, `暴れ`, and `固め` get dedicated
+  glossary pages after a second source or maintainer review?
 - Should the existing `knowledge/curated/glossary/shimmy.md` cite this source
   in a future glossary-focused PR, or should it remain based on the legacy
   reviewed note?

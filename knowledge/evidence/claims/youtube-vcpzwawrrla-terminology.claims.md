@@ -43,22 +43,27 @@ captions and transcript-like text are not stored here.
 
 | knowledge_unit_id | source-derived knowledge | claim_kind | target surface | review_status | terminal decision | notes |
 |---|---|---|---|---|---|---|
-| `term-vcpzwawrrla-meaty-001` | `重ね` is explained as timing an attack or special move against a waking opponent so it overlaps the opponent's wake-up. | `stable_concept` | review note / future glossary candidate | needs_review | review-only terminology candidate | Exact meaty setups, timing, and guaranteed followups remain separate current or matchup claims. |
-| `term-vcpzwawrrla-crossup-002` | `めくり` is explained through a jump attack that hits or threatens from behind/crossing side, causing guard-direction ambiguity or reversal. | `stable_concept` | review note / future glossary candidate | needs_review | review-only terminology candidate | Do not infer which current jump attacks cross up. |
+| `term-vcpzwawrrla-meaty-001` | `重ね` is explained as timing an attack or special move against a waking opponent so it overlaps the opponent's wake-up. | `stable_concept` | `knowledge/curated/glossary/meaty.md` | needs_review | accepted curated glossary entry; embedded claim remains review-only | Exact meaty setups, timing, and guaranteed followups remain separate current or matchup claims. |
+| `term-vcpzwawrrla-crossup-002` | `めくり` is explained through a jump attack that hits or threatens from behind/crossing side, causing guard-direction ambiguity or reversal. | `stable_concept` | `knowledge/curated/glossary/cross-up.md` | needs_review | accepted curated glossary entry; embedded claim remains review-only | Do not infer which current jump attacks cross up. |
 | `term-vcpzwawrrla-sukashi-003` | `すかし` is explained as withholding the expected jump attack and landing into another option such as low or throw pressure. | `strategy_or_matchup` | review note | needs_review | review-only terminology candidate | Option coverage is context-dependent and source-local. |
 | `term-vcpzwawrrla-line-004` | `ライン` is explained as screen-position pressure: advancing pushes the opponent toward the corner, retreating lowers the line. | `strategy_or_matchup` | review note | needs_review | review-only concept candidate | No exact spacing rule or matchup claim is accepted. |
 | `term-vcpzwawrrla-grapple-005` | `グラップ` is used as community wording for throw escape / throw tech, including delayed throw-tech context. | `stable_concept` | review note / future glossary candidate | needs_review | review-only terminology candidate | Not treated as official terminology authority. |
 | `term-vcpzwawrrla-shimmy-006` | `シミー` is explained as baiting an opponent's throw-tech / grapple response, making it whiff, and punishing it. | `stable_concept` | existing curated glossary boundary plus review note | needs_review | corroborates existing stable concept; no new curated promotion | Existing `knowledge/curated/glossary/shimmy.md` remains unchanged. |
 | `term-vcpzwawrrla-abare-007` | `暴れ` is explained as attacking from disadvantage or an expected-block situation to interrupt pressure. | `strategy_or_matchup` | review note | needs_review | review-only terminology candidate | Any exact advantage examples remain current-fact-like and are not accepted here. |
 | `term-vcpzwawrrla-katame-008` | `固め` is explained as using attacks or pressure strings to make the defender hard to move. | `strategy_or_matchup` | review note | needs_review | review-only concept candidate | SF6-specific pressure strength and plus-state claims remain held. |
-| `term-vcpzwawrrla-cancel-009` | `キャンセル` is explained as cutting off the later recovery of one action into another action, commonly normal into special. | `stable_concept` | review note / future glossary candidate | needs_review | review-only terminology candidate | Move-specific cancelability is a current-system fact. |
-| `term-vcpzwawrrla-lethal-010` | `リーサル` is explained as an option or combo that can finish the opponent from the current life total. | `stable_concept` | review note / future glossary candidate | needs_review | review-only terminology candidate | Exact kill thresholds are route-, resource-, character-, and patch-sensitive. |
+| `term-vcpzwawrrla-cancel-009` | `キャンセル` is explained as cutting off the later recovery of one action into another action, commonly normal into special. | `stable_concept` | `knowledge/curated/glossary/cancel.md` | needs_review | accepted curated glossary entry; embedded claim remains review-only | Move-specific cancelability is a current-system fact. |
+| `term-vcpzwawrrla-lethal-010` | `リーサル` is explained as an option or combo that can finish the opponent from the current life total. | `stable_concept` | `knowledge/curated/glossary/lethal.md` | needs_review | accepted curated glossary entry; embedded claim remains review-only | Exact kill thresholds are route-, resource-, character-, and patch-sensitive. |
 
 ## Claim Payloads
 
 The JSON payloads below are review-only claim candidates. Every embedded
-`review_status` remains `needs_review`; accepted public-use surfaces are not
-changed by this PR.
+`review_status` remains `needs_review`; accepted public-use surfaces are changed
+only through the curated glossary files listed in the table above.
+
+For terms promoted to curated glossary entries, the accepted terminal decision
+is recorded in the table and the new curated page. The embedded JSON stays
+review-only because video-derived claim artifacts must not mark their own
+payloads accepted.
 
 ```json
 [
@@ -210,4 +215,7 @@ changed by this PR.
   source-local review input, not accepted public guidance.
 - `グラップ`, `すかし`, and `ライン` are captured as terminology or concept
   candidates, but they need normalization before curated glossary promotion.
+- `重ね`, `めくり`, `キャンセル`, and `リーサル` are promoted only as stable
+  glossary boundaries. Their setup-, move-, route-, resource-, and
+  current-system details remain held.
 - No rejected unsafe claim was found in this source-unit run.
