@@ -13,7 +13,7 @@ source_refs:
   - label: "Source metadata: Hameko 2023 combo scaling"
     path: "knowledge/sources/articles/hameko-2023-combo-scaling.md"
     url: "https://note.com/hameko/n/n933d2911d655"
-    accessed_at: "2026-05-01"
+    accessed_at: "2026-05-14"
 ---
 
 # Candidate Claims
@@ -148,10 +148,31 @@ These claims are extracted for review only. They are not accepted curated knowle
 }
 ```
 
+## 2026-05-14 Source E2E Decisions
+
+#160 performed a fresh bounded review of the article through public no-cookie
+access. Raw HTML, full article text, article images, long excerpts, and private
+state were not stored.
+
+| Claim | Source E2E terminal decision | Repo surface |
+|---|---|---|
+| `claim-hameko-combo-scaling-concept-001` | Accepted stable concept already represented. No curated-page text change needed. | `knowledge/curated/mechanics/combo-scaling.md` |
+| `claim-hameko-combo-scaling-factors-002` | Split decision: the stable reading concept is already represented in curated knowledge; source-specific examples and exact rule details remain review-only. | `knowledge/curated/mechanics/combo-scaling.md`; `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` |
+| `claim-hameko-combo-scaling-percentages-003` | Current-fact/system-mechanics route. Keep as `needs_review`; do not accept exact values from this article. | `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` |
+| `claim-hameko-combo-scaling-exceptions-004` | Current-fact/system-mechanics route. Keep as `needs_review`; do not accept character-, move-, or control-scheme-specific exception details from this article. | `knowledge/review/current-fact-candidates/hameko-2023-combo-scaling-system-mechanics.md` |
+
+No unsupported claim was rejected in this source-unit run. The source produced
+accepted stable concept routing and review-only current-fact/system-mechanics
+routing, but it did not produce a safe rejected-unsafe terminal state.
+
 ## Pilot Notes
 
 - Candidate claim count: 2 concept/strategy candidates and 2 current-system candidates.
-- Claims promoted to curated knowledge in this PR: 0.
+- Claims newly promoted to curated knowledge in this PR: 0.
+- Existing curated stable concept knowledge reaffirmed in this PR: yes.
+- Current-fact/system-mechanics route created in this PR: yes.
 - Generated references updated in this PR: no.
 - Exact scaling values stored in this PR: no.
-- Workflow friction: source and claim artifacts are not yet validated by dedicated schema validators; this pilot uses conservative Markdown records and documents that gap for later follow-up.
+- Workflow friction: current exact system-mechanics values still do not have an
+  accepted authority data surface; they are held in review-only current-fact
+  candidates until that authority path exists.
