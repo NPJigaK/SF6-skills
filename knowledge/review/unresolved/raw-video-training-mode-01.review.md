@@ -156,20 +156,38 @@ the Hameko article remain review-only, unverified system-mechanics candidates.
 Terminal state remains review-only calibration evidence. #175, #176, and #177
 remain required before damage/scaling attribution can be evaluated.
 
+## 2026-05-14 Command Prompt Normalization Follow-Up
+
+#175 created a sanitized command-prompt oracle for the visible JP `上級 5`
+combo-trial UI and mapped prompt rows to canonical move candidates where the
+visible input tokens matched existing JP move metadata.
+
+Report:
+`docs/testing/video-analysis-calibration/raw-video-training-mode-01-command-prompt-normalization-20260514.md`.
+
+Result: ordered prompt rows were extracted as sanitized text, and candidate JP
+move IDs were produced for many rows. Several prompts remain review-only holds:
+OD Veehat/Departure variant, Veehat-set follow-up behavior, Drive Rush/system
+action context, OD Triglav variant, and SA3/CA distinction.
+
+Terminal state remains review-only calibration evidence. The command-prompt
+oracle can support #176 and #177, but it does not establish accepted move order,
+route validity, current frame facts, or damage/scaling authority.
+
 ## Resolved Follow-Up Routing
 
 | Previously mapped gap | Follow-up issue | Resolution |
 |---|---|---|
 | Hameko-sourced SF6 combo-scaling candidates were not loaded into damage/scaling calibration. | #174 | Resolved in #174 / PR #182: candidates extracted from the Hameko article were loaded and compared against the #173 oracle. The result remains insufficient for attribution without #175/#176/#177. |
+| Combo-trial command prompts were visible but not normalized to canonical move candidates. | #175 | Resolved in #175: a sanitized command-prompt oracle and review-only candidate move mappings were created. Exact move order remains blocked until #176/#177 align rows to frames, inputs, hits, and damage labels. |
 | Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
 
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
 |---|---|---|
-| Combo-trial command prompts were not normalized to canonical move candidates. | #175 | Needed before predicted move order can be compared to an answer key. |
-| Coarse frame ranges were not aligned with input history, action phases, hit events, or damage labels. | #176 | Needed for frame-level calibration without claiming current frame data. |
-| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle plus #171 SF6 combo-scaling candidates where applicable. |
+| Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Should use the #175 sanitized command-prompt oracle while avoiding exact frame/current-fact claims. |
+| Visible damage/scaling labels were not attributed hit-by-hit or move-by-move. | #177 | Should use #173 oracle, #174 SF6 combo-scaling comparison, and #175 command-prompt candidates where applicable. |
 | External visual atlas acquisition is missing. | #178 | Needed for move/action identification support without committing GIFs/images. |
 | JP move/action matching against visual references was not attempted. | #179 | Depends on gated repo-external visual reference acquisition. |
 
