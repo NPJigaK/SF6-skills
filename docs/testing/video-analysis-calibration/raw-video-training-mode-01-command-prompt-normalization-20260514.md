@@ -150,6 +150,86 @@ changes, hit events, and damage-label changes.
 | Button-icon taxonomy is manually inspected | No raw OCR output or screenshot is committed; icon interpretation is sanitized. | Confidence is bounded and must be rechecked if attribution depends on a row. |
 | Prompt rows are not official route authority | Combo-trial UI shows a prompt sequence, but this PR does not verify current route validity or exact hit behavior. | No accepted current facts or public runtime behavior are created. |
 
+## Reusable Command-Prompt Normalization Method
+
+This section records the reusable method from #175 so a future Codex/Hermes
+video-analysis pass can repeat the command-prompt normalization without relying
+on chat history or local memory.
+
+1. Pre-analysis context loading
+   - Load prior calibration reports for the same sample.
+   - Load combo-scaling context reports when move/action mapping will affect
+     damage or scaling analysis.
+   - Load the raw-video source descriptor, observation artifact, and review
+     note.
+   - Load the character move registry and packaged frame-current metadata for
+     candidate labels.
+   - Record what each artifact can guide and what it cannot authorize.
+
+2. Source access
+   - Use raw local path mappings only out of band.
+   - Keep frames, crops, contact sheets, OCR attempts, and command-list
+     inspection outputs in repo-external scratch only.
+   - Do not commit screenshots, frames, raw OCR output, raw tool output, private
+     paths, or raw media.
+
+3. Visual command-list extraction
+   - Inspect the visible command-list UI region before attempting move order,
+     frame alignment, or damage attribution.
+   - Record visible row order as sanitized text only.
+   - Preserve source-local context labels such as `ジャンプ中に`,
+     `ドライブパリィ中に`, and `ヴィーハト設置中に`.
+   - Mark uncertain or occluded rows as `unknown` with a reason instead of
+     inventing a prompt.
+
+4. Prompt token normalization
+   - Normalize visible direction icons to numpad-style tokens.
+   - Normalize punch/kick strength icons as `LP`, `MP`, `HP`, `LK`, `MK`, `HK`,
+     `PP`, or `KK` only when confidently visible.
+   - Record confidence, manual-reading limits, and whether raw visuals were
+     committed.
+
+5. Candidate mapping
+   - Use `ingest/frame_data/config/registry/<character>.moves.yaml` as the
+     primary candidate registry.
+   - Cross-check packaged frame-current names only as candidate-label context.
+   - Map exact token matches to candidate move IDs when the token and context
+     are sufficient.
+   - Map system-action prompts to system-action registry candidates when present,
+     as with `jp_068_parry_drive_rush`.
+   - Do not force a candidate when token, context, setup state, or visual
+     confidence is insufficient.
+
+6. Ambiguity handling
+   - OD variants remain candidate families unless the prompt distinguishes the
+     variant.
+   - SA3/CA remains ambiguous unless health, resource, or UI context
+     disambiguates it.
+   - Setup-dependent prompts remain held until prior state is aligned.
+   - System actions remain review-only until a later frame/input alignment pass
+     verifies timing and execution.
+
+7. Terminal routing
+   - Commit only the sanitized command-prompt oracle and review-only move
+     candidates.
+   - Create no accepted current facts and no generated references.
+   - Route timing/alignment work to #176 and damage/scaling attribution work to
+     #177.
+
+### Next-Agent One-Shot Checklist
+
+Before closing a future command-prompt normalization run, confirm:
+
+- relevant repo context was loaded and recorded;
+- command-list rows were inspected and transcribed as sanitized text;
+- direction and button tokens were normalized with confidence;
+- candidate IDs were mapped through the character registry when supported;
+- ambiguous rows were held instead of forced;
+- system-action rows used registry candidates when available;
+- no raw visual, OCR, private-path, or local-state artifact was committed;
+- no accepted current fact or public runtime behavior was created;
+- follow-up routing records what #176/#177 still need.
+
 ## Follow-Up Routing
 
 | Follow-up issue | Routing from #175 |
