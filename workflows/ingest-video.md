@@ -181,6 +181,37 @@ For frame/input alignment:
 8. Route hit/damage/scaling attribution to later calibration work when exact
    action-to-label mapping is still unresolved.
 
+### Damage And Scaling Attribution Calibration
+
+Run damage/scaling attribution only after a command-prompt oracle and bounded
+frame/input windows exist.
+
+For damage/scaling attribution:
+
+1. Load relevant repo context first, including source-derived system-mechanics
+   candidates, prior calibration reports, command-prompt oracle, frame/input
+   alignment report, source observations, and review notes.
+2. Use repo-external scratch only if further inspection is needed. Do not
+   commit raw video, frames, screenshots, contact sheets, OCR output, private
+   paths, raw tool output, or local state.
+3. Normalize SF6 system analysis to the 60 game-frame timeline while separately
+   recording source capture cadence and uncertainty.
+4. Map visible damage, combo, and scaling labels to candidate prompt rows,
+   action windows, hit-event candidates, and damage-label windows only where
+   evidence supports the mapping.
+5. Compare labels against source-derived mechanics candidates as hypothesis
+   context, not as current-fact authority.
+6. Classify each label as `attributed`, `partial`, `unknown`, `contradicted`,
+   `not_applicable`, or `not_available`; record confidence, reason, authority
+   boundary, and missing evidence.
+7. Keep all attribution evidence review-only unless a separate current-fact
+   authority path verifies it.
+8. Do not infer official damage/scaling facts, exact route validity, or exact
+   hit-by-hit current facts from video alone.
+9. Route unresolved visual-action identity to visual-reference work and
+   unresolved arithmetic or authority-boundary reasoning to evaluation fixtures
+   or follow-up issues.
+
 ## Track Guidance
 
 Use these tracks from the video observation contract:
