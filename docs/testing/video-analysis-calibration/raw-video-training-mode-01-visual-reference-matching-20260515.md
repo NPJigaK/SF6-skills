@@ -209,6 +209,28 @@ inspection, not only textual window descriptors.
 - It did not update generated references, public runtime behavior, or
   `official_raw`.
 
+## Generalization Boundary
+
+This PR does not prove full-character, full-move, match-level move recognition,
+or move-frequency analytics.
+
+It proves only that one SF6Frames JP M Stribog visual reference can be
+re-acquired, preprocessed, and compared against selected raw-video windows as
+review-only calibration evidence. Generalizing this to all characters, all
+moves, or match-level statistics requires later scoped validation covering:
+
+- broader visual reference acquisition;
+- per-character and per-move coverage;
+- clean/reference overlay mismatch handling;
+- raw-video sampling strategy;
+- tool and model repeatability;
+- false-positive and false-negative measurement;
+- move-recognition candidate generation;
+- move-frequency aggregation.
+
+Until those follow-ups exist, this report is a first proven visual-reference
+matching pipeline slice, not evidence that broad move analytics are ready.
+
 ## Failure Analysis
 
 | Limitation | Cause | Impact | Follow-up |

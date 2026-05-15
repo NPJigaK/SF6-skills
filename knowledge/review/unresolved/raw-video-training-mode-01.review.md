@@ -269,6 +269,12 @@ raw-video frame/crop, or current-fact authority change was committed. External
 visuals remain review support only. #183 remains relevant for reasoning
 fixtures that prevent overclaiming from partial or inconclusive visual evidence.
 
+Generalization boundary: #179 proves one narrow JP M Stribog visual-reference
+matching pipeline slice only. It does not prove full-character, full-move,
+match-level move recognition, or move-frequency analytics. Those require later
+coverage, repeatability, false-positive/false-negative, and aggregation
+validation before they can be claimed.
+
 ## Resolved Follow-Up Routing
 
 | Previously mapped gap | Follow-up issue | Resolution |
