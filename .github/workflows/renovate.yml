@@ -1,0 +1,46 @@
+name: Renovate
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run once per day at 04:23 JST. Avoid the top of the hour to reduce
+    # scheduled-run congestion.
+    - cron: '23 19 * * *'
+
+concurrency:
+  group: renovate
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  renovate:
+    name: Create dependency update PRs
+    runs-on: ubuntu-latest
+    if: github.repository == 'NPJigaK/SF6-skills'
+    env:
+      RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+    steps:
+      - name: Skip when RENOVATE_TOKEN is not configured
+        if: env.RENOVATE_TOKEN == ''
+        run: |
+          echo "::warning::RENOVATE_TOKEN is not configured; skipping Renovate."
+          echo "Create a PAT or GitHub App token secret named RENOVATE_TOKEN to enable dependency update PRs."
+
+      - name: Check out repository
+        if: env.RENOVATE_TOKEN != ''
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Run Renovate
+        if: env.RENOVATE_TOKEN != ''
+        uses: renovatebot/github-action@693b9ef15eec82123529a37c782242f091365961 # v46.1.14
+        with:
+          token: ${{ env.RENOVATE_TOKEN }}
+          renovate-version: 43.150.0 # renovate: datasource=npm depName=renovate
+        env:
+          LOG_LEVEL: info
+          RENOVATE_ONBOARDING: 'false'
+          RENOVATE_PLATFORM: github
+          RENOVATE_REQUIRE_CONFIG: required
+          RENOVATE_REPOSITORIES: ${{ github.repository }}

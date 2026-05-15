@@ -9,13 +9,35 @@ on:
       - main
 
 jobs:
+  maintainer-toolchain:
+    name: Verify maintainer toolchain locks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Set up mise
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4
+        with:
+          install: false
+          cache: true
+
+      - name: Install locked maintainer tools
+        run: mise install --locked --yes
+
+      - name: Check ingest Python lockfile
+        working-directory: ingest/frame_data
+        run: uv lock --check
+
   validate:
     name: Run v2 validation suite
     runs-on: windows-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Run validation
-        shell: powershell
+        shell: pwsh
         run: .\tests\validation\run-all.ps1

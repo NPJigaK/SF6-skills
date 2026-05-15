@@ -147,6 +147,14 @@ Issue、PR、CI status、label、milestone、merge操作は原則 `gh` CLIで行
 
 PR本文やsmoke reportには、認証情報、private local state、profile固有のlocal state、raw mediaを含めません。
 
+## Maintainer toolchain
+
+WSL/Linux向けのrepo-local maintainer toolchainは `mise.toml` と `mise.lock` で管理します。Python依存は `ingest/frame_data/uv.lock` で固定し、通常の更新PRは Renovate で扱います。
+
+Hermes CLIは `mise.toml` のtoolには含めません。Hermesはconfigured maintainer profileがある環境のrepo-local growth engineであり、公式installerや専用workflowで扱います。
+
+詳しい手順と境界は [workflows/manage-maintainer-toolchain.md](./workflows/manage-maintainer-toolchain.md) を参照してください。
+
 ## 検証
 
 変更後は、少なくとも次を確認します。
