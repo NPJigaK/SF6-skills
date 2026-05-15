@@ -214,6 +214,24 @@ No accepted current damage, scaling, route, move-order, or frame facts were
 created. #178/#179 remain relevant for visual/action identity, and #183 remains
 relevant for math reasoning fixtures and insufficient-evidence cases.
 
+## 2026-05-15 External Visual Atlas Acquisition Follow-Up
+
+#178 added
+`docs/testing/video-analysis-calibration/external-visual-atlas-acquisition-20260515.md`.
+
+Terminal state: visual-atlas-acquisition PATH_DEFINED. The PR defines a gated
+Scrapling-aligned acquisition path and selects a tiny JP scope covering Stribog,
+OD Triglav, and SA3/CA candidate families. Binary acquisition from SF6Frames is
+held because the existing source evaluation remains `hold_terms_or_permission`;
+no GIF, image, WebP, frame, screenshot, raw HTML, raw tool output, direct binary
+URL, local cache path, or private path was committed.
+
+#179 is partially unblocked: it now has a source-selection path and first JP
+move/action scope, but actual visual matching remains blocked until a permitted
+repo-external visual reference is acquired or a maintainer-approved local visual
+reference is provided. External visuals remain review support only and are not
+current-fact authority.
+
 ## Resolved Follow-Up Routing
 
 | Previously mapped gap | Follow-up issue | Resolution |
@@ -222,14 +240,14 @@ relevant for math reasoning fixtures and insufficient-evidence cases.
 | Combo-trial command prompts were visible but not normalized to canonical move candidates. | #175 | Resolved in #175: a sanitized command-prompt oracle and review-only candidate move mappings were created. Later #176/#177 used the rows for bounded alignment and partial attribution, but exact move order remains unaccepted. |
 | Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Resolved in #176 as PARTIAL calibration evidence: approximate frame/timestamp windows were recorded where supported and later used by #177. Exact execution remains unresolved. |
 | Visible damage/scaling labels were not mapped to candidate hit/action windows. | #177 | Resolved in #177 as PARTIAL review-only attribution evidence: every loaded visible label is covered as partial or unknown, with no accepted current facts. |
+| External visual atlas acquisition path was missing. | #178 | Resolved in #178 as PATH_DEFINED: a Scrapling-aligned, repo-external acquisition path and JP-small-scope source gate were recorded. Binary acquisition remains held until permission/terms review allows it. |
 | Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
 
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
 |---|---|---|
-| External visual atlas acquisition is missing. | #178 | Needed for move/action identification support without committing GIFs/images. |
-| JP move/action matching against visual references was not attempted. | #179 | Depends on gated repo-external visual reference acquisition. |
+| JP move/action matching against visual references was not attempted. | #179 | #178 defined the acquisition path and selected JP scope, but matching still requires a permitted repo-external visual reference or an approved local reference. |
 | SF6 system-mechanics math reasoning fixtures are missing. | #183 | Should cover combo-scaling arithmetic, insufficient-evidence detection, and current-fact authority boundaries after #177 has stronger attribution examples. |
 
 Open questions that remain after #173:
