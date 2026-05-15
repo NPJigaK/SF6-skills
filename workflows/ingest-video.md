@@ -271,15 +271,21 @@ For visual reference matching:
    binaries and visual derivatives before commit.
 4. Select a tiny raw-video target set from existing sanitized reports before
    expanding scope.
-5. Compare broad visual phases and source-local features, not exact
+5. Inspect actual raw-video target windows repo-externally when a raw-local
+   mapping is available. Comparing a visual reference only against sanitized
+   text/window descriptors is insufficient to close a visual-matching issue.
+6. Compare broad visual phases and source-local features, not exact
    frame-perfect identity.
-6. Classify each target as `helped`, `partial`, `inconclusive`, `failed`, or
+7. Classify each target as `helped`, `partial`, `inconclusive`, `failed`, or
    `not_applicable`; record confidence, matching features, mismatching
    features, authority boundary, and needed next evidence.
-7. Keep visual matches review-only. Do not infer official move identity, route
+8. If raw-video visual inspection cannot be performed, use a HOLD or
+   INCONCLUSIVE terminal state and do not claim the visual-matching issue is
+   complete.
+9. Keep visual matches review-only. Do not infer official move identity, route
    validity, exact frame data, damage/scaling facts, or current facts from
    visual similarity.
-8. Do not commit visual binaries, extracted frames, screenshots, contact sheets,
+10. Do not commit visual binaries, extracted frames, screenshots, contact sheets,
    raw HTML, raw tool output, direct binary URLs, cache paths, credentials,
    cookies, or private paths.
 

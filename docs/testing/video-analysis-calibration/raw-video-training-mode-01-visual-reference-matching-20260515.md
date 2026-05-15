@@ -15,17 +15,17 @@
 | Source sample id | `raw-video-training-mode-01` |
 | Visual source | SF6Frames |
 | Visual reference candidate | M Stribog / `jp_034_236mp_stribog` |
-| Raw media used? | no; this pass used existing sanitized #175/#176/#177 raw-video artifacts |
+| Raw media used? | yes, via out-of-band local mapping only |
 | External visual binary used? | yes, repo-external scratch only |
 | External visual binary committed? | no |
 | Raw video/frame/image committed? | no |
-| Terminal state | visual-reference matching PARTIAL; M Stribog reference re-acquired and preprocessed; row 11 and row 8 classified; no accepted current fact |
+| Terminal state | visual-reference matching PARTIAL; M Stribog reference re-acquired and preprocessed; row 11 and row 8 raw-video windows inspected repo-externally; no accepted current fact |
 
 This report performs the first review-only JP visual-reference matching
 calibration for `raw-video-training-mode-01`. It reuses the #178 SF6Frames
 encoded-descriptor acquisition path for M Stribog, preprocesses the animated
-WebP in repo-external scratch, and compares the resulting visual phases against
-the sanitized raw-video candidate windows from #175/#176/#177.
+WebP in repo-external scratch, inspects targeted raw-video frame windows in
+repo-external scratch, and compares actual visual samples at broad phase level.
 
 This is not final move recognition, not current-fact authority, not route
 validation, and not public `sf6-agent` behavior.
@@ -98,8 +98,8 @@ encoded animation descriptor path, which yielded an actual M Stribog visual.
 | Stage background / watermark handling | background and watermark were noted as comparison limitations, not removed |
 | Source frame index handling | source frame numbers were used as approximate phase anchors only |
 | Relation to 60 SF6 game-frame timeline | raw-video windows remain on #176's projected 60-game-frame timeline; SF6Frames animation frames were not treated as exact game-frame timing |
-| What was not normalized | no pixel-level template matching, no geometry registration, no overlay separation, no clean/no-hitbox reconstruction, no raw-video crop extraction |
-| Why not normalized further | #179 is a calibration pass; raw-video frames were not reopened and external binaries/derivatives cannot be committed |
+| What was not normalized | no pixel-level template matching, no geometry registration, no overlay separation, no clean/no-hitbox reconstruction |
+| Why not normalized further | #179 is a calibration pass; visual derivatives cannot be committed, and source mismatch makes exact frame identity unsafe |
 
 The useful reference features from the sampled frames are:
 
@@ -111,16 +111,40 @@ The useful reference features from the sampled frames are:
 - Hitbox/hurtbox overlays and frame numbers make the source useful for
   phase-level review, but weaker for direct raw-video pixel matching.
 
+## Raw-Video Segment Visual Inspection
+
+| Field | Result |
+|---|---|
+| Raw local mapping used? | yes, out-of-band only |
+| Private path recorded? | no |
+| Required target inspected | row 11 / `cmd-raw-jp-adv5-011` / approx. frames 900-1170 |
+| Optional target inspected | row 8 / `cmd-raw-jp-adv5-008` / approx. frames 510-630 |
+| Frame sampling strategy | sparse target-window sampling followed by denser samples near suspected action/effect phases |
+| Row 11 raw-video samples inspected | 13 unique frames: 900, 960, 1020, 1080, 1100, 1110, 1120, 1130, 1140, 1150, 1160, 1170, 1180 |
+| Row 8 raw-video samples inspected | 16 unique frames: 500, 510, 520, 530, 540, 550, 560, 570, 580, 590, 600, 610, 620, 630, 640, 650 |
+| Crop regions | full-frame review plus visual focus on the actor/opponent/effect area; no committed crop coordinates or private paths |
+| Raw-video frames/crops created? | yes, temporary repo-external inspection frames and contact sheets |
+| Raw-video frames/crops committed? | no |
+| Cleanup status | all raw-video visual derivatives deleted before commit |
+
+The actual row 11 samples show that the broad 900-1170 window is not a clean
+single-action segment. Early samples include close-range movement and strike
+phases. Later samples around the late portion of the window show a purple/black
+projectile or smoke-like effect near JP and the opponent, which is the only
+usable phase-level overlap with the M Stribog reference. The actual row 8
+samples show portal/effect carryover, close-range movement, and kick/strike
+phases; they do not provide a clean horizontal M Stribog-like projectile phase.
+
 ## Raw-Video Matching Targets
 
-This pass used the #175/#176/#177 sanitized raw-video reports instead of
-reopening raw media. The targets are therefore review-only window descriptors,
-not raw image evidence.
+This pass selected targets from #175/#176/#177, then reopened the corresponding
+raw-video windows repo-externally for visual inspection. The target IDs remain
+review-only and do not become accepted move-order or current-fact authority.
 
 | target_id | prompt_row_id | candidate_move_id | approximate frame/timestamp window | raw-video evidence source | Why selected | Authority boundary |
 |---|---|---|---|---|---|---|
-| `vismatch-target-row-011` | `cmd-raw-jp-adv5-011` | `jp_034_236mp_stribog` | 900-1170 / 00:15.00-00:19.50 | #175 command row; #176 command prompt row alignment; #177 sequence step 011 | Exact candidate id matches the M Stribog visual reference and #177 had partial late-juggle attribution near this window. | Sanitized window only; not exact execution or accepted move identity. |
-| `vismatch-target-row-008` | `cmd-raw-jp-adv5-008` | `jp_035_236hp_stribog` | 510-630 / 00:08.50-00:10.50 | #175 command row; #176 command prompt row alignment; #177 sequence step 008 | Same Stribog family, but different strength. Useful as same-family caution. | M reference cannot prove H Stribog, exact strength, or hit timing. |
+| `vismatch-target-row-011` | `cmd-raw-jp-adv5-011` | `jp_034_236mp_stribog` | 900-1170 / 00:15.00-00:19.50 | #175 command row; #176 command prompt row alignment; #177 sequence step 011; repo-external raw-frame inspection | Exact candidate id matches the M Stribog visual reference and #177 had partial late-juggle attribution near this window. | Review-only visual target; not exact execution or accepted move identity. |
+| `vismatch-target-row-008` | `cmd-raw-jp-adv5-008` | `jp_035_236hp_stribog` | 510-630 / 00:08.50-00:10.50 | #175 command row; #176 command prompt row alignment; #177 sequence step 008; repo-external raw-frame inspection | Same Stribog family, but different strength. Useful as same-family caution. | M reference cannot prove H Stribog, exact strength, or hit timing. |
 
 OD Triglav and SA3/CA were not attempted because #178 only proved M Stribog
 usability, and this PR must not become a broad atlas matching pass.
@@ -133,28 +157,28 @@ The method was intentionally conservative:
 2. Extract representative source frames in repo-external scratch.
 3. Identify broad visual phases: startup posture, projectile emergence,
    horizontal projectile extension, and late dissipation.
-4. Compare those broad phases against sanitized #176 raw-video window
-   descriptors, not against committed raw frames.
-5. Account for source mismatch:
+4. Inspect actual raw-video target frames/crops in repo-external scratch.
+5. Compare broad visual phases between the external reference and the actual
+   raw-video samples, not only against textual window descriptors.
+6. Account for source mismatch:
    - SF6Frames is frame-numbered, hitbox/hurtbox overlay reference footage.
    - The raw video is a combo-trial recording with effects, opponent state,
      hitstop, UI, and possible route/camera differences.
-6. Classify target windows as `helped`, `partial`, `inconclusive`, `failed`, or
+7. Classify target windows as `helped`, `partial`, `inconclusive`, `failed`, or
    `not_applicable`.
-7. Preserve authority boundaries: no official move identity, no current fact,
+8. Preserve authority boundaries: no official move identity, no current fact,
    no exact frame data, no damage/scaling authority.
 
 ## Matching Result
 
-| match_id | raw_video_target | candidate_move_id | visual_reference | reference_frames_or_phase | raw_video_window | matching_features | mismatching_features | result | confidence | reason | authority_boundary | needed_next_evidence |
-|---|---|---|---|---|---|---|---|---|---:|---|---|---|
-| `vismatch-001` | row 11 late Stribog candidate | `jp_034_236mp_stribog` | SF6Frames M Stribog animated WebP | sampled startup/projectile/recovery-like phases across 53 source frames | 900-1170 / 00:15.00-00:19.50 | Reference shows JP producing a horizontal purple/black/white projectile-like strike; #176 describes row 11 as projectile/juggle continuation and #177 associates late pre-super labels with row 11. Exact candidate id matches the reference. | No raw-video frames were reopened; #176 window is broad and may include row 10 spillover or prior effects. Overlay/reference footage differs from combo-trial footage. | partial | 0.46 | The visual reference helps confirm that the row 11 candidate family is visually plausible, but it does not prove exact execution, hit source, or current move identity. | Review-only visual support; not accepted move identity or frame data. | Repo-external raw-video frame crop review for row 11, plus H/OD references if adjacent effects remain ambiguous. |
-| `vismatch-002` | row 8 same-family Stribog candidate | `jp_035_236hp_stribog` | SF6Frames M Stribog animated WebP | same sampled M Stribog phases | 510-630 / 00:08.50-00:10.50 | Reference's horizontal projectile/slash phase is compatible with #176's row 8 "purple projectile/strike effect window." Same Stribog family supports family-level plausibility. | Reference is M Stribog while row 8 candidate is H Stribog; strength-specific timing/spacing/visual extent may differ. Window overlaps later HP and OD Triglav candidates. | partial | 0.32 | The reference helps at family level only. It cannot distinguish `236HP` from `236MP` or prove row 8 execution. | Review-only same-family support; no exact strength or route authority. | H Stribog reference, repo-external raw row 8 crops, and adjacent OD Triglav reference if row 8-10 effects overlap. |
+| match_id | raw_video_target | candidate_move_id | visual_reference | reference_frames_or_phase | raw_video_window | raw_video_visual_inspected | raw_video_sample_count | reference_sample_count | matching_features | mismatching_features | result | confidence | reason | authority_boundary | needed_next_evidence |
+|---|---|---|---|---|---|---|---:|---:|---|---|---|---:|---|---|---|
+| `vismatch-001` | row 11 late Stribog candidate | `jp_034_236mp_stribog` | SF6Frames M Stribog animated WebP | sampled startup/projectile/recovery-like phases across 53 source frames | 900-1170 / 00:15.00-00:19.50 | yes | 13 | 6 | Actual row 11 samples include a late purple/black effect plume and horizontal/forward effect pressure near JP and the airborne opponent; the reference shows JP producing a horizontal purple/black/white projectile-like strike. Exact candidate id matches the reference. | Early row 11 samples are close-range movement, crouch/stab, and kick/strike phases rather than the reference's clean horizontal projectile. The raw-video phase is effects-heavy and may include row 10 spillover or prior setup effects. | partial | 0.52 | Actual visual inspection improves the row 11 result from text-only plausibility to partial visual-to-visual support, but the window is mixed and cannot prove exact execution, hit source, or current move identity. | Review-only visual support; not accepted move identity or frame data. | Denser row 10/11 boundary sampling, H/OD references if adjacent effects remain ambiguous, and a clean no-overlay reference if available. |
+| `vismatch-002` | row 8 same-family Stribog candidate | `jp_035_236hp_stribog` | SF6Frames M Stribog animated WebP | same sampled M Stribog phases | 510-630 / 00:08.50-00:10.50 | yes | 16 | 6 | Actual row 8 samples contain purple/white effect activity near the opponent and same-family special-effect context in the broad window. | The samples do not show the reference's clean horizontal M Stribog projectile phase; they include portal/effect carryover, close-range movement, and kick/strike phases. The reference is M Stribog while row 8 is H Stribog. | inconclusive | 0.28 | Actual visual inspection prevents overclaiming: M Stribog is not enough to visually support row 8 beyond weak family-level possibility. | Review-only same-family caution; no exact strength, route, or move identity authority. | H Stribog reference, adjacent OD Triglav reference, and tighter raw row 8 action-boundary sampling. |
 
-No target reached `helped` with high confidence because this pass did not
-reopen raw-video frames. The useful improvement is narrower: M Stribog now has
-a preprocessable visual reference and can be compared against row windows
-without guessing what the move visually looks like.
+No target reached high-confidence `helped`. The improvement over the previous
+draft is that row 11 and row 8 are now based on actual visual-to-visual
+inspection, not only textual window descriptors.
 
 ## What The Visual Reference Helped With
 
@@ -163,7 +187,9 @@ without guessing what the move visually looks like.
 - It confirmed that M Stribog has a distinctive horizontal purple/black/white
   projectile-like visual phase.
 - It made row 11's `jp_034_236mp_stribog` candidate more plausible at the
-  broad visual-phase level.
+  broad visual-to-visual phase level.
+- It showed that row 8 should not be treated as supported by the M Stribog
+  reference; actual samples remain inconclusive for H Stribog.
 - It helped separate Stribog-like horizontal projectile/slash phases from
   vertical spike or cinematic-super categories as a future matching heuristic.
 - It reduced #177 uncertainty slightly for the late pre-super Stribog-family
@@ -173,6 +199,7 @@ without guessing what the move visually looks like.
 
 - It did not identify OD Triglav or SA3/CA.
 - It did not prove H Stribog for row 8 because the reference is M Stribog.
+- It did not produce a clean visual match for row 8.
 - It did not isolate exact hit timing or contact frames.
 - It did not validate exact route order.
 - It did not distinguish row 10 spillover from row 11 action in the late juggle
@@ -186,9 +213,10 @@ without guessing what the move visually looks like.
 
 | Limitation | Cause | Impact | Follow-up |
 |---|---|---|---|
-| No raw-video pixel comparison | This pass used existing sanitized #176/#177 windows and did not reopen raw media. | Matching remains phase-level and review-only. | A later pass may use repo-external raw-video crops if maintainer provides the local mapping again. |
+| Mixed row 11 window | Actual row 11 samples include close-range, kick/strike, purple effect, and airborne opponent phases, not a single clean M Stribog segment. | Matching remains partial and phase-level. | Denser boundary sampling and adjacent row 10 references may separate spillover. |
+| Inconclusive row 8 window | Actual row 8 samples do not show the M Stribog reference's clean horizontal projectile phase. | Row 8 cannot be strengthened from M Stribog alone. | Acquire H Stribog reference and inspect tighter row 8 boundaries if needed. |
 | Source overlay mismatch | SF6Frames reference has hitbox/hurtbox overlays, frame numbers, stage grid, and watermark. | Direct pixel matching is unsafe without preprocessing. | #179 method records overlay/watermark handling as required preprocessing. |
-| Strength mismatch for row 8 | Reference is M Stribog; row 8 candidate is H Stribog. | Row 8 can only be same-family partial support. | Acquire H Stribog reference if row 8 becomes attribution-critical. |
+| Strength mismatch for row 8 | Reference is M Stribog; row 8 candidate is H Stribog. | Row 8 remains inconclusive from this reference alone. | Acquire H Stribog reference if row 8 becomes attribution-critical. |
 | Adjacent action overlap | #176 windows for rows 8-11 overlap through purple effects, HP followups, and OD Triglav candidate windows. | Stribog reference cannot alone isolate exact move order. | Add H Stribog and OD Triglav references or denser raw-video frame review. |
 | Source frame index mismatch | SF6Frames frame count is not mapped to #176 60-game-frame raw-video windows. | No exact timing claim can be made. | A future matching run must define a time/phase alignment method. |
 | Visual evidence boundary | Visual similarity can suggest but not authorize exact current facts. | All results remain review-only. | #183 should include insufficient-visual-evidence reasoning fixtures. |
@@ -211,14 +239,19 @@ Future Codex/Hermes runs should repeat this method without chat history:
    - delete binaries and derivatives before commit.
 4. Select a tiny raw-video target set from existing command/frame/damage
    reports.
-5. Compare broad visual phases, not exact frame identity.
-6. Classify each target as `helped`, `partial`, `inconclusive`, `failed`, or
+5. Inspect the selected raw-video windows repo-externally when the local mapping
+   is available. Comparing against sanitized text windows alone is insufficient
+   to close a visual-matching issue.
+6. Compare broad visual phases, not exact frame identity.
+7. Classify each target as `helped`, `partial`, `inconclusive`, `failed`, or
    `not_applicable`.
-7. Record confidence, matching features, mismatching features, authority
+8. Record confidence, matching features, mismatching features, authority
    boundary, and needed next evidence.
-8. Keep visual references review-only and never infer official move identity or
+9. Keep visual references review-only and never infer official move identity or
    current facts from visual similarity alone.
-9. Route remaining gaps to existing issues or future scoped work.
+10. If raw-video visual inspection cannot be performed, use a HOLD or
+   INCONCLUSIVE terminal state and do not close the visual-matching issue.
+11. Route remaining gaps to existing issues or future scoped work.
 
 ### Next-Agent One-Shot Checklist
 
@@ -227,7 +260,9 @@ Future Codex/Hermes runs should repeat this method without chat history:
 - Extract/sample frames with a tool that supports the asset type.
 - Do not commit WebP/GIF/image/frame/contact sheet/raw HTML/tool output.
 - Select one or two raw-video candidate windows from prior sanitized reports.
-- Compare broad visual phases and record source mismatch.
+- Inspect the selected raw-video windows repo-externally when available.
+- Compare actual reference samples against actual raw-video samples at broad
+  visual-phase level and record source mismatch.
 - Classify every target.
 - Keep all results review-only.
 - Update follow-up routing.
@@ -253,8 +288,9 @@ validators already enforce the no-binary and video-artifact boundaries.
 - visual-reference matching: PARTIAL
 - M Stribog reference re-acquired: yes, repo-external scratch only
 - M Stribog reference preprocessed: yes, representative frames sampled outside repo
+- raw-video row windows inspected: yes, repo-external scratch only
 - row 11 attempted: yes, `partial`
-- row 8 attempted: yes, same-family `partial`
+- row 8 attempted: yes, `inconclusive`
 - accepted current fact: no
 - curated knowledge: no
 - generated references changed: no
@@ -267,6 +303,7 @@ validators already enforce the no-binary and video-artifact boundaries.
 |---|---|
 | Visual reference acquired? | yes, repo-external scratch only |
 | Preprocessing outputs created? | yes, repo-external scratch only |
+| Raw-video frames/crops created? | yes, repo-external scratch only |
 | Scratch cleanup | completed before commit |
 | Binaries committed? | no |
 | Raw media/frames/screenshots/contact sheets committed? | no |
