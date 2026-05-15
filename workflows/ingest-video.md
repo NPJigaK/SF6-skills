@@ -243,10 +243,13 @@ For external visual atlas acquisition:
    `not_usable`, or `inconclusive`. Also record preprocessing needs such as
    frame extraction, resizing, cropping, alpha/background handling, playback
    normalization, overlay separation, or frame-index normalization.
-9. Path definition alone is not matching readiness. If no permitted visual
-   reference was inspected, keep acquisition incomplete and route the later
-   matching task to HOLD until usability is established.
-10. Route visual comparison and usefulness evaluation to a later matching task
+9. Verify that the fetched asset is an actual move visual, not an error
+   placeholder, unsupported payload, or unrelated source asset. A valid image
+   container by itself is not enough.
+10. Path definition alone is not matching readiness. If no permitted visual
+   reference was inspected, or if the inspected visual is `not_usable`, route
+   the later matching task to HOLD until usability is established.
+11. Route visual comparison and usefulness evaluation to a later matching task
    only after the visual-reference input and usability boundary are recorded.
 
 ## Track Guidance

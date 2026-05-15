@@ -219,22 +219,23 @@ relevant for math reasoning fixtures and insufficient-evidence cases.
 #178 added
 `docs/testing/video-analysis-calibration/external-visual-atlas-acquisition-20260515.md`.
 
-Terminal state: visual-atlas-acquisition PATH_DEFINED_ONLY /
-VISUAL_REFERENCE_NOT_ACQUIRED. The PR defines a gated Scrapling-aligned
-acquisition path and selects a tiny JP scope covering Stribog, OD Triglav, and
-SA3/CA candidate families. Binary acquisition from SF6Frames is held because
-the existing source evaluation remains `hold_terms_or_permission`; no GIF,
-image, WebP, frame, screenshot, raw HTML, raw tool output, direct binary URL,
-local cache path, or private path was committed.
+Terminal state: visual-atlas-acquisition USABILITY_SMOKE_HOLD. The PR defines
+a gated Scrapling-aligned acquisition path and selects a tiny JP scope covering
+Stribog, OD Triglav, and SA3/CA candidate families. After maintainer approval
+for a tiny SF6Frames repo-local smoke, #178 used Scrapling to fetch the JP
+specials page and inspect the M Stribog visual reference descriptor.
 
-#178 is not complete: no permission-cleared visual reference was acquired or
-provided, no file type/frame count/resolution/overlay/frame-number state was
-observed, and no preprocessing or comparison-readiness smoke was performed.
-#179 remains blocked for actual visual matching until a permitted repo-external
-visual reference is acquired or a maintainer-approved local visual reference is
-provided and classified as usable, needs-preprocessing, not usable, or
-inconclusive. External visuals remain review support only and are not
-current-fact authority.
+Result: the SF6Frames page and M Stribog asset descriptor were reachable, but
+the fetched WebP was an internal-server-error placeholder rather than a usable
+move visual. It was classified as `not_usable`. No GIF, image, WebP, frame,
+screenshot, raw HTML, raw tool output, direct binary URL, local cache path, or
+private path was committed; the repo-external temp binary and extracted frame
+were deleted.
+
+#178 is complete as a path/usability-boundary smoke, but #179 remains blocked
+for actual visual matching until a corrected permitted SF6Frames asset path or
+maintainer-approved usable local visual reference exists. External visuals
+remain review support only and are not current-fact authority.
 
 ## Resolved Follow-Up Routing
 
@@ -244,14 +245,14 @@ current-fact authority.
 | Combo-trial command prompts were visible but not normalized to canonical move candidates. | #175 | Resolved in #175: a sanitized command-prompt oracle and review-only candidate move mappings were created. Later #176/#177 used the rows for bounded alignment and partial attribution, but exact move order remains unaccepted. |
 | Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Resolved in #176 as PARTIAL calibration evidence: approximate frame/timestamp windows were recorded where supported and later used by #177. Exact execution remains unresolved. |
 | Visible damage/scaling labels were not mapped to candidate hit/action windows. | #177 | Resolved in #177 as PARTIAL review-only attribution evidence: every loaded visible label is covered as partial or unknown, with no accepted current facts. |
+| External visual atlas acquisition path and usability boundary were missing. | #178 | Resolved in #178 as USABILITY_SMOKE_HOLD: a Scrapling-aligned path was recorded, and one maintainer-approved SF6Frames M Stribog WebP smoke was classified `not_usable` because it resolved to an error placeholder. |
 | Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
 
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
 |---|---|---|
-| External visual atlas acquisition usability was not verified. | #178 | #191 defined the acquisition path and selected JP scope, but no permitted visual reference was acquired/provided and no usability smoke was run. #178 should not close from path definition alone. |
-| JP move/action matching against visual references was not attempted. | #179 | Matching still requires a permitted repo-external visual reference or approved local reference plus a usability result. |
+| JP move/action matching against visual references was not attempted. | #179 | #178 proved the current SF6Frames static WebP fetch is `not_usable`; matching requires a corrected permitted asset path or approved local usable reference. |
 | SF6 system-mechanics math reasoning fixtures are missing. | #183 | Should cover combo-scaling arithmetic, insufficient-evidence detection, and current-fact authority boundaries after #177 has stronger attribution examples. |
 
 Open questions that remain after #173:

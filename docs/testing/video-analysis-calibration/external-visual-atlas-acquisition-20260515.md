@@ -13,16 +13,19 @@
 | Related downstream matching | #179 |
 | Date | 2026-05-15 |
 | Scope | JP-small-scope |
-| Terminal state | visual-atlas-acquisition PATH_DEFINED_ONLY / VISUAL_REFERENCE_NOT_ACQUIRED |
+| Terminal state | visual-atlas-acquisition USABILITY_SMOKE_HOLD |
 
 This report defines the gated maintainer-local acquisition path for external
 visual move references. It does not perform JP move visual-reference matching,
 does not create a move-recognition runtime, does not fetch a full atlas, and
 does not add binary assets to the repository.
 
-Because no permission-cleared visual reference was acquired or provided for
-inspection, this report does not verify practical GIF/image/WebP usability and
-does not complete #178.
+After maintainer approval for a tiny SF6Frames repo-local smoke, this report
+uses the existing Scrapling-aligned fetch path to inspect one JP visual
+reference candidate. The fetched file was not a usable move visual; it was an
+error placeholder WebP. That makes the acquisition path concrete, but leaves
+#179 blocked for actual visual matching until a usable visual reference is
+available.
 
 ## Loaded Repo Context
 
@@ -77,10 +80,10 @@ important storage change:
   cache when an explicit source permission/terms gate allows it;
 - commit metadata/report only.
 
-No new dependency is added in this PR. The current shell does not have the
-optional fetch runtime installed (`scrapling` and `pydantic` imports were not
-available), so this PR does not run a live Scrapling fetch. CI is unaffected and
-must not perform live external visual-asset fetches.
+No new dependency is added in this PR. A maintainer-local, repo-external
+temporary Python environment installed the optional fetch runtime for this
+smoke only. CI is unaffected and must not perform live external visual-asset
+fetches.
 
 ## Source Selection
 
@@ -103,9 +106,11 @@ Access boundary:
 - no direct binary URL storage;
 - no legal conclusion beyond maintainer-local source-review basis.
 
-Existing source evaluation status for SF6Frames is `hold_terms_or_permission`.
-Therefore this PR holds binary acquisition before fetching or caching a visual
-asset.
+Existing source evaluation status for SF6Frames is `hold_terms_or_permission`
+for broad binary acquisition or redistribution. The maintainer approved a
+single repo-local usability smoke for this PR. That approval does not permit
+committing binaries, raw HTML, direct binary URLs, cache paths, or public
+runtime behavior.
 
 ## JP Visual Reference Acquisition Attempt
 
@@ -118,66 +123,91 @@ Tiny scope selected from #175/#176/#177:
 
 | attempt_id | source | character | move/action candidate | candidate move id(s) | source page or source descriptor | acquisition method | asset kind expected | acquired locally? | file type observed | committed binary? | cleanup status | result | reason |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `jp-atlas-sf6frames-001` | SF6Frames | JP | Stribog visual reference candidate | `jp_034_236mp_stribog`; `jp_035_236hp_stribog` | `source_id=sf6frames` in `data/external-frame-atlas/evaluation/source-evaluation-matrix.json` | pre-fetch gate using existing source evaluation and Scrapling setup review | hitbox-overlay animation or frame-numbered visual reference if permission later allows | no | not observed | no | no scratch created | hold | SF6Frames is held for permission/terms review; direct asset URL stability was not tested; no live fetch runtime was installed; no binary acquisition was safe in this PR. |
+| `jp-atlas-sf6frames-001` | SF6Frames | JP | M Stribog visual reference usability smoke | `jp_034_236mp_stribog` | `sf6frames:jp_specials:M Stribog:data-animation-src` | Scrapling `fetch_with_profile` using static `Fetcher`; no auth/cookies; repo-external temp only | WebP hitbox/hurtbox animation with frame numbers | yes | WebP container, but image content was an internal-server-error placeholder, not a move visual | no | temp binary and extracted frame deleted | hold | Maintainer-approved smoke proved the static Scrapling path can resolve a file, but the resolved file is not usable for visual matching. |
 | `jp-atlas-sf6frames-002` | SF6Frames | JP | OD Triglav visual reference candidate | `jp_030_22pp_triglav_od_weak`; `jp_031_22pp_triglav_od_medium`; `jp_032_22pp_triglav_od_heavy` | `source_id=sf6frames` in source evaluation matrix | pre-fetch gate using existing source evaluation and Scrapling setup review | hitbox-overlay animation or frame-numbered visual reference if permission later allows | no | not observed | no | no scratch created | hold | Same hold: source evaluation recommends `hold_terms_or_permission` and #178 must not bypass that to acquire binaries. |
 | `jp-atlas-sf6frames-003` | SF6Frames | JP | SA3/CA visual reference candidate | `jp_055_sa3_236236k`; `jp_056_ca_236236k` | `source_id=sf6frames` in source evaluation matrix | pre-fetch gate using existing source evaluation and Scrapling setup review | hitbox-overlay animation or frame-numbered visual reference if source coverage exists | no | not observed | no | no scratch created | hold | Same hold plus possible source coverage uncertainty for cinematic/super references. |
 
 No GIF, image, WebP, frame, screenshot, contact sheet, raw HTML, raw JSON dump,
 or direct binary URL was committed.
 
-## Why #178 Is Not Complete
+## Visual Reference Usability Smoke
 
-#178 requires more than a path definition before it can be considered complete.
-The missing practical usability evidence is:
+| Field | Result |
+|---|---|
+| visual_reference_source | SF6Frames, maintainer-approved repo-local usability smoke |
+| source provenance boundary | External visual reference candidate; approval covers this repo-local smoke only. It does not authorize redistribution, committed binary storage, public runtime behavior, or current-fact authority. |
+| character | JP |
+| move/action candidate family | Stribog family |
+| candidate move id | `jp_034_236mp_stribog` |
+| source descriptor | `sf6frames:jp_specials:M Stribog:data-animation-src` |
+| acquisition tool | Scrapling via `ingest/frame_data`-style `fetch_with_profile` static `Fetcher` |
+| no-auth/no-cookie boundary | yes |
+| file type observed | WebP container |
+| downloaded bytes | 3156 |
+| resolution | 350 x 280 |
+| duration/frame count | no duration or `nb_frames` reported by `ffprobe`; `ffmpeg` extracted one frame |
+| transparency / overlay / hitbox overlay status | not usable; the observed frame was an internal-server-error placeholder, not a hitbox/hurtbox overlay |
+| frame numbers visible? | no |
+| clean animation visible? | no |
+| can be sampled frame-by-frame? | no; only a single placeholder frame was available |
+| can be cropped or normalized? | technically yes as an image, but not useful because the content is not a move visual |
+| can be compared to raw-video frame windows later? | no |
+| observed preprocessing needs | Source-specific asset resolution or browser/session-compatible acquisition is required before normal image preprocessing matters. Resizing, cropping, alpha/background handling, frame extraction, frame-index normalization, playback-speed normalization, and overlay separation cannot make this placeholder usable. |
+| usability result | `not_usable` |
+| reason | Scrapling static fetch reached a WebP response, but the visual content is an error placeholder rather than the expected SF6Frames move animation. |
+| cleanup status | repo-external temp binary and extracted frame deleted |
+| binary committed? | no |
+| authority boundary | Visual reference smoke only; not current-fact authority, not exact move identity proof, not an `official_raw` override |
 
-- no permission-cleared GIF, image, WebP, image sequence, or local captured
-  visual reference was acquired or provided;
-- no file type was observed;
-- no duration, frame count, resolution, transparency, overlay, hitbox-overlay,
-  or frame-number visibility was inspected;
-- no frame extraction, resizing, cropping, alpha/background handling,
-  playback-speed normalization, or frame-index normalization was tested;
-- no comparison readiness against #176 raw-video frame windows was verified.
+The page fetch itself succeeded with Scrapling and exposed the `M Stribog`
+`data-animation-src` descriptor. The failure is the practical visual-reference
+usability of the resolved asset through the current static fetch path.
 
-Therefore this PR records the acquisition gate and JP-small-scope source path
-only. #178 remains open until a permitted visual reference is acquired or
-provided and its usability is classified as `usable_as_is`,
-`needs_preprocessing`, `not_usable`, or `inconclusive`.
+## Why #179 Is Still Blocked
+
+The smoke verifies that "SF6Frames asset referenced by the page" is not the same
+as "usable visual reference for matching." The current Scrapling static fetch
+path produced a valid WebP container, but not a move visual. #179 must not
+attempt raw-video matching from this placeholder. It needs either:
+
+- a corrected Scrapling/source-specific acquisition path that resolves the
+  actual frame-numbered move visual; or
+- a maintainer-approved repo-external local visual reference sample with a
+  usable or needs-preprocessing result.
 
 ## Metadata-Only Visual Atlas Record
 
-No new metadata-only manifest was created beyond this report because no binary,
-source page, or permission-cleared local visual reference acquisition succeeded.
-Existing metadata-only fixtures already cover the general source shape:
+No new JSON manifest was created because the inspected SF6Frames WebP was
+`not_usable`. This report records the metadata-only smoke result instead.
+Existing metadata-only fixtures still cover the general source shape:
 
 - `tests/fixtures/external-frame-atlas/sf6frames-hitbox-overlay-candidate.json`
 - `tests/fixtures/external-frame-atlas/ultimate-frame-data-hitbox-image-candidate.json`
 
-If a later issue resolves the source permission/terms gate, or a
-maintainer-approved local visual reference is provided, #179 can consume
-metadata fields like:
+The inspected sample would be represented with these metadata-only fields:
 
 | Field | Planned value / rule |
 |---|---|
 | `character_slug` | `jp` |
-| `candidate_move_id` | one of the selected Stribog, OD Triglav, or SA3/CA candidates |
-| `move_family` | Stribog / OD Triglav / SA3-CA |
-| `source_name` | SF6Frames, unless a later source is selected |
-| `source_page_descriptor` | source page or character/move descriptor only; no private temp path or direct binary URL unless policy permits |
-| `asset_kind` | hitbox overlay / frame-numbered visual reference / unknown |
-| `file_type_observed` | `gif`, `webp`, `png_sequence`, `hitbox_image`, or `unknown` after permitted acquisition |
-| `acquired_for_review` | true only after permitted repo-external acquisition or approved local sample inspection |
-| `usability_result` | `usable_as_is`, `needs_preprocessing`, `not_usable`, or `inconclusive` |
-| `preprocessing_required` | crop/resize/frame extraction/alpha handling/playback normalization/overlay handling as observed |
+| `candidate_move_id_or_family` | `jp_034_236mp_stribog` |
+| `move_family` | Stribog |
+| `source_kind` | external visual reference candidate |
+| `source_name` | SF6Frames |
+| `source_page_descriptor` | `sf6frames:jp_specials:M Stribog:data-animation-src` |
+| `visual_reference_kind` | expected hitbox/hurtbox animation |
+| `file_type_observed` | WebP container |
+| `usability_result` | `not_usable` |
+| `preprocessing_required` | source-specific asset resolution; placeholder cannot be fixed by crop/resize/frame extraction |
+| `acquired_for_review` | true |
 | `local_binary_committed` | false |
 | `raw_html_committed` | false |
 | `authority_boundary` | visual reference only; not current-fact authority |
-| `cleanup_status` | deleted or repo-external cache retained with reason |
+| `cleanup_status` | temp binary and extracted frame deleted |
 | `next_use` | #179 review-only visual matching |
 
-Current hold reason: existing SF6Frames/UFD evaluations do not grant permission
-for binary acquisition or redistribution, and #178 does not add a live fetch
-runtime or source-specific selector.
+Current hold reason: the inspected sample is an error placeholder, so #179 needs
+a corrected permitted acquisition path or an approved local usable sample before
+matching.
 
 ## How This Supports #179
 
@@ -190,13 +220,13 @@ What #179 can do:
 - use the selected JP move families as the first visual matching scope;
 - use this acquisition path to determine whether a permitted repo-external or
   maintainer-approved visual reference exists;
-- mark #179 HOLD if no permitted visual reference has been acquired.
+- use the `not_usable` result to HOLD rather than forcing visual matching.
 
 What #179 cannot do from this PR:
 
 - compare raw-video segments against SF6Frames binaries, because none were
-  acquired;
-- assert visual-reference usability, because no permitted sample was inspected;
+  usable;
+- treat the fetched placeholder as visual evidence;
 - infer official move identity from visual similarity alone;
 - treat SF6Frames/UFD visuals as current-fact authority;
 - commit GIFs, images, frames, screenshots, contact sheets, raw HTML, raw tool
@@ -209,10 +239,10 @@ checks are likely:
 - OD Triglav family vs row 10 and mid-route ambiguous labels;
 - SA3/CA family vs row 12 cinematic window.
 
-If a future #179 run receives a permitted local visual reference, it must first
-record file type, frame count or still-image status, resolution, overlay/frame
-number visibility, sampling readiness, preprocessing needs, and cleanup status
-before attempting visual matching.
+If a future #179 run receives a corrected SF6Frames asset or a permitted local
+visual reference, it must first record file type, frame count or still-image
+status, resolution, overlay/frame-number visibility, sampling readiness,
+preprocessing needs, and cleanup status before attempting visual matching.
 
 ## Reusable Visual Atlas Acquisition Method
 
@@ -237,7 +267,9 @@ Future Codex/Hermes runs should repeat this method without chat history:
    - challenge detection;
    - metadata-first recording;
    - repo-external scratch/cache only.
-6. Record metadata only in repo:
+6. Verify that the fetched asset is a real visual reference, not an error
+   placeholder or unsupported payload.
+7. Record metadata only in repo:
    - source;
    - character;
    - move candidate;
@@ -246,13 +278,13 @@ Future Codex/Hermes runs should repeat this method without chat history:
    - usability result and preprocessing needs;
    - cleanup/cache status;
    - authority boundary.
-7. If no permission-cleared visual reference is available, leave #178 open or
-   record the PR as path-only; do not claim matching readiness.
-8. Delete binaries after review unless a later explicit repo-external cache
+8. If the acquired visual is not usable, classify it as `not_usable` and keep
+   #179 held until a corrected source path or approved local reference exists.
+9. Delete binaries after review unless a later explicit repo-external cache
    retention rule applies.
-9. Route visual comparison to #179 only after usability is established or
+10. Route visual comparison to #179 only after usability is established or
    explicitly held with reason.
-10. Preserve the boundary that visual references are review support only.
+11. Preserve the boundary that visual references are review support only.
 
 ### Next-Agent One-Shot Checklist
 
@@ -293,37 +325,37 @@ schema or manifest.
 
 | Follow-up | Status after this PR | Reason |
 |---|---|---|
-| #178 visual reference usability | still open | This PR defines the path and selected JP scope only. A permitted visual reference still must be acquired or provided and inspected for practical usability before #178 can close. |
-| #179 JP move/action visual-reference matching | open; blocked for actual matching | Matching requires a permitted visual reference and usability result. This PR provides neither a binary reference nor usability classification. |
+| #179 JP move/action visual-reference matching | open; blocked for actual matching | #178 now includes a Scrapling usability smoke, but the inspected WebP was `not_usable`. Matching requires a corrected permitted visual reference or approved local usable sample. |
 | #183 SF6 system-mechanics math reasoning fixtures | still relevant | Visual references do not solve damage/scaling reasoning or authority-boundary fixtures. |
 
 No new follow-up issue is needed.
 
 ## Terminal State
 
-- visual-atlas-acquisition: PATH_DEFINED_ONLY / VISUAL_REFERENCE_NOT_ACQUIRED
+- visual-atlas-acquisition: USABILITY_SMOKE_HOLD
 - small JP scope selected: yes
-- acquisition attempt result: held before binary fetch
-- hold reason: SF6Frames/UFD source evaluations do not grant permission/terms
-  clearance for binary acquisition or redistribution
-- visual-reference usability smoke: not run
-- usability reason: no permitted visual reference was acquired or provided
+- acquisition attempt result: SF6Frames page and M Stribog asset descriptor
+  fetched through Scrapling; asset response was a WebP placeholder
+- hold reason: inspected WebP was not a usable move visual
+- visual-reference usability smoke: run
+- usability result: `not_usable`
 - metadata/report only: yes
 - binary committed: no
 - raw HTML committed: no
 - current-fact authority: no
-- #178 complete? no
+- #178 complete? yes for the path/usability boundary; no usable atlas asset was
+  produced
 - #179 ready? no for actual matching; it can only load the path/scope and must
-  HOLD until a permitted visual reference and usability result exist
+  HOLD until a corrected usable visual reference exists
 
 ## Cleanup And Validation
 
 | Check | Result |
 |---|---|
-| External binaries acquired? | no |
-| Permission-cleared visual reference inspected? | no |
+| External binaries acquired? | yes, one maintainer-approved SF6Frames WebP in repo-external temp only |
+| Permission-cleared visual reference inspected? | yes |
 | Committed binaries? | no |
 | Raw HTML committed? | no |
-| Scratch cleanup | no scratch created |
+| Scratch cleanup | temp binary and extracted frame deleted |
 | Private paths committed? | no |
 | Validators run | see PR body |
