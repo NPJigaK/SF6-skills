@@ -219,7 +219,7 @@ relevant for math reasoning fixtures and insufficient-evidence cases.
 #178 added
 `docs/testing/video-analysis-calibration/external-visual-atlas-acquisition-20260515.md`.
 
-Terminal state: visual-atlas-acquisition USABILITY_SMOKE_HOLD. The PR defines
+Terminal state: visual-atlas-acquisition USABILITY_SMOKE_COMPLETED_NOT_USABLE. The PR defines
 a gated Scrapling-aligned acquisition path and selects a tiny JP scope covering
 Stribog, OD Triglav, and SA3/CA candidate families. After maintainer approval
 for a tiny SF6Frames repo-local smoke, #178 used Scrapling to fetch the JP
@@ -245,7 +245,7 @@ remain review support only and are not current-fact authority.
 | Combo-trial command prompts were visible but not normalized to canonical move candidates. | #175 | Resolved in #175: a sanitized command-prompt oracle and review-only candidate move mappings were created. Later #176/#177 used the rows for bounded alignment and partial attribution, but exact move order remains unaccepted. |
 | Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Resolved in #176 as PARTIAL calibration evidence: approximate frame/timestamp windows were recorded where supported and later used by #177. Exact execution remains unresolved. |
 | Visible damage/scaling labels were not mapped to candidate hit/action windows. | #177 | Resolved in #177 as PARTIAL review-only attribution evidence: every loaded visible label is covered as partial or unknown, with no accepted current facts. |
-| External visual atlas acquisition path and usability boundary were missing. | #178 | Resolved in #178 as USABILITY_SMOKE_HOLD: a Scrapling-aligned path was recorded, and one maintainer-approved SF6Frames M Stribog WebP smoke was classified `not_usable` because it resolved to an error placeholder. |
+| External visual atlas acquisition path and usability boundary were missing. | #178 | Resolved in #178 as USABILITY_SMOKE_COMPLETED_NOT_USABLE: a Scrapling-aligned path was recorded, and one maintainer-approved SF6Frames M Stribog WebP smoke completed with `not_usable` result because it resolved to an error placeholder. |
 | Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
 
 ## Next Review Questions

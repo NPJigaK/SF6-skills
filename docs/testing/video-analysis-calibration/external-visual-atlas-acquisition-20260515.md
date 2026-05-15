@@ -13,7 +13,7 @@
 | Related downstream matching | #179 |
 | Date | 2026-05-15 |
 | Scope | JP-small-scope |
-| Terminal state | visual-atlas-acquisition USABILITY_SMOKE_HOLD |
+| Terminal state | visual-atlas-acquisition USABILITY_SMOKE_COMPLETED_NOT_USABLE |
 
 This report defines the gated maintainer-local acquisition path for external
 visual move references. It does not perform JP move visual-reference matching,
@@ -220,7 +220,8 @@ What #179 can do:
 - use the selected JP move families as the first visual matching scope;
 - use this acquisition path to determine whether a permitted repo-external or
   maintainer-approved visual reference exists;
-- use the `not_usable` result to HOLD rather than forcing visual matching.
+- use the completed `not_usable` smoke result to block matching rather than
+  forcing visual matching.
 
 What #179 cannot do from this PR:
 
@@ -279,7 +280,8 @@ Future Codex/Hermes runs should repeat this method without chat history:
    - cleanup/cache status;
    - authority boundary.
 8. If the acquired visual is not usable, classify it as `not_usable` and keep
-   #179 held until a corrected source path or approved local reference exists.
+   #179 blocked until a corrected source path or approved local reference
+   exists.
 9. Delete binaries after review unless a later explicit repo-external cache
    retention rule applies.
 10. Route visual comparison to #179 only after usability is established or
@@ -332,7 +334,7 @@ No new follow-up issue is needed.
 
 ## Terminal State
 
-- visual-atlas-acquisition: USABILITY_SMOKE_HOLD
+- visual-atlas-acquisition: USABILITY_SMOKE_COMPLETED_NOT_USABLE
 - small JP scope selected: yes
 - acquisition attempt result: SF6Frames page and M Stribog asset descriptor
   fetched through Scrapling; asset response was a WebP placeholder
@@ -345,15 +347,16 @@ No new follow-up issue is needed.
 - current-fact authority: no
 - #178 complete? yes for the path/usability boundary; no usable atlas asset was
   produced
-- #179 ready? no for actual matching; it can only load the path/scope and must
-  HOLD until a corrected usable visual reference exists
+- #179 ready? no for actual matching; it can only load the path/scope and
+  remains blocked until a corrected usable visual reference exists
 
 ## Cleanup And Validation
 
 | Check | Result |
 |---|---|
 | External binaries acquired? | yes, one maintainer-approved SF6Frames WebP in repo-external temp only |
-| Permission-cleared visual reference inspected? | yes |
+| Permission-cleared visual reference candidate inspected? | yes |
+| Usable visual reference inspected? | no |
 | Committed binaries? | no |
 | Raw HTML committed? | no |
 | Scratch cleanup | temp binary and extracted frame deleted |
