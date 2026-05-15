@@ -128,6 +128,9 @@ coarse 1 fps full-timeline pass and denser 2 fps per-minute sampled windows.
 It produced sampled-window family/candidate ranges for Kakeru's JP, including
 Stribog-like, Triglav-like, portal/setup-like, ghost/projectile-like,
 super/cinematic, normal/close-strike, movement/drive-like, and unknown buckets.
+The report includes a sanitized count evidence ledger tying representative
+sampled windows to family/candidate/unknown buckets without committing raw
+frames or contact sheets.
 
 This does not produce exact full-match move counts, official move identity,
 current facts, or public answer behavior. Raw media, frames, screenshots,
