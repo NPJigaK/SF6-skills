@@ -212,6 +212,49 @@ For damage/scaling attribution:
    unresolved arithmetic or authority-boundary reasoning to evaluation fixtures
    or follow-up issues.
 
+### External Visual Atlas Acquisition For Calibration
+
+Use external visual atlas acquisition only as calibration support when prior
+video-analysis reports show unresolved move/action identity and a later matching
+task needs visual references.
+
+For external visual atlas acquisition:
+
+1. Load relevant repo context first, including same-sample calibration reports,
+   source review notes, character move registry, external-frame-atlas source
+   evaluation records, media scratch/cache policy, and the existing
+   `ingest/frame_data` Scrapling fetch setup.
+2. Select a tiny scope: one source, one character, and one to three
+   move/action candidate families.
+3. Check source evaluation status before any network or binary work. If terms,
+   robots, permission, rate limits, or asset stability are unresolved, record a
+   HOLD before acquisition unless the issue explicitly grants a tiny
+   maintainer-local smoke.
+4. Align any future acquisition with `ingest/frame_data` discipline: config
+   driven, no-auth/no-cookie boundary, challenge detection, metadata-first
+   reporting, and repo-external scratch/cache only.
+5. Do not require live external fetch in CI or public answer flows.
+6. Do not commit GIFs, images, WebPs, frames, screenshots, contact sheets, raw
+   HTML, raw tool output, cache paths, credentials, cookies, or private paths.
+7. Commit metadata/report only. Existing external visual references remain
+   review-only support and cannot authorize exact move identity, current facts,
+   or `official_raw` changes.
+8. After a permitted acquisition or approved local reference inspection, record
+   whether the visual reference is `usable_as_is`, `needs_preprocessing`,
+   `not_usable`, or `inconclusive`. Also record preprocessing needs such as
+   frame extraction, resizing, cropping, alpha/background handling, playback
+   normalization, overlay separation, or frame-index normalization.
+9. Verify that the fetched asset is an actual move visual, not an error
+   placeholder, unsupported payload, or unrelated source asset. A valid image
+   container by itself is not enough.
+10. Path definition alone is not matching readiness. If no permitted visual
+   reference was inspected, or if the inspected visual is `not_usable`, continue
+   the acquisition loop or leave the source issue open; do not claim readiness
+   for matching.
+11. Route visual comparison and usefulness evaluation to a later matching task
+   only after the visual-reference input is `usable_as_is` or
+   `needs_preprocessing`, and the preprocessing boundary is recorded.
+
 ## Track Guidance
 
 Use these tracks from the video observation contract:
