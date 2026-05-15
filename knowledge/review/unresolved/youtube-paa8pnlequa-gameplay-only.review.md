@@ -116,6 +116,26 @@ Follow-up issue #195 tracks that calibration explicitly. This review note must
 not be interpreted as proving move-count readiness, match-level analytics, or
 all-character/all-move recognition.
 
+## 2026-05-16 Move-Frequency Calibration Follow-Up
+
+#195 added a review-only move-frequency calibration report:
+`docs/testing/video-analysis-calibration/video-link-gameplay-only-01-kakeru-jp-move-frequency-20260516.md`.
+
+Result: move-frequency calibration PARTIAL.
+
+The #195 pass inspected actual video evidence in repo-external scratch using a
+coarse 1 fps full-timeline pass and denser 2 fps per-minute sampled windows.
+It produced sampled-window family/candidate ranges for Kakeru's JP, including
+Stribog-like, Triglav-like, portal/setup-like, ghost/projectile-like,
+super/cinematic, normal/close-strike, movement/drive-like, and unknown buckets.
+The report includes a sanitized count evidence ledger tying representative
+sampled windows to family/candidate/unknown buckets without committing raw
+frames or contact sheets.
+
+This does not produce exact full-match move counts, official move identity,
+current facts, or public answer behavior. Raw media, frames, screenshots,
+contact sheets, transcripts, tool output, and private paths were not committed.
+
 ## Next Review Questions
 
 - Should a later video-link batch compare #161 with #162 to document the
@@ -123,6 +143,6 @@ all-character/all-move recognition.
 - Should the final #158 audit record this row as PASS for the gameplay-only
   YouTube/video-link family with terminal state `sanitized report only` plus
   review-only observation?
-- Should future move-recognition or move-frequency work use this source as a
-  separate scoped validation case? That would require a new issue and
-  false-positive/false-negative evaluation.
+- Should a later move-frequency tranche repeat #195 with denser sampling,
+  negative controls, or another gameplay source before any public analytics
+  behavior is considered?
