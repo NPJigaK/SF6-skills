@@ -7,6 +7,7 @@ $questionFiles = @(
   'evals/questions/current-fact.yaml',
   'evals/questions/strategy.yaml',
   'evals/questions/matchup.yaml',
+  'evals/questions/sf6-system-mechanics-math-reasoning.yaml',
   'evals/questions/video-observation.yaml',
   'evals/questions/uncertainty.yaml'
 )

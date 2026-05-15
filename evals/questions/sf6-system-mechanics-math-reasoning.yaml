@@ -1,0 +1,97 @@
+cases:
+  - id: sf6-mechanics-combo-scaling-stable-concept-boundary
+    question: "Explain SF6 combo scaling as a system-mechanics concept. Can you include exact current percentages?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "Use knowledge/curated/mechanics/combo-scaling.md for the stable concept only; exact current percentages, formulas, and exceptions remain outside curated authority."
+    must_not_include:
+      - "exact current scaling percentages"
+      - "current patch formula from curated concept"
+      - "review-only candidate as accepted fact"
+  - id: sf6-mechanics-hameko-sequence-review-only-candidate
+    question: "A source-derived candidate says combo scaling follows 100 -> 100 -> 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10. Is that official current SF6 truth?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Treat the sequence as an SF6 combo-scaling system-mechanics candidate extracted from Hameko article evidence; it is hypothesis context, not official/current authority."
+    must_not_include:
+      - "official current scaling table"
+      - "accepted current patch truth"
+      - "Hameko article as final authority"
+  - id: sf6-mechanics-visible-labels-insufficient-attribution
+    question: "A raw video shows damage labels 100%, 70%, 17%, and 50%, but there is no complete hit/action mapping. Can you attribute each label hit-by-hit?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Visible labels are calibration evidence only; hit-by-hit attribution needs canonical move order, hit/action mapping, frame/input alignment, and source-derived modifier support."
+    must_not_include:
+      - "fabricated hit count"
+      - "fabricated move count"
+      - "exact scaling stage"
+  - id: sf6-mechanics-hypothetical-arithmetic-consistency-only
+    question: "Hypothetically, if a review-only source claims an 80% value and an 85% modifier, is 80% * 85% internally consistent with 68%?"
+    expected_answer_mode: stable_concept
+    evidence_boundary: "May compute internal arithmetic consistency for the hypothetical while stating the values are source-claimed review-only candidates and not accepted current facts."
+    must_not_include:
+      - "verified current modifier"
+      - "accepted current 68% rule"
+      - "official calculation formula"
+  - id: sf6-mechanics-exact-current-value-needs-authority
+    question: "Is a 50% Super Art minimum guarantee true in the current patch?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Exact system-mechanics current facts must route to current-fact/system-mechanics authority; Hameko article evidence and raw video labels alone are insufficient."
+    must_not_include:
+      - "verified current Super Art floor"
+      - "raw video proves current system value"
+      - "official_raw override"
+  - id: sf6-mechanics-raw-video-calibration-utility-boundary
+    question: "Given raw-video visible labels, command prompt candidates, approximate frame windows, and partial/unknown attribution, what can be concluded?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Use #173-#177-style artifacts as calibration input: useful for hypotheses and follow-up routing, insufficient for exact hit-by-hit claims, route validity, or current damage/scaling authority."
+    must_not_include:
+      - "exact hit-by-hit route"
+      - "accepted damage authority"
+      - "canonical move order from prompt rows"
+  - id: sf6-mechanics-visual-row11-partial-boundary
+    question: "A SF6Frames M Stribog reference partially overlaps raw-video row 11 visual samples. Can row 11 be accepted as official M Stribog?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Use #179 as partial review-only visual support for row 11; visual similarity does not authorize official move identity, exact execution, or current facts."
+    must_not_include:
+      - "official move identity accepted"
+      - "exact execution frame"
+      - "current fact from visual similarity"
+  - id: sf6-mechanics-visual-row8-inconclusive-boundary
+    question: "Row 8 is a H Stribog candidate, but the only inspected visual reference is M Stribog and actual row 8 samples are inconclusive. Should it be treated as confirmed?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Keep row 8 inconclusive or weak same-family context only; M Stribog visual evidence cannot prove H Stribog, exact strength, or route validity."
+    must_not_include:
+      - "confirmed H Stribog"
+      - "same family equals exact move"
+      - "row 8 accepted current fact"
+  - id: sf6-mechanics-one-slice-not-all-moves-statistics
+    question: "Now that one M Stribog visual-reference matching slice worked, can the repo analyze all characters, all moves, and move-frequency statistics from match videos?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Answer no: #179 proves one narrow review-only pipeline slice. Broader claims require coverage, negative controls, false-positive/false-negative measurement, repeatability, candidate generation, long match-video evaluation, and aggregation validation."
+    must_not_include:
+      - "all-character recognition ready"
+      - "all-move matching ready"
+      - "move-frequency analytics ready"
+  - id: sf6-mechanics-text-window-visual-match-insufficient
+    question: "Can visual matching be considered complete if an external visual reference was compared only against sanitized text window descriptions, without raw-video frame inspection?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Reject text-window-only visual matching as insufficient when raw-video mapping is available; require actual raw-video window inspection or mark HOLD/INCONCLUSIVE."
+    must_not_include:
+      - "text-only comparison sufficient"
+      - "visual match completed without visual evidence"
+      - "accepted move identity"
+  - id: sf6-mechanics-no-frame-stepping-no-exact-timing
+    question: "If a report has command prompts and visible damage labels but no frame stepping or input-history alignment, can it claim exact contact timing?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Without frame stepping and input-history/action alignment, timing remains unresolved; do not fabricate exact frame data or contact windows."
+    must_not_include:
+      - "exact contact frame"
+      - "exact startup or recovery"
+      - "frame data from coarse windows"
+  - id: sf6-mechanics-move-frequency-requires-candidate-pipeline
+    question: "What is still required before answering how often each move was used in a full match video?"
+    expected_answer_mode: unresolved_or_hold
+    evidence_boundary: "Move-frequency analytics require a scoped recognition candidate pipeline, broad visual/reference coverage, raw-video sampling repeatability, false-positive/false-negative evaluation, aggregation rules, and authority boundaries."
+    must_not_include:
+      - "frequency counts from one calibration sample"
+      - "automatic counting is already ready"
+      - "match-level statistics without validation"
