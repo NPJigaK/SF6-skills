@@ -228,7 +228,8 @@ For external visual atlas acquisition:
    move/action candidate families.
 3. Check source evaluation status before any network or binary work. If terms,
    robots, permission, rate limits, or asset stability are unresolved, record a
-   HOLD before acquisition.
+   HOLD before acquisition unless the issue explicitly grants a tiny
+   maintainer-local smoke.
 4. Align any future acquisition with `ingest/frame_data` discipline: config
    driven, no-auth/no-cookie boundary, challenge detection, metadata-first
    reporting, and repo-external scratch/cache only.
@@ -247,10 +248,12 @@ For external visual atlas acquisition:
    placeholder, unsupported payload, or unrelated source asset. A valid image
    container by itself is not enough.
 10. Path definition alone is not matching readiness. If no permitted visual
-   reference was inspected, or if the inspected visual is `not_usable`, route
-   the later matching task as blocked until usability is established.
+   reference was inspected, or if the inspected visual is `not_usable`, continue
+   the acquisition loop or leave the source issue open; do not claim readiness
+   for matching.
 11. Route visual comparison and usefulness evaluation to a later matching task
-   only after the visual-reference input and usability boundary are recorded.
+   only after the visual-reference input is `usable_as_is` or
+   `needs_preprocessing`, and the preprocessing boundary is recorded.
 
 ## Track Guidance
 

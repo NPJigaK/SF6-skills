@@ -13,7 +13,7 @@
 | Related downstream matching | #179 |
 | Date | 2026-05-15 |
 | Scope | JP-small-scope |
-| Terminal state | visual-atlas-acquisition USABILITY_SMOKE_COMPLETED_NOT_USABLE |
+| Terminal state | visual-atlas-acquisition USABILITY_SMOKE_PARTIAL_NEEDS_PREPROCESSING |
 
 This report defines the gated maintainer-local acquisition path for external
 visual move references. It does not perform JP move visual-reference matching,
@@ -22,10 +22,12 @@ does not add binary assets to the repository.
 
 After maintainer approval for a tiny SF6Frames repo-local smoke, this report
 uses the existing Scrapling-aligned fetch path to inspect one JP visual
-reference candidate. The fetched file was not a usable move visual; it was an
-error placeholder WebP. That makes the acquisition path concrete, but leaves
-#179 blocked for actual visual matching until a usable visual reference is
-available.
+reference candidate. The first direct `data-animation-src` attempt produced an
+error placeholder WebP. The second iteration followed the SF6Frames page
+script's encoded animation descriptor path and acquired an actual animated
+M Stribog visual in repo-external scratch. That makes the acquisition path
+concrete, but #179 still must re-acquire/preprocess the visual reference outside
+the repo before any matching.
 
 ## Loaded Repo Context
 
@@ -123,12 +125,53 @@ Tiny scope selected from #175/#176/#177:
 
 | attempt_id | source | character | move/action candidate | candidate move id(s) | source page or source descriptor | acquisition method | asset kind expected | acquired locally? | file type observed | committed binary? | cleanup status | result | reason |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `jp-atlas-sf6frames-001` | SF6Frames | JP | M Stribog visual reference usability smoke | `jp_034_236mp_stribog` | `sf6frames:jp_specials:M Stribog:data-animation-src` | Scrapling `fetch_with_profile` using static `Fetcher`; no auth/cookies; repo-external temp only | WebP hitbox/hurtbox animation with frame numbers | yes | WebP container, but image content was an internal-server-error placeholder, not a move visual | no | temp binary and extracted frame deleted | hold | Maintainer-approved smoke proved the static Scrapling path can resolve a file, but the resolved file is not usable for visual matching. |
-| `jp-atlas-sf6frames-002` | SF6Frames | JP | OD Triglav visual reference candidate | `jp_030_22pp_triglav_od_weak`; `jp_031_22pp_triglav_od_medium`; `jp_032_22pp_triglav_od_heavy` | `source_id=sf6frames` in source evaluation matrix | pre-fetch gate using existing source evaluation and Scrapling setup review | hitbox-overlay animation or frame-numbered visual reference if permission later allows | no | not observed | no | no scratch created | hold | Same hold: source evaluation recommends `hold_terms_or_permission` and #178 must not bypass that to acquire binaries. |
-| `jp-atlas-sf6frames-003` | SF6Frames | JP | SA3/CA visual reference candidate | `jp_055_sa3_236236k`; `jp_056_ca_236236k` | `source_id=sf6frames` in source evaluation matrix | pre-fetch gate using existing source evaluation and Scrapling setup review | hitbox-overlay animation or frame-numbered visual reference if source coverage exists | no | not observed | no | no scratch created | hold | Same hold plus possible source coverage uncertainty for cinematic/super references. |
+| `jp-atlas-sf6frames-001` | SF6Frames | JP | M Stribog direct descriptor smoke | `jp_034_236mp_stribog` | `sf6frames:jp_specials:M Stribog:data-animation-src` | Scrapling `fetch_with_profile` using static `Fetcher`; no auth/cookies; repo-external temp only | WebP hitbox/hurtbox animation with frame numbers | yes | WebP container, but image content was an internal-server-error placeholder, not a move visual | no | temp binary and extracted frame deleted | not_usable | Direct descriptor was stale or endpoint-incompatible for acquisition. It proved that a valid container is not enough. |
+| `jp-atlas-sf6frames-002` | SF6Frames | JP | M Stribog encoded animation descriptor smoke | `jp_034_236mp_stribog` | `sf6frames:jp_specials:M Stribog:data-key decoded animation descriptor` | Scrapling `fetch_with_profile` using static `Fetcher`; no auth/cookies; repo-external temp only; decoded the page-provided descriptor using the same rule visible in the SF6Frames page script | animated WebP hitbox/hurtbox visual with frame numbers | yes | animated WebP, 750 x 573, 53 frames, RGBA | no | temp animated WebP and inspection frames deleted | partial | Actual M Stribog move visual was acquired and inspected. It needs preprocessing before #179 matching: frame extraction, crop/scale normalization, overlay/frame-number handling, and source-frame to target-window indexing. |
+| `jp-atlas-sf6frames-003` | SF6Frames | JP | OD Triglav visual reference candidate | `jp_030_22pp_triglav_od_weak`; `jp_031_22pp_triglav_od_medium`; `jp_032_22pp_triglav_od_heavy` | `source_id=sf6frames` in source evaluation matrix | not fetched in this PR | hitbox-overlay animation or frame-numbered visual reference if later needed | no | not observed | no | no scratch created | not_applicable | #178 only needed one tiny positive usability smoke; #179 may repeat the same encoded-descriptor method for OD Triglav if matching needs it. |
+| `jp-atlas-sf6frames-004` | SF6Frames | JP | SA3/CA visual reference candidate | `jp_055_sa3_236236k`; `jp_056_ca_236236k` | `source_id=sf6frames` in source evaluation matrix | not fetched in this PR | hitbox-overlay animation or frame-numbered visual reference if source coverage exists | no | not observed | no | no scratch created | not_applicable | #178 only needed one tiny positive usability smoke; cinematic/super visual coverage remains #179 scope if needed. |
 
 No GIF, image, WebP, frame, screenshot, contact sheet, raw HTML, raw JSON dump,
 or direct binary URL was committed.
+
+## Usability Loop Iteration 2
+
+Iteration 1 failure:
+
+- Static Scrapling page fetch exposed the M Stribog `data-animation-src`
+  descriptor.
+- Fetching that descriptor produced a small WebP container whose only observed
+  content was an internal-server-error placeholder.
+- Likely failure class: source-specific asset path or stale descriptor. The
+  container/file type alone was not proof of a usable visual reference.
+
+Iteration 2 change:
+
+- Re-read the SF6Frames page script behavior and the JP specials page DOM.
+- Used the page-provided encoded animation descriptor (`data-key`) rather than
+  the direct `data-animation-src` descriptor.
+- Decoded only enough descriptor state in repo-external scratch to fetch the
+  animation; no raw URL, raw HTML, browser profile, cookie, or direct binary URL
+  was committed.
+- Fetched the decoded animation descriptor through the same Scrapling-aligned
+  `fetch_with_profile` static `Fetcher` path.
+
+Iteration 2 result:
+
+- Actual M Stribog animated WebP acquired in repo-external scratch.
+- Observed size: 1,604,726 bytes.
+- Observed media: animated WebP, 750 x 573, RGBA.
+- Observed frame count: 53 frames via Pillow inspection.
+- Observed visual content: JP performing M Stribog with hitbox/hurtbox overlay,
+  frame numbers, stage grid, and SF6Frames watermark.
+- `ffmpeg` in this environment did not decode the animated WebP cleanly, but
+  Pillow could inspect and sample frames. That is a preprocessing/tooling note
+  for #179, not a failure of acquisition.
+- Result: `needs_preprocessing`.
+
+This confirms that the correct SF6Frames acquisition path is not the visible
+direct animation descriptor alone. Future agents should inspect the page script
+and use the page's encoded animation descriptor path or another reviewed source
+path, while keeping all binaries repo-external.
 
 ## Visual Reference Usability Smoke
 
@@ -139,52 +182,55 @@ or direct binary URL was committed.
 | character | JP |
 | move/action candidate family | Stribog family |
 | candidate move id | `jp_034_236mp_stribog` |
-| source descriptor | `sf6frames:jp_specials:M Stribog:data-animation-src` |
+| source descriptor | `sf6frames:jp_specials:M Stribog:data-key decoded animation descriptor` |
 | acquisition tool | Scrapling via `ingest/frame_data`-style `fetch_with_profile` static `Fetcher` |
 | no-auth/no-cookie boundary | yes |
-| file type observed | WebP container |
-| downloaded bytes | 3156 |
-| resolution | 350 x 280 |
-| duration/frame count | no duration or `nb_frames` reported by `ffprobe`; `ffmpeg` extracted one frame |
-| transparency / overlay / hitbox overlay status | not usable; the observed frame was an internal-server-error placeholder, not a hitbox/hurtbox overlay |
-| frame numbers visible? | no |
-| clean animation visible? | no |
-| can be sampled frame-by-frame? | no; only a single placeholder frame was available |
-| can be cropped or normalized? | technically yes as an image, but not useful because the content is not a move visual |
-| can be compared to raw-video frame windows later? | no |
-| observed preprocessing needs | Source-specific asset resolution or browser/session-compatible acquisition is required before normal image preprocessing matters. Resizing, cropping, alpha/background handling, frame extraction, frame-index normalization, playback-speed normalization, and overlay separation cannot make this placeholder usable. |
-| usability result | `not_usable` |
-| reason | Scrapling static fetch reached a WebP response, but the visual content is an error placeholder rather than the expected SF6Frames move animation. |
-| cleanup status | repo-external temp binary and extracted frame deleted |
+| file type observed | animated WebP |
+| downloaded bytes | 1,604,726 |
+| resolution | 750 x 573 |
+| duration/frame count | 53 frames observed via Pillow; source playback timing still needs #179 preprocessing |
+| transparency / overlay / hitbox overlay status | hitbox/hurtbox overlay visible; alpha not useful as a clean isolated sprite because frames include stage background and watermark |
+| frame numbers visible? | yes |
+| clean animation visible? | yes, but with hitbox/hurtbox overlay, frame number, and source watermark |
+| can be sampled frame-by-frame? | yes with Pillow; the local ffmpeg build did not decode this animated WebP path cleanly |
+| can be cropped or normalized? | yes, with preprocessing |
+| can be compared to raw-video frame windows later? | yes after #179 re-acquires it in repo-external scratch and applies preprocessing |
+| observed preprocessing needs | Extract frames with a WebP-capable tool such as Pillow; crop/resize to compare against raw-video windows; handle hitbox/hurtbox overlays, frame-number labels, stage background, and watermark; normalize source animation frame indices against the #176 60-game-frame windows. |
+| usability result | `needs_preprocessing` |
+| reason | Scrapling static fetch through the page's encoded animation descriptor acquired a real M Stribog animated visual, but it is not directly comparable to raw-video frames without extraction and normalization. |
+| cleanup status | repo-external animated WebP and sampled inspection frames deleted |
 | binary committed? | no |
 | authority boundary | Visual reference smoke only; not current-fact authority, not exact move identity proof, not an `official_raw` override |
 
-The page fetch itself succeeded with Scrapling and exposed the `M Stribog`
-`data-animation-src` descriptor. The failure is the practical visual-reference
-usability of the resolved asset through the current static fetch path.
+The page fetch itself succeeded with Scrapling and exposed both the failing
+direct descriptor and the working encoded animation descriptor. The successful
+path is useful acquisition evidence for #179, but it is not visual matching and
+not current-fact authority.
 
-## Why #179 Is Still Blocked
+## Why #179 Is Only Partially Unblocked
 
 The smoke verifies that "SF6Frames asset referenced by the page" is not the same
-as "usable visual reference for matching." The current Scrapling static fetch
-path produced a valid WebP container, but not a move visual. #179 must not
-attempt raw-video matching from this placeholder. It needs either:
+as "usable visual reference for matching" unless the correct page-resolved
+descriptor is used. #179 must not use the iteration 1 placeholder. It may use
+the iteration 2 method as a starting point, but it still needs to:
 
-- a corrected Scrapling/source-specific acquisition path that resolves the
-  actual frame-numbered move visual; or
-- a maintainer-approved repo-external local visual reference sample with a
-  usable or needs-preprocessing result.
+- re-acquire the animated WebP in repo-external scratch;
+- extract frames with a tool that supports this animated WebP;
+- record any crop/resize/overlay/watermark handling;
+- align source animation frames to the #176 frame/input windows; and
+- keep the visual comparison review-only.
 
 ## Metadata-Only Visual Atlas Record
 
-No new JSON manifest was created because the inspected SF6Frames WebP was
-`not_usable`. This report records the metadata-only smoke result instead.
-Existing metadata-only fixtures still cover the general source shape:
+No new JSON manifest was created because this PR only records one operational
+usability smoke and does not add an external atlas cache. This report records a
+metadata-only visual atlas record that #179 can consume procedurally. Existing
+metadata-only fixtures still cover the general source shape:
 
 - `tests/fixtures/external-frame-atlas/sf6frames-hitbox-overlay-candidate.json`
 - `tests/fixtures/external-frame-atlas/ultimate-frame-data-hitbox-image-candidate.json`
 
-The inspected sample would be represented with these metadata-only fields:
+The inspected sample is represented with these metadata-only fields:
 
 | Field | Planned value / rule |
 |---|---|
@@ -193,57 +239,57 @@ The inspected sample would be represented with these metadata-only fields:
 | `move_family` | Stribog |
 | `source_kind` | external visual reference candidate |
 | `source_name` | SF6Frames |
-| `source_page_descriptor` | `sf6frames:jp_specials:M Stribog:data-animation-src` |
-| `visual_reference_kind` | expected hitbox/hurtbox animation |
-| `file_type_observed` | WebP container |
-| `usability_result` | `not_usable` |
-| `preprocessing_required` | source-specific asset resolution; placeholder cannot be fixed by crop/resize/frame extraction |
+| `source_page_descriptor` | `sf6frames:jp_specials:M Stribog:data-key decoded animation descriptor` |
+| `visual_reference_kind` | hitbox/hurtbox animated WebP with frame numbers |
+| `file_type_observed` | animated WebP |
+| `usability_result` | `needs_preprocessing` |
+| `preprocessing_required` | frame extraction; crop/resize normalization; overlay/frame-number/watermark handling; source-frame to #176 window alignment |
 | `acquired_for_review` | true |
 | `local_binary_committed` | false |
 | `raw_html_committed` | false |
 | `authority_boundary` | visual reference only; not current-fact authority |
-| `cleanup_status` | temp binary and extracted frame deleted |
+| `cleanup_status` | temp animated WebP and sampled inspection frames deleted |
 | `next_use` | #179 review-only visual matching |
 
-Current hold reason: the inspected sample is an error placeholder, so #179 needs
-a corrected permitted acquisition path or an approved local usable sample before
-matching.
+Current readiness boundary: #179 has a verified acquisition path for one
+preprocessable M Stribog visual reference, but no binary is stored in repo and
+no matching has been attempted.
 
 ## How This Supports #179
 
-#179 can use this report to decide whether it has an allowed visual-reference
-input, but this report does not itself provide one.
+#179 can use this report to re-run the allowed visual-reference acquisition
+path and decide how to preprocess the sample before matching.
 
 What #179 can do:
 
 - load the same JP command-prompt rows and frame/action windows;
 - use the selected JP move families as the first visual matching scope;
-- use this acquisition path to determine whether a permitted repo-external or
-  maintainer-approved visual reference exists;
-- use the completed `not_usable` smoke result to block matching rather than
-  forcing visual matching.
+- use the encoded-descriptor acquisition method for M Stribog in repo-external
+  scratch;
+- record whether OD Triglav or SA3/CA visuals need the same method; and
+- preprocess the M Stribog animated WebP before any raw-video comparison.
 
 What #179 cannot do from this PR:
 
-- compare raw-video segments against SF6Frames binaries, because none were
-  usable;
-- treat the fetched placeholder as visual evidence;
+- assume the animated WebP proves exact move identity;
+- skip frame extraction/crop/scale/overlay handling;
+- use the iteration 1 placeholder as visual evidence;
 - infer official move identity from visual similarity alone;
 - treat SF6Frames/UFD visuals as current-fact authority;
 - commit GIFs, images, frames, screenshots, contact sheets, raw HTML, raw tool
   output, or private paths.
 
-If source permission/terms are resolved later, the first useful #179 visual
-checks are likely:
+The first useful #179 visual checks are likely:
 
 - Stribog family vs rows 8/11;
 - OD Triglav family vs row 10 and mid-route ambiguous labels;
 - SA3/CA family vs row 12 cinematic window.
 
-If a future #179 run receives a corrected SF6Frames asset or a permitted local
-visual reference, it must first record file type, frame count or still-image
-status, resolution, overlay/frame-number visibility, sampling readiness,
-preprocessing needs, and cleanup status before attempting visual matching.
+If a future #179 run re-acquires this SF6Frames asset or receives another
+permitted local visual reference, it must first record file type, frame count or
+still-image status, resolution, overlay/frame-number visibility, sampling
+readiness, preprocessing needs, and cleanup status before attempting visual
+matching.
 
 ## Reusable Visual Atlas Acquisition Method
 
@@ -260,8 +306,10 @@ Future Codex/Hermes runs should repeat this method without chat history:
 2. Select a tiny character/move scope from unresolved video-analysis gaps.
 3. Inspect the source evaluation status before any network or binary work.
 4. If the source is held for permission/terms/robots/rate-limit review, stop
-   before binary acquisition and record a HOLD.
-5. If acquisition is permitted by a later explicit issue, use the existing
+   before binary acquisition and record a HOLD unless the maintainer explicitly
+   approves a tiny repo-local smoke for the issue.
+5. If acquisition is permitted by a later explicit issue or maintainer approval,
+   use the existing
    `ingest/frame_data` fetch discipline:
    - config-driven profile;
    - no-auth/no-cookie boundary;
@@ -279,14 +327,17 @@ Future Codex/Hermes runs should repeat this method without chat history:
    - usability result and preprocessing needs;
    - cleanup/cache status;
    - authority boundary.
-8. If the acquired visual is not usable, classify it as `not_usable` and keep
-   #179 blocked until a corrected source path or approved local reference
-   exists.
-9. Delete binaries after review unless a later explicit repo-external cache
+8. If a descriptor yields a placeholder, keep the failure and continue the
+   acquisition loop before claiming readiness.
+9. If the acquired visual is `not_usable`, keep #179 blocked until a corrected
+   source path or approved local reference exists.
+10. If the acquired visual is `usable_as_is` or `needs_preprocessing`, record
+   the exact preprocessing requirements before routing to #179.
+11. Delete binaries after review unless a later explicit repo-external cache
    retention rule applies.
-10. Route visual comparison to #179 only after usability is established or
+12. Route visual comparison to #179 only after usability is established or
    explicitly held with reason.
-11. Preserve the boundary that visual references are review support only.
+13. Preserve the boundary that visual references are review support only.
 
 ### Next-Agent One-Shot Checklist
 
@@ -327,38 +378,44 @@ schema or manifest.
 
 | Follow-up | Status after this PR | Reason |
 |---|---|---|
-| #179 JP move/action visual-reference matching | open; blocked for actual matching | #178 now includes a Scrapling usability smoke, but the inspected WebP was `not_usable`. Matching requires a corrected permitted visual reference or approved local usable sample. |
+| #179 JP move/action visual-reference matching | open; partially unblocked but preprocessing required | #178 now includes a Scrapling usability smoke that found one preprocessable M Stribog animated WebP. #179 must re-acquire it repo-externally, preprocess it, and keep any visual comparison review-only. |
 | #183 SF6 system-mechanics math reasoning fixtures | still relevant | Visual references do not solve damage/scaling reasoning or authority-boundary fixtures. |
 
 No new follow-up issue is needed.
 
 ## Terminal State
 
-- visual-atlas-acquisition: USABILITY_SMOKE_COMPLETED_NOT_USABLE
+- visual-atlas-acquisition: USABILITY_SMOKE_PARTIAL_NEEDS_PREPROCESSING
 - small JP scope selected: yes
-- acquisition attempt result: SF6Frames page and M Stribog asset descriptor
-  fetched through Scrapling; asset response was a WebP placeholder
-- hold reason: inspected WebP was not a usable move visual
+- acquisition attempt result: SF6Frames page and M Stribog direct descriptor
+  fetched through Scrapling first; direct descriptor response was a WebP
+  placeholder. Iteration 2 followed the page's encoded animation descriptor and
+  acquired a real animated WebP.
+- preprocessing reason: the animated WebP includes hitbox/hurtbox overlays,
+  frame numbers, stage background, and watermark; #179 must extract frames and
+  normalize crop/scale/source-frame indexing before matching
 - visual-reference usability smoke: run
-- usability result: `not_usable`
+- usability result: `needs_preprocessing`
 - metadata/report only: yes
 - binary committed: no
 - raw HTML committed: no
 - current-fact authority: no
-- #178 complete? yes for the path/usability boundary; no usable atlas asset was
-  produced
-- #179 ready? no for actual matching; it can only load the path/scope and
-  remains blocked until a corrected usable visual reference exists
+- #178 complete? yes as a usable/preprocessable visual-reference acquisition
+  smoke
+- #179 ready? partially; it can use the acquisition method and preprocessing
+  requirements, but must re-acquire and preprocess repo-externally before
+  matching
 
 ## Cleanup And Validation
 
 | Check | Result |
 |---|---|
-| External binaries acquired? | yes, one maintainer-approved SF6Frames WebP in repo-external temp only |
+| External binaries acquired? | yes, two maintainer-approved SF6Frames WebP responses in repo-external temp only: one placeholder from the direct descriptor and one actual animated M Stribog visual from the encoded descriptor |
 | Permission-cleared visual reference candidate inspected? | yes |
-| Usable visual reference inspected? | no |
+| Usable/preprocessable visual reference inspected? | yes |
+| Usability result | `needs_preprocessing` |
 | Committed binaries? | no |
 | Raw HTML committed? | no |
-| Scratch cleanup | temp binary and extracted frame deleted |
+| Scratch cleanup | temp WebP responses and sampled inspection frames deleted |
 | Private paths committed? | no |
 | Validators run | see PR body |
