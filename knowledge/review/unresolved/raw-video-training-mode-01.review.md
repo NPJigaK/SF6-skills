@@ -242,6 +242,39 @@ partially unblocked, but actual visual matching still requires repo-external
 re-acquisition and preprocessing. External visuals remain review support only
 and are not current-fact authority.
 
+## 2026-05-15 Visual Reference Matching Follow-Up
+
+#179 added
+`docs/testing/video-analysis-calibration/raw-video-training-mode-01-visual-reference-matching-20260515.md`.
+
+Result: visual-reference matching PARTIAL. The pass re-acquired the SF6Frames
+M Stribog animated WebP through the #178 encoded-descriptor path, extracted
+representative frames in repo-external scratch with Pillow, then inspected the
+row 11 and row 8 raw-video target windows repo-externally before comparing
+actual reference samples against actual raw-video samples.
+
+Row 11 (`cmd-raw-jp-adv5-011`, `jp_034_236mp_stribog`) is classified as
+`partial`: actual row 11 samples include mixed close-range and strike phases,
+but the late portion shows purple/black effect pressure that partially overlaps
+the M Stribog reference's broad projectile/effect phase. It does not prove
+exact execution, hit source, move identity, or current facts. Row 8
+(`cmd-raw-jp-adv5-008`, `jp_035_236hp_stribog`) is `inconclusive`: actual row 8
+samples show portal/effect carryover and close-range strike/kick phases, but
+not the clean horizontal M Stribog projectile phase; the reference is M
+Stribog, not H Stribog.
+
+No external WebP, GIF, image, frame, contact sheet, raw HTML, raw tool output,
+direct binary URL, private path, generated reference, public runtime behavior,
+raw-video frame/crop, or current-fact authority change was committed. External
+visuals remain review support only. #183 remains relevant for reasoning
+fixtures that prevent overclaiming from partial or inconclusive visual evidence.
+
+Generalization boundary: #179 proves one narrow JP M Stribog visual-reference
+matching pipeline slice only. It does not prove full-character, full-move,
+match-level move recognition, or move-frequency analytics. Those require later
+coverage, repeatability, false-positive/false-negative, and aggregation
+validation before they can be claimed.
+
 ## Resolved Follow-Up Routing
 
 | Previously mapped gap | Follow-up issue | Resolution |
@@ -251,13 +284,13 @@ and are not current-fact authority.
 | Coarse frame ranges were not aligned with input history, command-prompt rows, action phases, hit events, or damage labels. | #176 | Resolved in #176 as PARTIAL calibration evidence: approximate frame/timestamp windows were recorded where supported and later used by #177. Exact execution remains unresolved. |
 | Visible damage/scaling labels were not mapped to candidate hit/action windows. | #177 | Resolved in #177 as PARTIAL review-only attribution evidence: every loaded visible label is covered as partial or unknown, with no accepted current facts. |
 | External visual atlas acquisition path and usability boundary were missing. | #178 | Resolved in #178 as USABILITY_SMOKE_PARTIAL_NEEDS_PREPROCESSING: a Scrapling-aligned path was recorded, a failing direct-descriptor placeholder was preserved as failure evidence, and a second encoded-descriptor iteration acquired an actual M Stribog animated WebP that #179 can re-acquire and preprocess repo-externally. |
+| JP move/action matching against visual references was not attempted. | #179 | Resolved in #179 as PARTIAL review-only visual-to-visual matching evidence: M Stribog was re-acquired and preprocessed repo-externally, then compared against repo-external raw-video samples for rows 11 and 8. Row 11 remains partial, row 8 remains inconclusive, and no accepted move identity or current fact was created. |
 | Source-derived repo knowledge was not automatically loaded before later video analysis. | #180 | Resolved in #180 / PR #181: `workflows/ingest-video.md` now requires `Loaded Repo Context` before video-analysis calibration, and #174 used that gate. |
 
 ## Next Review Questions
 
 | Residual gap | Follow-up issue | Notes |
 |---|---|---|
-| JP move/action matching against visual references was not attempted. | #179 | #178 proved one SF6Frames M Stribog visual reference is preprocessable, but #179 must re-acquire it repo-externally, preprocess it, and keep any matching review-only. OD Triglav and SA3/CA visual acquisition remain untested. |
 | SF6 system-mechanics math reasoning fixtures are missing. | #183 | Should cover combo-scaling arithmetic, insufficient-evidence detection, and current-fact authority boundaries after #177 has stronger attribution examples. |
 
 Open questions that remain after #173:
