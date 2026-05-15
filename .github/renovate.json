@@ -29,7 +29,16 @@
       "matchManagers": [
         "mise"
       ],
-      "groupName": "maintainer toolchain"
+      "groupName": "maintainer toolchain",
+      "postUpgradeTasks": {
+        "commands": [
+          "bash .github/renovate-mise-lock.sh"
+        ],
+        "fileFilters": [
+          "mise.lock"
+        ],
+        "executionMode": "branch"
+      }
     },
     {
       "matchManagers": [
