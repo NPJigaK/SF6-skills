@@ -105,6 +105,17 @@ The following categories stay unresolved:
 - The correct terminal state is sanitized source/report/observation plus
   review-only hold, not accepted curated knowledge.
 
+## Move-Frequency Follow-Up
+
+#161 did not perform move-frequency analytics. This source is a good candidate
+for future Kakeru JP move-frequency calibration because it is gameplay-only
+match footage and the practical downstream query is how many times Kakeru's JP
+used each move in the match.
+
+Follow-up issue #195 tracks that calibration explicitly. This review note must
+not be interpreted as proving move-count readiness, match-level analytics, or
+all-character/all-move recognition.
+
 ## Next Review Questions
 
 - Should a later video-link batch compare #161 with #162 to document the

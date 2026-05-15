@@ -196,11 +196,33 @@ For gameplay-only YouTube/video-link source-unit rows:
 9. Keep exact move/frame/damage/current-fact/matchup/frequency claims out of the
    source-unit terminal state.
 
+## Move-Frequency Use-Case Boundary
+
+For gameplay-only match footage, a natural downstream analysis target is
+per-player move-frequency. For this source, the concrete desired query is:
+how many times did Kakeru's JP use each move in this match?
+
+#161 does not answer that question. This source-unit PR proves only that the
+gameplay-only video-link row can be accessed, reviewed, sanitized, and routed to
+source/report/observation artifacts plus review-only hold. Sparse contact-sheet
+review is insufficient for move-frequency counts.
+
+Move-frequency analysis requires a separate scoped validation with actual video
+evidence, a sampling or full-review strategy, candidate move taxonomy,
+ambiguity buckets, false-positive / false-negative analysis, confidence and
+uncertainty, and aggregation rules. It must not imply official move identity or
+current facts from visual similarity alone.
+
+Follow-up issue #195 tracks the Kakeru JP move-frequency calibration for this
+same source. This report must not be read as proving that the repo can already
+count moves from match footage.
+
 ## Follow-Up Routing
 
 | Follow-up | Routing |
 |---|---|
 | #162 gameplay-commentary video link | Still open; should exercise commentary/caption or audio/video claim extraction separately. |
+| #195 Kakeru JP move-frequency calibration | Open; should attempt review-only move-frequency analysis for this source with actual video evidence, ambiguity buckets, and false-positive / false-negative notes. |
 | #155 / #158 parent tracking | Remain open; #161 covers only one gameplay-only video-link row. |
 | Future move-recognition or move-frequency work | Not implemented here; would require separate scoped validation and broader coverage. |
 
