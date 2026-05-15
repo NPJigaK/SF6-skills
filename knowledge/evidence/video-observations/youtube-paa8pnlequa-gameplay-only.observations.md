@@ -64,7 +64,7 @@ media, frames, screenshots, contact sheets, captions, or transcript are stored.
     },
     {
       "actor_ref": "actor_b",
-      "character_slug": "c_viper",
+      "character_slug": "cviper",
       "binding_confidence": 0.72,
       "binding_basis": [
         "source title",
