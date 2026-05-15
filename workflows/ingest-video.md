@@ -238,7 +238,16 @@ For external visual atlas acquisition:
 7. Commit metadata/report only. Existing external visual references remain
    review-only support and cannot authorize exact move identity, current facts,
    or `official_raw` changes.
-8. Route visual comparison and usefulness evaluation to a later matching task.
+8. After a permitted acquisition or approved local reference inspection, record
+   whether the visual reference is `usable_as_is`, `needs_preprocessing`,
+   `not_usable`, or `inconclusive`. Also record preprocessing needs such as
+   frame extraction, resizing, cropping, alpha/background handling, playback
+   normalization, overlay separation, or frame-index normalization.
+9. Path definition alone is not matching readiness. If no permitted visual
+   reference was inspected, keep acquisition incomplete and route the later
+   matching task to HOLD until usability is established.
+10. Route visual comparison and usefulness evaluation to a later matching task
+   only after the visual-reference input and usability boundary are recorded.
 
 ## Track Guidance
 

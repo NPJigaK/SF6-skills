@@ -13,12 +13,16 @@
 | Related downstream matching | #179 |
 | Date | 2026-05-15 |
 | Scope | JP-small-scope |
-| Terminal state | visual-atlas-acquisition PATH_DEFINED; first JP external binary acquisition held for source permission/terms review |
+| Terminal state | visual-atlas-acquisition PATH_DEFINED_ONLY / VISUAL_REFERENCE_NOT_ACQUIRED |
 
 This report defines the gated maintainer-local acquisition path for external
 visual move references. It does not perform JP move visual-reference matching,
 does not create a move-recognition runtime, does not fetch a full atlas, and
 does not add binary assets to the repository.
+
+Because no permission-cleared visual reference was acquired or provided for
+inspection, this report does not verify practical GIF/image/WebP usability and
+does not complete #178.
 
 ## Loaded Repo Context
 
@@ -121,17 +125,37 @@ Tiny scope selected from #175/#176/#177:
 No GIF, image, WebP, frame, screenshot, contact sheet, raw HTML, raw JSON dump,
 or direct binary URL was committed.
 
+## Why #178 Is Not Complete
+
+#178 requires more than a path definition before it can be considered complete.
+The missing practical usability evidence is:
+
+- no permission-cleared GIF, image, WebP, image sequence, or local captured
+  visual reference was acquired or provided;
+- no file type was observed;
+- no duration, frame count, resolution, transparency, overlay, hitbox-overlay,
+  or frame-number visibility was inspected;
+- no frame extraction, resizing, cropping, alpha/background handling,
+  playback-speed normalization, or frame-index normalization was tested;
+- no comparison readiness against #176 raw-video frame windows was verified.
+
+Therefore this PR records the acquisition gate and JP-small-scope source path
+only. #178 remains open until a permitted visual reference is acquired or
+provided and its usability is classified as `usable_as_is`,
+`needs_preprocessing`, `not_usable`, or `inconclusive`.
+
 ## Metadata-Only Visual Atlas Record
 
-No new metadata-only manifest was created beyond this report because no binary
-or source page acquisition succeeded. Existing metadata-only fixtures already
-cover the general source shape:
+No new metadata-only manifest was created beyond this report because no binary,
+source page, or permission-cleared local visual reference acquisition succeeded.
+Existing metadata-only fixtures already cover the general source shape:
 
 - `tests/fixtures/external-frame-atlas/sf6frames-hitbox-overlay-candidate.json`
 - `tests/fixtures/external-frame-atlas/ultimate-frame-data-hitbox-image-candidate.json`
 
-If a later issue resolves the source permission/terms gate and performs a tiny
-repo-external acquisition, #179 can consume metadata fields like:
+If a later issue resolves the source permission/terms gate, or a
+maintainer-approved local visual reference is provided, #179 can consume
+metadata fields like:
 
 | Field | Planned value / rule |
 |---|---|
@@ -142,7 +166,9 @@ repo-external acquisition, #179 can consume metadata fields like:
 | `source_page_descriptor` | source page or character/move descriptor only; no private temp path or direct binary URL unless policy permits |
 | `asset_kind` | hitbox overlay / frame-numbered visual reference / unknown |
 | `file_type_observed` | `gif`, `webp`, `png_sequence`, `hitbox_image`, or `unknown` after permitted acquisition |
-| `acquired_for_review` | true only after permitted repo-external acquisition |
+| `acquired_for_review` | true only after permitted repo-external acquisition or approved local sample inspection |
+| `usability_result` | `usable_as_is`, `needs_preprocessing`, `not_usable`, or `inconclusive` |
+| `preprocessing_required` | crop/resize/frame extraction/alpha handling/playback normalization/overlay handling as observed |
 | `local_binary_committed` | false |
 | `raw_html_committed` | false |
 | `authority_boundary` | visual reference only; not current-fact authority |
@@ -156,20 +182,21 @@ runtime or source-specific selector.
 ## How This Supports #179
 
 #179 can use this report to decide whether it has an allowed visual-reference
-input.
+input, but this report does not itself provide one.
 
 What #179 can do:
 
 - load the same JP command-prompt rows and frame/action windows;
 - use the selected JP move families as the first visual matching scope;
-- use this acquisition path to determine whether a permitted repo-external
-  visual reference exists;
+- use this acquisition path to determine whether a permitted repo-external or
+  maintainer-approved visual reference exists;
 - mark #179 HOLD if no permitted visual reference has been acquired.
 
 What #179 cannot do from this PR:
 
 - compare raw-video segments against SF6Frames binaries, because none were
   acquired;
+- assert visual-reference usability, because no permitted sample was inspected;
 - infer official move identity from visual similarity alone;
 - treat SF6Frames/UFD visuals as current-fact authority;
 - commit GIFs, images, frames, screenshots, contact sheets, raw HTML, raw tool
@@ -181,6 +208,11 @@ checks are likely:
 - Stribog family vs rows 8/11;
 - OD Triglav family vs row 10 and mid-route ambiguous labels;
 - SA3/CA family vs row 12 cinematic window.
+
+If a future #179 run receives a permitted local visual reference, it must first
+record file type, frame count or still-image status, resolution, overlay/frame
+number visibility, sampling readiness, preprocessing needs, and cleanup status
+before attempting visual matching.
 
 ## Reusable Visual Atlas Acquisition Method
 
@@ -211,12 +243,16 @@ Future Codex/Hermes runs should repeat this method without chat history:
    - move candidate;
    - expected asset kind;
    - file type observed if permitted;
+   - usability result and preprocessing needs;
    - cleanup/cache status;
    - authority boundary.
-7. Delete binaries after review unless a later explicit repo-external cache
+7. If no permission-cleared visual reference is available, leave #178 open or
+   record the PR as path-only; do not claim matching readiness.
+8. Delete binaries after review unless a later explicit repo-external cache
    retention rule applies.
-8. Route visual comparison to #179.
-9. Preserve the boundary that visual references are review support only.
+9. Route visual comparison to #179 only after usability is established or
+   explicitly held with reason.
+10. Preserve the boundary that visual references are review support only.
 
 ### Next-Agent One-Shot Checklist
 
@@ -229,6 +265,8 @@ Future Codex/Hermes runs should repeat this method without chat history:
 - Check source evaluation status before any fetch.
 - Use repo-external scratch/cache only if acquisition is permitted.
 - Commit only metadata/report.
+- Record usability as `usable_as_is`, `needs_preprocessing`, `not_usable`, or
+  `inconclusive` before treating #179 as ready for matching.
 - Mark success/partial/hold with a concrete reason.
 - Route matching to #179.
 - Never treat external visuals as current-fact authority.
@@ -253,32 +291,37 @@ schema or manifest.
 
 ## Follow-Up Routing
 
-| Follow-up | Status after #178 | Reason |
+| Follow-up | Status after this PR | Reason |
 |---|---|---|
-| #179 JP move/action visual-reference matching | open; binary matching not yet ready | #178 defines the path and selected JP scope, but actual SF6Frames binary acquisition is held until permission/terms review is resolved or an approved local reference is provided. |
+| #178 visual reference usability | still open | This PR defines the path and selected JP scope only. A permitted visual reference still must be acquired or provided and inspected for practical usability before #178 can close. |
+| #179 JP move/action visual-reference matching | open; blocked for actual matching | Matching requires a permitted visual reference and usability result. This PR provides neither a binary reference nor usability classification. |
 | #183 SF6 system-mechanics math reasoning fixtures | still relevant | Visual references do not solve damage/scaling reasoning or authority-boundary fixtures. |
 
 No new follow-up issue is needed.
 
 ## Terminal State
 
-- visual-atlas-acquisition: PATH_DEFINED
+- visual-atlas-acquisition: PATH_DEFINED_ONLY / VISUAL_REFERENCE_NOT_ACQUIRED
 - small JP scope selected: yes
 - acquisition attempt result: held before binary fetch
 - hold reason: SF6Frames/UFD source evaluations do not grant permission/terms
   clearance for binary acquisition or redistribution
+- visual-reference usability smoke: not run
+- usability reason: no permitted visual reference was acquired or provided
 - metadata/report only: yes
 - binary committed: no
 - raw HTML committed: no
 - current-fact authority: no
-- #179 ready? partially: ready to use the path and scope, not ready for actual
-  binary visual matching until a permitted external reference is acquired
+- #178 complete? no
+- #179 ready? no for actual matching; it can only load the path/scope and must
+  HOLD until a permitted visual reference and usability result exist
 
 ## Cleanup And Validation
 
 | Check | Result |
 |---|---|
 | External binaries acquired? | no |
+| Permission-cleared visual reference inspected? | no |
 | Committed binaries? | no |
 | Raw HTML committed? | no |
 | Scratch cleanup | no scratch created |
