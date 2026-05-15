@@ -76,6 +76,10 @@ named `RENOVATE_TOKEN`; use a PAT or GitHub App token rather than the default
 `GITHUB_TOKEN` so Renovate-created PRs can trigger the normal validation
 workflows.
 
+When Renovate updates `mise.toml`, it also runs the allowlisted
+`.github/renovate-mise-lock.sh` post-upgrade task to regenerate
+`mise.lock`. The workflow allows only that exact post-upgrade command.
+
 For a manual tool update:
 
 ```bash
