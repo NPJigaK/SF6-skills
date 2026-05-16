@@ -18,6 +18,17 @@ Video observations are observation-only evidence. They must not be used to infer
 
 Hermes memory, sessions, profile state, browser state, cron state, local managed skills, local config, secrets, and chat transcripts must not be answer evidence.
 
+### Current-Fact Candidate Metadata
+
+Artifacts under `knowledge/review/current-fact-candidates/` are review-only
+current-fact candidates. Non-README candidate artifacts must carry
+machine-readable metadata marking them as `review_only`, disallowing public
+answers, disallowing generated references, and denying accepted current-fact
+authority.
+
+Those metadata fields are guardrails only. They do not verify, accept, promote,
+or publish current facts, and they do not create a current-fact authority path.
+
 ## Hold Behavior
 
 Hold or unresolved mode is required when evidence is missing, ambiguous, stale, unsupported, outside authority, or conflicting across authority boundaries.

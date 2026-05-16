@@ -70,8 +70,27 @@ Minimum fields:
 - `volatility`
 - `patch_sensitivity`
 - `review_status`
+- `authority_status`
+- `authority_role`
+- `public_answer_allowed`
+- `generated_reference_allowed`
+- `accepted_current_fact_authority`
 - `source_refs`
 - `review_after`
+
+Required authority metadata values:
+
+```yaml
+authority_status: review_only
+authority_role: review_only_current_fact_candidate
+public_answer_allowed: false
+generated_reference_allowed: false
+accepted_current_fact_authority: false
+```
+
+These values are machine-readable guardrails. They do not verify, accept,
+promote, or publish current facts. Accepted use requires a separate current-fact
+authority path; it is not created by flipping these fields.
 
 Recommended boundary text:
 
