@@ -47,11 +47,13 @@ $requiredFiles = @(
   'packs/codex-hermes-sf6/resources/hermes-cli-capability-reference.md',
   'packs/codex-hermes-sf6/resources/sf6-video-analysis-protocol.md',
   'packs/codex-hermes-sf6/resources/external-frame-atlas-policy.md',
+  'packs/codex-hermes-sf6/resources/calculation-executor-playbook.md',
   'packs/codex-hermes-sf6/guards/hermes-local-state-boundary.md',
   'packs/codex-hermes-sf6/guards/current-fact-boundary.md',
   'packs/codex-hermes-sf6/guards/article-video-boundary.md',
   'packs/codex-hermes-sf6/guards/video-observation-boundary.md',
-  'packs/codex-hermes-sf6/guards/external-visual-asset-boundary.md'
+  'packs/codex-hermes-sf6/guards/external-visual-asset-boundary.md',
+  'packs/codex-hermes-sf6/guards/calculation-executor-boundary.md'
 )
 
 $issues = @()

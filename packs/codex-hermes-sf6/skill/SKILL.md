@@ -53,11 +53,14 @@ Do not use this playbook to:
    `docs/architecture/sf6-video-analysis-protocol.md`.
 7. For external visual atlas work, check
    `docs/architecture/external-frame-atlas-policy.md`.
-8. Convert useful Hermes output into reviewed repo artifacts only when the
+8. For calculation work, check `contracts/calculation-executor-trace.md`,
+   `packs/codex-hermes-sf6/resources/calculation-executor-playbook.md`, and
+   `packs/codex-hermes-sf6/guards/calculation-executor-boundary.md`.
+9. Convert useful Hermes output into reviewed repo artifacts only when the
    target issue scope allows it.
-9. If Codex fallback analysis is used, record why Hermes-first delegation was
+10. If Codex fallback analysis is used, record why Hermes-first delegation was
    not attempted or could not complete.
-10. Run the relevant validators and record results before commit.
+11. Run the relevant validators and record results before commit.
 
 ## Review Checklist
 
@@ -71,6 +74,8 @@ Do not use this playbook to:
 - Exact current facts remain grounded in current-fact authority surfaces.
 - Web, article, video, and external visual atlas inputs do not override
   `official_raw`.
+- Calculation executors are trace generators only and do not become SF6,
+  formula, or current-fact authority.
 - Hermes memory, sessions, local skills, Curator output, browser state, cron
   state, Kanban state, and checkpoints are non-canonical.
 - Stale PR #71 and PR #83 are closed historical debt, not active sources.

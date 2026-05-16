@@ -1,0 +1,32 @@
+{
+  "trace_id": "blocked-missing-formula-policy-001",
+  "trace_schema_version": "sf6-calculation-trace/v1",
+  "calculation_intent": "accepted_formula_execution",
+  "question_scope": "Attempt to execute an SF6-like formula without accepted formula policy.",
+  "input_values": {
+    "damage": "1000",
+    "modifier": "80"
+  },
+  "input_authority_refs": [],
+  "input_status": "hypothetical",
+  "formula_policy_ref": null,
+  "formula_status": "hold",
+  "rounding_policy_ref": null,
+  "rounding_status": "not_applicable",
+  "operations": [
+    {
+      "step_id": "step-1",
+      "operation_kind": "percent_of",
+      "inputs": ["modifier", "damage"],
+      "output_name": "computed_damage"
+    }
+  ],
+  "created_by": "fixture",
+  "created_at": "2026-05-17T00:00:00Z",
+  "repo_revision": "fixture",
+  "expected": {
+    "status": "blocked_missing_formula_policy",
+    "output_values": {},
+    "public_answer_allowed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "trace_id": "invalid-input-001",
+  "trace_schema_version": "sf6-calculation-trace/v1",
+  "calculation_intent": "hypothetical_arithmetic_check",
+  "question_scope": "Reject malformed decimal input deterministically.",
+  "input_values": {
+    "a": "not-a-number",
+    "b": "25"
+  },
+  "input_authority_refs": [],
+  "input_status": "hypothetical",
+  "formula_policy_ref": null,
+  "formula_status": "hypothetical",
+  "rounding_policy_ref": null,
+  "rounding_status": "not_applicable",
+  "operations": [
+    {
+      "step_id": "step-1",
+      "operation_kind": "add",
+      "inputs": ["a", "b"],
+      "output_name": "sum"
+    }
+  ],
+  "created_by": "fixture",
+  "created_at": "2026-05-17T00:00:00Z",
+  "repo_revision": "fixture",
+  "expected": {
+    "status": "invalid_input",
+    "output_values": {},
+    "public_answer_allowed": false
+  }
+}
