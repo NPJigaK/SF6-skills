@@ -15,6 +15,12 @@ function ConvertFrom-ScalarValue {
   if ($trimmed -eq 'null') {
     return $null
   }
+  if ($trimmed -eq 'true') {
+    return $true
+  }
+  if ($trimmed -eq 'false') {
+    return $false
+  }
   if ($trimmed.Length -ge 2 -and $trimmed.StartsWith('"') -and $trimmed.EndsWith('"')) {
     return $trimmed.Substring(1, $trimmed.Length - 2)
   }
@@ -109,6 +115,35 @@ function Assert-Confidence {
   }
 }
 
+function Assert-ExactMetadata {
+  param(
+    [Parameter(Mandatory = $true)][string]$RelativePath,
+    [Parameter(Mandatory = $true)][System.Collections.IDictionary]$Metadata,
+    [Parameter(Mandatory = $true)][System.Collections.IDictionary]$RequiredMetadata,
+    [Parameter(Mandatory = $true)][ref]$Violations
+  )
+
+  foreach ($field in $RequiredMetadata.Keys) {
+    $expected = $RequiredMetadata[$field]
+    if (-not $Metadata.Contains($field)) {
+      $Violations.Value += "$RelativePath missing metadata field: $field"
+      continue
+    }
+
+    $actual = $Metadata[$field]
+    if ($expected -is [bool]) {
+      if (-not ($actual -is [bool]) -or $actual -ne $expected) {
+        $Violations.Value += "$RelativePath metadata $field must be $($expected.ToString().ToLowerInvariant())"
+      }
+      continue
+    }
+
+    if ($actual -ne $expected) {
+      $Violations.Value += "$RelativePath metadata $field must be $expected"
+    }
+  }
+}
+
 function Assert-NoReviewOnlyBoundaryBreaks {
   param(
     [Parameter(Mandatory = $true)][string]$RelativePath,
@@ -182,9 +217,38 @@ if (-not (Test-Path -LiteralPath $claimsRoot -PathType Container)) {
   $violations += 'Missing claim artifact directory: knowledge/evidence/claims'
 }
 else {
+  $claimsReadme = Join-Path $claimsRoot 'README.md'
+  if (-not (Test-Path -LiteralPath $claimsReadme -PathType Leaf)) {
+    $violations += 'knowledge/evidence/claims must include README.md'
+  }
+  else {
+    $claimsReadmeText = Get-Content -LiteralPath $claimsReadme -Raw -Encoding UTF8
+    foreach ($needle in @(
+      'authority_status: review_only',
+      'authority_role: review_only_evidence_claim_artifact',
+      'public_answer_allowed: false',
+      'generated_reference_allowed: false',
+      'accepted_current_fact_authority: false',
+      'artifact-level guardrails',
+      'must not feed generated references directly'
+    )) {
+      if ($claimsReadmeText -notmatch [regex]::Escape($needle)) {
+        $violations += "knowledge/evidence/claims/README.md missing boundary text: $needle"
+      }
+    }
+  }
+
   $claimFiles = @(Get-ChildItem -LiteralPath $claimsRoot -File -Filter '*.claims.md')
   if ($claimFiles.Count -eq 0) {
     $violations += 'No evidence claim artifacts found under knowledge/evidence/claims'
+  }
+
+  $requiredClaimAuthorityMetadata = [ordered]@{
+    authority_status = 'review_only'
+    authority_role = 'review_only_evidence_claim_artifact'
+    public_answer_allowed = $false
+    generated_reference_allowed = $false
+    accepted_current_fact_authority = $false
   }
 
   $claimRequiredFields = @(
@@ -213,6 +277,7 @@ else {
     Assert-EnumValue $relativePath $metadata 'patch_sensitivity' $allowedPatchSensitivity ([ref]$violations)
     Assert-EnumValue $relativePath $metadata 'review_status' $allowedReviewStatus ([ref]$violations)
     Assert-Confidence $relativePath $metadata ([ref]$violations)
+    Assert-ExactMetadata $relativePath $metadata $requiredClaimAuthorityMetadata ([ref]$violations)
 
     if ($content -notmatch '(?m)^# Candidate Claims\s*$') {
       $violations += "$relativePath missing required section: # Candidate Claims"
