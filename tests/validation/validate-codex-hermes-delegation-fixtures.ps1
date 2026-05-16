@@ -92,6 +92,7 @@ $expectedFixtures = [ordered]@{
   'stale-pr-active-source-rejection.json' = 'stale_pr_rejection'
   'video-observed-damage-label-boundary.json' = 'observed_damage_label_boundary'
   'move-frequency-review-only.json' = 'move_frequency_review_only'
+  'hermes-first-orchestration-loop.json' = 'hermes_first_orchestration'
 }
 
 $allowedScenarioKinds = @(
@@ -103,7 +104,8 @@ $allowedScenarioKinds = @(
   'external_atlas_metadata_only',
   'stale_pr_rejection',
   'observed_damage_label_boundary',
-  'move_frequency_review_only'
+  'move_frequency_review_only',
+  'hermes_first_orchestration'
 )
 
 $allowedOutcomeStatuses = @(
@@ -362,6 +364,27 @@ if ($issues.Count -eq 0) {
           if ($rawLower -notmatch [regex]::Escape($requiredText.ToLowerInvariant())) {
             $issues += "$relativePath must include $requiredText"
           }
+        }
+      }
+      'hermes_first_orchestration' {
+        foreach ($requiredText in @(
+          'analysis_mode',
+          'hermes_primary',
+          'windows codex app',
+          'hermes operator',
+          'primary analyst',
+          'provider codex',
+          'executor',
+          'codex_fallback',
+          'primary draft input'
+        )) {
+          if ($rawLower -notmatch [regex]::Escape($requiredText.ToLowerInvariant())) {
+            $issues += "$relativePath must include $requiredText"
+          }
+        }
+
+        if ([string]$fixture.expected_boundary_outcome.status -ne 'accept_draft') {
+          $issues += "$relativePath expected outcome must be accept_draft"
         }
       }
     }

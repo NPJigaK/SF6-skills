@@ -10,6 +10,8 @@ This workflow preserves the v2.2 operating lanes:
 - Codex remains the normal repo implementation executor.
 - Hermes is the repo-local growth engine when a configured maintainer profile
   is available.
+- For in-scope analysis, review, and growth tasks, Codex should operate Hermes
+  instead of performing primary object-level analysis itself.
 - GitHub issues and pull requests are the primary progress state.
 - Private memory is not repo state.
 - Completion is based on verification results, not agent confidence.
@@ -28,6 +30,9 @@ Before implementation starts:
 8. Inspect validators relevant to the changed surfaces.
 9. Confirm dependencies are complete, or explicitly report the missing
    dependency before proceeding.
+10. For analysis, review, or growth tasks, confirm whether Hermes-first
+    delegation applies and record any Codex fallback reason before primary
+    analysis starts.
 
 For issue-scoped implementation PRs, do not begin editing until the target
 scope, non-goals, and acceptance are clear enough to test.
