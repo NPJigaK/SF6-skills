@@ -2,15 +2,26 @@
 
 SF6 Knowledge Agent Kit separates public answer distribution from repo-local maintenance.
 
-The public package should help agents answer Street Fighter 6 questions. Repo-local maintainer surfaces should help maintainers grow and validate this repository after cloning it.
+The public package previously aimed to help agents answer Street Fighter 6
+questions. Repo-local maintainer surfaces help maintainers grow and validate
+this repository after cloning it.
+
+ADR-0002 changes the active priority: private Hermes-first operation is the
+current focus, and public skill distribution is deferred while knowledge
+collection, review, validation, and promotion workflows are stabilized.
 
 ## Public Answer Adapter
 
-`skills/sf6-agent/` is the public answer adapter.
+`skills/sf6-agent/` is the existing public answer adapter surface.
 
-It is the surface intended for users and agents that need SF6 answers, not repository maintenance behavior.
+It is not the active product surface during the private Hermes-first operation
+phase. There are no known external public-skill users, so this surface is not
+protected as an external compatibility contract. Later scoped work may remove
+or relocate it after mapping its remaining canonical and derived
+responsibilities.
 
-Public distribution should focus on:
+While it remains in the repository, public distribution surfaces are limited
+to:
 
 - `skills/sf6-agent/SKILL.md`
 - hand-written adapter policies under `skills/sf6-agent/references/`
@@ -19,6 +30,8 @@ Public distribution should focus on:
 - release bundles derived from those adapter surfaces
 
 Do not create a separate `sf6-agent-ja` adapter at this stage.
+Do not add new public adapter features unless a later architecture decision
+reactivates public distribution work.
 
 ## Repo-local Maintainer Surfaces
 
@@ -69,7 +82,8 @@ Hermes wrappers, if added later, should be thin wrappers around canonical workfl
 
 Wrappers must not become independent source-of-truth procedures. If a wrapper discovers a better procedure, update the canonical workflow first or in the same PR.
 
-The accepted v2.1 decision is [decisions/0001-hermes-primary-orchestration.md](./decisions/0001-hermes-primary-orchestration.md).
+The accepted v2.1 orchestration decision is [decisions/0001-hermes-primary-orchestration.md](./decisions/0001-hermes-primary-orchestration.md).
+The active private-operation priority is [decisions/0002-private-hermes-first-operation.md](./decisions/0002-private-hermes-first-operation.md).
 
 ## Codex And Repo Development
 
@@ -81,11 +95,13 @@ Repository development work belongs in repo-local surfaces such as `AGENTS.md`, 
 
 ## APM And Agent Skills
 
-APM or Agent Skills may be considered for public `sf6-agent` distribution.
+APM or Agent Skills public distribution is deferred by ADR-0002.
 
 APM may also support repo-local maintainer setup manifests after cloning this repository.
 
-Do not create a public repo-maintainer skill package at this stage. Repo maintainer workflows require a clone of this repository and should remain repo-local unless a later architecture decision says otherwise.
+Do not create a public repo-maintainer skill package at this stage. Repo
+maintainer workflows require a clone of this repository and should remain
+repo-local unless a later architecture decision says otherwise.
 
 ## Language Policy
 

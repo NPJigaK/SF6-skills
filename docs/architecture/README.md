@@ -4,6 +4,7 @@ Architecture docs define the v2 source-of-truth model.
 
 - [v2-architecture.md](./v2-architecture.md)
 - [decisions/](./decisions/README.md)
+- [decisions/0002-private-hermes-first-operation.md](./decisions/0002-private-hermes-first-operation.md)
 - [hermes-v2.1-roadmap.md](./hermes-v2.1-roadmap.md)
 - [hermes-growth-harness-map.md](./hermes-growth-harness-map.md)
 - [agent-toolchain-freshness.md](./agent-toolchain-freshness.md)
