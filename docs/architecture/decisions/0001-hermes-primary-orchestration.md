@@ -53,6 +53,12 @@ Hermes memory, sessions, profile state, browser state, cron state, local managed
 
 Codex, humans, or other agents may still execute the same canonical workflows as fallback executors when Hermes is unavailable or unconfigured.
 
+For in-scope analysis, review, and growth work, fallback execution means
+Codex, humans, or other agents may operate the workflow when Hermes is
+unavailable, unconfigured, explicitly out of scope, or unsafe for the material.
+It does not make Codex the default primary analyst when a configured Hermes
+profile can perform the delegated analysis.
+
 ## Repo Artifact Outputs
 
 Hermes-assisted work must produce reusable output as repository artifacts, such as:

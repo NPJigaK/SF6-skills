@@ -66,10 +66,12 @@
 
 - Repo implementation is Codex-first for issue-scoped PRs, validators, contracts, docs, packaging changes, and GitHub workflow operations.
 - Hermes is the repo-local growth engine for repeated knowledge-growth and maintainer-growth workflows when a configured maintainer profile is available.
-- Codex may delegate suitable source analysis, claim decomposition, observation drafting, review drafting, smoke drafting, workflow learning, validator-pattern learning, and procedural skill self-improvement tasks to Hermes.
+- For analysis, review, and growth tasks in scope for Hermes, Codex is the Hermes operator and boundary auditor rather than the primary analyst when a configured Hermes maintainer profile is available.
+- Codex should delegate primary object-level analysis such as source analysis, claim decomposition, observation drafting, review drafting, architecture review drafting, workflow learning, validator-pattern learning, and procedural skill self-improvement to Hermes when configured.
+- Codex-only analysis for Hermes-first tasks is fallback behavior and must record why Hermes delegation was not attempted or could not complete.
 - Hermes memory, sessions, local skills, Curator output, Kanban workers, and checkpoints are non-canonical until promoted through reviewed repository artifacts.
 - End users do not need Hermes; `skills/sf6-agent/` remains the public answer adapter.
-- See `docs/architecture/hermes-v2.1-roadmap.md`.
+- See `docs/architecture/hermes-v2.1-roadmap.md`, `docs/architecture/codex-hermes-bridge-policy.md`, and `workflows/codex-to-hermes-delegation.md`.
 
 ## Workflow Rules
 
