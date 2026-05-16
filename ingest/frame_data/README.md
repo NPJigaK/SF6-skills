@@ -34,6 +34,31 @@ The current roster also configures `supercombo` for every checked-in character t
 
 The authoritative raw artifact is the on-disk response byte payload. Any decoded HTML text is derived from those bytes and is not the source of truth.
 
+## Raw Snapshot Minimality
+
+Checked-in raw snapshots are a reproducibility surface only. They are not
+public-answer evidence and they are not a place to retain historical audit
+state by default.
+
+The minimum checked-in raw set is derived from
+`data/exports/<character_slug>/snapshot_manifest.json`:
+
+- `official_raw` keeps `data/raw/official/<character_slug>/<snapshot_id>/`
+- `derived_metrics` keeps `data/raw/official/<character_slug>/<snapshot_id>/`
+- `supercombo_enrichment` keeps `data/raw/supercombo/<character_slug>/<snapshot_id>/`
+
+Only datasets with `publication_state = available` contribute
+`published_snapshot_ids` to the keep set. A tracked raw snapshot directory that
+is not referenced by the current published manifests is removable residue unless
+a future reviewed retention-exception artifact explicitly allows it. This repo
+currently has no raw snapshot retention exceptions.
+
+Validate the checked-in surface from the repo root:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-raw-snapshot-minimality.ps1
+```
+
 ## Source Selection
 
 - `official` is the canonical source for current published frame data
