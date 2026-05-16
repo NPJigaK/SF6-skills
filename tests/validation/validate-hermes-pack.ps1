@@ -38,7 +38,6 @@ $requiredFiles = @(
   'packs/hermes-sf6/prompts/README.md',
   'packs/hermes-sf6/profiles/README.md',
   'packs/hermes-sf6/profiles/ingest-profile-guidance.md',
-  'packs/hermes-sf6/profiles/smoke-profile-guidance.md',
   'packs/hermes-sf6/guards/README.md',
   'packs/hermes-sf6/reports/README.md'
 )
@@ -68,16 +67,14 @@ if ($issues.Count -eq 0) {
 
   foreach ($relativePath in @(
     'packs/hermes-sf6/profiles/README.md',
-    'packs/hermes-sf6/profiles/ingest-profile-guidance.md',
-    'packs/hermes-sf6/profiles/smoke-profile-guidance.md'
+    'packs/hermes-sf6/profiles/ingest-profile-guidance.md'
   )) {
     Assert-TextContains $relativePath @('not executable profile config') ([ref]$issues)
   }
 
   foreach ($relativePath in @(
     'packs/hermes-sf6/profiles/README.md',
-    'packs/hermes-sf6/profiles/ingest-profile-guidance.md',
-    'packs/hermes-sf6/profiles/smoke-profile-guidance.md'
+    'packs/hermes-sf6/profiles/ingest-profile-guidance.md'
   )) {
     Assert-TextContains $relativePath @(
       'gpt-5.5',
@@ -102,7 +99,6 @@ if ($issues.Count -eq 0) {
     'packs/hermes-sf6/README.md',
     'packs/hermes-sf6/prompts/README.md',
     'packs/hermes-sf6/profiles/ingest-profile-guidance.md',
-    'packs/hermes-sf6/profiles/smoke-profile-guidance.md',
     'packs/hermes-sf6/guards/README.md',
     'packs/hermes-sf6/reports/README.md'
   )) {

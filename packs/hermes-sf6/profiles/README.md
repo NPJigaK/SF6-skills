@@ -27,3 +27,9 @@ the reviewed `flake.lock` pin, and Renovate Nix flake PRs.
 Fallback checks such as `hermes --version`, `hermes doctor`, and
 `hermes profile list` are local review signals only. The repo records policy
 and command expectations, not local installed versions or profile snapshots.
+
+Profile skill selection should also follow the repo-managed policy in
+`data/toolchain/maintainer-agent-toolchain.json`. The policy records expected
+allowlisted, conditional, and forbidden skill categories for `sf6ingest`; it is
+not a local Hermes skill export and does not commit enabled or disabled skill
+state.

@@ -27,3 +27,18 @@ If Hermes does not expose reasoning effort in `hermes profile list`, verify the
 setting manually outside the repo. Do not commit Hermes profile config, profile
 state, command output, memory, sessions, logs, caches, credentials, or raw
 transcripts.
+
+## Skill Selection Expectation
+
+The `sf6ingest` profile should use the repo-managed skill selection policy in
+`data/toolchain/maintainer-agent-toolchain.json`.
+
+Default built-in skills should stay focused on Hermes orchestration,
+provider-Codex execution, codebase inspection, GitHub issue/PR work, planning,
+debugging, test-driven changes, review preparation, spikes, and subagent-driven
+development.
+
+External source helpers such as `youtube-content`, `ocr-and-documents`, and
+`blogwatcher` are conditional. Use them only when the target issue explicitly
+needs source extraction or monitoring, and do not commit full copyrighted
+transcripts, OCR dumps, Hermes skill output, or local skill state.

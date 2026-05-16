@@ -6,10 +6,10 @@ Hermes is the primary repo-local orchestration harness when a configured maintai
 
 ## Profile Roles
 
-Use separate Hermes profiles for separate maintainer tasks:
+Use a single repo-local Hermes maintainer profile for SF6 maintainer tasks:
 
-- `sf6smoke`: smoke tests for Hermes harness behavior.
-- `sf6ingest`: article ingest and review workflow assistance.
+- `sf6ingest`: source review, artifact drafting, smoke checks, and maintainer
+  workflow validation.
 
 The ingest profile should help draft source summaries, candidate claims, and review notes while following `workflows/ingest-article.md`.
 

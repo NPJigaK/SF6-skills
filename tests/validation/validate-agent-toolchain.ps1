@@ -444,7 +444,8 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
           'accepted_reasoning_effort_aliases',
           'reasoning_effort_requirement_mode',
           'profile_check_commands',
-          'profile_check_output_policy'
+          'profile_check_output_policy',
+          'skill_selection_policy'
         )) {
           Assert-Property $profilePolicy $field 'hermes-cli maintainer_profile_policy' ([ref]$issues)
         }
@@ -466,9 +467,12 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
         }
 
         $profileNames = if (Test-Property $profilePolicy 'profile_names') { @($profilePolicy.profile_names) } else { @() }
-        foreach ($profileName in @('sf6ingest', 'sf6smoke')) {
-          if ($profileNames -notcontains $profileName) {
-            $issues += "Hermes profile policy missing expected profile: $profileName"
+        if ($profileNames -notcontains 'sf6ingest') {
+          $issues += 'Hermes profile policy missing expected profile: sf6ingest'
+        }
+        foreach ($profileName in $profileNames) {
+          if ([string]$profileName -ne 'sf6ingest') {
+            $issues += "Hermes profile policy has unsupported profile: $profileName"
           }
         }
 
@@ -487,14 +491,127 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
         }
 
         $profileCheckCommands = if (Test-Property $profilePolicy 'profile_check_commands') { @($profilePolicy.profile_check_commands) } else { @() }
-        foreach ($profileCheckCommand in @('hermes profile list', 'hermes profile show sf6ingest', 'hermes profile show sf6smoke')) {
+        foreach ($profileCheckCommand in @('hermes profile list', 'hermes profile show sf6ingest')) {
           if ($profileCheckCommands -notcontains $profileCheckCommand) {
             $issues += "Hermes profile policy missing profile check command: $profileCheckCommand"
           }
         }
         foreach ($profileCheckCommand in $profileCheckCommands) {
-          if ($profileCheckCommand -notmatch '^hermes profile (list|show (sf6ingest|sf6smoke))$') {
+          if ($profileCheckCommand -notmatch '^hermes profile (list|show sf6ingest)$') {
             $issues += "Hermes profile policy has unsupported profile check command: $profileCheckCommand"
+          }
+        }
+
+        if (-not (Test-Property $profilePolicy 'skill_selection_policy')) {
+          $issues += 'Hermes profile policy must include skill_selection_policy'
+        } else {
+          $skillPolicy = $profilePolicy.skill_selection_policy
+          $expectedSkillPolicyValues = @{
+            'selection_scope' = 'repo_maintainer_profiles_only'
+            'selection_status' = 'policy_expectation_not_runtime_state'
+            'skill_review_output_policy' = 'local_skill_output_is_noncanonical_review_signal'
+          }
+
+          foreach ($field in $expectedSkillPolicyValues.Keys) {
+            Assert-Property $skillPolicy $field 'hermes-cli skill_selection_policy' ([ref]$issues)
+            if ((Test-Property $skillPolicy $field) -and [string]$skillPolicy.$field -ne $expectedSkillPolicyValues[$field]) {
+              $issues += "Hermes skill_selection_policy $field must be $($expectedSkillPolicyValues[$field])"
+            }
+          }
+
+          foreach ($field in @(
+            'applies_to_profile',
+            'hub_context',
+            'purpose',
+            'default_builtin_skills',
+            'conditional_builtin_skills',
+            'forbidden_skill_categories',
+            'skill_review_commands'
+          )) {
+            Assert-Property $skillPolicy $field 'hermes-cli skill_selection_policy' ([ref]$issues)
+          }
+          if ((Test-Property $skillPolicy 'applies_to_profile') -and [string]$skillPolicy.applies_to_profile -ne 'sf6ingest') {
+            $issues += 'Hermes skill_selection_policy applies_to_profile must be sf6ingest'
+          }
+
+          if (Test-Property $skillPolicy 'hub_context') {
+            $hubContext = $skillPolicy.hub_context
+            foreach ($field in @('source', 'last_reviewed', 'advertised_total_skills', 'advertised_builtin_skills', 'narrowing_reason')) {
+              Assert-Property $hubContext $field 'hermes-cli skill_selection_policy hub_context' ([ref]$issues)
+            }
+            if ((Test-Property $hubContext 'source') -and [string]$hubContext.source -ne 'Hermes Skills Hub') {
+              $issues += 'Hermes skill_selection_policy hub_context source must be Hermes Skills Hub'
+            }
+            if ((Test-Property $hubContext 'advertised_total_skills') -and [int]$hubContext.advertised_total_skills -lt 1) {
+              $issues += 'Hermes skill_selection_policy advertised_total_skills must be positive'
+            }
+            if ((Test-Property $hubContext 'advertised_builtin_skills') -and [int]$hubContext.advertised_builtin_skills -lt 1) {
+              $issues += 'Hermes skill_selection_policy advertised_builtin_skills must be positive'
+            }
+          }
+
+          $skillReviewCommands = if (Test-Property $skillPolicy 'skill_review_commands') { @($skillPolicy.skill_review_commands) } else { @() }
+          foreach ($skillReviewCommand in @('hermes skills list', 'hermes skills inspect hermes-agent')) {
+            if ($skillReviewCommands -notcontains $skillReviewCommand) {
+              $issues += "Hermes skill_selection_policy missing skill review command: $skillReviewCommand"
+            }
+          }
+          foreach ($skillReviewCommand in $skillReviewCommands) {
+            if ($skillReviewCommand -notmatch '^hermes skills (list|inspect hermes-agent)$') {
+              $issues += "Hermes skill_selection_policy has unsupported skill review command: $skillReviewCommand"
+            }
+          }
+
+          foreach ($arrayField in @('default_builtin_skills', 'conditional_builtin_skills', 'forbidden_skill_categories')) {
+            if (Test-Property $skillPolicy $arrayField) {
+              $values = @($skillPolicy.$arrayField | ForEach-Object { [string]$_ })
+              $uniqueValues = @($values | Select-Object -Unique)
+              if ($values.Count -ne $uniqueValues.Count) {
+                $issues += "Hermes skill_selection_policy $arrayField contains duplicates"
+              }
+              foreach ($value in $values) {
+                if ([string]::IsNullOrWhiteSpace($value)) {
+                  $issues += "Hermes skill_selection_policy $arrayField contains an empty value"
+                }
+              }
+            }
+          }
+
+          $defaultSkills = if (Test-Property $skillPolicy 'default_builtin_skills') { @($skillPolicy.default_builtin_skills | ForEach-Object { [string]$_ }) } else { @() }
+          $conditionalSkills = if (Test-Property $skillPolicy 'conditional_builtin_skills') { @($skillPolicy.conditional_builtin_skills | ForEach-Object { [string]$_ }) } else { @() }
+          $forbiddenCategories = if (Test-Property $skillPolicy 'forbidden_skill_categories') { @($skillPolicy.forbidden_skill_categories | ForEach-Object { [string]$_ }) } else { @() }
+
+          foreach ($requiredSkill in @(
+            'hermes-agent',
+            'codex',
+            'codebase-inspection',
+            'github-issues',
+            'github-pr-workflow',
+            'github-code-review',
+            'writing-plans',
+            'systematic-debugging',
+            'test-driven-development',
+            'requesting-code-review',
+            'subagent-driven-development'
+          )) {
+            if ($defaultSkills -notcontains $requiredSkill) {
+              $issues += "sf6ingest default skill set missing: $requiredSkill"
+            }
+          }
+
+          foreach ($conditionalSkill in @('youtube-content', 'ocr-and-documents', 'blogwatcher', 'dspy')) {
+            if ($conditionalSkills -notcontains $conditionalSkill) {
+              $issues += "sf6ingest conditional skill set missing: $conditionalSkill"
+            }
+            if ($defaultSkills -contains $conditionalSkill) {
+              $issues += "sf6ingest must not default-enable external/source helper skill: $conditionalSkill"
+            }
+          }
+
+          foreach ($requiredForbiddenCategory in @('red_teaming', 'smart_home', 'social_media_posting', 'unrelated_ml_training_or_serving')) {
+            if ($forbiddenCategories -notcontains $requiredForbiddenCategory) {
+              $issues += "sf6ingest forbidden categories missing: $requiredForbiddenCategory"
+            }
           }
         }
       }

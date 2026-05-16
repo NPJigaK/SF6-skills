@@ -38,6 +38,7 @@ The repo-managed expectation is:
 - reasoning: `xhigh` / extra-high where supported
 - Hermes CLI version management is primarily through `flake.nix`, `flake.lock`,
   and Renovate Nix flake PRs
+- skill selection is profile-specific policy, not committed runtime skill state
 - local Hermes commands are fallback observations, not canonical repo data
 
 When reviewing Hermes CLI freshness, prefer the Nix path:
@@ -69,13 +70,21 @@ Profile checks are separate from CLI pinning:
 ```bash
 hermes profile list
 hermes profile show sf6ingest
-hermes profile show sf6smoke
+```
+
+Skill selection checks are also local review signals only:
+
+```bash
+hermes skills list
+hermes skills inspect hermes-agent
 ```
 
 Do not paste exact local version output, commit-behind counts, local profile
 paths, Python/OpenAI SDK versions, profile listings, logs, or auth output into
-canonical policy data. A PR body may summarize that local freshness was
-reviewed, but local output remains non-canonical.
+canonical policy data. Do not paste local skill enablement output, local skill
+paths, or exported skill configuration into canonical policy data. A PR body
+may summarize that local freshness and skill selection were reviewed, but local
+output remains non-canonical.
 
 ## Boundaries
 
