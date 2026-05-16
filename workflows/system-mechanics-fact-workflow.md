@@ -129,6 +129,20 @@ For combo scaling, this means:
 - Use frame-current runtime assets for packaged move-specific damage and scaling fields when available.
 - Hold route-level final damage formulas, minimum guarantee values, and exception rules unless a future accepted system-mechanics authority path exists.
 
+## Calculation executor boundary
+
+Calculation tools, math skills, scripts, and agents may help run arithmetic only
+as executors. They do not define SF6 input authority, formula authority,
+rounding policy, current facts, or system mechanics.
+
+Before a calculation output can support a public answer, all non-hypothetical
+inputs must cite accepted authority refs, formula and rounding policy must be
+reviewed, and the output must be captured as an auditable trace. If any input,
+formula, rounding rule, route mapping, timing assumption, or authority path is
+missing, use `unresolved / hold` instead of letting the executor guess.
+
+See `contracts/calculation-executor-trace.md`.
+
 ## Future contract decision
 
 A dedicated system-mechanics current-fact contract or data surface is likely needed before these facts can be accepted as runtime authority.
