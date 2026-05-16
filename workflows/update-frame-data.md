@@ -41,6 +41,7 @@ Use exact absolute labels such as `2026.03.17 update` when verified. If no offic
 9. Dry-run raw snapshot pruning for every roster character.
 10. Confirm pruning keeps the minimum raw snapshots needed to reproduce the current published exports.
 11. Apply pruning only after the dry-run output has been reviewed.
+12. Validate that every checked-in raw snapshot directory is referenced by the current published manifests.
 
 ## Commands
 
@@ -81,12 +82,18 @@ Before reporting the refresh as complete, run the validation commands that match
 
 ```powershell
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-roster-source.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-raw-snapshot-minimality.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-v2-surfaces.ps1
 ```
 
 Read the full output and confirm every command exits with code `0`.
+
+Raw snapshot minimality is a strict data hygiene check. Unreferenced checked-in
+raw snapshots are removable residue unless a reviewed retention-exception
+artifact is explicitly introduced. Missing referenced raw snapshots break
+reproducibility and must be fixed before reporting the refresh as complete.
 
 ## Reporting
 
