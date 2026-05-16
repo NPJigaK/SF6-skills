@@ -99,6 +99,153 @@
           "freshness_review_cadence": {
             "type": "string",
             "minLength": 1
+          },
+          "version_management": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "primary_pin_surface",
+              "primary_update_surface",
+              "flake_input",
+              "flake_input_url",
+              "manual_update_command",
+              "fallback_local_check_commands",
+              "fallback_local_update_command",
+              "local_output_policy"
+            ],
+            "properties": {
+              "primary_pin_surface": {
+                "type": "string",
+                "enum": [
+                  "nix_flake_lock"
+                ]
+              },
+              "primary_update_surface": {
+                "type": "string",
+                "enum": [
+                  "renovate_nix_flake_pr"
+                ]
+              },
+              "flake_input": {
+                "type": "string",
+                "const": "hermes-agent"
+              },
+              "flake_input_url": {
+                "type": "string",
+                "const": "github:NousResearch/hermes-agent"
+              },
+              "manual_update_command": {
+                "type": "string",
+                "const": "nix flake update hermes-agent"
+              },
+              "fallback_local_check_commands": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "hermes --version",
+                    "hermes doctor"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "fallback_local_update_command": {
+                "type": "string",
+                "const": "hermes update"
+              },
+              "local_output_policy": {
+                "type": "string",
+                "const": "local_command_output_is_noncanonical_review_signal"
+              }
+            }
+          },
+          "maintainer_profile_policy": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "profile_expectation_scope",
+              "profile_names",
+              "required_model",
+              "accepted_model_aliases",
+              "required_reasoning_effort",
+              "accepted_reasoning_effort_aliases",
+              "reasoning_effort_requirement_mode",
+              "profile_check_commands",
+              "profile_check_output_policy"
+            ],
+            "properties": {
+              "profile_expectation_scope": {
+                "type": "string",
+                "const": "repo_maintainer_profiles_only"
+              },
+              "profile_names": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "required_model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "accepted_model_aliases": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "required_reasoning_effort": {
+                "type": "string",
+                "enum": [
+                  "xhigh"
+                ]
+              },
+              "accepted_reasoning_effort_aliases": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "xhigh",
+                    "extra-high",
+                    "extra_high"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "reasoning_effort_requirement_mode": {
+                "type": "string",
+                "enum": [
+                  "required_when_supported",
+                  "manual_review_required",
+                  "not_applicable"
+                ]
+              },
+              "profile_check_commands": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "hermes profile list",
+                    "hermes profile show sf6ingest",
+                    "hermes profile show sf6smoke"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "profile_check_output_policy": {
+                "type": "string",
+                "const": "local_profile_output_is_noncanonical_review_signal"
+              }
+            }
           }
         }
       }

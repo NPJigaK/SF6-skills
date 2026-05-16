@@ -11,3 +11,19 @@ Reusable output must be committed as repo artifacts, not stored in Hermes state.
 Hermes memory, sessions, profile state, browser state, cron state, local managed skills, local config, secrets, and chat transcripts are non-canonical.
 
 This is markdown guidance only, not executable profile config. Operational prompt bodies belong to later work after answer contracts and evidence gate policy.
+
+## Model And Reasoning Expectation
+
+The `sf6ingest` profile should follow the repo maintainer profile policy in
+`data/toolchain/maintainer-agent-toolchain.json`.
+
+Expected setup:
+
+- model: `gpt-5.5`
+- accepted model alias: `codex 5.5`
+- reasoning effort: `xhigh` / extra-high where supported
+
+If Hermes does not expose reasoning effort in `hermes profile list`, verify the
+setting manually outside the repo. Do not commit Hermes profile config, profile
+state, command output, memory, sessions, logs, caches, credentials, or raw
+transcripts.

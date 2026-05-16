@@ -71,9 +71,43 @@ function Get-JsonPropertyNames {
   }
 }
 
+function Get-JsonStringValues {
+  param([AllowNull()][object]$Object)
+
+  if ($null -eq $Object) {
+    return
+  }
+
+  if ($Object -is [string]) {
+    $Object
+    return
+  }
+
+  if ($Object -is [pscustomobject]) {
+    foreach ($property in $Object.PSObject.Properties) {
+      if ($null -ne $property.Value) {
+        Get-JsonStringValues $property.Value
+      }
+    }
+    return
+  }
+
+  if ($Object -is [System.Collections.IEnumerable]) {
+    foreach ($item in $Object) {
+      if ($null -ne $item) {
+        Get-JsonStringValues $item
+      }
+    }
+  }
+}
+
 $issues = @()
 $requiredFiles = @(
+  '.github/renovate.json',
   'docs/architecture/agent-toolchain-freshness.md',
+  'docs/architecture/hermes-maintainer-profile-policy.md',
+  'flake.lock',
+  'flake.nix',
   $schemaPath,
   'data/toolchain/README.md',
   $manifestPath,
@@ -95,7 +129,9 @@ $allowedToolProperties = @(
   'version_command',
   'version_command_review_note',
   'update_guidance',
-  'freshness_review_cadence'
+  'freshness_review_cadence',
+  'version_management',
+  'maintainer_profile_policy'
 )
 $allowedToolIds = @('codex-cli', 'hermes-cli')
 $allowedRoles = @('repo_implementation_executor', 'repo_local_growth_engine')
@@ -154,6 +190,99 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/toolchain/README.md') -Pat
   }
 }
 
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'flake.nix') -PathType Leaf) {
+  $flakeText = Read-Text 'flake.nix'
+  foreach ($needle in @(
+    'hermes-agent.url = "github:NousResearch/hermes-agent"',
+    'program = "${hermes-agent.packages.${system}.default}/bin/hermes"',
+    'hermes-agent.packages.${system}.default'
+  )) {
+    if ($flakeText -notmatch [regex]::Escape($needle)) {
+      $issues += "flake.nix missing Hermes Nix input text: $needle"
+    }
+  }
+  foreach ($forbidden in @(
+    '~/.hermes',
+    'HERMES_HOME',
+    '.env',
+    'credential',
+    'secret',
+    'token',
+    'session',
+    'memory',
+    'profile-state',
+    'cache',
+    'log'
+  )) {
+    if ($flakeText -match [regex]::Escape($forbidden)) {
+      $issues += "flake.nix contains forbidden local-state or secret-like text: $forbidden"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'flake.lock') -PathType Leaf) {
+  $flakeLock = Read-Json 'flake.lock'
+  Assert-Property $flakeLock 'nodes' 'flake.lock' ([ref]$issues)
+  Assert-Property $flakeLock 'root' 'flake.lock' ([ref]$issues)
+
+  if (Test-Property $flakeLock 'nodes') {
+    if (-not (Test-Property $flakeLock.nodes 'hermes-agent')) {
+      $issues += 'flake.lock must contain hermes-agent node'
+    } else {
+      $hermesLock = $flakeLock.nodes.'hermes-agent'
+      foreach ($field in @('locked', 'original')) {
+        Assert-Property $hermesLock $field 'flake.lock hermes-agent node' ([ref]$issues)
+      }
+      if (Test-Property $hermesLock 'locked') {
+        foreach ($field in @('owner', 'repo', 'rev', 'narHash', 'type')) {
+          Assert-Property $hermesLock.locked $field 'flake.lock hermes-agent locked' ([ref]$issues)
+        }
+        if ((Test-Property $hermesLock.locked 'owner') -and $hermesLock.locked.owner -ne 'NousResearch') {
+          $issues += 'flake.lock hermes-agent owner must be NousResearch'
+        }
+        if ((Test-Property $hermesLock.locked 'repo') -and $hermesLock.locked.repo -ne 'hermes-agent') {
+          $issues += 'flake.lock hermes-agent repo must be hermes-agent'
+        }
+        if ((Test-Property $hermesLock.locked 'type') -and $hermesLock.locked.type -ne 'github') {
+          $issues += 'flake.lock hermes-agent type must be github'
+        }
+      }
+      if (Test-Property $hermesLock 'original') {
+        if ((Test-Property $hermesLock.original 'owner') -and $hermesLock.original.owner -ne 'NousResearch') {
+          $issues += 'flake.lock hermes-agent original owner must be NousResearch'
+        }
+        if ((Test-Property $hermesLock.original 'repo') -and $hermesLock.original.repo -ne 'hermes-agent') {
+          $issues += 'flake.lock hermes-agent original repo must be hermes-agent'
+        }
+      }
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot '.github/renovate.json') -PathType Leaf) {
+  $renovateRaw = Get-Content -LiteralPath (Join-Path $repoRoot '.github/renovate.json') -Raw -Encoding UTF8
+  $renovate = $renovateRaw | ConvertFrom-Json
+
+  if (-not (Test-Property $renovate 'nix') -or -not (Test-Property $renovate.nix 'enabled') -or $renovate.nix.enabled -ne $true) {
+    $issues += '.github/renovate.json must enable the Nix manager'
+  }
+  if (-not (Test-Property $renovate 'lockFileMaintenance') -or -not (Test-Property $renovate.lockFileMaintenance 'enabled') -or $renovate.lockFileMaintenance.enabled -ne $true) {
+    $issues += '.github/renovate.json must enable lockFileMaintenance'
+  }
+
+  $renovateText = $renovateRaw.ToLowerInvariant()
+  foreach ($needle in @('nix', 'hermes agent nix flake input')) {
+    if ($renovateText -notmatch [regex]::Escape($needle)) {
+      $issues += ".github/renovate.json missing Nix/Hermes update text: $needle"
+    }
+  }
+  foreach ($forbidden in @('secret', 'token', 'credential', '.env')) {
+    if ($renovateText -match [regex]::Escape($forbidden)) {
+      $issues += ".github/renovate.json contains forbidden secret-like text: $forbidden"
+    }
+  }
+}
+
 if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
   $manifestRaw = Get-Content -LiteralPath (Join-Path $repoRoot $manifestPath) -Raw -Encoding UTF8
   $manifest = $manifestRaw | ConvertFrom-Json
@@ -177,6 +306,23 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
     foreach ($field in $forbiddenManifestFields) {
       if ($propertyNameLower.Contains($field)) {
         $issues += "$manifestPath contains forbidden local-state or secret-like property: $propertyName"
+        break
+      }
+    }
+  }
+
+  foreach ($stringValue in @(Get-JsonStringValues $manifest)) {
+    foreach ($localOutputPattern in @(
+      'Hermes Agent v\d+\.\d+\.\d+',
+      '\d+ commits behind',
+      'Project: /',
+      'Project: [A-Za-z]:\\',
+      'Python: \d+\.\d+',
+      'OpenAI SDK: \d+\.\d+',
+      'Update available:'
+    )) {
+      if ([string]$stringValue -match $localOutputPattern) {
+        $issues += "$manifestPath contains local command output or installed-version-like value: $stringValue"
         break
       }
     }
@@ -208,6 +354,9 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
       $hermes = $toolsById['hermes-cli']
       if ((Test-Property $hermes 'role') -and $hermes.role -ne 'repo_local_growth_engine') {
         $issues += 'hermes-cli must use role repo_local_growth_engine'
+      }
+      if ((Test-Property $hermes 'version_command') -and $hermes.version_command -ne 'nix run .#hermes -- --version') {
+        $issues += 'hermes-cli version_command must use the repo Nix flake'
       }
     }
 
@@ -279,6 +428,120 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
         }
         if (-not $found) {
           $issues += "hermes-cli capabilities must include $label"
+        }
+      }
+
+      if (-not (Test-Property $hermes 'maintainer_profile_policy')) {
+        $issues += 'hermes-cli must include maintainer_profile_policy'
+      } else {
+        $profilePolicy = $hermes.maintainer_profile_policy
+        foreach ($field in @(
+          'profile_expectation_scope',
+          'profile_names',
+          'required_model',
+          'accepted_model_aliases',
+          'required_reasoning_effort',
+          'accepted_reasoning_effort_aliases',
+          'reasoning_effort_requirement_mode',
+          'profile_check_commands',
+          'profile_check_output_policy'
+        )) {
+          Assert-Property $profilePolicy $field 'hermes-cli maintainer_profile_policy' ([ref]$issues)
+        }
+
+        if ((Test-Property $profilePolicy 'profile_expectation_scope') -and $profilePolicy.profile_expectation_scope -ne 'repo_maintainer_profiles_only') {
+          $issues += 'Hermes profile policy must be repo_maintainer_profiles_only'
+        }
+        if ((Test-Property $profilePolicy 'required_model') -and $profilePolicy.required_model -ne 'gpt-5.5') {
+          $issues += 'Hermes profile policy required_model must be gpt-5.5'
+        }
+        if ((Test-Property $profilePolicy 'required_reasoning_effort') -and $profilePolicy.required_reasoning_effort -ne 'xhigh') {
+          $issues += 'Hermes profile policy required_reasoning_effort must be xhigh'
+        }
+        if ((Test-Property $profilePolicy 'reasoning_effort_requirement_mode') -and $profilePolicy.reasoning_effort_requirement_mode -ne 'required_when_supported') {
+          $issues += 'Hermes profile policy reasoning_effort_requirement_mode must be required_when_supported'
+        }
+        if ((Test-Property $profilePolicy 'profile_check_output_policy') -and $profilePolicy.profile_check_output_policy -ne 'local_profile_output_is_noncanonical_review_signal') {
+          $issues += 'Hermes profile policy must keep local profile output noncanonical'
+        }
+
+        $profileNames = if (Test-Property $profilePolicy 'profile_names') { @($profilePolicy.profile_names) } else { @() }
+        foreach ($profileName in @('sf6ingest', 'sf6smoke')) {
+          if ($profileNames -notcontains $profileName) {
+            $issues += "Hermes profile policy missing expected profile: $profileName"
+          }
+        }
+
+        $modelAliases = if (Test-Property $profilePolicy 'accepted_model_aliases') { @($profilePolicy.accepted_model_aliases) } else { @() }
+        foreach ($modelAlias in @('gpt-5.5', 'codex 5.5')) {
+          if ($modelAliases -notcontains $modelAlias) {
+            $issues += "Hermes profile policy missing model alias: $modelAlias"
+          }
+        }
+
+        $reasoningAliases = if (Test-Property $profilePolicy 'accepted_reasoning_effort_aliases') { @($profilePolicy.accepted_reasoning_effort_aliases) } else { @() }
+        foreach ($reasoningAlias in @('xhigh', 'extra-high', 'extra_high')) {
+          if ($reasoningAliases -notcontains $reasoningAlias) {
+            $issues += "Hermes profile policy missing reasoning alias: $reasoningAlias"
+          }
+        }
+
+        $profileCheckCommands = if (Test-Property $profilePolicy 'profile_check_commands') { @($profilePolicy.profile_check_commands) } else { @() }
+        foreach ($profileCheckCommand in @('hermes profile list', 'hermes profile show sf6ingest', 'hermes profile show sf6smoke')) {
+          if ($profileCheckCommands -notcontains $profileCheckCommand) {
+            $issues += "Hermes profile policy missing profile check command: $profileCheckCommand"
+          }
+        }
+        foreach ($profileCheckCommand in $profileCheckCommands) {
+          if ($profileCheckCommand -notmatch '^hermes profile (list|show (sf6ingest|sf6smoke))$') {
+            $issues += "Hermes profile policy has unsupported profile check command: $profileCheckCommand"
+          }
+        }
+      }
+
+      if (-not (Test-Property $hermes 'version_management')) {
+        $issues += 'hermes-cli must include version_management'
+      } else {
+        $versionManagement = $hermes.version_management
+        foreach ($field in @(
+          'primary_pin_surface',
+          'primary_update_surface',
+          'flake_input',
+          'flake_input_url',
+          'manual_update_command',
+          'fallback_local_check_commands',
+          'fallback_local_update_command',
+          'local_output_policy'
+        )) {
+          Assert-Property $versionManagement $field 'hermes-cli version_management' ([ref]$issues)
+        }
+
+        $expectedVersionValues = @{
+          'primary_pin_surface' = 'nix_flake_lock'
+          'primary_update_surface' = 'renovate_nix_flake_pr'
+          'flake_input' = 'hermes-agent'
+          'flake_input_url' = 'github:NousResearch/hermes-agent'
+          'manual_update_command' = 'nix flake update hermes-agent'
+          'fallback_local_update_command' = 'hermes update'
+          'local_output_policy' = 'local_command_output_is_noncanonical_review_signal'
+        }
+
+        foreach ($field in $expectedVersionValues.Keys) {
+          if ((Test-Property $versionManagement $field) -and [string]$versionManagement.$field -ne $expectedVersionValues[$field]) {
+            $issues += "Hermes version_management $field must be $($expectedVersionValues[$field])"
+          }
+        }
+
+        $fallbackCommands = if (Test-Property $versionManagement 'fallback_local_check_commands') { @($versionManagement.fallback_local_check_commands) } else { @() }
+        foreach ($fallbackCommand in @('hermes --version', 'hermes doctor')) {
+          if ($fallbackCommands -notcontains $fallbackCommand) {
+            $issues += "Hermes version_management missing fallback command: $fallbackCommand"
+          }
+        }
+        foreach ($fallbackCommand in $fallbackCommands) {
+          if ($fallbackCommand -notmatch '^hermes (--version|doctor)$') {
+            $issues += "Hermes version_management has unsupported fallback command: $fallbackCommand"
+          }
         }
       }
     }

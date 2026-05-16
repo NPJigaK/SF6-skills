@@ -1,6 +1,6 @@
 {
   "schema_version": "agent-toolchain/v1",
-  "last_reviewed": "2026-05-10",
+  "last_reviewed": "2026-05-17",
   "tools": [
     {
       "id": "codex-cli",
@@ -34,10 +34,48 @@
         "goal_checkpoints",
         "cron_freshness_audits"
       ],
-      "version_command": null,
-      "version_command_review_note": "Confirm from official Hermes CLI docs before pinning this command.",
-      "update_guidance": "Use official Hermes release or install documentation.",
-      "freshness_review_cadence": "before_growth_workflows"
+      "version_command": "nix run .#hermes -- --version",
+      "version_command_review_note": "Use the repo Nix flake so Hermes CLI version checks are grounded in the reviewed flake input; command output is local observation and must not become canonical policy data.",
+      "update_guidance": "Use Renovate Nix flake PRs as the primary update path. Maintainers with Nix may run `nix flake update hermes-agent`; use `hermes update` only as a fallback for non-Nix local installations.",
+      "freshness_review_cadence": "before_growth_workflows",
+      "version_management": {
+        "primary_pin_surface": "nix_flake_lock",
+        "primary_update_surface": "renovate_nix_flake_pr",
+        "flake_input": "hermes-agent",
+        "flake_input_url": "github:NousResearch/hermes-agent",
+        "manual_update_command": "nix flake update hermes-agent",
+        "fallback_local_check_commands": [
+          "hermes --version",
+          "hermes doctor"
+        ],
+        "fallback_local_update_command": "hermes update",
+        "local_output_policy": "local_command_output_is_noncanonical_review_signal"
+      },
+      "maintainer_profile_policy": {
+        "profile_expectation_scope": "repo_maintainer_profiles_only",
+        "profile_names": [
+          "sf6ingest",
+          "sf6smoke"
+        ],
+        "required_model": "gpt-5.5",
+        "accepted_model_aliases": [
+          "gpt-5.5",
+          "codex 5.5"
+        ],
+        "required_reasoning_effort": "xhigh",
+        "accepted_reasoning_effort_aliases": [
+          "xhigh",
+          "extra-high",
+          "extra_high"
+        ],
+        "reasoning_effort_requirement_mode": "required_when_supported",
+        "profile_check_commands": [
+          "hermes profile list",
+          "hermes profile show sf6ingest",
+          "hermes profile show sf6smoke"
+        ],
+        "profile_check_output_policy": "local_profile_output_is_noncanonical_review_signal"
+      }
     }
   ],
   "boundaries": [

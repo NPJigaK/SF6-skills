@@ -3,7 +3,7 @@
 ## Purpose
 
 This document defines how the SF6 repo tracks maintainer agent toolchain
-freshness for v2.2 Hermes Growth Operations.
+freshness for Hermes Growth Operations.
 
 Toolchain freshness tracking is for maintainer operations only. It records
 reviewed expectations, required capabilities, planned capabilities, and review
@@ -45,18 +45,33 @@ Use these concepts:
 
 - `recommended_channel`: the review target, such as `latest_stable`.
 - `known_good_version`: a reviewed version when pinned; otherwise `null`.
-- `required_capabilities`: capabilities expected for current v2.2 workflows.
-- `planned_capabilities`: capabilities expected to matter for later v2.2 work.
+- `required_capabilities`: capabilities expected for current maintainer workflows.
+- `planned_capabilities`: capabilities expected to matter for later maintainer work.
 - `last_reviewed`: when the policy was last reviewed.
 - `freshness_review_cadence`: when maintainers should revisit the tool entry.
+- `version_management`: repo-managed Hermes CLI pin and update policy, with
+  the Nix flake/lockfile path as primary and local Hermes commands as fallback.
+- `maintainer_profile_policy`: repo-managed expectations for local maintainer
+  profiles, such as required model, reasoning effort, profile-check commands,
+  and repo-local scope.
 
 Newest versions should be reviewed before being treated as known-good. Version
-and update commands should be recorded only when verified from official docs or
-release sources. If a command is not verified, leave it nullable and include a
-review note.
+and update commands should be recorded only when verified from official docs,
+release sources, or the tool's own reviewed CLI help. If a command is not
+verified, leave it nullable and include a review note.
 
 CI validators must not perform online latest-version checks. Online checks are
 manual workflow steps or future reporting tasks only.
+
+Hermes maintainer profile expectations are defined in
+`docs/architecture/hermes-maintainer-profile-policy.md`. These expectations are
+policy only. They do not commit local Hermes profile config or prove that a
+local profile currently matches the policy.
+
+Hermes CLI freshness is managed through the root `flake.nix` and the reviewed
+`flake.lock` pin. Renovate Nix flake PRs are the normal update signal. Local
+`hermes --version` and `hermes update` output is fallback operator evidence
+only.
 
 ## Verification
 
