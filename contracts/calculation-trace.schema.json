@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SF6 Calculation Trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "trace_id",
+    "trace_schema_version",
+    "executor_id",
+    "executor_role",
+    "executor_authority_status",
+    "calculation_intent",
+    "question_scope",
+    "input_values",
+    "input_authority_refs",
+    "input_status",
+    "formula_policy_ref",
+    "formula_status",
+    "rounding_policy_ref",
+    "rounding_status",
+    "operation_steps",
+    "output_values",
+    "status",
+    "public_answer_allowed",
+    "generated_reference_allowed",
+    "accepted_current_fact_authority",
+    "uncertainty_or_hold_reasons",
+    "created_by",
+    "created_at",
+    "repo_revision",
+    "limitations"
+  ],
+  "properties": {
+    "trace_id": { "type": "string", "minLength": 1 },
+    "trace_schema_version": { "const": "sf6-calculation-trace/v1" },
+    "executor_id": { "type": "string", "minLength": 1 },
+    "executor_role": {
+      "enum": ["calculation_executor", "trace_generator", "arithmetic_consistency_checker"]
+    },
+    "executor_authority_status": {
+      "type": "array",
+      "items": {
+        "enum": ["not_sf6_authority", "not_formula_authority", "not_current_fact_authority"]
+      },
+      "minItems": 3
+    },
+    "calculation_intent": {
+      "enum": [
+        "hypothetical_arithmetic_check",
+        "accepted_formula_execution",
+        "damage_hidden_eval_candidate_check",
+        "frame_window_arithmetic",
+        "punish_window_arithmetic",
+        "oki_timing_arithmetic"
+      ]
+    },
+    "question_scope": { "type": "string" },
+    "input_values": { "type": "object", "additionalProperties": { "type": "string" } },
+    "input_authority_refs": { "type": "array" },
+    "input_status": { "enum": ["accepted", "review_only", "hypothetical", "mixed", "hold"] },
+    "formula_policy_ref": { "type": ["string", "null"] },
+    "formula_status": { "enum": ["accepted", "review_only", "hypothetical", "hold"] },
+    "rounding_policy_ref": { "type": ["string", "null"] },
+    "rounding_status": { "enum": ["accepted", "review_only", "not_applicable", "hold"] },
+    "operation_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step_id", "operation_kind", "inputs_used", "output", "rounding_applied", "policy_ref", "notes"],
+        "properties": {
+          "step_id": { "type": "string" },
+          "operation_kind": { "type": "string" },
+          "inputs_used": { "type": "array" },
+          "output": { "type": "object" },
+          "rounding_applied": { "type": "string" },
+          "policy_ref": { "type": ["string", "null"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "output_values": { "type": "object", "additionalProperties": { "type": "string" } },
+    "status": {
+      "enum": [
+        "not_run",
+        "trace_generated",
+        "hypothetical_arithmetic_only",
+        "accepted_formula_execution",
+        "blocked_missing_input_authority",
+        "blocked_missing_formula_policy",
+        "blocked_missing_rounding_policy",
+        "blocked_ambiguous_route",
+        "blocked_public_answer_boundary",
+        "invalid_input",
+        "executor_error",
+        "out_of_scope"
+      ]
+    },
+    "public_answer_allowed": { "type": "boolean" },
+    "generated_reference_allowed": { "type": "boolean" },
+    "accepted_current_fact_authority": { "const": false },
+    "uncertainty_or_hold_reasons": { "type": "array", "items": { "type": "string" } },
+    "created_by": { "type": "string" },
+    "created_at": { "type": ["string", "null"] },
+    "repo_revision": { "type": ["string", "null"] },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}

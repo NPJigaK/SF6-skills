@@ -12,12 +12,14 @@ $requiredJsonSchemas = @(
   'contracts/answer-intent.schema.json',
   'contracts/evidence-card.schema.json',
   'contracts/answer-plan.schema.json',
+  'contracts/calculation-trace.schema.json',
   'contracts/normalization-aliases.schema.json',
   'contracts/agent-toolchain.schema.json'
 )
 
 $requiredDocs = @(
   'contracts/frame-current-runtime-assets.md',
+  'contracts/calculation-executor-trace.md',
   'contracts/video-observation.md',
   'contracts/evidence-gate.md',
   'contracts/web-research-policy.md'

@@ -1,0 +1,43 @@
+{
+  "trace_id": "hypothetical-multi-step-001",
+  "trace_schema_version": "sf6-calculation-trace/v1",
+  "calculation_intent": "hypothetical_arithmetic_check",
+  "question_scope": "Check a two-step arithmetic chain without SF6 formula authority.",
+  "input_values": {
+    "base": "100",
+    "bonus": "50",
+    "multiplier": "2"
+  },
+  "input_authority_refs": [],
+  "input_status": "hypothetical",
+  "formula_policy_ref": null,
+  "formula_status": "hypothetical",
+  "rounding_policy_ref": null,
+  "rounding_status": "not_applicable",
+  "operations": [
+    {
+      "step_id": "step-1",
+      "operation_kind": "add",
+      "inputs": ["base", "bonus"],
+      "output_name": "subtotal"
+    },
+    {
+      "step_id": "step-2",
+      "operation_kind": "multiply",
+      "inputs": ["subtotal", "multiplier"],
+      "output_name": "total"
+    }
+  ],
+  "created_by": "fixture",
+  "created_at": "2026-05-17T00:00:00Z",
+  "repo_revision": "fixture",
+  "expected": {
+    "status": "hypothetical_arithmetic_only",
+    "output_values": {
+      "subtotal": "150",
+      "total": "300"
+    },
+    "operation_step_count": 2,
+    "public_answer_allowed": false
+  }
+}
