@@ -13,6 +13,22 @@ Review is a separate step from article or video ingest. Ingest records evidence;
 - Exact current-fact exports under `data/exports/` when the claim touches move-specific current facts.
 - Current roster source under `data/roster/current-character-roster.json` when the claim depends on roster membership.
 
+Claim artifacts under `knowledge/evidence/claims/` are review-only artifact
+surfaces. They must carry artifact-level authority metadata:
+
+```yaml
+authority_status: review_only
+authority_role: review_only_evidence_claim_artifact
+public_answer_allowed: false
+generated_reference_allowed: false
+accepted_current_fact_authority: false
+```
+
+This metadata applies to the claim artifact, not to each embedded claim's final
+route. Individual claims may later be promoted through reviewed canonical
+surfaces, but the source claim artifact itself remains review-only provenance
+and must not become direct public answer authority.
+
 ## Decision Values
 
 Use v2 metadata fields:

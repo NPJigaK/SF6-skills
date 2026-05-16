@@ -6,6 +6,8 @@ Contracts distinguish canonical surfaces from derived surfaces and use generic s
 
 Some contracts describe Markdown front matter or agent-readable artifacts that are enforced by dedicated validators rather than by a generic JSON Schema runtime. Validators under `tests/validation/` are the executable contract layer for the current repo.
 
+`tests/validation/validate-ingest-artifacts.ps1` is the executable contract layer for artifact-level review-only metadata under `knowledge/evidence/claims/*.claims.md`.
+
 `tests/validation/validate-current-fact-boundaries.ps1` is the executable contract layer for review-only current-fact candidate metadata under `knowledge/review/current-fact-candidates/`.
 
 When `source_refs.path` points to a migrated legacy file, `source_revision` identifies the commit where that historical path can be reviewed.
