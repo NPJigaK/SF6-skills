@@ -11,3 +11,13 @@ require Codex CLI or Hermes CLI for public `sf6-agent` users.
 
 The policy files in this directory record reviewed expectations and
 required/planned maintainer capabilities, not local machine state.
+
+Hermes maintainer profile expectations may include required model and
+reasoning-effort policy for repo-local maintainer workflows. Those expectations
+are not exported Hermes profile config and are not evidence that a local
+machine currently matches the policy.
+
+Hermes maintainer profile expectations may also include repo-managed skill
+selection policy for `sf6ingest`. That policy narrows expected built-in skill
+use for repo-local maintainer work, but it is not installed skill state, local
+skill configuration, or an exported Hermes profile.

@@ -9,3 +9,27 @@ Hermes profile guidance must follow canonical workflows and canonical contracts.
 Hermes memory, sessions, profile state, browser state, cron state, local managed skills, local config, secrets, and chat transcripts are non-canonical.
 
 Profile files in this issue are markdown guidance only, not executable profile config. Do not add `.json` profile config unless a Hermes profile schema is explicitly defined.
+
+## Maintainer Profile Expectations
+
+Repo-local Hermes maintainer profiles should follow
+`data/toolchain/maintainer-agent-toolchain.json` and
+`docs/architecture/hermes-maintainer-profile-policy.md`.
+
+For SF6 maintainer work, profiles are expected to use `gpt-5.5` / `codex 5.5`
+with `xhigh` / extra-high reasoning where the provider and Hermes CLI expose
+that setting. If a profile listing does not show reasoning effort, verify it
+manually outside the repo and do not commit the observed local profile state or
+command output.
+
+Hermes CLI version freshness is primarily managed through the root `flake.nix`,
+the reviewed `flake.lock` pin, and Renovate Nix flake PRs.
+Fallback checks such as `hermes --version`, `hermes doctor`, and
+`hermes profile list` are local review signals only. The repo records policy
+and command expectations, not local installed versions or profile snapshots.
+
+Profile skill selection should also follow the repo-managed policy in
+`data/toolchain/maintainer-agent-toolchain.json`. The policy records expected
+allowlisted, conditional, and forbidden skill categories for `sf6ingest`; it is
+not a local Hermes skill export and does not commit enabled or disabled skill
+state.

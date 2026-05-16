@@ -12,6 +12,9 @@
   "lockFileMaintenance": {
     "enabled": true
   },
+  "nix": {
+    "enabled": true
+  },
   "customManagers": [
     {
       "customType": "regex",
@@ -25,6 +28,17 @@
     }
   ],
   "packageRules": [
+    {
+      "matchManagers": [
+        "nix"
+      ],
+      "groupName": "Hermes Agent Nix flake input",
+      "labels": [
+        "dependencies",
+        "toolchain",
+        "hermes"
+      ]
+    },
     {
       "matchManagers": [
         "mise"

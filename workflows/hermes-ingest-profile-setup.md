@@ -6,10 +6,10 @@ Hermes is the primary repo-local orchestration harness when a configured maintai
 
 ## Profile Roles
 
-Use separate Hermes profiles for separate maintainer tasks:
+Use a single repo-local Hermes maintainer profile for SF6 maintainer tasks:
 
-- `sf6smoke`: smoke tests for Hermes harness behavior.
-- `sf6ingest`: article ingest and review workflow assistance.
+- `sf6ingest`: source review, artifact drafting, smoke checks, and maintainer
+  workflow validation.
 
 The ingest profile should help draft source summaries, candidate claims, and review notes while following `workflows/ingest-article.md`.
 
@@ -28,9 +28,11 @@ Runtime/provider authentication is profile-scoped. A new or cloned ingest profil
 For a new `sf6ingest` profile:
 
 1. Create or select a Hermes profile whose home directory is outside this repo.
-2. Configure provider authentication interactively for that profile.
-3. Run `hermes doctor` with the ingest profile selected.
-4. Run a small non-interactive command with the ingest profile before using it for article ingest.
+2. Configure the profile for `gpt-5.5` / `codex 5.5` with `xhigh` /
+   extra-high reasoning where the provider and Hermes CLI expose that setting.
+3. Configure provider authentication interactively for that profile.
+4. Run `hermes doctor` with the ingest profile selected.
+5. Run a small non-interactive command with the ingest profile before using it for article ingest.
 
 Do not copy credentials into this repository. Do not paste tokens, API keys, device codes, `.env` contents, or account-specific auth output into issue comments, PR bodies, smoke reports, or workflow docs.
 
@@ -68,8 +70,19 @@ case "$HERMES_HOME" in
 esac
 
 hermes doctor
+hermes --version
+hermes profile list
+hermes profile show sf6ingest
 hermes chat -Q --max-turns 1 -q "Reply with one sentence confirming this profile can run non-interactively."
 ```
+
+Prefer the repo Nix flake and Renovate Nix flake PRs for Hermes CLI version
+freshness. Use `hermes --version` output only as a fallback local freshness
+signal. If a non-Nix local Hermes install reports `Update available` or a
+commit-behind count, update Hermes outside the repo and re-run
+`hermes --version` and `hermes doctor`. Do not commit exact version output,
+profile listings, local paths, auth output, logs, sessions, or local profile
+state.
 
 After any Hermes-assisted ingest run:
 

@@ -23,6 +23,8 @@ runtime requirement.
   also be started manually.
 - `.github/workflows/v2-validation.yml` verifies locked installation and repo
   validation in CI.
+- `flake.nix` declares the Hermes Agent flake input for repo-local maintainer
+  workflows. `flake.lock` is the reviewed Hermes Agent input pin.
 
 ## Tool Boundary
 
@@ -44,10 +46,10 @@ Git cannot be fully bootstrapped by this repo because a maintainer needs Git or
 another checkout mechanism before `mise.toml` is available.
 
 Hermes CLI is intentionally not declared in `mise.toml`. Hermes is the
-repo-local growth engine when a configured maintainer profile is available, but
-its official installer manages a wider runtime surface than a single CLI
-binary. Keep Hermes installation in its dedicated workflow and promote only
-reviewed repo artifacts into this repository.
+repo-local growth engine when a configured maintainer profile is available.
+Prefer the repo Nix flake for Hermes CLI pinning and Renovate updates. Keep
+Hermes profile state outside the repository and promote only reviewed repo
+artifacts into this repository.
 
 ## Local Setup
 
@@ -69,12 +71,12 @@ uv sync
 
 ## Updating Tools
 
-Use Renovate for normal update PRs. Renovate is configured for mise, GitHub
-Actions, and Python dependency updates. The Renovate workflow is separate from
-normal CI and runs once per day at 04:23 JST. It requires a repository secret
-named `RENOVATE_TOKEN`; use a PAT or GitHub App token rather than the default
-`GITHUB_TOKEN` so Renovate-created PRs can trigger the normal validation
-workflows.
+Use Renovate for normal update PRs. Renovate is configured for mise, Nix
+flakes, GitHub Actions, and Python dependency updates. The Renovate workflow is
+separate from normal CI and runs once per day at 04:23 JST. It requires a
+repository secret named `RENOVATE_TOKEN`; use a PAT or GitHub App token rather
+than the default `GITHUB_TOKEN` so Renovate-created PRs can trigger the normal
+validation workflows.
 
 When Renovate updates `mise.toml`, it also runs the allowlisted
 `.github/renovate-mise-lock.sh` post-upgrade task to regenerate
@@ -92,6 +94,12 @@ For a manual Python dependency update:
 ```bash
 cd ingest/frame_data
 uv lock --upgrade
+```
+
+For a manual Hermes Agent flake input update in a Nix-capable environment:
+
+```bash
+nix flake update hermes-agent
 ```
 
 Review the resulting manifest and lockfile diffs together. Do not commit local
