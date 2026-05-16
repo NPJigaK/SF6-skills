@@ -13,6 +13,11 @@ confidence: 0.25
 volatility: patch_sensitive
 patch_sensitivity: high
 review_status: needs_review
+authority_status: review_only
+authority_role: review_only_current_fact_candidate
+public_answer_allowed: false
+generated_reference_allowed: false
+accepted_current_fact_authority: false
 source_refs:
   - label: "Source metadata: Hameko 2023 combo scaling"
     path: "knowledge/sources/articles/hameko-2023-combo-scaling.md"
