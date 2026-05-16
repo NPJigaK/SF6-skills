@@ -7,7 +7,7 @@ primary draft input.
 ```yaml
 analysis_mode: hermes_primary
 target_issue:
-scope_summary:
+target_scope_summary:
 codex_app_role:
   - hermes_operator
   - boundary_auditor
@@ -30,7 +30,8 @@ review_checklist:
 ## Field Guidance
 
 - `target_issue`: the GitHub issue controlling scope and acceptance.
-- `scope_summary`: a short restatement of scope, non-goals, and acceptance.
+- `target_scope_summary`: a short restatement of scope, non-goals, and
+  acceptance.
 - `analysis_mode`: usually `hermes_primary`; use `codex_fallback` only when
   Hermes is unavailable, unconfigured, explicitly out of scope, or unsafe for
   the material.

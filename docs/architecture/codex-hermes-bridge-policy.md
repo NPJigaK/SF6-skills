@@ -2,7 +2,8 @@
 
 ## Purpose
 
-This document defines the repo-local Codex-Hermes bridge policy for v2.3.
+This document defines the repo-local Codex-Hermes bridge policy, including the
+Hermes-first analysis loop.
 
 Codex remains the repo implementation entrypoint for issue-scoped PRs,
 validators, contracts, docs, packaging changes, and GitHub workflow
@@ -95,8 +96,8 @@ A Codex skill or playbook teaches Codex repo-specific maintainer procedures.
 
 It may help Codex:
 
-- decide whether Hermes delegation is appropriate
 - prepare a bounded Hermes delegation request
+- identify whether a documented fallback condition applies
 - review Hermes output against repo authority boundaries
 - preserve issue scope, validators, PR review, and handoff requirements
 
@@ -227,9 +228,7 @@ reviewed and merged into the appropriate repo-local surfaces.
 
 ## Non-Goals For This Policy
 
-This policy does not add the `packs/codex-hermes-sf6/` skeleton, Codex skill
-files, Hermes CLI capability reference, dry-run delegation fixtures, plugin or
-gateway planning, live Hermes execution, runtime config, Hermes operational
-prompts, public `sf6-agent` behavior changes, generated outputs,
+This policy does not add live Hermes execution, runtime config, Hermes
+operational prompts, public `sf6-agent` behavior changes, generated outputs,
 frame-current assets, normalization assets, historical smoke report rewrites,
 or stale PR imports.
