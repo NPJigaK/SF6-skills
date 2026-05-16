@@ -3,7 +3,8 @@
 ## Core Identity
 
 - This repo is SF6 Knowledge Agent Kit.
-- It is a GitHub-reviewable source of truth and distribution kit for AI agents answering Street Fighter 6 questions.
+- It is a GitHub-reviewable source of truth for Street Fighter 6 knowledge and repo-local agent workflows.
+- Public skill distribution is deferred while private Hermes-first operation is stabilized.
 - Keep source-of-truth responsibilities aligned with the canonical surfaces below.
 
 ## Canonical Surfaces
@@ -41,7 +42,7 @@
 - Japanese is the primary operating language for SF6 user questions, source summaries, review notes, and curated prose when appropriate.
 - Metadata keys, artifact IDs, schema enum values, filenames, generated markers, and validator contracts remain English-compatible.
 - Do not duplicate canonical knowledge only to create separate English/Japanese versions.
-- Keep `skills/sf6-agent/` as the single public adapter unless a later architecture decision changes it.
+- `skills/sf6-agent/` is the existing public adapter surface, but ADR-0002 makes it a deferred legacy distribution surface rather than the active product focus.
 - See `docs/architecture/language-policy.md`.
 
 ## Japanese Maintainer Documentation
@@ -54,13 +55,13 @@
 
 ## Harness And Distribution Roles
 
-- `skills/sf6-agent/` is the public answer adapter.
+- `skills/sf6-agent/` is the existing public answer adapter surface.
 - `AGENTS.md`, `workflows/*`, `tests/validation/*`, `packages/*`, and `contracts/*` are repo-local maintainer surfaces.
 - Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available, but Hermes memory and profile state are not canonical.
-- Hermes does not replace `skills/sf6-agent/` as the public answer adapter.
+- Hermes does not make local memory, sessions, profile state, or local skill state canonical.
 - `packs/hermes-sf6/*` is repo-local orchestration support, not public answer-skill behavior.
-- APM / Agent Skills may support public `sf6-agent` distribution or repo-local setup manifests, but do not create a public repo-maintainer skill package without a later architecture decision.
-- See `docs/architecture/harness-and-distribution-roles.md` and `docs/architecture/decisions/0001-hermes-primary-orchestration.md`.
+- APM / Agent Skills public distribution is deferred. Do not create a public repo-maintainer skill package without a later architecture decision.
+- See `docs/architecture/harness-and-distribution-roles.md`, `docs/architecture/decisions/0001-hermes-primary-orchestration.md`, and `docs/architecture/decisions/0002-private-hermes-first-operation.md`.
 
 ## Operating Lanes
 
@@ -70,7 +71,7 @@
 - Codex should delegate primary object-level analysis such as source analysis, claim decomposition, observation drafting, review drafting, architecture review drafting, workflow learning, validator-pattern learning, and procedural skill self-improvement to Hermes when configured.
 - Codex-only analysis for Hermes-first tasks is fallback behavior and must record why Hermes delegation was not attempted or could not complete.
 - Hermes memory, sessions, local skills, Curator output, Kanban workers, and checkpoints are non-canonical until promoted through reviewed repository artifacts.
-- End users do not need Hermes; `skills/sf6-agent/` remains the public answer adapter.
+- Current operation prioritizes personal/private Codex-operated Hermes-first workflows; `skills/sf6-agent/` is deferred until later scoped work decides whether to remove, relocate, or reactivate it.
 - See `docs/architecture/hermes-v2.1-roadmap.md`, `docs/architecture/codex-hermes-bridge-policy.md`, and `workflows/codex-to-hermes-delegation.md`.
 
 ## Workflow Rules
