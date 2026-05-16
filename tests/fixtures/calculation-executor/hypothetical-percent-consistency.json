@@ -1,0 +1,36 @@
+{
+  "trace_id": "hypothetical-percent-consistency-001",
+  "trace_schema_version": "sf6-calculation-trace/v1",
+  "calculation_intent": "hypothetical_arithmetic_check",
+  "question_scope": "Check whether hypothetical 85% of hypothetical 80 is arithmetically consistent with 68.",
+  "input_values": {
+    "base_percent": "80",
+    "modifier_percent": "85"
+  },
+  "input_authority_refs": [],
+  "input_status": "hypothetical",
+  "formula_policy_ref": null,
+  "formula_status": "hypothetical",
+  "rounding_policy_ref": null,
+  "rounding_status": "not_applicable",
+  "operations": [
+    {
+      "step_id": "step-1",
+      "operation_kind": "percent_of",
+      "inputs": ["modifier_percent", "base_percent"],
+      "output_name": "composed_percent",
+      "notes": "Generic arithmetic only: 85 percent of 80 equals 68."
+    }
+  ],
+  "created_by": "fixture",
+  "created_at": "2026-05-17T00:00:00Z",
+  "repo_revision": "fixture",
+  "expected": {
+    "status": "hypothetical_arithmetic_only",
+    "output_values": {
+      "composed_percent": "68"
+    },
+    "operation_step_count": 1,
+    "public_answer_allowed": false
+  }
+}
