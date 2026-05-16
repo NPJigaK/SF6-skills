@@ -45,8 +45,8 @@ Do not use this playbook to:
 2. Follow `workflows/maintainer-agent-session.md`.
 3. Use `workflows/codex-to-hermes-delegation.md` for request and response
    shape when Hermes-first analysis or delegation is appropriate.
-4. Check `docs/architecture/codex-hermes-bridge-policy.md` before deciding
-   whether Hermes delegation fits.
+4. Check `docs/architecture/codex-hermes-bridge-policy.md` to confirm
+   Hermes-first delegation applies or to record a documented fallback reason.
 5. Check `docs/architecture/hermes-cli-capability-reference.md` for reviewed
    Hermes capability status. Do not invent command requirements.
 6. For video work, check
