@@ -6,6 +6,7 @@
 |---|---|
 | analysis_mode | `hermes_primary` |
 | target_issue | `#203` |
+| related_issue | `#204` |
 | date | `2026-05-17` |
 | timezone | `Asia/Tokyo` |
 | report_type | `raw_snapshot_minimality_handoff` |
@@ -28,6 +29,28 @@ For every dataset with `publication_state = available`:
 
 The reference check compares those manifest-derived paths with Git-tracked
 snapshot directories under `data/raw/official/` and `data/raw/supercombo/`.
+
+## Implicit Hermes-First Behavior Observation
+
+This run also records the behavior smoke requested by Issue `#204`.
+
+| Field | Value |
+|---|---|
+| underspecified_prompt | `/mnt/e/github/SF6-skills で、raw snapshot minimality の次の進め方を整理して、必要ならPRにしてください。` |
+| hermes_explicitly_requested_by_user | no |
+| codex_selected_hermes_first_from_repo_guidance | yes |
+| codex_primary_analysis_before_hermes | no |
+| hermes_delegation_attempted | yes |
+| fallback_or_hold_reason | none |
+
+The prompt did not mention Hermes, PR `#200`, PR `#202`, or Issue `#204`.
+Windows Codex app was expected to discover the Hermes-first lane from repo
+guidance and act as Hermes operator, boundary auditor, artifact converter, and
+validator executor rather than as primary analyst.
+
+Hermes produced the primary draft analysis for the raw snapshot minimality
+decision. The draft was treated as maintainer input only; it did not become
+canonical evidence by itself.
 
 ## Pre-Cleanup Result
 
