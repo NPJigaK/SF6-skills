@@ -11,3 +11,12 @@ mise.local.lock
 data/normalized/
 *.zip
 .dist/
+.hermes/
+.env
+.env.*
+!.env.EXAMPLE
+*.transcript
+*-transcript.txt
+*-doctor-output.txt
+*-profile-output.txt
+*-command-output.txt

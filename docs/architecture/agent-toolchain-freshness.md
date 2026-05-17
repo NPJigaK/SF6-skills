@@ -73,6 +73,35 @@ Hermes CLI freshness is managed through the root `flake.nix` and the reviewed
 `hermes --version` and `hermes update` output is fallback operator evidence
 only.
 
+## Freshness Continuation
+
+The v2.6 freshness loop continues through reviewed policy and reviewed pins:
+
+- `flake.nix` declares the Hermes Agent input.
+- `flake.lock` records the reviewed pin.
+- Renovate Nix flake PRs are the normal update surface.
+- `nix run .#hermes -- --version` is the preferred local inspection command
+  because it uses the reviewed flake input.
+- fallback local `hermes --version`, `hermes doctor`, and `hermes update`
+  output remains operator diagnostic output only.
+
+Do not promote local Hermes CLI output to canonical data. In particular, do not
+commit exact local installed versions, commit-behind counts, local paths,
+doctor transcripts, provider diagnostics, Python/OpenAI SDK versions, update
+output, logs, caches, credentials, auth output, or command transcripts.
+
+## Model And Reasoning Expectations
+
+`gpt-5.5` / `codex 5.5` and `xhigh` / extra-high reasoning are maintainer
+profile policy expectations recorded in `data/toolchain/maintainer-agent-toolchain.json`.
+They are not copied local profile output, not local proof, and are not proof
+that any maintainer machine currently matches the policy.
+
+If a local Hermes CLI or provider surface does not expose reasoning effort in a
+profile listing, treat the missing display as a local manual-review gap. Do not
+paste the profile listing into repo artifacts. Fix local profile state locally,
+or open a reviewed policy PR if the repo expectation itself needs to change.
+
 ## Verification
 
 `tests/validation/validate-agent-toolchain.ps1` verifies the contract, policy
