@@ -41,6 +41,7 @@ $validationScripts = @(
   'tests/validation/validate-codex-hermes-delegation-fixtures.ps1',
   'tests/validation/validate-v2-contracts.ps1',
   'tests/validation/validate-agent-toolchain.ps1',
+  'tests/validation/validate-repository-surfaces.ps1',
   'tests/validation/validate-answer-orchestration-contracts.ps1',
   'tests/validation/validate-answer-smoke-fixtures.ps1',
   'tests/validation/validate-calculation-executor.ps1',
