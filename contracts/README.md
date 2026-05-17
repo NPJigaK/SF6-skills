@@ -20,6 +20,8 @@ reproducibility, current-fact rules, and Markdown front matter contracts.
 
 `tests/validation/validate-knowledge-lineage-report.ps1` is the executable contract layer for the generated `data/knowledge-lineage.json` observability report over source, evidence, review, and curated knowledge artifacts.
 
+`tests/validation/validate-knowledge-integrity-report.ps1` is the executable contract layer for the generated `data/knowledge-integrity.json` observability report over duplicate IDs, dangling knowledge refs, review dates, and generated-reference contamination.
+
 When `source_refs.path` points to a migrated legacy file, `source_revision` identifies the commit where that historical path can be reviewed.
 
 ## Human-Readable Contracts

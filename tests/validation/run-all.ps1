@@ -66,6 +66,7 @@ $readOnlyValidationScripts = @(
   'tests/validation/validate-normalization-runtime-assets.ps1',
   'tests/validation/validate-knowledge-schema.ps1',
   'tests/validation/validate-knowledge-lineage-report.ps1',
+  'tests/validation/validate-knowledge-integrity-report.ps1',
   'tests/validation/validate-ingest-artifacts.ps1',
   'tests/validation/validate-video-artifacts.ps1',
   'tests/validation/validate-video-observation-taxonomy-fixtures.ps1',

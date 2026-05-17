@@ -20,3 +20,13 @@ normal public answer authority. Refresh and validate it with:
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-lineage-report.ps1 -Update
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-lineage-report.ps1
 ```
+
+`data/knowledge-integrity.json` is a generated observability report for
+dangling knowledge references, duplicate artifact IDs, `review_after` state,
+and generated-reference contamination. It is not gameplay authority or normal
+public answer authority. Refresh and validate it with:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-integrity-report.ps1 -Update
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-integrity-report.ps1
+```
