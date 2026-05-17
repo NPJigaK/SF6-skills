@@ -13,6 +13,10 @@ Run the full local verification sequence with:
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
 
+Maintainer validation uses `pwsh` as the supported command. Windows
+PowerShell / `powershell.exe` fallback and git visibility warnings are covered
+by [docs/architecture/powershell-compatibility-policy.md](../architecture/powershell-compatibility-policy.md).
+
 GitHub Actions uses the same entrypoint in `.github/workflows/v2-validation.yml` for pull requests targeting `main` and pushes to `main`.
 
 `run-all.ps1` supports validation lanes:
@@ -37,19 +41,19 @@ After each generation step, the suite fails if tracked derived outputs changed. 
 
 Manual validator set:
 
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-v2-surfaces.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-v2-contracts.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-schema.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-ingest-artifacts.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-video-artifacts.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-combo-damage-fixtures.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-evals.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-roster-source.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-generated-knowledge.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-distribution.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-doc-links.ps1`
-- `powershell -ExecutionPolicy Bypass -File tests/validation/validate-legacy-cleanup.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-v2-surfaces.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-v2-contracts.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-schema.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-ingest-artifacts.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-video-artifacts.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-combo-damage-fixtures.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-evals.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-roster-source.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-generated-knowledge.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-distribution.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-doc-links.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-legacy-cleanup.ps1`
 
 Old prose-locking validators were removed. New validators should check contracts and source boundaries, not subjective strategic correctness.

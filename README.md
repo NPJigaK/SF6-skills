@@ -196,6 +196,11 @@ Validation lane と repository surface role の対応は
 [`docs/architecture/repository-surface-registry-policy.md`](./docs/architecture/repository-surface-registry-policy.md)
 を参照してください。
 
+Maintainer validation は `pwsh` を supported command とします。
+Windows PowerShell / `powershell.exe` fallback と git visibility warning の扱いは
+[`docs/architecture/powershell-compatibility-policy.md`](./docs/architecture/powershell-compatibility-policy.md)
+を参照してください。
+
 広いPRやmerge前確認では、従来どおりfull suiteを実行します。
 
 ```powershell
@@ -220,6 +225,7 @@ Generated referencesやframe-current assetsを変更するPRでは、derived out
 - [docs/architecture/language-policy.md](./docs/architecture/language-policy.md): 日本語first運用と英語互換構造
 - [docs/architecture/harness-and-distribution-roles.md](./docs/architecture/harness-and-distribution-roles.md): public adapter、repo-local workflow、Hermes harness、配布境界
 - [docs/architecture/repository-surface-registry-policy.md](./docs/architecture/repository-surface-registry-policy.md): repository surface registry と validation lane の使い方
+- [docs/architecture/powershell-compatibility-policy.md](./docs/architecture/powershell-compatibility-policy.md): `pwsh` と Windows PowerShell fallback の互換 policy
 - [docs/architecture/japanese-maintainer-docs-policy.md](./docs/architecture/japanese-maintainer-docs-policy.md): 日本語メンテナー向けdoc方針
 - [workflows/README.md](./workflows/README.md): canonical maintainer proceduresの索引
 - [docs/testing/README.md](./docs/testing/README.md): smoke runsとvalidation docs

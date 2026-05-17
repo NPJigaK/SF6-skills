@@ -51,6 +51,11 @@ Prefer the repo Nix flake for Hermes CLI pinning and Renovate updates. Keep
 Hermes profile state outside the repository and promote only reviewed repo
 artifacts into this repository.
 
+PowerShell compatibility policy is documented in
+`docs/architecture/powershell-compatibility-policy.md`. Maintainer validation
+uses `pwsh`; Windows PowerShell / `powershell.exe` is fallback or legacy
+compatibility only.
+
 ## Local Setup
 
 From WSL2 or another Linux environment with this repo already checked out:

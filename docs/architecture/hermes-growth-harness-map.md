@@ -87,6 +87,8 @@ When Windows PowerShell cannot see Git during generated-surface checks, the
 handoff should report that warning and separately verify from a git-visible
 environment that generated references, `.dist`, frame-current assets, and
 normalization runtime assets have no residual diff.
+See `docs/architecture/powershell-compatibility-policy.md` for the canonical
+`pwsh` / Windows PowerShell fallback policy.
 
 ## Deferred Harness Surfaces
 

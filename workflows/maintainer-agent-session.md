@@ -95,6 +95,9 @@ that these generated or derived surfaces have no residual diff:
 - `skills/sf6-agent/assets/frame-current/`
 - `skills/sf6-agent/assets/normalization/`
 
+See `docs/architecture/powershell-compatibility-policy.md` for the canonical
+`pwsh` / Windows PowerShell fallback policy.
+
 Completion is determined by validation results, not agent confidence.
 
 ## End-Of-Session Handoff

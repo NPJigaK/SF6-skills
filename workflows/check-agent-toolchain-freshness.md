@@ -102,12 +102,15 @@ output remains non-canonical.
 After editing toolchain policy data, run:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-agent-toolchain.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-v2-contracts.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-agent-toolchain.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-v2-contracts.ps1
 ```
 
 Before opening a PR, also run the full validation suite:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
+
+See `docs/architecture/powershell-compatibility-policy.md` for Windows
+PowerShell / `powershell.exe` fallback guidance.
