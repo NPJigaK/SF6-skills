@@ -94,6 +94,26 @@ authority promotions. A maintainer must still review:
 - security/audit output
 - whether the skill remains executor-only for SF6 work
 
+## Current Math Skill Decision
+
+v2.6 selects only the K-Dense-AI `scientific-agent-skills` SymPy skill as the
+initial external Agent Skill dependency for maintainer-local calculation work.
+
+```yaml
+dependencies:
+  apm:
+    # renovate: datasource=git-tags depName=K-Dense-AI/scientific-agent-skills
+    - K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0
+```
+
+This is a selected subset, not adoption of the whole scientific skill bundle.
+SageMath skills, statistics skills, MCP servers, and broad math/science bundles
+remain deferred until a later issue defines a task-scoped adoption policy.
+The lockfile must preserve `virtual_path: scientific-skills/sympy` so reviewers
+can verify that the selected subset, not the broad bundle, is installed.
+
+See `docs/architecture/calculation-backend-policy.md`.
+
 ## Math Skill Boundary
 
 Math-related skills such as SymPy / SageMath operator instructions are managed

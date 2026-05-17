@@ -43,6 +43,11 @@ Third-party or wild math skills are allowed only as executor implementations or
 operator instructions after dependency review. Their output is a calculation
 trace candidate, not authority.
 
+The v2.6 initial backend decision uses SymPy and the pinned K-Dense SymPy Agent
+Skill as maintainer-local executor / operator-instruction dependencies only.
+They do not supply accepted SF6 formulas, rounding rules, input truth, current
+facts, or public answer behavior.
+
 ## Trace Fields
 
 A calculation trace should include enough structured information to reproduce
