@@ -66,6 +66,41 @@
       "notes": "Curated prose is canonical for stable concepts, not for exact current frame data."
     },
     {
+      "id": "knowledge_lineage_report",
+      "title": "Knowledge Lineage Report",
+      "path_globs": [
+        "data/knowledge-lineage.json"
+      ],
+      "path_state": "tracked_present",
+      "surface_role": "derived",
+      "authority_scope": "knowledge lineage observability only",
+      "source_of_truth": [
+        "knowledge"
+      ],
+      "generated": true,
+      "generator": "tests/validation/validate-knowledge-lineage-report.ps1 -Update",
+      "source_paths": [
+        "knowledge/sources/**/*.md",
+        "knowledge/evidence/**/*.md",
+        "knowledge/review/**/*.md",
+        "knowledge/curated/**/*.md"
+      ],
+      "allowed_to_edit_directly": false,
+      "public_distribution_status": "not_distribution",
+      "normal_public_answer_authority": false,
+      "validation_expectation": [
+        "knowledge_lineage_report_fresh",
+        "not_gameplay_authority",
+        "not_normal_public_answer_authority"
+      ],
+      "policy_refs": [
+        "AGENTS.md",
+        "knowledge/README.md",
+        "contracts/README.md"
+      ],
+      "notes": "Generated observability graph for source -> evidence -> review -> curated lineage. It does not promote evidence and is not answer authority."
+    },
+    {
       "id": "data_exports",
       "title": "Current Fact Exports",
       "path_globs": [

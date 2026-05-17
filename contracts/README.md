@@ -18,6 +18,8 @@ reproducibility, current-fact rules, and Markdown front matter contracts.
 
 `tests/validation/validate-noncanonical-data-authority-boundaries.ps1` is the executable contract layer for keeping `data/raw/`, `data/normalized/`, `*_manual_review.*`, and `data/exports/_index/manual-review-debt.json` out of normal public answer authority.
 
+`tests/validation/validate-knowledge-lineage-report.ps1` is the executable contract layer for the generated `data/knowledge-lineage.json` observability report over source, evidence, review, and curated knowledge artifacts.
+
 When `source_refs.path` points to a migrated legacy file, `source_revision` identifies the commit where that historical path can be reviewed.
 
 ## Human-Readable Contracts

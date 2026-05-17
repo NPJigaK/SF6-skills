@@ -11,3 +11,12 @@
 Do not store exact current move values here. Exact current facts belong in `data/exports/` and generated frame-current runtime assets.
 
 The intended flow is source metadata to evidence or claims, then review, then curated knowledge. Full copyrighted articles, videos, screenshots, audio, and transcripts are not stored by default.
+
+`data/knowledge-lineage.json` is a generated observability report for the
+source -> evidence -> review -> curated flow. It is not gameplay authority or
+normal public answer authority. Refresh and validate it with:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-lineage-report.ps1 -Update
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-knowledge-lineage-report.ps1
+```
