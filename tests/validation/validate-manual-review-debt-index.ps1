@@ -203,7 +203,7 @@ if (-not (Test-Path -LiteralPath $indexPath -PathType Leaf)) {
   throw "Missing manual-review debt index: $indexRelativePath"
 }
 
-$actualJson = Get-Content -LiteralPath $indexPath -Raw -Encoding UTF8
+$actualJson = ConvertTo-CanonicalJson (Read-JsonFile $indexPath)
 if ($actualJson -ne $expectedJson) {
   throw "Manual-review debt index is stale. Regenerate with: pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1 -Update"
 }
