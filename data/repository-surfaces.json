@@ -362,9 +362,40 @@
       "policy_refs": [
         "docs/architecture/decisions/0002-private-hermes-first-operation.md",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md",
+        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
         "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
       ],
-      "notes": "Generated bundle for deferred public distribution. It may exist locally after validation but should not be tracked."
+      "notes": "Generated bundle for deferred public distribution. ADR-0004 keeps it as interim legacy-lane coverage only until public adapter removal; it may exist locally after validation but should not be tracked."
+    },
+    {
+      "id": "distribution_docs",
+      "title": "Distribution Documentation",
+      "path_globs": [
+        "docs/distribution/*"
+      ],
+      "path_state": "tracked_present",
+      "surface_role": "deferred_legacy",
+      "authority_scope": "deferred public adapter install and release documentation",
+      "source_of_truth": [
+        "docs/distribution",
+        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md"
+      ],
+      "generated": false,
+      "generator": null,
+      "source_paths": [],
+      "allowed_to_edit_directly": true,
+      "public_distribution_status": "deferred",
+      "normal_public_answer_authority": false,
+      "validation_expectation": [
+        "doc_links_valid",
+        "legacy_distribution_boundary_preserved"
+      ],
+      "policy_refs": [
+        "docs/architecture/decisions/0002-private-hermes-first-operation.md",
+        "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md",
+        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md"
+      ],
+      "notes": "Human install and release docs for deferred public distribution. ADR-0004 keeps them as interim legacy-lane coverage only until public adapter removal."
     },
     {
       "id": "sf6_agent_public_adapter",
@@ -505,9 +536,10 @@
       ],
       "policy_refs": [
         "docs/architecture/decisions/0002-private-hermes-first-operation.md",
+        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
         "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
       ],
-      "notes": "Installer tooling belongs to deferred public distribution and should not drive private operation design."
+      "notes": "Installer tooling belongs to deferred public distribution. ADR-0004 keeps it as interim legacy-lane coverage only until public adapter removal."
     },
     {
       "id": "skill_validator_package",
