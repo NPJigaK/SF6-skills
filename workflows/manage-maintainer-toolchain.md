@@ -122,3 +122,5 @@ Before opening any repo PR, also run:
 ```powershell
 pwsh -NoProfile -File tests/validation/run-all.ps1
 ```
+
+For narrow toolchain docs or policy-only changes, `tests/validation/run-all.ps1 -Lane read-only` is the lighter first pass. Keep the no-argument `all` lane for merge readiness and CI-equivalent validation.

@@ -10,17 +10,27 @@ Manual adapter behavior checks:
 Run the full local verification sequence with:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
 
 GitHub Actions uses the same entrypoint in `.github/workflows/v2-validation.yml` for pull requests targeting `main` and pushes to `main`.
 
-The sequence intentionally builds derived payloads before validation:
+`run-all.ps1` supports validation lanes:
+
+| Lane | Command | Purpose |
+|---|---|---|
+| `read-only` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane read-only` | Validate tracked repo artifacts, schemas, fixtures, docs, and boundaries without building generated outputs or `.dist`. |
+| `derived-build` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane derived-build` | Rebuild generated knowledge refs, frame-current assets, and normalization assets, then validate the derived surfaces. |
+| `legacy-distribution` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane legacy-distribution` | Build and validate the deferred public distribution bundle under `.dist`. |
+| `all` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1` | CI-compatible full suite. This is the default when `-Lane` is omitted. |
+
+The `all` lane intentionally builds derived payloads and the deferred distribution bundle before validation. The `derived-build` lane uses the first three commands only, while `legacy-distribution` uses the release-bundle command:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File packages/knowledge-generation/build-sf6-agent-knowledge.ps1
-powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1
-powershell -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-bundle.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File packages/knowledge-generation/build-sf6-agent-knowledge.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-normalization-runtime-assets.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-bundle.ps1
 ```
 
 After each generation step, the suite fails if tracked derived outputs changed. Regenerated `skills/sf6-agent/references/generated-*` or `skills/sf6-agent/assets/frame-current/` files must be reviewed and committed before validation or release packaging is treated as reliable.
