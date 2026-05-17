@@ -1,5 +1,9 @@
 # Current-Fact Boundary
 
+This guard is a repo-local reminder only. Canonical authority remains in
+`AGENTS.md`, `workflows/`, `docs/architecture/`, `contracts/`,
+`tests/validation/`, and reviewed repo artifacts.
+
 Exact current facts remain grounded in packaged/current-fact authorities:
 
 - `data/exports/`

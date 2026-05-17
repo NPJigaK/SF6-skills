@@ -1,36 +1,27 @@
-# Calculation Executor Playbook
+# Calculation Executor Boundary Pointer
 
-This playbook is repo-local maintainer support only. It does not define public
-`sf6-agent` answer behavior.
+This pointer is repo-local maintainer support only. It does not define public
+`sf6-agent` answer behavior and does not define SF6 formula authority.
 
-Use the deterministic executor when Hermes, Codex, or provider Codex needs to
-avoid LLM arithmetic errors while preserving SF6 authority boundaries.
+Canonical calculation boundaries live in:
 
-## Command
+- `contracts/calculation-executor-trace.md`
+- `contracts/calculation-trace.schema.json`
+- `contracts/calculation-backend-handoff.schema.json`
+- `workflows/calculation-backend-handoff.md`
+- `packages/calculation-executor/README.md`
+- `tests/validation/validate-calculation-executor.ps1`
+- `tests/validation/validate-calculation-backend-handoff.ps1`
 
-```bash
-python packages/calculation-executor/sf6_calculation_executor.py \
-  --input tests/fixtures/calculation-executor/hypothetical-addition.json \
-  --pretty
-```
+Use this pack note only to remember the boundary:
 
-## Required boundary
+- calculation executors are trace generators only;
+- executor output is not SF6 authority, formula authority, rounding authority,
+  or current-fact authority;
+- exact SF6 values, formulas, and rounding rules are not repo authority;
+- backend instructions and traces must stay review-only or hold unless a
+  separate accepted authority path exists;
+- do not use calculation output to change public `sf6-agent` behavior.
 
-- The executor is a calculation executor and trace generator only.
-- The executor output is not SF6 authority, formula authority, or current-fact
-  authority.
-- Hermes may request arithmetic, but provider Codex should run the repo-owned
-  script rather than doing arithmetic in natural language.
-- Codex must audit the trace against `contracts/calculation-executor-trace.md`
-  and `contracts/calculation-trace.schema.json`.
-- Missing input provenance, formula instruction, rounding instruction, route,
-  or timing context must produce blocked or hold behavior.
-- Do not use the executor to discover SF6 facts, infer formulas, scrape data, or
-  make public answers.
-
-## First-tranche use
-
-Use the executor for generic arithmetic and hypothetical consistency checks
-only. Do not encode combo damage, scaling tables, minimum guarantees, frame
-advantage interpretation, punish-window logic, or meaty/oki timing rules until
-a later reviewed backend-instruction policy exists.
+Command examples and executable behavior belong to the package README, tests,
+and validators, not to this pack.

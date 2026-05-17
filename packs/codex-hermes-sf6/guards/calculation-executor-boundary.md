@@ -1,5 +1,9 @@
 # Calculation Executor Boundary
 
+This guard is a repo-local reminder only. Canonical authority remains in
+`AGENTS.md`, `workflows/`, `docs/architecture/`, `contracts/`,
+`tests/validation/`, and reviewed repo artifacts.
+
 Calculation tools are executors only.
 
 They must not:
@@ -14,5 +18,5 @@ They must not:
 - feed generated references by default;
 - change public `sf6-agent` behavior.
 
-Use `packages/calculation-executor/sf6_calculation_executor.py` for deterministic
-arithmetic traces and keep `accepted_current_fact_authority: false`.
+Use the canonical calculation contracts, backend handoff workflow, package
+README, and validators for executable behavior.
