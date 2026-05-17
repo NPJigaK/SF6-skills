@@ -43,6 +43,32 @@ data/exports/<character_slug>/
 snapshot の keep-set、runtime asset reproducibility、manual-review debt などの
 cross-file semantics は専用 validator が扱います。
 
+## Manual-Review Debt Index
+
+`data/exports/_index/manual-review-debt.json` は、すべての
+`*_manual_review.json` sidecar と `snapshot_manifest.json` から生成される
+横断 index です。
+
+この index は、character / dataset ごとに次を見える化します。
+
+- `publication_state`
+- `published_record_count`
+- manifest 上の `withheld_review_count`
+- actual manual-review sidecar row count
+- reason-code counts
+- `publish_eligible` / `confirmation_status` counts
+
+この index は observability surface です。normal public answer authority では
+ありません。生成元の manual-review rows も、review と publish workflow を通る
+までは通常回答に使ってはいけません。
+
+Regenerate and validate the index:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1 -Update
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1
+```
+
 ## Dataset Semantics
 
 Current dataset keys are:
@@ -92,6 +118,7 @@ Run related semantic checks:
 ```powershell
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-raw-snapshot-minimality.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1
 ```
 

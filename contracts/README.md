@@ -42,6 +42,8 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 
 - `current-fact-export-manifest.schema.json`: structural contract for
   `data/exports/<character_slug>/snapshot_manifest.json`.
+- `manual-review-debt-index.schema.json`: structural contract for generated
+  cross-character manual-review debt observability.
 - `data/exports/README.md`: maintainer-facing boundary for published export
   authority, manual-review sidecars, and related validators.
 

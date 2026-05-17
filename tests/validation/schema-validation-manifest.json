@@ -53,6 +53,14 @@
         "data/exports/*/snapshot_manifest.json"
       ],
       "notes": "Structural current-fact export manifest shape only; frame-current and raw snapshot validators remain semantic authority."
+    },
+    {
+      "id": "manual_review_debt_index",
+      "schema_path": "contracts/manual-review-debt-index.schema.json",
+      "document_globs": [
+        "data/exports/_index/manual-review-debt.json"
+      ],
+      "notes": "Structural manual-review debt index shape only; validate-manual-review-debt-index.ps1 remains generated-drift authority."
     }
   ]
 }

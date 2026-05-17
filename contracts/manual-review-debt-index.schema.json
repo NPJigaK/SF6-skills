@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/manual-review-debt-index.schema.json",
+  "title": "Manual Review Debt Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated",
+    "generator",
+    "last_generated",
+    "tracking_issue",
+    "source_paths",
+    "not_current_fact_authority",
+    "normal_public_answer_authority",
+    "summary",
+    "reason_code_totals",
+    "datasets"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "manual-review-debt-index/v1"
+    },
+    "generated": {
+      "type": "boolean",
+      "const": true
+    },
+    "generator": {
+      "type": "string",
+      "const": "tests/validation/validate-manual-review-debt-index.ps1 -Update"
+    },
+    "last_generated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "tracking_issue": {
+      "type": "string",
+      "const": "#256"
+    },
+    "source_paths": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "not_current_fact_authority": {
+      "type": "boolean",
+      "const": true
+    },
+    "normal_public_answer_authority": {
+      "type": "boolean",
+      "const": false
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "character_count",
+        "dataset_count",
+        "manual_review_file_count",
+        "manual_review_row_count",
+        "manifest_withheld_review_count",
+        "withheld_count_mismatch_count"
+      ],
+      "properties": {
+        "character_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dataset_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manual_review_file_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manual_review_row_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manifest_withheld_review_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "withheld_count_mismatch_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "reason_code_totals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/count_entry"
+      }
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dataset_entry"
+      }
+    }
+  },
+  "$defs": {
+    "count_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "row_count"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "row_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "dataset_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "character_slug",
+        "dataset",
+        "publication_state",
+        "published_record_count",
+        "manifest_withheld_review_count",
+        "manual_review_row_count",
+        "manual_review_count_matches_manifest",
+        "snapshot_manifest_path",
+        "manual_review_path",
+        "published_run_id",
+        "published_snapshot_ids",
+        "reason_code_counts",
+        "publish_eligible_counts",
+        "confirmation_status_counts"
+      ],
+      "properties": {
+        "character_slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_]*$"
+        },
+        "dataset": {
+          "type": "string",
+          "enum": [
+            "official_raw",
+            "derived_metrics",
+            "supercombo_enrichment"
+          ]
+        },
+        "publication_state": {
+          "type": "string",
+          "enum": [
+            "available",
+            "unavailable"
+          ]
+        },
+        "published_record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manifest_withheld_review_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manual_review_row_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manual_review_count_matches_manifest": {
+          "type": "boolean"
+        },
+        "snapshot_manifest_path": {
+          "type": "string",
+          "pattern": "^data/exports/[a-z0-9_]+/snapshot_manifest\\.json$"
+        },
+        "manual_review_path": {
+          "type": "string",
+          "pattern": "^data/exports/[a-z0-9_]+/(official_raw|derived_metrics|supercombo_enrichment)_manual_review\\.json$"
+        },
+        "published_run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "published_snapshot_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "reason_code_counts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/count_entry"
+          }
+        },
+        "publish_eligible_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "true_count",
+            "false_count",
+            "null_count"
+          ],
+          "properties": {
+            "true_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "false_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "null_count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "confirmation_status_counts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/count_entry"
+          }
+        }
+      }
+    }
+  }
+}
