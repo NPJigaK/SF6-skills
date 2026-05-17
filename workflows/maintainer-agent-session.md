@@ -55,10 +55,23 @@ scope, non-goals, and acceptance are clear enough to test.
 
 Before opening a PR, run focused validators for the changed surfaces.
 
-When practical, also run the full validation suite:
+For normal private Hermes-first docs, contracts, workflow, registry, or
+boundary-only changes, run the read-only lane:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane read-only
+```
+
+Use `-Lane derived-build` when generated references, frame-current assets, or
+normalization assets are intentionally in scope. Use `-Lane
+legacy-distribution` only when deferred public distribution bundle or installer
+surfaces are intentionally in scope.
+
+When practical, also run the full validation suite. Omitting `-Lane` is
+equivalent to `-Lane all`:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
 
 Always check whitespace and patch formatting:

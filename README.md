@@ -174,7 +174,23 @@ maintainer profileがある環境のrepo-local growth engineであり、root
 変更後は、少なくとも次を確認します。
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane read-only
+```
+
+`run-all.ps1` は validation lane を持ちます。引数なしは従来互換の
+`all` lane です。
+
+| Lane | 用途 |
+|---|---|
+| `read-only` | 通常の docs / contracts / workflows / registry / artifact 境界検証。generated output と `.dist` を作らない。 |
+| `derived-build` | generated references、frame-current assets、normalization assets を再生成して残差分を確認する。 |
+| `legacy-distribution` | deferred public distribution bundle / `.dist` を検証する。 |
+| `all` | CI相当。derived build と legacy distribution を含む従来互換のfull suite。 |
+
+広いPRやmerge前確認では、従来どおりfull suiteを実行します。
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
 
 追加でよく使う確認:

@@ -133,10 +133,34 @@ git pull --ff-only
 
 ## Validation Before PR Or Merge
 
-Before opening or merging PRs, run the relevant local checks. For broad repo changes, use the full v2 validation suite:
+Before opening or merging PRs, run the relevant local checks. For normal
+private Hermes-first docs, contracts, workflow, registry, or boundary-only
+changes, start with the read-only lane:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane read-only
+```
+
+Use the generated-surface lane when a PR intentionally touches generated
+references, frame-current assets, or normalization assets:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane derived-build
+```
+
+Use the legacy distribution lane only when a PR touches deferred public
+distribution bundle or installer surfaces:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane legacy-distribution
+```
+
+For broad repo changes and merge readiness, use the full v2 validation suite.
+Omitting `-Lane` is equivalent to `-Lane all` and preserves the CI-compatible
+legacy behavior:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
 ```
 
 Also check:

@@ -185,8 +185,14 @@ Before committing work that used Hermes output:
 5. Confirm provider Codex did not become the final analyst or decision
    authority.
 6. Confirm Hermes memory, session, and local skill state are not committed.
-7. Run relevant validators for the changed surfaces.
-8. Run `tests/validation/run-all.ps1` when practical.
+7. Run relevant validators for the changed surfaces. For normal Hermes-first
+   docs, contracts, workflow, registry, or boundary-only changes, prefer
+   `tests/validation/run-all.ps1 -Lane read-only`.
+8. Run `tests/validation/run-all.ps1` when practical for merge readiness.
+   Use `-Lane derived-build` only when generated references, frame-current
+   assets, or normalization assets are intentionally in scope. Use
+   `-Lane legacy-distribution` only when deferred public distribution bundle or
+   installer surfaces are intentionally in scope.
 9. Run `git diff --check`.
 10. Verify generated or derived surfaces have no residual diff unless
    intentionally in scope.
