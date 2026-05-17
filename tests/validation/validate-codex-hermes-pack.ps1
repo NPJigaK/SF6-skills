@@ -75,6 +75,10 @@ if ($issues.Count -eq 0) {
 
   $requiredPhrases = @(
     'repo-local maintainer support only',
+    'thin pointer',
+    'template',
+    'checklist',
+    'not canonical procedure authority',
     'does not define public answer behavior',
     'workflows/maintainer-agent-session.md',
     'workflows/codex-to-hermes-delegation.md',
@@ -83,7 +87,7 @@ if ($issues.Count -eq 0) {
     'docs/architecture/sf6-video-analysis-protocol.md',
     'docs/architecture/external-frame-atlas-policy.md',
     'Hermes output remains draft input',
-    'Stale PR #71 and PR #83 are closed historical debt',
+    'stale PR #71 and PR #83',
     'official_raw'
   )
 
@@ -100,11 +104,26 @@ if ($issues.Count -eq 0) {
 
   $activePublicAnswerPatterns = @(
     '(?im)^\s*(this pack|the pack)\s+defines\s+public answer behavior',
-    '(?im)^\s*define\s+public answer behavior'
+    '(?im)^\s*this pack defines public answer behavior'
   )
   foreach ($pattern in $activePublicAnswerPatterns) {
     if ($combinedText -match $pattern) {
       $issues += 'Codex-Hermes pack appears to define public answer behavior.'
+    }
+  }
+
+  foreach ($pattern in @(
+    '(?im)^## Required Procedure$',
+    '(?im)^## Canonical Procedure$',
+    '(?i)\bthis pack is authoritative\b',
+    '(?i)\bmust follow this pack\b',
+    '(?i)\bthis pack defines canonical procedure\b',
+    '(?i)\bthis pack defines Hermes CLI command truth\b',
+    '(?i)\blive Hermes.*CI requirement\b',
+    '(?i)\blive video analysis.*CI requirement\b'
+  )) {
+    if ($combinedText -match $pattern) {
+      $issues += "Codex-Hermes pack duplicates or overclaims procedure authority: $pattern"
     }
   }
 

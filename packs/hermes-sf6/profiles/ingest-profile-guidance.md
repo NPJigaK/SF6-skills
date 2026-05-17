@@ -1,10 +1,11 @@
 # Ingest Profile Guidance
 
 This file is repo-local orchestration support for future Hermes ingest profile guidance.
+It is a thin pointer surface only.
 
 It is not public answer behavior and does not replace skills/sf6-agent. Public SF6 answer behavior remains in the single `skills/sf6-agent/` adapter.
 
-Hermes ingest guidance must follow canonical workflows and canonical contracts, including the relevant article, video, and source review workflows under `workflows/`.
+Hermes ingest guidance must follow canonical workflows and canonical contracts, including the relevant article, video, and source review workflows under `workflows/`. This file is not canonical procedure authority.
 
 Reusable output must be committed as repo artifacts, not stored in Hermes state. Source metadata, claims, observations, review notes, and smoke evidence belong in their canonical repository surfaces.
 
@@ -15,18 +16,13 @@ This is markdown guidance only, not executable profile config. Operational promp
 ## Model And Reasoning Expectation
 
 The `sf6ingest` profile should follow the repo maintainer profile policy in
-`data/toolchain/maintainer-agent-toolchain.json`.
-
-Expected setup:
-
-- model: `gpt-5.5`
-- accepted model alias: `codex 5.5`
-- reasoning effort: `xhigh` / extra-high where supported
-
-If Hermes does not expose reasoning effort in `hermes profile list`, verify the
-setting manually outside the repo. Do not commit Hermes profile config, profile
-state, command output, memory, sessions, logs, caches, credentials, or raw
-transcripts.
+`data/toolchain/maintainer-agent-toolchain.json` and
+`docs/architecture/hermes-maintainer-profile-policy.md`. Those canonical
+surfaces define the `gpt-5.5` / `codex 5.5` and `xhigh` / extra-high
+expectations. If Hermes does not expose reasoning effort in a local profile
+listing, verify the setting manually outside the repo. Do not commit Hermes
+profile config, profile state, command output, memory, sessions, logs, caches,
+credentials, or raw transcripts.
 
 ## Skill Selection Expectation
 

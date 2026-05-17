@@ -1,5 +1,9 @@
 # Video Observation Boundary
 
+This guard is a repo-local reminder only. Canonical authority remains in
+`AGENTS.md`, `workflows/`, `docs/architecture/`, `contracts/`,
+`tests/validation/`, and reviewed repo artifacts.
+
 Reviewed policy:
 
 - `docs/architecture/sf6-video-analysis-protocol.md`

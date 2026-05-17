@@ -1,5 +1,9 @@
 # Article And Video Boundary
 
+This guard is a repo-local reminder only. Canonical authority remains in
+`AGENTS.md`, `workflows/`, `docs/architecture/`, `contracts/`,
+`tests/validation/`, and reviewed repo artifacts.
+
 Article sources provide candidate claims and review input only until reviewed
 and promoted through an accepted repo path.
 

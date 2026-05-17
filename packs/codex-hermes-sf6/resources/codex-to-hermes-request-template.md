@@ -1,11 +1,16 @@
 # Codex-To-Hermes Request Template
 
-Use this concise template when the target issue allows Hermes delegation.
+This is a fill-in template only. Canonical delegation procedure lives in
+`workflows/codex-to-hermes-delegation.md`, with boundary policy in
+`docs/architecture/codex-hermes-bridge-policy.md`.
+
 Hermes output is draft input only. For Hermes-first analysis, it is the
 primary draft input.
 
 ```yaml
 analysis_mode: hermes_primary
+task_id:
+tracking_issue:
 target_issue:
 target_scope_summary:
 codex_app_role:
@@ -27,32 +32,16 @@ validators_to_run:
 review_checklist:
 ```
 
-## Field Guidance
+## Minimal Field Notes
 
-- `target_issue`: the GitHub issue controlling scope and acceptance.
-- `target_scope_summary`: a short restatement of scope, non-goals, and
-  acceptance.
-- `analysis_mode`: usually `hermes_primary`; use `codex_fallback` only when
-  Hermes is unavailable, unconfigured, explicitly out of scope, or unsafe for
-  the material.
-- `codex_app_role`: Windows Codex app responsibilities. It operates Hermes,
-  audits boundaries, converts artifacts, runs validators, and reports to the
-  maintainer.
-- `hermes_role`: Hermes responsibilities. Hermes performs primary analysis,
-  orchestration, uncertainty integration, and self-improvement review.
-- `provider_codex_role`: provider Codex responsibilities when Hermes uses it.
-  Provider Codex is an executor, not the final analyst.
-- `source_material`: repo artifacts, links, notes, article/video references,
-  or other input. Source material is not automatically canonical.
-- `requested_artifact_type`: draft note, candidate observation, review
-  checklist, validator proposal, or other scoped draft.
-- `allowed_outputs`: what Hermes may produce as draft input.
-- `forbidden_outputs`: exact current facts, public answer behavior, raw
-  article/video dumps, local state, secrets, or out-of-scope artifacts.
-- `authority_boundaries`: current-fact, article, video, external visual atlas,
-  and public adapter boundaries that apply.
-- `validators_to_run`: repo validators Codex must run before commit.
-- `review_checklist`: checks Codex must perform before using the draft.
+- `target_issue`: issue controlling scope and acceptance.
+- `target_scope_summary`: one short scope / non-goal / acceptance restatement.
+- `source_material`: repo refs or source refs; not automatically canonical.
+- `forbidden_outputs`: include local state, raw transcript, secrets, exact
+  current facts, and public answer behavior unless explicitly in scope.
+- `authority_boundaries`: current-fact, article/video, visual-asset,
+  calculation, and public-adapter boundaries that apply.
+- `validators_to_run`: checks Codex must run before commit.
 
 Use this fallback shape only when Hermes-first analysis cannot be used:
 
@@ -64,5 +53,5 @@ hermes_delegation:
 debt: hermes_first_analysis_not_validated_for_this_workflow
 ```
 
-Reference `workflows/codex-to-hermes-delegation.md` for the canonical
-delegation workflow.
+Fallback rules, provider Codex boundaries, and post-delegation checks are
+defined by `workflows/codex-to-hermes-delegation.md`.

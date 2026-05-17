@@ -44,10 +44,12 @@ $requiredFiles = @(
 
 $commonBoundaryPhrases = @(
   'repo-local orchestration support',
+  'thin pointer',
   'not public answer behavior',
   'does not replace skills/sf6-agent',
   'canonical workflows',
   'canonical contracts',
+  'not canonical procedure authority',
   'non-canonical',
   'repo artifacts'
 )
@@ -77,10 +79,8 @@ if ($issues.Count -eq 0) {
     'packs/hermes-sf6/profiles/ingest-profile-guidance.md'
   )) {
     Assert-TextContains $relativePath @(
-      'gpt-5.5',
-      'codex 5.5',
-      'xhigh',
-      'extra-high',
+      'data/toolchain/maintainer-agent-toolchain.json',
+      'docs/architecture/hermes-maintainer-profile-policy.md',
       'do not commit'
     ) ([ref]$issues)
   }
@@ -89,10 +89,8 @@ if ($issues.Count -eq 0) {
     'flake.nix',
     'flake.lock',
     'Renovate Nix flake PRs',
-    'hermes --version',
-    'hermes doctor',
-    'hermes profile list',
-    'local installed versions'
+    'local review signals only',
+    'not local installed versions'
   ) ([ref]$issues)
 
   foreach ($relativePath in @(
@@ -103,6 +101,19 @@ if ($issues.Count -eq 0) {
     'packs/hermes-sf6/reports/README.md'
   )) {
     Assert-TextContains $relativePath @('operational prompt bodies belong to later work') ([ref]$issues)
+  }
+
+  $combinedText = ($requiredFiles | ForEach-Object { Read-Text $_ }) -join "`n"
+  foreach ($pattern in @(
+    '(?i)\bthis pack is authoritative\b',
+    '(?i)\bmust follow this pack\b',
+    '(?i)\bthis directory defines canonical procedure\b',
+    '(?i)\blive Hermes.*CI requirement\b',
+    '(?i)\blive video analysis.*CI requirement\b'
+  )) {
+    if ($combinedText -match $pattern) {
+      $issues += "Hermes pack duplicates or overclaims procedure authority: $pattern"
+    }
   }
 }
 

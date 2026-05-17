@@ -1,30 +1,42 @@
 # Hermes SF6 Pack
 
-This pack is repo-local orchestration support for Hermes.
+This pack is repo-local orchestration support for Hermes. It is a thin pointer
+surface only.
 
-Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available. Hermes is not a canonical knowledge surface, not canonical memory, and not required for public distribution. Hermes state is non-canonical. This pack is not public answer behavior and does not replace skills/sf6-agent. Canonical maintainer procedures live in [workflows](../../workflows/). Public agent behavior lives in the single `sf6-agent` adapter.
+It is not public answer behavior, does not replace skills/sf6-agent, and does
+not define canonical procedure authority. Canonical workflows, canonical
+contracts, architecture docs, validators, issue scope, and reviewed repo
+artifacts remain authoritative.
 
-When Hermes is unavailable, Codex, humans, or other agents may still follow the same canonical workflows as fallback executors.
+Validator anchor: this pack is not canonical procedure authority. Canonical
+workflows and canonical contracts remain authoritative.
+
+Hermes state is non-canonical. Do not commit Hermes memory, sessions, profile
+state, browser state, cron state, local managed skills, local config, secrets,
+raw transcripts, logs, caches, Kanban state, checkpoints, credentials, or
+tokens.
 
 ## Contents
 
-- `hermes.example.json`: example harness configuration shape.
-- `prompts/`: boundary guidance for future prompt wrappers.
+- `hermes.example.json`: example harness shape only.
+- `prompts/`: pointer guidance for future prompt wrappers.
 - `profiles/`: markdown profile guidance only; not executable profile config.
-- `guards/`: boundary guidance for future guard checks.
-- `reports/`: boundary guidance for future report templates.
+- `guards/`: pointer guidance for future guard checks.
+- `reports/`: pointer guidance for future report templates.
 
 ## Rules
 
-- Hermes wrappers must follow canonical workflows and canonical contracts.
-- Operational prompt bodies belong to later work after answer contracts and evidence gate policy.
-- Reusable output must be committed as repo artifacts, not stored in Hermes state.
-- Do not commit Hermes memory state.
-- Do not commit cron state.
-- Do not commit secrets.
-- Do not commit user session state.
-- Keep generated or local Hermes runtime files outside this pack.
+- Hermes wrappers must point back to canonical workflows and canonical
+  contracts.
+- Reusable output must be promoted through reviewed repo artifacts.
+- Operational prompt bodies belong to later work after answer contracts and
+  evidence gate policy.
+- Do not add executable profile config, local state, or public adapter behavior
+  to this pack.
 
 ## Usage
 
-Install or build the `sf6-agent` adapter using the canonical distribution docs under [docs/distribution/agents](../../docs/distribution/agents/). Use this pack only to point Hermes at the adapter and at [workflows](../../workflows/) for repo-local orchestration tasks.
+Use this pack only to orient Hermes maintainer operation back to canonical repo
+surfaces. For deferred public adapter work, follow the explicit target issue
+and the canonical distribution docs instead of treating this pack as
+distribution procedure.
