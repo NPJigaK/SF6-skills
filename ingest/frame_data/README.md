@@ -53,6 +53,13 @@ is not referenced by the current published manifests is removable residue unless
 a future reviewed retention-exception artifact explicitly allows it. This repo
 currently has no raw snapshot retention exceptions.
 
+ADR-0005 fixes this as the repository retention model:
+`docs/architecture/decisions/0005-raw-snapshot-retention.md`. Checked-in raw
+snapshots are the minimal Git-tracked reproducibility set for current published
+exports. Broader raw-history or raw-cache work must stay repo-external by
+default and may commit only reviewed metadata/hash references after a later
+artifact contract is defined.
+
 Validate the checked-in surface from the repo root:
 
 ```powershell

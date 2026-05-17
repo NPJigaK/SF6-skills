@@ -94,6 +94,10 @@ Raw snapshot minimality is a strict data hygiene check. Unreferenced checked-in
 raw snapshots are removable residue unless a reviewed retention-exception
 artifact is explicitly introduced. Missing referenced raw snapshots break
 reproducibility and must be fixed before reporting the refresh as complete.
+ADR-0005 records this boundary:
+`docs/architecture/decisions/0005-raw-snapshot-retention.md`. Broader raw-cache
+or raw-history storage stays repo-external unless a later reviewed artifact
+contract is introduced.
 
 ## Reporting
 
