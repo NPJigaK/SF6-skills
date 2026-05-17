@@ -59,6 +59,11 @@ Hermes is primary when configured, but it is not a hard dependency for using or 
 
 Hermes memory, sessions, profile state, browser state, cron state, and local managed skills are not canonical SF6 knowledge.
 
+Hermes built-in memory and `session_search` may be used only as local
+non-canonical context under `docs/architecture/hermes-memory-policy.md`.
+External Memory Providers are not enabled by default for v2.6 private
+`sf6ingest` operation.
+
 Final outputs must be repo artifacts, such as:
 
 - `knowledge/sources/*`

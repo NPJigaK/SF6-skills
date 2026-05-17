@@ -106,6 +106,7 @@ $requiredFiles = @(
   '.github/renovate.json',
   'docs/architecture/agent-toolchain-freshness.md',
   'docs/architecture/agent-skill-dependency-policy.md',
+  'docs/architecture/hermes-memory-policy.md',
   'docs/architecture/hermes-maintainer-profile-policy.md',
   'flake.lock',
   'flake.nix',
@@ -347,6 +348,29 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-skill-d
   )) {
     if ($agentSkillPolicy -notmatch [regex]::Escape($needle)) {
       $issues += "docs/architecture/agent-skill-dependency-policy.md missing policy text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/hermes-memory-policy.md') -PathType Leaf) {
+  $memoryPolicy = Read-Text 'docs/architecture/hermes-memory-policy.md'
+  foreach ($needle in @(
+    'built-in memory',
+    'session_search',
+    'local non-canonical context',
+    'external Memory Provider',
+    'defer',
+    'Holographic',
+    'Honcho',
+    'Mem0',
+    'Hindsight',
+    'Memory and session search may improve operator efficiency, but they must not override current git, disk, issue, PR, validator, or checked-in artifact evidence',
+    'Do not commit:',
+    'state.db',
+    'provider output remains non-canonical'
+  )) {
+    if ($memoryPolicy -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/hermes-memory-policy.md missing policy text: $needle"
     }
   }
 }

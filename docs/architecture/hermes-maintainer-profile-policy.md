@@ -122,6 +122,11 @@ Deferred:
   do not install broad third-party skill collections as repo-managed profile
   state.
 
+Memory and session-search policy is defined in
+`docs/architecture/hermes-memory-policy.md`. Built-in memory and
+`session_search` are local non-canonical context only. External Memory
+Providers are deferred by default for v2.6.
+
 Forbidden:
 
 - `approvals.mode: off` for normal repo work.
