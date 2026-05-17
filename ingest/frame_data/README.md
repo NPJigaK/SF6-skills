@@ -160,6 +160,8 @@ Published exports:
 See `data/exports/README.md` for the current-fact export authority boundary.
 `snapshot_manifest.json` follows
 `contracts/current-fact-export-manifest.schema.json` for structural validation.
+`data/exports/_index/manual-review-debt.json` is a generated observability index
+for withheld rows and review reasons; it is not normal public answer authority.
 
 ## Manifest Rules
 

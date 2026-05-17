@@ -1,0 +1,2895 @@
+{
+  "schema_version": "manual-review-debt-index/v1",
+  "generated": true,
+  "generator": "tests/validation/validate-manual-review-debt-index.ps1 -Update",
+  "last_generated": "2026-05-18",
+  "tracking_issue": "#256",
+  "source_paths": [
+    "data/exports/*/snapshot_manifest.json",
+    "data/exports/*/*_manual_review.json"
+  ],
+  "not_current_fact_authority": true,
+  "normal_public_answer_authority": false,
+  "summary": {
+    "character_count": 29,
+    "dataset_count": 87,
+    "manual_review_file_count": 87,
+    "manual_review_row_count": 1632,
+    "manifest_withheld_review_count": 1632,
+    "withheld_count_mismatch_count": 0
+  },
+  "reason_code_totals": [
+    {
+      "id": "official_active_ambiguous",
+      "row_count": 750
+    },
+    {
+      "id": "official_total_parse_failed",
+      "row_count": 6
+    },
+    {
+      "id": "supercombo_binding_collision",
+      "row_count": 200
+    },
+    {
+      "id": "supercombo_binding_excluded",
+      "row_count": 314
+    },
+    {
+      "id": "supercombo_binding_one_to_many",
+      "row_count": 219
+    },
+    {
+      "id": "supercombo_missing_official_safe_row",
+      "row_count": 143
+    }
+  ],
+  "datasets": [
+    {
+      "character_slug": "aki",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 54,
+      "manifest_withheld_review_count": 10,
+      "manual_review_row_count": 10,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/aki/snapshot_manifest.json",
+      "manual_review_path": "data/exports/aki/official_raw_manual_review.json",
+      "published_run_id": "20260412T162057799941Z-da860c59",
+      "published_snapshot_ids": [
+        "20260412T161520Z-7fbd27f7"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 8
+        },
+        {
+          "id": "official_total_parse_failed",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 10
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "aki",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 54,
+      "manifest_withheld_review_count": 10,
+      "manual_review_row_count": 10,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/aki/snapshot_manifest.json",
+      "manual_review_path": "data/exports/aki/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162057799941Z-da860c59",
+      "published_snapshot_ids": [
+        "20260412T161520Z-7fbd27f7"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 8
+        },
+        {
+          "id": "official_total_parse_failed",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 10
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "aki",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 44,
+      "manifest_withheld_review_count": 20,
+      "manual_review_row_count": 20,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/aki/snapshot_manifest.json",
+      "manual_review_path": "data/exports/aki/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T212324704618Z-c8c366a4",
+      "published_snapshot_ids": [
+        "20260412T212323Z-09d0c791"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 3
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 9
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 9,
+        "false_count": 11,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 20
+        }
+      ]
+    },
+    {
+      "character_slug": "alex",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 72,
+      "manifest_withheld_review_count": 2,
+      "manual_review_row_count": 2,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/alex/snapshot_manifest.json",
+      "manual_review_path": "data/exports/alex/official_raw_manual_review.json",
+      "published_run_id": "20260412T161634392054Z-96ddd2d9",
+      "published_snapshot_ids": [
+        "20260412T161526Z-9839b882"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 2
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "alex",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 72,
+      "manifest_withheld_review_count": 2,
+      "manual_review_row_count": 2,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/alex/snapshot_manifest.json",
+      "manual_review_path": "data/exports/alex/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161634392054Z-96ddd2d9",
+      "published_snapshot_ids": [
+        "20260412T161526Z-9839b882"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 2
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "alex",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 55,
+      "manifest_withheld_review_count": 21,
+      "manual_review_row_count": 21,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/alex/snapshot_manifest.json",
+      "manual_review_path": "data/exports/alex/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214333161489Z-214dedb3",
+      "published_snapshot_ids": [
+        "20260412T214332Z-f7ab00c5"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 7
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 21,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 21
+        }
+      ]
+    },
+    {
+      "character_slug": "blanka",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 67,
+      "manifest_withheld_review_count": 24,
+      "manual_review_row_count": 24,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/blanka/snapshot_manifest.json",
+      "manual_review_path": "data/exports/blanka/official_raw_manual_review.json",
+      "published_run_id": "20260412T162056680519Z-c2592c96",
+      "published_snapshot_ids": [
+        "20260412T161514Z-b66cc4c2"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 24
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 24
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "blanka",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 67,
+      "manifest_withheld_review_count": 24,
+      "manual_review_row_count": 24,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/blanka/snapshot_manifest.json",
+      "manual_review_path": "data/exports/blanka/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162056680519Z-c2592c96",
+      "published_snapshot_ids": [
+        "20260412T161514Z-b66cc4c2"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 24
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 24
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "blanka",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 40,
+      "manifest_withheld_review_count": 44,
+      "manual_review_row_count": 44,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/blanka/snapshot_manifest.json",
+      "manual_review_path": "data/exports/blanka/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T210121539828Z-7a667ec0",
+      "published_snapshot_ids": [
+        "20260412T210120Z-b88e35d1"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 27
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 16
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 1,
+        "false_count": 43,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 44
+        }
+      ]
+    },
+    {
+      "character_slug": "cammy",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 65,
+      "manifest_withheld_review_count": 10,
+      "manual_review_row_count": 10,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/cammy/snapshot_manifest.json",
+      "manual_review_path": "data/exports/cammy/official_raw_manual_review.json",
+      "published_run_id": "20260412T162057573425Z-b7de11a6",
+      "published_snapshot_ids": [
+        "20260412T161519Z-8289f3ca"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 10
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 10
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "cammy",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 65,
+      "manifest_withheld_review_count": 10,
+      "manual_review_row_count": 10,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/cammy/snapshot_manifest.json",
+      "manual_review_path": "data/exports/cammy/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162057573425Z-b7de11a6",
+      "published_snapshot_ids": [
+        "20260412T161519Z-8289f3ca"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 10
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 10
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "cammy",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 49,
+      "manifest_withheld_review_count": 25,
+      "manual_review_row_count": 25,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/cammy/snapshot_manifest.json",
+      "manual_review_path": "data/exports/cammy/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T211716457989Z-e85fa115",
+      "published_snapshot_ids": [
+        "20260412T211715Z-583424e1"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 3
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 4,
+        "false_count": 21,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 25
+        }
+      ]
+    },
+    {
+      "character_slug": "chunli",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 52,
+      "manifest_withheld_review_count": 26,
+      "manual_review_row_count": 26,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/chunli/snapshot_manifest.json",
+      "manual_review_path": "data/exports/chunli/official_raw_manual_review.json",
+      "published_run_id": "20260412T161632092221Z-07ab563d",
+      "published_snapshot_ids": [
+        "20260412T161511Z-31b9e71d"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 26
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 26
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "chunli",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 52,
+      "manifest_withheld_review_count": 26,
+      "manual_review_row_count": 26,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/chunli/snapshot_manifest.json",
+      "manual_review_path": "data/exports/chunli/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161632092221Z-07ab563d",
+      "published_snapshot_ids": [
+        "20260412T161511Z-31b9e71d"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 26
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 26
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "chunli",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 32,
+      "manifest_withheld_review_count": 47,
+      "manual_review_row_count": 47,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/chunli/snapshot_manifest.json",
+      "manual_review_path": "data/exports/chunli/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T205126192347Z-69755ebc",
+      "published_snapshot_ids": [
+        "20260412T205125Z-e44b2ca7"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 10
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 17
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 14
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 14,
+        "false_count": 33,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "confirmed",
+          "row_count": 1
+        },
+        {
+          "id": "not_required",
+          "row_count": 46
+        }
+      ]
+    },
+    {
+      "character_slug": "cviper",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 58,
+      "manifest_withheld_review_count": 11,
+      "manual_review_row_count": 11,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/cviper/snapshot_manifest.json",
+      "manual_review_path": "data/exports/cviper/official_raw_manual_review.json",
+      "published_run_id": "20260412T161634287623Z-3e983212",
+      "published_snapshot_ids": [
+        "20260412T161525Z-a7ba6579"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 11
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 11
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "cviper",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 58,
+      "manifest_withheld_review_count": 11,
+      "manual_review_row_count": 11,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/cviper/snapshot_manifest.json",
+      "manual_review_path": "data/exports/cviper/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161634287623Z-3e983212",
+      "published_snapshot_ids": [
+        "20260412T161525Z-a7ba6579"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 11
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 11
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "cviper",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 43,
+      "manifest_withheld_review_count": 21,
+      "manual_review_row_count": 21,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/cviper/snapshot_manifest.json",
+      "manual_review_path": "data/exports/cviper/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214748703789Z-83b88bdb",
+      "published_snapshot_ids": [
+        "20260412T214259Z-d1544e78"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 8
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 8
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 5,
+        "false_count": 16,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 21
+        }
+      ]
+    },
+    {
+      "character_slug": "deejay",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 91,
+      "manifest_withheld_review_count": 14,
+      "manual_review_row_count": 14,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/deejay/snapshot_manifest.json",
+      "manual_review_path": "data/exports/deejay/official_raw_manual_review.json",
+      "published_run_id": "20260412T161632880670Z-dd96879e",
+      "published_snapshot_ids": [
+        "20260412T161516Z-d5bba474"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 14
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 14
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "deejay",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 91,
+      "manifest_withheld_review_count": 14,
+      "manual_review_row_count": 14,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/deejay/snapshot_manifest.json",
+      "manual_review_path": "data/exports/deejay/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161632880670Z-dd96879e",
+      "published_snapshot_ids": [
+        "20260412T161516Z-d5bba474"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 14
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 14
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "deejay",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 54,
+      "manifest_withheld_review_count": 44,
+      "manual_review_row_count": 44,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/deejay/snapshot_manifest.json",
+      "manual_review_path": "data/exports/deejay/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214746867564Z-745c4d59",
+      "published_snapshot_ids": [
+        "20260412T210554Z-b1ab66c9"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 14
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 15
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 3
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 3,
+        "false_count": 41,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 44
+        }
+      ]
+    },
+    {
+      "character_slug": "dhalsim",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 82,
+      "manifest_withheld_review_count": 7,
+      "manual_review_row_count": 7,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/dhalsim/snapshot_manifest.json",
+      "manual_review_path": "data/exports/dhalsim/official_raw_manual_review.json",
+      "published_run_id": "20260412T161632647593Z-e856d1f2",
+      "published_snapshot_ids": [
+        "20260412T161515Z-bfffb3ab"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 7
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 7
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "dhalsim",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 82,
+      "manifest_withheld_review_count": 7,
+      "manual_review_row_count": 7,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/dhalsim/snapshot_manifest.json",
+      "manual_review_path": "data/exports/dhalsim/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161632647593Z-e856d1f2",
+      "published_snapshot_ids": [
+        "20260412T161515Z-bfffb3ab"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 7
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 7
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "dhalsim",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 46,
+      "manifest_withheld_review_count": 23,
+      "manual_review_row_count": 23,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/dhalsim/snapshot_manifest.json",
+      "manual_review_path": "data/exports/dhalsim/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T210425769615Z-93f2c2ce",
+      "published_snapshot_ids": [
+        "20260412T210424Z-a4a761c1"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 9
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 2,
+        "false_count": 21,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "confirmed",
+          "row_count": 1
+        },
+        {
+          "id": "not_required",
+          "row_count": 22
+        }
+      ]
+    },
+    {
+      "character_slug": "ed",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 64,
+      "manifest_withheld_review_count": 6,
+      "manual_review_row_count": 6,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ed/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ed/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633646337Z-a379b7c2",
+      "published_snapshot_ids": [
+        "20260412T161521Z-719afbc0"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 6
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 6
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ed",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 64,
+      "manifest_withheld_review_count": 6,
+      "manual_review_row_count": 6,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ed/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ed/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633646337Z-a379b7c2",
+      "published_snapshot_ids": [
+        "20260412T161521Z-719afbc0"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 6
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 6
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ed",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 47,
+      "manifest_withheld_review_count": 18,
+      "manual_review_row_count": 18,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ed/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ed/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T212628849767Z-f19cb692",
+      "published_snapshot_ids": [
+        "20260412T212628Z-f00d5c58"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 5
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 5,
+        "false_count": 13,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 18
+        }
+      ]
+    },
+    {
+      "character_slug": "ehonda",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 47,
+      "manifest_withheld_review_count": 23,
+      "manual_review_row_count": 23,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ehonda/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ehonda/official_raw_manual_review.json",
+      "published_run_id": "20260412T161632763444Z-5aca3258",
+      "published_snapshot_ids": [
+        "20260412T161515Z-f7a529f8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 23
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 23
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ehonda",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 47,
+      "manifest_withheld_review_count": 23,
+      "manual_review_row_count": 23,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ehonda/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ehonda/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161632763444Z-5aca3258",
+      "published_snapshot_ids": [
+        "20260412T161515Z-f7a529f8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 23
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 23
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ehonda",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 36,
+      "manifest_withheld_review_count": 29,
+      "manual_review_row_count": 29,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ehonda/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ehonda/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214745885495Z-3729bdc2",
+      "published_snapshot_ids": [
+        "20260412T210510Z-c157f16c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 14
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 9
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 4,
+        "false_count": 25,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 29
+        }
+      ]
+    },
+    {
+      "character_slug": "elena",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 59,
+      "manifest_withheld_review_count": 20,
+      "manual_review_row_count": 20,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/elena/snapshot_manifest.json",
+      "manual_review_path": "data/exports/elena/official_raw_manual_review.json",
+      "published_run_id": "20260412T161634113045Z-76b94746",
+      "published_snapshot_ids": [
+        "20260412T161524Z-2649b57a"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 20
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 20
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "elena",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 59,
+      "manifest_withheld_review_count": 20,
+      "manual_review_row_count": 20,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/elena/snapshot_manifest.json",
+      "manual_review_path": "data/exports/elena/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161634113045Z-76b94746",
+      "published_snapshot_ids": [
+        "20260412T161524Z-2649b57a"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 20
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 20
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "elena",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 42,
+      "manifest_withheld_review_count": 40,
+      "manual_review_row_count": 40,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/elena/snapshot_manifest.json",
+      "manual_review_path": "data/exports/elena/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214050987636Z-21794606",
+      "published_snapshot_ids": [
+        "20260412T214050Z-b474cc50"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 7
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 15
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 15,
+        "false_count": 25,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 40
+        }
+      ]
+    },
+    {
+      "character_slug": "gouki_akuma",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 78,
+      "manifest_withheld_review_count": 13,
+      "manual_review_row_count": 13,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/gouki_akuma/snapshot_manifest.json",
+      "manual_review_path": "data/exports/gouki_akuma/official_raw_manual_review.json",
+      "published_run_id": "20260412T162058026535Z-47c6c73b",
+      "published_snapshot_ids": [
+        "20260412T161522Z-e5cef7e8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 13
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 13
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "gouki_akuma",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 78,
+      "manifest_withheld_review_count": 13,
+      "manual_review_row_count": 13,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/gouki_akuma/snapshot_manifest.json",
+      "manual_review_path": "data/exports/gouki_akuma/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162058026535Z-47c6c73b",
+      "published_snapshot_ids": [
+        "20260412T161522Z-e5cef7e8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 13
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 13
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "gouki_akuma",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 48,
+      "manifest_withheld_review_count": 43,
+      "manual_review_row_count": 43,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/gouki_akuma/snapshot_manifest.json",
+      "manual_review_path": "data/exports/gouki_akuma/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T212933329346Z-8fc98c4d",
+      "published_snapshot_ids": [
+        "20260412T212932Z-447e18a5"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 8
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 20
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 10
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 5,
+        "false_count": 38,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 43
+        }
+      ]
+    },
+    {
+      "character_slug": "guile",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 77,
+      "manifest_withheld_review_count": 3,
+      "manual_review_row_count": 3,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/guile/snapshot_manifest.json",
+      "manual_review_path": "data/exports/guile/official_raw_manual_review.json",
+      "published_run_id": "20260412T161632206516Z-73829415",
+      "published_snapshot_ids": [
+        "20260412T161511Z-2fcf0e43"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        },
+        {
+          "id": "official_total_parse_failed",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 3
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "guile",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 77,
+      "manifest_withheld_review_count": 3,
+      "manual_review_row_count": 3,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/guile/snapshot_manifest.json",
+      "manual_review_path": "data/exports/guile/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161632206516Z-73829415",
+      "published_snapshot_ids": [
+        "20260412T161511Z-2fcf0e43"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        },
+        {
+          "id": "official_total_parse_failed",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 3
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "guile",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 39,
+      "manifest_withheld_review_count": 28,
+      "manual_review_row_count": 28,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/guile/snapshot_manifest.json",
+      "manual_review_path": "data/exports/guile/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T205430167243Z-3f0d1d29",
+      "published_snapshot_ids": [
+        "20260412T205429Z-168d253c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 17
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 1,
+        "false_count": 27,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 28
+        }
+      ]
+    },
+    {
+      "character_slug": "jamie",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 74,
+      "manifest_withheld_review_count": 29,
+      "manual_review_row_count": 29,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/jamie/snapshot_manifest.json",
+      "manual_review_path": "data/exports/jamie/official_raw_manual_review.json",
+      "published_run_id": "20260412T161631973911Z-6391b88d",
+      "published_snapshot_ids": [
+        "20260412T161510Z-786a93e8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 29
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 29
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "jamie",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 74,
+      "manifest_withheld_review_count": 29,
+      "manual_review_row_count": 29,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/jamie/snapshot_manifest.json",
+      "manual_review_path": "data/exports/jamie/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161631973911Z-6391b88d",
+      "published_snapshot_ids": [
+        "20260412T161510Z-786a93e8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 29
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 29
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "jamie",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 43,
+      "manifest_withheld_review_count": 72,
+      "manual_review_row_count": 72,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/jamie/snapshot_manifest.json",
+      "manual_review_path": "data/exports/jamie/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T205051355609Z-2d1f9621",
+      "published_snapshot_ids": [
+        "20260412T205050Z-91a98446"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 37
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 14
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 7
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 14
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 14,
+        "false_count": 58,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 72
+        }
+      ]
+    },
+    {
+      "character_slug": "jp",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 61,
+      "manifest_withheld_review_count": 8,
+      "manual_review_row_count": 8,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/jp/snapshot_manifest.json",
+      "manual_review_path": "data/exports/jp/official_raw_manual_review.json",
+      "published_run_id": "20260412T151153138978Z-793a283a",
+      "published_snapshot_ids": [
+        "20260412T151014Z-6aeeace2"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 8
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 8
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "jp",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 61,
+      "manifest_withheld_review_count": 8,
+      "manual_review_row_count": 8,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/jp/snapshot_manifest.json",
+      "manual_review_path": "data/exports/jp/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T151153138978Z-793a283a",
+      "published_snapshot_ids": [
+        "20260412T151014Z-6aeeace2"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 8
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 8
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "jp",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 47,
+      "manifest_withheld_review_count": 17,
+      "manual_review_row_count": 17,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/jp/snapshot_manifest.json",
+      "manual_review_path": "data/exports/jp/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T211217352448Z-c5a9c944",
+      "published_snapshot_ids": [
+        "20260412T211216Z-8241f7b0"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 5
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 4,
+        "false_count": 13,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 17
+        }
+      ]
+    },
+    {
+      "character_slug": "juri",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 70,
+      "manifest_withheld_review_count": 17,
+      "manual_review_row_count": 17,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/juri/snapshot_manifest.json",
+      "manual_review_path": "data/exports/juri/official_raw_manual_review.json",
+      "published_run_id": "20260412T161632407559Z-5432d3e2",
+      "published_snapshot_ids": [
+        "20260412T161513Z-f21ab57c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 17
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 17
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "juri",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 70,
+      "manifest_withheld_review_count": 17,
+      "manual_review_row_count": 17,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/juri/snapshot_manifest.json",
+      "manual_review_path": "data/exports/juri/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161632407559Z-5432d3e2",
+      "published_snapshot_ids": [
+        "20260412T161513Z-f21ab57c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 17
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 17
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "juri",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 58,
+      "manifest_withheld_review_count": 29,
+      "manual_review_row_count": 29,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/juri/snapshot_manifest.json",
+      "manual_review_path": "data/exports/juri/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T205838976523Z-7126c41b",
+      "published_snapshot_ids": [
+        "20260412T205838Z-3fba7e0e"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 9
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 4,
+        "false_count": 25,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 29
+        }
+      ]
+    },
+    {
+      "character_slug": "ken",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 59,
+      "manifest_withheld_review_count": 17,
+      "manual_review_row_count": 17,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ken/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ken/official_raw_manual_review.json",
+      "published_run_id": "20260412T161946684105Z-f607fccf",
+      "published_snapshot_ids": [
+        "20260412T161513Z-83e39e41"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 17
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 17
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ken",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 59,
+      "manifest_withheld_review_count": 17,
+      "manual_review_row_count": 17,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ken/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ken/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161946684105Z-f607fccf",
+      "published_snapshot_ids": [
+        "20260412T161513Z-83e39e41"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 17
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 17
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ken",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 51,
+      "manifest_withheld_review_count": 24,
+      "manual_review_row_count": 24,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ken/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ken/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T205915248848Z-88f02197",
+      "published_snapshot_ids": [
+        "20260412T205914Z-7c1dea52"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 12
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 12,
+        "false_count": 12,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 24
+        }
+      ]
+    },
+    {
+      "character_slug": "kimberly",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 64,
+      "manifest_withheld_review_count": 22,
+      "manual_review_row_count": 22,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/kimberly/snapshot_manifest.json",
+      "manual_review_path": "data/exports/kimberly/official_raw_manual_review.json",
+      "published_run_id": "20260412T162056318523Z-2db599d4",
+      "published_snapshot_ids": [
+        "20260412T161512Z-b0731b91"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 22
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 22
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "kimberly",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 64,
+      "manifest_withheld_review_count": 22,
+      "manual_review_row_count": 22,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/kimberly/snapshot_manifest.json",
+      "manual_review_path": "data/exports/kimberly/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162056318523Z-2db599d4",
+      "published_snapshot_ids": [
+        "20260412T161512Z-b0731b91"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 22
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 22
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "kimberly",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 39,
+      "manifest_withheld_review_count": 45,
+      "manual_review_row_count": 45,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/kimberly/snapshot_manifest.json",
+      "manual_review_path": "data/exports/kimberly/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T205633260803Z-328b0030",
+      "published_snapshot_ids": [
+        "20260412T205632Z-302cf26c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 18
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 10
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 5,
+        "false_count": 40,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 45
+        }
+      ]
+    },
+    {
+      "character_slug": "lily",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 53,
+      "manifest_withheld_review_count": 21,
+      "manual_review_row_count": 21,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/lily/snapshot_manifest.json",
+      "manual_review_path": "data/exports/lily/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633290127Z-92ea3b61",
+      "published_snapshot_ids": [
+        "20260412T161519Z-400d530c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 21
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 21
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "lily",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 53,
+      "manifest_withheld_review_count": 21,
+      "manual_review_row_count": 21,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/lily/snapshot_manifest.json",
+      "manual_review_path": "data/exports/lily/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633290127Z-92ea3b61",
+      "published_snapshot_ids": [
+        "20260412T161519Z-400d530c"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 21
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 21
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "lily",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 34,
+      "manifest_withheld_review_count": 41,
+      "manual_review_row_count": 41,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/lily/snapshot_manifest.json",
+      "manual_review_path": "data/exports/lily/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T211637048039Z-7c8d4dea",
+      "published_snapshot_ids": [
+        "20260412T211636Z-57501bca"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 10
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 19
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 10
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 2,
+        "false_count": 39,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 41
+        }
+      ]
+    },
+    {
+      "character_slug": "luke",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 74,
+      "manifest_withheld_review_count": 2,
+      "manual_review_row_count": 2,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/luke/snapshot_manifest.json",
+      "manual_review_path": "data/exports/luke/official_raw_manual_review.json",
+      "published_run_id": "20260412T151204334951Z-7bf49ced",
+      "published_snapshot_ids": [
+        "20260412T151014Z-a610a92d"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 2
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "luke",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 74,
+      "manifest_withheld_review_count": 2,
+      "manual_review_row_count": 2,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/luke/snapshot_manifest.json",
+      "manual_review_path": "data/exports/luke/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T151204334951Z-7bf49ced",
+      "published_snapshot_ids": [
+        "20260412T151014Z-a610a92d"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 2
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "luke",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 69,
+      "manifest_withheld_review_count": 5,
+      "manual_review_row_count": 5,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/luke/snapshot_manifest.json",
+      "manual_review_path": "data/exports/luke/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T204844949295Z-7e78e3a5",
+      "published_snapshot_ids": [
+        "20260412T204844Z-a2b354b1"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 3
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 1
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 1,
+        "false_count": 4,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 5
+        }
+      ]
+    },
+    {
+      "character_slug": "mai",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 66,
+      "manifest_withheld_review_count": 24,
+      "manual_review_row_count": 24,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/mai/snapshot_manifest.json",
+      "manual_review_path": "data/exports/mai/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633995301Z-a63b54d9",
+      "published_snapshot_ids": [
+        "20260412T161523Z-142c38ef"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 24
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 24
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "mai",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 66,
+      "manifest_withheld_review_count": 24,
+      "manual_review_row_count": 24,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/mai/snapshot_manifest.json",
+      "manual_review_path": "data/exports/mai/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633995301Z-a63b54d9",
+      "published_snapshot_ids": [
+        "20260412T161523Z-142c38ef"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 24
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 24
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "mai",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 41,
+      "manifest_withheld_review_count": 46,
+      "manual_review_row_count": 46,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/mai/snapshot_manifest.json",
+      "manual_review_path": "data/exports/mai/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T213747015227Z-5423b024",
+      "published_snapshot_ids": [
+        "20260412T213746Z-5ee126b8"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 11
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 26
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 3
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 3,
+        "false_count": 43,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 46
+        }
+      ]
+    },
+    {
+      "character_slug": "manon",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 51,
+      "manifest_withheld_review_count": 8,
+      "manual_review_row_count": 8,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/manon/snapshot_manifest.json",
+      "manual_review_path": "data/exports/manon/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633019758Z-95fac20e",
+      "published_snapshot_ids": [
+        "20260412T161516Z-aedf1008"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 8
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 8
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "manon",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 51,
+      "manifest_withheld_review_count": 8,
+      "manual_review_row_count": 8,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/manon/snapshot_manifest.json",
+      "manual_review_path": "data/exports/manon/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633019758Z-95fac20e",
+      "published_snapshot_ids": [
+        "20260412T161516Z-aedf1008"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 8
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 8
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "manon",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 45,
+      "manifest_withheld_review_count": 15,
+      "manual_review_row_count": 15,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/manon/snapshot_manifest.json",
+      "manual_review_path": "data/exports/manon/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T210709024222Z-fe64b007",
+      "published_snapshot_ids": [
+        "20260412T210708Z-de6f395a"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 5
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 1
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 7
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 7,
+        "false_count": 8,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 15
+        }
+      ]
+    },
+    {
+      "character_slug": "marisa",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 89,
+      "manifest_withheld_review_count": 2,
+      "manual_review_row_count": 2,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/marisa/snapshot_manifest.json",
+      "manual_review_path": "data/exports/marisa/official_raw_manual_review.json",
+      "published_run_id": "20260412T162057248016Z-ac8aaef8",
+      "published_snapshot_ids": [
+        "20260412T161517Z-529a56d1"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 2
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "marisa",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 89,
+      "manifest_withheld_review_count": 2,
+      "manual_review_row_count": 2,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/marisa/snapshot_manifest.json",
+      "manual_review_path": "data/exports/marisa/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162057248016Z-ac8aaef8",
+      "published_snapshot_ids": [
+        "20260412T161517Z-529a56d1"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 2
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "marisa",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 73,
+      "manifest_withheld_review_count": 17,
+      "manual_review_row_count": 17,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/marisa/snapshot_manifest.json",
+      "manual_review_path": "data/exports/marisa/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T211013082480Z-a5ca6ae9",
+      "published_snapshot_ids": [
+        "20260412T211012Z-72a84215"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 10
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 5
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 1
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 1,
+        "false_count": 16,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 17
+        }
+      ]
+    },
+    {
+      "character_slug": "rashid",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 72,
+      "manifest_withheld_review_count": 13,
+      "manual_review_row_count": 13,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/rashid/snapshot_manifest.json",
+      "manual_review_path": "data/exports/rashid/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633468719Z-e16f6ab2",
+      "published_snapshot_ids": [
+        "20260412T161520Z-c1af6585"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 13
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 13
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "rashid",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 72,
+      "manifest_withheld_review_count": 13,
+      "manual_review_row_count": 13,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/rashid/snapshot_manifest.json",
+      "manual_review_path": "data/exports/rashid/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633468719Z-e16f6ab2",
+      "published_snapshot_ids": [
+        "20260412T161520Z-c1af6585"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 13
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 13
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "rashid",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 45,
+      "manifest_withheld_review_count": 34,
+      "manual_review_row_count": 34,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/rashid/snapshot_manifest.json",
+      "manual_review_path": "data/exports/rashid/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T212020581683Z-c480ffb0",
+      "published_snapshot_ids": [
+        "20260412T212019Z-7e4c58e2"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 14
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 2,
+        "false_count": 32,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 34
+        }
+      ]
+    },
+    {
+      "character_slug": "ryu",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 63,
+      "manifest_withheld_review_count": 12,
+      "manual_review_row_count": 12,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ryu/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ryu/official_raw_manual_review.json",
+      "published_run_id": "20260412T161631853995Z-9cb09979",
+      "published_snapshot_ids": [
+        "20260412T161509Z-eee70350"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 12
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 12
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ryu",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 63,
+      "manifest_withheld_review_count": 12,
+      "manual_review_row_count": 12,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ryu/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ryu/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161631853995Z-9cb09979",
+      "published_snapshot_ids": [
+        "20260412T161509Z-eee70350"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 12
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 12
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "ryu",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 49,
+      "manifest_withheld_review_count": 28,
+      "manual_review_row_count": 28,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/ryu/snapshot_manifest.json",
+      "manual_review_path": "data/exports/ryu/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T204540746531Z-d5a1b389",
+      "published_snapshot_ids": [
+        "20260412T204539Z-71ff24af"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 14
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 8
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 8,
+        "false_count": 20,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 28
+        }
+      ]
+    },
+    {
+      "character_slug": "sagat",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 65,
+      "manifest_withheld_review_count": 5,
+      "manual_review_row_count": 5,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/sagat/snapshot_manifest.json",
+      "manual_review_path": "data/exports/sagat/official_raw_manual_review.json",
+      "published_run_id": "20260412T162058584225Z-f22864af",
+      "published_snapshot_ids": [
+        "20260412T161525Z-6f955abc"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 5
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "sagat",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 65,
+      "manifest_withheld_review_count": 5,
+      "manual_review_row_count": 5,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/sagat/snapshot_manifest.json",
+      "manual_review_path": "data/exports/sagat/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162058584225Z-f22864af",
+      "published_snapshot_ids": [
+        "20260412T161525Z-6f955abc"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 5
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "sagat",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 53,
+      "manifest_withheld_review_count": 16,
+      "manual_review_row_count": 16,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/sagat/snapshot_manifest.json",
+      "manual_review_path": "data/exports/sagat/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214834701973Z-540b6510",
+      "published_snapshot_ids": [
+        "20260412T214829Z-28e9df44"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 3
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 7
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 4,
+        "false_count": 12,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 16
+        }
+      ]
+    },
+    {
+      "character_slug": "terry",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 61,
+      "manifest_withheld_review_count": 5,
+      "manual_review_row_count": 5,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/terry/snapshot_manifest.json",
+      "manual_review_path": "data/exports/terry/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633880923Z-93e5fd8b",
+      "published_snapshot_ids": [
+        "20260412T161523Z-fc92d323"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 5
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "terry",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 61,
+      "manifest_withheld_review_count": 5,
+      "manual_review_row_count": 5,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/terry/snapshot_manifest.json",
+      "manual_review_path": "data/exports/terry/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633880923Z-93e5fd8b",
+      "published_snapshot_ids": [
+        "20260412T161523Z-fc92d323"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 5
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "terry",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 50,
+      "manifest_withheld_review_count": 16,
+      "manual_review_row_count": 16,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/terry/snapshot_manifest.json",
+      "manual_review_path": "data/exports/terry/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T213443076506Z-09c4b00d",
+      "published_snapshot_ids": [
+        "20260412T213442Z-a27a5cb6"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 6
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 4
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 2
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 2,
+        "false_count": 14,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 16
+        }
+      ]
+    },
+    {
+      "character_slug": "vega_mbison",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 52,
+      "manifest_withheld_review_count": 20,
+      "manual_review_row_count": 20,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/vega_mbison/snapshot_manifest.json",
+      "manual_review_path": "data/exports/vega_mbison/official_raw_manual_review.json",
+      "published_run_id": "20260412T162058141749Z-cc7fc6be",
+      "published_snapshot_ids": [
+        "20260412T161522Z-d61a7dff"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 20
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 20
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "vega_mbison",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 52,
+      "manifest_withheld_review_count": 20,
+      "manual_review_row_count": 20,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/vega_mbison/snapshot_manifest.json",
+      "manual_review_path": "data/exports/vega_mbison/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T162058141749Z-cc7fc6be",
+      "published_snapshot_ids": [
+        "20260412T161522Z-d61a7dff"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 20
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 20
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "vega_mbison",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 27,
+      "manifest_withheld_review_count": 48,
+      "manual_review_row_count": 48,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/vega_mbison/snapshot_manifest.json",
+      "manual_review_path": "data/exports/vega_mbison/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T214747813023Z-2ef67327",
+      "published_snapshot_ids": [
+        "20260412T213236Z-83650a27"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 11
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 20
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 12
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 5
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 5,
+        "false_count": 43,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 48
+        }
+      ]
+    },
+    {
+      "character_slug": "zangief",
+      "dataset": "official_raw",
+      "publication_state": "available",
+      "published_record_count": 68,
+      "manifest_withheld_review_count": 4,
+      "manual_review_row_count": 4,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/zangief/snapshot_manifest.json",
+      "manual_review_path": "data/exports/zangief/official_raw_manual_review.json",
+      "published_run_id": "20260412T161633184111Z-5ef335c3",
+      "published_snapshot_ids": [
+        "20260412T161518Z-44ac8649"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 4
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "zangief",
+      "dataset": "derived_metrics",
+      "publication_state": "available",
+      "published_record_count": 68,
+      "manifest_withheld_review_count": 4,
+      "manual_review_row_count": 4,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/zangief/snapshot_manifest.json",
+      "manual_review_path": "data/exports/zangief/derived_metrics_manual_review.json",
+      "published_run_id": "20260412T161633184111Z-5ef335c3",
+      "published_snapshot_ids": [
+        "20260412T161518Z-44ac8649"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "official_active_ambiguous",
+          "row_count": 4
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 0,
+        "false_count": 0,
+        "null_count": 4
+      },
+      "confirmation_status_counts": []
+    },
+    {
+      "character_slug": "zangief",
+      "dataset": "supercombo_enrichment",
+      "publication_state": "available",
+      "published_record_count": 48,
+      "manifest_withheld_review_count": 20,
+      "manual_review_row_count": 20,
+      "manual_review_count_matches_manifest": true,
+      "snapshot_manifest_path": "data/exports/zangief/snapshot_manifest.json",
+      "manual_review_path": "data/exports/zangief/supercombo_enrichment_manual_review.json",
+      "published_run_id": "20260412T211429884239Z-ff8f3f9f",
+      "published_snapshot_ids": [
+        "20260412T211429Z-385c15f2"
+      ],
+      "reason_code_counts": [
+        {
+          "id": "supercombo_binding_collision",
+          "row_count": 2
+        },
+        {
+          "id": "supercombo_binding_excluded",
+          "row_count": 14
+        },
+        {
+          "id": "supercombo_binding_one_to_many",
+          "row_count": 3
+        },
+        {
+          "id": "supercombo_missing_official_safe_row",
+          "row_count": 1
+        }
+      ],
+      "publish_eligible_counts": {
+        "true_count": 1,
+        "false_count": 19,
+        "null_count": 0
+      },
+      "confirmation_status_counts": [
+        {
+          "id": "not_required",
+          "row_count": 20
+        }
+      ]
+    }
+  ]
+}

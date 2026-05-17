@@ -752,6 +752,39 @@
         "contracts/frame-current-runtime-assets.md"
       ],
       "notes": "Manual-review sidecars record withheld or unresolved rows and must not feed normal public answer authority."
+    },
+    {
+      "id": "manual_review_debt_index",
+      "title": "Manual Review Debt Index",
+      "path_globs": [
+        "data/exports/_index/manual-review-debt.json"
+      ],
+      "path_state": "tracked_present",
+      "surface_role": "derived",
+      "authority_scope": "manual-review observability only",
+      "source_of_truth": [
+        "data/exports"
+      ],
+      "generated": true,
+      "generator": "tests/validation/validate-manual-review-debt-index.ps1 -Update",
+      "source_paths": [
+        "data/exports/*/snapshot_manifest.json",
+        "data/exports/*/*_manual_review.json"
+      ],
+      "allowed_to_edit_directly": false,
+      "public_distribution_status": "not_distribution",
+      "normal_public_answer_authority": false,
+      "validation_expectation": [
+        "manual_review_debt_index_fresh",
+        "manual_review_not_runtime",
+        "not_normal_public_answer_authority"
+      ],
+      "policy_refs": [
+        "AGENTS.md",
+        "data/exports/README.md",
+        "contracts/manual-review-debt-index.schema.json"
+      ],
+      "notes": "Generated summary of withheld row counts, reason-code counts, and published dataset state. It is not current-fact authority."
     }
   ]
 }
