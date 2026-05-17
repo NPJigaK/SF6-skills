@@ -36,3 +36,8 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 
 - `agent-toolchain.schema.json`: maintainer agent toolchain policy contract for reviewed capabilities and freshness expectations.
 - `data/toolchain/`: canonical maintainer-toolchain policy data, not SF6 gameplay knowledge or exact current-fact authority.
+
+## Repository Surface Registry
+
+- `repository-surface.schema.json`: machine-readable index contract for canonical, derived, deferred legacy, repo-local support, historical, and non-canonical repository surfaces.
+- `data/repository-surfaces.json`: seed registry of existing reviewed boundaries. The registry indexes current policy; it does not replace `AGENTS.md`, ADRs, workflows, or validators as policy sources yet.
