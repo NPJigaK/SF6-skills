@@ -1,5 +1,7 @@
 # skill-packaging
 
+Package classification: `shared_infra`.
+
 Shared packaging scripts live here.
 
 `build-release-bundle.ps1` is deferred public distribution tooling. ADR-0004
@@ -10,7 +12,8 @@ reference:
 
 Current entrypoints:
 
-- `build-frame-current-runtime-assets.ps1`
-- `build-release-bundle.ps1`
+- `build-frame-current-runtime-assets.ps1`: `active_repo_local`
+- `build-normalization-runtime-assets.ps1`: `active_repo_local`
+- `build-release-bundle.ps1`: `deferred_distribution`
 
 `build-release-bundle.ps1` packages only `skills/sf6-agent/**` under the archive root `sf6-agent/` and writes `.dist/sf6-agent-bundle.zip`.

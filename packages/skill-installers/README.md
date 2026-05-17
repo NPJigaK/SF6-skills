@@ -1,5 +1,7 @@
 # skill-installers
 
+Package classification: `deferred_distribution`.
+
 Deferred legacy installer scripts live here. ADR-0004 keeps this package only as
 interim `legacy-distribution` lane coverage until the public `skills/sf6-agent/`
 adapter is removed after runtime payload relocation. Policy reference:
