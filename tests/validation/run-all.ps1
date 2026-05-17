@@ -76,6 +76,7 @@ $readOnlyValidationScripts = @(
   'tests/validation/validate-no-video-binary-assets.ps1',
   'tests/validation/validate-combo-damage-fixtures.ps1',
   'tests/validation/validate-evals.ps1',
+  'tests/validation/validate-eval-score-reports.ps1',
   'tests/validation/validate-roster-source.ps1',
   'tests/validation/validate-raw-snapshot-minimality.ps1',
   'tests/validation/validate-raw-snapshot-retention-adr.ps1',

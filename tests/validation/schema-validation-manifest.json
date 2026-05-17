@@ -61,6 +61,14 @@
         "data/exports/_index/manual-review-debt.json"
       ],
       "notes": "Structural manual-review debt index shape only; validate-manual-review-debt-index.ps1 remains generated-drift authority."
+    },
+    {
+      "id": "eval_score_reports",
+      "schema_path": "contracts/eval-score-report.schema.json",
+      "document_globs": [
+        "tests/fixtures/eval-score-reports/*.json"
+      ],
+      "notes": "Structural score report shape only; validate-eval-score-reports.ps1 remains semantic authority."
     }
   ]
 }
