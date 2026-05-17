@@ -10,7 +10,7 @@ $allowedStatuses = @(
   'not_run',
   'trace_generated',
   'hypothetical_arithmetic_only',
-  'blocked_missing_input_authority',
+  'blocked_missing_input_reference',
   'blocked_missing_calculation_instruction',
   'blocked_missing_rounding_instruction',
   'blocked_ambiguous_route',
@@ -23,7 +23,7 @@ $blockedOrNonPublicStatuses = @(
   'not_run',
   'trace_generated',
   'hypothetical_arithmetic_only',
-  'blocked_missing_input_authority',
+  'blocked_missing_input_reference',
   'blocked_missing_calculation_instruction',
   'blocked_missing_rounding_instruction',
   'blocked_ambiguous_route',
@@ -99,7 +99,7 @@ foreach ($fixtureFile in $fixtureFiles) {
     'calculation_intent',
     'question_scope',
     'input_values',
-    'input_authority_refs',
+    'input_reference_refs',
     'input_status',
     'calculation_instruction_ref',
     'calculation_instruction_status',
@@ -131,6 +131,12 @@ foreach ($fixtureFile in $fixtureFiles) {
   }
   if ($trace.accepted_current_fact_authority -ne $false) {
     Add-Issue ([ref]$issues) "$relativePath output must not be accepted current-fact authority"
+  }
+  if ($trace.PSObject.Properties.Name -contains 'input_authority_refs') {
+    Add-Issue ([ref]$issues) "$relativePath output must use input_reference_refs, not input_authority_refs"
+  }
+  if ($trace.input_status -eq 'accepted') {
+    Add-Issue ([ref]$issues) "$relativePath calculation traces must not use input_status accepted"
   }
   if ($trace.generated_reference_allowed -ne $false) {
     Add-Issue ([ref]$issues) "$relativePath output must not feed generated references"
@@ -179,9 +185,19 @@ foreach ($fixtureFile in $fixtureFiles) {
   }
 
   $rawFixtureText = Get-Content -LiteralPath $fixtureFile.FullName -Raw -Encoding UTF8
-  foreach ($forbidden in @('Hermes memory', 'raw transcript', 'credential', 'secret', 'token', 'official_raw override')) {
+  foreach ($forbidden in @(
+    'Hermes memory',
+    'raw transcript',
+    'credential',
+    'secret',
+    'token',
+    'official_raw override',
+    'input_authority_refs',
+    'blocked_missing_input_authority',
+    '"input_status": "accepted"'
+  )) {
     if ($rawFixtureText -match [regex]::Escape($forbidden)) {
-      Add-Issue ([ref]$issues) "$relativePath contains forbidden local-state or authority text: $forbidden"
+      Add-Issue ([ref]$issues) "$relativePath contains forbidden local-state or stale authority text: $forbidden"
     }
   }
 }

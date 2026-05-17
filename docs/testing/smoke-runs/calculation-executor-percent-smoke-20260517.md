@@ -49,11 +49,11 @@ python packages/calculation-executor/sf6_calculation_executor.py \
 - The trace is not formula authority.
 - The trace is not rounding authority.
 - The trace is not current-fact authority.
-- The fixture has no `input_authority_refs` because the values are
-  hypothetical.
-- The trace does not cite `data/exports/`, `data/roster`, `official_raw`,
-  generated references, video observations, review-only candidates, or combo
-  fixtures as current-fact authority.
+- The fixture has no non-hypothetical `input_reference_refs` because the values
+  are hypothetical.
+- The trace does not cite generated references, video observations,
+  review-only candidates, combo fixtures, or current-fact surfaces as
+  calculation authority.
 - The trace must not support public current-fact answers.
 
 ## What Was Not Done

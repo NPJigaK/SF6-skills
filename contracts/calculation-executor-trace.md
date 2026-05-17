@@ -66,9 +66,11 @@ Minimum fields:
   `punish_window_arithmetic`, or `oki_timing_arithmetic`.
 - `question_scope`: short natural-language scope of the calculation.
 - `input_values`: all numeric or symbolic inputs used by the executor.
-- `input_authority_refs`: source refs for every non-hypothetical input.
-- `input_status`: one of `accepted`, `review_only`, `hypothetical`, `mixed`, or
-  `hold`.
+- `input_reference_refs`: provenance or source refs for every
+  non-hypothetical input. These refs document where an input came from; they do
+  not make the input authoritative for calculation answers.
+- `input_status`: one of `referenced`, `review_only`, `hypothetical`, `mixed`,
+  or `hold`.
 - `calculation_instruction_ref`: reviewed maintainer instruction, skill, or
   handoff reference used to tell a trusted external backend what to compute.
 - `calculation_instruction_status`: one of `external_backend_candidate`,
@@ -113,9 +115,8 @@ Use one of these values for `status`:
   accepted current fact.
 - `hypothetical_arithmetic_only`: values were user-provided, hypothetical, or
   review-only; the executor checked arithmetic consistency only.
-- `blocked_missing_input_authority`: an input is absent from `data/exports/`,
-  `data/roster`, packaged `official_raw`, or another accepted authority
-  surface.
+- `blocked_missing_input_reference`: an input lacks a reviewable provenance or
+  reference for the requested calculation trace.
 - `blocked_missing_calculation_instruction`: calculation instruction, scaling
   guidance, timing guidance, or exception handling is missing or held.
 - `blocked_missing_rounding_instruction`: rounding, floor, ceiling,
@@ -145,8 +146,9 @@ For hypothetical questions, the adapter may compute arithmetic consistency only
 if it states that the values are hypothetical or review-only and not accepted
 current SF6 truth.
 
-For exact current move facts, public answers remain grounded in packaged
-frame-current authority derived from `data/exports/` and `data/roster`. For
+For move-specific current facts, public answers use the separate packaged
+frame-current current-fact surfaces when available. Calculation traces do not
+promote those facts into formula, rounding, or calculation authority. For
 route-level formulas, combo damage, meaty or oki timing, punish windows,
 resource/damage calculations, or rounding questions, hold unless a later
 architecture decision reopens this boundary.
@@ -167,10 +169,9 @@ authority by themselves:
 
 ## Future Validation
 
-This docs-only contract does not create stored trace artifacts or a trace JSON
-schema. A later PR may add:
+This contract is paired with `contracts/calculation-trace.schema.json`. A later
+PR may add:
 
-- `contracts/calculation-trace.schema.json`;
 - `tests/validation/validate-calculation-traces.ps1`;
 - validators that reject `accepted_current_fact_authority: true`;
 - validators requiring external-backend instruction refs for selected trace

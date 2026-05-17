@@ -23,8 +23,8 @@ python packages/calculation-executor/sf6_calculation_executor.py \
   script rather than doing arithmetic in natural language.
 - Codex must audit the trace against `contracts/calculation-executor-trace.md`
   and `contracts/calculation-trace.schema.json`.
-- Missing input, formula, rounding, route, timing, or authority context must
-  produce blocked or hold behavior.
+- Missing input provenance, formula instruction, rounding instruction, route,
+  or timing context must produce blocked or hold behavior.
 - Do not use the executor to discover SF6 facts, infer formulas, scrape data, or
   make public answers.
 
@@ -33,4 +33,4 @@ python packages/calculation-executor/sf6_calculation_executor.py \
 Use the executor for generic arithmetic and hypothetical consistency checks
 only. Do not encode combo damage, scaling tables, minimum guarantees, frame
 advantage interpretation, punish-window logic, or meaty/oki timing rules until
-accepted authority exists.
+a later reviewed backend-instruction policy exists.
