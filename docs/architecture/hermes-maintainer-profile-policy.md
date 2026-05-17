@@ -141,6 +141,11 @@ requirements. See:
 - https://hermes-agent.nousresearch.com/docs/user-guide/configuration/
 - https://hermes-agent.nousresearch.com/docs/user-guide/security
 
+After #231, external Agent Skill dependencies are managed by
+`docs/architecture/agent-skill-dependency-policy.md` and
+`tools/agent-skills/apm.yml`. The manifest is maintainer-only and does not
+reactivate public `sf6-agent` distribution.
+
 ## Profile Distribution Boundary
 
 Profile Distribution may be useful later for sharing the shape of a private

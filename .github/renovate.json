@@ -25,9 +25,33 @@
       "matchStrings": [
         "renovate-version:\\s*(?<currentValue>\\S+)\\s+#\\s*renovate:\\s*datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)"
       ]
+    },
+    {
+      "customType": "regex",
+      "description": "Update pinned external Agent Skill dependencies managed by the maintainer APM manifest.",
+      "managerFilePatterns": [
+        "/^tools\\/agent-skills\\/apm\\.yml$/"
+      ],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>git-tags|git-refs)\\s+depName=(?<depName>\\S+)\\s*\\n\\s*-\\s*\\S+#(?<currentValue>[^\\s@]+)"
+      ]
     }
   ],
   "packageRules": [
+    {
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchFileNames": [
+        "tools/agent-skills/apm.yml"
+      ],
+      "groupName": "Agent Skill APM dependencies",
+      "labels": [
+        "dependencies",
+        "toolchain",
+        "agent-skills"
+      ]
+    },
     {
       "matchManagers": [
         "nix"
