@@ -21,3 +21,10 @@ Hermes maintainer profile expectations may also include repo-managed skill
 selection policy for `sf6ingest`. That policy narrows expected built-in skill
 use for repo-local maintainer work, but it is not installed skill state, local
 skill configuration, or an exported Hermes profile.
+
+`hermes-maintainer-skill-allowlist.json` is the machine-readable allowlist
+policy for the private `sf6ingest` profile. It separates built-in default
+skills, built-in conditional skills, external APM-managed skills, deferred
+candidates, and forbidden categories. It is policy data only; it is not local
+Hermes profile state, an installed skill list, or public `sf6-agent`
+distribution metadata.

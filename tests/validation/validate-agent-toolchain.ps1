@@ -36,6 +36,62 @@ function Assert-Property {
   }
 }
 
+function Get-ManifestItemIds {
+  param(
+    [AllowNull()][object]$Items,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues
+  )
+
+  $ids = @()
+  if ($null -eq $Items) {
+    return $ids
+  }
+
+  foreach ($item in @($Items)) {
+    if ($null -eq $item) {
+      $Issues.Value += "$Context contains null item"
+      continue
+    }
+    Assert-Property $item 'id' $Context $Issues
+    if (Test-Property $item 'id') {
+      $id = [string]$item.id
+      if ([string]::IsNullOrWhiteSpace($id)) {
+        $Issues.Value += "$Context contains empty id"
+      } else {
+        $ids += $id
+      }
+    }
+  }
+
+  $uniqueIds = @($ids | Select-Object -Unique)
+  if ($ids.Count -ne $uniqueIds.Count) {
+    $Issues.Value += "$Context contains duplicate ids"
+  }
+
+  return $ids
+}
+
+function Assert-SetEquals {
+  param(
+    [Parameter(Mandatory = $true)][string[]]$Actual,
+    [Parameter(Mandatory = $true)][string[]]$Expected,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues
+  )
+
+  foreach ($expectedItem in $Expected) {
+    if ($Actual -notcontains $expectedItem) {
+      $Issues.Value += "$Context missing item: $expectedItem"
+    }
+  }
+  foreach ($actualItem in $Actual) {
+    if ($Expected -notcontains $actualItem) {
+      $Issues.Value += "$Context has unexpected item: $actualItem"
+    }
+  }
+}
+
 function Get-ToolchainRelativePath {
   param([Parameter(Mandatory = $true)][string]$FullPath)
 
@@ -113,7 +169,9 @@ $requiredFiles = @(
   'flake.lock',
   'flake.nix',
   $schemaPath,
+  'contracts/hermes-maintainer-skill-allowlist.schema.json',
   'data/toolchain/README.md',
+  'data/toolchain/hermes-maintainer-skill-allowlist.json',
   $manifestPath,
   'tools/agent-skills/.gitignore',
   'tools/agent-skills/apm.lock.yaml',
@@ -178,6 +236,31 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $schemaPath) -PathType Leaf) {
   }
 }
 
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'contracts/hermes-maintainer-skill-allowlist.schema.json') -PathType Leaf) {
+  $allowlistSchema = Read-Json 'contracts/hermes-maintainer-skill-allowlist.schema.json'
+  foreach ($field in @('$schema', '$id', 'title', 'additionalProperties')) {
+    Assert-Property $allowlistSchema $field 'contracts/hermes-maintainer-skill-allowlist.schema.json' ([ref]$issues)
+  }
+  if ((Test-Property $allowlistSchema 'additionalProperties') -and $allowlistSchema.additionalProperties -ne $false) {
+    $issues += 'Hermes maintainer skill allowlist schema must set additionalProperties to false'
+  }
+  $allowlistSchemaText = Read-Text 'contracts/hermes-maintainer-skill-allowlist.schema.json'
+  foreach ($needle in @(
+    'hermes-maintainer-skill-allowlist/v1',
+    'sf6ingest',
+    'repo_maintainer_profiles_only',
+    'policy_expectation_not_runtime_state',
+    'public_sf6_agent_distribution_deferred',
+    'do_not_commit_local_hermes_profile_state',
+    'external_apm',
+    'reviewed_tag_or_immutable_sha_required'
+  )) {
+    if ($allowlistSchemaText -notmatch [regex]::Escape($needle)) {
+      $issues += "contracts/hermes-maintainer-skill-allowlist.schema.json missing required text: $needle"
+    }
+  }
+}
+
 if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/toolchain/README.md') -PathType Leaf) {
   $readme = Read-Text 'data/toolchain/README.md'
   foreach ($needle in @(
@@ -189,7 +272,10 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/toolchain/README.md') -Pat
     'local configs',
     'sessions',
     'caches',
-    'logs'
+    'logs',
+    'hermes-maintainer-skill-allowlist.json',
+    'built-in default',
+    'external APM-managed'
   )) {
     if ($readme -notmatch [regex]::Escape($needle)) {
       $issues += "data/toolchain/README.md missing boundary text: $needle"
@@ -398,11 +484,217 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.lock.yam
   }
 }
 
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/toolchain/hermes-maintainer-skill-allowlist.json') -PathType Leaf) {
+  $skillAllowlist = Read-Json 'data/toolchain/hermes-maintainer-skill-allowlist.json'
+  foreach ($field in @(
+    'schema_version',
+    'last_reviewed',
+    'tracking_issue',
+    'profile',
+    'scope',
+    'status',
+    'public_distribution_boundary',
+    'local_state_boundary',
+    'default_activation_rule',
+    'builtin_default_skills',
+    'builtin_conditional_skills',
+    'external_apm_skills',
+    'deferred_candidates',
+    'forbidden_categories',
+    'review_commands',
+    'source_refs'
+  )) {
+    Assert-Property $skillAllowlist $field 'data/toolchain/hermes-maintainer-skill-allowlist.json' ([ref]$issues)
+  }
+
+  $expectedAllowlistValues = @{
+    'schema_version' = 'hermes-maintainer-skill-allowlist/v1'
+    'tracking_issue' = '#279'
+    'profile' = 'sf6ingest'
+    'scope' = 'repo_maintainer_profiles_only'
+    'status' = 'policy_expectation_not_runtime_state'
+    'public_distribution_boundary' = 'public_sf6_agent_distribution_deferred'
+    'local_state_boundary' = 'do_not_commit_local_hermes_profile_state'
+  }
+  foreach ($field in $expectedAllowlistValues.Keys) {
+    if ((Test-Property $skillAllowlist $field) -and [string]$skillAllowlist.$field -ne $expectedAllowlistValues[$field]) {
+      $issues += "Hermes skill allowlist $field must be $($expectedAllowlistValues[$field])"
+    }
+  }
+
+  $defaultAllowlistIds = Get-ManifestItemIds $skillAllowlist.builtin_default_skills 'Hermes skill allowlist builtin_default_skills' ([ref]$issues)
+  $conditionalAllowlistIds = Get-ManifestItemIds $skillAllowlist.builtin_conditional_skills 'Hermes skill allowlist builtin_conditional_skills' ([ref]$issues)
+  $externalAllowlistIds = Get-ManifestItemIds $skillAllowlist.external_apm_skills 'Hermes skill allowlist external_apm_skills' ([ref]$issues)
+  $deferredAllowlistIds = Get-ManifestItemIds $skillAllowlist.deferred_candidates 'Hermes skill allowlist deferred_candidates' ([ref]$issues)
+  $forbiddenAllowlistIds = Get-ManifestItemIds $skillAllowlist.forbidden_categories 'Hermes skill allowlist forbidden_categories' ([ref]$issues)
+
+  foreach ($id in $defaultAllowlistIds) {
+    if ($conditionalAllowlistIds -contains $id) {
+      $issues += "Hermes skill allowlist must not list $id as both default and conditional"
+    }
+    if ($externalAllowlistIds -contains $id) {
+      $issues += "Hermes skill allowlist must not list $id as both built-in default and external APM"
+    }
+  }
+  foreach ($id in $conditionalAllowlistIds) {
+    if ($externalAllowlistIds -contains $id) {
+      $issues += "Hermes skill allowlist must not list $id as both built-in conditional and external APM"
+    }
+  }
+
+  foreach ($requiredDefaultSkill in @(
+    'hermes-agent',
+    'codex',
+    'codebase-inspection',
+    'github-issues',
+    'github-pr-workflow',
+    'github-code-review',
+    'github-repo-management',
+    'writing-plans',
+    'systematic-debugging',
+    'test-driven-development',
+    'requesting-code-review',
+    'spike',
+    'subagent-driven-development'
+  )) {
+    if ($defaultAllowlistIds -notcontains $requiredDefaultSkill) {
+      $issues += "Hermes skill allowlist default set missing: $requiredDefaultSkill"
+    }
+  }
+
+  foreach ($requiredConditionalSkill in @(
+    'youtube-content',
+    'ocr-and-documents',
+    'blogwatcher',
+    'dspy',
+    'kanban-orchestrator',
+    'kanban-worker',
+    'jupyter-live-kernel'
+  )) {
+    if ($conditionalAllowlistIds -notcontains $requiredConditionalSkill) {
+      $issues += "Hermes skill allowlist conditional set missing: $requiredConditionalSkill"
+    }
+    if ($defaultAllowlistIds -contains $requiredConditionalSkill) {
+      $issues += "Hermes skill allowlist must not default-enable conditional skill: $requiredConditionalSkill"
+    }
+  }
+
+  if ($externalAllowlistIds -notcontains 'sympy') {
+    $issues += 'Hermes skill allowlist external_apm_skills must include sympy'
+  }
+  if ($defaultAllowlistIds -contains 'sympy' -or $conditionalAllowlistIds -contains 'sympy') {
+    $issues += 'Hermes skill allowlist must not classify sympy as a built-in skill'
+  }
+
+  if (Test-Property $skillAllowlist 'external_apm_skills') {
+    foreach ($externalSkill in @($skillAllowlist.external_apm_skills)) {
+      if ((Test-Property $externalSkill 'id') -and [string]$externalSkill.id -eq 'sympy') {
+        $expectedExternalValues = @{
+          'source_kind' = 'external_apm'
+          'source_manifest' = 'tools/agent-skills/apm.yml'
+          'lockfile' = 'tools/agent-skills/apm.lock.yaml'
+          'dependency' = 'K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0'
+          'virtual_path' = 'scientific-skills/sympy'
+          'pin_policy' = 'reviewed_tag_or_immutable_sha_required'
+          'authority_boundary' = 'not_sf6_formula_or_current_fact_authority'
+          'public_answer_boundary' = 'not_public_adapter_dependency'
+        }
+        foreach ($field in $expectedExternalValues.Keys) {
+          Assert-Property $externalSkill $field 'Hermes skill allowlist sympy external_apm skill' ([ref]$issues)
+          if ((Test-Property $externalSkill $field) -and [string]$externalSkill.$field -ne $expectedExternalValues[$field]) {
+            $issues += "Hermes skill allowlist sympy $field must be $($expectedExternalValues[$field])"
+          }
+        }
+      }
+    }
+  }
+
+  foreach ($requiredDeferred in @(
+    'sagemath-skills',
+    'statistics-skills',
+    'mcp-servers',
+    'gateway-bot-skills',
+    'cron-kanban-defaults',
+    'external-memory-providers',
+    'public-sf6-agent-distribution'
+  )) {
+    if ($deferredAllowlistIds -notcontains $requiredDeferred) {
+      $issues += "Hermes skill allowlist deferred candidate missing: $requiredDeferred"
+    }
+  }
+
+  foreach ($requiredForbidden in @(
+    'red_teaming',
+    'smart_home',
+    'social_media_posting',
+    'unrelated_ml_training_or_serving',
+    'secrets_or_profile_state',
+    'raw_transcripts_or_runtime_state'
+  )) {
+    if ($forbiddenAllowlistIds -notcontains $requiredForbidden) {
+      $issues += "Hermes skill allowlist forbidden category missing: $requiredForbidden"
+    }
+  }
+
+  $reviewCommands = if (Test-Property $skillAllowlist 'review_commands') { @($skillAllowlist.review_commands | ForEach-Object { [string]$_ }) } else { @() }
+  foreach ($reviewCommand in @('hermes skills list', 'hermes skills inspect hermes-agent')) {
+    if ($reviewCommands -notcontains $reviewCommand) {
+      $issues += "Hermes skill allowlist missing review command: $reviewCommand"
+    }
+  }
+
+  $sourceRefs = if (Test-Property $skillAllowlist 'source_refs') { @($skillAllowlist.source_refs | ForEach-Object { [string]$_ }) } else { @() }
+  foreach ($sourceRef in @(
+    'docs/architecture/hermes-maintainer-profile-policy.md',
+    'docs/architecture/agent-skill-dependency-policy.md',
+    'tools/agent-skills/apm.yml',
+    'tools/agent-skills/apm.lock.yaml',
+    'workflows/hermes-ingest-profile-setup.md'
+  )) {
+    if ($sourceRefs -notcontains $sourceRef) {
+      $issues += "Hermes skill allowlist missing source ref: $sourceRef"
+    }
+  }
+
+  $apmTextForAllowlist = if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.yml') -PathType Leaf) { Read-Text 'tools/agent-skills/apm.yml' } else { '' }
+  $apmLockTextForAllowlist = if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.lock.yaml') -PathType Leaf) { Read-Text 'tools/agent-skills/apm.lock.yaml' } else { '' }
+  if ($apmTextForAllowlist -notmatch [regex]::Escape('K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0')) {
+    $issues += 'Hermes skill allowlist expects SymPy dependency, but tools/agent-skills/apm.yml does not contain the pinned dependency'
+  }
+  if ($apmLockTextForAllowlist -notmatch [regex]::Escape('virtual_path: scientific-skills/sympy')) {
+    $issues += 'Hermes skill allowlist expects SymPy virtual_path, but tools/agent-skills/apm.lock.yaml does not contain it'
+  }
+  if ($apmTextForAllowlist -match [regex]::Escape('K-Dense-AI/scientific-agent-skills#')) {
+    $issues += 'Hermes skill allowlist forbids broad K-Dense-AI scientific-agent-skills root bundle dependency'
+  }
+
+  $allowlistStringValues = @(Get-JsonStringValues $skillAllowlist)
+  foreach ($stringValue in $allowlistStringValues) {
+    foreach ($forbiddenText in @(
+      '~/.hermes',
+      'HERMES_HOME',
+      '.env',
+      'auth.json',
+      'memories/',
+      'sessions/',
+      'state.db',
+      'logs/',
+      '/home/',
+      'C:\'
+    )) {
+      if ($stringValue -match [regex]::Escape($forbiddenText)) {
+        $issues += "Hermes skill allowlist contains forbidden local-state text: $forbiddenText"
+      }
+    }
+  }
+}
+
 if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-skill-dependency-policy.md') -PathType Leaf) {
   $agentSkillPolicy = Read-Text 'docs/architecture/agent-skill-dependency-policy.md'
   foreach ($needle in @(
     'tools/agent-skills/apm.yml',
     'tools/agent-skills/apm.lock.yaml',
+    'data/toolchain/hermes-maintainer-skill-allowlist.json',
     'docs/architecture/calculation-backend-policy.md',
     'executor / operator instruction dependency',
     'reviewed tag or immutable SHA',
@@ -410,12 +702,50 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-skill-d
     'git-tags',
     'git-refs',
     'SymPy',
+    'external_apm_skills',
     'SageMath',
     'K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0',
     'must not become repo-owned SF6 formula authority'
   )) {
     if ($agentSkillPolicy -notmatch [regex]::Escape($needle)) {
       $issues += "docs/architecture/agent-skill-dependency-policy.md missing policy text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/hermes-maintainer-profile-policy.md') -PathType Leaf) {
+  $profilePolicyText = Read-Text 'docs/architecture/hermes-maintainer-profile-policy.md'
+  foreach ($needle in @(
+    'data/toolchain/hermes-maintainer-skill-allowlist.json',
+    'contracts/hermes-maintainer-skill-allowlist.schema.json',
+    'built-in default skills',
+    'built-in conditional skills',
+    'external APM-managed skills',
+    'deferred candidates',
+    'forbidden skill categories',
+    'External Agent Skills are not built-in Hermes skills',
+    'public answer authority'
+  )) {
+    if ($profilePolicyText -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/hermes-maintainer-profile-policy.md missing skill allowlist policy text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'workflows/hermes-ingest-profile-setup.md') -PathType Leaf) {
+  $ingestProfileSetupText = Read-Text 'workflows/hermes-ingest-profile-setup.md'
+  foreach ($needle in @(
+    'data/toolchain/hermes-maintainer-skill-allowlist.json',
+    'built-in default skills',
+    'Built-in conditional skills',
+    'external APM skills',
+    'hermes skills list',
+    'tools/agent-skills/',
+    'external_apm_skills',
+    'Broad third-party skill bundles'
+  )) {
+    if ($ingestProfileSetupText -notmatch [regex]::Escape($needle)) {
+      $issues += "workflows/hermes-ingest-profile-setup.md missing skill allowlist setup text: $needle"
     }
   }
 }
@@ -726,6 +1056,8 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
           foreach ($field in @(
             'applies_to_profile',
             'hub_context',
+            'allowlist_manifest',
+            'allowlist_schema',
             'purpose',
             'default_builtin_skills',
             'conditional_builtin_skills',
@@ -736,6 +1068,12 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
           }
           if ((Test-Property $skillPolicy 'applies_to_profile') -and [string]$skillPolicy.applies_to_profile -ne 'sf6ingest') {
             $issues += 'Hermes skill_selection_policy applies_to_profile must be sf6ingest'
+          }
+          if ((Test-Property $skillPolicy 'allowlist_manifest') -and [string]$skillPolicy.allowlist_manifest -ne 'data/toolchain/hermes-maintainer-skill-allowlist.json') {
+            $issues += 'Hermes skill_selection_policy allowlist_manifest must be data/toolchain/hermes-maintainer-skill-allowlist.json'
+          }
+          if ((Test-Property $skillPolicy 'allowlist_schema') -and [string]$skillPolicy.allowlist_schema -ne 'contracts/hermes-maintainer-skill-allowlist.schema.json') {
+            $issues += 'Hermes skill_selection_policy allowlist_schema must be contracts/hermes-maintainer-skill-allowlist.schema.json'
           }
 
           if (Test-Property $skillPolicy 'hub_context') {
@@ -784,6 +1122,17 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
           $defaultSkills = if (Test-Property $skillPolicy 'default_builtin_skills') { @($skillPolicy.default_builtin_skills | ForEach-Object { [string]$_ }) } else { @() }
           $conditionalSkills = if (Test-Property $skillPolicy 'conditional_builtin_skills') { @($skillPolicy.conditional_builtin_skills | ForEach-Object { [string]$_ }) } else { @() }
           $forbiddenCategories = if (Test-Property $skillPolicy 'forbidden_skill_categories') { @($skillPolicy.forbidden_skill_categories | ForEach-Object { [string]$_ }) } else { @() }
+
+          if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/toolchain/hermes-maintainer-skill-allowlist.json') -PathType Leaf) {
+            $allowlistForToolchain = Read-Json 'data/toolchain/hermes-maintainer-skill-allowlist.json'
+            $allowlistDefaultIds = @($allowlistForToolchain.builtin_default_skills | ForEach-Object { [string]$_.id })
+            $allowlistConditionalIds = @($allowlistForToolchain.builtin_conditional_skills | ForEach-Object { [string]$_.id })
+            $allowlistForbiddenIds = @($allowlistForToolchain.forbidden_categories | ForEach-Object { [string]$_.id })
+
+            Assert-SetEquals $defaultSkills $allowlistDefaultIds 'Hermes skill_selection_policy default_builtin_skills must match allowlist builtin_default_skills' ([ref]$issues)
+            Assert-SetEquals $conditionalSkills $allowlistConditionalIds 'Hermes skill_selection_policy conditional_builtin_skills must match allowlist builtin_conditional_skills' ([ref]$issues)
+            Assert-SetEquals $forbiddenCategories $allowlistForbiddenIds 'Hermes skill_selection_policy forbidden_skill_categories must match allowlist forbidden_categories' ([ref]$issues)
+          }
 
           foreach ($requiredSkill in @(
             'hermes-agent',

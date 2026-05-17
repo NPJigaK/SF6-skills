@@ -253,6 +253,8 @@
                   "selection_status",
                   "applies_to_profile",
                   "hub_context",
+                  "allowlist_manifest",
+                  "allowlist_schema",
                   "purpose",
                   "default_builtin_skills",
                   "conditional_builtin_skills",
@@ -305,6 +307,14 @@
                         "minLength": 1
                       }
                     }
+                  },
+                  "allowlist_manifest": {
+                    "type": "string",
+                    "const": "data/toolchain/hermes-maintainer-skill-allowlist.json"
+                  },
+                  "allowlist_schema": {
+                    "type": "string",
+                    "const": "contracts/hermes-maintainer-skill-allowlist.schema.json"
                   },
                   "purpose": {
                     "type": "string",

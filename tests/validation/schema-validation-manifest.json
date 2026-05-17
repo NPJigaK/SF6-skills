@@ -23,6 +23,14 @@
       "notes": "Structural toolchain manifest shape only; validate-agent-toolchain.ps1 remains semantic authority."
     },
     {
+      "id": "hermes_maintainer_skill_allowlist",
+      "schema_path": "contracts/hermes-maintainer-skill-allowlist.schema.json",
+      "document_globs": [
+        "data/toolchain/hermes-maintainer-skill-allowlist.json"
+      ],
+      "notes": "Structural skill allowlist shape only; validate-agent-toolchain.ps1 remains semantic authority for category and APM-pin consistency."
+    },
+    {
       "id": "normalization_aliases",
       "schema_path": "contracts/normalization-aliases.schema.json",
       "document_globs": [
