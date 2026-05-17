@@ -62,6 +62,9 @@ Machine-readable surface classifications live in
 [`data/repository-surfaces.json`](./data/repository-surfaces.json). Maintainer
 guidance for using the registry with validation lanes is in
 [`docs/architecture/repository-surface-registry-policy.md`](./docs/architecture/repository-surface-registry-policy.md).
+The Phase 2 plan for separating frame-current runtime assets from the deferred
+public adapter is in
+[`docs/architecture/frame-current-runtime-separation-plan.md`](./docs/architecture/frame-current-runtime-separation-plan.md).
 
 ## Public answer adapter status
 
@@ -225,6 +228,7 @@ Generated referencesやframe-current assetsを変更するPRでは、derived out
 - [docs/architecture/language-policy.md](./docs/architecture/language-policy.md): 日本語first運用と英語互換構造
 - [docs/architecture/harness-and-distribution-roles.md](./docs/architecture/harness-and-distribution-roles.md): public adapter、repo-local workflow、Hermes harness、配布境界
 - [docs/architecture/repository-surface-registry-policy.md](./docs/architecture/repository-surface-registry-policy.md): repository surface registry と validation lane の使い方
+- [docs/architecture/frame-current-runtime-separation-plan.md](./docs/architecture/frame-current-runtime-separation-plan.md): frame-current runtime assets を deferred public adapter から分離する Phase 2 plan
 - [docs/architecture/powershell-compatibility-policy.md](./docs/architecture/powershell-compatibility-policy.md): `pwsh` と Windows PowerShell fallback の互換 policy
 - [docs/architecture/japanese-maintainer-docs-policy.md](./docs/architecture/japanese-maintainer-docs-policy.md): 日本語メンテナー向けdoc方針
 - [workflows/README.md](./workflows/README.md): canonical maintainer proceduresの索引
