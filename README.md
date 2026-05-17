@@ -68,6 +68,8 @@ public adapter is in
 The Phase 2 plan for separating generated knowledge references from
 hand-written public adapter policy references is in
 [`docs/architecture/generated-reference-responsibility-plan.md`](./docs/architecture/generated-reference-responsibility-plan.md).
+The ADR selecting removal of the public adapter after runtime relocation is in
+[`docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md`](./docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md).
 
 ## Public answer adapter status
 
@@ -82,8 +84,8 @@ distribution surfaceとして扱います。
 - `data/exports/` と `data/roster/` から生成された `skills/sf6-agent/assets/frame-current/`
 
 `skills/sf6-agent/` は当面、新しい公開機能を足す場所ではありません。
-今後のscoped workで残存責務を棚卸ししたうえで、削除・移設・再有効化の
-どれにするかを決めます。
+ADR-0003 では、再利用するruntime payloadを先に移設したうえで、このpublic
+adapter surfaceを削除する方針を選択しています。
 
 `workflows/*`、`tests/validation/*`、`packages/*`、`contracts/*`、
 `packs/hermes-sf6/*` はpublic answer skillとして配布しません。

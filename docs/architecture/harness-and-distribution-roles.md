@@ -16,9 +16,8 @@ collection, review, validation, and promotion workflows are stabilized.
 
 It is not the active product surface during the private Hermes-first operation
 phase. There are no known external public-skill users, so this surface is not
-protected as an external compatibility contract. Later scoped work may remove
-or relocate it after mapping its remaining canonical and derived
-responsibilities.
+protected as an external compatibility contract. ADR-0003 selects removal after
+reusable runtime payloads are relocated out of the adapter path.
 
 While it remains in the repository, public distribution surfaces are limited
 to:
@@ -94,6 +93,7 @@ Wrappers must not become independent source-of-truth procedures. If a wrapper di
 
 The accepted v2.1 orchestration decision is [decisions/0001-hermes-primary-orchestration.md](./decisions/0001-hermes-primary-orchestration.md).
 The active private-operation priority is [decisions/0002-private-hermes-first-operation.md](./decisions/0002-private-hermes-first-operation.md).
+The public adapter disposition is [decisions/0003-retire-public-sf6-agent-adapter.md](./decisions/0003-retire-public-sf6-agent-adapter.md).
 
 ## Codex And Repo Development
 
