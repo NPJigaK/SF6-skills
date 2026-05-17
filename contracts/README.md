@@ -41,3 +41,4 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 
 - `repository-surface.schema.json`: machine-readable index contract for canonical, derived, deferred legacy, repo-local support, historical, and non-canonical repository surfaces.
 - `data/repository-surfaces.json`: seed registry of existing reviewed boundaries. The registry indexes current policy; it does not replace `AGENTS.md`, ADRs, workflows, or validators as policy sources yet.
+- `docs/architecture/repository-surface-registry-policy.md`: maintainer-facing guide for using registry surface roles with validation lanes and generated / deferred legacy surface boundaries.
