@@ -102,11 +102,16 @@ tracked artifact にしない。
 |---|---|
 | `sf6_agent_public_adapter` | 既存 public answer adapter。現在は deferred legacy distribution surface。 |
 | `sf6_agent_adapter_policy_references` | hand-written `skills/sf6-agent/references/*-policy.md`。deferred public adapter behavior only。 |
+| `distribution_docs` | `docs/distribution/*`。interim install / release docs for deferred public distribution。 |
 | `skill_installers_package` | deferred public skill installer tooling。 |
 | `release_bundle_dist` | deferred public distribution bundle output。 |
 
 これらを変更する PR は、通常の private workflow 改善と混ぜない。public adapter を
 remove / relocate / reactivate するかは、後続の scoped ADR / issue で決める。
+ADR-0004 により、`.dist`、installer tooling、distribution docs は public adapter
+removal までの interim legacy-lane surface であり、長期 retained surface ではない。
+Policy reference:
+`docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md`。
 
 ## Non-canonical Boundary IDs
 

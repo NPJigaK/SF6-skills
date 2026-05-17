@@ -70,6 +70,9 @@ hand-written public adapter policy references is in
 [`docs/architecture/generated-reference-responsibility-plan.md`](./docs/architecture/generated-reference-responsibility-plan.md).
 The ADR selecting removal of the public adapter after runtime relocation is in
 [`docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md`](./docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md).
+The ADR selecting interim legacy-lane handling and later deletion for `.dist`,
+installers, and distribution docs is in
+[`docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md`](./docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md).
 
 ## Public answer adapter status
 
@@ -156,6 +159,8 @@ Profile setupは [workflows/hermes-ingest-profile-setup.md](./workflows/hermes-i
 ## 配布
 
 Public distribution bundle は現在 deferred/legacy output です。
+ADR-0004 により、`.dist`、installer tooling、distribution docs は public adapter
+削除までの interim legacy-lane surface であり、長期的には削除対象です。
 
 ```text
 .dist/sf6-agent-bundle.zip
