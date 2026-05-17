@@ -6,6 +6,7 @@ They must not:
 
 - become SF6 authority;
 - become formula authority;
+- become rounding authority;
 - become current-fact authority;
 - override `data/exports`, `data/roster`, or packaged `official_raw`;
 - promote review-only claims, current-fact candidates, video observations,

@@ -127,8 +127,8 @@ def determine_block_status(request: dict[str, Any]) -> tuple[str | None, list[st
     input_status = request.get("input_status")
 
     if input_status == "hold":
-        hold_reasons.append("input authority is missing or held")
-        return "blocked_missing_input_authority", hold_reasons
+        hold_reasons.append("input reference or provenance is missing or held")
+        return "blocked_missing_input_reference", hold_reasons
 
     if request.get("route_status") == "ambiguous":
         hold_reasons.append("route, hit, action, timing, or move mapping is ambiguous")
@@ -244,7 +244,7 @@ def build_trace(request: dict[str, Any]) -> dict[str, Any]:
         "calculation_intent": request.get("calculation_intent", "hypothetical_arithmetic_check"),
         "question_scope": request.get("question_scope", ""),
         "input_values": input_values,
-        "input_authority_refs": request.get("input_authority_refs", []),
+        "input_reference_refs": request.get("input_reference_refs", []),
         "input_status": request.get("input_status", "hypothetical"),
         "calculation_instruction_ref": request.get("calculation_instruction_ref"),
         "calculation_instruction_status": request.get(
@@ -289,7 +289,7 @@ def invalid_request_trace(message: str) -> dict[str, Any]:
         "calculation_intent": "hypothetical_arithmetic_check",
         "question_scope": "Invalid calculation request.",
         "input_values": {},
-        "input_authority_refs": [],
+        "input_reference_refs": [],
         "input_status": "hold",
         "calculation_instruction_ref": None,
         "calculation_instruction_status": "hold",
