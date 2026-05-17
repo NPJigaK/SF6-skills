@@ -13,6 +13,7 @@ $requiredJsonSchemas = @(
   'contracts/answer-intent.schema.json',
   'contracts/evidence-card.schema.json',
   'contracts/answer-plan.schema.json',
+  'contracts/hermes-delegation-sanitized-trace.schema.json',
   'contracts/calculation-backend-handoff.schema.json',
   'contracts/calculation-trace.schema.json',
   'contracts/normalization-aliases.schema.json',
@@ -24,6 +25,7 @@ $requiredJsonSchemas = @(
 
 $requiredDocs = @(
   'contracts/frame-current-runtime-assets.md',
+  'contracts/hermes-delegation-sanitized-trace.md',
   'contracts/calculation-executor-trace.md',
   'contracts/video-observation.md',
   'contracts/evidence-gate.md',

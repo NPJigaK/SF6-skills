@@ -1,0 +1,122 @@
+{
+  "schema_version": "hermes-delegation-sanitized-trace/v1",
+  "trace_id": "codex-fallback-recorded",
+  "trace_kind": "codex_fallback",
+  "tracking_issue": "#197",
+  "target_issue": "#275",
+  "analysis_mode": "codex_fallback",
+  "created_at": "2026-05-18T00:00:00Z",
+  "created_from": {
+    "source_kind": "dry_run_fixture",
+    "source_refs": [
+      "workflows/codex-to-hermes-delegation.md"
+    ]
+  },
+  "delegation_summary": {
+    "target_scope_summary": "Record that Hermes delegation could not complete and fallback was used.",
+    "requested_artifact_type": "fallback trace fixture",
+    "allowed_outputs": [
+      "fallback reason",
+      "review boundary",
+      "validator summary"
+    ],
+    "forbidden_outputs": [
+      "claiming Hermes-first completion",
+      "unrecorded fallback",
+      "canonical promotion without review"
+    ],
+    "authority_boundaries": [
+      "Codex fallback requires a recorded reason.",
+      "Fallback does not claim Hermes primary analysis."
+    ]
+  },
+  "role_summary": {
+    "codex_app_role": [
+      "hermes_operator",
+      "boundary_auditor",
+      "artifact_converter",
+      "validator_executor"
+    ],
+    "hermes_role": [],
+    "provider_codex_role": []
+  },
+  "sanitized_inputs": [
+    {
+      "input_kind": "workflow",
+      "ref": "workflows/codex-to-hermes-delegation.md",
+      "summary": "Fallback reason requirement.",
+      "canonicality": "canonical"
+    }
+  ],
+  "sanitized_hermes_result": {
+    "result_status": "fallback_required",
+    "summary": "Hermes delegation did not complete for this fixture.",
+    "proposed_artifacts": [],
+    "source_refs": [],
+    "evidence_candidate_notes": [],
+    "uncertainty_or_hold_reasons": [
+      "Hermes unavailable or unconfigured."
+    ],
+    "boundary_notes": [
+      "This trace does not claim Hermes primary analysis."
+    ],
+    "follow_up_recommendations": [
+      "Retry Hermes when the configured profile is available."
+    ]
+  },
+  "provider_codex_summary": {
+    "used": false,
+    "task_kinds": [],
+    "outputs_used": [],
+    "outputs_rejected": [],
+    "remained_executor": true
+  },
+  "fallback": {
+    "occurred": true,
+    "reason": "Hermes unavailable or unconfigured in this dry-run fixture.",
+    "recorded_in": "#275"
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "provider_codex_final_authority": false,
+    "local_state_committed": false,
+    "raw_transcript_committed": false,
+    "credentials_committed": false,
+    "provider_raw_output_committed": false
+  },
+  "artifact_conversion": {
+    "converted_to_repo_artifact": true,
+    "artifact_refs": [
+      "tests/fixtures/hermes-delegation-sanitized-trace/valid/codex-fallback-recorded.json"
+    ],
+    "conversion_notes": [
+      "Fallback was recorded explicitly."
+    ],
+    "not_promoted_reason": null
+  },
+  "validators": {
+    "required": [
+      "tests/validation/validate-hermes-delegation-sanitized-traces.ps1"
+    ],
+    "reported": [],
+    "skipped": [],
+    "live_hermes_required": false
+  },
+  "expected_boundary_outcome": {
+    "status": "metadata_only",
+    "reason": "The fixture records fallback metadata and does not claim Hermes-first completion."
+  },
+  "sanitization_assertions": {
+    "contains_raw_transcript": false,
+    "contains_local_state": false,
+    "contains_credentials": false,
+    "contains_provider_raw_output": false,
+    "contains_tool_raw_log": false,
+    "contains_binary_asset_path": false,
+    "requires_live_hermes": false,
+    "requires_live_provider_execution": false
+  }
+}

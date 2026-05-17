@@ -77,6 +77,14 @@
         "tests/fixtures/calculation-backend-handoff/*.json"
       ],
       "notes": "Structural calculation backend handoff shape only; validate-calculation-backend-handoff.ps1 remains semantic authority."
+    },
+    {
+      "id": "hermes_delegation_sanitized_traces",
+      "schema_path": "contracts/hermes-delegation-sanitized-trace.schema.json",
+      "document_globs": [
+        "tests/fixtures/hermes-delegation-sanitized-trace/valid/*.json"
+      ],
+      "notes": "Structural sanitized trace shape only; validate-hermes-delegation-sanitized-traces.ps1 remains semantic authority and validates invalid rejection fixtures."
     }
   ]
 }

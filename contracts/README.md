@@ -31,6 +31,7 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 - `combo-notation.md`: notation rules for `evals/fixtures/combo-damage/*.yaml`.
 - `evidence-gate.md`: answer evidence authority boundaries for current facts, review claims, observations, and Hermes state.
 - `frame-current-runtime-assets.md`: runtime asset boundary for generated frame-current payloads.
+- `hermes-delegation-sanitized-trace.md`: boundary for recording sanitized Codex app / Hermes / provider Codex delegation metadata without local state or raw output.
 - `video-observation.md`: timestamped video observation artifact contract.
 - `web-research-policy.md`: web source ranking, freshness, and current-fact conflict policy.
 

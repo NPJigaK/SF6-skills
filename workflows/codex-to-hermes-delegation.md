@@ -232,3 +232,9 @@ Use GitHub issues and PRs as primary progress state. Use PR bodies, issue
 comments, smoke reports, and reviewed docs as visible handoff surfaces. Do not
 rely on private model memory, Hermes memory, local sessions, local skills,
 Curator output, Kanban workers, or checkpoints as repo state.
+
+When a reusable record of a Hermes-first delegation is needed, use
+`contracts/hermes-delegation-sanitized-trace.md`. The sanitized trace may
+record orchestration and handoff metadata only. It must not include raw Hermes
+transcripts, local Hermes state, provider raw output, raw command output,
+credentials, binary media, or current-fact authority.
