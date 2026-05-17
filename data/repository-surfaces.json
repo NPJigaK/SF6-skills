@@ -101,6 +101,47 @@
       "notes": "Generated observability graph for source -> evidence -> review -> curated lineage. It does not promote evidence and is not answer authority."
     },
     {
+      "id": "knowledge_integrity_report",
+      "title": "Knowledge Integrity Report",
+      "path_globs": [
+        "data/knowledge-integrity.json"
+      ],
+      "path_state": "tracked_present",
+      "surface_role": "derived",
+      "authority_scope": "knowledge integrity observability only",
+      "source_of_truth": [
+        "knowledge",
+        "skills/sf6-agent/references/generated-*"
+      ],
+      "generated": true,
+      "generator": "tests/validation/validate-knowledge-integrity-report.ps1 -Update",
+      "source_paths": [
+        "knowledge/sources/**/*.md",
+        "knowledge/evidence/**/*.md",
+        "knowledge/review/**/*.md",
+        "knowledge/curated/**/*.md",
+        "skills/sf6-agent/references/generated-*"
+      ],
+      "allowed_to_edit_directly": false,
+      "public_distribution_status": "not_distribution",
+      "normal_public_answer_authority": false,
+      "validation_expectation": [
+        "knowledge_integrity_report_fresh",
+        "duplicate_ids_absent",
+        "dangling_refs_absent",
+        "invalid_review_after_absent",
+        "generated_contamination_absent",
+        "not_gameplay_authority",
+        "not_normal_public_answer_authority"
+      ],
+      "policy_refs": [
+        "AGENTS.md",
+        "knowledge/README.md",
+        "contracts/README.md"
+      ],
+      "notes": "Generated observability report for duplicate IDs, dangling knowledge refs, review_after state, and generated-reference contamination. It is not answer authority."
+    },
+    {
       "id": "data_exports",
       "title": "Current Fact Exports",
       "path_globs": [
