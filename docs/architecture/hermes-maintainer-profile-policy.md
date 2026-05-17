@@ -269,6 +269,24 @@ hermes profile show sf6ingest
 These commands may help confirm local model and reasoning setup, but they do
 not produce canonical repo data.
 
+## Freshness Review Is Not Profile Export
+
+Hermes CLI freshness and maintainer profile conformance are reviewed through
+repo policy, the Nix flake input, Renovate Nix flake PRs, and local operator
+checks. They are not reviewed by committing exported profile config or command
+transcripts.
+
+`gpt-5.5` / `codex 5.5` and `xhigh` / extra-high reasoning remain policy
+expectations for `sf6ingest`. They are policy expectations, not local proof.
+If a local profile listing does not show reasoning effort, do not treat the
+missing display as a canonical mismatch; verify locally and keep any raw output
+outside the repo.
+
+Do not paste or commit exact local Hermes versions, commit-behind counts,
+profile listings, config paths, local profile paths, `hermes doctor` output,
+provider diagnostics, Python/OpenAI SDK versions, logs, caches, credentials,
+device codes, auth output, or local update transcripts.
+
 ## Boundaries
 
 - Do not require Hermes for public `sf6-agent` users.

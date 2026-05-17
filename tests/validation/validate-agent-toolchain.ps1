@@ -159,6 +159,7 @@ function Get-JsonStringValues {
 
 $issues = @()
 $requiredFiles = @(
+  '.gitignore',
   '.github/renovate.json',
   'docs/architecture/agent-toolchain-freshness.md',
   'docs/architecture/agent-skill-dependency-policy.md',
@@ -226,6 +227,25 @@ $forbiddenManifestFields = @(
 foreach ($relativePath in $requiredFiles) {
   if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $relativePath) -PathType Leaf)) {
     $issues += "Missing agent toolchain file: $relativePath"
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot '.gitignore') -PathType Leaf) {
+  $rootGitignore = Read-Text '.gitignore'
+  foreach ($needle in @(
+    '.hermes/',
+    '.env',
+    '.env.*',
+    '!.env.EXAMPLE',
+    '*.transcript',
+    '*-transcript.txt',
+    '*-doctor-output.txt',
+    '*-profile-output.txt',
+    '*-command-output.txt'
+  )) {
+    if ($rootGitignore -notmatch [regex]::Escape($needle)) {
+      $issues += ".gitignore missing Hermes local-state/output ignore: $needle"
+    }
   }
 }
 
@@ -730,6 +750,19 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/hermes-mainta
       $issues += "docs/architecture/hermes-maintainer-profile-policy.md missing skill allowlist policy text: $needle"
     }
   }
+
+  foreach ($needle in @(
+    'Freshness Review Is Not Profile Export',
+    'policy expectations',
+    'not local proof',
+    'profile listings',
+    'hermes doctor',
+    'device codes'
+  )) {
+    if ($profilePolicyText -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/hermes-maintainer-profile-policy.md missing freshness boundary text: $needle"
+    }
+  }
 }
 
 if (Test-Path -LiteralPath (Join-Path $repoRoot 'workflows/hermes-ingest-profile-setup.md') -PathType Leaf) {
@@ -817,6 +850,48 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/hermes-curato
   }
 }
 
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-toolchain-freshness.md') -PathType Leaf) {
+  $freshnessPolicy = Read-Text 'docs/architecture/agent-toolchain-freshness.md'
+  foreach ($needle in @(
+    'Freshness Continuation',
+    'flake.lock',
+    'Renovate Nix flake PRs',
+    'policy expectations',
+    'not local proof',
+    'gpt-5.5',
+    'xhigh',
+    'command transcripts',
+    'doctor transcripts',
+    'commit-behind counts'
+  )) {
+    if ($freshnessPolicy -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/agent-toolchain-freshness.md missing freshness boundary text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'workflows/check-agent-toolchain-freshness.md') -PathType Leaf) {
+  $freshnessWorkflow = Read-Text 'workflows/check-agent-toolchain-freshness.md'
+  foreach ($needle in @(
+    'Canonical Hermes CLI Freshness Route',
+    'Renovate Nix flake PRs',
+    'operator diagnostics',
+    'local profile state',
+    'policy expectations',
+    'not copied local profile state',
+    'gpt-5.5',
+    'xhigh',
+    'command transcripts',
+    'doctor transcripts',
+    'profile listings',
+    'device codes'
+  )) {
+    if ($freshnessWorkflow -notmatch [regex]::Escape($needle)) {
+      $issues += "workflows/check-agent-toolchain-freshness.md missing freshness boundary text: $needle"
+    }
+  }
+}
+
 if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
   $manifestRaw = Get-Content -LiteralPath (Join-Path $repoRoot $manifestPath) -Raw -Encoding UTF8
   $manifest = $manifestRaw | ConvertFrom-Json
@@ -853,7 +928,15 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $manifestPath) -PathType Leaf) {
       'Project: [A-Za-z]:\\',
       'Python: \d+\.\d+',
       'OpenAI SDK: \d+\.\d+',
-      'Update available:'
+      'Update available:',
+      'Active profile:',
+      'Profile path:',
+      'Config path:',
+      'HERMES_HOME=',
+      'auth\.json',
+      'state\.db',
+      'device code',
+      'Doctor report:'
     )) {
       if ([string]$stringValue -match $localOutputPattern) {
         $issues += "$manifestPath contains local command output or installed-version-like value: $stringValue"
@@ -1249,6 +1332,10 @@ if (-not (Test-Path -LiteralPath $toolchainRoot -PathType Container)) {
       $name -like '*session*' -or
       $name -like '*cache*' -or
       $name -like '*log*' -or
+      $name -like '*transcript*' -or
+      $name -like '*profile-output*' -or
+      $name -like '*doctor-output*' -or
+      $name -like '*command-output*' -or
       $relativePathLower -like '*/.env' -or
       $relativePathLower -like '*/.env.*' -or
       $relativePathLower -like '*/.envrc' -or
@@ -1257,7 +1344,11 @@ if (-not (Test-Path -LiteralPath $toolchainRoot -PathType Container)) {
       $relativePathLower -like '*credential*' -or
       $relativePathLower -like '*session*' -or
       $relativePathLower -like '*cache*' -or
-      $relativePathLower -like '*log*'
+      $relativePathLower -like '*log*' -or
+      $relativePathLower -like '*transcript*' -or
+      $relativePathLower -like '*profile-output*' -or
+      $relativePathLower -like '*doctor-output*' -or
+      $relativePathLower -like '*command-output*'
     ) {
       $issues += "Forbidden toolchain local-state or secret-like file: $relativePath"
     }
