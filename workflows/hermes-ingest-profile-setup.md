@@ -44,15 +44,49 @@ Use repo-external profile state:
 export HERMES_HOME="$HOME/.hermes/profiles/sf6ingest"
 ```
 
-Configure Hermes so it can discover the repo's public adapter skills without turning Hermes state into repo state. When using external skill discovery, prefer the repo `skills/` directory:
+Configure `sf6ingest` from the safe config policy in
+`docs/architecture/hermes-maintainer-profile-policy.md`. The profile state stays
+outside the repo; this repository records expectations, not the machine's
+actual `config.yaml`.
+
+Recommended starting posture:
 
 ```yaml
+terminal:
+  backend: docker
+  env_passthrough: []
+  docker_forward_env: []
+
+approvals:
+  mode: smart
+
 skills:
-  external_dirs:
-    - /absolute/path/to/SF6-skills/skills
+  guard_agent_created: true
+  external_dirs: []
+
+security:
+  redact_secrets: true
+  tirith_fail_open: false
+  allow_private_urls: false
+
+compression:
+  enabled: true
+
+agent:
+  tool_use_enforcement: auto
 ```
 
-Do not configure `workflows/` as a skill directory. Workflows are canonical maintainer procedures, not public adapter skills.
+`terminal.backend: local` is allowed for trusted repo-local work, but it is not
+a sandbox. Use Docker for untrusted code, broad source ingest, experimental
+refactors, or credential-adjacent tasks.
+
+Do not point `skills.external_dirs` at the repo `skills/` directory by default.
+`skills/sf6-agent/` is a deferred public adapter surface, not the active private
+Hermes maintainer skill package. External skill directories must come from a
+reviewed dependency policy such as #231 or a later architecture decision.
+
+Do not configure `workflows/` as a skill directory. Workflows are canonical
+maintainer procedures, not Hermes installed skills.
 
 ## Verification
 
@@ -75,6 +109,17 @@ hermes profile list
 hermes profile show sf6ingest
 hermes chat -Q --max-turns 1 -q "Reply with one sentence confirming this profile can run non-interactively."
 ```
+
+Also verify the safe config posture locally without committing the output:
+
+```bash
+hermes config check
+hermes config
+```
+
+Review the printed local config for the recommended keys above. If a command,
+section, or config key differs across Hermes versions, record the mismatch as a
+local review note only. Do not paste local profile output into repo artifacts.
 
 Prefer the repo Nix flake and Renovate Nix flake PRs for Hermes CLI version
 freshness. Use `hermes --version` output only as a fallback local freshness
