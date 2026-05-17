@@ -179,6 +179,9 @@ git status --porcelain -- \
   skills/sf6-agent/assets/frame-current
 ```
 
+See `docs/architecture/powershell-compatibility-policy.md` for the repo
+policy on `pwsh`, Windows PowerShell fallback, and git visibility warnings.
+
 Do not ignore failing checks. If a failure is legacy-obsolete or out of scope, document that clearly in the PR and create a follow-up issue when needed.
 
 ## PR Body Requirements
