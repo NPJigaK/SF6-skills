@@ -27,6 +27,7 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 ## Human-Readable Contracts
 
 - `calculation-executor-trace.md`: boundary for calculation tools as executors and trace generators only.
+- `calculation-backend-handoff.schema.json`: schema for maintainer-only backend handoff instructions that stay outside SF6 formula authority.
 - `combo-notation.md`: notation rules for `evals/fixtures/combo-damage/*.yaml`.
 - `evidence-gate.md`: answer evidence authority boundaries for current facts, review claims, observations, and Hermes state.
 - `frame-current-runtime-assets.md`: runtime asset boundary for generated frame-current payloads.

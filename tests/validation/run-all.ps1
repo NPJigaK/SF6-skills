@@ -61,6 +61,7 @@ $readOnlyValidationScripts = @(
   'tests/validation/validate-deferred-distribution-retirement-plan.ps1',
   'tests/validation/validate-answer-orchestration-contracts.ps1',
   'tests/validation/validate-answer-smoke-fixtures.ps1',
+  'tests/validation/validate-calculation-backend-handoff.ps1',
   'tests/validation/validate-calculation-executor.ps1',
   'tests/validation/validate-normalization-aliases.ps1',
   'tests/validation/validate-normalization-runtime-assets.ps1',

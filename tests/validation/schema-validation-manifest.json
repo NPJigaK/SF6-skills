@@ -69,6 +69,14 @@
         "tests/fixtures/eval-score-reports/*.json"
       ],
       "notes": "Structural score report shape only; validate-eval-score-reports.ps1 remains semantic authority."
+    },
+    {
+      "id": "calculation_backend_handoffs",
+      "schema_path": "contracts/calculation-backend-handoff.schema.json",
+      "document_globs": [
+        "tests/fixtures/calculation-backend-handoff/*.json"
+      ],
+      "notes": "Structural calculation backend handoff shape only; validate-calculation-backend-handoff.ps1 remains semantic authority."
     }
   ]
 }

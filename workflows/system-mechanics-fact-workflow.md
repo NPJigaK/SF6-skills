@@ -144,6 +144,11 @@ guess.
 
 See `contracts/calculation-executor-trace.md`.
 
+When a maintainer needs to hand a calculation request to the selected backend,
+use `workflows/calculation-backend-handoff.md`. That handoff is operator
+instruction only and must not become accepted formula, rounding, current-fact,
+or public answer authority.
+
 ## Future contract decision
 
 A future architecture decision may reopen system-mechanics modeling, but v2.6 does not create an accepted SF6 formula or rounding authority surface.

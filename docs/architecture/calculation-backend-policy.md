@@ -87,6 +87,10 @@ Calculation outputs remain trace candidates. If an input, route mapping,
 formula-like instruction, or rounding instruction is missing or uncertain, the
 trace must remain hold / blocked rather than public answer authority.
 
+For reviewed maintainer handoff instruction artifacts, use
+`workflows/calculation-backend-handoff.md` and
+`contracts/calculation-backend-handoff.schema.json`.
+
 ## Not Committed
 
 Do not commit:
