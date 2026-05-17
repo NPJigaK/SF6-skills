@@ -24,6 +24,7 @@ Architecture docs define the v2 source-of-truth model.
 - [language-policy.md](./language-policy.md)
 - [harness-and-distribution-roles.md](./harness-and-distribution-roles.md)
 - [repository-surface-registry-policy.md](./repository-surface-registry-policy.md)
+- [noncanonical-data-authority-boundaries.md](./noncanonical-data-authority-boundaries.md)
 - [package-surface-classification.md](./package-surface-classification.md)
 - [schema-validation-runner.md](./schema-validation-runner.md)
 - [generated-reference-responsibility-plan.md](./generated-reference-responsibility-plan.md)
