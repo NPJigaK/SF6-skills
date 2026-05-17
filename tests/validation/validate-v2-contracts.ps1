@@ -15,7 +15,8 @@ $requiredJsonSchemas = @(
   'contracts/calculation-trace.schema.json',
   'contracts/normalization-aliases.schema.json',
   'contracts/agent-toolchain.schema.json',
-  'contracts/repository-surface.schema.json'
+  'contracts/repository-surface.schema.json',
+  'contracts/current-fact-export-manifest.schema.json'
 )
 
 $requiredDocs = @(

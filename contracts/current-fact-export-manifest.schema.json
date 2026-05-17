@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6-knowledge-agent-kit.local/current-fact-export-manifest.schema.json",
+  "title": "Current Fact Export Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "character_slug",
+    "schema_version",
+    "export_contract_version",
+    "derivation_rule_version",
+    "repo_generation_registry_version",
+    "repo_generation_registry_sha256",
+    "repo_generation_binding_policy_version",
+    "repo_generation_binding_policy_sha256",
+    "datasets"
+  ],
+  "properties": {
+    "character_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "export_contract_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "derivation_rule_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repo_generation_registry_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repo_generation_registry_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "repo_generation_binding_policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repo_generation_binding_policy_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "datasets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "official_raw",
+        "supercombo_enrichment",
+        "derived_metrics"
+      ],
+      "properties": {
+        "official_raw": {
+          "$ref": "#/$defs/dataset_entry"
+        },
+        "supercombo_enrichment": {
+          "$ref": "#/$defs/dataset_entry"
+        },
+        "derived_metrics": {
+          "$ref": "#/$defs/dataset_entry"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sha256_or_null": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "version_or_null": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "run_id_or_null": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "dataset_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "publication_state",
+        "published_run_id",
+        "published_snapshot_ids",
+        "published_record_count",
+        "withheld_review_count",
+        "registry_version",
+        "registry_sha256",
+        "binding_policy_version",
+        "binding_policy_sha256",
+        "content_hash"
+      ],
+      "properties": {
+        "publication_state": {
+          "type": "string",
+          "enum": [
+            "available",
+            "unavailable"
+          ]
+        },
+        "published_run_id": {
+          "$ref": "#/$defs/run_id_or_null"
+        },
+        "published_snapshot_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "published_record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "withheld_review_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "registry_version": {
+          "$ref": "#/$defs/version_or_null"
+        },
+        "registry_sha256": {
+          "$ref": "#/$defs/sha256_or_null"
+        },
+        "binding_policy_version": {
+          "$ref": "#/$defs/version_or_null"
+        },
+        "binding_policy_sha256": {
+          "$ref": "#/$defs/sha256_or_null"
+        },
+        "content_hash": {
+          "$ref": "#/$defs/sha256_or_null"
+        }
+      }
+    }
+  }
+}
