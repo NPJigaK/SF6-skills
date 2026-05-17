@@ -1,14 +1,17 @@
 # SF6 Calculation Executor
 
-This package contains a repo-owned deterministic calculation executor for
-maintainer workflows.
+This package contains a repo-owned deterministic arithmetic trace compatibility
+helper for maintainer workflows.
 
 The executor exists to reduce LLM arithmetic errors. It is not SF6 authority,
 formula authority, rounding authority, current-fact authority, or public answer
 behavior.
 
-Use it only with explicit JSON inputs and audited authority boundaries from
-`contracts/calculation-executor-trace.md`.
+Use it only with explicit JSON inputs and the non-authority boundaries from
+`contracts/calculation-executor-trace.md`. Do not extend it into a custom SF6
+math engine. If SF6-specific calculation is needed, prefer a reviewed external
+CAS / symbolic math backend and keep this package as a thin trace helper unless
+a later architecture decision retires it.
 
 ## Run
 

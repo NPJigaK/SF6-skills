@@ -5,20 +5,25 @@ agents may produce auditable SF6 calculation traces.
 
 Calculation executors are not SF6 authority. They may run arithmetic and emit
 trace output, but they must not supply input facts, formulas, rounding rules,
-current patch facts, system mechanics, or public answer authority by themselves.
+current patch facts, system mechanics, or public answer authority.
+
+The repo does not own accepted SF6 formulas or rounding rules. If SF6-specific
+calculation is needed, the reusable knowledge should be an operator instruction
+for a trusted external CAS or symbolic math backend, not repo formula
+authority.
 
 ## Executor Boundary
 
 Calculation executors may:
 
 - run arithmetic against explicitly supplied inputs;
-- run reviewed formulas only when a formula policy and rounding policy are
-  referenced;
+- run arithmetic against explicitly supplied non-authoritative calculation
+  instructions;
 - emit ordered calculation steps that a reviewer can audit;
 - check hypothetical or review-only arithmetic consistency while preserving
   draft or hold status;
-- support future damage-hidden eval experiments when fixture, route, input,
-  formula, and rounding boundaries are all satisfied.
+- support future damage-hidden eval experiments only as non-authoritative trace
+  generation.
 
 Calculation executors must not:
 
@@ -30,12 +35,13 @@ Calculation executors must not:
   reports, or combo fixtures into accepted current facts;
 - treat generated concept references as exact current values or formulas;
 - override `data/exports/`, `data/roster`, packaged `official_raw`, accepted
-  contracts, accepted workflows, or reviewed formula policy;
+  contracts, or accepted workflows;
 - write generated references, frame-current assets, or public adapter behavior
   unless a separate reviewed issue explicitly allows it.
 
-Third-party or wild math skills are allowed only as executor implementations.
-Their output is a calculation trace candidate, not authority.
+Third-party or wild math skills are allowed only as executor implementations or
+operator instructions after dependency review. Their output is a calculation
+trace candidate, not authority.
 
 ## Trace Fields
 
@@ -53,9 +59,9 @@ Minimum fields:
 - `executor_role`: one of `calculation_executor`, `trace_generator`, or
   `arithmetic_consistency_checker`.
 - `executor_authority_status`: must state that the executor is not SF6
-  authority, formula authority, or current-fact authority.
+  authority, formula authority, rounding authority, or current-fact authority.
 - `calculation_intent`: why the calculation was run, such as
-  `hypothetical_arithmetic_check`, `accepted_formula_execution`,
+  `hypothetical_arithmetic_check`, `external_backend_instruction_check`,
   `damage_hidden_eval_candidate_check`, `frame_window_arithmetic`,
   `punish_window_arithmetic`, or `oki_timing_arithmetic`.
 - `question_scope`: short natural-language scope of the calculation.
@@ -63,14 +69,14 @@ Minimum fields:
 - `input_authority_refs`: source refs for every non-hypothetical input.
 - `input_status`: one of `accepted`, `review_only`, `hypothetical`, `mixed`, or
   `hold`.
-- `formula_policy_ref`: reviewed formula policy used by the calculation, when
-  any formula is being executed as SF6 behavior.
-- `formula_status`: one of `accepted`, `review_only`, `hypothetical`, or
-  `hold`.
-- `rounding_policy_ref`: reviewed rounding, floor, ceiling, truncation, minimum
-  guarantee, or tie-behavior policy when rounding affects output.
-- `rounding_status`: one of `accepted`, `review_only`, `not_applicable`, or
-  `hold`.
+- `calculation_instruction_ref`: reviewed maintainer instruction, skill, or
+  handoff reference used to tell a trusted external backend what to compute.
+- `calculation_instruction_status`: one of `external_backend_candidate`,
+  `review_only`, `hypothetical`, `not_applicable`, or `hold`.
+- `rounding_instruction_ref`: non-authoritative rounding instruction reference
+  when rounding affects output.
+- `rounding_instruction_status`: one of `external_backend_candidate`,
+  `review_only`, `hypothetical`, `not_applicable`, or `hold`.
 - `operation_steps`: ordered computation steps.
 - `output_values`: computed outputs, explicitly labeled as trace outputs rather
   than authority.
@@ -79,8 +85,9 @@ Minimum fields:
 - `generated_reference_allowed`: whether this trace may feed generated
   references. Default is `false` unless a later reviewed workflow allows it.
 - `accepted_current_fact_authority`: must be `false` for executor traces.
-- `uncertainty_or_hold_reasons`: required when any input, formula, rounding
-  rule, route mapping, timing assumption, or authority path is missing.
+- `uncertainty_or_hold_reasons`: required when any input, calculation
+  instruction, rounding instruction, route mapping, or timing assumption is
+  missing.
 - `created_by`: human, agent, script, or skill that created the trace.
 - `created_at`: timestamp.
 - `repo_revision`: repository commit or revision used for the calculation, when
@@ -106,16 +113,14 @@ Use one of these values for `status`:
   accepted current fact.
 - `hypothetical_arithmetic_only`: values were user-provided, hypothetical, or
   review-only; the executor checked arithmetic consistency only.
-- `accepted_formula_execution`: the executor ran only against accepted inputs,
-  accepted formula policy, and accepted rounding policy. The output may support
-  an answer, but the trace is still not authority by itself.
 - `blocked_missing_input_authority`: an input is absent from `data/exports/`,
   `data/roster`, packaged `official_raw`, or another accepted authority
   surface.
-- `blocked_missing_formula_policy`: formula, scaling rule, timing rule, or
-  exception policy is not accepted.
-- `blocked_missing_rounding_policy`: rounding, floor, ceiling, truncation,
-  minimum guarantee, or tie behavior matters but no reviewed policy exists.
+- `blocked_missing_calculation_instruction`: calculation instruction, scaling
+  guidance, timing guidance, or exception handling is missing or held.
+- `blocked_missing_rounding_instruction`: rounding, floor, ceiling,
+  truncation, minimum guarantee, or tie behavior matters but no reviewed
+  instruction exists.
 - `blocked_ambiguous_route`: combo route, action mapping, hit mapping, timing,
   or move identity is unresolved.
 - `blocked_public_answer_boundary`: a calculation may exist for maintainer
@@ -124,22 +129,17 @@ Use one of these values for `status`:
   contract.
 - `executor_error`: the tool failed or produced non-auditable output.
 - `out_of_scope`: the request asks the executor to decide authority, scrape
-  facts, infer formulas, or answer beyond arithmetic execution.
+  facts, infer SF6 formulas, or answer beyond arithmetic execution.
 
 ## Public Answer Rules
 
-Executor traces may support public answers only when all of these are true:
+Executor traces must not support public current-fact answers in v2.6.
+`public_answer_allowed` remains `false` for traces from the repo-local
+compatibility helper.
 
-- non-hypothetical inputs cite accepted authority refs;
-- formula policy and rounding policy are accepted and cited;
-- route, hit, action, timing, and unit assumptions are explicit when relevant;
-- `status` is `accepted_formula_execution`;
-- `public_answer_allowed` is `true`;
-- no hold reason remains.
-
-Executor traces must not support public answers when any required input,
-formula, rounding policy, route mapping, timing assumption, or authority path is
-missing. In those cases, use hold or unresolved behavior.
+Use hold or unresolved behavior when any required input, calculation
+instruction, rounding instruction, route mapping, or timing assumption is
+missing.
 
 For hypothetical questions, the adapter may compute arithmetic consistency only
 if it states that the values are hypothetical or review-only and not accepted
@@ -148,8 +148,8 @@ current SF6 truth.
 For exact current move facts, public answers remain grounded in packaged
 frame-current authority derived from `data/exports/` and `data/roster`. For
 route-level formulas, combo damage, meaty or oki timing, punish windows,
-resource/damage calculations, or rounding questions, hold unless accepted
-authority exists.
+resource/damage calculations, or rounding questions, hold unless a later
+architecture decision reopens this boundary.
 
 ## Non-Authority Inputs
 
@@ -173,7 +173,7 @@ schema. A later PR may add:
 - `contracts/calculation-trace.schema.json`;
 - `tests/validation/validate-calculation-traces.ps1`;
 - validators that reject `accepted_current_fact_authority: true`;
-- validators requiring formula and rounding refs for
-  `accepted_formula_execution`;
+- validators requiring external-backend instruction refs for selected trace
+  use cases;
 - validators blocking `public_answer_allowed: true` for hypothetical, blocked,
   invalid, or executor-error traces.

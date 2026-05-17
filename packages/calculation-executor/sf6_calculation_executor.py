@@ -16,6 +16,7 @@ TRACE_SCHEMA_VERSION = "sf6-calculation-trace/v1"
 AUTHORITY_STATUS = [
     "not_sf6_authority",
     "not_formula_authority",
+    "not_rounding_authority",
     "not_current_fact_authority",
 ]
 
@@ -121,9 +122,8 @@ def compute_operation(
 
 def determine_block_status(request: dict[str, Any]) -> tuple[str | None, list[str]]:
     hold_reasons: list[str] = []
-    intent = request.get("calculation_intent")
-    formula_status = request.get("formula_status")
-    rounding_status = request.get("rounding_status")
+    calculation_instruction_status = request.get("calculation_instruction_status")
+    rounding_instruction_status = request.get("rounding_instruction_status")
     input_status = request.get("input_status")
 
     if input_status == "hold":
@@ -134,13 +134,19 @@ def determine_block_status(request: dict[str, Any]) -> tuple[str | None, list[st
         hold_reasons.append("route, hit, action, timing, or move mapping is ambiguous")
         return "blocked_ambiguous_route", hold_reasons
 
-    if intent == "accepted_formula_execution" and formula_status != "accepted":
-        hold_reasons.append("accepted formula policy is required")
-        return "blocked_missing_formula_policy", hold_reasons
+    if (
+        request.get("calculation_instruction_required")
+        and calculation_instruction_status in {None, "hold"}
+    ):
+        hold_reasons.append("calculation instruction is missing or held")
+        return "blocked_missing_calculation_instruction", hold_reasons
 
-    if request.get("rounding_required") and rounding_status != "accepted":
-        hold_reasons.append("accepted rounding policy is required")
-        return "blocked_missing_rounding_policy", hold_reasons
+    if (
+        request.get("rounding_required")
+        and rounding_instruction_status in {None, "hold"}
+    ):
+        hold_reasons.append("rounding instruction is missing or held")
+        return "blocked_missing_rounding_instruction", hold_reasons
 
     return None, hold_reasons
 
@@ -149,16 +155,11 @@ def determine_success_status(request: dict[str, Any], operations_run: bool) -> s
     if not operations_run:
         return "not_run"
 
-    if request.get("input_status") == "hypothetical" or request.get("formula_status") == "hypothetical":
-        return "hypothetical_arithmetic_only"
-
     if (
-        request.get("calculation_intent") == "accepted_formula_execution"
-        and request.get("input_status") == "accepted"
-        and request.get("formula_status") == "accepted"
-        and request.get("rounding_status") in {"accepted", "not_applicable"}
+        request.get("input_status") == "hypothetical"
+        or request.get("calculation_instruction_status") == "hypothetical"
     ):
-        return "accepted_formula_execution"
+        return "hypothetical_arithmetic_only"
 
     return "trace_generated"
 
@@ -226,18 +227,13 @@ def build_trace(request: dict[str, Any]) -> dict[str, Any]:
             status = "invalid_input"
             hold_reasons.append(str(exc))
 
-    public_answer_allowed = bool(
-        status == "accepted_formula_execution"
-        and request.get("public_answer_allowed") is True
-        and not hold_reasons
-    )
+    public_answer_allowed = False
 
     limitations = [
         "Executor output is an arithmetic trace, not SF6 authority.",
         "The executor does not look up SF6 facts, formulas, rounding rules, or current patch data.",
+        "Trace must not support public current-fact answers.",
     ]
-    if status != "accepted_formula_execution":
-        limitations.append("Trace must not support public current-fact answers.")
 
     return {
         "trace_id": request.get("trace_id", "calculation-trace"),
@@ -250,10 +246,14 @@ def build_trace(request: dict[str, Any]) -> dict[str, Any]:
         "input_values": input_values,
         "input_authority_refs": request.get("input_authority_refs", []),
         "input_status": request.get("input_status", "hypothetical"),
-        "formula_policy_ref": request.get("formula_policy_ref"),
-        "formula_status": request.get("formula_status", "hypothetical"),
-        "rounding_policy_ref": request.get("rounding_policy_ref"),
-        "rounding_status": request.get("rounding_status", "not_applicable"),
+        "calculation_instruction_ref": request.get("calculation_instruction_ref"),
+        "calculation_instruction_status": request.get(
+            "calculation_instruction_status", "hypothetical"
+        ),
+        "rounding_instruction_ref": request.get("rounding_instruction_ref"),
+        "rounding_instruction_status": request.get(
+            "rounding_instruction_status", "not_applicable"
+        ),
         "operation_steps": operation_steps,
         "output_values": output_values,
         "status": status,
@@ -291,10 +291,10 @@ def invalid_request_trace(message: str) -> dict[str, Any]:
         "input_values": {},
         "input_authority_refs": [],
         "input_status": "hold",
-        "formula_policy_ref": None,
-        "formula_status": "hold",
-        "rounding_policy_ref": None,
-        "rounding_status": "hold",
+        "calculation_instruction_ref": None,
+        "calculation_instruction_status": "hold",
+        "rounding_instruction_ref": None,
+        "rounding_instruction_status": "hold",
         "operation_steps": [],
         "output_values": {},
         "status": "invalid_input",

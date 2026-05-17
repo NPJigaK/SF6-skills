@@ -33,8 +33,8 @@ python packages/calculation-executor/sf6_calculation_executor.py \
 | `executor_role` | `calculation_executor` |
 | `calculation_intent` | `hypothetical_arithmetic_check` |
 | `input_status` | `hypothetical` |
-| `formula_status` | `hypothetical` |
-| `rounding_status` | `not_applicable` |
+| `calculation_instruction_status` | `hypothetical` |
+| `rounding_instruction_status` | `not_applicable` |
 | `operation_kind` | `percent_of` |
 | `output_values.composed_percent` | `68` |
 | `status` | `hypothetical_arithmetic_only` |
@@ -47,6 +47,7 @@ python packages/calculation-executor/sf6_calculation_executor.py \
 - The executor output is arithmetic trace evidence only.
 - The trace is not SF6 authority.
 - The trace is not formula authority.
+- The trace is not rounding authority.
 - The trace is not current-fact authority.
 - The fixture has no `input_authority_refs` because the values are
   hypothetical.

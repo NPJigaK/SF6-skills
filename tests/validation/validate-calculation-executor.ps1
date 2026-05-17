@@ -10,10 +10,9 @@ $allowedStatuses = @(
   'not_run',
   'trace_generated',
   'hypothetical_arithmetic_only',
-  'accepted_formula_execution',
   'blocked_missing_input_authority',
-  'blocked_missing_formula_policy',
-  'blocked_missing_rounding_policy',
+  'blocked_missing_calculation_instruction',
+  'blocked_missing_rounding_instruction',
   'blocked_ambiguous_route',
   'blocked_public_answer_boundary',
   'invalid_input',
@@ -25,8 +24,8 @@ $blockedOrNonPublicStatuses = @(
   'trace_generated',
   'hypothetical_arithmetic_only',
   'blocked_missing_input_authority',
-  'blocked_missing_formula_policy',
-  'blocked_missing_rounding_policy',
+  'blocked_missing_calculation_instruction',
+  'blocked_missing_rounding_instruction',
   'blocked_ambiguous_route',
   'blocked_public_answer_boundary',
   'invalid_input',
@@ -102,10 +101,10 @@ foreach ($fixtureFile in $fixtureFiles) {
     'input_values',
     'input_authority_refs',
     'input_status',
-    'formula_policy_ref',
-    'formula_status',
-    'rounding_policy_ref',
-    'rounding_status',
+    'calculation_instruction_ref',
+    'calculation_instruction_status',
+    'rounding_instruction_ref',
+    'rounding_instruction_status',
     'operation_steps',
     'output_values',
     'status',
@@ -140,7 +139,7 @@ foreach ($fixtureFile in $fixtureFiles) {
     Add-Issue ([ref]$issues) "$relativePath non-public status must not allow public answers"
   }
 
-  foreach ($authorityFlag in @('not_sf6_authority', 'not_formula_authority', 'not_current_fact_authority')) {
+  foreach ($authorityFlag in @('not_sf6_authority', 'not_formula_authority', 'not_rounding_authority', 'not_current_fact_authority')) {
     if (@($trace.executor_authority_status) -notcontains $authorityFlag) {
       Add-Issue ([ref]$issues) "$relativePath missing executor authority flag: $authorityFlag"
     }
