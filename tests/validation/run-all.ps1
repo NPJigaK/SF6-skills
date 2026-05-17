@@ -50,6 +50,7 @@ $readOnlyValidationScripts = @(
   'tests/validation/validate-codex-hermes-pack.ps1',
   'tests/validation/validate-codex-hermes-delegation-fixtures.ps1',
   'tests/validation/validate-v2-contracts.ps1',
+  'tests/validation/validate-json-schema-manifest.ps1',
   'tests/validation/validate-agent-toolchain.ps1',
   'tests/validation/validate-repository-surfaces.ps1',
   'tests/validation/validate-package-surface-classification.ps1',

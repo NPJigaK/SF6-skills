@@ -76,6 +76,8 @@ installers, and distribution docs is in
 [`docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md`](./docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md).
 Package directory classifications are in
 [`docs/architecture/package-surface-classification.md`](./docs/architecture/package-surface-classification.md).
+Generic JSON Schema validation runner guidance is in
+[`docs/architecture/schema-validation-runner.md`](./docs/architecture/schema-validation-runner.md).
 
 ## Public answer adapter status
 

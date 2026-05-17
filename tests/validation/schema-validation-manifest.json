@@ -1,0 +1,50 @@
+{
+  "schema_version": "schema-validation-manifest/v1",
+  "last_reviewed": "2026-05-18",
+  "tracking_issue": "#252",
+  "runner": "tests/validation/validate-json-schema-manifest.ps1",
+  "validation_scope": "json_schema_structural_validation_only",
+  "semantic_validators_remain_authority": true,
+  "entries": [
+    {
+      "id": "repository_surfaces",
+      "schema_path": "contracts/repository-surface.schema.json",
+      "document_globs": [
+        "data/repository-surfaces.json"
+      ],
+      "notes": "Structural registry shape only; validate-repository-surfaces.ps1 remains semantic authority."
+    },
+    {
+      "id": "maintainer_agent_toolchain",
+      "schema_path": "contracts/agent-toolchain.schema.json",
+      "document_globs": [
+        "data/toolchain/maintainer-agent-toolchain.json"
+      ],
+      "notes": "Structural toolchain manifest shape only; validate-agent-toolchain.ps1 remains semantic authority."
+    },
+    {
+      "id": "normalization_aliases",
+      "schema_path": "contracts/normalization-aliases.schema.json",
+      "document_globs": [
+        "data/aliases/ja-query-fixtures.json"
+      ],
+      "notes": "Structural alias shape only; normalization validators remain semantic authority."
+    },
+    {
+      "id": "external_frame_atlas_source_evaluation",
+      "schema_path": "contracts/external-frame-atlas-source-evaluation.schema.json",
+      "document_globs": [
+        "data/external-frame-atlas/evaluation/source-evaluation-matrix.json"
+      ],
+      "notes": "Structural source evaluation shape only; external atlas evaluation validator remains semantic authority."
+    },
+    {
+      "id": "external_frame_atlas_source_fixtures",
+      "schema_path": "contracts/external-frame-atlas-source.schema.json",
+      "document_globs": [
+        "tests/fixtures/external-frame-atlas/*.json"
+      ],
+      "notes": "Structural external source fixture shape only; external atlas fixture validator remains semantic authority."
+    }
+  ]
+}
