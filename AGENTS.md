@@ -74,6 +74,26 @@
 - Current operation prioritizes personal/private Codex-operated Hermes-first workflows; `skills/sf6-agent/` is deferred until later scoped work decides whether to remove, relocate, or reactivate it.
 - See `docs/architecture/hermes-v2.1-roadmap.md`, `docs/architecture/codex-hermes-bridge-policy.md`, and `workflows/codex-to-hermes-delegation.md`.
 
+## Project Status Protocol
+
+- Before answering project status, resuming previous work, editing files, or updating progress docs, verify the current baseline.
+- Identify the current date, cwd, repository root, and git root.
+- Read this `AGENTS.md` and any relevant subdirectory or workflow context before applying remembered instructions.
+- Run `git status --short --branch` and inspect the relevant issue, PR, roadmap, and on-disk docs for the task.
+- Treat Hermes memory, session search, local skills, Curator output, Kanban state, checkpoints, and previous chat summaries as secondary hints only.
+- If memory/session recall conflicts with current git, disk, issue, PR, or validator evidence, prefer the current evidence and state the contradiction.
+- Label important status claims when useful as `verified_from_git`, `verified_from_disk`, `from_issue_or_pr`, `from_memory_or_session`, `inferred`, or `unknown`.
+- Do not modify files, update progress docs, or claim validation if the baseline has unresolved contradictions.
+- Do not report tests, validators, PR state, merge state, or issue closure as complete unless verified from current command output, GitHub state, or checked-in artifacts.
+
+## Negative Learning Guard
+
+- Treat missing packages, path problems, auth failures, network failures, sandbox limitations, migration artifacts, stale generated files, and tool-version mismatches as provisional failures.
+- Do not write permanent Hermes skills, memory, workflow rules, or repo policy saying a tool or workflow "does not work" unless the user confirms it is a stable constraint or a later verification proves it.
+- After environment, dependency, profile, auth, or toolchain changes, retry previously failed tools before preserving an avoidance rule.
+- When creating or updating local skills, distinguish permanent API/spec limits, repo policy, temporary environment failures, and one-off transient errors.
+- Promote only durable procedural lessons through the reviewed repo path. Do not promote raw failure logs, local Hermes state, or temporary workarounds as canonical behavior.
+
 ## Workflow Rules
 
 - Maintainer procedures belong under `workflows/`.
