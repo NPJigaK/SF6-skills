@@ -23,6 +23,7 @@ Architecture docs define the v2 source-of-truth model.
 - [language-policy.md](./language-policy.md)
 - [harness-and-distribution-roles.md](./harness-and-distribution-roles.md)
 - [repository-surface-registry-policy.md](./repository-surface-registry-policy.md)
+- [package-surface-classification.md](./package-surface-classification.md)
 - [generated-reference-responsibility-plan.md](./generated-reference-responsibility-plan.md)
 - [frame-current-runtime-separation-plan.md](./frame-current-runtime-separation-plan.md)
 - [powershell-compatibility-policy.md](./powershell-compatibility-policy.md)

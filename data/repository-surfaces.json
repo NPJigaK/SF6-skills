@@ -1,11 +1,12 @@
 {
   "schema_version": "repository-surfaces/v1",
-  "last_reviewed": "2026-05-17",
+  "last_reviewed": "2026-05-18",
   "registry_status": "seed_index_of_existing_reviewed_boundaries",
   "policy_refs": [
     "AGENTS.md",
     "docs/architecture/decisions/0002-private-hermes-first-operation.md",
     "docs/architecture/harness-and-distribution-roles.md",
+    "docs/architecture/package-surface-classification.md",
     "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
   ],
   "surfaces": [
@@ -478,9 +479,11 @@
       ],
       "policy_refs": [
         "packages/README.md",
+        "docs/architecture/package-surface-classification.md",
+        "docs/architecture/generated-reference-responsibility-plan.md",
         "docs/architecture/decisions/0002-private-hermes-first-operation.md"
       ],
-      "notes": "Builder for derived knowledge references under the deferred public adapter path."
+      "notes": "package_classification=active_repo_local. Builder for derived knowledge references under the deferred public adapter path; retained as repo-local generated knowledge runtime builder."
     },
     {
       "id": "skill_packaging_package",
@@ -509,9 +512,12 @@
       ],
       "policy_refs": [
         "packages/README.md",
+        "docs/architecture/package-surface-classification.md",
+        "docs/architecture/frame-current-runtime-separation-plan.md",
+        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
         "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
       ],
-      "notes": "Currently mixes private runtime asset builders with deferred public distribution bundle tooling."
+      "notes": "package_classification=shared_infra. Runtime asset builders are active_repo_local; build-release-bundle.ps1 is deferred_distribution."
     },
     {
       "id": "skill_installers_package",
@@ -535,11 +541,12 @@
         "legacy_distribution_boundary_preserved"
       ],
       "policy_refs": [
+        "docs/architecture/package-surface-classification.md",
         "docs/architecture/decisions/0002-private-hermes-first-operation.md",
         "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
         "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
       ],
-      "notes": "Installer tooling belongs to deferred public distribution. ADR-0004 keeps it as interim legacy-lane coverage only until public adapter removal."
+      "notes": "package_classification=deferred_distribution. Installer tooling belongs to deferred public distribution. ADR-0004 keeps it as interim legacy-lane coverage only until public adapter removal."
     },
     {
       "id": "skill_validator_package",
@@ -564,9 +571,10 @@
       ],
       "policy_refs": [
         "packages/README.md",
+        "docs/architecture/package-surface-classification.md",
         "docs/architecture/decisions/0002-private-hermes-first-operation.md"
       ],
-      "notes": "Placeholder/support surface whose future depends on deferred public adapter decisions."
+      "notes": "package_classification=legacy. Historical placeholder/support surface; current validation authority lives under tests/validation."
     },
     {
       "id": "calculation_executor_package",
@@ -592,9 +600,10 @@
         "not_formula_authority"
       ],
       "policy_refs": [
-        "contracts/calculation-executor-trace.md"
+        "contracts/calculation-executor-trace.md",
+        "docs/architecture/package-surface-classification.md"
       ],
-      "notes": "Executor for calculation traces. It is not SF6 formula, input, or current-fact authority."
+      "notes": "package_classification=active_repo_local. Executor for calculation traces. It is not SF6 formula, input, or current-fact authority."
     },
     {
       "id": "hermes_sf6_pack",

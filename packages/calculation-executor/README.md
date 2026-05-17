@@ -1,5 +1,7 @@
 # SF6 Calculation Executor
 
+Package classification: `active_repo_local`.
+
 This package contains a repo-owned deterministic arithmetic trace compatibility
 helper for maintainer workflows.
 
