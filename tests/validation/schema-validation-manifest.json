@@ -45,6 +45,14 @@
         "tests/fixtures/external-frame-atlas/*.json"
       ],
       "notes": "Structural external source fixture shape only; external atlas fixture validator remains semantic authority."
+    },
+    {
+      "id": "current_fact_export_manifests",
+      "schema_path": "contracts/current-fact-export-manifest.schema.json",
+      "document_globs": [
+        "data/exports/*/snapshot_manifest.json"
+      ],
+      "notes": "Structural current-fact export manifest shape only; frame-current and raw snapshot validators remain semantic authority."
     }
   ]
 }

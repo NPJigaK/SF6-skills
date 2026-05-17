@@ -157,6 +157,10 @@ Published exports:
 - `data/exports/<character_slug>/derived_metrics.{json,csv}`
 - `data/exports/<character_slug>/snapshot_manifest.json`
 
+See `data/exports/README.md` for the current-fact export authority boundary.
+`snapshot_manifest.json` follows
+`contracts/current-fact-export-manifest.schema.json` for structural validation.
+
 ## Manifest Rules
 
 `run_manifest.json` records a normalized attempt and includes:

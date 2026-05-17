@@ -69,6 +69,7 @@
       "id": "data_exports",
       "title": "Current Fact Exports",
       "path_globs": [
+        "data/exports/README.md",
         "data/exports/*/snapshot_manifest.json",
         "data/exports/*/official_raw.json",
         "data/exports/*/derived_metrics.json",
@@ -87,11 +88,14 @@
       "public_distribution_status": "not_distribution",
       "normal_public_answer_authority": true,
       "validation_expectation": [
+        "current_fact_export_manifest_schema_valid",
         "ingest_artifacts_valid",
         "raw_snapshot_manifest_consistent"
       ],
       "policy_refs": [
         "AGENTS.md",
+        "data/exports/README.md",
+        "contracts/current-fact-export-manifest.schema.json",
         "ingest/frame_data/README.md"
       ],
       "notes": "Published current facts are canonical; manual-review sidecars remain non-canonical."

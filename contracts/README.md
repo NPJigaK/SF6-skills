@@ -38,6 +38,13 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 - `normalization-aliases.schema.json`: query-normalization alias contract for mapping user language to structured lookup inputs.
 - `data/aliases/`: canonical query-normalization support, not exact current-fact authority. Exact current facts remain grounded in `data/exports/` and `data/roster/`.
 
+## Current-Fact Export Contracts
+
+- `current-fact-export-manifest.schema.json`: structural contract for
+  `data/exports/<character_slug>/snapshot_manifest.json`.
+- `data/exports/README.md`: maintainer-facing boundary for published export
+  authority, manual-review sidecars, and related validators.
+
 ## Maintainer Toolchain Contracts
 
 - `agent-toolchain.schema.json`: maintainer agent toolchain policy contract for reviewed capabilities and freshness expectations.

@@ -33,6 +33,7 @@ JSON artifact に限定する。
 | `contracts/normalization-aliases.schema.json` | `data/aliases/ja-query-fixtures.json` |
 | `contracts/external-frame-atlas-source-evaluation.schema.json` | `data/external-frame-atlas/evaluation/source-evaluation-matrix.json` |
 | `contracts/external-frame-atlas-source.schema.json` | `tests/fixtures/external-frame-atlas/*.json` |
+| `contracts/current-fact-export-manifest.schema.json` | `data/exports/*/snapshot_manifest.json` |
 
 Schemas with external relative `$ref` files, markdown front matter contracts,
 or command-generated traces stay under dedicated validators until a later PR
