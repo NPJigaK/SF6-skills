@@ -58,6 +58,11 @@ Validator-facing boundary markers:
 - `skills/sf6-agent/references/generated-*` is derived
 - `skills/sf6-agent/assets/frame-current/` is derived
 
+Machine-readable surface classifications live in
+[`data/repository-surfaces.json`](./data/repository-surfaces.json). Maintainer
+guidance for using the registry with validation lanes is in
+[`docs/architecture/repository-surface-registry-policy.md`](./docs/architecture/repository-surface-registry-policy.md).
+
 ## Public answer adapter status
 
 `skills/sf6-agent/` は既存の単一public answer adapter surfaceです。
@@ -187,6 +192,10 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane
 | `legacy-distribution` | deferred public distribution bundle / `.dist` を検証する。 |
 | `all` | CI相当。derived build と legacy distribution を含む従来互換のfull suite。 |
 
+Validation lane と repository surface role の対応は
+[`docs/architecture/repository-surface-registry-policy.md`](./docs/architecture/repository-surface-registry-policy.md)
+を参照してください。
+
 広いPRやmerge前確認では、従来どおりfull suiteを実行します。
 
 ```powershell
@@ -210,6 +219,7 @@ Generated referencesやframe-current assetsを変更するPRでは、derived out
 - [docs/architecture/v2-architecture.md](./docs/architecture/v2-architecture.md): v2のsource-of-truth構造
 - [docs/architecture/language-policy.md](./docs/architecture/language-policy.md): 日本語first運用と英語互換構造
 - [docs/architecture/harness-and-distribution-roles.md](./docs/architecture/harness-and-distribution-roles.md): public adapter、repo-local workflow、Hermes harness、配布境界
+- [docs/architecture/repository-surface-registry-policy.md](./docs/architecture/repository-surface-registry-policy.md): repository surface registry と validation lane の使い方
 - [docs/architecture/japanese-maintainer-docs-policy.md](./docs/architecture/japanese-maintainer-docs-policy.md): 日本語メンテナー向けdoc方針
 - [workflows/README.md](./workflows/README.md): canonical maintainer proceduresの索引
 - [docs/testing/README.md](./docs/testing/README.md): smoke runsとvalidation docs

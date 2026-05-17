@@ -4,10 +4,18 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $schemaPath = 'contracts/repository-surface.schema.json'
 $registryPath = 'data/repository-surfaces.json'
+$policyDocPath = 'docs/architecture/repository-surface-registry-policy.md'
+$readmePath = 'README.md'
+$contractsReadmePath = 'contracts/README.md'
 
 function Read-Json {
   param([Parameter(Mandatory = $true)][string]$RelativePath)
   return Get-Content -LiteralPath (Join-Path $repoRoot $RelativePath) -Raw -Encoding UTF8 | ConvertFrom-Json
+}
+
+function Read-Text {
+  param([Parameter(Mandatory = $true)][string]$RelativePath)
+  return Get-Content -LiteralPath (Join-Path $repoRoot $RelativePath) -Raw -Encoding UTF8
 }
 
 function Test-Property {
@@ -48,6 +56,19 @@ function Get-TrackedMatches {
   })
 }
 
+function Assert-TextContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$Text,
+    [Parameter(Mandatory = $true)][string]$Needle,
+    [Parameter(Mandatory = $true)][string]$Context,
+    [Parameter(Mandatory = $true)][ref]$Issues
+  )
+
+  if (-not $Text.Contains($Needle)) {
+    $Issues.Value += "$Context must mention: $Needle"
+  }
+}
+
 $issues = @()
 $requiredSurfaceIds = @(
   'knowledge',
@@ -75,7 +96,7 @@ $requiredSurfaceIds = @(
   'manual_review_sidecars'
 )
 
-foreach ($relativePath in @($schemaPath, $registryPath)) {
+foreach ($relativePath in @($schemaPath, $registryPath, $policyDocPath, $readmePath, $contractsReadmePath)) {
   if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $relativePath) -PathType Leaf)) {
     $issues += "Missing repository surface file: $relativePath"
   }
@@ -203,6 +224,62 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $registryPath) -PathType Leaf) {
     if (-not $seenIds.ContainsKey($requiredId)) {
       $issues += "$registryPath missing required seed surface: $requiredId"
     }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot $policyDocPath) -PathType Leaf) {
+  $policyDoc = Read-Text $policyDocPath
+  foreach ($requiredText in @(
+    'data/repository-surfaces.json',
+    'repository-surfaces/v1',
+    'surface_role',
+    'path_state',
+    'validation_expectation',
+    'read-only',
+    'derived-build',
+    'legacy-distribution',
+    'all',
+    'canonical',
+    'derived',
+    'deferred_legacy',
+    'repo_local_support',
+    'historical',
+    'non_canonical',
+    'generated_knowledge_references',
+    'frame_current_runtime_assets',
+    'normalization_runtime_assets',
+    'release_bundle_dist',
+    'sf6_agent_public_adapter',
+    'skill_installers_package',
+    'raw_snapshots',
+    'normalized_intermediate_state',
+    'manual_review_sidecars'
+  )) {
+    Assert-TextContains $policyDoc $requiredText $policyDocPath ([ref]$issues)
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot $readmePath) -PathType Leaf) {
+  $readme = Read-Text $readmePath
+  foreach ($requiredText in @(
+    'data/repository-surfaces.json',
+    'docs/architecture/repository-surface-registry-policy.md',
+    'read-only',
+    'derived-build',
+    'legacy-distribution'
+  )) {
+    Assert-TextContains $readme $requiredText $readmePath ([ref]$issues)
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot $contractsReadmePath) -PathType Leaf) {
+  $contractsReadme = Read-Text $contractsReadmePath
+  foreach ($requiredText in @(
+    'repository-surface.schema.json',
+    'data/repository-surfaces.json',
+    'docs/architecture/repository-surface-registry-policy.md'
+  )) {
+    Assert-TextContains $contractsReadme $requiredText $contractsReadmePath ([ref]$issues)
   }
 }
 

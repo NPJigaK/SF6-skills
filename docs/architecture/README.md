@@ -20,4 +20,5 @@ Architecture docs define the v2 source-of-truth model.
 - [video-observation-v2.2-plan.md](./video-observation-v2.2-plan.md)
 - [language-policy.md](./language-policy.md)
 - [harness-and-distribution-roles.md](./harness-and-distribution-roles.md)
+- [repository-surface-registry-policy.md](./repository-surface-registry-policy.md)
 - [japanese-maintainer-docs-policy.md](./japanese-maintainer-docs-policy.md)
