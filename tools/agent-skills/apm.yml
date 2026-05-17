@@ -4,6 +4,8 @@ description: Maintainer-only external Agent Skill dependency manifest for privat
 targets:
   - agent-skills
 dependencies:
-  apm: []
+  apm:
+    # renovate: datasource=git-tags depName=K-Dense-AI/scientific-agent-skills
+    - K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0
 devDependencies:
   apm: []

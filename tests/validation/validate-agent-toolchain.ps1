@@ -106,6 +106,7 @@ $requiredFiles = @(
   '.github/renovate.json',
   'docs/architecture/agent-toolchain-freshness.md',
   'docs/architecture/agent-skill-dependency-policy.md',
+  'docs/architecture/calculation-backend-policy.md',
   'docs/architecture/hermes-curator-worktree-checkpoint-policy.md',
   'docs/architecture/hermes-memory-policy.md',
   'docs/architecture/hermes-maintainer-profile-policy.md',
@@ -114,6 +115,8 @@ $requiredFiles = @(
   $schemaPath,
   'data/toolchain/README.md',
   $manifestPath,
+  'tools/agent-skills/.gitignore',
+  'tools/agent-skills/apm.lock.yaml',
   'tools/agent-skills/apm.yml',
   'workflows/check-agent-toolchain-freshness.md'
 )
@@ -304,11 +307,23 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.yml') -P
     'targets:',
     '- agent-skills',
     'dependencies:',
-    'apm: []',
+    'renovate: datasource=git-tags depName=K-Dense-AI/scientific-agent-skills',
+    'K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0',
     'devDependencies:'
   )) {
     if ($apmText -notmatch [regex]::Escape($needle)) {
       $issues += "tools/agent-skills/apm.yml missing required text: $needle"
+    }
+  }
+  foreach ($forbiddenDependency in @(
+    'K-Dense-AI/scientific-agent-skills#',
+    'K-Dense-AI/scientific-agent-skills/main',
+    'scientific-skills/statistics',
+    'sagemath',
+    'mcp'
+  )) {
+    if ($apmText.ToLowerInvariant() -match [regex]::Escape($forbiddenDependency.ToLowerInvariant())) {
+      $issues += "tools/agent-skills/apm.yml contains deferred or broad dependency text: $forbiddenDependency"
     }
   }
   foreach ($forbidden in @(
@@ -333,11 +348,62 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.yml') -P
   }
 }
 
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/.gitignore') -PathType Leaf) {
+  $apmGitignore = Read-Text 'tools/agent-skills/.gitignore'
+  foreach ($needle in @(
+    '.agents/',
+    'apm_modules/'
+  )) {
+    if ($apmGitignore -notmatch [regex]::Escape($needle)) {
+      $issues += "tools/agent-skills/.gitignore missing ignored APM output text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.lock.yaml') -PathType Leaf) {
+  $apmLockText = Read-Text 'tools/agent-skills/apm.lock.yaml'
+  foreach ($needle in @(
+    "lockfile_version: '1'",
+    'apm_version:',
+    'repo_url: K-Dense-AI/scientific-agent-skills',
+    'resolved_ref: v2.38.0',
+    'virtual_path: scientific-skills/sympy',
+    'is_virtual: true',
+    'package_type: claude_skill',
+    'deployed_files:',
+    '- .agents/skills/sympy',
+    'content_hash: sha256:'
+  )) {
+    if ($apmLockText -notmatch [regex]::Escape($needle)) {
+      $issues += "tools/agent-skills/apm.lock.yaml missing required lock text: $needle"
+    }
+  }
+  foreach ($forbiddenLockText in @(
+    'scientific-skills/statistical-analysis',
+    'scientific-skills/statsmodels',
+    'scientific-skills/simpy',
+    'sagemath',
+    'mcp',
+    'secret',
+    'token',
+    'credential',
+    'memories/',
+    'sessions/',
+    'state.db',
+    'logs/'
+  )) {
+    if ($apmLockText.ToLowerInvariant() -match [regex]::Escape($forbiddenLockText.ToLowerInvariant())) {
+      $issues += "tools/agent-skills/apm.lock.yaml contains deferred or forbidden text: $forbiddenLockText"
+    }
+  }
+}
+
 if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-skill-dependency-policy.md') -PathType Leaf) {
   $agentSkillPolicy = Read-Text 'docs/architecture/agent-skill-dependency-policy.md'
   foreach ($needle in @(
     'tools/agent-skills/apm.yml',
     'tools/agent-skills/apm.lock.yaml',
+    'docs/architecture/calculation-backend-policy.md',
     'executor / operator instruction dependency',
     'reviewed tag or immutable SHA',
     'Renovate',
@@ -345,10 +411,30 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-skill-d
     'git-refs',
     'SymPy',
     'SageMath',
+    'K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0',
     'must not become repo-owned SF6 formula authority'
   )) {
     if ($agentSkillPolicy -notmatch [regex]::Escape($needle)) {
       $issues += "docs/architecture/agent-skill-dependency-policy.md missing policy text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/calculation-backend-policy.md') -PathType Leaf) {
+  $calculationBackendPolicy = Read-Text 'docs/architecture/calculation-backend-policy.md'
+  foreach ($needle in @(
+    'SymPy is the initial default maintainer-local calculation backend',
+    'sympy==1.14.0',
+    'K-Dense-AI/scientific-agent-skills/scientific-skills/sympy#v2.38.0',
+    'tools/agent-skills/apm.lock.yaml',
+    'SageMath is deferred',
+    'MCP servers are deferred',
+    'statistics are catalogued candidates only',
+    'not SF6 formula authority',
+    'not accepted repo formula authority'
+  )) {
+    if ($calculationBackendPolicy -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/calculation-backend-policy.md missing policy text: $needle"
     }
   }
 }

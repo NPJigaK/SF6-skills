@@ -3,6 +3,10 @@ $ErrorActionPreference = 'Stop'
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $scriptPath = Join-Path $repoRoot 'packages/calculation-executor/sf6_calculation_executor.py'
+$packageRoot = Join-Path $repoRoot 'packages/calculation-executor'
+$pyprojectPath = Join-Path $packageRoot 'pyproject.toml'
+$uvLockPath = Join-Path $packageRoot 'uv.lock'
+$readmePath = Join-Path $packageRoot 'README.md'
 $fixtureRoot = Join-Path $repoRoot 'tests/fixtures/calculation-executor'
 
 $allowedExecutorRoles = @('calculation_executor', 'trace_generator', 'arithmetic_consistency_checker')
@@ -59,8 +63,48 @@ $issues = @()
 if (-not (Test-Path -LiteralPath $scriptPath -PathType Leaf)) {
   throw 'Missing calculation executor script'
 }
+if (-not (Test-Path -LiteralPath $pyprojectPath -PathType Leaf)) {
+  throw 'Missing calculation executor pyproject.toml'
+}
+if (-not (Test-Path -LiteralPath $uvLockPath -PathType Leaf)) {
+  throw 'Missing calculation executor uv.lock'
+}
 if (-not (Test-Path -LiteralPath $fixtureRoot -PathType Container)) {
   throw 'Missing calculation executor fixture directory'
+}
+
+$pyprojectText = Get-Content -LiteralPath $pyprojectPath -Raw -Encoding UTF8
+foreach ($needle in @(
+  'name = "sf6-calculation-executor"',
+  'requires-python = ">=3.14"',
+  '"sympy==1.14.0"'
+)) {
+  if ($pyprojectText -notmatch [regex]::Escape($needle)) {
+    Add-Issue ([ref]$issues) "packages/calculation-executor/pyproject.toml missing required text: $needle"
+  }
+}
+
+$uvLockText = Get-Content -LiteralPath $uvLockPath -Raw -Encoding UTF8
+foreach ($needle in @(
+  'name = "sf6-calculation-executor"',
+  'name = "sympy"',
+  'version = "1.14.0"'
+)) {
+  if ($uvLockText -notmatch [regex]::Escape($needle)) {
+    Add-Issue ([ref]$issues) "packages/calculation-executor/uv.lock missing required text: $needle"
+  }
+}
+
+$readmeText = Get-Content -LiteralPath $readmePath -Raw -Encoding UTF8
+foreach ($needle in @(
+  'SymPy is the initial default maintainer-local symbolic math backend dependency',
+  'not SF6 authority',
+  'not SF6 combo damage formula',
+  'SF6 rounding rule'
+)) {
+  if ($readmeText -notmatch [regex]::Escape($needle)) {
+    Add-Issue ([ref]$issues) "packages/calculation-executor/README.md missing required boundary text: $needle"
+  }
 }
 
 $pythonCommand = Get-Command python -ErrorAction SilentlyContinue

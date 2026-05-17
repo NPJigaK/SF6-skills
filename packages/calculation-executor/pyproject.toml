@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sf6-calculation-executor"
+version = "0.1.0"
+description = "Repo-local calculation trace helper for SF6 maintainer workflows."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "sympy==1.14.0",
+]
+
+[tool.setuptools]
+py-modules = ["sf6_calculation_executor"]

@@ -27,6 +27,7 @@ Architecture docs define the v2 source-of-truth model.
 - [noncanonical-data-authority-boundaries.md](./noncanonical-data-authority-boundaries.md)
 - [package-surface-classification.md](./package-surface-classification.md)
 - [schema-validation-runner.md](./schema-validation-runner.md)
+- [calculation-backend-policy.md](./calculation-backend-policy.md)
 - [generated-reference-responsibility-plan.md](./generated-reference-responsibility-plan.md)
 - [frame-current-runtime-separation-plan.md](./frame-current-runtime-separation-plan.md)
 - [powershell-compatibility-policy.md](./powershell-compatibility-policy.md)
