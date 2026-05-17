@@ -74,6 +74,9 @@ The ADR selecting removal of the public adapter after runtime relocation is in
 The ADR selecting interim legacy-lane handling and later deletion for `.dist`,
 installers, and distribution docs is in
 [`docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md`](./docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md).
+The ADR selecting minimal Git retention for raw snapshots and deferring broader
+raw cache/hash references to repo-external storage is in
+[`docs/architecture/decisions/0005-raw-snapshot-retention.md`](./docs/architecture/decisions/0005-raw-snapshot-retention.md).
 Package directory classifications are in
 [`docs/architecture/package-surface-classification.md`](./docs/architecture/package-surface-classification.md).
 Generic JSON Schema validation runner guidance is in

@@ -76,6 +76,7 @@ $readOnlyValidationScripts = @(
   'tests/validation/validate-evals.ps1',
   'tests/validation/validate-roster-source.ps1',
   'tests/validation/validate-raw-snapshot-minimality.ps1',
+  'tests/validation/validate-raw-snapshot-retention-adr.ps1',
   'tests/validation/validate-manual-review-debt-index.ps1',
   'tests/validation/validate-frame-current-assets.ps1',
   'tests/validation/validate-generated-knowledge.ps1',

@@ -687,13 +687,15 @@
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "raw_snapshot_minimality_valid",
+        "raw_snapshot_retention_adr_valid",
         "not_normal_public_answer_authority"
       ],
       "policy_refs": [
         "AGENTS.md",
-        "ingest/frame_data/README.md"
+        "ingest/frame_data/README.md",
+        "docs/architecture/decisions/0005-raw-snapshot-retention.md"
       ],
-      "notes": "Raw snapshots support reproducibility and ingestion review. They are not final evidence for normal public answers."
+      "notes": "Raw snapshots support minimal current published export reproducibility and ingestion review. ADR-0005 keeps broader raw cache or history storage repo-external by default. They are not final evidence for normal public answers."
     },
     {
       "id": "normalized_intermediate_state",

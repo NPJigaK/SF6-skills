@@ -119,12 +119,15 @@ Policy reference:
 
 | ID | 境界 |
 |---|---|
-| `raw_snapshots` | reproducibility / ingest review の入力。normal public answer evidence ではない。 |
+| `raw_snapshots` | current published exports を再現するための最小 Git-tracked input。ADR-0005 により、それ以上の raw cache / history は repo-external が既定。normal public answer evidence ではない。 |
 | `normalized_intermediate_state` | intermediate state。現在は `documented_absent`。 |
 | `manual_review_sidecars` | withheld rows や review holds。runtime current fact payload に入れない。 |
 
 これらを accepted answer authority に昇格しない。必要な情報は review / curated /
 exported current-fact surface へ、明示的な workflow と validator を通して移す。
+
+Raw snapshot retention boundary:
+`docs/architecture/decisions/0005-raw-snapshot-retention.md`。
 
 ## Maintainer Rule
 
