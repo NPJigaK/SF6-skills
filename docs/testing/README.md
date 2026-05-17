@@ -48,6 +48,7 @@ Manual validator set:
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-video-artifacts.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-combo-damage-fixtures.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-evals.ps1`
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-eval-score-reports.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-roster-source.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-generated-knowledge.ps1`

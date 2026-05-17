@@ -8,6 +8,7 @@ $requiredJsonSchemas = @(
   'contracts/knowledge-page.schema.json',
   'contracts/generated-surface.schema.json',
   'contracts/eval-case.schema.json',
+  'contracts/eval-score-report.schema.json',
   'contracts/video-observation.schema.json',
   'contracts/answer-intent.schema.json',
   'contracts/evidence-card.schema.json',

@@ -39,6 +39,11 @@ When `source_refs.path` points to a migrated legacy file, `source_revision` iden
 - `evidence-card.schema.json`: evidence authority and source-boundary card contract.
 - `answer-plan.schema.json`: answer planning contract combining intent, evidence cards, web state, hold reasons, and response requirements.
 
+## Eval Contracts
+
+- `eval-case.schema.json`: answer-quality case contract for `evals/questions/*.yaml`.
+- `eval-score-report.schema.json`: answer-quality / regression observability report contract. Score reports are not SF6 gameplay authority and do not store raw transcripts or local agent state.
+
 ## Query Normalization Contracts
 
 - `normalization-aliases.schema.json`: query-normalization alias contract for mapping user language to structured lookup inputs.

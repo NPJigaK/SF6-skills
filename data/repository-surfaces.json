@@ -276,12 +276,15 @@
       "public_distribution_status": "not_distribution",
       "normal_public_answer_authority": false,
       "validation_expectation": [
-        "evals_valid"
+        "evals_valid",
+        "eval_score_reports_valid"
       ],
       "policy_refs": [
-        "AGENTS.md"
+        "AGENTS.md",
+        "evals/README.md",
+        "contracts/eval-score-report.schema.json"
       ],
-      "notes": "Canonical for answer-quality expectations, not direct current-fact evidence."
+      "notes": "Canonical for answer-quality expectations, not direct current-fact evidence. Eval score reports are regression observability and not gameplay authority."
     },
     {
       "id": "generated_knowledge_references",
