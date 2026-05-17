@@ -1,0 +1,147 @@
+{
+  "schema_version": "hermes-delegation-sanitized-trace/v1",
+  "trace_id": "provider-executor-summary",
+  "trace_kind": "provider_executor_summary",
+  "tracking_issue": "#197",
+  "target_issue": "#275",
+  "analysis_mode": "hermes_primary",
+  "created_at": "2026-05-18T00:00:00Z",
+  "created_from": {
+    "source_kind": "dry_run_fixture",
+    "source_refs": [
+      "workflows/codex-to-hermes-delegation.md"
+    ]
+  },
+  "delegation_summary": {
+    "target_scope_summary": "Record provider Codex as bounded executor under Hermes orchestration.",
+    "requested_artifact_type": "provider executor summary fixture",
+    "allowed_outputs": [
+      "file inventory label",
+      "diff skeleton label",
+      "validator invocation label"
+    ],
+    "forbidden_outputs": [
+      "provider final judgment",
+      "provider raw details",
+      "canonical promotion without review"
+    ],
+    "authority_boundaries": [
+      "Provider Codex remains executor.",
+      "Hermes remains integrator for the delegated draft.",
+      "Codex app performs final boundary audit before commit."
+    ]
+  },
+  "role_summary": {
+    "codex_app_role": [
+      "hermes_operator",
+      "boundary_auditor",
+      "artifact_converter",
+      "validator_executor"
+    ],
+    "hermes_role": [
+      "primary_analyst",
+      "orchestrator"
+    ],
+    "provider_codex_role": [
+      "executor",
+      "file_reader",
+      "diff_skeleton_builder",
+      "validator_runner"
+    ]
+  },
+  "sanitized_inputs": [
+    {
+      "input_kind": "repo_artifact",
+      "ref": "tests/fixtures/codex-hermes-delegation/hermes-first-orchestration-loop.json",
+      "summary": "Dry-run role separation fixture.",
+      "canonicality": "review_input"
+    }
+  ],
+  "sanitized_hermes_result": {
+    "result_status": "draft_received",
+    "summary": "Hermes may integrate provider executor labels without accepting provider authority.",
+    "proposed_artifacts": [
+      "sanitized provider summary"
+    ],
+    "source_refs": [
+      "workflows/codex-to-hermes-delegation.md"
+    ],
+    "evidence_candidate_notes": [
+      "Provider executor labels are not evidence by themselves."
+    ],
+    "uncertainty_or_hold_reasons": [
+      "Future traces must summarize used and rejected provider outputs."
+    ],
+    "boundary_notes": [
+      "Provider output remains under Hermes orchestration.",
+      "Provider output does not become final authority."
+    ],
+    "follow_up_recommendations": [
+      "Keep provider summaries short and label-based."
+    ]
+  },
+  "provider_codex_summary": {
+    "used": true,
+    "task_kinds": [
+      "file_inventory",
+      "diff_skeleton",
+      "validator_invocation_summary"
+    ],
+    "outputs_used": [
+      "file_inventory",
+      "validator_invocation_summary"
+    ],
+    "outputs_rejected": [
+      "final_architecture_judgment"
+    ],
+    "remained_executor": true
+  },
+  "fallback": {
+    "occurred": false,
+    "reason": null,
+    "recorded_in": null
+  },
+  "post_delegation_review": {
+    "hermes_output_is_draft_input": true,
+    "canonical_promotion_allowed": false,
+    "requires_codex_review": true,
+    "requires_validators": true,
+    "provider_codex_final_authority": false,
+    "local_state_committed": false,
+    "raw_transcript_committed": false,
+    "credentials_committed": false,
+    "provider_raw_output_committed": false
+  },
+  "artifact_conversion": {
+    "converted_to_repo_artifact": true,
+    "artifact_refs": [
+      "tests/fixtures/hermes-delegation-sanitized-trace/valid/provider-executor-summary.json"
+    ],
+    "conversion_notes": [
+      "Provider details are represented as labels only."
+    ],
+    "not_promoted_reason": null
+  },
+  "validators": {
+    "required": [
+      "tests/validation/validate-hermes-delegation-sanitized-traces.ps1"
+    ],
+    "reported": [],
+    "skipped": [],
+    "live_hermes_required": false
+  },
+  "expected_boundary_outcome": {
+    "status": "accept_trace",
+    "reason": "Provider Codex remained a bounded executor and no unsafe content is recorded."
+  },
+  "sanitization_assertions": {
+    "contains_raw_transcript": false,
+    "contains_local_state": false,
+    "contains_credentials": false,
+    "contains_provider_raw_output": false,
+    "contains_tool_raw_log": false,
+    "contains_binary_asset_path": false,
+    "requires_live_hermes": false,
+    "requires_live_provider_execution": false
+  }
+}

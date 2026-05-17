@@ -1,0 +1,25 @@
+{
+  "schema_version": "hermes-delegation-sanitized-trace/v1",
+  "trace_id": "live-hermes-required",
+  "trace_kind": "hermes_primary_delegation",
+  "tracking_issue": "#197",
+  "target_issue": "#275",
+  "analysis_mode": "hermes_primary",
+  "created_at": "2026-05-18T00:00:00Z",
+  "validators": {
+    "required": [],
+    "reported": [],
+    "skipped": [],
+    "live_hermes_required": true
+  },
+  "sanitization_assertions": {
+    "contains_raw_transcript": false,
+    "contains_local_state": false,
+    "contains_credentials": false,
+    "contains_provider_raw_output": false,
+    "contains_tool_raw_log": false,
+    "contains_binary_asset_path": false,
+    "requires_live_hermes": true,
+    "requires_live_provider_execution": false
+  }
+}

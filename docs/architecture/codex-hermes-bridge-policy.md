@@ -63,6 +63,12 @@ Hermes output is non-canonical, but for delegated analysis tasks it is the
 primary draft input. Codex must review that draft against repo boundaries and
 convert only in-scope, supported material into repo artifacts.
 
+If the delegation itself needs to be recorded as a reusable repo artifact,
+use the sanitized trace contract in
+`contracts/hermes-delegation-sanitized-trace.md`. That trace is orchestration
+and handoff metadata only; it is not SF6 fact authority, analysis correctness
+evidence, raw Hermes output, or provider raw output.
+
 Codex-only analysis for Hermes-first work is fallback behavior. It is allowed
 only when Hermes is unavailable or unconfigured, the required Hermes capability
 is unavailable or unverified, the target issue explicitly requests Codex-only
