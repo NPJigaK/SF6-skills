@@ -20,6 +20,12 @@ hermes_local_state_committed: false
 - validators は広く有効だが、PowerShell の手書き列挙・regex・存在確認に寄っており、schema-driven validation、read-only validation lane、legacy distribution lane の分離が不足している。
 - knowledge/data/evals の正本境界は概ね良いが、source->evidence->review->curated の lineage、manual-review debt、eval scoring、system-mechanics authority の横断観測性が弱い。
 
+Update: #226 supersedes the recommendation to create a repo-owned
+system-mechanics formula / rounding authority surface. v2.6 keeps exact SF6
+formulas and rounding rules out of repo authority; needed arithmetic should
+route through trusted external CAS / symbolic math backend instructions and
+remain non-authoritative.
+
 ## 実施方法
 
 Hermes を primary analyst / orchestrator として使い、git 管理下の全ディレクトリを 3 group に分割して read-only delegated analysis を実行した。[Hermes delegation docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation) では、child agent は親の会話履歴を持たず、`goal` / `context` に必要情報を明示する必要がある。その前提で repo path、Issue #220、ADR-0002、対象 directory group、分析観点、出力形式を渡した。
@@ -74,7 +80,7 @@ Raw Hermes transcript、local profile state、sessions、logs、caches、local s
 - Hermes delegation の sanitized trace contract を残したい。
 - source->claim->review->curated の lineage graph を生成したい。
 - evals を静的 YAML ではなく、agent response scoring / regression tracking に使いたい。
-- combo scaling、damage formula、system mechanics の authority path を `data/system-mechanics/` などで作りたい。
+- combo scaling、damage formula、system mechanics の計算を、repo-owned authority ではなく外部 CAS / symbolic math backend 向け instruction として扱いたい。
 - `run-all.ps1` を read-only validation / build-derived / legacy distribution / toolchain に分割したい。
 
 ## 主要な懸念点
@@ -179,14 +185,14 @@ Raw Hermes transcript、local profile state、sessions、logs、caches、local s
 - 推奨対応: read-only `knowledge graph report` を生成し、dangling source refs、duplicate ids、review_after overdue、source->claim->review->curated lineage、generated contamination を検査する。
 - 優先度: Medium
 
-### 懸念 11: system-mechanics current fact authority path が未完成
+### 懸念 11: system-mechanics calculation authority は repo 外へ寄せる
 
 - 種別: architecture / design
 - 根拠: combo scaling などは `knowledge/review/current-fact-candidates` に hold され、`packages/calculation-executor` は arithmetic trace executor であり SF6 formula authority ではない。
-- 問題: system formula / rounding / minimum guarantee / patch-sensitive exceptions の accepted authority surface がない。
+- 問題: system formula / rounding / minimum guarantee / patch-sensitive exceptions を repo authority として持つと、更新漏れや誤った authority 昇格のリスクが高い。
 - ユーザー影響: SF6 の数学的質問で hold が増えるか、review-only material を誤用するリスクがある。
-- 将来要望との関係: combo damage calculator、frame advantage calculator、oki timing calculator が欲しくなると authority path が必要になる。
-- 推奨対応: `data/system-mechanics/` または `data/current-system/` と `contracts/system-mechanics-fact.md` を設計し、calculation executor と formula authority を分離する。
+- 将来要望との関係: combo damage calculator、frame advantage calculator、oki timing calculator が欲しくなると、信頼できる外部 CAS / symbolic math backend と operator instruction 管理が必要になる。
+- 推奨対応: repo-owned formula / rounding authority は作らず、必要な計算は外部 backend への maintainer instruction と非 authoritative trace に寄せる。
 - 優先度: Medium
 
 ### 懸念 12: installer / bundle validation の supply-chain boundary が弱い
@@ -221,7 +227,7 @@ Raw Hermes transcript、local profile state、sessions、logs、caches、local s
 - public skill を削除・移設・再有効化のどれにするかを surface map に基づき決定する。
 - private Hermes-first delegation trace contract を作る。
 - knowledge graph report と eval scoring harness を追加する。
-- `data/system-mechanics/` authority path を作り、calculation executor と SF6 formula authority を接続する。
+- SF6 formula / rounding authority は repo に作らず、外部 CAS / symbolic math backend 向け instruction と非 authoritative trace 運用に寄せる。
 - raw snapshot retention を Git-tracked sanitized artifact と repo-external raw cache/hash reference に分離する。
 
 ## 不確実な点・追加で確認したい点

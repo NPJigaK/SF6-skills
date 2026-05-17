@@ -1,18 +1,19 @@
 {
-  "trace_id": "blocked-missing-formula-policy-001",
+  "trace_id": "blocked-missing-calculation-instruction-001",
   "trace_schema_version": "sf6-calculation-trace/v1",
-  "calculation_intent": "accepted_formula_execution",
-  "question_scope": "Attempt to execute an SF6-like formula without accepted formula policy.",
+  "calculation_intent": "external_backend_instruction_check",
+  "question_scope": "Attempt to execute SF6-like arithmetic without reviewed backend instruction.",
   "input_values": {
     "damage": "1000",
     "modifier": "80"
   },
   "input_authority_refs": [],
   "input_status": "hypothetical",
-  "formula_policy_ref": null,
-  "formula_status": "hold",
-  "rounding_policy_ref": null,
-  "rounding_status": "not_applicable",
+  "calculation_instruction_ref": null,
+  "calculation_instruction_status": "hold",
+  "calculation_instruction_required": true,
+  "rounding_instruction_ref": null,
+  "rounding_instruction_status": "not_applicable",
   "operations": [
     {
       "step_id": "step-1",
@@ -25,7 +26,7 @@
   "created_at": "2026-05-17T00:00:00Z",
   "repo_revision": "fixture",
   "expected": {
-    "status": "blocked_missing_formula_policy",
+    "status": "blocked_missing_calculation_instruction",
     "output_values": {},
     "public_answer_allowed": false
   }

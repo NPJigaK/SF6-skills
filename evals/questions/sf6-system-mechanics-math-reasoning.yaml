@@ -34,7 +34,7 @@ cases:
   - id: sf6-mechanics-exact-current-value-needs-authority
     question: "Is a 50% Super Art minimum guarantee true in the current patch?"
     expected_answer_mode: unresolved_or_hold
-    evidence_boundary: "Exact system-mechanics current facts must route to current-fact/system-mechanics authority; Hameko article evidence and raw video labels alone are insufficient."
+    evidence_boundary: "The repo does not maintain accepted system-mechanics formula authority; Hameko article evidence and raw video labels alone are insufficient, so hold."
     must_not_include:
       - "verified current Super Art floor"
       - "raw video proves current system value"
