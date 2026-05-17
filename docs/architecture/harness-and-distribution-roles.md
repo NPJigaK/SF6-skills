@@ -64,6 +64,11 @@ non-canonical context under `docs/architecture/hermes-memory-policy.md`.
 External Memory Providers are not enabled by default for v2.6 private
 `sf6ingest` operation.
 
+Curator, worktree, and checkpoint lifecycle is governed by
+`docs/architecture/hermes-curator-worktree-checkpoint-policy.md`. Curator
+output, checkpoint store, Kanban state, and worktree-local Hermes state are not
+canonical repo artifacts.
+
 Final outputs must be repo artifacts, such as:
 
 - `knowledge/sources/*`

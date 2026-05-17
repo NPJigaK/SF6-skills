@@ -85,6 +85,13 @@ Built-in Hermes memory and `session_search` may be enabled locally for
 remain disabled by default unless a later reviewed issue adopts one. See
 `docs/architecture/hermes-memory-policy.md`.
 
+For substantial Hermes-assisted edits, use a dedicated git worktree or
+`hermes -w`, and enable checkpoints as a local rollback safety feature. Run
+Curator only through the lifecycle in
+`docs/architecture/hermes-curator-worktree-checkpoint-policy.md`: dry-run,
+pin important skills, backup, review, restore/rollback if needed, and promote
+only summarized lessons through reviewed repo artifacts.
+
 Do not point `skills.external_dirs` at the repo `skills/` directory by default.
 `skills/sf6-agent/` is a deferred public adapter surface, not the active private
 Hermes maintainer skill package. External skill directories must come from a

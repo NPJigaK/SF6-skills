@@ -106,6 +106,7 @@ $requiredFiles = @(
   '.github/renovate.json',
   'docs/architecture/agent-toolchain-freshness.md',
   'docs/architecture/agent-skill-dependency-policy.md',
+  'docs/architecture/hermes-curator-worktree-checkpoint-policy.md',
   'docs/architecture/hermes-memory-policy.md',
   'docs/architecture/hermes-maintainer-profile-policy.md',
   'flake.lock',
@@ -371,6 +372,31 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/hermes-memory
   )) {
     if ($memoryPolicy -notmatch [regex]::Escape($needle)) {
       $issues += "docs/architecture/hermes-memory-policy.md missing policy text: $needle"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/hermes-curator-worktree-checkpoint-policy.md') -PathType Leaf) {
+  $lifecyclePolicy = Read-Text 'docs/architecture/hermes-curator-worktree-checkpoint-policy.md'
+  foreach ($needle in @(
+    'Curator / Worktree / Checkpoint Policy',
+    'hermes curator run --dry-run',
+    'hermes curator pin <skill>',
+    'hermes curator backup --reason',
+    'hermes curator rollback',
+    'hermes curator restore <skill>',
+    'hermes -w',
+    'dedicated git worktree',
+    '/rollback diff <N>',
+    '~/.hermes/checkpoints/',
+    'Git commit、validator、PR review の代替にはしない',
+    'Gateway、cron、Kanban は v2.6 既定では有効化しない',
+    'Do not commit:',
+    '~/.hermes/logs/curator/',
+    'checkpoint store'
+  )) {
+    if ($lifecyclePolicy -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/hermes-curator-worktree-checkpoint-policy.md missing policy text: $needle"
     }
   }
 }

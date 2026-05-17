@@ -127,6 +127,12 @@ Memory and session-search policy is defined in
 `session_search` are local non-canonical context only. External Memory
 Providers are deferred by default for v2.6.
 
+Curator, worktree, and checkpoint policy is defined in
+`docs/architecture/hermes-curator-worktree-checkpoint-policy.md`. Curator must
+start with dry-run / pin / backup review, substantial Hermes editing should use
+dedicated worktrees or `hermes -w`, and checkpoints remain local rollback
+safety state.
+
 Forbidden:
 
 - `approvals.mode: off` for normal repo work.
