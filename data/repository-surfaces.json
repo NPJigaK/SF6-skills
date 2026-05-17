@@ -229,9 +229,41 @@
       ],
       "policy_refs": [
         "AGENTS.md",
-        "contracts/generated-surface.schema.json"
+        "contracts/generated-surface.schema.json",
+        "docs/architecture/generated-reference-responsibility-plan.md"
       ],
-      "notes": "Generated derived output for the deferred public adapter surface."
+      "notes": "Generated derived output from curated knowledge. It is currently located under the deferred public adapter path, but it is separate from hand-written adapter policy references."
+    },
+    {
+      "id": "sf6_agent_adapter_policy_references",
+      "title": "SF6 Agent Adapter Policy References",
+      "path_globs": [
+        "skills/sf6-agent/references/*-policy.md"
+      ],
+      "path_state": "tracked_present",
+      "surface_role": "deferred_legacy",
+      "authority_scope": "hand-written public adapter behavior policy references",
+      "source_of_truth": [
+        "skills/sf6-agent/references/*-policy.md",
+        "skills/sf6-agent/SKILL.md",
+        "AGENTS.md"
+      ],
+      "generated": false,
+      "generator": null,
+      "source_paths": [],
+      "allowed_to_edit_directly": true,
+      "public_distribution_status": "deferred",
+      "normal_public_answer_authority": false,
+      "validation_expectation": [
+        "adapter_policy_boundary_preserved",
+        "not_canonical_sf6_knowledge"
+      ],
+      "policy_refs": [
+        "AGENTS.md",
+        "skills/sf6-agent/SKILL.md",
+        "docs/architecture/generated-reference-responsibility-plan.md"
+      ],
+      "notes": "Hand-written adapter policy files define deferred public adapter behavior only. They are not generated stable concept payloads and are not canonical SF6 knowledge."
     },
     {
       "id": "frame_current_runtime_assets",
