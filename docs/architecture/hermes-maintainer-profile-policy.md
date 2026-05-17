@@ -42,6 +42,21 @@ profile. This is policy metadata only: it is not an exported Hermes profile,
 not installed skill state, and not proof that any maintainer machine has those
 skills enabled or disabled.
 
+The machine-readable allowlist for `sf6ingest` is
+`data/toolchain/hermes-maintainer-skill-allowlist.json`, validated by
+`contracts/hermes-maintainer-skill-allowlist.schema.json` and
+`tests/validation/validate-agent-toolchain.ps1`. The allowlist separates:
+
+- built-in default skills for normal repo-local maintainer work
+- built-in conditional skills that require task-scoped need
+- external APM-managed skills pinned by `tools/agent-skills/apm.yml`
+- deferred candidates that need a later reviewed issue
+- forbidden skill categories that should not be enabled for this repo profile
+
+`maintainer-agent-toolchain.json` keeps the summary policy near the toolchain
+expectations. The allowlist manifest is the detailed review surface for skill
+selection. If the two drift, the validator should fail.
+
 The default posture is:
 
 - `sf6ingest` may use repo maintenance, GitHub, planning, debugging, review,
@@ -67,6 +82,12 @@ hermes skills inspect hermes-agent
 
 Do not copy local skill list output, enabled/disabled state, local skill paths,
 or profile-specific skill configuration into canonical policy data.
+
+External Agent Skills are not built-in Hermes skills. For v2.6, the only
+reviewed external APM skill is the selected SymPy subset recorded in
+`tools/agent-skills/apm.yml` and `tools/agent-skills/apm.lock.yaml`; it is a
+maintainer-local operator dependency and not SF6 formula, current-fact, or
+public answer authority.
 
 ## Safe Config Policy
 

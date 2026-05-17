@@ -76,6 +76,13 @@ agent:
   tool_use_enforcement: auto
 ```
 
+Use `data/toolchain/hermes-maintainer-skill-allowlist.json` as the reviewed
+skill selection policy for `sf6ingest`. Normal maintainer work should expose
+only the allowlisted built-in default skills. Built-in conditional skills are
+for task-scoped needs only; external APM skills are for reviewed dependency
+routes such as the SymPy calculation backend. Do not treat local
+`hermes skills list` output as canonical repo data.
+
 `terminal.backend: local` is allowed for trusted repo-local work, but it is not
 a sandbox. Use Docker for untrusted code, broad source ingest, experimental
 refactors, or credential-adjacent tasks.
@@ -96,6 +103,12 @@ Do not point `skills.external_dirs` at the repo `skills/` directory by default.
 `skills/sf6-agent/` is a deferred public adapter surface, not the active private
 Hermes maintainer skill package. External skill directories must come from a
 reviewed dependency policy such as #231 or a later architecture decision.
+
+When external skill dependencies are installed for local operation, they must
+come from the reviewed APM manifest / lockfile route in `tools/agent-skills/`
+and appear in the `external_apm_skills` allowlist category. Broad third-party skill bundles,
+local managed skills, and ad-hoc external directories are not default
+`sf6ingest` profile inputs.
 
 Do not configure `workflows/` as a skill directory. Workflows are canonical
 maintainer procedures, not Hermes installed skills.

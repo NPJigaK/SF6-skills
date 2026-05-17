@@ -85,6 +85,8 @@
             "narrowing_reason": "A single repo-maintainer skill policy reduces tool temptation and context noise while keeping Hermes profile management simple."
           },
           "purpose": "SF6 maintainer orchestration, source review, validation, issue/PR work, and repo artifact preparation.",
+          "allowlist_manifest": "data/toolchain/hermes-maintainer-skill-allowlist.json",
+          "allowlist_schema": "contracts/hermes-maintainer-skill-allowlist.schema.json",
           "default_builtin_skills": [
             "hermes-agent",
             "codex",
@@ -121,7 +123,9 @@
             "unrelated_finance",
             "unrelated_health",
             "unrelated_ml_training_or_serving",
-            "external_workspace_mutation_by_default"
+            "external_workspace_mutation_by_default",
+            "secrets_or_profile_state",
+            "raw_transcripts_or_runtime_state"
           ],
           "skill_review_commands": [
             "hermes skills list",
