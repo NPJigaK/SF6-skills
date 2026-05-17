@@ -80,6 +80,11 @@ agent:
 a sandbox. Use Docker for untrusted code, broad source ingest, experimental
 refactors, or credential-adjacent tasks.
 
+Built-in Hermes memory and `session_search` may be enabled locally for
+`sf6ingest`, but they are non-canonical context only. External Memory Providers
+remain disabled by default unless a later reviewed issue adopts one. See
+`docs/architecture/hermes-memory-policy.md`.
+
 Do not point `skills.external_dirs` at the repo `skills/` directory by default.
 `skills/sf6-agent/` is a deferred public adapter surface, not the active private
 Hermes maintainer skill package. External skill directories must come from a
