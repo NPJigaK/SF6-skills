@@ -73,6 +73,7 @@ $issues = @()
 $requiredSurfaceIds = @(
   'knowledge',
   'knowledge_curated',
+  'knowledge_lineage_report',
   'data_exports',
   'data_roster',
   'contracts',
@@ -249,6 +250,7 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $policyDocPath) -PathType Leaf) 
     'historical',
     'non_canonical',
     'generated_knowledge_references',
+    'knowledge_lineage_report',
     'sf6_agent_adapter_policy_references',
     'frame_current_runtime_assets',
     'normalization_runtime_assets',
