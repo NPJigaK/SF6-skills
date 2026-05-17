@@ -65,6 +65,9 @@ guidance for using the registry with validation lanes is in
 The Phase 2 plan for separating frame-current runtime assets from the deferred
 public adapter is in
 [`docs/architecture/frame-current-runtime-separation-plan.md`](./docs/architecture/frame-current-runtime-separation-plan.md).
+The Phase 2 plan for separating generated knowledge references from
+hand-written public adapter policy references is in
+[`docs/architecture/generated-reference-responsibility-plan.md`](./docs/architecture/generated-reference-responsibility-plan.md).
 
 ## Public answer adapter status
 
@@ -104,6 +107,8 @@ source
 - Review: 不確実性、patch sensitivity、setup-specific claim、verification needsを保持する。
 - Curated: 安定して受け入れられる知識だけを昇格する。
 - Generated references: `knowledge/curated/` から生成されるpublic adapter向けpayload。手で正本化しない。
+- Adapter policy references: `skills/sf6-agent/references/*-policy.md` は
+  deferred public adapter behavior only。canonical SF6 knowledge ではない。
 
 記事・画像・動画のingestでは、raw article、raw image、screenshot、downloaded video、full transcript、large excerptをrepoへ保存しません。必要なsource metadata、短いsummary、observation、candidate claim、review noteだけを残します。
 
