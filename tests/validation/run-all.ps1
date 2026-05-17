@@ -55,6 +55,7 @@ $readOnlyValidationScripts = @(
   'tests/validation/validate-powershell-compatibility-policy.ps1',
   'tests/validation/validate-frame-current-runtime-separation-plan.ps1',
   'tests/validation/validate-generated-reference-responsibility-plan.ps1',
+  'tests/validation/validate-public-adapter-disposition-adr.ps1',
   'tests/validation/validate-answer-orchestration-contracts.ps1',
   'tests/validation/validate-answer-smoke-fixtures.ps1',
   'tests/validation/validate-calculation-executor.ps1',
