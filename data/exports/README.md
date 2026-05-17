@@ -104,6 +104,9 @@ The following are not normal public answer authority:
 - Hermes memory, sessions, local skills, Curator output, checkpoints, or raw transcripts
 
 Exact current facts must not be inferred from those surfaces alone.
+See `docs/architecture/noncanonical-data-authority-boundaries.md` for the
+cross-surface boundary that keeps these inputs and observability files out of
+normal public answer authority.
 
 ## Validation
 
@@ -118,6 +121,7 @@ Run related semantic checks:
 ```powershell
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-raw-snapshot-minimality.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-noncanonical-data-authority-boundaries.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1
 ```

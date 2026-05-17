@@ -688,11 +688,13 @@
       "validation_expectation": [
         "raw_snapshot_minimality_valid",
         "raw_snapshot_retention_adr_valid",
+        "noncanonical_data_authority_boundary_valid",
         "not_normal_public_answer_authority"
       ],
       "policy_refs": [
         "AGENTS.md",
         "ingest/frame_data/README.md",
+        "docs/architecture/noncanonical-data-authority-boundaries.md",
         "docs/architecture/decisions/0005-raw-snapshot-retention.md"
       ],
       "notes": "Raw snapshots support minimal current published export reproducibility and ingestion review. ADR-0005 keeps broader raw cache or history storage repo-external by default. They are not final evidence for normal public answers."
@@ -717,11 +719,13 @@
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "not_tracked_currently",
+        "noncanonical_data_authority_boundary_valid",
         "not_normal_public_answer_authority"
       ],
       "policy_refs": [
         "AGENTS.md",
-        "ingest/frame_data/README.md"
+        "ingest/frame_data/README.md",
+        "docs/architecture/noncanonical-data-authority-boundaries.md"
       ],
       "notes": "Documented boundary with no currently tracked files. If introduced, it must remain non-canonical unless a later policy changes that."
     },
@@ -746,11 +750,13 @@
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "manual_review_not_runtime",
+        "noncanonical_data_authority_boundary_valid",
         "not_normal_public_answer_authority"
       ],
       "policy_refs": [
         "AGENTS.md",
         "ingest/frame_data/README.md",
+        "docs/architecture/noncanonical-data-authority-boundaries.md",
         "contracts/frame-current-runtime-assets.md"
       ],
       "notes": "Manual-review sidecars record withheld or unresolved rows and must not feed normal public answer authority."
@@ -779,11 +785,13 @@
       "validation_expectation": [
         "manual_review_debt_index_fresh",
         "manual_review_not_runtime",
+        "noncanonical_data_authority_boundary_valid",
         "not_normal_public_answer_authority"
       ],
       "policy_refs": [
         "AGENTS.md",
         "data/exports/README.md",
+        "docs/architecture/noncanonical-data-authority-boundaries.md",
         "contracts/manual-review-debt-index.schema.json"
       ],
       "notes": "Generated summary of withheld row counts, reason-code counts, and published dataset state. It is not current-fact authority."

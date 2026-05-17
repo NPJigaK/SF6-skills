@@ -95,7 +95,8 @@ $requiredSurfaceIds = @(
   'codex_hermes_sf6_pack',
   'raw_snapshots',
   'normalized_intermediate_state',
-  'manual_review_sidecars'
+  'manual_review_sidecars',
+  'manual_review_debt_index'
 )
 
 foreach ($relativePath in @($schemaPath, $registryPath, $policyDocPath, $readmePath, $contractsReadmePath)) {
@@ -257,7 +258,8 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $policyDocPath) -PathType Leaf) 
     'skill_installers_package',
     'raw_snapshots',
     'normalized_intermediate_state',
-    'manual_review_sidecars'
+    'manual_review_sidecars',
+    'manual_review_debt_index'
   )) {
     Assert-TextContains $policyDoc $requiredText $policyDocPath ([ref]$issues)
   }

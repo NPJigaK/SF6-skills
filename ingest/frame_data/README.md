@@ -165,6 +165,10 @@ Published exports:
 - `data/exports/<character_slug>/snapshot_manifest.json`
 
 See `data/exports/README.md` for the current-fact export authority boundary.
+See `docs/architecture/noncanonical-data-authority-boundaries.md` for the
+cross-surface rule that keeps raw snapshots, normalized intermediate state,
+manual-review sidecars, and manual-review debt observability out of normal
+public answer authority.
 `snapshot_manifest.json` follows
 `contracts/current-fact-export-manifest.schema.json` for structural validation.
 `data/exports/_index/manual-review-debt.json` is a generated observability index
