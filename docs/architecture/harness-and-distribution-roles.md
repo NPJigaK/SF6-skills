@@ -99,6 +99,12 @@ APM or Agent Skills public distribution is deferred by ADR-0002.
 
 APM may also support repo-local maintainer setup manifests after cloning this repository.
 
+External Agent Skill dependencies for private `sf6ingest` operation are
+managed by `docs/architecture/agent-skill-dependency-policy.md` and
+`tools/agent-skills/apm.yml`. They are maintainer executor / operator
+instruction dependencies only; they do not provide SF6 official values,
+formulas, rounding rules, current facts, or public answer authority.
+
 Do not create a public repo-maintainer skill package at this stage. Repo
 maintainer workflows require a clone of this repository and should remain
 repo-local unless a later architecture decision says otherwise.

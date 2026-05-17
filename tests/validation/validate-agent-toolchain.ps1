@@ -105,12 +105,14 @@ $issues = @()
 $requiredFiles = @(
   '.github/renovate.json',
   'docs/architecture/agent-toolchain-freshness.md',
+  'docs/architecture/agent-skill-dependency-policy.md',
   'docs/architecture/hermes-maintainer-profile-policy.md',
   'flake.lock',
   'flake.nix',
   $schemaPath,
   'data/toolchain/README.md',
   $manifestPath,
+  'tools/agent-skills/apm.yml',
   'workflows/check-agent-toolchain-freshness.md'
 )
 $allowedRootProperties = @(
@@ -276,9 +278,75 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot '.github/renovate.json') -PathTy
       $issues += ".github/renovate.json missing Nix/Hermes update text: $needle"
     }
   }
+  foreach ($needle in @(
+    'tools/agent-skills/apm.yml',
+    'agent skill apm dependencies',
+    'git-tags',
+    'git-refs'
+  )) {
+    if ($renovateText -notmatch [regex]::Escape($needle)) {
+      $issues += ".github/renovate.json missing Agent Skill dependency update text: $needle"
+    }
+  }
   foreach ($forbidden in @('secret', 'token', 'credential', '.env')) {
     if ($renovateText -match [regex]::Escape($forbidden)) {
       $issues += ".github/renovate.json contains forbidden secret-like text: $forbidden"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'tools/agent-skills/apm.yml') -PathType Leaf) {
+  $apmText = Read-Text 'tools/agent-skills/apm.yml'
+  foreach ($needle in @(
+    'name: sf6-maintainer-agent-skills',
+    'targets:',
+    '- agent-skills',
+    'dependencies:',
+    'apm: []',
+    'devDependencies:'
+  )) {
+    if ($apmText -notmatch [regex]::Escape($needle)) {
+      $issues += "tools/agent-skills/apm.yml missing required text: $needle"
+    }
+  }
+  foreach ($forbidden in @(
+    '~/.hermes',
+    'HERMES_HOME',
+    '.env',
+    'auth.json',
+    'credential',
+    'secret',
+    'token',
+    'memories/',
+    'sessions/',
+    'state.db',
+    'logs/',
+    'cache',
+    '/home/',
+    'C:\'
+  )) {
+    if ($apmText -match [regex]::Escape($forbidden)) {
+      $issues += "tools/agent-skills/apm.yml contains forbidden local-state or secret-like text: $forbidden"
+    }
+  }
+}
+
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'docs/architecture/agent-skill-dependency-policy.md') -PathType Leaf) {
+  $agentSkillPolicy = Read-Text 'docs/architecture/agent-skill-dependency-policy.md'
+  foreach ($needle in @(
+    'tools/agent-skills/apm.yml',
+    'tools/agent-skills/apm.lock.yaml',
+    'executor / operator instruction dependency',
+    'reviewed tag or immutable SHA',
+    'Renovate',
+    'git-tags',
+    'git-refs',
+    'SymPy',
+    'SageMath',
+    'must not become repo-owned SF6 formula authority'
+  )) {
+    if ($agentSkillPolicy -notmatch [regex]::Escape($needle)) {
+      $issues += "docs/architecture/agent-skill-dependency-policy.md missing policy text: $needle"
     }
   }
 }
