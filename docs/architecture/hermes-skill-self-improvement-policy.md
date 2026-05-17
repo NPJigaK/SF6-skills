@@ -51,6 +51,43 @@ If a local skill needs an example, use a procedural placeholder or a reviewed
 repo artifact reference. Do not embed SF6 current facts or private maintainer
 state as reusable skill content.
 
+## Negative Learning Guard
+
+Hermes may learn from failed attempts, but temporary failure must not become a
+permanent repo rule or local skill constraint without verification.
+
+Treat these failures as provisional by default:
+
+- missing packages or tools
+- path, shell, or platform differences
+- auth or credential availability
+- network, rate-limit, or service availability
+- sandbox or permissions limits
+- migration artifacts
+- stale generated files
+- version mismatches in local tools or profile setup
+
+Do not create or patch a local skill that says a tool, workflow, source, or
+validator should be avoided permanently unless one of these is true:
+
+- the user confirms it is a stable project constraint
+- a current repo policy or upstream specification says it is unsupported
+- a later verification after environment/toolchain repair still reproduces the
+  failure
+
+When recording a lesson from failure, separate:
+
+- permanent API or specification limits
+- reviewed repo policy
+- local environment setup requirements
+- temporary environment failures
+- one-off transient errors
+
+Prefer "verify again after setup changes" over "avoid forever". If a failed
+path becomes useful after a toolchain, profile, auth, or dependency change,
+update or remove the old local skill guidance instead of preserving the stale
+avoidance rule.
+
 ## Promotion Path
 
 Local procedural learning becomes repo behavior only through this path:
