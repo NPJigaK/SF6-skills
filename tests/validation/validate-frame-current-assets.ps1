@@ -2,7 +2,6 @@ Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $primaryAssetRootRelativePath = 'runtime/frame-current'
-$compatibilityAssetRootRelativePath = 'skills/sf6-agent/assets/frame-current'
 $sourceRootRelativePath = 'data/exports'
 $rosterSourceRelativePath = 'data/roster/current-character-roster.json'
 $generatorRelativePath = 'packages/skill-packaging/build-frame-current-runtime-assets.ps1'
@@ -161,33 +160,6 @@ function Assert-FrameCurrentAssetRoot {
   }
 }
 
-function Assert-CompatibilityCopyMatchesPrimary {
-  param(
-    [Parameter(Mandatory = $true)][string]$PrimaryRootRelativePath,
-    [Parameter(Mandatory = $true)][string]$CompatibilityRootRelativePath
-  )
-
-  $primaryRoot = Join-Path $repoRoot $PrimaryRootRelativePath
-  $compatibilityRoot = Join-Path $repoRoot $CompatibilityRootRelativePath
-
-  $primaryFiles = @(Get-AssetInventory $primaryRoot | Where-Object { $_ -ne 'runtime_manifest.json' })
-  $compatibilityFiles = @(Get-AssetInventory $compatibilityRoot | Where-Object { $_ -ne 'runtime_manifest.json' })
-
-  if (Compare-Object ($primaryFiles | Sort-Object) ($compatibilityFiles | Sort-Object)) {
-    throw 'Frame-current compatibility copy inventory must match primary runtime output'
-  }
-
-  foreach ($relativePath in $primaryFiles) {
-    $primaryHash = (Get-FileHash -LiteralPath (Join-Path $primaryRoot $relativePath) -Algorithm SHA256).Hash.ToLowerInvariant()
-    $compatibilityHash = (Get-FileHash -LiteralPath (Join-Path $compatibilityRoot $relativePath) -Algorithm SHA256).Hash.ToLowerInvariant()
-    if ($primaryHash -ne $compatibilityHash) {
-      throw "Frame-current compatibility copy hash mismatch: $relativePath"
-    }
-  }
-}
-
 Assert-FrameCurrentAssetRoot $primaryAssetRootRelativePath 'primary runtime'
-Assert-FrameCurrentAssetRoot $compatibilityAssetRootRelativePath 'legacy adapter compatibility copy'
-Assert-CompatibilityCopyMatchesPrimary $primaryAssetRootRelativePath $compatibilityAssetRootRelativePath
 
 Write-Host 'Frame-current assets OK'

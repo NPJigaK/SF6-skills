@@ -1,6 +1,6 @@
-# sf6-agent Smoke Test
+# Answer Smoke Test
 
-This smoke test checks whether an agent reading the public `sf6-agent` adapter chooses the expected answer mode and evidence boundary. It is a manual behavior check, not an exact prose test.
+This smoke test checks whether an agent using the repo-local runtime payloads chooses the expected answer mode and evidence boundary. It is a manual behavior check, not an exact prose test.
 
 Do not paste exact current frame values into this document. Record whether the answer used packaged frame-current assets and whether it held correctly.
 
@@ -13,19 +13,17 @@ Do not paste exact current frame values into this document. Record whether the a
 | Branch or commit |  |
 | Tester |  |
 
-## Adapter Surface
+## Runtime Surface
 
-Give the agent access to the packaged adapter surface:
+Give the agent access to the repo-local runtime and canonical source surfaces:
 
-- `skills/sf6-agent/SKILL.md`
-- `skills/sf6-agent/references/answer-policy.md`
-- `skills/sf6-agent/references/current-fact-policy.md`
-- `skills/sf6-agent/references/uncertainty-policy.md`
 - `runtime/generated-knowledge/`
-- `skills/sf6-agent/references/generated-*`
-- `skills/sf6-agent/assets/frame-current/`
+- `runtime/frame-current/`
+- `runtime/normalization/`
+- `knowledge/curated/`
+- `contracts/evidence-gate.md`
 
-The agent should not need a full repository checkout to answer normal public-adapter questions.
+The former public adapter was removed after runtime relocation.
 
 ## Pass Criteria
 
@@ -53,7 +51,7 @@ A run passes when the agent:
 | Current fact: startup and block advantage | `evals/questions/current-fact.yaml#current-fact-runtime-assets-required` | Tell me the current startup and block advantage for Luke's crouching medium punch. | `verified_current_fact` | Use only packaged frame-current runtime assets derived from `data/exports` and `data/roster`. |  |  |  |
 | Current fact: unpackaged character | `evals/questions/current-fact.yaml#current-fact-unpackaged-character` | Give the current exact frame data for a character not present in the roster source. | `unresolved_or_hold` | Hold when the character is outside the packaged roster/runtime assets. |  |  |  |
 | Current fact: supplemental conflict | `evals/questions/current-fact.yaml#current-fact-supplemental-no-override` | If supplemental enrichment disagrees with `official_raw` for a current value, which source controls the answer? | `verified_current_fact` | Say `official_raw` controls exact current facts and supplemental enrichment cannot override it. |  |  |  |
-| Current fact: missing dataset | `evals/questions/current-fact.yaml#current-fact-missing-dataset-hold` | A user asks for exact current frame data from a dataset that is missing from the bundle. What should sf6-agent do? | `unresolved_or_hold` | Hold rather than guess from concepts, generated references, or unpackaged sources. |  |  |  |
+| Current fact: missing dataset | `evals/questions/current-fact.yaml#current-fact-missing-dataset-hold` | A user asks for exact current frame data from a dataset that is missing from runtime assets. What should the answer do? | `unresolved_or_hold` | Hold rather than guess from concepts, generated references, or unpackaged sources. |  |  |  |
 | Uncertainty: patch-sensitive setup | `evals/questions/uncertainty.yaml#uncertainty-patch-sensitive-setup` | Is this wake-up setup still guaranteed in the current patch? | `unresolved_or_hold` | Hold unless current patch data and setup-specific reviewed evidence are available. |  |  |  |
 | Uncertainty: video generalization | `evals/questions/uncertainty.yaml#uncertainty-video-observation-generalization` | I saw this option work in a video. Is it generally strong strategy? | `unresolved_or_hold` | Treat the clip as observation only; do not promote it to accepted strategy knowledge. |  |  |  |
 | Uncertainty: third-party conflict | `evals/questions/uncertainty.yaml#uncertainty-conflicting-third-party-without-runtime-asset` | Two third-party pages disagree about a current exact value, and the frame-current runtime asset is unavailable. Can sf6-agent verify it? | `unresolved_or_hold` | Hold when packaged runtime evidence is unavailable and only conflicting third-party evidence exists. |  |  |  |

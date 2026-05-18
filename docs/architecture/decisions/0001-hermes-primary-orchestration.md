@@ -6,7 +6,7 @@ date: 2026-05-09
 decision_type: architecture_decision
 scope: repo_local_maintainer_orchestration
 
-public_answer_adapter: skills/sf6-agent
+public_answer_adapter: removed_by_adr_0003_issue_295
 hermes_role: primary_repo_local_orchestration_when_configured
 hermes_distribution: repo_local_only
 hermes_state: non_canonical
@@ -35,7 +35,7 @@ fallback_executors:
 markers:
   - sf6.harness.hermes.primary_repo_local_orchestration_when_configured
   - sf6.boundary.hermes_state_non_canonical
-  - sf6.boundary.public_adapter_remains_sf6_agent
+  - sf6.boundary.public_adapter_removed_after_runtime_relocation
   - sf6.boundary.repo_artifacts_are_source_of_truth
 ---
 
@@ -45,7 +45,7 @@ markers:
 
 Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available.
 
-Hermes orchestrates repo-local answer, ingest, review, validation, and smoke workflows. It does not replace `skills/sf6-agent/` as the public answer adapter, and it is not a public distribution target.
+Hermes orchestrates repo-local answer, ingest, review, validation, and smoke workflows. It is not a public distribution target. The former public `skills/sf6-agent/` adapter was removed after runtime payload relocation under ADR-0003 and issue #295.
 
 Reusable knowledge and exact current facts remain canonical only as repo artifacts. Canonical sources include `knowledge/`, `data/exports/`, `data/roster/`, `contracts/`, `workflows/`, and `evals/`.
 
@@ -76,7 +76,7 @@ Hermes-assisted work must produce reusable output as repository artifacts, such 
 
 - Hermes is not canonical memory.
 - Hermes is not a public answer adapter.
-- Hermes does not replace `skills/sf6-agent/`.
+- Hermes does not define a replacement public answer adapter.
 - Hermes does not make unreviewed article, image, video, or web claims canonical.
 - Hermes wrappers do not replace canonical maintainer procedures under `workflows/*`.
 
@@ -84,4 +84,4 @@ Hermes-assisted work must produce reusable output as repository artifacts, such 
 
 Guidance docs may change prose over time, but validators should check the machine-readable decision fields and markers in this ADR rather than requiring exact natural-language sentences.
 
-Hermes-related implementation should remain repo-local. Public distribution continues to focus on the single `sf6-agent` adapter and its derived runtime payloads.
+Hermes-related implementation should remain repo-local. Public distribution is inactive after the former `sf6-agent` adapter and deferred distribution surfaces were removed.

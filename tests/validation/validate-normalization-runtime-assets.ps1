@@ -2,14 +2,10 @@ Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $assetRootRelativePath = 'runtime/normalization'
-$compatibilityAssetRootRelativePath = 'skills/sf6-agent/assets/normalization'
 $frameCurrentRelativePath = 'runtime/frame-current'
 $assetRoot = Join-Path $repoRoot $assetRootRelativePath
 $manifestRelativePath = "$assetRootRelativePath/runtime_manifest.json"
 $aliasesRelativePath = "$assetRootRelativePath/aliases.json"
-$compatibilityAssetRoot = Join-Path $repoRoot $compatibilityAssetRootRelativePath
-$compatibilityManifestRelativePath = "$compatibilityAssetRootRelativePath/runtime_manifest.json"
-$compatibilityAliasesRelativePath = "$compatibilityAssetRootRelativePath/aliases.json"
 $generatorRelativePath = 'packages/skill-packaging/build-normalization-runtime-assets.ps1'
 $aliasesSourceRootRelativePath = 'data/aliases'
 $aliasesSourceRoot = [System.IO.Path]::GetFullPath((Join-Path $repoRoot $aliasesSourceRootRelativePath))
@@ -508,136 +504,6 @@ if (Test-Path -LiteralPath $assetRoot -PathType Container) {
 $expectedInventory = @('aliases.json', 'runtime_manifest.json')
 if (Compare-Object ($actualInventory | Sort-Object) ($expectedInventory | Sort-Object)) {
   $issues += 'Normalization runtime inventory must contain only aliases.json and runtime_manifest.json'
-}
-
-if (Test-Path -LiteralPath $compatibilityAssetRoot -PathType Container) {
-  foreach ($relativePath in @($compatibilityManifestRelativePath, $compatibilityAliasesRelativePath)) {
-    if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $relativePath) -PathType Leaf)) {
-      $issues += "Missing normalization compatibility bridge path: $relativePath"
-    }
-  }
-
-  if (
-    (Test-Path -LiteralPath (Join-Path $repoRoot $aliasesRelativePath) -PathType Leaf) -and
-    (Test-Path -LiteralPath (Join-Path $repoRoot $compatibilityAliasesRelativePath) -PathType Leaf)
-  ) {
-    $primaryAliases = Read-Json $aliasesRelativePath
-    $compatibilityAliases = Read-Json $compatibilityAliasesRelativePath
-
-    foreach ($field in @('generated', 'schema_version', 'kind', 'authority', 'not_current_fact_authority', 'generator', 'source_paths', 'entries')) {
-      Assert-Property $compatibilityAliases $field $compatibilityAliasesRelativePath ([ref]$issues)
-    }
-    if ((Test-Property $compatibilityAliases 'target_path') -and $compatibilityAliases.target_path -ne $compatibilityAliasesRelativePath) {
-      $issues += "$compatibilityAliasesRelativePath target_path must be $compatibilityAliasesRelativePath"
-    }
-
-    $primaryComparable = [ordered]@{
-      generated = $primaryAliases.generated
-      schema_version = $primaryAliases.schema_version
-      kind = $primaryAliases.kind
-      authority = $primaryAliases.authority
-      not_current_fact_authority = $primaryAliases.not_current_fact_authority
-      generator = $primaryAliases.generator
-      source_paths = @($primaryAliases.source_paths)
-      entries = @($primaryAliases.entries)
-    }
-    $compatibilityComparable = [ordered]@{
-      generated = $compatibilityAliases.generated
-      schema_version = $compatibilityAliases.schema_version
-      kind = $compatibilityAliases.kind
-      authority = $compatibilityAliases.authority
-      not_current_fact_authority = $compatibilityAliases.not_current_fact_authority
-      generator = $compatibilityAliases.generator
-      source_paths = @($compatibilityAliases.source_paths)
-      entries = @($compatibilityAliases.entries)
-    }
-    if ((ConvertTo-CompactJson $primaryComparable) -ne (ConvertTo-CompactJson $compatibilityComparable)) {
-      $issues += "$compatibilityAliasesRelativePath must match primary runtime aliases except target_path"
-    }
-  }
-
-  if (Test-Path -LiteralPath (Join-Path $repoRoot $compatibilityManifestRelativePath) -PathType Leaf) {
-    $compatibilityManifest = Read-Json $compatibilityManifestRelativePath
-    foreach ($field in @('generated', 'schema_version', 'kind', 'authority', 'not_current_fact_authority', 'generator', 'source_root', 'asset_root', 'source_paths', 'target_path', 'files')) {
-      Assert-Property $compatibilityManifest $field $compatibilityManifestRelativePath ([ref]$issues)
-    }
-    if ((Test-Property $compatibilityManifest 'generated') -and $compatibilityManifest.generated -ne $true) {
-      $issues += "$compatibilityManifestRelativePath must include generated marker true"
-    }
-    if ((Test-Property $compatibilityManifest 'schema_version') -and $compatibilityManifest.schema_version -ne 'normalization-runtime-manifest/v1') {
-      $issues += "$compatibilityManifestRelativePath must use schema_version normalization-runtime-manifest/v1"
-    }
-    if ((Test-Property $compatibilityManifest 'kind') -and $compatibilityManifest.kind -ne 'query_normalization_runtime_manifest') {
-      $issues += "$compatibilityManifestRelativePath must use kind query_normalization_runtime_manifest"
-    }
-    if ((Test-Property $compatibilityManifest 'authority') -and $compatibilityManifest.authority -ne 'query_normalization_only') {
-      $issues += "$compatibilityManifestRelativePath must use authority query_normalization_only"
-    }
-    if ((Test-Property $compatibilityManifest 'not_current_fact_authority') -and $compatibilityManifest.not_current_fact_authority -ne $true) {
-      $issues += "$compatibilityManifestRelativePath must set not_current_fact_authority true"
-    }
-    if ((Test-Property $compatibilityManifest 'generator') -and $compatibilityManifest.generator -ne $generatorRelativePath) {
-      $issues += "$compatibilityManifestRelativePath generator must be $generatorRelativePath"
-    }
-    if ((Test-Property $compatibilityManifest 'source_root') -and $compatibilityManifest.source_root -ne 'data/aliases') {
-      $issues += "$compatibilityManifestRelativePath source_root must be data/aliases"
-    }
-    if ((Test-Property $compatibilityManifest 'asset_root') -and $compatibilityManifest.asset_root -ne $compatibilityAssetRootRelativePath) {
-      $issues += "$compatibilityManifestRelativePath asset_root must be $compatibilityAssetRootRelativePath"
-    }
-    if ((Test-Property $compatibilityManifest 'target_path') -and $compatibilityManifest.target_path -ne $compatibilityManifestRelativePath) {
-      $issues += "$compatibilityManifestRelativePath target_path must be $compatibilityManifestRelativePath"
-    }
-    if (Test-Property $compatibilityManifest 'source_paths') {
-      Assert-StringListEqual `
-        -Expected ([string[]]$expectedSourcePaths) `
-        -Actual @($compatibilityManifest.source_paths | ForEach-Object { $_.path }) `
-        -Context "$compatibilityManifestRelativePath source_paths" `
-        -Issues ([ref]$issues)
-    }
-    if (Test-Property $compatibilityManifest 'files') {
-      $files = @($compatibilityManifest.files)
-      if ($files.Count -ne 1) {
-        $issues += "$compatibilityManifestRelativePath must describe exactly one runtime aliases file"
-      }
-      foreach ($fileEntry in $files) {
-        foreach ($field in @('target', 'target_path', 'source_paths', 'sha256')) {
-          Assert-Property $fileEntry $field "$compatibilityManifestRelativePath files entry" ([ref]$issues)
-        }
-        if ((Test-Property $fileEntry 'target') -and $fileEntry.target -ne 'aliases.json') {
-          $issues += "$compatibilityManifestRelativePath file target must be aliases.json"
-        }
-        if ((Test-Property $fileEntry 'target_path') -and $fileEntry.target_path -ne $compatibilityAliasesRelativePath) {
-          $issues += "$compatibilityManifestRelativePath file target_path must be $compatibilityAliasesRelativePath"
-        }
-        if ((Test-Property $fileEntry 'source_paths')) {
-          foreach ($sourcePath in @($fileEntry.source_paths)) {
-            Assert-DataAliasesSourcePath `
-              -RelativePath ([string]$sourcePath) `
-              -Context "$compatibilityManifestRelativePath files entry" `
-              -Issues ([ref]$issues)
-          }
-        }
-        if (
-          (Test-Property $fileEntry 'sha256') -and
-          (Test-Path -LiteralPath (Join-Path $repoRoot $compatibilityAliasesRelativePath) -PathType Leaf)
-        ) {
-          $actualHash = (Get-FileHash -LiteralPath (Join-Path $repoRoot $compatibilityAliasesRelativePath) -Algorithm SHA256).Hash.ToLowerInvariant()
-          if ($fileEntry.sha256 -ne $actualHash) {
-            $issues += "$compatibilityManifestRelativePath aliases.json hash mismatch"
-          }
-        }
-      }
-    }
-  }
-
-  $compatibilityInventory = @(
-    Get-ChildItem -LiteralPath $compatibilityAssetRoot -Recurse -File |
-      ForEach-Object { $_.FullName.Substring($compatibilityAssetRoot.Length + 1).Replace('\', '/') }
-  )
-  if (Compare-Object ($compatibilityInventory | Sort-Object) ($expectedInventory | Sort-Object)) {
-    $issues += 'Normalization compatibility bridge inventory must contain only aliases.json and runtime_manifest.json'
-  }
 }
 
 if ($issues.Count -gt 0) {

@@ -3,7 +3,6 @@ Set-StrictMode -Version Latest
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $sourceRootRelativePath = 'data/aliases'
 $assetRootRelativePath = 'runtime/normalization'
-$compatibilityAssetRootRelativePath = 'skills/sf6-agent/assets/normalization'
 $generatorRelativePath = 'packages/skill-packaging/build-normalization-runtime-assets.ps1'
 $sourceRoot = Join-Path $repoRoot $sourceRootRelativePath
 
@@ -129,6 +128,5 @@ function Write-NormalizationRuntimeAssets {
 }
 
 Write-NormalizationRuntimeAssets $assetRootRelativePath
-Write-NormalizationRuntimeAssets $compatibilityAssetRootRelativePath
 
 Write-Host 'Normalization runtime assets built'

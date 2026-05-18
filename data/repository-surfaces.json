@@ -290,12 +290,11 @@
       "id": "generated_knowledge_references",
       "title": "Generated Knowledge References",
       "path_globs": [
-        "runtime/generated-knowledge/*",
-        "skills/sf6-agent/references/generated-*"
+        "runtime/generated-knowledge/*"
       ],
       "path_state": "tracked_present",
       "surface_role": "derived",
-      "authority_scope": "primary generated stable concept runtime payload with deferred public adapter compatibility copy",
+      "authority_scope": "generated stable concept runtime payload",
       "source_of_truth": [
         "knowledge/curated"
       ],
@@ -305,13 +304,12 @@
         "knowledge/curated"
       ],
       "allowed_to_edit_directly": false,
-      "public_distribution_status": "mixed_private_and_deferred",
+      "public_distribution_status": "private_repo_local",
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "generated_marker_present",
         "source_paths_present",
-        "generated_knowledge_valid",
-        "compatibility_copy_matches_primary"
+        "generated_knowledge_valid"
       ],
       "policy_refs": [
         "AGENTS.md",
@@ -319,50 +317,17 @@
         "docs/architecture/generated-reference-responsibility-plan.md",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
       ],
-      "notes": "Primary generated runtime output is runtime/generated-knowledge. skills/sf6-agent/references/generated-* is a deferred public adapter compatibility copy while the adapter remains."
-    },
-    {
-      "id": "sf6_agent_adapter_policy_references",
-      "title": "SF6 Agent Adapter Policy References",
-      "path_globs": [
-        "skills/sf6-agent/references/*-policy.md"
-      ],
-      "path_state": "tracked_present",
-      "surface_role": "deferred_legacy",
-      "authority_scope": "hand-written public adapter behavior policy references",
-      "source_of_truth": [
-        "skills/sf6-agent/references/*-policy.md",
-        "skills/sf6-agent/SKILL.md",
-        "AGENTS.md"
-      ],
-      "generated": false,
-      "generator": null,
-      "source_paths": [],
-      "allowed_to_edit_directly": true,
-      "public_distribution_status": "deferred",
-      "normal_public_answer_authority": false,
-      "validation_expectation": [
-        "adapter_policy_boundary_preserved",
-        "not_canonical_sf6_knowledge"
-      ],
-      "policy_refs": [
-        "AGENTS.md",
-        "skills/sf6-agent/SKILL.md",
-        "docs/architecture/generated-reference-responsibility-plan.md",
-        "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
-      ],
-      "notes": "Hand-written adapter policy files define deferred public adapter behavior only. They are not generated stable concept payloads and are not canonical SF6 knowledge."
+      "notes": "Generated runtime output is runtime/generated-knowledge. Former deferred public adapter compatibility copies were removed with issue #295."
     },
     {
       "id": "frame_current_runtime_assets",
       "title": "Frame Current Runtime Assets",
       "path_globs": [
-        "runtime/frame-current/*",
-        "skills/sf6-agent/assets/frame-current/*"
+        "runtime/frame-current/*"
       ],
       "path_state": "tracked_present",
       "surface_role": "derived",
-      "authority_scope": "primary derived exact current-fact runtime payload with deferred public adapter compatibility copy",
+      "authority_scope": "derived exact current-fact runtime payload",
       "source_of_truth": [
         "data/exports",
         "data/roster"
@@ -374,12 +339,11 @@
         "data/roster/current-character-roster.json"
       ],
       "allowed_to_edit_directly": false,
-      "public_distribution_status": "mixed_private_and_deferred",
+      "public_distribution_status": "private_repo_local",
       "normal_public_answer_authority": true,
       "validation_expectation": [
         "frame_current_assets_valid",
         "generated_marker_present",
-        "compatibility_copy_matches_primary",
         "csv_sidecars_excluded"
       ],
       "policy_refs": [
@@ -388,14 +352,13 @@
         "docs/architecture/frame-current-runtime-separation-plan.md",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
       ],
-      "notes": "Primary generated runtime output is runtime/frame-current. skills/sf6-agent/assets/frame-current is a deferred public adapter compatibility copy while the adapter remains."
+      "notes": "Generated runtime output is runtime/frame-current. Former deferred public adapter compatibility copies were removed with issue #295."
     },
     {
       "id": "normalization_runtime_assets",
       "title": "Normalization Runtime Assets",
       "path_globs": [
-        "runtime/normalization/*",
-        "skills/sf6-agent/assets/normalization/*"
+        "runtime/normalization/*"
       ],
       "path_state": "tracked_present",
       "surface_role": "derived",
@@ -409,7 +372,7 @@
         "data/aliases"
       ],
       "allowed_to_edit_directly": false,
-      "public_distribution_status": "mixed_private_and_deferred",
+      "public_distribution_status": "private_repo_local",
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "normalization_runtime_assets_valid",
@@ -420,101 +383,7 @@
         "contracts/normalization-aliases.schema.json",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
       ],
-      "notes": "Generated query-normalization support, not exact current-fact authority. Primary runtime output is runtime/normalization/; skills/sf6-agent/assets/normalization/ is a deferred public adapter compatibility bridge while the adapter still exists."
-    },
-    {
-      "id": "release_bundle_dist",
-      "title": "Release Bundle Output",
-      "path_globs": [
-        ".dist/sf6-agent-bundle.zip"
-      ],
-      "path_state": "generated_untracked",
-      "surface_role": "derived",
-      "authority_scope": "generated release bundle output",
-      "source_of_truth": [
-        "skills/sf6-agent",
-        "packages/skill-packaging"
-      ],
-      "generated": true,
-      "generator": "packages/skill-packaging/build-release-bundle.ps1",
-      "source_paths": [
-        "skills/sf6-agent",
-        "packages/skill-packaging"
-      ],
-      "allowed_to_edit_directly": false,
-      "public_distribution_status": "deferred",
-      "normal_public_answer_authority": false,
-      "validation_expectation": [
-        "distribution_valid_when_built",
-        "not_tracked"
-      ],
-      "policy_refs": [
-        "docs/architecture/decisions/0002-private-hermes-first-operation.md",
-        "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md",
-        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
-        "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
-      ],
-      "notes": "Generated bundle for deferred public distribution. ADR-0004 keeps it as interim legacy-lane coverage only until public adapter removal; it may exist locally after validation but should not be tracked."
-    },
-    {
-      "id": "distribution_docs",
-      "title": "Distribution Documentation",
-      "path_globs": [
-        "docs/distribution/*"
-      ],
-      "path_state": "tracked_present",
-      "surface_role": "deferred_legacy",
-      "authority_scope": "deferred public adapter install and release documentation",
-      "source_of_truth": [
-        "docs/distribution",
-        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md"
-      ],
-      "generated": false,
-      "generator": null,
-      "source_paths": [],
-      "allowed_to_edit_directly": true,
-      "public_distribution_status": "deferred",
-      "normal_public_answer_authority": false,
-      "validation_expectation": [
-        "doc_links_valid",
-        "legacy_distribution_boundary_preserved"
-      ],
-      "policy_refs": [
-        "docs/architecture/decisions/0002-private-hermes-first-operation.md",
-        "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md",
-        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md"
-      ],
-      "notes": "Human install and release docs for deferred public distribution. ADR-0004 keeps them as interim legacy-lane coverage only until public adapter removal."
-    },
-    {
-      "id": "sf6_agent_public_adapter",
-      "title": "SF6 Agent Public Adapter",
-      "path_globs": [
-        "skills/sf6-agent/*"
-      ],
-      "path_state": "tracked_present",
-      "surface_role": "deferred_legacy",
-      "authority_scope": "adapter behavior for deferred public skill distribution",
-      "source_of_truth": [
-        "skills/sf6-agent/SKILL.md",
-        "AGENTS.md"
-      ],
-      "generated": false,
-      "generator": null,
-      "source_paths": [],
-      "allowed_to_edit_directly": true,
-      "public_distribution_status": "deferred",
-      "normal_public_answer_authority": false,
-      "validation_expectation": [
-        "legacy_cleanup_boundary_preserved",
-        "current_fact_boundaries_preserved"
-      ],
-      "policy_refs": [
-        "AGENTS.md",
-        "docs/architecture/decisions/0002-private-hermes-first-operation.md",
-        "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
-      ],
-      "notes": "Existing public adapter surface. ADR-0003 selects removal after reusable runtime payloads are relocated out of this adapter path."
+      "notes": "Generated query-normalization support, not exact current-fact authority. Runtime output is runtime/normalization/. Former deferred public adapter compatibility copies were removed with issue #295."
     },
     {
       "id": "validation_scripts",
@@ -560,7 +429,7 @@
       "generator": null,
       "source_paths": [],
       "allowed_to_edit_directly": true,
-      "public_distribution_status": "mixed_private_and_deferred",
+      "public_distribution_status": "private_repo_local",
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "generated_knowledge_reproducible"
@@ -571,7 +440,7 @@
         "docs/architecture/generated-reference-responsibility-plan.md",
         "docs/architecture/decisions/0002-private-hermes-first-operation.md"
       ],
-      "notes": "package_classification=active_repo_local. Builder for derived knowledge references under the deferred public adapter path; retained as repo-local generated knowledge runtime builder."
+      "notes": "package_classification=active_repo_local. Repo-local generated knowledge runtime builder."
     },
     {
       "id": "skill_packaging_package",
@@ -581,60 +450,28 @@
       ],
       "path_state": "tracked_present",
       "surface_role": "repo_local_support",
-      "authority_scope": "runtime asset and release bundle builders",
+      "authority_scope": "runtime asset builders",
       "source_of_truth": [
         "data/exports",
         "data/roster",
-        "data/aliases",
-        "skills/sf6-agent"
+        "data/aliases"
       ],
       "generated": false,
       "generator": null,
       "source_paths": [],
       "allowed_to_edit_directly": true,
-      "public_distribution_status": "mixed_private_and_deferred",
+      "public_distribution_status": "private_repo_local",
       "normal_public_answer_authority": false,
       "validation_expectation": [
-        "runtime_assets_reproducible",
-        "distribution_valid_when_built"
+        "runtime_assets_reproducible"
       ],
       "policy_refs": [
         "packages/README.md",
         "docs/architecture/package-surface-classification.md",
         "docs/architecture/frame-current-runtime-separation-plan.md",
-        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
-        "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
+        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md"
       ],
-      "notes": "package_classification=shared_infra. Runtime asset builders are active_repo_local; build-release-bundle.ps1 is deferred_distribution."
-    },
-    {
-      "id": "skill_installers_package",
-      "title": "Skill Installer Package",
-      "path_globs": [
-        "packages/skill-installers/*"
-      ],
-      "path_state": "tracked_present",
-      "surface_role": "deferred_legacy",
-      "authority_scope": "deferred public skill installer tooling",
-      "source_of_truth": [
-        "packages/skill-installers"
-      ],
-      "generated": false,
-      "generator": null,
-      "source_paths": [],
-      "allowed_to_edit_directly": true,
-      "public_distribution_status": "deferred",
-      "normal_public_answer_authority": false,
-      "validation_expectation": [
-        "legacy_distribution_boundary_preserved"
-      ],
-      "policy_refs": [
-        "docs/architecture/package-surface-classification.md",
-        "docs/architecture/decisions/0002-private-hermes-first-operation.md",
-        "docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md",
-        "docs/architecture/reviews/full-directory-refactor-audit-20260517.md"
-      ],
-      "notes": "package_classification=deferred_distribution. Installer tooling belongs to deferred public distribution. ADR-0004 keeps it as interim legacy-lane coverage only until public adapter removal."
+      "notes": "package_classification=active_repo_local. Runtime asset builders are repo-local; deferred release bundle tooling was removed with issue #295."
     },
     {
       "id": "skill_validator_package",

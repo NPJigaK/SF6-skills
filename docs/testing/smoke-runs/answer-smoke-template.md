@@ -34,17 +34,13 @@ after the fixture set and validators are selected.
 
 Record whether these surfaces had residual unintended diff after validation:
 
-- `skills/sf6-agent/references/`:
 - `runtime/generated-knowledge/`:
-- `.dist`:
 - `runtime/frame-current/`:
-- `skills/sf6-agent/assets/frame-current/`:
 - `runtime/normalization/`:
-- `skills/sf6-agent/assets/normalization/`:
 
 ## Intentionally Not Done
 
 - No live Hermes execution.
 - No live web research.
 - No operational answer prompt body changes.
-- No public `sf6-agent` behavior changes.
+- No public adapter behavior changes.

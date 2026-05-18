@@ -82,12 +82,12 @@ or review artifact.
 The preferred future support surface is `packs/codex-hermes-sf6/`.
 
 Codex-Hermes maintainer support must not live under `skills/`. The `skills/`
-tree is reserved for public skill distribution surfaces such as
-`skills/sf6-agent/`.
+tree is reserved for future public skill distribution surfaces if a later ADR
+creates one.
 
-`skills/sf6-agent/` remains the public answer adapter. It is end-user facing
-and must not absorb repo-local maintainer workflows, local Hermes procedures,
-or Codex delegation playbooks.
+The former `skills/sf6-agent/` public adapter was removed after runtime
+relocation. Do not recreate it to absorb repo-local maintainer workflows, local
+Hermes procedures, or Codex delegation playbooks.
 
 `packs/codex-hermes-sf6/` is repo-local maintainer support only. It may later
 hold a Codex-oriented playbook, guardrails, request templates, and pointers to
@@ -148,7 +148,7 @@ Future `AGENTS.md` updates should stay minimal.
   when configured.
 - Codex is the Hermes operator and boundary auditor for those tasks.
 - Codex-only analysis for Hermes-first tasks is recorded fallback behavior.
-- `skills/sf6-agent/` remains the public answer adapter.
+- No public answer adapter is active after runtime relocation.
 - Hermes local state is non-canonical.
 - Repo artifacts and validators remain authoritative.
 

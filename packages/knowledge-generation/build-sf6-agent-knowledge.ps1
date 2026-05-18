@@ -9,7 +9,6 @@ $ErrorActionPreference = 'Stop'
 $generatorRelativePath = 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
 $sourceRootRelativePath = 'knowledge/curated'
 $targetRootRelativePath = 'runtime/generated-knowledge'
-$compatibilityTargetRootRelativePath = 'skills/sf6-agent/references'
 $generatedFileNames = @(
   'generated-knowledge-index.md',
   'generated-concepts.md'
@@ -256,21 +255,6 @@ function Write-GeneratedKnowledge {
   )
 }
 
-function Copy-GeneratedKnowledgeCompatibilityFiles {
-  param(
-    [Parameter(Mandatory = $true)][string]$PrimaryRoot,
-    [Parameter(Mandatory = $true)][string]$CompatibilityRoot
-  )
-
-  New-Item -ItemType Directory -Path $CompatibilityRoot -Force | Out-Null
-  foreach ($generatedFileName in $generatedFileNames) {
-    Copy-Item `
-      -LiteralPath (Join-Path $PrimaryRoot $generatedFileName) `
-      -Destination (Join-Path $CompatibilityRoot $generatedFileName) `
-      -Force
-  }
-}
-
 if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
   throw "Missing source root: $sourceRootRelativePath"
 }
@@ -298,11 +282,8 @@ if (-not [string]::IsNullOrWhiteSpace($OutputRoot)) {
 }
 
 $primaryRoot = Join-Path $repoRoot $targetRootRelativePath
-$compatibilityRoot = Join-Path $repoRoot $compatibilityTargetRootRelativePath
 
 Write-GeneratedKnowledge $primaryRoot $targetRootRelativePath $pages
-Copy-GeneratedKnowledgeCompatibilityFiles $primaryRoot $compatibilityRoot
 
 Write-Host "Generated $targetRootRelativePath/generated-knowledge-index.md"
 Write-Host "Generated $targetRootRelativePath/generated-concepts.md"
-Write-Host "Updated compatibility copy under $compatibilityTargetRootRelativePath"

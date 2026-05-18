@@ -1,9 +1,10 @@
 {
   "name": "sf6-maintainer-harness",
   "description": "Optional Hermes harness guidance for SF6 Knowledge Agent Kit maintainers.",
-  "adapter": {
-    "name": "sf6-agent",
-    "path": "../../skills/sf6-agent"
+  "runtime": {
+    "generatedKnowledge": "../../runtime/generated-knowledge",
+    "frameCurrent": "../../runtime/frame-current",
+    "normalization": "../../runtime/normalization"
   },
   "workflows": {
     "root": "../../workflows"

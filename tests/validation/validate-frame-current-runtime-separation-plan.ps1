@@ -39,20 +39,15 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $planPath) -PathType Leaf) {
   $plan = Read-Text $planPath
   foreach ($requiredText in @(
     'runtime/frame-current/',
-    'skills/sf6-agent/assets/frame-current/',
     'data/exports/',
     'data/roster/',
     'packages/skill-packaging/build-frame-current-runtime-assets.ps1',
     'tests/validation/validate-frame-current-assets.ps1',
     'contracts/frame-current-runtime-assets.md',
     'frame_current_runtime_assets',
-    'deferred public adapter',
-    'compatibility copy',
-    'design-only',
     'source authority',
-    'primary derived runtime output',
-    'do not move',
-    'public `sf6-agent` behavior'
+    'derived runtime output',
+    'public adapter was removed'
   )) {
     Assert-Contains $plan $requiredText $planPath ([ref]$issues)
   }

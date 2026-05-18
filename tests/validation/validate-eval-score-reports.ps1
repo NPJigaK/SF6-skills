@@ -20,9 +20,8 @@ $forbiddenReportPatterns = @(
   'data/exports/',
   'official_raw',
   'runtime/frame-current',
-  'skills/sf6-agent/assets/frame-current',
   'runtime/generated-knowledge',
-  'skills/sf6-agent/references/generated-'
+  'runtime/normalization'
 )
 
 function Test-Property {

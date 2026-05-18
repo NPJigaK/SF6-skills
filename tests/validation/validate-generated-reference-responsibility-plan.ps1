@@ -46,19 +46,12 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $planPath) -PathType Leaf) {
   $plan = Read-Text $planPath
   foreach ($needle in @(
     'generated knowledge references',
-    'public adapter policy references',
-    'skills/sf6-agent/references/generated-*',
-    'skills/sf6-agent/references/*-policy.md',
     'knowledge/curated/',
     'packages/knowledge-generation/build-sf6-agent-knowledge.ps1',
     'tests/validation/validate-generated-knowledge.ps1',
     'generated_knowledge_references',
-    'sf6_agent_adapter_policy_references',
     'runtime/generated-knowledge/',
-    'compatibility copy',
-    'design-only',
-    'do not move generated files',
-    'public `sf6-agent` behavior',
+    'public adapter was removed',
     'canonical SF6 knowledge'
   )) {
     Assert-Contains $plan $needle $planPath ([ref]$issues)
@@ -86,30 +79,13 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $registryPath) -PathType Leaf) {
     if (@($surface.policy_refs) -notcontains $planPath) {
       $issues += "generated_knowledge_references must reference $planPath"
     }
+    if (@($surface.path_globs) -contains 'skills/sf6-agent/references/generated-*') {
+      $issues += 'generated_knowledge_references must not retain removed adapter compatibility path'
+    }
   }
 
-  if ($adapterPolicySurface.Count -ne 1) {
-    $issues += "$registryPath must contain exactly one sf6_agent_adapter_policy_references surface"
-  } else {
-    $surface = $adapterPolicySurface[0]
-    if ($surface.generated -ne $false) {
-      $issues += 'sf6_agent_adapter_policy_references must not be generated'
-    }
-    if ($surface.surface_role -ne 'deferred_legacy') {
-      $issues += 'sf6_agent_adapter_policy_references must be deferred_legacy'
-    }
-    if ($surface.public_distribution_status -ne 'deferred') {
-      $issues += 'sf6_agent_adapter_policy_references must have deferred public_distribution_status'
-    }
-    if ($surface.normal_public_answer_authority -ne $false) {
-      $issues += 'sf6_agent_adapter_policy_references must not be normal public answer authority'
-    }
-    if (@($surface.path_globs) -notcontains 'skills/sf6-agent/references/*-policy.md') {
-      $issues += 'sf6_agent_adapter_policy_references must cover skills/sf6-agent/references/*-policy.md'
-    }
-    if (@($surface.policy_refs) -notcontains $planPath) {
-      $issues += "sf6_agent_adapter_policy_references must reference $planPath"
-    }
+  if ($adapterPolicySurface.Count -ne 0) {
+    $issues += "$registryPath must not retain removed sf6_agent_adapter_policy_references surface"
   }
 }
 

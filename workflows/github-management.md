@@ -148,16 +148,8 @@ references, frame-current assets, or normalization assets:
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane derived-build
 ```
 
-Use the legacy distribution lane only when a PR touches deferred public
-distribution bundle or installer surfaces:
-
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane legacy-distribution
-```
-
 For broad repo changes and merge readiness, use the full v2 validation suite.
-Omitting `-Lane` is equivalent to `-Lane all` and preserves the CI-compatible
-legacy behavior:
+Omitting `-Lane` is equivalent to `-Lane all`:
 
 ```powershell
 pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1
@@ -175,10 +167,8 @@ If Windows PowerShell cannot see `git` while running `run-all.ps1`, verify deriv
 ```bash
 git status --porcelain -- \
   runtime/generated-knowledge \
-  skills/sf6-agent/references/generated-knowledge-index.md \
-  skills/sf6-agent/references/generated-concepts.md \
   runtime/frame-current \
-  skills/sf6-agent/assets/frame-current
+  runtime/normalization
 ```
 
 See `docs/architecture/powershell-compatibility-policy.md` for the repo

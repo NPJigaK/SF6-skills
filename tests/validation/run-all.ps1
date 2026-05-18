@@ -1,5 +1,5 @@
 param(
-  [ValidateSet('read-only', 'derived-build', 'legacy-distribution', 'all')]
+  [ValidateSet('read-only', 'derived-build', 'all')]
   [string]$Lane = 'all'
 )
 
@@ -9,12 +9,8 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $derivedOutputPaths = @(
   'runtime/generated-knowledge',
-  'skills/sf6-agent/references/generated-knowledge-index.md',
-  'skills/sf6-agent/references/generated-concepts.md',
   'runtime/frame-current',
-  'skills/sf6-agent/assets/frame-current',
-  'runtime/normalization',
-  'skills/sf6-agent/assets/normalization'
+  'runtime/normalization'
 )
 
 function Assert-NoDerivedOutputStatus {
@@ -40,11 +36,7 @@ $derivedBuildPreflightScripts = @(
   'packages/skill-packaging/build-normalization-runtime-assets.ps1'
 )
 
-$legacyDistributionPreflightScripts = @(
-  'packages/skill-packaging/build-release-bundle.ps1'
-)
-
-$allPreflightScripts = $derivedBuildPreflightScripts + $legacyDistributionPreflightScripts
+$allPreflightScripts = $derivedBuildPreflightScripts
 
 $readOnlyValidationScripts = @(
   'tests/validation/validate-v2-surfaces.ps1',
@@ -104,11 +96,6 @@ $derivedBuildValidationScripts = @(
   'tests/validation/validate-repository-surfaces.ps1'
 )
 
-$legacyDistributionValidationScripts = @(
-  'tests/validation/validate-distribution.ps1',
-  'tests/validation/validate-legacy-cleanup.ps1'
-)
-
 $allValidationScripts = @(
   $readOnlyValidationScripts | Where-Object {
     $_ -notin @(
@@ -117,7 +104,6 @@ $allValidationScripts = @(
     )
   }
 ) + @(
-  'tests/validation/validate-distribution.ps1',
   'tests/validation/validate-doc-links.ps1',
   'tests/validation/validate-legacy-cleanup.ps1'
 )
@@ -130,10 +116,6 @@ switch ($Lane) {
   'derived-build' {
     $preflightScripts = $derivedBuildPreflightScripts
     $validationScripts = $derivedBuildValidationScripts
-  }
-  'legacy-distribution' {
-    $preflightScripts = $legacyDistributionPreflightScripts
-    $validationScripts = $legacyDistributionValidationScripts
   }
   'all' {
     $preflightScripts = $allPreflightScripts

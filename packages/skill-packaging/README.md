@@ -1,19 +1,11 @@
 # skill-packaging
 
-Package classification: `shared_infra`.
+Package classification: `active_repo_local`.
 
-Shared packaging scripts live here.
-
-`build-release-bundle.ps1` is deferred public distribution tooling. ADR-0004
-keeps it only as interim `legacy-distribution` lane coverage until the public
-`skills/sf6-agent/` adapter is removed after runtime payload relocation. Policy
-reference:
+Repo-local runtime asset builders live here. deferred distribution surfaces were removed with issue #295; see
 `docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md`.
 
 Current entrypoints:
 
 - `build-frame-current-runtime-assets.ps1`: `active_repo_local`
-- `build-normalization-runtime-assets.ps1`: `active_repo_local`; writes primary runtime output to `runtime/normalization/` and a deferred adapter compatibility bridge to `skills/sf6-agent/assets/normalization/` while the public adapter still exists.
-- `build-release-bundle.ps1`: `deferred_distribution`
-
-`build-release-bundle.ps1` packages only `skills/sf6-agent/**` under the archive root `sf6-agent/` and writes `.dist/sf6-agent-bundle.zip`.
+- `build-normalization-runtime-assets.ps1`: `active_repo_local`; writes runtime output to `runtime/normalization/`.

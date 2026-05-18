@@ -39,13 +39,13 @@ A curated page may use Japanese prose when that is the most natural operating la
 Examples that may be appropriate:
 
 - `README.ja.md`
-- `docs/distribution/agents/codex.ja.md`
+- localized maintainer summaries under `docs/`
 
 Avoid `.ja.*` files for canonical knowledge pages or core workflows unless an architecture decision defines how canonical and localized variants stay synchronized.
 
 ## Public Adapter
 
-Keep `skills/sf6-agent/` as the single public adapter for now.
+The former `skills/sf6-agent/` public adapter was removed after runtime relocation.
 
 Do not create `sf6-agent-ja` unless a later architecture decision shows that a separate Japanese adapter is necessary and can be validated without duplicate source-of-truth drift.
 

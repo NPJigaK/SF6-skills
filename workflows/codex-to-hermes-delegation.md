@@ -214,9 +214,7 @@ Before committing work that used Hermes output:
    `tests/validation/run-all.ps1 -Lane read-only`.
 8. Run `tests/validation/run-all.ps1` when practical for merge readiness.
    Use `-Lane derived-build` only when generated references, frame-current
-   assets, or normalization assets are intentionally in scope. Use
-   `-Lane legacy-distribution` only when deferred public distribution bundle or
-   installer surfaces are intentionally in scope.
+   assets, or normalization assets are intentionally in scope.
 9. Run `git diff --check`.
 10. Verify generated or derived surfaces have no residual diff unless
    intentionally in scope.

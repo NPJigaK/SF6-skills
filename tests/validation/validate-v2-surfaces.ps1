@@ -34,9 +34,8 @@ $requiredDirectories = @(
   'workflows',
   'packs',
   'runtime/generated-knowledge',
-  'skills/sf6-agent/references',
   'runtime/frame-current',
-  'skills/sf6-agent/assets/frame-current'
+  'runtime/normalization'
 )
 
 $issues = @()
@@ -60,9 +59,8 @@ if ($issues.Count -eq 0) {
     '`knowledge/` is canonical',
     '`data/exports/` and `data/roster/` are the exact current-fact authority',
     '`runtime/generated-knowledge/` is derived',
-    '`skills/sf6-agent/references/generated-*` is a compatibility bridge',
     '`runtime/frame-current/` is derived',
-    '`skills/sf6-agent/assets/frame-current/` is a compatibility bridge'
+    '`runtime/normalization/` is derived'
   )) {
     if ($readme -notmatch [regex]::Escape($needle)) {
       $issues += "README.md missing v2 boundary text: $needle"

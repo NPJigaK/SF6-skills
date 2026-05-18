@@ -107,13 +107,10 @@ Recommended future gated sequence, not implemented here:
 
 Repo-tracked binary media, media cache, and external atlas binary artifacts are forbidden by default in:
 
-- `skills/sf6-agent/`
 - public release bundle paths
 - `.dist`
 - `runtime/frame-current/`
-- `skills/sf6-agent/assets/frame-current/`
 - `runtime/normalization/`
-- `skills/sf6-agent/assets/normalization/`
 - `data/raw`
 - `data/normalized`
 - `data/exports`

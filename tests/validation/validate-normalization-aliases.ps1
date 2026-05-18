@@ -227,7 +227,7 @@ if (Test-Path -LiteralPath $aliasesPath -PathType Container) {
 }
 
 if (Get-Command git -ErrorAction SilentlyContinue) {
-  $frameCurrentStatus = @(& git -C $repoRoot status --porcelain -- 'runtime/frame-current' 'skills/sf6-agent/assets/frame-current')
+  $frameCurrentStatus = @(& git -C $repoRoot status --porcelain -- 'runtime/frame-current')
   if ($LASTEXITCODE -ne 0) {
     $issues += 'Unable to inspect frame-current status'
   } elseif ($frameCurrentStatus.Count -gt 0) {
