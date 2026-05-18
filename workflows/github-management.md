@@ -174,6 +174,7 @@ If Windows PowerShell cannot see `git` while running `run-all.ps1`, verify deriv
 
 ```bash
 git status --porcelain -- \
+  runtime/generated-knowledge \
   skills/sf6-agent/references/generated-knowledge-index.md \
   skills/sf6-agent/references/generated-concepts.md \
   runtime/frame-current \

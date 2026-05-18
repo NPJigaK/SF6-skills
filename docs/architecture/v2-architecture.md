@@ -19,11 +19,12 @@ The repo has one public adapter, `skills/sf6-agent/`, and several canonical sour
 
 - `skills/sf6-agent/SKILL.md`: adapter entry behavior.
 - `skills/sf6-agent/references/*-policy.md`: hand-written adapter policy.
-- `skills/sf6-agent/references/generated-*`: derived curated knowledge payload.
+- `skills/sf6-agent/references/generated-*`: deferred adapter compatibility copy for generated knowledge payload.
 - `skills/sf6-agent/assets/frame-current/`: deferred adapter compatibility copy for frame-current runtime payload.
 
 ## Runtime Surface
 
+- `runtime/generated-knowledge/`: primary derived stable concept runtime payload.
 - `runtime/frame-current/`: primary derived exact current-fact runtime payload.
 - `runtime/normalization/`: primary derived query-normalization runtime payload.
 
@@ -33,7 +34,7 @@ The adapter can be bundled without requiring a full repo checkout.
 
 Generated references and frame-current assets are outputs. They must carry provenance and must point back to canonical source paths.
 
-Generated references come from `knowledge/curated/` only. They must not contain exact current frame values.
+Generated knowledge runtime assets come from `knowledge/curated/` only. They must not contain exact current frame values. The primary runtime path is `runtime/generated-knowledge/`; any `skills/sf6-agent/references/generated-*` copy is compatibility-only.
 
 Frame-current assets come from `data/exports/` plus `data/roster/` only. They must not include manual-review rows, raw snapshots, normalized intermediate files, or CSV sidecars. The primary runtime path is `runtime/frame-current/`; any `skills/sf6-agent/assets/frame-current/` copy is compatibility-only.
 

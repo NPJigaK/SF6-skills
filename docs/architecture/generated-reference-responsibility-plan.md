@@ -1,7 +1,7 @@
 ---
 title: Generated Reference Responsibility Plan
 status: accepted
-last_reviewed: 2026-05-17
+last_reviewed: 2026-05-19
 tracking_issue: "#244"
 ---
 
@@ -10,9 +10,9 @@ tracking_issue: "#244"
 この文書は、generated knowledge references と hand-written public adapter
 references の責務を分けるための Phase 2 設計方針を定義する。
 
-この PR は design-only であり、generated references、generator output path、
-public `sf6-agent` behavior、current facts は変更しない。この design step では
-generated files を移動しない。
+Phase A は design-only だった。Phase B/C では generator output path を
+`runtime/generated-knowledge/` に移し、public `sf6-agent` behavior を維持するための
+compatibility copy を残す。current facts と public adapter policy references は変更しない。
 In this design step, do not move generated files.
 
 ## Current State
@@ -21,7 +21,8 @@ In this design step, do not move generated files.
 
 | Surface | 現在の path | 責務 |
 |---|---|---|
-| generated knowledge references | `skills/sf6-agent/references/generated-*` | `knowledge/curated/` から生成された stable concept runtime payload |
+| generated knowledge references | `runtime/generated-knowledge/` | `knowledge/curated/` から生成された stable concept runtime payload |
+| compatibility copy | `skills/sf6-agent/references/generated-*` | public adapter が残る間の generated knowledge copy |
 | public adapter policy references | `skills/sf6-agent/references/*-policy.md` | public `sf6-agent` adapter の answer / current-fact / uncertainty behavior |
 
 generated knowledge references の現在値:
@@ -29,7 +30,8 @@ generated knowledge references の現在値:
 | 項目 | 現在値 |
 |---|---|
 | source authority | `knowledge/curated/` |
-| generated output | `skills/sf6-agent/references/generated-*` |
+| primary generated output | `runtime/generated-knowledge/` |
+| compatibility copy | `skills/sf6-agent/references/generated-*` |
 | generator | `packages/knowledge-generation/build-sf6-agent-knowledge.ps1` |
 | validator | `tests/validation/validate-generated-knowledge.ps1` |
 | registry ID | `generated_knowledge_references` |
@@ -46,7 +48,7 @@ public adapter policy references の現在値:
 問題は、generated stable concept payload と hand-written adapter behavior policy が
 同じ `references/` directory に置かれていることだ。これにより、
 `references/` という言葉が source-of-truth、generated runtime payload、adapter
-behavior policy のどれを指すのか曖昧になる。
+behavior policy のどれを指すのか曖昧になっていた。
 
 ## Responsibility Split
 
@@ -154,9 +156,9 @@ reactivate ADR と合わせて判断する。
 - deferred public adapter compatibility copy: `skills/sf6-agent/references/generated-*`
 - hand-written public adapter behavior policy: `skills/sf6-agent/references/*-policy.md`
 
-`validate-generated-knowledge.ps1` は、最終的に primary generated knowledge runtime
-output を検証する。compatibility copy を検証する場合は、primary output と content が
-一致する bridge validator に分ける。
+`validate-generated-knowledge.ps1` は primary generated knowledge runtime output を
+検証する。compatibility copy を検証する場合は、primary output と content が一致する
+ことを確認する。
 
 ## Non-goals
 

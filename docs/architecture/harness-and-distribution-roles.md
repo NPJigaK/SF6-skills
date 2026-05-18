@@ -24,7 +24,7 @@ to:
 
 - `skills/sf6-agent/SKILL.md`
 - hand-written adapter policies under `skills/sf6-agent/references/`
-- generated reference payloads under `skills/sf6-agent/references/generated-*`
+- generated reference compatibility copies under `skills/sf6-agent/references/generated-*`
 - frame-current compatibility copy under `skills/sf6-agent/assets/frame-current/`
 - release bundles derived from those adapter surfaces
 

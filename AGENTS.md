@@ -19,7 +19,8 @@
 
 ## Derived Surfaces
 
-- `skills/sf6-agent/references/generated-*` is derived from `knowledge/curated/`.
+- `runtime/generated-knowledge/` is derived from `knowledge/curated/`.
+- `skills/sf6-agent/references/generated-*` is a deferred public adapter compatibility bridge derived from `knowledge/curated/`.
 - `runtime/frame-current/` is derived from `data/exports/` and `data/roster/`.
 - `skills/sf6-agent/assets/frame-current/` is a deferred public adapter compatibility bridge derived from `data/exports/` and `data/roster/`.
 - `runtime/normalization/` is derived from `data/aliases/`.

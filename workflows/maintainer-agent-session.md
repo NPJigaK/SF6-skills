@@ -91,6 +91,7 @@ the warning and separately verify from WSL or another git-visible environment
 that these generated or derived surfaces have no residual diff:
 
 - `skills/sf6-agent/references/`
+- `runtime/generated-knowledge/`
 - `.dist`
 - `runtime/frame-current/`
 - `skills/sf6-agent/assets/frame-current/`

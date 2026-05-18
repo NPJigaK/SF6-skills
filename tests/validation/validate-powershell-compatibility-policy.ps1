@@ -63,6 +63,7 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $policyPath) -PathType Leaf) {
     'git status --porcelain',
     'git diff --check',
     'origin/main...HEAD',
+    'runtime/generated-knowledge',
     'skills/sf6-agent/references/generated-knowledge-index.md',
     'runtime/frame-current',
     'skills/sf6-agent/assets/frame-current',
