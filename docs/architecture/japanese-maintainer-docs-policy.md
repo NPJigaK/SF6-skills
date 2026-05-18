@@ -10,7 +10,7 @@ This policy clarifies how maintainer-facing docs can use Japanese prose without 
 
 ただし、metadata key、artifact ID、schema enum、filename、validator contract、command名などは英語互換を保ちます。
 
-`AGENTS.md` や `skills/sf6-agent/SKILL.md` のようにagentが実際に読む入口では、必須ルールを `.ja.*` companion に逃がさず、entrypoint本体に書きます。
+`AGENTS.md` や workflow のようにagentが実際に読む入口では、必須ルールを `.ja.*` companion に逃がさず、entrypoint本体に書きます。
 
 `knowledge/curated/` は英語版と日本語版で二重正本化しません。
 
@@ -45,22 +45,20 @@ Keep these English-compatible and stable:
 - filenames and path slugs
 - generated markers
 - validator contracts
-- package and installer interfaces
+- package interfaces
 - command names and script names
 
 Japanese prose must not require Japanese-only metadata keys, schema enum values, filenames, or validator contracts.
 
 ## Required Entrypoints
 
-Required repo and skill behavior must live in the canonical entrypoints that agents actually read.
+Required repo behavior must live in the canonical entrypoints that agents actually read.
 
 Do not move required rules only into `.ja.*` companion files.
 
 Examples:
 
 - `AGENTS.md` must contain required repo guidance directly.
-- `skills/sf6-agent/SKILL.md` must contain required skill behavior directly.
-- Hand-written policy files under `skills/sf6-agent/references/` must contain required adapter behavior directly.
 
 Localized companions may explain or summarize these entrypoints for humans, but they are not enough for required agent behavior unless a later architecture decision changes discovery behavior.
 

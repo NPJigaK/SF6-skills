@@ -3,7 +3,7 @@
 This pack is repo-local orchestration support for Hermes. It is a thin pointer
 surface only.
 
-It is not public answer behavior, does not replace skills/sf6-agent, and does
+It is not public answer behavior, does not define public answer behavior, and does
 not define canonical procedure authority. Canonical workflows, canonical
 contracts, architecture docs, validators, issue scope, and reviewed repo
 artifacts remain authoritative.
@@ -37,6 +37,5 @@ tokens.
 ## Usage
 
 Use this pack only to orient Hermes maintainer operation back to canonical repo
-surfaces. For deferred public adapter work, follow the explicit target issue
-and the canonical distribution docs instead of treating this pack as
-distribution procedure.
+surfaces. Future public adapter or distribution work requires a new scoped
+architecture decision instead of treating this pack as distribution procedure.

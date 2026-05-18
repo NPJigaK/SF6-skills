@@ -2,10 +2,8 @@ Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $generatedRootRelativePath = 'runtime/generated-knowledge'
-$compatibilityGeneratedRootRelativePath = 'skills/sf6-agent/references'
 $curatedRootRelativePath = 'knowledge/curated'
 $generatedRoot = Join-Path $repoRoot $generatedRootRelativePath
-$compatibilityGeneratedRoot = Join-Path $repoRoot $compatibilityGeneratedRootRelativePath
 $curatedRoot = Join-Path $repoRoot $curatedRootRelativePath
 $generatorRelativePath = 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
 $generatorPath = Join-Path $repoRoot $generatorRelativePath
@@ -128,10 +126,6 @@ if (-not (Test-Path -LiteralPath $generatedRoot -PathType Container)) {
   throw "Missing generated knowledge primary root: $generatedRootRelativePath"
 }
 
-if (-not (Test-Path -LiteralPath $compatibilityGeneratedRoot -PathType Container)) {
-  throw "Missing generated knowledge compatibility root: $compatibilityGeneratedRootRelativePath"
-}
-
 $expectedSourcePaths = @(
   Get-ChildItem -LiteralPath $curatedRoot -Recurse -File -Filter '*.md' |
     Where-Object { $_.Name -ne 'README.md' } |
@@ -145,13 +139,6 @@ if ($expectedSourcePaths.Count -eq 0) {
 
 foreach ($name in $generatedFiles) {
   Assert-GeneratedKnowledgeFile $name $generatedRoot $generatedRootRelativePath $expectedSourcePaths 'primary runtime'
-  Assert-GeneratedKnowledgeFile $name $compatibilityGeneratedRoot $compatibilityGeneratedRootRelativePath $expectedSourcePaths 'legacy adapter compatibility copy'
-
-  $primaryContent = [System.IO.File]::ReadAllText((Join-Path $generatedRoot $name))
-  $compatibilityContent = [System.IO.File]::ReadAllText((Join-Path $compatibilityGeneratedRoot $name))
-  if ($primaryContent -ne $compatibilityContent) {
-    throw "Generated knowledge compatibility copy must match primary runtime output: $name"
-  }
 }
 
 $primaryInventory = @(

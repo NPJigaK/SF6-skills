@@ -15,17 +15,12 @@
 - `contracts/` is canonical for schemas and artifact contracts.
 - `workflows/` are canonical maintainer procedures.
 - `evals/` is canonical for answer-quality cases and rubrics.
-- `skills/sf6-agent/SKILL.md` and hand-written files under `skills/sf6-agent/references/` are canonical adapter behavior only.
 
 ## Derived Surfaces
 
 - `runtime/generated-knowledge/` is derived from `knowledge/curated/`.
-- `skills/sf6-agent/references/generated-*` is a deferred public adapter compatibility bridge derived from `knowledge/curated/`.
 - `runtime/frame-current/` is derived from `data/exports/` and `data/roster/`.
-- `skills/sf6-agent/assets/frame-current/` is a deferred public adapter compatibility bridge derived from `data/exports/` and `data/roster/`.
 - `runtime/normalization/` is derived from `data/aliases/`.
-- `skills/sf6-agent/assets/normalization/` is a deferred public adapter compatibility bridge derived from `data/aliases/`.
-- Release bundles and generated agent-specific front doors are derived distribution outputs.
 - Generated surfaces must identify their generator and source paths.
 - Do not make generated surfaces canonical.
 
@@ -47,25 +42,24 @@
 - Japanese is the primary operating language for SF6 user questions, source summaries, review notes, and curated prose when appropriate.
 - Metadata keys, artifact IDs, schema enum values, filenames, generated markers, and validator contracts remain English-compatible.
 - Do not duplicate canonical knowledge only to create separate English/Japanese versions.
-- `skills/sf6-agent/` is the existing public adapter surface, but ADR-0002 makes it a deferred legacy distribution surface rather than the active product focus.
+- The former `skills/sf6-agent/` public adapter was removed after runtime relocation. Future public distribution requires a new architecture decision.
 - See `docs/architecture/language-policy.md`.
 
 ## Japanese Maintainer Documentation
 
 - Maintainer-facing prose may be Japanese-first when it improves repo operation.
-- Required repo and skill behavior must stay in canonical entrypoints such as `AGENTS.md` and `skills/sf6-agent/SKILL.md`; do not rely on `.ja.*` companion files for required behavior.
+- Required repo behavior must stay in canonical entrypoints such as `AGENTS.md` and workflow files; do not rely on `.ja.*` companion files for required behavior.
 - Do not duplicate canonical knowledge only to create separate English/Japanese versions.
 - Use `.ja.*` files for human-facing localized docs only when their canonical, companion, or summary role is clear.
 - See `docs/architecture/japanese-maintainer-docs-policy.md`.
 
 ## Harness And Distribution Roles
 
-- `skills/sf6-agent/` is the existing public answer adapter surface.
 - `AGENTS.md`, `workflows/*`, `tests/validation/*`, `packages/*`, and `contracts/*` are repo-local maintainer surfaces.
 - Hermes is the primary repo-local orchestration harness when a configured maintainer profile is available, but Hermes memory and profile state are not canonical.
 - Hermes does not make local memory, sessions, profile state, or local skill state canonical.
 - `packs/hermes-sf6/*` is repo-local orchestration support, not public answer-skill behavior.
-- APM / Agent Skills public distribution is deferred. Do not create a public repo-maintainer skill package without a later architecture decision.
+- APM / Agent Skills public distribution is inactive after adapter removal. Do not create a public repo-maintainer skill package without a later architecture decision.
 - See `docs/architecture/harness-and-distribution-roles.md`, `docs/architecture/decisions/0001-hermes-primary-orchestration.md`, and `docs/architecture/decisions/0002-private-hermes-first-operation.md`.
 
 ## Operating Lanes
@@ -76,7 +70,7 @@
 - Codex should delegate primary object-level analysis such as source analysis, claim decomposition, observation drafting, review drafting, architecture review drafting, workflow learning, validator-pattern learning, and procedural skill self-improvement to Hermes when configured.
 - Codex-only analysis for Hermes-first tasks is fallback behavior and must record why Hermes delegation was not attempted or could not complete.
 - Hermes memory, sessions, local skills, Curator output, Kanban workers, and checkpoints are non-canonical until promoted through reviewed repository artifacts.
-- Current operation prioritizes personal/private Codex-operated Hermes-first workflows; `skills/sf6-agent/` is deferred until later scoped work decides whether to remove, relocate, or reactivate it.
+- Current operation prioritizes personal/private Codex-operated Hermes-first workflows. The former public adapter was removed after its reusable runtime payloads moved under `runtime/`.
 - See `docs/architecture/hermes-v2.1-roadmap.md`, `docs/architecture/codex-hermes-bridge-policy.md`, and `workflows/codex-to-hermes-delegation.md`.
 
 ## Hermes Delegation Command Discipline
@@ -112,7 +106,7 @@
 
 - Maintainer procedures belong under `workflows/`.
 - Ingestion and publishing implementation belongs under `ingest/frame_data/`.
-- Public adapter packaging belongs under `packages/skill-packaging/`.
+- Runtime asset generation belongs under `packages/skill-packaging/`.
 - Knowledge-generation tooling belongs under `packages/knowledge-generation/`.
 - Hermes is primary when configured, but not canonical memory.
 - Do not store full copyrighted articles, videos, or transcripts by default.

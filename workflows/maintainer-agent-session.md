@@ -63,9 +63,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane
 ```
 
 Use `-Lane derived-build` when generated references, frame-current assets, or
-normalization assets are intentionally in scope. Use `-Lane
-legacy-distribution` only when deferred public distribution bundle or installer
-surfaces are intentionally in scope.
+normalization assets are intentionally in scope.
 
 When practical, also run the full validation suite. Omitting `-Lane` is
 equivalent to `-Lane all`:
@@ -90,13 +88,9 @@ If Windows PowerShell cannot see `git` during generated-surface checks, report
 the warning and separately verify from WSL or another git-visible environment
 that these generated or derived surfaces have no residual diff:
 
-- `skills/sf6-agent/references/`
 - `runtime/generated-knowledge/`
-- `.dist`
 - `runtime/frame-current/`
-- `skills/sf6-agent/assets/frame-current/`
 - `runtime/normalization/`
-- `skills/sf6-agent/assets/normalization/`
 
 See `docs/architecture/powershell-compatibility-policy.md` for the canonical
 `pwsh` / Windows PowerShell fallback policy.

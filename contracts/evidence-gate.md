@@ -4,7 +4,7 @@ This contract defines evidence boundaries for answer orchestration. It is a repo
 
 ## Current Facts
 
-Exact current move facts must be grounded in packaged frame-current authority. The primary exact current fact runtime surface is `runtime/frame-current/published/*/official_raw.json`, which is derived from `data/exports/` and `data/roster/`. The legacy `skills/sf6-agent/assets/frame-current/` path is a compatibility copy, not a separate authority.
+Exact current move facts must be grounded in packaged frame-current authority. The exact current fact runtime surface is `runtime/frame-current/published/*/official_raw.json`, which is derived from `data/exports/` and `data/roster/`.
 
 `derived_metrics` may support calculations only when the route is anchored to `official_raw`. Derived metrics are not an independent source for exact current move facts.
 

@@ -7,12 +7,13 @@ tracking_issue: "#242"
 
 # Frame-current Runtime Separation Plan
 
-この文書は、frame-current runtime assets を deferred public adapter surface から
-切り離すための設計方針を定義する。
+この文書は、frame-current runtime assets を旧 deferred public adapter surface から
+切り離した設計方針を記録する。
 
 Phase A は design-only だった。Phase B/C では generator output path を
-`runtime/frame-current/` に移し、public `sf6-agent` behavior を維持するための
-compatibility copy を残す。current facts と `data/exports/` / `data/roster/` は変更しない。
+`runtime/frame-current/` に移した。public adapter was removed after runtime
+relocation, so the old compatibility copy is no longer an active repository
+surface. current facts と `data/exports/` / `data/roster/` は変更しない。
 
 ## Current State
 
@@ -21,21 +22,18 @@ compatibility copy を残す。current facts と `data/exports/` / `data/roster/
 | 項目 | 現在値 |
 |---|---|
 | source authority | `data/exports/`, `data/roster/` |
-| primary generated runtime output | `runtime/frame-current/` |
-| compatibility copy | `skills/sf6-agent/assets/frame-current/` |
+| generated runtime output | `runtime/frame-current/` |
 | generator | `packages/skill-packaging/build-frame-current-runtime-assets.ps1` |
 | validator | `tests/validation/validate-frame-current-assets.ps1` |
 | contract | `contracts/frame-current-runtime-assets.md` |
 | registry ID | `frame_current_runtime_assets` |
 
 `data/exports/` と `data/roster/` は exact current-fact authority である。
-`runtime/frame-current/` は primary derived runtime payload であり、正本ではない。
-`skills/sf6-agent/assets/frame-current/` は compatibility copy であり、正本ではない。
+`runtime/frame-current/` は derived runtime output であり、正本ではない。
 
 この plan の起点になった問題は、derived runtime payload が `skills/sf6-agent/` 配下にあることだった。
-`skills/sf6-agent/` は現在 deferred legacy public adapter surface であり、private
-Hermes-first operation の active product focus ではない。これにより、current-fact
-runtime payload と deferred public adapter が構造的に結合していた。
+旧 `skills/sf6-agent/` adapter は削除済みであり、current-fact runtime payload と
+public adapter の構造的結合は解消済み。
 
 ## Target Direction
 
@@ -45,8 +43,7 @@ preferred target runtime surface は `runtime/frame-current/` とする。
 
 - `data/exports/` と `data/roster/` を authority として維持し、derived runtime output を
   `data/` 配下に戻さない。
-- `skills/sf6-agent/` から current-fact runtime payload を分離し、public adapter の
-  remove / relocate / reactivate 判断を独立させる。
+- 旧 `skills/sf6-agent/` から current-fact runtime payload を分離する。
 - `runtime/` 配下を generated runtime output surface として扱える。
 - 将来、normalization runtime や他の private runtime payload も public adapter から
   独立して扱える。
@@ -60,16 +57,7 @@ data/roster/
   -> runtime/frame-current/
 ```
 
-必要な期間だけ、deferred public adapter compatibility copy を残してよい。
-
-```text
-runtime/frame-current/
-  -> skills/sf6-agent/assets/frame-current/
-```
-
-ただし compatibility copy は authority ではない。`runtime/frame-current/` を primary
-derived runtime surface とし、`skills/sf6-agent/assets/frame-current/` は legacy adapter
-copy または bridge として扱う。
+旧 compatibility copy は adapter removal とともに削除済み。
 
 ## Transition Phases
 

@@ -3,7 +3,7 @@
 This file is repo-local orchestration support for future Hermes ingest profile guidance.
 It is a thin pointer surface only.
 
-It is not public answer behavior and does not replace skills/sf6-agent. Public SF6 answer behavior remains in the single `skills/sf6-agent/` adapter.
+It is not public answer behavior and does not define public answer behavior. The former public adapter was removed after runtime relocation.
 
 Hermes ingest guidance must follow canonical workflows and canonical contracts, including the relevant article, video, and source review workflows under `workflows/`. This file is not canonical procedure authority.
 

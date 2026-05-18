@@ -224,7 +224,7 @@ else {
       $violations += "$relativePath must include at least one source_refs path"
     }
     foreach ($sourceRef in $sourceRefs) {
-      if ($sourceRef -match '^(runtime/generated-knowledge/|skills/sf6-agent/references/generated-)') {
+      if ($sourceRef -match '^runtime/generated-knowledge/') {
         $violations += "$relativePath source_refs must not point to generated references: $sourceRef"
         continue
       }

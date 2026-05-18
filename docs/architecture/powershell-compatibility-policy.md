@@ -71,20 +71,14 @@ generated surface を触る PR では、少なくとも次の derived / generate
 ```bash
 git status --porcelain -- \
   runtime/generated-knowledge \
-  skills/sf6-agent/references/generated-knowledge-index.md \
-  skills/sf6-agent/references/generated-concepts.md \
   runtime/frame-current \
-  skills/sf6-agent/assets/frame-current \
-  runtime/normalization \
-  skills/sf6-agent/assets/normalization \
-  .dist
+  runtime/normalization
 ```
 
 ## When Windows PowerShell Is Acceptable
 
 Windows PowerShell は次の用途に限定して扱う。
 
-- deferred public distribution installer docs の legacy example。
 - Windows-only user environment での compatibility smoke。
 - `powershell.exe` 自体の fallback behavior を検証する scoped issue。
 

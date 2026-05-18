@@ -1,18 +1,17 @@
-# Public Adapter
+# Skills
 
-`skills/sf6-agent/` is the existing public adapter for SF6 Knowledge Agent Kit.
-It is currently a deferred legacy distribution surface while private
-Hermes-first operation is stabilized.
+The former `skills/sf6-agent/` public adapter was removed after runtime payload
+relocation. This directory remains only as a placeholder for future reviewed
+decisions.
 
-The adapter contains:
+Do not create a public skill, agent-specific front door, or replacement adapter
+here without a new architecture decision. Repo-local runtime payloads live under:
 
-- `SKILL.md` for runtime behavior.
-- `references/*-policy.md` for hand-written public adapter behavior policy.
-- `references/generated-*` as compatibility copy of generated concept payload from `runtime/generated-knowledge/`.
-- `assets/frame-current/` as compatibility copy of exact current-fact payload from `runtime/frame-current/`.
+- `runtime/generated-knowledge/`
+- `runtime/frame-current/`
+- `runtime/normalization/`
 
-Do not add separate public `kb-*` skills or agent-specific front doors here. Environment-specific wrappers belong under `packs/`, and human install docs belong under `docs/distribution/agents/`.
-
-Generated knowledge references and hand-written adapter policy references are
-separate responsibility surfaces. The Phase 2 plan is in
+Historical public adapter disposition is recorded in
+`docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md`. The
+generated knowledge responsibility plan is in
 `docs/architecture/generated-reference-responsibility-plan.md`.

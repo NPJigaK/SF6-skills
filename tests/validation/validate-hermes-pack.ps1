@@ -46,7 +46,7 @@ $commonBoundaryPhrases = @(
   'repo-local orchestration support',
   'thin pointer',
   'not public answer behavior',
-  'does not replace skills/sf6-agent',
+  'does not define public answer behavior',
   'canonical workflows',
   'canonical contracts',
   'not canonical procedure authority',

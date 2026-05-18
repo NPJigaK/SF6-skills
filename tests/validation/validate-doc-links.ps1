@@ -4,8 +4,7 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $markdownFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -File -Include '*.md' |
   Where-Object {
     $relative = $_.FullName.Substring($repoRoot.Length + 1).Replace('\', '/')
-    $relative -notmatch '^(\.git|\.dist|\.worktrees)/' -and
-    $relative -notmatch '^skills/sf6-agent/assets/frame-current/'
+    $relative -notmatch '^(\.git|\.dist|\.worktrees)/'
   }
 
 $issues = @()

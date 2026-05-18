@@ -7,26 +7,21 @@ questions. Repo-local maintainer surfaces help maintainers grow and validate
 this repository after cloning it.
 
 ADR-0002 changes the active priority: private Hermes-first operation is the
-current focus, and public skill distribution is deferred while knowledge
-collection, review, validation, and promotion workflows are stabilized.
+current focus. Public skill distribution is inactive after the former adapter
+and deferred distribution surfaces were removed.
 
 ## Public Answer Adapter
 
-`skills/sf6-agent/` is the existing public answer adapter surface.
+The former `skills/sf6-agent/` public answer adapter was removed after reusable
+runtime payloads moved to `runtime/generated-knowledge/`,
+`runtime/frame-current/`, and `runtime/normalization/`.
+public adapter was removed.
 
-It is not the active product surface during the private Hermes-first operation
-phase. There are no known external public-skill users, so this surface is not
-protected as an external compatibility contract. ADR-0003 selects removal after
-reusable runtime payloads are relocated out of the adapter path.
+deferred distribution surfaces were removed with issue #295:
 
-While it remains in the repository, public distribution surfaces are limited
-to:
-
-- `skills/sf6-agent/SKILL.md`
-- hand-written adapter policies under `skills/sf6-agent/references/`
-- generated reference compatibility copies under `skills/sf6-agent/references/generated-*`
-- frame-current compatibility copy under `skills/sf6-agent/assets/frame-current/`
-- release bundles derived from those adapter surfaces
+- `docs/distribution/`
+- `packages/skill-installers/`
+- `packages/skill-packaging/build-release-bundle.ps1`
 
 Do not create a separate `sf6-agent-ja` adapter at this stage.
 Do not add new public adapter features unless a later architecture decision
@@ -93,8 +88,10 @@ Wrappers must not become independent source-of-truth procedures. If a wrapper di
 
 The accepted v2.1 orchestration decision is [decisions/0001-hermes-primary-orchestration.md](./decisions/0001-hermes-primary-orchestration.md).
 The active private-operation priority is [decisions/0002-private-hermes-first-operation.md](./decisions/0002-private-hermes-first-operation.md).
-The public adapter disposition is [decisions/0003-retire-public-sf6-agent-adapter.md](./decisions/0003-retire-public-sf6-agent-adapter.md).
-The deferred distribution surface disposition is [decisions/0004-retire-deferred-distribution-surfaces.md](./decisions/0004-retire-deferred-distribution-surfaces.md).
+The public adapter disposition is [decisions/0003-retire-public-sf6-agent-adapter.md](./decisions/0003-retire-public-sf6-agent-adapter.md);
+canonical path `docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md`.
+The deferred distribution surface disposition is [decisions/0004-retire-deferred-distribution-surfaces.md](./decisions/0004-retire-deferred-distribution-surfaces.md);
+canonical path `docs/architecture/decisions/0004-retire-deferred-distribution-surfaces.md`.
 
 ## Codex And Repo Development
 
@@ -106,7 +103,7 @@ Repository development work belongs in repo-local surfaces such as `AGENTS.md`, 
 
 ## APM And Agent Skills
 
-APM or Agent Skills public distribution is deferred by ADR-0002.
+APM or Agent Skills public distribution is inactive after ADR-0003/0004 removal.
 
 APM may also support repo-local maintainer setup manifests after cloning this repository.
 
@@ -124,4 +121,4 @@ repo-local unless a later architecture decision says otherwise.
 
 This boundary follows the Japanese-first operating policy in `docs/architecture/language-policy.md`.
 
-Japanese prose is allowed and encouraged where appropriate. Metadata keys, artifact IDs, schema enum values, filenames and path slugs, generated markers, validator contracts, package interfaces, and installer interfaces remain English-compatible.
+Japanese prose is allowed and encouraged where appropriate. Metadata keys, artifact IDs, schema enum values, filenames and path slugs, generated markers, validator contracts, and package interfaces remain English-compatible.

@@ -1,8 +1,8 @@
 # Testing Docs
 
-The v2 validation suite protects schemas, boundaries, generated markers, distribution contents, and legacy cleanup.
+The v2 validation suite protects schemas, boundaries, generated markers, runtime assets, and legacy cleanup.
 
-Manual adapter behavior checks:
+Manual answer behavior checks:
 
 - `docs/testing/sf6-agent-smoke.md`
 - `docs/testing/smoke-runs/`
@@ -23,21 +23,19 @@ GitHub Actions uses the same entrypoint in `.github/workflows/v2-validation.yml`
 
 | Lane | Command | Purpose |
 |---|---|---|
-| `read-only` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane read-only` | Validate tracked repo artifacts, schemas, fixtures, docs, and boundaries without building generated outputs or `.dist`. |
+| `read-only` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane read-only` | Validate tracked repo artifacts, schemas, fixtures, docs, and boundaries without building generated outputs. |
 | `derived-build` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane derived-build` | Rebuild generated knowledge refs, frame-current assets, and normalization assets, then validate the derived surfaces. |
-| `legacy-distribution` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1 -Lane legacy-distribution` | Build and validate the deferred public distribution bundle under `.dist`. |
 | `all` | `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/run-all.ps1` | CI-compatible full suite. This is the default when `-Lane` is omitted. |
 
-The `all` lane intentionally builds derived payloads and the deferred distribution bundle before validation. The `derived-build` lane uses the first three commands only, while `legacy-distribution` uses the release-bundle command:
+The `all` lane intentionally builds derived payloads before validation. The `derived-build` lane uses these generation commands:
 
 ```powershell
 pwsh -NoProfile -ExecutionPolicy Bypass -File packages/knowledge-generation/build-sf6-agent-knowledge.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-frame-current-runtime-assets.ps1
 pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-normalization-runtime-assets.ps1
-pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-release-bundle.ps1
 ```
 
-After each generation step, the suite fails if tracked derived outputs changed. Regenerated `runtime/generated-knowledge/`, `skills/sf6-agent/references/generated-*`, `runtime/frame-current/`, `skills/sf6-agent/assets/frame-current/`, or normalization runtime files must be reviewed and committed before validation or release packaging is treated as reliable.
+After each generation step, the suite fails if tracked derived outputs changed. Regenerated `runtime/generated-knowledge/`, `runtime/frame-current/`, or `runtime/normalization/` files must be reviewed and committed before validation is treated as reliable.
 
 Manual validator set:
 
@@ -53,7 +51,6 @@ Manual validator set:
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-generated-knowledge.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1`
-- `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-distribution.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-doc-links.ps1`
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-legacy-cleanup.ps1`
 

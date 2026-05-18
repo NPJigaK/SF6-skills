@@ -1,7 +1,7 @@
 # Packages
 
-Shared executable infrastructure for repo-local generation, validation,
-compatibility helpers, and deferred distribution.
+Shared executable infrastructure for repo-local generation, validation, and
+runtime helper packages.
 
 Use `packages/` only after a second real consumer exists, or when a reviewed
 architecture decision classifies the package as a transition surface.
@@ -15,8 +15,7 @@ Package classifications are defined in
 |---|---|---|
 | `calculation-executor/` | `active_repo_local` | Deterministic arithmetic trace compatibility helper. Not a custom SF6 math engine. |
 | `knowledge-generation/` | `active_repo_local` | Builds generated knowledge runtime payloads from `knowledge/curated/`. |
-| `skill-packaging/` | `shared_infra` | Runtime asset builders plus deferred release bundle builder. Keep entrypoint boundaries separate. |
-| `skill-installers/` | `deferred_distribution` | Deferred public adapter installer tooling kept only for interim legacy-distribution coverage. |
+| `skill-packaging/` | `active_repo_local` | Runtime asset builders. Deferred release bundle tooling was removed with issue #295. |
 | `skill-validator/` | `legacy` | Historical placeholder. Current validation authority is `tests/validation/`. |
 
 - `calculation-executor/`: deterministic repo-local arithmetic trace

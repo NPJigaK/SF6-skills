@@ -81,16 +81,11 @@ $requiredSurfaceIds = @(
   'workflows',
   'evals',
   'generated_knowledge_references',
-  'sf6_agent_adapter_policy_references',
   'frame_current_runtime_assets',
   'normalization_runtime_assets',
-  'release_bundle_dist',
-  'distribution_docs',
-  'sf6_agent_public_adapter',
   'validation_scripts',
   'knowledge_generation_package',
   'skill_packaging_package',
-  'skill_installers_package',
   'skill_validator_package',
   'calculation_executor_package',
   'hermes_sf6_pack',
@@ -214,12 +209,6 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $registryPath) -PathType Leaf) {
     if ($surface.surface_role -eq 'non_canonical' -and $surface.normal_public_answer_authority -ne $false) {
       $issues += "$registryPath non-canonical surface $id must not be normal public answer authority"
     }
-    if ($id -eq 'sf6_agent_public_adapter' -and $surface.public_distribution_status -ne 'deferred') {
-      $issues += "$registryPath must represent skills/sf6-agent as deferred"
-    }
-    if ($id -eq 'release_bundle_dist' -and $surface.path_state -ne 'generated_untracked') {
-      $issues += "$registryPath must represent .dist release bundle as generated_untracked"
-    }
     if ($id -eq 'normalized_intermediate_state' -and $surface.path_state -ne 'documented_absent') {
       $issues += "$registryPath must represent data/normalized as documented_absent until tracked files exist"
     }
@@ -242,7 +231,6 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $policyDocPath) -PathType Leaf) 
     'validation_expectation',
     'read-only',
     'derived-build',
-    'legacy-distribution',
     'all',
     'canonical',
     'derived',
@@ -253,13 +241,8 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $policyDocPath) -PathType Leaf) 
     'generated_knowledge_references',
     'knowledge_lineage_report',
     'knowledge_integrity_report',
-    'sf6_agent_adapter_policy_references',
     'frame_current_runtime_assets',
     'normalization_runtime_assets',
-    'release_bundle_dist',
-    'distribution_docs',
-    'sf6_agent_public_adapter',
-    'skill_installers_package',
     'raw_snapshots',
     'normalized_intermediate_state',
     'manual_review_sidecars',
@@ -275,8 +258,7 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $readmePath) -PathType Leaf) {
     'data/repository-surfaces.json',
     'docs/architecture/repository-surface-registry-policy.md',
     'read-only',
-    'derived-build',
-    'legacy-distribution'
+    'derived-build'
   )) {
     Assert-TextContains $readme $requiredText $readmePath ([ref]$issues)
   }

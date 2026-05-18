@@ -14,17 +14,15 @@ they are not canonical SF6 gameplay knowledge or exact current-fact authority.
 
 v2.2 uses this map to keep Hermes Growth Operations concrete. Hermes is the
 repo-local growth engine when a configured maintainer profile is available,
-while Codex remains the normal repo implementation executor and
-`skills/sf6-agent/` remains the public answer adapter.
+while Codex remains the normal repo implementation executor.
 
 ## Boundary
 
 The maintainer harness is repo-local. It coordinates implementation,
 knowledge-growth, review, validation, and handoff work.
 
-The public answer surface is still `skills/sf6-agent/`. End users do not need
-Hermes, Codex, local Hermes memory, local skills, Curator output, Kanban
-workers, or checkpoints to use the public adapter.
+The former public answer surface was removed after runtime relocation. Future
+public distribution requires a new architecture decision.
 
 Hermes-generated drafts, local Hermes skills, session memory, Curator output,
 and other local state are not canonical until promoted through reviewed
@@ -64,8 +62,8 @@ The map keeps three lanes separate:
   decomposition, observation drafting, review drafting, smoke drafting,
   workflow learning, validator-pattern learning, and procedural skill
   self-improvement when configured.
-- Public user lane: users consume `skills/sf6-agent/`; Hermes is optional and
-  not required for public answering.
+- Public user lane: currently inactive after adapter removal; Hermes is not a
+  public distribution dependency.
 
 Hermes output is draft material until reviewed. It may become a repository
 artifact only through the same repo review path as other maintainer work:

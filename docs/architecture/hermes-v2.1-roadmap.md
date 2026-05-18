@@ -4,7 +4,7 @@
 
 Hermes v2.1 establishes Hermes as the primary repo-local orchestration harness when a configured maintainer profile is available.
 
-This does not make Hermes state canonical, does not make Hermes a public distribution target, and does not replace `skills/sf6-agent/`. The public answer adapter remains `skills/sf6-agent/`; reusable maintainer output must remain as repository artifacts.
+This does not make Hermes state canonical and does not make Hermes a public distribution target. The former public adapter was removed after runtime relocation; reusable maintainer output must remain as repository artifacts.
 
 Hermes v2.1 is not only a safety boundary for answer orchestration. It is also the repo-local growth engine for improving the SF6 skill behavior, workflows, validators, ingest procedures, aliases, and review artifacts over time.
 
@@ -30,16 +30,16 @@ Agent-managed skills, Curator, session search, subagents, `/goal` checkpoints, d
 
 ### Public User Lane
 
-End users do not need Hermes. Codex, Claude, Hermes, or other agents may use `skills/sf6-agent/` as the public answer adapter when they can import the skill.
+End users do not need Hermes. Future public answer distribution requires a new scoped architecture decision.
 
-`skills/sf6-agent/` remains the distribution surface for user answers. Hermes is repo-local maintainer orchestration support, not a requirement for public use.
+Hermes is repo-local maintainer orchestration support, not a public distribution surface.
 
 ## Invariants
 
 - Hermes is primary only when a configured maintainer profile is available.
 - Hermes remains repo-local orchestration support.
 - Hermes state is non-canonical.
-- `skills/sf6-agent/` remains the only public answer adapter.
+- No public answer adapter is active after runtime relocation.
 - Repo artifacts are the source of truth.
 - Canonical maintainer procedures remain under `workflows/*`.
 - Exact current facts remain grounded in `data/exports/` and `data/roster/`.
@@ -48,7 +48,7 @@ End users do not need Hermes. Codex, Claude, Hermes, or other agents may use `sk
 - Normalization runtime assets must remain separate from `runtime/frame-current/`.
 - Codex remains the normal repo implementation executor.
 - Hermes may assist or receive delegated knowledge-growth workflows when configured.
-- End users do not need Hermes to use `skills/sf6-agent/`.
+- Future public distribution must define its own user-facing adapter.
 
 ## Completed v2.1 PR Sequence
 
@@ -163,7 +163,7 @@ The v2.1 initial foundation work does not implement:
 - MCP integrations.
 - Gateway / platform notifications.
 - Hermes memory as canonical knowledge.
-- Any replacement for `skills/sf6-agent/`.
+- Any replacement for the removed public adapter.
 - Any change to packaged frame-current authority.
 - Automatic promotion from Hermes memory, session search, agent-created skills, Curator output, or Kanban workers into canonical repo surfaces.
 - Autonomous current-fact updates without the frame-data refresh workflow and review.

@@ -3,7 +3,6 @@ Set-StrictMode -Version Latest
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $sourceRootRelativePath = 'data/exports'
 $assetRootRelativePath = 'runtime/frame-current'
-$compatibilityAssetRootRelativePath = 'skills/sf6-agent/assets/frame-current'
 $rosterSourceRelativePath = 'data/roster/current-character-roster.json'
 $generatorRelativePath = 'packages/skill-packaging/build-frame-current-runtime-assets.ps1'
 
@@ -99,6 +98,5 @@ function Write-FrameCurrentRuntimeAssets {
 }
 
 Write-FrameCurrentRuntimeAssets $assetRootRelativePath
-Write-FrameCurrentRuntimeAssets $compatibilityAssetRootRelativePath
 
 Write-Host 'Frame-current runtime assets built'

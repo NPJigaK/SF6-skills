@@ -118,7 +118,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $decisionPath) -PathType L
   Assert-FieldEquals $metadata 'status' 'accepted' ([ref]$issues)
   Assert-FieldEquals $metadata 'decision_type' 'architecture_decision' ([ref]$issues)
   Assert-FieldEquals $metadata 'scope' 'repo_local_maintainer_orchestration' ([ref]$issues)
-  Assert-FieldEquals $metadata 'public_answer_adapter' 'skills/sf6-agent' ([ref]$issues)
+  Assert-FieldEquals $metadata 'public_answer_adapter' 'removed_by_adr_0003_issue_295' ([ref]$issues)
   Assert-FieldEquals $metadata 'hermes_role' 'primary_repo_local_orchestration_when_configured' ([ref]$issues)
   Assert-FieldEquals $metadata 'hermes_distribution' 'repo_local_only' ([ref]$issues)
   Assert-FieldEquals $metadata 'hermes_state' 'non_canonical' ([ref]$issues)
@@ -150,7 +150,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $decisionPath) -PathType L
   Assert-ListContains $metadata 'markers' @(
     'sf6.harness.hermes.primary_repo_local_orchestration_when_configured',
     'sf6.boundary.hermes_state_non_canonical',
-    'sf6.boundary.public_adapter_remains_sf6_agent',
+    'sf6.boundary.public_adapter_removed_after_runtime_relocation',
     'sf6.boundary.repo_artifacts_are_source_of_truth'
   ) ([ref]$issues)
 }
@@ -169,7 +169,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $privateOperationDecisionP
   Assert-FieldEquals $metadata 'primary_operation_loop' 'windows_codex_app_to_hermes_to_repo_artifacts' ([ref]$issues) $privateOperationDecisionPath
   Assert-FieldEquals $metadata 'codex_role' 'hermes_operator_boundary_auditor_artifact_pr_executor' ([ref]$issues) $privateOperationDecisionPath
   Assert-FieldEquals $metadata 'hermes_role' 'primary_private_analyst_and_repo_local_orchestrator' ([ref]$issues) $privateOperationDecisionPath
-  Assert-FieldEquals $metadata 'public_skill_status' 'deferred_legacy_distribution_surface' ([ref]$issues) $privateOperationDecisionPath
+  Assert-FieldEquals $metadata 'public_skill_status' 'removed_after_runtime_relocation' ([ref]$issues) $privateOperationDecisionPath
   Assert-FieldEquals $metadata 'public_skill_external_users' 'none_known' ([ref]$issues) $privateOperationDecisionPath
   Assert-FieldEquals $metadata 'public_skill_removal_path' 'allowed_after_scoped_surface_mapping' ([ref]$issues) $privateOperationDecisionPath
   Assert-FieldEquals $metadata 'hermes_state' 'non_canonical' ([ref]$issues) $privateOperationDecisionPath
@@ -183,17 +183,20 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $privateOperationDecisionP
     'evals'
   ) ([ref]$issues) $privateOperationDecisionPath
 
-  Assert-ListContains $metadata 'deferred_distribution_surfaces' @(
+  Assert-ListContains $metadata 'retired_distribution_surfaces' @(
     'skills/sf6-agent',
     'skills/sf6-agent/references/generated-*',
     'skills/sf6-agent/assets/frame-current',
-    '.dist'
+    'skills/sf6-agent/assets/normalization',
+    '.dist',
+    'docs/distribution',
+    'packages/skill-installers'
   ) ([ref]$issues) $privateOperationDecisionPath
 
   Assert-ListContains $metadata 'markers' @(
     'sf6.operation.private_hermes_first_priority',
-    'sf6.boundary.public_skill_deferred_legacy_distribution_surface',
-    'sf6.boundary.public_skill_removal_allowed_after_surface_mapping',
+    'sf6.boundary.public_skill_removed_after_runtime_relocation',
+    'sf6.boundary.deferred_distribution_surfaces_removed',
     'sf6.boundary.hermes_state_non_canonical',
     'sf6.boundary.repo_artifacts_are_source_of_truth'
   ) ([ref]$issues) $privateOperationDecisionPath

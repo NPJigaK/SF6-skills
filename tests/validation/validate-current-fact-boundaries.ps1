@@ -4,8 +4,7 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 
 $scopedRoots = @(
   'knowledge/curated',
-  'knowledge/review',
-  'skills/sf6-agent/references'
+  'knowledge/review'
 )
 
 $files = @()

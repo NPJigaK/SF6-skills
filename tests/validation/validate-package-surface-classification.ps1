@@ -40,12 +40,7 @@ $packageClassifications = [ordered]@{
   'packages/skill-packaging/README.md' = [pscustomobject]@{
     SurfaceId = 'skill_packaging_package'
     Package = 'skill-packaging/'
-    Classification = 'shared_infra'
-  }
-  'packages/skill-installers/README.md' = [pscustomobject]@{
-    SurfaceId = 'skill_installers_package'
-    Package = 'skill-installers/'
-    Classification = 'deferred_distribution'
+    Classification = 'active_repo_local'
   }
   'packages/skill-validator/README.md' = [pscustomobject]@{
     SurfaceId = 'skill_validator_package'
@@ -65,16 +60,13 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $packagePolicyPath) -PathType Le
   foreach ($needle in @(
     'tracking_issue: "#250"',
     'active_repo_local',
-    'deferred_distribution',
     'legacy',
-    'shared_infra',
     'packages/calculation-executor/',
     'packages/knowledge-generation/',
     'packages/skill-packaging/',
-    'packages/skill-installers/',
     'packages/skill-validator/',
     'package_classification=<value>',
-    'This design step does not move package files'
+    'Deferred public distribution package files were removed'
   )) {
     Assert-Contains $policyText $needle $packagePolicyPath ([ref]$issues)
   }
@@ -118,11 +110,6 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $registryPath) -PathType Leaf) {
     if (-not ([string]$surface[0].notes).Contains("package_classification=$classification")) {
       $issues += "$surfaceId notes must record package_classification=$classification"
     }
-  }
-
-  $skillPackaging = @($registry.surfaces | Where-Object { $_.id -eq 'skill_packaging_package' })
-  if ($skillPackaging.Count -eq 1) {
-    Assert-Contains ([string]$skillPackaging[0].notes) 'build-release-bundle.ps1 is deferred_distribution' 'skill_packaging_package notes' ([ref]$issues)
   }
 }
 

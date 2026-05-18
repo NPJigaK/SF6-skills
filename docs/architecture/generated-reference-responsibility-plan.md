@@ -7,48 +7,34 @@ tracking_issue: "#244"
 
 # Generated Reference Responsibility Plan
 
-この文書は、generated knowledge references と hand-written public adapter
-references の責務を分けるための Phase 2 設計方針を定義する。
+この文書は、generated knowledge references と旧 hand-written public adapter
+references の責務を分けた Phase 2 設計方針を記録する。
 
 Phase A は design-only だった。Phase B/C では generator output path を
-`runtime/generated-knowledge/` に移し、public `sf6-agent` behavior を維持するための
-compatibility copy を残す。current facts と public adapter policy references は変更しない。
-In this design step, do not move generated files.
+`runtime/generated-knowledge/` に移した。public adapter was removed after runtime
+relocation, so the old compatibility copy and adapter policy references are no
+longer active repository surfaces.
 
 ## Current State
 
-`skills/sf6-agent/references/` には、性質の違う2種類の reference が同居している。
+`skills/sf6-agent/references/` に同居していた旧 references は削除済み。
 
 | Surface | 現在の path | 責務 |
 |---|---|---|
 | generated knowledge references | `runtime/generated-knowledge/` | `knowledge/curated/` から生成された stable concept runtime payload |
-| compatibility copy | `skills/sf6-agent/references/generated-*` | public adapter が残る間の generated knowledge copy |
-| public adapter policy references | `skills/sf6-agent/references/*-policy.md` | public `sf6-agent` adapter の answer / current-fact / uncertainty behavior |
 
 generated knowledge references の現在値:
 
 | 項目 | 現在値 |
 |---|---|
 | source authority | `knowledge/curated/` |
-| primary generated output | `runtime/generated-knowledge/` |
-| compatibility copy | `skills/sf6-agent/references/generated-*` |
+| generated output | `runtime/generated-knowledge/` |
 | generator | `packages/knowledge-generation/build-sf6-agent-knowledge.ps1` |
 | validator | `tests/validation/validate-generated-knowledge.ps1` |
 | registry ID | `generated_knowledge_references` |
 
-public adapter policy references の現在値:
-
-| 項目 | 現在値 |
-|---|---|
-| behavior entrypoint | `skills/sf6-agent/SKILL.md` |
-| hand-written policy references | `skills/sf6-agent/references/*-policy.md` |
-| registry ID | `sf6_agent_adapter_policy_references` |
-| public distribution status | `deferred` |
-
-問題は、generated stable concept payload と hand-written adapter behavior policy が
-同じ `references/` directory に置かれていることだ。これにより、
-`references/` という言葉が source-of-truth、generated runtime payload、adapter
-behavior policy のどれを指すのか曖昧になっていた。
+解消した問題は、generated stable concept payload と hand-written adapter behavior
+policy が同じ `references/` directory に置かれていたことだった。
 
 ## Responsibility Split
 
@@ -58,16 +44,12 @@ behavior policy のどれを指すのか曖昧になっていた。
 |---|---|---|
 | stable concept authoring | `knowledge/curated/` | canonical knowledge source。exact current values は入れない。 |
 | generated stable concept runtime payload | `generated_knowledge_references` | derived output。手で正本化しない。 |
-| public adapter behavior policy | `sf6_agent_adapter_policy_references` | deferred public adapter behavior only。canonical SF6 knowledge ではない。 |
-| public adapter entrypoint | `sf6_agent_public_adapter` | `skills/sf6-agent/SKILL.md` と package-local lookup behavior。 |
 
 `generated_knowledge_references` は `knowledge/curated/` から再生成できる derived
 surface であり、canonical authoring location ではない。
 
-`sf6_agent_adapter_policy_references` は public `sf6-agent` の挙動を定義する
-hand-written adapter policy であり、stable concept knowledge や exact current facts の
-authority ではない。`skills/sf6-agent/` が remove / relocate / reactivate されるまで、
-deferred legacy adapter surface として扱う。
+旧 adapter policy references は canonical SF6 knowledge へ昇格せず、adapter removal
+とともに削除した。
 
 ## Target Direction
 
