@@ -464,6 +464,7 @@ Forbidden cache locations by default:
 - public release bundle paths
 - `.dist`
 - `skills/sf6-agent/assets/frame-current/`
+- `runtime/normalization/`
 - `skills/sf6-agent/assets/normalization/`
 
 Suggested future local-only cache layout:

@@ -133,8 +133,7 @@ Added:
 Intentionally not added:
 
 - full roster alias coverage
-- runtime normalization asset generation
-- `skills/sf6-agent/assets/normalization/`
+- runtime normalization asset generation (`runtime/normalization/` primary or legacy adapter bridge)
 - frame-current asset changes
 - retrieval or lookup code
 - Hermes prompt bodies

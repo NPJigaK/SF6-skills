@@ -390,6 +390,7 @@
       "id": "normalization_runtime_assets",
       "title": "Normalization Runtime Assets",
       "path_globs": [
+        "runtime/normalization/*",
         "skills/sf6-agent/assets/normalization/*"
       ],
       "path_state": "tracked_present",
@@ -415,7 +416,7 @@
         "contracts/normalization-aliases.schema.json",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
       ],
-      "notes": "Generated query-normalization support, not exact current-fact authority."
+      "notes": "Generated query-normalization support, not exact current-fact authority. Primary runtime output is runtime/normalization/; skills/sf6-agent/assets/normalization/ is a deferred public adapter compatibility bridge while the adapter still exists."
     },
     {
       "id": "release_bundle_dist",

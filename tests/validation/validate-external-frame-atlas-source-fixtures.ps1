@@ -315,6 +315,7 @@ function Assert-NoForbiddenRawContent {
     '(?i)(^|["''\s:/\\])skills/sf6-agent([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])\.dist([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])skills/sf6-agent/assets/frame-current([\\/]|["''\s,)}\]]|$)',
+    '(?i)(^|["''\s:/\\])runtime/normalization([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])skills/sf6-agent/assets/normalization([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])data/raw([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])data/normalized([\\/]|["''\s,)}\]]|$)',

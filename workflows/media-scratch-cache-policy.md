@@ -111,6 +111,7 @@ Repo-tracked binary media, media cache, and external atlas binary artifacts are 
 - public release bundle paths
 - `.dist`
 - `skills/sf6-agent/assets/frame-current/`
+- `runtime/normalization/`
 - `skills/sf6-agent/assets/normalization/`
 - `data/raw`
 - `data/normalized`

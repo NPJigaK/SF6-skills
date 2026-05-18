@@ -2,12 +2,10 @@ Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $sourceRootRelativePath = 'data/aliases'
-$assetRootRelativePath = 'skills/sf6-agent/assets/normalization'
+$assetRootRelativePath = 'runtime/normalization'
+$compatibilityAssetRootRelativePath = 'skills/sf6-agent/assets/normalization'
 $generatorRelativePath = 'packages/skill-packaging/build-normalization-runtime-assets.ps1'
 $sourceRoot = Join-Path $repoRoot $sourceRootRelativePath
-$assetRoot = Join-Path $repoRoot $assetRootRelativePath
-$aliasesOutputPath = Join-Path $assetRoot 'aliases.json'
-$manifestOutputPath = Join-Path $assetRoot 'runtime_manifest.json'
 
 function ConvertTo-RepoRelativePath {
   param([Parameter(Mandatory = $true)][string]$Path)
@@ -23,12 +21,6 @@ function ConvertTo-RepoRelativePath {
 if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
   throw "Missing normalization alias source root: $sourceRootRelativePath"
 }
-
-if (Test-Path -LiteralPath $assetRoot) {
-  Remove-Item -LiteralPath $assetRoot -Recurse -Force
-}
-
-New-Item -ItemType Directory -Path $assetRoot -Force | Out-Null
 
 $sourceFiles = @(
   Get-ChildItem -LiteralPath $sourceRoot -File -Filter '*.json' |
@@ -81,44 +73,62 @@ foreach ($sourceFile in $sourceFiles) {
 
 $runtimeEntries = @($runtimeEntries | Sort-Object { $_.source_path }, { $_.id })
 
-$aliasesDocument = [ordered]@{
-  generated = $true
-  schema_version = 'normalization-runtime/v1'
-  kind = 'query_normalization_runtime_assets'
-  authority = 'query_normalization_only'
-  not_current_fact_authority = $true
-  generator = $generatorRelativePath
-  source_paths = @($sourceRecords.path)
-  target_path = "$assetRootRelativePath/aliases.json"
-  entries = $runtimeEntries
-}
-
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
-$aliasesJson = ((($aliasesDocument | ConvertTo-Json -Depth 10) -replace "`r`n", "`n").TrimEnd() + "`n")
-[System.IO.File]::WriteAllText($aliasesOutputPath, $aliasesJson, $utf8NoBom)
 
-$manifestDocument = [ordered]@{
-  generated = $true
-  schema_version = 'normalization-runtime-manifest/v1'
-  kind = 'query_normalization_runtime_manifest'
-  authority = 'query_normalization_only'
-  not_current_fact_authority = $true
-  generator = $generatorRelativePath
-  source_root = $sourceRootRelativePath
-  asset_root = $assetRootRelativePath
-  source_paths = $sourceRecords
-  target_path = "$assetRootRelativePath/runtime_manifest.json"
-  files = @(
-    [ordered]@{
-      target = 'aliases.json'
-      target_path = "$assetRootRelativePath/aliases.json"
-      source_paths = @($sourceRecords.path)
-      sha256 = (Get-FileHash -LiteralPath $aliasesOutputPath -Algorithm SHA256).Hash.ToLowerInvariant()
-    }
-  )
+function Write-NormalizationRuntimeAssets {
+  param([Parameter(Mandatory = $true)][string]$TargetRootRelativePath)
+
+  $targetRoot = Join-Path $repoRoot $TargetRootRelativePath
+  $aliasesOutputPath = Join-Path $targetRoot 'aliases.json'
+  $manifestOutputPath = Join-Path $targetRoot 'runtime_manifest.json'
+
+  if (Test-Path -LiteralPath $targetRoot) {
+    Remove-Item -LiteralPath $targetRoot -Recurse -Force
+  }
+
+  New-Item -ItemType Directory -Path $targetRoot -Force | Out-Null
+
+  $aliasesDocument = [ordered]@{
+    generated = $true
+    schema_version = 'normalization-runtime/v1'
+    kind = 'query_normalization_runtime_assets'
+    authority = 'query_normalization_only'
+    not_current_fact_authority = $true
+    generator = $generatorRelativePath
+    source_paths = @($sourceRecords.path)
+    target_path = "$TargetRootRelativePath/aliases.json"
+    entries = $runtimeEntries
+  }
+
+  $aliasesJson = ((($aliasesDocument | ConvertTo-Json -Depth 10) -replace "`r`n", "`n").TrimEnd() + "`n")
+  [System.IO.File]::WriteAllText($aliasesOutputPath, $aliasesJson, $utf8NoBom)
+
+  $manifestDocument = [ordered]@{
+    generated = $true
+    schema_version = 'normalization-runtime-manifest/v1'
+    kind = 'query_normalization_runtime_manifest'
+    authority = 'query_normalization_only'
+    not_current_fact_authority = $true
+    generator = $generatorRelativePath
+    source_root = $sourceRootRelativePath
+    asset_root = $TargetRootRelativePath
+    source_paths = $sourceRecords
+    target_path = "$TargetRootRelativePath/runtime_manifest.json"
+    files = @(
+      [ordered]@{
+        target = 'aliases.json'
+        target_path = "$TargetRootRelativePath/aliases.json"
+        source_paths = @($sourceRecords.path)
+        sha256 = (Get-FileHash -LiteralPath $aliasesOutputPath -Algorithm SHA256).Hash.ToLowerInvariant()
+      }
+    )
+  }
+
+  $manifestJson = ((($manifestDocument | ConvertTo-Json -Depth 10) -replace "`r`n", "`n").TrimEnd() + "`n")
+  [System.IO.File]::WriteAllText($manifestOutputPath, $manifestJson, $utf8NoBom)
 }
 
-$manifestJson = ((($manifestDocument | ConvertTo-Json -Depth 10) -replace "`r`n", "`n").TrimEnd() + "`n")
-[System.IO.File]::WriteAllText($manifestOutputPath, $manifestJson, $utf8NoBom)
+Write-NormalizationRuntimeAssets $assetRootRelativePath
+Write-NormalizationRuntimeAssets $compatibilityAssetRootRelativePath
 
 Write-Host 'Normalization runtime assets built'

@@ -65,6 +65,7 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot $policyPath) -PathType Leaf) {
     'origin/main...HEAD',
     'skills/sf6-agent/references/generated-knowledge-index.md',
     'skills/sf6-agent/assets/frame-current',
+    'runtime/normalization',
     'skills/sf6-agent/assets/normalization',
     '.dist',
     '-NoProfile',
