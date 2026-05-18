@@ -13,7 +13,7 @@ reference:
 Current entrypoints:
 
 - `build-frame-current-runtime-assets.ps1`: `active_repo_local`
-- `build-normalization-runtime-assets.ps1`: `active_repo_local`
+- `build-normalization-runtime-assets.ps1`: `active_repo_local`; writes primary runtime output to `runtime/normalization/` and a deferred adapter compatibility bridge to `skills/sf6-agent/assets/normalization/` while the public adapter still exists.
 - `build-release-bundle.ps1`: `deferred_distribution`
 
 `build-release-bundle.ps1` packages only `skills/sf6-agent/**` under the archive root `sf6-agent/` and writes `.dist/sf6-agent-bundle.zip`.

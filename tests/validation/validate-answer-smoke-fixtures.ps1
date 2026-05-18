@@ -4,8 +4,8 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $fixtureRootRelativePath = 'tests/fixtures/answer-smoke'
 $fixtureRoot = Join-Path $repoRoot $fixtureRootRelativePath
 $templateRelativePath = 'docs/testing/smoke-runs/answer-smoke-template.md'
-$normalizationManifestRelativePath = 'skills/sf6-agent/assets/normalization/runtime_manifest.json'
-$normalizationAssetRelativePath = 'skills/sf6-agent/assets/normalization/aliases.json'
+$normalizationManifestRelativePath = 'runtime/normalization/runtime_manifest.json'
+$normalizationAssetRelativePath = 'runtime/normalization/aliases.json'
 
 function Read-Json {
   param([Parameter(Mandatory = $true)][string]$RelativePath)

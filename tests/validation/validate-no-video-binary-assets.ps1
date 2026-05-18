@@ -25,6 +25,7 @@ $forbiddenBinarySurfaces = @(
   '.dist',
   'skills/sf6-agent',
   'skills/sf6-agent/assets/frame-current',
+  'runtime/normalization',
   'skills/sf6-agent/assets/normalization',
   'data/raw',
   'data/normalized',

@@ -73,6 +73,7 @@ git status --porcelain -- \
   skills/sf6-agent/references/generated-knowledge-index.md \
   skills/sf6-agent/references/generated-concepts.md \
   skills/sf6-agent/assets/frame-current \
+  runtime/normalization \
   skills/sf6-agent/assets/normalization \
   .dist
 ```

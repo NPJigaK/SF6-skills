@@ -11,6 +11,7 @@
 
 - `knowledge/` is canonical.
 - `data/exports/` and `data/roster/` are exact current fact authority.
+- `data/aliases/` is canonical for query-normalization support, not exact current facts.
 - `contracts/` is canonical for schemas and artifact contracts.
 - `workflows/` are canonical maintainer procedures.
 - `evals/` is canonical for answer-quality cases and rubrics.
@@ -20,6 +21,8 @@
 
 - `skills/sf6-agent/references/generated-*` is derived from `knowledge/curated/`.
 - `skills/sf6-agent/assets/frame-current/` is derived from `data/exports/` and `data/roster/`.
+- `runtime/normalization/` is derived from `data/aliases/`.
+- `skills/sf6-agent/assets/normalization/` is a deferred public adapter compatibility bridge derived from `data/aliases/`.
 - Release bundles and generated agent-specific front doors are derived distribution outputs.
 - Generated surfaces must identify their generator and source paths.
 - Do not make generated surfaces canonical.

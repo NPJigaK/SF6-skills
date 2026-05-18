@@ -103,7 +103,7 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/aliases/README.md') -PathT
     'not exact current-fact authority',
     'data/exports/',
     'data/roster/',
-    'skills/sf6-agent/assets/normalization/',
+    'runtime/normalization/',
     'skills/sf6-agent/assets/frame-current/'
   )) {
     if ($readme -notmatch [regex]::Escape($needle)) {

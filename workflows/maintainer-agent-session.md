@@ -93,6 +93,7 @@ that these generated or derived surfaces have no residual diff:
 - `skills/sf6-agent/references/`
 - `.dist`
 - `skills/sf6-agent/assets/frame-current/`
+- `runtime/normalization/`
 - `skills/sf6-agent/assets/normalization/`
 
 See `docs/architecture/powershell-compatibility-policy.md` for the canonical

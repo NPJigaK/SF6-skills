@@ -9,8 +9,8 @@
     "is_executed_answer": false
   },
   "normalization": {
-    "source_manifest": "skills/sf6-agent/assets/normalization/runtime_manifest.json",
-    "source_asset": "skills/sf6-agent/assets/normalization/aliases.json",
+    "source_manifest": "runtime/normalization/runtime_manifest.json",
+    "source_asset": "runtime/normalization/aliases.json",
     "runtime_authority": "query_normalization_only",
     "not_current_fact_authority": true,
     "structured_inputs": {
