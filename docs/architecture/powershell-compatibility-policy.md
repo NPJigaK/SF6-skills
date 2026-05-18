@@ -70,6 +70,7 @@ generated surface を触る PR では、少なくとも次の derived / generate
 
 ```bash
 git status --porcelain -- \
+  runtime/generated-knowledge \
   skills/sf6-agent/references/generated-knowledge-index.md \
   skills/sf6-agent/references/generated-concepts.md \
   runtime/frame-current \

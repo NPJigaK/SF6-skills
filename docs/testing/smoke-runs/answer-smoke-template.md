@@ -35,6 +35,7 @@ after the fixture set and validators are selected.
 Record whether these surfaces had residual unintended diff after validation:
 
 - `skills/sf6-agent/references/`:
+- `runtime/generated-knowledge/`:
 - `.dist`:
 - `runtime/frame-current/`:
 - `skills/sf6-agent/assets/frame-current/`:

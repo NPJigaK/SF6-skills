@@ -56,7 +56,8 @@ Validator-facing boundary markers:
 
 - `knowledge/` is canonical
 - `data/exports/` and `data/roster/` are the exact current-fact authority
-- `skills/sf6-agent/references/generated-*` is derived
+- `runtime/generated-knowledge/` is derived
+- `skills/sf6-agent/references/generated-*` is a compatibility bridge
 - `runtime/frame-current/` is derived
 - `skills/sf6-agent/assets/frame-current/` is a compatibility bridge
 
@@ -92,7 +93,8 @@ distribution surfaceとして扱います。
 主に次を使って回答します。
 
 - hand-written answer, uncertainty, and current-fact policies
-- `knowledge/curated/` から生成された `skills/sf6-agent/references/generated-*`
+- `knowledge/curated/` から生成された `runtime/generated-knowledge/`
+- public adapter が残る間の互換 copy としての `skills/sf6-agent/references/generated-*`
 - `data/exports/` と `data/roster/` から生成された `runtime/frame-current/`
 - public adapter が残る間の互換 copy としての `skills/sf6-agent/assets/frame-current/`
 

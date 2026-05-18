@@ -1,5 +1,6 @@
 param(
-  [string]$OutputRoot = $null
+  [string]$OutputRoot = $null,
+  [string]$OutputRootRelativePath = $null
 )
 
 Set-StrictMode -Version Latest
@@ -7,19 +8,15 @@ $ErrorActionPreference = 'Stop'
 
 $generatorRelativePath = 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
 $sourceRootRelativePath = 'knowledge/curated'
-$targetRootRelativePath = 'skills/sf6-agent/references'
+$targetRootRelativePath = 'runtime/generated-knowledge'
+$compatibilityTargetRootRelativePath = 'skills/sf6-agent/references'
+$generatedFileNames = @(
+  'generated-knowledge-index.md',
+  'generated-concepts.md'
+)
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $sourceRoot = Join-Path $repoRoot $sourceRootRelativePath
-$targetRoot = if ([string]::IsNullOrWhiteSpace($OutputRoot)) {
-  Join-Path $repoRoot $targetRootRelativePath
-}
-elseif ([System.IO.Path]::IsPathRooted($OutputRoot)) {
-  $OutputRoot
-}
-else {
-  Join-Path $repoRoot $OutputRoot
-}
 
 function ConvertTo-RepoRelativePath {
   param([Parameter(Mandatory = $true)][string]$Path)
@@ -165,6 +162,115 @@ function New-GeneratedHeader {
   return $lines
 }
 
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+
+function Resolve-OutputRoot {
+  param([Parameter(Mandatory = $true)][string]$Root)
+
+  if ([System.IO.Path]::IsPathRooted($Root)) {
+    return $Root
+  }
+
+  return Join-Path $repoRoot $Root
+}
+
+function Write-GeneratedKnowledge {
+  param(
+    [Parameter(Mandatory = $true)][string]$TargetRoot,
+    [Parameter(Mandatory = $true)][string]$TargetRootRelativePath,
+    [Parameter(Mandatory = $true)][object[]]$Pages
+  )
+
+  New-Item -ItemType Directory -Path $TargetRoot -Force | Out-Null
+  foreach ($generatedFileName in $generatedFileNames) {
+    $generatedPath = Join-Path $TargetRoot $generatedFileName
+    if (Test-Path -LiteralPath $generatedPath -PathType Leaf) {
+      Remove-Item -LiteralPath $generatedPath -Force
+    }
+  }
+
+  $sourcePaths = @($Pages | ForEach-Object { $_.RelativePath })
+  $indexTargetPath = "$TargetRootRelativePath/generated-knowledge-index.md"
+  $conceptTargetPath = "$TargetRootRelativePath/generated-concepts.md"
+
+  $indexLines = New-GeneratedHeader 'Generated Knowledge Index' $indexTargetPath $sourcePaths
+  $indexLines += @(
+    '## Sources',
+    '',
+    '| Title | Section | Claim Kind | Source | Verification | Confidence | Volatility | Patch Sensitivity | Review |',
+    '| --- | --- | --- | --- | --- | --- | --- | --- | --- |'
+  )
+
+  foreach ($page in $Pages) {
+    $indexLines += "| $($page.Title) | $($page.Section) | $($page.ClaimKind) | $($page.RelativePath) | $($page.VerificationState) | $($page.Confidence) | $($page.Volatility) | $($page.PatchSensitivity) | $($page.ReviewStatus) |"
+  }
+
+  $indexLines += @(
+    '',
+    '## Boundary',
+    '',
+    'This generated index is a derived navigation aid. Use the cited curated source files for review decisions, and do not add exact current frame values here.'
+  )
+
+  $conceptLines = New-GeneratedHeader 'Generated Concepts' $conceptTargetPath $sourcePaths
+  $conceptLines += @(
+    '## Boundary',
+    '',
+    'The entries below are derived summaries and concept text from curated v2 knowledge. They are suitable for stable concept grounding only and must not be used as exact current frame data.',
+    ''
+  )
+
+  foreach ($page in $Pages) {
+    $reviewAfter = if ([string]::IsNullOrWhiteSpace($page.ReviewAfter)) { 'null' } else { $page.ReviewAfter }
+    $conceptLines += @(
+      "## $($page.Title)",
+      '',
+      "- source: $($page.RelativePath)",
+      "- claim_kind: $($page.ClaimKind)",
+      "- source_kind: $($page.SourceKind)",
+      "- source_role: $($page.SourceRole)",
+      "- verification_state: $($page.VerificationState)",
+      "- confidence: $($page.Confidence)",
+      "- volatility: $($page.Volatility)",
+      "- patch_sensitivity: $($page.PatchSensitivity)",
+      "- review_status: $($page.ReviewStatus)",
+      "- review_after: $reviewAfter",
+      "- summary: $($page.Summary)",
+      '',
+      $page.Body,
+      ''
+    )
+  }
+
+  $indexText = (($indexLines -join "`n").TrimEnd("`n") + "`n")
+  $conceptText = (($conceptLines -join "`n").TrimEnd("`n") + "`n")
+  [System.IO.File]::WriteAllText(
+    (Join-Path $TargetRoot 'generated-knowledge-index.md'),
+    $indexText,
+    $utf8NoBom
+  )
+  [System.IO.File]::WriteAllText(
+    (Join-Path $TargetRoot 'generated-concepts.md'),
+    $conceptText,
+    $utf8NoBom
+  )
+}
+
+function Copy-GeneratedKnowledgeCompatibilityFiles {
+  param(
+    [Parameter(Mandatory = $true)][string]$PrimaryRoot,
+    [Parameter(Mandatory = $true)][string]$CompatibilityRoot
+  )
+
+  New-Item -ItemType Directory -Path $CompatibilityRoot -Force | Out-Null
+  foreach ($generatedFileName in $generatedFileNames) {
+    Copy-Item `
+      -LiteralPath (Join-Path $PrimaryRoot $generatedFileName) `
+      -Destination (Join-Path $CompatibilityRoot $generatedFileName) `
+      -Force
+  }
+}
+
 if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
   throw "Missing source root: $sourceRootRelativePath"
 }
@@ -178,74 +284,25 @@ if (@($pages).Count -eq 0) {
   throw "No curated pages found under $sourceRootRelativePath"
 }
 
-New-Item -ItemType Directory -Path $targetRoot -Force | Out-Null
-
-$sourcePaths = @($pages | ForEach-Object { $_.RelativePath })
-$indexTargetPath = "$targetRootRelativePath/generated-knowledge-index.md"
-$conceptTargetPath = "$targetRootRelativePath/generated-concepts.md"
-
-$indexLines = New-GeneratedHeader 'Generated Knowledge Index' $indexTargetPath $sourcePaths
-$indexLines += @(
-  '## Sources',
-  '',
-  '| Title | Section | Claim Kind | Source | Verification | Confidence | Volatility | Patch Sensitivity | Review |',
-  '| --- | --- | --- | --- | --- | --- | --- | --- | --- |'
-)
-
-foreach ($page in $pages) {
-  $indexLines += "| $($page.Title) | $($page.Section) | $($page.ClaimKind) | $($page.RelativePath) | $($page.VerificationState) | $($page.Confidence) | $($page.Volatility) | $($page.PatchSensitivity) | $($page.ReviewStatus) |"
+if (-not [string]::IsNullOrWhiteSpace($OutputRoot)) {
+  $metadataRootRelativePath = if ([string]::IsNullOrWhiteSpace($OutputRootRelativePath)) {
+    $targetRootRelativePath
+  } else {
+    $OutputRootRelativePath
+  }
+  $targetRoot = Resolve-OutputRoot $OutputRoot
+  Write-GeneratedKnowledge $targetRoot $metadataRootRelativePath $pages
+  Write-Host "Generated $metadataRootRelativePath/generated-knowledge-index.md"
+  Write-Host "Generated $metadataRootRelativePath/generated-concepts.md"
+  return
 }
 
-$indexLines += @(
-  '',
-  '## Boundary',
-  '',
-  'This generated index is a derived navigation aid. Use the cited curated source files for review decisions, and do not add exact current frame values here.'
-)
+$primaryRoot = Join-Path $repoRoot $targetRootRelativePath
+$compatibilityRoot = Join-Path $repoRoot $compatibilityTargetRootRelativePath
 
-$conceptLines = New-GeneratedHeader 'Generated Concepts' $conceptTargetPath $sourcePaths
-$conceptLines += @(
-  '## Boundary',
-  '',
-  'The entries below are derived summaries and concept text from curated v2 knowledge. They are suitable for stable concept grounding only and must not be used as exact current frame data.',
-  ''
-)
+Write-GeneratedKnowledge $primaryRoot $targetRootRelativePath $pages
+Copy-GeneratedKnowledgeCompatibilityFiles $primaryRoot $compatibilityRoot
 
-foreach ($page in $pages) {
-  $reviewAfter = if ([string]::IsNullOrWhiteSpace($page.ReviewAfter)) { 'null' } else { $page.ReviewAfter }
-  $conceptLines += @(
-    "## $($page.Title)",
-    '',
-    "- source: $($page.RelativePath)",
-    "- claim_kind: $($page.ClaimKind)",
-    "- source_kind: $($page.SourceKind)",
-    "- source_role: $($page.SourceRole)",
-    "- verification_state: $($page.VerificationState)",
-    "- confidence: $($page.Confidence)",
-    "- volatility: $($page.Volatility)",
-    "- patch_sensitivity: $($page.PatchSensitivity)",
-    "- review_status: $($page.ReviewStatus)",
-    "- review_after: $reviewAfter",
-    "- summary: $($page.Summary)",
-    '',
-    $page.Body,
-    ''
-  )
-}
-
-$utf8NoBom = New-Object System.Text.UTF8Encoding $false
-$indexText = (($indexLines -join "`n").TrimEnd("`n") + "`n")
-$conceptText = (($conceptLines -join "`n").TrimEnd("`n") + "`n")
-[System.IO.File]::WriteAllText(
-  (Join-Path $targetRoot 'generated-knowledge-index.md'),
-  $indexText,
-  $utf8NoBom
-)
-[System.IO.File]::WriteAllText(
-  (Join-Path $targetRoot 'generated-concepts.md'),
-  $conceptText,
-  $utf8NoBom
-)
-
-Write-Host "Generated skills/sf6-agent/references/generated-knowledge-index.md"
-Write-Host "Generated skills/sf6-agent/references/generated-concepts.md"
+Write-Host "Generated $targetRootRelativePath/generated-knowledge-index.md"
+Write-Host "Generated $targetRootRelativePath/generated-concepts.md"
+Write-Host "Updated compatibility copy under $compatibilityTargetRootRelativePath"

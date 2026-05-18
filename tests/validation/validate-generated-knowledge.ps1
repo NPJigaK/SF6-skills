@@ -1,9 +1,14 @@
 Set-StrictMode -Version Latest
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
-$generatedRoot = Join-Path $repoRoot 'skills/sf6-agent/references'
-$curatedRoot = Join-Path $repoRoot 'knowledge/curated'
-$generatorPath = Join-Path $repoRoot 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
+$generatedRootRelativePath = 'runtime/generated-knowledge'
+$compatibilityGeneratedRootRelativePath = 'skills/sf6-agent/references'
+$curatedRootRelativePath = 'knowledge/curated'
+$generatedRoot = Join-Path $repoRoot $generatedRootRelativePath
+$compatibilityGeneratedRoot = Join-Path $repoRoot $compatibilityGeneratedRootRelativePath
+$curatedRoot = Join-Path $repoRoot $curatedRootRelativePath
+$generatorRelativePath = 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1'
+$generatorPath = Join-Path $repoRoot $generatorRelativePath
 
 $generatedFiles = @(
   'generated-knowledge-index.md',
@@ -74,8 +79,57 @@ function Read-GeneratedFrontMatter {
   return $metadata
 }
 
+function Assert-GeneratedKnowledgeFile {
+  param(
+    [Parameter(Mandatory = $true)][string]$Name,
+    [Parameter(Mandatory = $true)][string]$Root,
+    [Parameter(Mandatory = $true)][string]$RootRelativePath,
+    [Parameter(Mandatory = $true)][string[]]$ExpectedSourcePaths,
+    [Parameter(Mandatory = $true)][string]$Context
+  )
+
+  $path = Join-Path $Root $Name
+  if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+    throw "Missing generated knowledge file ($Context): $RootRelativePath/$Name"
+  }
+
+  $metadata = Read-GeneratedFrontMatter (Get-Item -LiteralPath $path)
+  if ($metadata.generated -ne 'true') {
+    throw "$Context $Name generated front matter must set generated: true"
+  }
+  if ($metadata.generator -ne $generatorRelativePath) {
+    throw "$Context $Name generated front matter has unexpected generator"
+  }
+  if ($metadata.target_path -ne "$generatedRootRelativePath/$Name") {
+    throw "$Context $Name generated front matter target_path must point to primary runtime output"
+  }
+  $actualSourcePaths = @($metadata.source_paths)
+  if (Compare-Object ($ExpectedSourcePaths | Sort-Object) ($actualSourcePaths | Sort-Object)) {
+    throw "$Context $Name generated front matter source_paths do not match $curatedRootRelativePath"
+  }
+
+  $content = Get-Content -LiteralPath $path -Raw -Encoding UTF8
+  foreach ($needle in @(
+    'GENERATED FILE - DO NOT EDIT',
+    "generator: $generatorRelativePath",
+    "source_root: $curatedRootRelativePath"
+  )) {
+    if ($content -notmatch [regex]::Escape($needle)) {
+      throw "$Context $Name missing generated marker: $needle"
+    }
+  }
+}
+
 if (-not (Test-Path -LiteralPath $generatorPath -PathType Leaf)) {
   throw 'Missing generated knowledge generator'
+}
+
+if (-not (Test-Path -LiteralPath $generatedRoot -PathType Container)) {
+  throw "Missing generated knowledge primary root: $generatedRootRelativePath"
+}
+
+if (-not (Test-Path -LiteralPath $compatibilityGeneratedRoot -PathType Container)) {
+  throw "Missing generated knowledge compatibility root: $compatibilityGeneratedRootRelativePath"
 }
 
 $expectedSourcePaths = @(
@@ -90,36 +144,22 @@ if ($expectedSourcePaths.Count -eq 0) {
 }
 
 foreach ($name in $generatedFiles) {
-  $path = Join-Path $generatedRoot $name
-  if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
-    throw "Missing generated knowledge file: skills/sf6-agent/references/$name"
-  }
+  Assert-GeneratedKnowledgeFile $name $generatedRoot $generatedRootRelativePath $expectedSourcePaths 'primary runtime'
+  Assert-GeneratedKnowledgeFile $name $compatibilityGeneratedRoot $compatibilityGeneratedRootRelativePath $expectedSourcePaths 'legacy adapter compatibility copy'
 
-  $metadata = Read-GeneratedFrontMatter (Get-Item -LiteralPath $path)
-  if ($metadata.generated -ne 'true') {
-    throw "$name generated front matter must set generated: true"
+  $primaryContent = [System.IO.File]::ReadAllText((Join-Path $generatedRoot $name))
+  $compatibilityContent = [System.IO.File]::ReadAllText((Join-Path $compatibilityGeneratedRoot $name))
+  if ($primaryContent -ne $compatibilityContent) {
+    throw "Generated knowledge compatibility copy must match primary runtime output: $name"
   }
-  if ($metadata.generator -ne 'packages/knowledge-generation/build-sf6-agent-knowledge.ps1') {
-    throw "$name generated front matter has unexpected generator"
-  }
-  if ($metadata.target_path -ne "skills/sf6-agent/references/$name") {
-    throw "$name generated front matter has unexpected target_path"
-  }
-  $actualSourcePaths = @($metadata.source_paths)
-  if (Compare-Object ($expectedSourcePaths | Sort-Object) ($actualSourcePaths | Sort-Object)) {
-    throw "$name generated front matter source_paths do not match knowledge/curated"
-  }
+}
 
-  $content = Get-Content -LiteralPath $path -Raw -Encoding UTF8
-  foreach ($needle in @(
-    'GENERATED FILE - DO NOT EDIT',
-    'generator: packages/knowledge-generation/build-sf6-agent-knowledge.ps1',
-    'source_root: knowledge/curated'
-  )) {
-    if ($content -notmatch [regex]::Escape($needle)) {
-      throw "$name missing generated marker: $needle"
-    }
-  }
+$primaryInventory = @(
+  Get-ChildItem -LiteralPath $generatedRoot -File |
+    ForEach-Object { $_.Name }
+)
+if (Compare-Object ($primaryInventory | Sort-Object) ($generatedFiles | Sort-Object)) {
+  throw "$generatedRootRelativePath inventory must contain only generated knowledge files"
 }
 
 $tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ([System.Guid]::NewGuid().ToString())
@@ -134,7 +174,7 @@ try {
     $expected = [System.IO.File]::ReadAllText($expectedPath)
     $actual = [System.IO.File]::ReadAllText($actualPath)
     if ($expected -ne $actual) {
-      throw "$name is stale; rerun packages/knowledge-generation/build-sf6-agent-knowledge.ps1"
+      throw "$name is stale; rerun $generatorRelativePath"
     }
   }
 }

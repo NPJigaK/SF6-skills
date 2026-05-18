@@ -111,7 +111,7 @@
       "authority_scope": "knowledge integrity observability only",
       "source_of_truth": [
         "knowledge",
-        "skills/sf6-agent/references/generated-*"
+        "runtime/generated-knowledge"
       ],
       "generated": true,
       "generator": "tests/validation/validate-knowledge-integrity-report.ps1 -Update",
@@ -120,7 +120,7 @@
         "knowledge/evidence/**/*.md",
         "knowledge/review/**/*.md",
         "knowledge/curated/**/*.md",
-        "skills/sf6-agent/references/generated-*"
+        "runtime/generated-knowledge/*"
       ],
       "allowed_to_edit_directly": false,
       "public_distribution_status": "not_distribution",
@@ -288,13 +288,14 @@
     },
     {
       "id": "generated_knowledge_references",
-      "title": "Generated Skill Knowledge References",
+      "title": "Generated Knowledge References",
       "path_globs": [
+        "runtime/generated-knowledge/*",
         "skills/sf6-agent/references/generated-*"
       ],
       "path_state": "tracked_present",
       "surface_role": "derived",
-      "authority_scope": "generated adapter references from curated knowledge",
+      "authority_scope": "primary generated stable concept runtime payload with deferred public adapter compatibility copy",
       "source_of_truth": [
         "knowledge/curated"
       ],
@@ -304,12 +305,13 @@
         "knowledge/curated"
       ],
       "allowed_to_edit_directly": false,
-      "public_distribution_status": "deferred",
+      "public_distribution_status": "mixed_private_and_deferred",
       "normal_public_answer_authority": false,
       "validation_expectation": [
         "generated_marker_present",
         "source_paths_present",
-        "generated_knowledge_valid"
+        "generated_knowledge_valid",
+        "compatibility_copy_matches_primary"
       ],
       "policy_refs": [
         "AGENTS.md",
@@ -317,7 +319,7 @@
         "docs/architecture/generated-reference-responsibility-plan.md",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
       ],
-      "notes": "Generated derived output from curated knowledge. It is currently located under the deferred public adapter path, but it is separate from hand-written adapter policy references."
+      "notes": "Primary generated runtime output is runtime/generated-knowledge. skills/sf6-agent/references/generated-* is a deferred public adapter compatibility copy while the adapter remains."
     },
     {
       "id": "sf6_agent_adapter_policy_references",

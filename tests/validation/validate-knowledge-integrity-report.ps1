@@ -16,7 +16,6 @@ $knowledgeRoots = @(
   'knowledge/review',
   'knowledge/curated'
 )
-$generatedReferenceGlob = 'skills/sf6-agent/references/generated-*'
 $generatedContaminationPatterns = @(
   'knowledge/evidence/',
   'knowledge/review/',
@@ -119,7 +118,7 @@ function Get-RepoLocalReferencePaths {
 }
 
 function Get-GeneratedReferenceFiles {
-  $referenceRoot = Join-Path $repoRoot 'skills/sf6-agent/references'
+  $referenceRoot = Join-Path $repoRoot 'runtime/generated-knowledge'
   if (-not (Test-Path -LiteralPath $referenceRoot -PathType Container)) {
     return @()
   }

@@ -321,7 +321,7 @@ if (Test-Path -LiteralPath $fixtureRoot -PathType Container) {
             if ($sourcePath -match '^runtime/frame-current/published/.+/official_raw\.json$') {
               Assert-PathExists $sourcePath "$relativePath official_raw evidence" ([ref]$issues)
             }
-            if ($sourcePath -eq 'skills/sf6-agent/references/generated-concepts.md') {
+            if ($sourcePath -eq 'runtime/generated-knowledge/generated-concepts.md') {
               Assert-PathExists $sourcePath "$relativePath generated reference evidence" ([ref]$issues)
             }
           }

@@ -33,6 +33,7 @@ $requiredDirectories = @(
   'contracts',
   'workflows',
   'packs',
+  'runtime/generated-knowledge',
   'skills/sf6-agent/references',
   'runtime/frame-current',
   'skills/sf6-agent/assets/frame-current'
@@ -58,7 +59,8 @@ if ($issues.Count -eq 0) {
     'SF6 Knowledge Agent Kit',
     '`knowledge/` is canonical',
     '`data/exports/` and `data/roster/` are the exact current-fact authority',
-    '`skills/sf6-agent/references/generated-*` is derived',
+    '`runtime/generated-knowledge/` is derived',
+    '`skills/sf6-agent/references/generated-*` is a compatibility bridge',
     '`runtime/frame-current/` is derived',
     '`skills/sf6-agent/assets/frame-current/` is a compatibility bridge'
   )) {

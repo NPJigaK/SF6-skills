@@ -21,6 +21,7 @@ Give the agent access to the packaged adapter surface:
 - `skills/sf6-agent/references/answer-policy.md`
 - `skills/sf6-agent/references/current-fact-policy.md`
 - `skills/sf6-agent/references/uncertainty-policy.md`
+- `runtime/generated-knowledge/`
 - `skills/sf6-agent/references/generated-*`
 - `skills/sf6-agent/assets/frame-current/`
 
@@ -34,7 +35,7 @@ A run passes when the agent:
 - Uses `verified current fact` only when packaged frame-current assets support the exact current fact.
 - Uses `unresolved / hold` when a current exact fact is unavailable, conflicting, underspecified, or outside packaged assets.
 - Does not require literal fixed output tags.
-- Does not treat `skills/sf6-agent/references/generated-*` as canonical knowledge.
+- Does not treat generated runtime references as canonical knowledge.
 - Does not invent exact current values.
 - Does not let supplemental enrichment override `official_raw`.
 - Does not turn one video observation into accepted strategy knowledge.
