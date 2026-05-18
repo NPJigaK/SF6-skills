@@ -45,6 +45,30 @@ improvements without changing canonical surfaces directly.
 Codex-only analysis for these tasks is fallback behavior. Record the fallback
 reason when Hermes delegation is not attempted or cannot complete.
 
+## Command Discipline
+
+Codex is responsible for operating Hermes with a command shape that fits the
+task. Before a real Hermes-first delegation, Codex should verify current command
+behavior from the repo Hermes CLI capability reference, local `hermes chat
+--help`, and official Hermes CLI documentation when limits, resume behavior, or
+toolset behavior matter.
+
+Do not reuse connectivity-smoke settings such as `--max-turns 1` for primary
+analysis. For repo-wide audits, architecture reviews, source-surface audits, or
+other broad read-only tasks, use the documented default turn budget or a larger
+explicit budget, allow enough wall-clock time, and keep the session id so the
+same delegation can be resumed if needed.
+
+If Hermes stops because it hit a turn limit, encountered a denied nonessential
+tool command, failed transiently, or ran out of context, Codex should first
+resume or continue the same session, or split the remaining work into bounded
+follow-up prompts. Codex fallback is valid only after a properly budgeted
+attempt and reasonable resume/retry path have been tried or shown unsafe or
+out-of-scope.
+
+Cost control must not be the reason to under-budget Hermes primary analysis
+when the target issue calls for Hermes-first work.
+
 ## Forbidden Delegation Tasks
 
 Do not delegate tasks that would allow Hermes to bypass repo authority or issue

@@ -74,6 +74,15 @@
 - Current operation prioritizes personal/private Codex-operated Hermes-first workflows; `skills/sf6-agent/` is deferred until later scoped work decides whether to remove, relocate, or reactivate it.
 - See `docs/architecture/hermes-v2.1-roadmap.md`, `docs/architecture/codex-hermes-bridge-policy.md`, and `workflows/codex-to-hermes-delegation.md`.
 
+## Hermes Delegation Command Discipline
+
+- Before using Hermes for in-scope analysis, review `workflows/codex-to-hermes-delegation.md`, the repo Hermes CLI capability reference, local `hermes chat --help`, and official Hermes CLI docs when command behavior or limits matter.
+- Do not reuse smoke-test or probe settings such as `--max-turns 1` for real analysis.
+- Give Hermes enough turn budget and wall-clock time for the task. Prefer the documented default or a larger explicit `--max-turns` for repo-wide audits, and resume the same session if the first run does not complete.
+- If Hermes hits a limit, tool denial, transient provider failure, or context issue, continue with `--resume` / `--continue` or split the delegation into bounded follow-up prompts before declaring Codex fallback.
+- Record Codex fallback only after a properly budgeted Hermes attempt, any reasonable resume/retry path, and the blocker have been verified.
+- Treat cost saving as secondary to accurate Hermes-first analysis when the issue requires Hermes primary analysis.
+
 ## Project Status Protocol
 
 - Before answering project status, resuming previous work, editing files, or updating progress docs, verify the current baseline.
