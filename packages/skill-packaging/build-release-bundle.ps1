@@ -16,6 +16,7 @@ $normalizationAssetValidator = Join-Path $repoRoot 'tests/validation/validate-no
 $derivedOutputPaths = @(
   'skills/sf6-agent/references/generated-knowledge-index.md',
   'skills/sf6-agent/references/generated-concepts.md',
+  'runtime/frame-current',
   'skills/sf6-agent/assets/frame-current',
   'runtime/normalization',
   'skills/sf6-agent/assets/normalization'
@@ -34,7 +35,7 @@ function Assert-NoDerivedOutputStatus {
     throw "Unable to inspect derived output status during $Context"
   }
   if ($status.Count -gt 0) {
-    throw "Tracked or untracked derived outputs changed during $Context. Commit regenerated generated-* references and frame-current assets before building a release bundle."
+    throw "Tracked or untracked derived outputs changed during $Context. Commit regenerated generated-* references, frame-current assets, and normalization assets before building a release bundle."
   }
 }
 

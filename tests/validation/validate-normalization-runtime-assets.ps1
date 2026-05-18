@@ -3,7 +3,7 @@ Set-StrictMode -Version Latest
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $assetRootRelativePath = 'runtime/normalization'
 $compatibilityAssetRootRelativePath = 'skills/sf6-agent/assets/normalization'
-$frameCurrentRelativePath = 'skills/sf6-agent/assets/frame-current'
+$frameCurrentRelativePath = 'runtime/frame-current'
 $assetRoot = Join-Path $repoRoot $assetRootRelativePath
 $manifestRelativePath = "$assetRootRelativePath/runtime_manifest.json"
 $aliasesRelativePath = "$assetRootRelativePath/aliases.json"

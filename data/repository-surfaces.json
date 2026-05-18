@@ -1,6 +1,6 @@
 {
   "schema_version": "repository-surfaces/v1",
-  "last_reviewed": "2026-05-18",
+  "last_reviewed": "2026-05-19",
   "registry_status": "seed_index_of_existing_reviewed_boundaries",
   "policy_refs": [
     "AGENTS.md",
@@ -355,11 +355,12 @@
       "id": "frame_current_runtime_assets",
       "title": "Frame Current Runtime Assets",
       "path_globs": [
+        "runtime/frame-current/*",
         "skills/sf6-agent/assets/frame-current/*"
       ],
       "path_state": "tracked_present",
       "surface_role": "derived",
-      "authority_scope": "derived exact current-fact runtime payload",
+      "authority_scope": "primary derived exact current-fact runtime payload with deferred public adapter compatibility copy",
       "source_of_truth": [
         "data/exports",
         "data/roster"
@@ -376,6 +377,7 @@
       "validation_expectation": [
         "frame_current_assets_valid",
         "generated_marker_present",
+        "compatibility_copy_matches_primary",
         "csv_sidecars_excluded"
       ],
       "policy_refs": [
@@ -384,7 +386,7 @@
         "docs/architecture/frame-current-runtime-separation-plan.md",
         "docs/architecture/decisions/0003-retire-public-sf6-agent-adapter.md"
       ],
-      "notes": "Derived from exact current-fact authority but currently located under deferred public adapter path."
+      "notes": "Primary generated runtime output is runtime/frame-current. skills/sf6-agent/assets/frame-current is a deferred public adapter compatibility copy while the adapter remains."
     },
     {
       "id": "normalization_runtime_assets",

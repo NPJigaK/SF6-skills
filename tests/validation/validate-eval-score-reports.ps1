@@ -19,6 +19,7 @@ $forbiddenReportPatterns = @(
   'state\.db',
   'data/exports/',
   'official_raw',
+  'runtime/frame-current',
   'skills/sf6-agent/assets/frame-current',
   'skills/sf6-agent/references/generated-'
 )

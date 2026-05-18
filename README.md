@@ -57,7 +57,8 @@ Validator-facing boundary markers:
 - `knowledge/` is canonical
 - `data/exports/` and `data/roster/` are the exact current-fact authority
 - `skills/sf6-agent/references/generated-*` is derived
-- `skills/sf6-agent/assets/frame-current/` is derived
+- `runtime/frame-current/` is derived
+- `skills/sf6-agent/assets/frame-current/` is a compatibility bridge
 
 Machine-readable surface classifications live in
 [`data/repository-surfaces.json`](./data/repository-surfaces.json). Maintainer
@@ -92,7 +93,8 @@ distribution surfaceとして扱います。
 
 - hand-written answer, uncertainty, and current-fact policies
 - `knowledge/curated/` から生成された `skills/sf6-agent/references/generated-*`
-- `data/exports/` と `data/roster/` から生成された `skills/sf6-agent/assets/frame-current/`
+- `data/exports/` と `data/roster/` から生成された `runtime/frame-current/`
+- public adapter が残る間の互換 copy としての `skills/sf6-agent/assets/frame-current/`
 
 `skills/sf6-agent/` は当面、新しい公開機能を足す場所ではありません。
 ADR-0003 では、再利用するruntime payloadを先に移設したうえで、このpublic
@@ -129,7 +131,7 @@ source
 
 このrepoでは、exact current factsとcurated knowledgeを分けます。
 
-- exact move-specific current facts: `data/exports/`、`data/roster/`、derived `skills/sf6-agent/assets/frame-current/`
+- exact move-specific current facts: `data/exports/`、`data/roster/`、derived `runtime/frame-current/`
 - stable concepts / reviewed explanations: `knowledge/curated/`
 - unresolved numeric/system/current claims: `knowledge/review/`
 

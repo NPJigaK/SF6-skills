@@ -233,6 +233,7 @@ function Assert-NoForbiddenRawContent {
     '(?i)(^|["''\s:/\\])assets/raw([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])skills/sf6-agent([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])\.dist([\\/]|["''\s,)}\]]|$)',
+    '(?i)(^|["''\s:/\\])runtime/frame-current([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])skills/sf6-agent/assets/frame-current([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])runtime/normalization([\\/]|["''\s,)}\]]|$)',
     '(?i)(^|["''\s:/\\])skills/sf6-agent/assets/normalization([\\/]|["''\s,)}\]]|$)',

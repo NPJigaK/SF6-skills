@@ -72,6 +72,7 @@ generated surface を触る PR では、少なくとも次の derived / generate
 git status --porcelain -- \
   skills/sf6-agent/references/generated-knowledge-index.md \
   skills/sf6-agent/references/generated-concepts.md \
+  runtime/frame-current \
   skills/sf6-agent/assets/frame-current \
   runtime/normalization \
   skills/sf6-agent/assets/normalization \

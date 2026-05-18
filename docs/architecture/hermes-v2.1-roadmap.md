@@ -45,7 +45,7 @@ End users do not need Hermes. Codex, Claude, Hermes, or other agents may use `sk
 - Exact current facts remain grounded in `data/exports/` and `data/roster/`.
 - Web sources do not override packaged frame-current `official_raw`.
 - Query-normalization aliases are not exact current-fact authority.
-- Future normalization runtime assets must remain separate from `skills/sf6-agent/assets/frame-current/`.
+- Normalization runtime assets must remain separate from `runtime/frame-current/`.
 - Codex remains the normal repo implementation executor.
 - Hermes may assist or receive delegated knowledge-growth workflows when configured.
 - End users do not need Hermes to use `skills/sf6-agent/`.

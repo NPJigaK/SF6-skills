@@ -24,6 +24,7 @@ $repoLocalCacheRoots = @(
 $forbiddenBinarySurfaces = @(
   '.dist',
   'skills/sf6-agent',
+  'runtime/frame-current',
   'skills/sf6-agent/assets/frame-current',
   'runtime/normalization',
   'skills/sf6-agent/assets/normalization',
