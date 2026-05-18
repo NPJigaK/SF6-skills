@@ -104,7 +104,7 @@ if (Test-Path -LiteralPath (Join-Path $repoRoot 'data/aliases/README.md') -PathT
     'data/exports/',
     'data/roster/',
     'runtime/normalization/',
-    'skills/sf6-agent/assets/frame-current/'
+    'runtime/frame-current/'
   )) {
     if ($readme -notmatch [regex]::Escape($needle)) {
       $issues += "data/aliases/README.md missing boundary text: $needle"
@@ -227,11 +227,11 @@ if (Test-Path -LiteralPath $aliasesPath -PathType Container) {
 }
 
 if (Get-Command git -ErrorAction SilentlyContinue) {
-  $frameCurrentStatus = @(& git -C $repoRoot status --porcelain -- 'skills/sf6-agent/assets/frame-current')
+  $frameCurrentStatus = @(& git -C $repoRoot status --porcelain -- 'runtime/frame-current' 'skills/sf6-agent/assets/frame-current')
   if ($LASTEXITCODE -ne 0) {
     $issues += 'Unable to inspect frame-current status'
   } elseif ($frameCurrentStatus.Count -gt 0) {
-    $issues += 'skills/sf6-agent/assets/frame-current/ has residual diff'
+    $issues += 'frame-current runtime assets have residual diff'
   }
 } else {
   Write-Host 'WARNING: git is unavailable; skipping frame-current status check'

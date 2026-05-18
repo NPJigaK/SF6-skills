@@ -25,7 +25,7 @@ to:
 - `skills/sf6-agent/SKILL.md`
 - hand-written adapter policies under `skills/sf6-agent/references/`
 - generated reference payloads under `skills/sf6-agent/references/generated-*`
-- frame-current runtime assets under `skills/sf6-agent/assets/frame-current/`
+- frame-current compatibility copy under `skills/sf6-agent/assets/frame-current/`
 - release bundles derived from those adapter surfaces
 
 Do not create a separate `sf6-agent-ja` adapter at this stage.

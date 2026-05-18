@@ -8,7 +8,8 @@ This is a repository maintainer procedure. It is not a public answer policy and 
 
 - Current roster source: `data/roster/current-character-roster.json`
 - Published exact current-fact source: `data/exports/<character_slug>/`
-- Derived runtime asset target: `skills/sf6-agent/assets/frame-current/`
+- Primary derived runtime asset target: `runtime/frame-current/`
+- Compatibility copy while the public adapter remains: `skills/sf6-agent/assets/frame-current/`
 - Runtime asset contract: `contracts/frame-current-runtime-assets.md`
 - Ingestion implementation: `ingest/frame_data/`
 
@@ -37,7 +38,7 @@ Use exact absolute labels such as `2026.03.17 update` when verified. If no offic
 5. Use `--source all` when the roster entry has `sources.supercombo_data`; otherwise use `--source official` for that character only.
 6. Read `data/exports/<character_slug>/snapshot_manifest.json` for every roster character.
 7. Record each dataset state separately from the manifest, including `publication_state`, `published_run_id`, `published_snapshot_ids`, `published_record_count`, and `withheld_review_count`.
-8. Rebuild frame-current runtime assets so the derived target is `skills/sf6-agent/assets/frame-current/`.
+8. Rebuild frame-current runtime assets so the primary target is `runtime/frame-current/` and the legacy adapter compatibility copy is refreshed.
 9. Dry-run raw snapshot pruning for every roster character.
 10. Confirm pruning keeps the minimum raw snapshots needed to reproduce the current published exports.
 11. Apply pruning only after the dry-run output has been reviewed.
@@ -72,7 +73,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File packages/skill-packaging/build-fra
 
 The builder output must satisfy these v2 values:
 
-- `asset_root = skills/sf6-agent/assets/frame-current`
+- primary `asset_root = runtime/frame-current`
+- compatibility `asset_root = skills/sf6-agent/assets/frame-current`
 - `source_root = data/exports`
 - `roster_source = data/roster/current-character-roster.json`
 

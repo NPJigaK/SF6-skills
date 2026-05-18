@@ -92,6 +92,7 @@ that these generated or derived surfaces have no residual diff:
 
 - `skills/sf6-agent/references/`
 - `.dist`
+- `runtime/frame-current/`
 - `skills/sf6-agent/assets/frame-current/`
 - `runtime/normalization/`
 - `skills/sf6-agent/assets/normalization/`

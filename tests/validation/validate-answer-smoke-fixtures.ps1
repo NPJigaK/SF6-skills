@@ -318,7 +318,7 @@ if (Test-Path -LiteralPath $fixtureRoot -PathType Container) {
         if (Test-Property $card 'source_ref') {
           if (Test-Property $card.source_ref 'path') {
             $sourcePath = [string]$card.source_ref.path
-            if ($sourcePath -match '^skills/sf6-agent/assets/frame-current/published/.+/official_raw\.json$') {
+            if ($sourcePath -match '^runtime/frame-current/published/.+/official_raw\.json$') {
               Assert-PathExists $sourcePath "$relativePath official_raw evidence" ([ref]$issues)
             }
             if ($sourcePath -eq 'skills/sf6-agent/references/generated-concepts.md') {
@@ -359,7 +359,7 @@ if (Test-Path -LiteralPath $fixtureRoot -PathType Container) {
         $sourcePath = if (Test-Property $_.source_ref 'path') { [string]$_.source_ref.path } else { '' }
         $_.evidence_family -eq 'frame_current_official_raw' -and
         $_.supports_exact_current_fact -eq $true -and
-        $sourcePath -match '^skills/sf6-agent/assets/frame-current/published/.+/official_raw\.json$' -and
+        $sourcePath -match '^runtime/frame-current/published/.+/official_raw\.json$' -and
         (Test-Path -LiteralPath (Join-Path $repoRoot $sourcePath) -PathType Leaf)
       })
       if ($officialRawCards.Count -eq 0) {

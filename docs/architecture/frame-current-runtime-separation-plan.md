@@ -1,7 +1,7 @@
 ---
 title: Frame-current Runtime Separation Plan
 status: accepted
-last_reviewed: 2026-05-17
+last_reviewed: 2026-05-19
 tracking_issue: "#242"
 ---
 
@@ -10,9 +10,9 @@ tracking_issue: "#242"
 この文書は、frame-current runtime assets を deferred public adapter surface から
 切り離すための設計方針を定義する。
 
-この PR は design-only であり、generated assets、generator output path、
-`runtime_manifest.json` format、public `sf6-agent` behavior は変更しない。
-In this design step, do not move generated frame-current assets.
+Phase A は design-only だった。Phase B/C では generator output path を
+`runtime/frame-current/` に移し、public `sf6-agent` behavior を維持するための
+compatibility copy を残す。current facts と `data/exports/` / `data/roster/` は変更しない。
 
 ## Current State
 
@@ -21,19 +21,21 @@ In this design step, do not move generated frame-current assets.
 | 項目 | 現在値 |
 |---|---|
 | source authority | `data/exports/`, `data/roster/` |
-| generated runtime output | `skills/sf6-agent/assets/frame-current/` |
+| primary generated runtime output | `runtime/frame-current/` |
+| compatibility copy | `skills/sf6-agent/assets/frame-current/` |
 | generator | `packages/skill-packaging/build-frame-current-runtime-assets.ps1` |
 | validator | `tests/validation/validate-frame-current-assets.ps1` |
 | contract | `contracts/frame-current-runtime-assets.md` |
 | registry ID | `frame_current_runtime_assets` |
 
 `data/exports/` と `data/roster/` は exact current-fact authority である。
-`skills/sf6-agent/assets/frame-current/` は derived runtime payload であり、正本ではない。
+`runtime/frame-current/` は primary derived runtime payload であり、正本ではない。
+`skills/sf6-agent/assets/frame-current/` は compatibility copy であり、正本ではない。
 
-問題は、derived runtime payload が `skills/sf6-agent/` 配下にあることだ。
+この plan の起点になった問題は、derived runtime payload が `skills/sf6-agent/` 配下にあることだった。
 `skills/sf6-agent/` は現在 deferred legacy public adapter surface であり、private
 Hermes-first operation の active product focus ではない。これにより、current-fact
-runtime payload と deferred public adapter が構造的に結合している。
+runtime payload と deferred public adapter が構造的に結合していた。
 
 ## Target Direction
 
@@ -74,6 +76,7 @@ copy または bridge として扱う。
 ### Phase A: Design Only
 
 この文書を追加し、移行方針を review 可能にする。
+In this phase, do not move generated frame-current assets.
 
 この phase では次をしない。
 
@@ -85,11 +88,10 @@ copy または bridge として扱う。
 
 ### Phase B: New Runtime Surface
 
-`runtime/frame-current/` を追加し、registry に new derived generated surface として
+`runtime/frame-current/` を追加し、registry に primary derived generated surface として
 登録する。
 
-この phase では generator を `runtime/frame-current/` に出力できるようにする。
-旧 path はまだ削除しない。
+この phase では generator を `runtime/frame-current/` に出力する。旧 path はまだ削除しない。
 
 必要な更新候補:
 
@@ -135,9 +137,9 @@ legacy path の削除は、この design issue の scope ではない。
 - deferred public adapter compatibility copy: `skills/sf6-agent/assets/frame-current/`
 - generated release bundle: `.dist/sf6-agent-bundle.zip`
 
-`validate-frame-current-assets.ps1` は、最終的に primary runtime output を検証する。
-compatibility copy を検証する場合は、primary runtime output と hash / manifest が一致する
-ことを確認する bridge validator に分ける。
+`validate-frame-current-assets.ps1` は primary runtime output を検証する。
+compatibility copy を検証する場合は、primary runtime output と inventory / file hash が
+一致することを確認する。
 
 ## Non-goals
 

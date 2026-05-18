@@ -36,6 +36,7 @@ Record whether these surfaces had residual unintended diff after validation:
 
 - `skills/sf6-agent/references/`:
 - `.dist`:
+- `runtime/frame-current/`:
 - `skills/sf6-agent/assets/frame-current/`:
 - `runtime/normalization/`:
 - `skills/sf6-agent/assets/normalization/`:

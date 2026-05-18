@@ -246,7 +246,7 @@ Use the term as community terminology, not as official game wording. Whether a s
 - 最低保証や技、キャラクター、操作方式に関係する例外。
 - 現行patchで確認する具体値。
 
-技ごとの基礎ダメージや、技に紐づく始動補正・コンボ補正の現在値は、このページでは扱いません。必要な場合は `skills/sf6-agent/assets/frame-current/` のruntime assetsを参照します。各キャラクターのpublished runtime dataには、moveごとのraw official fieldsが含まれる場合があります。
+技ごとの基礎ダメージや、技に紐づく始動補正・コンボ補正の現在値は、このページでは扱いません。必要な場合は `runtime/frame-current/` のruntime assetsを参照します。各キャラクターのpublished runtime dataには、moveごとのraw official fieldsが含まれる場合があります。
 
 このページで扱うのは、補正率そのものではなく、コンボ補正を読むための考え方です。コンボ全体の最終ダメージ計算、システム行動、最低保証、キャラクター固有・技固有の例外、現行patchでの正確な計算式は、frame-current runtime assets、現在の公式情報、ゲーム内検証、または将来のsystem-mechanics fact workflowで確認してください。
 

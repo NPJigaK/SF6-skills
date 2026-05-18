@@ -19,7 +19,7 @@ Frame-current factsは、packaged frame-current runtime assetsで解決できる
 - moveに紐づくpublished raw fieldsに含まれるstarter scalingやcombo scaling。
 - roster membershipやpackaged character availability。
 
-これらは `data/exports/` と `data/roster/` をcanonical authorityとし、derived `skills/sf6-agent/assets/frame-current/` をruntime answer surfaceとして使います。
+これらは `data/exports/` と `data/roster/` をcanonical authorityとし、derived `runtime/frame-current/` をprimary runtime answer surfaceとして使います。`skills/sf6-agent/assets/frame-current/` はpublic adapterが残る間の互換copyです。
 
 System-mechanics current factsは、単一のmove rowだけでは解決しにくいpatch-sensitiveなsystem valuesや計算規則です。
 

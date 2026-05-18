@@ -176,6 +176,7 @@ If Windows PowerShell cannot see `git` while running `run-all.ps1`, verify deriv
 git status --porcelain -- \
   skills/sf6-agent/references/generated-knowledge-index.md \
   skills/sf6-agent/references/generated-concepts.md \
+  runtime/frame-current \
   skills/sf6-agent/assets/frame-current
 ```
 

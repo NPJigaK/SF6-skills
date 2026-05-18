@@ -276,7 +276,7 @@ foreach ($fileName in $requiredFixtures) {
       $sourcePath = if (Test-Property $_.source_ref 'path') { [string]$_.source_ref.path } else { '' }
       $_.evidence_family -eq 'frame_current_official_raw' -and
       $_.supports_exact_current_fact -eq $true -and
-      $sourcePath -match '^skills/sf6-agent/assets/frame-current/published/.+/official_raw\.json$' -and
+      $sourcePath -match '^runtime/frame-current/published/.+/official_raw\.json$' -and
       (Test-Path -LiteralPath (Join-Path $repoRoot $sourcePath) -PathType Leaf)
     })
     if ($officialRawCards.Count -eq 0) {

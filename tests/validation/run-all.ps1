@@ -10,6 +10,7 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $derivedOutputPaths = @(
   'skills/sf6-agent/references/generated-knowledge-index.md',
   'skills/sf6-agent/references/generated-concepts.md',
+  'runtime/frame-current',
   'skills/sf6-agent/assets/frame-current',
   'runtime/normalization',
   'skills/sf6-agent/assets/normalization'
@@ -28,7 +29,7 @@ function Assert-NoDerivedOutputStatus {
     throw "Unable to inspect derived output status during $Context"
   }
   if ($status.Count -gt 0) {
-    throw "Tracked or untracked derived outputs changed during $Context. Review and commit regenerated generated-* references and frame-current assets before relying on validation."
+    throw "Tracked or untracked derived outputs changed during $Context. Review and commit regenerated generated-* references, frame-current assets, and normalization assets before relying on validation."
   }
 }
 
