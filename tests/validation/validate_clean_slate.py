@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 REQUIRED_PATHS = [
+    ".github/workflows/ci.yml",
     "AGENTS.md",
     "README.md",
     "docs/PLAN.md",
@@ -22,7 +23,6 @@ REQUIRED_PATHS = [
 ]
 
 LEGACY_DIRS_EXPECTED_GONE = [
-    ".github",
     "contracts",
     "docs/architecture",
     "docs/testing",
@@ -37,6 +37,11 @@ LEGACY_DIRS_EXPECTED_GONE = [
     "workflows",
 ]
 
+ALLOWED_GITHUB_PATHS = {
+    ".github/workflows",
+    ".github/workflows/ci.yml",
+}
+
 
 def main() -> int:
     errors: list[str] = []
@@ -44,9 +49,22 @@ def main() -> int:
         if not (ROOT / relative).exists():
             errors.append(f"Missing required clean-slate path: {relative}")
 
+    ci_workflow = ROOT / ".github" / "workflows" / "ci.yml"
+    if ci_workflow.exists() and not ci_workflow.is_file():
+        errors.append(".github/workflows/ci.yml must be a file")
+
     for relative in LEGACY_DIRS_EXPECTED_GONE:
         if (ROOT / relative).exists():
             errors.append(f"Legacy path should remain deleted: {relative}")
+
+    github_dir = ROOT / ".github"
+    if github_dir.exists() and not github_dir.is_dir():
+        errors.append(".github must be a directory containing only workflows/ci.yml")
+    if github_dir.is_dir():
+        for path in github_dir.rglob("*"):
+            relative = path.relative_to(ROOT).as_posix()
+            if relative not in ALLOWED_GITHUB_PATHS:
+                errors.append(f"Unexpected .github content: {relative}")
 
     for json_path in (ROOT / "data").rglob("*.json"):
         try:
