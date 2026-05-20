@@ -1,6 +1,6 @@
 # Clean-Slate CI Restoration
 
-Status: Implemented; awaiting mandatory review.
+Status: Remote verification complete; draft PR open and not merged.
 
 ## Purpose
 
@@ -11,13 +11,17 @@ This ExecPlan defines and records the small implementation slice that restores
 CI without bringing back legacy workflows, legacy validators, or old runtime
 behavior.
 
+Remote verification was completed for draft PR #298 on commit
+`07be2d391fb78db58c34c29c865ecdc433fd79e6`: the push CI run and the
+pull_request CI run both passed.
+
 ## Scope
 
 Included:
 
-- Add one new workflow in a later implementation step:
+- Add one new workflow:
   `.github/workflows/ci.yml`.
-- Update the clean-slate validator in the same later implementation step so it
+- Update the clean-slate validator so it
   allows exactly `.github/workflows/ci.yml` while continuing to reject legacy
   `.github` content.
 - Run on Python 3.12.
@@ -48,9 +52,9 @@ Excluded:
 
 ## Acceptance Criteria
 
-- A future implementation adds exactly one minimal workflow:
+- The implementation adds exactly one minimal workflow:
   `.github/workflows/ci.yml`.
-- The future implementation updates `tests/validation/validate_clean_slate.py`
+- The implementation updates `tests/validation/validate_clean_slate.py`
   so `.github/workflows/ci.yml` is permitted, while any other `.github` file or
   directory remains a validation failure.
 - The workflow uses Python 3.12.
@@ -131,6 +135,13 @@ fi
 git status --short --branch
 ```
 
+Remote verification:
+
+- Draft PR: `https://github.com/NPJigaK/SF6-skills/pull/298`
+- Commit: `07be2d391fb78db58c34c29c865ecdc433fd79e6`
+- Push CI run: `https://github.com/NPJigaK/SF6-skills/actions/runs/26156989969`
+- Pull request CI run: `https://github.com/NPJigaK/SF6-skills/actions/runs/26157030962`
+
 ## Progress
 
 - [x] (2026-05-20 JST) Verified baseline branch and repository state before
@@ -162,6 +173,15 @@ git status --short --branch
   `git status --short --branch`.
 - [x] (2026-05-20 JST) Updated mandatory review table for the implemented
   scope.
+- [x] (2026-05-20 JST) Mandatory review completed with no actionable findings.
+- [x] (2026-05-20 JST) Pushed branch
+  `redesign/sf6-knowledge-coach-clean-slate` and opened draft PR #298.
+- [x] (2026-05-20 JST) Observed GitHub Actions push CI run pass for commit
+  `07be2d391fb78db58c34c29c865ecdc433fd79e6`.
+- [x] (2026-05-20 JST) Observed GitHub Actions pull_request CI run pass for
+  commit `07be2d391fb78db58c34c29c865ecdc433fd79e6`.
+- [x] (2026-05-20 JST) Confirmed the PR-range whitespace behavior through the
+  passing pull_request CI run.
 
 ## Decision Log
 
@@ -220,18 +240,23 @@ git status --short --branch
   the PR-range check.
   Date/Author: 2026-05-20 / Codex
 
+- Decision: Keep PR #298 draft and unmerged after remote CI verification.
+  Rationale: The requested step was remote verification only. Marking ready or
+  merging should be a separate maintainer decision.
+  Date/Author: 2026-05-20 / Codex
+
 ## Deviations
 
 - None.
 
 ## Risks
 
-- The PR-range whitespace check requires checkout history that can resolve
-  `origin/${GITHUB_BASE_REF}`. The workflow uses `fetch-depth: 0` plus an
-  explicit base-branch fetch, but the pull-request path still needs confirmation
-  on GitHub Actions.
+- The PR-range whitespace check was observed passing for commit
+  `07be2d391fb78db58c34c29c865ecdc433fd79e6` in PR #298. Future workflow
+  changes should keep enough checkout history to resolve
+  `origin/${GITHUB_BASE_REF}`.
 - The push/manual fallback remains HEAD commit/tree-oriented and does not check
-  a whole branch range.
+  a whole branch range. This is intentional for non-PR runs.
 - The validator update is intentionally narrow. It allows exactly
   `.github/workflows/ci.yml`; any other restored `.github` content should still
   fail validation.
@@ -243,12 +268,13 @@ git status --short --branch
 - The scaffold currently has no private vault, overlay DB, Discord, VLM, video
   pipeline, web mode, or API runtime by design; CI must not imply those are
   implemented.
+- PR #298 remains draft and unmerged by design.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ExecPlan governance | Created and updated a scoped CI restoration plan; implementation stayed within the approved file set. | `docs/execplans/2026-05-20-clean-slate-ci.md` | `git diff --check`; `git status --short --branch` | Pass | None | Mandatory review still pending | None known |
-| Minimal validation surface | Added Python 3.12 CI running unittest, clean-slate validator, current-fact CLI smoke, and PR-range-oriented whitespace check with HEAD fallback. | `.github/workflows/ci.yml`; `tests/validation/validate_clean_slate.py` | `PYTHONPATH=src python -m unittest discover -s tests`; `PYTHONPATH=src python tests/validation/validate_clean_slate.py`; current-fact CLI smoke | Pass | None | GitHub Actions run not yet observed | Runner command and checkout behavior must be verified on GitHub |
+| ExecPlan governance | Created and updated a scoped CI restoration plan; implementation stayed within the approved file set. Mandatory review completed with no actionable findings. | `docs/execplans/2026-05-20-clean-slate-ci.md` | `git diff --check`; `git status --short --branch`; review of PR #298 | Pass | None | PR remains draft and unmerged | None known |
+| Minimal validation surface | Added Python 3.12 CI running unittest, clean-slate validator, current-fact CLI smoke, and PR-range-oriented whitespace check with HEAD fallback. Push and pull_request CI runs passed for commit `07be2d391fb78db58c34c29c865ecdc433fd79e6`. | `.github/workflows/ci.yml`; `tests/validation/validate_clean_slate.py` | `PYTHONPATH=src python -m unittest discover -s tests`; `PYTHONPATH=src python tests/validation/validate_clean_slate.py`; current-fact CLI smoke; GitHub Actions push run; GitHub Actions pull_request run | Pass | None | None for current commit | Future workflow changes must preserve checkout behavior |
 | Privacy/log boundary | CI does not set a repo-internal `SF6_COACH_LOG_DIR` and does not upload artifacts. Existing tests continue to cover repo-internal log rejection. | `.github/workflows/ci.yml` | `PYTHONPATH=src python -m unittest discover -s tests`; clean-slate validator | Pass | None | No additional CI artifact guard beyond absence of upload steps | Future CI additions must preserve this boundary |
 | No legacy restore | Validator now allows only `.github/workflows/ci.yml` under `.github` and keeps all other legacy surfaces rejected. No legacy workflow or validator content was restored. | `.github/workflows/ci.yml`; `tests/validation/validate_clean_slate.py` | `PYTHONPATH=src python tests/validation/validate_clean_slate.py`; review of diff | Pass | None | None known | Accidental future `.github` additions should be caught by validator |
