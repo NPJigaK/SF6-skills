@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sf6-knowledge-coach"
+version = "0.1.0"
+description = "Clean-slate local SF6 knowledge coach tools."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+sf6 = "sf6_knowledge_coach.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
