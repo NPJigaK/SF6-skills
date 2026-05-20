@@ -1,8 +1,0 @@
-cases:
-  - id: video-observation-neutral-jump
-    question: "From this clip, identify whether player A jumped before the punish."
-    expected_answer_mode: observation
-    evidence_boundary: "Report observable clip-relative events and avoid turning them into accepted strategy knowledge."
-    must_not_include:
-      - "current frame-data verdict"
-      - "accepted strategy claim without review"

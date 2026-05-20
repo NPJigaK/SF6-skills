@@ -1,8 +1,0 @@
-cases:
-  - id: matchup-fireball-approach
-    question: "How should a character approach a fireball-heavy matchup?"
-    expected_answer_mode: strategy_or_matchup_knowledge
-    evidence_boundary: "Answer at strategy level unless reviewed character-specific claims exist."
-    must_not_include:
-      - "patch-specific claim without source"
-      - "exact move values"
