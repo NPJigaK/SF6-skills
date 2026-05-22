@@ -1,10 +1,10 @@
 # Latest Source Value-Shape Inventory
 
-Status: Draft; planning-only ExecPlan.
+Status: Implemented locally; awaiting mandatory review.
 
 ## Purpose
 
-Plan reviewed value-shape inventory artifacts from the latest source
+Implement reviewed value-shape inventory artifacts from the latest source
 acquisition outputs created by PR #305.
 
 This unit comes after current-source acquisition and before current-fact JSON
@@ -13,14 +13,14 @@ SuperCombo raw artifacts, summarize the value shapes that appear, and hand
 reviewed evidence to later schema and deterministic classifier work.
 
 JSON Schema redesign remains blocked until this inventory is reviewed. This
-ExecPlan does not implement schemas, parser/classifier rules, normalized
+ExecPlan does not implement schemas, parser/classifier semantics, normalized
 exports, retrieval changes, answer behavior, or authority promotion.
 
 ## Scope
 
 Included:
 
-- Plan value-shape inventory generation from the latest ignored local
+- Implement value-shape inventory generation from the latest ignored local
   acquisition artifacts, when present:
 
   ```text
@@ -39,14 +39,16 @@ Included:
 - Preserve source-native labels in the inventory:
   - official Japanese source header paths
   - SuperCombo English headings and labels
-- Preserve exact raw example expressions when examples are included.
+- Preserve exact raw example expressions when short examples are included.
+  Long public examples are capped to a short excerpt plus
+  `raw_value_sha256` and `raw_value_length`.
 - Record counts, shape classes, representative examples, affected fields,
   source family, source role, and review items.
 - Identify unclassified, rare, malformed-looking, structurally surprising, or
   source-specific expressions as explicit review items.
-- Define privacy and source-boundary guard expectations for future inventory
+- Implement privacy and source-boundary guard expectations for inventory
   artifacts.
-- Define graceful blocked/review-item behavior when ignored `.local` artifacts
+- Implement graceful blocked/review-item behavior when ignored `.local` artifacts
   are missing.
 
 Excluded:
@@ -83,7 +85,7 @@ Excluded:
   output.
 - The plan inventories official and SuperCombo separately.
 - The plan preserves source-native labels and exact representative raw
-  examples.
+  examples when they fit the public example length cap.
 - The plan records counts, shape classes, affected fields, source family, and
   review items.
 - The plan covers the official special expressions already observed during
@@ -101,13 +103,18 @@ Excluded:
 - The plan does not approve live acquisition, parser/classifier behavior,
   normalized export, retrieval changes, answer behavior, or authority
   promotion.
-- Planning validation passes.
+- Implementation validation passes.
 
 ## Files / Interfaces
 
-Changed by this planning ExecPlan:
+Changed by this implementation:
 
 - `docs/execplans/2026-05-23-latest-source-value-shape-inventory.md`
+- `src/sf6_knowledge_coach/value_shape_inventory.py`
+- `tests/test_value_shape_inventory.py`
+- `tests/validation/validate_value_shape_inventory.py`
+- `docs/value-shape-inventories/20260521T025403Z-latest-source-value-shape-inventory.md`
+- `data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json`
 
 Existing inputs:
 
@@ -122,21 +129,20 @@ Existing inputs:
   `.local/source-acquisition/current-source-acquisition/20260521T025403Z/`,
   when present.
 
-Future implementation may create only reviewed summary artifacts and focused
-generation/validation code after review. Preferred future public artifact
-paths:
+Reviewed public summary artifacts:
 
 - `docs/value-shape-inventories/20260521T025403Z-latest-source-value-shape-inventory.md`
 - `data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json`
 
-Preferred future implementation helpers, if needed:
+Implementation helpers:
 
 - `src/sf6_knowledge_coach/value_shape_inventory.py`
 - `tests/test_value_shape_inventory.py`
 - `tests/validation/validate_value_shape_inventory.py`
 
-Those future files are not created by this planning-only ExecPlan. The future
-implementation ExecPlan must approve exact paths before editing.
+No runtime, schema, parser/classifier semantics, normalized export, retrieval,
+answer behavior, private data, live acquisition, or authority promotion files
+are changed.
 
 ## Source Inputs
 
@@ -152,8 +158,8 @@ The latest source acquisition report records:
 - full raw HTML public commit: `prohibited_without_explicit_review`
 - source-boundary review: `pending`
 
-The future inventory implementation should first validate the committed public
-report and then check whether the ignored local artifact directory exists.
+The inventory implementation first validates the committed public report and
+then checks whether the ignored local artifact directory exists.
 
 If `.local/source-acquisition/current-source-acquisition/20260521T025403Z/`
 is present:
@@ -179,7 +185,9 @@ Allowed public inventory content:
 - source-native field names and heading paths;
 - shape names;
 - bounded representative examples;
-- raw example expressions copied exactly when included;
+- raw example expressions copied exactly when they fit the public example
+  length cap;
+- excerpt, hash, and length metadata for long examples;
 - raw example hashes or short source references;
 - affected character counts;
 - affected row/cell/table counts;
@@ -208,9 +216,13 @@ Forbidden public inventory content:
 The future public JSON artifact must be a summary, not a lossless copy of raw
 source artifacts.
 
+Implementation observation: the ignored local artifacts were present on this
+machine and passed `source_acquisition validate-artifacts` before inventory
+generation.
+
 ## Inventory Model
 
-The inventory should separate these levels:
+The inventory separates these levels:
 
 ```yaml
 inventory_run:
@@ -244,17 +256,32 @@ field_shape_summary:
     raw_only: integer
     unclassified: integer
   representative_examples:
-    - raw_value: string
+    - raw_value: string # omitted when raw_value_truncated is true
+      raw_value_excerpt: string
+      raw_value_sha256: string
+      raw_value_length: integer
+      raw_value_truncated: boolean
       source_family: official | supercombo
       source_label: string
       source_header_path: [string]
       character_slug: string
       example_scope: bounded_representative
+  review_item_summary:
+    grouped_count: integer
+    emitted_count: integer
+    omitted_count: integer
+    truncated: boolean
+    blocker_for_json_schema_redesign: boolean
   review_items:
     - kind: unclassified_expression | rare_expression | malformed_looking_source_value | missing_artifact | drift_candidate
       source_family: official | supercombo
       source_label: string
-      raw_value: string
+      examples:
+        - raw_value: string # omitted when raw_value_truncated is true
+          raw_value_excerpt: string
+          raw_value_sha256: string
+          raw_value_length: integer
+          raw_value_truncated: boolean
       affected_count: integer
       review_question: string
 ```
@@ -265,10 +292,16 @@ Rules:
 - Official Japanese source labels stay Japanese.
 - SuperCombo English source labels stay English.
 - English canonical keys are not introduced here.
-- `raw_value` examples preserve the exact source expression used in the
+- short `raw_value` examples preserve the exact source expression used in the
   summary.
+- long examples preserve a short excerpt, `raw_value_sha256`, and
+  `raw_value_length` instead of publishing full source prose.
 - The inventory may group examples by exact string or shape class, but must
   not replace exact raw examples with inferred values.
+- Review item groups must not be silently dropped. If any future cap omits
+  review groups, the summary must record grouped/emitted/omitted counts and
+  make the truncation a blocker for JSON Schema redesign. This implementation
+  emits all grouped review items.
 - A value may have multiple shape classes.
 - Shape classes are descriptive and do not imply parse safety.
 
@@ -363,8 +396,7 @@ the ignored raw artifacts.
 
 ## Shape Vocabulary
 
-The future implementation should include at least these top-level shape
-classes, and may add source-specific subtypes after review:
+The implementation includes these top-level shape classes:
 
 - `scalar`
 - `signed_frame`
@@ -397,7 +429,7 @@ interpretation. For example:
 
 ## Validation Strategy
 
-Future implementation validation should include:
+Implementation validation includes:
 
 - public inventory artifact guard:
   - reject local absolute paths;
@@ -411,6 +443,8 @@ Future implementation validation should include:
 - source-boundary guard:
   - ensure public artifacts are summaries only;
   - ensure representative examples are bounded;
+  - ensure long public examples are capped to excerpt/hash/length metadata;
+  - ensure review item groups are not silently truncated;
   - ensure no artifact claims `current_fact_authority`.
 - coverage validation:
   - official source family represented or explicitly blocked;
@@ -429,7 +463,7 @@ Future implementation validation should include:
   - SuperCombo remains enrichment/cross-reference/candidate only;
   - no parsed numeric values are emitted.
 
-Planned local validation for future implementation may include:
+Local validation includes:
 
 ```bash
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-report docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
@@ -438,16 +472,20 @@ PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_invento
 PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_inventory.py
 ```
 
-Those commands are illustrative for future implementation planning. They are
-not implemented by this docs-only ExecPlan.
-
 ## Validation Commands
 
-Run from the repository root for this planning-only step:
+Run from the repository root:
 
 ```bash
 git diff --check
+git diff --cached --check
+uv lock --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-report docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-artifacts docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_inventory build --run-id 20260521T025403Z
+PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_inventory.py
 git status --short --branch
 ```
 
@@ -465,7 +503,28 @@ git status --short --branch
   `git diff --check`,
   `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
   and `git status --short --branch`.
-- [ ] Complete mandatory review.
+- [x] (2026-05-23 JST) Mandatory review completed with no actionable findings.
+- [x] (2026-05-23 JST) Merged PR #308 into `main`; main CI passed on merge
+  commit `28d77f9129928c5b1410946e92e86ddbd7e93110`.
+- [x] (2026-05-23 JST) Started implementation branch
+  `impl/latest-source-value-shape-inventory` from updated `main`.
+- [x] (2026-05-23 JST) Confirmed ignored local artifacts for
+  `20260521T025403Z` are present.
+- [x] (2026-05-23 JST) Implemented value-shape inventory generator and
+  validator.
+- [x] (2026-05-23 JST) Generated summarized public Markdown and JSON
+  inventory artifacts.
+- [x] (2026-05-23 JST) Added focused unit tests and a public artifact
+  validation script.
+- [x] (2026-05-23 JST) Ran full implementation validation:
+  `git diff --check`, `git diff --cached --check`, `uv lock --check`,
+  unit tests, clean-slate validator, acquisition report validator,
+  acquisition artifact validator, inventory generator, inventory validator,
+  and `git status --short --branch`.
+- [x] (2026-05-23 JST) Addressed mandatory review findings by emitting all
+  grouped review items and capping long public examples to
+  excerpt/hash/length metadata.
+- [ ] Complete mandatory review for the implementation.
 
 ## Decision Log
 
@@ -498,16 +557,45 @@ git status --short --branch
   Canonical field keys require explicit mapping design after inventory review.
   Date/Author: 2026-05-23 / Codex
 
+- Decision: Publish both Markdown and JSON summarized inventory artifacts.
+  Rationale: Markdown is reviewable by humans, while JSON gives later schema
+  work structured counts, bounded examples, and review items without copying
+  raw rows or source tables.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Limit representative examples to five per field summary.
+  Rationale: Examples must be useful for schema design without becoming a
+  public source-table dump.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Emit all grouped review items instead of capping them at 100.
+  Rationale: Review items are the handoff into value-shape and schema work.
+  Dropping groups would hide source-specific expressions before JSON Schema
+  redesign.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Cap long public raw examples at 120 characters and publish
+  `raw_value_excerpt`, `raw_value_sha256`, and `raw_value_length` for longer
+  source prose.
+  Rationale: Public artifacts need representative evidence without becoming a
+  copied source-prose dump.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Summarize SuperCombo by source section and cell label rather than
+  per-move heading paths.
+  Rationale: Including every per-move heading would turn the inventory into a
+  near source-table dump. Section plus source label preserves source-native
+  grouping while keeping public artifacts summarized.
+  Date/Author: 2026-05-23 / Codex
+
 ## Unresolved Decisions
 
-- Exact future implementation file list for generator and validator.
-- Exact JSON summary schema for the public inventory artifact.
-- Maximum number of representative examples per source family, field, and
-  shape class.
-- Whether a Markdown-only inventory is enough for first review, or whether the
-  first implementation should include both Markdown and JSON summary.
-- How to represent SuperCombo heading/table variations without turning the
-  artifact into a full source dump.
+- Whether the current shape vocabulary is sufficient for deterministic parser
+  design.
+- Whether later schema work needs additional SuperCombo heading detail beyond
+  source section plus cell label.
+- Whether later schema work needs a reviewer-only private report with more
+  surrounding context for selected long SuperCombo prose examples.
 
 ## Deviations
 
@@ -520,15 +608,23 @@ git status --short --branch
   sources.
 - Overly large representative-example sets could become de facto source table
   dumps. The future implementation must keep examples bounded.
+- Long examples are public excerpts only. Later schema/classifier work may
+  need to return to the ignored local artifacts or a reviewer-only private
+  report for full source context.
 - Shape classification can drift into semantic parsing. This unit must remain
   descriptive and inventory-only.
 - Official and SuperCombo label mapping is intentionally deferred. Later
   schema work must not skip the mapping review.
+- The public inventory is summarized by design; it does not preserve enough
+  detail to regenerate raw source rows.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan latest-source value-shape inventory | Drafted this ExecPlan only | `docs/execplans/2026-05-23-latest-source-value-shape-inventory.md` | `git diff --check` | Pass | None | Implementation not started | Exact artifact schema deferred |
-| Preserve source boundaries | Planned summarized artifacts only; raw HTML/full rows/source dumps forbidden | `docs/execplans/2026-05-23-latest-source-value-shape-inventory.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py` | Pass | None | Implementation not started | Representative examples must remain bounded |
-| Keep authority unchanged | Planned no parser/schema/retrieval/answer changes and no authority promotion | `docs/execplans/2026-05-23-latest-source-value-shape-inventory.md` | Reviewer check | Pending | None | Implementation not started | None |
+| Plan latest-source value-shape inventory | Drafted and reviewed this ExecPlan | `docs/execplans/2026-05-23-latest-source-value-shape-inventory.md` | `git diff --check` | Pass | None | None | None |
+| Build summarized inventory | Added generator and generated Markdown/JSON summarized inventory artifacts | `src/sf6_knowledge_coach/value_shape_inventory.py`; `docs/value-shape-inventories/20260521T025403Z-latest-source-value-shape-inventory.md`; `data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json` | `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_inventory build --run-id 20260521T025403Z` | Pass, 418 field summaries and 247 review items | None | None | `.local` artifacts required locally |
+| Preserve source boundaries | Public artifacts are summaries only; raw HTML/full rows/source dumps forbidden by validator | `src/sf6_knowledge_coach/value_shape_inventory.py`; `tests/validation/validate_value_shape_inventory.py` | `PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_inventory.py` | Pass | None | None | Representative examples must remain bounded |
+| Preserve review-item handoff | All grouped review items are emitted; review-item summary rejects silent truncation | `src/sf6_knowledge_coach/value_shape_inventory.py`; `tests/test_value_shape_inventory.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass | None | None | Later schema work still needs human review |
+| Bound long public examples | Long source prose is emitted as excerpt/hash/length rather than full `raw_value` | `src/sf6_knowledge_coach/value_shape_inventory.py`; public inventory artifacts | `PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_inventory.py` | Pass | None | None | Full context remains only in ignored local artifacts |
+| Keep authority unchanged | No parser/schema/retrieval/answer changes and no authority promotion | Inventory artifacts and validator | Reviewer check | Pending mandatory review | None | None | None |
