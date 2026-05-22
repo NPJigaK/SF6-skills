@@ -1,17 +1,18 @@
 # SuperCombo Field Mapping Artifacts
 
-Status: Drafted for review.
+Status: Implemented; awaiting mandatory review.
 
 ## Purpose
 
 Plan generation and review artifacts for all 403 SuperCombo field-summary
 mappings from the latest source value-shape inventory.
 
-This ExecPlan implements the planning step after
-`2026-05-23-supercombo-canonical-field-mapping-review.md`. It is still
-docs-only. It does not implement the mapping generator, mapping validator,
-schemas, parsers, classifiers, normalized exports, retrieval changes, answer
-behavior, runtime behavior, or authority promotion.
+This ExecPlan implements the mapping artifact step after
+`2026-05-23-supercombo-canonical-field-mapping-review.md`. It creates
+reviewable SuperCombo mapping artifacts and deterministic validation. It does
+not implement schemas, parsers, classifiers, normalized exports, retrieval
+changes, answer behavior, application runtime behavior, or authority
+promotion.
 
 JSON Schema redesign remains blocked until SuperCombo mapping artifacts are
 implemented and reviewed, and value-shape review item disposition is also
@@ -21,25 +22,24 @@ completed and reviewed.
 
 Included:
 
-- Plan artifacts that cover exactly 403 SuperCombo field summaries.
-- Plan one mapping record per SuperCombo `source_header_path` group.
-- Plan exactly one `mapping_status` per mapping record.
+- Implement artifacts that cover exactly 403 SuperCombo field summaries.
+- Implement one mapping record per SuperCombo `source_header_path` group.
+- Implement exactly one `mapping_status` per mapping record.
 - Reuse the mapping statuses approved in the SuperCombo canonical mapping
   review.
-- Define public Markdown and JSON mapping summary outputs.
-- Define validation requirements for coverage, status exclusivity, authority
+- Create public Markdown and JSON mapping summary outputs.
+- Implement validation requirements for coverage, status exclusivity, authority
   boundary, privacy, and source-boundary guard.
-- Define optional generator module boundaries if implementation needs code.
+- Add a focused generator/validator module.
 - Keep SuperCombo source labels and header paths source-native.
 
 Excluded:
 
-- Do not implement this plan yet.
 - Do not implement JSON Schema redesign.
 - Do not implement parser or classifier behavior.
 - Do not implement normalized export.
 - Do not change retrieval or answer behavior.
-- Do not modify runtime code.
+- Do not change application runtime behavior.
 - Do not run live official or SuperCombo acquisition.
 - Do not use `solve_cloudflare=True`.
 - Do not promote SuperCombo to numeric authority.
@@ -51,33 +51,39 @@ Excluded:
 
 ## Acceptance Criteria
 
-- The plan names all required input artifacts and policy ExecPlans.
-- The plan names the future Markdown and JSON mapping artifacts.
-- The plan names the future validator path.
-- The plan allows a generator module only if needed.
-- The plan requires exactly 403 SuperCombo field summaries to be covered.
-- The plan requires one mapping record per `source_header_path` group.
-- The plan requires exactly one `mapping_status` per record.
-- The plan uses the mapping statuses from PR #311.
-- The plan keeps `source_label` and `source_header_path` source-native.
-- The plan keeps `source_family` as a semantic category only.
-- The plan keeps `source_name: supercombo`.
-- The plan keeps `source_role` limited to `enrichment_candidate` or
+- The implementation names all required input artifacts and policy ExecPlans.
+- The implementation creates the Markdown and JSON mapping artifacts.
+- The implementation creates the validator path.
+- The implementation uses a focused generator/validator module.
+- The implementation covers exactly 403 SuperCombo field summaries.
+- The implementation creates one mapping record per `source_header_path`
+  group.
+- The implementation requires exactly one `mapping_status` per record.
+- The implementation uses the mapping statuses from PR #311.
+- The implementation keeps `source_label` and `source_header_path`
+  source-native.
+- The implementation keeps `source_family` as a semantic category only.
+- The implementation keeps `source_name: supercombo`.
+- The implementation keeps `source_role` limited to `enrichment_candidate` or
   `cross_reference_candidate`.
-- The plan forbids SuperCombo numeric authority promotion.
-- The plan forbids string-similarity auto-mapping.
-- The plan forbids parsed values.
-- The plan forbids schema/parser/retrieval/answer behavior changes.
-- The plan states that public artifacts are mapping summaries only, not raw
-  source dumps.
-- The plan keeps JSON Schema redesign blocked.
-- Planning validation passes.
+- The implementation forbids SuperCombo numeric authority promotion.
+- The implementation forbids string-similarity auto-mapping.
+- The implementation forbids parsed values.
+- The implementation forbids schema/parser/retrieval/answer behavior changes.
+- Public artifacts are mapping summaries only, not raw source dumps.
+- The implementation keeps JSON Schema redesign blocked.
+- Implementation validation passes.
 
 ## Files / Interfaces
 
-Created in this planning step:
+Changed by this implementation:
 
 - `docs/execplans/2026-05-23-supercombo-field-mapping-artifacts.md`
+- `src/sf6_knowledge_coach/supercombo_field_mapping.py`
+- `tests/test_supercombo_field_mapping.py`
+- `tests/validation/validate_supercombo_field_mapping.py`
+- `docs/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-review.md`
+- `data/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-summary.json`
 
 Required inputs for the later implementation:
 
@@ -86,20 +92,18 @@ Required inputs for the later implementation:
 - `docs/execplans/2026-05-23-supercombo-canonical-field-mapping-review.md`
 - `docs/execplans/2026-05-23-normalized-field-mapping-and-classifier-policy.md`
 
-Planned public outputs:
+Public outputs:
 
 - `docs/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-review.md`
 - `data/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-summary.json`
 
-Planned validation file:
+Validation file:
 
 - `tests/validation/validate_supercombo_field_mapping.py`
 
-Optional implementation file if needed:
+Implementation file:
 
 - `src/sf6_knowledge_coach/supercombo_field_mapping.py`
-
-No files are implemented by this planning step beyond this ExecPlan.
 
 ## Input Inventory Facts
 
@@ -329,16 +333,16 @@ supercombo_mapping_summary:
 
 ## Implementation Slice Boundaries
 
-The later implementation may include:
+This implementation includes:
 
 - a generator or manual artifact builder for the mapping summary;
 - the Markdown mapping review artifact;
 - the JSON mapping summary artifact;
 - `tests/validation/validate_supercombo_field_mapping.py`;
-- focused unit tests only if an implementation module is added;
+- focused unit tests for the implementation module;
 - ExecPlan progress/decision/risk updates.
 
-The later implementation must not include:
+This implementation does not include:
 
 - JSON Schema redesign;
 - parser/classifier semantics;
@@ -369,7 +373,10 @@ Run from repository root:
 
 ```bash
 git diff --check
+git diff --cached --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py
 git status --short --branch
 ```
 
@@ -386,6 +393,27 @@ git status --short --branch
 - [x] (2026-05-23 JST) Completed planning validation:
   `git diff --check`,
   `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
+  and `git status --short --branch`.
+- [x] (2026-05-23 JST) Created implementation branch
+  `impl/supercombo-field-mapping-artifacts` from updated `main`
+  `02541fe2591423e19ad2d82201b4cdee1674a094`.
+- [x] (2026-05-23 JST) Added focused
+  `src/sf6_knowledge_coach/supercombo_field_mapping.py` generator/validator.
+- [x] (2026-05-23 JST) Generated public mapping artifacts:
+  `docs/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-review.md`
+  and
+  `data/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-summary.json`.
+- [x] (2026-05-23 JST) Added validator
+  `tests/validation/validate_supercombo_field_mapping.py` and focused unit
+  tests.
+- [x] (2026-05-23 JST) Confirmed implementation covers 403 SuperCombo field
+  summaries with exactly one mapping status per record.
+- [x] (2026-05-23 JST) Completed implementation validation:
+  `git diff --check`,
+  `git diff --cached --check`,
+  `PYTHONPATH=src uv run --locked python -m unittest discover -s tests`,
+  `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
+  `PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py`,
   and `git status --short --branch`.
 - [ ] Complete mandatory review.
 
@@ -412,16 +440,26 @@ git status --short --branch
   SuperCombo must not be promoted by accidental equivalence.
   Date/Author: 2026-05-23 / Codex
 
+- Decision: Use a small generator/validator module with explicit mapping
+  policy tables.
+  Rationale: The artifact has 403 records, so hand-editing output directly is
+  more error-prone than deterministic generation from reviewed policy tables.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Leave `Character Vitals > Throw Range / Hurtbox` as
+  `blocked_pending_human_review`.
+  Rationale: The combined source label mixes throw range and hurtbox semantics;
+  mapping it without human disposition would guess normalized meaning.
+  Date/Author: 2026-05-23 / Codex
+
 ## Unresolved Decisions
 
-- Actual mapping status for each of the 403 SuperCombo field summaries.
-- Which SuperCombo fields map to existing official field keys.
-- Which SuperCombo fields receive source-specific canonical field keys.
-- Which SuperCombo fields remain enrichment-only context.
-- Which SuperCombo fields are out of scope for the first normalized export.
-- Which SuperCombo fields remain blocked pending human review.
-- Exact implementation choice: manual artifact authoring only, generator
-  module, or a small hybrid.
+- Reviewer disposition for the single blocked mapping:
+  `Character Vitals > Throw Range / Hurtbox`.
+- Whether any SuperCombo source-specific enrichment keys should be renamed in
+  a later normalized schema ExecPlan.
+- Value-shape review item disposition for 231 SuperCombo review item groups and
+  247 total review item groups.
 
 ## Deviations
 
@@ -429,12 +467,15 @@ git status --short --branch
 
 ## Risks
 
-- Mapping all 403 summaries may be broad; implementation should keep the
-  generated artifact reviewable and validate full coverage.
-- Over-eager mapping to official keys could imply authority equivalence.
+- Mapping all 403 summaries is broad; implementation keeps the generated
+  artifact reviewable and validates full coverage, but reviewer attention is
+  still required.
+- Over-eager mapping to official keys could imply authority equivalence; the
+  artifact keeps all official matches as cross-reference candidates only.
 - Too many out-of-scope mappings could reduce SuperCombo cross-reference
   value.
-- Too many blocked mappings could delay JSON Schema redesign.
+- The one blocked mapping still blocks JSON Schema redesign unless resolved or
+  explicitly scoped out by review.
 - The mapping artifact may need follow-up review before value-shape
   disposition can fill `proposed_field_key` reliably.
 
@@ -442,7 +483,7 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan SuperCombo mapping artifacts | Drafted docs-only ExecPlan | `docs/execplans/2026-05-23-supercombo-field-mapping-artifacts.md` | `git diff --check` | Pass | None | Mandatory review pending | 403 mappings not assigned |
-| Preserve mapping boundaries | Planned source-native labels, semantic `source_family`, `source_name: supercombo`, and non-authority roles | ExecPlan only | reviewer check | Pending | None | Implementation not started | None |
-| Plan validation | Required coverage/status/privacy/source-boundary validator | ExecPlan only | reviewer check | Pending | None | Validator not implemented | Coverage errors possible later |
-| Keep schema blocked | Explicitly blocks JSON Schema redesign until mapping artifacts and value-shape disposition are reviewed | ExecPlan only | reviewer check | Pending | None | Value-shape disposition still pending | Schema work must wait |
+| Plan SuperCombo mapping artifacts | Implemented 403-record mapping artifacts | ExecPlan, generator, validator, tests, Markdown artifact, JSON artifact | `PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py` | Pass | None | Mandatory review pending | One blocked mapping remains |
+| Preserve mapping boundaries | Source-native labels, semantic `source_family`, `source_name: supercombo`, and non-authority roles are validated | `src/sf6_knowledge_coach/supercombo_field_mapping.py`, artifacts | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass, 35 tests | None | None | Reviewer must confirm policy choices |
+| Plan validation | Implemented coverage/status/privacy/source-boundary validator | `tests/validation/validate_supercombo_field_mapping.py` | `PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py` | Pass | None | None | CI will run after PR |
+| Keep schema blocked | JSON Schema redesign remains blocked until mapping artifacts and value-shape disposition are reviewed | ExecPlan and artifacts | reviewer check | Pending | None | Value-shape disposition still pending | Schema work must wait |
