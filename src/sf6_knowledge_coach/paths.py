@@ -11,9 +11,5 @@ def data_dir() -> Path:
     return repo_root() / "data"
 
 
-def aliases_file() -> Path:
-    return data_dir() / "aliases" / "ja-query-fixtures.json"
-
-
 def exports_dir() -> Path:
     return data_dir() / "exports"

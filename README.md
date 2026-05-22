@@ -24,7 +24,6 @@ under [docs/execplans/](docs/execplans/).
 - `docs/PLAN.md`: clean-slate architecture contract.
 - `docs/execplans/`: scoped execution plans for implementation slices.
 - `data/exports/`: retained public current-fact seed data.
-- `data/aliases/`: retained query-normalization seed data.
 - `src/sf6_knowledge_coach/`: minimal deterministic local tools.
 - `tests/`: clean-slate tests and validation.
 
