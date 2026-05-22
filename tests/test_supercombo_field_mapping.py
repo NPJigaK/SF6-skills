@@ -18,10 +18,10 @@ class SuperComboFieldMappingTests(unittest.TestCase):
             self.payload["mapping_status_counts"],
             {
                 "maps_to_existing_official_field_key": 80,
-                "supercombo_source_specific_field_key": 274,
+                "supercombo_source_specific_field_key": 275,
                 "enrichment_only_no_current_fact_mapping": 10,
                 "out_of_scope_first_normalized_export": 38,
-                "blocked_pending_human_review": 1,
+                "blocked_pending_human_review": 0,
             },
         )
         self.assertEqual(self.payload["source_role_counts"], {"cross_reference_candidate": 80, "enrichment_candidate": 323})

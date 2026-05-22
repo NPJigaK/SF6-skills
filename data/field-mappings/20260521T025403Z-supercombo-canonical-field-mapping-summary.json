@@ -3,13 +3,13 @@
   "artifact_schema_version": "supercombo_field_mapping_summary/v1",
   "authority_status": "supercombo_not_numeric_authority",
   "input_inventory": "data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json",
-  "json_schema_redesign_blocked_count": 1,
+  "json_schema_redesign_blocked_count": 0,
   "mapping_status_counts": {
-    "blocked_pending_human_review": 1,
+    "blocked_pending_human_review": 0,
     "enrichment_only_no_current_fact_mapping": 10,
     "maps_to_existing_official_field_key": 80,
     "out_of_scope_first_normalized_export": 38,
-    "supercombo_source_specific_field_key": 274
+    "supercombo_source_specific_field_key": 275
   },
   "mappings": [
     {
@@ -438,13 +438,13 @@
     {
       "affected_field_summary_count": 1,
       "display_label_ja": null,
-      "json_schema_redesign_blocked": true,
+      "json_schema_redesign_blocked": false,
       "mapping_id": "supercombo:character_vitals--throw_range_hurtbox",
-      "mapping_status": "blocked_pending_human_review",
+      "mapping_status": "supercombo_source_specific_field_key",
       "observation_count": 29,
       "official_field_key_target": null,
-      "proposed_field_key": null,
-      "rationale": "Combined throw range and hurtbox semantics require human review before mapping.",
+      "proposed_field_key": "supercombo_throw_range_hurtbox_pair",
+      "rationale": "Source review resolved this as an ordered SuperCombo throw range and hurtbox pair.",
       "review_item_count": 1,
       "run_id": "20260521T025403Z",
       "shape_classes": [

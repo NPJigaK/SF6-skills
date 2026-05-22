@@ -446,16 +446,14 @@ git status --short --branch
   more error-prone than deterministic generation from reviewed policy tables.
   Date/Author: 2026-05-23 / Codex
 
-- Decision: Leave `Character Vitals > Throw Range / Hurtbox` as
-  `blocked_pending_human_review`.
-  Rationale: The combined source label mixes throw range and hurtbox semantics;
-  mapping it without human disposition would guess normalized meaning.
+- Decision: Map `Character Vitals > Throw Range / Hurtbox` as
+  `supercombo_throw_range_hurtbox_pair`.
+  Rationale: Source review resolved the source label as an ordered SuperCombo
+  enrichment pair. It remains non-authority and still needs pair parser policy.
   Date/Author: 2026-05-23 / Codex
 
 ## Unresolved Decisions
 
-- Reviewer disposition for the single blocked mapping:
-  `Character Vitals > Throw Range / Hurtbox`.
 - Whether any SuperCombo source-specific enrichment keys should be renamed in
   a later normalized schema ExecPlan.
 - Value-shape review item disposition for 231 SuperCombo review item groups and
@@ -474,8 +472,6 @@ git status --short --branch
   artifact keeps all official matches as cross-reference candidates only.
 - Too many out-of-scope mappings could reduce SuperCombo cross-reference
   value.
-- The one blocked mapping still blocks JSON Schema redesign unless resolved or
-  explicitly scoped out by review.
 - The mapping artifact may need follow-up review before value-shape
   disposition can fill `proposed_field_key` reliably.
 
@@ -483,7 +479,7 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan SuperCombo mapping artifacts | Implemented 403-record mapping artifacts | ExecPlan, generator, validator, tests, Markdown artifact, JSON artifact | `PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py` | Pass | None | Mandatory review pending | One blocked mapping remains |
+| Plan SuperCombo mapping artifacts | Implemented 403-record mapping artifacts | ExecPlan, generator, validator, tests, Markdown artifact, JSON artifact | `PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py` | Pass | None | Mandatory review pending | No blocked mapping remains |
 | Preserve mapping boundaries | Source-native labels, semantic `source_family`, `source_name: supercombo`, and non-authority roles are validated | `src/sf6_knowledge_coach/supercombo_field_mapping.py`, artifacts | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass, 35 tests | None | None | Reviewer must confirm policy choices |
 | Plan validation | Implemented coverage/status/privacy/source-boundary validator | `tests/validation/validate_supercombo_field_mapping.py` | `PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py` | Pass | None | None | CI will run after PR |
 | Keep schema blocked | JSON Schema redesign remains blocked until mapping artifacts and value-shape disposition are reviewed | ExecPlan and artifacts | reviewer check | Pending | None | Value-shape disposition still pending | Schema work must wait |

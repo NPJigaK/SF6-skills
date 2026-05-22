@@ -7,16 +7,16 @@ SuperCombo numeric authority.
 - Run ID: `20260521T025403Z`
 - Input inventory: `data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json`
 - Total SuperCombo field summaries: `403`
-- JSON Schema redesign blocked records: `1`
+- JSON Schema redesign blocked records: `0`
 - Value-shape disposition dependencies: `231`
 
 ## Mapping Status Counts
 
 - `maps_to_existing_official_field_key`: 80
-- `supercombo_source_specific_field_key`: 274
+- `supercombo_source_specific_field_key`: 275
 - `enrichment_only_no_current_fact_mapping`: 10
 - `out_of_scope_first_normalized_export`: 38
-- `blocked_pending_human_review`: 1
+- `blocked_pending_human_review`: 0
 
 ## Section Counts
 
@@ -54,7 +54,7 @@ SuperCombo numeric authority.
 | `Character Vitals > Jump Apex` | `supercombo_source_specific_field_key` | `mobility` | `enrichment_candidate` | `supercombo_jump_apex` | `` | 29 | 1 | Jump apex is SuperCombo-specific mobility enrichment. |
 | `Character Vitals > Jump Speed` | `supercombo_source_specific_field_key` | `mobility` | `enrichment_candidate` | `supercombo_jump_speed` | `` | 29 | 0 | Jump speed is SuperCombo-specific mobility enrichment. |
 | `Character Vitals > Portrait` | `out_of_scope_first_normalized_export` | `metadata` | `enrichment_candidate` | `` | `` | 29 | 0 | Portrait media is excluded from first normalized and enrichment outputs. |
-| `Character Vitals > Throw Range / Hurtbox` | `blocked_pending_human_review` | `throw` | `enrichment_candidate` | `` | `` | 29 | 1 | Combined throw range and hurtbox semantics require human review before mapping. |
+| `Character Vitals > Throw Range / Hurtbox` | `supercombo_source_specific_field_key` | `throw` | `enrichment_candidate` | `supercombo_throw_range_hurtbox_pair` | `` | 29 | 1 | Source review resolved this as an ordered SuperCombo throw range and hurtbox pair. |
 | `Command Normals > Active` | `maps_to_existing_official_field_key` | `timing` | `cross_reference_candidate` | `active` | `active` | 141 | 1 | SuperCombo Active is a cross-reference candidate for official active frames after review. |
 | `Command Normals > After DR Blk` | `supercombo_source_specific_field_key` | `advantage` | `enrichment_candidate` | `supercombo_after_drive_rush_block_advantage` | `` | 141 | 1 | Drive-rush block advantage is SuperCombo-specific enrichment. |
 | `Command Normals > After DR Hit` | `supercombo_source_specific_field_key` | `advantage` | `enrichment_candidate` | `supercombo_after_drive_rush_hit_advantage` | `` | 141 | 1 | Drive-rush hit advantage is SuperCombo-specific enrichment. |

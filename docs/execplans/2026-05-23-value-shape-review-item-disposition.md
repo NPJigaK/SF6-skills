@@ -180,15 +180,15 @@ Implemented disposition summary:
 - total dispositions: 247
 - official dispositions: 16
 - SuperCombo dispositions: 231
-- `parse_rule_required_before_schema`: 206
+- `parse_rule_required_before_schema`: 208
 - `source_specific_enum_required`: 16
-- `schema_supports_raw_only`: 5
+- `schema_supports_raw_only`: 6
 - `out_of_scope_first_normalized_export`: 17
-- `blocked_pending_source_review`: 3
+- `blocked_pending_source_review`: 0
 - SuperCombo mapping dependencies: 231
-- JSON Schema redesign blocked records: 225
+- JSON Schema redesign blocked records: 224
 
-Blocked source-review items:
+Resolved source-review items:
 
 - official `動作フレーム > 持続` malformed-looking value group;
 - official `技名` note-bearing move-name variant group;
@@ -496,12 +496,12 @@ git status --short --branch
   dispositions would hide blockers.
   Date/Author: 2026-05-23 / Codex
 
-- Decision: Mark official malformed-looking `動作フレーム > 持続`, official
-  note-bearing `技名`, and SuperCombo `Character Vitals > Throw Range / Hurtbox`
-  as `blocked_pending_source_review`.
-  Rationale: These are the only groups that cannot safely proceed to schema or
-  classifier planning without additional source/domain review or completed
-  mapping clarification.
+- Decision: Consume source-review resolutions for official malformed-looking
+  `動作フレーム > 持続`, official note-bearing `技名`, and SuperCombo
+  `Character Vitals > Throw Range / Hurtbox`.
+  Rationale: Source review resolved those items enough for disposition:
+  active-frame notation and the SuperCombo pair need parser policy; note-bearing
+  move names can remain raw-only in the first schema.
   Date/Author: 2026-05-23 / Codex
 
 - Decision: Mark source-specific cancel/attribute/guard/defense categorical
@@ -525,13 +525,12 @@ git status --short --branch
 
 ## Unresolved Decisions
 
-- Exact parse/classifier rules for the 206
+- Exact parse/classifier rules for the 208
   `parse_rule_required_before_schema` groups.
 - Exact enum design for the 16 `source_specific_enum_required` groups.
-- Human review outcome for the 3 `blocked_pending_source_review` groups.
 - Whether any of the 17 `out_of_scope_first_normalized_export` groups should be
   pulled into a later normalized export.
-- Whether the 5 `schema_supports_raw_only` groups need additional display or
+- Whether the 6 `schema_supports_raw_only` groups need additional display or
   review-context schema fields.
 
 ## Deviations
@@ -548,14 +547,14 @@ git status --short --branch
   normalized export.
 - Long example context is summarized; reviewers may need to consult the
   source inventory or ignored local artifacts for full context.
-- JSON Schema redesign remains blocked because 225 disposition records still
-  require parse/classifier, enum, or source-review follow-up before schema work.
+- JSON Schema redesign remains blocked because 224 disposition records still
+  require parse/classifier or enum follow-up before schema work.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Implement review item disposition | Generated 247 disposition records | `src/sf6_knowledge_coach/value_shape_disposition.py`, disposition artifacts | `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_disposition build` | Pass | None | Mandatory review pending | 225 records still block schema redesign |
+| Implement review item disposition | Generated 247 disposition records | `src/sf6_knowledge_coach/value_shape_disposition.py`, disposition artifacts | `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_disposition build` | Pass | None | Mandatory review pending | 224 records still block schema redesign |
 | Validate coverage and boundaries | Added validator and tests | `tests/test_value_shape_disposition.py`, `tests/validation/validate_value_shape_disposition.py` | `PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_disposition.py` | Pass | None | Mandatory review pending | None |
 | Preserve mapping dependency | SuperCombo 231 review items reference mapping IDs | disposition JSON/Markdown | validator | Pass | None | None | SuperCombo remains non-authority |
 | Preserve source boundaries | Uses `inventory_source_family`; official and SuperCombo remain separate | disposition JSON/Markdown | validator | Pass | None | None | None |

@@ -57,6 +57,7 @@ PARSE_RULE_FAMILIES = {
     "projectile",
     "scaling",
     "timing",
+    "throw",
     "vital",
 }
 ENUM_FAMILIES = {"attribute", "cancel", "defense", "guard"}
@@ -390,14 +391,14 @@ def _official_disposition_policy(item: dict[str, Any], shape_classes: list[str])
     kind = str(item.get("kind"))
     if kind == "malformed_looking_source_value":
         return _policy(
-            "blocked_pending_source_review",
+            "parse_rule_required_before_schema",
             field_key,
             semantic_family,
             display_label_ja,
-            "Malformed-looking official value must be checked against the source before schema work.",
+            "Source review confirmed the official raw value; parser policy must handle malformed-looking notation before schema work.",
             True,
-            "source review for malformed official values",
-            "Source-review blocker; do not infer numeric meaning.",
+            "deterministic parsed-value classifier policy",
+            "Source review resolved this item; do not infer numeric meaning before parser policy.",
         )
     if source_header_path == ("備考",):
         return _policy(
@@ -412,14 +413,14 @@ def _official_disposition_policy(item: dict[str, Any], shape_classes: list[str])
         )
     if source_header_path == ("技名",):
         return _policy(
-            "blocked_pending_source_review",
+            "schema_supports_raw_only",
             field_key,
             semantic_family,
             display_label_ja,
-            "Note-bearing official move-name variants require source/domain review before identity schema design.",
-            True,
-            "source review for note-bearing move names",
-            "Move identity must not be normalized from a note-bearing source string by guesswork.",
+            "Source review confirmed note-bearing official move names can remain raw-only in the first schema.",
+            False,
+            None,
+            "Later move-identity splitting may be designed separately.",
         )
     if semantic_family in {"cancel", "attribute"}:
         return _policy(

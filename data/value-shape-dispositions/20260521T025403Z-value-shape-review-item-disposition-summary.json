@@ -3,10 +3,10 @@
   "artifact_schema_version": "value_shape_review_item_disposition_summary/v1",
   "authority_status": "disposition_only_not_authority",
   "disposition_counts": {
-    "blocked_pending_source_review": 3,
+    "blocked_pending_source_review": 0,
     "out_of_scope_first_normalized_export": 17,
-    "parse_rule_required_before_schema": 206,
-    "schema_supports_raw_only": 5,
+    "parse_rule_required_before_schema": 208,
+    "schema_supports_raw_only": 6,
     "source_specific_enum_required": 16
   },
   "dispositions": [
@@ -377,12 +377,12 @@
     {
       "affected_count": 3,
       "display_label_ja": "持続",
-      "disposition": "blocked_pending_source_review",
+      "disposition": "parse_rule_required_before_schema",
       "inventory_source_family": "official",
       "json_schema_redesign_blocked": true,
-      "next_execplan_needed": "source review for malformed official values",
+      "next_execplan_needed": "deterministic parsed-value classifier policy",
       "proposed_field_key": "active",
-      "rationale": "Malformed-looking official value must be checked against the source before schema work.",
+      "rationale": "Source review confirmed the official raw value; parser policy must handle malformed-looking notation before schema work.",
       "representative_examples": [
         {
           "raw_value": "30-34.35",
@@ -408,7 +408,7 @@
       ],
       "review_item_id": "value-shape:official--malformed_looking_source_value--u_fdb49a2113ba--u_c2b75204faf1",
       "review_kind": "malformed_looking_source_value",
-      "reviewer_notes": "Source-review blocker; do not infer numeric meaning.",
+      "reviewer_notes": "Source review resolved this item; do not infer numeric meaning before parser policy.",
       "run_id": "20260521T025403Z",
       "semantic_source_family": "timing",
       "shape_classes": [
@@ -683,12 +683,12 @@
     {
       "affected_count": 2,
       "display_label_ja": "技名",
-      "disposition": "blocked_pending_source_review",
+      "disposition": "schema_supports_raw_only",
       "inventory_source_family": "official",
-      "json_schema_redesign_blocked": true,
-      "next_execplan_needed": "source review for note-bearing move names",
+      "json_schema_redesign_blocked": false,
+      "next_execplan_needed": null,
       "proposed_field_key": "move_name",
-      "rationale": "Note-bearing official move-name variants require source/domain review before identity schema design.",
+      "rationale": "Source review confirmed note-bearing official move names can remain raw-only in the first schema.",
       "representative_examples": [
         {
           "raw_value": "スクトゥム(当身派生版)※スクトゥム中に打撃を受ける",
@@ -707,7 +707,7 @@
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_1aa6a6f86513",
       "review_kind": "source_specific_expression",
-      "reviewer_notes": "Move identity must not be normalized from a note-bearing source string by guesswork.",
+      "reviewer_notes": "Later move-identity splitting may be designed separately.",
       "run_id": "20260521T025403Z",
       "semantic_source_family": "identity",
       "shape_classes": [
@@ -1222,12 +1222,12 @@
     {
       "affected_count": 29,
       "display_label_ja": null,
-      "disposition": "blocked_pending_source_review",
+      "disposition": "parse_rule_required_before_schema",
       "inventory_source_family": "supercombo",
       "json_schema_redesign_blocked": true,
-      "next_execplan_needed": "SuperCombo field mapping human review",
-      "proposed_field_key": null,
-      "rationale": "The SuperCombo field mapping itself is blocked pending human review.",
+      "next_execplan_needed": "deterministic parsed-value classifier policy",
+      "proposed_field_key": "supercombo_throw_range_hurtbox_pair",
+      "rationale": "The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use.",
       "representative_examples": [
         {
           "raw_value": "0.8 / 0.33",
@@ -1267,7 +1267,7 @@
       ],
       "review_item_id": "value-shape:supercombo--unclassified_expression--character_vitals--throw_range_hurtbox",
       "review_kind": "unclassified_expression",
-      "reviewer_notes": "Schema work must not consume this field until mapping is resolved or scoped out.",
+      "reviewer_notes": "Do not use these values as numeric authority.",
       "run_id": "20260521T025403Z",
       "semantic_source_family": "throw",
       "shape_classes": [
@@ -14103,7 +14103,7 @@
     "official": 16,
     "supercombo": 231
   },
-  "json_schema_redesign_blocked_count": 225,
+  "json_schema_redesign_blocked_count": 224,
   "json_schema_redesign_gate": {
     "blocked_until": [
       "all parse_rule_required_before_schema records get parser/classifier policy",
