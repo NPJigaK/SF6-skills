@@ -28,6 +28,14 @@ When implementing:
 - VLM output is observation_candidate, never reviewed knowledge.
 - Discord is a thin adapter only.
 
+## Reviewer Tooling Boundary
+
+- Repo-local Codex skills may be installed under `.agents/skills/` for reviewer-only external observation.
+- Playwright/browser skills, if installed, are reviewer observation tools only.
+- Do not add Playwright/browser automation to committed runtime code, CLI commands, CI validation, or normal deterministic validators unless an approved ExecPlan explicitly authorizes it.
+- Do not install project skills into global Codex locations or Windows global Codex paths.
+- Keep `.agents/` ignored and uncommitted.
+
 ## Validation
 
 Before finalizing changes, run:
