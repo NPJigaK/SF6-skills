@@ -1,6 +1,6 @@
 # Value-Shape Review Item Disposition
 
-Status: Drafted for review.
+Status: Implementation complete; review pending.
 
 ## Purpose
 
@@ -13,9 +13,10 @@ groups are value-shape and expression blockers. They do not cover all 403
 SuperCombo field summaries and must not be treated as a substitute for
 SuperCombo field mapping.
 
-This ExecPlan is docs-only. It does not implement schemas, parsers,
-classifiers, normalized exports, retrieval changes, answer behavior, runtime
-behavior, data artifacts, or authority promotion.
+This ExecPlan now implements the review disposition artifacts for all 247
+grouped value-shape review items. It does not implement schemas, parsers,
+classifiers, normalized exports, retrieval changes, answer behavior, daily
+runtime behavior, or authority promotion.
 
 JSON Schema redesign remains blocked until both are reviewed:
 
@@ -26,15 +27,18 @@ JSON Schema redesign remains blocked until both are reviewed:
 
 Included:
 
-- Plan disposition coverage for every grouped review item emitted by the
+- Implement disposition coverage for every grouped review item emitted by the
   latest value-shape inventory.
 - Define required disposition categories.
 - Define required per-review-item fields.
 - Define dependency on SuperCombo canonical field mapping review.
-- Define future public disposition artifact shape.
+- Create public Markdown and JSON disposition artifacts.
+- Add a deterministic generator and validator for the disposition artifacts.
+- Add focused tests for coverage, source boundaries, authority boundaries, and
+  public example limits.
 - Preserve official and SuperCombo source boundaries.
 - Preserve authority boundaries.
-- Define validation expectations for a later disposition implementation.
+- Define validation expectations for later schema/classifier planning.
 
 Excluded:
 
@@ -42,8 +46,7 @@ Excluded:
 - Do not implement parser or classifier code.
 - Do not implement normalized export.
 - Do not change retrieval or answer behavior.
-- Do not modify runtime code.
-- Do not modify existing data artifacts in this planning step.
+- Do not change daily-answer runtime behavior.
 - Do not run live official or SuperCombo acquisition.
 - Do not use `solve_cloudflare=True`.
 - Do not promote official data to current-fact authority.
@@ -61,6 +64,12 @@ Excluded:
 - The plan states that 247 review item dispositions do not cover all 403
   SuperCombo field summaries.
 - The plan covers all 247 grouped review item groups.
+- The implementation assigns exactly one disposition to each of the 247 grouped
+  review item groups.
+- The implementation produces Markdown and JSON public artifacts.
+- The implementation validates coverage, status exclusivity, source boundaries,
+  authority boundaries, SuperCombo mapping dependencies, and public example
+  limits.
 - The plan defines the required disposition categories.
 - The plan defines required fields for each disposition record.
 - The plan uses `inventory_source_family` for the inventory source identity.
@@ -78,9 +87,17 @@ Excluded:
 
 ## Files / Interfaces
 
-Created in this step:
+Created in the planning step:
 
 - `docs/execplans/2026-05-23-value-shape-review-item-disposition.md`
+
+Created in the implementation step:
+
+- `src/sf6_knowledge_coach/value_shape_disposition.py`
+- `tests/test_value_shape_disposition.py`
+- `tests/validation/validate_value_shape_disposition.py`
+- `docs/value-shape-dispositions/20260521T025403Z-value-shape-review-item-disposition.md`
+- `data/value-shape-dispositions/20260521T025403Z-value-shape-review-item-disposition-summary.json`
 
 Required input inventory artifacts:
 
@@ -98,7 +115,7 @@ Reference plans:
 - `AGENTS.md`
 - `docs/execplans/2026-05-23-latest-source-value-shape-inventory.md`
 
-Future disposition output should be both Markdown and JSON:
+Disposition output is both Markdown and JSON:
 
 - Markdown review table:
   `docs/value-shape-dispositions/20260521T025403Z-value-shape-review-item-disposition.md`
@@ -112,7 +129,9 @@ Rationale:
   planning.
 - Both together match the inventory and SuperCombo mapping artifact pattern.
 
-This ExecPlan does not create those future artifacts.
+These artifacts are public summaries only. They do not contain raw HTML, full
+raw rows, full source table dumps, screenshots, local paths, cookies, browser
+profiles, traces, debug dumps, answer logs, training logs, or private data.
 
 ## Input Inventory Facts
 
@@ -156,6 +175,25 @@ The 231 SuperCombo review item groups are a subset of value-shape issues. They
 do not cover every SuperCombo field summary. Canonical field mapping for all
 403 SuperCombo field summaries remains a separate prerequisite.
 
+Implemented disposition summary:
+
+- total dispositions: 247
+- official dispositions: 16
+- SuperCombo dispositions: 231
+- `parse_rule_required_before_schema`: 206
+- `source_specific_enum_required`: 16
+- `schema_supports_raw_only`: 5
+- `out_of_scope_first_normalized_export`: 17
+- `blocked_pending_source_review`: 3
+- SuperCombo mapping dependencies: 231
+- JSON Schema redesign blocked records: 225
+
+Blocked source-review items:
+
+- official `動作フレーム > 持続` malformed-looking value group;
+- official `技名` note-bearing move-name variant group;
+- SuperCombo `Character Vitals > Throw Range / Hurtbox`.
+
 ## Dependency Gate
 
 This disposition plan depends on two prior policy surfaces:
@@ -173,7 +211,7 @@ This disposition plan depends on two prior policy surfaces:
      source-specific keys, enrichment-only context, out-of-scope deferrals, or
      blocked human review.
 
-Future disposition implementation must use SuperCombo mapping outputs when a
+This disposition implementation uses SuperCombo mapping outputs when a
 SuperCombo review item needs `proposed_field_key`.
 
 If SuperCombo mapping is incomplete:
@@ -353,9 +391,9 @@ JSON Schema redesign remains blocked until:
 This disposition work may reduce schema risk, but it does not itself implement
 JSON Schema redesign.
 
-## Future Validation Strategy
+## Validation Strategy
 
-The later disposition implementation should validate:
+The disposition implementation validates:
 
 - input inventory run ID is `20260521T025403Z`;
 - input review item count is exactly 247;
@@ -375,7 +413,7 @@ The later disposition implementation should validate:
   secrets, screenshots, traces, answer logs, training logs, or private data
   appear in public artifacts.
 
-The future implementation should also provide a review summary:
+The implementation also provides a review summary:
 
 ```yaml
 disposition_summary:
@@ -399,7 +437,14 @@ Run from repository root:
 
 ```bash
 git diff --check
+git diff --cached --check
+uv lock --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_inventory.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_supercombo_field_mapping.py
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_disposition build
+PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_disposition.py
 git status --short --branch
 ```
 
@@ -418,7 +463,13 @@ git status --short --branch
   `git diff --check`,
   `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
   and `git status --short --branch`.
-- [ ] Complete mandatory review.
+- [x] (2026-05-23 JST) Created implementation branch
+  `impl/value-shape-review-item-disposition`.
+- [x] (2026-05-23 JST) Implemented deterministic disposition generator and
+  validator.
+- [x] (2026-05-23 JST) Generated Markdown and JSON disposition artifacts.
+- [x] (2026-05-23 JST) Added focused disposition tests and validation script.
+- [ ] Complete mandatory implementation review.
 
 ## Decision Log
 
@@ -435,7 +486,7 @@ git status --short --branch
   categories.
   Date/Author: 2026-05-23 / Codex
 
-- Decision: Future disposition output should be both Markdown and JSON.
+- Decision: Disposition output should be both Markdown and JSON.
   Rationale: Markdown supports human review of 247 groups, while JSON supports
   deterministic coverage validation and later schema/classifier planning.
   Date/Author: 2026-05-23 / Codex
@@ -445,17 +496,43 @@ git status --short --branch
   dispositions would hide blockers.
   Date/Author: 2026-05-23 / Codex
 
+- Decision: Mark official malformed-looking `動作フレーム > 持続`, official
+  note-bearing `技名`, and SuperCombo `Character Vitals > Throw Range / Hurtbox`
+  as `blocked_pending_source_review`.
+  Rationale: These are the only groups that cannot safely proceed to schema or
+  classifier planning without additional source/domain review or completed
+  mapping clarification.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Mark source-specific cancel/attribute/guard/defense categorical
+  groups as `source_specific_enum_required`.
+  Rationale: They are finite source-native categories and need reviewed enum
+  design before parser/schema work.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Mark notes/prose enrichment groups as
+  `schema_supports_raw_only`.
+  Rationale: They should be preserved for review context without emitting
+  parsed values or numeric authority.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Mark mapped numeric/current-fact-like special shapes as
+  `parse_rule_required_before_schema`.
+  Rationale: Parentheses, brackets, ranges, note markers, knockdown notation,
+  gauge variants, and other expression shapes require deterministic parse or
+  classifier policy before normalized schema work.
+  Date/Author: 2026-05-23 / Codex
+
 ## Unresolved Decisions
 
-- The actual disposition for each of the 247 review item groups.
-- Which official review items block the first normalized schema.
-- Which SuperCombo review items depend on a completed canonical field mapping.
-- Which SuperCombo review items are out of scope for the first normalized
-  export.
-- Which source-specific enum sets must be designed before schema work.
-- Which parse rules are required before schema versus deferred parser work.
-- Exact future artifact paths may be adjusted during implementation review if
-  the proposed paths conflict with repository organization.
+- Exact parse/classifier rules for the 206
+  `parse_rule_required_before_schema` groups.
+- Exact enum design for the 16 `source_specific_enum_required` groups.
+- Human review outcome for the 3 `blocked_pending_source_review` groups.
+- Whether any of the 17 `out_of_scope_first_normalized_export` groups should be
+  pulled into a later normalized export.
+- Whether the 5 `schema_supports_raw_only` groups need additional display or
+  review-context schema fields.
 
 ## Deviations
 
@@ -471,12 +548,15 @@ git status --short --branch
   normalized export.
 - Long example context is summarized; reviewers may need to consult the
   source inventory or ignored local artifacts for full context.
+- JSON Schema redesign remains blocked because 225 disposition records still
+  require parse/classifier, enum, or source-review follow-up before schema work.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan corrected review item disposition | Drafted docs-only ExecPlan | `docs/execplans/2026-05-23-value-shape-review-item-disposition.md` | `git diff --check` | Pass | None | Mandatory review pending | 247 item dispositions not yet assigned |
-| Preserve mapping dependency | SuperCombo 403 mapping review is explicit prerequisite | ExecPlan only | reviewer check | Pending | None | SuperCombo mapping output not implemented | Proposed field keys may be unavailable |
-| Preserve source boundaries | Uses `inventory_source_family`; official and SuperCombo remain separate | ExecPlan only | reviewer check | Pending | None | Future disposition implementation needed | None |
-| Keep JSON Schema blocked | Disposition gate and SuperCombo mapping gate explicitly block schema redesign | ExecPlan only | reviewer check | Pending | None | All dispositions unresolved | Schema work must wait |
+| Implement review item disposition | Generated 247 disposition records | `src/sf6_knowledge_coach/value_shape_disposition.py`, disposition artifacts | `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.value_shape_disposition build` | Pass | None | Mandatory review pending | 225 records still block schema redesign |
+| Validate coverage and boundaries | Added validator and tests | `tests/test_value_shape_disposition.py`, `tests/validation/validate_value_shape_disposition.py` | `PYTHONPATH=src uv run --locked python tests/validation/validate_value_shape_disposition.py` | Pass | None | Mandatory review pending | None |
+| Preserve mapping dependency | SuperCombo 231 review items reference mapping IDs | disposition JSON/Markdown | validator | Pass | None | None | SuperCombo remains non-authority |
+| Preserve source boundaries | Uses `inventory_source_family`; official and SuperCombo remain separate | disposition JSON/Markdown | validator | Pass | None | None | None |
+| Keep JSON Schema blocked | Disposition gate and SuperCombo mapping gate block schema redesign | ExecPlan and disposition artifacts | reviewer check | Pending | None | Parser/enum/source-review follow-ups unresolved | Schema work must wait |
