@@ -9,16 +9,16 @@ numeric authority.
 - Input inventory: `data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json`
 - Input SuperCombo mapping: `data/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-summary.json`
 - Total review items: `247`
-- JSON Schema redesign blocked records: `225`
+- JSON Schema redesign blocked records: `224`
 - SuperCombo mapping dependencies: `231`
 
 ## Disposition Counts
 
-- `parse_rule_required_before_schema`: 206
-- `schema_supports_raw_only`: 5
+- `parse_rule_required_before_schema`: 208
+- `schema_supports_raw_only`: 6
 - `source_specific_enum_required`: 16
 - `out_of_scope_first_normalized_export`: 17
-- `blocked_pending_source_review`: 3
+- `blocked_pending_source_review`: 0
 
 ## Source Counts
 
@@ -35,12 +35,12 @@ numeric authority.
 | `value-shape:official--source_specific_expression--u_55d872f6091a` | `official` | `コンボ補正値` | `source_specific_expression` | `parse_rule_required_before_schema` | `combo_scaling` | `authority_candidate` | 55 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--source_specific_expression--u_202a059d9b1b` | `official` | `ダメージ` | `source_specific_expression` | `parse_rule_required_before_schema` | `damage` | `authority_candidate` | 36 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--source_specific_expression--u_80309c573b8b` | `official` | `備考` | `source_specific_expression` | `schema_supports_raw_only` | `remarks` | `authority_candidate` | 311 | Official remarks are source prose and should remain raw-only in the first schema. |
-| `value-shape:official--malformed_looking_source_value--u_fdb49a2113ba--u_c2b75204faf1` | `official` | `動作フレーム > 持続` | `malformed_looking_source_value` | `blocked_pending_source_review` | `active` | `authority_candidate` | 3 | Malformed-looking official value must be checked against the source before schema work. |
+| `value-shape:official--malformed_looking_source_value--u_fdb49a2113ba--u_c2b75204faf1` | `official` | `動作フレーム > 持続` | `malformed_looking_source_value` | `parse_rule_required_before_schema` | `active` | `authority_candidate` | 3 | Source review confirmed the official raw value; parser policy must handle malformed-looking notation before schema work. |
 | `value-shape:official--source_specific_expression--u_fdb49a2113ba--u_c2b75204faf1` | `official` | `動作フレーム > 持続` | `source_specific_expression` | `parse_rule_required_before_schema` | `active` | `authority_candidate` | 44 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100` | `official` | `動作フレーム > 発生` | `source_specific_expression` | `parse_rule_required_before_schema` | `startup` | `authority_candidate` | 6 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--source_specific_expression--u_fdb49a2113ba--u_4b3674d32cef` | `official` | `動作フレーム > 硬直` | `source_specific_expression` | `parse_rule_required_before_schema` | `recovery` | `authority_candidate` | 28 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--source_specific_expression--u_86de52d17820` | `official` | `属性` | `source_specific_expression` | `source_specific_enum_required` | `attribute` | `authority_candidate` | 9 | Official categorical values need a reviewed source-specific enum before schema/parser work. |
-| `value-shape:official--source_specific_expression--u_1aa6a6f86513` | `official` | `技名` | `source_specific_expression` | `blocked_pending_source_review` | `move_name` | `authority_candidate` | 2 | Note-bearing official move-name variants require source/domain review before identity schema design. |
+| `value-shape:official--source_specific_expression--u_1aa6a6f86513` | `official` | `技名` | `source_specific_expression` | `schema_supports_raw_only` | `move_name` | `authority_candidate` | 2 | Source review confirmed note-bearing official move names can remain raw-only in the first schema. |
 | `value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb` | `official` | `硬直差 > ガード` | `source_specific_expression` | `parse_rule_required_before_schema` | `block_advantage` | `authority_candidate` | 6 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb` | `official` | `硬直差 > ガード` | `unclassified_expression` | `parse_rule_required_before_schema` | `block_advantage` | `authority_candidate` | 3 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
 | `value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69` | `official` | `硬直差 > ヒット` | `source_specific_expression` | `parse_rule_required_before_schema` | `hit_advantage` | `authority_candidate` | 4 | Official current-fact values with special shapes need deterministic parse rules before schema redesign. |
@@ -52,7 +52,7 @@ numeric authority.
 | `value-shape:supercombo--unclassified_expression--character_vitals--forward_jump_distance` | `supercombo` | `Character Vitals > Forward Jump Distance` | `unclassified_expression` | `parse_rule_required_before_schema` | `supercombo_forward_jump_distance` | `enrichment_candidate` | 2 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |
 | `value-shape:supercombo--unclassified_expression--character_vitals--forward_walk_speed` | `supercombo` | `Character Vitals > Forward Walk Speed` | `unclassified_expression` | `parse_rule_required_before_schema` | `supercombo_forward_walk_speed` | `enrichment_candidate` | 1 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |
 | `value-shape:supercombo--unclassified_expression--character_vitals--jump_apex` | `supercombo` | `Character Vitals > Jump Apex` | `unclassified_expression` | `parse_rule_required_before_schema` | `supercombo_jump_apex` | `enrichment_candidate` | 1 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |
-| `value-shape:supercombo--unclassified_expression--character_vitals--throw_range_hurtbox` | `supercombo` | `Character Vitals > Throw Range / Hurtbox` | `unclassified_expression` | `blocked_pending_source_review` | `` | `enrichment_candidate` | 29 | The SuperCombo field mapping itself is blocked pending human review. |
+| `value-shape:supercombo--unclassified_expression--character_vitals--throw_range_hurtbox` | `supercombo` | `Character Vitals > Throw Range / Hurtbox` | `unclassified_expression` | `parse_rule_required_before_schema` | `supercombo_throw_range_hurtbox_pair` | `enrichment_candidate` | 29 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |
 | `value-shape:supercombo--unclassified_expression--command_normals--active` | `supercombo` | `Command Normals > Active` | `unclassified_expression` | `parse_rule_required_before_schema` | `active` | `cross_reference_candidate` | 13 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |
 | `value-shape:supercombo--unclassified_expression--command_normals--after_dr_blk` | `supercombo` | `Command Normals > After DR Blk` | `unclassified_expression` | `parse_rule_required_before_schema` | `supercombo_after_drive_rush_block_advantage` | `enrichment_candidate` | 11 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |
 | `value-shape:supercombo--unclassified_expression--command_normals--after_dr_hit` | `supercombo` | `Command Normals > After DR Hit` | `unclassified_expression` | `parse_rule_required_before_schema` | `supercombo_after_drive_rush_hit_advantage` | `enrichment_candidate` | 21 | The SuperCombo field has special value shapes that need deterministic parse/classifier policy before schema use. |

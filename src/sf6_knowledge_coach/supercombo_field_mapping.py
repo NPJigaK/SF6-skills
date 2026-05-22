@@ -142,7 +142,7 @@ CHARACTER_VITALS_LABELS: dict[str, MappingPolicy] = {
     "Jump Apex": MappingPolicy("supercombo_source_specific_field_key", "mobility", "supercombo_jump_apex", None, "enrichment_candidate", "Jump apex is SuperCombo-specific mobility enrichment."),
     "Jump Speed": MappingPolicy("supercombo_source_specific_field_key", "mobility", "supercombo_jump_speed", None, "enrichment_candidate", "Jump speed is SuperCombo-specific mobility enrichment."),
     "Portrait": MappingPolicy("out_of_scope_first_normalized_export", "metadata", None, None, "enrichment_candidate", "Portrait media is excluded from first normalized and enrichment outputs."),
-    "Throw Range / Hurtbox": MappingPolicy("blocked_pending_human_review", "throw", None, None, "enrichment_candidate", "Combined throw range and hurtbox semantics require human review before mapping.", True),
+    "Throw Range / Hurtbox": MappingPolicy("supercombo_source_specific_field_key", "throw", "supercombo_throw_range_hurtbox_pair", None, "enrichment_candidate", "Source review resolved this as an ordered SuperCombo throw range and hurtbox pair."),
 }
 
 
