@@ -16,10 +16,10 @@ from sf6_knowledge_coach.paths import repo_root
 
 
 class CleanSlateCliTests(unittest.TestCase):
-    def test_resolves_seed_alias_fixture(self) -> None:
-        context = resolve_query("リュウの屈中Pってガードで何F？")
-        self.assertEqual(context.character_slug, "ryu")
-        self.assertEqual(context.move_input, "2MP")
+    def test_resolves_current_fact_query_without_legacy_alias_fixture(self) -> None:
+        context = resolve_query("JPの5LPってガードで何F？")
+        self.assertEqual(context.character_slug, "jp")
+        self.assertEqual(context.move_input, "5LP")
         self.assertEqual(context.field, "block_adv")
 
     def test_current_fact_lookup_uses_official_raw(self) -> None:

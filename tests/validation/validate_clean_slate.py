@@ -18,7 +18,6 @@ REQUIRED_PATHS = [
     "src/sf6_knowledge_coach/cli.py",
     "tests/test_cli.py",
     "tests/validation/validate_clean_slate.py",
-    "data/aliases/ja-query-fixtures.json",
     "data/exports/jp/official_raw.json",
 ]
 

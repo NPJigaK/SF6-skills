@@ -183,7 +183,9 @@ knowledge_item:
 
 - SQLite + FTS: prose/search 用。概念説明、レビュー済み知識、用語、戦術メモの検索に使う。
 - Structured numeric tables: frame、damage、scaling、punish、combo damage、patch delta、current move facts の正確値に使う。
-- Alias dictionary from `data/aliases/`: 日本語・英語・略称・表記揺れのquery normalizationに使う。
+- Alias dictionary: 日本語・英語・略称・表記揺れのquery normalizationに使う。旧
+  `data/aliases/` seed fixtureはclean-slate後の負債としてretireし、将来の
+  alias dictionary surfaceは別ExecPlanで新規設計する。
 - Metadata filters: evidence boundary、status、review state、patch sensitivity、source role、personal/public boundary の絞り込みに使う。
 
 数値回答は、prose FTSやLLM memoryではなく、deterministic tools/tables の結果を必須根拠にする。
@@ -327,7 +329,7 @@ Step 2: 30+短尺クリップ
 - 公開repoに実個人情報は置かない
 - 日常回答runtimeはCodex CLI中心
 - API課金前提の回答runtimeにはしない
-- 初期検索・取得はSQLite + FTS、structured numeric tables、`data/aliases/` alias dictionary、metadata filtersを組み合わせる
+- 初期検索・取得はSQLite + FTS、structured numeric tables、newly designed alias dictionary、metadata filtersを組み合わせる
 - 数値回答はdeterministic tools/tablesを必須根拠にし、prose FTSやLLM memoryから答えない
 - ベクトル検索は後続判断
 - 動画の元データと解析中間物はGit外
