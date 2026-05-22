@@ -1,6 +1,6 @@
 # Source Acquisition CI Alignment
 
-Status: Draft; planning-only, not implemented.
+Status: Implemented locally; awaiting mandatory review.
 
 ## Purpose
 
@@ -86,14 +86,14 @@ Planning file:
 
 - `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md`
 
-Expected implementation file:
+Implementation file:
 
 - `.github/workflows/ci.yml`
 
 No runtime, schema, parser, retrieval, answer, validator, or data artifact file
-changes are planned. If implementation discovers that another file is required,
-the implementer must update the Decision Log and stop for review before
-editing it.
+changes are included. If future implementation discovers that another file is
+required, the implementer must update the Decision Log and stop for review
+before editing it.
 
 Planned CI command surface:
 
@@ -180,8 +180,24 @@ pull_request CI passing before PR readiness.
   `git diff --check`,
   `PYTHONPATH=src python tests/validation/validate_clean_slate.py`, and
   `git status --short --branch`.
-- [ ] Complete mandatory review.
-- [ ] Implement CI alignment in a separate implementation step after approval.
+- [x] (2026-05-22 JST) Mandatory review completed with no actionable findings.
+- [x] (2026-05-22 JST) Merged PR #306 into `main`; main CI passed on merge
+  commit `5efd5ace4e854d6b76db4aa685b50dae03f51bc7`.
+- [x] (2026-05-22 JST) Started implementation branch
+  `impl/source-acquisition-ci-alignment` from updated `main`.
+- [x] (2026-05-22 JST) Chose `astral-sh/setup-uv@v8.1.0` with
+  `version: "0.11.15"` and `enable-cache: "false"` as the minimal CI `uv`
+  setup mechanism.
+- [x] (2026-05-22 JST) Updated `.github/workflows/ci.yml` to run
+  `uv lock --check`, Scrapling import validation, unit tests, clean-slate
+  validation, current-fact CLI smoke, and public acquisition report validation
+  through `uv run --locked`.
+- [x] (2026-05-22 JST) Ran implementation validation:
+  `git diff --check`, `git diff --cached --check`, `uv lock --check`,
+  Scrapling import check, unit tests, clean-slate validator, current-fact CLI
+  smoke, public acquisition report validation, and
+  `git status --short --branch`.
+- [ ] Complete mandatory review for the implementation.
 
 ## Decision Log
 
@@ -211,14 +227,22 @@ pull_request CI passing before PR readiness.
   change that boundary.
   Date/Author: 2026-05-22 / Codex
 
+- Decision: Use `astral-sh/setup-uv@v8.1.0` with `version: "0.11.15"` in CI.
+  Rationale: `astral-sh/setup-uv` is the focused GitHub Action maintained for
+  installing `uv`. `v8.1.0` is the current latest release observed during
+  implementation, and `0.11.15` matches local validation. Pinning both avoids
+  relying on a floating action or floating `uv` release for this CI slice.
+  Date/Author: 2026-05-22 / Codex
+
+- Decision: Disable `uv` cache in CI with `enable-cache: "false"`.
+  Rationale: The approved plan defaulted to no dependency cache unless a clear
+  need appeared. This implementation does not need cache behavior to validate
+  the dependency/import/report surface.
+  Date/Author: 2026-05-22 / Codex
+
 ## Unresolved Decisions
 
-- The implementation must choose the exact `uv` setup mechanism for GitHub
-  Actions and record it before editing the workflow. The preferred direction is
-  a focused setup action or equivalent minimal bootstrap, but the final action
-  reference should be reviewed during implementation.
-- Whether to add dependency caching is deferred. The default for this slice is
-  no explicit cache unless implementation review shows a clear need.
+- None for this implementation slice.
 
 ## Deviations
 
@@ -232,8 +256,6 @@ pull_request CI passing before PR readiness.
 - CI will not run `validate-artifacts` unless a later ExecPlan introduces a
   safe, non-public, CI-local artifact generation strategy. Current policy keeps
   `.local` artifacts out of CI.
-- The exact `uv` setup mechanism is not fixed by this planning step and must
-  be selected carefully during implementation.
 - Installing dependencies in CI introduces dependency-bootstrap network use.
   This must remain limited to CI environment setup and must not become daily
   answer web access or live source acquisition.
@@ -242,6 +264,9 @@ pull_request CI passing before PR readiness.
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan source-acquisition CI alignment | Drafted this ExecPlan only | `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md` | `git diff --check` | Pass | None | Implementation not started | Exact `uv` setup mechanism deferred |
-| Preserve no-live-acquisition boundary | Planned CI report/dependency validation only | `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md` | `PYTHONPATH=src python tests/validation/validate_clean_slate.py` | Pass | None | Implementation not started | CI will not prove live acquisition |
-| Keep authority unchanged | Planned no schema/parser/retrieval/answer changes | `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md` | Reviewer check | Pending mandatory review | None | Implementation not started | None |
+| Plan source-acquisition CI alignment | Drafted and reviewed this ExecPlan | `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md` | `git diff --check` | Pass | None | None | None |
+| Add `uv` setup | Use `astral-sh/setup-uv@v8.1.0`, pin `uv` `0.11.15`, disable cache | `.github/workflows/ci.yml` | `uv lock --check` | Pass | None | None | Dependency-bootstrap network use |
+| Validate Scrapling dependency | Add `Fetcher` and `StealthyFetcher` import check | `.github/workflows/ci.yml` | Scrapling import command | Pass | None | None | None |
+| Validate committed report only | Add `validate-report`; keep `validate-artifacts` out of CI | `.github/workflows/ci.yml` | acquisition report validation | Pass | None | `.local` artifact validation remains local/reviewer-only | CI will not prove live acquisition or local artifact integrity |
+| Preserve no-live-acquisition boundary | CI does not run acquisition, browser review, `solve_cloudflare=True`, or uploads | `.github/workflows/ci.yml`; `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md` | Reviewer check | Pending mandatory review | None | None | CI will not prove live acquisition |
+| Keep authority unchanged | No schema/parser/retrieval/answer behavior changes | `docs/execplans/2026-05-22-source-acquisition-ci-alignment.md`; `.github/workflows/ci.yml` | Reviewer check | Pending mandatory review | None | None | None |
