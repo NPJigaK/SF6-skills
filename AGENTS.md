@@ -1,55 +1,130 @@
-## Project Goal
+# AGENTS.md
 
-Build SF6 Knowledge Coach: a character-agnostic personal SF6 coaching system.
-JP is the initial primary active character, not a hardcoded global assumption.
+Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
 
-## Plan Conformance
+**Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
-For multi-file changes, create or follow an approved ExecPlan before editing.
+## 1. Think Before Coding
 
-When implementing:
-- Implement only what the approved ExecPlan says.
-- Do not add features, dependencies, schemas, public APIs, or runtime behavior outside the plan.
-- If the plan is wrong or incomplete, update Decision Log and stop for confirmation.
-- Keep Progress updated after each milestone.
-- Run listed validation commands.
-- Report deviations at the end.
+**Don't assume. Don't hide confusion. Surface tradeoffs.**
 
-## Hard Rules
+Before implementing:
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them - don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
 
-- Do not put real personal data in the public repo.
-- Do not commit real user_profile, personal_reviewed, training logs, answer logs, private vault path, or private overlay DB.
-- Numeric answers require dedicated tool results.
-- Do not answer frame/damage/scaling/punish questions from memory.
-- Do not use candidate/observed/deprecated knowledge as definitive daily-answer evidence.
-- Daily answer mode is read-only for public repo and knowledge files.
-- Web access is not allowed in daily answer mode.
-- Web access belongs to update/research modes only.
-- VLM output is observation_candidate, never reviewed knowledge.
-- Discord is a thin adapter only.
+## 2. Simplicity First
 
-## Reviewer Tooling Boundary
+**Minimum code that solves the problem. Nothing speculative.**
 
-- Repo-local Codex skills may be installed under `.agents/skills/` for reviewer-only external observation.
-- Playwright/browser skills, if installed, are reviewer observation tools only.
-- Reviewers may use `jq` for local JSON inspection, count checks, and artifact sanity checks.
-- `jq` use is reviewer tooling only and must not become a runtime dependency unless an approved ExecPlan explicitly adds it.
-- Do not add Playwright/browser automation to committed runtime code, CLI commands, CI validation, or normal deterministic validators unless an approved ExecPlan explicitly authorizes it.
-- Do not install project skills into global Codex locations or Windows global Codex paths.
-- Keep `.agents/` ignored and uncommitted.
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
 
-## Validation
+Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
-Before finalizing changes, run:
+## 3. Surgical Changes
+
+**Touch only what you must. Clean up only your own mess.**
+
+When editing existing code:
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it - don't delete it.
+
+When your changes create orphans:
+- Remove imports/variables/functions that YOUR changes made unused.
+- Don't remove pre-existing dead code unless asked.
+
+The test: Every changed line should trace directly to the user's request.
+
+## 4. Goal-Driven Execution
+
+**Define success criteria. Loop until verified.**
+
+Transform tasks into verifiable goals:
+- "Add validation" → "Write tests for invalid inputs, then make them pass"
+- "Fix the bug" → "Write a test that reproduces it, then make it pass"
+- "Refactor X" → "Ensure tests pass before and after"
+
+For multi-step tasks, state a brief plan:
+```
+1. [Step] → verify: [check]
+2. [Step] → verify: [check]
+3. [Step] → verify: [check]
+```
+
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+---
+
+**These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
+## Priority / 優先順位
+
+上記の behavioral guidelines は、このファイル内の一般的な作業方針の中で最優先とする。
+プロジェクト固有の安全境界、データ境界、ExecPlan、検証ルールとは統合して適用する。
+
+## Architecture Contract / アーキテクチャ契約
+
+`docs/PLAN.md` is the authoritative architecture and implementation contract for this repository.
+Implementations and designs must conform to `docs/PLAN.md` and any approved ExecPlan.
+Do not introduce designs, runtime behavior, data flows, schemas, dependencies, or public interfaces that diverge from `docs/PLAN.md`.
+If a requested change conflicts with or is not covered by `docs/PLAN.md`, state the gap, update the relevant Decision Log or ExecPlan, and stop for confirmation before editing.
+
+## Project Goal / プロジェクト目標
+
+SF6 Knowledge Coach を構築する。これは、キャラクターに依存しない個人向け SF6 コーチングシステムである。
+JP は初期の主要アクティブキャラクターであり、グローバルな前提としてハードコードしてはならない。
+
+## Plan Conformance / 計画への準拠
+
+複数ファイルを変更する場合は、編集前に承認済みの ExecPlan を作成するか、それに従う。
+
+実装時:
+- 承認済みの ExecPlan に記載された内容のみを実装する。
+- 計画外の機能、依存関係、スキーマ、公開 API、ランタイム挙動を追加しない。
+- 計画が誤っている、または不完全な場合は、Decision Log を更新し、確認を得るために停止する。
+- 各マイルストーンの完了後に Progress を更新する。
+- 記載された検証コマンドを実行する。
+- 最後に逸脱事項を報告する。
+
+## Hard Rules / 厳守ルール
+
+- 実在する個人データを公開リポジトリに入れない。
+- 実在する `user_profile`、`personal_reviewed`、トレーニングログ、回答ログ、プライベート vault パス、プライベート overlay DB をコミットしない。
+- 数値を含む回答には、専用ツールの結果が必要である。
+- フレーム、ダメージ、スケーリング、確定反撃に関する質問に記憶だけで答えない。
+- `candidate`、`observed`、`deprecated` の知識を、daily-answer の確定的な根拠として使わない。
+- daily answer mode では、公開リポジトリとナレッジファイルは読み取り専用である。
+- daily answer mode では Web アクセスを許可しない。
+- Web アクセスは update/research modes でのみ使用する。
+- VLM 出力は `observation_candidate` であり、reviewed knowledge ではない。
+- Discord は薄いアダプターに限定する。
+
+## Reviewer Tooling Boundary / レビューツールの境界
+
+- 開発エージェントとレビュアーエージェントは、実装、レビュー、検証、成果物確認のために Codex skills、`jq`、browser/Playwright 系ツール、その他の補助ツールを使用してよい。
+- これらはエージェント作業を補助するためのツールであり、承認済みの ExecPlan が明示的に追加しない限り、アプリの通常ランタイム、CLI、CI、決定論的バリデーターの依存関係にしない。
+- このアプリを使って SF6 の回答を作成する場合、Codex skills、`jq`、browser/Playwright 系ツール、その他の補助ツールを回答根拠として使わない。回答精度は、承認済みの決定論的ツールと reviewed knowledge/data に依存させる。
+- `.agents/` は ignore された未コミット状態のままにする。
+
+## Validation / 検証
+
+変更を完了する前に、以下を実行する:
 - privacy guard
 - schema validation
-- minimal eval relevant to changed files
-- formatting/type checks if applicable
+- 変更ファイルに関連する最小限の eval
+- 該当する場合はフォーマット / 型チェック
 
-## Done
+## Done / 完了条件
 
-A task is done only when:
-- Acceptance Criteria are satisfied.
-- Validation Commands pass or failures are explicitly explained.
-- PLAN deviations are listed.
-- Remaining risks are listed.
+タスクは、以下を満たした場合にのみ完了とする:
+- Acceptance Criteria を満たしている。
+- Validation Commands が成功している、または失敗内容が明示的に説明されている。
+- PLAN からの逸脱事項が列挙されている。
+- 残存リスクが列挙されている。
