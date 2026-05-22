@@ -2,20 +2,23 @@
 
 `data/exports/` は、公開済みの exact current-fact export surface です。
 
-この directory は通常回答で使う move-specific current facts の authority ですが、
-すべての tracked file が同じ authority を持つわけではありません。
+この directory は通常回答で使う move-specific current facts の authority seed
+です。clean-slate cleanup 後、runtime が直接読む tracked surface は
+`official_raw.json` です。
 
 ## Authority Boundary
 
-- `official_raw.{json,csv}` は公式 raw frame-data export の公開面です。
-- `derived_metrics.{json,csv}` は `official_raw` だけから再計算された派生 metric です。
-- `supercombo_enrichment.{json,csv}` は `official_raw` の safe subset に束縛された enrichment です。
-- `snapshot_manifest.json` は character ごとの published export provenance です。
-- `*_manual_review.{json,csv}` は withheld row / review reason / audit sidecar です。
+- `official_raw.json` は現在の runtime current-fact lookup が読む公式 raw
+  frame-data export の公開面です。
+- `snapshot_manifest.json` は character ごとの legacy published export
+  provenance です。
+- `data/exports/_index/manual-review-debt.json` は legacy manual-review debt
+  observability surface です。
 
-`*_manual_review.*` は normal public answer authority ではありません。通常回答や
-runtime current-fact lookup に混ぜる前に、review と publish workflow を通して
-main export へ昇格させる必要があります。
+削除済みの CSV、derived metric、manual-review、SuperCombo enrichment
+sidecar は normal public answer authority ではありません。通常回答や runtime
+current-fact lookup に混ぜるには、後続の reviewed workflow と deterministic
+schema/parser/export を通す必要があります。
 
 ## Layout
 
@@ -24,30 +27,16 @@ Character ごとの directory は次の形を持ちます。
 ```text
 data/exports/<character_slug>/
   official_raw.json
-  official_raw.csv
-  official_raw_manual_review.json
-  official_raw_manual_review.csv
-  derived_metrics.json
-  derived_metrics.csv
-  derived_metrics_manual_review.json
-  derived_metrics_manual_review.csv
-  supercombo_enrichment.json
-  supercombo_enrichment.csv
-  supercombo_enrichment_manual_review.json
-  supercombo_enrichment_manual_review.csv
   snapshot_manifest.json
 ```
 
-`snapshot_manifest.json` は `contracts/current-fact-export-manifest.schema.json`
-に従います。この schema は structural validation 用です。published raw
-snapshot の keep-set、runtime asset reproducibility、manual-review debt などの
-cross-file semantics は専用 validator が扱います。
+`snapshot_manifest.json` は legacy provenance として残しています。現在の
+clean-slate runtime authority は `official_raw.json` です。
 
 ## Manual-Review Debt Index
 
-`data/exports/_index/manual-review-debt.json` は、すべての
-`*_manual_review.json` sidecar と `snapshot_manifest.json` から生成される
-横断 index です。
+`data/exports/_index/manual-review-debt.json` は、旧 export workflow の横断
+index です。
 
 この index は、character / dataset ごとに次を見える化します。
 
@@ -59,25 +48,17 @@ cross-file semantics は専用 validator が扱います。
 - `publish_eligible` / `confirmation_status` counts
 
 この index は observability surface です。normal public answer authority では
-ありません。生成元の manual-review rows も、review と publish workflow を通る
-までは通常回答に使ってはいけません。
-
-Regenerate and validate the index:
-
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1 -Update
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1
-```
+ありません。clean-slate cleanup 後は再生成 workflow を持たない legacy
+reference であり、削除または移行は別 ExecPlan で判断します。
 
 ## Dataset Semantics
 
-Current dataset keys are:
+Current retained dataset key is:
 
 - `official_raw`
-- `derived_metrics`
-- `supercombo_enrichment`
 
-Each dataset entry records:
+Legacy `snapshot_manifest.json` entries may still mention retired datasets.
+Each retained or legacy manifest entry can record:
 
 - `publication_state`
 - `published_run_id`
@@ -88,9 +69,7 @@ Each dataset entry records:
 - `binding_policy_version` / `binding_policy_sha256`
 - `content_hash`
 
-`publication_state` is `available` or `unavailable`. Available datasets have
-published export files and provenance. Unavailable datasets keep an explicit
-manifest entry so downstream code can distinguish absence from omission.
+Current runtime must not treat retired sidecar datasets as available authority.
 
 ## Non-Authority Surfaces
 
@@ -99,31 +78,21 @@ The following are not normal public answer authority:
 - `data/raw/`
 - `data/normalized/`
 - `*_manual_review.*`
+- `derived_metrics.*`
+- `supercombo_enrichment.*`
 - run-local scraper state
 - browser/cache/log output
 - Hermes memory, sessions, local skills, Curator output, checkpoints, or raw transcripts
 
 Exact current facts must not be inferred from those surfaces alone.
-See `docs/architecture/noncanonical-data-authority-boundaries.md` for the
-cross-surface boundary that keeps these inputs and observability files out of
-normal public answer authority.
+See `docs/PLAN.md` for the current architecture boundary that keeps these
+inputs and observability files out of normal public answer authority.
 
 ## Validation
 
-Run the focused structural contract check:
+Run current clean-slate validation:
 
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-json-schema-manifest.ps1
+```bash
+PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.cli answer prepare "JPの5LPはガードで何F？"
 ```
-
-Run related semantic checks:
-
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-frame-current-assets.ps1
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-raw-snapshot-minimality.ps1
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-noncanonical-data-authority-boundaries.ps1
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-manual-review-debt-index.ps1
-pwsh -NoProfile -ExecutionPolicy Bypass -File tests/validation/validate-current-fact-boundaries.ps1
-```
-
-Use `tests/validation/run-all.ps1` before claiming broad validation.
