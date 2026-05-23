@@ -27,6 +27,19 @@ The `224` schema-design blockers are the `208` parse-rule groups plus the
 they are not safe calculation inputs until deterministic parsing or enum
 classification is implemented and reviewed.
 
+The parser/classifier implementation must also consume the reviewed
+SuperCombo system mechanics source summary:
+
+```text
+docs/system-mechanics/20260523-supercombo-system-mechanics-parser-inputs.md
+```
+
+That source summary records frame, scaling, gauge, cancel, guard, juggle,
+movement, and image-evidence semantics from the SuperCombo system pages. It is
+required because shape names alone do not define whether values such as `X(Y)`,
+`X(n)Y`, `X,Y`, `X*Y`, `KD`, Drive units, scaling notes, or cancel tokens are
+safe for calculation.
+
 ## Scope
 
 Included:
@@ -153,6 +166,8 @@ Do not write normalized current-fact exports in this unit.
 - Parser/classifier output validates against current-fact schemas.
 - Every parse-rule and enum disposition group is covered by a parser/enum
   policy decision.
+- Parser/classifier policy is checked against
+  `docs/system-mechanics/20260523-supercombo-system-mechanics-parser-inputs.md`.
 - Every unsupported calculation-relevant value remains `review_required`, not
   guessed.
 - Raw-only prose remains explicit and excluded from calculation.
