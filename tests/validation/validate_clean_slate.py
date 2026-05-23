@@ -22,7 +22,6 @@ REQUIRED_PATHS = [
 ]
 
 LEGACY_DIRS_EXPECTED_GONE = [
-    "contracts",
     "docs/architecture",
     "docs/testing",
     "evals",
@@ -39,6 +38,15 @@ LEGACY_DIRS_EXPECTED_GONE = [
 ALLOWED_GITHUB_PATHS = {
     ".github/workflows",
     ".github/workflows/ci.yml",
+}
+
+ALLOWED_CONTRACT_PATHS = {
+    "contracts/current-facts",
+    "contracts/current-facts/current_fact_export.schema.json",
+    "contracts/current-facts/current_fact_record.schema.json",
+    "contracts/current-facts/parsed_value.schema.json",
+    "contracts/current-facts/source_reference.schema.json",
+    "contracts/current-facts/value_shape.schema.json",
 }
 
 
@@ -64,6 +72,15 @@ def main() -> int:
             relative = path.relative_to(ROOT).as_posix()
             if relative not in ALLOWED_GITHUB_PATHS:
                 errors.append(f"Unexpected .github content: {relative}")
+
+    contracts_dir = ROOT / "contracts"
+    if contracts_dir.exists() and not contracts_dir.is_dir():
+        errors.append("contracts must be a directory containing only current-facts schemas")
+    if contracts_dir.is_dir():
+        for path in contracts_dir.rglob("*"):
+            relative = path.relative_to(ROOT).as_posix()
+            if relative not in ALLOWED_CONTRACT_PATHS:
+                errors.append(f"Unexpected contracts content: {relative}")
 
     for json_path in (ROOT / "data").rglob("*.json"):
         try:

@@ -20,6 +20,7 @@ privacy/security boundary.
 | `tests/test_value_shape_disposition.py` | artifact consistency | accepted with limits | disposition coverage is not parse semantics |
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
 | `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape only |
+| `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |
 | `tests/validation/validate_validator_test_audit.py` | governance boundary | accepted with limits | audit coverage and evidence metadata only |
 | `tests/validation/validate_supercombo_field_mapping.py` | policy-derived | accepted with limits | delegates to mapping artifact validation |
 | `tests/validation/validate_value_shape_disposition.py` | artifact consistency | accepted with limits | validates disposition structure, not source truth |

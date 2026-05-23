@@ -1,0 +1,27 @@
+{
+  "authority_status": "authority_candidate",
+  "character_slug": "jp",
+  "display_label_ja": "技名",
+  "evidence": {
+    "evidence_basis": "official_raw_snapshot",
+    "public_reference": "data/exports/jp/official_raw.json",
+    "run_id": "20260521T025403Z",
+    "source_header_path": ["技名"],
+    "source_label": "技名",
+    "source_name": "official",
+    "source_role": "authority_candidate"
+  },
+  "field_key": "move_name",
+  "move_id": "jp_001_5lp",
+  "raw_value": "立ち弱P（ノーシ）",
+  "record_id": "official:jp:jp_001_5lp:move_name",
+  "source_family": "identity",
+  "source_header_path": ["技名"],
+  "source_label": "技名",
+  "source_name": "official",
+  "source_role": "authority_candidate",
+  "value_shape": {
+    "classes": ["raw_only"],
+    "classifier_status": "raw_preserved"
+  }
+}

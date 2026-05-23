@@ -1,0 +1,62 @@
+{
+  "$id": "https://sf6-knowledge-coach.local/schemas/current-facts/value_shape.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "classifier_status": { "const": "parsed" }
+        },
+        "required": ["classifier_status"]
+      },
+      "then": {
+        "required": ["parser_rule_id"]
+      }
+    }
+  ],
+  "properties": {
+    "classes": {
+      "items": {
+        "enum": [
+          "blank",
+          "categorical",
+          "conditional",
+          "dash_variant",
+          "hidden_detail",
+          "landing_expression",
+          "multihit",
+          "note_prefixed",
+          "note_separated_alternate",
+          "note_suffixed",
+          "percent_expression",
+          "plus_expression",
+          "prose",
+          "range",
+          "raw_only",
+          "scalar",
+          "signed_frame",
+          "unclassified",
+          "until_landing"
+        ]
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "classifier_status": {
+      "enum": ["parsed", "raw_preserved", "review_required", "rejected"]
+    },
+    "parser_rule_id": {
+      "pattern": "^[a-z0-9][a-z0-9_.-]*$",
+      "type": "string"
+    },
+    "review_item_id": {
+      "pattern": "^[a-z0-9][a-z0-9_.:-]*$",
+      "type": "string"
+    }
+  },
+  "required": ["classes", "classifier_status"],
+  "title": "Current-fact value shape",
+  "type": "object"
+}

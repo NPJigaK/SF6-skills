@@ -81,7 +81,21 @@
       "primary_evidence": [
         "docs/PLAN.md",
         "AGENTS.md",
-        "clean-slate ExecPlans"
+        "clean-slate ExecPlans",
+        "current-fact JSON Schema artifacts ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "synthetic_contract",
+      "file": "tests/validation/validate_current_fact_schemas.py",
+      "limitations": [
+        "checks schema and fixture contracts only; does not prove parser correctness or source truth"
+      ],
+      "primary_evidence": [
+        "contracts/current-facts/*.schema.json",
+        "tests/fixtures/current-facts",
+        "current-fact JSON Schema redesign ExecPlans"
       ],
       "status": "accepted_with_limits"
     },
