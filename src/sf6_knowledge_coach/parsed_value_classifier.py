@@ -61,7 +61,16 @@ INTEGER_RE = re.compile(r"^[+-]?\d+$")
 UNSIGNED_INTEGER_RE = re.compile(r"^\d+$")
 DECIMAL_RE = re.compile(r"^[+-]?(?:\d+\.\d+|\d+)$")
 FRAME_RANGE_RE = re.compile(r"^(\d+)\s*[-~]\s*(\d+)$")
+OFFICIAL_SIGNED_WAVE_DASH_RANGE_RE = re.compile(r"^([+-]?\d+)～([+-]?\d+)$")
 THROW_PAIR_RE = re.compile(r"^(\d+(?:\.\d+)?)\s*/\s*(\d+(?:\.\d+)?)$")
+OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID = "frame_range.official_signed_wave_dash.v1"
+PARSED_RANGE_NOT_SINGLE_VALUE_CALCULATION_SAFE = "parsed_range_not_single_value_calculation_safe"
+OFFICIAL_SIGNED_WAVE_DASH_RANGE_REVIEW_ITEM_IDS = frozenset(
+    {
+        "value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb",
+        "value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69",
+    }
+)
 FORBIDDEN_PUBLIC_PATTERNS = [
     re.compile(r"(?i)(?:^|[\s\"'`])(?:/[a-z0-9_.-]+)+"),
     re.compile(r"(?i)(?:^|[\s\"'`(])[A-Z]:[\\/]"),
@@ -143,6 +152,7 @@ def classify_raw_value(raw_value: str | None, disposition_record: dict[str, Any]
     review_item_id = str(disposition_record.get("review_item_id"))
     family = str(disposition_record.get("semantic_source_family"))
     field_key = str(disposition_record.get("proposed_field_key") or "")
+    source_name = str(disposition_record.get("source_name") or "")
 
     if disposition == "out_of_scope_first_normalized_export":
         return _non_parsed_result(
@@ -180,7 +190,13 @@ def classify_raw_value(raw_value: str | None, disposition_record: dict[str, Any]
     if unsupported_reason:
         return _review_required(raw, review_item_id, unsupported_reason)
     if family == "throw":
-        parsed = _parse_supported_value(stripped, family=family, field_key=field_key)
+        parsed = _parse_supported_value(
+            stripped,
+            family=family,
+            field_key=field_key,
+            review_item_id=review_item_id,
+            source_name=source_name,
+        )
         if parsed is not None:
             parsed_value, parser_rule_id = parsed
             return ClassificationResult(
@@ -193,14 +209,20 @@ def classify_raw_value(raw_value: str | None, disposition_record: dict[str, Any]
                     "review_item_id": review_item_id,
                 },
                 parsed_value=parsed_value,
-                calculation_input_status=_parsed_calculation_status(disposition_record),
+                calculation_input_status=_parsed_calculation_status(disposition_record, parser_rule_id=parser_rule_id),
                 policy_note="Parsed by a strict deterministic rule; calculators must still check source role, authority status, kind, unit, and domain.",
             )
     complex_reason = _complex_expression_reason(stripped)
     if complex_reason:
         return _review_required(raw, review_item_id, complex_reason)
 
-    parsed = _parse_supported_value(stripped, family=family, field_key=field_key)
+    parsed = _parse_supported_value(
+        stripped,
+        family=family,
+        field_key=field_key,
+        review_item_id=review_item_id,
+        source_name=source_name,
+    )
     if parsed is None:
         return _review_required(raw, review_item_id, "No deterministic parser rule accepts this raw value shape.")
     parsed_value, parser_rule_id = parsed
@@ -214,7 +236,7 @@ def classify_raw_value(raw_value: str | None, disposition_record: dict[str, Any]
             "review_item_id": review_item_id,
         },
         parsed_value=parsed_value,
-        calculation_input_status=_parsed_calculation_status(disposition_record),
+        calculation_input_status=_parsed_calculation_status(disposition_record, parser_rule_id=parser_rule_id),
         policy_note="Parsed by a strict deterministic rule; calculators must still check source role, authority status, kind, unit, and domain.",
     )
 
@@ -461,13 +483,16 @@ def _coverage_record(record: dict[str, Any]) -> dict[str, Any]:
             decision = "review_required"
             note = unsupported_reason
         else:
-            parser_rule_ids = SUPPORTED_PARSE_RULES_BY_FAMILY.get(family, [])
+            parser_rule_ids = _supported_parse_rule_ids(record)
             parsed_examples = _parsed_representative_examples(record)
             if parser_rule_ids and parsed_examples:
                 decision = "parsed_numeric_structured"
                 value_shape_status = "parsed"
-                calculation_status = _parsed_calculation_status(record)
-                note = "Reviewed representative examples parse under strict rules; complex variants still remain review-required at raw-value classification time."
+                calculation_status = _parsed_calculation_status(record, parser_rule_id=parser_rule_ids[0])
+                if calculation_status == PARSED_RANGE_NOT_SINGLE_VALUE_CALCULATION_SAFE:
+                    note = "Official signed range parses to frame_range endpoints, but range reason is unknown and it is not single-value calculation-safe."
+                else:
+                    note = "Reviewed representative examples parse under strict rules; complex variants still remain review-required at raw-value classification time."
             else:
                 decision = "review_required"
                 parser_rule_ids = []
@@ -599,15 +624,45 @@ def _parsed_representative_examples(record: dict[str, Any]) -> list[str]:
     return parsed
 
 
-def _parsed_calculation_status(disposition_record: dict[str, Any]) -> str:
+def _supported_parse_rule_ids(record: dict[str, Any]) -> list[str]:
+    if _is_official_signed_wave_dash_range_record(record):
+        return [OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID]
+    family = str(record.get("semantic_source_family"))
+    return SUPPORTED_PARSE_RULES_BY_FAMILY.get(family, [])
+
+
+def _parsed_calculation_status(disposition_record: dict[str, Any], *, parser_rule_id: str) -> str:
+    if parser_rule_id == OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID:
+        return PARSED_RANGE_NOT_SINGLE_VALUE_CALCULATION_SAFE
     if disposition_record.get("source_name") == "supercombo":
         return "not_numeric_authority"
     return "eligible_only_after_domain_source_and_unit_checks"
 
 
-def _parse_supported_value(raw: str, *, family: str, field_key: str) -> tuple[dict[str, Any], str] | None:
+def _parse_supported_value(
+    raw: str,
+    *,
+    family: str,
+    field_key: str,
+    review_item_id: str,
+    source_name: str,
+) -> tuple[dict[str, Any], str] | None:
     if family == "advantage" and INTEGER_RE.fullmatch(raw):
         return {"kind": "signed_frame", "unit": "frame", "value": int(raw)}, "signed_frame.strict.v1"
+    if _is_official_signed_wave_dash_range_target(
+        review_item_id=review_item_id,
+        source_name=source_name,
+        family=family,
+        field_key=field_key,
+    ):
+        match = OFFICIAL_SIGNED_WAVE_DASH_RANGE_RE.fullmatch(raw)
+        if match:
+            start, end = int(match.group(1)), int(match.group(2))
+            if start <= end:
+                return (
+                    {"kind": "frame_range", "unit": "frame", "start": start, "end": end},
+                    OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID,
+                )
     if family == "timing":
         match = FRAME_RANGE_RE.fullmatch(raw)
         if match:
@@ -639,6 +694,30 @@ def _parse_supported_value(raw: str, *, family: str, field_key: str) -> tuple[di
         value = float(raw) if "." in raw else int(raw)
         return {"kind": "decimal", "unit": unit, "value": value}, "decimal_metric.strict.v1"
     return None
+
+
+def _is_official_signed_wave_dash_range_record(record: dict[str, Any]) -> bool:
+    return (
+        record.get("review_item_id") in OFFICIAL_SIGNED_WAVE_DASH_RANGE_REVIEW_ITEM_IDS
+        and record.get("source_name") == "official"
+        and record.get("semantic_source_family") == "advantage"
+        and record.get("proposed_field_key") in {"block_advantage", "hit_advantage"}
+    )
+
+
+def _is_official_signed_wave_dash_range_target(
+    *,
+    review_item_id: str,
+    source_name: str,
+    family: str,
+    field_key: str,
+) -> bool:
+    return (
+        review_item_id in OFFICIAL_SIGNED_WAVE_DASH_RANGE_REVIEW_ITEM_IDS
+        and source_name == "official"
+        and family == "advantage"
+        and field_key in {"block_advantage", "hit_advantage"}
+    )
 
 
 def _unsupported_field_reason(record: dict[str, Any]) -> str | None:

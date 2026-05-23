@@ -14,17 +14,18 @@ promote SuperCombo values to numeric authority.
 
 - `enum_classified`: 16
 - `out_of_scope_first_normalized_export`: 17
-- `parsed_numeric_structured`: 1
+- `parsed_numeric_structured`: 3
 - `raw_preserved_non_calculation`: 6
-- `review_required`: 207
+- `review_required`: 205
 
 ## Calculation Input Status
 
 - `enum_only_not_arithmetic`: 16
 - `not_numeric_authority`: 1
 - `out_of_scope_not_emitted`: 17
+- `parsed_range_not_single_value_calculation_safe`: 2
 - `raw_preserved_not_calculation`: 6
-- `review_required_not_calculation_safe`: 207
+- `review_required_not_calculation_safe`: 205
 
 ## Mechanics Anchors
 
@@ -56,9 +57,9 @@ promote SuperCombo values to numeric authority.
 | `value-shape:official--source_specific_expression--u_86de52d17820` | `official` | `attribute` | `attribute` | `source_specific_enum_required` | `enum_classified` | `enum_only_not_arithmetic` | `enum_token.source_native_examples.v1` | Representative source-native enum tokens are preserved; unknown tokens are review-required. |
 | `value-shape:official--source_specific_expression--u_1aa6a6f86513` | `official` | `identity` | `move_name` | `schema_supports_raw_only` | `raw_preserved_non_calculation` | `raw_preserved_not_calculation` | `` | Reviewed raw-only field is preserved for display/context and excluded from calculation. |
 | `value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb` | `official` | `advantage` | `block_advantage` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |
-| `value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb` | `official` | `advantage` | `block_advantage` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |
+| `value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb` | `official` | `advantage` | `block_advantage` | `parse_rule_required_before_schema` | `parsed_numeric_structured` | `parsed_range_not_single_value_calculation_safe` | `frame_range.official_signed_wave_dash.v1` | Official signed range parses to frame_range endpoints, but range reason is unknown and it is not single-value calculation-safe. |
 | `value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69` | `official` | `advantage` | `hit_advantage` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |
-| `value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69` | `official` | `advantage` | `hit_advantage` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |
+| `value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69` | `official` | `advantage` | `hit_advantage` | `parse_rule_required_before_schema` | `parsed_numeric_structured` | `parsed_range_not_single_value_calculation_safe` | `frame_range.official_signed_wave_dash.v1` | Official signed range parses to frame_range endpoints, but range reason is unknown and it is not single-value calculation-safe. |
 | `value-shape:supercombo--unclassified_expression--character_vitals--back_dash_distance` | `supercombo` | `mobility` | `supercombo_back_dash_distance` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |
 | `value-shape:supercombo--unclassified_expression--character_vitals--back_jump_distance` | `supercombo` | `mobility` | `supercombo_back_jump_distance` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |
 | `value-shape:supercombo--unclassified_expression--character_vitals--back_walk_speed` | `supercombo` | `mobility` | `supercombo_back_walk_speed` | `parse_rule_required_before_schema` | `review_required` | `review_required_not_calculation_safe` | `` | Reviewed representative examples do not parse under strict rules; this disposition group remains review-required. |

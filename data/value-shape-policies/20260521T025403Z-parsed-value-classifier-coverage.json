@@ -6,15 +6,16 @@
     "enum_only_not_arithmetic": 16,
     "not_numeric_authority": 1,
     "out_of_scope_not_emitted": 17,
+    "parsed_range_not_single_value_calculation_safe": 2,
     "raw_preserved_not_calculation": 6,
-    "review_required_not_calculation_safe": 207
+    "review_required_not_calculation_safe": 205
   },
   "classifier_decision_counts": {
     "enum_classified": 16,
     "out_of_scope_first_normalized_export": 17,
-    "parsed_numeric_structured": 1,
+    "parsed_numeric_structured": 3,
     "raw_preserved_non_calculation": 6,
-    "review_required": 207
+    "review_required": 205
   },
   "coverage_records": [
     {
@@ -382,10 +383,12 @@
       "value_shape_classifier_status": "review_required"
     },
     {
-      "calculation_input_status": "review_required_not_calculation_safe",
-      "classifier_decision": "review_required",
-      "parser_rule_ids": [],
-      "policy_note": "Reviewed representative examples do not parse under strict rules; this disposition group remains review-required.",
+      "calculation_input_status": "parsed_range_not_single_value_calculation_safe",
+      "classifier_decision": "parsed_numeric_structured",
+      "parser_rule_ids": [
+        "frame_range.official_signed_wave_dash.v1"
+      ],
+      "policy_note": "Official signed range parses to frame_range endpoints, but range reason is unknown and it is not single-value calculation-safe.",
       "proposed_field_key": "block_advantage",
       "raw_value_policy": "preserve_raw_value_always",
       "review_item_id": "value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb",
@@ -409,7 +412,7 @@
       "source_name": "official",
       "source_role": "authority_candidate",
       "supercombo_authority_policy": "not_applicable",
-      "value_shape_classifier_status": "review_required"
+      "value_shape_classifier_status": "parsed"
     },
     {
       "calculation_input_status": "review_required_not_calculation_safe",
@@ -442,10 +445,12 @@
       "value_shape_classifier_status": "review_required"
     },
     {
-      "calculation_input_status": "review_required_not_calculation_safe",
-      "classifier_decision": "review_required",
-      "parser_rule_ids": [],
-      "policy_note": "Reviewed representative examples do not parse under strict rules; this disposition group remains review-required.",
+      "calculation_input_status": "parsed_range_not_single_value_calculation_safe",
+      "classifier_decision": "parsed_numeric_structured",
+      "parser_rule_ids": [
+        "frame_range.official_signed_wave_dash.v1"
+      ],
+      "policy_note": "Official signed range parses to frame_range endpoints, but range reason is unknown and it is not single-value calculation-safe.",
       "proposed_field_key": "hit_advantage",
       "raw_value_policy": "preserve_raw_value_always",
       "review_item_id": "value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69",
@@ -469,7 +474,7 @@
       "source_name": "official",
       "source_role": "authority_candidate",
       "supercombo_authority_policy": "not_applicable",
-      "value_shape_classifier_status": "review_required"
+      "value_shape_classifier_status": "parsed"
     },
     {
       "calculation_input_status": "review_required_not_calculation_safe",
