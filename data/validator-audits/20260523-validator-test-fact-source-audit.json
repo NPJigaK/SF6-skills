@@ -61,6 +61,19 @@
       "status": "accepted_with_limits"
     },
     {
+      "evidence_class": "policy_derived",
+      "file": "tests/test_parsed_value_classifier.py",
+      "limitations": [
+        "validates deterministic parser/classifier policy behavior and representative fixtures; does not prove live source truth or calculation correctness"
+      ],
+      "primary_evidence": [
+        "data/value-shape-dispositions/20260521T025403Z-value-shape-review-item-disposition-summary.json",
+        "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+        "docs/system-mechanics/20260523-supercombo-system-mechanics-parser-inputs.md"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
       "evidence_class": "source_derived",
       "file": "tests/test_value_shape_inventory.py",
       "limitations": [
@@ -108,6 +121,19 @@
       "primary_evidence": [
         "this validator audit artifact",
         "current tests/validation file inventory"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "artifact_consistency",
+      "file": "tests/validation/validate_parsed_value_classifier.py",
+      "limitations": [
+        "checks coverage artifact, mechanics anchors, and schema-compatible sample outputs; does not prove calculation semantics"
+      ],
+      "primary_evidence": [
+        "parsed-value classifier coverage artifact",
+        "value-shape disposition and policy artifacts",
+        "current-fact schemas"
       ],
       "status": "accepted_with_limits"
     },

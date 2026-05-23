@@ -18,9 +18,11 @@ privacy/security boundary.
 | `tests/test_source_acquisition.py` | synthetic contract | accepted with limits | synthetic HTML tests parser/guard behavior, not live source truth |
 | `tests/test_supercombo_field_mapping.py` | policy-derived | accepted with limits | mapping counts are reviewed policy output, not live SuperCombo proof |
 | `tests/test_value_shape_disposition.py` | artifact consistency | accepted with limits | disposition coverage is not parse semantics |
+| `tests/test_parsed_value_classifier.py` | policy-derived | accepted with limits | parser/classifier behavior is policy-derived and not calculation correctness |
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
 | `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape only |
 | `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |
+| `tests/validation/validate_parsed_value_classifier.py` | artifact consistency | accepted with limits | coverage artifact, mechanics anchors, and schema-compatible samples only |
 | `tests/validation/validate_validator_test_audit.py` | governance boundary | accepted with limits | audit coverage and evidence metadata only |
 | `tests/validation/validate_supercombo_field_mapping.py` | policy-derived | accepted with limits | delegates to mapping artifact validation |
 | `tests/validation/validate_value_shape_disposition.py` | artifact consistency | accepted with limits | validates disposition structure, not source truth |
