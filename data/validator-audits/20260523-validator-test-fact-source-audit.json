@@ -113,6 +113,19 @@
       "status": "accepted_with_limits"
     },
     {
+      "evidence_class": "source_derived",
+      "file": "tests/validation/validate_official_note_linkage_source_review.py",
+      "limitations": [
+        "checks official note-linkage source-review summary boundaries; full row-note context remains ignored local evidence"
+      ],
+      "primary_evidence": [
+        "official note-linkage source-review artifact",
+        "parsed-value classifier coverage artifact",
+        "ignored local official source artifacts"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
       "evidence_class": "governance_boundary",
       "file": "tests/validation/validate_validator_test_audit.py",
       "limitations": [

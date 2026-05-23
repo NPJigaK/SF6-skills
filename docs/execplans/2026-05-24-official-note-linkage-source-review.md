@@ -1,16 +1,16 @@
 # Official Note Linkage Source Review
 
-Status: Drafted for review.
+Status: Implementation complete; review pending.
 
 ## Purpose
 
-Plan how to review and represent official note linkage for `※` and `*`
-annotated official values before any note-bearing parser can become
-calculation-safe.
+Review and represent official note linkage for `※` and `*` annotated official
+values before any note-bearing parser can become calculation-safe.
 
-This ExecPlan is docs-only. It does not implement parser, schema, classifier,
-calculator, retrieval, answer, export, validator, generated coverage artifact,
-live acquisition, or SymPy changes.
+This ExecPlan produced source-review summary artifacts and a focused validator.
+It does not implement parser, schema, classifier, calculator, retrieval,
+answer, export, generated coverage artifact, live acquisition, or SymPy
+changes.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ live acquisition, or SymPy changes.
 - Existing ignored `.local/` reviewer artifacts, if available, as reviewer
   input only.
 
-Live official page checks are not part of this docs-only plan. If later source
+Live official page checks are not part of this implementation. If later source
 review needs live official page checks, they must be run only in reviewer or
 update mode, never in CI or daily-answer mode.
 
@@ -58,7 +58,7 @@ Known risks:
 
 Included:
 
-- Plan source-review artifacts only.
+- Implement source-review summary artifacts only.
 - Define how to link `note_marker`, `note_id`, `note_text`, `note_scope`,
   `source_column_header_path`, row/move identity, and raw value.
 - Define how to distinguish:
@@ -79,14 +79,15 @@ Excluded:
 - No parser implementation.
 - No schema implementation.
 - No classifier behavior changes.
-- No validator changes.
+- No validator changes except the focused source-review summary validator and
+  its evidence-audit entry.
 - No generated coverage artifact changes.
 - No calculator implementation.
 - No SymPy calculation logic.
 - No retrieval, answer, export, or runtime changes.
 - No numeric authority promotion.
 - No SuperCombo authority promotion.
-- No live acquisition in this planning step.
+- No live acquisition in this implementation.
 - No weakening validators to fit current artifacts.
 
 ## Exact Official Groups Covered
@@ -115,9 +116,9 @@ Those two official signed `～` advantage range groups are already parsed as
 `frame_range` and remain not single-value calculation-safe under the frame
 range consumer guard plan.
 
-## Planned Source-Review Artifacts
+## Source-Review Artifacts
 
-A later source-review implementation ExecPlan may create:
+This implementation creates:
 
 - `docs/source-reviews/20260524-official-note-linkage-source-review.md`
 - `data/source-reviews/20260524-official-note-linkage-source-review-summary.json`
@@ -127,7 +128,7 @@ source dumps or private/local evidence.
 
 ### Public Markdown Summary
 
-The Markdown summary should include:
+The Markdown summary includes:
 
 - run id and source-review summary version;
 - input coverage and disposition artifact paths;
@@ -143,7 +144,7 @@ The Markdown summary should include:
 
 ### Public JSON Summary
 
-The JSON summary should use a small deterministic structure such as:
+The JSON summary uses a small deterministic structure:
 
 ```json
 {
@@ -290,25 +291,24 @@ gap rather than guessing.
 
 ## Source-Review Procedure
 
-A later source-review implementation should:
+This implementation:
 
-1. Inventory the current ignored reviewer artifacts without committing them.
-2. For each target review item, locate representative official rows and cells.
-3. Confirm `source_column_header_path` and cell boundary for each targeted
+1. Inventoried the current ignored reviewer artifacts without committing them.
+2. Located representative official rows and cells for each target review item.
+3. Confirmed `source_column_header_path` and cell boundary for each targeted
    example, especially `damage` examples such as `※500`.
-4. Record row or move identity using public summary-safe identifiers only.
-5. Extract marker role and marker placement from the value cell.
-6. Link marker/id to source note text when deterministic evidence exists.
-7. Record note scope and note review status.
-8. For active cells, compare separated `visible_text` and
+4. Recorded row or move identity using public summary-safe identifiers only.
+5. Extracted marker role and marker placement from the value cell.
+6. Linked marker/id to source note text when deterministic evidence exists.
+7. Recorded note scope and note review status.
+8. Compared separated `visible_text` and
    `hidden_detail_text` against concatenated `source_text_stripped`.
-9. Mark each group as later parser-eligible, blocked pending source review,
-   or blocked pending acquisition-field support.
-10. Emit public Markdown and JSON summaries only.
+9. Marked every note-bearing group blocked pending acquisition-field support
+   because row note text is not structured in the table-row artifact.
+10. Emitted public Markdown and JSON summaries only.
 
-No live official page checks should be run unless a later source-review
-implementation ExecPlan explicitly approves them as reviewer/update-mode
-steps.
+No live official page checks were run. Later live checks require a separate
+reviewer/update-mode ExecPlan.
 
 ## Required Review Decisions
 
@@ -375,20 +375,19 @@ Ignored `.local/` artifacts may be used as reviewer input, but they must remain
 uncommitted. The public summary should describe evidence status without
 leaking local artifact paths or full private/local dumps.
 
-## Future Implementation Files
+## Implementation Files
 
-A later source-review implementation ExecPlan may touch:
+This source-review implementation touches:
 
 - `docs/source-reviews/20260524-official-note-linkage-source-review.md`
 - `data/source-reviews/20260524-official-note-linkage-source-review-summary.json`
-- a focused validator for the source-review summary, only if the validator is
-  grounded in this ExecPlan, the coverage artifact, and synthetic contract
-  fixtures.
+- `tests/validation/validate_official_note_linkage_source_review.py`
+- `data/validator-audits/20260523-validator-test-fact-source-audit.json`
+- `docs/validator-audits/20260523-validator-test-fact-source-audit.md`
 
-That later implementation must not touch parser, schema, classifier,
-calculator, retrieval, answer, export, runtime, generated coverage artifacts,
-or live acquisition unless a separate approved ExecPlan explicitly expands the
-scope.
+This implementation does not touch parser, schema, classifier, calculator,
+retrieval, answer, export, runtime, generated coverage artifacts, or live
+acquisition.
 
 ## Acceptance Criteria
 
@@ -404,14 +403,21 @@ scope.
 - The ExecPlan keeps ignored `.local/` artifacts as reviewer input only.
 - The ExecPlan does not implement parser/schema/classifier/calculator/
   retrieval/answer/export/runtime changes.
-- The ExecPlan does not modify validators or generated coverage artifacts.
+- The source-review validator checks only the public summary boundary and is
+  grounded in this ExecPlan and parsed-value coverage.
+- The implementation does not modify generated coverage artifacts.
 - Validation commands pass.
 
 ## Files / Interfaces
 
-This docs-only planning unit changes only:
+This source-review implementation changes only:
 
 - `docs/execplans/2026-05-24-official-note-linkage-source-review.md`
+- `docs/source-reviews/20260524-official-note-linkage-source-review.md`
+- `data/source-reviews/20260524-official-note-linkage-source-review-summary.json`
+- `tests/validation/validate_official_note_linkage_source_review.py`
+- `data/validator-audits/20260523-validator-test-fact-source-audit.json`
+- `docs/validator-audits/20260523-validator-test-fact-source-audit.md`
 
 ## Validation Commands
 
@@ -421,6 +427,8 @@ Run from repository root:
 git diff --check
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+PYTHONPATH=src uv run --locked python tests/validation/validate_official_note_linkage_source_review.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 git status --short --branch
 ```
 
@@ -432,15 +440,27 @@ git status --short --branch
   `eeeba999382f632cf11396c4ea47a516924f21bb` before branching.
 - [x] (2026-05-24 JST) Identified the `9` remaining official
   `review_required` groups from parsed-value classifier coverage.
-- [x] (2026-05-24 JST) Drafted this docs-only ExecPlan.
+- [x] (2026-05-24 JST) Drafted the docs-only ExecPlan.
 - [x] (2026-05-24 JST) Validation passed:
   `git diff --check`,
   `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
   `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate`,
   and `git status --short --branch`. New-file whitespace check also produced
   no whitespace error output.
-- [ ] Complete mandatory review before any source-review artifact
-  implementation.
+- [x] (2026-05-24 JST) PR #336 merged, approving this source-review plan.
+- [x] (2026-05-24 JST) Created implementation branch
+  `impl/official-note-linkage-source-review`.
+- [x] (2026-05-24 JST) Reviewed ignored official artifacts. Structured
+  table-row artifacts expose source-native column paths, raw cell text,
+  visible text, hidden detail text, and row identity. Row-local note text is
+  visible in ignored official HTML captures but is not structured in the
+  table-row artifact.
+- [x] (2026-05-24 JST) Added public source-review Markdown and JSON summary
+  artifacts.
+- [x] (2026-05-24 JST) Added a focused source-review summary validator.
+- [x] (2026-05-24 JST) Updated the validator/test evidence audit for the new
+  validator.
+- [ ] Complete mandatory review before staging.
 
 ## Decision Log
 
@@ -464,8 +484,29 @@ git status --short --branch
   Date/Author: 2026-05-24 / Codex
 
 - Decision: Do not run live official page acquisition in this plan.
-  Rationale: The user requested a docs-only planner. Any live checks belong in
-  a later reviewer/update-mode source-review implementation plan.
+  Rationale: Any live checks belong in a separate reviewer/update-mode
+  source-review plan.
+  Date/Author: 2026-05-24 / Codex
+
+- Decision: Keep all note-bearing groups blocked pending acquisition-field
+  support.
+  Rationale: Reviewer evidence found row-local notes in ignored official HTML
+  captures, but the structured table-row artifact does not expose row note
+  text. A parser should not depend on ad hoc HTML review or group-level note
+  assumptions.
+  Date/Author: 2026-05-24 / Codex
+
+- Decision: Treat the active dot/double-hyphen group as source-confirmed but
+  not a note-linkage target.
+  Rationale: The values are official active cells, but this source review does
+  not establish dot or double-hyphen grammar or calculation meaning.
+  Date/Author: 2026-05-24 / Codex
+
+- Decision: Update the validator/test evidence audit for the new source-review
+  validator.
+  Rationale: Repository policy requires every test and validator to declare
+  its evidence basis. The new validator is source-derived but proves only
+  public summary consistency and boundary rules, not parser correctness.
   Date/Author: 2026-05-24 / Codex
 
 ## Deviations
@@ -474,8 +515,9 @@ git status --short --branch
 
 ## Risks
 
-- Current ignored reviewer artifacts may not expose official note text or
-  row/cell linkage fields needed for deterministic review.
+- Current structured table-row artifacts do not expose official row-local note
+  text, so note-bearing parser work remains blocked pending acquisition-field
+  support.
 - `*` can have multiple roles; treating it as a note marker without source
   location evidence would be unsafe.
 - Active cells may require acquisition improvements if only concatenated text
@@ -490,33 +532,43 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Official note-linkage source-review plan | Drafted docs-only plan for source-review artifact boundaries and marker linkage decisions | `docs/execplans/2026-05-24-official-note-linkage-source-review.md` | `git diff --check`; clean-slate validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review pending | Future source-review artifacts and validators still need separate implementation |
-| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/runtime/validator/artifact changes added | This ExecPlan only | Diff/status review | Passed | None | Future implementation ExecPlan required | Note-bearing values remain blocked |
+| Official note-linkage source-review artifacts | Added public Markdown and JSON summaries for the 9 remaining official note-bearing or note-adjacent groups | Source-review Markdown and JSON summary | Source-review validator | Pending | None | Review pending | Note-bearing values remain blocked pending acquisition-field support |
+| Source-review validator | Added focused validator grounded in this ExecPlan and coverage artifact | `tests/validation/validate_official_note_linkage_source_review.py` | Source-review validator | Pending | None | Review pending | Validator checks boundary and consistency, not parser correctness |
+| Validator audit | Added evidence-basis audit entry for the new validator | Validator audit JSON/Markdown | `validate_validator_test_audit.py` | Pending | None | Review pending | Audit remains accepted-with-limits |
+| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/runtime/generated coverage/live acquisition changes added | Scoped files only | Diff/status review | Pending | None | Review pending | Note-bearing values remain blocked |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-24-official-note-linkage-source-review.md.
-
-Confirm whether it is acceptable as the docs-only planner for official
-note-linkage source review before any note-bearing parser/schema implementation.
+Review the official note-linkage source-review implementation.
 
 Check:
-- it covers exactly the remaining official review_required note-bearing or
-  note-adjacent groups after the signed range parser slice;
-- it plans only source-review artifacts and does not implement parser/schema/
-  classifier/calculator/retrieval/answer/export/runtime changes;
-- it does not modify validators or generated coverage artifacts;
-- it keeps ignored .local artifacts as reviewer input only;
-- it defines how to link note_marker, note_id, note_text, note_scope,
-  source_column_header_path, row/move identity, and raw value;
-- it distinguishes note marker on value, cancel marker, bracketed note id,
-  standalone marker, visible/hidden detail concatenation, and actual source
-  note text;
-- it keeps full raw rows, raw HTML, screenshots, cookies, browser profiles,
-  traces, debug dumps, local paths, and private data out of Git;
-- it does not authorize parser output, current-fact authority promotion,
-  calculator work, SymPy, SuperCombo authority, or live acquisition.
+- changed files are limited to the ExecPlan, public source-review Markdown,
+  public source-review JSON, focused source-review validator, and
+  validator/test evidence audit entries;
+- the JSON covers exactly the 9 remaining official review_required records
+  after the signed range parser slice;
+- note-bearing records remain blocked pending acquisition-field support;
+- the active dot/double-hyphen group is source-confirmed but not treated as a
+  note-linkage target;
+- no parser/schema/classifier/calculator/retrieval/answer/export/runtime,
+  generated coverage artifact, live acquisition, or SymPy behavior was added;
+- public artifacts include summaries only and no full source rows, raw HTML,
+  browser images, cookies, profiles, traces, debug dumps, local paths, answer
+  logs, training logs, or private data;
+- official remains authority candidate only and no value becomes
+  calculation-safe.
 
-Return blocking findings first, then PLAN deviations and remaining risks.
+Run:
+- `git diff --check`
+- `git diff --cached --check`
+- `PYTHONPATH=src uv run --locked python -m unittest discover -s tests`
+- `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`
+- `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate`
+- `PYTHONPATH=src uv run --locked python tests/validation/validate_official_note_linkage_source_review.py`
+- `PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py`
+- `git status --short --branch`
+
+Return blocking findings first, then validation results, PLAN deviations,
+remaining risks, and whether this is stage-ready.
 ```
