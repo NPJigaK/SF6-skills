@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
 
 from sf6_knowledge_coach import parsed_value_classifier as classifier
 
@@ -19,14 +20,20 @@ class ParsedValueClassifierTests(unittest.TestCase):
             {
                 "enum_classified": 16,
                 "out_of_scope_first_normalized_export": 17,
-                "parsed_numeric_structured": 184,
+                "parsed_numeric_structured": 1,
                 "raw_preserved_non_calculation": 6,
-                "review_required": 24,
+                "review_required": 207,
             },
         )
         self.assertEqual(payload["parse_rule_policy_counts"]["timing"], 63)
         self.assertEqual(payload["enum_policy_counts"], {"attribute": 1, "cancel": 6, "defense": 9})
         self.assertTrue(all(payload["system_mechanics_anchors_checked"].values()))
+        sa_gain = next(
+            record for record in payload["coverage_records"]
+            if record["review_item_id"] == "value-shape:official--source_specific_expression--sa"
+        )
+        self.assertEqual(sa_gain["classifier_decision"], "review_required")
+        self.assertEqual(sa_gain["calculation_input_status"], "review_required_not_calculation_safe")
 
     def test_strict_numeric_values_parse_without_collapsing_complex_shapes(self) -> None:
         block_advantage = self.records["value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb"]
@@ -106,6 +113,13 @@ class ParsedValueClassifierTests(unittest.TestCase):
         result = classifier.classify_raw_value("100x8", out_of_scope)
         self.assertEqual(result.classifier_decision, "out_of_scope_first_normalized_export")
         self.assertEqual(result.value_shape["classifier_status"], "rejected")
+
+    def test_validate_coverage_artifacts_reports_missing_files(self) -> None:
+        errors = classifier.validate_coverage_artifacts(
+            json_path=Path("missing-parsed-value-classifier-coverage.json"),
+            markdown_path=Path("missing-parsed-value-classifier-coverage.md"),
+        )
+        self.assertTrue(any("Missing" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

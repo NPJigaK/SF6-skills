@@ -366,9 +366,9 @@ def validate_coverage_artifacts(
     output_json = json_path or default_coverage_json_path()
     output_md = markdown_path or default_coverage_md_path()
     if not output_json.exists():
-        errors.append(f"Missing {output_json.relative_to(repo_root())}")
+        errors.append(f"Missing {_display_path(output_json)}")
     if not output_md.exists():
-        errors.append(f"Missing {output_md.relative_to(repo_root())}")
+        errors.append(f"Missing {_display_path(output_md)}")
     if errors:
         return errors
     payload = json.loads(output_json.read_text(encoding="utf-8"))
@@ -377,7 +377,7 @@ def validate_coverage_artifacts(
         text = path.read_text(encoding="utf-8")
         for pattern in FORBIDDEN_PUBLIC_PATTERNS:
             if pattern.search(text):
-                errors.append(f"{path.relative_to(repo_root())} contains forbidden public content")
+                errors.append(f"{_display_path(path)} contains forbidden public content")
                 break
     if errors:
         raise ValueError("\n".join(errors))
@@ -461,11 +461,17 @@ def _coverage_record(record: dict[str, Any]) -> dict[str, Any]:
             decision = "review_required"
             note = unsupported_reason
         else:
-            decision = "parsed_numeric_structured"
             parser_rule_ids = SUPPORTED_PARSE_RULES_BY_FAMILY.get(family, [])
-            value_shape_status = "parsed"
-            calculation_status = "eligible_only_after_domain_source_and_unit_checks"
-            note = "Strict parser rules cover simple values; complex variants remain review-required at raw-value classification time."
+            parsed_examples = _parsed_representative_examples(record)
+            if parser_rule_ids and parsed_examples:
+                decision = "parsed_numeric_structured"
+                value_shape_status = "parsed"
+                calculation_status = _parsed_calculation_status(record)
+                note = "Reviewed representative examples parse under strict rules; complex variants still remain review-required at raw-value classification time."
+            else:
+                decision = "review_required"
+                parser_rule_ids = []
+                note = "Reviewed representative examples do not parse under strict rules; this disposition group remains review-required."
     elif disposition == "source_specific_enum_required":
         parser_rule_ids = ["enum_token.source_native_examples.v1"]
         value_shape_status = "parsed"
@@ -580,6 +586,17 @@ def _classify_enum(raw: str, disposition_record: dict[str, Any]) -> Classificati
             policy_note="Source-native enum token is preserved exactly from reviewed representative examples.",
         )
     return _review_required(raw, review_item_id, "Enum token is not in reviewed representative examples; do not guess source-native enum semantics.")
+
+
+def _parsed_representative_examples(record: dict[str, Any]) -> list[str]:
+    parsed: list[str] = []
+    for example in record.get("representative_examples", []):
+        if not isinstance(example, dict) or not isinstance(example.get("raw_value"), str):
+            continue
+        result = classify_raw_value(example["raw_value"], record)
+        if result.classifier_decision == "parsed_numeric_structured":
+            parsed.append(example["raw_value"])
+    return parsed
 
 
 def _parsed_calculation_status(disposition_record: dict[str, Any]) -> str:
@@ -761,6 +778,13 @@ def _contains_forbidden_authority_claim(value: Any) -> bool:
     return False
 
 
+def _display_path(path: Path) -> str:
+    try:
+        return path.relative_to(repo_root()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
 def _markdown_code(value: str) -> str:
     return "`" + str(value).replace("`", "\\`") + "`"
 
@@ -777,7 +801,9 @@ def main(argv: list[str] | None = None) -> int:
             write_coverage_artifacts(payload)
             print(f"Parsed-value classifier coverage written: {payload['total_review_items']} records")
             return 0
-        validate_coverage_artifacts()
+        errors = validate_coverage_artifacts()
+        if errors:
+            raise ValueError("\n".join(errors))
         print("Parsed-value classifier coverage validation OK")
         return 0
     except Exception as exc:  # pragma: no cover - CLI error message matters

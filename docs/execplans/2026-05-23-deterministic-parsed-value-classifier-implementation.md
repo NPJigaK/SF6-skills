@@ -204,9 +204,9 @@ git status --short --branch
 - [x] (2026-05-23 JST) Added focused parser/classifier tests, current-fact
   schema fixtures, validator coverage, and validator/test audit entries.
 - [x] (2026-05-23 JST) Classified all 247 review groups:
-  184 `parsed_numeric_structured`, 16 `enum_classified`, 6
+  1 `parsed_numeric_structured`, 16 `enum_classified`, 6
   `raw_preserved_non_calculation`, 17 `out_of_scope_first_normalized_export`,
-  and 24 `review_required`.
+  and 207 `review_required`.
 - [x] (2026-05-23 JST) Validation passed:
   `git diff --check`, `git diff --cached --check`, `uv lock --check`,
   `PYTHONPATH=src uv run --locked python -m unittest discover -s tests`, all
@@ -258,6 +258,14 @@ git status --short --branch
   authority.
   Date/Author: 2026-05-23 / Codex
 
+- Decision: Mark a disposition group `parsed_numeric_structured` only when its
+  reviewed representative examples parse under strict deterministic rules.
+  Rationale: Family-level parser availability is not enough evidence that the
+  current source examples are calculation-safe. Groups with note-prefixed,
+  compound, parenthesized, bracketed, or otherwise unsupported representative
+  examples must remain `review_required`.
+  Date/Author: 2026-05-23 / Codex
+
 ## Deviations
 
 - None.
@@ -275,8 +283,8 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Parser/classifier module | Added deterministic strict parsers, enum preservation for reviewed representative examples, raw-preserved handling, review-required handling, and out-of-scope rejection | `src/sf6_knowledge_coach/parsed_value_classifier.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Passed, 46 tests | None | Implementation review pending | Strict parsed outputs still require later domain/source/unit checks before calculator use |
-| Parser/classifier coverage | Classified all 247 disposition groups: 184 parsed numeric/structured, 16 enum, 24 review-required, 6 raw-preserved, 17 out-of-scope | `data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json`, `docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_parsed_value_classifier.py` | Passed | None | Implementation review pending | Coverage is policy-derived, not live source truth |
+| Parser/classifier module | Added deterministic strict parsers, enum preservation for reviewed representative examples, raw-preserved handling, review-required handling, and out-of-scope rejection | `src/sf6_knowledge_coach/parsed_value_classifier.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Passed, 47 tests | None | Implementation review pending | Strict parsed outputs still require later domain/source/unit checks before calculator use |
+| Parser/classifier coverage | Classified all 247 disposition groups: 1 parsed numeric/structured, 16 enum, 207 review-required, 6 raw-preserved, 17 out-of-scope | `data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json`, `docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_parsed_value_classifier.py` | Passed | None | Implementation review pending | Coverage is policy-derived, not live source truth |
 | Current-fact schema compatibility | Added focused fixtures for enum, review-required scaling, and SuperCombo ordered pair without promoting SuperCombo authority | `tests/fixtures/current-facts/records/valid/*.json` | `PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py` | Passed | None | Implementation review pending | Fixtures prove schema compatibility only |
 | Validator audit | Added audit entries for new unittest and validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`, `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py` | Passed | None | Implementation review pending | Audit remains accepted-with-limits |
 | Preserve calculation safety | Kept scaling, juggle metadata, SuperCombo active-window sequences, note-bearing values, parenthesized values, bracketed values, KD/HKD/stateful values, multihit values, and unknown enum tokens review-required | Parser/classifier module and coverage artifacts | Full validation command set | Passed | None | Implementation review pending | Future calculators must enforce parsed-only plus source/role/unit/domain eligibility |
