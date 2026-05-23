@@ -56,6 +56,20 @@ class ParsedValueClassifierTests(unittest.TestCase):
         self.assertEqual(result.parsed_value["values"], [0.8, 0.33])
         self.assertEqual(result.calculation_input_status, "not_numeric_authority")
 
+    def test_gauge_scalar_unit_does_not_confuse_supercombo_prefix(self) -> None:
+        drive_gain = self.records["value-shape:supercombo--unclassified_expression--command_normals--drive_gain"]
+        result = classifier.classify_raw_value("1000", drive_gain)
+        self.assertEqual(result.parsed_value, {"kind": "gauge_amount", "unit": "drive", "value": 1000})
+        self.assertEqual(result.calculation_input_status, "not_numeric_authority")
+
+        drive_damage = self.records["value-shape:supercombo--unclassified_expression--command_normals--drivedmg_blk"]
+        result = classifier.classify_raw_value("1000", drive_damage)
+        self.assertEqual(result.parsed_value, {"kind": "gauge_amount", "unit": "drive", "value": 1000})
+
+        super_gain = self.records["value-shape:supercombo--unclassified_expression--command_normals--super_gain_hit"]
+        result = classifier.classify_raw_value("1000", super_gain)
+        self.assertEqual(result.parsed_value, {"kind": "gauge_amount", "unit": "super_art", "value": 1000})
+
     def test_supercombo_parsed_coverage_is_not_numeric_authority(self) -> None:
         payload = classifier.build_coverage_payload(disposition=self.disposition)
         supercombo_parsed = [

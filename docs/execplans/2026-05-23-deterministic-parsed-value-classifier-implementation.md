@@ -211,8 +211,12 @@ git status --short --branch
   `git diff --check`, `git diff --cached --check`, `uv lock --check`,
   `PYTHONPATH=src uv run --locked python -m unittest discover -s tests`, all
   `tests/validation/validate_*.py`, and `git status --short --branch`.
-- [x] (2026-05-23 JST) Completed implementation review with
-  `codex review --commit 1332e1d`; no correctness issues were identified.
+- [x] (2026-05-23 JST) Completed full implementation review with
+  `codex review --base d849741`; fixed the P2 SuperCombo gauge unit inference
+  issue it identified.
+- [x] (2026-05-23 JST) Re-ran full implementation review after the gauge-unit
+  fix with `codex review --base d849741`; no discrete correctness issues were
+  identified.
 
 ## Decision Log
 
@@ -267,6 +271,13 @@ git status --short --branch
   examples must remain `review_required`.
   Date/Author: 2026-05-23 / Codex
 
+- Decision: Infer gauge units from explicit field semantics only.
+  Rationale: `supercombo_` is a source prefix, not Super Art semantics. Drive
+  gauge fields such as `supercombo_drive_gain` and
+  `supercombo_drive_damage_on_block` must remain `drive`; only `sa_gain` and
+  `super_gain` fields classify as `super_art`.
+  Date/Author: 2026-05-23 / Codex
+
 ## Deviations
 
 - None.
@@ -284,7 +295,7 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Parser/classifier module | Added deterministic strict parsers, enum preservation for reviewed representative examples, raw-preserved handling, review-required handling, and out-of-scope rejection | `src/sf6_knowledge_coach/parsed_value_classifier.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Passed, 48 tests | None | None | Strict parsed outputs still require later domain/source/unit checks before calculator use |
+| Parser/classifier module | Added deterministic strict parsers, enum preservation for reviewed representative examples, raw-preserved handling, review-required handling, and out-of-scope rejection | `src/sf6_knowledge_coach/parsed_value_classifier.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Passed, 49 tests | None | None | Strict parsed outputs still require later domain/source/unit checks before calculator use |
 | Parser/classifier coverage | Classified all 247 disposition groups: 1 parsed numeric/structured, 16 enum, 207 review-required, 6 raw-preserved, 17 out-of-scope | `data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json`, `docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_parsed_value_classifier.py` | Passed | None | None | Coverage is policy-derived, not live source truth |
 | Current-fact schema compatibility | Added focused fixtures for enum, review-required scaling, and SuperCombo ordered pair without promoting SuperCombo authority | `tests/fixtures/current-facts/records/valid/*.json` | `PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py` | Passed | None | None | Fixtures prove schema compatibility only |
 | Validator audit | Added audit entries for new unittest and validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`, `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py` | Passed | None | None | Audit remains accepted-with-limits |
