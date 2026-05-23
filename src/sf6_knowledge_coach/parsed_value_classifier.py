@@ -619,7 +619,7 @@ def _parse_supported_value(raw: str, *, family: str, field_key: str) -> tuple[di
     if family == "damage" and UNSIGNED_INTEGER_RE.fullmatch(raw):
         return {"kind": "integer", "unit": "damage", "value": int(raw)}, "integer_damage.strict.v1"
     if family == "gauge" and DECIMAL_RE.fullmatch(raw):
-        unit = "super_art" if ("super" in field_key or field_key == "sa_gain") else "drive"
+        unit = _gauge_amount_unit(field_key)
         value = float(raw) if "." in raw else int(raw)
         return {"kind": "gauge_amount", "unit": unit, "value": value}, "gauge_amount.strict.v1"
     if family == "throw":
@@ -756,6 +756,12 @@ def _decimal_metric_unit(field_key: str) -> str:
     if "range" in field_key or "distance" in field_key or "apex" in field_key:
         return "source_native_distance"
     return "source_native_metric"
+
+
+def _gauge_amount_unit(field_key: str) -> str:
+    if field_key == "sa_gain" or field_key.startswith("super_gain") or "_super_gain" in field_key:
+        return "super_art"
+    return "drive"
 
 
 def _mechanics_anchor_presence(text: str) -> dict[str, bool]:
