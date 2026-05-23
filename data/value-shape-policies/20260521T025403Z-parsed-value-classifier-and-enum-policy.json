@@ -1,0 +1,140 @@
+{
+  "artifact_boundary": "classifier_enum_policy_summary_only",
+  "artifact_schema_version": "parsed_value_classifier_enum_policy/v1",
+  "authority_status": "policy_only_not_authority",
+  "input_disposition": "data/value-shape-dispositions/20260521T025403Z-value-shape-review-item-disposition-summary.json",
+  "json_schema_redesign_status": "ready_for_schema_design_after_policy_review",
+  "parsed_value_implementation": "not_implemented",
+  "parse_rule_policy_counts": {
+    "advantage": 50,
+    "damage": 18,
+    "gauge": 44,
+    "metadata": 21,
+    "mobility": 7,
+    "projectile": 3,
+    "scaling": 1,
+    "throw": 1,
+    "timing": 63
+  },
+  "parse_rule_policies": [
+    {
+      "record_count": 50,
+      "semantic_source_family": "advantage",
+      "schema_shapes": [
+        "signed_frame",
+        "knockdown_advantage",
+        "wall_splat_variant",
+        "stagger_variant",
+        "parenthesized_alternate",
+        "range_advantage"
+      ]
+    },
+    {
+      "record_count": 18,
+      "semantic_source_family": "damage",
+      "schema_shapes": [
+        "scalar_damage",
+        "multihit_damage",
+        "bracketed_alternate_damage",
+        "parenthesized_total_or_scaled"
+      ]
+    },
+    {
+      "record_count": 44,
+      "semantic_source_family": "gauge",
+      "schema_shapes": [
+        "scalar_gauge",
+        "parenthesized_alternate",
+        "bracketed_tagged_value",
+        "multihit_gauge"
+      ]
+    },
+    {
+      "record_count": 21,
+      "semantic_source_family": "metadata",
+      "schema_shapes": [
+        "decimal_metric",
+        "juggle_marker",
+        "range_metric",
+        "bracketed_marker"
+      ]
+    },
+    {
+      "record_count": 7,
+      "semantic_source_family": "mobility",
+      "schema_shapes": [
+        "decimal_metric",
+        "plus_sequence"
+      ]
+    },
+    {
+      "record_count": 3,
+      "semantic_source_family": "projectile",
+      "schema_shapes": [
+        "decimal_metric",
+        "source_native_speed_note"
+      ]
+    },
+    {
+      "record_count": 1,
+      "semantic_source_family": "scaling",
+      "schema_shapes": [
+        "percent_note"
+      ]
+    },
+    {
+      "record_count": 1,
+      "semantic_source_family": "throw",
+      "schema_shapes": [
+        "ordered_pair"
+      ],
+      "components": [
+        "throw_range",
+        "hurtbox"
+      ]
+    },
+    {
+      "record_count": 63,
+      "semantic_source_family": "timing",
+      "schema_shapes": [
+        "frame_scalar",
+        "frame_range",
+        "active_window_sequence",
+        "parenthesized_alternate",
+        "total_duration",
+        "plus_sequence",
+        "landing_condition",
+        "source_note_marker"
+      ]
+    }
+  ],
+  "enum_policy_counts": {
+    "attribute": 1,
+    "cancel": 6,
+    "defense": 9
+  },
+  "enum_policies": [
+    {
+      "enum_status": "source_native_enum_required",
+      "record_count": 1,
+      "semantic_source_family": "attribute"
+    },
+    {
+      "enum_status": "source_native_enum_required",
+      "record_count": 6,
+      "semantic_source_family": "cancel"
+    },
+    {
+      "enum_status": "source_native_enum_required",
+      "record_count": 9,
+      "semantic_source_family": "defense"
+    }
+  ],
+  "run_id": "20260521T025403Z",
+  "source_boundary": {
+    "full_raw_rows_public_commit": "forbidden",
+    "raw_html_public_commit": "forbidden"
+  },
+  "total_enum_policy_records": 16,
+  "total_parse_rule_policy_records": 208
+}
