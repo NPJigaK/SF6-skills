@@ -1,0 +1,50 @@
+{
+  "$id": "https://sf6-knowledge-coach.local/schemas/current-facts/source_reference.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "evidence_basis": {
+      "enum": [
+        "official_raw_snapshot",
+        "supercombo_mapping_summary",
+        "source_acquisition_report",
+        "synthetic_contract_fixture",
+        "value_shape_inventory",
+        "value_shape_policy"
+      ]
+    },
+    "public_reference": {
+      "pattern": "^(data|docs|contracts)/[A-Za-z0-9_.:/-]+$",
+      "type": "string"
+    },
+    "run_id": {
+      "pattern": "^[0-9]{8}T[0-9]{6}Z$",
+      "type": "string"
+    },
+    "source_header_path": {
+      "items": { "type": "string" },
+      "minItems": 1,
+      "type": "array"
+    },
+    "source_label": { "type": "string" },
+    "source_name": { "enum": ["official", "supercombo"] },
+    "source_role": {
+      "enum": [
+        "authority_candidate",
+        "cross_reference_candidate",
+        "enrichment_candidate"
+      ]
+    }
+  },
+  "required": [
+    "evidence_basis",
+    "public_reference",
+    "run_id",
+    "source_header_path",
+    "source_label",
+    "source_name",
+    "source_role"
+  ],
+  "title": "Current-fact source reference",
+  "type": "object"
+}

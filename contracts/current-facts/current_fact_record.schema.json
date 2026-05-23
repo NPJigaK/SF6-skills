@@ -1,0 +1,125 @@
+{
+  "$id": "https://sf6-knowledge-coach.local/schemas/current-facts/current_fact_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_name": { "const": "official" }
+        },
+        "required": ["source_name"]
+      },
+      "then": {
+        "properties": {
+          "source_role": { "const": "authority_candidate" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_name": { "const": "supercombo" }
+        },
+        "required": ["source_name"]
+      },
+      "then": {
+        "properties": {
+          "authority_status": {
+            "enum": ["cross_reference_candidate", "enrichment_candidate", "not_authority"]
+          },
+          "source_role": {
+            "enum": ["cross_reference_candidate", "enrichment_candidate"]
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "authority_status": {
+      "enum": [
+        "authority_candidate",
+        "cross_reference_candidate",
+        "enrichment_candidate",
+        "not_authority"
+      ]
+    },
+    "character_slug": {
+      "pattern": "^[a-z0-9_]+$",
+      "type": "string"
+    },
+    "display_label_ja": { "type": "string" },
+    "evidence": {
+      "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/source_reference.schema.json"
+    },
+    "field_key": {
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "type": "string"
+    },
+    "move_id": {
+      "type": ["string", "null"]
+    },
+    "parsed_value": {
+      "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/parsed_value.schema.json"
+    },
+    "raw_value": { "type": "string" },
+    "record_id": {
+      "pattern": "^[a-z0-9][a-z0-9_.:-]*$",
+      "type": "string"
+    },
+    "source_family": {
+      "enum": [
+        "advantage",
+        "attribute",
+        "cancel",
+        "damage",
+        "defense",
+        "gauge",
+        "identity",
+        "metadata",
+        "mobility",
+        "note",
+        "projectile",
+        "scaling",
+        "throw",
+        "timing",
+        "vital"
+      ]
+    },
+    "source_header_path": {
+      "items": { "type": "string" },
+      "minItems": 1,
+      "type": "array"
+    },
+    "source_label": { "type": "string" },
+    "source_name": { "enum": ["official", "supercombo"] },
+    "source_role": {
+      "enum": [
+        "authority_candidate",
+        "cross_reference_candidate",
+        "enrichment_candidate"
+      ]
+    },
+    "value_shape": {
+      "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/value_shape.schema.json"
+    }
+  },
+  "required": [
+    "authority_status",
+    "character_slug",
+    "display_label_ja",
+    "evidence",
+    "field_key",
+    "move_id",
+    "raw_value",
+    "record_id",
+    "source_family",
+    "source_header_path",
+    "source_label",
+    "source_name",
+    "source_role",
+    "value_shape"
+  ],
+  "title": "Normalized current-fact record",
+  "type": "object"
+}

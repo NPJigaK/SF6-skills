@@ -1,0 +1,27 @@
+{
+  "authority_status": "authority_candidate",
+  "character_slug": "jp",
+  "display_label_ja": "ガード硬直差",
+  "evidence": {
+    "evidence_basis": "official_raw_snapshot",
+    "public_reference": "data/exports/jp/official_raw.json",
+    "run_id": "20260521T025403Z",
+    "source_header_path": ["硬直差", "ガード"],
+    "source_label": "ガード",
+    "source_name": "official",
+    "source_role": "authority_candidate"
+  },
+  "field_key": "block_advantage",
+  "move_id": "jp_001_5lp",
+  "raw_value": "-2",
+  "record_id": "official:jp:jp_001_5lp:block_advantage",
+  "source_family": "official",
+  "source_header_path": ["硬直差", "ガード"],
+  "source_label": "ガード",
+  "source_name": "official",
+  "source_role": "authority_candidate",
+  "value_shape": {
+    "classes": ["signed_frame"],
+    "classifier_status": "raw_preserved"
+  }
+}
