@@ -1,6 +1,6 @@
 # Deterministic Parsed-Value Classifier Implementation
 
-Status: Drafted for review.
+Status: Implemented; validation passed; implementation review pending.
 
 ## Purpose
 
@@ -195,7 +195,23 @@ git status --short --branch
 - [x] (2026-05-23 JST) Confirmed current disposition and parser/enum policy
   counts from local artifacts.
 - [x] (2026-05-23 JST) Drafted this planning ExecPlan.
-- [ ] Complete mandatory review.
+- [x] (2026-05-23 JST) Reviewer approved this ExecPlan as the implementation
+  target for parser/classifier work only.
+- [x] (2026-05-23 JST) Added deterministic
+  `parsed_value_classifier` module.
+- [x] (2026-05-23 JST) Added parser/classifier coverage JSON and Markdown
+  artifacts for all 247 disposition groups.
+- [x] (2026-05-23 JST) Added focused parser/classifier tests, current-fact
+  schema fixtures, validator coverage, and validator/test audit entries.
+- [x] (2026-05-23 JST) Classified all 247 review groups:
+  184 `parsed_numeric_structured`, 16 `enum_classified`, 6
+  `raw_preserved_non_calculation`, 17 `out_of_scope_first_normalized_export`,
+  and 24 `review_required`.
+- [x] (2026-05-23 JST) Validation passed:
+  `git diff --check`, `git diff --cached --check`, `uv lock --check`,
+  `PYTHONPATH=src uv run --locked python -m unittest discover -s tests`, all
+  `tests/validation/validate_*.py`, and `git status --short --branch`.
+- [ ] Complete implementation review.
 
 ## Decision Log
 
@@ -210,6 +226,36 @@ git status --short --branch
 - Decision: Do not add calculation tools in the same PR as parser/classifier.
   Rationale: Calculators need their own domain contracts after parsed values
   exist.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Approve this ExecPlan for implementation as a reviewer, limited to
+  deterministic parser/classifier work and the listed fixtures, coverage
+  artifact, validator, and audit updates.
+  Rationale: The plan matches `docs/PLAN.md` numeric-safety boundaries and
+  explicitly excludes calculators, normalized exports, retrieval changes,
+  answer behavior changes, authority promotion, live acquisition, and
+  SuperCombo numeric authority promotion.
+  Date/Author: 2026-05-23 / Codex reviewer
+
+- Decision: Keep SymPy out of this parser/classifier implementation.
+  Rationale: This unit classifies value shapes and raw values. Exact arithmetic
+  belongs to a later calculator ExecPlan that consumes reviewed formulas and
+  parsed values.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Mark scaling-family values, juggle metadata, and SuperCombo active
+  window expressions as `review_required` until a later schema/parser plan adds
+  domain-specific structured objects.
+  Rationale: The reviewed SuperCombo system mechanics summary says these values
+  need scaling types, trigger/target semantics, juggle terminology mapping, or
+  active-window component labels before calculation use.
+  Date/Author: 2026-05-23 / Codex
+
+- Decision: Treat parsed SuperCombo values as `not_numeric_authority` in the
+  classifier coverage artifact.
+  Rationale: Parsed structure is useful for enrichment and cross-reference, but
+  it does not change SuperCombo's source role or make it daily-answer numeric
+  authority.
   Date/Author: 2026-05-23 / Codex
 
 ## Deviations
@@ -229,6 +275,9 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan parser/classifier | Defined calculation-safe parser boundary | This ExecPlan | reviewer check | Pending | None | Implementation not started | Must not overclaim parse semantics |
-| Preserve calculation safety | Block arithmetic on raw/unparsed values | This ExecPlan | reviewer check | Pending | None | Calculation tools not implemented | Future tools must enforce parsed-only inputs |
-| Preserve update safety | Reused drift policy for future updates | This ExecPlan | reviewer check | Pending | None | Drift automation not implemented | New source expressions must hard fail or review |
+| Parser/classifier module | Added deterministic strict parsers, enum preservation for reviewed representative examples, raw-preserved handling, review-required handling, and out-of-scope rejection | `src/sf6_knowledge_coach/parsed_value_classifier.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Passed, 46 tests | None | Implementation review pending | Strict parsed outputs still require later domain/source/unit checks before calculator use |
+| Parser/classifier coverage | Classified all 247 disposition groups: 184 parsed numeric/structured, 16 enum, 24 review-required, 6 raw-preserved, 17 out-of-scope | `data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json`, `docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_parsed_value_classifier.py` | Passed | None | Implementation review pending | Coverage is policy-derived, not live source truth |
+| Current-fact schema compatibility | Added focused fixtures for enum, review-required scaling, and SuperCombo ordered pair without promoting SuperCombo authority | `tests/fixtures/current-facts/records/valid/*.json` | `PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py` | Passed | None | Implementation review pending | Fixtures prove schema compatibility only |
+| Validator audit | Added audit entries for new unittest and validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`, `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py` | Passed | None | Implementation review pending | Audit remains accepted-with-limits |
+| Preserve calculation safety | Kept scaling, juggle metadata, SuperCombo active-window sequences, note-bearing values, parenthesized values, bracketed values, KD/HKD/stateful values, multihit values, and unknown enum tokens review-required | Parser/classifier module and coverage artifacts | Full validation command set | Passed | None | Implementation review pending | Future calculators must enforce parsed-only plus source/role/unit/domain eligibility |
+| Preserve scope exclusions | Did not add calculators, normalized exports, retrieval changes, answer changes, authority promotion, live acquisition, or SymPy calculation logic | All changed files | Diff review and validation | Passed | None | Implementation review pending | Later calculator ExecPlan still required |

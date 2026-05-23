@@ -1,0 +1,33 @@
+{
+  "authority_status": "authority_candidate",
+  "character_slug": "jp",
+  "display_label_ja": "キャンセル",
+  "evidence": {
+    "evidence_basis": "value_shape_policy",
+    "public_reference": "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+    "run_id": "20260521T025403Z",
+    "source_header_path": ["キャンセル"],
+    "source_label": "キャンセル",
+    "source_name": "official",
+    "source_role": "authority_candidate"
+  },
+  "field_key": "cancel",
+  "move_id": "jp_001_5lp",
+  "parsed_value": {
+    "kind": "enum_token",
+    "tokens": ["SA3"]
+  },
+  "raw_value": "SA3",
+  "record_id": "official:jp:jp_001_5lp:cancel:enum",
+  "source_family": "cancel",
+  "source_header_path": ["キャンセル"],
+  "source_label": "キャンセル",
+  "source_name": "official",
+  "source_role": "authority_candidate",
+  "value_shape": {
+    "classes": ["categorical"],
+    "classifier_status": "parsed",
+    "parser_rule_id": "enum_token.source_native_examples.v1",
+    "review_item_id": "value-shape:official--unclassified_expression--u_bca84ea5c65f"
+  }
+}

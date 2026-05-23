@@ -1,0 +1,28 @@
+{
+  "authority_status": "authority_candidate",
+  "character_slug": "jp",
+  "display_label_ja": "コンボ補正値",
+  "evidence": {
+    "evidence_basis": "value_shape_policy",
+    "public_reference": "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+    "run_id": "20260521T025403Z",
+    "source_header_path": ["コンボ補正値"],
+    "source_label": "コンボ補正値",
+    "source_name": "official",
+    "source_role": "authority_candidate"
+  },
+  "field_key": "combo_scaling",
+  "move_id": "jp_001_5lp",
+  "raw_value": "※即時補正10%",
+  "record_id": "official:jp:jp_001_5lp:combo_scaling:review_required",
+  "source_family": "scaling",
+  "source_header_path": ["コンボ補正値"],
+  "source_label": "コンボ補正値",
+  "source_name": "official",
+  "source_role": "authority_candidate",
+  "value_shape": {
+    "classes": ["note_prefixed", "percent_expression"],
+    "classifier_status": "review_required",
+    "review_item_id": "value-shape:official--source_specific_expression--u_55d872f6091a"
+  }
+}
