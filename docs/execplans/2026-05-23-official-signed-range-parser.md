@@ -1,14 +1,14 @@
 # Official Signed Range Parser
 
-Status: Drafted for review.
+Status: Implemented; validation passed.
 
 ## Purpose
 
-Plan the smallest parser implementation slice for official signed `～`
-advantage ranges only.
+Implement the smallest parser slice for official signed `～` advantage ranges
+only.
 
-This ExecPlan is docs-only. It does not implement parser, schema, classifier,
-calculator, retrieval, answer, export, live acquisition, or SymPy changes.
+This ExecPlan does not authorize schema, calculator, retrieval, answer,
+export, live acquisition, or SymPy changes.
 
 ## Inputs
 
@@ -98,8 +98,8 @@ silently widen `frame_range`.
 
 ## Parser Design
 
-Future implementation should add a narrowly scoped parser helper for official
-signed Japanese wave-dash advantage ranges.
+Implementation adds a narrowly scoped parser helper for official signed
+Japanese wave-dash advantage ranges.
 
 Required behavior:
 
@@ -151,9 +151,9 @@ groups `review_required_not_calculation_safe` and do not parse them until a
 range-reason representation is approved. Do not parse them while marking them
 as ordinary calculation-eligible numeric values.
 
-## Future Implementation Plan
+## Implementation Plan
 
-A later implementation PR may touch only the surfaces required for this slice:
+This implementation PR may touch only the surfaces required for this slice:
 
 - `src/sf6_knowledge_coach/parsed_value_classifier.py`
 - `tests/test_parsed_value_classifier.py`
@@ -167,7 +167,7 @@ A later implementation PR may touch only the surfaces required for this slice:
 It must not touch current-fact schemas unless review rejects the schema
 decision above and this ExecPlan is amended first.
 
-Expected coverage movement, if the preferred design is approved:
+Expected coverage movement:
 
 - the two target groups move from `review_required` to
   `parsed_numeric_structured`;
@@ -177,7 +177,7 @@ Expected coverage movement, if the preferred design is approved:
 
 ## Required Tests
 
-Future tests must prove:
+Tests must prove:
 
 - `-12～-1` parses for the official `block_advantage` target group as:
   `{"kind": "frame_range", "unit": "frame", "start": -12, "end": -1}`;
@@ -203,14 +203,20 @@ Future tests must prove:
 - Parsed ranges are not treated as single-value calculation-safe.
 - Raw values are preserved exactly.
 - Parser rule ID and test expectations are explicit.
-- No implementation changes are made in this docs-only planning unit.
+- Implementation changes are limited to the scoped parser, tests, validator
+  coverage, generated coverage artifacts, and this ExecPlan.
 - Validation commands pass.
 
 ## Files / Interfaces
 
-This docs-only planning unit changes only:
+This implementation changes only:
 
 - `docs/execplans/2026-05-23-official-signed-range-parser.md`
+- `src/sf6_knowledge_coach/parsed_value_classifier.py`
+- `tests/test_parsed_value_classifier.py`
+- `tests/validation/validate_parsed_value_classifier.py`
+- `data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json`
+- `docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md`
 
 ## Validation Commands
 
@@ -218,7 +224,11 @@ Run from repository root:
 
 ```bash
 git diff --check
+git diff --cached --check
+uv lock --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier build
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 git status --short --branch
 ```
@@ -235,7 +245,25 @@ git status --short --branch
   `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
   `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate`,
   and `git status --short --branch`.
-- [ ] Complete review before implementation approval.
+- [x] (2026-05-23 JST) Implementation approval received; created branch
+  `impl/official-signed-range-parser`.
+- [x] (2026-05-23 JST) Added target-ID-limited
+  `frame_range.official_signed_wave_dash.v1` parser.
+- [x] (2026-05-23 JST) Added tests for target parsing, invalid delimiter
+  rejection, note/active exclusions, and SuperCombo exclusion.
+- [x] (2026-05-23 JST) Added validator coverage for the new calculation
+  status, target IDs, parser rule, and count changes.
+- [x] (2026-05-23 JST) Regenerated parsed-value classifier coverage artifacts.
+- [x] (2026-05-23 JST) Final validation passed:
+  `git diff --check`,
+  `git diff --cached --check`,
+  `uv lock --check`,
+  `PYTHONPATH=src uv run --locked python -m unittest discover -s tests`,
+  `PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py`,
+  `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier build`,
+  `PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate`,
+  and `git status --short --branch`.
+- [ ] Complete implementation review.
 
 ## Decision Log
 
@@ -282,23 +310,24 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Docs-only signed range parser plan | Drafted implementation-prep plan for exactly two official signed `～` advantage range groups | `docs/execplans/2026-05-23-official-signed-range-parser.md` | `git diff --check`; clean-slate validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review pending | Calculation status naming needs review |
-| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/live acquisition/SymPy implementation added | This ExecPlan only | Diff/status review | Passed | None | Future implementation ExecPlan approval required | Later work must not expand beyond target groups |
+| Official signed range parser | Added target-ID-limited parser rule for two official signed `～` advantage range groups | `src/sf6_knowledge_coach/parsed_value_classifier.py`; coverage artifacts | Full validation command set | Passed | None | Review pending | Future calculators must not consume ranges as single values |
+| Calculation status guard | Added `parsed_range_not_single_value_calculation_safe` and validator/test coverage for count/status expectations | `src/sf6_knowledge_coach/parsed_value_classifier.py`; `tests/test_parsed_value_classifier.py`; `tests/validation/validate_parsed_value_classifier.py` | Full validation command set | Passed | None | Review pending | Status must remain fixed by validator |
+| Scope exclusions | No schema/calculator/retrieval/answer/export/live acquisition/SymPy implementation added | Scoped implementation files only | Diff/status review | Passed | None | Review pending | Later work must not expand beyond target groups |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-23-official-signed-range-parser.md.
+Review the implementation of docs/execplans/2026-05-23-official-signed-range-parser.md.
 
-Confirm whether it is acceptable as the implementation ExecPlan for only the
-two official signed `～` advantage range groups.
+Confirm whether the implementation matches the ExecPlan for only the two
+official signed `～` advantage range groups.
 
 Check:
-- it covers exactly the two target official review_required groups;
-- existing `parsed_value.kind == "frame_range"` is reused appropriately;
+- the parser applies exactly to the two target official review_required groups;
+- `parsed_value.kind == "frame_range"` is reused without schema changes;
 - delimiter preservation relies on raw_value, not parsed_value widening;
 - range reason remains unknown and is not hidden by parser success;
-- parsed signed ranges are not treated as single-value calculation-safe;
+- parsed signed ranges use `parsed_range_not_single_value_calculation_safe`;
 - ASCII `~`, note-bearing values, active dot/double-dash values, damage,
   scaling, total_duration, SuperCombo, calculators, retrieval, answers,
   exports, live acquisition, and SymPy remain out of scope.

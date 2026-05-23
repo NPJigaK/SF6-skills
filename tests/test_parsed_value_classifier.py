@@ -20,9 +20,20 @@ class ParsedValueClassifierTests(unittest.TestCase):
             {
                 "enum_classified": 16,
                 "out_of_scope_first_normalized_export": 17,
-                "parsed_numeric_structured": 1,
+                "parsed_numeric_structured": 3,
                 "raw_preserved_non_calculation": 6,
-                "review_required": 207,
+                "review_required": 205,
+            },
+        )
+        self.assertEqual(
+            payload["calculation_input_status_counts"],
+            {
+                "enum_only_not_arithmetic": 16,
+                "not_numeric_authority": 1,
+                "out_of_scope_not_emitted": 17,
+                "parsed_range_not_single_value_calculation_safe": 2,
+                "raw_preserved_not_calculation": 6,
+                "review_required_not_calculation_safe": 205,
             },
         )
         self.assertEqual(payload["parse_rule_policy_counts"]["timing"], 63)
@@ -69,6 +80,54 @@ class ParsedValueClassifierTests(unittest.TestCase):
         super_gain = self.records["value-shape:supercombo--unclassified_expression--command_normals--super_gain_hit"]
         result = classifier.classify_raw_value("1000", super_gain)
         self.assertEqual(result.parsed_value, {"kind": "gauge_amount", "unit": "super_art", "value": 1000})
+
+    def test_official_signed_wave_dash_advantage_ranges_parse_but_are_not_calculation_safe(self) -> None:
+        block_advantage = self.records[
+            "value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb"
+        ]
+        block_examples = {
+            "-12～-1": {"kind": "frame_range", "unit": "frame", "start": -12, "end": -1},
+            "-4～-1": {"kind": "frame_range", "unit": "frame", "start": -4, "end": -1},
+            "-39～-33": {"kind": "frame_range", "unit": "frame", "start": -39, "end": -33},
+        }
+        for raw, expected in block_examples.items():
+            result = classifier.classify_raw_value(raw, block_advantage)
+            self.assertEqual(result.raw_value, raw)
+            self.assertEqual(result.parsed_value, expected)
+            self.assertEqual(result.value_shape["parser_rule_id"], "frame_range.official_signed_wave_dash.v1")
+            self.assertEqual(result.calculation_input_status, "parsed_range_not_single_value_calculation_safe")
+
+        hit_advantage = self.records["value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69"]
+        result = classifier.classify_raw_value("-28～-23", hit_advantage)
+        self.assertEqual(result.parsed_value, {"kind": "frame_range", "unit": "frame", "start": -28, "end": -23})
+        self.assertEqual(result.value_shape["parser_rule_id"], "frame_range.official_signed_wave_dash.v1")
+        self.assertEqual(result.calculation_input_status, "parsed_range_not_single_value_calculation_safe")
+
+        for raw in ("-12~-1", "-12--1", "-1～-12"):
+            result = classifier.classify_raw_value(raw, block_advantage)
+            self.assertEqual(result.value_shape["classifier_status"], "review_required")
+            self.assertIsNone(result.parsed_value)
+
+    def test_official_signed_wave_dash_slice_does_not_expand_other_parsers(self) -> None:
+        note_bearing_advantage = self.records[
+            "value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb"
+        ]
+        result = classifier.classify_raw_value("※-4", note_bearing_advantage)
+        self.assertEqual(result.value_shape["classifier_status"], "review_required")
+        self.assertIsNone(result.parsed_value)
+
+        active = self.records["value-shape:official--malformed_looking_source_value--u_fdb49a2113ba--u_c2b75204faf1"]
+        for raw in ("30-34.35", "20-24.25", "23--33"):
+            result = classifier.classify_raw_value(raw, active)
+            self.assertEqual(result.value_shape["classifier_status"], "review_required")
+            self.assertIsNone(result.parsed_value)
+
+        supercombo_advantage = self.records[
+            "value-shape:supercombo--unclassified_expression--command_normals--hit_advantage"
+        ]
+        result = classifier.classify_raw_value("-12～-1", supercombo_advantage)
+        self.assertEqual(result.value_shape["classifier_status"], "review_required")
+        self.assertIsNone(result.parsed_value)
 
     def test_supercombo_parsed_coverage_is_not_numeric_authority(self) -> None:
         payload = classifier.build_coverage_payload(disposition=self.disposition)

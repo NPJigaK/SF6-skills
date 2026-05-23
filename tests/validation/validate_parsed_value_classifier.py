@@ -17,6 +17,12 @@ COVERAGE_JSON = ROOT / "data/value-shape-policies/20260521T025403Z-parsed-value-
 COVERAGE_MD = ROOT / "docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md"
 SCHEMA_DIR = ROOT / "contracts/current-facts"
 RECORD_SCHEMA_ID = "https://sf6-knowledge-coach.local/schemas/current-facts/current_fact_record.schema.json"
+SIGNED_WAVE_DASH_RULE_ID = "frame_range.official_signed_wave_dash.v1"
+SIGNED_WAVE_DASH_CALCULATION_STATUS = "parsed_range_not_single_value_calculation_safe"
+SIGNED_WAVE_DASH_TARGET_IDS = {
+    "value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb",
+    "value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69",
+}
 SCHEMA_FILES = [
     "parsed_value.schema.json",
     "value_shape.schema.json",
@@ -62,9 +68,64 @@ def main() -> int:
     rendered = classifier.render_coverage_markdown(coverage)
     if COVERAGE_MD.read_text(encoding="utf-8") != rendered:
         errors.append("coverage markdown is not the deterministic classifier rendering")
+    _validate_signed_wave_dash_slice(coverage, errors)
     errors.extend(_validate_current_fact_compatible_outputs(disposition))
     _scan_public_files([COVERAGE_JSON, COVERAGE_MD], errors)
     return _finish(errors)
+
+
+def _validate_signed_wave_dash_slice(coverage: dict[str, Any], errors: list[str]) -> None:
+    if coverage.get("classifier_decision_counts", {}).get("parsed_numeric_structured") != 3:
+        errors.append("parsed_numeric_structured count must include exactly two official signed wave-dash ranges")
+    if coverage.get("classifier_decision_counts", {}).get("review_required") != 205:
+        errors.append("review_required count must decrease only for the two official signed wave-dash ranges")
+
+    calculation_counts = coverage.get("calculation_input_status_counts", {})
+    if calculation_counts.get(SIGNED_WAVE_DASH_CALCULATION_STATUS) != 2:
+        errors.append(f"{SIGNED_WAVE_DASH_CALCULATION_STATUS} count must be 2")
+    if calculation_counts.get("review_required_not_calculation_safe") != 205:
+        errors.append("review_required_not_calculation_safe count must be 205")
+    if calculation_counts.get("not_numeric_authority") != 1:
+        errors.append("not_numeric_authority count must remain 1")
+
+    records = coverage.get("coverage_records", [])
+    by_id = {record.get("review_item_id"): record for record in records if isinstance(record, dict)}
+    for review_item_id in SIGNED_WAVE_DASH_TARGET_IDS:
+        record = by_id.get(review_item_id)
+        if record is None:
+            errors.append(f"Missing signed wave-dash target coverage record: {review_item_id}")
+            continue
+        if record.get("source_name") != "official":
+            errors.append(f"{review_item_id} must remain official")
+        if record.get("source_role") != "authority_candidate":
+            errors.append(f"{review_item_id} must remain authority_candidate")
+        if record.get("classifier_decision") != "parsed_numeric_structured":
+            errors.append(f"{review_item_id} must be parsed_numeric_structured")
+        if record.get("calculation_input_status") != SIGNED_WAVE_DASH_CALCULATION_STATUS:
+            errors.append(f"{review_item_id} must not be single-value calculation-safe")
+        if record.get("parser_rule_ids") != [SIGNED_WAVE_DASH_RULE_ID]:
+            errors.append(f"{review_item_id} must use only {SIGNED_WAVE_DASH_RULE_ID}")
+
+    extra_rule_records = [
+        record.get("review_item_id")
+        for record in records
+        if isinstance(record, dict)
+        and SIGNED_WAVE_DASH_RULE_ID in record.get("parser_rule_ids", [])
+        and record.get("review_item_id") not in SIGNED_WAVE_DASH_TARGET_IDS
+    ]
+    if extra_rule_records:
+        errors.append(f"{SIGNED_WAVE_DASH_RULE_ID} leaked outside target groups: {extra_rule_records[:3]}")
+
+    unsafe_official_ranges = [
+        record.get("review_item_id")
+        for record in records
+        if isinstance(record, dict)
+        and record.get("source_name") == "official"
+        and SIGNED_WAVE_DASH_RULE_ID in record.get("parser_rule_ids", [])
+        and record.get("calculation_input_status") == "eligible_only_after_domain_source_and_unit_checks"
+    ]
+    if unsafe_official_ranges:
+        errors.append(f"official signed ranges must not be calculation-eligible: {unsafe_official_ranges[:3]}")
 
 
 def _validate_current_fact_compatible_outputs(disposition: dict[str, Any]) -> list[str]:
