@@ -38,8 +38,13 @@ jobs:
       - name: Unit tests
         run: PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 
-      - name: Clean-slate validator
-        run: PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+      - name: Repo validators
+        shell: bash
+        run: |
+          set -euo pipefail
+          for script in tests/validation/validate_*.py; do
+            PYTHONPATH=src uv run --locked python "$script"
+          done
 
       - name: Current-fact CLI smoke
         run: PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.cli answer prepare "JPの5LPはガードで何F？"

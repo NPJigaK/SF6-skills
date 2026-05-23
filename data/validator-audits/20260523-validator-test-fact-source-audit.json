@@ -1,0 +1,163 @@
+{
+  "artifact_boundary": "validator_test_audit_summary_only",
+  "artifact_schema_version": "validator_test_fact_source_audit/v1",
+  "audit_status": "review_required_before_schema_redesign",
+  "evidence_classes": [
+    "source_derived",
+    "policy_derived",
+    "synthetic_contract",
+    "privacy_boundary",
+    "artifact_consistency",
+    "governance_boundary"
+  ],
+  "files": [
+    {
+      "evidence_class": "source_derived",
+      "file": "tests/test_cli.py",
+      "limitations": [
+        "JP 5LP smoke only; not full roster current-fact validation"
+      ],
+      "primary_evidence": [
+        "data/exports/jp/official_raw.json",
+        ".local official acquisition artifact for JP 5LP checked during audit"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "synthetic_contract",
+      "file": "tests/test_source_acquisition.py",
+      "limitations": [
+        "uses synthetic HTML for parser and guard behavior",
+        "does not prove live source truth"
+      ],
+      "primary_evidence": [
+        "source acquisition ExecPlan",
+        "official/SuperCombo acquisition artifacts and reports"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "policy_derived",
+      "file": "tests/test_supercombo_field_mapping.py",
+      "limitations": [
+        "validates reviewed mapping policy output, not live SuperCombo truth"
+      ],
+      "primary_evidence": [
+        "data/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-summary.json",
+        "data/source-reviews/20260521T025403Z-value-shape-blocked-source-review-summary.json"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "artifact_consistency",
+      "file": "tests/test_value_shape_disposition.py",
+      "limitations": [
+        "validates disposition coverage and boundaries, not source semantics"
+      ],
+      "primary_evidence": [
+        "data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json",
+        "data/field-mappings/20260521T025403Z-supercombo-canonical-field-mapping-summary.json"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "source_derived",
+      "file": "tests/test_value_shape_inventory.py",
+      "limitations": [
+        "classifier examples are representative source shapes, not final parser semantics"
+      ],
+      "primary_evidence": [
+        "data/value-shape-inventories/20260521T025403Z-latest-source-value-shape-summary.json",
+        "ignored .local source acquisition artifacts"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "governance_boundary",
+      "file": "tests/validation/validate_clean_slate.py",
+      "limitations": [
+        "checks clean-slate repo shape, not source truth"
+      ],
+      "primary_evidence": [
+        "docs/PLAN.md",
+        "AGENTS.md",
+        "clean-slate ExecPlans"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "governance_boundary",
+      "file": "tests/validation/validate_validator_test_audit.py",
+      "limitations": [
+        "checks audit coverage and evidence metadata only; does not prove source truth"
+      ],
+      "primary_evidence": [
+        "this validator audit artifact",
+        "current tests/validation file inventory"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "policy_derived",
+      "file": "tests/validation/validate_supercombo_field_mapping.py",
+      "limitations": [
+        "delegates to mapping artifact validator; does not prove live SuperCombo truth"
+      ],
+      "primary_evidence": [
+        "SuperCombo mapping artifact",
+        "source review artifact"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "artifact_consistency",
+      "file": "tests/validation/validate_value_shape_disposition.py",
+      "limitations": [
+        "checks disposition artifact consistency; does not prove parse semantics"
+      ],
+      "primary_evidence": [
+        "value-shape disposition artifact",
+        "SuperCombo mapping artifact"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "source_derived",
+      "file": "tests/validation/validate_value_shape_inventory.py",
+      "limitations": [
+        "checks summarized inventory and privacy boundary; does not re-fetch live sources"
+      ],
+      "primary_evidence": [
+        "value-shape inventory artifact",
+        "source acquisition report"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "policy_derived",
+      "file": "tests/validation/validate_value_shape_policy.py",
+      "limitations": [
+        "checks policy coverage against disposition artifact; does not prove parser correctness"
+      ],
+      "primary_evidence": [
+        "parsed-value classifier and enum policy artifact",
+        "value-shape disposition artifact"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "source_derived",
+      "file": "tests/validation/validate_value_shape_source_review.py",
+      "limitations": [
+        "checks source-review summary boundaries; full raw context remains ignored local data"
+      ],
+      "primary_evidence": [
+        "source-review artifact",
+        "ignored .local source acquisition artifacts"
+      ],
+      "status": "accepted_with_limits"
+    }
+  ],
+  "review_rule": "A passing validator may prove only the evidence class declared for that file.",
+  "run_id": "20260523-validator-test-fact-source-audit"
+}
