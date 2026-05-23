@@ -22,6 +22,7 @@ privacy/security boundary.
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
 | `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape only |
 | `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |
+| `tests/validation/validate_official_note_linkage_source_review.py` | source-derived | accepted with limits | source-review summary; full row-note context remains ignored local evidence |
 | `tests/validation/validate_parsed_value_classifier.py` | artifact consistency | accepted with limits | coverage artifact, mechanics anchors, and schema-compatible samples only |
 | `tests/validation/validate_validator_test_audit.py` | governance boundary | accepted with limits | audit coverage and evidence metadata only |
 | `tests/validation/validate_supercombo_field_mapping.py` | policy-derived | accepted with limits | delegates to mapping artifact validation |
