@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
-    "artifact_schema_version": { "const": "current_fact_export/v1" },
+    "artifact_schema_version": { "const": "current_fact_export/v2" },
     "authority_boundary": {
       "additionalProperties": false,
       "properties": {
@@ -15,6 +15,7 @@
     },
     "generated_from": {
       "items": {
+        "not": { "pattern": "^data/exports/" },
         "pattern": "^(data|docs|contracts)/[A-Za-z0-9_.:/-]+$",
         "type": "string"
       },
@@ -24,7 +25,15 @@
     },
     "records": {
       "items": {
-        "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/current_fact_record.schema.json"
+        "allOf": [
+          {
+            "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/current_fact_record.schema.json"
+          },
+          {
+            "required": ["parsed_value"],
+            "type": "object"
+          }
+        ]
       },
       "minItems": 1,
       "type": "array"

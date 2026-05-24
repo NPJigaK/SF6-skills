@@ -44,6 +44,18 @@
         "not_authority"
       ]
     },
+    "calculation_input_status": {
+      "enum": [
+        "eligible_only_after_domain_source_and_unit_checks",
+        "annotated_candidate_not_calculation_safe",
+        "parsed_range_not_single_value_calculation_safe",
+        "review_required_not_calculation_safe",
+        "enum_only_not_arithmetic",
+        "raw_preserved_not_calculation",
+        "not_numeric_authority",
+        "out_of_scope_not_emitted"
+      ]
+    },
     "character_slug": {
       "pattern": "^[a-z0-9_]+$",
       "type": "string"
@@ -106,6 +118,7 @@
   },
   "required": [
     "authority_status",
+    "calculation_input_status",
     "character_slug",
     "display_label_ja",
     "evidence",

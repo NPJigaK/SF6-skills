@@ -1,6 +1,6 @@
 # Current-Fact Calculation Status Schema
 
-Status: Drafted for review; validation passed.
+Status: Implemented; validation passed.
 
 ## Purpose
 
@@ -316,11 +316,11 @@ Recommended next sequence:
 
 ## Files / Interfaces
 
-This docs-only plan changes only:
+The reviewed docs-only planning PR changed only:
 
 - `docs/execplans/2026-05-25-current-fact-calculation-status-schema.md`
 
-Future implementation plans may touch, after review:
+This implementation may touch only:
 
 - `contracts/current-facts/current_fact_record.schema.json`;
 - `contracts/current-facts/current_fact_export.schema.json`;
@@ -331,7 +331,7 @@ Future implementation plans may touch, after review:
 - current-fact consumer guard validators;
 - validator audit artifacts if new or changed test/validator files require it.
 
-This plan does not authorize export generation or runtime changes.
+This implementation does not authorize export generation or runtime changes.
 
 ## Validation Commands
 
@@ -356,7 +356,35 @@ git status --short --branch
 - [x] (2026-05-25 JST) Validation passed: `git diff --check`,
   `uv lock --check`, clean-slate validator, parsed-value classifier coverage
   validator, and `git status --short --branch`.
-- [ ] Complete mandatory review.
+- [x] (2026-05-25 JST) Completed mandatory review for the docs-only PR #353
+  with no blocking findings.
+- [x] (2026-05-25 JST) PR #353 was marked ready and merged with normal merge
+  commit `b8ca11b89399fb87da2470a1c4ccd90a1b421a0b`; local `main` was
+  fast-forwarded to `origin/main`.
+- [x] (2026-05-25 JST) Created implementation branch
+  `impl/current-fact-calculation-status-schema`.
+- [x] (2026-05-25 JST) Added top-level required
+  `calculation_input_status` to `current_fact_record.schema.json` with the
+  approved closed eight-value enum.
+- [x] (2026-05-25 JST) Bumped current-fact export artifact version to
+  `current_fact_export/v2` and required lookup-ready export records to include
+  `parsed_value`.
+- [x] (2026-05-25 JST) Updated current-fact record/export fixtures with
+  status values, v2 export version, and invalid fixtures for unknown status,
+  legacy raw `generated_from`, and review-required/no-parsed-value export
+  records.
+- [x] (2026-05-25 JST) Updated focused schema and consumer guard validators
+  for the closed status enum, v2 export version, invalid export fixtures, and
+  coverage/status compatibility.
+- [x] (2026-05-25 JST) Updated parsed-value classifier compatibility
+  validation so current-fact-compatible sample records include top-level
+  `calculation_input_status` from `ClassificationResult`.
+- [x] (2026-05-25 JST) Final implementation validation passed:
+  `git diff --check`, `git diff --cached --check`, `uv lock --check`,
+  unittest discovery, clean-slate validator, all validation scripts,
+  parsed-value classifier coverage validator, and `git status --short
+  --branch`.
+- [ ] Complete implementation review.
 
 ## Decision Log
 
@@ -388,16 +416,26 @@ git status --short --branch
   arithmetic.
   Date/Author: 2026-05-25 / Codex
 
+- Decision: Require `parsed_value` from `current_fact_export/v2.records[]`
+  while keeping record-shape fixtures able to represent review-required
+  records.
+  Rationale: This keeps lookup-ready exports parsed-value-only without
+  deleting useful record-level schema fixtures for blocked values.
+  Date/Author: 2026-05-25 / Codex
+
+- Decision: Reject legacy raw export paths in `generated_from` at schema level.
+  Rationale: The replacement export must not depend on the technical-debt raw
+  export surface it is intended to retire.
+  Date/Author: 2026-05-25 / Codex
+
 ## Deviations
 
 - None.
 
 ## Remaining Risks
 
-- The future schema implementation will need to update existing valid fixtures
-  to include `calculation_input_status`.
-- Existing review-required/no-parsed-value fixtures may need directory or
-  validator separation from lookup-ready export fixtures.
+- Existing review-required/no-parsed-value record-shape fixtures remain valid
+  only outside lookup-ready export fixtures.
 - The first export may have limited coverage because lookup-ready records
   require reviewed `parsed_value`.
 - Runtime lookup helper, export generator, parity validator, rollback
@@ -412,6 +450,10 @@ git status --short --branch
 | Closed status enum | Listed eight closed status values aligned with current guard and classifier coverage | This ExecPlan only | Diff/status review | Passed | None | Future schema validator update required | Enum drift if classifier policy changes |
 | Export record admission | Chose parsed-value-only first lookup-ready export and excluded review-required/no-parsed-value records | This ExecPlan only | Diff/status review | Passed | None | Future export validator required | Limited first-export coverage |
 | Scope exclusions | Kept schema/export/runtime/parser/classifier/retrieval/calculator/SymPy/live acquisition implementation out of scope | This ExecPlan only | Diff/status review | Passed | None | Review pending | None for docs-only PR |
+| Current-fact record schema | Added required top-level `calculation_input_status` with the approved eight-value closed enum | `contracts/current-facts/current_fact_record.schema.json` | current-fact schema validator | Passed | None | Review pending | Future enum changes require an ExecPlan |
+| Current-fact export schema | Bumped export artifact const to `current_fact_export/v2`, required `parsed_value` in export records, and rejected legacy raw `generated_from` paths | `contracts/current-facts/current_fact_export.schema.json` | current-fact schema validator | Passed | None | Review pending | Runtime export generator still absent |
+| Fixtures | Updated record/export fixtures for required statuses and added invalid fixtures for unknown status, no parsed value in export, and legacy raw generated_from | `tests/fixtures/current-facts/**` | current-fact schema validator | Passed | None | Review pending | First lookup-ready export coverage remains limited |
+| Validators | Updated schema, guard, and parsed-value classifier compatibility validators for status enum, v2 export, export invalid fixtures, classifier status compatibility, and top-level status in current-fact-compatible sample records | `tests/validation/validate_current_fact_schemas.py`; `tests/validation/validate_current_fact_consumer_guards.py`; `tests/validation/validate_parsed_value_classifier.py` | schema validator; guard validator; parsed-value classifier validator; all validation scripts; validator audit | Passed | None | Review pending | Validators cover contracts, not runtime lookup |
 
 ## Next Reviewer Prompt
 
