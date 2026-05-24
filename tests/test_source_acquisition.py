@@ -10,9 +10,11 @@ from sf6_knowledge_coach.paths import repo_root
 from sf6_knowledge_coach.source_acquisition import (
     FetchResult,
     REPO_LOCAL_RAW_ARTIFACT_BOUNDARY,
+    REPO_LOCAL_REVIEWER_EVIDENCE_BOUNDARY,
     RosterCharacter,
     acquire_official_sources,
     default_workspace,
+    prepare_official_note_linkage_review_bundle,
     render_acquisition_report,
     validate_acquisition_artifacts,
     validate_acquisition_report,
@@ -50,9 +52,9 @@ def _fake_fetch(url: str) -> FetchResult:
         <tr>
           <td><span>{slug} 5LP</span><p><img src="/i/lp.png" alt="LP"></p></td>
           <td>4</td><td><label>3</label><div class="frame_ex___test"><div>1-2, 4</div></div></td>
-          <td>7</td><td>+4</td><td>-2</td><td>C</td>
+          <td>7</td><td>+4</td><td>-2</td><td>※</td>
           <td>300</td><td>始動補正(20%)</td><td>250</td><td>-500</td><td>+6</td>
-          <td>100</td><td>上</td><td></td>
+          <td>100</td><td>上</td><td><ul><li>※ヒット時のみキャンセル可能</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -96,6 +98,12 @@ def _fake_supercombo_fetch(url: str) -> FetchResult:
 
 def _repo_local_test_workspace(prefix: str) -> Path:
     root = repo_root() / ".local" / "source-acquisition" / "unit-tests"
+    root.mkdir(parents=True, exist_ok=True)
+    return Path(tempfile.mkdtemp(prefix=f"{prefix}-", dir=root))
+
+
+def _repo_local_reviewer_workspace(prefix: str) -> Path:
+    root = repo_root() / ".local" / "reviewer-evidence" / "unit-tests"
     root.mkdir(parents=True, exist_ok=True)
     return Path(tempfile.mkdtemp(prefix=f"{prefix}-", dir=root))
 
@@ -163,11 +171,38 @@ class SourceAcquisitionTests(unittest.TestCase):
             self.assertEqual(raw_rows["column_header_paths"][5], ["硬直差", "ガード"])
             self.assertEqual(raw_rows["column_header_paths"][11], ["Dゲージ減少", "パニッシュカウンター"])
             self.assertEqual(raw_rows["header_path_violations"], [])
+            self.assertEqual(raw_rows["artifact_schema_version"], "official_table_rows_raw/v4")
+            self.assertEqual(raw_rows["row_note_rows"], 1)
+            self.assertEqual(raw_rows["row_note_count"], 1)
+            self.assertEqual(report["entries"][0]["official_table_rows_schema_version"], "official_table_rows_raw/v4")
+            self.assertEqual(report["entries"][0]["official_row_note_rows"], 1)
+            self.assertEqual(report["entries"][0]["official_row_note_count"], 1)
             first_row_cells = raw_rows["rows"][0]["cells"]
+            self.assertEqual(raw_rows["rows"][0]["row_note_count"], 1)
+            self.assertEqual(raw_rows["rows"][0]["row_note_extraction_status"], "notes_extracted")
+            self.assertEqual(
+                raw_rows["rows"][0]["row_notes"][0],
+                {
+                    "note_index": 0,
+                    "note_marker": "※",
+                    "note_id": None,
+                    "note_text": "※ヒット時のみキャンセル可能",
+                    "note_text_stripped": "※ヒット時のみキャンセル可能",
+                    "note_source_scope": "row_local_note",
+                    "source_order": 0,
+                },
+            )
             self.assertEqual(first_row_cells[0]["source_column_header_path"], ["技名"])
             self.assertEqual(first_row_cells[1]["source_column_header_path"], ["動作フレーム", "発生"])
             self.assertEqual(first_row_cells[5]["source_column_header_path"], ["硬直差", "ガード"])
             self.assertEqual(first_row_cells[5]["source_column_leaf_header"], "ガード")
+            self.assertEqual(first_row_cells[6]["cell_note_markers"], ["※"])
+            self.assertEqual(first_row_cells[6]["cell_note_ids"], [])
+            self.assertEqual(
+                first_row_cells[6]["row_note_reference_candidates"],
+                [{"note_index": 0, "note_marker": "※", "note_id": None}],
+            )
+            self.assertEqual(first_row_cells[6]["note_linkage_status"], "same_row_note_candidates_available")
             active_frame_cell = raw_rows["rows"][0]["cells"][2]
             self.assertEqual(active_frame_cell["column_index"], 2)
             self.assertEqual(active_frame_cell["source_column_header_path"], ["動作フレーム", "持続"])
@@ -180,6 +215,64 @@ class SourceAcquisitionTests(unittest.TestCase):
             self.assertNotIn(str(workspace.resolve()), report_path.read_text(encoding="utf-8"))
             validate_acquisition_report(report_path, roster_path)
             validate_acquisition_artifacts(report_path, workspace=workspace, roster_path=roster_path)
+
+    def test_prepares_local_reviewer_bundle_with_fake_scrapling_screenshotter(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            roster_path = root / "roster.json"
+            report_path = root / "report.md"
+            workspace = _repo_local_test_workspace("reviewer-bundle-source")
+            bundle_dir = _repo_local_reviewer_workspace("official-note-bundle")
+            self.addCleanup(lambda: shutil.rmtree(workspace, ignore_errors=True))
+            self.addCleanup(lambda: shutil.rmtree(bundle_dir, ignore_errors=True))
+            self.addCleanup(lambda: bundle_dir.with_suffix(".zip").unlink(missing_ok=True))
+            roster_path.write_text(
+                """
+{
+  "characters": [
+    {
+      "character_slug": "jp",
+      "display_name": "JP",
+      "sources": {
+        "official": "https://www.streetfighter.com/6/ja-jp/character/jp/frame"
+      }
+    }
+  ]
+}
+""",
+                encoding="utf-8",
+            )
+            acquire_official_sources(
+                report_path=report_path,
+                workspace=workspace,
+                run_id="20260521T000000Z",
+                roster_path=roster_path,
+                fetcher=_fake_fetch,
+            )
+
+            def fake_screenshotter(url: str, output_path: Path) -> str:
+                output_path.write_bytes(b"fake png")
+                return url
+
+            result = prepare_official_note_linkage_review_bundle(
+                report_path=report_path,
+                output_dir=bundle_dir,
+                run_id="unit-review",
+                slugs=["jp"],
+                screenshotter=fake_screenshotter,
+            )
+
+            self.assertEqual(result["target_count"], 1)
+            self.assertTrue((bundle_dir / "screenshots" / "jp-full-page.png").exists())
+            self.assertTrue((bundle_dir / "manifest.json").exists())
+            self.assertTrue((bundle_dir / "chatgpt-check-prompt.md").exists())
+            self.assertTrue(bundle_dir.with_suffix(".zip").exists())
+            manifest = json.loads((bundle_dir / "manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(manifest["evidence_boundary"], REPO_LOCAL_REVIEWER_EVIDENCE_BOUNDARY)
+            self.assertEqual(manifest["screenshot_method"], "scrapling_dynamic_fetcher_page_action")
+            self.assertEqual(manifest["chatgpt_result_status"], "observation_candidate_only")
+            self.assertEqual(manifest["targets"][0]["screenshot"], "screenshots/jp-full-page.png")
+            self.assertNotIn(str(bundle_dir.resolve()), json.dumps(manifest))
 
     def test_acquires_supercombo_tables_when_included(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -369,16 +462,21 @@ class SourceAcquisitionTests(unittest.TestCase):
             rows_path = workspace / "official" / "jp" / "official_table_rows.raw.json"
             payload = json.loads(rows_path.read_text(encoding="utf-8"))
             del payload["rows"][0]["group_heading"]
+            del payload["rows"][0]["row_note_count"]
+            del payload["rows"][0]["row_notes"][0]["note_text"]
             del payload["rows"][0]["input_images"][0]["src"]
             del payload["rows"][0]["cells"][0]["image_src"]
+            del payload["rows"][0]["cells"][6]["note_linkage_status"]
             rows_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
             with self.assertRaises(ValueError) as context:
                 validate_acquisition_artifacts(report_path, workspace=workspace, roster_path=roster_path)
             message = str(context.exception)
-            self.assertIn("official row 1 missing fields: group_heading", message)
+            self.assertIn("official row 1 missing fields: group_heading, row_note_count", message)
+            self.assertIn("official row 1 note 0 missing fields: note_text", message)
             self.assertIn("official row 1 input image 0 missing fields: src", message)
             self.assertIn("official row 1 cell 0 missing fields: image_src", message)
+            self.assertIn("official row 1 cell 6 missing fields: note_linkage_status", message)
 
     def test_artifact_validation_rejects_malformed_official_row_and_image_fields(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -414,17 +512,29 @@ class SourceAcquisitionTests(unittest.TestCase):
             payload = json.loads(rows_path.read_text(encoding="utf-8"))
             payload["rows"][0]["cell_count"] = 99
             payload["rows"][0]["input_images"] = {"src": "/i/lp.png", "alt": "LP"}
+            payload["rows"][0]["row_note_count"] = 99
+            payload["rows"][0]["row_note_extraction_status"] = "no_row_notes"
             payload["rows"][0]["cells"][0]["image_src"] = "/i/lp.png"
             payload["rows"][0]["cells"][0]["image_alt"] = "LP"
+            payload["rows"][0]["cells"][6]["cell_note_markers"] = "※"
+            payload["rows"][0]["cells"][6]["cell_note_ids"] = "※1"
+            payload["rows"][0]["cells"][6]["row_note_reference_candidates"] = {"note_index": 0}
+            payload["rows"][0]["cells"][6]["note_linkage_status"] = "parsed_note"
             rows_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
             with self.assertRaises(ValueError) as context:
                 validate_acquisition_artifacts(report_path, workspace=workspace, roster_path=roster_path)
             message = str(context.exception)
             self.assertIn("official row 1 input_images must be a list", message)
+            self.assertIn("official row 1 row_note_count must match row_notes length", message)
+            self.assertIn("official row 1 row_note_extraction_status must be notes_extracted", message)
             self.assertIn("official row 1 cell_count must match cells length", message)
             self.assertIn("official row 1 cell 0 image_src must be a list", message)
             self.assertIn("official row 1 cell 0 image_alt must be a list", message)
+            self.assertIn("official row 1 cell 6 cell_note_markers must be a list", message)
+            self.assertIn("official row 1 cell 6 cell_note_ids must be a list", message)
+            self.assertIn("official row 1 cell 6 row_note_reference_candidates must be a list", message)
+            self.assertIn("official row 1 cell 6 note_linkage_status must be a known source-structural status", message)
 
     def test_artifact_validation_rejects_missing_or_shifted_official_header_path(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
