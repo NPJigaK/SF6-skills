@@ -26,6 +26,15 @@ Before implementing:
 
 Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
+## Debt Retirement / 負債退役
+
+- Treat old raw exports, alias fixtures, obsolete validator assumptions, and
+  unused data surfaces as deletion candidates unless their current dependency
+  and replacement blocker are explicit.
+- Keep new code and validators small, evidence-bounded, and easy to delete.
+- When debt is found, record it immediately in Issue #343 or the relevant
+  ExecPlan Risks/Decision Log, and raise it as a next PR candidate.
+
 ## 3. Surgical Changes
 
 **Touch only what you must. Clean up only your own mess.**
