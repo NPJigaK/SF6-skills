@@ -1,6 +1,6 @@
 # Annotated Official Parser-Schema Implementation Slice
 
-Status: Drafted for review.
+Status: Implemented; validation passed; ready for mandatory review.
 
 ## Purpose
 
@@ -75,14 +75,18 @@ update, must not run in CI, and must not be committed.
 
 | Target | Review item | Field | Source header | Included raw surfaces | Planned parser rule | Planned parsed kind | Calculation status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| startup suffix marker | `value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100` | `startup` | `動作フレーム > 発生` | `122※`, `128※`, and same reviewed suffix-marker startup variants | `annotated_frame.official_suffix_marker.v1` | `annotated_numeric_candidate` with unsigned frame candidate | `annotated_candidate_not_calculation_safe` |
-| block advantage explicit negative prefix marker | `value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb` | `block_advantage` | `硬直差 > ガード` | `※-4`, `※-2`, and same reviewed explicit-negative variants | `annotated_signed_frame.official_prefix_marker.negative.v1` | `annotated_numeric_candidate` with signed frame candidate | `annotated_candidate_not_calculation_safe` |
-| hit advantage explicit negative prefix marker | `value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69` | `hit_advantage` | `硬直差 > ヒット` | explicit negative variants such as `※-3`; `※1` is excluded | `annotated_signed_frame.official_prefix_marker.negative.v1` | `annotated_numeric_candidate` with signed frame candidate | `annotated_candidate_not_calculation_safe` |
+| startup suffix marker | `value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100` | `startup` | `動作フレーム > 発生` | `122※`, `128※` only | `annotated_frame.official_suffix_marker.v1` | `annotated_numeric_candidate` with unsigned frame candidate | `annotated_candidate_not_calculation_safe` |
+| block advantage explicit negative prefix marker | `value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb` | `block_advantage` | `硬直差 > ガード` | `※-4`, `※-2` only | `annotated_signed_frame.official_prefix_marker.negative.v1` | `annotated_numeric_candidate` with signed frame candidate | `annotated_candidate_not_calculation_safe` |
+| hit advantage explicit negative prefix marker | `value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69` | `hit_advantage` | `硬直差 > ヒット` | `※-3`, `※-1`, `※-4` only; `※1` is excluded | `annotated_signed_frame.official_prefix_marker.negative.v1` | `annotated_numeric_candidate` with signed frame candidate | `annotated_candidate_not_calculation_safe` |
 
 The implementation must derive the exact raw variants from reviewed source
 artifacts and focused fixtures. This table authorizes only the grammar family
 and review item IDs, not blanket acceptance of every note-bearing value in the
 same field.
+
+After mandatory review, implementation was further narrowed to the exact
+Issue #343 double-check-passed raw values listed above. Same-grammar variants
+that were not recorded in the double-check gate remain blocked.
 
 ## Explicitly Blocked Variants
 
@@ -92,6 +96,8 @@ same field.
 | `全体 ※43` and other `全体 ※NN` values | `review_required` / blocked | Requires a total-duration field/schema decision. |
 | `※16` and other recovery `※NN` values | `review_required` / blocked | Deferred with the mixed recovery group until split/subset semantics are approved. |
 | `※1` and other positive unsigned advantage values | `review_required` / blocked | Requires explicit plus-sign / column-context normalization policy. |
+| `124※` in startup | `review_required` / blocked raw variant | Same-grammar variant was not included in the Issue #343 double-check gate. |
+| `※-15`, `※-5`, `※-10` in block advantage | `review_required` / blocked raw variants | Same-grammar variants were not included in the Issue #343 double-check gate. |
 | `sa_gain`, `combo_scaling`, `damage`, `active` ambiguous groups | `blocked_pending_source_review` | PR #341 marks these ambiguous. |
 | `30-34.35`, `20-24.25`, `23--33` | `review_required` / blocked | Non-note active grammar blockers remain outside this parser slice. |
 | SuperCombo values | non-authoritative and out of scope | SuperCombo remains enrichment/cross-reference/candidate only. |
@@ -420,9 +426,46 @@ git status --short --branch
   new-file whitespace check, `uv lock --check`, official note-linkage
   source-review validator, parsed-value classifier validator, clean-slate
   validator, and `git status --short --branch`.
-- [ ] Complete mandatory review.
-- [ ] Complete Issue #343 value double-check gate before implementation
-  approval.
+- [x] (2026-05-24 JST) Completed mandatory review for PR #345 with no
+  blocking findings.
+- [x] (2026-05-24 JST) PR #345 was marked ready and merged with normal merge
+  commit `86d1fdbe37c797f5a256b50f921327e2fda8b86e`.
+- [x] (2026-05-24 JST) Local `main` was updated to `origin/main` at merge
+  commit `86d1fdbe37c797f5a256b50f921327e2fda8b86e`; main CI passed in run
+  `26354404361`.
+- [x] (2026-05-24 JST) Completed Issue #343 value double-check gate before
+  implementation approval. The reviewer result passed the narrowed included
+  targets as `observation_candidate` only; `sa_gain` `※3000` remained
+  uncertain and excluded.
+- [x] (2026-05-24 JST) Created branch
+  `impl/annotated-official-parser-schema`.
+- [x] (2026-05-24 JST) Added `parsed_value.kind ==
+  "annotated_numeric_candidate"` schema wrapper for note-bound numeric
+  candidates.
+- [x] (2026-05-24 JST) Added target-limited parser rules for startup suffix
+  marker frames and explicit negative annotated advantage frames.
+- [x] (2026-05-24 JST) Added closed calculation status
+  `annotated_candidate_not_calculation_safe`.
+- [x] (2026-05-24 JST) Bumped parsed-value classifier coverage artifact schema
+  to v2 and added raw-value-level variant coverage for annotated targets.
+- [x] (2026-05-24 JST) Added focused parser, schema compatibility, coverage,
+  partial-acceptance, consumer-guard, and exclusion tests/validators.
+- [x] (2026-05-24 JST) Updated the official note-linkage source-review
+  validator to keep the 9 source-review records fixed while allowing only the
+  narrowed implemented annotated coverage states; deferred and ambiguous
+  records must remain `review_required`.
+- [x] (2026-05-24 JST) Regenerated parsed-value classifier coverage JSON and
+  Markdown artifacts.
+- [x] (2026-05-24 JST) Fixed mandatory review blocker by choosing the
+  narrow-implementation path: only the 7 Issue #343 double-check-passed raw
+  values parse, while `124※`, `※-15`, `※-5`, and `※-10` remain
+  `review_required`.
+- [x] (2026-05-24 JST) Final validation passed: `git diff --check`,
+  `git diff --cached --check`, `uv lock --check`, unittest discovery,
+  clean-slate validator, official note-linkage source-review validator,
+  parsed-value classifier coverage validator, and focused parsed-value
+  classifier validator.
+- [ ] Complete implementation review.
 
 ## Decision Log
 
@@ -438,10 +481,10 @@ git status --short --branch
   text and must not be scalar calculation inputs.
   Date/Author: 2026-05-24 / Codex
 
-- Decision: Require raw-value-level partial acceptance before parsing the
-  hit-advantage review item.
-  Rationale: The review item contains both explicit negative variants and
-  deferred positive unsigned variants such as `※1`.
+- Decision: Require raw-value-level partial acceptance for each annotated
+  target review item.
+  Rationale: The review items contain both Issue #343 double-check-passed raw
+  values and same-grammar or policy-deferred variants that must remain blocked.
   Date/Author: 2026-05-24 / Codex
 
 - Decision: Make the Issue #343 Scrapling screenshot plus ChatGPT/VLM
@@ -451,35 +494,52 @@ git status --short --branch
   authority.
   Date/Author: 2026-05-24 / Codex
 
+- Decision: Represent all annotated target groups with top-level
+  `partial_raw_value_coverage` and per-raw-value variant statuses.
+  Rationale: Only Issue #343 double-check-passed raw values can parse in this
+  implementation. `124※`, `※-15`, `※-5`, `※-10`, and `※1` remain blocked
+  until they receive their own review gate or policy approval.
+  Date/Author: 2026-05-24 / Codex
+
 ## Deviations
 
 - None.
 
 ## Remaining Risks
 
-- The exact JSON Schema field names for `annotated_numeric_candidate` still
-  need mandatory review before implementation.
-- Partial coverage will require a coverage artifact schema version bump and
-  validator updates; if that proves too broad, the mixed hit-advantage item
-  must be deferred.
-- The value double-check bundle has not been created yet; implementation must
-  not start until that gate passes.
+- Export, retrieval, answer, and calculator consumers are still not
+  implemented; future consumer PRs must reject `annotated_numeric_candidate`
+  as scalar input unless a later annotated-condition-aware contract is
+  approved.
+- The `annotated_numeric_candidate` field shape is now implemented and
+  validator-checked, but remains review pending.
+- Partial coverage schema v2 is implemented and validator-checked, but remains
+  review pending.
 - Recovery and total-duration parsing still need a separate plan.
 - Positive unsigned advantage parsing still needs a plus-sign /
   column-context policy.
-- Export, retrieval, answer, and calculator guards remain future work beyond
-  this parser/schema slice.
+- Same-grammar annotated variants that were not included in the Issue #343
+  double-check gate remain blocked pending supplemental double-check or a
+  later approved expansion plan.
+- `sa_gain` `※3000` remains `uncertain_blocks_implementation` from the
+  double-check gate and stays excluded with the other ambiguous PR #341
+  groups.
 
 ## Completion Review Table
 
 | PLAN item | Planned outcome | Changed files in this docs-only PR | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Annotated official parser/schema implementation planning | Draft docs-only implementation plan narrowed by PR #344 and gated by Issue #343 double-check workflow | `docs/execplans/2026-05-24-annotated-official-parser-schema-implementation.md` | `git diff --check`; new-file whitespace check; `uv lock --check`; official note-linkage source-review validator; parsed-value classifier validator; clean-slate validator; status check | Passed | None | Mandatory review and double-check gate pending | Schema field names and partial coverage implementation need review |
+| Annotated official parser/schema implementation planning | Draft docs-only implementation plan narrowed by PR #344 and gated by Issue #343 double-check workflow | `docs/execplans/2026-05-24-annotated-official-parser-schema-implementation.md` | `git diff --check`; new-file whitespace check; `uv lock --check`; official note-linkage source-review validator; parsed-value classifier validator; clean-slate validator; status check | Passed | None | Complete | None |
+| Double-check gate | Used Issue #343 reviewer-only Scrapling screenshot bundle and human ChatGPT/VLM observation to gate implementation; included targets passed, `sa_gain` control stayed excluded | No committed bundle files; `.local/reviewer-evidence/value-double-check/20260524T065431Z-annotated-official-parser-schema/` remained ignored | Human review recorded on Issue #343 | Passed for included targets | None | Complete | ChatGPT/VLM remains observation_candidate only |
+| Annotated parsed-value schema | Added non-scalar `annotated_numeric_candidate` wrapper with separate numeric candidate, annotation, source context, and calculation gate sections | `contracts/current-facts/parsed_value.schema.json` | Schema compatibility through parsed-value classifier validator and unittest fixtures | Passed | None | Review pending | Future consumers must not treat nested numeric candidate as scalar |
+| Annotated parser rules | Added target-limited parser support for startup suffix-marker frames and explicit negative annotated advantage frames | `src/sf6_knowledge_coach/parsed_value_classifier.py`; tests | Unit tests; parsed-value classifier validator | Passed | None | Review pending | Positive unsigned advantage remains blocked |
+| Partial raw-value coverage | Bumped coverage artifact schema to v2 and recorded per-raw-value variants so `※1` remains blocked while explicit negatives parse | coverage JSON/Markdown; classifier; validator | parsed-value classifier build/validate; validator tests | Passed | None | Review pending | Partial coverage semantics must remain validator-locked |
+| Scope exclusions | Recovery, total-duration, `※16`, `※1`, ambiguous groups, active grammar blockers, SuperCombo, calculators, SymPy, retrieval, answer, export, runtime, live acquisition, and authority promotion remain out of scope | classifier/tests/validator coverage only | Unit tests and validators | Passed | None | Review pending | Deferred groups require separate plans |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-24-annotated-official-parser-schema-implementation.md.
+Review the implementation of docs/execplans/2026-05-24-annotated-official-parser-schema-implementation.md.
 
 Check:
 - scope is limited to startup suffix-marker frames, explicit negative
@@ -501,11 +561,11 @@ Check:
 - Issue #343 Scrapling screenshot plus ChatGPT/VLM double-check gate is
   mandatory before implementation approval;
 - ChatGPT/VLM output remains observation_candidate only;
-- no parser/schema/classifier/calculator/retrieval/answer/export/runtime
-  implementation, SymPy logic, live acquisition, or authority promotion is
-  included.
+- parser/schema/classifier implementation is limited to this approved slice;
+- no calculator/retrieval/answer/export/runtime implementation, SymPy logic,
+  live acquisition, calculation-safe promotion, numeric authority promotion,
+  or current-fact authority promotion is included.
 
-Return blocking findings first, validation results, unresolved decisions,
-PLAN deviations, remaining risks, and whether docs-only stage/commit is
-approved.
+Return blocking findings first, validation results, coverage count changes,
+PLAN deviations, remaining risks, and whether implementation is stage-ready.
 ```

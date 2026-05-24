@@ -1,21 +1,23 @@
 {
   "artifact_boundary": "classifier_coverage_policy_only",
-  "artifact_schema_version": "parsed_value_classifier_coverage/v1",
+  "artifact_schema_version": "parsed_value_classifier_coverage/v2",
   "authority_status": "coverage_not_authority",
   "calculation_input_status_counts": {
+    "annotated_candidate_not_calculation_safe": 3,
     "enum_only_not_arithmetic": 16,
     "not_numeric_authority": 1,
     "out_of_scope_not_emitted": 17,
     "parsed_range_not_single_value_calculation_safe": 2,
     "raw_preserved_not_calculation": 6,
-    "review_required_not_calculation_safe": 205
+    "review_required_not_calculation_safe": 202
   },
   "classifier_decision_counts": {
     "enum_classified": 16,
     "out_of_scope_first_normalized_export": 17,
     "parsed_numeric_structured": 3,
+    "partial_raw_value_coverage": 3,
     "raw_preserved_non_calculation": 6,
-    "review_required": 205
+    "review_required": 202
   },
   "coverage_records": [
     {
@@ -249,12 +251,50 @@
       "value_shape_classifier_status": "review_required"
     },
     {
-      "calculation_input_status": "review_required_not_calculation_safe",
-      "classifier_decision": "review_required",
-      "parser_rule_ids": [],
-      "policy_note": "Reviewed representative examples do not parse under strict rules; this disposition group remains review-required.",
+      "calculation_input_status": "annotated_candidate_not_calculation_safe",
+      "classifier_decision": "partial_raw_value_coverage",
+      "parser_rule_ids": [
+        "annotated_frame.official_suffix_marker.v1"
+      ],
+      "policy_note": "Official annotated numeric candidates parse only for approved raw variants; blocked variants remain review-required and no candidate is scalar calculation-safe.",
       "proposed_field_key": "startup",
       "raw_value_policy": "preserve_raw_value_always",
+      "raw_value_variant_coverage": [
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_frame.official_suffix_marker.v1"
+          ],
+          "raw_value": "122※",
+          "raw_value_length": 4,
+          "raw_value_sha256": "sha256:1a036dd4c06cd18cde9b72d219f3bf9ff2c41ec171022dbe1058e162cf96df7c",
+          "value_shape_classifier_status": "parsed"
+        },
+        {
+          "calculation_input_status": "review_required_not_calculation_safe",
+          "classifier_decision": "review_required",
+          "parser_rule_ids": [],
+          "raw_value": "124※",
+          "raw_value_length": 4,
+          "raw_value_sha256": "sha256:8fc2ec40ec067f30ebb75ecc85eb21293d6e8742ab5b85544215d9ee2cd4b7de",
+          "review_required_reason": "Source note marker may change semantics; a reviewed note parser is required.",
+          "value_shape_classifier_status": "review_required"
+        },
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_frame.official_suffix_marker.v1"
+          ],
+          "raw_value": "128※",
+          "raw_value_length": 4,
+          "raw_value_sha256": "sha256:3c911b4c4f5d473c3e4bd988a924818f3c760adbd14fd241a7fdccf42c99b814",
+          "value_shape_classifier_status": "parsed"
+        }
+      ],
       "review_item_id": "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100",
       "semantic_source_family": "timing",
       "shape_classes": [
@@ -272,7 +312,7 @@
       "source_name": "official",
       "source_role": "authority_candidate",
       "supercombo_authority_policy": "not_applicable",
-      "value_shape_classifier_status": "review_required"
+      "value_shape_classifier_status": "partial"
     },
     {
       "calculation_input_status": "review_required_not_calculation_safe",
@@ -353,12 +393,70 @@
       "value_shape_classifier_status": "raw_preserved"
     },
     {
-      "calculation_input_status": "review_required_not_calculation_safe",
-      "classifier_decision": "review_required",
-      "parser_rule_ids": [],
-      "policy_note": "Reviewed representative examples do not parse under strict rules; this disposition group remains review-required.",
+      "calculation_input_status": "annotated_candidate_not_calculation_safe",
+      "classifier_decision": "partial_raw_value_coverage",
+      "parser_rule_ids": [
+        "annotated_signed_frame.official_prefix_marker.negative.v1"
+      ],
+      "policy_note": "Official annotated numeric candidates parse only for approved raw variants; blocked variants remain review-required and no candidate is scalar calculation-safe.",
       "proposed_field_key": "block_advantage",
       "raw_value_policy": "preserve_raw_value_always",
+      "raw_value_variant_coverage": [
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_signed_frame.official_prefix_marker.negative.v1"
+          ],
+          "raw_value": "※-4",
+          "raw_value_length": 3,
+          "raw_value_sha256": "sha256:b5112d05eab37a8ef2062523ba1cce640a8350c6cba7ef40bf66072550f3609c",
+          "value_shape_classifier_status": "parsed"
+        },
+        {
+          "calculation_input_status": "review_required_not_calculation_safe",
+          "classifier_decision": "review_required",
+          "parser_rule_ids": [],
+          "raw_value": "※-15",
+          "raw_value_length": 4,
+          "raw_value_sha256": "sha256:e3fd4ceb6a238201bd84c58c61bdb772abc8f204550b5d9d59a2abdc55f46314",
+          "review_required_reason": "Source note marker may change semantics; a reviewed note parser is required.",
+          "value_shape_classifier_status": "review_required"
+        },
+        {
+          "calculation_input_status": "review_required_not_calculation_safe",
+          "classifier_decision": "review_required",
+          "parser_rule_ids": [],
+          "raw_value": "※-5",
+          "raw_value_length": 3,
+          "raw_value_sha256": "sha256:a25126a3ae8da0b6db06a834304454cb63a89b8fd27b6bcf910acd655c574719",
+          "review_required_reason": "Source note marker may change semantics; a reviewed note parser is required.",
+          "value_shape_classifier_status": "review_required"
+        },
+        {
+          "calculation_input_status": "review_required_not_calculation_safe",
+          "classifier_decision": "review_required",
+          "parser_rule_ids": [],
+          "raw_value": "※-10",
+          "raw_value_length": 4,
+          "raw_value_sha256": "sha256:1daf82327e1e91a1c78ec05aca64129f009a864081c8f5a7150c334b743774c9",
+          "review_required_reason": "Source note marker may change semantics; a reviewed note parser is required.",
+          "value_shape_classifier_status": "review_required"
+        },
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_signed_frame.official_prefix_marker.negative.v1"
+          ],
+          "raw_value": "※-2",
+          "raw_value_length": 3,
+          "raw_value_sha256": "sha256:522076e6afe25969ab0fe38642fcf471a681152e0f919f489622873b188357e6",
+          "value_shape_classifier_status": "parsed"
+        }
+      ],
       "review_item_id": "value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb",
       "semantic_source_family": "advantage",
       "shape_classes": [
@@ -380,7 +478,7 @@
       "source_name": "official",
       "source_role": "authority_candidate",
       "supercombo_authority_policy": "not_applicable",
-      "value_shape_classifier_status": "review_required"
+      "value_shape_classifier_status": "partial"
     },
     {
       "calculation_input_status": "parsed_range_not_single_value_calculation_safe",
@@ -415,12 +513,62 @@
       "value_shape_classifier_status": "parsed"
     },
     {
-      "calculation_input_status": "review_required_not_calculation_safe",
-      "classifier_decision": "review_required",
-      "parser_rule_ids": [],
-      "policy_note": "Reviewed representative examples do not parse under strict rules; this disposition group remains review-required.",
+      "calculation_input_status": "annotated_candidate_not_calculation_safe",
+      "classifier_decision": "partial_raw_value_coverage",
+      "parser_rule_ids": [
+        "annotated_signed_frame.official_prefix_marker.negative.v1"
+      ],
+      "policy_note": "Official annotated numeric candidates parse only for approved raw variants; blocked variants remain review-required and no candidate is scalar calculation-safe.",
       "proposed_field_key": "hit_advantage",
       "raw_value_policy": "preserve_raw_value_always",
+      "raw_value_variant_coverage": [
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_signed_frame.official_prefix_marker.negative.v1"
+          ],
+          "raw_value": "※-3",
+          "raw_value_length": 3,
+          "raw_value_sha256": "sha256:38098349c914433f0d197b466d52fc182309a3043e91d401f8c2a98b3b8917ca",
+          "value_shape_classifier_status": "parsed"
+        },
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_signed_frame.official_prefix_marker.negative.v1"
+          ],
+          "raw_value": "※-1",
+          "raw_value_length": 3,
+          "raw_value_sha256": "sha256:dbdd09f8dbaacf8ce6a87b3f4b004af5a8185b47ed0b193adcf2afdd6bd8e0af",
+          "value_shape_classifier_status": "parsed"
+        },
+        {
+          "calculation_input_status": "annotated_candidate_not_calculation_safe",
+          "classifier_decision": "parsed_numeric_structured",
+          "parsed_value_kind": "annotated_numeric_candidate",
+          "parser_rule_ids": [
+            "annotated_signed_frame.official_prefix_marker.negative.v1"
+          ],
+          "raw_value": "※-4",
+          "raw_value_length": 3,
+          "raw_value_sha256": "sha256:b5112d05eab37a8ef2062523ba1cce640a8350c6cba7ef40bf66072550f3609c",
+          "value_shape_classifier_status": "parsed"
+        },
+        {
+          "calculation_input_status": "review_required_not_calculation_safe",
+          "classifier_decision": "review_required",
+          "parser_rule_ids": [],
+          "raw_value": "※1",
+          "raw_value_length": 2,
+          "raw_value_sha256": "sha256:cdbdef563e30978a50724b9a6d38e2e93f159fe241dcf0089ac429fe4d1e99c5",
+          "review_required_reason": "Source note marker may change semantics; a reviewed note parser is required.",
+          "value_shape_classifier_status": "review_required"
+        }
+      ],
       "review_item_id": "value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69",
       "semantic_source_family": "advantage",
       "shape_classes": [
@@ -442,7 +590,7 @@
       "source_name": "official",
       "source_role": "authority_candidate",
       "supercombo_authority_policy": "not_applicable",
-      "value_shape_classifier_status": "review_required"
+      "value_shape_classifier_status": "partial"
     },
     {
       "calculation_input_status": "parsed_range_not_single_value_calculation_safe",
@@ -6430,6 +6578,14 @@
     "scaling": 1,
     "throw": 1,
     "timing": 63
+  },
+  "raw_value_variant_calculation_input_status_counts": {
+    "annotated_candidate_not_calculation_safe": 7,
+    "review_required_not_calculation_safe": 5
+  },
+  "raw_value_variant_decision_counts": {
+    "parsed_numeric_structured": 7,
+    "review_required": 5
   },
   "run_id": "20260521T025403Z",
   "supercombo_numeric_authority": "forbidden",
