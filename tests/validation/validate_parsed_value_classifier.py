@@ -366,6 +366,7 @@ def _record(
 ) -> dict[str, Any]:
     payload = {
         "authority_status": authority_status,
+        "calculation_input_status": result.calculation_input_status,
         "character_slug": character_slug,
         "display_label_ja": display_label_ja,
         "evidence": {

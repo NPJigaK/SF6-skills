@@ -5,12 +5,26 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from sf6_knowledge_coach.current_fact_guards import is_scalar_calculation_input
+from sf6_knowledge_coach.current_fact_guards import (
+    NON_SCALAR_OR_BLOCKED_CALCULATION_STATUSES,
+    SCALAR_CALCULATION_INPUT_STATUSES,
+    is_scalar_calculation_input,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
 COVERAGE_PATH = ROOT / "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json"
 ELIGIBLE_STATUS = "eligible_only_after_domain_source_and_unit_checks"
+APPROVED_STATUSES = {
+    ELIGIBLE_STATUS,
+    "annotated_candidate_not_calculation_safe",
+    "parsed_range_not_single_value_calculation_safe",
+    "review_required_not_calculation_safe",
+    "enum_only_not_arithmetic",
+    "raw_preserved_not_calculation",
+    "not_numeric_authority",
+    "out_of_scope_not_emitted",
+}
 
 
 def main() -> int:
@@ -20,9 +34,17 @@ def main() -> int:
         return _finish(errors)
 
     coverage = json.loads(COVERAGE_PATH.read_text(encoding="utf-8"))
+    _validate_guard_status_sets(errors)
     _validate_synthetic_contract_fixtures(errors)
     _validate_coverage_status_guards(coverage, errors)
     return _finish(errors)
+
+
+def _validate_guard_status_sets(errors: list[str]) -> None:
+    if set(SCALAR_CALCULATION_INPUT_STATUSES) != {ELIGIBLE_STATUS}:
+        errors.append("scalar calculation input status set must contain only the approved eligible status")
+    if set(NON_SCALAR_OR_BLOCKED_CALCULATION_STATUSES) != APPROVED_STATUSES - {ELIGIBLE_STATUS}:
+        errors.append("non-scalar or blocked calculation status set does not match approved schema statuses")
 
 
 def _validate_synthetic_contract_fixtures(errors: list[str]) -> None:
@@ -33,6 +55,11 @@ def _validate_synthetic_contract_fixtures(errors: list[str]) -> None:
     for parsed_value, status in accepted:
         if not is_scalar_calculation_input(parsed_value, status):
             errors.append(f"synthetic scalar fixture should be accepted: {parsed_value['kind']}")
+
+    scalar_value = {"kind": "signed_frame", "unit": "frame", "value": -2}
+    for status in sorted(APPROVED_STATUSES - {ELIGIBLE_STATUS}):
+        if is_scalar_calculation_input(scalar_value, status):
+            errors.append(f"blocked status should reject scalar fixture: {status}")
 
     rejected = [
         (
@@ -73,6 +100,15 @@ def _validate_coverage_status_guards(coverage: dict[str, Any], errors: list[str]
     if not isinstance(records, list):
         errors.append("coverage_records must be a list")
         return
+
+    coverage_statuses = {
+        record.get("calculation_input_status")
+        for record in records
+        if isinstance(record, dict)
+    }
+    unknown_statuses = coverage_statuses - APPROVED_STATUSES
+    if unknown_statuses:
+        errors.append(f"coverage contains unknown calculation_input_status values: {sorted(unknown_statuses)}")
 
     annotated_records = [
         record for record in records

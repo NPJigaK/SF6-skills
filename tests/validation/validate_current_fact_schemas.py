@@ -22,6 +22,16 @@ SCHEMA_FILES = [
     "current_fact_record.schema.json",
     "current_fact_export.schema.json",
 ]
+CALCULATION_INPUT_STATUSES = {
+    "eligible_only_after_domain_source_and_unit_checks",
+    "annotated_candidate_not_calculation_safe",
+    "parsed_range_not_single_value_calculation_safe",
+    "review_required_not_calculation_safe",
+    "enum_only_not_arithmetic",
+    "raw_preserved_not_calculation",
+    "not_numeric_authority",
+    "out_of_scope_not_emitted",
+}
 FORBIDDEN_PUBLIC_PATTERNS = [
     re.compile(r"(?i)(?:^|[\s\"'`])(?:/[a-z0-9_.-]+)+"),
     re.compile(r"(?i)(?:^|[\s\"'`(])[A-Z]:[\\/]"),
@@ -48,9 +58,11 @@ def main() -> int:
 
     record_validator = Draft202012Validator(schemas[SCHEMA_DIR / "current_fact_record.schema.json"], registry=registry)
     export_validator = Draft202012Validator(schemas[SCHEMA_DIR / "current_fact_export.schema.json"], registry=registry)
+    _validate_status_schema_contract(schemas, errors)
     _validate_valid_fixtures(record_validator, FIXTURE_DIR / "records/valid", errors)
     _validate_invalid_fixtures(record_validator, FIXTURE_DIR / "records/invalid", errors)
     _validate_valid_fixtures(export_validator, FIXTURE_DIR / "exports/valid", errors)
+    _validate_invalid_fixtures(export_validator, FIXTURE_DIR / "exports/invalid", errors)
     _scan_public_files([*schemas, *FIXTURE_DIR.rglob("*.json")], errors)
     return _finish(errors)
 
@@ -66,6 +78,19 @@ def _load_schemas(errors: list[str]) -> dict[Path, dict[str, Any]]:
         if schemas[path].get("$schema") != "https://json-schema.org/draft/2020-12/schema":
             errors.append(f"{path.relative_to(ROOT)} must use JSON Schema Draft 2020-12")
     return schemas
+
+
+def _validate_status_schema_contract(schemas: dict[Path, dict[str, Any]], errors: list[str]) -> None:
+    record_schema = schemas[SCHEMA_DIR / "current_fact_record.schema.json"]
+    export_schema = schemas[SCHEMA_DIR / "current_fact_export.schema.json"]
+    status_property = record_schema.get("properties", {}).get("calculation_input_status", {})
+    if set(status_property.get("enum", [])) != CALCULATION_INPUT_STATUSES:
+        errors.append("current_fact_record.schema.json calculation_input_status enum does not match approved statuses")
+    if "calculation_input_status" not in record_schema.get("required", []):
+        errors.append("current_fact_record.schema.json must require calculation_input_status")
+    version = export_schema.get("properties", {}).get("artifact_schema_version", {}).get("const")
+    if version != "current_fact_export/v2":
+        errors.append("current_fact_export.schema.json must use artifact_schema_version current_fact_export/v2")
 
 
 def _validate_valid_fixtures(validator: Draft202012Validator, directory: Path, errors: list[str]) -> None:
