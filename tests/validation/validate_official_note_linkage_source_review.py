@@ -13,6 +13,25 @@ JSON_PATH = ROOT / "data/source-reviews/20260524-official-note-linkage-source-re
 MD_PATH = ROOT / "docs/source-reviews/20260524-official-note-linkage-source-review.md"
 COVERAGE_PATH = ROOT / "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json"
 
+EXPECTED_REVIEW_ITEM_IDS = {
+    "value-shape:official--source_specific_expression--sa",
+    "value-shape:official--source_specific_expression--u_55d872f6091a",
+    "value-shape:official--source_specific_expression--u_202a059d9b1b",
+    "value-shape:official--malformed_looking_source_value--u_fdb49a2113ba--u_c2b75204faf1",
+    "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_c2b75204faf1",
+    "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100",
+    "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_4b3674d32cef",
+    "value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb",
+    "value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69",
+}
+ANNOTATED_IMPLEMENTED_COVERAGE = {
+    "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100": "partial_raw_value_coverage",
+    "value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb": "partial_raw_value_coverage",
+    "value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69": "partial_raw_value_coverage",
+}
+ANNOTATED_CALCULATION_STATUS = "annotated_candidate_not_calculation_safe"
+BLOCKED_CALCULATION_STATUS = "review_required_not_calculation_safe"
+
 ALLOWED_RESULTS = {
     "structured_row_note_evidence_found",
     "structured_row_note_evidence_ambiguous",
@@ -65,10 +84,10 @@ def main() -> int:
 
     payload = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     coverage = json.loads(COVERAGE_PATH.read_text(encoding="utf-8"))
-    expected_ids = {
-        record["review_item_id"]
+    coverage_by_id = {
+        record.get("review_item_id"): record
         for record in coverage["coverage_records"]
-        if record.get("source_name") == "official" and record.get("classifier_decision") == "review_required"
+        if record.get("source_name") == "official"
     }
 
     if payload.get("artifact_schema_version") != "official_note_linkage_source_review_summary/v1":
@@ -85,8 +104,12 @@ def main() -> int:
 
     records = payload.get("review_records", [])
     actual_ids = {record.get("review_item_id") for record in records}
-    if actual_ids != expected_ids:
-        errors.append("review_records do not match official review_required coverage records")
+    if actual_ids != EXPECTED_REVIEW_ITEM_IDS:
+        errors.append("review_records do not match expected official note-linkage target records")
+    missing_coverage_ids = sorted(EXPECTED_REVIEW_ITEM_IDS - set(coverage_by_id))
+    if missing_coverage_ids:
+        errors.append(f"coverage missing official note-linkage records: {', '.join(missing_coverage_ids)}")
+    _validate_coverage_alignment(records, coverage_by_id, errors)
 
     expected_counts = Counter(record.get("source_review_result") for record in records)
     expected_counts.update(record.get("later_parser_eligibility") for record in records)
@@ -205,6 +228,38 @@ def _validate_record(index: int, record: dict[str, object], errors: list[str]) -
         expected_hash = "sha256:" + sha256(raw_value.encode("utf-8")).hexdigest()
         if raw_hash != expected_hash:
             errors.append(f"review_records[{index}].representative_examples[{example_index}] has invalid hash")
+
+
+def _validate_coverage_alignment(
+    records: list[object], coverage_by_id: dict[object, dict[str, object]], errors: list[str]
+) -> None:
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            continue
+        review_item_id = record.get("review_item_id")
+        coverage_record = coverage_by_id.get(review_item_id)
+        if not isinstance(coverage_record, dict):
+            continue
+        decision = coverage_record.get("classifier_decision")
+        calculation_status = coverage_record.get("calculation_input_status")
+        parser_rule_ids = coverage_record.get("parser_rule_ids", [])
+
+        if review_item_id in ANNOTATED_IMPLEMENTED_COVERAGE:
+            expected_decision = ANNOTATED_IMPLEMENTED_COVERAGE[review_item_id]
+            if decision != expected_decision:
+                errors.append(f"review_records[{index}] coverage decision must be {expected_decision}")
+            if calculation_status != ANNOTATED_CALCULATION_STATUS:
+                errors.append(f"review_records[{index}] coverage must remain annotated non-calculation-safe")
+            if not parser_rule_ids:
+                errors.append(f"review_records[{index}] implemented annotated coverage must record parser rule ids")
+            continue
+
+        if decision != "review_required":
+            errors.append(f"review_records[{index}] coverage must remain review_required")
+        if calculation_status != BLOCKED_CALCULATION_STATUS:
+            errors.append(f"review_records[{index}] coverage must remain blocked from calculation inputs")
+        if parser_rule_ids:
+            errors.append(f"review_records[{index}] blocked coverage must not record parser rule ids")
 
 
 def _validate_v4_evidence(index: int, evidence: object, errors: list[str]) -> None:

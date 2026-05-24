@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -18,7 +19,7 @@ POLICY_JSON = Path("data/value-shape-policies/20260521T025403Z-parsed-value-clas
 SYSTEM_MECHANICS_MD = Path("docs/system-mechanics/20260523-supercombo-system-mechanics-parser-inputs.md")
 COVERAGE_JSON = Path("data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json")
 COVERAGE_MD = Path("docs/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.md")
-ARTIFACT_SCHEMA_VERSION = "parsed_value_classifier_coverage/v1"
+ARTIFACT_SCHEMA_VERSION = "parsed_value_classifier_coverage/v2"
 
 DISPOSITION_TO_DECISION = {
     "schema_supports_raw_only": "raw_preserved_non_calculation",
@@ -65,11 +66,53 @@ OFFICIAL_SIGNED_WAVE_DASH_RANGE_RE = re.compile(r"^([+-]?\d+)～([+-]?\d+)$")
 THROW_PAIR_RE = re.compile(r"^(\d+(?:\.\d+)?)\s*/\s*(\d+(?:\.\d+)?)$")
 OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID = "frame_range.official_signed_wave_dash.v1"
 PARSED_RANGE_NOT_SINGLE_VALUE_CALCULATION_SAFE = "parsed_range_not_single_value_calculation_safe"
+ANNOTATED_FRAME_SUFFIX_MARKER_RULE_ID = "annotated_frame.official_suffix_marker.v1"
+ANNOTATED_SIGNED_FRAME_NEGATIVE_RULE_ID = "annotated_signed_frame.official_prefix_marker.negative.v1"
+ANNOTATED_CANDIDATE_NOT_CALCULATION_SAFE = "annotated_candidate_not_calculation_safe"
+PARTIAL_RAW_VALUE_COVERAGE_DECISION = "partial_raw_value_coverage"
+ANNOTATED_STARTUP_REVIEW_ITEM_ID = "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100"
+ANNOTATED_BLOCK_ADVANTAGE_REVIEW_ITEM_ID = "value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb"
+ANNOTATED_HIT_ADVANTAGE_REVIEW_ITEM_ID = "value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69"
 OFFICIAL_SIGNED_WAVE_DASH_RANGE_REVIEW_ITEM_IDS = frozenset(
     {
         "value-shape:official--unclassified_expression--u_c135db53355f--u_522ba9f47afb",
         "value-shape:official--unclassified_expression--u_c135db53355f--u_7acd6c7b6e69",
     }
+)
+ANNOTATED_OFFICIAL_REVIEW_METADATA = {
+    ANNOTATED_STARTUP_REVIEW_ITEM_ID: {
+        "approved_raw_values": frozenset({"122※", "128※"}),
+        "candidate_type": "unsigned_frame",
+        "field_key": "startup",
+        "marker_placement": "suffix",
+        "note_scope": "row_startup_condition",
+        "parser_rule_id": ANNOTATED_FRAME_SUFFIX_MARKER_RULE_ID,
+        "source_column_header_path": ["動作フレーム", "発生"],
+        "source_review_id": "source-review:official-note-linkage-startup",
+    },
+    ANNOTATED_BLOCK_ADVANTAGE_REVIEW_ITEM_ID: {
+        "approved_raw_values": frozenset({"※-4", "※-2"}),
+        "candidate_type": "signed_frame",
+        "field_key": "block_advantage",
+        "marker_placement": "prefix",
+        "note_scope": "row_block_advantage_condition",
+        "parser_rule_id": ANNOTATED_SIGNED_FRAME_NEGATIVE_RULE_ID,
+        "source_column_header_path": ["硬直差", "ガード"],
+        "source_review_id": "source-review:official-note-linkage-block-advantage",
+    },
+    ANNOTATED_HIT_ADVANTAGE_REVIEW_ITEM_ID: {
+        "approved_raw_values": frozenset({"※-3", "※-1", "※-4"}),
+        "candidate_type": "signed_frame",
+        "field_key": "hit_advantage",
+        "marker_placement": "prefix",
+        "note_scope": "row_hit_advantage_condition",
+        "parser_rule_id": ANNOTATED_SIGNED_FRAME_NEGATIVE_RULE_ID,
+        "source_column_header_path": ["硬直差", "ヒット"],
+        "source_review_id": "source-review:official-note-linkage-hit-advantage",
+    },
+}
+ANNOTATED_OFFICIAL_RULE_IDS = frozenset(
+    metadata["parser_rule_id"] for metadata in ANNOTATED_OFFICIAL_REVIEW_METADATA.values()
 )
 FORBIDDEN_PUBLIC_PATTERNS = [
     re.compile(r"(?i)(?:^|[\s\"'`])(?:/[a-z0-9_.-]+)+"),
@@ -153,6 +196,7 @@ def classify_raw_value(raw_value: str | None, disposition_record: dict[str, Any]
     family = str(disposition_record.get("semantic_source_family"))
     field_key = str(disposition_record.get("proposed_field_key") or "")
     source_name = str(disposition_record.get("source_name") or "")
+    source_role = str(disposition_record.get("source_role") or "")
 
     if disposition == "out_of_scope_first_normalized_export":
         return _non_parsed_result(
@@ -189,6 +233,29 @@ def classify_raw_value(raw_value: str | None, disposition_record: dict[str, Any]
     unsupported_reason = _unsupported_field_reason(disposition_record)
     if unsupported_reason:
         return _review_required(raw, review_item_id, unsupported_reason)
+    annotated = _parse_annotated_official_value(
+        stripped,
+        review_item_id=review_item_id,
+        source_name=source_name,
+        source_role=source_role,
+        family=family,
+        field_key=field_key,
+    )
+    if annotated is not None:
+        parsed_value, parser_rule_id = annotated
+        return ClassificationResult(
+            raw_value=raw,
+            classifier_decision="parsed_numeric_structured",
+            value_shape={
+                "classes": _infer_shape_classes(stripped),
+                "classifier_status": "parsed",
+                "parser_rule_id": parser_rule_id,
+                "review_item_id": review_item_id,
+            },
+            parsed_value=parsed_value,
+            calculation_input_status=ANNOTATED_CANDIDATE_NOT_CALCULATION_SAFE,
+            policy_note="Parsed as an official annotated numeric candidate; the nested numeric token is condition-bound and not scalar calculation-safe.",
+        )
     if family == "throw":
         parsed = _parse_supported_value(
             stripped,
@@ -253,6 +320,14 @@ def build_coverage_payload(
     records = [_coverage_record(record) for record in disposition_payload.get("dispositions", [])]
     decision_counts = Counter(record["classifier_decision"] for record in records)
     calculation_counts = Counter(record["calculation_input_status"] for record in records)
+    variant_records = [
+        variant
+        for record in records
+        for variant in record.get("raw_value_variant_coverage", [])
+        if isinstance(variant, dict)
+    ]
+    variant_decision_counts = Counter(variant["classifier_decision"] for variant in variant_records)
+    variant_calculation_counts = Counter(variant["calculation_input_status"] for variant in variant_records)
     payload = {
         "artifact_schema_version": ARTIFACT_SCHEMA_VERSION,
         "run_id": RUN_ID,
@@ -268,6 +343,8 @@ def build_coverage_payload(
         "total_review_items": len(records),
         "classifier_decision_counts": dict(sorted(decision_counts.items())),
         "calculation_input_status_counts": dict(sorted(calculation_counts.items())),
+        "raw_value_variant_decision_counts": dict(sorted(variant_decision_counts.items())),
+        "raw_value_variant_calculation_input_status_counts": dict(sorted(variant_calculation_counts.items())),
         "parse_rule_policy_counts": policy_payload.get("parse_rule_policy_counts", {}),
         "enum_policy_counts": policy_payload.get("enum_policy_counts", {}),
         "coverage_records": records,
@@ -353,6 +430,21 @@ def validate_coverage_payload(
     calculation_counts = Counter(record.get("calculation_input_status") for record in records if isinstance(record, dict))
     if payload.get("calculation_input_status_counts") != dict(sorted(calculation_counts.items())):
         errors.append("calculation_input_status_counts mismatch")
+    variant_records = [
+        variant
+        for record in records
+        if isinstance(record, dict)
+        for variant in record.get("raw_value_variant_coverage", [])
+        if isinstance(variant, dict)
+    ]
+    variant_decision_counts = Counter(variant.get("classifier_decision") for variant in variant_records)
+    if payload.get("raw_value_variant_decision_counts") != dict(sorted(variant_decision_counts.items())):
+        errors.append("raw_value_variant_decision_counts mismatch")
+    variant_calculation_counts = Counter(variant.get("calculation_input_status") for variant in variant_records)
+    if payload.get("raw_value_variant_calculation_input_status_counts") != dict(
+        sorted(variant_calculation_counts.items())
+    ):
+        errors.append("raw_value_variant_calculation_input_status_counts mismatch")
 
     by_id = {record["review_item_id"]: record for record in disposition_records}
     for index, record in enumerate(records):
@@ -428,6 +520,17 @@ def render_coverage_markdown(payload: dict[str, Any]) -> str:
     lines.extend(["", "## Calculation Input Status", ""])
     for status, count in payload["calculation_input_status_counts"].items():
         lines.append(f"- `{status}`: {count}")
+    lines.extend(["", "## Raw Value Variant Coverage", ""])
+    if payload.get("raw_value_variant_decision_counts"):
+        lines.append("Classifier decisions:")
+        lines.append("")
+        for decision, count in payload["raw_value_variant_decision_counts"].items():
+            lines.append(f"- `{decision}`: {count}")
+        lines.extend(["", "Calculation input statuses:", ""])
+        for status, count in payload["raw_value_variant_calculation_input_status_counts"].items():
+            lines.append(f"- `{status}`: {count}")
+    else:
+        lines.append("- No raw-value-level variant coverage recorded.")
     lines.extend(
         [
             "",
@@ -442,11 +545,16 @@ def render_coverage_markdown(payload: dict[str, Any]) -> str:
             "",
             "## Coverage Records",
             "",
-            "| Review item | Source | Family | Field | Disposition | Decision | Calculation status | Parser rules | Note |",
-            "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+            "| Review item | Source | Family | Field | Disposition | Decision | Calculation status | Parser rules | Variant coverage | Note |",
+            "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
         ]
     )
     for record in payload["coverage_records"]:
+        variants = record.get("raw_value_variant_coverage", [])
+        variant_summary = ""
+        if variants:
+            variant_counts = Counter(variant["classifier_decision"] for variant in variants)
+            variant_summary = ", ".join(f"{decision}: {count}" for decision, count in sorted(variant_counts.items()))
         lines.append(
             "| "
             + " | ".join(
@@ -459,6 +567,7 @@ def render_coverage_markdown(payload: dict[str, Any]) -> str:
                     _markdown_code(record["classifier_decision"]),
                     _markdown_code(record["calculation_input_status"]),
                     _markdown_code(", ".join(record["parser_rule_ids"])),
+                    _markdown_code(variant_summary),
                     record["policy_note"].replace("|", "\\|"),
                 ]
             )
@@ -476,6 +585,7 @@ def _coverage_record(record: dict[str, Any]) -> dict[str, Any]:
     value_shape_status = "review_required"
     calculation_status = "review_required_not_calculation_safe"
     note = "Unsupported or calculation-relevant values remain review-required."
+    raw_value_variant_coverage: list[dict[str, Any]] = []
 
     if disposition == "parse_rule_required_before_schema":
         unsupported_reason = _unsupported_field_reason(record)
@@ -485,12 +595,27 @@ def _coverage_record(record: dict[str, Any]) -> dict[str, Any]:
         else:
             parser_rule_ids = _supported_parse_rule_ids(record)
             parsed_examples = _parsed_representative_examples(record)
+            raw_value_variant_coverage = _raw_value_variant_coverage(record)
+            blocked_variant_count = sum(
+                1
+                for variant in raw_value_variant_coverage
+                if variant.get("classifier_decision") == "review_required"
+            )
             if parser_rule_ids and parsed_examples:
-                decision = "parsed_numeric_structured"
-                value_shape_status = "parsed"
+                if blocked_variant_count:
+                    decision = PARTIAL_RAW_VALUE_COVERAGE_DECISION
+                    value_shape_status = "partial"
+                else:
+                    decision = "parsed_numeric_structured"
+                    value_shape_status = "parsed"
                 calculation_status = _parsed_calculation_status(record, parser_rule_id=parser_rule_ids[0])
                 if calculation_status == PARSED_RANGE_NOT_SINGLE_VALUE_CALCULATION_SAFE:
                     note = "Official signed range parses to frame_range endpoints, but range reason is unknown and it is not single-value calculation-safe."
+                elif calculation_status == ANNOTATED_CANDIDATE_NOT_CALCULATION_SAFE:
+                    if blocked_variant_count:
+                        note = "Official annotated numeric candidates parse only for approved raw variants; blocked variants remain review-required and no candidate is scalar calculation-safe."
+                    else:
+                        note = "Official annotated numeric candidates parse into a non-scalar wrapper; note-bound candidates are not calculation-safe."
                 else:
                     note = "Reviewed representative examples parse under strict rules; complex variants still remain review-required at raw-value classification time."
             else:
@@ -513,7 +638,7 @@ def _coverage_record(record: dict[str, Any]) -> dict[str, Any]:
     if record.get("source_name") == "supercombo" and calculation_status == "eligible_only_after_domain_source_and_unit_checks":
         calculation_status = "not_numeric_authority"
 
-    return {
+    coverage_record = {
         "review_item_id": record.get("review_item_id"),
         "source_name": record.get("source_name"),
         "source_role": record.get("source_role"),
@@ -530,6 +655,9 @@ def _coverage_record(record: dict[str, Any]) -> dict[str, Any]:
         "supercombo_authority_policy": _supercombo_authority_policy(record),
         "policy_note": note,
     }
+    if raw_value_variant_coverage:
+        coverage_record["raw_value_variant_coverage"] = raw_value_variant_coverage
+    return coverage_record
 
 
 def _coverage_record_errors(
@@ -569,7 +697,11 @@ def _coverage_record_errors(
             errors.append(f"{context}.{key} must match disposition artifact")
     disposition = str(record.get("source_disposition"))
     decision = record.get("classifier_decision")
-    if disposition == "parse_rule_required_before_schema" and decision not in {"parsed_numeric_structured", "review_required"}:
+    if disposition == "parse_rule_required_before_schema" and decision not in {
+        "parsed_numeric_structured",
+        PARTIAL_RAW_VALUE_COVERAGE_DECISION,
+        "review_required",
+    }:
         errors.append(f"{context}.classifier_decision invalid for parse-rule disposition")
     if disposition == "source_specific_enum_required" and decision != "enum_classified":
         errors.append(f"{context}.classifier_decision must be enum_classified")
@@ -586,6 +718,68 @@ def _coverage_record_errors(
         errors.append(f"{context}.raw_value_policy must preserve raw values")
     if not record.get("policy_note"):
         errors.append(f"{context}.policy_note is required")
+    errors.extend(_raw_value_variant_coverage_errors(context, record))
+    return errors
+
+
+def _raw_value_variant_coverage_errors(context: str, record: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    variants = record.get("raw_value_variant_coverage", [])
+    if variants == []:
+        if record.get("classifier_decision") == PARTIAL_RAW_VALUE_COVERAGE_DECISION:
+            errors.append(f"{context}.raw_value_variant_coverage is required for partial coverage")
+        return errors
+    if not isinstance(variants, list):
+        return [f"{context}.raw_value_variant_coverage must be a list"]
+    parsed_count = 0
+    blocked_count = 0
+    for variant_index, variant in enumerate(variants):
+        variant_context = f"{context}.raw_value_variant_coverage[{variant_index}]"
+        if not isinstance(variant, dict):
+            errors.append(f"{variant_context} must be an object")
+            continue
+        required = {
+            "raw_value",
+            "raw_value_length",
+            "raw_value_sha256",
+            "classifier_decision",
+            "value_shape_classifier_status",
+            "parser_rule_ids",
+            "calculation_input_status",
+        }
+        for key in sorted(required):
+            if key not in variant:
+                errors.append(f"{variant_context}.{key} is required")
+        decision = variant.get("classifier_decision")
+        if decision == "parsed_numeric_structured":
+            parsed_count += 1
+            if variant.get("parsed_value_kind") != "annotated_numeric_candidate":
+                errors.append(f"{variant_context}.parsed_value_kind must be annotated_numeric_candidate")
+            if variant.get("calculation_input_status") != ANNOTATED_CANDIDATE_NOT_CALCULATION_SAFE:
+                errors.append(f"{variant_context}.calculation_input_status must not be scalar calculation-safe")
+            if not variant.get("parser_rule_ids"):
+                errors.append(f"{variant_context}.parser_rule_ids must identify the annotated parser")
+        elif decision == "review_required":
+            blocked_count += 1
+            if variant.get("parser_rule_ids") != []:
+                errors.append(f"{variant_context}.parser_rule_ids must be empty for blocked variants")
+            if not variant.get("review_required_reason"):
+                errors.append(f"{variant_context}.review_required_reason is required for blocked variants")
+        else:
+            errors.append(f"{variant_context}.classifier_decision is invalid")
+        raw_value = variant.get("raw_value")
+        if isinstance(raw_value, str):
+            expected_length = len(raw_value)
+            expected_hash = "sha256:" + hashlib.sha256(raw_value.encode("utf-8")).hexdigest()
+            if variant.get("raw_value_length") != expected_length:
+                errors.append(f"{variant_context}.raw_value_length does not match raw_value")
+            if variant.get("raw_value_sha256") != expected_hash:
+                errors.append(f"{variant_context}.raw_value_sha256 does not match raw_value")
+    if record.get("classifier_decision") == PARTIAL_RAW_VALUE_COVERAGE_DECISION:
+        if parsed_count == 0 or blocked_count == 0:
+            errors.append(f"{context}.raw_value_variant_coverage must include parsed and blocked variants")
+    elif blocked_count:
+        errors.append(f"{context}.classifier_decision must be partial when variants remain blocked")
     return errors
 
 
@@ -624,9 +818,43 @@ def _parsed_representative_examples(record: dict[str, Any]) -> list[str]:
     return parsed
 
 
+def _raw_value_variant_coverage(record: dict[str, Any]) -> list[dict[str, Any]]:
+    if not _is_annotated_official_target_record(record):
+        return []
+    variants: list[dict[str, Any]] = []
+    for example in record.get("representative_examples", []):
+        if not isinstance(example, dict) or not isinstance(example.get("raw_value"), str):
+            continue
+        raw = example["raw_value"]
+        result = classify_raw_value(raw, record)
+        variant = {
+            "raw_value": raw,
+            "raw_value_length": example.get("raw_value_length", len(raw)),
+            "raw_value_sha256": example.get(
+                "raw_value_sha256",
+                "sha256:" + hashlib.sha256(raw.encode("utf-8")).hexdigest(),
+            ),
+            "classifier_decision": result.classifier_decision,
+            "value_shape_classifier_status": result.value_shape["classifier_status"],
+            "parser_rule_ids": [result.value_shape["parser_rule_id"]]
+            if result.value_shape.get("parser_rule_id")
+            else [],
+            "calculation_input_status": result.calculation_input_status,
+        }
+        if result.parsed_value is not None:
+            variant["parsed_value_kind"] = result.parsed_value["kind"]
+        if result.review_required_reason:
+            variant["review_required_reason"] = result.review_required_reason
+        variants.append(variant)
+    return variants
+
+
 def _supported_parse_rule_ids(record: dict[str, Any]) -> list[str]:
     if _is_official_signed_wave_dash_range_record(record):
         return [OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID]
+    metadata = _annotated_official_metadata_for_record(record)
+    if metadata:
+        return [metadata["parser_rule_id"]]
     family = str(record.get("semantic_source_family"))
     return SUPPORTED_PARSE_RULES_BY_FAMILY.get(family, [])
 
@@ -634,9 +862,73 @@ def _supported_parse_rule_ids(record: dict[str, Any]) -> list[str]:
 def _parsed_calculation_status(disposition_record: dict[str, Any], *, parser_rule_id: str) -> str:
     if parser_rule_id == OFFICIAL_SIGNED_WAVE_DASH_RANGE_RULE_ID:
         return PARSED_RANGE_NOT_SINGLE_VALUE_CALCULATION_SAFE
+    if parser_rule_id in ANNOTATED_OFFICIAL_RULE_IDS:
+        return ANNOTATED_CANDIDATE_NOT_CALCULATION_SAFE
     if disposition_record.get("source_name") == "supercombo":
         return "not_numeric_authority"
     return "eligible_only_after_domain_source_and_unit_checks"
+
+
+def _parse_annotated_official_value(
+    raw: str,
+    *,
+    review_item_id: str,
+    source_name: str,
+    source_role: str,
+    family: str,
+    field_key: str,
+) -> tuple[dict[str, Any], str] | None:
+    metadata = ANNOTATED_OFFICIAL_REVIEW_METADATA.get(review_item_id)
+    if not metadata:
+        return None
+    if source_name != "official" or source_role != "authority_candidate" or field_key != metadata["field_key"]:
+        return None
+    if raw not in metadata["approved_raw_values"]:
+        return None
+    if metadata["candidate_type"] == "unsigned_frame":
+        if family != "timing":
+            return None
+        match = re.fullmatch(r"(\d+)※", raw)
+        if not match:
+            return None
+        value = int(match.group(1))
+    else:
+        if family != "advantage":
+            return None
+        match = re.fullmatch(r"※(-\d+)", raw)
+        if not match:
+            return None
+        value = int(match.group(1))
+
+    return (
+        {
+            "kind": "annotated_numeric_candidate",
+            "numeric_candidate": {
+                "candidate_type": metadata["candidate_type"],
+                "unit": "frame",
+                "value": value,
+            },
+            "annotation": {
+                "note_marker": "※",
+                "marker_placement": metadata["marker_placement"],
+                "note_id": None,
+                "note_text_status": "structured_row_note_text_found",
+                "note_scope": metadata["note_scope"],
+                "row_note_candidate_count": 1,
+                "note_linkage_status": "same_row_note_candidates_available",
+            },
+            "source_context": {
+                "source_review_id": metadata["source_review_id"],
+                "review_item_id": review_item_id,
+                "source_column_header_path": metadata["source_column_header_path"],
+            },
+            "calculation": {
+                "calculation_input_status": ANNOTATED_CANDIDATE_NOT_CALCULATION_SAFE,
+                "reason": "condition_bound_by_official_note",
+            },
+        },
+        metadata["parser_rule_id"],
+    )
 
 
 def _parse_supported_value(
@@ -718,6 +1010,23 @@ def _is_official_signed_wave_dash_range_target(
         and family == "advantage"
         and field_key in {"block_advantage", "hit_advantage"}
     )
+
+
+def _annotated_official_metadata_for_record(record: dict[str, Any]) -> dict[str, Any] | None:
+    metadata = ANNOTATED_OFFICIAL_REVIEW_METADATA.get(str(record.get("review_item_id")))
+    if not metadata:
+        return None
+    if (
+        record.get("source_name") == "official"
+        and record.get("source_role") == "authority_candidate"
+        and record.get("proposed_field_key") == metadata["field_key"]
+    ):
+        return metadata
+    return None
+
+
+def _is_annotated_official_target_record(record: dict[str, Any]) -> bool:
+    return _annotated_official_metadata_for_record(record) is not None
 
 
 def _unsupported_field_reason(record: dict[str, Any]) -> str | None:

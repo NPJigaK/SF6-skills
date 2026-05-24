@@ -106,6 +106,98 @@
       },
       "required": ["kind", "text"],
       "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "annotation": {
+          "additionalProperties": false,
+          "properties": {
+            "marker_placement": { "enum": ["prefix", "suffix"] },
+            "note_id": { "type": ["string", "null"] },
+            "note_linkage_status": {
+              "enum": ["same_row_note_candidates_available"]
+            },
+            "note_marker": { "const": "※" },
+            "note_scope": {
+              "enum": [
+                "row_startup_condition",
+                "row_block_advantage_condition",
+                "row_hit_advantage_condition"
+              ]
+            },
+            "note_text_status": { "const": "structured_row_note_text_found" },
+            "row_note_candidate_count": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "marker_placement",
+            "note_id",
+            "note_linkage_status",
+            "note_marker",
+            "note_scope",
+            "note_text_status",
+            "row_note_candidate_count"
+          ],
+          "type": "object"
+        },
+        "calculation": {
+          "additionalProperties": false,
+          "properties": {
+            "calculation_input_status": {
+              "const": "annotated_candidate_not_calculation_safe"
+            },
+            "reason": { "const": "condition_bound_by_official_note" }
+          },
+          "required": ["calculation_input_status", "reason"],
+          "type": "object"
+        },
+        "kind": { "const": "annotated_numeric_candidate" },
+        "numeric_candidate": {
+          "additionalProperties": false,
+          "properties": {
+            "candidate_type": { "enum": ["unsigned_frame", "signed_frame"] },
+            "unit": { "const": "frame" },
+            "value": { "type": "integer" }
+          },
+          "required": ["candidate_type", "unit", "value"],
+          "type": "object"
+        },
+        "source_context": {
+          "additionalProperties": false,
+          "properties": {
+            "review_item_id": {
+              "pattern": "^[a-z0-9][a-z0-9_.:-]*$",
+              "type": "string"
+            },
+            "source_column_header_path": {
+              "items": { "type": "string" },
+              "minItems": 1,
+              "type": "array"
+            },
+            "source_review_id": {
+              "pattern": "^[a-z0-9][a-z0-9_.:-]*$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "review_item_id",
+            "source_column_header_path",
+            "source_review_id"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "annotation",
+        "calculation",
+        "kind",
+        "numeric_candidate",
+        "source_context"
+      ],
+      "type": "object"
     }
   ],
   "title": "Parsed current-fact value"
