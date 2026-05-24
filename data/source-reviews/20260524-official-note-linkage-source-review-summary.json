@@ -5,27 +5,29 @@
   "input_coverage": "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
   "input_disposition": "data/value-shape-dispositions/20260521T025403Z-value-shape-review-item-disposition-summary.json",
   "review_counts": {
-    "blocked_pending_acquisition_fields": 8,
+    "blocked_pending_source_review": 4,
+    "later_annotated_parser_eligible": 4,
     "not_note_linkage_target": 1,
     "source_confirmed_non_note_grammar_blocked": 1,
-    "source_evidence_found_acquisition_field_gap": 8,
+    "structured_row_note_evidence_ambiguous": 4,
+    "structured_row_note_evidence_found": 4,
     "total_review_records": 9
   },
   "review_records": [
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 8,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "blocked_pending_source_review",
       "marker_roles": [
         "note_marker_on_value"
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "linked_in_reviewer_evidence",
+      "note_review_status": "structured_multiple_candidates_ambiguous",
       "note_scope": "row_source_column_condition",
       "note_text_excerpt": "SAゲージ増加量が上昇",
-      "note_text_status": "row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found_ambiguous",
       "proposed_field_key": "sa_gain",
       "representative_examples": [
         {
@@ -45,10 +47,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--sa",
-      "reviewer_notes": "Reviewer evidence links the marker to row-local medal-level SA gauge conditions, but the structured table-row artifact does not expose row notes.",
+      "reviewer_notes": "v4 row_notes expose row-local text, but representative SA cells have multiple same-row ※ candidates, including damage and SA-gauge notes. This remains blocked until marker-to-field linkage is reviewed beyond marker presence.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "gauge",
       "source_header_path": [
@@ -56,15 +65,29 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-sa-gain",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_ambiguous",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "ambiguous_marker_without_id": 8
+        },
+        "representative_match_count": 8,
+        "row_note_reference_candidate_count_range": [
+          2,
+          4
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 55,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "blocked_pending_source_review",
       "marker_roles": [
         "note_marker_on_value",
         "standalone_marker",
@@ -72,10 +95,10 @@
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "mixed_linked_in_reviewer_evidence",
+      "note_review_status": "structured_mixed_candidate_statuses",
       "note_scope": "row_scaling_condition",
       "note_text_excerpt": "必殺技キャンセル時のみ適用",
-      "note_text_status": "mixed_row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found_mixed",
       "proposed_field_key": "combo_scaling",
       "representative_examples": [
         {
@@ -95,10 +118,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_55d872f6091a",
-      "reviewer_notes": "Reviewer evidence shows row-local scaling notes, but the notes vary by move and must be captured per row before any scaling parser is safe.",
+      "reviewer_notes": "v4 row_notes expose row-local scaling notes for representative values. Most have a single candidate, but some representative rows still have multiple same-row ※ candidates, so the group remains blocked pending source review.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "scaling",
       "source_header_path": [
@@ -106,24 +136,39 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-combo-scaling",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_ambiguous",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "ambiguous_marker_without_id": 2,
+          "same_row_note_candidates_available": 33
+        },
+        "representative_match_count": 35,
+        "row_note_reference_candidate_count_range": [
+          1,
+          2
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 36,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "blocked_pending_source_review",
       "marker_roles": [
         "note_marker_on_value"
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "mixed_linked_in_reviewer_evidence",
+      "note_review_status": "structured_mixed_candidate_statuses",
       "note_scope": "row_damage_condition",
       "note_text_excerpt": "毒破裂時ダメージ",
-      "note_text_status": "mixed_row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found_mixed",
       "proposed_field_key": "damage",
       "representative_examples": [
         {
@@ -143,10 +188,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_202a059d9b1b",
-      "reviewer_notes": "Damage examples are confirmed inside the source-native damage column, not caused by adjacent cancel cells. Row notes still need structured acquisition before parsing.",
+      "reviewer_notes": "v4 row_notes confirm source-native damage column boundaries and row-local note text for representative damage values, but at least one representative row has multiple same-row ※ candidates. Damage remains blocked pending source review.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "damage",
       "source_header_path": [
@@ -154,8 +206,23 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-damage",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_ambiguous",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "ambiguous_marker_without_id": 1,
+          "same_row_note_candidates_available": 4
+        },
+        "representative_match_count": 5,
+        "row_note_reference_candidate_count_range": [
+          1,
+          2
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     },
     {
@@ -191,10 +258,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--malformed_looking_source_value--u_fdb49a2113ba--u_c2b75204faf1",
-      "reviewer_notes": "Dot and double-hyphen active strings are source-confirmed active cells, but this source review does not resolve their grammar or calculation meaning.",
+      "reviewer_notes": "v4 evidence confirms these representative active values are source-native active cells with no cell note markers. Dot and double-hyphen active grammar remains a non-note blocker outside this review.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "timing",
       "source_header_path": [
@@ -205,13 +279,27 @@
       "source_review_id": "source-review:official-active-non-note-grammar",
       "source_review_result": "source_confirmed_non_note_grammar_blocked",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": false,
+        "note_linkage_status_counts": {
+          "no_cell_note_markers": 2
+        },
+        "representative_match_count": 2,
+        "row_note_reference_candidate_count_range": [
+          0,
+          0
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "visible_text_preserved"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 44,
       "cell_boundary_status": "confirmed_source_column_with_hidden_detail",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "blocked_pending_source_review",
       "marker_roles": [
         "standalone_marker",
         "bracketed_note_id",
@@ -220,10 +308,10 @@
       ],
       "note_id": "mixed",
       "note_marker": "※",
-      "note_review_status": "mixed_linked_in_reviewer_evidence",
+      "note_review_status": "structured_mixed_candidate_statuses",
       "note_scope": "row_active_component",
       "note_text_excerpt": "ボタンホールドでパリィの持続を延長可",
-      "note_text_status": "mixed_row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found_mixed",
       "proposed_field_key": "active",
       "representative_examples": [
         {
@@ -248,10 +336,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_c2b75204faf1",
-      "reviewer_notes": "Active cells mix standalone markers, bracketed note ids, and hidden-detail concatenation. Future parser must consume separated visible and hidden fields, not only concatenated source text.",
+      "reviewer_notes": "v4 row_notes expose row-local active notes and preserve visible/hidden detail separation. The group still mixes standalone markers, bracketed note ids, and visible/hidden concatenation, with ambiguous representative rows, so it remains blocked pending source review.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "timing",
       "source_header_path": [
@@ -260,24 +355,39 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-active",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_ambiguous",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": true,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "ambiguous_marker_without_id": 2,
+          "same_row_note_candidates_available": 30
+        },
+        "representative_match_count": 32,
+        "row_note_reference_candidate_count_range": [
+          1,
+          3
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "separated_visible_and_hidden_detail_present"
+      },
       "visible_hidden_detail_status": "separated_fields_available_with_concatenated_source_text"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 6,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "later_annotated_parser_eligible",
       "marker_roles": [
         "note_marker_on_value"
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "linked_in_reviewer_evidence",
+      "note_review_status": "structured_single_candidate",
       "note_scope": "row_startup_condition",
       "note_text_excerpt": "画面中央で発動した際の数値",
-      "note_text_status": "row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found",
       "proposed_field_key": "startup",
       "representative_examples": [
         {
@@ -297,10 +407,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_a23f1a4e4100",
-      "reviewer_notes": "Startup suffix markers are row-local conditional values. Row-note extraction is required before annotated startup parsing.",
+      "reviewer_notes": "v4 row_notes provide a single same-row note candidate for representative startup suffix-marker values. This is source-review readiness only; no parser or calculation-safe promotion is granted.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "timing",
       "source_header_path": [
@@ -309,25 +426,39 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-startup",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_found",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "same_row_note_candidates_available": 4
+        },
+        "representative_match_count": 4,
+        "row_note_reference_candidate_count_range": [
+          1,
+          1
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 28,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "later_annotated_parser_eligible",
       "marker_roles": [
         "note_marker_on_value",
         "total_duration_label"
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "mixed_linked_in_reviewer_evidence",
+      "note_review_status": "structured_single_candidate",
       "note_scope": "row_recovery_or_total_duration_condition",
       "note_text_excerpt": "裏回り時 全体",
-      "note_text_status": "mixed_row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found",
       "proposed_field_key": "recovery",
       "representative_examples": [
         {
@@ -347,10 +478,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_fdb49a2113ba--u_4b3674d32cef",
-      "reviewer_notes": "The source column is recovery, but values prefixed with the source label for total duration must not be treated as ordinary recovery frames.",
+      "reviewer_notes": "v4 row_notes provide single same-row note candidates for representative recovery-column values. Values with 全体 remain a later total_duration/schema design concern and are not calculation-safe here.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "timing",
       "source_header_path": [
@@ -359,25 +497,39 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-recovery",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_found",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "same_row_note_candidates_available": 3
+        },
+        "representative_match_count": 3,
+        "row_note_reference_candidate_count_range": [
+          1,
+          1
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 6,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "later_annotated_parser_eligible",
       "marker_roles": [
         "note_marker_on_value",
         "embedded_alternate_value_marker"
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "mixed_linked_in_reviewer_evidence",
+      "note_review_status": "structured_single_candidate",
       "note_scope": "row_block_advantage_condition",
       "note_text_excerpt": "行雲流水を継続した場合の数値",
-      "note_text_status": "mixed_row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found",
       "proposed_field_key": "block_advantage",
       "representative_examples": [
         {
@@ -397,10 +549,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_c135db53355f--u_522ba9f47afb",
-      "reviewer_notes": "Block advantage markers are row-local conditions. Embedded alternate forms such as a marker between two signed values need a separate parser rule.",
+      "reviewer_notes": "v4 row_notes provide a single same-row note candidate for representative block-advantage marker values. This enables later annotated parser planning only, not scalar advantage calculation.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "advantage",
       "source_header_path": [
@@ -409,24 +568,38 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-block-advantage",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_found",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "same_row_note_candidates_available": 2
+        },
+        "representative_match_count": 2,
+        "row_note_reference_candidate_count_range": [
+          1,
+          1
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     },
     {
-      "acquisition_field_gap": "row_note_text_not_structured_in_table_row_artifact",
+      "acquisition_field_gap": "resolved_by_v4_row_note_fields",
       "affected_count": 4,
       "cell_boundary_status": "confirmed_source_column",
-      "later_parser_eligibility": "blocked_pending_acquisition_fields",
+      "later_parser_eligibility": "later_annotated_parser_eligible",
       "marker_roles": [
         "note_marker_on_value"
       ],
       "note_id": null,
       "note_marker": "※",
-      "note_review_status": "mixed_linked_in_reviewer_evidence",
+      "note_review_status": "structured_single_candidate",
       "note_scope": "row_hit_advantage_condition",
       "note_text_excerpt": "行雲流水を継続した場合の数値",
-      "note_text_status": "mixed_row_note_evidence_found",
+      "note_text_status": "structured_row_note_text_found",
       "proposed_field_key": "hit_advantage",
       "representative_examples": [
         {
@@ -446,10 +619,17 @@
         "visible_text",
         "hidden_detail_text",
         "row_identity",
-        "row_note_list_from_ignored_html_capture"
+        "official_table_rows_raw/v4",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status"
       ],
       "review_item_id": "value-shape:official--source_specific_expression--u_c135db53355f--u_7acd6c7b6e69",
-      "reviewer_notes": "Hit advantage markers are row-local conditions. Positive values without an explicit plus sign remain column-context dependent.",
+      "reviewer_notes": "v4 row_notes provide a single same-row note candidate for representative hit-advantage marker values. This enables later annotated parser planning only, not scalar advantage calculation.",
       "row_identity_status": "confirmed_public_character_move_reference",
       "semantic_source_family": "advantage",
       "source_header_path": [
@@ -458,8 +638,22 @@
       ],
       "source_name": "official",
       "source_review_id": "source-review:official-note-linkage-hit-advantage",
-      "source_review_result": "source_evidence_found_acquisition_field_gap",
+      "source_review_result": "structured_row_note_evidence_found",
       "source_role": "authority_candidate",
+      "v4_representative_evidence": {
+        "cell_note_ids_present": false,
+        "cell_note_markers_present": true,
+        "note_linkage_status_counts": {
+          "same_row_note_candidates_available": 2
+        },
+        "representative_match_count": 2,
+        "row_note_reference_candidate_count_range": [
+          1,
+          1
+        ],
+        "row_note_text_structured": true,
+        "visible_hidden_detail_evidence": "visible_text_only"
+      },
       "visible_hidden_detail_status": "not_applicable_or_empty"
     }
   ],
@@ -471,7 +665,9 @@
   },
   "source_evidence_summary": {
     "live_acquisition_run": false,
-    "row_note_text_in_structured_table_row_artifact": false,
+    "official_table_rows_v4_seen": true,
+    "reviewer_only_chatgpt_vlm_observation_used": false,
+    "row_note_text_in_structured_table_row_artifact": true,
     "row_note_text_seen_in_ignored_reviewer_html_capture": true,
     "table_cell_boundaries_seen_in_structured_table_row_artifact": true,
     "visible_hidden_detail_fields_seen_in_structured_table_row_artifact": true

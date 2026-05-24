@@ -1,6 +1,6 @@
 # Official Note Linkage V4 Source Review Update
 
-Status: Drafted for review.
+Status: Implemented; ready for review.
 
 ## Purpose
 
@@ -257,7 +257,26 @@ git status --short --branch
   `validate-artifacts`, parsed-value classifier validator, clean-slate
   validator, and `git status --short --branch`. New-file whitespace check
   produced no whitespace error output.
-- [ ] Complete mandatory review before any source-review artifact update.
+- [x] (2026-05-24 JST) Completed mandatory review for PR #340 with no blocking
+  findings.
+- [x] (2026-05-24 JST) PR #340 was marked ready and merged with normal merge
+  commit `c11a18fee4aa8e281eed03bf6ebb0334c54156f3`.
+- [x] (2026-05-24 JST) Local `main` was updated to `origin/main` at the PR
+  #340 merge commit.
+- [x] (2026-05-24 JST) Confirmed main CI for the PR #340 merge commit passed:
+  run `26352319121`.
+- [x] (2026-05-24 JST) Created branch
+  `impl/official-note-linkage-v4-source-review-update`.
+- [x] (2026-05-24 JST) Updated source-review summary artifacts using existing
+  ignored official v4 row-note artifacts as reviewer input.
+- [x] (2026-05-24 JST) Updated the focused source-review validator to enforce
+  v4 source-review statuses, public artifact boundaries, and blocked ambiguous
+  cases.
+- [x] (2026-05-24 JST) Validation passed: `git diff --check`,
+  `git diff --cached --check`, `uv lock --check`, official note-linkage
+  source-review validator, source-acquisition `validate-report`,
+  source-acquisition `validate-artifacts`, parsed-value classifier validator,
+  clean-slate validator, and `git status --short --branch`.
 
 ## Decision Log
 
@@ -305,19 +324,20 @@ git status --short --branch
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Official note-linkage v4 source-review update plan | Drafted docs-only plan for updating source-review artifacts using v4 row-note fields | `docs/execplans/2026-05-24-official-note-linkage-v4-source-review-update.md` | `git diff --check`; `uv lock --check`; source-review validator; validate-report; validate-artifacts; parsed-value classifier validator; clean-slate validator; status check | Passed | None | Review pending | Future source-review update still required |
-| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/runtime implementation added | This ExecPlan only | Diff/status review | Passed | None | Future implementation ExecPlan required | Note-bearing values remain not calculation-safe |
+| Official note-linkage v4 source-review update plan | Drafted docs-only plan for updating source-review artifacts using v4 row-note fields | `docs/execplans/2026-05-24-official-note-linkage-v4-source-review-update.md` | `git diff --check`; `uv lock --check`; source-review validator; validate-report; validate-artifacts; parsed-value classifier validator; clean-slate validator; status check | Passed | None | Complete | Future parser/schema ExecPlan still required |
+| Source-review artifact update | Re-evaluated the 9 official note-bearing or note-adjacent records using v4 row-note evidence | `docs/source-reviews/20260524-official-note-linkage-source-review.md`; `data/source-reviews/20260524-official-note-linkage-source-review-summary.json`; `tests/validation/validate_official_note_linkage_source_review.py`; this ExecPlan | Requested validation suite | Passed | None | Complete | Ambiguous groups remain blocked pending source review |
+| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/runtime implementation added | Source-review artifacts, focused validator, and this ExecPlan only | Diff/status review | Passed | None | Complete | No value is calculation-safe or numeric authority |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-24-official-note-linkage-v4-source-review-update.md.
+Review the implementation of docs/execplans/2026-05-24-official-note-linkage-v4-source-review-update.md.
 
 Check:
-- it plans only source-review summary artifact updates using v4 official
-  row-note fields from PR #339;
-- it uses existing ignored .local official v4 artifacts as reviewer input only;
-- it re-evaluates the 9 official note-bearing or note-adjacent groups;
+- changed files are limited to source-review summary artifacts, the focused
+  source-review validator, and this ExecPlan;
+- it uses existing ignored official v4 artifacts as reviewer input only;
+- it re-evaluates exactly the 9 official note-bearing or note-adjacent groups;
 - unresolved and ambiguous cases remain blocked;
 - it does not implement parser/schema/classifier/calculator/retrieval/answer/
   export/runtime behavior;
@@ -327,8 +347,8 @@ Check:
   profiles, traces, debug dumps, answer logs, training logs, private data, or
   .local artifacts;
 - ChatGPT/VLM bundles, if used, remain local reviewer-only observation_candidate;
-- validator updates, if planned, remain evidence-first and boundary-based.
+- validator updates remain evidence-first and boundary-based.
 
 Return findings, unresolved cases, PLAN deviations, and whether the
-source-review update plan is ready.
+implementation is stage-ready.
 ```
