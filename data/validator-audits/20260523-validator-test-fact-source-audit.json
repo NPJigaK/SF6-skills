@@ -25,6 +25,19 @@
     },
     {
       "evidence_class": "synthetic_contract",
+      "file": "tests/test_current_fact_guards.py",
+      "limitations": [
+        "uses synthetic scalar/non-scalar fixtures; does not prove source truth or calculation correctness"
+      ],
+      "primary_evidence": [
+        "annotated numeric candidate consumer guard implementation ExecPlan",
+        "frame range consumer guard ExecPlan",
+        "annotated numeric candidate consumer guard ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "synthetic_contract",
       "file": "tests/test_source_acquisition.py",
       "limitations": [
         "uses synthetic HTML for parser and guard behavior",
@@ -96,6 +109,19 @@
         "AGENTS.md",
         "clean-slate ExecPlans",
         "current-fact JSON Schema artifacts ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "artifact_consistency",
+      "file": "tests/validation/validate_current_fact_consumer_guards.py",
+      "limitations": [
+        "checks guard behavior against synthetic fixtures and parsed-value coverage statuses; does not prove calculation safety or source truth"
+      ],
+      "primary_evidence": [
+        "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+        "annotated numeric candidate consumer guard implementation ExecPlan",
+        "frame range consumer guard ExecPlan"
       ],
       "status": "accepted_with_limits"
     },

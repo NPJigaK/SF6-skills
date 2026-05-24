@@ -1,6 +1,6 @@
 # Annotated Numeric Candidate Consumer Guard Implementation
 
-Status: Drafted for review.
+Status: Implemented; validation pending.
 
 ## Purpose
 
@@ -14,9 +14,9 @@ The immediate trigger is PR #346, which added
 This implementation plan also covers the earlier `frame_range` guard contract
 from PR #335 because both shapes are parsed but not scalar calculation-safe.
 
-This ExecPlan is docs-only. It does not implement runtime, retrieval, answer,
-export, calculator, parser, classifier, schema, generated artifact, live
-acquisition, or SymPy changes.
+The planning PR for this ExecPlan was docs-only. The implementation slice
+must not implement runtime, retrieval, answer, export, calculator, parser,
+classifier, schema, generated artifact, live acquisition, or SymPy changes.
 
 ## Inputs
 
@@ -76,13 +76,13 @@ Included for future implementation planning:
 
 Excluded:
 
-- No runtime behavior changes in this docs-only PR.
+- No runtime behavior changes in this implementation slice.
 - No retrieval implementation.
 - No answer behavior changes.
 - No normalized export implementation.
 - No calculator implementation.
-- No parser or classifier changes in this docs-only PR.
-- No schema changes in this docs-only PR.
+- No parser or classifier changes in this implementation slice.
+- No schema changes in this implementation slice.
 - No generated artifact changes.
 - No SymPy logic.
 - No live acquisition.
@@ -270,15 +270,15 @@ and block `※-10` remain blocked until a later plan provides:
 - The ExecPlan requires future consumer artifacts to carry
   `calculation_input_status`.
 - The ExecPlan keeps parser/classifier/schema/generated artifact changes out
-  of this docs-only PR.
+  of this implementation slice.
 - The ExecPlan keeps calculator/retrieval/answer/export/runtime implementation
-  out of this docs-only PR.
+  out of this implementation slice.
 - The ExecPlan keeps SymPy and live acquisition out of scope.
 - Validation commands pass.
 
 ## Files / Interfaces
 
-This docs-only planning unit changes only:
+The reviewed docs-only planning unit changed only:
 
 - `docs/execplans/2026-05-24-annotated-numeric-candidate-consumer-guard-implementation.md`
 
@@ -288,6 +288,8 @@ Future implementation may touch only after this plan is reviewed:
 - focused unit tests under `tests/`;
 - a focused guard validator under `tests/validation/`;
 - focused synthetic fixtures under `tests/fixtures/current-facts/` if needed;
+- validator audit summary artifacts when new test or validation files are
+  added;
 - this ExecPlan progress/decision log.
 
 Future implementation must not touch parser/classifier/schema/generated
@@ -322,7 +324,28 @@ git status --short --branch
 - [x] (2026-05-24 JST) Validation passed: `git diff --check`,
   `uv lock --check`, clean-slate validator, parsed-value classifier coverage
   validator, and `git status --short --branch`.
-- [ ] Complete review before implementation approval.
+- [x] (2026-05-24 JST) Completed mandatory review for PR #348 with no
+  blocking findings.
+- [x] (2026-05-24 JST) PR #348 was marked ready and merged with normal merge
+  commit `bd0a79a75f34b1b28d4e93fc4eb3d3a8d5697c05`.
+- [x] (2026-05-24 JST) Local `main` was fast-forwarded to `origin/main` at
+  commit `bd0a79a75f34b1b28d4e93fc4eb3d3a8d5697c05`; main CI passed in run
+  `26363790775`.
+- [x] (2026-05-24 JST) Created implementation branch
+  `impl/annotated-numeric-candidate-consumer-guard`.
+- [x] (2026-05-24 JST) Added `current_fact_guards.is_scalar_calculation_input`
+  with closed scalar-kind and calculation-status checks.
+- [x] (2026-05-24 JST) Added focused unit tests and a focused validator for
+  annotated candidate, frame range, review-required, and not-numeric-authority
+  rejection cases.
+- [x] (2026-05-24 JST) Updated validator audit summary artifacts because new
+  test and validation files must be covered by the audit validator.
+- [x] (2026-05-24 JST) Final implementation validation passed:
+  `git diff --check`, `git diff --cached --check`, `uv lock --check`,
+  unittest discovery, clean-slate validator, parsed-value classifier coverage
+  validator, current-fact consumer guard validator, validator audit, all
+  validation scripts, and `git status --short --branch`.
+- [ ] Complete implementation review.
 
 ## Decision Log
 
@@ -348,19 +371,35 @@ git status --short --branch
   Rationale: This plan defines rejection and routing behavior, not arithmetic.
   Date/Author: 2026-05-24 / Codex
 
+- Decision: Put the helper in `src/sf6_knowledge_coach/current_fact_guards.py`.
+  Rationale: Current-fact consumers can import it without coupling consumer
+  safety back into the raw parser/classifier module.
+  Date/Author: 2026-05-24 / Codex
+
+- Decision: Use `eligible_only_after_domain_source_and_unit_checks` as the
+  only synthetic scalar-accepted status in the first helper implementation.
+  Rationale: Existing classifier policy already uses this as the scalar
+  candidate status before later domain/source/unit checks; this does not
+  promote any production value to calculation-safe authority.
+  Date/Author: 2026-05-24 / Codex
+
+- Decision: Update validator audit artifacts with the new test and validator
+  files.
+  Rationale: The CI validation inventory requires every `tests/test_*.py` and
+  `tests/validation/validate_*.py` file to declare its evidence boundary.
+  Date/Author: 2026-05-24 / Codex
+
 ## Deviations
 
 - None.
 
 ## Remaining Risks
 
-- Guard implementation remains future work until a reviewed implementation PR
-  lands.
-- The exact helper module name and accepted scalar status set must be fixed in
-  implementation review.
+- Guard implementation is added but remains review pending.
 - Existing `current_facts.py` still reads legacy raw export data and does not
   yet expose parsed-value-backed lookup.
-- Future consumers could bypass the helper unless validators require it.
+- Future consumers could bypass the helper unless future surface-specific
+  validators require it.
 - Same-grammar annotated raw-value expansion remains blocked pending an
   Issue #343-style supplemental double-check gate.
 
@@ -371,6 +410,9 @@ git status --short --branch
 | Consumer guard implementation plan | Drafted docs-only plan for future helper/tests/validators that reject non-scalar parsed values in scalar contexts | `docs/execplans/2026-05-24-annotated-numeric-candidate-consumer-guard-implementation.md` | `git diff --check`; `uv lock --check`; clean-slate validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review pending | Future implementation still required |
 | Current surface inventory | Identified `current_facts.py`, `answering.py`, current-fact schemas/fixtures, and future export/retrieval/calculator surfaces | This ExecPlan only | Diff/status review | Passed | None | Implementation review must confirm exact touched files | Existing lookup remains legacy raw export |
 | Scope exclusions | No runtime/retrieval/answer/export/calculator/parser/classifier/schema/generated artifact/SymPy/live acquisition changes added | This ExecPlan only | Diff/status review | Passed | None | Future implementation ExecPlan required | Guard bypass remains possible until implemented |
+| Guard helper | Added `is_scalar_calculation_input` with closed scalar-kind/status checks | `src/sf6_knowledge_coach/current_fact_guards.py` | Unit tests; focused guard validator | Passed | None | Review pending | Future consumers still need to call the helper |
+| Guard tests and validator | Added focused unit tests and validator coverage for accepted synthetic scalar and rejected annotated/frame-range/review-required/not-authority cases | `tests/test_current_fact_guards.py`; `tests/validation/validate_current_fact_consumer_guards.py` | unittest; new guard validator | Passed | None | Review pending | Synthetic scalar fixture does not prove production authority |
+| Validator audit update | Added audit entries for the new test and validator files | `data/validator-audits/20260523-validator-test-fact-source-audit.json`; `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | validator audit | Passed | None | Review pending | Audit proves evidence boundary only |
 
 ## Next Reviewer Prompt
 
@@ -378,23 +420,33 @@ git status --short --branch
 Review docs/execplans/2026-05-24-annotated-numeric-candidate-consumer-guard-implementation.md.
 
 Check:
-- PR diff contains exactly one docs-only ExecPlan file.
-- It plans implementation of deterministic guard helpers/validators only.
+- PR diff stays within the approved implementation files: guard helper,
+  focused tests, focused validator, validator audit update, and ExecPlan
+  progress updates.
 - It does not implement runtime/retrieval/answer/export/calculator/parser/classifier/schema/generated artifact changes.
-- It covers both annotated_numeric_candidate and frame_range as non-scalar parsed values.
-- It requires calculation_input_status to carry forward.
-- It plans rejection fixtures for annotated_candidate_not_calculation_safe, parsed_range_not_single_value_calculation_safe, review_required values with no parsed_value, and not_numeric_authority values.
-- It does not promote any value to calculation-safe, numeric authority, or current-fact authority.
+- `is_scalar_calculation_input` rejects annotated_numeric_candidate and
+  frame_range in scalar contexts.
+- It requires calculation_input_status before scalar acceptance.
+- It rejects annotated_candidate_not_calculation_safe,
+  parsed_range_not_single_value_calculation_safe, review_required values with
+  no parsed_value, and not_numeric_authority values.
+- The accepted scalar fixture is synthetic and does not promote any production
+  value to calculation-safe, numeric authority, or current-fact authority.
+- Validator audit updates are scoped to the new test and validator files.
 - It keeps SymPy and live acquisition out of scope.
 - Issue #343 double-check remains required for future raw-value expansion.
 
 Run:
 - git diff --check
+- git diff --cached --check
 - uv lock --check
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 - PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 - git status --short --branch
 
 Return blocking findings first, validation results, PLAN deviations,
-remaining risks, and whether docs-only stage/commit is approved.
+remaining risks, and whether implementation is stage-ready.
 ```
