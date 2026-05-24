@@ -5,6 +5,7 @@ import json
 import re
 import sys
 import time
+import zipfile
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -28,10 +29,15 @@ LOCAL_PATH_PATTERN = re.compile(
     r"|\\\\Users\\\\)"
 )
 REPO_LOCAL_RAW_ARTIFACT_BOUNDARY = "repo_local_ignored_raw_capture"
+REPO_LOCAL_REVIEWER_EVIDENCE_BOUNDARY = "repo_local_ignored_reviewer_evidence"
 
 
 def repo_local_raw_workspace_root() -> Path:
     return repo_root() / ".local" / "source-acquisition"
+
+
+def repo_local_reviewer_evidence_root() -> Path:
+    return repo_root() / ".local" / "reviewer-evidence"
 
 
 @dataclass(frozen=True)
@@ -83,6 +89,17 @@ def ensure_acquisition_workspace(path: Path) -> Path:
         raise ValueError(
             "Acquisition workspace must stay under repo-local ignored "
             f"{repo_local_raw_workspace_root().as_posix()}: {resolved}"
+        )
+    return resolved
+
+
+def ensure_reviewer_evidence_workspace(path: Path) -> Path:
+    resolved = path.expanduser().resolve()
+    repo_local_root = repo_local_reviewer_evidence_root().resolve()
+    if resolved != repo_local_root and repo_local_root not in resolved.parents:
+        raise ValueError(
+            "Reviewer evidence workspace must stay under repo-local ignored "
+            f"{repo_local_reviewer_evidence_root().as_posix()}: {resolved}"
         )
     return resolved
 
@@ -264,6 +281,9 @@ def acquire_official_sources(
                 "official_next_data_hash": official_artifacts["next_data_hash"],
                 "official_table_count": official_artifacts["table_count"],
                 "official_raw_row_count": official_artifacts["raw_row_count"],
+                "official_table_rows_schema_version": official_artifacts["table_rows_schema_version"],
+                "official_row_note_rows": official_artifacts["row_note_rows"],
+                "official_row_note_count": official_artifacts["row_note_count"],
                 "official_header_missing": official_artifacts["header_missing"],
                 "official_header_path_violations": official_artifacts["header_path_violations"],
                 "official_row_cell_count_violations": official_artifacts["row_cell_count_violations"],
@@ -358,6 +378,8 @@ def acquire_official_sources(
             "review_item_count": sum(1 for item in review_items if not item.startswith("supercombo:")),
             "official_raw_row_count": sum(int(entry.get("official_raw_row_count") or 0) for entry in official_entries),
             "official_table_count": sum(int(entry.get("official_table_count") or 0) for entry in official_entries),
+            "official_row_note_rows": sum(int(entry.get("official_row_note_rows") or 0) for entry in official_entries),
+            "official_row_note_count": sum(int(entry.get("official_row_note_count") or 0) for entry in official_entries),
         },
         "supercombo_decision": {
             "status": "same_run_approved" if include_supercombo else "queued",
@@ -405,6 +427,8 @@ def render_acquisition_report(report: dict[str, Any]) -> str:
         f"- Failed official characters: `{coverage['failed_count']}`",
         f"- Official raw rows: `{coverage.get('official_raw_row_count', 0)}`",
         f"- Official tables: `{coverage.get('official_table_count', 0)}`",
+        f"- Official row-note rows: `{coverage.get('official_row_note_rows', 0)}`",
+        f"- Official row notes: `{coverage.get('official_row_note_count', 0)}`",
         f"- Captured SuperCombo characters: `{supercombo_coverage.get('captured_count', 0)}`",
         f"- Failed SuperCombo characters: `{supercombo_coverage.get('failed_count', 0)}`",
         f"- SuperCombo tables: `{supercombo_coverage.get('supercombo_table_count', 0)}`",
@@ -498,6 +522,125 @@ def validate_acquisition_report_text(
     return []
 
 
+def prepare_official_note_linkage_review_bundle(
+    *,
+    report_path: Path,
+    output_dir: Path | None = None,
+    run_id: str | None = None,
+    slugs: list[str] | None = None,
+    screenshotter: Callable[[str, Path], str] | None = None,
+) -> dict[str, Any]:
+    report = load_acquisition_report(report_path)
+    bundle_id = run_id or f"{report['run_id']}-official-note-linkage"
+    root = ensure_reviewer_evidence_workspace(
+        output_dir or repo_local_reviewer_evidence_root() / "official-note-linkage" / bundle_id
+    )
+    root.mkdir(parents=True, exist_ok=True)
+    screenshots_dir = root / "screenshots"
+    screenshots_dir.mkdir(parents=True, exist_ok=True)
+
+    selected_slugs = set(slugs or [])
+    capture = screenshotter or _scrapling_official_full_page_screenshot
+    targets = []
+    for entry in report.get("entries", []):
+        if entry.get("source_family") != "official" or entry.get("capture_success") is not True:
+            continue
+        slug = str(entry["character_slug"])
+        if selected_slugs and slug not in selected_slugs:
+            continue
+        screenshot_path = screenshots_dir / f"{slug}-full-page.png"
+        final_url = capture(str(entry["source_url"]), screenshot_path)
+        targets.append(
+            {
+                "character_slug": slug,
+                "source_url": entry["source_url"],
+                "final_url": final_url,
+                "screenshot": f"screenshots/{screenshot_path.name}",
+                "official_row_note_rows": entry.get("official_row_note_rows", 0),
+                "official_row_note_count": entry.get("official_row_note_count", 0),
+            }
+        )
+
+    manifest = {
+        "bundle_schema_version": "official_note_linkage_reviewer_bundle/v1",
+        "evidence_boundary": REPO_LOCAL_REVIEWER_EVIDENCE_BOUNDARY,
+        "source_run_id": report["run_id"],
+        "bundle_id": bundle_id,
+        "screenshot_method": "scrapling_dynamic_fetcher_page_action",
+        "chatgpt_result_status": "observation_candidate_only",
+        "forbidden_uses": [
+            "validator_evidence",
+            "source_truth",
+            "parser_schema_approval",
+            "calculation_safe_promotion",
+            "numeric_authority",
+        ],
+        "targets": targets,
+    }
+    manifest_path = root / "manifest.json"
+    prompt_path = root / "chatgpt-check-prompt.md"
+    _write_json(manifest_path, manifest)
+    prompt_path.write_text(_official_note_linkage_chatgpt_prompt(manifest), encoding="utf-8")
+
+    zip_path = root.with_suffix(".zip")
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for path in sorted(root.rglob("*")):
+            if path.is_file():
+                archive.write(path, path.relative_to(root))
+    return {
+        "ok": True,
+        "bundle_id": bundle_id,
+        "target_count": len(targets),
+        "bundle_dir": str(root),
+        "zip_path": str(zip_path),
+    }
+
+
+def _scrapling_official_full_page_screenshot(url: str, output_path: Path) -> str:
+    try:
+        from scrapling.fetchers import DynamicFetcher
+    except ImportError as exc:
+        raise RuntimeError(
+            "Scrapling is required for reviewer screenshot bundles. "
+            'Install it with: uv pip install "scrapling[all]>=0.4.8,<0.5"'
+        ) from exc
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    def capture(page: Any) -> None:
+        page.screenshot(path=str(output_path), full_page=True)
+
+    page = DynamicFetcher.fetch(
+        url,
+        headless=True,
+        network_idle=True,
+        wait_selector="table",
+        wait=1000,
+        timeout=90_000,
+        page_action=capture,
+    )
+    return str(getattr(page, "url", url) or url)
+
+
+def _official_note_linkage_chatgpt_prompt(manifest: dict[str, Any]) -> str:
+    target_lines = "\n".join(
+        f"- {target['character_slug']}: {target['source_url']} -> {target['screenshot']}"
+        for target in manifest["targets"]
+    )
+    return (
+        "# Official Note Linkage Screenshot Review\n\n"
+        "You are reviewing SF6 official frame-data screenshots as an external observation aid only.\n"
+        "Do not treat your response as source truth, validator evidence, parser/schema approval, "
+        "calculation-safe promotion, or numeric authority.\n\n"
+        "For each screenshot, inspect the official frame-data table and row-local notes. Report only "
+        "whether visible row notes appear consistent with the row-note fields described by the accompanying "
+        "manifest. Mark uncertain cases as observation_candidate review items.\n\n"
+        "Targets:\n"
+        f"{target_lines}\n\n"
+        "Return a concise table with character_slug, screenshot, observation_candidate_status, and notes.\n"
+    )
+
+
 def _validate_report_structure(report: dict[str, Any], roster_characters: list[RosterCharacter]) -> list[str]:
     errors: list[str] = []
     roster_slugs = {character.character_slug for character in roster_characters}
@@ -536,6 +679,8 @@ def _validate_report_structure(report: dict[str, Any], roster_characters: list[R
             aggregate_fields={
                 "official_table_count": "official_table_count",
                 "official_raw_row_count": "official_raw_row_count",
+                "official_row_note_rows": "official_row_note_rows",
+                "official_row_note_count": "official_row_note_count",
             },
         )
     )
@@ -586,6 +731,15 @@ def _validate_report_structure(report: dict[str, Any], roster_characters: list[R
                 errors.append(f"{entry.get('character_slug')}: successful official capture requires raw rows")
             if int(entry.get("official_table_count") or 0) <= 0:
                 errors.append(f"{entry.get('character_slug')}: successful official capture requires table count")
+            if entry.get("official_table_rows_schema_version") != OFFICIAL_TABLE_ROWS_SCHEMA_VERSION:
+                errors.append(
+                    f"{entry.get('character_slug')}: official_table_rows_schema_version "
+                    f"must be {OFFICIAL_TABLE_ROWS_SCHEMA_VERSION}"
+                )
+            if int(entry.get("official_row_note_rows") or 0) < 0:
+                errors.append(f"{entry.get('character_slug')}: official_row_note_rows must be non-negative")
+            if int(entry.get("official_row_note_count") or 0) < 0:
+                errors.append(f"{entry.get('character_slug')}: official_row_note_count must be non-negative")
         if source_family == "supercombo" and entry.get("capture_success") is True:
             if int(entry.get("supercombo_table_count") or 0) <= 0:
                 errors.append(f"{entry.get('character_slug')}: successful SuperCombo capture requires table count")
@@ -717,6 +871,8 @@ def _validate_official_artifacts(raw_workspace: Path, entry: dict[str, Any]) -> 
     )
     table_payload = _read_json_if_available(table_rows_path, f"{slug}: official_table_rows.raw.json", errors)
     if isinstance(table_payload, dict):
+        if table_payload.get("artifact_schema_version") != OFFICIAL_TABLE_ROWS_SCHEMA_VERSION:
+            errors.append(f"{slug}: artifact_schema_version must be {OFFICIAL_TABLE_ROWS_SCHEMA_VERSION}")
         if table_payload.get("expected_column_header_paths") != EXPECTED_OFFICIAL_COLUMN_HEADER_PATHS:
             errors.append(f"{slug}: expected_column_header_paths must match official contract")
         if table_payload.get("column_header_paths") != EXPECTED_OFFICIAL_COLUMN_HEADER_PATHS:
@@ -727,6 +883,10 @@ def _validate_official_artifacts(raw_workspace: Path, entry: dict[str, Any]) -> 
             errors.append(f"{slug}: official table_count does not match report")
         if table_payload.get("raw_row_count") != entry.get("official_raw_row_count"):
             errors.append(f"{slug}: official raw_row_count does not match report")
+        if table_payload.get("row_note_rows") != entry.get("official_row_note_rows"):
+            errors.append(f"{slug}: official row_note_rows does not match report")
+        if table_payload.get("row_note_count") != entry.get("official_row_note_count"):
+            errors.append(f"{slug}: official row_note_count does not match report")
         rows = table_payload.get("rows")
         if isinstance(rows, list) and len(rows) != entry.get("official_raw_row_count"):
             errors.append(f"{slug}: official rows length does not match report")
@@ -737,7 +897,16 @@ def _validate_official_artifacts(raw_workspace: Path, entry: dict[str, Any]) -> 
 
 def _official_cell_payload_errors(slug: str, rows: list[Any]) -> list[str]:
     errors: list[str] = []
-    required_row_keys = {"table_index", "row_index", "group_heading", "cell_count", "input_images"}
+    required_row_keys = {
+        "table_index",
+        "row_index",
+        "group_heading",
+        "cell_count",
+        "input_images",
+        "row_note_count",
+        "row_notes",
+        "row_note_extraction_status",
+    }
     required_cell_keys = {
         "cell_index",
         "column_index",
@@ -749,6 +918,10 @@ def _official_cell_payload_errors(slug: str, rows: list[Any]) -> list[str]:
         "hidden_detail_text",
         "image_src",
         "image_alt",
+        "cell_note_markers",
+        "cell_note_ids",
+        "row_note_reference_candidates",
+        "note_linkage_status",
     }
     for row_index, row in enumerate(rows, start=1):
         if not isinstance(row, dict):
@@ -771,6 +944,16 @@ def _official_cell_payload_errors(slug: str, rows: list[Any]) -> list[str]:
                         f"{slug}: official row {row_index} input image {image_index} missing fields: "
                         f"{', '.join(missing_image_keys)}"
                     )
+        row_notes = row.get("row_notes")
+        if not isinstance(row_notes, list):
+            errors.append(f"{slug}: official row {row_index} row_notes must be a list")
+            row_notes = []
+        if row.get("row_note_count") != len(row_notes):
+            errors.append(f"{slug}: official row {row_index} row_note_count must match row_notes length")
+        expected_status = "notes_extracted" if row_notes else "no_row_notes"
+        if row.get("row_note_extraction_status") != expected_status:
+            errors.append(f"{slug}: official row {row_index} row_note_extraction_status must be {expected_status}")
+        errors.extend(_official_row_note_payload_errors(slug, row_index, row_notes))
         cells = row.get("cells")
         if not isinstance(cells, list):
             errors.append(f"{slug}: official row {row_index} cells must be a list")
@@ -790,6 +973,19 @@ def _official_cell_payload_errors(slug: str, rows: list[Any]) -> list[str]:
                 errors.append(f"{slug}: official row {row_index} cell {cell_index} image_src must be a list")
             if not isinstance(cell.get("image_alt"), list):
                 errors.append(f"{slug}: official row {row_index} cell {cell_index} image_alt must be a list")
+            if not isinstance(cell.get("cell_note_markers"), list):
+                errors.append(f"{slug}: official row {row_index} cell {cell_index} cell_note_markers must be a list")
+            if not isinstance(cell.get("cell_note_ids"), list):
+                errors.append(f"{slug}: official row {row_index} cell {cell_index} cell_note_ids must be a list")
+            if not isinstance(cell.get("row_note_reference_candidates"), list):
+                errors.append(
+                    f"{slug}: official row {row_index} cell {cell_index} row_note_reference_candidates must be a list"
+                )
+            if cell.get("note_linkage_status") not in OFFICIAL_NOTE_LINKAGE_STATUSES:
+                errors.append(
+                    f"{slug}: official row {row_index} cell {cell_index} note_linkage_status "
+                    "must be a known source-structural status"
+                )
             expected_path = (
                 EXPECTED_OFFICIAL_COLUMN_HEADER_PATHS[cell_index]
                 if cell_index < len(EXPECTED_OFFICIAL_COLUMN_HEADER_PATHS)
@@ -810,6 +1006,45 @@ def _official_cell_payload_errors(slug: str, rows: list[Any]) -> list[str]:
                 )
             if "text_stripped" in cell:
                 errors.append(f"{slug}: official row {row_index} cell {cell_index} must not use text_stripped")
+    return errors
+
+
+def _official_row_note_payload_errors(slug: str, row_index: int, row_notes: list[Any]) -> list[str]:
+    errors: list[str] = []
+    required_note_keys = {
+        "note_index",
+        "note_marker",
+        "note_id",
+        "note_text",
+        "note_text_stripped",
+        "note_source_scope",
+        "source_order",
+    }
+    for note_index, note in enumerate(row_notes):
+        if not isinstance(note, dict):
+            errors.append(f"{slug}: official row {row_index} note {note_index} must be an object")
+            continue
+        missing = sorted(required_note_keys - set(note))
+        if missing:
+            errors.append(f"{slug}: official row {row_index} note {note_index} missing fields: {', '.join(missing)}")
+        if note.get("note_index") != note_index:
+            errors.append(f"{slug}: official row {row_index} note {note_index} note_index must match source order")
+        if note.get("source_order") != note_index:
+            errors.append(f"{slug}: official row {row_index} note {note_index} source_order must match source order")
+        if note.get("note_source_scope") != OFFICIAL_ROW_NOTE_SOURCE_SCOPE:
+            errors.append(
+                f"{slug}: official row {row_index} note {note_index} note_source_scope "
+                f"must be {OFFICIAL_ROW_NOTE_SOURCE_SCOPE}"
+            )
+        note_text = note.get("note_text")
+        if not isinstance(note_text, str) or not note_text:
+            errors.append(f"{slug}: official row {row_index} note {note_index} note_text must be non-empty text")
+        if note.get("note_text_stripped") != _normalize_text(note_text or ""):
+            errors.append(f"{slug}: official row {row_index} note {note_index} note_text_stripped must be normalized")
+        if note.get("note_marker") is not None and not isinstance(note.get("note_marker"), str):
+            errors.append(f"{slug}: official row {row_index} note {note_index} note_marker must be text or null")
+        if note.get("note_id") is not None and not isinstance(note.get("note_id"), str):
+            errors.append(f"{slug}: official row {row_index} note {note_index} note_id must be text or null")
     return errors
 
 
@@ -924,6 +1159,17 @@ def _forbidden_json_value_errors(value: Any) -> list[str]:
 
 
 EXPECTED_OFFICIAL_CELL_COUNT = 15
+OFFICIAL_TABLE_ROWS_SCHEMA_VERSION = "official_table_rows_raw/v4"
+OFFICIAL_ROW_NOTE_SOURCE_SCOPE = "row_local_note"
+OFFICIAL_NOTE_LINKAGE_STATUSES = {
+    "no_cell_note_markers",
+    "no_row_notes",
+    "same_row_note_candidates_available",
+    "ambiguous_marker_without_id",
+    "no_matching_row_note_candidate",
+}
+OFFICIAL_BRACKETED_NOTE_ID_RE = re.compile(r"[\[［]([※＊*]\d+)[\]］]")
+OFFICIAL_LEADING_NOTE_ID_RE = re.compile(r"^([※＊*]\d+)(?:\s|　)")
 EXPECTED_OFFICIAL_COLUMN_HEADER_PATHS = [
     ["技名"],
     ["動作フレーム", "発生"],
@@ -981,7 +1227,7 @@ def _write_official_artifacts(
 
     raw_rows = _extract_official_table_rows(soup)
     table_rows_payload = {
-        "artifact_schema_version": "official_table_rows_raw/v3",
+        "artifact_schema_version": OFFICIAL_TABLE_ROWS_SCHEMA_VERSION,
         "character_slug": character.character_slug,
         "source_family": "official",
         "source_role": "current_fact_authority_candidate",
@@ -998,6 +1244,8 @@ def _write_official_artifacts(
         "header_path_violations": raw_rows["header_path_violations"],
         "table_count": raw_rows["table_count"],
         "raw_row_count": len(raw_rows["rows"]),
+        "row_note_rows": raw_rows["row_note_rows"],
+        "row_note_count": raw_rows["row_note_count"],
         "row_cell_count_violations": raw_rows["row_cell_count_violations"],
         "rows": raw_rows["rows"],
     }
@@ -1010,6 +1258,9 @@ def _write_official_artifacts(
             "next_data_hash": next_data_hash,
             "official_table_count": raw_rows["table_count"],
             "official_raw_row_count": len(raw_rows["rows"]),
+            "official_table_rows_schema_version": OFFICIAL_TABLE_ROWS_SCHEMA_VERSION,
+            "official_row_note_rows": raw_rows["row_note_rows"],
+            "official_row_note_count": raw_rows["row_note_count"],
             "official_header_missing": raw_rows["header_missing"],
             "official_header_path_violations": raw_rows["header_path_violations"],
             "official_row_cell_count_violations": raw_rows["row_cell_count_violations"],
@@ -1023,6 +1274,9 @@ def _write_official_artifacts(
         "next_data_hash": next_data_hash,
         "table_count": raw_rows["table_count"],
         "raw_row_count": len(raw_rows["rows"]),
+        "table_rows_schema_version": OFFICIAL_TABLE_ROWS_SCHEMA_VERSION,
+        "row_note_rows": raw_rows["row_note_rows"],
+        "row_note_count": raw_rows["row_note_count"],
         "header_missing": raw_rows["header_missing"],
         "header_path_violations": raw_rows["header_path_violations"],
         "row_cell_count_violations": raw_rows["row_cell_count_violations"],
@@ -1106,6 +1360,9 @@ def _empty_official_artifacts() -> dict[str, Any]:
         "next_data_hash": None,
         "table_count": 0,
         "raw_row_count": 0,
+        "table_rows_schema_version": OFFICIAL_TABLE_ROWS_SCHEMA_VERSION,
+        "row_note_rows": 0,
+        "row_note_count": 0,
         "header_missing": OFFICIAL_HEADER_MARKERS,
         "header_path_violations": ["missing official header paths"],
         "row_cell_count_violations": [],
@@ -1303,6 +1560,7 @@ def _extract_official_table_rows(soup: Any) -> dict[str, Any]:
                 row_cell_count_violations.append(
                     {"table_index": table_index, "row_index": row_index, "cell_count": len(cells)}
                 )
+            row_notes = _official_row_notes(cells)
             rows.append(
                 {
                     "table_index": table_index,
@@ -1310,8 +1568,11 @@ def _extract_official_table_rows(soup: Any) -> dict[str, Any]:
                     "group_heading": group_heading,
                     "cell_count": len(cells),
                     "input_images": _cell_images(cells[0]) if cells else [],
+                    "row_note_count": len(row_notes),
+                    "row_notes": row_notes,
+                    "row_note_extraction_status": "notes_extracted" if row_notes else "no_row_notes",
                     "cells": [
-                        _official_cell_payload(cell, cell_index, header_structure["column_header_paths"])
+                        _official_cell_payload(cell, cell_index, header_structure["column_header_paths"], row_notes)
                         for cell_index, cell in enumerate(cells)
                     ],
                 }
@@ -1326,6 +1587,8 @@ def _extract_official_table_rows(soup: Any) -> dict[str, Any]:
         "column_header_paths": column_header_paths,
         "header_path_violations": header_path_violations,
         "row_cell_count_violations": row_cell_count_violations,
+        "row_note_rows": sum(1 for row in rows if row["row_note_count"] > 0),
+        "row_note_count": sum(int(row["row_note_count"]) for row in rows),
         "rows": rows,
     }
 
@@ -1452,9 +1715,17 @@ def _positive_int_attr(node: Any, name: str, *, default: int) -> int:
     return value if value > 0 else default
 
 
-def _official_cell_payload(cell: Any, cell_index: int, column_header_paths: list[list[str]]) -> dict[str, Any]:
+def _official_cell_payload(
+    cell: Any,
+    cell_index: int,
+    column_header_paths: list[list[str]],
+    row_notes: list[dict[str, Any]],
+) -> dict[str, Any]:
     source_text = cell.get_text("", strip=False)
     header_path = column_header_paths[cell_index] if cell_index < len(column_header_paths) else []
+    note_markers = _official_note_markers(source_text)
+    note_ids = _official_note_ids(source_text)
+    note_candidates = _row_note_reference_candidates(row_notes, note_markers, note_ids)
     return {
         "cell_index": cell_index,
         "column_index": cell_index,
@@ -1466,7 +1737,137 @@ def _official_cell_payload(cell: Any, cell_index: int, column_header_paths: list
         "hidden_detail_text": _official_hidden_detail_text(cell),
         "image_src": [image.get("src") for image in cell.find_all("img")],
         "image_alt": [image.get("alt") for image in cell.find_all("img")],
+        "cell_note_markers": note_markers,
+        "cell_note_ids": note_ids,
+        "row_note_reference_candidates": note_candidates,
+        "note_linkage_status": _note_linkage_status(note_markers, note_ids, row_notes, note_candidates),
     }
+
+
+def _official_row_notes(cells: list[Any]) -> list[dict[str, Any]]:
+    if len(cells) < EXPECTED_OFFICIAL_CELL_COUNT:
+        return []
+    note_cell = cells[EXPECTED_OFFICIAL_CELL_COUNT - 1]
+    note_nodes = note_cell.find_all("li", recursive=True)
+    if not note_nodes:
+        note_text = _official_visible_text(note_cell)
+        note_nodes = [note_cell] if note_text else []
+
+    notes: list[dict[str, Any]] = []
+    for note_index, node in enumerate(note_nodes):
+        note_text = _official_visible_text(node)
+        if not note_text:
+            continue
+        note_id = _official_note_id_from_note_text(note_text)
+        notes.append(
+            {
+                "note_index": len(notes),
+                "note_marker": _official_note_marker_from_text(note_text),
+                "note_id": note_id,
+                "note_text": note_text,
+                "note_text_stripped": _normalize_text(note_text),
+                "note_source_scope": OFFICIAL_ROW_NOTE_SOURCE_SCOPE,
+                "source_order": len(notes),
+            }
+        )
+    return notes
+
+
+def _official_note_marker_from_text(text: str) -> str | None:
+    stripped = text.strip()
+    if not stripped:
+        return None
+    if stripped.startswith("[") or stripped.startswith("［"):
+        match = OFFICIAL_BRACKETED_NOTE_ID_RE.match(stripped)
+        return _normalize_note_marker(match.group(1)[0]) if match else None
+    first = stripped[0]
+    return _normalize_note_marker(first) if first in {"※", "＊", "*"} else None
+
+
+def _official_note_id_from_note_text(text: str) -> str | None:
+    stripped = text.strip()
+    bracketed_match = OFFICIAL_BRACKETED_NOTE_ID_RE.match(stripped)
+    if bracketed_match:
+        return _normalize_note_id(bracketed_match.group(1))
+    leading_match = OFFICIAL_LEADING_NOTE_ID_RE.match(stripped)
+    if leading_match:
+        return _normalize_note_id(leading_match.group(1))
+    return None
+
+
+def _official_note_markers(text: str) -> list[str]:
+    markers: list[str] = []
+    for char in str(text):
+        marker = _normalize_note_marker(char)
+        if marker and marker not in markers:
+            markers.append(marker)
+    return markers
+
+
+def _official_note_ids(text: str) -> list[str]:
+    ids: list[str] = []
+    for pattern in (OFFICIAL_BRACKETED_NOTE_ID_RE, OFFICIAL_LEADING_NOTE_ID_RE):
+        for match in pattern.finditer(str(text)):
+            note_id = _normalize_note_id(match.group(1))
+            if note_id not in ids:
+                ids.append(note_id)
+    return ids
+
+
+def _normalize_note_marker(value: str) -> str | None:
+    if value == "＊":
+        return "*"
+    return value if value in {"※", "*"} else None
+
+
+def _normalize_note_id(value: str) -> str:
+    return value.replace("＊", "*")
+
+
+def _row_note_reference_candidates(
+    row_notes: list[dict[str, Any]],
+    note_markers: list[str],
+    note_ids: list[str],
+) -> list[dict[str, Any]]:
+    candidates = []
+    for note in row_notes:
+        note_id = note.get("note_id")
+        note_marker = note.get("note_marker")
+        if (note_id and note_id in note_ids) or (note_marker and note_marker in note_markers):
+            candidates.append(
+                {
+                    "note_index": note["note_index"],
+                    "note_marker": note_marker,
+                    "note_id": note_id,
+                }
+            )
+    if candidates or not note_markers:
+        return candidates
+    return [
+        {
+            "note_index": note["note_index"],
+            "note_marker": note.get("note_marker"),
+            "note_id": note.get("note_id"),
+        }
+        for note in row_notes
+    ]
+
+
+def _note_linkage_status(
+    note_markers: list[str],
+    note_ids: list[str],
+    row_notes: list[dict[str, Any]],
+    note_candidates: list[dict[str, Any]],
+) -> str:
+    if not note_markers and not note_ids:
+        return "no_cell_note_markers"
+    if not row_notes:
+        return "no_row_notes"
+    if note_ids and note_candidates:
+        return "same_row_note_candidates_available"
+    if note_candidates:
+        return "same_row_note_candidates_available" if len(note_candidates) == 1 else "ambiguous_marker_without_id"
+    return "no_matching_row_note_candidate"
 
 
 def _extract_supercombo_tables(soup: Any) -> dict[str, Any]:
@@ -1630,6 +2031,9 @@ def _missing_official_entry(character: RosterCharacter, captured_at: str) -> dic
         "official_next_data_hash": None,
         "official_table_count": 0,
         "official_raw_row_count": 0,
+        "official_table_rows_schema_version": OFFICIAL_TABLE_ROWS_SCHEMA_VERSION,
+        "official_row_note_rows": 0,
+        "official_row_note_count": 0,
         "official_header_missing": OFFICIAL_HEADER_MARKERS,
         "official_header_path_violations": ["missing official header paths"],
         "official_row_cell_count_violations": [],
@@ -1758,6 +2162,13 @@ def build_parser() -> argparse.ArgumentParser:
     validate_artifacts_parser.add_argument("--workspace", type=Path)
     validate_artifacts_parser.set_defaults(func=_validate_artifacts_command)
 
+    bundle_parser = subparsers.add_parser("prepare-official-note-review-bundle")
+    bundle_parser.add_argument("report", type=Path)
+    bundle_parser.add_argument("--output-dir", type=Path)
+    bundle_parser.add_argument("--run-id")
+    bundle_parser.add_argument("--character", action="append", dest="characters", default=[])
+    bundle_parser.set_defaults(func=_prepare_official_note_review_bundle_command)
+
     return parser
 
 
@@ -1792,6 +2203,15 @@ def _validate_artifacts_command(args: argparse.Namespace) -> dict[str, Any]:
         "official_captured_count": report["official_coverage"]["captured_count"],
         "supercombo_captured_count": report.get("supercombo_coverage", {}).get("captured_count", 0),
     }
+
+
+def _prepare_official_note_review_bundle_command(args: argparse.Namespace) -> dict[str, Any]:
+    return prepare_official_note_linkage_review_bundle(
+        report_path=args.report,
+        output_dir=args.output_dir,
+        run_id=args.run_id,
+        slugs=args.characters,
+    )
 
 
 def main(argv: list[str] | None = None) -> int:

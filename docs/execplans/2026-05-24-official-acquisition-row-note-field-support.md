@@ -1,6 +1,6 @@
 # Official Acquisition Row Note Field Support
 
-Status: Drafted for review.
+Status: Implementation complete; review pending.
 
 ## Purpose
 
@@ -210,6 +210,13 @@ targeted screenshots and values, but it is observation_candidate only. The
 implementation authority remains deterministic structured artifacts and
 reviewed public summaries.
 
+Reviewer screenshot capture must use Scrapling browser automation for this
+workflow. Direct Playwright/Chrome screenshots are not the planned interface
+for this ExecPlan, and screenshot/bundle capture must not be implemented as a
+Python HTML-parsing or BeautifulSoup-based substitute. The committed helper
+records this as `scrapling_dynamic_fetcher_page_action` in local reviewer
+manifests.
+
 If used, reviewer bundles and screenshots must be stored only under:
 
 ```text
@@ -316,9 +323,12 @@ Parser/schema implementation remains blocked until:
 
 ## Files / Interfaces
 
-This docs-only planning unit changes only:
+This implementation unit may change only:
 
 - `docs/execplans/2026-05-24-official-acquisition-row-note-field-support.md`
+- `src/sf6_knowledge_coach/source_acquisition.py`
+- `tests/test_source_acquisition.py`
+- `docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md`
 
 ## Validation Commands
 
@@ -326,9 +336,12 @@ Run from repository root:
 
 ```bash
 git diff --check
+PYTHONPATH=src uv run --locked python -c "from scrapling.fetchers import DynamicFetcher; print(DynamicFetcher.__name__)"
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 PYTHONPATH=src uv run --locked python tests/validation/validate_official_note_linkage_source_review.py
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-report docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
+PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-artifacts docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
 git status --short --branch
 ```
 
@@ -350,7 +363,27 @@ git status --short --branch
   `PYTHONPATH=src uv run --locked python tests/validation/validate_official_note_linkage_source_review.py`,
   and `git status --short --branch`. New-file whitespace check produced no
   whitespace error output.
-- [ ] Complete mandatory review before any acquisition-field implementation.
+- [x] (2026-05-24 JST) PR #338 was marked ready and merged with normal merge
+  commit `85b25b5f61cfbb63ff5cf27cf4b3528137be1eb1`; main CI passed in run
+  `26350386177`.
+- [x] (2026-05-24 JST) Created implementation branch
+  `impl/official-acquisition-row-note-field-support` from updated `main`.
+- [x] (2026-05-24 JST) Implemented
+  `official_table_rows_raw/v4` row-note fields and source-structural cell
+  note candidate fields in `src/sf6_knowledge_coach/source_acquisition.py`.
+- [x] (2026-05-24 JST) Added source-acquisition tests for row-note fields,
+  artifact validation, and local reviewer bundle boundary.
+- [x] (2026-05-24 JST) Reprocessed existing ignored official HTML captures
+  without live acquisition; public report now records summary-safe
+  `official_row_note_rows=1725` and `official_row_note_count=4281`.
+- [x] (2026-05-24 JST) Added local reviewer-only bundle preparation using
+  Scrapling screenshot capture through `DynamicFetcher` page action.
+- [x] (2026-05-24 JST) Completed local implementation validation:
+  `git diff --check`, `git diff --cached --check`, `uv lock --check`,
+  Scrapling `DynamicFetcher` import, unittest, clean-slate validator,
+  parsed-value classifier validator, official note-linkage source-review
+  validator, validate-report, and validate-artifacts all passed.
+- [ ] Complete mandatory review before staging.
 
 ## Decision Log
 
@@ -381,6 +414,13 @@ git status --short --branch
   public summaries.
   Date/Author: 2026-05-24 / Codex
 
+- Decision: Use Scrapling for reviewer screenshot capture in this workflow.
+  Rationale: Source acquisition already requires Scrapling, and reviewer
+  screenshot evidence should not introduce a separate browser automation
+  surface. The local helper uses Scrapling `DynamicFetcher` page action and
+  stores outputs only under ignored `.local/reviewer-evidence/`.
+  Date/Author: 2026-05-24 / Codex
+
 ## Deviations
 
 - None.
@@ -400,41 +440,60 @@ git status --short --branch
   Git.
 - Note-bearing values remain blocked until a later reviewed source-review
   update consumes the new acquisition fields.
+- Reviewer screenshot bundle generation is local-only and may still fail if
+  browser dependencies are unavailable; that does not affect deterministic
+  row-note artifact validation.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Official row-note field support plan | Drafted docs-only plan for exposing row-local notes in ignored structured official acquisition artifacts | `docs/execplans/2026-05-24-official-acquisition-row-note-field-support.md` | `git diff --check`; clean-slate validator; parsed-value classifier validator; official note-linkage source-review validator; `git status --short --branch` | Passed | None | Review pending | Future acquisition-field implementation still required |
-| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/runtime/acquisition implementation added | This ExecPlan only | Diff/status review | Passed | None | Future implementation ExecPlan required | Note-bearing values remain blocked |
+| Official row-note field support | Added `official_table_rows_raw/v4` row-note fields and cell source-structural candidate fields | `src/sf6_knowledge_coach/source_acquisition.py`; `tests/test_source_acquisition.py`; acquisition report; this ExecPlan | source-acquisition tests; report/artifact validators | Passed | None | Mandatory review pending | Note-bearing values remain blocked until source-review update |
+| Reviewer bundle boundary | Added local-only Scrapling screenshot bundle helper and fake-screenshotter unit coverage | `src/sf6_knowledge_coach/source_acquisition.py`; `tests/test_source_acquisition.py`; this ExecPlan | source-acquisition tests | Passed | None | Actual screenshots not generated in this implementation run | Bundle output remains ignored `.local` observation_candidate only |
+| Scope exclusions | No parser/schema/classifier/calculator/retrieval/answer/export/runtime implementation added | Scoped files only | Diff/status review | Passed | None | Mandatory review pending | Parser/schema still blocked |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-24-official-acquisition-row-note-field-support.md.
+Review the official acquisition row-note field support implementation.
 
-Confirm whether it is acceptable as the docs-only planner for official
-acquisition row-note field support.
+Review against:
+- docs/PLAN.md
+- AGENTS.md
+- docs/execplans/2026-05-24-official-acquisition-row-note-field-support.md
 
 Check:
-- it starts from PR #337's result that row-local note evidence exists in
-  ignored HTML but is not structured in official_table_rows.raw.json;
-- it targets row-local official note extraction into ignored structured
-  acquisition artifacts;
-- it keeps raw HTML, full raw rows, screenshots, cookies, browser profiles,
-  traces, debug dumps, local paths, and private data out of Git;
-- it preserves source-native note text, note order, row identity,
-  source_column_header_path, visible_text, and hidden_detail_text;
-- it defines note linkage to row/cell/field without parser inference;
-- it includes reviewer-only sanitized ChatGPT/VLM observation as optional
-  observation_candidate only;
-- it stores any screenshots/bundles only under
-  .local/reviewer-evidence/official-note-linkage/;
-- it prohibits parser/schema/classifier/calculator/retrieval/answer/export/
-  runtime changes;
-- it keeps all note-bearing values blocked until structured row notes are
-  available and reviewed.
+- changed files are limited to source acquisition, source-acquisition tests,
+  the current-source acquisition report, and this ExecPlan;
+- official_table_rows.raw.json is now v4 in ignored `.local` artifacts;
+- v4 rows preserve v3 fields and add row_note_count, row_notes, and
+  row_note_extraction_status;
+- row_notes preserve source-native note text, source order, note_marker,
+  note_id, note_text_stripped, and note_source_scope;
+- cells add only source-structural marker/candidate fields and do not infer
+  parser eligibility, numeric meaning, calculation safety, or authority;
+- public report contains summary-safe counts/hashes only, not row note lists,
+  full rows, raw HTML, screenshots, local paths, cookies, profiles, traces,
+  debug dumps, or private data;
+- local reviewer bundle helper uses Scrapling screenshot capture and stores
+  outputs under ignored `.local/reviewer-evidence/` only;
+- ChatGPT/VLM output remains observation_candidate only;
+- no parser/schema/classifier/calculator/retrieval/answer/export/runtime
+  behavior changed;
+- note-bearing values remain blocked until a later source-review update.
 
-Return blocking findings first, then validation checked, PLAN deviations, and
-remaining risks.
+Run:
+- git diff --check
+- git diff --cached --check
+- PYTHONPATH=src uv run --locked python -c "from scrapling.fetchers import DynamicFetcher; print(DynamicFetcher.__name__)"
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
+- PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
+- PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+- PYTHONPATH=src uv run --locked python tests/validation/validate_official_note_linkage_source_review.py
+- PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-report docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
+- PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.source_acquisition validate-artifacts docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md
+- git status --short --branch
+
+Return blocking findings first, then validation checked, PLAN deviations,
+remaining risks, and stage readiness.
 ```
