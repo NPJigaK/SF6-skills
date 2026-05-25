@@ -25,6 +25,7 @@ privacy/security boundary.
 | `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape and approved contract file inventory only |
 | `tests/validation/validate_current_fact_export_generator.py` | artifact consistency | accepted with limits | fixture-contract generator output, guard boundaries, and no production artifact paths only |
 | `tests/validation/validate_current_fact_row_move_cell_candidates.py` | synthetic contract | accepted with limits | candidate schema, synthetic fixture contracts, and source-boundary guard mutations only; no production candidates or source truth |
+| `tests/validation/validate_current_fact_candidate_evidence.py` | source-derived | accepted with limits | candidate evidence source-review summary; full v4 row context remains ignored local reviewer input |
 | `tests/validation/validate_current_fact_consumer_guards.py` | artifact consistency | accepted with limits | guard behavior against synthetic fixtures and coverage statuses only |
 | `tests/validation/validate_current_fact_source_records.py` | synthetic contract | accepted with limits | source-record schema, fixture contracts, and source-boundary guard mutations only; no production source records or source truth |
 | `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |

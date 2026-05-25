@@ -155,6 +155,20 @@
       "status": "accepted_with_limits"
     },
     {
+      "evidence_class": "source_derived",
+      "file": "tests/validation/validate_current_fact_candidate_evidence.py",
+      "limitations": [
+        "checks summary-safe candidate evidence source-review boundaries; full v4 row context remains ignored local reviewer input"
+      ],
+      "primary_evidence": [
+        "data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json",
+        "docs/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.md",
+        "parsed-value classifier coverage artifact",
+        "official note-linkage source-review artifact"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
       "evidence_class": "artifact_consistency",
       "file": "tests/validation/validate_current_fact_consumer_guards.py",
       "limitations": [

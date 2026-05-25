@@ -1,6 +1,6 @@
 # Current-Fact Candidate Evidence Amendment
 
-Status: Drafted for review; validation passed.
+Status: Implementation complete; validation passed.
 
 ## Purpose
 
@@ -13,8 +13,10 @@ defines what evidence a future amendment must emit from existing ignored v4
 official artifacts or from a derived acquisition/source-review summary before
 any production candidate artifact generation can start.
 
-This is a docs-only planning step. It does not implement the amendment and
-does not generate candidate, source-record, or current-fact export artifacts.
+This PR started as a docs-only planning step. After mandatory plan review, the
+same draft PR is amended to implement the source-review evidence artifact and
+focused validator described here. It still does not generate candidate,
+source-record, or current-fact export artifacts.
 
 ## Inputs
 
@@ -54,7 +56,7 @@ candidate records can be populated.
 
 ## Scope
 
-Included in this docs-only plan:
+Included in this plan and implementation slice:
 
 - define exact row/move/cell candidate evidence fields required for a future
   public amendment artifact;
@@ -65,10 +67,15 @@ Included in this docs-only plan:
 - define admission requirements for candidate-generation readiness;
 - preserve Issue #343 double-check gate for any new value-handling decision;
 - keep production candidate/source-record/export generation blocked.
+- add a summary-safe public source-review JSON artifact for current parsed
+  official candidate evidence;
+- add a summary-safe Markdown companion;
+- add a focused validator for that source-review artifact;
+- update validator audit artifacts for the new validator;
+- update this ExecPlan Progress, Decision Log, and Completion Review Table.
 
 Excluded:
 
-- No amendment implementation.
 - No candidate artifact generation.
 - No source-record artifact generation.
 - No current-fact export artifact generation.
@@ -89,17 +96,25 @@ Excluded:
 
 ## Amendment Placement Decision
 
-The next implementation should create a new summary-safe public source-review
-artifact, supported by acquisition-derived structural fields where needed.
+This implementation creates a new summary-safe public source-review artifact,
+supported by acquisition-derived structural fields from ignored v4 reviewer
+input.
 
-Recommended future artifact family:
+Implemented artifact family:
 
-- JSON: `data/source-reviews/<run_id>-current-fact-row-move-cell-candidate-evidence.json`
-- Markdown: `docs/source-reviews/<run_id>-current-fact-row-move-cell-candidate-evidence.md`
-- Optional future schema:
-  `contracts/source-reviews/current_fact_candidate_evidence.schema.json`
-- Planned artifact schema version:
+- JSON:
+  `data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json`
+- Markdown:
+  `docs/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.md`
+- Focused validator:
+  `tests/validation/validate_current_fact_candidate_evidence.py`
+- Artifact schema version:
   `current_fact_candidate_evidence/v1`
+
+No JSON Schema contract is added in this slice. The focused validator fixes
+the contract tightly enough for this source-review summary. A later schema can
+be planned if production generation needs a reusable candidate-evidence
+contract.
 
 Rationale:
 
@@ -200,15 +215,16 @@ Allowed public inputs for the amendment:
 - reviewed public Markdown summaries;
 - future reviewed source-review evidence summaries.
 
-Allowed reviewer input, if explicitly approved by the future implementation
-ExecPlan:
+Allowed reviewer input for this implementation slice:
 
 - ignored v4 acquisition artifacts as local reviewer input;
 - sanitized local reviewer bundles under approved `.local` paths;
 - Scrapling screenshots as reviewer-only observation material.
 
-Reviewer input must be converted into summary-safe public evidence before it
-can support production candidate generation.
+Only ignored v4 acquisition artifacts were used for this implementation. The
+committed output converts that local reviewer input into summary-safe public
+evidence without committing local paths, raw source payloads, full rows, visual
+reviewer output, or private material.
 
 ## Forbidden Inputs And Published Content
 
@@ -284,10 +300,9 @@ full output must not be committed.
 
 ## Future Validation Plan
 
-A future implementation PR for the amendment should add focused validation
-that checks:
+This implementation adds focused validation that checks:
 
-- public artifact schema and required field coverage;
+- public artifact version and required field coverage;
 - summary-safe public paths only;
 - no legacy raw export source input;
 - no `.local`, raw HTML, full rows, screenshots, local paths, logs, or private
@@ -298,29 +313,27 @@ that checks:
 - coverage/source-review/acquisition reference consistency;
 - blocked/ambiguous evidence cannot enter lookup-ready candidate input;
 - non-scalar parsed values are not flattened;
-- SuperCombo numeric authority is rejected.
+- SuperCombo numeric authority is absent.
 
 Validators must be evidence-first and grounded in public artifacts, approved
 contract fixtures, or privacy/source-boundary rules.
 
 ## Future Implementation Slices
 
-Recommended next PR:
+Completed in this PR after plan review:
 
-1. Docs-only implementation ExecPlan for the candidate evidence source-review
-   artifact.
+1. Candidate evidence source-review artifact implementation.
 
-Blocked until that plan is approved:
+Blocked until mandatory review of this implementation:
 
-2. Candidate evidence source-review artifact implementation.
-3. Production `current_fact_row_move_cell_candidate_input/v1` generation.
-4. Production source-record artifact generation.
-5. Production current-fact export generation.
-6. Runtime lookup transition and legacy raw export retirement.
+2. Production `current_fact_row_move_cell_candidate_input/v1` generation.
+3. Production source-record artifact generation.
+4. Production current-fact export generation.
+5. Runtime lookup transition and legacy raw export retirement.
 
 ## Acceptance Criteria
 
-- The plan is docs-only.
+- The plan was reviewed first, then implemented in the same draft PR.
 - The plan defines exact candidate evidence fields needed for future
   production candidate records.
 - The plan decides that the evidence should be emitted as a summary-safe
@@ -334,12 +347,21 @@ Blocked until that plan is approved:
   acquisition, or live acquisition.
 - The plan does not use legacy `data/exports/*/official_raw.json`, `.local`,
   raw HTML, screenshots, VLM output, or private data as authority.
+- The implementation commits no production candidate/source-record/export
+  artifact.
+- The implementation commits no raw source payload, complete row, local path,
+  visual reviewer output, browser session material, or private material.
 
 ## Files / Interfaces
 
-This docs-only PR should change only:
+This PR may change only:
 
 - `docs/execplans/2026-05-25-current-fact-candidate-evidence-amendment.md`
+- `data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json`
+- `docs/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.md`
+- `tests/validation/validate_current_fact_candidate_evidence.py`
+- `data/validator-audits/20260523-validator-test-fact-source-audit.json`
+- `docs/validator-audits/20260523-validator-test-fact-source-audit.md`
 
 Future implementation plans may touch additional files only after mandatory
 review approval.
@@ -353,8 +375,10 @@ PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_candidate_evidence.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 git status --short --branch
 ```
@@ -364,6 +388,10 @@ git status --short --branch
 - 2026-05-25: Drafted docs-only source-review/acquisition amendment plan after
   PR #364 merged. No implementation or generated artifact changes included.
 - 2026-05-25: Ran validation commands for docs-only plan. All checks passed.
+- 2026-05-25: Mandatory plan review passed on PR #365. Amended the same draft
+  PR to implement the source-review evidence artifact, focused validator, and
+  validator audit entries.
+- 2026-05-25: Ran full validation after implementation. All checks passed.
 
 ## Decision Log
 
@@ -377,6 +405,14 @@ git status --short --branch
 - 2026-05-25: Legacy raw exports remain rejected as replacement source input.
 - 2026-05-25: Validation passed without adding implementation, schemas,
   fixtures, validators, or generated artifacts.
+- 2026-05-25: Implemented 13 summary-safe evidence records for currently
+  parsed official candidate groups: 9 annotated candidates and 4 frame ranges.
+- 2026-05-25: Did not add a reusable source-review schema in this slice;
+  focused validator coverage is sufficient for this one artifact.
+- 2026-05-25: Candidate artifact generation remains blocked pending mandatory
+  review of this evidence implementation.
+- 2026-05-25: No production artifact was generated under `data/current-facts`
+  or `docs/current-facts`.
 
 ## Deviations
 
@@ -397,18 +433,24 @@ git status --short --branch
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Evidence field plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-candidate-evidence-amendment.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Future implementation may need acquisition amendment |
-| Amendment placement decision | Draft plan chooses summary-safe public source-review artifact | Same | `validate_current_fact_row_move_cell_candidates.py`; `parsed_value_classifier validate` | Pass | None | Mandatory review pending | Production candidate artifact remains blocked |
-| Runtime and artifact boundary | No runtime or generated artifact changes | Same | current-fact validators; `validate_clean_slate.py` | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
+| Evidence field plan | Defined candidate evidence fields and implemented summary-safe source-review records | ExecPlan; JSON/MD source-review artifacts | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Future candidate artifact still requires review |
+| Amendment placement decision | Implemented source-review artifact and no acquisition code | ExecPlan; source-review artifacts; validator | `validate_current_fact_candidate_evidence.py` | Pass | None | Mandatory review pending | Production candidate artifact remains blocked |
+| Runtime and artifact boundary | No runtime or production generated artifact changes | Same plus audit artifacts | current-fact validators; `validate_clean_slate.py`; audit validator | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-candidate-evidence-amendment.md.
+Review PR #365 current-fact candidate evidence amendment implementation.
 
 Check:
-- PR diff contains exactly one ExecPlan file.
-- Plan is docs-only.
+- PR diff contains only the approved source-review evidence implementation
+  files:
+  - docs/execplans/2026-05-25-current-fact-candidate-evidence-amendment.md
+  - data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json
+  - docs/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.md
+  - tests/validation/validate_current_fact_candidate_evidence.py
+  - data/validator-audits/20260523-validator-test-fact-source-audit.json
+  - docs/validator-audits/20260523-validator-test-fact-source-audit.md
 - It defines exact candidate evidence fields:
   - character_slug
   - move_id
@@ -430,10 +472,15 @@ Check:
 - It keeps Issue #343 double-check gate mandatory for future value-handling
   decisions.
 - It keeps production candidate/source-record/export generation blocked.
-- It does not implement the amendment.
+- It implements only the source-review evidence artifact and focused
+  validator.
 - It does not change runtime lookup, current_facts.py, answering.py,
   parser/classifier behavior, retrieval, answer, calculator, SymPy, source
   acquisition, or live acquisition.
+- It commits no production artifacts under data/current-facts or
+  docs/current-facts.
+- It commits no raw source payloads, complete rows, local paths, visual
+  reviewer output, browser session material, or private material.
 
 Run:
 - git status --short --branch
@@ -444,8 +491,10 @@ Run:
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_candidate_evidence.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
 Return blocking findings first, validation results, PLAN deviations, remaining
