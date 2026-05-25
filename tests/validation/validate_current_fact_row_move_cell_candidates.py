@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -17,6 +18,9 @@ from sf6_knowledge_coach.current_fact_guards import is_scalar_calculation_input
 ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_DIR = ROOT / "contracts/current-facts"
 FIXTURE_DIR = ROOT / "tests/fixtures/current-facts/candidate-inputs"
+PRODUCTION_JSON = ROOT / "data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json"
+PRODUCTION_MD = ROOT / "docs/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.md"
+EVIDENCE_JSON = ROOT / "data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json"
 CANDIDATE_SCHEMA_PATH = SCHEMA_DIR / "current_fact_row_move_cell_candidate_input.schema.json"
 SCHEMA_FILES = [
     "parsed_value.schema.json",
@@ -58,6 +62,20 @@ REFERENCE_ARRAY_FIELDS = (
     "coverage_refs",
     "source_review_refs",
 )
+EXPECTED_PRODUCTION_COUNT = 13
+EXPECTED_PRODUCTION_RUN_ID = "20260525T000000Z"
+EVIDENCE_JSON_REF = "data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json"
+EVIDENCE_MD_REF = "docs/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.md"
+COVERAGE_REF = "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json"
+EXPECTED_PRODUCTION_STATUS_COUNTS = {
+    "annotated_candidate_not_calculation_safe": 9,
+    "parsed_range_not_single_value_calculation_safe": 4,
+}
+EXPECTED_PRODUCTION_FIELD_COUNTS = {
+    "block_advantage": 5,
+    "hit_advantage": 4,
+    "startup": 4,
+}
 
 
 def main() -> int:
@@ -81,7 +99,7 @@ def main() -> int:
     _validate_invalid_fixtures(validator, errors)
     _validate_synthetic_boundary_rejections(validator, valid_payloads, errors)
     _scan_valid_public_fixtures(errors)
-    _validate_no_production_candidate_artifacts(errors)
+    _validate_approved_production_candidate_artifacts(validator, errors)
     return _finish(errors)
 
 
@@ -283,14 +301,167 @@ def _scan_valid_public_fixtures(errors: list[str]) -> None:
                 break
 
 
-def _validate_no_production_candidate_artifacts(errors: list[str]) -> None:
-    for relative in (
-        "data/current-facts/candidate-inputs",
-        "docs/current-facts/candidate-inputs",
-    ):
+def _validate_approved_production_candidate_artifacts(
+    validator: Draft202012Validator,
+    errors: list[str],
+) -> None:
+    approved = {
+        PRODUCTION_JSON.relative_to(ROOT).as_posix(),
+        PRODUCTION_MD.relative_to(ROOT).as_posix(),
+    }
+    for relative in ("data/current-facts", "docs/current-facts"):
         directory = ROOT / relative
-        if directory.exists() and any(directory.rglob("*")):
-            errors.append(f"production candidate artifact path must remain empty in this slice: {relative}")
+        if not directory.exists():
+            errors.append(f"Missing production candidate directory: {relative}")
+            continue
+        files = {
+            path.relative_to(ROOT).as_posix()
+            for path in directory.rglob("*")
+            if path.is_file()
+        }
+        unexpected = sorted(files - approved)
+        if unexpected:
+            errors.append(f"unexpected current-fact production artifacts: {unexpected}")
+    if not PRODUCTION_JSON.exists():
+        errors.append(f"Missing approved production candidate JSON: {PRODUCTION_JSON.relative_to(ROOT)}")
+        return
+    if not PRODUCTION_MD.exists():
+        errors.append(f"Missing approved production candidate summary: {PRODUCTION_MD.relative_to(ROOT)}")
+    if not EVIDENCE_JSON.exists():
+        errors.append(f"Missing source evidence artifact: {EVIDENCE_JSON.relative_to(ROOT)}")
+        return
+
+    payload = json.loads(PRODUCTION_JSON.read_text(encoding="utf-8"))
+    failures = _schema_errors(validator, payload)
+    semantic_failures = _semantic_errors(payload)
+    if failures or semantic_failures:
+        message = failures[0] if failures else semantic_failures[0]
+        errors.append(f"{PRODUCTION_JSON.relative_to(ROOT)} should be valid: {message}")
+        return
+
+    evidence_payload = json.loads(EVIDENCE_JSON.read_text(encoding="utf-8"))
+    _validate_production_payload_against_evidence(payload, evidence_payload, errors)
+    for path in (PRODUCTION_JSON, PRODUCTION_MD):
+        _scan_public_text(path, errors)
+
+
+def _validate_production_payload_against_evidence(
+    payload: dict[str, Any],
+    evidence_payload: dict[str, Any],
+    errors: list[str],
+) -> None:
+    if payload.get("run_id") != EXPECTED_PRODUCTION_RUN_ID:
+        errors.append(f"production candidate run_id must be {EXPECTED_PRODUCTION_RUN_ID}")
+    if payload.get("run_id") == evidence_payload.get("run_id"):
+        errors.append("production candidate run_id must not reuse date-only source-review evidence run_id")
+    generated_from = set(payload.get("generated_from", []))
+    for required in (EVIDENCE_JSON_REF, EVIDENCE_MD_REF, COVERAGE_REF):
+        if required not in generated_from:
+            errors.append(f"production generated_from missing {required}")
+
+    evidence_records = evidence_payload.get("evidence_records", [])
+    if not isinstance(evidence_records, list):
+        errors.append("source evidence records must be a list")
+        return
+    records = payload.get("records", [])
+    if not isinstance(records, list):
+        errors.append("production candidate records must be a list")
+        return
+    if len(records) != EXPECTED_PRODUCTION_COUNT:
+        errors.append(f"production candidate artifact must contain {EXPECTED_PRODUCTION_COUNT} records")
+    status_counts = Counter(record.get("calculation_input_status") for record in records if isinstance(record, dict))
+    field_counts = Counter(record.get("field_key") for record in records if isinstance(record, dict))
+    if dict(sorted(status_counts.items())) != EXPECTED_PRODUCTION_STATUS_COUNTS:
+        errors.append("production calculation status counts do not match approved evidence")
+    if dict(sorted(field_counts.items())) != EXPECTED_PRODUCTION_FIELD_COUNTS:
+        errors.append("production field counts do not match approved evidence")
+
+    evidence_by_id = {
+        record.get("candidate_record_id"): record
+        for record in evidence_records
+        if isinstance(record, dict)
+    }
+    record_ids = [record.get("candidate_record_id") for record in records if isinstance(record, dict)]
+    if len(set(record_ids)) != len(record_ids):
+        errors.append("production candidate_record_id values must be unique")
+    if set(record_ids) != set(evidence_by_id):
+        errors.append("production candidate records must exactly match PR #365 evidence ids")
+        return
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            errors.append(f"records[{index}] must be an object")
+            continue
+        evidence_record = evidence_by_id[record["candidate_record_id"]]
+        _validate_production_record(index, record, evidence_record, errors)
+
+
+def _validate_production_record(
+    index: int,
+    record: dict[str, Any],
+    evidence_record: dict[str, Any],
+    errors: list[str],
+) -> None:
+    copied_fields = (
+        "candidate_record_id",
+        "character_slug",
+        "display_label_ja",
+        "field_key",
+        "move_id",
+        "raw_value",
+        "raw_value_length",
+        "raw_value_sha256",
+        "source_cell_key",
+        "source_cell_order",
+        "source_family",
+        "source_header_path",
+        "source_label",
+        "source_name",
+        "source_role",
+        "source_row_key",
+        "source_row_order",
+        "source_value_key",
+    )
+    for field in copied_fields:
+        if record.get(field) != evidence_record.get(field):
+            errors.append(f"records[{index}].{field} does not match source evidence")
+    if record.get("authority_status") != "authority_candidate":
+        errors.append(f"records[{index}] official candidate authority must not be promoted")
+    if record.get("calculation_input_status") != evidence_record.get("calculation_input_status"):
+        errors.append(f"records[{index}] calculation_input_status does not match source evidence")
+    if record.get("parser_rule_ids") != evidence_record.get("parser_rule_ids"):
+        errors.append(f"records[{index}] parser_rule_ids does not match source evidence")
+    if record.get("coverage_refs") != [COVERAGE_REF]:
+        errors.append(f"records[{index}] coverage_refs must point to the public coverage artifact")
+    if EVIDENCE_JSON_REF not in record.get("source_review_refs", []):
+        errors.append(f"records[{index}] source_review_refs must include PR #365 evidence artifact")
+    for source_ref in evidence_record.get("source_review_refs", []):
+        if source_ref not in record.get("source_review_refs", []):
+            errors.append(f"records[{index}] missing carried source_review_ref {source_ref}")
+
+    value_shape = record.get("value_shape", {})
+    if value_shape.get("review_item_id") != evidence_record.get("coverage_refs", [None])[0]:
+        errors.append(f"records[{index}] value_shape.review_item_id must preserve source review item id")
+    if value_shape.get("parser_rule_id") != evidence_record.get("parser_rule_ids", [None])[0]:
+        errors.append(f"records[{index}] value_shape.parser_rule_id must match source evidence")
+    parsed_value = record.get("parsed_value", {})
+    if parsed_value.get("kind") != evidence_record.get("parsed_value_kind"):
+        errors.append(f"records[{index}] parsed_value kind must match source evidence")
+
+    evidence = record.get("evidence", {})
+    if evidence.get("evidence_basis") != "source_review_summary":
+        errors.append(f"records[{index}] evidence must use source_review_summary")
+    if evidence.get("public_reference") != EVIDENCE_JSON_REF:
+        errors.append(f"records[{index}] evidence.public_reference must point to PR #365 evidence JSON")
+    if evidence.get("run_id") != "20260521T025403Z":
+        errors.append(f"records[{index}] evidence.run_id must carry source acquisition/classifier run id")
+
+
+def _scan_public_text(path: Path, errors: list[str]) -> None:
+    text = path.read_text(encoding="utf-8")
+    for pattern in FORBIDDEN_PUBLIC_PATTERNS:
+        if pattern.search(text):
+            errors.append(f"{path.relative_to(ROOT)} contains forbidden public content")
+            break
 
 
 def _first_record(payload: dict[str, Any]) -> dict[str, Any]:
