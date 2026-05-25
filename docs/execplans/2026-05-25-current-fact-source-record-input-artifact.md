@@ -1,13 +1,15 @@
 # Current-Fact Source-Record Input Artifact
 
-Status: Drafted for review; validation passed.
+Status: Implemented; validation passed.
 
 ## Purpose
 
 Define the reviewed row/move/cell-level source-record input artifact required
 before production `current_fact_export/v2` generation.
 
-This plan is docs-only. It does not implement source-record extraction,
+The original planning PR was docs-only. This implementation follow-up is
+limited to the schema, fixtures, focused validator, validator audit update, and
+this ExecPlan progress update. It does not implement source-record extraction,
 generator code, generated artifacts, runtime lookup, answer behavior,
 parser/classifier behavior, retrieval, calculators, SymPy logic, or live
 acquisition.
@@ -427,15 +429,22 @@ Intended future sequence:
 
 ## Files / Interfaces
 
-This docs-only plan changes only:
+The original docs-only plan changed only:
 
 - `docs/execplans/2026-05-25-current-fact-source-record-input-artifact.md`
 
-Future implementation plans may touch, after review:
+This schema/fixtures/validators implementation touches only:
 
 - `contracts/current-facts/current_fact_source_record_input.schema.json`;
 - focused source-record fixtures under `tests/fixtures/current-facts/`;
-- focused validators under `tests/validation/`;
+- `tests/validation/validate_current_fact_source_records.py`;
+- `tests/validation/validate_clean_slate.py`, limited to approving the new
+  contract file in the clean-slate contract inventory;
+- validator audit artifacts;
+- this ExecPlan.
+
+Future implementation plans may touch, after review:
+
 - source-record generation code only if a later ExecPlan approves it;
 - `data/current-facts/source-records/` and
   `docs/current-facts/source-records/` artifacts only after schema/validator
@@ -450,11 +459,15 @@ Run from repository root:
 
 ```bash
 git diff --check
+git diff --cached --check
 uv lock --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 git status --short --branch
 ```
 
@@ -475,7 +488,33 @@ git status --short --branch
   `uv lock --check`, clean-slate validator, current-fact schema validator,
   current-fact consumer guard validator, parsed-value classifier coverage
   validator, and `git status --short --branch`.
-- [ ] Complete mandatory review.
+- [x] (2026-05-25 JST) PR #356 mandatory review passed and was merged with
+  normal merge commit `ef57790964e4bf31a39788532b76d587b0d9a734`.
+- [x] (2026-05-25 JST) Created branch
+  `impl/current-fact-source-record-input-schema` from updated `main`.
+- [x] (2026-05-25 JST) Implemented
+  `current_fact_source_record_input/v1` schema with reviewed public
+  `generated_from`, source-record identity, nested lookup-ready
+  current-fact-record payloads, parsed-value-only admission, no
+  review-required/out-of-scope lookup records, no SuperCombo scalar authority,
+  no flattened annotated candidates, and no collapsed frame ranges.
+- [x] (2026-05-25 JST) Added focused source-record fixtures for valid scalar,
+  annotated candidate, and frame-range records plus invalid legacy-source,
+  review-required, flattened annotated, collapsed range, and SuperCombo scalar
+  authority cases.
+- [x] (2026-05-25 JST) Added focused source-record validator covering schema,
+  fixture, semantic identity, public source-boundary, privacy mutation, guard,
+  and authority checks.
+- [x] (2026-05-25 JST) Updated validator audit artifacts for the new focused
+  validator.
+- [x] (2026-05-25 JST) Updated clean-slate contract inventory to recognize
+  `contracts/current-facts/current_fact_source_record_input.schema.json`.
+- [x] (2026-05-25 JST) Full implementation validation passed: `git diff
+  --check`, `git diff --cached --check`, `uv lock --check`, unittest,
+  clean-slate validator, current-fact schema validator, current-fact consumer
+  guard validator, parsed-value classifier validator, source-record validator,
+  validator audit validator, and `git status --short --branch`.
+- [ ] Complete implementation mandatory review.
 
 ## Decision Log
 
@@ -511,79 +550,104 @@ git status --short --branch
   Rationale: Source-record input is evidence/status plumbing, not arithmetic.
   Date/Author: 2026-05-25 / Codex
 
+- Decision: Model source-record identity as sidecar fields around a nested
+  `current_fact_record` payload.
+  Rationale: The input artifact needs row/cell/value identity, while the
+  final `current_fact_export/v2` records must remain compatible with the
+  existing current-fact record schema.
+  Date/Author: 2026-05-25 / Codex
+
+- Decision: Keep raw-source privacy checks partly semantic instead of encoding
+  every forbidden reviewer-support term into JSON Schema.
+  Rationale: The schema handles structural public paths and legacy raw export
+  rejection; the focused validator can check reviewer-only paths, raw source
+  markers, hash/length, and cross-field identity without adding noisy public
+  schema strings.
+  Date/Author: 2026-05-25 / Codex
+
+- Decision: Update the clean-slate contract inventory for the new schema file.
+  Rationale: Adding an approved contract file is a repository-shape change;
+  the governance validator must recognize it without broadening unrelated
+  paths.
+  Date/Author: 2026-05-25 / Codex
+
 ## Deviations
 
 - None.
 
 ## Remaining Risks
 
-- Exact source-record schema field names need implementation review.
+- Exact source-record schema field names still need mandatory review.
 - A production source-record artifact still does not exist.
 - The first production source-record artifact may have limited coverage because
   it admits only records with reviewed `parsed_value`.
 - Runtime lookup remains legacy raw export backed.
 - Export generator, lookup parity, rollback criteria, and legacy raw export
   retirement remain future work.
+- Source-record generation code is not implemented.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Docs-only source-record plan | Drafted source-record input artifact plan, path/schema direction, input boundaries, identity requirements, admission rules, carry-forward rules, validators, and retirement boundary | `docs/execplans/2026-05-25-current-fact-source-record-input-artifact.md` | `git diff --check`; `uv lock --check`; clean-slate validator; current-fact schema validator; current-fact guard validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review pending | Production source-record artifact missing |
-| Artifact path/schema direction | Planned `data/current-facts/source-records/<run_id>-current-fact-source-records.json`, optional Markdown summary, and future `current_fact_source_record_input/v1` schema | This ExecPlan only | Diff/status review | Passed | None | Review pending | Schema implementation still future work |
-| Parsed-value-only admission | Required lookup-ready source records to include `parsed_value` and top-level `calculation_input_status`; blocked no-parsed records remain in classifier/source-review artifacts | This ExecPlan only | Diff/status review | Passed | None | Review pending | Coverage limited by parsed-value availability |
-| Guard/privacy/source boundary | Required no flattened annotated candidates, no collapsed frame ranges, reviewed public evidence only, and privacy/source-boundary validators | This ExecPlan only | Diff/status review | Passed | None | Review pending | Validator implementation still future work |
-| Runtime/generator exclusion | Kept current-fact export generation, runtime lookup, answers, retrieval, calculators, SymPy, live acquisition, and parser/classifier expansion out of scope | This ExecPlan only | Diff/status review | Passed | None | Review pending | Runtime remains legacy raw backed |
+| Docs-only source-record plan | Drafted source-record input artifact plan, path/schema direction, input boundaries, identity requirements, admission rules, carry-forward rules, validators, and retirement boundary | `docs/execplans/2026-05-25-current-fact-source-record-input-artifact.md` | `git diff --check`; `uv lock --check`; clean-slate validator; current-fact schema validator; current-fact guard validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review complete via PR #356 | Production source-record artifact missing |
+| Source-record schema | Added `current_fact_source_record_input/v1` schema with reviewed public source paths, source-record sidecar identity, nested current-fact payloads, parsed-value-only lookup-ready records, and non-scalar guard conditions | `contracts/current-facts/current_fact_source_record_input.schema.json` | Source-record validator; current-fact schema validator | Passed | None | Review pending | Field names need mandatory review |
+| Source-record fixtures | Added focused valid and invalid fixture artifacts for scalar, annotated candidate, frame range, legacy source, review-required, flattened annotated, collapsed range, and SuperCombo scalar authority cases | `tests/fixtures/current-facts/source-records/**` | Source-record validator; current-fact schema validator | Passed | None | Review pending | Synthetic fixtures do not prove source truth |
+| Focused source-record validator | Added validator for schema validity, valid/invalid fixtures, hash/length identity, header/evidence carry-forward, public source boundary, privacy mutations, guard behavior, and SuperCombo scalar rejection | `tests/validation/validate_current_fact_source_records.py` | Source-record validator; validator audit | Passed | None | Review pending | Production artifact validation remains future work |
+| Clean-slate contract inventory | Added the new source-record schema file to the approved contracts inventory | `tests/validation/validate_clean_slate.py` | Clean-slate validator; validator audit | Passed | None | Review pending | Governance whitelist only; no runtime behavior |
+| Validator audit | Added evidence-boundary audit entry for the new focused validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`; `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | Validator audit validator | Passed | None | Review pending | Audit is boundary metadata only |
+| Parsed-value-only admission | Required lookup-ready source records to include `parsed_value` and top-level `calculation_input_status`; blocked no-parsed records remain in classifier/source-review artifacts | Schema, fixtures, validator, this ExecPlan | Source-record validator | Passed | None | Review pending | Coverage limited by parsed-value availability |
+| Guard/privacy/source boundary | Required no flattened annotated candidates, no collapsed frame ranges, reviewed public evidence only, and privacy/source-boundary validators | Schema, fixtures, validator, this ExecPlan | Source-record validator; current-fact guard validator | Passed | None | Review pending | Future generators must call equivalent checks |
+| Runtime/generator exclusion | Kept current-fact export generation, runtime lookup, answers, retrieval, calculators, SymPy, live acquisition, and parser/classifier expansion out of scope | No runtime/generator files changed | Diff/status review | Passed | None | Review pending | Runtime remains legacy raw backed |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-source-record-input-artifact.md.
+Review the source-record input schema/fixtures/validators implementation.
 
 Check:
-- PR diff contains exactly one ExecPlan file.
-- Plan is docs-only and does not implement source-record extraction,
-  generator code, generated artifacts, runtime lookup, answer behavior,
-  parser/classifier behavior, retrieval, calculator, SymPy, or live
-  acquisition.
-- Artifact path is
-  data/current-facts/source-records/<run_id>-current-fact-source-records.json
-  with optional docs/current-facts/source-records/<run_id>-current-fact-source-records.md.
-- Future schema/version direction is
-  contracts/current-facts/current_fact_source_record_input.schema.json with
-  artifact_schema_version current_fact_source_record_input/v1.
-- Allowed inputs are reviewed public artifacts only.
-- Excluded inputs include legacy data/exports/<character>/official_raw.json,
-  .local, raw HTML, screenshots/VLM as authority, private data, and SuperCombo
-  numeric authority.
-- Row/move/cell identity requirements are defined without publishing full raw
-  rows or raw HTML.
-- Required fields include character_slug, move_id, field_key,
-  display_label_ja, raw_value, parsed_value, value_shape, source_name,
-  source_role, source_family, source_label, source_header_path, evidence,
-  authority_status, and calculation_input_status.
-- Lookup-ready source records are parsed-value-only.
-- Blocked/review-required records remain in classifier/source-review artifacts
-  unless a later plan approves a separate metadata artifact.
-- Source/evidence/authority/status carry-forward rules do not promote
+- PR diff is limited to source-record schema, focused fixtures, focused
+  validator, clean-slate contract inventory update, validator audit artifacts,
+  and this ExecPlan.
+- `current_fact_source_record_input.schema.json` defines
+  `current_fact_source_record_input/v1`.
+- Generated source paths and evidence paths reject legacy
+  `data/exports/*`, `.local`, reviewer-only paths, local paths, raw-source
+  markers, and private/debug/log paths through schema or focused validator.
+- Lookup-ready source records carry nested current-fact payloads with
+  `parsed_value` and top-level `calculation_input_status`.
+- Blocked/review-required and out-of-scope records are rejected from
+  lookup-ready source-record fixtures.
+- Source-record identity fields preserve row/cell/value identity without full
+  raw rows or raw HTML.
+- `raw_value` is preserved exactly and hash/length validation matches it.
+- Source/evidence/header fields carry forward consistently and do not promote
   authority.
-- Privacy/source-boundary validators are evidence-first.
-- Guard checks require no flattened annotated_numeric_candidate and no
-  collapsed frame_range.
-- Issue #343 screenshot plus ChatGPT/VLM double-check gate remains required
-  for new value semantics decisions.
-- Legacy raw export retirement boundary is preserved.
+- `annotated_numeric_candidate` is not flattened.
+- `frame_range` is not collapsed.
+- SuperCombo scalar calculation authority is rejected.
+- No production source-record artifact is generated under
+  `data/current-facts/source-records/`.
+- No current-fact export artifact is generated under `data/current-facts/`.
+- No source-record extraction, export generator, runtime lookup,
+  `current_facts.py`, `answering.py`, parser/classifier expansion, retrieval,
+  answer, calculator, SymPy, or live acquisition changes are included.
+- Validator audit updates are evidence-first and boundary-based.
 
 Run:
 - git status --short --branch
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
+- git diff --cached --check
 - uv lock --check
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 - PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 
 Return blocking findings first, validation results, PLAN deviations,
-remaining risks, and whether docs-only stage/commit is approved.
+remaining risks, and whether the implementation is stage-ready.
 ```
