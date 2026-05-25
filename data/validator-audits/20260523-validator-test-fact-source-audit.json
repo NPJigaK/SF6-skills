@@ -108,7 +108,8 @@
         "docs/PLAN.md",
         "AGENTS.md",
         "clean-slate ExecPlans",
-        "current-fact JSON Schema artifacts ExecPlan"
+        "current-fact JSON Schema artifacts ExecPlan",
+        "current-fact source-record input artifact ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
@@ -122,6 +123,19 @@
         "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
         "annotated numeric candidate consumer guard implementation ExecPlan",
         "frame range consumer guard ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "synthetic_contract",
+      "file": "tests/validation/validate_current_fact_source_records.py",
+      "limitations": [
+        "checks source-record schema, fixture contracts, and source-boundary guard mutations; does not produce production source records or prove source truth"
+      ],
+      "primary_evidence": [
+        "contracts/current-facts/current_fact_source_record_input.schema.json",
+        "tests/fixtures/current-facts/source-records",
+        "current-fact source-record input artifact ExecPlan"
       ],
       "status": "accepted_with_limits"
     },

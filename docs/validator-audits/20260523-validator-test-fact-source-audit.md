@@ -21,8 +21,9 @@ privacy/security boundary.
 | `tests/test_value_shape_disposition.py` | artifact consistency | accepted with limits | disposition coverage is not parse semantics |
 | `tests/test_parsed_value_classifier.py` | policy-derived | accepted with limits | parser/classifier behavior is policy-derived and not calculation correctness |
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
-| `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape only |
+| `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape and approved contract file inventory only |
 | `tests/validation/validate_current_fact_consumer_guards.py` | artifact consistency | accepted with limits | guard behavior against synthetic fixtures and coverage statuses only |
+| `tests/validation/validate_current_fact_source_records.py` | synthetic contract | accepted with limits | source-record schema, fixture contracts, and source-boundary guard mutations only; no production source records or source truth |
 | `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |
 | `tests/validation/validate_official_note_linkage_source_review.py` | source-derived | accepted with limits | source-review summary; full row-note context remains ignored local evidence |
 | `tests/validation/validate_parsed_value_classifier.py` | artifact consistency | accepted with limits | coverage artifact, mechanics anchors, and schema-compatible samples only |

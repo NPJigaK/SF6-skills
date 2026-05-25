@@ -1,0 +1,61 @@
+{
+  "artifact_schema_version": "current_fact_source_record_input/v1",
+  "authority_boundary": {
+    "official": "authority_candidate_only",
+    "supercombo": "enrichment_or_cross_reference_only"
+  },
+  "generated_from": [
+    "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json"
+  ],
+  "records": [
+    {
+      "current_fact_record": {
+        "authority_status": "authority_candidate",
+        "calculation_input_status": "review_required_not_calculation_safe",
+        "character_slug": "jp",
+        "display_label_ja": "コンボ補正",
+        "evidence": {
+          "evidence_basis": "value_shape_policy",
+          "public_reference": "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+          "run_id": "20260521T025403Z",
+          "source_header_path": ["コンボ補正"],
+          "source_label": "コンボ補正",
+          "source_name": "official",
+          "source_role": "authority_candidate"
+        },
+        "field_key": "combo_scaling",
+        "move_id": "jp_001_5lp",
+        "raw_value": "始動補正20%",
+        "record_id": "official:jp:jp_001_5lp:combo_scaling:review_required",
+        "source_family": "scaling",
+        "source_header_path": ["コンボ補正"],
+        "source_label": "コンボ補正",
+        "source_name": "official",
+        "source_role": "authority_candidate",
+        "value_shape": {
+          "classes": ["percent_expression", "prose"],
+          "classifier_status": "review_required",
+          "review_item_id": "value-shape:official--unclassified_expression--combo-scaling"
+        }
+      },
+      "raw_value_length": 7,
+      "raw_value_sha256": "93aa1eb1357636c07557682963b2ba8e51f4ef4f333ea3875c14eee83c94438d",
+      "source_cell_key": "official:jp:jp_001_5lp:combo_scaling:cell",
+      "source_cell_order": 7,
+      "source_header_path": ["コンボ補正"],
+      "source_record_id": "source-record:official:jp:jp_001_5lp:combo_scaling:review_required",
+      "source_row_key": "official:jp:jp_001_5lp",
+      "source_row_order": 1,
+      "source_value_key": "official:jp:jp_001_5lp:combo_scaling:value-1"
+    }
+  ],
+  "run_id": "20260521T025403Z",
+  "source_record_boundary": {
+    "blocked_records": "excluded_to_classifier_or_source_review",
+    "legacy_raw_exports": "excluded_as_source_input",
+    "local_source_payloads": "excluded_from_public_artifact",
+    "lookup_ready_records": "parsed_value_only",
+    "reviewer_observations": "observation_candidate_only_not_authority",
+    "supercombo": "enrichment_or_cross_reference_only"
+  }
+}
