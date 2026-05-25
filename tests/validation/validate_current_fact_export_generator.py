@@ -2,13 +2,17 @@ from __future__ import annotations
 
 import copy
 import json
+import re
 import sys
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
 from sf6_knowledge_coach.current_fact_export_generator import (
     CurrentFactExportGeneratorError,
+    build_current_fact_export_summary_markdown,
     build_current_fact_export,
+    build_production_current_fact_export,
     validate_current_fact_export_payload,
 )
 
@@ -21,9 +25,26 @@ PRODUCTION_ARTIFACT_DIRS = (
 )
 APPROVED_PRODUCTION_INPUT_ARTIFACTS = {
     "data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json",
+    "data/current-facts/20260525T000000Z-current-fact-export.json",
     "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json",
+    "docs/current-facts/20260525T000000Z-current-fact-export.md",
     "docs/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.md",
     "docs/current-facts/source-records/20260525T000000Z-current-fact-source-records.md",
+}
+PRODUCTION_SOURCE_RECORD_JSON = ROOT / "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json"
+PRODUCTION_EXPORT_JSON = ROOT / "data/current-facts/20260525T000000Z-current-fact-export.json"
+PRODUCTION_EXPORT_MD = ROOT / "docs/current-facts/20260525T000000Z-current-fact-export.md"
+PRODUCTION_SOURCE_RECORD_JSON_REF = "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json"
+EXPECTED_PRODUCTION_RUN_ID = "20260525T000000Z"
+EXPECTED_PRODUCTION_COUNT = 13
+EXPECTED_STATUS_COUNTS = {
+    "annotated_candidate_not_calculation_safe": 9,
+    "parsed_range_not_single_value_calculation_safe": 4,
+}
+EXPECTED_FIELD_COUNTS = {
+    "block_advantage": 5,
+    "hit_advantage": 4,
+    "startup": 4,
 }
 SIDECAR_FIELDS = {
     "raw_value_length",
@@ -35,6 +56,14 @@ SIDECAR_FIELDS = {
     "source_row_order",
     "source_value_key",
 }
+FORBIDDEN_PUBLIC_PATTERNS = [
+    re.compile(r"(?i)(?:^|[\s\"'`])(?:/[a-z0-9_.-]+)+"),
+    re.compile(r"(?i)(?:^|[\s\"'`(])[A-Z]:[\\/]"),
+    re.compile(r"(?i)\.local(?:/|\\)"),
+    re.compile(r"(?i)\b(?:cookie|authorization|bearer|token|password|secret)\b"),
+    re.compile(r"(?i)<html|</html|<!doctype|<table|</table|<tr|</tr|<td|</td|<th|</th"),
+    re.compile(r"(?i)\b(?:screenshot|chatgpt|vlm|trace|debug dump|answer[-_ ]?log|training[-_ ]?log|private[-_ ]?vault)\b"),
+]
 
 
 def main() -> int:
@@ -44,6 +73,7 @@ def main() -> int:
     _validate_invalid_fixture_rejections(errors)
     _validate_synthetic_export_boundary_mutations(valid_payloads, errors)
     _validate_no_production_artifacts(errors)
+    _validate_approved_production_export_artifacts(errors)
     return _finish(errors)
 
 
@@ -179,6 +209,90 @@ def _validate_no_production_artifacts(errors: list[str]) -> None:
         ]
         if unexpected:
             errors.append(f"fixture-contract generator must not create current-fact export artifacts: {unexpected}")
+
+
+def _validate_approved_production_export_artifacts(errors: list[str]) -> None:
+    if not PRODUCTION_SOURCE_RECORD_JSON.exists():
+        errors.append(f"Missing production source-record input: {PRODUCTION_SOURCE_RECORD_JSON.relative_to(ROOT)}")
+        return
+    if not PRODUCTION_EXPORT_JSON.exists():
+        errors.append(f"Missing approved production current-fact export JSON: {PRODUCTION_EXPORT_JSON.relative_to(ROOT)}")
+        return
+    if not PRODUCTION_EXPORT_MD.exists():
+        errors.append(f"Missing approved production current-fact export summary: {PRODUCTION_EXPORT_MD.relative_to(ROOT)}")
+        return
+
+    source_payload = json.loads(PRODUCTION_SOURCE_RECORD_JSON.read_text(encoding="utf-8"))
+    export_payload = json.loads(PRODUCTION_EXPORT_JSON.read_text(encoding="utf-8"))
+    expected_payload = build_production_current_fact_export(source_payload)
+    if export_payload != expected_payload:
+        errors.append("production current-fact export JSON must match deterministic generator output")
+
+    export_errors = validate_current_fact_export_payload(export_payload)
+    if export_errors:
+        errors.append(f"{PRODUCTION_EXPORT_JSON.relative_to(ROOT)} should be valid: {export_errors[0]}")
+        return
+    expected_markdown = build_current_fact_export_summary_markdown(export_payload)
+    if PRODUCTION_EXPORT_MD.read_text(encoding="utf-8") != expected_markdown:
+        errors.append("production current-fact export summary must match deterministic generator output")
+
+    _validate_production_export_payload(export_payload, source_payload, errors)
+    for path in (PRODUCTION_EXPORT_JSON, PRODUCTION_EXPORT_MD):
+        _scan_public_text(path, errors)
+
+
+def _validate_production_export_payload(
+    export_payload: dict[str, Any],
+    source_payload: dict[str, Any],
+    errors: list[str],
+) -> None:
+    if export_payload.get("artifact_schema_version") != "current_fact_export/v2":
+        errors.append("production export must use current_fact_export/v2")
+    if export_payload.get("run_id") != EXPECTED_PRODUCTION_RUN_ID:
+        errors.append(f"production export run_id must be {EXPECTED_PRODUCTION_RUN_ID}")
+    if export_payload.get("generated_from") != [PRODUCTION_SOURCE_RECORD_JSON_REF]:
+        errors.append("production export generated_from must point only to PR #367 source-record JSON")
+    records = export_payload.get("records", [])
+    source_records = source_payload.get("records", [])
+    if not isinstance(records, list) or not isinstance(source_records, list):
+        errors.append("production export and source-record records must be lists")
+        return
+    if len(records) != EXPECTED_PRODUCTION_COUNT:
+        errors.append(f"production export must contain {EXPECTED_PRODUCTION_COUNT} records")
+    status_counts = Counter(record.get("calculation_input_status") for record in records if isinstance(record, dict))
+    field_counts = Counter(record.get("field_key") for record in records if isinstance(record, dict))
+    if dict(sorted(status_counts.items())) != EXPECTED_STATUS_COUNTS:
+        errors.append("production export calculation status counts do not match approved source records")
+    if dict(sorted(field_counts.items())) != EXPECTED_FIELD_COUNTS:
+        errors.append("production export field counts do not match approved source records")
+
+    source_current_facts = [
+        record.get("current_fact_record")
+        for record in source_records
+        if isinstance(record, dict)
+    ]
+    if sorted(records, key=lambda record: record.get("record_id", "")) != sorted(
+        source_current_facts,
+        key=lambda record: record.get("record_id", "") if isinstance(record, dict) else "",
+    ):
+        errors.append("production export records must exactly match source-record current_fact_record payloads")
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            errors.append(f"records[{index}] must be an object")
+            continue
+        leaked = sorted(SIDECAR_FIELDS & set(record))
+        if leaked:
+            errors.append(f"records[{index}] leaked source-record sidecar fields: {leaked}")
+        if record.get("source_name") != "official" or record.get("authority_status") != "authority_candidate":
+            errors.append(f"records[{index}] must remain official authority_candidate")
+
+
+def _scan_public_text(path: Path, errors: list[str]) -> None:
+    text = path.read_text(encoding="utf-8")
+    for pattern in FORBIDDEN_PUBLIC_PATTERNS:
+        if pattern.search(text):
+            errors.append(f"{path.relative_to(ROOT)} contains forbidden public content")
+            break
 
 
 def _finish(errors: list[str]) -> int:

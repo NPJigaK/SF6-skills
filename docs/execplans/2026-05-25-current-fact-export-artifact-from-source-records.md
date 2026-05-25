@@ -1,6 +1,6 @@
 # Current-Fact Export Artifact From Source Records
 
-Status: Drafted for review; validation passed.
+Status: Implementation complete; validation passed; mandatory review pending.
 
 ## Purpose
 
@@ -329,6 +329,13 @@ git status --short --branch
 - 2026-05-25: Drafted plan after PR #367 merged. No implementation or
   production current-fact export artifact generated yet.
 - 2026-05-26: Ran plan-only validation. All checks passed.
+- 2026-05-26: Added a production export helper path that uses the PR #367
+  source-record JSON as the only `generated_from` input boundary.
+- 2026-05-26: Generated the production `current_fact_export/v2` JSON and
+  summary Markdown artifacts from the PR #367 source-record JSON.
+- 2026-05-26: Updated focused tests, export validator, and validator audit
+  artifacts for the production export artifact boundary.
+- 2026-05-26: Ran implementation validation. All checks passed.
 
 ## Decision Log
 
@@ -340,6 +347,11 @@ git status --short --branch
   not the candidate artifacts that originally fed the source-record artifact.
 - 2026-05-25: Runtime lookup transition, answer behavior, and legacy raw export
   retirement remain out of scope.
+- 2026-05-26: The existing fixture-contract helper keeps its fixture behavior,
+  while the production helper overrides `generated_from` to the PR #367
+  source-record JSON only.
+- 2026-05-26: The production export summary is generated from the committed
+  production export JSON and remains summary-safe.
 
 ## Deviations
 
@@ -360,30 +372,35 @@ git status --short --branch
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Production current-fact export artifact plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-export-artifact-from-source-records.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
-| Input boundary | Plan restricts input to PR #367 source-record JSON | Same | `validate_current_fact_source_records.py` | Pass | None | Mandatory review pending | Export generation remains unimplemented |
-| Runtime/export boundary | Plan excludes runtime lookup and answer behavior changes | Same | current-fact validators | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
+| Production current-fact export artifact plan | Implementation progress, decisions, and review prompt updated | `docs/execplans/2026-05-25-current-fact-export-artifact-from-source-records.md` | `git diff --check`; `uv lock --check` | Pass | None | None | Runtime remains legacy raw export backed |
+| Production export helper | Source-record payload to `current_fact_export/v2`; production path uses source-record JSON only | `src/sf6_knowledge_coach/current_fact_export_generator.py`; `tests/test_current_fact_export_generator.py` | `python -m unittest discover -s tests` | Pass | None | None | Helper does not switch runtime lookup |
+| Production export artifact | 13 current-fact export records generated from PR #367 source-record JSON | `data/current-facts/20260525T000000Z-current-fact-export.json`; `docs/current-facts/20260525T000000Z-current-fact-export.md` | `validate_current_fact_export_generator.py` | Pass | None | None | All 13 records remain non-scalar and not calculation-safe |
+| Input boundary | Export validator checks committed JSON/MD against deterministic helper output from source-record JSON | `tests/validation/validate_current_fact_export_generator.py` | `validate_current_fact_export_generator.py`; `validate_current_fact_source_records.py` | Pass | None | None | Runtime remains legacy raw export backed |
+| Validator audit | Audit records updated helper test and export validator evidence boundaries | `data/validator-audits/20260523-validator-test-fact-source-audit.json`; `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `validate_validator_test_audit.py` | Pass | None | None | Audit remains evidence-boundary metadata only |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-export-artifact-from-source-records.md.
+Review PR #368 implementation for production current-fact export artifact from source records.
 
 Check:
-- PR diff initially contains exactly one ExecPlan file.
-- Plan uses only
+- PR diff contains only approved implementation files.
+- Implementation uses only
   data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json
   as production input.
-- Planned output is current_fact_export/v2 under data/current-facts/ with a
+- Output is current_fact_export/v2 under data/current-facts/ with a
   summary under docs/current-facts/.
-- Plan does not use legacy data/exports/*/official_raw.json.
-- Plan does not use candidate artifacts, .local, raw HTML, full rows,
+- Committed production export JSON and Markdown match deterministic generator
+  output.
+- Implementation does not use legacy data/exports/*/official_raw.json.
+- Implementation does not use candidate artifacts, .local, raw HTML, full rows,
   screenshots, VLM output, or private data as authority.
-- Plan includes no runtime lookup change, current_facts.py change,
+- Implementation includes no runtime lookup change, current_facts.py change,
   answering.py change, parser/classifier behavior change, retrieval, answer,
   calculator, SymPy, source acquisition, or live acquisition.
-- Planned production current-fact export artifact is exactly 13 records from
-  PR #367 source-record input.
+- Production current-fact export artifact is exactly 13 records from PR #367
+  source-record input.
+- `generated_from` points only to the PR #367 source-record JSON.
 - Source-record sidecar fields do not leak into export records.
 - annotated_numeric_candidate and frame_range remain non-scalar and not
   calculation-safe.
@@ -396,7 +413,10 @@ Run:
 - git status --short --branch
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
+- git diff --cached --check
 - uv lock --check
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
+- for f in tests/validation/validate_*.py; do PYTHONPATH=src uv run --locked python "$f" || exit $?; done
 - PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
@@ -406,5 +426,5 @@ Run:
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
 Return blocking findings first, validation results, PLAN deviations, remaining
-risks, and whether docs-only plan is approved for same-PR implementation.
+risks, and whether PR #368 is ready to mark ready and merge.
 ```

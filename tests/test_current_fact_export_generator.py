@@ -8,12 +8,16 @@ from pathlib import Path
 from sf6_knowledge_coach.current_fact_export_generator import (
     CurrentFactExportGeneratorError,
     build_current_fact_export,
+    build_current_fact_export_summary_markdown,
+    build_production_current_fact_export,
     validate_current_fact_export_payload,
 )
 
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_RECORD_FIXTURE_DIR = ROOT / "tests/fixtures/current-facts/source-records"
+PRODUCTION_SOURCE_RECORD_JSON = ROOT / "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json"
+PRODUCTION_SOURCE_RECORD_JSON_REF = "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json"
 SOURCE_RECORD_ONLY_FIELDS = {
     "raw_value_length",
     "raw_value_sha256",
@@ -137,6 +141,46 @@ class CurrentFactExportGeneratorTests(unittest.TestCase):
         errors = validate_current_fact_export_payload(export_payload)
 
         self.assertTrue(any("data/exports" in error for error in errors))
+
+    def test_production_export_uses_source_record_json_input_boundary(self) -> None:
+        source_payload = _fixture(PRODUCTION_SOURCE_RECORD_JSON)
+
+        export_payload = build_production_current_fact_export(source_payload)
+
+        self.assertEqual(export_payload["artifact_schema_version"], "current_fact_export/v2")
+        self.assertEqual(export_payload["run_id"], "20260525T000000Z")
+        self.assertEqual(export_payload["generated_from"], [PRODUCTION_SOURCE_RECORD_JSON_REF])
+        self.assertEqual(len(export_payload["records"]), 13)
+        self.assertEqual(validate_current_fact_export_payload(export_payload), [])
+
+    def test_production_export_keeps_non_scalar_values_wrapped(self) -> None:
+        source_payload = _fixture(PRODUCTION_SOURCE_RECORD_JSON)
+        export_payload = build_production_current_fact_export(source_payload)
+
+        statuses = {record["calculation_input_status"] for record in export_payload["records"]}
+        kinds = {record["parsed_value"]["kind"] for record in export_payload["records"]}
+
+        self.assertEqual(
+            statuses,
+            {
+                "annotated_candidate_not_calculation_safe",
+                "parsed_range_not_single_value_calculation_safe",
+            },
+        )
+        self.assertEqual(kinds, {"annotated_numeric_candidate", "frame_range"})
+        for record in export_payload["records"]:
+            self.assertFalse(SOURCE_RECORD_ONLY_FIELDS & set(record))
+
+    def test_export_summary_is_boundary_only(self) -> None:
+        source_payload = _fixture(PRODUCTION_SOURCE_RECORD_JSON)
+        export_payload = build_production_current_fact_export(source_payload)
+
+        markdown = build_current_fact_export_summary_markdown(export_payload)
+
+        self.assertIn("Total records: `13`", markdown)
+        self.assertIn(PRODUCTION_SOURCE_RECORD_JSON_REF, markdown)
+        self.assertNotIn(".local", markdown)
+        self.assertNotIn("data/exports/", markdown)
 
 
 if __name__ == "__main__":

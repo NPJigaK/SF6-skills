@@ -4,6 +4,7 @@ import copy
 import hashlib
 import json
 import re
+from collections import Counter
 from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
@@ -67,13 +68,20 @@ FORBIDDEN_TEXT_PATTERNS = (
     re.compile(r"(?i)\b(?:cookie|authorization|bearer|token|password|secret)\b"),
     re.compile(r"(?i)\b(?:screenshot|chatgpt|vlm|trace|debug dump|answer[-_ ]?log|training[-_ ]?log|private[-_ ]?vault)\b"),
 )
+PRODUCTION_SOURCE_RECORD_JSON_PATH = "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json"
+PRODUCTION_EXPORT_JSON_PATH = "data/current-facts/20260525T000000Z-current-fact-export.json"
+PRODUCTION_EXPORT_MD_PATH = "docs/current-facts/20260525T000000Z-current-fact-export.md"
 
 
 class CurrentFactExportGeneratorError(ValueError):
     """Raised when source-record input cannot build a valid current-fact export."""
 
 
-def build_current_fact_export(source_record_payload: Mapping[str, Any]) -> dict[str, Any]:
+def build_current_fact_export(
+    source_record_payload: Mapping[str, Any],
+    *,
+    generated_from: list[str] | None = None,
+) -> dict[str, Any]:
     errors = validate_source_record_payload(source_record_payload)
     if errors:
         raise CurrentFactExportGeneratorError(_format_errors("invalid source-record input", errors))
@@ -85,7 +93,7 @@ def build_current_fact_export(source_record_payload: Mapping[str, Any]) -> dict[
     export_payload = {
         "artifact_schema_version": "current_fact_export/v2",
         "authority_boundary": copy.deepcopy(source_record_payload["authority_boundary"]),
-        "generated_from": sorted(source_record_payload["generated_from"]),
+        "generated_from": sorted(generated_from if generated_from is not None else source_record_payload["generated_from"]),
         "records": sorted(records, key=_record_sort_key),
         "run_id": source_record_payload["run_id"],
     }
@@ -94,6 +102,63 @@ def build_current_fact_export(source_record_payload: Mapping[str, Any]) -> dict[
     if export_errors:
         raise CurrentFactExportGeneratorError(_format_errors("invalid generated current-fact export", export_errors))
     return export_payload
+
+
+def build_production_current_fact_export(source_record_payload: Mapping[str, Any]) -> dict[str, Any]:
+    return build_current_fact_export(
+        source_record_payload,
+        generated_from=[PRODUCTION_SOURCE_RECORD_JSON_PATH],
+    )
+
+
+def build_current_fact_export_summary_markdown(export_payload: Mapping[str, Any]) -> str:
+    records = export_payload.get("records", [])
+    if not isinstance(records, list):
+        raise CurrentFactExportGeneratorError("export payload records must be a list")
+    status_counts = Counter(
+        record.get("calculation_input_status")
+        for record in records
+        if isinstance(record, Mapping)
+    )
+    field_counts = Counter(
+        record.get("field_key")
+        for record in records
+        if isinstance(record, Mapping)
+    )
+    return "\n".join(
+        [
+            "# Current-Fact Export",
+            "",
+            f"- JSON artifact: `{PRODUCTION_EXPORT_JSON_PATH}`",
+            f"- Run ID: `{export_payload.get('run_id')}`",
+            f"- Source-record input: `{PRODUCTION_SOURCE_RECORD_JSON_PATH}`",
+            f"- Total records: `{len(records)}`",
+            "- Export boundary: source-record sidecar fields are excluded.",
+            "- Calculation boundary: non-scalar values remain not calculation-safe.",
+            "- Authority boundary: official values remain authority candidates only.",
+            "- Runtime lookup and answer behavior are unchanged.",
+            "",
+            "## Counts",
+            "",
+            "| Dimension | Value | Count |",
+            "| --- | --- | --- |",
+            *[
+                f"| calculation_input_status | `{status}` | {count} |"
+                for status, count in sorted(status_counts.items())
+            ],
+            *[
+                f"| field_key | `{field}` | {count} |"
+                for field, count in sorted(field_counts.items())
+            ],
+            "",
+            "## Boundaries",
+            "",
+            "- No runtime current-fact lookup switch is included.",
+            "- `annotated_numeric_candidate` and `frame_range` must not be flattened into scalar values.",
+            "- Legacy raw exports, ignored local artifacts, raw source payloads, reviewer observations, and private data are excluded as authority.",
+            "",
+        ]
+    )
 
 
 def validate_source_record_payload(source_record_payload: Mapping[str, Any]) -> list[str]:

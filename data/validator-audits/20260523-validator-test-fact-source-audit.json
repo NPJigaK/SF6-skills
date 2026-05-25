@@ -50,16 +50,18 @@
       "status": "accepted_with_limits"
     },
     {
-      "evidence_class": "synthetic_contract",
+      "evidence_class": "artifact_consistency",
       "file": "tests/test_current_fact_export_generator.py",
       "limitations": [
-        "uses source-record synthetic fixtures; does not generate production exports or prove source truth"
+        "uses source-record synthetic fixtures and approved production source-record input; checks deterministic export transform only and does not prove source truth or runtime behavior"
       ],
       "primary_evidence": [
         "contracts/current-facts/current_fact_export.schema.json",
         "contracts/current-facts/current_fact_source_record_input.schema.json",
+        "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json",
         "tests/fixtures/current-facts/source-records",
-        "current-fact export generator fixture-contract implementation ExecPlan"
+        "current-fact export generator fixture-contract implementation ExecPlan",
+        "current-fact export artifact from source records ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
@@ -157,15 +159,18 @@
       "evidence_class": "artifact_consistency",
       "file": "tests/validation/validate_current_fact_export_generator.py",
       "limitations": [
-        "checks fixture-contract generator output, guard boundaries, and absence of production current-fact export artifacts; approved candidate/source-record inputs are not export artifacts"
+        "checks fixture-contract generator output, guard boundaries, and approved production current-fact export consistency with reviewed source-record input; does not prove source truth or runtime behavior"
       ],
       "primary_evidence": [
         "contracts/current-facts/current_fact_export.schema.json",
         "contracts/current-facts/current_fact_source_record_input.schema.json",
+        "data/current-facts/20260525T000000Z-current-fact-export.json",
+        "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json",
         "tests/fixtures/current-facts/source-records",
         "current-fact export generator fixture-contract implementation ExecPlan",
         "current-fact production candidate artifact ExecPlan",
-        "current-fact source-record artifact from candidates ExecPlan"
+        "current-fact source-record artifact from candidates ExecPlan",
+        "current-fact export artifact from source records ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
