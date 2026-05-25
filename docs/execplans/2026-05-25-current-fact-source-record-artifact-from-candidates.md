@@ -1,6 +1,6 @@
 # Current-Fact Source-Record Artifact From Candidates
 
-Status: Drafted for review; validation passed.
+Status: Plan amended for review; implementation paused.
 
 ## Purpose
 
@@ -251,7 +251,12 @@ Required validator behavior:
 - `validate_current_fact_export_generator.py` must continue rejecting
   production current-fact export artifacts, but must not reject the approved
   source-record input artifact.
-- `validate_current_fact_row_move_cell_candidates.py` must continue passing.
+- `validate_current_fact_row_move_cell_candidates.py` must continue validating
+  the approved candidate artifact and its `candidate-inputs/` boundary. It may
+  be narrowly updated to allow the approved source-record artifact to coexist
+  under `data/current-facts/source-records/` and
+  `docs/current-facts/source-records/`; source-record artifact semantics remain
+  the responsibility of `validate_current_fact_source_records.py`.
 - `validate_validator_test_audit.py` must cover any new or modified
   test/validator boundaries.
 
@@ -300,6 +305,8 @@ Future implementation commits in the same draft PR may change only:
 - `tests/test_current_fact_source_record_generator.py` if helper is added
 - `tests/validation/validate_current_fact_source_records.py`
 - `tests/validation/validate_current_fact_export_generator.py` if needed
+- `tests/validation/validate_current_fact_row_move_cell_candidates.py` only
+  for approved source-record artifact coexistence compatibility
 - `data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json`
 - `docs/current-facts/source-records/20260525T000000Z-current-fact-source-records.md`
 - validator audit JSON/MD if tests or validators change
@@ -341,6 +348,16 @@ git status --short --branch
 - 2026-05-25: Drafted plan after PR #366 merged. No implementation or
   production source-record artifact generated yet.
 - 2026-05-25: Ran plan-only validation. All checks passed.
+- 2026-05-26: During local implementation, full validation exposed that
+  `validate_current_fact_row_move_cell_candidates.py` treats the new approved
+  source-record artifacts as unexpected production artifacts. That validator
+  was not in this plan's approved implementation file list, so implementation
+  was paused.
+- 2026-05-26: Amended the plan to allow a narrow
+  `validate_current_fact_row_move_cell_candidates.py` compatibility update.
+  The candidate validator's responsibility remains candidate artifact
+  validation; source-record artifact validation remains in
+  `validate_current_fact_source_records.py`.
 
 ## Decision Log
 
@@ -353,6 +370,20 @@ git status --short --branch
 - 2026-05-25: Source-record `run_id` will use the schema-valid candidate run
   ID `20260525T000000Z`; PR #365's `20260525` remains only a source-review
   evidence reference.
+- 2026-05-26: Source-record IDs and current-fact record IDs are derived by
+  replacing the candidate prefix with `source-record:` and `current-fact:`;
+  no source facts or value semantics are inferred.
+- 2026-05-26: The committed production source-record JSON must match the
+  deterministic generator output from the PR #366 candidate artifact.
+- 2026-05-26: `validate_current_fact_export_generator.py` may allow the
+  approved candidate/source-record input artifacts under `data/current-facts`
+  and `docs/current-facts`, but still rejects production current-fact export
+  artifacts.
+- 2026-05-26: `validate_current_fact_row_move_cell_candidates.py` also needs a
+  narrow compatibility update to continue validating candidate artifacts while
+  allowing the approved source-record artifacts. This file was not listed in
+  the approved implementation file set and therefore requires amendment before
+  editing.
 
 ## Deviations
 
@@ -372,31 +403,37 @@ git status --short --branch
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Production source-record artifact plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-source-record-artifact-from-candidates.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Source-record generation remains unimplemented |
-| Input boundary | Plan restricts input to PR #366 candidate artifact | Same | `validate_current_fact_row_move_cell_candidates.py` | Pass | None | Mandatory review pending | Candidate-to-source-record generation remains unimplemented |
-| Runtime/export boundary | No current-fact export or runtime changes | Same | current-fact validators | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
+| Production source-record artifact plan | Amended plan only | `docs/execplans/2026-05-25-current-fact-source-record-artifact-from-candidates.md` | `git diff --check`; `uv lock --check` | Pass | None | Amendment review pending | Runtime remains legacy raw export backed |
+| Candidate validator compatibility | Planned narrow coexistence update for approved source-record artifacts | Same | `validate_current_fact_row_move_cell_candidates.py` after implementation | Pending | None | Amendment review pending | Candidate validator must not validate source-record semantics |
+| Runtime/export boundary | Plan still excludes current-fact export and runtime changes | Same | current-fact validators | Pending | None | Implementation paused | Production current-fact export remains blocked |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-source-record-artifact-from-candidates.md.
+Review PR #367 ExecPlan amendment for current-fact source-record artifact from candidates.
 
 Check:
-- PR diff initially contains exactly one ExecPlan file.
-- Plan uses PR #366 production candidate artifact as the input boundary.
-- Plan does not use legacy data/exports/*/official_raw.json.
-- Plan does not use .local, raw HTML, full rows, screenshots, VLM output, or
-  private data as authority.
-- Plan generates no current-fact export artifact, runtime lookup change,
-  parser/classifier behavior change, retrieval, answer, calculator, SymPy,
-  source acquisition, or live acquisition.
-- Planned production source-record artifact is exactly 13 records from PR #366
+- PR diff for this amendment contains only the ExecPlan file.
+- Approved implementation file list now includes
+  `tests/validation/validate_current_fact_row_move_cell_candidates.py` only for
+  approved source-record artifact coexistence compatibility.
+- Candidate validator responsibility remains limited to candidate artifact and
+  `candidate-inputs/` boundary validation.
+- Source-record artifact semantics remain assigned to
+  `validate_current_fact_source_records.py`.
+- Unexpected current-fact export/artifact blocking remains in
+  `validate_current_fact_export_generator.py` and source-record validator
+  boundaries.
+- No legacy data/exports/*/official_raw.json is allowed.
+- No .local, raw HTML, full rows, screenshots, VLM output, or private data is
+  allowed as authority.
+- No current-fact export artifact, runtime lookup change, parser/classifier
+  behavior change, retrieval, answer, calculator, SymPy, source acquisition, or
+  live acquisition is planned.
+- Planned source-record artifact remains exactly 13 records from PR #366
   candidate input.
-- Source-record artifact top-level run_id is schema-valid `20260525T000000Z`;
-  PR #365's `20260525` evidence ID is retained only in references.
-- annotated_numeric_candidate and frame_range remain non-scalar and not
+- `annotated_numeric_candidate` and `frame_range` remain non-scalar and not
   calculation-safe.
-- validator boundary changes are explicitly planned.
 - Issue #343 double-check gate remains required for future raw-value
   expansion.
 
@@ -414,5 +451,6 @@ Run:
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
 Return blocking findings first, validation results, PLAN deviations, remaining
-risks, and whether docs-only plan is approved for same-PR implementation.
+risks, and whether the amended plan is approved for same-PR implementation
+continuation.
 ```
