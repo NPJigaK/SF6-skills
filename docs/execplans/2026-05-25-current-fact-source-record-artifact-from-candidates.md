@@ -1,6 +1,6 @@
 # Current-Fact Source-Record Artifact From Candidates
 
-Status: Plan amended for review; implementation paused.
+Status: Implementation complete; validation passed; mandatory review pending.
 
 ## Purpose
 
@@ -358,6 +358,11 @@ git status --short --branch
   The candidate validator's responsibility remains candidate artifact
   validation; source-record artifact validation remains in
   `validate_current_fact_source_records.py`.
+- 2026-05-26: Implemented the deterministic source-record generator helper,
+  focused unit tests, production source-record JSON/Markdown artifacts, source
+  record validator checks, export-generator coexistence guard, candidate
+  validator coexistence compatibility, and validator audit updates.
+- 2026-05-26: Ran implementation validation. All checks passed.
 
 ## Decision Log
 
@@ -384,6 +389,11 @@ git status --short --branch
   allowing the approved source-record artifacts. This file was not listed in
   the approved implementation file set and therefore requires amendment before
   editing.
+- 2026-05-26: The candidate validator coexistence update is limited to scanning
+  `data/current-facts/candidate-inputs/` and
+  `docs/current-facts/candidate-inputs/` for approved candidate artifacts.
+  Source-record artifact validation remains exclusively in
+  `validate_current_fact_source_records.py`.
 
 ## Deviations
 
@@ -403,37 +413,44 @@ git status --short --branch
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Production source-record artifact plan | Amended plan only | `docs/execplans/2026-05-25-current-fact-source-record-artifact-from-candidates.md` | `git diff --check`; `uv lock --check` | Pass | None | Amendment review pending | Runtime remains legacy raw export backed |
-| Candidate validator compatibility | Planned narrow coexistence update for approved source-record artifacts | Same | `validate_current_fact_row_move_cell_candidates.py` after implementation | Pending | None | Amendment review pending | Candidate validator must not validate source-record semantics |
-| Runtime/export boundary | Plan still excludes current-fact export and runtime changes | Same | current-fact validators | Pending | None | Implementation paused | Production current-fact export remains blocked |
+| Production source-record artifact plan | Implementation progress, decisions, and review prompt updated | `docs/execplans/2026-05-25-current-fact-source-record-artifact-from-candidates.md` | `git diff --check`; `uv lock --check` | Pass | None | None | Runtime remains legacy raw export backed |
+| Deterministic source-record helper | Candidate artifact to source-record artifact shape transform only | `src/sf6_knowledge_coach/current_fact_source_record_generator.py`; `tests/test_current_fact_source_record_generator.py` | `python -m unittest discover -s tests` | Pass | None | None | Helper does not prove source truth |
+| Production source-record artifact | 13 source records generated from PR #366 candidate artifact | `data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json`; `docs/current-facts/source-records/20260525T000000Z-current-fact-source-records.md` | `validate_current_fact_source_records.py` | Pass | None | None | All 13 records remain non-scalar and not calculation-safe |
+| Candidate validator compatibility | Candidate validator scans candidate-inputs directories only; source-record semantics remain elsewhere | `tests/validation/validate_current_fact_row_move_cell_candidates.py` | `validate_current_fact_row_move_cell_candidates.py` | Pass | None | None | Candidate validator must not validate source-record semantics |
+| Runtime/export boundary | Export-generator validator allows approved input artifacts but no current-fact export artifact | `tests/validation/validate_current_fact_export_generator.py` | `validate_current_fact_export_generator.py` | Pass | None | None | Production current-fact export remains blocked |
+| Validator audit | Audit records new helper test and updated validator evidence boundaries | `data/validator-audits/20260523-validator-test-fact-source-audit.json`; `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `validate_validator_test_audit.py` | Pass | None | None | Audit remains evidence-boundary metadata only |
 
 ## Next Reviewer Prompt
 
 ```text
-Review PR #367 ExecPlan amendment for current-fact source-record artifact from candidates.
+Review PR #367 implementation for current-fact source-record artifact from candidates.
 
 Check:
-- PR diff for this amendment contains only the ExecPlan file.
-- Approved implementation file list now includes
-  `tests/validation/validate_current_fact_row_move_cell_candidates.py` only for
-  approved source-record artifact coexistence compatibility.
+- PR diff contains only approved implementation files.
+- Source-record artifact uses PR #366 production candidate artifact as the
+  input boundary.
+- Source-record generator output and committed JSON match.
+- `tests/validation/validate_current_fact_row_move_cell_candidates.py` changes
+  are limited to approved source-record artifact coexistence compatibility.
 - Candidate validator responsibility remains limited to candidate artifact and
   `candidate-inputs/` boundary validation.
 - Source-record artifact semantics remain assigned to
   `validate_current_fact_source_records.py`.
-- Unexpected current-fact export/artifact blocking remains in
-  `validate_current_fact_export_generator.py` and source-record validator
-  boundaries.
-- No legacy data/exports/*/official_raw.json is allowed.
+- No legacy data/exports/*/official_raw.json is used.
 - No .local, raw HTML, full rows, screenshots, VLM output, or private data is
-  allowed as authority.
+  used as authority.
 - No current-fact export artifact, runtime lookup change, parser/classifier
   behavior change, retrieval, answer, calculator, SymPy, source acquisition, or
-  live acquisition is planned.
-- Planned source-record artifact remains exactly 13 records from PR #366
+  live acquisition is included.
+- Production source-record artifact has exactly 13 records from PR #366
   candidate input.
+- Source-record artifact top-level run_id is schema-valid `20260525T000000Z`;
+  PR #365's `20260525` evidence ID is retained only in references.
 - `annotated_numeric_candidate` and `frame_range` remain non-scalar and not
   calculation-safe.
+- Official records remain `authority_candidate`.
+- Validator boundary changes are evidence-first and audit entries match the
+  new helper/validator scope.
 - Issue #343 double-check gate remains required for future raw-value
   expansion.
 
@@ -441,7 +458,10 @@ Run:
 - git status --short --branch
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
+- git diff --cached --check
 - uv lock --check
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
+- for f in tests/validation/validate_*.py; do PYTHONPATH=src uv run --locked python "$f" || exit $?; done
 - PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
@@ -451,6 +471,5 @@ Run:
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
 Return blocking findings first, validation results, PLAN deviations, remaining
-risks, and whether the amended plan is approved for same-PR implementation
-continuation.
+risks, and whether PR #367 is ready to mark ready and merge.
 ```
