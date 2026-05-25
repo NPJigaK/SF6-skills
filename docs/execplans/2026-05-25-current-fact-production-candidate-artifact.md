@@ -1,6 +1,6 @@
 # Current-Fact Production Candidate Artifact
 
-Status: Drafted for review; validation passed.
+Status: Drafted for review; run_id schema amendment pending review; validation passed.
 
 ## Purpose
 
@@ -101,16 +101,22 @@ Excluded:
 
 Planned production candidate JSON:
 
-- `data/current-facts/candidate-inputs/20260525-row-move-cell-candidates.json`
+- `data/current-facts/candidate-inputs/<candidate_run_id>-row-move-cell-candidates.json`
 
 Planned summary Markdown:
 
-- `docs/current-facts/candidate-inputs/20260525-row-move-cell-candidates.md`
+- `docs/current-facts/candidate-inputs/<candidate_run_id>-row-move-cell-candidates.md`
 
-The artifact `run_id` should be `20260525`, matching the reviewed evidence
-artifact run. Records must keep source references to the `20260521T025403Z`
-acquisition and classifier run through `generated_from`, `coverage_refs`,
-`source_review_refs`, `acquisition_report_refs`, and `evidence`.
+`<candidate_run_id>` is the production candidate artifact run ID and must match
+the schema-required UTC timestamp format `YYYYMMDDTHHMMSSZ`. The JSON
+top-level `run_id` must exactly match `<candidate_run_id>`.
+
+Do not reuse the PR #365 evidence artifact's date-only `20260525` identifier as
+the candidate artifact `run_id`. Keep the PR #365 evidence artifact identity in
+`generated_from`, `source_review_refs`, and `evidence`; keep source references
+to the `20260521T025403Z` acquisition and classifier run through
+`generated_from`, `coverage_refs`, `source_review_refs`,
+`acquisition_report_refs`, and `evidence`.
 
 ## Allowed Source Inputs
 
@@ -276,6 +282,8 @@ double-check gate first.
   same draft PR.
 - Production candidate artifact is generated only from PR #365 reviewed public
   evidence.
+- Production candidate artifact top-level `run_id` is a schema-valid
+  `YYYYMMDDTHHMMSSZ` timestamp, not the PR #365 date-only evidence identifier.
 - Production candidate artifact has exactly 13 records.
 - No production source-record or current-fact export artifact is generated.
 - No runtime lookup, parser/classifier behavior, retrieval, answer,
@@ -304,8 +312,8 @@ Future implementation commits in the same draft PR may change only:
 - `contracts/current-facts/source_reference.schema.json` only for
   `source_review_summary` evidence basis if needed
 - current-fact schema fixtures only if a schema enum change requires them
-- `data/current-facts/candidate-inputs/20260525-row-move-cell-candidates.json`
-- `docs/current-facts/candidate-inputs/20260525-row-move-cell-candidates.md`
+- `data/current-facts/candidate-inputs/<candidate_run_id>-row-move-cell-candidates.json`
+- `docs/current-facts/candidate-inputs/<candidate_run_id>-row-move-cell-candidates.md`
 - validator audit JSON/MD if tests or validators change
 
 Any additional file requires ExecPlan amendment and mandatory review before
@@ -346,6 +354,9 @@ git status --short --branch
 - 2026-05-25: Drafted plan after PR #365 merged. No implementation or
   production candidate artifact generated yet.
 - 2026-05-25: Ran plan-only validation. All checks passed.
+- 2026-05-25: Amended candidate artifact path and top-level `run_id` plan to
+  use schema-valid `YYYYMMDDTHHMMSSZ` timestamps while retaining PR #365
+  `20260525` only as a source-review evidence reference.
 
 ## Decision Log
 
@@ -358,6 +369,8 @@ git status --short --branch
   if a source-review evidence basis is needed.
 - 2026-05-25: Plan-only validation passed without implementation or generated
   candidate artifact changes.
+- 2026-05-25: Candidate artifact `run_id` must be a schema-valid timestamp and
+  must not reuse PR #365's date-only source-review evidence identifier.
 
 ## Deviations
 
@@ -381,6 +394,7 @@ git status --short --branch
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Production candidate artifact plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-production-candidate-artifact.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory plan review pending | Schema enum may be needed later |
 | Input boundary | Plan restricts input to PR #365 public evidence | Same | `validate_current_fact_candidate_evidence.py` | Pass | None | Mandatory plan review pending | Candidate generation remains unimplemented |
+| Candidate run ID | Plan requires schema-valid timestamp `run_id` and keeps PR #365 `20260525` as evidence reference only | Same | `validate_current_fact_schemas.py` | Pass | None | Mandatory plan review pending | Implementation must choose one stable timestamp for JSON and Markdown paths |
 | Runtime/export boundary | No runtime/source-record/export changes | Same | current-fact validators | Pass | None | Mandatory plan review pending | Runtime remains legacy raw export backed |
 
 ## Next Reviewer Prompt
@@ -399,6 +413,9 @@ Check:
   calculator, SymPy, source acquisition, or live acquisition.
 - Planned production candidate artifact is exactly 13 records from PR #365
   evidence.
+- Candidate artifact JSON top-level `run_id` and artifact filename use a
+  schema-valid `YYYYMMDDTHHMMSSZ` candidate run ID; PR #365's `20260525`
+  evidence ID is retained only in references.
 - annotated_numeric_candidate and frame_range remain non-scalar and not
   calculation-safe.
 - validator boundary changes are explicitly planned.
