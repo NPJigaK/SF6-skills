@@ -1,15 +1,16 @@
 # Current-Fact Export Generator Fixture-Contract Implementation
 
-Status: Drafted for review; validation passed.
+Status: Implemented; validation passed.
 
 ## Purpose
 
 Plan the first deterministic current-fact export generator implementation
 slice as fixture-contract only.
 
-This plan implements generator behavior against reviewed synthetic
-source-record input fixtures and current-fact schemas. It must not create a
-production source-record artifact, a production current-fact export artifact,
+The original planning PR was docs-only. This implementation follow-up adds
+the fixture-contract generator helper, focused tests, focused validator,
+validator audit updates, and this ExecPlan progress update. It does not create
+a production source-record artifact, a production current-fact export artifact,
 or any runtime lookup behavior.
 
 ## Inputs
@@ -306,20 +307,23 @@ Before any production artifact PR:
 
 ## Files / Interfaces
 
-This docs-only plan changes only:
+The original docs-only plan changed only:
 
 - `docs/execplans/2026-05-25-current-fact-export-generator-fixture-contract-implementation.md`
 
-Future implementation may touch, after review:
+This fixture-contract implementation touches only:
 
 - `src/sf6_knowledge_coach/current_fact_export_generator.py`;
-- focused unit tests under `tests/`;
+- `tests/test_current_fact_export_generator.py`;
 - `tests/validation/validate_current_fact_export_generator.py`;
-- optional synthetic generator fixtures under `tests/fixtures/current-facts/`;
-- validator audit artifacts if new tests/validators require audit entries;
+- validator audit artifacts;
 - this ExecPlan progress/completion table.
 
-Future implementation must not touch:
+Future implementation may touch, after review:
+
+- optional synthetic generator fixtures under `tests/fixtures/current-facts/`.
+
+This implementation must not touch:
 
 - `data/current-facts/` production artifacts;
 - `docs/current-facts/` production summaries;
@@ -335,12 +339,16 @@ Run from repository root:
 
 ```bash
 git diff --check
+git diff --cached --check
 uv lock --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 git status --short --branch
 ```
 
@@ -362,7 +370,37 @@ git status --short --branch
   `uv lock --check`, clean-slate validator, current-fact schema validator,
   current-fact source-record validator, current-fact consumer guard validator,
   parsed-value classifier validator, and `git status --short --branch`.
-- [ ] Complete mandatory review.
+- [x] (2026-05-25 JST) PR #358 mandatory review passed and was merged with
+  normal merge commit `323b56c3952ed39b9cea038b66689fce10701e58`.
+- [x] (2026-05-25 JST) Local `main` was fast-forwarded to `origin/main` at
+  `323b56c3952ed39b9cea038b66689fce10701e58`; main CI passed in run
+  `26378555283`.
+- [x] (2026-05-25 JST) Created branch
+  `impl/current-fact-export-generator-fixture-contract`.
+- [x] (2026-05-25 JST) Added
+  `src/sf6_knowledge_coach/current_fact_export_generator.py` with in-memory
+  source-record input validation, deterministic transformation to
+  `current_fact_export/v2`, output validation, guard checks, authority checks,
+  and public source-boundary checks.
+- [x] (2026-05-25 JST) Added focused unit tests for minimal export
+  generation, sidecar field stripping, non-scalar wrapper preservation,
+  deterministic ordering, invalid fixture rejection, flattened annotated
+  candidate rejection, collapsed frame-range rejection, and legacy
+  `generated_from` rejection.
+- [x] (2026-05-25 JST) Added focused generator validator for fixture-contract
+  output, invalid fixture rejection, synthetic export boundary mutations, and
+  absence of production artifacts under `data/current-facts/` and
+  `docs/current-facts/`.
+- [x] (2026-05-25 JST) Updated validator audit artifacts for the new focused
+  unit test and validator.
+- [x] (2026-05-25 JST) Full implementation validation passed: `git diff
+  --check`, `git diff --cached --check`, `uv lock --check`, unittest,
+  clean-slate validator, current-fact schema validator, current-fact
+  source-record validator, current-fact consumer guard validator,
+  parsed-value classifier validator, current-fact export generator validator,
+  validator audit validator, `git status --short --branch`, and production
+  artifact path check.
+- [ ] Complete implementation mandatory review.
 
 ## Decision Log
 
@@ -394,6 +432,18 @@ git status --short --branch
   no arithmetic.
   Date/Author: 2026-05-25 / Codex
 
+- Decision: Validate source-record and export payloads in the helper before
+  returning output.
+  Rationale: The fixture-contract helper is the future production transform
+  core; keeping schema, guard, authority, and source-boundary checks in the
+  helper makes later file-writing wrappers harder to misuse.
+  Date/Author: 2026-05-25 / Codex
+
+- Decision: Do not add a CLI or file writer.
+  Rationale: This slice proves in-memory transformation only. File IO and
+  production artifact paths remain blocked until source-record artifact review.
+  Date/Author: 2026-05-25 / Codex
+
 ## Deviations
 
 - None.
@@ -408,43 +458,51 @@ git status --short --branch
 - Fixture-contract tests do not prove source truth.
 - Future production generator wrappers will need file IO, parity, rollback,
   and artifact review plans.
+- Validator/test coverage is synthetic contract coverage and does not prove
+  source truth.
 
 ## Completion Review Table
 
 | PLAN item | Implementation | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Docs-only fixture-contract generator plan | Drafted plan for in-memory current-fact export generator implementation from source-record fixtures | `docs/execplans/2026-05-25-current-fact-export-generator-fixture-contract-implementation.md` | `git diff --check`; `uv lock --check`; clean-slate validator; current-fact schema validator; source-record validator; consumer guard validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review pending | Production artifact generation remains blocked |
-| Input/output boundary | Planned source-record fixture inputs and in-memory `current_fact_export/v2` payload outputs only | This ExecPlan only | Diff/status review | Passed | None | Review pending | No production source-record artifact exists |
-| Guard/authority/privacy behavior | Planned schema, guard, authority, generated_from, privacy, and deterministic ordering checks | This ExecPlan only | Diff/status review | Passed | None | Review pending | Future generator implementation still pending |
-| Runtime exclusion | Kept `current_facts.py`, `answering.py`, retrieval, answer, calculator, SymPy, source acquisition, live acquisition, and parser/classifier behavior out of scope | This ExecPlan only | Diff/status review | Passed | None | Review pending | Runtime remains legacy raw backed |
+| Docs-only fixture-contract generator plan | Drafted plan for in-memory current-fact export generator implementation from source-record fixtures | `docs/execplans/2026-05-25-current-fact-export-generator-fixture-contract-implementation.md` | `git diff --check`; `uv lock --check`; clean-slate validator; current-fact schema validator; source-record validator; consumer guard validator; parsed-value classifier validator; `git status --short --branch` | Passed | None | Review complete via PR #358 | Production artifact generation remains blocked |
+| Generator helper | Added in-memory source-record-to-export helper with source-record validation, sidecar stripping, deterministic ordering, v2 output construction, output validation, guard checks, authority checks, and source-boundary checks | `src/sf6_knowledge_coach/current_fact_export_generator.py` | Unit tests; export generator validator | Passed | None | Review pending | Future file-writing wrapper still blocked |
+| Unit tests | Added focused tests for successful fixture generation, non-scalar wrapper preservation, deterministic ordering, invalid source fixture rejection, flattened annotated rejection, collapsed range rejection, and legacy generated_from rejection | `tests/test_current_fact_export_generator.py` | Unittest | Passed | None | Review pending | Synthetic fixtures do not prove source truth |
+| Focused validator | Added fixture-contract validator for valid fixture outputs, invalid fixture rejection, synthetic output boundary mutations, and absence of production artifacts | `tests/validation/validate_current_fact_export_generator.py` | Export generator validator; validator audit | Passed | None | Review pending | Production artifact validation remains future work |
+| Validator audit | Added evidence-boundary audit entries for the new unit test and focused validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`; `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | Validator audit validator | Passed | None | Review pending | Audit is boundary metadata only |
+| Input/output boundary | Implemented source-record fixture inputs and in-memory `current_fact_export/v2` payload outputs only | Generator helper, tests, validator, this ExecPlan | Unit tests; export generator validator; production artifact path check | Passed | None | Review pending | No production source-record artifact exists |
+| Guard/authority/privacy behavior | Implemented schema, guard, authority, generated_from, privacy, and deterministic ordering checks for fixture-contract output | Generator helper, tests, validator, this ExecPlan | Unit tests; export generator validator; current-fact guard validator | Passed | None | Review pending | Future generators must preserve equivalent checks |
+| Runtime exclusion | Kept `current_facts.py`, `answering.py`, retrieval, answer, calculator, SymPy, source acquisition, live acquisition, and parser/classifier behavior out of scope | No runtime/parser/source-acquisition files changed | Diff/status review | Passed | None | Review pending | Runtime remains legacy raw backed |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-export-generator-fixture-contract-implementation.md.
+Review the fixture-contract current-fact export generator implementation.
 
 Check:
-- PR diff contains exactly one ExecPlan file.
-- Plan is docs-only and plans fixture-contract generator implementation only.
+- PR diff is limited to generator helper, focused unit test, focused
+  validator, validator audit artifacts, and this ExecPlan.
+- Generator accepts source-record fixture payloads and returns
+  `current_fact_export/v2` payloads in memory.
 - No production source-record artifact under data/current-facts/source-records/
-  is planned or generated.
+  is generated.
 - No production current-fact export artifact under data/current-facts/ is
-  planned or generated.
-- Future implementation consumes only source-record fixtures and current-fact
-  schemas.
-- Future implementation emits only in-memory or temporary test
-  current_fact_export/v2 payloads.
-- The plan requires source-record schema validation before transformation.
-- The plan strips source-record sidecar identity fields from export records.
-- The plan preserves raw_value, parsed_value, value_shape, source fields,
-  authority_status, evidence, and calculation_input_status.
-- The plan requires deterministic ordering.
-- The plan rejects legacy data/exports/*, .local, raw HTML, screenshots/VLM as
+  generated.
+- Implementation consumes only source-record fixtures and current-fact schemas.
+- Implementation emits only in-memory current_fact_export/v2 payloads.
+- Source-record schema validation happens before transformation.
+- Export schema validation happens before returning output.
+- Source-record sidecar identity fields are stripped from export records.
+- raw_value, parsed_value, value_shape, source fields,
+  authority_status, evidence, and calculation_input_status are preserved.
+- Output ordering is deterministic by source, character, move, field, and
+  record ID.
+- Generator rejects legacy data/exports/*, .local, raw HTML, screenshots/VLM as
   authority, local paths, private data, and SuperCombo numeric authority.
-- The plan requires no flattened annotated_numeric_candidate.
-- The plan requires no collapsed frame_range.
-- The plan requires guard, authority, schema, privacy, and validator-audit
-  checks.
+- annotated_numeric_candidate is not flattened.
+- frame_range is not collapsed.
+- Guard, authority, schema, privacy, and validator-audit checks are included.
+- No CLI or file writer is added.
 - Runtime lookup, current_facts.py, answering.py, parser/classifier behavior,
   retrieval, answer, calculator, SymPy, source acquisition, and live
   acquisition remain excluded.
@@ -453,13 +511,17 @@ Run:
 - git status --short --branch
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
+- git diff --cached --check
 - uv lock --check
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 - PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 
 Return blocking findings first, validation results, PLAN deviations,
-remaining risks, and whether docs-only stage/commit is approved.
+remaining risks, and whether the implementation is stage-ready.
 ```

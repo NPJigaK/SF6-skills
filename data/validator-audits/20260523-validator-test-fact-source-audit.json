@@ -25,6 +25,20 @@
     },
     {
       "evidence_class": "synthetic_contract",
+      "file": "tests/test_current_fact_export_generator.py",
+      "limitations": [
+        "uses source-record synthetic fixtures; does not generate production exports or prove source truth"
+      ],
+      "primary_evidence": [
+        "contracts/current-facts/current_fact_export.schema.json",
+        "contracts/current-facts/current_fact_source_record_input.schema.json",
+        "tests/fixtures/current-facts/source-records",
+        "current-fact export generator fixture-contract implementation ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "synthetic_contract",
       "file": "tests/test_current_fact_guards.py",
       "limitations": [
         "uses synthetic scalar/non-scalar fixtures; does not prove source truth or calculation correctness"
@@ -110,6 +124,20 @@
         "clean-slate ExecPlans",
         "current-fact JSON Schema artifacts ExecPlan",
         "current-fact source-record input artifact ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
+      "evidence_class": "artifact_consistency",
+      "file": "tests/validation/validate_current_fact_export_generator.py",
+      "limitations": [
+        "checks fixture-contract generator output, guard boundaries, and no production artifact paths; does not prove source truth"
+      ],
+      "primary_evidence": [
+        "contracts/current-facts/current_fact_export.schema.json",
+        "contracts/current-facts/current_fact_source_record_input.schema.json",
+        "tests/fixtures/current-facts/source-records",
+        "current-fact export generator fixture-contract implementation ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
