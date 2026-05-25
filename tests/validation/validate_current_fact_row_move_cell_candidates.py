@@ -309,7 +309,7 @@ def _validate_approved_production_candidate_artifacts(
         PRODUCTION_JSON.relative_to(ROOT).as_posix(),
         PRODUCTION_MD.relative_to(ROOT).as_posix(),
     }
-    for relative in ("data/current-facts", "docs/current-facts"):
+    for relative in ("data/current-facts/candidate-inputs", "docs/current-facts/candidate-inputs"):
         directory = ROOT / relative
         if not directory.exists():
             errors.append(f"Missing production candidate directory: {relative}")

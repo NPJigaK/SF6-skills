@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -12,11 +13,17 @@ from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
 from sf6_knowledge_coach.current_fact_guards import is_scalar_calculation_input
+from sf6_knowledge_coach.current_fact_source_record_generator import build_source_record_input_payload
 
 
 ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_DIR = ROOT / "contracts/current-facts"
 FIXTURE_DIR = ROOT / "tests/fixtures/current-facts/source-records"
+PRODUCTION_JSON = ROOT / "data/current-facts/source-records/20260525T000000Z-current-fact-source-records.json"
+PRODUCTION_MD = ROOT / "docs/current-facts/source-records/20260525T000000Z-current-fact-source-records.md"
+CANDIDATE_JSON = ROOT / "data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json"
+CANDIDATE_JSON_REF = "data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json"
+CANDIDATE_MD_REF = "docs/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.md"
 SOURCE_RECORD_SCHEMA_PATH = SCHEMA_DIR / "current_fact_source_record_input.schema.json"
 SOURCE_RECORD_SCHEMA_ID = (
     "https://sf6-knowledge-coach.local/schemas/current-facts/current_fact_source_record_input.schema.json"
@@ -31,6 +38,17 @@ SCHEMA_FILES = [
 LOOKUP_READY_BLOCKED_STATUSES = {
     "review_required_not_calculation_safe",
     "out_of_scope_not_emitted",
+}
+EXPECTED_PRODUCTION_COUNT = 13
+EXPECTED_PRODUCTION_RUN_ID = "20260525T000000Z"
+EXPECTED_PRODUCTION_STATUS_COUNTS = {
+    "annotated_candidate_not_calculation_safe": 9,
+    "parsed_range_not_single_value_calculation_safe": 4,
+}
+EXPECTED_PRODUCTION_FIELD_COUNTS = {
+    "block_advantage": 5,
+    "hit_advantage": 4,
+    "startup": 4,
 }
 FORBIDDEN_PUBLIC_PATTERNS = [
     re.compile(r"(?i)(?:^|[\s\"'`])(?:/[a-z0-9_.-]+)+"),
@@ -74,11 +92,13 @@ def main() -> int:
             errors.append(f"{path.relative_to(ROOT)} is not a valid Draft 2020-12 schema: {exc}")
 
     validator = Draft202012Validator(schemas[SOURCE_RECORD_SCHEMA_PATH], registry=registry)
+    record_validator = Draft202012Validator(schemas[SCHEMA_DIR / "current_fact_record.schema.json"], registry=registry)
     _validate_schema_contract(schemas[SOURCE_RECORD_SCHEMA_PATH], errors)
     valid_payloads = _validate_valid_fixtures(validator, errors)
     _validate_invalid_fixtures(validator, errors)
     _validate_synthetic_boundary_rejections(validator, valid_payloads, errors)
     _scan_valid_public_fixtures(errors)
+    _validate_approved_production_source_record_artifacts(validator, record_validator, errors)
     return _finish(errors)
 
 
@@ -281,6 +301,199 @@ def _scan_valid_public_fixtures(errors: list[str]) -> None:
             if pattern.search(text):
                 errors.append(f"{path.relative_to(ROOT)} contains forbidden public content")
                 break
+
+
+def _validate_approved_production_source_record_artifacts(
+    validator: Draft202012Validator,
+    record_validator: Draft202012Validator,
+    errors: list[str],
+) -> None:
+    approved = {
+        PRODUCTION_JSON.relative_to(ROOT).as_posix(),
+        PRODUCTION_MD.relative_to(ROOT).as_posix(),
+    }
+    for relative in ("data/current-facts/source-records", "docs/current-facts/source-records"):
+        directory = ROOT / relative
+        if not directory.exists():
+            errors.append(f"Missing production source-record directory: {relative}")
+            continue
+        files = {
+            path.relative_to(ROOT).as_posix()
+            for path in directory.rglob("*")
+            if path.is_file()
+        }
+        unexpected = sorted(files - approved)
+        if unexpected:
+            errors.append(f"unexpected source-record production artifacts: {unexpected}")
+    if not PRODUCTION_JSON.exists():
+        errors.append(f"Missing approved production source-record JSON: {PRODUCTION_JSON.relative_to(ROOT)}")
+        return
+    if not PRODUCTION_MD.exists():
+        errors.append(f"Missing approved production source-record summary: {PRODUCTION_MD.relative_to(ROOT)}")
+    if not CANDIDATE_JSON.exists():
+        errors.append(f"Missing candidate input artifact: {CANDIDATE_JSON.relative_to(ROOT)}")
+        return
+
+    payload = json.loads(PRODUCTION_JSON.read_text(encoding="utf-8"))
+    failures = _schema_errors(validator, payload)
+    semantic_failures = _semantic_errors(payload)
+    if failures or semantic_failures:
+        message = failures[0] if failures else semantic_failures[0]
+        errors.append(f"{PRODUCTION_JSON.relative_to(ROOT)} should be valid: {message}")
+        return
+    candidate_payload = json.loads(CANDIDATE_JSON.read_text(encoding="utf-8"))
+    generated_payload = build_source_record_input_payload(candidate_payload)
+    if payload != generated_payload:
+        errors.append("production source-record JSON must match deterministic generator output")
+    _validate_production_payload_against_candidates(payload, candidate_payload, record_validator, errors)
+    for path in (PRODUCTION_JSON, PRODUCTION_MD):
+        _scan_public_text(path, errors)
+
+
+def _validate_production_payload_against_candidates(
+    payload: dict[str, Any],
+    candidate_payload: dict[str, Any],
+    record_validator: Draft202012Validator,
+    errors: list[str],
+) -> None:
+    if payload.get("run_id") != EXPECTED_PRODUCTION_RUN_ID:
+        errors.append(f"production source-record run_id must be {EXPECTED_PRODUCTION_RUN_ID}")
+    if payload.get("run_id") != candidate_payload.get("run_id"):
+        errors.append("production source-record run_id must match production candidate run_id")
+    if payload.get("generated_from") != [CANDIDATE_JSON_REF, CANDIDATE_MD_REF]:
+        errors.append("production source-record generated_from must point only to PR #366 candidate artifacts")
+    candidate_records = candidate_payload.get("records", [])
+    records = payload.get("records", [])
+    if not isinstance(candidate_records, list) or not isinstance(records, list):
+        errors.append("production source-record and candidate records must be lists")
+        return
+    if len(records) != EXPECTED_PRODUCTION_COUNT:
+        errors.append(f"production source-record artifact must contain {EXPECTED_PRODUCTION_COUNT} records")
+    status_counts = Counter(
+        record.get("current_fact_record", {}).get("calculation_input_status")
+        for record in records
+        if isinstance(record, dict)
+    )
+    field_counts = Counter(
+        record.get("current_fact_record", {}).get("field_key")
+        for record in records
+        if isinstance(record, dict)
+    )
+    if dict(sorted(status_counts.items())) != EXPECTED_PRODUCTION_STATUS_COUNTS:
+        errors.append("production source-record calculation status counts do not match approved candidates")
+    if dict(sorted(field_counts.items())) != EXPECTED_PRODUCTION_FIELD_COUNTS:
+        errors.append("production source-record field counts do not match approved candidates")
+
+    candidates_by_source_record_id = {
+        _source_record_id(candidate.get("candidate_record_id")): candidate
+        for candidate in candidate_records
+        if isinstance(candidate, dict)
+    }
+    source_record_ids = [record.get("source_record_id") for record in records if isinstance(record, dict)]
+    if len(set(source_record_ids)) != len(source_record_ids):
+        errors.append("production source_record_id values must be unique")
+    if set(source_record_ids) != set(candidates_by_source_record_id):
+        errors.append("production source records must exactly match PR #366 candidate ids")
+        return
+    current_fact_record_ids: set[str] = set()
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            errors.append(f"records[{index}] must be an object")
+            continue
+        candidate = candidates_by_source_record_id[record["source_record_id"]]
+        current_fact = record.get("current_fact_record", {})
+        record_failures = _schema_errors(record_validator, current_fact) if isinstance(current_fact, dict) else ["current_fact_record must be an object"]
+        if record_failures:
+            errors.append(f"records[{index}].current_fact_record should be valid: {record_failures[0]}")
+            continue
+        current_fact_record_id = current_fact.get("record_id")
+        if current_fact_record_id in current_fact_record_ids:
+            errors.append(f"current_fact_record.record_id must be unique: {current_fact_record_id}")
+        if isinstance(current_fact_record_id, str):
+            current_fact_record_ids.add(current_fact_record_id)
+        _validate_production_record(index, record, current_fact, candidate, errors)
+
+
+def _validate_production_record(
+    index: int,
+    source_record: dict[str, Any],
+    current_fact: dict[str, Any],
+    candidate: dict[str, Any],
+    errors: list[str],
+) -> None:
+    sidecar_fields = (
+        "raw_value_length",
+        "raw_value_sha256",
+        "source_cell_key",
+        "source_cell_order",
+        "source_header_path",
+        "source_row_key",
+        "source_row_order",
+        "source_value_key",
+    )
+    for field in sidecar_fields:
+        if source_record.get(field) != candidate.get(field):
+            errors.append(f"records[{index}].{field} does not match candidate artifact")
+    if source_record.get("source_record_id") != _source_record_id(candidate.get("candidate_record_id")):
+        errors.append(f"records[{index}].source_record_id must be derived from candidate_record_id")
+    if current_fact.get("record_id") != _current_fact_record_id(candidate.get("candidate_record_id")):
+        errors.append(f"records[{index}].current_fact_record.record_id must be derived from candidate_record_id")
+
+    copied_current_fact_fields = (
+        "authority_status",
+        "calculation_input_status",
+        "character_slug",
+        "display_label_ja",
+        "evidence",
+        "field_key",
+        "move_id",
+        "parsed_value",
+        "raw_value",
+        "source_family",
+        "source_header_path",
+        "source_label",
+        "source_name",
+        "source_role",
+        "value_shape",
+    )
+    for field in copied_current_fact_fields:
+        if current_fact.get(field) != candidate.get(field):
+            errors.append(f"records[{index}].current_fact_record.{field} does not match candidate artifact")
+    forbidden_sidecars = {
+        "candidate_record_id",
+        "parser_rule_ids",
+        "source_record_id",
+        "source_row_key",
+        "source_cell_key",
+        "source_value_key",
+        "source_row_order",
+        "source_cell_order",
+        "raw_value_length",
+        "raw_value_sha256",
+    }
+    leaked = sorted(forbidden_sidecars & set(current_fact))
+    if leaked:
+        errors.append(f"records[{index}].current_fact_record leaked sidecar fields: {leaked}")
+
+
+def _source_record_id(candidate_record_id: object) -> str:
+    if not isinstance(candidate_record_id, str):
+        return ""
+    return candidate_record_id.replace("candidate:", "source-record:", 1)
+
+
+def _current_fact_record_id(candidate_record_id: object) -> str:
+    if not isinstance(candidate_record_id, str):
+        return ""
+    return candidate_record_id.replace("candidate:", "current-fact:", 1)
+
+
+def _scan_public_text(path: Path, errors: list[str]) -> None:
+    text = path.read_text(encoding="utf-8")
+    for pattern in FORBIDDEN_PUBLIC_PATTERNS:
+        if pattern.search(text):
+            errors.append(f"{path.relative_to(ROOT)} contains forbidden public content")
+            break
 
 
 def _first_record(payload: dict[str, Any]) -> dict[str, Any]:
