@@ -175,6 +175,21 @@
       "status": "accepted_with_limits"
     },
     {
+      "evidence_class": "artifact_consistency",
+      "file": "tests/validation/validate_current_fact_lookup_parity.py",
+      "limitations": [
+        "checks production export invariants, expected non-parity with the legacy JP raw comparison surface, and source-text runtime boundary markers; does not switch runtime or prove source truth/calculation safety"
+      ],
+      "primary_evidence": [
+        "data/current-facts/20260525T000000Z-current-fact-export.json",
+        "data/exports/jp/official_raw.json",
+        "src/sf6_knowledge_coach/current_facts.py",
+        "src/sf6_knowledge_coach/answering.py",
+        "current-fact lookup parity rollback ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
       "evidence_class": "source_derived",
       "file": "tests/validation/validate_current_fact_row_move_cell_candidates.py",
       "limitations": [

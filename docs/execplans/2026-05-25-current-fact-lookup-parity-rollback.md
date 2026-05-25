@@ -1,6 +1,6 @@
 # Current-Fact Lookup Parity And Rollback
 
-Status: Plan amended for review; validation passed.
+Status: Validator-only implementation complete; validation passed.
 
 ## Purpose
 
@@ -337,6 +337,13 @@ git status --short --branch
 - 2026-05-26: Amended plan to authorize a same-PR validator-only
   implementation slice after amended plan review passes, with exact file list
   limited to the ExecPlan, one focused validator, and validator audit JSON/MD.
+- 2026-05-26: Implemented
+  `tests/validation/validate_current_fact_lookup_parity.py` and validator audit
+  entries. The validator checks production export invariants, expected
+  non-parity with the legacy JP raw comparison surface, non-scalar guard
+  rejection for all 13 records, source-record sidecar exclusion, and source-text
+  runtime boundary markers without calling runtime lookup or switching behavior.
+- 2026-05-26: Ran implementation validation. All checks passed.
 
 ## Decision Log
 
@@ -352,6 +359,10 @@ git status --short --branch
   rollback evidence. Runtime lookup, answer behavior, export generation,
   parser/classifier, retrieval, calculator, SymPy, source/live acquisition,
   schemas, fixtures, and generated data remain out of scope.
+- 2026-05-26: The parity validator treats legacy JP raw export as comparison
+  surface only. It records expected non-parity because current runtime lookup is
+  input/field-oriented while reviewed production export records are
+  row/move/cell-oriented and all non-scalar/not calculation-safe.
 
 ## Deviations
 
@@ -371,33 +382,35 @@ git status --short --branch
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Lookup parity/rollback plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
-| Runtime boundary | Plan excludes runtime lookup and answer behavior changes | Same | current-fact validators | Pass | None | Mandatory review pending | Future switch still needs review |
-| Guard boundary | Plan requires non-scalar guard rejection for all 13 export records | Same | `validate_current_fact_consumer_guards.py`; `validate_current_fact_export_generator.py` | Pass | None | Mandatory review pending | No scalar-safe export records yet |
-| Validator-only implementation authorization | Allows exactly one focused parity validator plus audit updates after amended plan review | Same | `validate_current_fact_lookup_parity.py` after implementation | Pending | None | Amended plan review pending | Validator must not switch runtime |
+| Lookup parity/rollback plan | Draft plan and implementation authorization | `docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md` | `git diff --check`; `uv lock --check` | Pass | None | Implementation review pending | Runtime remains legacy raw export backed |
+| Runtime boundary | Plan and validator exclude runtime lookup and answer behavior changes | Same | current-fact validators | Pass | None | Implementation review pending | Future switch still needs review |
+| Guard boundary | Plan and validator require non-scalar guard rejection for all 13 export records | Same | `validate_current_fact_consumer_guards.py`; `validate_current_fact_export_generator.py`; `validate_current_fact_lookup_parity.py` | Pass | None | Implementation review pending | No scalar-safe export records yet |
+| Validator-only implementation authorization | Allows exactly one focused parity validator plus audit updates after amended plan review | Same | `validate_current_fact_lookup_parity.py` | Pass | None | Implementation review pending | Validator must not switch runtime |
+| Lookup parity validator | Checks production export invariants, legacy JP comparison surface, expected non-parity, guard rejection, sidecar exclusion, and runtime source-text markers | `tests/validation/validate_current_fact_lookup_parity.py` | `PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_lookup_parity.py` | Pass | None | Implementation review pending | Runtime switch remains future work |
+| Validator audit | Records evidence boundary for the new parity validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`; `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py` | Pass | None | Implementation review pending | Audit proves metadata coverage only |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md.
+Review PR #369 implementation for current-fact lookup parity/rollback.
 
 Check:
-- PR diff initially contains exactly one ExecPlan file.
-- Plan clearly authorizes same-PR validator-only implementation after amended
-  plan review passes.
-- Authorized implementation files are fixed to:
+- PR diff contains exactly the authorized validator-only files:
   - docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md
   - tests/validation/validate_current_fact_lookup_parity.py
   - data/validator-audits/20260523-validator-test-fact-source-audit.json
   - docs/validator-audits/20260523-validator-test-fact-source-audit.md
-- Plan compares current legacy raw-backed lookup behavior with the reviewed
-  production current-fact export artifact.
-- Plan defines parity criteria, expected non-parity, rollback criteria, and
-  guard requirements.
+- The new validator compares current legacy raw-backed lookup behavior with the
+  reviewed production current-fact export artifact without calling runtime
+  lookup as a new authority path.
+- The validator checks production export invariants, expected non-parity,
+  rollback/guard contract markers, source-record sidecar exclusion, and
+  non-scalar guard rejection for all 13 records.
 - Runtime lookup remains unchanged.
 - No current_facts.py / answering.py behavior switch is planned.
 - No parser/classifier, retrieval, answer, calculator, SymPy, source/live
-  acquisition changes are planned.
+  acquisition, schema, fixture, generated data, or legacy raw retirement changes
+  are included.
 - Legacy raw exports are not retired.
 - Legacy data/exports/*/official_raw.json is comparison input only, not
   replacement source input.
@@ -409,15 +422,12 @@ Run:
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
 - uv lock --check
-- PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
+- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_lookup_parity.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
+- for f in tests/validation/validate_*.py; do PYTHONPATH=src uv run --locked python "$f" || exit $?; done
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
 Return blocking findings first, validation results, PLAN deviations, remaining
-risks, and whether amended plan is approved for same-PR validator-only
-implementation.
+risks, and whether PR #369 is ready to mark ready and merge.
 ```
