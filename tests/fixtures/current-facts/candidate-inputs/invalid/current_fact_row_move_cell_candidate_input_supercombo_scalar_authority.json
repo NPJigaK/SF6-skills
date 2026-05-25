@@ -1,0 +1,61 @@
+{
+  "artifact_schema_version": "current_fact_row_move_cell_candidate_input/v1",
+  "authority_boundary": {
+    "official": "authority_candidate_only",
+    "supercombo": "enrichment_or_cross_reference_only"
+  },
+  "candidate_boundary": {
+    "blocked_records": "excluded_to_classifier_or_source_review",
+    "legacy_raw_exports": "excluded_as_source_input",
+    "local_source_payloads": "excluded_from_public_artifact",
+    "lookup_ready_candidates": "parsed_value_only",
+    "reviewer_observations": "observation_candidate_only_not_authority",
+    "supercombo": "enrichment_or_cross_reference_only",
+    "synthetic_fixtures": "not_source_truth"
+  },
+  "generated_from": ["data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json"],
+  "records": [
+    {
+      "acquisition_report_refs": ["docs/acquisition-reports/20260521T025403Z-current-source-acquisition.md"],
+      "authority_status": "cross_reference_candidate",
+      "calculation_input_status": "eligible_only_after_domain_source_and_unit_checks",
+      "candidate_record_id": "candidate:supercombo:jp:example_special:block_advantage",
+      "character_slug": "jp",
+      "coverage_refs": ["data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json"],
+      "display_label_ja": "SuperCombo ガード硬直差",
+      "evidence": {
+        "evidence_basis": "synthetic_contract_fixture",
+        "public_reference": "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+        "run_id": "20260521T025403Z",
+        "source_header_path": ["Special Moves", "Block Advantage"],
+        "source_label": "Block Advantage",
+        "source_name": "supercombo",
+        "source_role": "cross_reference_candidate"
+      },
+      "field_key": "block_advantage",
+      "move_id": "synthetic:supercombo:example_special",
+      "parsed_value": { "kind": "signed_frame", "unit": "frame", "value": -4 },
+      "parser_rule_ids": ["signed_frame.v1"],
+      "raw_value": "-4",
+      "raw_value_length": 2,
+      "raw_value_sha256": "e5e0093f285a4fb94c3fcc2ad7fd04edd10d429ccda87a9aa5e4718efadf182e",
+      "source_cell_key": "supercombo:jp:example_special:block_advantage:cell",
+      "source_cell_order": 3,
+      "source_family": "advantage",
+      "source_header_path": ["Special Moves", "Block Advantage"],
+      "source_label": "Block Advantage",
+      "source_name": "supercombo",
+      "source_review_refs": ["docs/source-reviews/20260524-official-note-linkage-source-review.md"],
+      "source_role": "cross_reference_candidate",
+      "source_row_key": "supercombo:jp:example_special",
+      "source_row_order": 1,
+      "source_value_key": "supercombo:jp:example_special:block_advantage:value-1",
+      "value_shape": {
+        "classes": ["signed_frame"],
+        "classifier_status": "parsed",
+        "parser_rule_id": "signed_frame.v1"
+      }
+    }
+  ],
+  "run_id": "20260521T025403Z"
+}

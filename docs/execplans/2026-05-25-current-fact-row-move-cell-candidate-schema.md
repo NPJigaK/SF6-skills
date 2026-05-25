@@ -1,6 +1,6 @@
 # Current-Fact Row/Move/Cell Candidate Schema
 
-Status: Drafted for review; validation passed.
+Status: Implemented; validation passed.
 
 ## Purpose
 
@@ -10,6 +10,10 @@ entries for `current_fact_row_move_cell_candidate_input/v1`.
 This plan follows the reviewed row/move/cell candidate input boundary. It does
 not implement candidate artifact generation and does not create production
 source-record or current-fact export artifacts.
+
+The original planning PR was docs-only. This implementation follow-up adds
+only the schema, synthetic fixtures, focused validator, validator audit
+updates, inventory compatibility updates, and this ExecPlan progress update.
 
 ## Inputs
 
@@ -52,21 +56,18 @@ focused validator, and validator audit entries.
 
 ## Scope
 
-Included in this docs-only plan:
+Included in the approved implementation slice:
 
-- define exact files for the future schema/fixture/validator implementation;
-- define the artifact schema version and high-level schema requirements;
-- define synthetic valid and invalid fixture coverage;
-- define focused validator behavior;
-- define validator audit updates;
+- add the candidate input schema;
+- add synthetic valid and invalid fixture coverage;
+- add the focused candidate validator;
+- update schema inventory/compatibility validators only as needed;
+- update validator audit artifacts;
 - preserve summary-safe, parsed-value-only, non-scalar guard, and source
   boundary rules.
 
 Excluded:
 
-- No schema implementation in this docs-only PR.
-- No fixture implementation in this docs-only PR.
-- No validator implementation in this docs-only PR.
 - No candidate artifact generation.
 - No production source-record artifact generation.
 - No production current-fact export artifact generation.
@@ -279,45 +280,44 @@ promotion, or numeric authority.
 
 ## Acceptance Criteria
 
-- The plan is docs-only.
-- The plan defines exact schema, fixture, validator, audit, and ExecPlan files
-  for the future implementation.
-- Future fixtures are synthetic contract fixtures only.
-- The plan does not authorize candidate artifact generation.
-- The plan does not authorize production source-record or current-fact export
-  artifact generation.
-- The plan rejects legacy raw exports as replacement source input.
-- The plan preserves summary-safe boundaries.
-- The plan preserves parsed-value-only admission.
-- The plan keeps review-required/no parsed-value records out of lookup-ready
-  valid fixtures.
-- The plan preserves `annotated_numeric_candidate` and `frame_range`
-  non-scalar guard boundaries.
-- The plan keeps Issue #343 double-check gate mandatory for future
-  value-handling decisions.
-- The plan does not change runtime lookup, `current_facts.py`, `answering.py`,
-  parser/classifier behavior, retrieval, answer, calculator, SymPy, source
-  acquisition, or live acquisition.
+- The implementation is limited to schema, synthetic fixtures, focused
+  validator, validator audit, inventory compatibility, and this ExecPlan
+  update.
+- Fixtures are synthetic contract fixtures only.
+- No candidate artifact is generated.
+- No production source-record or current-fact export artifact is generated.
+- Legacy raw exports are rejected as replacement source input.
+- Summary-safe boundaries are preserved.
+- Parsed-value-only admission is preserved.
+- Review-required/no parsed-value records stay out of valid lookup-ready
+  fixtures.
+- `annotated_numeric_candidate` and `frame_range` non-scalar guard boundaries
+  are preserved.
+- Issue #343 double-check gate remains mandatory for future value-handling
+  decisions.
+- Runtime lookup, `current_facts.py`, `answering.py`, parser/classifier
+  behavior, retrieval, answer, calculator, SymPy, source acquisition, and live
+  acquisition remain unchanged.
 
 ## Files / Interfaces
 
-This docs-only PR should change only:
-
-- `docs/execplans/2026-05-25-current-fact-row-move-cell-candidate-schema.md`
-
-Future implementation plans may touch the files listed in Planned Files only
-after mandatory review approval.
+This implementation PR may change only the files listed in Planned Files.
+Future artifact generation or runtime plans need separate mandatory review.
 
 ## Validation Commands
 
 ```bash
 git diff --check
+git diff --cached --check
 uv lock --check
+PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 git status --short --branch
 ```
@@ -328,6 +328,11 @@ git status --short --branch
   PR #361 merged. No implementation or generated artifact changes included.
 - 2026-05-25: Ran validation commands. They passed with only this new
   ExecPlan file untracked.
+- 2026-05-25: Implemented the contract-only schema/fixtures/validator slice.
+  Added no production candidate, source-record, or export artifacts.
+- 2026-05-25: Ran implementation validation, including unittest,
+  current-fact schema/source-record/consumer/export/candidate validators,
+  validator audit, and parsed-value classifier validation. All passed.
 
 ## Decision Log
 
@@ -339,6 +344,10 @@ git status --short --branch
   `parsed_value`.
 - 2026-05-25: Review-required/no parsed-value records belong in invalid
   fixtures and remain out of valid lookup-ready candidate fixtures.
+- 2026-05-25: Candidate fixtures are synthetic contract fixtures only and use
+  `synthetic_contract_fixture` evidence; they are not source truth.
+- 2026-05-25: The focused validator checks source-boundary mutations instead
+  of relaxing existing source-record, export, or guard validators.
 
 ## Deviations
 
@@ -358,23 +367,27 @@ git status --short --branch
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Docs-only schema/fixture/validator plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-row-move-cell-candidate-schema.md` | `git diff --check` | Pass | None | Mandatory review pending | Schema implementation not started |
-| Runtime and artifact boundary | No runtime, schema, validator, or generated artifact changes | Same | `git status --short --branch` | Pass; one untracked ExecPlan file only | None | Mandatory review pending | Runtime remains legacy raw export backed |
+| Candidate schema | Added `current_fact_row_move_cell_candidate_input/v1` contract | `contracts/current-facts/current_fact_row_move_cell_candidate_input.schema.json` | `validate_current_fact_row_move_cell_candidates.py` | Pass | None | Mandatory review pending | Schema field names still need review |
+| Synthetic fixtures | Added valid/invalid candidate input fixtures only | `tests/fixtures/current-facts/candidate-inputs/**` | `validate_current_fact_row_move_cell_candidates.py` | Pass | None | Mandatory review pending | Fixtures do not prove source truth |
+| Focused validator and inventory | Added candidate validator and schema inventory compatibility updates | `tests/validation/validate_current_fact_row_move_cell_candidates.py`, `tests/validation/validate_clean_slate.py`, `tests/validation/validate_current_fact_schemas.py` | `validate_clean_slate.py`; `validate_current_fact_schemas.py`; `validate_current_fact_row_move_cell_candidates.py` | Pass | None | Mandatory review pending | Validator proves contract boundary only |
+| Validator audit | Added validator audit entry for candidate validator | `data/validator-audits/20260523-validator-test-fact-source-audit.json`, `docs/validator-audits/20260523-validator-test-fact-source-audit.md` | `validate_validator_test_audit.py` | Pass | None | Mandatory review pending | Audit is not source truth |
+| Runtime and artifact boundary | No runtime or generated artifact changes | No `data/current-facts/**` or `docs/current-facts/**` production artifacts | `git status --short --branch`; artifact path check | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
 
 ## Next Reviewer Prompt
 
 ```text
-Review docs/execplans/2026-05-25-current-fact-row-move-cell-candidate-schema.md.
+Review implementation of docs/execplans/2026-05-25-current-fact-row-move-cell-candidate-schema.md.
 
 Check:
-- PR diff contains exactly one ExecPlan file.
-- Plan is docs-only.
-- It defines exact schema file path, fixture paths, validator path, and audit files.
-- It uses synthetic contract fixtures only.
-- It does not authorize candidate artifact generation.
-- It does not authorize production source-record artifact generation.
-- It does not authorize production current-fact export artifact generation.
-- It does not change runtime lookup, current_facts.py, answering.py, parser/classifier behavior, retrieval, answer, calculator, SymPy, source acquisition, or live acquisition.
+- PR diff contains only the approved schema, synthetic fixtures, focused validator, inventory/audit updates, and ExecPlan progress update.
+- Schema path is `contracts/current-facts/current_fact_row_move_cell_candidate_input.schema.json`.
+- Fixture paths are under `tests/fixtures/current-facts/candidate-inputs/`.
+- Validator path is `tests/validation/validate_current_fact_row_move_cell_candidates.py`.
+- Fixtures are synthetic contract fixtures only.
+- No candidate artifact generation is included.
+- No production source-record artifact generation is included.
+- No production current-fact export artifact generation is included.
+- No runtime lookup, current_facts.py, answering.py, parser/classifier behavior, retrieval, answer, calculator, SymPy, source acquisition, or live acquisition changes are included.
 - Summary-safe boundaries are preserved.
 - Legacy data/exports/*/official_raw.json is rejected as replacement source input.
 - Parsed-value-only admission is preserved.
@@ -386,13 +399,17 @@ Run:
 - git status --short --branch
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
+- git diff --cached --check
 - uv lock --check
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 - PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 - PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
+- PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
-Return blocking findings first, validation results, PLAN deviations, remaining risks, and whether docs-only stage/commit is approved.
+Return blocking findings first, validation results, PLAN deviations, remaining risks, and whether implementation is stage-ready.
 ```

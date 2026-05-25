@@ -142,6 +142,19 @@
       "status": "accepted_with_limits"
     },
     {
+      "evidence_class": "synthetic_contract",
+      "file": "tests/validation/validate_current_fact_row_move_cell_candidates.py",
+      "limitations": [
+        "checks row/move/cell candidate schema, synthetic fixture contracts, and source-boundary guard mutations; does not produce production candidates or prove source truth"
+      ],
+      "primary_evidence": [
+        "contracts/current-facts/current_fact_row_move_cell_candidate_input.schema.json",
+        "tests/fixtures/current-facts/candidate-inputs",
+        "current-fact row/move/cell candidate schema ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
       "evidence_class": "artifact_consistency",
       "file": "tests/validation/validate_current_fact_consumer_guards.py",
       "limitations": [
