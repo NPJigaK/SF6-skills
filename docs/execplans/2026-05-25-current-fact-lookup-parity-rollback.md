@@ -1,6 +1,6 @@
 # Current-Fact Lookup Parity And Rollback
 
-Status: Drafted for review; validation passed.
+Status: Plan amended for review; validation passed.
 
 ## Purpose
 
@@ -19,9 +19,8 @@ Use the same draft PR flow as PR #365 through PR #368:
 
 1. Commit this docs-only plan and open a draft PR.
 2. Complete mandatory plan review.
-3. Add implementation commits to the same draft PR only if this plan is
-   amended to authorize a validator-only implementation and mandatory plan
-   review passes.
+3. Add validator-only implementation commits to the same draft PR only after
+   mandatory review of this amended plan passes.
 4. Complete mandatory implementation review.
 5. Ready and merge only after the relevant review passes.
 
@@ -83,7 +82,7 @@ cannot be used as exact scalar answers. Parity must therefore distinguish:
 
 ## Scope
 
-Included in this docs-only plan:
+Included in this plan:
 
 - inventory current legacy lookup and answer behavior;
 - define comparison surfaces between legacy raw-backed lookup and the reviewed
@@ -92,7 +91,8 @@ Included in this docs-only plan:
 - define rollback criteria for any future runtime lookup switch;
 - define guard requirements for `annotated_numeric_candidate` and
   `frame_range`;
-- define future validator-only implementation slices if review approves them;
+- authorize one focused validator-only implementation slice in this same draft
+  PR after mandatory review passes;
 - keep runtime lookup unchanged.
 
 Excluded:
@@ -241,13 +241,10 @@ Any future lookup implementation must prove:
   fallback contract;
 - it can be disabled or reverted without deleting reviewed export artifacts.
 
-## Future Implementation Slices
+## Validator-Only Implementation Slice
 
-This docs-only plan does not authorize implementation by itself unless the
-mandatory plan review explicitly approves a validator-only implementation
-commit in the same draft PR.
-
-Possible future validator-only implementation in this same draft PR:
+After mandatory review of this amended plan passes, this same draft PR may add
+one validator-only implementation slice:
 
 - add a focused parity/rollback validator such as
   `tests/validation/validate_current_fact_lookup_parity.py`;
@@ -260,8 +257,14 @@ Possible future validator-only implementation in this same draft PR:
   SymPy, source acquisition, live acquisition, or legacy raw retirement files
   changed.
 
-Any helper, fixture, or validator file not listed in an amended file list
-requires ExecPlan amendment and mandatory review before editing.
+The validator must be evidence-first and must not call runtime lookup as a new
+authority path. It may inspect `current_facts.py`, `answering.py`, the
+production export artifact, current-fact guards, and `data/exports/jp/official_raw.json`
+as the existing runtime comparison surface only.
+
+No helper, fixture, runtime, parser/classifier, retrieval, answer, calculator,
+SymPy, source/live acquisition, schema, or generated data file may be added or
+changed by this implementation slice.
 
 ## Acceptance Criteria
 
@@ -284,12 +287,13 @@ Plan-only initial PR should change only:
 
 - `docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md`
 
-Possible future implementation commits in the same draft PR may change only
-after mandatory plan review explicitly approves implementation:
+Future implementation commits in the same draft PR may change only after
+mandatory review of this amended plan passes:
 
 - `docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md`
-- a focused parity validator under `tests/validation/` if approved
-- validator audit JSON/MD if a validator is added or changed
+- `tests/validation/validate_current_fact_lookup_parity.py`
+- `data/validator-audits/20260523-validator-test-fact-source-audit.json`
+- `docs/validator-audits/20260523-validator-test-fact-source-audit.md`
 
 Any additional file requires ExecPlan amendment and mandatory review before
 implementation continues.
@@ -318,6 +322,8 @@ git diff --check
 git diff --cached --check
 uv lock --check
 PYTHONPATH=src uv run --locked python -m unittest discover -s tests
+PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_lookup_parity.py
+PYTHONPATH=src uv run --locked python tests/validation/validate_validator_test_audit.py
 for f in tests/validation/validate_*.py; do PYTHONPATH=src uv run --locked python "$f" || exit $?; done
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 git status --short --branch
@@ -328,6 +334,9 @@ git status --short --branch
 - 2026-05-26: Drafted plan after PR #368 merged. No runtime lookup switch,
   validator implementation, or legacy raw export retirement yet.
 - 2026-05-26: Ran plan-only validation. All checks passed.
+- 2026-05-26: Amended plan to authorize a same-PR validator-only
+  implementation slice after amended plan review passes, with exact file list
+  limited to the ExecPlan, one focused validator, and validator audit JSON/MD.
 
 ## Decision Log
 
@@ -339,6 +348,10 @@ git status --short --branch
   not calculation-safe for parity purposes.
 - 2026-05-26: Legacy raw exports may be compared as the current runtime surface
   but must not become replacement source input for reviewed export records.
+- 2026-05-26: Same-PR implementation is limited to validator-only parity and
+  rollback evidence. Runtime lookup, answer behavior, export generation,
+  parser/classifier, retrieval, calculator, SymPy, source/live acquisition,
+  schemas, fixtures, and generated data remain out of scope.
 
 ## Deviations
 
@@ -361,6 +374,7 @@ git status --short --branch
 | Lookup parity/rollback plan | Draft plan only | `docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Runtime remains legacy raw export backed |
 | Runtime boundary | Plan excludes runtime lookup and answer behavior changes | Same | current-fact validators | Pass | None | Mandatory review pending | Future switch still needs review |
 | Guard boundary | Plan requires non-scalar guard rejection for all 13 export records | Same | `validate_current_fact_consumer_guards.py`; `validate_current_fact_export_generator.py` | Pass | None | Mandatory review pending | No scalar-safe export records yet |
+| Validator-only implementation authorization | Allows exactly one focused parity validator plus audit updates after amended plan review | Same | `validate_current_fact_lookup_parity.py` after implementation | Pending | None | Amended plan review pending | Validator must not switch runtime |
 
 ## Next Reviewer Prompt
 
@@ -369,6 +383,13 @@ Review docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md.
 
 Check:
 - PR diff initially contains exactly one ExecPlan file.
+- Plan clearly authorizes same-PR validator-only implementation after amended
+  plan review passes.
+- Authorized implementation files are fixed to:
+  - docs/execplans/2026-05-25-current-fact-lookup-parity-rollback.md
+  - tests/validation/validate_current_fact_lookup_parity.py
+  - data/validator-audits/20260523-validator-test-fact-source-audit.json
+  - docs/validator-audits/20260523-validator-test-fact-source-audit.md
 - Plan compares current legacy raw-backed lookup behavior with the reviewed
   production current-fact export artifact.
 - Plan defines parity criteria, expected non-parity, rollback criteria, and
@@ -397,6 +418,6 @@ Run:
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 
 Return blocking findings first, validation results, PLAN deviations, remaining
-risks, and whether docs-only plan is approved for same-PR implementation or
-docs-only merge.
+risks, and whether amended plan is approved for same-PR validator-only
+implementation.
 ```
