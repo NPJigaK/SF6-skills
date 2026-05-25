@@ -15,6 +15,7 @@ privacy/security boundary.
 | File | Evidence class | Status | Limitation |
 | --- | --- | --- | --- |
 | `tests/test_cli.py` | source-derived | accepted with limits | JP 5LP smoke only; not full roster validation |
+| `tests/test_current_fact_export_generator.py` | synthetic contract | accepted with limits | source-record synthetic fixtures only; no production exports or source truth |
 | `tests/test_current_fact_guards.py` | synthetic contract | accepted with limits | scalar/non-scalar guard fixtures only; no source truth or calculation correctness |
 | `tests/test_source_acquisition.py` | synthetic contract | accepted with limits | synthetic HTML tests parser/guard behavior, not live source truth |
 | `tests/test_supercombo_field_mapping.py` | policy-derived | accepted with limits | mapping counts are reviewed policy output, not live SuperCombo proof |
@@ -22,6 +23,7 @@ privacy/security boundary.
 | `tests/test_parsed_value_classifier.py` | policy-derived | accepted with limits | parser/classifier behavior is policy-derived and not calculation correctness |
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
 | `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape and approved contract file inventory only |
+| `tests/validation/validate_current_fact_export_generator.py` | artifact consistency | accepted with limits | fixture-contract generator output, guard boundaries, and no production artifact paths only |
 | `tests/validation/validate_current_fact_consumer_guards.py` | artifact consistency | accepted with limits | guard behavior against synthetic fixtures and coverage statuses only |
 | `tests/validation/validate_current_fact_source_records.py` | synthetic contract | accepted with limits | source-record schema, fixture contracts, and source-boundary guard mutations only; no production source records or source truth |
 | `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |
