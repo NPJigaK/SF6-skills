@@ -44,6 +44,7 @@ ALLOWED_CONTRACT_PATHS = {
     "contracts/current-facts",
     "contracts/current-facts/current_fact_export.schema.json",
     "contracts/current-facts/current_fact_record.schema.json",
+    "contracts/current-facts/current_fact_row_move_cell_candidate_input.schema.json",
     "contracts/current-facts/current_fact_source_record_input.schema.json",
     "contracts/current-facts/parsed_value.schema.json",
     "contracts/current-facts/source_reference.schema.json",

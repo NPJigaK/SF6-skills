@@ -1,0 +1,387 @@
+{
+  "$id": "https://sf6-knowledge-coach.local/schemas/current-facts/current_fact_row_move_cell_candidate_input.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_schema_version": { "const": "current_fact_row_move_cell_candidate_input/v1" },
+    "authority_boundary": {
+      "additionalProperties": false,
+      "properties": {
+        "official": { "const": "authority_candidate_only" },
+        "supercombo": { "const": "enrichment_or_cross_reference_only" }
+      },
+      "required": ["official", "supercombo"],
+      "type": "object"
+    },
+    "candidate_boundary": {
+      "additionalProperties": false,
+      "properties": {
+        "blocked_records": { "const": "excluded_to_classifier_or_source_review" },
+        "legacy_raw_exports": { "const": "excluded_as_source_input" },
+        "local_source_payloads": { "const": "excluded_from_public_artifact" },
+        "lookup_ready_candidates": { "const": "parsed_value_only" },
+        "reviewer_observations": { "const": "observation_candidate_only_not_authority" },
+        "supercombo": { "const": "enrichment_or_cross_reference_only" },
+        "synthetic_fixtures": { "const": "not_source_truth" }
+      },
+      "required": [
+        "blocked_records",
+        "legacy_raw_exports",
+        "local_source_payloads",
+        "lookup_ready_candidates",
+        "reviewer_observations",
+        "supercombo",
+        "synthetic_fixtures"
+      ],
+      "type": "object"
+    },
+    "generated_from": {
+      "items": { "$ref": "#/$defs/public_artifact_path" },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "records": {
+      "items": { "$ref": "#/$defs/candidate_record" },
+      "minItems": 1,
+      "type": "array"
+    },
+    "run_id": {
+      "pattern": "^[0-9]{8}T[0-9]{6}Z$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_schema_version",
+    "authority_boundary",
+    "candidate_boundary",
+    "generated_from",
+    "records",
+    "run_id"
+  ],
+  "$defs": {
+    "identity_key": {
+      "pattern": "^[a-z0-9][a-z0-9_.:-]*$",
+      "type": "string"
+    },
+    "parser_rule_id": {
+      "pattern": "^[a-z0-9][a-z0-9_.-]*$",
+      "type": "string"
+    },
+    "public_artifact_path": {
+      "allOf": [
+        {
+          "pattern": "^(data|docs|contracts)/[A-Za-z0-9_.:/-]+$",
+          "type": "string"
+        },
+        {
+          "not": { "pattern": "^data/exports/" }
+        },
+        {
+          "not": { "pattern": "(^|/)\\.local(/|$)" }
+        },
+        {
+          "not": { "pattern": "(screen[-_]?shot|chat[-_]?gpt|vlm|raw[-_]?html|full[-_]?row|cook(?:ie)|prof(?:ile)|trac(?:e)|debu(?:g)|priv(?:ate)|tok(?:en))" }
+        }
+      ]
+    },
+    "public_reference_array": {
+      "items": { "$ref": "#/$defs/public_artifact_path" },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "source_family": {
+      "enum": [
+        "advantage",
+        "attribute",
+        "cancel",
+        "damage",
+        "defense",
+        "gauge",
+        "identity",
+        "metadata",
+        "mobility",
+        "note",
+        "projectile",
+        "scaling",
+        "throw",
+        "timing",
+        "vital"
+      ]
+    },
+    "candidate_record": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "calculation_input_status": {
+                "const": "annotated_candidate_not_calculation_safe"
+              }
+            },
+            "required": ["calculation_input_status"]
+          },
+          "then": {
+            "properties": {
+              "parsed_value": {
+                "properties": {
+                  "kind": { "const": "annotated_numeric_candidate" }
+                },
+                "required": ["kind"],
+                "type": "object"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "parsed_value": {
+                "properties": {
+                  "kind": { "const": "annotated_numeric_candidate" }
+                },
+                "required": ["kind"],
+                "type": "object"
+              }
+            },
+            "required": ["parsed_value"]
+          },
+          "then": {
+            "properties": {
+              "calculation_input_status": {
+                "const": "annotated_candidate_not_calculation_safe"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "calculation_input_status": {
+                "const": "parsed_range_not_single_value_calculation_safe"
+              }
+            },
+            "required": ["calculation_input_status"]
+          },
+          "then": {
+            "properties": {
+              "parsed_value": {
+                "properties": {
+                  "kind": { "const": "frame_range" }
+                },
+                "required": ["kind"],
+                "type": "object"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "parsed_value": {
+                "properties": {
+                  "kind": { "const": "frame_range" }
+                },
+                "required": ["kind"],
+                "type": "object"
+              }
+            },
+            "required": ["parsed_value"]
+          },
+          "then": {
+            "properties": {
+              "calculation_input_status": {
+                "const": "parsed_range_not_single_value_calculation_safe"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "source_name": { "const": "official" }
+            },
+            "required": ["source_name"]
+          },
+          "then": {
+            "properties": {
+              "authority_status": { "const": "authority_candidate" },
+              "source_role": { "const": "authority_candidate" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "source_name": { "const": "supercombo" }
+            },
+            "required": ["source_name"]
+          },
+          "then": {
+            "properties": {
+              "authority_status": {
+                "enum": ["cross_reference_candidate", "enrichment_candidate", "not_authority"]
+              },
+              "calculation_input_status": {
+                "not": {
+                  "const": "eligible_only_after_domain_source_and_unit_checks"
+                }
+              },
+              "source_role": {
+                "enum": ["cross_reference_candidate", "enrichment_candidate"]
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "acquisition_report_refs": { "$ref": "#/$defs/public_reference_array" },
+        "authority_status": {
+          "enum": [
+            "authority_candidate",
+            "cross_reference_candidate",
+            "enrichment_candidate",
+            "not_authority"
+          ]
+        },
+        "calculation_input_status": {
+          "allOf": [
+            {
+              "enum": [
+                "eligible_only_after_domain_source_and_unit_checks",
+                "annotated_candidate_not_calculation_safe",
+                "parsed_range_not_single_value_calculation_safe",
+                "review_required_not_calculation_safe",
+                "enum_only_not_arithmetic",
+                "raw_preserved_not_calculation",
+                "not_numeric_authority",
+                "out_of_scope_not_emitted"
+              ]
+            },
+            {
+              "not": {
+                "enum": [
+                  "review_required_not_calculation_safe",
+                  "out_of_scope_not_emitted"
+                ]
+              }
+            }
+          ]
+        },
+        "candidate_record_id": { "$ref": "#/$defs/identity_key" },
+        "character_slug": {
+          "pattern": "^[a-z0-9_]+$",
+          "type": "string"
+        },
+        "coverage_refs": { "$ref": "#/$defs/public_reference_array" },
+        "display_label_ja": { "type": "string" },
+        "evidence": {
+          "allOf": [
+            {
+              "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/source_reference.schema.json"
+            },
+            {
+              "properties": {
+                "public_reference": {
+                  "$ref": "#/$defs/public_artifact_path"
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        "field_key": {
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "type": "string"
+        },
+        "move_id": { "$ref": "#/$defs/identity_key" },
+        "parsed_value": {
+          "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/parsed_value.schema.json"
+        },
+        "parser_rule_ids": {
+          "items": { "$ref": "#/$defs/parser_rule_id" },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "raw_value": {
+          "not": {
+            "pattern": "<[/!]?[A-Za-z]"
+          },
+          "type": "string"
+        },
+        "raw_value_length": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "raw_value_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "source_cell_key": { "$ref": "#/$defs/identity_key" },
+        "source_cell_order": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_family": { "$ref": "#/$defs/source_family" },
+        "source_header_path": {
+          "items": { "type": "string" },
+          "minItems": 1,
+          "type": "array"
+        },
+        "source_label": { "type": "string" },
+        "source_name": { "enum": ["official", "supercombo"] },
+        "source_review_refs": { "$ref": "#/$defs/public_reference_array" },
+        "source_role": {
+          "enum": [
+            "authority_candidate",
+            "cross_reference_candidate",
+            "enrichment_candidate"
+          ]
+        },
+        "source_row_key": { "$ref": "#/$defs/identity_key" },
+        "source_row_order": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_value_key": { "$ref": "#/$defs/identity_key" },
+        "value_shape": {
+          "$ref": "https://sf6-knowledge-coach.local/schemas/current-facts/value_shape.schema.json"
+        }
+      },
+      "required": [
+        "acquisition_report_refs",
+        "authority_status",
+        "calculation_input_status",
+        "candidate_record_id",
+        "character_slug",
+        "coverage_refs",
+        "display_label_ja",
+        "evidence",
+        "field_key",
+        "move_id",
+        "parsed_value",
+        "parser_rule_ids",
+        "raw_value",
+        "raw_value_length",
+        "raw_value_sha256",
+        "source_cell_key",
+        "source_cell_order",
+        "source_family",
+        "source_header_path",
+        "source_label",
+        "source_name",
+        "source_review_refs",
+        "source_role",
+        "source_row_key",
+        "source_row_order",
+        "source_value_key",
+        "value_shape"
+      ],
+      "type": "object"
+    }
+  },
+  "title": "Current-fact row/move/cell candidate input artifact",
+  "type": "object"
+}

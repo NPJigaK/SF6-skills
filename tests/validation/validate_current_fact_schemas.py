@@ -21,6 +21,7 @@ SCHEMA_FILES = [
     "source_reference.schema.json",
     "current_fact_record.schema.json",
     "current_fact_export.schema.json",
+    "current_fact_row_move_cell_candidate_input.schema.json",
 ]
 CALCULATION_INPUT_STATUSES = {
     "eligible_only_after_domain_source_and_unit_checks",
