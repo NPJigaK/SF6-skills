@@ -19,6 +19,10 @@ PRODUCTION_ARTIFACT_DIRS = (
     ROOT / "data/current-facts",
     ROOT / "docs/current-facts",
 )
+APPROVED_CANDIDATE_ARTIFACTS = {
+    "data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json",
+    "docs/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.md",
+}
 SIDECAR_FIELDS = {
     "raw_value_length",
     "raw_value_sha256",
@@ -166,9 +170,13 @@ def _validate_no_production_artifacts(errors: list[str]) -> None:
         if not directory.exists():
             continue
         files = sorted(path for path in directory.rglob("*") if path.is_file())
-        if files:
-            relative = [path.relative_to(ROOT).as_posix() for path in files]
-            errors.append(f"fixture-contract generator must not create production artifacts: {relative}")
+        unexpected = [
+            path.relative_to(ROOT).as_posix()
+            for path in files
+            if path.relative_to(ROOT).as_posix() not in APPROVED_CANDIDATE_ARTIFACTS
+        ]
+        if unexpected:
+            errors.append(f"fixture-contract generator must not create source-record/export artifacts: {unexpected}")
 
 
 def _finish(errors: list[str]) -> int:

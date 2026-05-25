@@ -1,6 +1,6 @@
 # Current-Fact Production Candidate Artifact
 
-Status: Drafted for review; run_id schema amendment pending review; validation passed.
+Status: Implementation complete; validation passed; mandatory review pending.
 
 ## Purpose
 
@@ -102,10 +102,14 @@ Excluded:
 Planned production candidate JSON:
 
 - `data/current-facts/candidate-inputs/<candidate_run_id>-row-move-cell-candidates.json`
+- Implemented as
+  `data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json`.
 
 Planned summary Markdown:
 
 - `docs/current-facts/candidate-inputs/<candidate_run_id>-row-move-cell-candidates.md`
+- Implemented as
+  `docs/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.md`.
 
 `<candidate_run_id>` is the production candidate artifact run ID and must match
 the schema-required UTC timestamp format `YYYYMMDDTHHMMSSZ`. The JSON
@@ -357,6 +361,13 @@ git status --short --branch
 - 2026-05-25: Amended candidate artifact path and top-level `run_id` plan to
   use schema-valid `YYYYMMDDTHHMMSSZ` timestamps while retaining PR #365
   `20260525` only as a source-review evidence reference.
+- 2026-05-25: Added in-memory candidate generator, focused unit tests,
+  `source_review_summary` evidence basis, production candidate JSON/Markdown
+  artifacts, validator boundary updates, and validator audit updates. Full
+  validation passed.
+- 2026-05-25: Ran implementation validation: `git diff --check`,
+  `uv lock --check`, unittest discovery, all `tests/validation/validate_*.py`,
+  and `parsed_value_classifier validate`; all passed.
 
 ## Decision Log
 
@@ -371,6 +382,11 @@ git status --short --branch
   candidate artifact changes.
 - 2026-05-25: Candidate artifact `run_id` must be a schema-valid timestamp and
   must not reuse PR #365's date-only source-review evidence identifier.
+- 2026-05-25: Chose `20260525T000000Z` as the stable candidate artifact
+  `run_id` for this first production candidate artifact.
+- 2026-05-25: Added `source_review_summary` to `source_reference.schema.json`
+  as the evidence basis for production candidate records derived from reviewed
+  public source-review evidence.
 
 ## Deviations
 
@@ -396,6 +412,10 @@ git status --short --branch
 | Input boundary | Plan restricts input to PR #365 public evidence | Same | `validate_current_fact_candidate_evidence.py` | Pass | None | Mandatory plan review pending | Candidate generation remains unimplemented |
 | Candidate run ID | Plan requires schema-valid timestamp `run_id` and keeps PR #365 `20260525` as evidence reference only | Same | `validate_current_fact_schemas.py` | Pass | None | Mandatory plan review pending | Implementation must choose one stable timestamp for JSON and Markdown paths |
 | Runtime/export boundary | No runtime/source-record/export changes | Same | current-fact validators | Pass | None | Mandatory plan review pending | Runtime remains legacy raw export backed |
+| Candidate generator | Deterministic helper transforms PR #365 evidence into candidate payload and summary | `src/sf6_knowledge_coach/current_fact_candidate_generator.py`; `tests/test_current_fact_candidate_generator.py` | `python -m unittest tests.test_current_fact_candidate_generator` | Pass | None | Mandatory implementation review pending | Helper proves transformation only, not source truth |
+| Production candidate artifact | 13-record JSON plus summary Markdown with timestamp `run_id` | `data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json`; `docs/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.md` | `validate_current_fact_row_move_cell_candidates.py` | Pass | None | Mandatory implementation review pending | All records remain non-scalar and not calculation-safe |
+| Evidence basis schema | Added `source_review_summary` evidence basis only | `contracts/current-facts/source_reference.schema.json` | `validate_current_fact_schemas.py` | Pass | None | Mandatory implementation review pending | No broader schema change planned |
+| Validator boundaries | Candidate validator now allows only approved production candidate artifact; export validator still rejects source-record/export artifacts | `tests/validation/validate_current_fact_row_move_cell_candidates.py`; `tests/validation/validate_current_fact_export_generator.py`; validator audit artifacts | validation suite | Pass | None | Mandatory implementation review pending | Runtime remains legacy raw export backed |
 
 ## Next Reviewer Prompt
 

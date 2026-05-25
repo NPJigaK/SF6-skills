@@ -24,6 +24,19 @@
       "status": "accepted_with_limits"
     },
     {
+      "evidence_class": "source_derived",
+      "file": "tests/test_current_fact_candidate_generator.py",
+      "limitations": [
+        "uses reviewed candidate evidence and deterministic classifier reproduction; does not prove source truth beyond reviewed public evidence"
+      ],
+      "primary_evidence": [
+        "data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json",
+        "data/value-shape-policies/20260521T025403Z-parsed-value-classifier-coverage.json",
+        "current-fact production candidate artifact ExecPlan"
+      ],
+      "status": "accepted_with_limits"
+    },
+    {
       "evidence_class": "synthetic_contract",
       "file": "tests/test_current_fact_export_generator.py",
       "limitations": [
@@ -131,26 +144,30 @@
       "evidence_class": "artifact_consistency",
       "file": "tests/validation/validate_current_fact_export_generator.py",
       "limitations": [
-        "checks fixture-contract generator output, guard boundaries, and no production artifact paths; does not prove source truth"
+        "checks fixture-contract generator output, guard boundaries, and absence of production source-record/export artifacts; does not prove source truth"
       ],
       "primary_evidence": [
         "contracts/current-facts/current_fact_export.schema.json",
         "contracts/current-facts/current_fact_source_record_input.schema.json",
         "tests/fixtures/current-facts/source-records",
-        "current-fact export generator fixture-contract implementation ExecPlan"
+        "current-fact export generator fixture-contract implementation ExecPlan",
+        "current-fact production candidate artifact ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
     {
-      "evidence_class": "synthetic_contract",
+      "evidence_class": "source_derived",
       "file": "tests/validation/validate_current_fact_row_move_cell_candidates.py",
       "limitations": [
-        "checks row/move/cell candidate schema, synthetic fixture contracts, and source-boundary guard mutations; does not produce production candidates or prove source truth"
+        "checks row/move/cell candidate schema, synthetic fixture contracts, source-boundary guard mutations, and production candidate consistency with reviewed public evidence; does not prove source truth beyond reviewed evidence"
       ],
       "primary_evidence": [
         "contracts/current-facts/current_fact_row_move_cell_candidate_input.schema.json",
+        "data/current-facts/candidate-inputs/20260525T000000Z-row-move-cell-candidates.json",
+        "data/source-reviews/20260525-current-fact-row-move-cell-candidate-evidence.json",
         "tests/fixtures/current-facts/candidate-inputs",
-        "current-fact row/move/cell candidate schema ExecPlan"
+        "current-fact row/move/cell candidate schema ExecPlan",
+        "current-fact production candidate artifact ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
