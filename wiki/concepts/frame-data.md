@@ -2,16 +2,18 @@
 type: concept
 title: "Frame Data"
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-05-27
 status: active
 confidence: medium
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
   - "[[sources/capcom-official-jp-frame-data]]"
+  - "[[sources/capcom-official-ryu-frame-data]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/juggle-system]]"
   - "[[concepts/fighting-game-notation]]"
+  - "[[entities/ryu]]"
 tags:
   - mechanics
   - glossary
@@ -32,8 +34,8 @@ frames, startup, recovery, cancel options, hit/block advantage, guard direction,
 damage, damage scaling, hitconfirm windows, Drive Rush Cancel advantage, and
 actionable recovery.
 
-The official Capcom JP frame-data source provides reviewed structured per-move
-data for JP in Classic and Modern controls.
+The official Capcom frame-data captures provide reviewed structured per-move
+data for JP and Ryu in Classic and Modern controls.
 
 ## Why it matters
 
@@ -49,7 +51,8 @@ interpret move data, comparisons, or timing-sensitive claims.
 | Startup values are written with the last startup frame and first active frame as the same frame. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | Hit/block values describe frame advantage when an attack hits or is blocked. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | The accepted official JP capture contains 69 Classic data rows and 65 Modern data rows. | [[sources/capcom-official-jp-frame-data]] | high |
-| The official capture stores field explanations separately from per-move CSV rows. | [[sources/capcom-official-jp-frame-data]] | high |
+| The official Ryu capture contains 75 Classic data rows and 69 Modern data rows. | [[sources/capcom-official-ryu-frame-data]] | high |
+| The official captures store field explanations separately from per-move CSV rows. | [[sources/capcom-official-jp-frame-data]], [[sources/capcom-official-ryu-frame-data]] | high |
 
 ## Connections
 
@@ -57,10 +60,13 @@ interpret move data, comparisons, or timing-sensitive claims.
 - [[concepts/juggle-system]]
 - [[concepts/fighting-game-notation]]
 - [[entities/jp]]
+- [[entities/ryu]]
 
 ## Contradictions / caveats
 
 - This page does not yet summarize individual JP move values; those values
+  remain in the raw DOM and derived CSV outputs.
+- This page does not yet summarize individual Ryu move values; those values
   remain in the raw DOM and derived CSV outputs.
 - `input_raw_display` in the derived CSV is a raw DOM-token display, not a
   normalized command notation.

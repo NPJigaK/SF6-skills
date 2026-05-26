@@ -194,6 +194,9 @@ wiki/outputs/data/frame-data/<character>/<control-scheme>.field-meanings.json
 ```
 
 つまり、古い公式rawを上書きせず、比較しやすい派生データだけを更新します。
+CSVは技1項目ごとのデータに絞り、publisher、game、locale、source URL、
+character、control scheme、raw pathなどのsource-level metadataは
+`raw/official/.../manifest.json`、各 `metadata.json`、wiki source page に残します。
 `*.field-meanings.json` には、表ヘッダの補足説明やtooltip相当の説明を保存します。
 
 ツールは `uv` で実行します。

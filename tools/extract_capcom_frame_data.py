@@ -36,12 +36,7 @@ def main(argv: list[str]) -> int:
         if not table_dom_path.exists():
             raise FileNotFoundError(table_dom_path)
         table_dom = json.loads(table_dom_path.read_text(encoding="utf-8"))
-        raw_rel = raw_dir.relative_to(args.repo_root).as_posix()
-        rows = csv_rows_from_dom(
-            table_dom,
-            raw_capture_path=raw_rel,
-            screenshot_path=f"{raw_rel}/screenshot.png",
-        )
+        rows = csv_rows_from_dom(table_dom)
         write_csv(output_dir / f"{mode}.csv", rows)
         write_json(output_dir / f"{mode}.field-meanings.json", field_meanings_from_dom(table_dom))
         print(f"{mode}: wrote {len(rows)} rows")

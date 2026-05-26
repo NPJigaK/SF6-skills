@@ -38,14 +38,6 @@ COLUMN_KEYS = [
 ]
 
 CSV_FIELDS = [
-    "publisher",
-    "game",
-    "locale",
-    "source_url",
-    "raw_capture_path",
-    "screenshot_path",
-    "character_slug",
-    "control_scheme",
     "category_order",
     "category",
     "row_order",
@@ -388,7 +380,7 @@ def move_name_from_cell(move_cell: dict[str, Any]) -> str:
     return str(move_cell.get("text", "")).strip()
 
 
-def csv_rows_from_dom(table_dom: dict[str, Any], raw_capture_path: str, screenshot_path: str) -> list[dict[str, str]]:
+def csv_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, str]]:
     records = []
     category = ""
     category_order = 0
@@ -405,14 +397,6 @@ def csv_rows_from_dom(table_dom: dict[str, Any], raw_capture_path: str, screensh
         mapped = dict(zip(COLUMN_KEYS, cells, strict=True))
         records.append(
             {
-                "publisher": table_dom.get("publisher", "Capcom"),
-                "game": table_dom.get("game", "Street Fighter 6"),
-                "locale": table_dom.get("locale", "ja-jp"),
-                "source_url": table_dom["source_url"],
-                "raw_capture_path": raw_capture_path,
-                "screenshot_path": screenshot_path,
-                "character_slug": table_dom["character_slug"],
-                "control_scheme": table_dom["control_scheme"],
                 "category_order": str(category_order),
                 "category": category,
                 "row_order": str(row_order),
@@ -626,12 +610,7 @@ def main(argv: list[str]) -> int:
             )
             captures.append(capture)
             table_dom = json.loads(capture.table_dom_path.read_text(encoding="utf-8"))
-            raw_rel = capture.raw_dir.relative_to(args.output_root).as_posix()
-            csv_rows_by_mode[mode] = csv_rows_from_dom(
-                table_dom,
-                raw_capture_path=raw_rel,
-                screenshot_path=f"{raw_rel}/screenshot.png",
-            )
+            csv_rows_by_mode[mode] = csv_rows_from_dom(table_dom)
 
     DynamicFetcher.fetch(
         args.source_url,

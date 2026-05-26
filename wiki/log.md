@@ -306,3 +306,77 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Kept `wiki/reviews/2026-05-26-official-jp-frame-data-capture-review.md`
     because it records the human acceptance of the official JP frame-data
     capture and remains useful evidence.
+
+## [2026-05-27] ingest | Capcom official Ryu frame data
+- Raw source:
+  - `raw/official/frame-data/2026-05-27/ryu/manifest.json`
+  - `raw/official/frame-data/2026-05-27/ryu/classic/`
+  - `raw/official/frame-data/2026-05-27/ryu/modern/`
+- Derived outputs:
+  - `wiki/outputs/data/frame-data/ryu/classic.csv`
+  - `wiki/outputs/data/frame-data/ryu/modern.csv`
+  - `wiki/outputs/data/frame-data/ryu/classic.field-meanings.json`
+  - `wiki/outputs/data/frame-data/ryu/modern.field-meanings.json`
+- Created:
+  - `wiki/sources/capcom-official-ryu-frame-data.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/reviews/2026-05-27-official-ryu-frame-data-capture-review.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/street-fighter-6.md`
+- Validation:
+  - Capture command succeeded for `https://www.streetfighter.com/6/ja-jp/character/ryu/frame`.
+  - Extract command reproduced 75 Classic rows and 69 Modern rows from raw DOM.
+  - Metadata reports separate Classic and Modern tab captures with no visible
+    Cookiebot or navigation overlays after cleanup.
+  - LLM visual check confirmed the screenshots include the table width.
+- Status:
+  - Pending human review before marking the Ryu capture accepted.
+- Open questions:
+  - Should a Ryu Classic/Modern comparison question be filed after human review?
+  - Which character should stress-test unusual frame-data table formats next?
+
+## [2026-05-27] schema | Simplify official frame-data CSV rows
+- Updated:
+  - `tools/capture_capcom_frame_data.py`
+  - `tools/extract_capcom_frame_data.py`
+  - `README.md`
+  - `wiki/outputs/data/frame-data/jp/classic.csv`
+  - `wiki/outputs/data/frame-data/jp/modern.csv`
+  - `wiki/outputs/data/frame-data/ryu/classic.csv`
+  - `wiki/outputs/data/frame-data/ryu/modern.csv`
+  - `wiki/log.md`
+- Notes:
+  - Removed repeated source-level metadata from per-move CSV rows.
+  - `publisher`, `game`, `locale`, `source_url`, character, control scheme,
+    raw capture path, and screenshot path remain in raw manifests, raw metadata,
+    output paths, and wiki source pages.
+  - Kept CSVs focused on row-level frame-data fields to make diffs and manual
+    inspection easier.
+
+## [2026-05-27] human-review | Accept official Ryu frame-data capture
+- Updated:
+  - `wiki/sources/capcom-official-ryu-frame-data.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/reviews/2026-05-27-official-ryu-frame-data-capture-review.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+- Decision:
+  - Accepted.
+- Reviewer checks:
+  - Raw placement matches the JP convention.
+  - Classic and Modern screenshots show the intended Ryu official tables without
+    visible horizontal cutoff or obstructing overlays.
+  - DOM row counts, manifest row counts, and CSV row counts match: Classic 75,
+    Modern 69.
+  - Field meanings are present: Classic 7 records, Modern 8 records, including
+    the Modern SP-button 80% damage note.
+  - Ryu source, entity, review, and outputs are reachable from the index.
+- Notes:
+  - Source and review statuses were moved from `pending_human_review` to active
+    or accepted as appropriate.
