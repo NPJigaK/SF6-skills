@@ -12,14 +12,15 @@
   ],
   "files": [
     {
-      "evidence_class": "source_derived",
+      "evidence_class": "governance_boundary",
       "file": "tests/test_cli.py",
       "limitations": [
-        "JP 5LP smoke only; not full roster current-fact validation"
+        "checks CLI scaffolding, retired current-fact hold/unavailable behavior, and answer-log path guards; does not prove source truth or calculation correctness"
       ],
       "primary_evidence": [
-        "data/exports/jp/official_raw.json",
-        ".local official acquisition artifact for JP 5LP checked during audit"
+        "current-fact legacy raw retirement ExecPlan",
+        "docs/PLAN.md",
+        "AGENTS.md"
       ],
       "status": "accepted_with_limits"
     },
@@ -151,7 +152,8 @@
         "AGENTS.md",
         "clean-slate ExecPlans",
         "current-fact JSON Schema artifacts ExecPlan",
-        "current-fact source-record input artifact ExecPlan"
+        "current-fact source-record input artifact ExecPlan",
+        "current-fact legacy raw retirement ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
@@ -171,21 +173,6 @@
         "current-fact production candidate artifact ExecPlan",
         "current-fact source-record artifact from candidates ExecPlan",
         "current-fact export artifact from source records ExecPlan"
-      ],
-      "status": "accepted_with_limits"
-    },
-    {
-      "evidence_class": "artifact_consistency",
-      "file": "tests/validation/validate_current_fact_lookup_parity.py",
-      "limitations": [
-        "checks production export invariants, expected non-parity with the legacy JP raw comparison surface, and source-text runtime boundary markers; does not switch runtime or prove source truth/calculation safety"
-      ],
-      "primary_evidence": [
-        "data/current-facts/20260525T000000Z-current-fact-export.json",
-        "data/exports/jp/official_raw.json",
-        "src/sf6_knowledge_coach/current_facts.py",
-        "src/sf6_knowledge_coach/answering.py",
-        "current-fact lookup parity rollback ExecPlan"
       ],
       "status": "accepted_with_limits"
     },

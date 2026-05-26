@@ -7,8 +7,13 @@ from pathlib import Path
 from typing import Any
 
 from .aliases import ResolvedContext, resolve_query
-from .current_facts import lookup_current_fact
 from .paths import repo_root
+
+CURRENT_FACT_RETIREMENT_MESSAGE = (
+    "Legacy raw-backed current-fact lookup has been retired. "
+    "Numeric/current-fact exact answers are held until reviewed scalar-safe "
+    "or non-scalar disposition contracts exist."
+)
 
 NUMERIC_TERMS = (
     "frame",
@@ -68,38 +73,16 @@ def prepare_answer(query: str) -> dict[str, Any]:
     assert context.character_slug is not None
     assert context.move_input is not None
     assert context.field is not None
-    try:
-        fact = lookup_current_fact(context.character_slug, context.move_input, context.field)
-    except (LookupError, ValueError) as exc:
-        packet["status"] = "hold"
-        packet["uncertainty"].append(str(exc))
-        return packet
-
-    packet["status"] = "answered"
-    packet["answer"] = (
-        f"{fact.character_slug} {fact.input} {fact.field}: {fact.value} "
-        f"({fact.authority})"
-    )
-    packet["evidence"].append(
-        {
-            "kind": "deterministic_current_fact_lookup",
-            "authority": fact.authority,
-            "source_path": fact.source_path,
-            "fact": fact.to_dict(),
-        }
-    )
+    packet["status"] = "hold"
+    packet["uncertainty"].append(CURRENT_FACT_RETIREMENT_MESSAGE)
     return packet
 
 
 def verify_answer_packet(packet: dict[str, Any]) -> dict[str, Any]:
     numeric = is_numeric_or_current_fact_query(str(packet.get("query", "")))
-    evidence = packet.get("evidence", [])
-    deterministic_evidence = [
-        item for item in evidence if item.get("kind") == "deterministic_current_fact_lookup"
-    ]
     issues: list[str] = []
-    if numeric and packet.get("status") == "answered" and not deterministic_evidence:
-        issues.append("Numeric/current-fact answer lacks deterministic current-fact evidence.")
+    if numeric and packet.get("status") == "answered":
+        issues.append("Numeric/current-fact exact answers are retired and must hold.")
     if packet.get("status") == "answered" and packet.get("answer") is None:
         issues.append("Answered packet has no answer text.")
     return {
