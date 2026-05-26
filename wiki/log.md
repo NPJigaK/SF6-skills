@@ -95,3 +95,48 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Open knowledge gaps remain around official Capcom terminology sources,
     malformed notation-table capture quality, and community-source confidence
     policy.
+
+## [2026-05-26] ingest | Capcom official JP frame data
+- Raw source:
+  - `raw/official/frame-data/2026-05-26/jp/manifest.json`
+  - `raw/official/frame-data/2026-05-26/jp/classic/`
+  - `raw/official/frame-data/2026-05-26/jp/modern/`
+- Derived outputs:
+  - `wiki/outputs/data/frame-data/jp/classic.csv`
+  - `wiki/outputs/data/frame-data/jp/modern.csv`
+  - `wiki/outputs/data/frame-data/jp/classic.field-meanings.json`
+  - `wiki/outputs/data/frame-data/jp/modern.field-meanings.json`
+- Tooling:
+  - Added `pyproject.toml` and `uv.lock` for Scrapling-based capture tooling.
+  - Added `tools/capture_capcom_frame_data.py`.
+  - Added `tools/extract_capcom_frame_data.py`.
+  - Fixed capture URL handling so `--source-url` is derived from
+    `--character-slug` unless explicitly provided, and explicit URLs must match
+    the slug.
+- Created:
+  - `wiki/sources/capcom-official-jp-frame-data.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/jp.md`
+  - `wiki/reviews/2026-05-26-official-jp-frame-data-capture-review.md`
+- Updated:
+  - `README.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Review:
+  - Human review accepted the raw snapshot and derived outputs for wiki ingest.
+  - Classic data row count is 69; Modern data row count is 65.
+  - `*.field-meanings.json` stores table-header help text separately from row
+    CSVs.
+- Notes:
+  - Raw official captures remain dated snapshots under `raw/official/`.
+  - Stable derived CSV paths under `wiki/outputs/data/` are intended to make
+    future update diffs easier to review.
+- Open questions:
+  - Should the next official capture cover all characters, or one additional
+    character first to validate the pipeline?
+  - Should a normalized command notation be generated later from raw input
+    tokens?
+  - Which official update-history source should be ingested to explain future
+    frame-data changes?

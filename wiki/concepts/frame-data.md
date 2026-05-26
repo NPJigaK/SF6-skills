@@ -7,6 +7,7 @@ status: active
 confidence: medium
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
+  - "[[sources/capcom-official-jp-frame-data]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/juggle-system]]"
@@ -20,20 +21,24 @@ tags:
 
 ## Summary
 
-Frame data is the vocabulary used to describe timing, recovery, advantage,
-damage, scaling, cancel options, and related properties of moves.
+Frame data is the vocabulary and structured move data used to describe timing,
+recovery, advantage, damage, scaling, cancel options, and related move
+properties.
 
 ## Definition
 
-The source defines frame data fields and related terms such as active frames,
-startup, recovery, cancel options, hit/block advantage, guard direction, damage,
-damage scaling, hitconfirm windows, Drive Rush Cancel advantage, and actionable
-recovery.
+The SuperCombo glossary source defines frame-data vocabulary such as active
+frames, startup, recovery, cancel options, hit/block advantage, guard direction,
+damage, damage scaling, hitconfirm windows, Drive Rush Cancel advantage, and
+actionable recovery.
+
+The official Capcom JP frame-data source provides reviewed structured per-move
+data for JP in Classic and Modern controls.
 
 ## Why it matters
 
-Frame data terms are needed before later wiki pages can interpret move data,
-comparisons, or timing-sensitive claims.
+Frame data terms and structured captures are needed before later wiki pages can
+interpret move data, comparisons, or timing-sensitive claims.
 
 ## Key claims
 
@@ -43,22 +48,25 @@ comparisons, or timing-sensitive claims.
 | Recovery describes how many frames a move takes to finish after active frames end. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | Startup values are written with the last startup frame and first active frame as the same frame. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | Hit/block values describe frame advantage when an attack hits or is blocked. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| The accepted official JP capture contains 69 Classic data rows and 65 Modern data rows. | [[sources/capcom-official-jp-frame-data]] | high |
+| The official capture stores field explanations separately from per-move CSV rows. | [[sources/capcom-official-jp-frame-data]] | high |
 
 ## Connections
 
 - [[concepts/drive-system]]
 - [[concepts/juggle-system]]
 - [[concepts/fighting-game-notation]]
+- [[entities/jp]]
 
 ## Contradictions / caveats
 
-- This page currently summarizes glossary-level concepts, not reviewed move
-  values.
-- Numeric examples from the source are treated as source-backed glossary
-  examples, not as a complete verified data table.
+- This page does not yet summarize individual JP move values; those values
+  remain in the raw DOM and derived CSV outputs.
+- `input_raw_display` in the derived CSV is a raw DOM-token display, not a
+  normalized command notation.
 
 ## Open questions
 
-- Which source should define canonical frame data fields for future structured
-  move pages?
-
+- Should the wiki define a normalized command-input notation after more official
+  frame-data captures exist?
+- Which official source should be ingested to explain frame-data update history?

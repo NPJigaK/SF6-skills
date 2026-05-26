@@ -133,6 +133,7 @@ raw/images/        スクリーンショット、図
 raw/assets/        記事画像などの添付ファイル
 raw/transcripts/   transcript
 raw/notes/         自分の調査メモ、読書メモ
+raw/official/      公式一次資料のHTML、DOM、スクリーンショットなど
 ```
 
 ファイル名は、日付・source名・topic が分かる形にします。
@@ -166,6 +167,42 @@ status: raw
 
 画像や添付ファイルが重要な場合は、URL参照だけにせず `raw/images/` または
 `raw/assets/` にローカル保存します。
+
+## 公式フレームデータの置き方
+
+公式フレームデータは記事ではなく、公式リファレンス / dataset-like source として扱います。
+Web Clipper Markdownではなく、再現できるツールでHTML、DOM、スクリーンショットを保存します。
+
+raw snapshot は日付を含むpathに置きます。
+
+```text
+raw/official/frame-data/YYYY-MM-DD/<character>/<control-scheme>/
+  page.html
+  table.dom.json
+  screenshot.png
+  metadata.json
+```
+
+これは `raw/` を immutable source of truth として扱うためです。公式ページは同じURLでもアップデートで中身が変わるので、
+新しい取得は新しいsnapshotとして残します。
+
+一方で、フレーム変更の Git diff を見やすくするため、派生CSVは安定したpathに出します。
+
+```text
+wiki/outputs/data/frame-data/<character>/<control-scheme>.csv
+wiki/outputs/data/frame-data/<character>/<control-scheme>.field-meanings.json
+```
+
+つまり、古い公式rawを上書きせず、比較しやすい派生データだけを更新します。
+`*.field-meanings.json` には、表ヘッダの補足説明やtooltip相当の説明を保存します。
+
+ツールは `uv` で実行します。
+
+```bash
+uv sync
+uv run python tools/capture_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
+uv run python tools/extract_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
+```
 
 ## source を置いた後にLLMへ依頼すること
 
