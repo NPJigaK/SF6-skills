@@ -24,13 +24,13 @@ privacy/security boundary.
 | `tests/test_value_shape_disposition.py` | artifact consistency | accepted with limits | disposition coverage is not parse semantics |
 | `tests/test_parsed_value_classifier.py` | policy-derived | accepted with limits | parser/classifier behavior is policy-derived and not calculation correctness |
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
-| `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape and approved contract file inventory only |
+| `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape, approved contract file inventory, and retired legacy data surface guards only |
 | `tests/validation/validate_current_fact_export_generator.py` | artifact consistency | accepted with limits | fixture-contract generator output, guard boundaries, and approved production export consistency only |
 | `tests/validation/validate_current_fact_row_move_cell_candidates.py` | source-derived | accepted with limits | candidate schema, synthetic fixtures, production candidate consistency, and approved source-record artifact coexistence only |
 | `tests/validation/validate_current_fact_candidate_evidence.py` | source-derived | accepted with limits | candidate evidence source-review summary; full v4 row context remains ignored local reviewer input |
 | `tests/validation/validate_current_fact_consumer_guards.py` | artifact consistency | accepted with limits | guard behavior against synthetic fixtures and coverage statuses only |
 | `tests/validation/validate_current_fact_source_records.py` | source-derived | accepted with limits | source-record schema, fixtures, and approved production source-record consistency with reviewed candidate input only |
-| `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts only; no parser/source truth |
+| `tests/validation/validate_current_fact_schemas.py` | synthetic contract | accepted with limits | schema and fixture contracts plus retired raw-export fixture reference guards only; no parser/source truth |
 | `tests/validation/validate_official_note_linkage_source_review.py` | source-derived | accepted with limits | source-review summary; full row-note context remains ignored local evidence |
 | `tests/validation/validate_parsed_value_classifier.py` | artifact consistency | accepted with limits | coverage artifact, mechanics anchors, and schema-compatible samples only |
 | `tests/validation/validate_validator_test_audit.py` | governance boundary | accepted with limits | audit coverage and evidence metadata only |

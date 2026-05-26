@@ -145,7 +145,7 @@
       "evidence_class": "governance_boundary",
       "file": "tests/validation/validate_clean_slate.py",
       "limitations": [
-        "checks clean-slate repo shape, not source truth"
+        "checks clean-slate repo shape and retired legacy data surface guards, not source truth"
       ],
       "primary_evidence": [
         "docs/PLAN.md",
@@ -153,7 +153,8 @@
         "clean-slate ExecPlans",
         "current-fact JSON Schema artifacts ExecPlan",
         "current-fact source-record input artifact ExecPlan",
-        "current-fact legacy raw retirement ExecPlan"
+        "current-fact legacy raw retirement ExecPlan",
+        "current-fact legacy provenance cleanup ExecPlan"
       ],
       "status": "accepted_with_limits"
     },
@@ -240,12 +241,13 @@
       "evidence_class": "synthetic_contract",
       "file": "tests/validation/validate_current_fact_schemas.py",
       "limitations": [
-        "checks schema and fixture contracts only; does not prove parser correctness or source truth"
+        "checks schema and fixture contracts only, including retired raw-export fixture reference guards; does not prove parser correctness or source truth"
       ],
       "primary_evidence": [
         "contracts/current-facts/*.schema.json",
         "tests/fixtures/current-facts",
-        "current-fact JSON Schema redesign ExecPlans"
+        "current-fact JSON Schema redesign ExecPlans",
+        "current-fact legacy provenance cleanup ExecPlan"
       ],
       "status": "accepted_with_limits"
     },

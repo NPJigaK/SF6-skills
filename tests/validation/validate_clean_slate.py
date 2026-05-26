@@ -65,12 +65,13 @@ def main() -> int:
         if (ROOT / relative).exists():
             errors.append(f"Legacy path should remain deleted: {relative}")
 
-    retired_official_raw = sorted(
+    retired_exports = sorted(
         path.relative_to(ROOT).as_posix()
-        for path in (ROOT / "data/exports").glob("*/official_raw.json")
+        for path in (ROOT / "data/exports").rglob("*")
+        if path.is_file()
     )
-    if retired_official_raw:
-        errors.append(f"Retired official_raw exports should remain deleted: {retired_official_raw}")
+    if retired_exports:
+        errors.append(f"Retired data/exports files should remain deleted: {retired_exports}")
 
     if (ROOT / "src/sf6_knowledge_coach/current_facts.py").exists():
         errors.append("Legacy raw-backed current_facts.py should remain deleted.")

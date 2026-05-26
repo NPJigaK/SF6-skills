@@ -1,6 +1,6 @@
 # Current-Fact Legacy Provenance Cleanup
 
-Status: Draft.
+Status: Implementation complete; validation passed.
 
 ## Purpose
 
@@ -30,6 +30,8 @@ validator, generator, or reviewed-artifact dependency.
 - `docs/execplans/2026-05-23-data-surface-cleanup.md`
 - `docs/execplans/2026-05-26-current-fact-legacy-raw-retirement.md`
 - `README.md`
+- `src/sf6_knowledge_coach/aliases.py`
+- `src/sf6_knowledge_coach/paths.py`
 - `data/exports/README.md`
 - `data/exports/*/snapshot_manifest.json`
 - `data/exports/_index/manual-review-debt.json`
@@ -81,6 +83,9 @@ Included after mandatory plan review:
   - `data/exports/README.md`;
 - update `README.md` so it no longer describes `data/exports/` as retained
   public current-fact seed data;
+- replace character slug discovery that still depends on `data/exports`
+  directory names with the reviewed public roster;
+- remove `exports_dir()` if the implementation makes it orphaned;
 - update clean-slate validation to guard that `data/exports/` remains retired,
   while still permitting explicit negative fixture strings that reject legacy
   paths;
@@ -93,7 +98,8 @@ Excluded:
 - No compatibility fallback.
 - No dual lookup.
 - No alias/input bridge.
-- No runtime lookup change.
+- No runtime lookup change beyond replacing context resolver character
+  discovery that still depends on `data/exports`.
 - No `current_facts.py` restoration.
 - No `answering.py` exact numeric/current-fact answer restoration.
 - No `cli.py` raw-backed search/current lookup restoration.
@@ -182,6 +188,10 @@ Allowed implementation files after mandatory plan review:
 
 - `docs/execplans/2026-05-26-current-fact-legacy-provenance-cleanup.md`
 - `README.md`
+- `src/sf6_knowledge_coach/aliases.py`, only to replace `data/exports`
+  character discovery with `data/roster/current-character-roster.json`;
+- `src/sf6_knowledge_coach/paths.py`, only to remove the orphaned
+  `exports_dir()` helper if no callers remain;
 - `tests/fixtures/current-facts/records/valid/official_active_frame_range.json`
 - `tests/fixtures/current-facts/records/valid/official_block_advantage_signed_frame.json`
 - `tests/fixtures/current-facts/records/valid/official_move_name_raw_preserved.json`
@@ -196,10 +206,12 @@ Allowed implementation files after mandatory plan review:
   - `data/exports/_index/manual-review-debt.json`;
   - `data/exports/*/snapshot_manifest.json`.
 
-Not allowed without ExecPlan amendment:
+Not allowed without another ExecPlan amendment:
 
-- current-fact runtime modules;
-- answer or CLI runtime behavior beyond existing retired behavior;
+- current-fact runtime modules beyond the explicitly allowed context resolver
+  discovery cleanup;
+- answer or CLI runtime behavior beyond existing retired behavior and the
+  context resolver character-discovery source;
 - parser/classifier code;
 - schemas;
 - production generated current-fact artifacts;
@@ -247,10 +259,18 @@ Expected implementation checks:
 ## Progress
 
 - [x] 2026-05-26: Created docs-only cleanup plan from updated `main`.
-- [ ] Complete mandatory plan review.
-- [ ] Implement scoped cleanup in the same draft PR.
-- [ ] Run implementation validation.
-- [ ] Complete implementation review table.
+- [x] 2026-05-26: Completed mandatory plan review for PR #371.
+- [x] 2026-05-26: Implemented scoped cleanup in the same draft PR. Replaced
+  historical synthetic record fixture references to deleted
+  `data/exports/jp/official_raw.json`, deleted all tracked `data/exports`
+  provenance files, updated README, and added clean-slate/schema validator
+  guards.
+- [x] 2026-05-26: Initial implementation validation found that context
+  resolver character discovery still depended on `data/exports` directories.
+  Amended this plan to authorize using the reviewed roster for character
+  discovery and removing the orphaned `exports_dir()` helper.
+- [x] 2026-05-26: Ran implementation validation. All required checks passed.
+- [x] 2026-05-26: Updated completion review table for implementation review.
 
 ## Decision Log
 
@@ -262,6 +282,18 @@ Expected implementation checks:
   references unless replacement rejection coverage is reviewed.
 - 2026-05-26: Do not use this cleanup to change non-scalar current-fact
   disposition or answer behavior.
+- 2026-05-26: Dependency scan found one active context resolver dependency on
+  `data/exports` directory names. This plan removes that dependency by using
+  the reviewed roster. Remaining `data/exports` strings are boundary rejection
+  fixtures, validator mutations, historical ExecPlan prose, or retired crafted
+  answer-packet text.
+- 2026-05-26: Valid current-fact record fixtures now use
+  `synthetic_contract_fixture` evidence against the current-fact record schema
+  instead of deleted official raw export paths.
+- 2026-05-26: Character discovery must use
+  `data/roster/current-character-roster.json` after deleting `data/exports`.
+  Rationale: this preserves context resolution without reintroducing raw
+  lookup, fallback, dual lookup, alias bridging, or exact answer behavior.
 
 ## Deviations
 
@@ -283,10 +315,11 @@ Expected implementation checks:
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Plan cleanup | Draft docs-only cleanup plan | `docs/execplans/2026-05-26-current-fact-legacy-provenance-cleanup.md` | plan-only validation | Pending | None | Mandatory review pending | Implementation not started |
-| Fixture cleanup | Replace historical valid synthetic fixture references | planned fixture files | `validate_current_fact_schemas.py` | Pending | None | Implementation pending | Synthetic fixtures still do not prove source truth |
-| Provenance deletion | Delete remaining tracked `data/exports` provenance files | planned `data/exports` deletions | `git ls-files data/exports` | Pending | None | Implementation pending | Historical ExecPlans still mention legacy paths |
-| Boundary preservation | Keep rejection coverage for legacy path inputs | current-fact validators/fixtures | all validators | Pending | None | Implementation pending | Must not re-authorize legacy paths |
+| Plan cleanup | Draft docs-only cleanup plan | `docs/execplans/2026-05-26-current-fact-legacy-provenance-cleanup.md` | plan-only validation | Pass | None | None | Implementation required review first |
+| Fixture cleanup | Replaced historical record fixture references with synthetic contract evidence | `tests/fixtures/current-facts/records/valid/official_active_frame_range.json`; `tests/fixtures/current-facts/records/valid/official_block_advantage_signed_frame.json`; `tests/fixtures/current-facts/records/valid/official_move_name_raw_preserved.json`; `tests/fixtures/current-facts/records/invalid/source_family_uses_source_identity.json`; `tests/validation/validate_current_fact_schemas.py` | `validate_current_fact_schemas.py` | Pass | None | None | Synthetic fixtures still do not prove source truth |
+| Provenance deletion | Deleted remaining tracked `data/exports` provenance files and updated README | `data/exports/`; `README.md`; `tests/validation/validate_clean_slate.py` | `git ls-files data/exports`; `validate_clean_slate.py` | Pass | None | None | Historical ExecPlans still mention legacy paths |
+| Context resolver dependency cleanup | Replaced `data/exports` character discovery with reviewed roster and removed orphan helper | `src/sf6_knowledge_coach/aliases.py`; `src/sf6_knowledge_coach/paths.py` | unit tests | Pass | None | None | Does not restore exact answers |
+| Boundary preservation | Preserved negative legacy path rejection coverage and updated validator audit | current-fact invalid fixtures/validators; validator audit JSON/MD | all validators; `validate_validator_test_audit.py` | Pass | None | None | Must not re-authorize legacy paths |
 
 ## Next Reviewer Prompt
 

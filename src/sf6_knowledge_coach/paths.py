@@ -9,7 +9,3 @@ def repo_root() -> Path:
 
 def data_dir() -> Path:
     return repo_root() / "data"
-
-
-def exports_dir() -> Path:
-    return data_dir() / "exports"
