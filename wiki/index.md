@@ -39,7 +39,7 @@ which wiki pages to inspect.
 
 | Page | Question | Summary | Updated |
 |---|---|---|---:|
-| [[questions/how-juggles-work-internally]] | ジャグルって内部的にどういう仕組みで発生するんですか？ | Explains juggle checks using Juggle Count, Start, Increase, and Limit from the ingested glossary. | 2026-05-26 |
+| [[questions/jp-modern-vs-classic-frame-data-moves-and-inputs]] | JPのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？ | JP Classic/Modernの項目数、Classic専用項目、入力表示、ダメージ差分を公式フレームデータから比較する。 | 2026-05-27 |
 
 ## Outputs
 
@@ -54,5 +54,4 @@ which wiki pages to inspect.
 
 | Page | Review type | Summary | Status |
 |---|---|---|---|
-| [[reviews/2026-05-26-health-check]] | lint | Initial health check after first source ingest and first filed-back query. | open |
 | [[reviews/2026-05-26-official-jp-frame-data-capture-review]] | human_review | Review accepted the official JP frame-data raw snapshot and derived outputs. | accepted |

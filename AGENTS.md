@@ -30,6 +30,11 @@ pattern is implemented and reviewed.
 - `wiki/reviews/`: lint results, contradictions, stale claims, and review notes.
 - `wiki/templates/`: reusable page templates.
 
+Question pages are durable, reader-facing answers. Do not include workflow
+sections such as `Filed-back updates`, changed files, task summaries, or
+implementation notes in `wiki/questions/`. Put operational history in
+`wiki/log.md`, and use `wiki/reviews/` for review findings.
+
 ## Non-Negotiable Rules
 
 1. Never modify files in `raw/`.
@@ -71,9 +76,11 @@ When asked to answer a question:
 4. Answer with citations to wiki pages or source pages.
 5. State uncertainty and missing evidence clearly.
 6. If the answer is durable, save it to `wiki/questions/`, `wiki/syntheses/`, or `wiki/outputs/`.
-7. Update `wiki/index.md` if a page is created or materially changed.
-8. Append to `wiki/log.md`.
-9. Report changed files and unresolved questions.
+7. Keep saved question pages focused on the reusable answer; put file-back
+   details and changed files in `wiki/log.md`, not in the question page.
+8. Update `wiki/index.md` if a page is created or materially changed.
+9. Append to `wiki/log.md`.
+10. Report changed files and unresolved questions.
 
 ## Output Workflow
 
@@ -113,4 +120,3 @@ When asked to run a wiki health check:
 - Use simple file-based CLI tools only when they exist.
 - Do not depend on Obsidian CLI, Obsidian APIs, vector databases, graph databases,
   hosted RAG systems, or MCP-first architecture in the base implementation.
-

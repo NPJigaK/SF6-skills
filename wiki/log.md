@@ -140,3 +140,169 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     tokens?
   - Which official update-history source should be ingested to explain future
     frame-data changes?
+
+## [2026-05-26] query | JP Modern vs Classic frame-data counts and inputs
+- Question:
+  - JPのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+- Read:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/sources/capcom-official-jp-frame-data.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/jp.md`
+  - `wiki/outputs/data/frame-data/jp/classic.csv`
+  - `wiki/outputs/data/frame-data/jp/modern.csv`
+- Created:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Answer summary:
+  - Classic has 69 official derived frame-data rows and Modern has 65.
+  - Modern has no unique move-name rows compared with Classic; Classic-only
+    rows are standing LK, crouching MP, crouching HK, and Heavy Stribog.
+  - Of 65 shared move names, 62 have different raw input displays and 3
+    movement/system rows have identical raw input displays.
+- Open questions:
+  - Should future comparisons normalize `input_raw_display` into conventional
+    command notation, or continue comparing raw DOM-token displays only?
+
+## [2026-05-26] query-review | Improve JP Modern vs Classic answer
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Notes:
+  - Reworked the answer to start with a user-facing conclusion instead of a CSV
+    implementation detail.
+  - Added the practical interpretation that shared move-name rows have the same
+    captured frame/gauge/cancel fields except for 16 damage differences.
+  - Added a damage-difference table and clarified that `input_raw_display`
+    remains raw DOM-token output, not normalized command notation.
+
+## [2026-05-26] query-review | Japanese wording for JP Modern vs Classic answer
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Converted user-facing section headings and explanatory prose to Japanese.
+  - Kept technical field names such as `move_name`, `input_raw_display`, and
+    token names unchanged where they identify stored data fields.
+
+## [2026-05-26] query-review | Display command notation for JP comparison
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Replaced raw DOM tokens such as `key-d` and `icon_punch_l` in user-facing
+    examples with readable command notation such as ↓, ↘, →, 弱P, and 強K.
+  - Left raw token field names in the limitations section to clarify the stored
+    evidence format.
+
+## [2026-05-26] query-review | Prefer official column wording
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Replaced internal comparison field names in user-facing prose with official
+    table wording such as 技名 and 入力表示.
+  - Kept storage field names only where the page explicitly discusses stored
+    evidence fields.
+
+## [2026-05-26] query-review | Remove workflow notes from JP answer
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Removed the `File-back` workflow section from the durable answer page.
+  - Shortened the caveats so user-facing prose does not expose unnecessary
+    storage-field details.
+
+## [2026-05-26] query-review | Simplify evidence wording
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Replaced internal derived-output file paths in the evidence section with
+    user-facing source wording.
+  - Kept the wiki source link as the traceability anchor.
+
+## [2026-05-27] schema | Keep question pages reader-facing
+- Updated:
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - `ROADMAP.md`
+  - `wiki/templates/question.md`
+  - `wiki/questions/how-juggles-work-internally.md`
+  - `wiki/log.md`
+- Notes:
+  - Removed `Filed-back updates` from the question template and the existing
+    juggle question page.
+  - Clarified that `wiki/questions/` pages are durable reader-facing answers.
+  - Operational file-back details, changed files, and task summaries now belong
+    in `wiki/log.md` or the final task report, not in question pages.
+
+## [2026-05-27] query-review | Make JP comparison answer less implementation-facing
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Notes:
+  - Removed implementation-facing wording such as CSV, derived data, and row
+    counting from the durable answer prose.
+  - Reworded the answer around official frame-data items, move names, input
+    displays, and the practical Classic/Modern differences a reader asked for.
+
+## [2026-05-27] query-review | Remove bare source footer from JP comparison
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Removed the bare `参照元` wikilink from the answer body because the source
+    is already recorded in frontmatter.
+  - Kept the evidence section focused on what was checked rather than exposing
+    wiki navigation details to the reader.
+
+## [2026-05-27] query-review | Sort JP damage differences by move family
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Reordered the damage-difference table so variants of the same move family,
+    such as Stribog and Triglav, stay adjacent.
+
+## [2026-05-27] query-review | Format JP command examples
+- Updated:
+  - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
+  - `wiki/log.md`
+- Notes:
+  - Wrapped command notation examples in inline code for readability.
+
+## [2026-05-27] query-removal | Remove low-quality juggle answer
+- Removed:
+  - `wiki/questions/how-juggles-work-internally.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Notes:
+  - Removed the filed-back juggle question because the current answer quality
+    and reader-facing shape no longer match the standard established by later
+    question-page tuning.
+  - Kept the underlying SuperCombo source and related concept pages intact; this
+    is a removal of a weak answer, not a rejection of the source.
+- Follow-up:
+  - Re-answer the juggle mechanism question later after the relevant official
+    Capcom terminology or a stronger source has been ingested.
+
+## [2026-05-27] review-removal | Remove stale initial health check
+- Removed:
+  - `wiki/reviews/2026-05-26-health-check.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Notes:
+  - Removed the initial health check because it described the early wiki state
+    around a now-deleted filed-back juggle answer.
+  - Kept `wiki/reviews/2026-05-26-official-jp-frame-data-capture-review.md`
+    because it records the human acceptance of the official JP frame-data
+    capture and remains useful evidence.
