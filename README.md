@@ -4,9 +4,9 @@ SF6 Knowledge Coach is a clean-slate local app for building a personal,
 character-agnostic Street Fighter 6 coaching system.
 
 JP is the initial active character package, not a global hardcoded assumption.
-The repository keeps public current-fact seed data in Git and keeps private user
-profile data, training logs, answer logs, raw media, and private overlays out of
-Git.
+The repository keeps reviewed public current-fact artifacts in Git and keeps
+private user profile data, training logs, answer logs, raw media, and private
+overlays out of Git.
 
 ## Current State
 
@@ -23,7 +23,8 @@ under [docs/execplans/](docs/execplans/).
 - `AGENTS.md`: repository rules for agents and maintainers.
 - `docs/PLAN.md`: clean-slate architecture contract.
 - `docs/execplans/`: scoped execution plans for implementation slices.
-- `data/exports/`: retained public current-fact seed data.
+- `data/current-facts/`: reviewed current-fact candidate/source-record/export
+  artifacts.
 - `src/sf6_knowledge_coach/`: minimal deterministic local tools.
 - `tests/`: clean-slate tests and validation.
 
@@ -40,15 +41,13 @@ Use the CLI without installing:
 
 ```bash
 PYTHONPATH=src python -m sf6_knowledge_coach.cli context resolve "JPの5LPはガードで何F？"
-PYTHONPATH=src python -m sf6_knowledge_coach.cli current lookup --character jp --move 5LP --field block_adv
 PYTHONPATH=src python -m sf6_knowledge_coach.cli answer prepare "JPの5LPはガードで何F？"
 PYTHONPATH=src python -m sf6_knowledge_coach.cli answer verify "JPの5LPはガードで何F？"
 ```
 
-`search` is currently a raw substring search over retained current-fact records.
-It does not apply Japanese alias normalization, FTS, or ranking yet. Use
-`context resolve`, `current lookup`, or `answer prepare` for normalized
-current-fact flows in this scaffold.
+`search` and `current lookup` are explicitly unavailable after legacy raw-backed
+current-fact retirement. Exact numeric/current-fact answers hold until a later
+reviewed scalar-safe or non-scalar disposition contract exists.
 
 After installing the package, the console command is `sf6`.
 

@@ -65,6 +65,7 @@ def main() -> int:
     _validate_valid_fixtures(export_validator, FIXTURE_DIR / "exports/valid", errors)
     _validate_invalid_fixtures(export_validator, FIXTURE_DIR / "exports/invalid", errors)
     _scan_public_files([*schemas, *FIXTURE_DIR.rglob("*.json")], errors)
+    _validate_record_fixtures_do_not_reference_retired_raw_exports(errors)
     return _finish(errors)
 
 
@@ -122,6 +123,13 @@ def _scan_public_files(paths: list[Path], errors: list[str]) -> None:
             if pattern.search(text):
                 errors.append(f"{path.relative_to(ROOT)} contains forbidden public content")
                 break
+
+
+def _validate_record_fixtures_do_not_reference_retired_raw_exports(errors: list[str]) -> None:
+    for path in sorted((FIXTURE_DIR / "records").rglob("*.json")):
+        text = path.read_text(encoding="utf-8")
+        if "data/exports/jp/official_raw.json" in text:
+            errors.append(f"{path.relative_to(ROOT)} references retired official_raw fixture data")
 
 
 def _finish(errors: list[str]) -> int:

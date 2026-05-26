@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
 from typing import Any
 
-from .paths import exports_dir
+from .paths import data_dir
 
 
 FIELD_ALIASES = {
@@ -32,10 +33,15 @@ class ResolvedContext:
 
 
 def available_character_slugs() -> set[str]:
-    root = exports_dir()
-    if not root.exists():
+    roster_path = data_dir() / "roster" / "current-character-roster.json"
+    if not roster_path.exists():
         return set()
-    return {path.name for path in root.iterdir() if path.is_dir() and not path.name.startswith("_")}
+    payload = json.loads(roster_path.read_text(encoding="utf-8"))
+    return {
+        str(item["character_slug"])
+        for item in payload.get("characters", [])
+        if isinstance(item, dict) and item.get("character_slug")
+    }
 
 
 def resolve_query(query: str) -> ResolvedContext:
