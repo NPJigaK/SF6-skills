@@ -36,6 +36,7 @@ which wiki pages to inspect.
 
 | Page | Question | Summary | Updated |
 |---|---|---|---:|
+| [[questions/how-juggles-work-internally]] | ジャグルって内部的にどういう仕組みで発生するんですか？ | Explains juggle checks using Juggle Count, Start, Increase, and Limit from the ingested glossary. | 2026-05-26 |
 
 ## Outputs
 
