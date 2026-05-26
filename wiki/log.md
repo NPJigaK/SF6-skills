@@ -380,3 +380,33 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Notes:
   - Source and review statuses were moved from `pending_human_review` to active
     or accepted as appropriate.
+
+## [2026-05-27] query | Ryu Modern vs Classic frame-data counts and inputs
+- Question:
+  - Ryuのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+- Read:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/sources/capcom-official-ryu-frame-data.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/outputs/data/frame-data/ryu/classic.csv`
+  - `wiki/outputs/data/frame-data/ryu/modern.csv`
+- Created:
+  - `wiki/questions/ryu-modern-vs-classic-frame-data-moves-and-inputs.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Answer summary:
+  - Classic has 75 official frame-data items and Modern has 69.
+  - Exact official move-name matching gives 68 shared names, 7 Classic-only
+    names, and 1 Modern-only name.
+  - The `しゃがみ強K（回転足払い）` / `回転足払い` naming difference is called
+    out explicitly instead of silently normalizing it.
+  - Of 68 shared move names, 65 have different input displays and 3 movement
+    rows have identical input displays.
+  - Damage differs on 22 shared move-name items; other captured frame/gauge/cancel
+    fields match for shared move-name items.
+- Open questions:
+  - Should future comparison pages normalize move identity across name variants,
+    or keep exact official move-name matching as the default?
