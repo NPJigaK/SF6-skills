@@ -72,3 +72,26 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Clarified that spacing, timing, hitboxes, and hurtboxes still matter.
   - Clarified that official terminology sources have not yet been independently
     ingested or cited by this wiki page.
+
+## [2026-05-26] lint | Initial wiki health check
+- Checked:
+  - broken wikilinks
+  - pages missing from `wiki/index.md`
+  - missing frontmatter
+  - duplicate pages
+  - contradictions
+  - stale claims
+  - uncited claims
+  - missing concepts
+  - data gaps
+- Created:
+  - `wiki/reviews/2026-05-26-health-check.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Findings:
+  - No broken wikilinks, missing index entries, or missing frontmatter were
+    found.
+  - Open knowledge gaps remain around official Capcom terminology sources,
+    malformed notation-table capture quality, and community-source confidence
+    policy.

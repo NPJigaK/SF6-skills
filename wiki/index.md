@@ -47,3 +47,4 @@ which wiki pages to inspect.
 
 | Page | Review type | Summary | Status |
 |---|---|---|---|
+| [[reviews/2026-05-26-health-check]] | lint | Initial health check after first source ingest and first filed-back query. | open |
