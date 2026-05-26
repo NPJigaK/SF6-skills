@@ -7,6 +7,7 @@ status: active
 sources:
   - "[[sources/capcom-official-jp-frame-data]]"
   - "[[sources/capcom-official-ryu-frame-data]]"
+  - "[[sources/capcom-official-chun-li-frame-data]]"
 related:
   - "[[entities/street-fighter-6]]"
 tags:
@@ -27,10 +28,11 @@ ingested by this wiki.
 |---|---|---|
 | 2026-05-26 | Official JP frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-jp-frame-data]] |
 | 2026-05-27 | Official Ryu frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-ryu-frame-data]] |
+| 2026-05-27 | Official Chun-Li frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-chun-li-frame-data]] |
 
 ## Relevant claims
 
-- The official JP and Ryu frame-data sources record Capcom as publisher.
+- The official JP, Ryu, and Chun-Li frame-data sources record Capcom as publisher.
 - The ingested official frame-data source URLs are under
   `https://www.streetfighter.com/6/ja-jp/character/<character>/frame`.
 

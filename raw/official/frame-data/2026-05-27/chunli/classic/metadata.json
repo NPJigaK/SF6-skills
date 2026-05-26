@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-26T21:10:54Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/chunli/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/chunli/frame",
+  "character_slug": "chunli",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:3a99215482f093c29a50e135922e04cd43b5a86fe67e45b9a379f0dcaa1e9dd7",
+      "byte_count": 470415
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:a47c5f467b722dd9176e56e119f1e6badd9e8bbf36dcbf7408384f9776e4a0bb",
+      "byte_count": 976034,
+      "data_row_count": 78,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:f15229ddbfc001d36b4eaea2d329545784fdab90c78940e6a9d3906b273bb2e9",
+      "byte_count": 5974010,
+      "width": 2271,
+      "height": 10259,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

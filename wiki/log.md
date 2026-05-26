@@ -410,3 +410,66 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Open questions:
   - Should future comparison pages normalize move identity across name variants,
     or keep exact official move-name matching as the default?
+
+## [2026-05-27] ingest | Capcom official Chun-Li frame data
+- Raw source:
+  - `raw/official/frame-data/2026-05-27/chunli/manifest.json`
+  - `raw/official/frame-data/2026-05-27/chunli/classic/`
+  - `raw/official/frame-data/2026-05-27/chunli/modern/`
+- Derived outputs:
+  - `wiki/outputs/data/frame-data/chunli/classic.csv`
+  - `wiki/outputs/data/frame-data/chunli/modern.csv`
+  - `wiki/outputs/data/frame-data/chunli/classic.field-meanings.json`
+  - `wiki/outputs/data/frame-data/chunli/modern.field-meanings.json`
+- Created:
+  - `wiki/sources/capcom-official-chun-li-frame-data.md`
+  - `wiki/entities/chun-li.md`
+  - `wiki/reviews/2026-05-27-official-chun-li-frame-data-capture-review.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/street-fighter-6.md`
+- Validation:
+  - Capture command succeeded for `https://www.streetfighter.com/6/ja-jp/character/chunli/frame`.
+  - Extract command reproduced 78 Classic rows and 72 Modern rows from raw DOM.
+  - Metadata reports separate Classic and Modern tab captures with no visible
+    Cookiebot or navigation overlays after cleanup.
+  - LLM visual check confirmed the screenshots include the table width.
+- Status:
+  - Pending human review before marking the Chun-Li capture accepted.
+- Open questions:
+  - Should a Chun-Li Classic/Modern comparison question be filed after human
+    review?
+  - Which character should be used next to stress-test unusual frame-data table
+    formats?
+
+## [2026-05-27] human-review | Accept official Chun-Li frame-data capture
+- Updated:
+  - `wiki/sources/capcom-official-chun-li-frame-data.md`
+  - `wiki/entities/chun-li.md`
+  - `wiki/reviews/2026-05-27-official-chun-li-frame-data-capture-review.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+- Decision:
+  - Accepted.
+- Reviewer checks:
+  - Raw placement matches the JP and Ryu conventions.
+  - Classic and Modern screenshots show the intended Chun-Li official tables
+    without visible horizontal cutoff or obstructing overlays.
+  - DOM row counts, manifest row counts, and CSV row counts match: Classic 78,
+    Modern 72.
+  - Field meanings are present: Classic 7 records, Modern 8 records, including
+    the Modern SP-button 80% damage note.
+  - Chun-Li source, entity, review, and outputs are reachable from the index.
+  - Stance-like, branch, charge, and air-action inputs are retained in
+    `input_token_json`.
+- Cleanup:
+  - Restored `[[entities/jp]]` to `wiki/concepts/frame-data.md` frontmatter
+    `related` to match the page connections and index.
+- Notes:
+  - Source and review statuses were moved from `pending_human_review` to active
+    or accepted as appropriate.

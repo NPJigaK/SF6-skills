@@ -12,13 +12,14 @@ which wiki pages to inspect.
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki glossary for Drive System, frame data, juggle, and notation terms. | 2026-01-31 | wiki_page | active |
 | [[sources/capcom-official-jp-frame-data]] | Capcom official JP frame-data capture with Classic/Modern raw snapshots, derived CSVs, and field meanings. | 2026-05-26 | official_frame_data | active |
 | [[sources/capcom-official-ryu-frame-data]] | Capcom official Ryu frame-data capture with Classic/Modern raw snapshots, derived CSVs, and field meanings. | 2026-05-27 | official_frame_data | active |
+| [[sources/capcom-official-chun-li-frame-data]] | Capcom official Chun-Li frame-data capture with Classic/Modern raw snapshots, derived CSVs, and field meanings. | 2026-05-27 | official_frame_data | active |
 
 ## Concepts
 
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Meter system glossary concept for Drive-related movement, offense, defense, and burnout terms. | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | Timing and property vocabulary plus official JP and Ryu structured frame-data captures. | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/jp]], [[entities/ryu]] |
+| [[concepts/frame-data]] | Timing and property vocabulary plus official JP, Ryu, and Chun-Li structured frame-data captures. | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/jp]], [[entities/ryu]], [[entities/chun-li]] |
 | [[concepts/juggle-system]] | Glossary concept for free/limited juggle states and Juggle Count/Start/Increase/Limit terminology. | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | Compact notation for links, cancels, holds, releases, chains, hit states, air actions, delays, and directional inputs. | [[concepts/frame-data]] |
 
@@ -26,11 +27,12 @@ which wiki pages to inspect.
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | Game context for the ingested community glossary and official JP/Ryu frame-data sources. | other |
+| [[entities/street-fighter-6]] | Game context for the ingested community glossary and official JP/Ryu/Chun-Li frame-data sources. | other |
 | [[entities/supercombo-wiki]] | Source site for the first ingested raw source. | other |
 | [[entities/capcom]] | Publisher of the official Street Fighter 6 frame-data sources. | company |
 | [[entities/jp]] | Street Fighter 6 character covered by the first official frame-data capture. | character |
 | [[entities/ryu]] | Street Fighter 6 character covered by the second official frame-data capture. | character |
+| [[entities/chun-li]] | Street Fighter 6 character covered by the third official frame-data capture. | character |
 
 ## Syntheses
 
@@ -56,6 +58,10 @@ which wiki pages to inspect.
 | `wiki/outputs/data/frame-data/ryu/modern.csv` | csv | Derived Ryu Modern frame-data rows from the official Capcom capture. | 2026-05-27 |
 | `wiki/outputs/data/frame-data/ryu/classic.field-meanings.json` | json | Field explanations extracted from the Ryu Classic frame-data table header. | 2026-05-27 |
 | `wiki/outputs/data/frame-data/ryu/modern.field-meanings.json` | json | Field explanations extracted from the Ryu Modern frame-data table header. | 2026-05-27 |
+| `wiki/outputs/data/frame-data/chunli/classic.csv` | csv | Derived Chun-Li Classic frame-data rows from the official Capcom capture. | 2026-05-27 |
+| `wiki/outputs/data/frame-data/chunli/modern.csv` | csv | Derived Chun-Li Modern frame-data rows from the official Capcom capture. | 2026-05-27 |
+| `wiki/outputs/data/frame-data/chunli/classic.field-meanings.json` | json | Field explanations extracted from the Chun-Li Classic frame-data table header. | 2026-05-27 |
+| `wiki/outputs/data/frame-data/chunli/modern.field-meanings.json` | json | Field explanations extracted from the Chun-Li Modern frame-data table header. | 2026-05-27 |
 
 ## Reviews
 
@@ -63,3 +69,4 @@ which wiki pages to inspect.
 |---|---|---|---|
 | [[reviews/2026-05-26-official-jp-frame-data-capture-review]] | human_review | Review accepted the official JP frame-data raw snapshot and derived outputs. | accepted |
 | [[reviews/2026-05-27-official-ryu-frame-data-capture-review]] | human_review | Review accepted the official Ryu frame-data raw snapshot and derived outputs. | accepted |
+| [[reviews/2026-05-27-official-chun-li-frame-data-capture-review]] | human_review | Review accepted the official Chun-Li frame-data raw snapshot and derived outputs. | accepted |
