@@ -558,3 +558,27 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Cleanup:
   - Aligned the review index table's review type labels with review page
     frontmatter by using `capture_validation`.
+
+## [2026-05-27] query | Zangief Classic vs Modern frame-data comparison
+- Question:
+  - Zangiefのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+- Created:
+  - `wiki/questions/zangief-modern-vs-classic-frame-data-moves-and-inputs.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Answer summary:
+  - Classic has 72 official frame-data items and Modern has 66.
+  - Exact official move-name matching gives 65 shared names, 7 Classic-only
+    names, and 1 Modern-only name.
+  - The `しゃがみ強K（ビッグスタンプ）` / `ビッグスタンプ` naming difference is
+    called out explicitly instead of silently normalizing it.
+  - Of 65 shared move names, 62 have different input displays and 3 movement
+    rows have identical input displays.
+  - Damage differs on 18 shared move-name items; other captured frame/gauge/cancel
+    fields match for shared move-name items.
+  - One/two-circle inputs are rendered in the answer as readable command
+    notation while the raw source keeps the original input tokens.
+- Open questions:
+  - Should future comparison pages normalize move identity across name variants,
+    or keep exact official move-name matching as the default?
