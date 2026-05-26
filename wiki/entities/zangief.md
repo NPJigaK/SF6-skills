@@ -44,5 +44,6 @@ frame-data capture in this wiki.
 
 ## Open questions
 
-- Which Zangief move values should be compiled into durable wiki summaries
-  after human review?
+- Which Zangief move values, if any, should be promoted into durable
+  move-specific wiki summaries instead of remaining only in source and output
+  data?

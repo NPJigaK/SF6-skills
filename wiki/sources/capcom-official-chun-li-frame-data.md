@@ -70,16 +70,15 @@ Classic and Modern controls.
 - This source adds a third official character frame-data capture after JP and
   Ryu.
 - It helps stress-test the capture schema against a character with stance-like
-  and special move table complexity, but it should not be generalized until
-  human review accepts the capture.
+  and special move table complexity, but it should not be generalized to every
+  character without more captures.
 
 ## Open questions
 
-- Should Chun-Li's Classic/Modern differences be filed back as a durable
-  question page?
 - Should command input tokens be normalized before comparing inputs across
   characters?
-- Which character should be used next to stress-test unusual move table formats?
+- Should move-name variants across Classic and Modern be normalized for some
+  comparison tasks, or should exact official move names remain the default?
 
 ## Source notes
 

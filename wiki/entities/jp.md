@@ -2,7 +2,7 @@
 type: entity
 entity_type: character
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-05-27
 status: active
 sources:
   - "[[sources/capcom-official-jp-frame-data]]"
@@ -39,4 +39,5 @@ JP is the Street Fighter 6 character covered by the first official frame-data ca
 
 ## Open questions
 
-- Which JP move values should be compiled into durable wiki summaries after broader official data coverage exists?
+- Which JP move values, if any, should be promoted into durable move-specific
+  wiki summaries instead of remaining only in source and output data?

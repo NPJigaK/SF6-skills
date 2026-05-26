@@ -7,7 +7,7 @@ publisher: "Capcom"
 raw_path: "raw/official/frame-data/2026-05-26/jp/manifest.json"
 original_url: "https://www.streetfighter.com/6/ja-jp/character/jp/frame"
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-05-27
 captured_at_utc: "2026-05-26T09:04:33Z"
 status: active
 confidence: high
@@ -65,8 +65,11 @@ Capcom's official Street Fighter 6 frame data page for JP, captured as reviewed 
 
 ## Open questions
 
-- Should the next official capture cover all characters, or should the pipeline be tested on one additional character first?
 - Should `input_token_json` be transformed into a normalized command notation later, or preserved as raw token data only?
+- Should move-name variants across Classic and Modern be normalized for some
+  comparison tasks, or should exact official move names remain the default?
+- Which remaining official character should be captured next, and should
+  captures continue one at a time or move to small reviewed batches?
 - Should official balance-change pages be ingested separately to explain why frame data changes over time?
 
 ## Source notes

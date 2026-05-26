@@ -582,3 +582,66 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Open questions:
   - Should future comparison pages normalize move identity across name variants,
     or keep exact official move-name matching as the default?
+
+## [2026-05-27] lint | post-Zangief wiki health check
+- Read:
+  - `AGENTS.md`
+  - `wiki/index.md`
+  - recent `wiki/log.md` entries
+  - official frame-data source pages
+  - accepted character entity pages
+  - filed Classic/Modern comparison question pages
+- Created:
+  - `wiki/reviews/2026-05-27-health-check.md`
+- Updated:
+  - `wiki/sources/capcom-official-jp-frame-data.md`
+  - `wiki/sources/capcom-official-ryu-frame-data.md`
+  - `wiki/sources/capcom-official-chun-li-frame-data.md`
+  - `wiki/sources/capcom-official-zangief-frame-data.md`
+  - `wiki/entities/jp.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/entities/chun-li.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Checks:
+  - Non-template wiki pages have no broken wikilinks.
+  - Content pages have frontmatter.
+  - Existing non-template wiki pages were registered in `wiki/index.md`.
+  - Question pages do not contain operational file-back sections or changed-file
+    summaries.
+  - Accepted JP, Ryu, Chun-Li, and Zangief frame-data outputs passed validation
+    against raw snapshots.
+- Cleanup:
+  - Removed stale source open questions about filing comparison pages that now
+    exist.
+  - Removed stale wording implying accepted captures were still waiting for
+    human review.
+- Open questions:
+  - Should command-input normalization become a formal wiki concept?
+  - Should move-name identity normalization be introduced before more
+    Classic/Modern comparison pages are created?
+
+## [2026-05-27] human-review | Accept post-Zangief wiki health check
+- Reviewed:
+  - `wiki/reviews/2026-05-27-health-check.md`
+  - source-page stale open question cleanup
+  - accepted character entity cleanup
+- Updated:
+  - `wiki/reviews/2026-05-27-health-check.md`
+  - `wiki/log.md`
+- Decision:
+  - Accepted the health check while keeping `status: open`.
+  - Accepted keeping JP, Ryu, Chun-Li, and Zangief validation results in the
+    health check.
+  - Accepted deletion of stale source-page questions about whether already-filed
+    comparison pages should be created.
+  - Accepted cleanup of accepted character entity wording.
+- Design decisions:
+  - Command notation remains a display-only transform for now.
+  - Classic/Modern move comparison defaults to exact official move-name matching.
+  - Likely corresponding name variants, such as `しゃがみ強K（ビッグスタンプ）` and
+    `ビッグスタンプ`, should be annotated rather than silently normalized.
+- Notes:
+  - Older open questions in `wiki/log.md` remain unchanged because the log is
+    append-only.

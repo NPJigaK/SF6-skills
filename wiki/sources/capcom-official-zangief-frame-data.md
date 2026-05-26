@@ -76,11 +76,10 @@ and Modern controls.
 
 ## Open questions
 
-- Should Zangief's Classic/Modern differences be filed back as a durable
-  question page?
 - Should command input tokens such as `key-circle` be normalized into readable
   command notation for future answer pages?
-- Which character should be used next to stress-test unusual move table formats?
+- Should move-name variants across Classic and Modern be normalized for some
+  comparison tasks, or should exact official move names remain the default?
 
 ## Source notes
 

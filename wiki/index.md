@@ -79,3 +79,4 @@ which wiki pages to inspect.
 | [[reviews/2026-05-27-official-ryu-frame-data-capture-review]] | capture_validation | Review accepted the official Ryu frame-data raw snapshot and derived outputs. | accepted |
 | [[reviews/2026-05-27-official-chun-li-frame-data-capture-review]] | capture_validation | Review accepted the official Chun-Li frame-data raw snapshot and derived outputs. | accepted |
 | [[reviews/2026-05-27-official-zangief-frame-data-capture-review]] | capture_validation | Review accepted the official Zangief frame-data raw snapshot and derived outputs. | accepted |
+| [[reviews/2026-05-27-health-check]] | health_check | Checked wiki structure, stale open questions, question-page cleanliness, and accepted frame-data outputs after four character captures. | open |

@@ -68,16 +68,15 @@ and Modern controls.
 ## Contradictions or updates to existing wiki
 
 - This source adds a second official character frame-data capture after JP.
-- It does not yet imply that all character pages share the same row structure;
-  more captures are needed before making broader schema claims.
+- It does not imply that all character pages share the same row structure;
+  more captures are still needed before making full-roster schema claims.
 
 ## Open questions
 
-- Should Ryu's Classic/Modern differences be filed back as a durable question
-  page?
 - Should command input tokens be normalized before comparing inputs across
   characters?
-- Which character should be used next to stress-test unusual move table formats?
+- Should move-name variants across Classic and Modern be normalized for some
+  comparison tasks, or should exact official move names remain the default?
 
 ## Source notes
 
