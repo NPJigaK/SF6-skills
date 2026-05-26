@@ -9,6 +9,7 @@ sources:
   - "[[sources/capcom-official-jp-frame-data]]"
   - "[[sources/capcom-official-ryu-frame-data]]"
   - "[[sources/capcom-official-chun-li-frame-data]]"
+  - "[[sources/capcom-official-zangief-frame-data]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/frame-data]]"
@@ -16,6 +17,7 @@ related:
   - "[[entities/jp]]"
   - "[[entities/ryu]]"
   - "[[entities/chun-li]]"
+  - "[[entities/zangief]]"
 tags:
   - game
 ---
@@ -26,7 +28,7 @@ tags:
 
 Street Fighter 6 is the game context for the ingested glossary and official
 frame-data sources. The wiki currently has community glossary concepts and
-reviewed official JP, Ryu, and Chun-Li frame-data captures.
+reviewed official JP, Ryu, Chun-Li, and Zangief frame-data captures.
 
 ## Timeline
 
@@ -36,6 +38,7 @@ reviewed official JP, Ryu, and Chun-Li frame-data captures.
 | 2026-05-26 | Official JP frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-jp-frame-data]] |
 | 2026-05-27 | Official Ryu frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-ryu-frame-data]] |
 | 2026-05-27 | Official Chun-Li frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-chun-li-frame-data]] |
+| 2026-05-27 | Official Zangief frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-zangief-frame-data]] |
 
 ## Relevant claims
 
@@ -48,6 +51,8 @@ reviewed official JP, Ryu, and Chun-Li frame-data captures.
   Modern per-move data.
 - The accepted official Chun-Li frame-data capture contains structured Classic
   and Modern per-move data.
+- The accepted official Zangief frame-data capture contains structured Classic
+  and Modern per-move data.
 
 ## Related concepts
 
@@ -58,6 +63,7 @@ reviewed official JP, Ryu, and Chun-Li frame-data captures.
 - [[entities/jp]]
 - [[entities/ryu]]
 - [[entities/chun-li]]
+- [[entities/zangief]]
 
 ## Open questions
 

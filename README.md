@@ -205,7 +205,14 @@ character、control scheme、raw pathなどのsource-level metadataは
 uv sync
 uv run python tools/capture_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
 uv run python tools/extract_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
+uv run python tools/validate_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
 ```
+
+`validate_capcom_frame_data.py` は全行について `page.html` 内の表、`table.dom.json`、
+派生CSV、`*.field-meanings.json` の一致を確認します。スクリーンショットは値の正本として
+OCRするのではなく、表の横幅と高さを覆っていること、Cookieやnavigation overlayが
+残っていないことを確認します。値の正確性は、画像ではなく raw HTML / DOM / CSV の
+全行照合で確認します。
 
 ## source を置いた後にLLMへ依頼すること
 

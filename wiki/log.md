@@ -495,3 +495,66 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Open questions:
   - Should future comparison pages normalize move identity across name variants,
     or keep exact official move-name matching as the default?
+
+## [2026-05-27] ingest | Capcom official Zangief frame data
+- Raw source:
+  - `raw/official/frame-data/2026-05-27/zangief/manifest.json`
+  - `raw/official/frame-data/2026-05-27/zangief/classic/`
+  - `raw/official/frame-data/2026-05-27/zangief/modern/`
+- Derived outputs:
+  - `wiki/outputs/data/frame-data/zangief/classic.csv`
+  - `wiki/outputs/data/frame-data/zangief/modern.csv`
+  - `wiki/outputs/data/frame-data/zangief/classic.field-meanings.json`
+  - `wiki/outputs/data/frame-data/zangief/modern.field-meanings.json`
+- Created:
+  - `wiki/sources/capcom-official-zangief-frame-data.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/reviews/2026-05-27-official-zangief-frame-data-capture-review.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/street-fighter-6.md`
+- Validation:
+  - Capture command succeeded for `https://www.streetfighter.com/6/ja-jp/character/zangief/frame`.
+  - Extract command reproduced 72 Classic rows and 66 Modern rows from raw DOM.
+  - Full validation confirmed `page.html` table hashes, raw DOM, derived CSV,
+    field-meanings JSON, overlay metadata, and screenshot coverage for all rows.
+  - Metadata reports zero visible Cookiebot and navigation overlays after cleanup.
+  - LLM visual check confirmed the screenshots include the table width and page
+    footer for both Classic and Modern captures.
+  - Zangief-specific command-grab and one/two-circle input tokens are retained
+    in `input_token_json`.
+- Status:
+  - Pending human review before marking the Zangief capture accepted.
+- Open questions:
+  - Should a Zangief Classic/Modern comparison question be filed after human
+    review?
+  - Which character should be used next to stress-test unusual frame-data table
+    formats?
+
+## [2026-05-27] human-review | Accept official Zangief frame-data capture
+- Updated:
+  - `wiki/sources/capcom-official-zangief-frame-data.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/reviews/2026-05-27-official-zangief-frame-data-capture-review.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+- Decision:
+  - Accepted.
+- Reviewer checks:
+  - Full validation passed for Classic 72 rows and Modern 66 rows.
+  - `page.html` table hashes match `table.dom.json`.
+  - Saved CSV rows match raw-DOM-regenerated rows.
+  - Field meanings are regenerated from DOM and match saved JSON.
+  - Screenshots show the official Zangief page, selected tabs, full table width,
+    table bottom, character select, and footer.
+  - Zangief-specific inputs such as `key-circle`, `key-circle key-circle`,
+    command grabs, Modern SP/AUTO shortcuts, and parenthesized normal-command
+    alternatives are retained.
+- Cleanup:
+  - Aligned the review index table's review type labels with review page
+    frontmatter by using `capture_validation`.

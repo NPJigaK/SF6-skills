@@ -10,6 +10,7 @@ sources:
   - "[[sources/capcom-official-jp-frame-data]]"
   - "[[sources/capcom-official-ryu-frame-data]]"
   - "[[sources/capcom-official-chun-li-frame-data]]"
+  - "[[sources/capcom-official-zangief-frame-data]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/juggle-system]]"
@@ -17,6 +18,7 @@ related:
   - "[[entities/jp]]"
   - "[[entities/ryu]]"
   - "[[entities/chun-li]]"
+  - "[[entities/zangief]]"
 tags:
   - mechanics
   - glossary
@@ -38,7 +40,7 @@ damage, damage scaling, hitconfirm windows, Drive Rush Cancel advantage, and
 actionable recovery.
 
 The official Capcom frame-data captures provide reviewed structured per-move
-data for JP, Ryu, and Chun-Li in Classic and Modern controls.
+data for JP, Ryu, Chun-Li, and Zangief in Classic and Modern controls.
 
 ## Why it matters
 
@@ -56,7 +58,8 @@ interpret move data, comparisons, or timing-sensitive claims.
 | The accepted official JP capture contains 69 Classic data rows and 65 Modern data rows. | [[sources/capcom-official-jp-frame-data]] | high |
 | The official Ryu capture contains 75 Classic data rows and 69 Modern data rows. | [[sources/capcom-official-ryu-frame-data]] | high |
 | The official Chun-Li capture contains 78 Classic data rows and 72 Modern data rows. | [[sources/capcom-official-chun-li-frame-data]] | high |
-| The official captures store field explanations separately from per-move CSV rows. | [[sources/capcom-official-jp-frame-data]], [[sources/capcom-official-ryu-frame-data]], [[sources/capcom-official-chun-li-frame-data]] | high |
+| The official Zangief capture contains 72 Classic data rows and 66 Modern data rows. | [[sources/capcom-official-zangief-frame-data]] | high |
+| The official captures store field explanations separately from per-move CSV rows. | [[sources/capcom-official-jp-frame-data]], [[sources/capcom-official-ryu-frame-data]], [[sources/capcom-official-chun-li-frame-data]], [[sources/capcom-official-zangief-frame-data]] | high |
 
 ## Connections
 
@@ -66,6 +69,7 @@ interpret move data, comparisons, or timing-sensitive claims.
 - [[entities/jp]]
 - [[entities/ryu]]
 - [[entities/chun-li]]
+- [[entities/zangief]]
 
 ## Contradictions / caveats
 
@@ -74,6 +78,8 @@ interpret move data, comparisons, or timing-sensitive claims.
 - This page does not yet summarize individual Ryu move values; those values
   remain in the raw DOM and derived CSV outputs.
 - This page does not yet summarize individual Chun-Li move values; those values
+  remain in the raw DOM and derived CSV outputs.
+- This page does not yet summarize individual Zangief move values; those values
   remain in the raw DOM and derived CSV outputs.
 - `input_raw_display` in the derived CSV is a raw DOM-token display, not a
   normalized command notation.

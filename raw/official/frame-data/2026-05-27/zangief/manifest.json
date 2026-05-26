@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-26T21:41:49Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/zangief/frame",
+  "character_slug": "zangief",
+  "date_label": "2026-05-27",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-27/zangief/classic",
+      "page_html": "raw/official/frame-data/2026-05-27/zangief/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-27/zangief/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-27/zangief/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-27/zangief/classic/metadata.json",
+      "row_count": 72,
+      "table_sha256": "sha256:91e2430543d329a153b8a1ea0848442db65a1735f139a00005c22d5e716f3558"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-27/zangief/modern",
+      "page_html": "raw/official/frame-data/2026-05-27/zangief/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-27/zangief/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-27/zangief/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-27/zangief/modern/metadata.json",
+      "row_count": 66,
+      "table_sha256": "sha256:a22a4aaa7fbf6afc659f1024858ef5fde6ac40702b9508e22fa75c4bafe5f5dd"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/zangief/classic.csv",
+    "wiki/outputs/data/frame-data/zangief/modern.csv",
+    "wiki/outputs/data/frame-data/zangief/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/zangief/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}
