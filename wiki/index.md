@@ -45,6 +45,7 @@ which wiki pages to inspect.
 |---|---|---|---:|
 | [[questions/jp-modern-vs-classic-frame-data-moves-and-inputs]] | JPのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？ | JP Classic/Modernの項目数、Classic専用項目、入力表示、ダメージ差分を公式フレームデータから比較する。 | 2026-05-27 |
 | [[questions/ryu-modern-vs-classic-frame-data-moves-and-inputs]] | Ryuのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？ | Ryu Classic/Modernの項目数、技名差分、入力表示、ダメージ差分を公式フレームデータから比較する。 | 2026-05-27 |
+| [[questions/chun-li-modern-vs-classic-frame-data-moves-and-inputs]] | Chun-Liのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？ | Chun-Li Classic/Modernの項目数、技名差分、入力表示、ダメージ差分を公式フレームデータから比較する。 | 2026-05-27 |
 
 ## Outputs
 

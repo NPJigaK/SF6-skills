@@ -473,3 +473,25 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Notes:
   - Source and review statuses were moved from `pending_human_review` to active
     or accepted as appropriate.
+
+## [2026-05-27] query | Chun-Li Classic vs Modern frame-data comparison
+- Question:
+  - Chun-Liのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+- Created:
+  - `wiki/questions/chun-li-modern-vs-classic-frame-data-moves-and-inputs.md`
+- Updated:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Answer summary:
+  - Classic has 78 official frame-data items and Modern has 72.
+  - Exact official move-name matching gives 71 shared names, 7 Classic-only
+    names, and 1 Modern-only name.
+  - The `しゃがみ強K（元伝暗殺蹴）` / `元伝暗殺蹴` naming difference is called
+    out explicitly instead of silently normalizing it.
+  - Of 71 shared move names, 68 have different input displays and 3 movement
+    rows have identical input displays.
+  - Damage differs on 15 shared move-name items; other captured frame/gauge/cancel
+    fields match for shared move-name items.
+- Open questions:
+  - Should future comparison pages normalize move identity across name variants,
+    or keep exact official move-name matching as the default?
