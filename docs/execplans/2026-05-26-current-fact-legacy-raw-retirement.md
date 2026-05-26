@@ -1,6 +1,6 @@
 # Current-Fact Legacy Raw Retirement
 
-Status: Drafted for review; validation passed.
+Status: One-shot retirement implementation complete; validation passed.
 
 ## Purpose
 
@@ -262,7 +262,6 @@ PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_sou
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
 PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
-PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_lookup_parity.py
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
 git status --short --branch
 ```
@@ -276,6 +275,8 @@ uv lock --check
 PYTHONPATH=src uv run --locked python -m unittest discover -s tests
 for f in tests/validation/validate_*.py; do PYTHONPATH=src uv run --locked python "$f" || exit $?; done
 PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+rg "lookup_current_fact|search_moves|official_raw\\.json|data/exports" src tests
+find data/exports -name official_raw.json
 git status --short --branch
 ```
 
@@ -290,6 +291,13 @@ runtime/test/validator code references them as active behavior.
   artifact, parser/classifier, retrieval, answer generation, calculator, SymPy,
   source/live acquisition, or legacy raw deletion yet.
 - 2026-05-26: Ran plan-only validation. All checks passed.
+- 2026-05-26: Implemented one-shot legacy raw retirement. Removed
+  `current_facts.py`, stopped raw-backed numeric/current-fact answers, made
+  raw-backed CLI `search` and `current lookup` explicitly unavailable, removed
+  the legacy parity validator, updated clean-slate and validator audit
+  boundaries, updated `data/exports/README.md`, and deleted all
+  `data/exports/*/official_raw.json` files.
+- 2026-05-26: Ran implementation validation. All checks passed.
 
 ## Decision Log
 
@@ -301,6 +309,14 @@ runtime/test/validator code references them as active behavior.
   disposition contract exists.
 - 2026-05-26: `data/exports/*/official_raw.json` are deletion candidates unless
   implementation review finds another explicit current dependency.
+- 2026-05-26: Dependency scan found no remaining active source/runtime/test
+  dependency that requires checked-in `official_raw.json`. Remaining
+  `data/exports` references in `src` and `tests` are boundary rejection checks,
+  invalid fixtures, or legacy provenance terms, not active raw-backed lookup.
+- 2026-05-26: The legacy parity validator was deleted because its purpose was
+  to protect a transition boundary that required legacy raw-backed runtime
+  markers. Clean-slate now guards that raw exports and `current_facts.py` remain
+  deleted.
 
 ## Deviations
 
@@ -316,52 +332,61 @@ runtime/test/validator code references them as active behavior.
 - `snapshot_manifest.json` and manual-review debt surfaces may remain as
   separate cleanup debt.
 - The all-13 non-scalar disposition remains future work.
+- Remaining `data/exports` snapshot manifests and manual-review debt index are
+  legacy provenance/observability surfaces and may need a later cleanup PR.
 
 ## Completion Review Table
 
 | PLAN item | Implementation content | Changed files | Validation command | Result | Deviation | Incomplete | Risk |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| One-shot raw retirement plan | Draft plan only | `docs/execplans/2026-05-26-current-fact-legacy-raw-retirement.md` | `git diff --check`; `uv lock --check` | Pass | None | Mandatory review pending | Raw retirement is not behavior-preserving |
-| Fallback direction removal | Replaced fallback/dual-lookup plan direction | Same | PR diff inspection | Pass | None | Mandatory review pending | PR branch name remains historical |
-| Non-scalar boundary | Plan keeps all 13 records non-scalar / not calculation-safe | Same | current-fact validators | Pass | None | Mandatory review pending | Exact answers will hold |
+| One-shot raw retirement plan | Draft plan and implementation | `docs/execplans/2026-05-26-current-fact-legacy-raw-retirement.md` | `git diff --check`; `uv lock --check` | Pass | None | Implementation review pending | Raw retirement is not behavior-preserving |
+| Fallback direction removal | Replaced fallback/dual-lookup plan direction | Same | PR diff inspection | Pass | None | Implementation review pending | PR branch name remains historical |
+| Runtime answer retirement | Numeric/current-fact answers hold instead of reading legacy raw values | `src/sf6_knowledge_coach/answering.py`; `tests/test_cli.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass | None | Implementation review pending | Exact answers now hold |
+| CLI retirement | Raw-backed `search` and `current lookup` return explicit unavailable payloads | `src/sf6_knowledge_coach/cli.py`; `tests/test_cli.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass | None | Implementation review pending | CLI output intentionally changed |
+| Raw lookup deletion | Removed legacy raw lookup module and all checked-in official raw JSON files | `src/sf6_knowledge_coach/current_facts.py`; `data/exports/*/official_raw.json`; `data/exports/README.md`; `tests/validation/validate_clean_slate.py` | `find data/exports -name official_raw.json`; `validate_clean_slate.py` | Pass | None | Implementation review pending | Snapshot manifests remain legacy provenance |
+| Validator/audit retirement | Deleted legacy parity validator and updated audit metadata | `tests/validation/validate_current_fact_lookup_parity.py`; validator audit JSON/MD | `validate_validator_test_audit.py`; all `tests/validation/validate_*.py` | Pass | None | Implementation review pending | Future runtime switch needs new validators |
+| Non-scalar boundary | Plan keeps all 13 records non-scalar / not calculation-safe | Same | current-fact validators | Pass | None | Implementation review pending | Exact answers will hold |
 
 ## Next Reviewer Prompt
 
 ```text
-Review PR #370 amended plan for one-shot legacy raw current-fact retirement.
+Review PR #370 implementation for one-shot legacy raw current-fact retirement.
 
 Check:
-- Final PR diff contains only:
-  docs/execplans/2026-05-26-current-fact-legacy-raw-retirement.md
+- PR implements the amended ExecPlan only.
 - The previous fallback/dual-lookup ExecPlan file is not present in final diff.
-- Plan explicitly rejects compatibility fallback, dual lookup, and alias bridge.
-- Plan retires/removes/disables the legacy raw-backed current-fact answer path
+- No compatibility fallback, dual lookup, or alias bridge is introduced.
+- The implementation retires/removes/disables the legacy raw-backed answer path
   in one pass.
-- `data/exports/*/official_raw.json` are deletion candidates unless another
-  explicit current dependency is found.
+- `answering.py` no longer imports or calls legacy raw lookup.
+- Numeric/current-fact answer packets hold until a reviewed scalar-safe or
+  non-scalar disposition contract exists.
+- `cli.py` raw-backed `search` / `current lookup` surfaces are explicitly
+  unavailable and do not read raw exports.
+- `current_facts.py` is deleted.
+- `data/exports/*/official_raw.json` files are deleted.
+- `validate_clean_slate.py` no longer requires legacy raw and guards deletion.
+- The legacy parity validator is deleted and validator audit is updated.
 - Reviewed current-fact artifacts remain retained.
 - The 13 production export records remain non-scalar / not calculation-safe.
-- Numeric/current-fact exact answers hold unless a later all-13 non-scalar
-  disposition or scalar-safe contract exists.
-- Plan does not flatten annotated_numeric_candidate or collapse frame_range.
-- No runtime/parser/classifier/retrieval/answer generation/calculator/SymPy/
-  source-live acquisition/schema/fixture/generated artifact change is included
-  in the plan-only commit.
+- The implementation does not flatten annotated_numeric_candidate or collapse
+  frame_range.
+- No parser/classifier, retrieval, answer generation expansion, calculator,
+  SymPy, source/live acquisition, schema, fixture, generated artifact,
+  authority promotion, or calculation-safe promotion is included.
 
 Run:
 - git status --short --branch
 - git show --name-status --oneline --no-renames HEAD
 - git diff --check origin/main...HEAD
+- git diff --cached --check
 - uv lock --check
-- PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_schemas.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_source_records.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_row_move_cell_candidates.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_consumer_guards.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_export_generator.py
-- PYTHONPATH=src uv run --locked python tests/validation/validate_current_fact_lookup_parity.py
+- PYTHONPATH=src uv run --locked python -m unittest discover -s tests
+- for f in tests/validation/validate_*.py; do PYTHONPATH=src uv run --locked python "$f" || exit $?; done
 - PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.parsed_value_classifier validate
+- rg "lookup_current_fact|search_moves|official_raw\\.json|data/exports" src tests
+- find data/exports -name official_raw.json
 
 Return blocking findings first, validation results, PLAN deviations, remaining
-risks, and whether same-PR implementation may proceed after plan review.
+risks, and whether PR #370 is ready to mark ready and merge.
 ```

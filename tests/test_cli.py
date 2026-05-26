@@ -11,7 +11,6 @@ from unittest import mock
 
 from sf6_knowledge_coach.aliases import resolve_query
 from sf6_knowledge_coach.answering import append_answer_log, prepare_answer, verify_answer_packet
-from sf6_knowledge_coach.current_facts import lookup_current_fact
 from sf6_knowledge_coach.paths import repo_root
 
 
@@ -22,16 +21,12 @@ class CleanSlateCliTests(unittest.TestCase):
         self.assertEqual(context.move_input, "5LP")
         self.assertEqual(context.field, "block_adv")
 
-    def test_current_fact_lookup_uses_official_raw(self) -> None:
-        fact = lookup_current_fact("jp", "5LP", "block_adv")
-        self.assertEqual(fact.value, "-2")
-        self.assertEqual(fact.authority, "data/exports official_raw")
-        self.assertTrue(fact.source_path.endswith("data/exports/jp/official_raw.json"))
-
-    def test_prepare_numeric_answer_requires_deterministic_evidence(self) -> None:
+    def test_prepare_numeric_answer_holds_after_legacy_raw_retirement(self) -> None:
         packet = prepare_answer("JPの5LPはガードで何F？")
-        self.assertEqual(packet["status"], "answered")
-        self.assertEqual(packet["evidence"][0]["kind"], "deterministic_current_fact_lookup")
+        self.assertEqual(packet["status"], "hold")
+        self.assertIsNone(packet["answer"])
+        self.assertEqual(packet["evidence"], [])
+        self.assertIn("Legacy raw-backed current-fact lookup has been retired", packet["uncertainty"][0])
         verification = verify_answer_packet(packet)
         self.assertTrue(verification["ok"], verification)
 
@@ -47,7 +42,7 @@ class CleanSlateCliTests(unittest.TestCase):
             self.assertTrue(path.exists())
             self.assertNotIn(repo_root(), path.resolve().parents)
             record = json.loads(path.read_text(encoding="utf-8").splitlines()[0])
-            self.assertEqual(record["packet"]["status"], "answered")
+            self.assertEqual(record["packet"]["status"], "hold")
 
     def test_answer_log_rejects_repo_internal_base_dir_without_writing(self) -> None:
         packet = prepare_answer("JPの5LPはガードで何F？")
@@ -74,7 +69,7 @@ class CleanSlateCliTests(unittest.TestCase):
         self.assertFalse(target_dir.exists())
         self.assertFalse(target_file.exists())
 
-    def test_cli_current_lookup(self) -> None:
+    def test_cli_current_lookup_is_unavailable_after_legacy_raw_retirement(self) -> None:
         result = subprocess.run(
             [
                 sys.executable,
@@ -94,7 +89,26 @@ class CleanSlateCliTests(unittest.TestCase):
             text=True,
         )
         payload = json.loads(result.stdout)
-        self.assertEqual(payload["value"], "-2")
+        self.assertEqual(payload["status"], "unavailable")
+        self.assertIsNone(payload["value"])
+        self.assertIn("Legacy raw-backed current-fact CLI lookup/search has been retired", payload["uncertainty"][0])
+
+    def test_cli_search_is_unavailable_after_legacy_raw_retirement(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "sf6_knowledge_coach.cli",
+                "search",
+                "5LP",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        payload = json.loads(result.stdout)
+        self.assertEqual(payload["status"], "unavailable")
+        self.assertEqual(payload["results"], [])
 
 
 if __name__ == "__main__":

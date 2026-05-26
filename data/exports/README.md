@@ -1,15 +1,15 @@
-# Current Fact Exports
+# Legacy Export Provenance
 
-`data/exports/` は、公開済みの exact current-fact export surface です。
+`data/exports/` は、legacy export provenance と manual-review debt の
+observability surface です。
 
-この directory は通常回答で使う move-specific current facts の authority seed
-です。clean-slate cleanup 後、runtime が直接読む tracked surface は
-`official_raw.json` です。
+legacy raw-backed current-fact lookup は退役済みです。この directory は通常回答
+で使う exact current-fact authority ではありません。
 
 ## Authority Boundary
 
-- `official_raw.json` は現在の runtime current-fact lookup が読む公式 raw
-  frame-data export の公開面です。
+- `official_raw.json` は削除済みです。再導入する場合は別ExecPlanとreviewが
+  必要です。
 - `snapshot_manifest.json` は character ごとの legacy published export
   provenance です。
 - `data/exports/_index/manual-review-debt.json` は legacy manual-review debt
@@ -26,12 +26,11 @@ Character ごとの directory は次の形を持ちます。
 
 ```text
 data/exports/<character_slug>/
-  official_raw.json
   snapshot_manifest.json
 ```
 
-`snapshot_manifest.json` は legacy provenance として残しています。現在の
-clean-slate runtime authority は `official_raw.json` です。
+`snapshot_manifest.json` は legacy provenance として残しています。現在この
+directory に clean-slate runtime authority はありません。
 
 ## Manual-Review Debt Index
 
@@ -53,10 +52,6 @@ reference であり、削除または移行は別 ExecPlan で判断します。
 
 ## Dataset Semantics
 
-Current retained dataset key is:
-
-- `official_raw`
-
 Legacy `snapshot_manifest.json` entries may still mention retired datasets.
 Each retained or legacy manifest entry can record:
 
@@ -69,7 +64,7 @@ Each retained or legacy manifest entry can record:
 - `binding_policy_version` / `binding_policy_sha256`
 - `content_hash`
 
-Current runtime must not treat retired sidecar datasets as available authority.
+Current runtime must not treat retired legacy datasets as available authority.
 
 ## Non-Authority Surfaces
 
@@ -94,5 +89,4 @@ Run current clean-slate validation:
 
 ```bash
 PYTHONPATH=src uv run --locked python tests/validation/validate_clean_slate.py
-PYTHONPATH=src uv run --locked python -m sf6_knowledge_coach.cli answer prepare "JPの5LPはガードで何F？"
 ```

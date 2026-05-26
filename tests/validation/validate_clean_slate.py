@@ -18,7 +18,6 @@ REQUIRED_PATHS = [
     "src/sf6_knowledge_coach/cli.py",
     "tests/test_cli.py",
     "tests/validation/validate_clean_slate.py",
-    "data/exports/jp/official_raw.json",
 ]
 
 LEGACY_DIRS_EXPECTED_GONE = [
@@ -65,6 +64,16 @@ def main() -> int:
     for relative in LEGACY_DIRS_EXPECTED_GONE:
         if (ROOT / relative).exists():
             errors.append(f"Legacy path should remain deleted: {relative}")
+
+    retired_official_raw = sorted(
+        path.relative_to(ROOT).as_posix()
+        for path in (ROOT / "data/exports").glob("*/official_raw.json")
+    )
+    if retired_official_raw:
+        errors.append(f"Retired official_raw exports should remain deleted: {retired_official_raw}")
+
+    if (ROOT / "src/sf6_knowledge_coach/current_facts.py").exists():
+        errors.append("Legacy raw-backed current_facts.py should remain deleted.")
 
     github_dir = ROOT / ".github"
     if github_dir.exists() and not github_dir.is_dir():

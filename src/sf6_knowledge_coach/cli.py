@@ -7,7 +7,11 @@ from typing import Any
 
 from .aliases import resolve_query
 from .answering import append_answer_log, prepare_answer, verify_answer_packet
-from .current_facts import lookup_current_fact, search_moves
+
+LEGACY_CURRENT_FACT_RETIREMENT_MESSAGE = (
+    "Legacy raw-backed current-fact CLI lookup/search has been retired. "
+    "Reviewed replacement lookup is not implemented yet."
+)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -64,11 +68,24 @@ def _context_resolve(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def _search(args: argparse.Namespace) -> dict[str, Any]:
-    return {"query": args.query, "results": search_moves(args.query, args.limit)}
+    return {
+        "query": args.query,
+        "limit": args.limit,
+        "status": "unavailable",
+        "results": [],
+        "uncertainty": [LEGACY_CURRENT_FACT_RETIREMENT_MESSAGE],
+    }
 
 
 def _current_lookup(args: argparse.Namespace) -> dict[str, Any]:
-    return lookup_current_fact(args.character, args.move, args.field).to_dict()
+    return {
+        "character_slug": args.character,
+        "move_input": args.move,
+        "field": args.field,
+        "status": "unavailable",
+        "value": None,
+        "uncertainty": [LEGACY_CURRENT_FACT_RETIREMENT_MESSAGE],
+    }
 
 
 def _answer_prepare(args: argparse.Namespace) -> dict[str, Any]:
