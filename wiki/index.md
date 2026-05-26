@@ -20,7 +20,7 @@ which wiki pages to inspect.
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Meter system glossary concept for Drive-related movement, offense, defense, and burnout terms. | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | Timing and property vocabulary plus official JP, Ryu, Chun-Li, and Zangief structured frame-data captures. | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/jp]], [[entities/ryu]], [[entities/chun-li]], [[entities/zangief]] |
+| [[concepts/frame-data]] | Timing/property vocabulary, official JP/Ryu/Chun-Li/Zangief frame-data captures, and accepted Classic/Modern comparison policy. | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/jp]], [[entities/ryu]], [[entities/chun-li]], [[entities/zangief]] |
 | [[concepts/juggle-system]] | Glossary concept for free/limited juggle states and Juggle Count/Start/Increase/Limit terminology. | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | Compact notation for links, cancels, holds, releases, chains, hit states, air actions, delays, and directional inputs. | [[concepts/frame-data]] |
 

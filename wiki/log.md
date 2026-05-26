@@ -645,3 +645,26 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Notes:
   - Older open questions in `wiki/log.md` remain unchanged because the log is
     append-only.
+
+## [2026-05-27] concept-update | Frame-data comparison policy
+- Read:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/reviews/2026-05-27-health-check.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/fighting-game-notation.md`
+- Updated:
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/fighting-game-notation.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Decisions recorded:
+  - Classic/Modern frame-data comparisons default to exact official move-name
+    matching.
+  - Likely corresponding move-name variants are annotated rather than silently
+    normalized.
+  - Command notation in reader-facing answers remains a display-only transform
+    for now; raw input tokens remain source-preserving data.
+- Open questions:
+  - When, if ever, should display-only command notation become a formal wiki
+    notation schema?
