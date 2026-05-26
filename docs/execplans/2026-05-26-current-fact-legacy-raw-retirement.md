@@ -298,6 +298,10 @@ runtime/test/validator code references them as active behavior.
   boundaries, updated `data/exports/README.md`, and deleted all
   `data/exports/*/official_raw.json` files.
 - 2026-05-26: Ran implementation validation. All checks passed.
+- 2026-05-26: Tightened `verify_answer_packet()` so crafted
+  numeric/current-fact `answered` packets are rejected even if they carry the
+  retired `deterministic_current_fact_lookup` evidence kind. Added regression
+  coverage.
 
 ## Decision Log
 
@@ -317,6 +321,9 @@ runtime/test/validator code references them as active behavior.
   to protect a transition boundary that required legacy raw-backed runtime
   markers. Clean-slate now guards that raw exports and `current_facts.py` remain
   deleted.
+- 2026-05-26: Answer packet verification now enforces the retirement boundary:
+  numeric/current-fact exact answers must hold until a later reviewed contract
+  exists.
 
 ## Deviations
 
@@ -334,6 +341,9 @@ runtime/test/validator code references them as active behavior.
 - The all-13 non-scalar disposition remains future work.
 - Remaining `data/exports` snapshot manifests and manual-review debt index are
   legacy provenance/observability surfaces and may need a later cleanup PR.
+- Some synthetic current-fact schema fixtures still use historical
+  `data/exports/jp/official_raw.json` references. They are not active runtime
+  dependencies, but they should be reviewed in a later fixture cleanup PR.
 
 ## Completion Review Table
 
@@ -342,6 +352,7 @@ runtime/test/validator code references them as active behavior.
 | One-shot raw retirement plan | Draft plan and implementation | `docs/execplans/2026-05-26-current-fact-legacy-raw-retirement.md` | `git diff --check`; `uv lock --check` | Pass | None | Implementation review pending | Raw retirement is not behavior-preserving |
 | Fallback direction removal | Replaced fallback/dual-lookup plan direction | Same | PR diff inspection | Pass | None | Implementation review pending | PR branch name remains historical |
 | Runtime answer retirement | Numeric/current-fact answers hold instead of reading legacy raw values | `src/sf6_knowledge_coach/answering.py`; `tests/test_cli.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass | None | Implementation review pending | Exact answers now hold |
+| Answer verifier retirement | Crafted numeric/current-fact answered packets are rejected even with retired deterministic lookup evidence | `src/sf6_knowledge_coach/answering.py`; `tests/test_cli.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass | None | Implementation review pending | Exact answers now hold |
 | CLI retirement | Raw-backed `search` and `current lookup` return explicit unavailable payloads | `src/sf6_knowledge_coach/cli.py`; `tests/test_cli.py` | `PYTHONPATH=src uv run --locked python -m unittest discover -s tests` | Pass | None | Implementation review pending | CLI output intentionally changed |
 | Raw lookup deletion | Removed legacy raw lookup module and all checked-in official raw JSON files | `src/sf6_knowledge_coach/current_facts.py`; `data/exports/*/official_raw.json`; `data/exports/README.md`; `tests/validation/validate_clean_slate.py` | `find data/exports -name official_raw.json`; `validate_clean_slate.py` | Pass | None | Implementation review pending | Snapshot manifests remain legacy provenance |
 | Validator/audit retirement | Deleted legacy parity validator and updated audit metadata | `tests/validation/validate_current_fact_lookup_parity.py`; validator audit JSON/MD | `validate_validator_test_audit.py`; all `tests/validation/validate_*.py` | Pass | None | Implementation review pending | Future runtime switch needs new validators |

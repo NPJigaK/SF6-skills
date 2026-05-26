@@ -30,6 +30,32 @@ class CleanSlateCliTests(unittest.TestCase):
         verification = verify_answer_packet(packet)
         self.assertTrue(verification["ok"], verification)
 
+    def test_verify_rejects_legacy_deterministic_numeric_answer_packet(self) -> None:
+        packet = {
+            "schema_version": "answer_packet/v1",
+            "query": "JPの5LPはガードで何F？",
+            "resolved_context": {
+                "character_slug": "jp",
+                "field": "block_adv",
+                "move_input": "5LP",
+            },
+            "mode": "daily_local",
+            "status": "answered",
+            "answer": "jp 5LP block_adv: -2 (data/exports official_raw)",
+            "evidence": [
+                {
+                    "kind": "deterministic_current_fact_lookup",
+                    "authority": "data/exports official_raw",
+                }
+            ],
+            "uncertainty": [],
+        }
+
+        verification = verify_answer_packet(packet)
+
+        self.assertFalse(verification["ok"], verification)
+        self.assertIn("Numeric/current-fact exact answers are retired", verification["issues"][0])
+
     def test_numeric_answer_holds_without_lookup_context(self) -> None:
         packet = prepare_answer("これはガードで何F？")
         self.assertEqual(packet["status"], "hold")

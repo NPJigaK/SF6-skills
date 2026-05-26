@@ -80,13 +80,9 @@ def prepare_answer(query: str) -> dict[str, Any]:
 
 def verify_answer_packet(packet: dict[str, Any]) -> dict[str, Any]:
     numeric = is_numeric_or_current_fact_query(str(packet.get("query", "")))
-    evidence = packet.get("evidence", [])
-    deterministic_evidence = [
-        item for item in evidence if item.get("kind") == "deterministic_current_fact_lookup"
-    ]
     issues: list[str] = []
-    if numeric and packet.get("status") == "answered" and not deterministic_evidence:
-        issues.append("Numeric/current-fact answer lacks deterministic current-fact evidence.")
+    if numeric and packet.get("status") == "answered":
+        issues.append("Numeric/current-fact exact answers are retired and must hold.")
     if packet.get("status") == "answered" and packet.get("answer") is None:
         issues.append("Answered packet has no answer text.")
     return {
