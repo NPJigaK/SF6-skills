@@ -26,6 +26,7 @@ privacy/security boundary.
 | `tests/test_value_shape_inventory.py` | source-derived | accepted with limits | representative shape checks are not parser semantics |
 | `tests/validation/validate_clean_slate.py` | governance boundary | accepted with limits | repo shape and approved contract file inventory only |
 | `tests/validation/validate_current_fact_export_generator.py` | artifact consistency | accepted with limits | fixture-contract generator output, guard boundaries, and approved production export consistency only |
+| `tests/validation/validate_current_fact_lookup_parity.py` | artifact consistency | accepted with limits | production export invariants, expected non-parity with legacy JP raw comparison, and runtime boundary markers only |
 | `tests/validation/validate_current_fact_row_move_cell_candidates.py` | source-derived | accepted with limits | candidate schema, synthetic fixtures, production candidate consistency, and approved source-record artifact coexistence only |
 | `tests/validation/validate_current_fact_candidate_evidence.py` | source-derived | accepted with limits | candidate evidence source-review summary; full v4 row context remains ignored local reviewer input |
 | `tests/validation/validate_current_fact_consumer_guards.py` | artifact consistency | accepted with limits | guard behavior against synthetic fixtures and coverage statuses only |
