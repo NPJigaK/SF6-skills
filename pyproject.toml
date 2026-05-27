@@ -5,6 +5,7 @@ description = "Karpathy-style LLM Wiki tooling for SF6 source capture."
 requires-python = ">=3.11"
 dependencies = [
   "scrapling[all]>=0.4.8",
+  "yt-dlp>=2026.3.17",
 ]
 
 [tool.uv]
