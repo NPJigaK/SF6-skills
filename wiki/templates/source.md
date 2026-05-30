@@ -10,46 +10,46 @@ updated: YYYY-MM-DD
 status: active
 confidence: high
 tags: []
+aliases: []
 related_concepts: []
 related_entities: []
 ---
 
-# Source: <Title>
+# ソース: <タイトル>
 
-## One-line summary
+## 1行要約
 
 ...
 
-## Key takeaways
+## 重要ポイント
 
 1. ...
 2. ...
 3. ...
 
-## Important claims
+## 重要な主張
 
-| Claim | Evidence | Confidence | Notes |
+| 主張 | 根拠 | 信頼度 | メモ |
 |---|---|---|---|
 | ... | ... | high | ... |
 
-## Related concepts
+## 関連概念
 
 - [[concepts/...]]
 
-## Related entities
+## 関連エンティティ
 
 - [[entities/...]]
 
-## Contradictions or updates to existing wiki
+## 既存 wiki との矛盾または更新
 
 - ...
 
-## Open questions
+## 未解決の質問
 
 - ...
 
-## Source notes
+## ソースメモ
 
 - Raw file: `raw/...`
 - Original URL: ...
-

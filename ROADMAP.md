@@ -1,20 +1,20 @@
-# Karpathy-Style LLM Wiki Roadmap
+# Karpathy-style LLM Wiki ロードマップ
 
-Status: draft roadmap
-Created: 2026-05-26
-Scope: domain-independent LLM Knowledge Base / LLM Wiki design
+ステータス: draft roadmap
+作成日: 2026-05-26
+範囲: ドメイン非依存の LLM Knowledge Base / LLM Wiki 設計
 
-## Purpose
+## 目的
 
-This roadmap defines a domain-independent implementation plan for a
-Karpathy-style LLM Knowledge Base / LLM Wiki.
+このロードマップは、Karpathy-style の LLM Knowledge Base / LLM Wiki を
+ドメイン非依存で実装するための計画を定義します。
 
-This document intentionally does not include any domain-specific architecture,
-schemas, answer rules, data model, or product behavior. Domain-specific design
-comes only after this base pattern is implemented and reviewed.
+この文書には、意図的にドメイン固有のアーキテクチャ、schema、回答ルール、
+データモデル、product behavior を含めません。ドメイン固有の設計は、この
+base pattern が実装されレビューされた後にだけ行います。
 
-The target is not a conventional app, database-backed RAG system, or
-domain-specific runtime. The target is a plain-file knowledge repository where:
+目標は、一般的な app、database-backed RAG system、domain-specific runtime ではありません。
+目標は plain-file knowledge repository です。
 
 ```text
 Human curates sources and asks questions.
@@ -24,15 +24,15 @@ Markdown files are the durable memory.
 CLI tools are the LLM's hands.
 ```
 
-Compatibility with any existing implementation is not a goal of this roadmap.
-Git history is the rollback mechanism.
+既存実装との互換性は、このロードマップの目的ではありません。
+Git history を rollback mechanism として使います。
 
-## Source Basis
+## 出典
 
-This roadmap is based on the user's "Karpathy式 LLM Knowledge Base / LLM Wiki
-設計実装まとめ" and the current public Karpathy `llm-wiki` gist.
+このロードマップは、ユーザーの「Karpathy式 LLM Knowledge Base / LLM Wiki
+設計実装まとめ」と、現在公開されている Karpathy `llm-wiki` gist に基づきます。
 
-Source links:
+出典リンク:
 
 - [Karpathy llm-wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 - [Farzapedia / file collection memory](https://x.com/karpathy/status/2040572272944324650)
@@ -40,52 +40,49 @@ Source links:
 - [Manual incremental compilation reply](https://x.com/karpathy/status/2039812403962253744)
 - [Obsidian CLI reply](https://x.com/karpathy/status/2039814066575917263)
 
-## Design Boundary
+## 設計境界
 
-The first implementation must stay inside the Karpathy-style base pattern:
+最初の実装は Karpathy-style の base pattern 内に留めます。
 
-- generic `raw/`
-- generic `wiki/`
-- generic schema files
-- generic `index.md`
-- generic `log.md`
-- generic ingest / query / output / lint workflows
-- optional small file-based CLI tools
-- optional Obsidian viewing workflow
+- 汎用の `raw/`
+- 汎用の `wiki/`
+- 汎用の schema files
+- 汎用の `index.md`
+- 汎用の `log.md`
+- 汎用の ingest / query / output / lint workflows
+- 任意の小さな file-based CLI tools
+- 任意の Obsidian viewing workflow
 
-The first implementation must not include:
+最初の実装に含めてはいけないもの:
 
-- domain-specific page types
-- domain-specific answer policy
-- domain-specific validators
-- domain-specific structured databases
-- domain-specific runtime behavior
-- domain-specific UI
-- domain-specific retrieval architecture
+- ドメイン固有の page types
+- ドメイン固有の answer policy
+- ドメイン固有の validators
+- ドメイン固有の structured databases
+- ドメイン固有の runtime behavior
+- ドメイン固有の UI
+- ドメイン固有の retrieval architecture
 - product-specific automation
 
-## Karpathy-Stated Core
+## Karpathy が述べた中核
 
-### 1. LLM Wiki Is Not Ordinary RAG
+### 1. LLM Wiki は通常の RAG ではない
 
-Ordinary RAG retrieves chunks from raw documents at query time and reconstructs
-answers repeatedly.
+通常の RAG は query 時に raw documents から chunk を retrieve し、毎回回答を再構成します。
 
-The LLM Wiki pattern is different:
+LLM Wiki pattern は違います。
 
-- raw sources are added to a curated collection
-- the LLM reads new sources
-- the LLM compiles the source into a persistent Markdown wiki
-- the LLM updates entity pages, concept pages, summaries, contradictions, and
-  cross-references
-- knowledge accumulates in the wiki instead of being re-derived from scratch on
-  every question
+- raw sources を curated collection に追加する
+- LLM が新しい source を読む
+- LLM が source を persistent Markdown wiki に compile する
+- LLM が entity pages、concept pages、summaries、contradictions、cross-references を更新する
+- 知識は質問ごとに再導出されるのではなく、wiki の中で蓄積される
 
-The wiki is a persistent, compounding artifact.
+wiki は persistent で compounding な artifact です。
 
-### 2. Three Layers
+### 2. 3 つのレイヤー
 
-The architecture has three layers:
+アーキテクチャは 3 レイヤーです。
 
 ```text
 1. Raw sources
@@ -93,68 +90,63 @@ The architecture has three layers:
 3. The schema
 ```
 
-`raw/` is the immutable source of truth. The LLM reads raw files but never
-modifies them.
+`raw/` は immutable source of truth です。LLM は raw files を読みますが、変更しません。
 
-`wiki/` is a directory of LLM-generated Markdown files. The LLM owns this layer:
-it creates pages, updates pages, maintains cross-references, and keeps the wiki
-consistent.
+`wiki/` は LLM-generated Markdown files のディレクトリです。LLM はこの layer を所有し、
+ページ作成、ページ更新、cross-reference の保守、wiki の一貫性維持を行います。
 
-The schema is a file such as `AGENTS.md` or `CLAUDE.md` that tells the LLM how
-the wiki is structured and what workflows to follow.
+schema は `AGENTS.md` や `CLAUDE.md` のようなファイルです。wiki がどう構造化され、
+どの workflow に従うかを LLM に伝えます。
 
-### 3. Role Split
+### 3. 役割分担
 
 Human:
 
-- curates sources
-- chooses what matters
-- asks questions
-- reviews important changes
-- directs analysis
-- checks Git diffs
+- sources を curate する
+- 何が重要かを選ぶ
+- 質問する
+- 重要な変更をレビューする
+- 分析の方向を決める
+- Git diffs を確認する
 
 LLM:
 
-- summarizes sources
-- creates pages
-- updates pages
-- maintains cross-references
-- updates `index.md`
-- appends `log.md`
-- answers questions from the wiki
-- files useful answers back into the wiki
-- runs health checks
-- produces outputs
+- sources を要約する
+- pages を作る
+- pages を更新する
+- cross-references を保守する
+- `index.md` を更新する
+- `log.md` に追記する
+- wiki から質問に答える
+- 有用な回答を wiki に file back する
+- health checks を実行する
+- outputs を作る
 
-### 4. Obsidian Is The IDE
+### 4. Obsidian は IDE
 
-Obsidian is the human-facing frontend for browsing the file collection:
+Obsidian は、人間が file collection を閲覧するための frontend です。
 
-- reading pages
-- following wikilinks
-- inspecting graph view
-- viewing outputs
-- using optional plugins such as Marp or Dataview
+- pages を読む
+- wikilinks を辿る
+- graph view を見る
+- outputs を見る
+- Marp や Dataview など任意 plugin を使う
 
-Obsidian is not the knowledge base. The knowledge base is the directory of plain
-files.
+Obsidian は knowledge base 本体ではありません。knowledge base 本体は plain files のディレクトリです。
 
-### 5. Fully Autonomous Ingest Is Not The Starting Point
+### 5. 完全自動 ingest から始めない
 
-Early ingest should be source-by-source with the human in the loop.
+初期 ingest は、人間を loop に入れて source-by-source で行います。
 
-Batch ingest and more automation may come later, after the schema, page shapes,
-and review expectations are stable.
+batch ingest やより強い automation は、schema、page shape、review expectation が安定してから検討します。
 
-## Implementation Judgments
+## 実装判断
 
-The following details are not fixed by Karpathy as universal requirements, but
-they are practical choices that preserve the pattern.
+以下は Karpathy が普遍要件として固定したものではありません。ただし pattern を保つための実践的判断です。
 
 ### 1. Plain Directory Structure
 
-Use a small, obvious directory tree:
+小さく明快なディレクトリツリーを使います。
 
 ```text
 llm-wiki/
@@ -202,7 +194,7 @@ llm-wiki/
     download_assets.py
 ```
 
-The minimum viable version is:
+最小実用版は次の通りです。
 
 ```text
 raw/
@@ -214,23 +206,21 @@ wiki/index.md
 wiki/log.md
 ```
 
-### 2. Use Frontmatter Where Useful
+### 2. 有用な場所で frontmatter を使う
 
-YAML frontmatter is useful for humans, LLMs, and optional Obsidian Dataview
-queries. It should stay simple and editable.
+YAML frontmatter は、人間、LLM、任意の Obsidian Dataview query にとって有用です。
+単純で編集しやすい形に保ちます。
 
-### 3. Keep Tools Small
+### 3. Tools は小さく保つ
 
-CLI tools should help the LLM operate on the file tree. They should not become
-the source of truth.
+CLI tools は、LLM が file tree 上で作業するための補助です。source of truth にしてはいけません。
 
-Start with simple file-based tooling. Do not introduce vector databases, graph
-databases, hosted RAG systems, or MCP-first architecture in the base
-implementation.
+まずは単純な file-based tooling から始めます。base implementation では vector databases、
+graph databases、hosted RAG systems、MCP-first architecture を導入しません。
 
-### 4. Use Git As The Safety Rail
+### 4. Git を安全柵にする
 
-The wiki is just files, so Git provides:
+wiki は単なる files なので、Git が次を提供します。
 
 - history
 - diffs
@@ -238,13 +228,30 @@ The wiki is just files, so Git provides:
 - rollback
 - review
 
-LLM-maintained wiki changes should be reviewed through Git diff.
+LLM-maintained wiki changes は Git diff でレビューします。
 
-## Raw Layer Design
+### 5. 言語方針
 
-`raw/` stores human-curated source material.
+この repository は日本語のメンテナーが読むため、wiki 本文、永続回答、統合分析、レビュー、
+source summary は日本語を優先します。
 
-Examples:
+一方で、構造識別子は安定性と検索性のため English/ASCII を保ちます。
+
+- directory names
+- filenames
+- slugs
+- YAML frontmatter keys
+- field names
+- generated data paths
+- commands
+
+重要語は必要に応じて日本語と英語を併記し、`aliases` や `tags` にも入れます。
+
+## Raw Layer 設計
+
+`raw/` は人間が curate した source material を保存します。
+
+例:
 
 ```text
 raw/articles/
@@ -257,15 +264,19 @@ raw/transcripts/
 raw/notes/
 ```
 
-Rules:
+ルール:
 
-- LLMs must not edit files in `raw/`.
-- Raw filenames should make date, source, and topic reasonably clear.
-- Images should be saved locally when they matter.
-- Source metadata can live in frontmatter or a sidecar file.
-- Wiki pages should link back to raw sources.
+- LLM は `raw/` 配下のファイルを編集してはいけない。
+- `raw/` は原本保存層なので、元ソースの言語と内容を維持する。
+- 英語 source は英語のまま、日本語 source は日本語のまま保存する。
+- 翻訳・要約・正規化した置き換え版を `raw/` に作らない。
+- 日本語化、要約、説明、統合は `wiki/` layer で行い、raw source または source page に citation を戻す。
+- raw filename は date、source、topic が十分に分かる形にする。
+- 重要な画像はローカル保存する。
+- source metadata は frontmatter または sidecar file に置いてよい。
+- wiki pages は raw sources へ link back する。
 
-Example raw source frontmatter:
+raw source frontmatter 例:
 
 ```markdown
 ---
@@ -276,14 +287,15 @@ author: ""
 original_url: ""
 captured_at: YYYY-MM-DD
 status: raw
+aliases: []
 ---
 ```
 
-## Wiki Layer Design
+## Wiki Layer 設計
 
-`wiki/` stores LLM-generated, LLM-maintained compiled knowledge.
+`wiki/` は LLM-generated、LLM-maintained の compiled knowledge を保存します。
 
-Recommended directories:
+推奨ディレクトリ:
 
 ```text
 wiki/sources/
@@ -296,22 +308,22 @@ wiki/reviews/
 wiki/templates/
 ```
 
-Rules:
+ルール:
 
-- Prefer updating existing pages over creating duplicates.
-- Every important claim should be traceable to a source.
-- Mark uncertainty explicitly.
-- Record contradictions and stale claims instead of hiding them.
-- Maintain backlinks and cross-references.
-- Add useful query results back into the wiki.
-- Update `wiki/index.md` after meaningful page changes.
-- Append `wiki/log.md` after ingest, query, output, lint, or schema work.
+- 重複ページを作るより既存ページの更新を優先する。
+- 重要な主張はすべて source へ traceable にする。
+- 不確実性を明示する。
+- 矛盾や古い主張を隠さず記録する。
+- backlinks と cross-references を保守する。
+- 有用な query results を wiki に戻す。
+- 意味のある page changes の後は `wiki/index.md` を更新する。
+- ingest、query、output、lint、schema work の後は `wiki/log.md` に追記する。
 
-## Schema Layer Design
+## Schema Layer 設計
 
-`AGENTS.md` and `CLAUDE.md` are the agent-facing operating constitution.
+`AGENTS.md` と `CLAUDE.md` は、agent-facing の operating constitution です。
 
-They should define:
+定義すべき内容:
 
 - core model
 - raw/wiki/schema layer boundaries
@@ -331,133 +343,132 @@ They should define:
 - CLI tool usage
 - Git diff reporting
 
-Minimum schema rules:
+最小 schema rules:
 
 ```markdown
-# LLM Wiki Agent Instructions
+# LLM Wiki エージェント指示
 
-## Core model
+## コアモデル
 
-This repository is an LLM-maintained knowledge base.
+このリポジトリは LLM-maintained knowledge base です。
 
-The human curates sources, asks questions, reviews important changes, and
-decides direction. The LLM writes and maintains the wiki.
+人間は sources を curate し、質問し、重要な変更をレビューし、方向性を決めます。
+LLM は wiki を書き、保守します。
 
-## Layers
+## レイヤー
 
-- `raw/`: immutable source material. Never edit files in `raw/`.
-- `wiki/`: LLM-generated and LLM-maintained Markdown wiki.
-- `wiki/index.md`: content-oriented catalog.
-- `wiki/log.md`: chronological append-only activity log.
+- `raw/`: 不変の source material。`raw/` 配下は絶対に編集しない。
+- `wiki/`: LLM-generated、LLM-maintained の Markdown wiki。
+- `wiki/index.md`: 内容指向の catalog。
+- `wiki/log.md`: 時系列の追記専用 activity log。
 
-## Non-negotiable rules
+## 絶対ルール
 
-1. Never modify `raw/`.
-2. Prefer updating existing wiki pages over creating duplicates.
-3. Every important claim must be traceable to a source.
-4. Mark uncertainty explicitly.
-5. Update `wiki/index.md` after every meaningful ingest or new page.
-6. Append to `wiki/log.md` after every ingest, query, output, or lint pass.
-7. Useful query results should be filed back into the wiki.
-8. Report all changed files at the end of each task.
+1. `raw/` を絶対に変更しない。
+2. 重複ページより既存 wiki ページの更新を優先する。
+3. 重要な主張はすべて source へ traceable にする。
+4. 不確実性を明示する。
+5. 意味のある ingest または new page の後は `wiki/index.md` を更新する。
+6. ingest、query、output、lint pass の後は `wiki/log.md` に追記する。
+7. 有用な query results は wiki に file back する。
+8. 各タスクの最後に変更ファイルをすべて報告する。
 ```
 
-## Special Files
+## 特別なファイル
 
 ### `wiki/index.md`
 
-`index.md` is content-oriented. It catalogs wiki pages with links, one-line
-summaries, and optional metadata.
+`index.md` は content-oriented です。wiki pages を links、one-line summaries、optional metadata とともに catalog します。
 
-The LLM reads it first when answering questions.
+LLM は質問に答える時、最初にこのファイルを読みます。
 
-Suggested shape:
+推奨形:
 
 ```markdown
-# Wiki Index
+# Wiki Index（内容カタログ）
 
-## Sources
+## Sources（ソース）
 
 | Page | Summary | Date | Source type | Status |
 |---|---|---:|---|---|
 
-## Concepts
+## Concepts（概念）
 
 | Page | Summary | Related |
 |---|---|---|
 
-## Entities
+## Entities（エンティティ）
 
 | Page | Summary | Type |
 |---|---|---|
 
-## Syntheses
+## Syntheses（統合分析）
 
 | Page | Summary | Updated |
 |---|---|---:|
 
-## Questions
+## Questions（質問）
 
 | Page | Question | Summary | Updated |
 |---|---|---|---:|
 
-## Outputs
+## Outputs（成果物）
 
 | Page | Type | Summary | Updated |
 |---|---|---|---:|
 
-## Reviews
+## Reviews（レビュー）
 
 | Page | Review type | Summary | Status |
 |---|---|---|---|
 ```
 
-Rules:
+ルール:
 
-- Add new wiki pages to the index.
-- Update summaries after major page updates.
-- Keep the index useful for navigation.
-- Use search tools only when the index is insufficient.
+- 新しい wiki pages を index に追加する。
+- major page updates の後は summary を更新する。
+- index を navigation に有用な状態に保つ。
+- search tools は index だけで不十分な場合にだけ使う。
 
 ### `wiki/log.md`
 
-`log.md` is chronological and append-only.
+`log.md` は chronological で append-only です。
 
-Suggested shape:
+推奨形:
 
 ```markdown
-# Wiki Log
+# Wiki Log（活動ログ）
 
-## [YYYY-MM-DD] schema | Initialize LLM Wiki
-- Created:
+## [YYYY-MM-DD] schema | LLM Wiki を初期化
+- 作成:
   - `AGENTS.md`
   - `CLAUDE.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
-  - Initialized raw/wiki/schema structure.
+- メモ:
+  - raw/wiki/schema structure を初期化した。
 
 ## [YYYY-MM-DD] ingest | <Source Title>
-- Raw source:
+- Raw source（原資料）:
   - `raw/articles/<file>.md`
-- Created:
+- 作成:
   - `wiki/sources/<source>.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
-- Open questions:
+- 未解決の質問:
   - ...
 ```
 
-Rules:
+ルール:
 
-- Append only.
-- Do not rewrite old entries except to correct obvious formatting mistakes.
-- Log ingest, query, output, lint, and schema updates.
-- Use consistent entry prefixes so Unix tools can parse recent activity.
+- 追記専用にする。
+- obvious formatting mistakes の修正を除き、古い entries を書き換えない。
+- ingest、query、output、lint、schema updates を記録する。
+- Unix tools で recent activity を parse しやすいよう、entry prefix を一貫させる。
 
-## Page Templates
+## ページテンプレート
 
-### Source Summary
+### ソース要約ページ
 
 ```markdown
 ---
@@ -472,51 +483,52 @@ updated: YYYY-MM-DD
 status: active
 confidence: high
 tags: []
+aliases: []
 related_concepts: []
 related_entities: []
 ---
 
-# Source: <Title>
+# ソース: <タイトル>
 
-## One-line summary
+## 1行要約
 
 ...
 
-## Key takeaways
+## 重要ポイント
 
 1. ...
 2. ...
 3. ...
 
-## Important claims
+## 重要な主張
 
-| Claim | Evidence | Confidence | Notes |
+| 主張 | 根拠 | 信頼度 | メモ |
 |---|---|---|---|
 | ... | ... | high | ... |
 
-## Related concepts
+## 関連概念
 
 - [[concepts/...]]
 
-## Related entities
+## 関連エンティティ
 
 - [[entities/...]]
 
-## Contradictions or updates to existing wiki
+## 既存 wiki との矛盾または更新
 
 - ...
 
-## Open questions
+## 未解決の質問
 
 - ...
 
-## Source notes
+## ソースメモ
 
 - Raw file: `raw/...`
 - Original URL: ...
 ```
 
-### Concept Page
+### 概念ページ
 
 ```markdown
 ---
@@ -528,44 +540,45 @@ status: active
 confidence: medium
 sources: []
 related: []
+aliases: []
 tags: []
 ---
 
-# <Concept>
+# <概念>
 
-## Summary
-
-...
-
-## Definition
+## 要約
 
 ...
 
-## Why it matters
+## 定義
 
 ...
 
-## Key claims
+## なぜ重要か
 
-| Claim | Sources | Confidence |
+...
+
+## 主要な主張
+
+| 主張 | ソース | 信頼度 |
 |---|---|---|
 | ... | ... | ... |
 
-## Connections
+## 関連
 
 - [[concepts/...]]
 - [[entities/...]]
 
-## Contradictions / caveats
+## 矛盾 / 注意点
 
 ...
 
-## Open questions
+## 未解決の質問
 
 ...
 ```
 
-### Entity Page
+### エンティティページ
 
 ```markdown
 ---
@@ -576,35 +589,36 @@ updated: YYYY-MM-DD
 status: active
 sources: []
 related: []
+aliases: []
 tags: []
 ---
 
-# <Entity>
+# <エンティティ>
 
-## Summary
+## 要約
 
 ...
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
 | ... | ... | ... |
 
-## Relevant claims
+## 関連する主張
 
 ...
 
-## Related concepts
+## 関連概念
 
 ...
 
-## Open questions
+## 未解決の質問
 
 ...
 ```
 
-### Synthesis Page
+### 統合分析ページ
 
 ```markdown
 ---
@@ -614,45 +628,46 @@ updated: YYYY-MM-DD
 status: active
 sources: []
 related: []
+aliases: []
 tags: []
 ---
 
-# <Synthesis Title>
+# <統合分析タイトル>
 
-## Executive summary
-
-...
-
-## Core argument
+## 要約
 
 ...
 
-## Evidence
+## 中心論点
 
-| Point | Supporting sources | Confidence |
+...
+
+## 根拠
+
+| 論点 | 根拠ソース | 信頼度 |
 |---|---|---|
 | ... | ... | ... |
 
-## Comparison
+## 比較
 
-| Dimension | A | B | Notes |
+| 観点 | A | B | メモ |
 |---|---|---|---|
 | ... | ... | ... | ... |
 
-## Implications
+## 含意
 
 ...
 
-## Open questions
+## 未解決の質問
 
 ...
 
-## Pages to update
+## 更新候補ページ
 
 - [[concepts/...]]
 ```
 
-### Question Page
+### 質問ページ
 
 ```markdown
 ---
@@ -663,28 +678,29 @@ status: active
 question: ""
 sources: []
 related: []
+aliases: []
 ---
 
-# Question: <Question>
+# 質問: <質問>
 
-## Short answer
-
-...
-
-## Evidence
+## 短い答え
 
 ...
 
-## Reasoning
+## 根拠
 
 ...
 
-## Limits / uncertainty
+## 説明
+
+...
+
+## 注意 / 不確実性
 
 ...
 ```
 
-### Lint Review
+### Lint レビュー
 
 ```markdown
 ---
@@ -692,171 +708,171 @@ type: review
 review_type: lint
 created: YYYY-MM-DD
 status: open
+aliases: []
 ---
 
-# Wiki Health Check - YYYY-MM-DD
+# Wiki ヘルスチェック - YYYY-MM-DD
 
-## Summary
-
-...
-
-## Structural issues
-
-### Broken links
+## 要約
 
 ...
 
-### Orphan pages
+## 構造上の問題
+
+### 壊れたリンク
 
 ...
 
-### Missing index entries
+### 孤立ページ
 
 ...
 
-## Knowledge issues
-
-### Contradictions
+### index 未掲載ページ
 
 ...
 
-### Stale claims
+## 知識上の問題
+
+### 矛盾
 
 ...
 
-### Uncited claims
+### 古い主張
 
 ...
 
-## Missing concepts
+### Citation のない主張
 
 ...
 
-## Suggested new sources
+## 不足している概念
 
 ...
 
-## Suggested next questions
+## 推奨される新規 sources
 
 ...
 
-## Changes made
+## 次に調べる質問の候補
 
 ...
 
-## Requires human review
+## 実施した変更
+
+...
+
+## 人間レビューが必要な項目
 
 ...
 ```
 
-## Workflows
+## ワークフロー
 
-### Ingest Workflow
+### Ingest ワークフロー
 
-Purpose: integrate one new raw source into the wiki.
+目的: 新しい raw source を 1 つ wiki に統合する。
 
-Steps:
+手順:
 
-1. Human adds one source under `raw/`.
-2. LLM reads `AGENTS.md` or `CLAUDE.md`.
-3. LLM reads `wiki/index.md`.
-4. LLM reads recent `wiki/log.md` entries.
-5. LLM reads the new raw source.
-6. LLM creates a source summary in `wiki/sources/`.
-7. LLM finds related concept, entity, and synthesis pages.
-8. LLM updates existing pages where appropriate.
-9. LLM creates new concept or entity pages only when useful.
-10. LLM records contradictions, stale claims, and uncertainty.
-11. LLM adds backlinks.
-12. LLM updates `wiki/index.md`.
-13. LLM appends `wiki/log.md`.
-14. LLM reports changed files and open questions.
-15. Human reviews the Git diff.
+1. Human が `raw/` に source を 1 つ追加する。
+2. LLM が `AGENTS.md` または `CLAUDE.md` を読む。
+3. LLM が `wiki/index.md` を読む。
+4. LLM が最近の `wiki/log.md` entries を読む。
+5. LLM が新しい raw source を読む。
+6. LLM が `wiki/sources/` に source summary を作る。
+7. LLM が関連する concept、entity、synthesis pages を探す。
+8. LLM が必要に応じて既存 pages を更新する。
+9. LLM が有用な場合にだけ新しい concept または entity pages を作る。
+10. LLM が contradictions、stale claims、uncertainty を記録する。
+11. LLM が backlinks を追加する。
+12. LLM が `wiki/index.md` を更新する。
+13. LLM が `wiki/log.md` に追記する。
+14. LLM が changed files と open questions を報告する。
+15. Human が Git diff をレビューする。
 
-Initial prompt:
+初期 prompt:
 
 ```text
-Please ingest this source into the LLM Wiki.
+この source を LLM Wiki に ingest してください。
 
-Source:
+ソース:
 raw/<path>
 
-Follow AGENTS.md exactly.
+AGENTS.md に厳密に従ってください。
 
-Requirements:
-- Do not edit raw/.
-- Read wiki/index.md first.
-- Read recent entries in wiki/log.md.
-- Create a source summary in wiki/sources/.
-- Update related concept/entity/synthesis pages.
-- Prefer updating existing pages over creating duplicates.
-- Add backlinks.
-- Flag contradictions, stale claims, and uncertainty.
-- Update wiki/index.md.
-- Append to wiki/log.md.
-- Report changed files and open questions.
+要件:
+- raw/ を編集しない。
+- 最初に wiki/index.md を読む。
+- wiki/log.md の最近の entries を読む。
+- wiki/sources/ に source summary を作る。
+- 関連する concept/entity/synthesis pages を更新する。
+- 重複ページを作るより既存ページの更新を優先する。
+- backlinks を追加する。
+- contradictions、stale claims、uncertainty を明示する。
+- wiki/index.md を更新する。
+- wiki/log.md に追記する。
+- changed files と open questions を報告する。
 ```
 
-Batch policy:
+バッチ方針:
 
 ```text
 0-20 sources:
-  one source at a time with human review
+  human review 付きで 1 source ずつ
 
 20-100 sources:
-  small batches only after patterns stabilize
+  patterns が安定した後に small batches のみ
 
 100+ sources:
-  consider stronger search tooling if index.md is no longer enough
+  index.md だけでは不足する場合、より強い search tooling を検討する
 ```
 
-### Query Workflow
+### Query ワークフロー
 
-Purpose: answer a question from the compiled wiki and preserve useful results.
+目的: compiled wiki から質問に答え、有用な結果を保存する。
 
-Steps:
+手順:
 
-1. LLM reads `wiki/index.md`.
-2. LLM searches the wiki if needed.
-3. LLM reads relevant source, concept, entity, and synthesis pages.
-4. LLM synthesizes an answer with citations to wiki/source pages.
-5. LLM chooses an output form when useful:
+1. LLM が `wiki/index.md` を読む。
+2. 必要なら LLM が wiki を検索する。
+3. LLM が関連する source、concept、entity、synthesis pages を読む。
+4. LLM が wiki/source pages への citation 付きで answer を synthesis する。
+5. 必要に応じて output form を選ぶ。
    - Markdown report
    - comparison table
    - Marp slide deck
    - matplotlib chart
    - canvas
-6. LLM files durable answers back into `wiki/questions/`, `wiki/syntheses/`, or
-   `wiki/outputs/`.
-7. LLM updates `wiki/index.md`.
-8. LLM appends `wiki/log.md`.
+6. LLM が durable answers を `wiki/questions/`、`wiki/syntheses/`、または `wiki/outputs/` に file back する。
+7. LLM が `wiki/index.md` を更新する。
+8. LLM が `wiki/log.md` に追記する。
 
-Initial prompt:
+初期 prompt:
 
 ```text
-Please answer this question against the wiki.
+wiki を使って次の質問に答えてください。
 
-Question:
+質問:
 <question>
 
-Workflow:
-1. Read wiki/index.md first.
-2. Search the wiki if needed.
-3. Read relevant source, concept, entity, and synthesis pages.
-4. Answer with citations to wiki/source pages.
-5. If the answer is useful, file it back into:
-   - wiki/questions/ for Q&A
-   - wiki/syntheses/ for durable analysis
-   - wiki/outputs/ for visual or presentation output
-6. Update wiki/index.md and wiki/log.md.
-7. Report changed files and unresolved questions.
+ワークフロー:
+1. 最初に wiki/index.md を読む。
+2. 必要なら wiki を検索する。
+3. 関連する source、concept、entity、synthesis pages を読む。
+4. wiki/source pages への citation 付きで回答する。
+5. 回答が有用なら次へ file back する:
+   - Q&A は wiki/questions/
+   - 永続分析は wiki/syntheses/
+   - visual または presentation output は wiki/outputs/
+6. wiki/index.md と wiki/log.md を更新する。
+7. changed files と unresolved questions を報告する。
 ```
 
-### Output Workflow
+### Output ワークフロー
 
-Purpose: make useful results durable and viewable.
+目的: 有用な結果を durable かつ viewable にする。
 
-Output locations:
+出力先:
 
 ```text
 wiki/outputs/reports/
@@ -865,30 +881,30 @@ wiki/outputs/charts/
 wiki/outputs/canvases/
 ```
 
-Initial prompt:
+初期 prompt:
 
 ```text
-Create a durable output from the wiki.
+wiki から durable output を作成してください。
 
-Topic:
+トピック:
 <topic>
 
-Output type:
+出力形式:
 Markdown report / Marp slide deck / matplotlib chart / comparison table
 
-Output path:
+出力 path:
 wiki/outputs/<type>/<filename>
 
-Requirements:
-- Cite relevant wiki/source pages.
-- Make it useful in Obsidian.
-- File it back into the wiki.
-- Update index.md and log.md.
+要件:
+- 関連する wiki/source pages を citation する。
+- Obsidian で有用に読むことができる形にする。
+- wiki に file back する。
+- index.md と log.md を更新する。
 ```
 
-### Lint / Health Check Workflow
+### Lint / Health Check ワークフロー
 
-Purpose: keep the wiki healthy as it grows.
+目的: wiki が成長しても健全に保つ。
 
 Checks:
 
@@ -917,15 +933,15 @@ Research:
   - further questions to investigate
 ```
 
-Initial prompt:
+初期 prompt:
 
 ```text
-Please run a wiki health check.
+wiki health check を実行してください。
 
-Workflow:
-1. Read AGENTS.md / CLAUDE.md.
-2. Read wiki/index.md and recent wiki/log.md entries.
-3. Check for:
+ワークフロー:
+1. AGENTS.md / CLAUDE.md を読む。
+2. wiki/index.md と最近の wiki/log.md entries を読む。
+3. 次を確認する:
    - contradictions
    - stale claims
    - orphan pages
@@ -934,16 +950,16 @@ Workflow:
    - missing source citations
    - data gaps
    - broken links
-4. Repair safe structural issues.
-5. For uncertain factual issues, create a review note instead of guessing.
-6. Write findings to wiki/reviews/<date>-health-check.md.
-7. Update wiki/index.md and wiki/log.md.
-8. Suggest next questions and next sources.
+4. 安全な structural issues を修正する。
+5. 不確実な factual issues は推測せず review note を作る。
+6. findings を wiki/reviews/<date>-health-check.md に書く。
+7. wiki/index.md と wiki/log.md を更新する。
+8. next questions と next sources を提案する。
 ```
 
-## CLI Design
+## CLI 設計
 
-CLI tools are optional helpers for the LLM. They are not the knowledge base.
+CLI tools は LLM の optional helpers です。knowledge base ではありません。
 
 Initial commands:
 
@@ -959,15 +975,15 @@ Decision status:
 
 | Tool | Status | Basis |
 |---|---|---|
-| search CLI | recommended | most obvious useful LLM helper |
-| status CLI | implementation judgment | useful for maintenance |
-| recent CLI | implementation judgment | reads parseable `log.md` |
-| lint CLI | implementation judgment | packages health checks |
-| render CLI | optional | packages output generation |
-| qmd | later option | useful when Markdown search needs grow |
-| MCP | deferred | useful only if a chosen tool exposes it cleanly |
+| search CLI | recommended | LLM helper として最も明確に有用 |
+| status CLI | implementation judgment | maintenance に有用 |
+| recent CLI | implementation judgment | parseable な `log.md` を読む |
+| lint CLI | implementation judgment | health checks をまとめる |
+| render CLI | optional | output generation をまとめる |
+| qmd | later option | Markdown search needs が増えたら有用 |
+| MCP | deferred | 選んだ tool が cleanly expose する場合のみ有用 |
 
-Do not start with:
+最初から導入しないもの:
 
 - Obsidian CLI
 - vector DB
@@ -976,11 +992,11 @@ Do not start with:
 - MCP-first architecture
 - fine-tuning
 
-## Obsidian Design
+## Obsidian 設計
 
-Obsidian is recommended as a viewer and IDE-like frontend.
+Obsidian は viewer 兼 IDE-like frontend として推奨します。
 
-Recommended settings:
+推奨 settings:
 
 ```text
 Attachment folder path:
@@ -995,24 +1011,24 @@ Useful plugins:
   Dataview
 ```
 
-Rules:
+ルール:
 
-- Do not depend on Obsidian for correctness.
-- Do not require Obsidian CLI.
-- Do not require Obsidian APIs.
-- Keep the repository readable with ordinary file tools.
+- correctness を Obsidian に依存させない。
+- Obsidian CLI を必須にしない。
+- Obsidian APIs を必須にしない。
+- ordinary file tools で repository を読める状態に保つ。
 
-## Git Design
+## Git 設計
 
-Use Git for:
+Git の用途:
 
 - version history
 - rollback
 - branch-based experiments
 - collaboration
-- review of LLM edits
+- LLM edits の review
 
-Suggested operations:
+推奨 operations:
 
 ```bash
 git status
@@ -1021,7 +1037,7 @@ git add raw/ wiki/ AGENTS.md CLAUDE.md README.md
 git commit -m "Initialize LLM Wiki"
 ```
 
-After ingest:
+ingest 後:
 
 ```bash
 git status
@@ -1030,7 +1046,7 @@ git add raw/ wiki/
 git commit -m "Ingest <source title>"
 ```
 
-After lint:
+lint 後:
 
 ```bash
 git status
@@ -1039,11 +1055,11 @@ git add wiki/
 git commit -m "Run wiki health check"
 ```
 
-## Scale Plan
+## スケール計画
 
-### Small Scale
+### 小規模
 
-Use:
+使うもの:
 
 - `index.md`
 - `log.md`
@@ -1051,26 +1067,26 @@ Use:
 - `rg`
 - simple search CLI
 
-Avoid:
+避けるもの:
 
 - vector DB
 - graph DB
 - MCP-first design
 - complex RAG pipelines
 
-### Moderate Scale
+### 中規模
 
-Consider:
+検討するもの:
 
-- qmd or another local Markdown search tool
+- qmd または別の local Markdown search tool
 - BM25/vector hybrid search
-- stronger frontmatter conventions
+- より強い frontmatter conventions
 - periodic lint
-- stronger index conventions
+- より強い index conventions
 
-### Larger Scale
+### 大規模
 
-Consider:
+検討するもの:
 
 - dedicated search layer
 - page-level metadata discipline
@@ -1082,25 +1098,25 @@ Consider:
 - possible MCP
 - possible evaluation set
 
-The core remains unchanged: raw sources are compiled into a persistent wiki.
+core は変わりません。raw sources を persistent wiki に compile します。
 
 ## Fine-Tuning / Synthetic Data
 
-Fine-tuning and synthetic data are future explorations, not MVP requirements.
+fine-tuning と synthetic data は将来の探索であり、MVP requirements ではありません。
 
-Recommended order:
+推奨順序:
 
-1. Create `raw/` and `wiki/`.
-2. Run ingest / query / lint manually.
-3. Stabilize `index.md` and `log.md`.
-4. Add simple search CLI if needed.
-5. Build evaluation questions if useful.
-6. Consider synthetic data.
-7. Consider fine-tuning only after the wiki has grown.
+1. `raw/` と `wiki/` を作る。
+2. ingest / query / lint を手動で回す。
+3. `index.md` と `log.md` を安定させる。
+4. 必要なら simple search CLI を追加する。
+5. 有用なら evaluation questions を作る。
+6. synthetic data を検討する。
+7. wiki が育った後にだけ fine-tuning を検討する。
 
-## Security And Privacy
+## セキュリティとプライバシー
 
-Even in a generic LLM Wiki, source sensitivity should be explicit.
+汎用 LLM Wiki でも source sensitivity は明示すべきです。
 
 Optional frontmatter:
 
@@ -1112,51 +1128,50 @@ contains_personal_data: false
 ---
 ```
 
-Rules:
+ルール:
 
-- Label sensitive raw sources.
-- Label sensitive wiki pages.
-- Do not send sources to cloud LLMs unless allowed.
-- Keep local-only material out of public remotes.
-- Review screenshots, transcripts, and personal notes carefully.
+- sensitive raw sources に label を付ける。
+- sensitive wiki pages に label を付ける。
+- 許可されていない sources を cloud LLMs に送らない。
+- local-only material を public remotes に入れない。
+- screenshots、transcripts、personal notes は慎重にレビューする。
 
-## Explicit Non-Goals
+## 明示的な Non-Goals
 
-- Domain-specific architecture in the base layer.
-- Complete automation from day one.
-- Obsidian CLI dependency.
-- Obsidian API dependency.
-- App-first design.
-- Database-first design.
-- Vector DB from day one.
-- Graph DB from day one.
-- MCP-first design.
-- Fine-tuning from day one.
-- Humans manually maintaining the wiki as traditional notes.
-- Leaving useful answers only in chat history.
+- base layer に domain-specific architecture を入れること。
+- day one から complete automation を行うこと。
+- Obsidian CLI dependency。
+- Obsidian API dependency。
+- app-first design。
+- database-first design。
+- day one から vector DB を使うこと。
+- day one から graph DB を使うこと。
+- MCP-first design。
+- day one から fine-tuning を行うこと。
+- 人間が traditional notes として wiki を手動保守すること。
+- 有用な回答を chat history にだけ残すこと。
 
-## MVP Roadmap
+## MVP ロードマップ
 
 ### Phase 0: Pure Pattern Lock
 
-Goal: accept the domain-independent Karpathy-style design before applying it to
-any specific domain.
+目的: 特定ドメインへ適用する前に、domain-independent Karpathy-style design を受け入れる。
 
-Tasks:
+タスク:
 
-- Review this roadmap.
-- Confirm that no domain-specific logic belongs in the base pattern.
-- Decide whether this roadmap supersedes any current implementation plan.
+- この roadmap をレビューする。
+- base pattern に domain-specific logic が入らないことを確認する。
+- この roadmap が現在の実装計画を supersede するか決める。
 
-Acceptance criteria:
+受け入れ条件:
 
-- `raw/`, `wiki/`, and schema are the only architectural layers.
-- `index.md` and `log.md` are mandatory.
-- Ingest, query, output, and lint are the only workflows.
-- CLI tools are optional helpers.
-- No domain-specific page types or answer policies are present.
+- `raw/`、`wiki/`、schema だけが architectural layers である。
+- `index.md` と `log.md` は mandatory。
+- ingest、query、output、lint だけが workflows。
+- CLI tools は optional helpers。
+- domain-specific page types または answer policies が存在しない。
 
-Validation:
+検証:
 
 ```bash
 git diff --check
@@ -1164,26 +1179,26 @@ git diff --check
 
 ### Phase 1: Base Repository Scaffold
 
-Goal: create the plain-file LLM Wiki structure.
+目的: plain-file LLM Wiki structure を作る。
 
-Tasks:
+タスク:
 
-- Create `raw/`.
-- Create `wiki/`.
-- Create `wiki/index.md`.
-- Create `wiki/log.md`.
-- Create `wiki/templates/`.
-- Add generic templates.
-- Add `README.md`.
+- `raw/` を作る。
+- `wiki/` を作る。
+- `wiki/index.md` を作る。
+- `wiki/log.md` を作る。
+- `wiki/templates/` を作る。
+- generic templates を追加する。
+- `README.md` を追加する。
 
-Acceptance criteria:
+受け入れ条件:
 
-- The repo is readable without Obsidian.
-- The repo is useful in Obsidian.
-- No domain-specific files are introduced.
-- No app runtime is introduced.
+- repo は Obsidian なしで読める。
+- repo は Obsidian で有用に使える。
+- domain-specific files が導入されていない。
+- app runtime が導入されていない。
 
-Validation:
+検証:
 
 ```bash
 git diff --check
@@ -1192,27 +1207,27 @@ find raw wiki -maxdepth 3 -type f | sort
 
 ### Phase 2: Schema Files
 
-Goal: make LLM agent behavior explicit.
+目的: LLM agent behavior を明示する。
 
-Tasks:
+タスク:
 
-- Write `AGENTS.md`.
-- Write `CLAUDE.md`.
-- Define layer boundaries.
-- Define page types.
-- Define workflows.
-- Define index and log rules.
-- Define uncertainty and citation rules.
-- Define Git diff reporting.
+- `AGENTS.md` を書く。
+- `CLAUDE.md` を書く。
+- layer boundaries を定義する。
+- page types を定義する。
+- workflows を定義する。
+- index and log rules を定義する。
+- uncertainty and citation rules を定義する。
+- Git diff reporting を定義する。
 
-Acceptance criteria:
+受け入れ条件:
 
-- Schema files prohibit editing `raw/`.
-- Schema files require reading `wiki/index.md` first for queries.
-- Schema files require appending `wiki/log.md` after meaningful work.
-- Schema files require filing useful answers back into the wiki.
+- schema files は `raw/` 編集を禁止する。
+- schema files は query 時に最初に `wiki/index.md` を読むことを要求する。
+- schema files は meaningful work 後に `wiki/log.md` へ追記することを要求する。
+- schema files は useful answers を wiki へ file back することを要求する。
 
-Validation:
+検証:
 
 ```bash
 git diff --check
@@ -1223,25 +1238,25 @@ rg "wiki/log.md" AGENTS.md CLAUDE.md
 
 ### Phase 3: First Manual Ingest
 
-Goal: prove single-source compilation.
+目的: single-source compilation を証明する。
 
-Tasks:
+タスク:
 
-- Human adds one generic source to `raw/`.
-- LLM creates one source summary.
-- LLM creates or updates relevant concept/entity/synthesis pages.
-- LLM updates index.
-- LLM appends log.
-- Human reviews diff.
+- Human が generic source を 1 つ `raw/` に追加する。
+- LLM が source summary を 1 つ作る。
+- LLM が関連する concept/entity/synthesis pages を作るか更新する。
+- LLM が index を更新する。
+- LLM が log に追記する。
+- Human が diff をレビューする。
 
-Acceptance criteria:
+受け入れ条件:
 
-- Raw source remains unchanged.
-- Source summary links to raw source.
-- At least one compiled wiki page exists.
-- Index and log are updated.
+- raw source は変更されていない。
+- source summary は raw source に link している。
+- compiled wiki page が少なくとも 1 つ存在する。
+- index と log が更新されている。
 
-Validation:
+検証:
 
 ```bash
 git diff --check
@@ -1250,22 +1265,22 @@ rg "raw/" wiki/sources wiki/index.md wiki/log.md
 
 ### Phase 4: First Query And File-Back
 
-Goal: prove that questions compound into durable knowledge.
+目的: 質問が durable knowledge として compounding することを証明する。
 
-Tasks:
+タスク:
 
-- Ask one question answerable from the wiki.
-- LLM answers with citations.
-- LLM saves useful answer to `wiki/questions/` or `wiki/syntheses/`.
-- LLM updates index and log.
+- wiki から答えられる質問を 1 つする。
+- LLM が citations 付きで答える。
+- LLM が有用な回答を `wiki/questions/` または `wiki/syntheses/` に保存する。
+- LLM が index と log を更新する。
 
-Acceptance criteria:
+受け入れ条件:
 
-- The answer cites wiki/source pages.
-- The filed-back page is useful outside chat history.
-- Index and log are updated.
+- 回答が wiki/source pages を cite している。
+- filed-back page は chat history の外でも有用。
+- index と log が更新されている。
 
-Validation:
+検証:
 
 ```bash
 git diff --check
@@ -1275,24 +1290,24 @@ rg "questions/|syntheses/" wiki/index.md wiki/log.md
 
 ### Phase 5: First Health Check
 
-Goal: prove maintenance workflow.
+目的: maintenance workflow を証明する。
 
-Tasks:
+タスク:
 
-- Run a wiki health check.
-- Repair safe structural issues.
-- Write uncertain factual issues to `wiki/reviews/`.
-- Suggest next sources and next questions.
-- Update index and log.
+- wiki health check を実行する。
+- 安全な structural issues を修正する。
+- 不確実な factual issues を `wiki/reviews/` に書く。
+- next sources と next questions を提案する。
+- index と log を更新する。
 
-Acceptance criteria:
+受け入れ条件:
 
-- A review page exists.
-- Broken links and missing index entries are checked.
-- Uncertain claims are not guessed.
-- Index and log are updated.
+- review page が存在する。
+- broken links と missing index entries がチェックされている。
+- uncertain claims を推測していない。
+- index と log が更新されている。
 
-Validation:
+検証:
 
 ```bash
 git diff --check
@@ -1302,24 +1317,24 @@ rg "health" wiki/log.md
 
 ### Phase 6: Small CLI
 
-Goal: add optional file-based helper tools.
+目的: optional file-based helper tools を追加する。
 
-Tasks:
+タスク:
 
-- Add simple search.
-- Add status.
-- Add recent log reader.
-- Add basic lint.
-- Add unprocessed raw source report.
+- simple search を追加する。
+- status を追加する。
+- recent log reader を追加する。
+- basic lint を追加する。
+- unprocessed raw source report を追加する。
 
-Acceptance criteria:
+受け入れ条件:
 
-- Tools operate on plain files.
-- Tools do not become the source of truth.
-- Tools do not require Obsidian.
-- Tools do not require vector DB or hosted services.
+- tools は plain files 上で動く。
+- tools は source of truth にならない。
+- tools は Obsidian を要求しない。
+- tools は vector DB や hosted services を要求しない。
 
-Validation:
+検証:
 
 ```bash
 python tools/kb_status.py
@@ -1329,30 +1344,30 @@ python tools/kb_lint.py
 
 ### Phase 7: Scale Review
 
-Goal: decide whether simple files and index are still enough.
+目的: simple files と index がまだ十分か判断する。
 
-Trigger:
+トリガー:
 
-- around 100 sources
-- hundreds of wiki pages
-- repeated search failures
-- repeated lint friction
+- sources が約 100
+- wiki pages が数百
+- search failures が繰り返される
+- lint friction が繰り返される
 
-Tasks:
+タスク:
 
-- Review search quality.
-- Review index usefulness.
-- Review log usefulness.
-- Decide whether to add qmd or another local Markdown search layer.
-- Record the decision in `wiki/reviews/`.
+- search quality をレビューする。
+- index usefulness をレビューする。
+- log usefulness をレビューする。
+- qmd または別の local Markdown search layer を追加するか決める。
+- decision を `wiki/reviews/` に記録する。
 
-Acceptance criteria:
+受け入れ条件:
 
-- Search escalation is evidence-based.
-- New tools preserve raw/wiki/schema boundaries.
-- No domain-specific assumptions are added.
+- search escalation が evidence-based。
+- new tools が raw/wiki/schema boundaries を保つ。
+- domain-specific assumptions が追加されていない。
 
-## Decision Table
+## 意思決定表
 
 | Item | Decision | Basis |
 |---|---:|---|
@@ -1363,29 +1378,29 @@ Acceptance criteria:
 | `wiki/index.md` | required | content-oriented catalog |
 | `wiki/log.md` | required | chronological append-only log |
 | Obsidian app | recommended | human IDE frontend |
-| Obsidian CLI | rejected | not part of the simple-file core |
+| Obsidian CLI | rejected | simple-file core の一部ではない |
 | Git | strongly recommended | version history and review |
 | search CLI | recommended | LLM helper |
 | lint CLI | optional | health check packaged as tool |
 | render CLI | optional | output generation packaged as tool |
-| qmd | later option | local Markdown search when needed |
-| MCP | deferred | only if a chosen tool makes it useful |
-| vector DB | deferred | not needed at small scale |
-| fine-tuning | future exploration | not MVP |
+| qmd | later option | 必要になった時の local Markdown search |
+| MCP | deferred | 選んだ tool が useful にする場合だけ |
+| vector DB | deferred | small scale では不要 |
+| fine-tuning | future exploration | MVP ではない |
 | full automation | rejected for MVP | early human-in-loop ingest |
 
-## Completion Definition For The Base Pattern
+## Base Pattern の完了定義
 
-The base pattern is complete when:
+base pattern は次を満たした時に complete です。
 
-- `raw/` exists and is treated as immutable.
-- `wiki/` exists and is LLM-maintained.
-- `AGENTS.md` exists.
-- `CLAUDE.md` exists or is explicitly deferred.
-- `wiki/index.md` exists and is maintained.
-- `wiki/log.md` exists and is append-only.
-- One source has been manually ingested.
-- One useful query has been filed back into the wiki.
-- One health check has been recorded.
-- Optional CLI tools, if present, operate only on plain files.
-- No domain-specific architecture has been introduced.
+- `raw/` が存在し、immutable として扱われている。
+- `wiki/` が存在し、LLM-maintained である。
+- `AGENTS.md` が存在する。
+- `CLAUDE.md` が存在する、または明示的に deferred されている。
+- `wiki/index.md` が存在し、保守されている。
+- `wiki/log.md` が存在し、append-only である。
+- source が 1 つ manually ingested されている。
+- 有用な query が 1 つ wiki に file back されている。
+- health check が 1 つ記録されている。
+- optional CLI tools が存在する場合、plain files のみに作用する。
+- domain-specific architecture が導入されていない。

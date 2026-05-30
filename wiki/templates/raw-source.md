@@ -6,9 +6,9 @@ author: ""
 original_url: ""
 captured_at: YYYY-MM-DD
 status: raw
+aliases: []
 ---
 
-# <Raw Source Title>
+# <Raw Source タイトル>
 
 ...
-

@@ -7,39 +7,39 @@ status: active
 confidence: medium
 sources: []
 related: []
+aliases: []
 tags: []
 ---
 
-# <Concept>
+# <概念>
 
-## Summary
-
-...
-
-## Definition
+## 要約
 
 ...
 
-## Why it matters
+## 定義
 
 ...
 
-## Key claims
+## なぜ重要か
 
-| Claim | Sources | Confidence |
+...
+
+## 主要な主張
+
+| 主張 | ソース | 信頼度 |
 |---|---|---|
 | ... | ... | ... |
 
-## Connections
+## 関連
 
 - [[concepts/...]]
 - [[entities/...]]
 
-## Contradictions / caveats
+## 矛盾 / 注意点
 
 ...
 
-## Open questions
+## 未解決の質問
 
 ...
-

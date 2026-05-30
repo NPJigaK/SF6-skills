@@ -5,40 +5,40 @@ updated: YYYY-MM-DD
 status: active
 sources: []
 related: []
+aliases: []
 tags: []
 ---
 
-# <Synthesis Title>
+# <統合分析タイトル>
 
-## Executive summary
-
-...
-
-## Core argument
+## 要約
 
 ...
 
-## Evidence
+## 中心論点
 
-| Point | Supporting sources | Confidence |
+...
+
+## 根拠
+
+| 論点 | 根拠ソース | 信頼度 |
 |---|---|---|
 | ... | ... | ... |
 
-## Comparison
+## 比較
 
-| Dimension | A | B | Notes |
+| 観点 | A | B | メモ |
 |---|---|---|---|
 | ... | ... | ... | ... |
 
-## Implications
+## 含意
 
 ...
 
-## Open questions
+## 未解決の質問
 
 ...
 
-## Pages to update
+## 更新候補ページ
 
 - [[concepts/...]]
-

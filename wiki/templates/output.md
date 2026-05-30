@@ -6,19 +6,19 @@ updated: YYYY-MM-DD
 status: active
 sources: []
 related: []
+aliases: []
 ---
 
-# <Output Title>
+# <出力タイトル>
 
-## Summary
+## 要約
 
 ...
 
-## Source references
+## ソース参照
 
 - ...
 
-## Notes
+## メモ
 
 ...
-

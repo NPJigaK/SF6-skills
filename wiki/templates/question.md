@@ -6,22 +6,23 @@ status: active
 question: ""
 sources: []
 related: []
+aliases: []
 ---
 
-# Question: <Question>
+# 質問: <質問>
 
-## Short answer
-
-...
-
-## Evidence
+## 短い答え
 
 ...
 
-## Reasoning
+## 根拠
 
 ...
 
-## Limits / uncertainty
+## 説明
+
+...
+
+## 注意 / 不確実性
 
 ...

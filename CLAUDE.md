@@ -1,122 +1,142 @@
-# LLM Wiki Agent Instructions
+# LLM Wiki エージェント指示
 
-## Core Model
+## コアモデル
 
-This repository is a Karpathy-style LLM-maintained knowledge base.
+このリポジトリは Karpathy-style の LLM-maintained knowledge base です。
 
-The human curates sources, asks questions, reviews important changes, and
-decides direction. The LLM writes and maintains the wiki.
+人間はソースを選び、質問し、重要な変更をレビューし、方向性を決めます。
+LLM は wiki を書き、リンクし、保守します。
 
-Follow [ROADMAP.md](ROADMAP.md) for the domain-independent implementation plan.
-Do not introduce domain-specific architecture until the base raw/wiki/schema
-pattern is implemented and reviewed.
+ドメイン非依存の実装計画は [ROADMAP.md](ROADMAP.md) に従ってください。
+基礎となる `raw/` / `wiki/` / schema パターンが実装されレビューされるまでは、
+ドメイン固有のアーキテクチャを導入しないでください。
 
-## Layers
+## レイヤー
 
-- `raw/`: immutable source material. Never edit files in `raw/`.
-- `wiki/`: LLM-generated and LLM-maintained Markdown wiki.
-- `wiki/index.md`: content-oriented catalog and first navigation surface.
-- `wiki/log.md`: chronological append-only activity log.
-- `AGENTS.md` / `CLAUDE.md`: schema and workflow instructions for LLM agents.
+- `raw/`: 不変のソース素材。`raw/` 配下のファイルは絶対に編集しない。
+- `wiki/`: LLM が生成・保守する Markdown wiki。
+- `wiki/index.md`: 内容指向のカタログであり、最初のナビゲーション面。
+- `wiki/log.md`: 時系列の追記専用アクティビティログ。
+- `AGENTS.md` / `CLAUDE.md`: LLM エージェント向けの schema とワークフロー指示。
 
-## Page Types
+## ページ種別
 
-- `wiki/sources/`: one summary page per raw source.
-- `wiki/concepts/`: concepts and reusable ideas.
-- `wiki/entities/`: people, companies, projects, tools, papers, datasets, and other entities.
-- `wiki/syntheses/`: higher-level analysis across multiple pages or sources.
-- `wiki/questions/`: useful answered questions filed back from chat.
-- `wiki/outputs/`: durable reports, slide decks, charts, canvases, and other outputs.
-- `wiki/reviews/`: lint results, contradictions, stale claims, and review notes.
-- `wiki/templates/`: reusable page templates.
+- `wiki/sources/`: raw source ごとに 1 つの要約ページ。
+- `wiki/concepts/`: 概念や再利用される考え方。
+- `wiki/entities/`: 人物、企業、プロジェクト、ツール、論文、データセット、その他のエンティティ。
+- `wiki/syntheses/`: 複数ページまたは複数ソースを横断する高次の分析。
+- `wiki/questions/`: チャットから file back された、再利用しやすい回答済み質問。
+- `wiki/outputs/`: 永続化するレポート、スライド、チャート、キャンバス、その他の成果物。
+- `wiki/reviews/`: lint 結果、矛盾、古い主張、レビュー notes。
+- `wiki/templates/`: 再利用するページテンプレート。
 
-Question pages are durable, reader-facing answers. Do not include workflow
-sections such as `Filed-back updates`, changed files, task summaries, or
-implementation notes in `wiki/questions/`. Put operational history in
-`wiki/log.md`, and use `wiki/reviews/` for review findings.
+質問ページは、読者向けの永続的な回答です。`wiki/questions/` には
+`Filed-back updates`、変更ファイル、タスク要約、実装メモのような作業履歴セクションを
+入れないでください。運用履歴は `wiki/log.md` に、レビュー findings は `wiki/reviews/`
+に置いてください。
 
-## Non-Negotiable Rules
+## 言語ポリシー
 
-1. Never modify files in `raw/`.
-2. Prefer updating existing wiki pages over creating duplicates.
-3. Every important claim must be traceable to a raw source or wiki source page.
-4. Mark uncertainty explicitly.
-5. Record contradictions and stale claims instead of hiding them.
-6. Update `wiki/index.md` after every meaningful ingest, new page, or major page update.
-7. Append to `wiki/log.md` after every ingest, query, output, lint pass, or schema change.
-8. Useful query results must be filed back into `wiki/questions/`, `wiki/syntheses/`, or `wiki/outputs/`.
-9. Report changed files and unresolved questions at the end of each task.
-10. Keep the base pattern domain-independent until a later explicit domain design step.
+この wiki は日本語のメンテナーが読むことを前提にします。ユーザーが別言語を明示した場合、
+またはソース忠実性のために英語が必要な場合を除き、`wiki/` ページ、永続回答、統合分析、
+outputs、reviews、source summary の本文は日本語を優先してください。
 
-## Ingest Workflow
+構造識別子は安定してツールで扱いやすい形に保ちます。
 
-When asked to ingest a source:
+- ディレクトリ名、ファイル名、slug、YAML frontmatter の key、field 名、tool 名、
+  生成データ path は English/ASCII を使う。
+- 元ソースの用語、公式名称、コマンド、入力表記、コード、引用文は元の言語を維持する。
+- 検索上重要な語は、必要に応じて title、summary、`aliases`、`tags` に日本語と英語の両方を入れる。
+  例: `Drive Rush` と `ドライブラッシュ`。
+- `raw/` は原本保存層なので、元ソースの言語と内容を維持する。英語 source は英語のまま、
+  日本語 source は日本語のまま保存する。
+- `raw/` に翻訳・要約・正規化した置き換え版を作らない。翻訳、要約、説明、統合は
+  `wiki/` layer で行い、raw source または source page に citation を戻す。
+- 既存ページを続けて編集する場合は、そのページの既存言語に従う。ただし読者の使いやすさが
+  明確に上がる場合は、日本語へ寄せてよい。
 
-1. Read this file.
-2. Read `wiki/index.md`.
-3. Read recent entries in `wiki/log.md`.
-4. Read the requested raw source.
-5. Do not edit `raw/`.
-6. Create or update one page in `wiki/sources/`.
-7. Update relevant concept, entity, or synthesis pages.
-8. Create new pages only when they are useful and not duplicates.
-9. Add backlinks and source references.
-10. Flag contradictions, stale claims, and uncertainty.
-11. Update `wiki/index.md`.
-12. Append to `wiki/log.md`.
-13. Report changed files and open questions.
+## 絶対ルール
 
-## Query Workflow
+1. `raw/` 配下のファイルは絶対に変更しない。翻訳・要約・正規化した派生物も `raw/` に置かない。
+2. 重複ページを作るより、既存 wiki ページの更新を優先する。
+3. 重要な主張はすべて raw source または wiki source page へ辿れるようにする。
+4. 不確実性は明示する。
+5. 矛盾や古い主張は隠さず記録する。
+6. 意味のある ingest、新規ページ、主要なページ更新の後は `wiki/index.md` を更新する。
+7. ingest、query、output、lint pass、schema 変更の後は `wiki/log.md` に追記する。
+8. 有用な query 結果は `wiki/questions/`、`wiki/syntheses/`、または `wiki/outputs/` に file back する。
+9. 各タスクの最後に変更ファイルと未解決の質問を報告する。
+10. 後の明示的な domain design step までは、base pattern をドメイン非依存に保つ。
 
-When asked to answer a question:
+## Ingest ワークフロー
 
-1. Read `wiki/index.md` first.
-2. Search the wiki only if the index is insufficient.
-3. Read relevant source, concept, entity, synthesis, question, and output pages.
-4. Answer with citations to wiki pages or source pages.
-5. State uncertainty and missing evidence clearly.
-6. If the answer is durable, save it to `wiki/questions/`, `wiki/syntheses/`, or `wiki/outputs/`.
-7. Keep saved question pages focused on the reusable answer; put file-back
-   details and changed files in `wiki/log.md`, not in the question page.
-8. Update `wiki/index.md` if a page is created or materially changed.
-9. Append to `wiki/log.md`.
-10. Report changed files and unresolved questions.
+ソースの ingest を依頼されたら:
 
-## Output Workflow
+1. このファイルを読む。
+2. `wiki/index.md` を読む。
+3. `wiki/log.md` の最近のエントリを読む。
+4. 指定された raw source を読む。
+5. `raw/` は編集しない。翻訳・要約・正規化もしない。
+6. `wiki/sources/` に 1 つのページを作るか更新する。
+7. 関連する concept、entity、synthesis ページを更新する。
+8. 新規ページは、有用で重複でない場合にだけ作る。
+9. backlink と source reference を追加する。
+10. 矛盾、古い主張、不確実性を明示する。
+11. `wiki/index.md` を更新する。
+12. `wiki/log.md` に追記する。
+13. 変更ファイルと open questions を報告する。
 
-When asked to create a durable output:
+## Query ワークフロー
 
-1. Read `wiki/index.md`.
-2. Read relevant wiki and source pages.
-3. Create the requested output under `wiki/outputs/`.
-4. Cite relevant wiki/source pages.
-5. Keep the output readable as plain Markdown where possible.
-6. Update `wiki/index.md`.
-7. Append to `wiki/log.md`.
-8. Report changed files.
+質問への回答を依頼されたら:
 
-## Lint / Health Check Workflow
+1. 最初に `wiki/index.md` を読む。
+2. index だけで不十分な場合のみ wiki を検索する。
+3. 関連する source、concept、entity、synthesis、question、output ページを読む。
+4. wiki page または source page への citation 付きで回答する。
+5. 不確実性と不足している evidence を明確に述べる。
+6. 回答が永続的に有用なら、`wiki/questions/`、`wiki/syntheses/`、または `wiki/outputs/` に保存する。
+7. 保存する question page は再利用可能な回答に集中させる。file-back の詳細や changed files は
+   question page ではなく `wiki/log.md` に置く。
+8. ページを作成または大きく変更した場合は `wiki/index.md` を更新する。
+9. `wiki/log.md` に追記する。
+10. 変更ファイルと未解決の質問を報告する。
 
-When asked to run a wiki health check:
+## Output ワークフロー
 
-1. Read this file.
-2. Read `wiki/index.md`.
-3. Read recent entries in `wiki/log.md`.
-4. Check for broken wikilinks, orphan pages, duplicate pages, missing index
-   entries, missing frontmatter, missing backlinks, contradictions, stale claims,
-   uncited important claims, weak summaries, missing concept/entity pages, data
-   gaps, and suggested next sources/questions.
-5. Repair safe structural issues.
-6. Do not invent facts.
-7. For uncertain factual issues, create a review note in `wiki/reviews/`.
-8. Update `wiki/index.md`.
-9. Append to `wiki/log.md`.
-10. Report changed files and items requiring human review.
+永続的な output の作成を依頼されたら:
 
-## Git And Tooling
+1. `wiki/index.md` を読む。
+2. 関連する wiki page と source page を読む。
+3. 要求された output を `wiki/outputs/` 配下に作成する。
+4. 関連する wiki/source page を citation する。
+5. 可能な限り plain Markdown として読みやすく保つ。
+6. `wiki/index.md` を更新する。
+7. `wiki/log.md` に追記する。
+8. 変更ファイルを報告する。
 
-- Use Git diff as the review surface for LLM-maintained wiki changes.
-- Use `rg` for local text search.
-- Use simple file-based CLI tools only when they exist.
-- Do not depend on Obsidian CLI, Obsidian APIs, vector databases, graph databases,
-  hosted RAG systems, or MCP-first architecture in the base implementation.
+## Lint / Health Check ワークフロー
+
+wiki health check を依頼されたら:
+
+1. このファイルを読む。
+2. `wiki/index.md` を読む。
+3. `wiki/log.md` の最近のエントリを読む。
+4. broken wikilinks、orphan pages、duplicate pages、missing index entries、
+   missing frontmatter、missing backlinks、contradictions、stale claims、
+   uncited important claims、weak summaries、missing concept/entity pages、
+   data gaps、suggested next sources/questions を確認する。
+5. 安全に直せる構造上の問題を修正する。
+6. 事実を捏造しない。
+7. 不確実な事実問題は `wiki/reviews/` に review note を作る。
+8. `wiki/index.md` を更新する。
+9. `wiki/log.md` に追記する。
+10. 変更ファイルと人間レビューが必要な項目を報告する。
+
+## Git とツール
+
+- LLM が保守した wiki 変更のレビュー面として Git diff を使う。
+- ローカルテキスト検索には `rg` を使う。
+- 既存の単純な file-based CLI tools だけを使う。
+- base implementation では Obsidian CLI、Obsidian APIs、vector databases、graph databases、
+  hosted RAG systems、MCP-first architecture に依存しない。

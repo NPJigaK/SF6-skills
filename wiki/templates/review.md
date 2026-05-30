@@ -3,59 +3,59 @@ type: review
 review_type: lint
 created: YYYY-MM-DD
 status: open
+aliases: []
 ---
 
-# Wiki Health Check - YYYY-MM-DD
+# Wiki ヘルスチェック - YYYY-MM-DD
 
-## Summary
-
-...
-
-## Structural issues
-
-### Broken links
+## 要約
 
 ...
 
-### Orphan pages
+## 構造上の問題
+
+### 壊れたリンク
 
 ...
 
-### Missing index entries
+### 孤立ページ
 
 ...
 
-## Knowledge issues
-
-### Contradictions
+### index 未掲載ページ
 
 ...
 
-### Stale claims
+## 知識上の問題
+
+### 矛盾
 
 ...
 
-### Uncited claims
+### 古い主張
 
 ...
 
-## Missing concepts
+### Citation のない主張
 
 ...
 
-## Suggested new sources
+## 不足している概念
 
 ...
 
-## Suggested next questions
+## 推奨される新規 sources
 
 ...
 
-## Changes made
+## 次に調べる質問の候補
 
 ...
 
-## Requires human review
+## 実施した変更
 
 ...
 
+## 人間レビューが必要な項目
+
+...

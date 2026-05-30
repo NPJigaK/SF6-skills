@@ -6,30 +6,30 @@ updated: YYYY-MM-DD
 status: active
 sources: []
 related: []
+aliases: []
 tags: []
 ---
 
-# <Entity>
+# <エンティティ>
 
-## Summary
+## 要約
 
 ...
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
 | ... | ... | ... |
 
-## Relevant claims
+## 関連する主張
 
 ...
 
-## Related concepts
+## 関連概念
 
 ...
 
-## Open questions
+## 未解決の質問
 
 ...
-
