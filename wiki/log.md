@@ -823,3 +823,26 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     ガード時+1F、キャンセル`C`、ダメージ600。
 - 未解決事項:
   - なし。
+
+## [2026-05-30] 質問 | 春麗の立ち中Pからしゃがみ中Pへのリンク可否
+- 質問:
+  - 春麗の立ち中Pが通常ヒットしたあと、発生6Fのしゃがみ中Pは理論上つながる？理由もフレームで説明して。
+- 参照:
+  - `wiki/index.md`
+  - `wiki/sources/capcom-official-chun-li-frame-data.md`
+  - `wiki/outputs/data/frame-data/chunli/classic.csv`
+  - `wiki/outputs/data/frame-data/chunli/modern.csv`
+  - `wiki/outputs/data/frame-data/chunli/classic.field-meanings.json`
+  - `wiki/outputs/data/frame-data/chunli/modern.field-meanings.json`
+  - `wiki/questions/chun-li-standing-medium-p-frame-data.md`
+- 作成:
+  - `wiki/questions/chun-li-standing-medium-p-into-crouching-medium-p-link.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 回答要約:
+  - 理論上はつながる。`立ち中P（頸穿刀）`は通常ヒット時`+6F`、
+    `しゃがみ中P（丹頂拳）`は発生`6F`なので、`+6F - 6F = 0F`。
+    最速なら連続ヒットするが、数値上の余裕はない。
+- 未解決事項:
+  - 実戦での距離、押し戻し、食らい判定は別途確認が必要。

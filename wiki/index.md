@@ -99,6 +99,7 @@
 | [[questions/chun-li-modern-vs-classic-frame-data-moves-and-inputs]] | Chun-Liのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？ | Chun-Li Classic / Modern の項目数、技名差分、入力表示、ダメージ差分を公式フレームデータから比較する。 | 2026-05-27 |
 | [[questions/zangief-modern-vs-classic-frame-data-moves-and-inputs]] | Zangiefのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？ | Zangief Classic / Modern の項目数、技名差分、一回転/二回転入力、ダメージ差分を公式フレームデータから比較する。 | 2026-05-27 |
 | [[questions/chun-li-standing-medium-p-frame-data]] | 春麗の立ち中Pは、発生・ヒット時・ガード時・キャンセル可否・ダメージはいくつですか？ | 春麗の立ち中P（頸穿刀）の発生、持続、硬直、有利、不利、Cキャンセル、ダメージを公式CSVから答える。 | 2026-05-30 |
+| [[questions/chun-li-standing-medium-p-into-crouching-medium-p-link]] | 春麗の立ち中Pが通常ヒットしたあと、発生6Fのしゃがみ中Pは理論上つながりますか？ | 立ち中Pの通常ヒット+6Fとしゃがみ中Pの発生6Fから、最速リンクが理論上成立する理由を説明する。 | 2026-05-30 |
 
 ## Outputs
 
