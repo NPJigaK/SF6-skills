@@ -668,3 +668,124 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - Open questions:
   - When, if ever, should display-only command notation become a formal wiki
     notation schema?
+
+
+## [2026-05-30] ingest | Official frame-data coverage for remaining roster
+- Read:
+  - `AGENTS.md`
+  - `wiki/index.md`
+  - recent entries in `wiki/log.md`
+  - existing official frame-data source, entity, review, and concept pages
+  - official Capcom frame-data pages via `tools/capture_capcom_frame_data.py`
+- Created raw snapshots:
+  - `raw/official/frame-data/2026-05-30/luke/`
+  - `raw/official/frame-data/2026-05-30/jamie/`
+  - `raw/official/frame-data/2026-05-30/guile/`
+  - `raw/official/frame-data/2026-05-30/kimberly/`
+  - `raw/official/frame-data/2026-05-30/juri/`
+  - `raw/official/frame-data/2026-05-30/ken/`
+  - `raw/official/frame-data/2026-05-30/blanka/`
+  - `raw/official/frame-data/2026-05-30/dhalsim/`
+  - `raw/official/frame-data/2026-05-30/ehonda/`
+  - `raw/official/frame-data/2026-05-30/deejay/`
+  - `raw/official/frame-data/2026-05-30/manon/`
+  - `raw/official/frame-data/2026-05-30/marisa/`
+  - `raw/official/frame-data/2026-05-30/lily/`
+  - `raw/official/frame-data/2026-05-30/cammy/`
+  - `raw/official/frame-data/2026-05-30/rashid/`
+  - `raw/official/frame-data/2026-05-30/aki/`
+  - `raw/official/frame-data/2026-05-30/ed/`
+  - `raw/official/frame-data/2026-05-30/gouki_akuma/`
+  - `raw/official/frame-data/2026-05-30/vega_mbison/`
+  - `raw/official/frame-data/2026-05-30/terry/`
+  - `raw/official/frame-data/2026-05-30/mai/`
+  - `raw/official/frame-data/2026-05-30/elena/`
+  - `raw/official/frame-data/2026-05-30/sagat/`
+  - `raw/official/frame-data/2026-05-30/cviper/`
+  - `raw/official/frame-data/2026-05-30/alex/`
+  - `raw/official/frame-data/2026-05-30/ingrid/`
+- Created wiki pages:
+  - `wiki/sources/capcom-official-luke-frame-data.md`
+  - `wiki/sources/capcom-official-jamie-frame-data.md`
+  - `wiki/sources/capcom-official-guile-frame-data.md`
+  - `wiki/sources/capcom-official-kimberly-frame-data.md`
+  - `wiki/sources/capcom-official-juri-frame-data.md`
+  - `wiki/sources/capcom-official-ken-frame-data.md`
+  - `wiki/sources/capcom-official-blanka-frame-data.md`
+  - `wiki/sources/capcom-official-dhalsim-frame-data.md`
+  - `wiki/sources/capcom-official-e-honda-frame-data.md`
+  - `wiki/sources/capcom-official-dee-jay-frame-data.md`
+  - `wiki/sources/capcom-official-manon-frame-data.md`
+  - `wiki/sources/capcom-official-marisa-frame-data.md`
+  - `wiki/sources/capcom-official-lily-frame-data.md`
+  - `wiki/sources/capcom-official-cammy-frame-data.md`
+  - `wiki/sources/capcom-official-rashid-frame-data.md`
+  - `wiki/sources/capcom-official-aki-frame-data.md`
+  - `wiki/sources/capcom-official-ed-frame-data.md`
+  - `wiki/sources/capcom-official-gouki-akuma-frame-data.md`
+  - `wiki/sources/capcom-official-vega-m-bison-frame-data.md`
+  - `wiki/sources/capcom-official-terry-frame-data.md`
+  - `wiki/sources/capcom-official-mai-frame-data.md`
+  - `wiki/sources/capcom-official-elena-frame-data.md`
+  - `wiki/sources/capcom-official-sagat-frame-data.md`
+  - `wiki/sources/capcom-official-c-viper-frame-data.md`
+  - `wiki/sources/capcom-official-alex-frame-data.md`
+  - `wiki/sources/capcom-official-ingrid-frame-data.md`
+  - `wiki/entities/luke.md`
+  - `wiki/entities/jamie.md`
+  - `wiki/entities/guile.md`
+  - `wiki/entities/kimberly.md`
+  - `wiki/entities/juri.md`
+  - `wiki/entities/ken.md`
+  - `wiki/entities/blanka.md`
+  - `wiki/entities/dhalsim.md`
+  - `wiki/entities/e-honda.md`
+  - `wiki/entities/dee-jay.md`
+  - `wiki/entities/manon.md`
+  - `wiki/entities/marisa.md`
+  - `wiki/entities/lily.md`
+  - `wiki/entities/cammy.md`
+  - `wiki/entities/rashid.md`
+  - `wiki/entities/aki.md`
+  - `wiki/entities/ed.md`
+  - `wiki/entities/gouki-akuma.md`
+  - `wiki/entities/vega-m-bison.md`
+  - `wiki/entities/terry.md`
+  - `wiki/entities/mai.md`
+  - `wiki/entities/elena.md`
+  - `wiki/entities/sagat.md`
+  - `wiki/entities/c-viper.md`
+  - `wiki/entities/alex.md`
+  - `wiki/entities/ingrid.md`
+  - `wiki/reviews/2026-05-30-official-frame-data-roster-capture-review.md`
+  - `wiki/outputs/reports/2026-05-30-official-frame-data-coverage.md`
+- Updated:
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/sources/capcom-official-jp-frame-data.md`
+  - `wiki/sources/capcom-official-ryu-frame-data.md`
+  - `wiki/sources/capcom-official-chun-li-frame-data.md`
+  - `wiki/sources/capcom-official-zangief-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- Derived outputs:
+  - Added Classic and Modern CSV plus field-meaning JSON outputs under
+    `wiki/outputs/data/frame-data/<data-slug>/` for 26 new character data slugs.
+- Validation:
+  - `tools/validate_capcom_frame_data.py` passed for all 26 new 2026-05-30
+    captures.
+  - Existing accepted JP, Ryu, Chun-Li, and Zangief captures were also
+    revalidated against their raw snapshots.
+  - Total coverage is now 30 character data slugs with Classic and Modern
+    derived outputs.
+- Notes:
+  - The official frame-data table slugs are `gouki_akuma` and `vega_mbison`,
+    not the shorter character navigation slugs `gouki` and `vega`.
+  - An empty generated `raw/official/frame-data/2026-05-30/gouki/manifest.json`
+    from the failed short-slug attempt was removed before filing the ingest.
+- Open questions:
+  - Should the 26 new captures be human-reviewed individually or accepted as a
+    batch after representative screenshot review?
+  - Should JP, Ryu, Chun-Li, and Zangief be recaptured under a 2026-05-30 date
+    label for a single-date full-roster snapshot?

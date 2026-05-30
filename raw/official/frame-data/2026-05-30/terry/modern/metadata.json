@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:58:13Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/terry/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/terry/frame",
+  "character_slug": "terry",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:7baf653a7cc95643afd269f8a512c4601eaa3818d999d4e87f56ec5caf6810cf",
+      "byte_count": 459632
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:bc497fd8c9fc304d7fb289d3380b0faf1ada6a35bfae5864b485a69aae536a78",
+      "byte_count": 782886,
+      "data_row_count": 60,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:8d1f016a8475ef66918e31ab10cff12e180915067517abea8109f53a5c841bd9",
+      "byte_count": 6401684,
+      "width": 2367,
+      "height": 8943,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

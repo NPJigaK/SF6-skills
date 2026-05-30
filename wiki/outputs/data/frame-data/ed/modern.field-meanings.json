@@ -1,0 +1,630 @@
+{
+  "artifact_schema_version": "capcom_frame_field_meanings/v1",
+  "source_captured_at_utc": "2026-05-30T06:45:45Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/ed/frame",
+  "character_slug": "ed",
+  "control_scheme": "modern",
+  "records": [
+    {
+      "header_row_index": 0,
+      "header_cell_index": 1,
+      "header_text": "動作フレーム 発生 持続 硬直",
+      "input_ids": [
+        "active_frame"
+      ],
+      "labels": [
+        {
+          "text": "持続",
+          "for_attr": "active_frame"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "動作フレーム"
+        },
+        {
+          "type": "text",
+          "value": "発生"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "持続"
+        },
+        {
+          "type": "text",
+          "value": "技の動作中に攻撃判定が発生しているフレームを表します"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "（例） 【10-12】表記の場合、【10F/11F/12F】の【3F】間、攻撃判定が持続"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "硬直"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 2,
+      "header_text": "硬直差 ヒット ガード",
+      "input_ids": [],
+      "labels": [],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "硬直差"
+        },
+        {
+          "type": "text",
+          "value": "ヒット"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "ガード"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 3,
+      "header_text": "キャンセル",
+      "input_ids": [
+        "cancel"
+      ],
+      "labels": [
+        {
+          "text": "キャンセル",
+          "for_attr": "cancel"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "キャンセル"
+        },
+        {
+          "type": "text",
+          "value": "【C】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "必殺技、ドライブインパクト、ドライブラッシュ、SAでキャンセル可能"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【SA】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "SA技でのみキャンセル可能"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【SA2】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "SA2、SA3でキャンセル可能"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【SA3】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "SA3でのみキャンセル可能"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【※】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "特定の技でのみキャンセル可能"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 4,
+      "header_text": "ダメージ",
+      "input_ids": [
+        "damage"
+      ],
+      "labels": [
+        {
+          "text": "ダメージ",
+          "for_attr": "damage"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "ダメージ"
+        },
+        {
+          "type": "text",
+          "value": "SPボタンで発動した際にダメージが80%になります。"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 5,
+      "header_text": "コンボ補正値",
+      "input_ids": [
+        "combo_correct"
+      ],
+      "labels": [
+        {
+          "text": "コンボ補正値",
+          "for_attr": "combo_correct"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "コンボ補正値"
+        },
+        {
+          "type": "text",
+          "value": "通常のコンボ補正に加えて、技自体に特殊な補正が設定されている場合に記載されます。"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【始動補正】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "コンボの初段にヒットさせた際に加算される補正"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【コンボ補正】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "コンボの2段目以降にヒットさせた際に加算される補正"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【即時補正】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "コンボの2段目以降にヒットさせた際、その技自体に加算される補正"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【乗算補正】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "コンボに組み込んだ際に、それ以降のコンボ補正値に乗算される補正値"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 6,
+      "header_text": "Dゲージ増加 ヒット",
+      "input_ids": [
+        "drive_gauge_gain_hit"
+      ],
+      "labels": [
+        {
+          "text": "ヒット",
+          "for_attr": "drive_gauge_gain_hit"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "Dゲージ増加"
+        },
+        {
+          "type": "text",
+          "value": "ヒット"
+        },
+        {
+          "type": "text",
+          "value": "攻撃側のドライブゲージ増加量（ヒット時）"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 7,
+      "header_text": "Dゲージ減少 ガード パニッシュカウンター",
+      "input_ids": [
+        "drive_gauge_lose_dguard",
+        "drive_gauge_lose_punish"
+      ],
+      "labels": [
+        {
+          "text": "ガード",
+          "for_attr": "drive_gauge_lose_dguard"
+        },
+        {
+          "text": "パニッシュカウンター",
+          "for_attr": "drive_gauge_lose_punish"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "Dゲージ減少"
+        },
+        {
+          "type": "text",
+          "value": "ガード"
+        },
+        {
+          "type": "text",
+          "value": "防御側のドライブゲージ減少量（ガード時）"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "パニッシュカウンター"
+        },
+        {
+          "type": "text",
+          "value": "防御側のドライブゲージ減少量（パニッシュカウンター時）"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    },
+    {
+      "header_row_index": 0,
+      "header_cell_index": 9,
+      "header_text": "属性",
+      "input_ids": [
+        "attribute"
+      ],
+      "labels": [
+        {
+          "text": "属性",
+          "for_attr": "attribute"
+        }
+      ],
+      "token_stream": [
+        {
+          "type": "text",
+          "value": "属性"
+        },
+        {
+          "type": "text",
+          "value": "攻撃判定の属性を表します"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【上】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "立ち/しゃがみガード可能な上段攻撃"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【中】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "立ちガードのみ可能な中段攻撃"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【下】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "しゃがみガードのみ可能な下段攻撃"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【投】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "ガードできない投げ技"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【弾】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "飛び道具"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "【空弾】"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "text",
+          "value": "空中判定の飛び道具"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        },
+        {
+          "type": "separator",
+          "value": "|"
+        }
+      ]
+    }
+  ]
+}

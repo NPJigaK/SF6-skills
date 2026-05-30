@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:58:38Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/vega_mbison/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/vega_mbison/frame",
+  "character_slug": "vega_mbison",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:c450af55dca06a6b22d54bfcfb4506e1ecb235d26d0f95a6c2dbea955636fb4a",
+      "byte_count": 474892
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:8f37864f0db45f8af008a60ac4b234f0941c7381d7d547165f51af2335216a63",
+      "byte_count": 914037,
+      "data_row_count": 69,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:5d179640d674f39e8ee1e47de91d24ac5df350d23406ed1392a783cd4a6b3e1e",
+      "byte_count": 6772385,
+      "width": 2367,
+      "height": 9852,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

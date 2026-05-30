@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:56:58Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/marisa/frame",
+  "character_slug": "marisa",
+  "date_label": "2026-05-30",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-30/marisa/classic",
+      "page_html": "raw/official/frame-data/2026-05-30/marisa/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/marisa/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/marisa/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/marisa/classic/metadata.json",
+      "row_count": 91,
+      "table_sha256": "sha256:74913b3ca4b0fbae2e354ef01885c5faeb705081698f719f26817f7701da5408"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-30/marisa/modern",
+      "page_html": "raw/official/frame-data/2026-05-30/marisa/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/marisa/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/marisa/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/marisa/modern/metadata.json",
+      "row_count": 80,
+      "table_sha256": "sha256:8112d134cdea3e480655ac8e84546d220ac18b4176dffee17937028ba8a27c2b"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/marisa/classic.csv",
+    "wiki/outputs/data/frame-data/marisa/modern.csv",
+    "wiki/outputs/data/frame-data/marisa/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/marisa/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}

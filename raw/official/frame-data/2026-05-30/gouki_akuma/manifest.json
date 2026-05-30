@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:52:32Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/gouki_akuma/frame",
+  "character_slug": "gouki_akuma",
+  "date_label": "2026-05-30",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-30/gouki_akuma/classic",
+      "page_html": "raw/official/frame-data/2026-05-30/gouki_akuma/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/gouki_akuma/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/gouki_akuma/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/gouki_akuma/classic/metadata.json",
+      "row_count": 91,
+      "table_sha256": "sha256:7781b6893f1cc3f467c435d897496df0828e9f10d4db4271b3cdefa50e4080b8"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-30/gouki_akuma/modern",
+      "page_html": "raw/official/frame-data/2026-05-30/gouki_akuma/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/gouki_akuma/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/gouki_akuma/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/gouki_akuma/modern/metadata.json",
+      "row_count": 83,
+      "table_sha256": "sha256:2d245552032e18e1ca9e00a4fb34e9885751946f04807f113ed0b2d061a28544"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/gouki_akuma/classic.csv",
+    "wiki/outputs/data/frame-data/gouki_akuma/modern.csv",
+    "wiki/outputs/data/frame-data/gouki_akuma/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/gouki_akuma/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}

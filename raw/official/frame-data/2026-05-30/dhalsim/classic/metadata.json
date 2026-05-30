@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:45:14Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/dhalsim/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/dhalsim/frame",
+  "character_slug": "dhalsim",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:2d90b4131faf45a99c64cbbe5a906183f355b9130eeb21290347e1a335f672f2",
+      "byte_count": 493561
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:db92a5bdc7a77de608ec1ad3f9ec7f7f4b77611b588f06909c85d32cf44f2ddc",
+      "byte_count": 1126860,
+      "data_row_count": 89,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:356b411b4fec40b24cf7e045734c2eacfca47ac02cf89ea30eda7f4217d2b2b9",
+      "byte_count": 6876225,
+      "width": 2271,
+      "height": 11001,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

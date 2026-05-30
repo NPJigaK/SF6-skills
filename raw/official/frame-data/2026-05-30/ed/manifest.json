@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:45:48Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/ed/frame",
+  "character_slug": "ed",
+  "date_label": "2026-05-30",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-30/ed/classic",
+      "page_html": "raw/official/frame-data/2026-05-30/ed/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/ed/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/ed/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/ed/classic/metadata.json",
+      "row_count": 70,
+      "table_sha256": "sha256:cd28aa5ba083a3c197dedf8418a7aeee8ddcc06270d44bcd9765b0e107f71293"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-30/ed/modern",
+      "page_html": "raw/official/frame-data/2026-05-30/ed/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/ed/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/ed/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/ed/modern/metadata.json",
+      "row_count": 68,
+      "table_sha256": "sha256:521023bd8bd8f5a7800ae93837495ae7fd2903331f03d2093560d2e7ac8e7dfa"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/ed/classic.csv",
+    "wiki/outputs/data/frame-data/ed/modern.csv",
+    "wiki/outputs/data/frame-data/ed/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/ed/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}

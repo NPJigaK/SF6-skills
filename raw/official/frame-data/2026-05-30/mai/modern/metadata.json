@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:56:03Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/mai/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/mai/frame",
+  "character_slug": "mai",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:d445f7d138c57c5696f36d1a9db1b8aea93c92b8487d8ce7cead5a584cdf4f86",
+      "byte_count": 502114
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:7d84a10ce155dcbff44b862184e9f9835b155dc4710a0b7b57b044b3e24f39d7",
+      "byte_count": 1202051,
+      "data_row_count": 85,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:736bc323dc16271bcc3ef68c156e136a95417fc81ddf6b1a7e197b3c05475bec",
+      "byte_count": 6777942,
+      "width": 2367,
+      "height": 11056,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

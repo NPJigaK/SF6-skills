@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:43:52Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/cammy/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/cammy/frame",
+  "character_slug": "cammy",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:87a25fed17162bc9983a2bcf29ea312c9484c3fcdb84024d9e970299e9fd4019",
+      "byte_count": 472808
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:87908b08691545be56609faa41385ecdcaec90f9784ba3f30e6b4c4ae76eb113",
+      "byte_count": 906849,
+      "data_row_count": 75,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:b3467aea33a3bcdd03d7ecee594e16d627c1780cd172881997f038359f853379",
+      "byte_count": 6605229,
+      "width": 2271,
+      "height": 10210,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

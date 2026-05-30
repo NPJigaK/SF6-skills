@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:46:13Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/ehonda/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/ehonda/frame",
+  "character_slug": "ehonda",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:3ace1e78a9d3abebf5ecaa76d921e3d4cc47383800a963364a1b59cdfd57f70c",
+      "byte_count": 473213
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:281b22b490235625920645c00cf8f5c762f32d61907678f94223614797fb8e6c",
+      "byte_count": 885331,
+      "data_row_count": 65,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:63ac3cea89391cf69b00f16f78b1001e438918d1f8c1daee877702914cf71666",
+      "byte_count": 6595811,
+      "width": 2367,
+      "height": 9851,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

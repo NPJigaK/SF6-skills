@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:46:34Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/elena/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/elena/frame",
+  "character_slug": "elena",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:c3f8cf167eafaca56b8dd5be174f56815a640d0b43919b1d54640b853ca4b749",
+      "byte_count": 482108
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:d38a12e7bfbc0602cd5adc65d21392ad9b01d407594781bef7e4d42effe22ed3",
+      "byte_count": 1002453,
+      "data_row_count": 79,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:781e6afb60b196ef4405e940b1f9ee4b94a964c165e8c116052e9ba84fd91586",
+      "byte_count": 6422569,
+      "width": 2271,
+      "height": 10528,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

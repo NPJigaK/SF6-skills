@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:57:48Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/sagat/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/sagat/frame",
+  "character_slug": "sagat",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:2b3e43c8ee4be46afa1c53ab13c439d0b4c3d754ab230ab0c8f89ac83c7ce5ff",
+      "byte_count": 472148
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:84b6d31c181fad7d4a529f401223b22dff3d29b1d88b74eac88081c4a1758b39",
+      "byte_count": 884253,
+      "data_row_count": 69,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:dc2bccd2294e8f10d10c81d69953059176699bd6f149acf2f340872f3f2d662f",
+      "byte_count": 6041474,
+      "width": 2367,
+      "height": 9714,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

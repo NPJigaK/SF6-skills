@@ -7,7 +7,7 @@ publisher: "Capcom"
 raw_path: "raw/official/frame-data/2026-05-27/chunli/manifest.json"
 original_url: "https://www.streetfighter.com/6/ja-jp/character/chunli/frame"
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-30
 captured_at_utc: "2026-05-26T21:11:01Z"
 status: active
 confidence: high
@@ -71,7 +71,7 @@ Classic and Modern controls.
   Ryu.
 - It helps stress-test the capture schema against a character with stance-like
   and special move table complexity, but it should not be generalized to every
-  character without more captures.
+  character; the later 2026-05-30 batch expanded coverage to the full roster of 30 character data slugs.
 
 ## Open questions
 

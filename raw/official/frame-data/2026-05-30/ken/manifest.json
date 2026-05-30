@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:54:45Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/ken/frame",
+  "character_slug": "ken",
+  "date_label": "2026-05-30",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-30/ken/classic",
+      "page_html": "raw/official/frame-data/2026-05-30/ken/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/ken/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/ken/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/ken/classic/metadata.json",
+      "row_count": 76,
+      "table_sha256": "sha256:98edc91243eefc4fa7166663bd08bd4e6179ef415c3407afc0972ee35dc55feb"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-30/ken/modern",
+      "page_html": "raw/official/frame-data/2026-05-30/ken/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/ken/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/ken/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/ken/modern/metadata.json",
+      "row_count": 71,
+      "table_sha256": "sha256:d73db9e90bdac5c59ca8491f4987e67c93fa426d1ef1b29bf82b8879e9c7dd8b"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/ken/classic.csv",
+    "wiki/outputs/data/frame-data/ken/modern.csv",
+    "wiki/outputs/data/frame-data/ken/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/ken/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}

@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:54:12Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/juri/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/juri/frame",
+  "character_slug": "juri",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:8053ad1bce26f40f86bbb50727de637f58de76932713ec812202c1a13ee1b0f6",
+      "byte_count": 486441
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:e48de5eb0b9c81b75a141a7471d28261437360a459ee81f00997395532c9256f",
+      "byte_count": 1039611,
+      "data_row_count": 87,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:42d9359ce17d78bd3336a22614af519560b52ccaf71f16a24c317e74836aa425",
+      "byte_count": 6381371,
+      "width": 2271,
+      "height": 10783,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

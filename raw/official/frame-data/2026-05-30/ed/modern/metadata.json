@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:45:46Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/ed/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/ed/frame",
+  "character_slug": "ed",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:cab9d66e010ffbc9e1837dc086c100c8ab6433e1e91de3644b87e73b12b4833a",
+      "byte_count": 471982
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:7e5ea9fbc99c4a25928a773ce684fc0fa88f2e8478cc17037928c5cc5d6605be",
+      "byte_count": 896690,
+      "data_row_count": 68,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:5fce56b2198abaa8edb217b4d612e9f877c5c890b5e07ebbe12ce9a50b21c0e2",
+      "byte_count": 6072622,
+      "width": 2367,
+      "height": 9825,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

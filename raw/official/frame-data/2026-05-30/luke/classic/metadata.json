@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:40:13Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/luke/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/luke/frame",
+  "character_slug": "luke",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:6a0f5f72565c07a462d9b825eed85247f8956ad193790df0ff138876e9803548",
+      "byte_count": 474203
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:cc1bba9ec9a890037492de3d0e5be75e6a898f08d68526d8f1c666950119a04a",
+      "byte_count": 934314,
+      "data_row_count": 76,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:0dd2dafabd0386fd85b341b261d1ba85ef5140155af0c96348fad0c5c0a14c70",
+      "byte_count": 6249125,
+      "width": 2271,
+      "height": 10158,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

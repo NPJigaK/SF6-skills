@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:43:31Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/blanka/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/blanka/frame",
+  "character_slug": "blanka",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:1ef93fcf9a5bf49b7c7051b4cc9f075d6801e1f9208228ddc84e40856422e051",
+      "byte_count": 495018
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:a77417f68f2cdc917e23d794027278f03db980afec00a271c6953d46d81fb4f4",
+      "byte_count": 1108835,
+      "data_row_count": 83,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:0178c630e35312af415c9862d11034f3fb9da51b182551c30996fae033943977",
+      "byte_count": 6728086,
+      "width": 2367,
+      "height": 11098,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

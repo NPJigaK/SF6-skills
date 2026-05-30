@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:55:04Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/kimberly/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/kimberly/frame",
+  "character_slug": "kimberly",
+  "control_scheme": "classic",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 0,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2247,
+    "document_scroll_width": 2247,
+    "table_rect_left": 0,
+    "table_rect_right": 2247,
+    "table_rect_width": 2247,
+    "table_scroll_width": 2247,
+    "framearea_scroll_width": 2247,
+    "inner_scroll_width": 2247
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:80f1f65822b489100d8d60037c4455d82b3a8bfaf2e8179625d880aa3525de73",
+      "byte_count": 487835
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:bc4b06f9152ce74364d68fd7833bced5db95847682291d580e23a10817f22ab6",
+      "byte_count": 1059990,
+      "data_row_count": 86,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:9483325b6bdce7997a372530de1b8bf2664259392c6e16ab714beb31a5575669",
+      "byte_count": 6671006,
+      "width": 2271,
+      "height": 11090,
+      "captured_in_same_browser_state": true
+    }
+  }
+}

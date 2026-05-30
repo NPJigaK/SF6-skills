@@ -7,7 +7,7 @@ publisher: "Capcom"
 raw_path: "raw/official/frame-data/2026-05-27/zangief/manifest.json"
 original_url: "https://www.streetfighter.com/6/ja-jp/character/zangief/frame"
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-30
 captured_at_utc: "2026-05-26T21:41:49Z"
 status: active
 confidence: high

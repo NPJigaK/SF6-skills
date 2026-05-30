@@ -7,7 +7,7 @@ publisher: "Capcom"
 raw_path: "raw/official/frame-data/2026-05-27/ryu/manifest.json"
 original_url: "https://www.streetfighter.com/6/ja-jp/character/ryu/frame"
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-30
 captured_at_utc: "2026-05-26T20:37:11Z"
 status: active
 confidence: high
@@ -68,8 +68,7 @@ and Modern controls.
 ## Contradictions or updates to existing wiki
 
 - This source adds a second official character frame-data capture after JP.
-- It does not imply that all character pages share the same row structure;
-  more captures are still needed before making full-roster schema claims.
+- A later 2026-05-30 batch expanded coverage to the full roster of 30 character data slugs; this page remains the accepted Ryu snapshot.
 
 ## Open questions
 

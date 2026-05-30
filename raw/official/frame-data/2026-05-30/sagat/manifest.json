@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:57:49Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/sagat/frame",
+  "character_slug": "sagat",
+  "date_label": "2026-05-30",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-30/sagat/classic",
+      "page_html": "raw/official/frame-data/2026-05-30/sagat/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/sagat/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/sagat/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/sagat/classic/metadata.json",
+      "row_count": 70,
+      "table_sha256": "sha256:60534abddb6885e3acab81f756fa98bf4a292b86ca5eabb2de32b9f0a001b1da"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-30/sagat/modern",
+      "page_html": "raw/official/frame-data/2026-05-30/sagat/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/sagat/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/sagat/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/sagat/modern/metadata.json",
+      "row_count": 69,
+      "table_sha256": "sha256:a558f718c48aa73c6886f066d1e52ece92c2099b5048598713042000e769dbb5"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/sagat/classic.csv",
+    "wiki/outputs/data/frame-data/sagat/modern.csv",
+    "wiki/outputs/data/frame-data/sagat/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/sagat/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}

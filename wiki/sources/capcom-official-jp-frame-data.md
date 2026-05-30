@@ -7,7 +7,7 @@ publisher: "Capcom"
 raw_path: "raw/official/frame-data/2026-05-26/jp/manifest.json"
 original_url: "https://www.streetfighter.com/6/ja-jp/character/jp/frame"
 created: 2026-05-26
-updated: 2026-05-27
+updated: 2026-05-30
 captured_at_utc: "2026-05-26T09:04:33Z"
 status: active
 confidence: high
@@ -60,7 +60,7 @@ Capcom's official Street Fighter 6 frame data page for JP, captured as reviewed 
 
 ## Contradictions or updates to existing wiki
 
-- This source upgrades the wiki from glossary-level frame-data vocabulary to one reviewed official structured frame-data capture for JP.
+- This source remains the accepted JP frame-data snapshot after the 2026-05-30 batch expanded coverage to the full roster of 30 character data slugs.
 - It does not replace community glossary terminology for juggle concepts; it provides official per-move frame data and field meanings.
 
 ## Open questions
@@ -68,8 +68,7 @@ Capcom's official Street Fighter 6 frame data page for JP, captured as reviewed 
 - Should `input_token_json` be transformed into a normalized command notation later, or preserved as raw token data only?
 - Should move-name variants across Classic and Modern be normalized for some
   comparison tasks, or should exact official move names remain the default?
-- Which remaining official character should be captured next, and should
-  captures continue one at a time or move to small reviewed batches?
+- Should JP be recaptured under a 2026-05-30 date label to align with the new full-roster batch?
 - Should official balance-change pages be ingested separately to explain why frame data changes over time?
 
 ## Source notes

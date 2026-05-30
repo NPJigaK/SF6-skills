@@ -1,0 +1,42 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:44:00Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/cammy/frame",
+  "character_slug": "cammy",
+  "date_label": "2026-05-30",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/official/frame-data/2026-05-30/cammy/classic",
+      "page_html": "raw/official/frame-data/2026-05-30/cammy/classic/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/cammy/classic/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/cammy/classic/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/cammy/classic/metadata.json",
+      "row_count": 75,
+      "table_sha256": "sha256:e08aaf63ea53a72e7c2f097aff1d8b2c3bbacc8149431df94ef98596acbdc90a"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/official/frame-data/2026-05-30/cammy/modern",
+      "page_html": "raw/official/frame-data/2026-05-30/cammy/modern/page.html",
+      "table_dom_json": "raw/official/frame-data/2026-05-30/cammy/modern/table.dom.json",
+      "screenshot_png": "raw/official/frame-data/2026-05-30/cammy/modern/screenshot.png",
+      "metadata_json": "raw/official/frame-data/2026-05-30/cammy/modern/metadata.json",
+      "row_count": 73,
+      "table_sha256": "sha256:0c89e03b2852ef4441b57c749a88e5cff3a4c2454f9c09eed82c783cf6db53db"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/cammy/classic.csv",
+    "wiki/outputs/data/frame-data/cammy/modern.csv",
+    "wiki/outputs/data/frame-data/cammy/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/cammy/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py"
+}

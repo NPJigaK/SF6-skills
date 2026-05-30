@@ -1,0 +1,57 @@
+{
+  "metadata_schema_version": "capcom_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-05-30T06:44:53Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/deejay/frame",
+  "final_url": "https://www.streetfighter.com/6/ja-jp/character/deejay/frame",
+  "character_slug": "deejay",
+  "control_scheme": "modern",
+  "capture_method": "scrapling_dynamic_fetcher_page_action",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_adjustments": {
+    "selected_frame_data_tab_index": 1,
+    "cookiebot_removed_from_capture_dom": true,
+    "site_header_navigation_removed_from_capture_dom": true,
+    "viewport_expanded_to_table_width": true
+  },
+  "overlay_visible_counts_after_cleanup": {
+    "cookiebot": 0,
+    "navigation": 0
+  },
+  "horizontal_metrics": {
+    "viewport_width": 2343,
+    "document_scroll_width": 2343,
+    "table_rect_left": 0,
+    "table_rect_right": 2343,
+    "table_rect_width": 2343,
+    "table_scroll_width": 2343,
+    "framearea_scroll_width": 2343,
+    "inner_scroll_width": 2343
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:1c9c798c451cd7cbde12e196167d3c656a834642a3996d136094b796c0b98fb2",
+      "byte_count": 533066
+    },
+    "table_dom_json": {
+      "path": "table.dom.json",
+      "sha256": "sha256:fd3a10c0a583a0ec5287225d5779843e4ecc223eb750fc454e2c5a481bbba34e",
+      "byte_count": 1543172,
+      "data_row_count": 101,
+      "category_row_count": 6
+    },
+    "screenshot_png": {
+      "path": "screenshot.png",
+      "sha256": "sha256:89f96fdc4bcdef50276eb9c0d62d59fd81539a9e7af7e3271c48849053cf4d2c",
+      "byte_count": 7034201,
+      "width": 2367,
+      "height": 13115,
+      "captured_in_same_browser_state": true
+    }
+  }
+}
