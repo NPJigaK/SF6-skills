@@ -8,20 +8,21 @@ sources:
 related:
   - "[[concepts/frame-data]]"
   - "[[entities/ryu]]"
+aliases:
+  - "Ryu（リュウ） capture review"
 tags:
   - review
   - frame-data
   - official
 ---
 
-# Official Ryu Frame Data Capture Review - 2026-05-27
+# 公式 Ryu（リュウ） フレームデータ capture review - 2026-05-27
 
-## Summary
+## 要約
 
-The official Ryu frame-data raw snapshot and derived outputs were captured,
-validated by tool checks, reviewed by the human, and accepted.
+Ryu（リュウ） の Capcom 公式 frame-data raw snapshot と派生 outputs は、人間レビュー済みで accepted。
 
-## Reviewed files
+## レビュー対象
 
 - `raw/official/frame-data/2026-05-27/ryu/classic/screenshot.png`
 - `raw/official/frame-data/2026-05-27/ryu/modern/screenshot.png`
@@ -35,28 +36,19 @@ validated by tool checks, reviewed by the human, and accepted.
 - `wiki/outputs/data/frame-data/ryu/classic.field-meanings.json`
 - `wiki/outputs/data/frame-data/ryu/modern.field-meanings.json`
 
-## Automated checks
+## 確認内容
 
-- Raw placement under `raw/official/frame-data/2026-05-27/ryu/<classic|modern>/`
-  follows the official frame-data snapshot convention.
-- Metadata and manifest include publisher, source URL, capture timestamps,
-  character slug, and control scheme.
-- Classic and Modern tabs were captured separately.
-- DOM captures retain move names, input icons, frame values, cancel values,
-  damage, notes, and related fields.
-- Classic DOM, manifest, and derived CSV all report 75 data rows.
-- Modern DOM, manifest, and derived CSV all report 69 data rows.
-- Overlay cleanup metadata reports no visible Cookiebot or navigation overlays
-  after cleanup.
-- Screenshots were visually checked by the LLM and appear to include the full
-  table width for both control schemes.
-- Field meanings JSON contains header explanations extracted from the table
-  header.
+- raw snapshot は `raw/official/frame-data/<date>/<data-slug>/<classic|modern>/` の convention に従っている。
+- metadata と manifest は publisher、source URL、capture timestamp、character slug、control scheme を含む。
+- Classic と Modern は別 capture として保存されている。
+- DOM capture は技名、入力 icon、frame values、cancel values、damage、notes、関連 fields を保持している。
+- Classic は 75 rows、Modern は 69 rows。
+- field-meaning JSON は table header 由来の説明を保持している。
 
-## Final decision
+## 最終判断
 
-Accepted.
+Accepted。
 
-## Requires human review
+## 人間レビューが必要な項目
 
-- No blocker remains for this capture.
+- この capture について blocker は残っていない。

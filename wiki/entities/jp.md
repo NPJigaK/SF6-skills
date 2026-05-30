@@ -2,13 +2,16 @@
 type: entity
 entity_type: character
 created: 2026-05-26
-updated: 2026-05-27
+updated: 2026-05-30
 status: active
 sources:
   - "[[sources/capcom-official-jp-frame-data]]"
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+aliases:
+  - "JP"
+  - "JP"
 tags:
   - character
   - frame-data
@@ -16,28 +19,28 @@ tags:
 
 # JP
 
-## Summary
+## 要約
 
-JP is the Street Fighter 6 character covered by the first official frame-data capture in this wiki.
+JP は、この wiki で Capcom 公式フレームデータ capture が保存されている Street Fighter 6 character。公式 frame-data table の data slug は `jp`。
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-26 | Official JP frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-jp-frame-data]] |
+| 2026-05-26 | 公式 frame-data page を Classic / Modern の raw snapshot として保存し、CSV / field-meaning JSON を派生生成した。 | [[sources/capcom-official-jp-frame-data]] |
 
-## Relevant claims
+## 関連する主張
 
-- The accepted official capture contains 69 Classic frame-data rows and 65 Modern frame-data rows.
-- The capture keeps raw input token data, including controller icons and Modern-control tokens.
-- This page does not yet summarize individual move values; those remain in the derived CSVs and raw DOM artifacts.
+- 公式 capture は Classic 69 行、Modern 65 行の frame-data rows を持つ。
+- 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/jp/` の CSV と raw DOM を source-preserving data として参照する。
+- この capture は人間レビューで accepted になっている。
 
-## Related concepts
+## 関連概念
 
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
 
-## Open questions
+## 未解決の質問
 
-- Which JP move values, if any, should be promoted into durable move-specific
-  wiki summaries instead of remaining only in source and output data?
+- JP のどの技データを、再利用できる質問・統合分析として wiki に昇格すべきか。

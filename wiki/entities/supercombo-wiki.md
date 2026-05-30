@@ -2,12 +2,14 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-05-30
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
 related:
   - "[[entities/street-fighter-6]]"
+aliases:
+  - "SuperCombo Wiki"
 tags:
   - source
   - community-wiki
@@ -15,30 +17,28 @@ tags:
 
 # SuperCombo Wiki
 
-## Summary
+## 要約
 
-SuperCombo Wiki is the source site for the first ingested raw source.
+SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source の掲載元。
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-26 | Street Fighter 6 glossary page captured into `raw/articles/`. | [[sources/supercombo-street-fighter-6-glossary]] |
+| 2026-05-26 | Street Fighter 6 glossary page を Obsidian Web Clipper で `raw/articles/` に保存した。 | [[sources/supercombo-street-fighter-6-glossary]] |
 
-## Relevant claims
+## 関連する主張
 
-- The current wiki has one source page from SuperCombo Wiki.
-- The source is treated as a community wiki source until source authority policy
-  is defined later.
+- 現在の wiki には SuperCombo Wiki 由来の source page が 1 つある。
+- SuperCombo Wiki は community wiki source として扱い、公式 Capcom source より低い confidence で使う。
 
-## Related concepts
+## 関連概念
 
 - [[concepts/drive-system]]
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
+- [[concepts/juggle-system]]
 
-## Open questions
+## 未解決の質問
 
-- Should SuperCombo Wiki pages be assigned a standard confidence policy after
-  more sources are ingested?
-
+- 追加 source ingest 後、community wiki source の標準 confidence policy を定義するべきか。

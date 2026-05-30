@@ -2,7 +2,7 @@
 type: concept
 title: "Juggle System"
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-05-30
 status: active
 confidence: medium
 sources:
@@ -10,55 +10,51 @@ sources:
 related:
   - "[[concepts/frame-data]]"
   - "[[entities/street-fighter-6]]"
+aliases:
+  - "ジャグルシステム"
+  - "Juggle System"
 tags:
   - mechanics
   - glossary
 ---
 
-# Juggle System
+# Juggle System（ジャグルシステム）
 
-## Summary
+## 要約
 
-The source describes a juggle system using free juggle and limited juggle states,
-with Juggle Count, Juggle Start, Juggle Increase, and Juggle Limit terms.
+SuperCombo glossary は、Free Juggle / Limited Juggle と Juggle Count、Juggle Start、Juggle Increase、Juggle Limit を使って SF6 の juggle system を説明している。
 
-## Definition
+## 定義
 
-In the source's terminology:
+- Free Juggle は、空中相手に当たる攻撃なら基本的に follow-up できる状態。
+- Limited Juggle は、攻撃側の juggle potential が十分な場合だけ follow-up できる状態。
+- Juggle Count は juggle 中の相手側状態を表す。
+- Juggle Start は juggle 開始時に相手の Juggle Count を設定する。
+- Juggle Increase は juggle 中の相手の Juggle Count を増やす。
+- Juggle Limit は現在の Juggle Count に対して攻撃が当たるかを決める性質。
 
-- Free Juggle means any applicable attack can juggle.
-- Limited Juggle means only attacks with sufficient juggle potential can work.
-- Juggle Count describes the defender's current juggle state.
-- Juggle Start sets the defender's Juggle Count when a juggle begins.
-- Juggle Increase raises the defender's Juggle Count during a juggle.
-- Juggle Limit determines whether an attack can connect against the current
-  Juggle Count.
+## なぜ重要か
 
-## Why it matters
+juggle terminology は、combo route、airborne hit、forced knockdown、follow-up attack が当たる/当たらない理由を説明するために必要。
 
-Juggle terminology helps interpret combo routes, airborne hits, forced
-knockdowns, and why some follow-up attacks connect while others fail.
+## 主要な主張
 
-## Key claims
-
-| Claim | Sources | Confidence |
+| 主張 | ソース | 信頼度 |
 |---|---|---|
-| The source distinguishes free juggle and limited juggle states. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| Juggle Limit must be greater than or equal to the defender's Juggle Count for a limited juggle attack to connect. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| The source notes that official Capcom terminology differs from the community-designated terms. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| source は free juggle と limited juggle を区別している。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| limited juggle では、攻撃の Juggle Limit が defender の Juggle Count 以上である必要がある。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| source は、公式 Capcom terminology が community-designated terms と少し異なると述べている。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 
-## Connections
+## 関連
 
 - [[concepts/frame-data]]
 - [[entities/street-fighter-6]]
 
-## Contradictions / caveats
+## 矛盾 / 注意点
 
-- The source itself notes a terminology mismatch with official Capcom terms.
-- Later official sources should be used to map community terms to official
-  terminology.
+- source 自体が official terminology との差異を示している。
+- 後続の公式 source で community terms と official terms の対応を整理する必要がある。
 
-## Open questions
+## 未解決の質問
 
-- Should future pages use community juggle terms, official Capcom terms, or both?
-
+- wiki では community juggle terms、official Capcom terms、または両方をどう併記するべきか。

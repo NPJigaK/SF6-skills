@@ -38,65 +38,66 @@ sources:
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+aliases:
+  - "カプコン"
+  - "Capcom"
 tags:
   - publisher
   - official-source
 ---
 
-# Capcom
+# Capcom（カプコン）
 
-## Summary
+## 要約
 
-Capcom is the publisher of the official Street Fighter 6 frame-data sources
-ingested by this wiki.
+Capcom は、この wiki に保存されている Street Fighter 6 公式フレームデータ source の publisher。
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-27 | Official Ryu frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-ryu-frame-data]] |
-| 2026-05-30 | Official Luke frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-luke-frame-data]] |
-| 2026-05-30 | Official Jamie frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-jamie-frame-data]] |
-| 2026-05-27 | Official Chun-Li frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-chun-li-frame-data]] |
-| 2026-05-30 | Official Guile frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-guile-frame-data]] |
-| 2026-05-30 | Official Kimberly frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-kimberly-frame-data]] |
-| 2026-05-30 | Official Juri frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-juri-frame-data]] |
-| 2026-05-30 | Official Ken frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-ken-frame-data]] |
-| 2026-05-30 | Official Blanka frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-blanka-frame-data]] |
-| 2026-05-30 | Official Dhalsim frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-dhalsim-frame-data]] |
-| 2026-05-30 | Official E. Honda frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-e-honda-frame-data]] |
-| 2026-05-30 | Official Dee Jay frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-dee-jay-frame-data]] |
-| 2026-05-30 | Official Manon frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-manon-frame-data]] |
-| 2026-05-30 | Official Marisa frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-marisa-frame-data]] |
-| 2026-05-26 | Official JP frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-jp-frame-data]] |
-| 2026-05-27 | Official Zangief frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-zangief-frame-data]] |
-| 2026-05-30 | Official Lily frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-lily-frame-data]] |
-| 2026-05-30 | Official Cammy frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-cammy-frame-data]] |
-| 2026-05-30 | Official Rashid frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-rashid-frame-data]] |
-| 2026-05-30 | Official A.K.I. frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-aki-frame-data]] |
-| 2026-05-30 | Official Ed frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-ed-frame-data]] |
-| 2026-05-30 | Official Gouki / Akuma frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-gouki-akuma-frame-data]] |
-| 2026-05-30 | Official Vega / M. Bison frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-vega-m-bison-frame-data]] |
-| 2026-05-30 | Official Terry frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-terry-frame-data]] |
-| 2026-05-30 | Official Mai frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-mai-frame-data]] |
-| 2026-05-30 | Official Elena frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-elena-frame-data]] |
-| 2026-05-30 | Official Sagat frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-sagat-frame-data]] |
-| 2026-05-30 | Official C. Viper frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-c-viper-frame-data]] |
-| 2026-05-30 | Official Alex frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-alex-frame-data]] |
-| 2026-05-30 | Official Ingrid frame-data page captured as raw HTML, DOM, screenshots, and derived outputs. | [[sources/capcom-official-ingrid-frame-data]] |
+| 2026-05-27 | Ryu（リュウ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-ryu-frame-data]] |
+| 2026-05-30 | Luke（ルーク） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-luke-frame-data]] |
+| 2026-05-30 | Jamie（ジェイミー） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-jamie-frame-data]] |
+| 2026-05-27 | Chun-Li（春麗） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-chun-li-frame-data]] |
+| 2026-05-30 | Guile（ガイル） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-guile-frame-data]] |
+| 2026-05-30 | Kimberly（キンバリー） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-kimberly-frame-data]] |
+| 2026-05-30 | Juri（ジュリ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-juri-frame-data]] |
+| 2026-05-30 | Ken（ケン） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-ken-frame-data]] |
+| 2026-05-30 | Blanka（ブランカ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-blanka-frame-data]] |
+| 2026-05-30 | Dhalsim（ダルシム） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-dhalsim-frame-data]] |
+| 2026-05-30 | E. Honda（エドモンド本田） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-e-honda-frame-data]] |
+| 2026-05-30 | Dee Jay（ディージェイ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-dee-jay-frame-data]] |
+| 2026-05-30 | Manon（マノン） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-manon-frame-data]] |
+| 2026-05-30 | Marisa（マリーザ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-marisa-frame-data]] |
+| 2026-05-26 | JP の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-jp-frame-data]] |
+| 2026-05-27 | Zangief（ザンギエフ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-zangief-frame-data]] |
+| 2026-05-30 | Lily（リリー） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-lily-frame-data]] |
+| 2026-05-30 | Cammy（キャミィ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-cammy-frame-data]] |
+| 2026-05-30 | Rashid（ラシード） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-rashid-frame-data]] |
+| 2026-05-30 | A.K.I. の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-aki-frame-data]] |
+| 2026-05-30 | Ed（エド） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-ed-frame-data]] |
+| 2026-05-30 | Gouki / Akuma（豪鬼） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-gouki-akuma-frame-data]] |
+| 2026-05-30 | Vega / M. Bison（ベガ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-vega-m-bison-frame-data]] |
+| 2026-05-30 | Terry（テリー） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-terry-frame-data]] |
+| 2026-05-30 | Mai（不知火舞） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-mai-frame-data]] |
+| 2026-05-30 | Elena（エレナ） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-elena-frame-data]] |
+| 2026-05-30 | Sagat（サガット） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-sagat-frame-data]] |
+| 2026-05-30 | C. Viper（C.ヴァイパー） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-c-viper-frame-data]] |
+| 2026-05-30 | Alex（アレックス） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-alex-frame-data]] |
+| 2026-05-30 | Ingrid（イングリッド） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-ingrid-frame-data]] |
 
-## Relevant claims
+## 関連する主張
 
-- The ingested official frame-data sources record Capcom as publisher.
-- The official frame-data source URLs are under
-  `https://www.streetfighter.com/6/ja-jp/character/<character>/frame`, with
-  `gouki_akuma` and `vega_mbison` used as the table-bearing frame-data slugs.
-- The wiki has official frame-data outputs for 30 character data slugs.
+- 公式 frame-data source の metadata は publisher を Capcom と記録している。
+- source URL は `https://www.streetfighter.com/6/ja-jp/character/<character>/frame` 系列にある。
+- `gouki_akuma` と `vega_mbison` は、公式 site で table を持つ frame-data slug として扱う。
+- この wiki は 30 character data slugs の Classic / Modern 公式 frame-data outputs を持つ。
 
-## Related concepts
+## 関連概念
 
 - [[concepts/frame-data]]
 
-## Open questions
+## 未解決の質問
 
-- Which other official Capcom pages should be ingested to explain frame-data changes over time?
+- frame-data の version change を説明する公式 Capcom source を追加 ingest するべきか。

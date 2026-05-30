@@ -9,9 +9,10 @@ sources:
 related:
   - "[[entities/ryu]]"
   - "[[concepts/frame-data]]"
+aliases: []
 ---
 
-# Question: Ryuのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+# 質問: Ryuのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
 
 ## 短い答え
 

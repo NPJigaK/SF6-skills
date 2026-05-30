@@ -36,7 +36,6 @@ sources:
   - "[[sources/capcom-official-c-viper-frame-data]]"
   - "[[sources/capcom-official-alex-frame-data]]"
   - "[[sources/capcom-official-ingrid-frame-data]]"
-  - "[[outputs/reports/2026-05-30-official-frame-data-coverage]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/frame-data]]"
@@ -72,108 +71,68 @@ related:
   - "[[entities/c-viper]]"
   - "[[entities/alex]]"
   - "[[entities/ingrid]]"
+aliases:
+  - "SF6"
+  - "ストリートファイター6"
 tags:
   - game
 ---
 
 # Street Fighter 6
 
-## Summary
+## 要約
 
-Street Fighter 6 is the game context for the ingested glossary and official
-frame-data sources. The wiki has community glossary concepts and official
-Capcom Classic/Modern frame-data outputs for 30 character data slugs.
+Street Fighter 6 は、この wiki が扱う glossary source と公式 frame-data source の game context。現在、community glossary concepts と Capcom 公式 Classic / Modern frame-data outputs が 30 character data slugs 分ある。
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-26 | Glossary page captured via Obsidian Web Clipper. | [[sources/supercombo-street-fighter-6-glossary]] |
-| 2026-05-27 | Official Ryu frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-ryu-frame-data]] |
-| 2026-05-30 | Official Luke frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-luke-frame-data]] |
-| 2026-05-30 | Official Jamie frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-jamie-frame-data]] |
-| 2026-05-27 | Official Chun-Li frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-chun-li-frame-data]] |
-| 2026-05-30 | Official Guile frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-guile-frame-data]] |
-| 2026-05-30 | Official Kimberly frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-kimberly-frame-data]] |
-| 2026-05-30 | Official Juri frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-juri-frame-data]] |
-| 2026-05-30 | Official Ken frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-ken-frame-data]] |
-| 2026-05-30 | Official Blanka frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-blanka-frame-data]] |
-| 2026-05-30 | Official Dhalsim frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-dhalsim-frame-data]] |
-| 2026-05-30 | Official E. Honda frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-e-honda-frame-data]] |
-| 2026-05-30 | Official Dee Jay frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-dee-jay-frame-data]] |
-| 2026-05-30 | Official Manon frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-manon-frame-data]] |
-| 2026-05-30 | Official Marisa frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-marisa-frame-data]] |
-| 2026-05-26 | Official JP frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-jp-frame-data]] |
-| 2026-05-27 | Official Zangief frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-zangief-frame-data]] |
-| 2026-05-30 | Official Lily frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-lily-frame-data]] |
-| 2026-05-30 | Official Cammy frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-cammy-frame-data]] |
-| 2026-05-30 | Official Rashid frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-rashid-frame-data]] |
-| 2026-05-30 | Official A.K.I. frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-aki-frame-data]] |
-| 2026-05-30 | Official Ed frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-ed-frame-data]] |
-| 2026-05-30 | Official Gouki / Akuma frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-gouki-akuma-frame-data]] |
-| 2026-05-30 | Official Vega / M. Bison frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-vega-m-bison-frame-data]] |
-| 2026-05-30 | Official Terry frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-terry-frame-data]] |
-| 2026-05-30 | Official Mai frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-mai-frame-data]] |
-| 2026-05-30 | Official Elena frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-elena-frame-data]] |
-| 2026-05-30 | Official Sagat frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-sagat-frame-data]] |
-| 2026-05-30 | Official C. Viper frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-c-viper-frame-data]] |
-| 2026-05-30 | Official Alex frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-alex-frame-data]] |
-| 2026-05-30 | Official Ingrid frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-ingrid-frame-data]] |
+| 2026-05-26 | SuperCombo Wiki の Street Fighter 6 glossary を raw source として保存した。 | [[sources/supercombo-street-fighter-6-glossary]] |
+| 2026-05-27 | Ryu（リュウ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-ryu-frame-data]] |
+| 2026-05-30 | Luke（ルーク） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-luke-frame-data]] |
+| 2026-05-30 | Jamie（ジェイミー） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-jamie-frame-data]] |
+| 2026-05-27 | Chun-Li（春麗） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-chun-li-frame-data]] |
+| 2026-05-30 | Guile（ガイル） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-guile-frame-data]] |
+| 2026-05-30 | Kimberly（キンバリー） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-kimberly-frame-data]] |
+| 2026-05-30 | Juri（ジュリ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-juri-frame-data]] |
+| 2026-05-30 | Ken（ケン） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-ken-frame-data]] |
+| 2026-05-30 | Blanka（ブランカ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-blanka-frame-data]] |
+| 2026-05-30 | Dhalsim（ダルシム） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-dhalsim-frame-data]] |
+| 2026-05-30 | E. Honda（エドモンド本田） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-e-honda-frame-data]] |
+| 2026-05-30 | Dee Jay（ディージェイ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-dee-jay-frame-data]] |
+| 2026-05-30 | Manon（マノン） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-manon-frame-data]] |
+| 2026-05-30 | Marisa（マリーザ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-marisa-frame-data]] |
+| 2026-05-26 | JP の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-jp-frame-data]] |
+| 2026-05-27 | Zangief（ザンギエフ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-zangief-frame-data]] |
+| 2026-05-30 | Lily（リリー） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-lily-frame-data]] |
+| 2026-05-30 | Cammy（キャミィ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-cammy-frame-data]] |
+| 2026-05-30 | Rashid（ラシード） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-rashid-frame-data]] |
+| 2026-05-30 | A.K.I. の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-aki-frame-data]] |
+| 2026-05-30 | Ed（エド） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-ed-frame-data]] |
+| 2026-05-30 | Gouki / Akuma（豪鬼） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-gouki-akuma-frame-data]] |
+| 2026-05-30 | Vega / M. Bison（ベガ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-vega-m-bison-frame-data]] |
+| 2026-05-30 | Terry（テリー） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-terry-frame-data]] |
+| 2026-05-30 | Mai（不知火舞） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-mai-frame-data]] |
+| 2026-05-30 | Elena（エレナ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-elena-frame-data]] |
+| 2026-05-30 | Sagat（サガット） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-sagat-frame-data]] |
+| 2026-05-30 | C. Viper（C.ヴァイパー） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-c-viper-frame-data]] |
+| 2026-05-30 | Alex（アレックス） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-alex-frame-data]] |
+| 2026-05-30 | Ingrid（イングリッド） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-ingrid-frame-data]] |
 
-## Relevant claims
+## 関連する主張
 
-- The ingested glossary describes Drive System definitions.
-- The ingested glossary describes frame data definitions.
-- The ingested glossary describes notation terms.
-- The wiki has derived Classic and Modern official frame-data outputs for 30
-  character data slugs.
-- JP, Ryu, Chun-Li, and Zangief captures were previously reviewed and accepted.
-- The 26 new 2026-05-30 captures passed automated validation and still need
-  human review.
+- SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
+- Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 CSV として保持している。
+- 30 character data slugs の coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30 の capture。
 
-## Related concepts
+## 関連概念
 
 - [[concepts/drive-system]]
 - [[concepts/frame-data]]
 - [[concepts/juggle-system]]
 - [[concepts/fighting-game-notation]]
 
-## Related character entities
+## 未解決の質問
 
-- [[entities/ryu]]
-- [[entities/luke]]
-- [[entities/jamie]]
-- [[entities/chun-li]]
-- [[entities/guile]]
-- [[entities/kimberly]]
-- [[entities/juri]]
-- [[entities/ken]]
-- [[entities/blanka]]
-- [[entities/dhalsim]]
-- [[entities/e-honda]]
-- [[entities/dee-jay]]
-- [[entities/manon]]
-- [[entities/marisa]]
-- [[entities/jp]]
-- [[entities/zangief]]
-- [[entities/lily]]
-- [[entities/cammy]]
-- [[entities/rashid]]
-- [[entities/aki]]
-- [[entities/ed]]
-- [[entities/gouki-akuma]]
-- [[entities/vega-m-bison]]
-- [[entities/terry]]
-- [[entities/mai]]
-- [[entities/elena]]
-- [[entities/sagat]]
-- [[entities/c-viper]]
-- [[entities/alex]]
-- [[entities/ingrid]]
-
-## Open questions
-
-- Which official Street Fighter 6 source should be ingested next for update
-  history and canonical terminology?
-- Should the full roster be recaptured on one date label after the new batch is
-  human-reviewed?
+- 公式 patch notes や Battle Change List を ingest して、frame-data の変化を時系列で扱うべきか。

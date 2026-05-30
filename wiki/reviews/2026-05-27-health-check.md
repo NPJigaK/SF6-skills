@@ -15,68 +15,44 @@ related:
   - "[[entities/ryu]]"
   - "[[entities/chun-li]]"
   - "[[entities/zangief]]"
+aliases:
+  - "2026-05-27 wiki health check"
 tags:
   - review
   - health-check
 ---
 
-# Wiki Health Check - 2026-05-27
+# Wiki ヘルスチェック - 2026-05-27
 
-## Summary
+## 要約
 
-This health check reviewed the wiki after the accepted JP, Ryu, Chun-Li, and
-Zangief official frame-data captures and the four Classic/Modern comparison
-question pages.
+JP、Ryu、Chun-Li、Zangief の公式 frame-data captures と Classic / Modern 比較 question pages の後に実施した health check。blocking structural issue は見つからなかった。
 
-No blocking structural issue was found. Safe cleanup was applied to stale open
-questions that still asked whether already-filed Classic/Modern comparison
-pages should be created.
+## 人間レビュー判断
 
-## Human review decision
+2026-05-27 に accepted。
 
-Accepted on 2026-05-27.
+- follow-up design work が残るため `status: open` は維持する。
+- JP、Ryu、Chun-Li、Zangief の validation results をこの health check に保持する。
+- command notation は当面 display-only transform とする。raw input tokens が source-preserving data。
+- Classic / Modern 比較は、公式技名の完全一致を default rule とする。
+- `しゃがみ強K（ビッグスタンプ）` と `ビッグスタンプ` のような pair は、勝手に normalize せず、対応しそうな name variants として注記する。
 
-- Keep `status: open` because follow-up design work remains.
-- Keep JP, Ryu, Chun-Li, and Zangief validation results in this health check.
-- Accept the cleanup of stale source-page questions about whether already-filed
-  comparison pages should be created.
-- Accept the cleanup of character entity wording after human review.
-- Treat command notation as a display-only transform for now. Raw input tokens
-  remain the source-preserving data.
-- Use exact official move-name matching as the default comparison rule.
-- For pairs such as `しゃがみ強K（ビッグスタンプ）` and `ビッグスタンプ`, annotate
-  them as likely corresponding name variants instead of silently normalizing
-  them as the same move.
+## 構造上の問題
 
-## Structural issues
+### 壊れたリンク
 
-### Broken links
+non-template wiki pages では見つからなかった。`wiki/templates/` の placeholder links は意図的に除外した。
 
-None found in non-template wiki pages.
+### index 未掲載ページ
 
-Template placeholder links under `wiki/templates/` were intentionally excluded
-from the broken-link check because they contain example links such as
-`concepts/...`.
+この review page 追加前の既存 non-template wiki page には、`wiki/index.md` 未掲載のものはなかった。
 
-### Missing index entries
+### frontmatter 不足
 
-No existing non-template wiki page was missing from `wiki/index.md` before this
-review page was added. This page is now registered in the Reviews section.
+content pages には frontmatter missing はなかった。`wiki/index.md` と `wiki/log.md` は special navigation/log files として frontmatter を持たない。
 
-### Missing frontmatter
-
-No missing frontmatter found in content pages. `wiki/index.md` and `wiki/log.md`
-are treated as special navigation/log files and intentionally do not use page
-frontmatter.
-
-### Question-page workflow leakage
-
-No `wiki/questions/` page currently includes workflow-only sections such as
-`Filed-back updates`, changed files, task summaries, or implementation notes.
-
-## Data validation
-
-The official frame-data outputs were revalidated against raw snapshots.
+## データ検証
 
 | Character | Classic rows | Modern rows | Result |
 |---|---:|---:|---|
@@ -85,58 +61,19 @@ The official frame-data outputs were revalidated against raw snapshots.
 | Chun-Li | 78 | 72 | passed |
 | Zangief | 72 | 66 | passed |
 
-The validation checks compare saved derived rows and field meanings against
-data regenerated from raw HTML / raw DOM snapshots. Screenshots are used as
-visual coverage evidence for page state, table width, and overlays, not as the
-primary cell-value source.
+validation は raw HTML / raw DOM snapshot から再生成した data と saved derived rows / field meanings を比較する。screenshots は page state、table width、overlay の visual coverage evidence として使い、cell-value source にはしない。
 
-## Knowledge issues
+## 知識上の問題
 
-### Stale open questions
+### 古い open questions
 
-Fixed:
+すでに filed-back された Classic / Modern comparison pages の作成有無を問う stale questions を整理した。
 
-- Removed source-page open questions asking whether the Ryu, Chun-Li, and
-  Zangief Classic/Modern comparison pages should be filed, because those pages
-  now exist.
-- Updated accepted character entity open questions so they no longer imply
-  that human review is still pending.
-- Updated JP source open questions so they no longer ask whether only one
-  additional official character should be tested.
+### 矛盾
 
-### Contradictions
+accepted source pages、character entities、index entries、question pages の間に直接の contradiction は見つからなかった。
 
-No direct contradiction was found between accepted source pages, character
-entities, index entries, and question pages.
+## 次に調べる質問の候補
 
-### Stale claims
-
-Chun-Li source wording still implied the capture should not be generalized until
-human review accepts it; this was updated because the capture has already been
-accepted.
-
-## Suggested next questions
-
-- Should the wiki define a normalized command-input notation for reader-facing
-  answers while preserving raw input tokens in source/output data?
-- Should Classic/Modern comparison pages keep exact official move-name matching
-  as the default, or add a separate normalized identity mapping for likely
-  equivalent move-name variants?
-- Which official Capcom source should be ingested next to explain update
-  history and official terminology?
-
-## Changes made
-
-- Cleaned stale open questions in official frame-data source pages.
-- Cleaned stale open questions in accepted character entity pages.
-- Added this health-check review page.
-- Updated `wiki/index.md`.
-- Appended to `wiki/log.md`.
-
-## Open follow-up items
-
-- If display-only command notation becomes repeated enough, consider defining
-  it as a formal wiki concept later.
-- If move-name variants become common across more characters, consider creating
-  an explicit move-identity mapping page. Until then, keep exact official
-  move-name matching as the default and annotate likely corresponding variants.
+- reader-facing command notation を normalized schema として定義するべきか。
+- SuperCombo Wiki の community terms と Capcom official terms の対応を、公式 source で確認するべきか。

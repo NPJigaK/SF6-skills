@@ -9,44 +9,38 @@ sources:
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+aliases:
+  - "Marisa"
+  - "マリーザ"
 tags:
   - character
   - frame-data
 ---
 
-# Marisa
+# Marisa（マリーザ）
 
-## Summary
+## 要約
 
-Marisa is a Street Fighter 6 character covered by an official Capcom
-frame-data capture in this wiki. The captured page uses the data slug
-`marisa` and the Japanese page name `マリーザ`.
+Marisa（マリーザ） は、この wiki で Capcom 公式フレームデータ capture が保存されている Street Fighter 6 character。公式 frame-data table の data slug は `marisa`。
 
-## Timeline
+## 年表
 
-| Date | Event | Source |
+| 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-30 | Official Marisa frame-data page captured for Classic and Modern controls. | [[sources/capcom-official-marisa-frame-data]] |
+| 2026-05-30 | 公式 frame-data page を Classic / Modern の raw snapshot として保存し、CSV / field-meaning JSON を派生生成した。 | [[sources/capcom-official-marisa-frame-data]] |
 
-## Relevant claims
+## 関連する主張
 
-- The official capture contains 91 Classic frame-data rows and 80
-  Modern frame-data rows.
-- The capture keeps raw input token data, including controller icons and
-  Modern-control tokens.
-- This page does not yet summarize individual move values; those remain in the
-  derived CSVs and raw DOM artifacts.
-- The 2026-05-30 batch validation reproduced the CSV rows and field meanings
-  from raw DOM artifacts.
-- Human review is still pending for this capture.
+- 公式 capture は Classic 91 行、Modern 80 行の frame-data rows を持つ。
+- 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/marisa/` の CSV と raw DOM を source-preserving data として参照する。
+- この capture は自動検証済みだが、人間レビューは未完了。
 
-## Related concepts
+## 関連概念
 
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
 
-## Open questions
+## 未解決の質問
 
-- Which Marisa move values, if any, should be promoted into durable
-  move-specific wiki summaries instead of remaining only in source and output
-  data?
+- Marisa（マリーザ） のどの技データを、再利用できる質問・統合分析として wiki に昇格すべきか。

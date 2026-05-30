@@ -2,7 +2,7 @@
 type: concept
 title: "Fighting Game Notation"
 created: 2026-05-26
-updated: 2026-05-27
+updated: 2026-05-30
 status: active
 confidence: medium
 sources:
@@ -10,65 +10,58 @@ sources:
   - "[[reviews/2026-05-27-health-check]]"
 related:
   - "[[concepts/frame-data]]"
+aliases:
+  - "格闘ゲーム表記"
+  - "コマンド表記"
+  - "Fighting Game Notation"
 tags:
   - notation
   - glossary
 ---
 
-# Fighting Game Notation
+# Fighting Game Notation（格闘ゲーム表記）
 
-## Summary
+## 要約
 
-Fighting-game notation compactly describes links, cancels, holds, releases,
-chains, hit states, air actions, delayed timing, tiger-knee inputs, whiffs, and
-directional inputs.
+Fighting-game notation は、link、cancel、hold/release、chain、hit state、air action、delay、tiger-knee input、whiff、directional input などを短く表すための表記体系。
 
-## Definition
+## 定義
 
-The source's notation table defines examples including:
+SuperCombo glossary は次のような例を定義している。
 
-- `A,B` for linking one action into another.
-- `A > B` for canceling one action into another.
-- `(N)` for using only some hits of a multi-hit move.
-- `xN` for repeating a chained normal.
-- `[X]` for holding an input.
-- `]X[` for releasing an input.
-- `X~Y` for doing inputs in quick succession.
-- `CH`, `j.`, `jc`, `dl`, `TK`, and whiff notation.
+- `A,B`: A の recovery 後に B を link する。
+- `A > B`: A の animation 中に B へ cancel する。
+- `(N)`: multi-hit move の一部 hit だけを使う。
+- `xN`: chained normal を繰り返す。
+- `[X]`: input を hold する。
+- `]X[`: input を release する。
+- `X~Y`: 入力を素早く連続して行う。
+- `CH`, `j.`, `jc`, `dl`, `TK`, whiff notation など。
 
-## Why it matters
+## なぜ重要か
 
-Notation is required for later wiki pages to preserve source wording while
-remaining concise.
+notation は、source wording を保ちながら combo や input を簡潔に説明するために必要。公式 frame-data answers では、読者向けに `↓↘→ + 強P` のような display-only 表記を使う場合があるが、source-preserving data は raw input tokens である。
 
-For official frame-data question pages, command inputs may be displayed with
-readable arrows and button names. That display is currently explanatory only;
-the wiki still preserves the raw input tokens from the official captures.
+## 主要な主張
 
-## Key claims
-
-| Claim | Sources | Confidence |
+| 主張 | ソース | 信頼度 |
 |---|---|---|
-| `A,B` means linking X into Y after X recovers. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| `A > B` means canceling A into B during A's animation. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| `[X]` and `]X[` represent hold and release notation. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| `TK` means tiger knee input timing for an air move. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| Reader-facing command notation for official frame-data answers is currently a display-only transform, not a canonical normalized input schema. | [[reviews/2026-05-27-health-check]] | high |
+| `A,B` は A の recovery 後に B を link する意味。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| `A > B` は A の animation 中に B へ cancel する意味。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| `[X]` と `]X[` は hold / release notation。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| `TK` は air move を地上近くで出す tiger knee input timing を表す。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| 公式 frame-data answers の読者向け command notation は、現時点では canonical normalized input schema ではなく display-only transform。 | [[reviews/2026-05-27-health-check]] | high |
 
-## Connections
+## 関連
 
 - [[concepts/frame-data]]
 
-## Contradictions / caveats
+## 矛盾 / 注意点
 
-- The clipped source's numpad-direction table appears malformed. Recapture may
-  be needed before relying on that part.
-- Official frame-data answer pages may use readable arrow notation, but raw
-  input tokens remain the source-preserving data.
+- clipped source の numpad-direction table は malformed に見えるため、その部分に強く依存する前に recapture が必要。
+- raw input tokens は引き続き source-preserving data として扱う。
 
-## Open questions
+## 未解決の質問
 
-- Should the wiki create a separate durable notation reference after additional
-  notation sources are ingested?
-- When should display-only command notation be promoted to a formal normalized
-  input notation schema?
+- 追加 notation source を ingest した後、独立した durable notation reference を作るべきか。
+- display-only command notation を formal normalized input notation schema に昇格する条件は何か。

@@ -9,9 +9,10 @@ sources:
 related:
   - "[[entities/chun-li]]"
   - "[[concepts/frame-data]]"
+aliases: []
 ---
 
-# Question: Chun-Liのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+# 質問: Chun-Liのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
 
 ## 短い答え
 

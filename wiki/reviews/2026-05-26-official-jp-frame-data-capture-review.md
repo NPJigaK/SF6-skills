@@ -1,6 +1,6 @@
 ---
 type: review
-review_type: human_review
+review_type: capture_validation
 created: 2026-05-26
 status: accepted
 sources:
@@ -8,19 +8,21 @@ sources:
 related:
   - "[[concepts/frame-data]]"
   - "[[entities/jp]]"
+aliases:
+  - "JP capture review"
 tags:
   - review
   - frame-data
   - official
 ---
 
-# Official JP Frame Data Capture Review - 2026-05-26
+# 公式 JP フレームデータ capture review - 2026-05-26
 
-## Summary
+## 要約
 
-The official JP frame-data raw snapshot and derived outputs were reviewed and accepted for wiki ingest.
+JP の Capcom 公式 frame-data raw snapshot と派生 outputs は、人間レビュー済みで accepted。
 
-## Reviewed files
+## レビュー対象
 
 - `raw/official/frame-data/2026-05-26/jp/classic/screenshot.png`
 - `raw/official/frame-data/2026-05-26/jp/modern/screenshot.png`
@@ -33,41 +35,20 @@ The official JP frame-data raw snapshot and derived outputs were reviewed and ac
 - `wiki/outputs/data/frame-data/jp/modern.csv`
 - `wiki/outputs/data/frame-data/jp/classic.field-meanings.json`
 - `wiki/outputs/data/frame-data/jp/modern.field-meanings.json`
-- `tools/capture_capcom_frame_data.py`
-- `tools/extract_capcom_frame_data.py`
-- `pyproject.toml`
-- `uv.lock`
-- `README.md`
 
-## Findings
+## 確認内容
 
-### Medium: default source URL was JP-specific
+- raw snapshot は `raw/official/frame-data/<date>/<data-slug>/<classic|modern>/` の convention に従っている。
+- metadata と manifest は publisher、source URL、capture timestamp、character slug、control scheme を含む。
+- Classic と Modern は別 capture として保存されている。
+- DOM capture は技名、入力 icon、frame values、cancel values、damage、notes、関連 fields を保持している。
+- Classic は 69 rows、Modern は 65 rows。
+- field-meaning JSON は table header 由来の説明を保持している。
 
-`tools/capture_capcom_frame_data.py` previously defaulted `--source-url` to the JP page. This was safe for the reviewed JP capture but would be unsafe for future character captures if only `--character-slug` changed.
+## 最終判断
 
-Resolution: fixed before ingest. The capture tool now derives the URL from `--character-slug` when `--source-url` is omitted and validates that an explicit URL matches the slug.
+Accepted。
 
-### Low: raw HTML has trailing whitespace
+## 人間レビューが必要な項目
 
-`git diff --cached --check` reports trailing whitespace in raw `page.html` files.
-
-Resolution: no raw normalization. These files are raw official page snapshots, so whitespace checks should exclude `raw/official/**/page.html` if enforced later.
-
-## Accepted checks
-
-- Raw placement under `raw/official/frame-data/2026-05-26/jp/<classic|modern>/` is suitable for immutable official snapshots.
-- Metadata and manifest include publisher, source URL, capture timestamps, character slug, and control scheme.
-- Screenshots include the full official table for Classic and Modern.
-- Classic and Modern tabs were captured separately.
-- DOM captures retain move names, input icons, frame values, cancel values, damage, notes, and related fields.
-- Classic CSV contains 69 data rows and Modern CSV contains 65 data rows, matching the DOM counts.
-- Modern input tokens such as `modern_auto`, `modern_sp`, `key-or`, and parenthesized alternate inputs are retained in `input_token_json`.
-- Field meanings JSON contains header explanations for cancel values, active frames, combo scaling, Drive gauge gain/loss, attributes, and Modern SP-button damage.
-
-## Final decision
-
-The raw snapshot and derived outputs are accepted. Wiki ingest may proceed.
-
-## Requires human review
-
-- No blocker remains for this capture.
+- この capture について blocker は残っていない。

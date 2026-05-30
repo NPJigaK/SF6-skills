@@ -2,16 +2,20 @@
 type: source
 source_type: wiki_page
 title: "Street Fighter 6/Glossary"
-author: ""
+author: "SuperCombo Wiki contributors"
 raw_path: "raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md"
 original_url: "https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary"
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-05-30
 status: active
 confidence: medium
 tags:
-  - fighting-games
+  - sf6
   - glossary
+  - community-wiki
+aliases:
+  - "SF6 glossary"
+  - "ストリートファイター6 用語集"
 related_concepts:
   - "[[concepts/drive-system]]"
   - "[[concepts/frame-data]]"
@@ -22,70 +26,50 @@ related_entities:
   - "[[entities/supercombo-wiki]]"
 ---
 
-# Source: Street Fighter 6/Glossary
+# ソース: SuperCombo Wiki Street Fighter 6 Glossary
 
-## One-line summary
+## 1行要約
 
-SuperCombo Wiki glossary page defining Street Fighter 6 drive mechanics, frame
-data terms, juggle terminology, and notation conventions.
+SuperCombo Wiki の Street Fighter 6 glossary を raw source として保存したもの。Drive System、frame data、juggle、notation の用語説明を含む。
 
-## Key takeaways
+## 重要ポイント
 
-1. The source groups definitions into Drive System terms, frame data terms, and
-   notation terms.
-2. Drive System entries define Burnout, Drive Impact, Drive Parry, Drive
-   Reversal, Drive Rush, Drive System, and Overdrive at a glossary level.
-3. Frame data entries define hitbox image colors, active frames, cancel fields,
-   hitconfirm windows, damage, scaling, Drive Rush Cancel advantage, forced
-   knockdown, guard, juggles, hit/block advantage, recovery, startup, and
-   actionable recovery.
-4. The juggle section distinguishes free juggle, limited juggle, Juggle Count,
-   Juggle Start, Juggle Increase, and Juggle Limit, and notes that official
-   Capcom terminology differs.
-5. The notation glossary records common fighting-game notation such as links,
-   cancels, hold/release notation, chained normals, counter hit, jump cancel,
-   tiger knee, whiff notation, and numpad directions.
+1. `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md` は Obsidian Web Clipper で保存された原本であり、翻訳せずに保持する。
+2. Drive System では Burnout、Drive Impact、Drive Parry、Drive Reversal、Drive Rush、Overdrive などの用語を説明している。
+3. Frame Data では startup、active、recovery、cancel、damage、damage scaling、hit/block advantage、guard などの読み方を説明している。
+4. Juggles では Free Juggle、Limited Juggle、Juggle Count、Juggle Start、Juggle Increase、Juggle Limit の関係を説明している。
+5. Notation Glossary では link、cancel、hold/release、chain、counter hit、jump、delay、tiger knee などの表記を説明している。
 
-## Important claims
+## 重要な主張
 
-| Claim | Evidence | Confidence | Notes |
+| 主張 | 根拠 | 信頼度 | メモ |
 |---|---|---|---|
-| Drive Rush can be performed from Drive Parry or from a cancelable normal attack. | Raw source section `Drive System definitions > Drive Rush` | medium | Source states costs, but this wiki has not independently verified them. |
-| Burnout occurs when the Drive gauge is empty and prevents Drive-related techniques until the gauge is replenished. | Raw source section `Drive System definitions > Burnout` | medium | Glossary-level statement. |
-| Hitbox images use colors to distinguish attack hitboxes, throw hitboxes, hurtboxes, throw hurtboxes, unique interaction boxes, armor/counter hitboxes, and projectile clash boxes. | Raw source section `Frame Data definitions > Hitbox Images` | medium | Useful for interpreting visual frame data assets. |
-| Active describes how many frames a move can hurt opponents. | Raw source section `Frame Data definitions > Active` | medium | Glossary-level definition. |
-| Startup values are written as startup plus one because the last startup frame and first active frame are the same frame. | Raw source section `Frame Data definitions > Startup` | medium | Domain convention from this source. |
-| Juggle interactions use Juggle Count, Juggle Start, Juggle Increase, and Juggle Limit terminology in this source. | Raw source section `Frame Data definitions > Juggles` | medium | Source notes official Capcom terms differ. |
-| Notation such as `A,B`, `A > B`, `[X]`, `]X[`, `X~Y`, `CH`, `jc`, and `TK` is defined in the notation table. | Raw source section `Notation Glossary` | medium | The source's clipped notation table appears partially malformed at the numpad diagram. |
+| Drive System は Street Fighter 6 の移動・攻め・守りに関わる共通 meter system として説明されている。 | `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md` | medium | community wiki source。 |
+| frame data 用語は、startup、active、recovery、cancel、damage、guard、hit/block advantage などを含む。 | `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md` | medium | 公式用語とは異なる可能性がある。 |
+| juggle 用語は community-designated terms として説明され、公式 Capcom 用語との差異にも触れている。 | `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md` | medium | 後続の公式資料で対応関係を確認する必要がある。 |
 
-## Related concepts
+## 関連概念
 
 - [[concepts/drive-system]]
 - [[concepts/frame-data]]
 - [[concepts/juggle-system]]
 - [[concepts/fighting-game-notation]]
 
-## Related entities
+## 関連エンティティ
 
 - [[entities/street-fighter-6]]
 - [[entities/supercombo-wiki]]
 
-## Contradictions or updates to existing wiki
+## 既存 wiki との矛盾または更新
 
-- No prior wiki pages existed, so no contradictions were found.
+- この source は community wiki であり、公式 Capcom source より低い confidence で扱う。
+- raw source は英語のまま保存し、日本語説明はこの source page と concept pages に置く。
 
-## Open questions
+## 未解決の質問
 
-- Should later ingests treat SuperCombo Wiki as a community source with
-  separate confidence from official sources?
-- Should the malformed numpad-direction table from the Web Clipper output be
-  recaptured or replaced by a cleaner raw source capture?
-- Which official source should be ingested later to compare terminology for
-  juggle count / combo count terms?
+- 公式 Capcom のシステム用語資料を追加 ingest して、community terms と official terms の対応を確認するべきか。
 
-## Source notes
+## ソースメモ
 
 - Raw file: `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md`
 - Original URL: https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary
-- Source page footer says: `This page was last edited on 31 January 2026, at 11:22.`
-- Captured with Obsidian Web Clipper on 2026-05-26.

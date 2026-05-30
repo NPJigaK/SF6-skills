@@ -9,9 +9,10 @@ sources:
 related:
   - "[[entities/jp]]"
   - "[[concepts/frame-data]]"
+aliases: []
 ---
 
-# Question: JPのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+# 質問: JPのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
 
 ## 短い答え
 

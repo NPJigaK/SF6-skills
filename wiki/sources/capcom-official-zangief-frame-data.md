@@ -1,7 +1,7 @@
 ---
 type: source
 source_type: official_frame_data
-title: "Capcom official Zangief frame data"
+title: "Capcom 公式 Zangief（ザンギエフ） フレームデータ"
 author: "Capcom"
 publisher: "Capcom"
 raw_path: "raw/official/frame-data/2026-05-27/zangief/manifest.json"
@@ -15,6 +15,9 @@ tags:
   - sf6
   - official
   - frame-data
+aliases:
+  - "Zangief frame data"
+  - "ザンギエフ フレームデータ"
 related_concepts:
   - "[[concepts/frame-data]]"
 related_entities:
@@ -23,65 +26,51 @@ related_entities:
   - "[[entities/zangief]]"
 ---
 
-# Source: Capcom Official Zangief Frame Data
+# ソース: Capcom 公式 Zangief（ザンギエフ） フレームデータ
 
-## One-line summary
+## 1行要約
 
-Capcom's official Street Fighter 6 frame data page for Zangief, captured as raw
-HTML, table DOM, screenshots, and derived CSV/field-meaning outputs for Classic
-and Modern controls.
+Capcom 公式サイトの Zangief（ザンギエフ） フレームデータを、Classic / Modern の raw HTML、DOM、screenshot、metadata として保存し、CSV と field-meaning JSON に派生抽出した source page。
 
-## Key takeaways
+## 重要ポイント
 
-1. The raw source is stored as a dated immutable snapshot under
-   `raw/official/frame-data/2026-05-27/zangief/`.
-2. The Classic capture contains 72 data rows; the Modern capture contains 66
-   data rows.
-3. The derived CSVs keep move names, raw input token displays, full input token
-   JSON, frame values, cancel values, damage, combo scaling, Drive gauge values,
-   SA gain, attributes, and notes.
-4. Header tooltip/explanatory text is stored separately in
-   `*.field-meanings.json`.
-5. The capture includes Zangief-specific command-grab and one/two-circle input
-   patterns, which makes it useful for stress-testing command input capture.
-6. The raw capture was reviewed and accepted by the human reviewer.
+1. raw snapshot は `raw/official/frame-data/2026-05-27/zangief/` 配下に日付付きで保存されている。`raw/` は原本保存層なので、この wiki 再コンパイルでは変更しない。
+2. Classic は 72 行、Modern は 66 行の技データを持つ。
+3. 派生 CSV は技名、入力 token 表示、入力 token JSON、発生、持続、硬直、ヒット/ガード硬直差、キャンセル、ダメージ、補正、Drive gauge、SA 増加、属性、備考を保持する。
+4. 表ヘッダの説明は `wiki/outputs/data/frame-data/zangief/classic.field-meanings.json` と `wiki/outputs/data/frame-data/zangief/modern.field-meanings.json` に分離して保存されている。
+5. この capture の review 状態は「人間レビュー済み accepted」。
 
-## Important claims
+## 重要な主張
 
-| Claim | Evidence | Confidence | Notes |
+| 主張 | 根拠 | 信頼度 | メモ |
 |---|---|---|---|
-| The source publisher is Capcom and the page is the official Zangief frame data URL. | `raw/official/frame-data/2026-05-27/zangief/manifest.json`; `raw/official/frame-data/2026-05-27/zangief/*/metadata.json` | high | Metadata records publisher, source URL, locale, character slug, and control scheme. |
-| Classic and Modern were captured as separate control-scheme outputs from the same official page. | `raw/official/frame-data/2026-05-27/zangief/classic/metadata.json`; `raw/official/frame-data/2026-05-27/zangief/modern/metadata.json` | high | The raw paths, metadata, screenshots, and table DOM files are separated by control scheme. |
-| The derived data has 72 Classic rows and 66 Modern rows. | `raw/official/frame-data/2026-05-27/zangief/manifest.json`; `wiki/outputs/data/frame-data/zangief/classic.csv`; `wiki/outputs/data/frame-data/zangief/modern.csv` | high | The extract command reproduced the same row counts from raw DOM. |
-| Header help text is captured outside the row CSV. | `wiki/outputs/data/frame-data/zangief/classic.field-meanings.json`; `wiki/outputs/data/frame-data/zangief/modern.field-meanings.json` | high | This separates field semantics from per-move rows. |
+| publisher は Capcom で、source URL は公式 Street Fighter 6 サイトの Zangief（ザンギエフ） frame page。 | `raw/official/frame-data/2026-05-27/zangief/manifest.json`; `raw/official/frame-data/2026-05-27/zangief/*/metadata.json` | high | metadata が publisher、locale、source URL、character slug、control scheme を記録している。 |
+| Classic と Modern は同じ公式 page の別 tab として保存されている。 | `raw/official/frame-data/2026-05-27/zangief/classic/metadata.json`; `raw/official/frame-data/2026-05-27/zangief/modern/metadata.json` | high | metadata が Classic tab index 0、Modern tab index 1 を記録している。 |
+| 派生データは Classic 72 行、Modern 66 行。 | `raw/official/frame-data/2026-05-27/zangief/manifest.json`; `wiki/outputs/data/frame-data/zangief/classic.csv`; `wiki/outputs/data/frame-data/zangief/modern.csv` | high | CSV 行数は raw DOM 由来の table row count と対応する。 |
+| field meanings は per-move CSV とは別に保存されている。 | `wiki/outputs/data/frame-data/zangief/classic.field-meanings.json`; `wiki/outputs/data/frame-data/zangief/modern.field-meanings.json` | high | Classic 7 records、Modern 8 records。 |
 
-## Related concepts
+## 関連概念
 
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
 - [[concepts/drive-system]]
 
-## Related entities
+## 関連エンティティ
 
 - [[entities/capcom]]
 - [[entities/street-fighter-6]]
 - [[entities/zangief]]
 
-## Contradictions or updates to existing wiki
+## 既存 wiki との矛盾または更新
 
-- This source adds a fourth official character frame-data capture after JP, Ryu,
-  and Chun-Li.
-- It helps stress-test the capture schema against one/two-circle inputs,
-  command grabs, and throw-heavy move data.
+- 個別技の値は、この source page では要約しない。再利用できる質問や統合分析が必要になった時に、raw DOM と派生 CSV から必要な範囲だけ昇格する。
+- `input_raw_display` は raw DOM token の表示であり、正規化されたコマンド表記ではない。
 
-## Open questions
+## 未解決の質問
 
-- Should command input tokens such as `key-circle` be normalized into readable
-  command notation for future answer pages?
-- Should move-name variants across Classic and Modern be normalized for some
-  comparison tasks, or should exact official move names remain the default?
+- この character のどの技データを、CSV から durable な技別 wiki page または synthesis に昇格すべきか。
 
-## Source notes
+## ソースメモ
 
 - Raw manifest: `raw/official/frame-data/2026-05-27/zangief/manifest.json`
 - Classic raw capture: `raw/official/frame-data/2026-05-27/zangief/classic/`

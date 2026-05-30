@@ -9,9 +9,10 @@ sources:
 related:
   - "[[entities/zangief]]"
   - "[[concepts/frame-data]]"
+aliases: []
 ---
 
-# Question: Zangiefのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
+# 質問: Zangiefのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
 
 ## 短い答え
 

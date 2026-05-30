@@ -37,8 +37,6 @@ sources:
   - "[[sources/capcom-official-c-viper-frame-data]]"
   - "[[sources/capcom-official-alex-frame-data]]"
   - "[[sources/capcom-official-ingrid-frame-data]]"
-  - "[[reviews/2026-05-27-health-check]]"
-  - "[[reviews/2026-05-30-official-frame-data-roster-capture-review]]"
   - "[[outputs/reports/2026-05-30-official-frame-data-coverage]]"
 related:
   - "[[concepts/drive-system]]"
@@ -75,89 +73,65 @@ related:
   - "[[entities/c-viper]]"
   - "[[entities/alex]]"
   - "[[entities/ingrid]]"
+aliases:
+  - "フレームデータ"
+  - "Frame Data"
 tags:
   - mechanics
   - glossary
 ---
 
-# Frame Data
+# Frame Data（フレームデータ）
 
-## Summary
+## 要約
 
-Frame data is the vocabulary and structured move data used to describe timing,
-recovery, advantage, damage, scaling, cancel options, and related move
-properties. The wiki now has official Capcom Classic and Modern frame-data
-outputs for 30 Street Fighter 6 character data slugs.
+Frame data は、技の発生、持続、硬直、有利不利、ダメージ、補正、キャンセル可否、Drive gauge 変動などを説明するための timing / property vocabulary と structured move data。現在この wiki には、30 character data slugs 分の Capcom 公式 Classic / Modern frame-data outputs がある。
 
-## Definition
+## 定義
 
-The SuperCombo glossary source defines frame-data vocabulary such as active
-frames, startup, recovery, cancel options, hit/block advantage, guard direction,
-damage, damage scaling, hitconfirm windows, Drive Rush Cancel advantage, and
-actionable recovery.
+SuperCombo glossary は active frames、startup、recovery、cancel options、hit/block advantage、guard direction、damage、damage scaling、hitconfirm windows、Drive Rush Cancel advantage、actionable recovery などの用語を説明している。
 
-The official Capcom frame-data captures provide structured per-move data in
-Classic and Modern controls. JP, Ryu, Chun-Li, and Zangief were previously
-human-accepted. The 26 new 2026-05-30 captures passed automated validation and
-are pending human review.
+Capcom 公式 capture は、Classic / Modern controls の per-move data を raw HTML、raw DOM、screenshot、metadata、派生 CSV / field-meaning JSON として保持する。JP、Ryu、Chun-Li、Zangief は人間レビュー済み accepted。2026-05-30 の 26 captures は自動検証済みで、人間レビューは未完了。
 
-## Why it matters
+## なぜ重要か
 
-Frame data terms, structured captures, and comparison conventions are needed
-before later wiki pages can interpret move data, comparisons, or
-timing-sensitive claims.
+frame-data 用語、structured capture、Classic / Modern comparison policy がないと、技データ、比較、timing-sensitive claims を安定して解釈できない。
 
-## Key claims
+## 主要な主張
 
-| Claim | Sources | Confidence |
+| 主張 | ソース | 信頼度 |
 |---|---|---|
-| Active describes how many frames a move remains able to hurt opponents. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| Recovery describes how many frames a move takes to finish after active frames end. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| Startup values are written with the last startup frame and first active frame as the same frame. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| Hit/block values describe frame advantage when an attack hits or is blocked. | [[sources/supercombo-street-fighter-6-glossary]] | medium |
-| The wiki has derived Classic and Modern official frame-data outputs for 30 character data slugs. | [[outputs/reports/2026-05-30-official-frame-data-coverage]] | high |
-| JP, Ryu, Chun-Li, and Zangief captures were previously accepted by human review. | [[reviews/2026-05-26-official-jp-frame-data-capture-review]], [[reviews/2026-05-27-official-ryu-frame-data-capture-review]], [[reviews/2026-05-27-official-chun-li-frame-data-capture-review]], [[reviews/2026-05-27-official-zangief-frame-data-capture-review]] | high |
-| The 26 new 2026-05-30 official captures passed automated validation and are pending human review. | [[reviews/2026-05-30-official-frame-data-roster-capture-review]] | high |
-| Official captures store field explanations separately from per-move CSV rows. | [[outputs/reports/2026-05-30-official-frame-data-coverage]] | high |
-| Classic/Modern comparisons should default to exact official move-name matching. | [[reviews/2026-05-27-health-check]] | high |
-| Reader-facing command notation is currently a display-only transform; raw input tokens remain the source-preserving data. | [[reviews/2026-05-27-health-check]] | high |
+| active は、技が相手に当たり得る状態で残る frames を説明する。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| recovery は、active frames 終了後に技が終わるまでの frames を説明する。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| startup は、技が active になるまでの frames を説明し、last startup frame と first active frame は同じ frame として扱われる。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| hit/block values は、攻撃が当たった時またはガードされた時の frame advantage を説明する。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| この wiki には 30 character data slugs 分の Classic / Modern 公式 frame-data outputs がある。 | [[outputs/reports/2026-05-30-official-frame-data-coverage]] | high |
+| JP、Ryu、Chun-Li、Zangief captures は人間レビュー済み accepted。 | [[reviews/2026-05-26-official-jp-frame-data-capture-review]], [[reviews/2026-05-27-official-ryu-frame-data-capture-review]], [[reviews/2026-05-27-official-chun-li-frame-data-capture-review]], [[reviews/2026-05-27-official-zangief-frame-data-capture-review]] | high |
+| 2026-05-30 の 26 official captures は自動検証済みで、人間レビューは未完了。 | [[reviews/2026-05-30-official-frame-data-roster-capture-review]] | high |
+| official captures は field explanations を per-move CSV rows から分離して保存している。 | [[outputs/reports/2026-05-30-official-frame-data-coverage]] | high |
+| Classic / Modern 比較は、公式の技名完全一致を default にする。 | [[reviews/2026-05-27-health-check]] | high |
+| 読者向け command notation は display-only transform であり、raw input tokens が source-preserving data。 | [[reviews/2026-05-27-health-check]] | high |
 
-## Comparison policy
+## 比較方針
 
-For Classic/Modern frame-data comparisons, use exact official move-name
-matching as the default. If two official names look like likely variants of the
-same practical move, such as `しゃがみ強K（ビッグスタンプ）` and `ビッグスタンプ`,
-annotate that relationship instead of silently merging the rows.
+Classic / Modern frame-data comparison では、公式表の技名完全一致を default にする。`しゃがみ強K（ビッグスタンプ）` と `ビッグスタンプ` のように実質対応しそうでも名前が違う場合は、勝手に merge せず、対応候補として注記する。
 
-Reader-facing answers may render raw input tokens as readable command notation
-such as `↓↘→ + 強P`. This is a display-only transform for explanations. The
-source-preserving data remains the raw token data stored in the official capture
-outputs.
+読者向け回答では `↓↘→ + 強P` のような読みやすい command notation を使ってよい。ただしこれは説明用の表示変換であり、source-preserving data は公式 capture outputs の raw token data。
 
-## Connections
+## 関連
 
 - [[concepts/drive-system]]
 - [[concepts/juggle-system]]
 - [[concepts/fighting-game-notation]]
 - [[entities/street-fighter-6]]
 
-## Contradictions / caveats
+## 矛盾 / 注意点
 
-- This page does not summarize individual move values; those values remain in
-  the raw DOM and derived CSV outputs until a specific reusable question or
-  synthesis needs them.
-- `input_raw_display` in the derived CSV is a raw DOM-token display, not a
-  normalized command notation.
-- Display-only command notation is not yet a formal canonical notation schema
-  for the wiki.
-- The 30-character coverage is not a single-date roster snapshot: JP is from
-  2026-05-26; Ryu, Chun-Li, and Zangief are from 2026-05-27; the other 26
-  characters are from 2026-05-30.
+- この page は個別技の値を網羅しない。個別値は raw DOM と派生 CSV に残し、再利用可能な question / synthesis が必要になった時だけ昇格する。
+- `input_raw_display` は raw DOM-token display であり、normalized command notation ではない。
+- 30-character coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30。
 
-## Open questions
+## 未解決の質問
 
-- When, if ever, should display-only command notation become a formal wiki
-  notation schema?
-- Which official source should be ingested to explain frame-data update history?
-- Should JP, Ryu, Chun-Li, and Zangief be recaptured under a 2026-05-30 date
-  label to make the full-roster snapshot single-date?
+- display-only command notation を formal wiki notation schema にする条件は何か。
+- 公式 patch notes / Battle Change List を ingest して、frame-data changes を時系列で扱うべきか。
