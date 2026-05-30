@@ -789,3 +789,37 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     batch after representative screenshot review?
   - Should JP, Ryu, Chun-Li, and Zangief be recaptured under a 2026-05-30 date
     label for a single-date full-roster snapshot?
+
+## [2026-05-30] 質問 | 春麗の立ち中Pのフレームデータ
+- 質問:
+  - 春麗の立ち中Pは、発生・ヒット時・ガード時・キャンセル可否・ダメージを教えて。
+- 参照:
+  - `wiki/index.md`
+  - `wiki/sources/capcom-official-chun-li-frame-data.md`
+  - `wiki/outputs/data/frame-data/chunli/classic.csv`
+  - `wiki/outputs/data/frame-data/chunli/modern.csv`
+- 作成:
+  - `wiki/questions/chun-li-standing-medium-p-frame-data.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 回答要約:
+  - 春麗の`立ち中P（頸穿刀）`はクラシックとモダンで同じ値:
+    発生5F、ヒット時+6F、ガード時+1F、キャンセル`C`、ダメージ600。
+- 未解決事項:
+  - この質問ではなし。
+
+## [2026-05-30] 質問レビュー | 春麗の立ち中P回答の修正
+- レビュー指摘:
+  - 発生、硬直差、キャンセル、ダメージだけでなく、持続と硬直も含める。
+  - `C`は必殺技、ドライブインパクト、ドライブラッシュ、SAでキャンセル可能という意味だと説明する。
+  - ガード時`+1`は、ガードされた時に春麗側が有利という意味だと説明する。
+- 更新:
+  - `wiki/questions/chun-li-standing-medium-p-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 修正後の回答要約:
+  - `立ち中P（頸穿刀）`: 発生5F、持続5-8F、硬直10F、ヒット時+6F、
+    ガード時+1F、キャンセル`C`、ダメージ600。
+- 未解決事項:
+  - なし。
