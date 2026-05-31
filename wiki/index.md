@@ -7,6 +7,7 @@
 | Page | Summary | Source date | Source type | Status |
 |---|---|---:|---|---|
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。Drive System、frame data、juggle、notation 用語を含む community source。 | 2026-05-26 | wiki_page | active |
+| [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw capture。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 123 件を含む community source。 | 2026-05-31 | community_frame_data | active |
 | [[sources/capcom-official-ryu-frame-data]] | Capcom 公式 Ryu（リュウ） frame-data capture。Classic 75 rows / Modern 69 rows。 | 2026-05-27 | official_frame_data | active |
 | [[sources/capcom-official-luke-frame-data]] | Capcom 公式 Luke（ルーク） frame-data capture。Classic 76 rows / Modern 73 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-jamie-frame-data]] | Capcom 公式 Jamie（ジェイミー） frame-data capture。Classic 103 rows / Modern 98 rows。 | 2026-05-30 | official_frame_data | active |
@@ -43,7 +44,7 @@
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | 技の timing/property vocabulary と、30 character data slugs 分の公式 Classic / Modern frame-data coverage。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
+| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo JP raw community capture。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit などの community terms。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。 | [[concepts/frame-data]] |
 
@@ -51,8 +52,8 @@
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary と公式 frame-data sources の game context。 | other |
-| [[entities/supercombo-wiki]] | 最初に ingest した glossary source の掲載元。 | other |
+| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo JP community frame-data capture の game context。 | other |
+| [[entities/supercombo-wiki]] | glossary と JP frame-data raw capture の掲載元である community wiki。 | other |
 | [[entities/capcom]] | 公式 Street Fighter 6 frame-data sources の publisher。 | company |
 | [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs がある character。 | character |
@@ -68,7 +69,7 @@
 | [[entities/dee-jay]] | Dee Jay（ディージェイ）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/manon]] | Manon（マノン）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/marisa]] | Marisa（マリーザ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/jp]] | JP。公式 Classic / Modern frame-data outputs がある character。 | character |
+| [[entities/jp]] | JP。公式 Classic / Modern frame-data outputs と SuperCombo raw community frame-data capture がある character。 | character |
 | [[entities/zangief]] | Zangief（ザンギエフ）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/lily]] | Lily（リリー）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/cammy]] | Cammy（キャミィ）。公式 Classic / Modern frame-data outputs がある character。 | character |
@@ -147,3 +148,4 @@
 | [[reviews/2026-05-27-official-zangief-frame-data-capture-review]] | capture_validation | Zangief 公式 frame-data capture の人間レビュー。 | accepted |
 | [[reviews/2026-05-27-health-check]] | health_check | 初期 official captures と Classic / Modern comparison pages 後の health check。 | open |
 | [[reviews/2026-05-30-official-frame-data-roster-capture-review]] | capture_validation | 2026-05-30 batch の 26 character captures の自動 validation review。 | open |
+| [[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]] | capture_validation | SuperCombo JP frame-data raw capture の自動 validation review。 | open |

@@ -1,0 +1,2058 @@
+{{Character Subnav SF6 | chara=JP }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = JP
+| name          = JP
+| portrait      = SF6 JP Portrait.png
+| icon          = SF6 JP Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.037
+| bwdWalkSpd    = 0.025
+| fwdDashSpd    = 22
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.454
+| bwdDashDist   = 1.003
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.525
+| dRushBlock    = 1.857
+| dRushMax      = 3.628
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_JP_5lp.png
+| hitboxes      = SF6_JP_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 6
+| active        = 3
+| recovery      = 10
+| total         = 18
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}
+| DRcancelHit   = {{sf6-adv|VP|+6}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 17
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.22
+| notes         = Chains into 5LP/2LP/2LK; DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_JP_5mp.png
+| hitboxes      = SF6_JP_5mp_hitbox.png
+| damage        = 700
+| startup       = 12
+| active        = 3
+| recovery      = 21
+| total         = 35
+| guard         = LH
+| cancel        = -
+| hitconfirm    = 15 (214HP)
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 3000
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.90
+| notes         = Long-range poke with great hitbox priority; cancelable into 214HP projectile when Departure portal is active
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_JP_5hp.png
+| hitboxes      = SF6_JP_5hp_hitbox.png
+| damage        = 800
+| dmgScaling    = 20% Starter
+| startup       = 12
+| active        = 2
+| recovery      = 22
+| total         = 35
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16 {{sf6-adv|PC|(23 PC)}}
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+25 Stagger}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+11}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 27
+| blockstun     = 21
+| hitstop       = 13 {{sf6-adv|PC|(20 PC)}}
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 4
+| jugLimit      = 4
+| atkRange      = 1.58
+| notes         = JP's main combo/juggle/punish tool (essentially a cancelable version of 5MP with less range); Punish Counter allows a 1-bar Drive Rush follow-up, or a cancel into 214PP with enough frame advantage to link 2MP afterwards; has juggle potential even without Drive Rush; puts airborne opponents into a limited juggle state; extends a large hurtbox 1f before active that is vulnerable to projectiles; hurtbox is extended horizontally during all active and recovery frames for easier whiff punishability
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_JP_5lk.png
+| hitboxes      = SF6_JP_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 11
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+6}}
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 17
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.12
+| rangeNotes    = JP's longest range 5f punish (among the shortest in the game)
+| notes         = DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_JP_5mk.png
+| hitboxes      = SF6_JP_5mk_hitbox.png
+| damage        = 600
+| startup       = 8
+| active        = 3
+| recovery      = 19
+| total         = 29
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+13}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 19
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.47
+| notes         = Cancelable poke and combo tool; special/DR cancel is delayed until after active frames; foot hurtbox does not extend until frame 11 (useful vs. low pokes)
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_JP_5hk.png
+| hitboxes      = SF6_JP_5hk_hitbox.png
+| damage        = 800
+| startup       = 12
+| active        = 4
+| recovery      = 17
+| total         = 32
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 18 TC / 214HP
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+11}}
+| afterDRBlk    = {{sf6-adv|VP|+6}}
+| hitstun       = 28
+| blockstun     = 23
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 9-15 Air (Head), 12-17 Air (Leg)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.62
+| notes         = Useful anti-air and combo/pressure starter with a confirmable Target Combo follow-up; whiffs on crouching opponents from farther away unless they extend a vertical hurtbox; pushback on block keeps JP out of throw range even after Drive Rush; cancelable into 214HP projectile when Departure portal is active
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_JP_2lp.png
+| hitboxes      = SF6_JP_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 11
+| total         = 16
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 12
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}
+| DRcancelHit   = {{sf6-adv|VP|+6}}
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 17
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.07
+| pushbackHit   = 0.371
+| pushbackBlk   = 0.325
+| notes         = Chains into 5LP/2LP/2LK; JP's only 4f normal, making it an important defensive option; DR cancel is delayed until after 2nd active frame; topmost hurtbox on frames 1-5 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_JP_2mp.png
+| hitboxes      = SF6_JP_2mp_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 4
+| recovery      = 14
+| total         = 24
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|P|+3}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 24
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.22
+| notes         = Good poke and combo/buffer tool; special/DR cancel is delayed until after active frames; has an extended hurtbox on whiff until the end of recovery; topmost hurtbox on frames 1-10 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_JP_2hp.png
+| hitboxes      = SF6_JP_2hp_hitbox_preview.png, SF6_JP_2hp_hitbox_1.png, SF6_JP_2hp_hitbox_2.png
+| damage        = 800
+| startup       = 9
+| active        = 6
+| recovery      = 20
+| total         = 34
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 20
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|P|-2}}
+| hitstun       = 27
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 4
+| jugLimit      = 6
+| atkRange      = 0.87
+| notes         = Solid anti-air but cannot hit cross-up; arm hurtbox is anti-air invuln on active frames 2-6; very short horizontal range; fastest of JP's heavy normals, making it useful in some Drive Rush combo routes; high juggle potential even without Drive Rush
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_JP_2lk.png
+| hitboxes      = SF6_JP_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 6
+| active        = 2
+| recovery      = 10
+| total         = 17
+| guard         = L
+| cancel        = Chn
+| hitconfirm    = 12 (214HP)
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.19
+| notes         = Chains into 5LP/2LP/2LK; cancelable into 214HP projectile when Departure portal is active
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_JP_2mk.png
+| hitboxes      = SF6_JP_2mk_hitbox.png
+| damage        = 700
+| dmgScaling    = 20% Starter
+| startup       = 9
+| active        = 3
+| recovery      = 17
+| total         = 28
+| guard         = L
+| cancel        = -
+| hitconfirm    = 15 (214HP)
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 23
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.74
+| notes         = Long range low poke that moves JP forward; after Drive Rush or Punish Counter, can confirm into 2MP; has an extended hurtbox on whiff until the end of recovery; cancelable into 214HP projectile when Departure portal is active
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Crouching Heavy Kick
+| images        = SF6_JP_2hk.png
+| hitboxes      = SF6_JP_2hk_hitbox.png
+| damage        = 900
+| startup       = 10
+| active        = 3
+| recovery      = 21
+| total         = 33
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +27
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = HKD +48
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = KD +27
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 6
+| jugLimit      = 6
+| atkRange      = 1.38
+| rangeNotes    = Short range but very safe when spaced
+| notes         = Short ranged sweep with good hitbox priority; very difficult for most characters to punish if well spaced; has juggle potential even without Drive Rush
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_JP_jlp.png
+| hitboxes      = SF6_JP_jlp_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+9)}}
+| blockAdv      = {{sf6-adv|VP|+4(+5)}}
+| punishAdv     = {{sf6-adv|VP|+12(+13)}}
+| perfParryAdv  = {{sf6-adv|M|-3(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.10
+| notes         = 
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_JP_jmp.png
+| hitboxes      = SF6_JP_jmp_hitbox.png
+| damage        = 700
+| startup       = 12
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+12(+13)}}
+| blockAdv      = {{sf6-adv|VP|+8(+9)}}
+| punishAdv     = {{sf6-adv|VP|+16(+17)}}
+| perfParryAdv  = {{sf6-adv|M|-3(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.84
+| notes         = Very long horizontal range; extends a large hurtbox 2f before active that makes it easily counterpoked out of the air; lower body projectile invuln 12-22f (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_JP_jhp.png
+| hitboxes      = SF6_JP_jhp_hitbox.png
+| damage        = 800
+| startup       = 9
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+15)}}
+| blockAdv      = {{sf6-adv|VP|+5(+11)}}
+| punishAdv     = {{sf6-adv|VP|+13(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.79
+| notes         = Causes spike knockdown vs. airborne opponents on Counter-hit/Punish Counter; good downwards hitbox priority; lower body projectile invuln 9-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_JP_jlk.png
+| hitboxes      = SF6_JP_jlk_hitbox.png
+| damage        = 300
+| startup       = 6
+| active        = 8
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+7)}}
+| punishAdv     = {{sf6-adv|VP|+8(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| notes         = Cross-up; can be used as a fuzzy instant overhead (requires perfect safe jump timing)
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_JP_jmk.png
+| hitboxes      = SF6_JP_jmk_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+13)}}
+| blockAdv      = {{sf6-adv|VP|+5(+9)}}
+| punishAdv     = {{sf6-adv|VP|+13(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| atkRange      = 1.20
+| notes         = Puts airborne opponents into a limited juggle state (similar to j.MP for most characters); useful for air-to-airs and juggles; lower body projectile invuln 7-20f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_JP_jhk.png
+| hitboxes      = SF6_JP_jhk_hitbox.png
+| damage        = 800
+| startup       = 11
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+15)}}
+| blockAdv      = {{sf6-adv|VP|+5(+11)}}
+| punishAdv     = {{sf6-adv|VP|+13(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.24
+| notes         = JP's best overall jump-in tool with decent hitbox priority; extends a hurtbox 1f before active, making it susceptible to being counterpoked out of the air; lower body projectile invuln 11-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 4MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_4mp | moveType = ground_normal
+| input         = 4MP
+| name          = Grom Strelka 1
+| images        = SF6_JP_4mp.png
+| hitboxes      = SF6_JP_4mp_hitbox.png
+| damage        = 500
+| startup       = 8
+| active        = 3
+| recovery      = 16
+| total         = 26
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 17 (23 TC)
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 24
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 400 (280)
+| superGainBlk  = 200 (100)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.15
+| notes         = Cancelable to Grom Strelka Target Combo with a very lenient hitconfirm window (1f blockstring gap if canceled into TC)
+}}
+
+===== 6MK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_6mk | moveType = ground_normal
+| input         = 6MK
+| name          = Guillotinna
+| images        = SF6_JP_6mk.png
+| hitboxes      = SF6_JP_6mk_hitbox.png
+| damage        = 700
+| startup       = 22
+| active        = 2
+| recovery      = 19
+| total         = 42
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 24
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1500
+| superGainHit  = 500 (250)
+| superGainBlk  = 350 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.50
+| notes         = Safe overhead that can link into 2LP with a meaty connect, or 2MP with a Drive Rush or Punish Counter
+}}
+
+===== 3HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_3hp | moveType = ground_normal
+| input         = 3HP
+| name          = Malice
+| images        = SF6_JP_3hp.png
+| hitboxes      = SF6_JP_3hp_hitbox.png
+| damage        = 900
+| startup       = 16
+| active        = 3
+| recovery      = 31
+| total         = 49
+| guard         = L
+| cancel        = -
+| hitAdv        = HKD +17
+| blockAdv      = {{sf6-adv|VM|-14}}
+| punishAdv     = HKD +39
+| perfParryAdv  = {{sf6-adv|VM|-32}}
+| afterDRHit    = HKD +17
+| afterDRBlk    = {{sf6-adv|VM|-10}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 20
+| jugLimit      = 20
+| atkRange      = 2.414
+| notes         = Long range advancing sweep; can be difficult to punish if well spaced; high juggle potential even without Drive Rush; no longer a Hard Knockdown if juggled into
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Bylina
+| images        = SF6_JP_6hk.png
+| hitboxes      = SF6_JP_6hk_hitbox_preview.png, SF6_JP_6hk_hitbox_1.png, SF6_JP_6hk_hitbox_2.png
+| damage        = 300,600
+| startup       = 11
+| active        = 2,4
+| recovery      = 24
+| total         = 40
+| guard         = LH
+| cancel        = Sp SA (2nd)
+| hitconfirm    = 34
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-5(-8)}}
+| punishAdv     = KD +38
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| DRcancelHit   = KD +55
+| DRcancelBlk   = {{sf6-adv|VP|+12}}
+| afterDRHit    = KD +38
+| afterDRBlk    = {{sf6-adv|M|-1}}{{sf6-adv|VM|(-4)}}
+| blockstun     = 25(22)
+| hitstop       = 13,13
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [5000x2]
+| driveGain     = 1250x2
+| superGainHit  = 500x2 (250x2)
+| superGainBlk  = 350x2 (125x2)
+| invuln        = 8-16 Air (Head/Leg)
+| jugStart      = 1,1
+| jugIncrease   = 0,1
+| jugLimit      = 1,1
+| atkRange      = 1.86 (1.56)
+| notes         = Solid anti-air (but a little slow and cannot hit cross-up); launches opponent into limited juggle state; 1st hit forces stand on hit; 2nd hit whiffs on crouching opponents for 3f worse advantage on crouch block; only 2nd hit is cancelable, so JP cannot make himself safe on a crouch blocking opponent (but if 6HK hits and the 2nd hit whiffs, the cancel can still come out); useful in many Drive Rush juggle routes; special/DR cancel is delayed until after 4th active frame (2nd active frame of 2nd hit)
+}}
+
+== Target Combos ==
+===== 4MP~MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_4mp_mp | moveType = ground_normal
+| input         = 4MP~MP
+| name          = Grom Strelka 2
+| images        = SF6_JP_4mp_mp.png
+| hitboxes      = SF6_JP_4mp_mp_hitbox.png
+| damage        = 500
+| dmgScaling    = Combo (2 hits)
+| startup       = 10
+| active        = 3
+| recovery      = 20
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 46(15)
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+16}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| hitstun       = 26
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [3000]
+| driveGain     = 800
+| superGainHit  = 400 (280)
+| superGainBlk  = 200 (100)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = Cancelable combo tool that can be hitconfirmed from 4MP; 1f gap between hits on block
+}}
+
+===== 5HK~HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5hk_hp | moveType = ground_normal
+| input         = 5HK~HP
+| name          = Zilant
+| images        = SF6_JP_5hk_hp.png
+| hitboxes      = SF6_JP_5hk_hp_hitbox.png
+| damage        = 500
+| startup       = 20
+| active        = 3
+| recovery      = 20
+| total         = 42
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 51-54(18) / 54-57(21) TC
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+9}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = True blockstring from 5HK (up to 1f gap on block if delayed to final cancel frame); safe on block and easily confirmed into a follow-up special or Drive Rush on hit; TC follow-ups cannot be comboed into unless the HP itself lands as a Counter-hit/Punish Counter; special/DR cancel is delayed until after 2nd active frame
+}}
+
+====== 5HK~HP~HP ======
+{{FrameData-SF6 | chara = JP | moveId = jp_5hk_hp_hp | moveType = ground_normal
+| input         = 5HK~HP~HP
+| name          = Zilant High
+| images        = SF6_JP_5hk_hp_hp.png
+| hitboxes      = SF6_JP_5hk_hp_hp_hitbox.png
+| damage        = 1000
+| startup       = 21
+| active        = 3
+| recovery      = 22
+| total         = 45
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| hitstun       = 28
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| notes         = TC overhead ender; does not combo naturally from 5HK~HP; 8f blockstring gap makes it easily interruptible
+}}
+
+====== 5HK~HP~HK ======
+{{FrameData-SF6 | chara = JP | moveId = jp_5hk_hp_hk | moveType = ground_normal
+| input         = 5HK~HP~HK
+| name          = Zilant Low
+| images        = SF6_JP_5hk_hp_hk.png
+| hitboxes      = SF6_JP_5hk_hp_hk_hitbox.png
+| damage        = 1000
+| startup       = 21
+| active        = 3
+| recovery      = 22
+| total         = 45
+| guard         = L
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| hitstun       = 28
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| notes         = TC low ender; does not combo naturally from 5HK~HP; 8f blockstring gap makes it easily interruptible
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_lplk | moveType = throw
+| input         = LPLK
+| name          = Ravina
+| images        = SF6_JP_lplk.png
+| hitboxes      = SF6_JP_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 40% Starter; 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = -
+| punishAdv     = HKD +23
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| jugStart      = 2
+| atkRange      = 0.80
+| notes         = Can dash forward for weak corner pressure (+1 after dash, throw loses to 4f lights), or Drive Rush for a manually timed strike/throw mixup (2MP is best, 5HK is auto-timed +7 oB but far out of throw range); throws opponent almost full screen away; damage scaling is applied when juggling into SA2, Departure spike, or Amnesia projectiles; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Uragan
+| images        = SF6_JP_4lplk.png
+| hitboxes      = SF6_JP_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +36
+| blockAdv      = -
+| punishAdv     = HKD +36
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| jugStart      = 0
+| atkRange      = 0.80
+| notes         = Side switch; throws opponent almost full screen away; after throwing opponent into corner, can dash to become +14 (no true strike/throw oki without Drive Rush); opponent can be juggled into SA2, Departure spike, or Amnesia projectiles before damage is applied, in which case there is no additional damage scaling; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== j.LPLK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_jlplk | moveType = throw
+| input         = j.LPLK
+| name          = Tornado
+| images        = SF6_JP_jlplk.png
+| hitboxes      = SF6_JP_jlplk_hitbox.png
+| damage        = 1200 (2040)
+| startup       = 5
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +32
+| blockAdv      = -
+| punishAdv     = HKD +32
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000(2800)]}}
+| atkRange      = 0.80
+| notes         = Side switch; can get oki if throwing opponent backwards into the corner; midscreen oki is very weak (better to set up Departure or throw a projectile)
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_hphk | moveType = drive
+| input         = HPHK
+| name          = Espada
+| images        = SF6_JP_hphk.png
+| hitboxes      = SF6_JP_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.535
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Exilio (Block)
+| images        = SF6_JP_6hphk.png
+| hitboxes      = SF6_JP_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 21
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.622
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = JP | moveId = jp_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Exilio (Recovery)
+| images        = SF6_JP_6hphk.png
+| hitboxes      = SF6_JP_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 21
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.622
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_JP_mpmk.png
+| hitboxes      = SF6_JP_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = JP | moveId = jp_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_JP_66.png
+| hitboxes      = SF6_JP_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.525 (min/throw), 1.857 (min/block), 3.628 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = JP | moveId = jp_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_JP_66.png
+| hitboxes      = SF6_JP_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Triglav ===
+===== 22P =====
+{{FrameData-SF6 | chara = JP | moveId = jp_22p | moveType = special
+| input         = 22P
+| name          = Triglav
+| images        = SF6_JP_22p.png
+| hitboxes      = SF6_JP_22p_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 22
+| active        = 10
+| recovery      = 24
+| total         = 55
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17
+| hitAdv        = KD +44
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +44
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 32
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 6
+| jugLimit      = 26
+| notes         = 1-hit projectile; button strength determines spike position (LP close, MP mid, HP far); spike appears from the ground and travels upward (takes 3f to reach max height); in the corner, all versions stop at the edge of the screen; puts opponent into limited juggle state on hit; useful tool for zoning, juggles, and block pressure (can be very plus on block with meaty timing)
+}}
+
+===== 22PP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_22pp | moveType = special
+| input         = 22PP
+| name          = Triglav
+| images        = SF6_JP_22pp.png
+| hitboxes      = SF6_JP_22PP_hitbox.png
+| damage        = 500x2
+| chip          = 125x2
+| dmgScaling    = 20% Starter
+| startup       = 20
+| active        = 10,10
+| recovery      = 14
+| total         = 53
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 19
+| hitAdv        = KD +53(+50)
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD +57(+50)
+| perfParryAdv  = {{sf6-adv|P|+3}}{{sf6-adv|VM|(-23)}}
+| blockstun     = 37(27)
+| hitstop       = 0,8
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1,1
+| jugIncrease   = 10,10
+| jugLimit      = 10,20
+| notes         = Spawns two separate 1-hit OD projectiles; spike position depends on button combination (LP+MP close, LP+HP mid, MP+HP far); each spike appears from the ground and travels upward (takes 3f to reach max height); in the corner, all versions stop at the edge of the screen; puts opponent into limited juggle state on hit; useful tool for zoning, juggles, and block pressure (can be very plus on block with meaty timing); frame advantage can increase slightly if the 2 spike hits are staggered; Punish Counter causes first spike to launch higher for increased KD Adv
+}}
+
+=== Stribog ===
+===== 236LP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236lp | moveType = special
+| input         = 236LP
+| name          = Stribog
+| images        = SF6_JP_236lp.png
+| hitboxes      = SF6_JP_236lp_hitbox1.png,F6_JP_236lp_hitbox2.png
+| damage        = 300,700
+| chip          = 75,175
+| startup       = 16
+| active        = 3,3
+| recovery      = 28
+| total         = 49
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 27(11 proj)
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = KD +38
+| perfParryAdv  = {{sf6-adv|VM|-32(-29)}}
+| blockstun     = 24(21)
+| hitstop       = 13,(8)
+| driveDmgBlk   = 1000,2500
+| driveDmgHit   = [2000,3000]
+| driveGain     = 500,1500
+| superGainHit  = 300,500 (210,350)
+| superGainBlk  = 150,250 (75,125)
+| jugStart      = 2,1
+| jugIncrease   = 1,1
+| jugLimit      = 1,50
+| atkRange      = 1.56 (1st)
+| notes         = 1st hit is a strike hitbox that clashes with non-OD projectiles; 2nd hit is a 1-hit non-OD projectile (but can be Perfect Parried like a strike; together, both hits can nullify a 2-hit non-OD projectile; 2nd hit has more range than the 1st hit; puts opponents into limited juggle state on hit; cannot hit cross-up (behind JP); 8f hitstop when clashing with opponent's projectile; 2nd hit expands if the 1st hit connects (for combo consistency)
+}}
+
+===== 236MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236mp | moveType = special
+| input         = 236MP
+| name          = Stribog
+| images        = SF6_JP_236mp1.png
+| hitboxes      = SF6_JP_236mp_hitbox1.png,SF6_JP_236mp_hitbox2.png
+| damage        = 400,800
+| chip          = 100,200
+| startup       = 20
+| active        = 3(1)3
+| recovery      = 27
+| total         = 53
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 30(13 proj)
+| hitAdv        = KD +42
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-32(-28)}}
+| blockstun     = 26(22)
+| hitstop       = 13,(8)
+| driveDmgBlk   = 1000,2500
+| driveDmgHit   = [2000,3000]
+| driveGain     = 500,1500
+| superGainHit  = 300,500 (210,350)
+| superGainBlk  = 150,250 (75,125)
+| jugStart      = 2,1
+| jugIncrease   = 1,1
+| jugLimit      = 1,50
+| atkRange      = 1.66 (1st)
+| notes         = 1st hit is a strike hitbox that clashes with non-OD projectiles; 2nd hit is a 1-hit non-OD projectile (but can be Perfect Parried like a strike; together, both hits can nullify a 2-hit non-OD projectile; 2nd hit has more range than the 1st hit; puts opponents into limited juggle state on hit; in the corner, launched high enough to juggle into the first hit of SA1; cannot hit cross-up (behind JP); 8f hitstop when clashing with opponent's projectile; 2nd hit expands if the 1st hit connects (for combo consistency)
+}}
+
+===== 236HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236hp | moveType = special
+| input         = 236HP
+| name          = Stribog
+| images        = SF6_JP_236hp.png
+| hitboxes      = SF6_JP_236hp_hitbox1.png,SF6_JP_236hp_hitbox2.png
+| damage        = 300,500
+| chip          = 75,125
+| startup       = 28
+| active        = 3(9)3
+| recovery      = 19
+| total         = 61
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 31(6 proj)
+| hitAdv        = KD +67(+87)
+| blockAdv      = {{sf6-adv|VP|+4}}
+| punishAdv     = KD +67(+87)
+| perfParryAdv  = {{sf6-adv|VM|-35(-23)}}
+| blockstun     = 36(26)
+| hitstop       = 13,(8)
+| driveDmgBlk   = 1000,2500
+| driveDmgHit   = [2000,3000]
+| driveGain     = 500,1500
+| superGainHit  = 300,500 (210,350)
+| superGainBlk  = 150,250 (75,125)
+| jugStart      = 1,3
+| jugIncrease   = 1,2
+| jugLimit      = 1,2
+| atkRange      = 1.80 (1st)
+| notes         = 1st hit is a strike hitbox that clashes with non-OD projectiles; 2nd hit is a 1-hit non-OD projectile (but can be Perfect Parried like a strike); together, both hits can nullify a 2-hit non-OD projectile (though the large gap between hits makes this impractical); 2nd hit has more range than the 1st hit; causes a wall bounce on hit (limited juggle state); cannot hit cross-up (behind JP); direct SA3 cancel will not usually juggle; 8f hitstop when clashing with opponent's projectile; 1st hit has 3f extra recovery when Perfect Parried, allowing a Drive Impact punish (recovery is unchanged if the 2nd attack hits opponent); 2nd hit expands if the 1st hit connects (for combo consistency)
+}}
+
+===== 236PP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236pp | moveType = special
+| input         = 236PP
+| name          = Stribog
+| images        = SF6_JP_236pp.png
+| hitboxes      = SF6_JP_236pp_hitbox1.png,SF6_JP_236pp_hitbox2.png
+| damage        = 600,400<br>(2nd: 800)
+| chip          = 150,100<br>(2nd: 200)
+| startup       = 19
+| active        = 3(6)3
+| recovery      = 22
+| total         = 52
+| guard         = LH
+| cancel        = SA2 SA3 (1st)
+| hitconfirm    = 17 (1st)
+| hitAdv        = KD +56(+72)
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +56(+72)
+| perfParryAdv  = {{sf6-adv|VM|-35(-26)}}
+| blockstun     = 36(27)
+| hitstop       = 13,(8)
+| driveDmgBlk   = 1000,2500
+| driveDmgHit   = [2000,3000]
+| driveGain     = -20000
+| superGainHit  = 300,500 (210,350)
+| superGainBlk  = 150,250 (75,125)
+| jugStart      = 1,3
+| jugIncrease   = 1,2
+| jugLimit      = 1,2
+| atkRange      = 1.80 (1st)
+| notes         = 1st hit is a strike hitbox that clashes with OD projectiles; 2nd hit is a 1-hit OD projectile (but can be Perfect Parried like a strike); together, both hits can nullify a 2-hit OD projectile; 2nd hit has more range than the 1st hit; causes a wall bounce on hit (limited juggle state); cannot hit cross-up (behind JP); SA3 cancel will whiff at point blank (but works consistently after canceling normals into 236PP); 8f hitstop when clashing with opponent's projectile; 1st hit has 3f extra recovery when Perfect Parried, allowing a Drive Impact punish (recovery is unchanged if the 2nd attack hits opponent); 2nd hit expands if the 1st hit connects (for combo consistency); 2nd hit does double damage when the 1st hit whiffs
+}}
+
+=== Departure ===
+===== 214P =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214p | moveType = special
+| input         = 214P
+| name          = Departure
+| images        = SF6_JP_214p.png
+| hitboxes      = SF6_JP_214p_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 50+100
+| active        = [10]
+| recovery      = 50 total
+| total         = 50
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = -
+| punishAdv     = KD ~
+| blockstun     = 31
+| hitstop       = 13
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 0
+| jugIncrease   = 0 / 1
+| jugLimit      = 50
+| notes         = Spawns a portal in the air according to button strength (LP close, MP mid, HP far); while the portal is active, JP cannot use 214P command grab; portal disappears if JP is hit or thrown; can manually input 214LP/MP or 214HP follow-up while portal is active; if no follow-up is input, the portal automatically spawns a 1-hit spike projectile toward the opponent 100f after JP recovers (150f total startup); spike puts opponents into a free juggle state; the automatic spike activation allows for strong mixups, as JP is free to move while it occurs (unlike 214P~214HP version where he snaps his fingers); cannot spawn another portal until the first has disappeared; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spike connects)
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214pp | moveType = special
+| input         = 214PP
+| name          = Departure
+| images        = SF6_JP_214pp.png
+| hitboxes      = SF6_JP_214pp_hitbox.png
+| damage        = 500x2
+| chip          = 125x2
+| startup       = 40+70
+| active        = [10(20)10]
+| recovery      = 40 total
+| total         = 40
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = -
+| punishAdv     = KD ~
+| blockstun     = 31 each
+| hitstop       = 13 each
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| jugStart      = 0,0
+| jugIncrease   = 0,0 / 1
+| jugLimit      = 50,50
+| notes         = Spawns 2 portals in the air according to button strengths used (LP close, MP mid, HP far); while the portals are active, JP cannot use 214P command grab; portals disappear if JP is hit or thrown; can manually input 214LP/MP or 214HP follow-up while portals are active; if no follow-up is input, each portal automatically spawns a 1-hit OD spike projectile (starting with the closest portal) angled toward the opponent 70f after JP recovers (110f total startup); spikes put opponents into a free juggle state; the automatic spike activation allows for strong mixups, as JP is free to move while it occurs (unlike 214PP~214HP version where he snaps his fingers); cannot spawn another portal until both have disappeared; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spikes connect)
+}}
+
+=== Departure: Window ===
+===== 214P~214LP/MP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214p_214lp_mp | moveType = special
+| input         = 214P~214LP/MP
+| name          = Departure: Window
+| images        = SF6_JP_214p_214lp_mp.png
+| hitboxes      = SF6_JP_214p_214lp_mp_hitbox.png
+| damage        = -
+| startup       = 6
+| active        = [20]
+| recovery      = 16+3 land
+| total         = 44
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 6-25 Full
+| airborne      = 26-41 (FKD)
+| notes         = Fully invincible while off-screen; Punish Counter state while airborne; teleports to portal location and causes portal to disappear (after OD Departure, LP version goes to close portal while MP version goes to far portal); JP can act in the air on frames 31-41; JP always faces the opponent after reappearing; if no air attack is used, JP has 1 punishable landing frame, then can block on the next 2 landing frames
+}}
+
+
+=== Departure: Shadow ===
+===== 214P~214HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214p_214hp | moveType = special
+| input         = 214P~214HP
+| name          = Departure: Shadow
+| images        = SF6_JP_214p_214hp.png
+| hitboxes      = SF6_JP_214p_214hp_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter
+| startup       = 19(21)
+| active        = [10]
+| recovery      = 21
+| total         = 40
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +58(+60)
+| blockAdv      = {{sf6-adv|VP|+9(+11)}}
+| punishAdv     = KD +58(+60)
+| perfParryAdv  = {{sf6-adv|VM|-9(-11)}}
+| blockstun     = 31
+| hitstop       = 13
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 0
+| jugIncrease   = 0 / 1
+| jugLimit      = 50
+| notes         = Spawns a 1-hit projectile spike from the active portal; spike is angled downward toward the opponent; 1st active frame only hits airborne or tall standing characters; 2nd active frame reaches regular-size standing characters; 3rd active frame reaches all crouching characters; useful tool for zoning, juggles, chip damage, and oki; puts opponent into free juggle state on hit; opponent builds 50% extra Drive meter when parrying the spike; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spike connects); can be canceled into from 2LK / 5MP / 2MK / 5HK despite not usually being cancelable
+}}
+
+===== 214PP~214HP =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214pp_214hp | moveType = special
+| input         = 214PP~214HP
+| name          = OD Departure: Shadow
+| images        = SF6_JP_214pp_214hp.png
+| hitboxes      = SF6_JP_214pp_214hp_hitbox.png
+| damage        = 500x2
+| chip          = 125x2
+| dmgScaling    = 20% Starter
+| startup       = 19(21)
+| active        = [10(20)10]
+| recovery      = 21
+| total         = 40
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +92
+| blockAdv      = {{sf6-adv|VP|+39(+40)}}
+| punishAdv     = KD +92
+| perfParryAdv  = {{sf6-adv|VP|+20}}
+| blockstun     = 31 each
+| hitstop       = 13 each
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| jugStart      = 0,0
+| jugIncrease   = 0,0 / 1
+| jugLimit      = 50,50
+| notes         = Spawns 2 separate OD projectile spikes beginning from the closest portal; spikes are angled downward toward the opponent; for each spike, 1st active frame only hits airborne or tall standing characters; 2nd active frame reaches regular-size standing characters; 3rd active frame reaches all crouching characters; useful tool for zoning, juggles, chip damage, and oki; puts opponent into free juggle state on hit; opponent builds 40% extra Drive meter when parrying the spikes; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spikes connect); can be canceled into from 2LK / 5MP / 2MK / 5HK despite not usually being cancelable
+}}
+
+=== Torbalan ===
+===== 236LK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236lk | moveType = special
+| input         = 236LK
+| name          = Torbalan
+| images        = SF6_JP_236lk.png
+| hitboxes      = SF6_JP_236lk_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 14+8
+| active        = 6
+| recovery      = 50 total
+| total         = 50
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 20
+| hitAdv        = KD +42~
+| blockAdv      = {{sf6-adv|VM|-6~}}
+| punishAdv     = KD +42~
+| perfParryAdv  = {{sf6-adv|VM|-18~}}
+| blockstun     = 23
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| projSpeed     = 0.13
+| notes         = Spawns a "ghost" that travels toward opponent and clashes with 1-hit non-OD projectiles; upon reaching the opponent, begins an 8f projectile attack; if the opponent moves forward quickly, it is possible to dodge the projectile entire since it is not active while traveling; from longer range, total startup increases and grants better frame advantage; cannot be used while SA2 is active; projectile speed decelerates by 0.01/frame when in proximity of opponent
+}}
+
+===== 236MK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236mk | moveType = special
+| input         = 236MK
+| name          = Torbalan
+| images        = SF6_JP_236mk.png
+| hitboxes      = SF6_JP_236mk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| dmgScaling    = 20% Starter
+| startup       = 14+12
+| active        = 6
+| recovery      = 50 total
+| total         = 50
+| guard         = H
+| cancel        = SA3
+| hitconfirm    = 16*
+| hitAdv        = {{sf6-adv|VP|+6~}}
+| blockAdv      = {{sf6-adv|VM|-8~}}
+| punishAdv     = {{sf6-adv|VP|+10~}}
+| perfParryAdv  = {{sf6-adv|VM|-14~}}
+| hitstun       = 31
+| blockstun     = 17
+| hitstop       = 6
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 10
+| projSpeed     = 0.13
+| notes         = Spawns a "ghost" that travels toward opponent and clashes with 1-hit non-OD projectiles; upon reaching the opponent, begins an 12f overhead projectile attack; if the opponent moves forward quickly, it is possible to dodge the projectile entire since it is not active while traveling; from longer range, total startup increases and grants better frame advantage; cannot be used while SA2 is active; cancel into SA3 won't combo at close range without CH/PC; projectile speed decelerates by 0.01/frame when in proximity of opponent
+}}
+
+===== 236HK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236hk | moveType = special
+| input         = 236HK
+| name          = Torbalan
+| images        = SF6_JP_236hk.png
+| hitboxes      = SF6_JP_236hk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| dmgScaling    = 20% Starter
+| startup       = 14+12
+| active        = 6
+| recovery      = 50 total
+| total         = 50
+| guard         = L
+| cancel        = SA3
+| hitconfirm    = 16*
+| hitAdv        = {{sf6-adv|VP|+6~}}
+| blockAdv      = {{sf6-adv|VM|-8~}}
+| punishAdv     = {{sf6-adv|VP|+10~}}
+| perfParryAdv  = {{sf6-adv|VM|-14~}}
+| hitstun       = 31
+| blockstun     = 17
+| hitstop       = 6
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 10
+| projSpeed     = 0.13
+| notes         = Spawns a "ghost" that travels toward opponent and clashes with 1-hit non-OD projectiles; upon reaching the opponent, begins an 12f low-hitting projectile attack; if the opponent moves forward quickly, it is possible to dodge the projectile entire since it is not active while traveling; from longer range, total startup increases and grants better frame advantage; cannot be used while SA2 is active; cancel into SA3 won't combo at close range without CH/PC; projectile speed decelerates by 0.01/frame when in proximity of opponent
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236kk | moveType = special
+| input         = 236KK
+| name          = Torbalan
+| images        = SF6_JP_236kk.png
+| hitboxes      = SF6_JP_236kk_hitbox1.png,SF6_JP_236kk_hitbox2.png
+| damage        = 400x2
+| dmgScaling    = 20% Starter
+| chip          = 100x2
+| startup       = 22
+| active        = 6(14)6
+| recovery      = 50 total
+| total         = 50
+| guard         = LH
+| cancel        = SA2 SA3 (1st)
+| hitconfirm    = 10 (1st, close)
+| hitAdv        = KD +66~
+| blockAdv      = {{sf6-adv|VP|+25~}}
+| punishAdv     = KD +66~
+| perfParryAdv  = {{sf6-adv|VM|-18}}{{sf6-adv|VP|(+13)}}
+| blockstun     = 54 total
+| hitstop       = 13,13
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| jugStart      = 1,6
+| jugIncrease   = 1,6
+| jugLimit      = 10,11
+| projSpeed     = 0.13
+| notes         = Spawns a "ghost" that travels toward opponent with 2-hit OD projectile priority; upon reaching the opponent, begins an OD projectile attack with 8f startup; after clashing with 1-hit OD projectile, only the 1st hit of the projectile attack will come out; SA2 cancel is a true blockstring or combo into the projectile attacks; if the opponent moves forward quickly, it is possible to dodge the projectile entire since it is not active while traveling; from longer range, total startup increases and grants better frame advantage; cannot be used while SA2 is active; if 1st hit is Perfect Parried, leaves a large gap where JP can be punished if close enough; projectile speed decelerates by 0.01/frame when in proximity of opponent
+}}
+
+===== 236[K] =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236k_hold | moveType = special
+| input         = 236[K]
+| name          = Torbalan Feint
+| images        = SF6_JP_236k_hold.png
+| hitboxes      = SF6_JP_236k_hold_hitbox.png
+| damage        = -
+| startup       = 34 total
+| active        = -
+| recovery      = -
+| total         = 34
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Great tool for baiting the opponent into whiffing Parry, jumping, or using anti-projectile attack
+}}
+
+=== Embrace ===
+===== 214K =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214k | moveType = special
+| input         = 214K
+| name          = Embrace
+| images        = SF6_JP_214k.png, SF6_JP_214k_2.png
+| hitboxes      = SF6_JP_214k_hitbox.png
+| damage        = 1800 (2070)
+| dmgScaling    = 10% Immediate
+| startup       = 26~
+| active        = 3
+| recovery      = 44
+| total         = 72
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +18
+| blockAdv      = -
+| punishAdv     = HKD +18
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 3000 (2100)
+| projSpeed     = 0.13
+| notes         = 1-hit projectile command grab; clashes with non-OD projectiles; can be comboed into against grounded opponents; minimum 72f total animation; startup increases at long range due to projectile grab travel time; cannot be performed if SA2 or a Departure portal are active on the screen; projectile speed decelerates by 0.01/frame when in proximity of opponent
+}}
+
+===== 214KK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214kk | moveType = special
+| input         = 214KK
+| name          = Embrace
+| images        = SF6_JP_214kk.png
+| hitboxes      = SF6_JP_214kk_hitbox.png
+| damage        = 2600 (2990)
+| dmgScaling    = 10% Immediate
+| startup       = 26~
+| active        = 3
+| recovery      = 44
+| total         = 72
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +18
+| blockAdv      = -
+| punishAdv     = HKD +18
+| driveDmgHit   = [10000]
+| driveGain     = -20000
+| superGainHit  = 3000 (2100)
+| projSpeed     = 0.13
+| notes         = 1-hit OD projectile command grab; clashes with OD projectiles (can destroy non-OD projectiles, allowing the throw to continue); can be comboed into against grounded opponents; minimum 72f total animation; startup increases at long range due to projectile grab travel time; cannot be performed if SA2 or a Departure portal are active on the screen; projectile speed decelerates by 0.01/frame when in proximity of opponent
+}}
+
+=== Amnesia ===
+===== 22K =====
+{{FrameData-SF6 | chara = JP | moveId = jp_22k | moveType = special
+| input         = 22K
+| name          = Amnesia
+| images        = SF6_JP_22k.png
+| hitboxes      = SF6_JP_22k_hitbox.png
+| damage        = -
+| startup       = 3
+| active        = 18
+| recovery      = 35(17)
+| total         = 55
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = 10000
+| superGainHit  = 2000 (0)
+| invuln        = 3-20 Strike
+| notes         = Counters strikes (but not projectiles or throws) on frames 3-20; JP is in a counter-hit state on frames 1-2, then a Punish Counter state until end of recovery; 17f recovery on a successful counter is fully invincible; resulting frame advantage depends on which move the opponent used (JP can be at frame disadvantage); successful counter places a bomb near the opponent that tracks their location; prevents the opponent from canceling their attack, similar to a Perfect Parry; cannot be input again until bomb detonates
+}}
+
+===== 22K~Bomb =====
+{{FrameData-SF6 | chara = JP | moveId = jp_22k_bomb | moveType = special
+| input         = 22K (Bomb)
+| name          = Amnesia Bomb
+| images        = SF6_JP_22k_bomb.png
+| hitboxes      = SF6_JP_22k_bomb_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 50% Starter; 60% Immediate
+| startup       = 59
+| active        = 10
+| recovery      = -
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = -
+| punishAdv     = KD ~
+| perfParryAdv  = -
+| blockstun     = 28
+| hitstop       = (13)
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 100
+| notes         = Projectile hitbox; bomb tracks the opponent's location; before detonating, bomb destroys any non-Super projectile; bomb is destroyed if it interacts with Super projectile; bomb causes proximity guard, limiting the opponent's movement until it explodes; bomb detonates immediately if JP cancels a move into SA3 while active (preventing him from bypassing the damage scaling)
+}}
+
+===== 22KK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_22kk | moveType = special
+| input         = 22KK
+| name          = Amnesia
+| images        = SF6_JP_22kk.png
+| hitboxes      = SF6_JP_22kk_hitbox.png
+| damage        = -
+| startup       = 1
+| active        = 20
+| recovery      = 35(17)
+| total         = 55
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| superGainHit  = 2000 (0)
+| invuln        = 1-20 Strike/Throw
+| notes         = Counters strikes and throws (but not projectiles) on frames 1-20; JP is in a Punish Counter state until end of recovery; 17f recovery on a successful counter is fully invincible; resulting frame advantage depends on which move the opponent used (JP can be at frame disadvantage); successful counter places 2 bombs near the opponent that track their location; prevents the opponent from canceling their attack, similar to a Perfect Parry; cannot be input again until both bombs detonate
+}}
+
+===== 22KK~Bomb =====
+{{FrameData-SF6 | chara = JP | moveId = jp_22kk_bomb | moveType = special
+| input         = 22KK (Bomb)
+| name          = Amnesia Bomb
+| images        = SF6_JP_22kk.png
+| hitboxes      = SF6_JP_22kk_hitbox.png
+| damage        = 600x2
+| chip          = 150z2
+| dmgScaling    = 50% Starter; 60% Immediate
+| startup       = 59
+| active        = 10(32)10
+| recovery      = -
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = -
+| punishAdv     = KD ~
+| perfParryAdv  = -
+| blockstun     = 28 each
+| hitstop       = (13) each
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [5000]
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 0,0
+| jugIncrease   = 0,0
+| jugLimit      = 100,100
+| notes         = Projectile hitbox; bombs track the opponent's location; before detonating, bombs destroy any non-Super projectile; bombs are destroyed if they interact with Super projectile; bombs cause proximity guard, limiting the opponent's movement until they explode; bombs detonate immediately if JP cancels a move into SA3 while active (preventing him from bypassing the damage scaling); opponent builds 50% extra Drive meter from parrying the bombs
+}}
+
+== Super Arts ==
+===== 236236P =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236236p | moveType = super
+| input         = 236236P
+| name          = Chornobog
+| images        = SF6_JP_236236p.png
+| hitboxes      = SF6_JP_236236p_hitbox1.png,SF6_JP_236236p_hitbox2.png
+| damage        = 400,1600 (2000)
+| chip          = 100,400 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 8
+| active        = 14,1~
+| recovery      = 62
+| total         = 84
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +22(+32)
+| blockAdv      = {{sf6-adv|VM|-33(-23)}}
+| punishAdv     = KD +22(+32)
+| perfParryAdv  = {{sf6-adv|VM|-52(-42)}}
+| blockstun     = 44(30)
+| hitstop       = 16,(10)
+| driveDmgBlk   = 2500
+| driveDmgHit   = 5000
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-10 Strike/Throw
+| armor         = Break
+| jugStart      = 10,100
+| jugIncrease   = 10,100
+| jugLimit      = 90,100
+| projSpeed     = 0.3 (2nd hit)
+| atkRange      = 1.50 (1st)
+| notes         = Super projectile hitbox; 1st hit (active frames 1-14) can be Perfect Parried like a strike; 2nd hit travels fullscreen; has high juggle potential, making it especially useful in combos where JP is close enough for the initial hit to connect; 8f hitstop when clashing with opponent's projectile
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = JP | moveId = jp_214214p | moveType = super
+| input         = 214214P
+| name          = Lovushka
+| images        = SF6_JP_214214p.png
+| hitboxes      = SF6_JP_214214p_hitbox1.png,SF6_JP_214214p_hitbox2.png,SF6_JP_214214p_hitbox3.png,SF6_JP_214214p_hitbox4.png
+| damage        = 500x4 (2000)
+| chip          = 75x4 (300)
+| dmgScaling    = 40% Minimum; 25% Starter (3rd hit); 25% Immediate
+| startup       = 1
+| active        = -
+| recovery      = 12
+| total         = 13
+| guard         = LH,H,L,H
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| hitstun       = 41 each
+| blockstun     = 20 each
+| hitstop       = (13) each
+| driveDmgBlk   = 1000x4
+| driveDmgHit   = 2500x4
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break (all)
+| jugStart      = 1
+| jugIncrease   = 1x4
+| jugLimit      = 100x4
+| notes         = Spawns 4 separate 1-hit Super projectiles that track the opponent; starter scaling applies to 3rd attack in the combo; immediate scaling applies to the SA2 projectiles if comboed into; total startup for each hit of the sequence is 34f, 71f, 108f, 145f; leaves a 17f gap between each projectile on block; hitstun/blockstun values include the 13f hitstop inflicted on the defender
+}}
+
+===== 236236K =====
+{{FrameData-SF6 | chara = JP | moveId = jp_236236k | moveType = super
+| input         = 236236K
+| name          = Interdiction
+| images        = SF6_JP_236236k.png
+| hitboxes      = SF6_JP_236236k_hitbox_1.png, SF6_JP_236236k_hitbox_2.png
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| damage        = 4000
+| chip          = 1000
+| startup       = 18
+| active        = 6
+| recovery      = 62
+| total         = 85
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +23
+| blockAdv      = {{sf6-adv|VM|-50}}
+| punishAdv     = HKD +23
+| perfParryAdv  = {{sf6-adv|VM|-66}}
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-23 Full
+| armor         = Break
+| jugLimit      = 100
+| notes         = Teleports to the opponent's location; extends a high combo-only hitbox but can still whiff if opponent is juggled too high; can be comboed into from anywhere on the screen; cinematic time regenerates ~1.8 Drive bars for JP; leaves opponent 3/4 screen away after cinematic
+}}
+
+====== 236236K (CA) ======
+{{FrameData-SF6 | chara = JP | moveId = jp_236236k(ca) | moveType = super
+| input         = 236236K
+| name          = Interdiction (CA)
+| images        = SF6_JP_236236k(ca).png
+| hitboxes      = SF6_JP_236236k_hitbox_1.png, SF6_JP_236236k_hitbox_2.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 18
+| active        = 6
+| recovery      = 62
+| total         = 85
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +44
+| blockAdv      = {{sf6-adv|VM|-50}}
+| punishAdv     = HKD +44
+| perfParryAdv  = {{sf6-adv|VM|-66}}
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-23 Full
+| armor         = Break
+| jugLimit      = 100
+| notes         = Teleports to the opponent's location; extends a high combo-only hitbox but can still whiff if opponent is juggled too high; can be comboed into from anywhere on the screen; available at 25% HP or below; cinematic time regenerates ~2.2 Drive bars for JP; leaves opponent fullscreen after cinematic with enough time to set up a Departure portal
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_JP_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 220 (total)
+| active        = -
+| recovery      = -
+| total         = 220
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Is... something the matter?"
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_JP_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 395 (total)
+| active        = -
+| recovery      = -
+| total         = 395
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Do you need to take a rest?"
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = JP | moveId = jp_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_JP_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 202 (total)
+| active        = -
+| recovery      = -
+| total         = 202
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Is this fight not what you wanted?"
+}}
+
+
+{{Character Subnav SF6 | chara=JP }}
+{{Navbox-SF6}}
+[[Category:Street Fighter 6]]
+[[Category:JP]]

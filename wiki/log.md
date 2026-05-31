@@ -846,3 +846,41 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     最速なら連続ヒットするが、数値上の余裕はない。
 - 未解決事項:
   - 実戦での距離、押し戻し、食らい判定は別途確認が必要。
+
+## [2026-05-31] 取り込み | SuperCombo JP フレームデータの生データ取得
+- Raw source:
+  - `raw/supercombo/frame-data/2026-05-31/jp/manifest.json`
+  - `raw/supercombo/frame-data/2026-05-31/jp/data.raw.wikitext`
+  - `raw/supercombo/frame-data/2026-05-31/jp/frame-data.raw.wikitext`
+  - `raw/supercombo/frame-data/2026-05-31/jp/cargo/`
+  - `raw/supercombo/frame-data/2026-05-31/jp/rendered/`
+  - `raw/supercombo/frame-data/2026-05-31/jp/screenshots/`
+  - `raw/supercombo/frame-data/2026-05-31/jp/images/files/`
+- 追加:
+  - `tools/capture_supercombo_frame_data.py`
+  - `tools/validate_supercombo_frame_data.py`
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/reviews/2026-05-31-supercombo-jp-frame-data-capture-review.md`
+- 更新:
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/jp.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - Scrapling `StealthySession` で SuperCombo から直接取得した。Jina などの第三者 cache/API は使っていない。
+  - `Data?action=raw` から `CharacterData-SF6` 1 件、`FrameData-SF6` 64 件を抽出した。
+  - Cargo API は `SF6_FrameData` 64 行、`SF6_CharacterData` 1 行を返し、raw template 件数と一致した。
+  - `General`、`Details`、`Meter`、`Properties`、`Notes` の 5 tab state と、4 section x 5 tab = 20 table comparisons を保存した。
+  - 5枚の full-page screenshot は目視確認済み。Character Data、各 tab の table、下部 navigation、footer が写っている。
+  - 画像参照 143 件、distinct filename 134 件のうち、MediaWiki `imageinfo` で 123 件を解決し、123 件を download した。
+  - `tools/validate_supercombo_frame_data.py` は passed。warning は `11 imageinfo titles are missing`。
+  - `python3 -m py_compile tools/capture_supercombo_frame_data.py tools/validate_supercombo_frame_data.py` は成功。
+- 注意:
+  - `6HPHK` と `236236K` は同じ input を持つ複数 row があるため、SuperCombo raw 内では `moveId` を行識別子として扱う。
+  - 公式 data と重なる基本フレーム値では Capcom 公式 data を優先し、SuperCombo は公式にない range、juggle、notes、hitbox image などを後で統合する候補 source として扱う。
+- 未解決事項:
+  - `imageinfo` で missing になった 11 件の画像参照を、削除済み/未作成ファイルとして扱うか、filename 正規化で再解決できるか。
+  - 公式 JP data と SuperCombo `moveId` rows の crosswalk policy をどう定義するか。
+  - SuperCombo の HTML 装飾付き frame advantage を、公式 CSV と比較可能な値へ正規化する schema をいつ作るか。

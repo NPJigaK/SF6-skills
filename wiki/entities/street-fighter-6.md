@@ -2,10 +2,11 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-05-30
+updated: 2026-05-31
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
+  - "[[sources/supercombo-jp-frame-data]]"
   - "[[sources/capcom-official-ryu-frame-data]]"
   - "[[sources/capcom-official-luke-frame-data]]"
   - "[[sources/capcom-official-jamie-frame-data]]"
@@ -82,7 +83,7 @@ tags:
 
 ## 要約
 
-Street Fighter 6 は、この wiki が扱う glossary source と公式 frame-data source の game context。現在、community glossary concepts と Capcom 公式 Classic / Modern frame-data outputs が 30 character data slugs 分ある。
+Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data source、SuperCombo JP community frame-data capture の game context。現在、community glossary concepts、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、SuperCombo JP raw capture がある。
 
 ## 年表
 
@@ -119,11 +120,13 @@ Street Fighter 6 は、この wiki が扱う glossary source と公式 frame-dat
 | 2026-05-30 | C. Viper（C.ヴァイパー） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-c-viper-frame-data]] |
 | 2026-05-30 | Alex（アレックス） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-alex-frame-data]] |
 | 2026-05-30 | Ingrid（イングリッド） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-ingrid-frame-data]] |
+| 2026-05-31 | SuperCombo Wiki の JP frame-data page を raw wikitext、Cargo API、DOM、5タブ screenshot、画像として保存した。 | [[sources/supercombo-jp-frame-data]] |
 
 ## 関連する主張
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
 - Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 CSV として保持している。
+- SuperCombo JP frame-data capture は community source であり、公式にない range、juggle、notes、hitbox image などを後で統合する候補 data を含む。
 - 30 character data slugs の coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30 の capture。
 
 ## 関連概念
@@ -136,3 +139,4 @@ Street Fighter 6 は、この wiki が扱う glossary source と公式 frame-dat
 ## 未解決の質問
 
 - 公式 patch notes や Battle Change List を ingest して、frame-data の変化を時系列で扱うべきか。
+- SuperCombo frame-data を全 character に広げる前に、JP で official/SuperCombo crosswalk policy を確定すべきか。
