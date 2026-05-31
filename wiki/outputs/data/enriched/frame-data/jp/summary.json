@@ -5,7 +5,7 @@
   "supercombo_only_rows": 7,
   "enrichment_status_counts": {
     "enriched": 62,
-    "enriched_review_required": 5,
+    "enriched_reviewed": 5,
     "official_only": 2
   },
   "review_flag_counts": {
@@ -18,6 +18,14 @@
   "basic_field_conflict_counts": {
     "damage": 1,
     "startup": 1
+  },
+  "human_review_status_counts": {
+    "accepted": 5
+  },
+  "human_review_decision_counts": {
+    "supplemental_link": 3,
+    "non_additive_supplemental_damage": 1,
+    "conflict_supplemental_only": 1
   },
   "supercombo_reused_move_ids": [
     "jp_214p",

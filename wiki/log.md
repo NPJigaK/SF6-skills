@@ -939,3 +939,26 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 未解決事項:
   - `ヴィーハト・チェーニ` と `SA2 ラヴーシュカ` の conflict をどう扱うか。
   - official only の前方/後方ステップを、SuperCombo character data の dash fields と別枠で結合するか。
+
+## [2026-05-31] レビュー | JP 公式 + SuperCombo 補助行の人間レビュー反映
+- 更新:
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/enriched/frame-data/jp/classic-supercombo.csv`
+  - `wiki/outputs/data/enriched/frame-data/jp/classic-supercombo.json`
+  - `wiki/outputs/data/enriched/frame-data/jp/schema.json`
+  - `wiki/outputs/data/enriched/frame-data/jp/summary.json`
+  - `wiki/outputs/reports/2026-05-31-jp-official-supercombo-enriched-data.md`
+  - `wiki/outputs/reports/2026-05-31-supercombo-jp-official-crosswalk.md`
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/log.md`
+- 決定:
+  - `ヴィーハト・アクノ`、`パリィドライブラッシュ`、`キャンセルドライブラッシュ` は `supplemental_link` として採用。
+  - `ヴィーハト・チェーニ` は `non_additive_supplemental_damage`。発火した spike damage は補助情報で、元ヴィーハト damage と合算しない。
+  - `SA2 ラヴーシュカ` は startup conflict付き補助情報。公式 startup 29 を正とする。
+- 検証:
+  - enriched status は `enriched` 62 rows、`enriched_reviewed` 5 rows、`official_only` 2 rows。
+  - human review decisions は `supplemental_link` 3、`non_additive_supplemental_damage` 1、`conflict_supplemental_only` 1。
+  - `python3 -m py_compile tools/build_official_supercombo_enriched_data.py` は成功。
+- 未解決事項:
+  - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
+  - 多対一対応 rows と SuperCombo-only rows の正式 merge policy。

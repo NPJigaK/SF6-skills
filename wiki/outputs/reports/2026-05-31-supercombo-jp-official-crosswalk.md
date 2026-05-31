@@ -41,7 +41,7 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 | 正とする source | 公式に存在する基本フレーム値は Capcom 公式 JP data を正とする。 |
 | SuperCombo の扱い | SuperCombo raw は削らず保持し、公式にない補助情報の候補 source として使う。 |
 | SuperCombo row key | input ではなく `move_id` を使う。`6HPHK` と `236236K` のような duplicate input があるため。 |
-| crosswalk の意味 | 自動候補。マージ前に人間レビューする。 |
+| crosswalk の意味 | 自動候補。enriched output の5件は人間レビュー済み。未レビュー行は引き続き候補扱い。 |
 | 比較対象 | startup、active duration、recovery、damage は単純数値化できる場合だけ比較する。 |
 
 ## 照合サマリー
@@ -82,7 +82,8 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 
 ## 注意点
 
-- `matched_manual` は JP 固有の名前 override で、`ヴィーハト・アクノ`、`ヴィーハト・チェーニ`、`パリィドライブラッシュ`、`キャンセルドライブラッシュ` に使った。
+- `matched_manual` の4件は enriched output で人間レビュー済み。`ヴィーハト・アクノ`、`パリィドライブラッシュ`、`キャンセルドライブラッシュ` は `supplemental_link`、`ヴィーハト・チェーニ` は `non_additive_supplemental_damage` として扱う。
+- `SA2 ラヴーシュカ` の startup conflict は、enriched output で `conflict_supplemental_only` として人間レビュー済み。公式 startup 29 を正とする。
 - 公式の active は `6-8` のような発生フレーム範囲、SuperCombo の active は `3` のような持続フレーム数で表されることがある。単純比較では active duration に変換できる場合だけ比較する。
 - この report は review 用であり、`wiki/outputs/data/frame-data/jp/` の公式 CSV を置き換えない。
 

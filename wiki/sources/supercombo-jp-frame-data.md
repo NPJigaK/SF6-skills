@@ -73,10 +73,11 @@ SuperCombo Wiki の JP フレームデータを、`Data?action=raw` の生 wikit
 - SuperCombo は community source なので、公式 Capcom source と同じ項目がある場合は Capcom 公式 data を優先する。今回の capture は、SuperCombo 側を削らず完全 raw source として保持し、後続の crosswalk / merge policy で official と照合するための基礎データ。
 - input が同じでも `moveId`、挙動、条件、notes が異なる row がある。したがって SuperCombo raw の主キーは `moveId` とし、input は主キーにしない。
 - `taunt` move type は raw/Cargo に含まれるが、表示ページの 4 section x 5 tab validation 対象には入っていない。
+- 2026-05-31 の人間レビューで、`ヴィーハト・アクノ`、`パリィドライブラッシュ`、`キャンセルドライブラッシュ` は `supplemental_link`、`ヴィーハト・チェーニ` は `non_additive_supplemental_damage`、`SA2 ラヴーシュカ` は `conflict_supplemental_only` として扱うことになった。
 
 ## 未解決の質問
 
-- 候補 crosswalk の `matched_manual` 4件、多対一対応 rows、SuperCombo-only rows を人間レビューし、正式な merge policy に昇格できるか。
+- 人間レビュー済みの5件を正式 merge policy として他 character に一般化できるか。多対一対応 rows と SuperCombo-only rows の扱いをどう確定するか。
 - `imageinfo` で missing になった 11 件の画像参照を、SuperCombo 側の削除済み/未作成ファイルとして扱うか、filename 正規化で再解決できるか。
 - SuperCombo の HTML 装飾付き frame advantage を、公式 CSV と比較可能な値へ正規化する schema をいつ作るか。
 

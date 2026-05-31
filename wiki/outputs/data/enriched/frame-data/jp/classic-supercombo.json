@@ -11,7 +11,7 @@
     "supercombo_only_rows": 7,
     "enrichment_status_counts": {
       "enriched": 62,
-      "enriched_review_required": 5,
+      "enriched_reviewed": 5,
       "official_only": 2
     },
     "review_flag_counts": {
@@ -24,6 +24,14 @@
     "basic_field_conflict_counts": {
       "damage": 1,
       "startup": 1
+    },
+    "human_review_status_counts": {
+      "accepted": 5
+    },
+    "human_review_decision_counts": {
+      "supplemental_link": 3,
+      "non_additive_supplemental_damage": 1,
+      "conflict_supplemental_only": 1
     },
     "supercombo_reused_move_ids": [
       "jp_214p",
@@ -111,7 +119,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"recovery\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"startup\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"recovery\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"startup\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -185,7 +197,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"recovery\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"recovery\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -259,7 +275,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"recovery\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"recovery\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -333,7 +353,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"600\", \"supercombo\": \"600\"}, \"recovery\": {\"match\": true, \"official\": \"19\", \"supercombo\": \"19\"}, \"startup\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"600\", \"supercombo\": \"600\"}, \"recovery\": {\"match\": true, \"official\": \"19\", \"supercombo\": \"19\"}, \"startup\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -407,7 +431,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -481,7 +509,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"4\", \"supercombo\": \"4\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"17\", \"supercombo\": \"17\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"4\", \"supercombo\": \"4\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"17\", \"supercombo\": \"17\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -555,7 +587,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"recovery\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}, \"startup\": {\"match\": true, \"official\": \"4\", \"supercombo\": \"4\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"recovery\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}, \"startup\": {\"match\": true, \"official\": \"4\", \"supercombo\": \"4\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -629,7 +665,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"200\", \"supercombo\": \"200\"}, \"recovery\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"startup\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"200\", \"supercombo\": \"200\"}, \"recovery\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"startup\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -703,7 +743,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"4\", \"supercombo\": \"4\"}, \"damage\": {\"match\": true, \"official\": \"600\", \"supercombo\": \"600\"}, \"recovery\": {\"match\": true, \"official\": \"14\", \"supercombo\": \"14\"}, \"startup\": {\"match\": true, \"official\": \"7\", \"supercombo\": \"7\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"4\", \"supercombo\": \"4\"}, \"damage\": {\"match\": true, \"official\": \"600\", \"supercombo\": \"600\"}, \"recovery\": {\"match\": true, \"official\": \"14\", \"supercombo\": \"14\"}, \"startup\": {\"match\": true, \"official\": \"7\", \"supercombo\": \"7\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -777,7 +821,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"recovery\": {\"match\": true, \"official\": \"17\", \"supercombo\": \"17\"}, \"startup\": {\"match\": true, \"official\": \"9\", \"supercombo\": \"9\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"recovery\": {\"match\": true, \"official\": \"17\", \"supercombo\": \"17\"}, \"startup\": {\"match\": true, \"official\": \"9\", \"supercombo\": \"9\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -851,7 +899,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"9\", \"supercombo\": \"9\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"9\", \"supercombo\": \"9\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -925,7 +977,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"900\", \"supercombo\": \"900\"}, \"recovery\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}, \"startup\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"900\", \"supercombo\": \"900\"}, \"recovery\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}, \"startup\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -999,7 +1055,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -1073,7 +1133,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"startup\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}, \"damage\": {\"match\": true, \"official\": \"300\", \"supercombo\": \"300\"}, \"startup\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -1147,7 +1211,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"startup\": {\"match\": true, \"official\": \"12\", \"supercombo\": \"12\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -1221,7 +1289,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"600\", \"supercombo\": \"600\"}, \"startup\": {\"match\": true, \"official\": \"7\", \"supercombo\": \"7\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"600\", \"supercombo\": \"600\"}, \"startup\": {\"match\": true, \"official\": \"7\", \"supercombo\": \"7\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -1295,7 +1367,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"9\", \"supercombo\": \"9\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"9\", \"supercombo\": \"9\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "1",
@@ -1369,7 +1445,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1443,7 +1523,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"recovery\": {\"match\": true, \"official\": \"19\", \"supercombo\": \"19\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"700\", \"supercombo\": \"700\"}, \"recovery\": {\"match\": true, \"official\": \"19\", \"supercombo\": \"19\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1517,7 +1601,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"900\", \"supercombo\": \"900\"}, \"recovery\": {\"match\": true, \"official\": \"31\", \"supercombo\": \"31\"}, \"startup\": {\"match\": true, \"official\": \"16\", \"supercombo\": \"16\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"900\", \"supercombo\": \"900\"}, \"recovery\": {\"match\": true, \"official\": \"31\", \"supercombo\": \"31\"}, \"startup\": {\"match\": true, \"official\": \"16\", \"supercombo\": \"16\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1591,7 +1679,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+recovery_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"recovery\": {\"match\": true, \"official\": \"24\", \"supercombo\": \"24\"}, \"startup\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}}"
+      "supercombo_field_comparisons_json": "{\"recovery\": {\"match\": true, \"official\": \"24\", \"supercombo\": \"24\"}, \"startup\": {\"match\": true, \"official\": \"11\", \"supercombo\": \"11\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1665,7 +1757,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"500\", \"supercombo\": \"500\"}, \"recovery\": {\"match\": true, \"official\": \"16\", \"supercombo\": \"16\"}, \"startup\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"500\", \"supercombo\": \"500\"}, \"recovery\": {\"match\": true, \"official\": \"16\", \"supercombo\": \"16\"}, \"startup\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1739,7 +1835,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"500\", \"supercombo\": \"500\"}, \"recovery\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"500\", \"supercombo\": \"500\"}, \"recovery\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1813,7 +1913,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"500\", \"supercombo\": \"500\"}, \"recovery\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"500\", \"supercombo\": \"500\"}, \"recovery\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1887,7 +1991,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}, \"recovery\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}, \"startup\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}, \"recovery\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}, \"startup\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "2",
@@ -1961,7 +2069,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}, \"recovery\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}, \"startup\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}, \"recovery\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}, \"startup\": {\"match\": true, \"official\": \"21\", \"supercombo\": \"21\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2035,7 +2147,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2109,7 +2225,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2183,7 +2303,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+startup_match+active_duration_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"10\", \"supercombo\": \"10\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2257,7 +2381,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2331,7 +2459,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2405,7 +2537,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2479,7 +2615,11 @@
       "supercombo_match_method": "exact_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "3",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"16\", \"supercombo\": \"16\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"16\", \"supercombo\": \"16\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2553,7 +2693,11 @@
       "supercombo_match_method": "exact_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "3",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2627,7 +2771,11 @@
       "supercombo_match_method": "exact_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "3",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"28\", \"supercombo\": \"28\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"28\", \"supercombo\": \"28\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2701,7 +2849,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"19\", \"supercombo\": \"19\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"19\", \"supercombo\": \"19\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2775,7 +2927,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2849,7 +3005,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2923,7 +3083,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -2997,7 +3161,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3071,7 +3239,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3145,7 +3317,11 @@
       "supercombo_match_method": "family_input+same_family+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3213,13 +3389,17 @@
       "supercombo_images": "SF6_JP_214p_214lp_mp.png",
       "supercombo_hitboxes": "SF6_JP_214p_214lp_mp_hitbox.png",
       "supercombo_notes": "Fully invincible while off-screen; Punish Counter state while airborne; teleports to portal location and causes portal to disappear (after OD Departure, LP version goes to close portal while MP version goes to far portal); JP can act in the air on frames 31-41; JP always faces the opponent after reappearing; if no air attack is used, JP has 1 punishable landing frame, then can block on the next 2 landing frames",
-      "enrichment_status": "enriched_review_required",
+      "enrichment_status": "enriched_reviewed",
       "enrichment_review_flags": "manual_match",
       "supercombo_match_status": "matched_manual",
       "supercombo_match_method": "jp_name_override+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "accepted",
+      "human_review_decision": "supplemental_link",
+      "human_review_value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
+      "human_review_note": "ヴィーハト・アクノ / 214P~214LP/MP は補助リンクとして採用する。公式の全体44Fと SuperCombo の total 44 が一致し、無敵・空中・31F以降行動可の説明も対応する。"
     },
     {
       "category_order": "3",
@@ -3287,13 +3467,17 @@
       "supercombo_images": "SF6_JP_214p_214hp.png",
       "supercombo_hitboxes": "SF6_JP_214p_214hp_hitbox.png",
       "supercombo_notes": "Spawns a 1-hit projectile spike from the active portal; spike is angled downward toward the opponent; 1st active frame only hits airborne or tall standing characters; 2nd active frame reaches regular-size standing characters; 3rd active frame reaches all crouching characters; useful tool for zoning, juggles, chip damage, and oki; puts opponent into free juggle state on hit; opponent builds 50% extra Drive meter when parrying the spike; Juggle Increase value becomes 1 when connecting mid-combo against opponent in a Free Juggle state (ensures that opponent will have Juggle Count 1 after the spike connects); can be canceled into from 2LK / 5MP / 2MK / 5HK despite not usually being cancelable",
-      "enrichment_status": "enriched_review_required",
+      "enrichment_status": "enriched_reviewed",
       "enrichment_review_flags": "manual_match;basic_field_conflict:damage",
       "supercombo_match_status": "matched_manual",
       "supercombo_match_method": "jp_name_override+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "damage",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": false, \"official\": \"0\", \"supercombo\": \"800\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": false, \"official\": \"0\", \"supercombo\": \"800\"}}",
+      "human_review_status": "accepted",
+      "human_review_decision": "non_additive_supplemental_damage",
+      "human_review_value_policy": "keep_official_damage_zero; use_supercombo_damage_as_triggered_vihhat_spike_damage; do_not_sum_with_vihhat_damage",
+      "human_review_note": "ヴィーハト・チェーニ / 214P~214HP はヴィーハトを任意タイミングで発火させる技として扱う。SuperCombo damage 800 は発火した spike の補助情報であり、元のヴィーハト damage と合算して1600などにしない。"
     },
     {
       "category_order": "3",
@@ -3367,7 +3551,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}, \"startup\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}, \"startup\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3441,7 +3629,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}, \"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3515,7 +3707,11 @@
       "supercombo_match_method": "exact_input+same_family+category_move_type+damage_match",
       "supercombo_candidate_count": "3",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3589,7 +3785,11 @@
       "supercombo_match_method": "exact_input+same_family+category_move_type+damage_match",
       "supercombo_candidate_count": "3",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3663,7 +3863,11 @@
       "supercombo_match_method": "exact_input+same_family+category_move_type+damage_match",
       "supercombo_candidate_count": "3",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}}"
+      "supercombo_field_comparisons_json": "{\"damage\": {\"match\": true, \"official\": \"1000\", \"supercombo\": \"1000\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3737,7 +3941,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"22\", \"supercombo\": \"22\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3811,7 +4019,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "3",
@@ -3885,7 +4097,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "4",
@@ -3959,7 +4175,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"8\", \"supercombo\": \"8\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "4",
@@ -4027,13 +4247,17 @@
       "supercombo_images": "SF6_JP_214214p.png",
       "supercombo_hitboxes": "SF6_JP_214214p_hitbox1.png,SF6_JP_214214p_hitbox2.png,SF6_JP_214214p_hitbox3.png,SF6_JP_214214p_hitbox4.png",
       "supercombo_notes": "Spawns 4 separate 1-hit Super projectiles that track the opponent; starter scaling applies to 3rd attack in the combo; immediate scaling applies to the SA2 projectiles if comboed into; total startup for each hit of the sequence is 34f, 71f, 108f, 145f; leaves a 17f gap between each projectile on block; hitstun/blockstun values include the 13f hitstop inflicted on the defender",
-      "enrichment_status": "enriched_review_required",
+      "enrichment_status": "enriched_reviewed",
       "enrichment_review_flags": "basic_field_conflict:startup",
       "supercombo_match_status": "matched",
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "startup",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": false, \"official\": \"29\", \"supercombo\": \"1\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": false, \"official\": \"29\", \"supercombo\": \"1\"}}",
+      "human_review_status": "accepted",
+      "human_review_decision": "conflict_supplemental_only",
+      "human_review_value_policy": "keep_official_startup_29; retain_supercombo_projectile_sequence_as_supplemental_conflict",
+      "human_review_note": "SA2 ラヴーシュカ / 214214P は startup conflict 付き補助情報として扱う。公式 startup 29 を正とし、SuperCombo startup 1 と projectile sequence startup notes は補助情報に留める。"
     },
     {
       "category_order": "4",
@@ -4107,7 +4331,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+non_ca_variant+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "2",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"4000\", \"supercombo\": \"4000\"}, \"recovery\": {\"match\": true, \"official\": \"62\", \"supercombo\": \"62\"}, \"startup\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"4000\", \"supercombo\": \"4000\"}, \"recovery\": {\"match\": true, \"official\": \"62\", \"supercombo\": \"62\"}, \"startup\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "4",
@@ -4181,7 +4409,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+ca_variant+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "2",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"4500\", \"supercombo\": \"4500\"}, \"recovery\": {\"match\": true, \"official\": \"62\", \"supercombo\": \"62\"}, \"startup\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"6\", \"supercombo\": \"6\"}, \"damage\": {\"match\": true, \"official\": \"4500\", \"supercombo\": \"4500\"}, \"recovery\": {\"match\": true, \"official\": \"62\", \"supercombo\": \"62\"}, \"startup\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "5",
@@ -4255,7 +4487,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"recovery\": {\"match\": true, \"official\": \"23\", \"supercombo\": \"23\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"recovery\": {\"match\": true, \"official\": \"23\", \"supercombo\": \"23\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "5",
@@ -4329,7 +4565,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"recovery\": {\"match\": true, \"official\": \"23\", \"supercombo\": \"23\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"recovery\": {\"match\": true, \"official\": \"23\", \"supercombo\": \"23\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "5",
@@ -4403,7 +4643,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"startup\": {\"match\": true, \"official\": \"5\", \"supercombo\": \"5\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4477,7 +4721,11 @@
       "supercombo_match_method": "",
       "supercombo_candidate_count": "0",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4551,7 +4799,11 @@
       "supercombo_match_method": "",
       "supercombo_candidate_count": "0",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4625,7 +4877,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match+recovery_match+damage_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"35\", \"supercombo\": \"35\"}, \"startup\": {\"match\": true, \"official\": \"26\", \"supercombo\": \"26\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"2\", \"supercombo\": \"2\"}, \"damage\": {\"match\": true, \"official\": \"800\", \"supercombo\": \"800\"}, \"recovery\": {\"match\": true, \"official\": \"35\", \"supercombo\": \"35\"}, \"startup\": {\"match\": true, \"official\": \"26\", \"supercombo\": \"26\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4699,7 +4955,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match",
       "supercombo_candidate_count": "2",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"startup\": {\"match\": true, \"official\": \"20\", \"supercombo\": \"20\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4773,7 +5033,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match+active_duration_match",
       "supercombo_candidate_count": "2",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"startup\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}}"
+      "supercombo_field_comparisons_json": "{\"active_duration\": {\"match\": true, \"official\": \"3\", \"supercombo\": \"3\"}, \"startup\": {\"match\": true, \"official\": \"18\", \"supercombo\": \"18\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4847,7 +5111,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4921,7 +5189,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -4995,7 +5267,11 @@
       "supercombo_match_method": "exact_input+family_input+same_family+category_move_type+startup_match",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}"
+      "supercombo_field_comparisons_json": "{\"startup\": {\"match\": true, \"official\": \"1\", \"supercombo\": \"1\"}}",
+      "human_review_status": "",
+      "human_review_decision": "",
+      "human_review_value_policy": "",
+      "human_review_note": ""
     },
     {
       "category_order": "6",
@@ -5063,13 +5339,17 @@
       "supercombo_images": "SF6_JP_66.png",
       "supercombo_hitboxes": "SF6_JP_66_hitbox.png",
       "supercombo_notes": "See Drive Rush; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.525 (min/throw), 1.857 (min/block), 3.628 (max/final DR frame)",
-      "enrichment_status": "enriched_review_required",
+      "enrichment_status": "enriched_reviewed",
       "enrichment_review_flags": "manual_match",
       "supercombo_match_status": "matched_manual",
       "supercombo_match_method": "jp_name_override+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "accepted",
+      "human_review_decision": "supplemental_link",
+      "human_review_value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
+      "human_review_note": "パリィドライブラッシュ / MPMK~66 は補助リンクとして採用する。SuperCombo の cancel/recovery decomposition は公式値の置換ではなく補助情報として扱う。"
     },
     {
       "category_order": "6",
@@ -5137,13 +5417,17 @@
       "supercombo_images": "SF6_JP_66.png",
       "supercombo_hitboxes": "SF6_JP_66_hitbox.png",
       "supercombo_notes": "See Drive Rush; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties",
-      "enrichment_status": "enriched_review_required",
+      "enrichment_status": "enriched_reviewed",
       "enrichment_review_flags": "manual_match",
       "supercombo_match_status": "matched_manual",
       "supercombo_match_method": "jp_name_override+category_move_type",
       "supercombo_candidate_count": "1",
       "supercombo_field_conflicts": "",
-      "supercombo_field_comparisons_json": "{}"
+      "supercombo_field_comparisons_json": "{}",
+      "human_review_status": "accepted",
+      "human_review_decision": "supplemental_link",
+      "human_review_value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
+      "human_review_note": "キャンセルドライブラッシュ / MPMK or 66 は補助リンクとして採用する。SuperCombo total 24(46) の括弧内 total は公式全体46Fと対応する。"
     }
   ]
 }
