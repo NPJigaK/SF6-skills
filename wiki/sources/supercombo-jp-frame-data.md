@@ -45,6 +45,7 @@ SuperCombo Wiki の JP フレームデータを、`Data?action=raw` の生 wikit
 6. `6HPHK` と `236236K` は同じ input を持つ複数 row があるため、SuperCombo raw の行識別には `moveId` を使う。input は表示・検索用であり、主キーにはしない。
 7. この source は community data なので、公式 Capcom data と重なる基本フレーム値では公式を正とする。SuperCombo は公式にない range、juggle、hitbox image、notes などを後で追加統合する候補として扱う。
 8. Review 用の派生 CSV/JSON と公式 JP Classic との候補 crosswalk は `wiki/outputs/data/supercombo/frame-data/jp/` と [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]] に保存している。
+9. 公式列を保持した enriched output は `wiki/outputs/data/enriched/frame-data/jp/` と [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] に保存している。
 
 ## 重要な主張
 
@@ -95,3 +96,5 @@ SuperCombo Wiki の JP フレームデータを、`Data?action=raw` の生 wikit
 - Validation: `raw/supercombo/frame-data/2026-05-31/jp/validation.json`
 - Derived outputs: `wiki/outputs/data/supercombo/frame-data/jp/`
 - Crosswalk report: [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]]
+- Enriched outputs: `wiki/outputs/data/enriched/frame-data/jp/`
+- Enriched report: [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]]

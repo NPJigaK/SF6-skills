@@ -108,7 +108,9 @@
 |---|---|---|---:|
 | [[outputs/reports/2026-05-30-official-frame-data-coverage]] | report | 30 character data slugs の公式 frame-data coverage table。row counts と review status を含む。 | 2026-05-30 |
 | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]] | report | SuperCombo JP raw derived outputs と Capcom 公式 JP Classic CSV の候補 crosswalk。 | 2026-05-31 |
+| [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] | report | Capcom 公式 JP Classic CSV を正として保持し、SuperCombo 補助列を付与した enriched output。 | 2026-05-31 |
 | `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補 crosswalk。 | 2026-05-31 |
+| `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した enriched data と SuperCombo-only rows。 | 2026-05-31 |
 | `wiki/outputs/data/frame-data/ryu/` | csv/json | Ryu（リュウ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
 | `wiki/outputs/data/frame-data/luke/` | csv/json | Luke（ルーク） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
 | `wiki/outputs/data/frame-data/jamie/` | csv/json | Jamie（ジェイミー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |

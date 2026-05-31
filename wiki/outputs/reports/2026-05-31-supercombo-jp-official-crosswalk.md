@@ -22,6 +22,8 @@ aliases:
 
 SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Capcom 公式 JP Classic CSV との候補 crosswalk を生成した。これは最終マージではなく、公式 data を正としたまま SuperCombo の `moveId`、range、juggle、notes、画像をどの公式 row に紐づけられるか確認するためのレビュー面。
 
+この crosswalk を使った enriched output は [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] に保存している。
+
 ## 生成ファイル
 
 - `wiki/outputs/data/supercombo/frame-data/jp/frames.csv`
@@ -91,3 +93,4 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 - SuperCombo validation: [[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]]
 - Raw SuperCombo manifest: `raw/supercombo/frame-data/2026-05-31/jp/manifest.json`
 - Crosswalk summary: `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-summary.json`
+- Enriched output report: [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]]

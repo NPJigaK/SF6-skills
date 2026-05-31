@@ -912,3 +912,30 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 未解決事項:
   - `matched_manual` 4件と多対一対応 rows を人間レビューして、正式 merge policy に昇格するか。
   - SuperCombo unmatched 7 rows を公式 row の補助情報として扱うか、SuperCombo-only rows として保持するか。
+
+## [2026-05-31] 出力 | JP 公式データへの SuperCombo 補助列付与
+- 追加:
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/enriched/frame-data/jp/classic-supercombo.csv`
+  - `wiki/outputs/data/enriched/frame-data/jp/classic-supercombo.json`
+  - `wiki/outputs/data/enriched/frame-data/jp/supercombo-only.csv`
+  - `wiki/outputs/data/enriched/frame-data/jp/schema.json`
+  - `wiki/outputs/data/enriched/frame-data/jp/summary.json`
+  - `wiki/outputs/reports/2026-05-31-jp-official-supercombo-enriched-data.md`
+- 更新:
+  - `wiki/outputs/reports/2026-05-31-supercombo-jp-official-crosswalk.md`
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - 公式 JP Classic 69 rows を保持したまま、SuperCombo 補助列を `supercombo_*` prefix で追加した。
+  - enriched rows は 69。内訳は enriched 62、enriched review required 5、official only 2。
+  - SuperCombo-only rows は 7。suggested handling は supplemental variant 2、supplemental followup 2、taunt 3。
+  - 基本値 conflict は damage 1件、startup 1件。
+  - `python3 -m py_compile tools/build_official_supercombo_enriched_data.py` は成功。
+- 注意:
+  - この output は公式 CSV の置換ではない。公式にある基本フレーム値は公式列を正とし、SuperCombo 値は補助列に分離している。
+  - `enriched_review_required` の 5 rows は人間レビューが必要。
+- 未解決事項:
+  - `ヴィーハト・チェーニ` と `SA2 ラヴーシュカ` の conflict をどう扱うか。
+  - official only の前方/後方ステップを、SuperCombo character data の dash fields と別枠で結合するか。
