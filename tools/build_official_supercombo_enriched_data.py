@@ -75,36 +75,38 @@ HUMAN_REVIEW_FIELDS = [
     "human_review_note",
 ]
 
-HUMAN_REVIEW_DECISIONS = {
-    "43": {
-        "status": "accepted",
-        "decision": "supplemental_link",
-        "value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
-        "note": "ヴィーハト・アクノ / 214P~214LP/MP は補助リンクとして採用する。公式の全体44Fと SuperCombo の total 44 が一致し、無敵・空中・31F以降行動可の説明も対応する。",
-    },
-    "44": {
-        "status": "accepted",
-        "decision": "non_additive_supplemental_damage",
-        "value_policy": "keep_official_damage_zero; use_supercombo_damage_as_triggered_vihhat_spike_damage; do_not_sum_with_vihhat_damage",
-        "note": "ヴィーハト・チェーニ / 214P~214HP はヴィーハトを任意タイミングで発火させる技として扱う。SuperCombo damage 800 は発火した spike の補助情報であり、元のヴィーハト damage と合算して1600などにしない。",
-    },
-    "54": {
-        "status": "accepted",
-        "decision": "conflict_supplemental_only",
-        "value_policy": "keep_official_startup_29; retain_supercombo_projectile_sequence_as_supplemental_conflict",
-        "note": "SA2 ラヴーシュカ / 214214P は startup conflict 付き補助情報として扱う。公式 startup 29 を正とし、SuperCombo startup 1 と projectile sequence startup notes は補助情報に留める。",
-    },
-    "68": {
-        "status": "accepted",
-        "decision": "supplemental_link",
-        "value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
-        "note": "パリィドライブラッシュ / MPMK~66 は補助リンクとして採用する。SuperCombo の cancel/recovery decomposition は公式値の置換ではなく補助情報として扱う。",
-    },
-    "69": {
-        "status": "accepted",
-        "decision": "supplemental_link",
-        "value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
-        "note": "キャンセルドライブラッシュ / MPMK or 66 は補助リンクとして採用する。SuperCombo total 24(46) の括弧内 total は公式全体46Fと対応する。",
+HUMAN_REVIEW_DECISIONS_BY_CHARACTER = {
+    "jp": {
+        "43": {
+            "status": "accepted",
+            "decision": "supplemental_link",
+            "value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
+            "note": "ヴィーハト・アクノ / 214P~214LP/MP は補助リンクとして採用する。公式の全体44Fと SuperCombo の total 44 が一致し、無敵・空中・31F以降行動可の説明も対応する。",
+        },
+        "44": {
+            "status": "accepted",
+            "decision": "non_additive_supplemental_damage",
+            "value_policy": "keep_official_damage_zero; use_supercombo_damage_as_triggered_vihhat_spike_damage; do_not_sum_with_vihhat_damage",
+            "note": "ヴィーハト・チェーニ / 214P~214HP はヴィーハトを任意タイミングで発火させる技として扱う。SuperCombo damage 800 は発火した spike の補助情報であり、元のヴィーハト damage と合算して1600などにしない。",
+        },
+        "54": {
+            "status": "accepted",
+            "decision": "conflict_supplemental_only",
+            "value_policy": "keep_official_startup_29; retain_supercombo_projectile_sequence_as_supplemental_conflict",
+            "note": "SA2 ラヴーシュカ / 214214P は startup conflict 付き補助情報として扱う。公式 startup 29 を正とし、SuperCombo startup 1 と projectile sequence startup notes は補助情報に留める。",
+        },
+        "68": {
+            "status": "accepted",
+            "decision": "supplemental_link",
+            "value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
+            "note": "パリィドライブラッシュ / MPMK~66 は補助リンクとして採用する。SuperCombo の cancel/recovery decomposition は公式値の置換ではなく補助情報として扱う。",
+        },
+        "69": {
+            "status": "accepted",
+            "decision": "supplemental_link",
+            "value_policy": "keep_official_values; allow_supercombo_supplemental_fields",
+            "note": "キャンセルドライブラッシュ / MPMK or 66 は補助リンクとして採用する。SuperCombo total 24(46) の括弧内 total は公式全体46Fと対応する。",
+        },
     },
 }
 
@@ -142,6 +144,8 @@ def review_flags(crosswalk_row: dict[str, str], reused_move_ids: set[str]) -> li
     conflicts = conflict_fields(crosswalk_row.get("field_comparisons_json", "{}"))
     if crosswalk_row.get("match_status") == "matched_manual":
         flags.append("manual_match")
+    if crosswalk_row.get("match_status") == "ambiguous":
+        flags.append("ambiguous_match")
     if conflicts:
         flags.append("basic_field_conflict:" + ",".join(conflicts))
     if int(crosswalk_row.get("candidate_count") or "0") > 1:
@@ -165,11 +169,13 @@ def supplemental_only_handling(row: dict[str, str]) -> str:
 
 def build_enriched(
     *,
+    character_slug: str,
     official_rows: list[dict[str, str]],
     supercombo_rows: list[dict[str, str]],
     crosswalk_rows: list[dict[str, str]],
     supercombo_only_rows: list[dict[str, str]],
 ) -> tuple[list[dict[str, str]], list[dict[str, str]], dict[str, Any]]:
+    human_review_decisions = HUMAN_REVIEW_DECISIONS_BY_CHARACTER.get(character_slug, {})
     supercombo_by_id = {row["move_id"]: row for row in supercombo_rows}
     crosswalk_by_official_order = {
         row["official_row_order"]: row
@@ -203,7 +209,9 @@ def build_enriched(
         supercombo_move_id = crosswalk.get("supercombo_move_id", "")
         supercombo = supercombo_by_id.get(supercombo_move_id)
         if supercombo:
-            status = "enriched_review_required" if any(flag.startswith(("manual_match", "basic_field_conflict")) for flag in flags) else "enriched"
+            status = "enriched_review_required" if any(
+                flag.startswith(("manual_match", "ambiguous_match", "basic_field_conflict")) for flag in flags
+            ) else "enriched"
             for field in SUPPLEMENTAL_FRAME_FIELDS:
                 row[f"supercombo_{field}"] = supercombo.get(field, "")
         else:
@@ -211,7 +219,7 @@ def build_enriched(
             for field in SUPPLEMENTAL_FRAME_FIELDS:
                 row[f"supercombo_{field}"] = ""
 
-        review_decision = HUMAN_REVIEW_DECISIONS.get(str(official_index), {})
+        review_decision = human_review_decisions.get(str(official_index), {})
         if review_decision and status == "enriched_review_required":
             status = "enriched_reviewed"
 
@@ -282,6 +290,7 @@ def main(argv: list[str]) -> int:
     supercombo_only_rows = read_csv(supercombo_only_csv)
 
     enriched_rows, supercombo_only_output, summary = build_enriched(
+        character_slug=args.character_slug,
         official_rows=official_rows,
         supercombo_rows=supercombo_rows,
         crosswalk_rows=crosswalk_rows,

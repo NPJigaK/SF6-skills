@@ -159,6 +159,11 @@ JP_NAME_OVERRIDES = {
     "キャンセルドライブラッシュ": "jp_mpmk_66_drc",
 }
 
+GENERIC_NAME_OVERRIDE_PATTERNS = {
+    "パリィドライブラッシュ": "{character_slug}_mpmk_66_pdr",
+    "キャンセルドライブラッシュ": "{character_slug}_mpmk_66_drc",
+}
+
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -172,7 +177,7 @@ def write_json(path: Path, value: Any) -> None:
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({field: row.get(field, "") for field in fieldnames})
@@ -216,8 +221,12 @@ def wiki_to_text(value: Any, *, field_name: str = "") -> str:
     return collapse_ws(html.unescape(text))
 
 
+def normalized_move_type(value: Any) -> str:
+    return str(value or "").strip().lower()
+
+
 def section_for(record: dict[str, Any]) -> str:
-    return SOURCE_SECTIONS.get(str(record.get("moveType", "")), "")
+    return SOURCE_SECTIONS.get(normalized_move_type(record.get("moveType", "")), "")
 
 
 def frame_display_rows(frames: list[dict[str, Any]]) -> list[dict[str, str]]:
@@ -226,7 +235,7 @@ def frame_display_rows(frames: list[dict[str, Any]]) -> list[dict[str, str]]:
         row = {
             "row_order": str(index),
             "section": section_for(record),
-            "move_type": str(record.get("moveType", "")),
+            "move_type": normalized_move_type(record.get("moveType", "")),
             "move_id": str(record.get("moveId", "")),
             "input": str(record.get("input", "")),
             "name": str(record.get("name", "")),
@@ -246,7 +255,7 @@ def frame_json_rows(frames: list[dict[str, Any]]) -> list[dict[str, Any]]:
             {
                 "row_order": index,
                 "section": section_for(record),
-                "move_type": str(record.get("moveType", "")),
+                "move_type": normalized_move_type(record.get("moveType", "")),
                 "move_id": str(record.get("moveId", "")),
                 "input": str(record.get("input", "")),
                 "name": str(record.get("name", "")),
@@ -374,6 +383,8 @@ def candidate_score(official: dict[str, str], candidate: dict[str, str], officia
 
 
 def build_crosswalk(
+    *,
+    character_slug: str,
     official_rows: list[dict[str, str]],
     supercombo_rows: list[dict[str, str]],
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
@@ -398,10 +409,19 @@ def build_crosswalk(
         }
         family = input_family(official["official_input_signature"], official["official_category"])
         override_move_id = ""
-        for name_part, move_id in JP_NAME_OVERRIDES.items():
-            if name_part in official["official_move_name"]:
-                override_move_id = move_id
-                break
+        override_source = ""
+        if character_slug == "jp":
+            for name_part, move_id in JP_NAME_OVERRIDES.items():
+                if name_part in official["official_move_name"]:
+                    override_move_id = move_id
+                    override_source = "jp_name_override"
+                    break
+        if not override_move_id:
+            for name_part, move_id_pattern in GENERIC_NAME_OVERRIDE_PATTERNS.items():
+                if name_part in official["official_move_name"]:
+                    override_move_id = move_id_pattern.format(character_slug=character_slug)
+                    override_source = "generic_name_override"
+                    break
         if override_move_id and override_move_id in supercombo_by_id:
             eligible = [supercombo_by_id[override_move_id]]
             override = True
@@ -427,7 +447,7 @@ def build_crosswalk(
             best_score, reasons, best = scored[0]
             top_ties = [item for item in scored if item[0] == best_score]
             status = "matched_manual" if override else ("ambiguous" if len(top_ties) > 1 else "matched")
-            match_method = "jp_name_override+" + "+".join(reasons) if override else "+".join(reasons)
+            match_method = override_source + "+" + "+".join(reasons) if override else "+".join(reasons)
             comparisons = compare_fields(official, best)
             matched_supercombo[best["move_id"]] += 1
             crosswalk.append(
@@ -556,7 +576,11 @@ def main(argv: list[str]) -> int:
     with official_csv.open(encoding="utf-8", newline="") as handle:
         official_rows = list(csv.DictReader(handle))
 
-    crosswalk_rows, unmatched_supercombo, summary = build_crosswalk(official_rows, frame_rows)
+    crosswalk_rows, unmatched_supercombo, summary = build_crosswalk(
+        character_slug=args.character_slug,
+        official_rows=official_rows,
+        supercombo_rows=frame_rows,
+    )
     crosswalk_fields = [
         "official_row_order",
         "official_category",

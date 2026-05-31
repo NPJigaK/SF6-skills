@@ -199,6 +199,10 @@ DISPLAY_TABLES = {
 }
 
 
+def normalized_move_type(value: Any) -> str:
+    return str(value or "").strip().lower()
+
+
 def utc_now() -> str:
     return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
@@ -252,7 +256,7 @@ def display_value(record: dict[str, Any], field: str) -> str:
 
 def frame_records_for_section(frames: list[dict[str, Any]], section: str) -> list[dict[str, Any]]:
     move_types = DISPLAY_TABLES[section]["move_types"]
-    return [record for record in frames if str(record.get("moveType", "")) in move_types]
+    return [record for record in frames if normalized_move_type(record.get("moveType", "")) in move_types]
 
 
 def expected_table(frames: list[dict[str, Any]], section: str, tab: str) -> dict[str, Any]:
@@ -317,7 +321,7 @@ def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[st
     cargo_move_ids = [str(record.get("moveId", "")) for record in frame_cargo]
     require(raw_move_ids == cargo_move_ids, "raw FrameData-SF6 moveId order differs from Cargo _rowID order")
 
-    move_type_counts = Counter(str(record.get("moveType", "")) for record in frame_templates)
+    move_type_counts = Counter(normalized_move_type(record.get("moveType", "")) for record in frame_templates)
     duplicate_inputs = {
         input_value: [record.get("moveId", "") for record in records]
         for input_value, records in group_by(frame_templates, "input").items()
@@ -438,7 +442,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--date-label", required=True)
     parser.add_argument("--character-slug", default="jp")
-    parser.add_argument("--expected-frame-count", type=int, default=64)
+    parser.add_argument("--expected-frame-count", type=int)
     return parser.parse_args(argv)
 
 

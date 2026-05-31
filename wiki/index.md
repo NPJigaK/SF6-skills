@@ -8,6 +8,7 @@
 |---|---|---:|---|---|
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。Drive System、frame data、juggle、notation 用語を含む community source。 | 2026-05-26 | wiki_page | active |
 | [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw capture。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 123 件を含む community source。 | 2026-05-31 | community_frame_data | active |
+| [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw capture。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 133 件を含む community source。 | 2026-05-31 | community_frame_data | active |
 | [[sources/capcom-official-ryu-frame-data]] | Capcom 公式 Ryu（リュウ） frame-data capture。Classic 75 rows / Modern 69 rows。 | 2026-05-27 | official_frame_data | active |
 | [[sources/capcom-official-luke-frame-data]] | Capcom 公式 Luke（ルーク） frame-data capture。Classic 76 rows / Modern 73 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-jamie-frame-data]] | Capcom 公式 Jamie（ジェイミー） frame-data capture。Classic 103 rows / Modern 98 rows。 | 2026-05-30 | official_frame_data | active |
@@ -109,8 +110,12 @@
 | [[outputs/reports/2026-05-30-official-frame-data-coverage]] | report | 30 character data slugs の公式 frame-data coverage table。row counts と review status を含む。 | 2026-05-30 |
 | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]] | report | SuperCombo JP raw derived outputs と Capcom 公式 JP Classic CSV の候補 crosswalk。 | 2026-05-31 |
 | [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] | report | Capcom 公式 JP Classic CSV を正として保持し、SuperCombo 補助列を付与した enriched output。 | 2026-05-31 |
+| [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]] | report | SuperCombo Ryu raw derived outputs と Capcom 公式 Ryu Classic CSV の候補 crosswalk。 | 2026-05-31 |
+| [[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] | report | Capcom 公式 Ryu Classic CSV を正として保持し、SuperCombo 補助列を付与した enriched output。 | 2026-05-31 |
 | `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補 crosswalk。 | 2026-05-31 |
 | `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した enriched data と SuperCombo-only rows。 | 2026-05-31 |
+| `wiki/outputs/data/supercombo/frame-data/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補 crosswalk。 | 2026-05-31 |
+| `wiki/outputs/data/enriched/frame-data/ryu/` | csv/json | 公式 Ryu Classic rows に SuperCombo `supercombo_*` 補助列を付与した enriched data と SuperCombo-only rows。 | 2026-05-31 |
 | `wiki/outputs/data/frame-data/ryu/` | csv/json | Ryu（リュウ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
 | `wiki/outputs/data/frame-data/luke/` | csv/json | Luke（ルーク） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
 | `wiki/outputs/data/frame-data/jamie/` | csv/json | Jamie（ジェイミー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
@@ -153,3 +158,4 @@
 | [[reviews/2026-05-27-health-check]] | health_check | 初期 official captures と Classic / Modern comparison pages 後の health check。 | open |
 | [[reviews/2026-05-30-official-frame-data-roster-capture-review]] | capture_validation | 2026-05-30 batch の 26 character captures の自動 validation review。 | open |
 | [[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]] | capture_validation | SuperCombo JP frame-data raw capture の自動 validation review。 | open |
+| [[reviews/2026-05-31-supercombo-ryu-frame-data-capture-review]] | capture_validation | SuperCombo Ryu frame-data raw capture の自動 validation review。 | open |

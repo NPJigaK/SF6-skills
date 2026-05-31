@@ -962,3 +962,66 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 未解決事項:
   - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
   - 多対一対応 rows と SuperCombo-only rows の正式 merge policy。
+
+## [2026-05-31] 取り込み | SuperCombo Ryu フレームデータ取得
+- 追加:
+  - `raw/supercombo/frame-data/2026-05-31/ryu/`
+  - `wiki/sources/supercombo-ryu-frame-data.md`
+  - `wiki/reviews/2026-05-31-supercombo-ryu-frame-data-capture-review.md`
+- 更新:
+  - `tools/validate_supercombo_frame_data.py`
+  - `wiki/index.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/log.md`
+- 検証:
+  - Scrapling `StealthySession` で SuperCombo から直接取得した。Jina などの第三者 cache/API は使っていない。
+  - `Data?action=raw` から `CharacterData-SF6` 1 件、`FrameData-SF6` 77 件を抽出した。
+  - Cargo API は `SF6_FrameData` 77 行、`SF6_CharacterData` 1 行を返し、raw template 件数と一致した。
+  - `General`、`Details`、`Meter`、`Properties`、`Notes` の 5 tab state と、4 section x 5 tab = 20 table comparisons を保存した。
+  - 5枚の full-page screenshot は目視確認済み。Character Data、各 tab の table、下部 navigation、footer が写っている。
+  - 画像参照 173 件、distinct filename 134 件のうち、MediaWiki `imageinfo` で 133 件を解決し、133 件を download した。
+  - `uv run python tools/validate_supercombo_frame_data.py --repo-root . --date-label 2026-05-31 --character-slug ryu` は成功。warning は `1 imageinfo titles are missing`。
+  - `uv run python -m py_compile tools/capture_supercombo_frame_data.py tools/validate_supercombo_frame_data.py` は成功。
+- 注意:
+  - Ryu は duplicate input が 10 種類あるため、SuperCombo raw 内では `moveId` を行識別子として扱う。
+  - Ryu では `moveType` に `Special` / `Super` の大文字表記があるため、validator で小文字正規化するようにした。
+- 未解決事項:
+  - missing imageinfo の `File:SF6 Ryu 236p hitbox.png` を、削除済み/未作成ファイルとして扱うか、filename 正規化で再解決できるか。
+  - Ryu の Denjin / hold level / duplicate input rows の merge policy。
+
+## [2026-05-31] 出力 | SuperCombo Ryu 派生データと公式 Ryu 補助データ生成
+- 追加:
+  - `wiki/outputs/data/supercombo/frame-data/ryu/frames.csv`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/frames.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/character.csv`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/schema.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-official-classic.csv`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-summary.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/supercombo-unmatched.csv`
+  - `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.csv`
+  - `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.json`
+  - `wiki/outputs/data/enriched/frame-data/ryu/supercombo-only.csv`
+  - `wiki/outputs/data/enriched/frame-data/ryu/schema.json`
+  - `wiki/outputs/data/enriched/frame-data/ryu/summary.json`
+  - `wiki/outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk.md`
+  - `wiki/outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data.md`
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - SuperCombo Ryu derived `frames.csv` は 77 rows、`character.csv` は 1 row。
+  - 公式 Ryu Classic 75 rows との候補照合は matched 61、ambiguous 10、generic name override matched 2、unmatched 2。
+  - enriched rows は 75。内訳は `enriched` 60、`enriched_review_required` 13、`official_only` 2。
+  - SuperCombo-only rows は 14。suggested handling は `supercombo_only` 10、`supercombo_only_taunt` 4。
+  - `uv run python -m py_compile tools/extract_supercombo_frame_data.py tools/build_official_supercombo_enriched_data.py` は成功。
+- 注意:
+  - Ryu の `enriched_review_required` 13 rows は accepted 扱いにしない。
+  - `パリィドライブラッシュ` / `キャンセルドライブラッシュ` は generic name override で紐づけるが、人間レビューは未完了。
+- 未解決事項:
+  - Ryu の review-required 13 rows を人間レビューする。
+  - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。

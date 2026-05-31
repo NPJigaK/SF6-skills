@@ -1,0 +1,2552 @@
+{{Character Subnav SF6 | chara=Ryu }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Ryu
+| name          = Ryu
+| portrait      = SF6 Ryu Portrait.png
+| icon          = SF6 Ryu Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.047
+| bwdWalkSpd    = 0.032
+| fwdDashSpd    = 19
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.252
+| bwdDashDist   = 0.923
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.525
+| dRushBlock    = 1.878
+| dRushMax      = 3.628
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Ryu_5lp.png
+| hitboxes      = SF6_Ryu_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 7
+| total         = 13
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 14
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| pushbackHit   = 0.289
+| pushbackBlk   = 0.378
+| notes         = Chains into 5LP/2LP/2LK
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Ryu_5mp.png
+| hitboxes      = SF6_Ryu_5mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 11(13)
+| total         = 20(22)
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 16 (18 TC)
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-13}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|VP|+11}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 22
+| blockstun     = 14
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| notes         = 2f extra recovery on whiff; useful combo tool with a Target Combo follow-up; extends a wider body hurtbox until the end of recovery
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Ryu_5hp.png
+| hitboxes      = SF6_Ryu_5hp_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 5
+| recovery      = 18
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 19 (22 TC)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+11}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 27
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.545
+| notes         = Forces stand on hit (allowing Target Combo follow-up to work on crouching opponents); good poke with hitbox priority, many active frames, and a reactable hitconfirm window
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Ryu_5lk.png
+| hitboxes      = SF6_Ryu_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 11
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 16
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.30
+| notes         = Good range for a 5f light (useful in punishes and neutral buffers); DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Ryu_5mk.png
+| hitboxes      = SF6_Ryu_5mk_hitbox.png
+| damage        = 700
+| startup       = 9
+| active        = 3
+| recovery      = 18
+| total         = 29
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 25
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.568
+| notes         = Solid poke; front leg hurtbox is raised on frames 4-11 (can avoid low pokes)
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Ryu_5hk.png
+| hitboxes      = SF6_Ryu_5hk_hitbox.png
+| damage        = 900
+| startup       = 12
+| active        = 4
+| recovery      = 20(22)
+| total         = 35
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = KD +84 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+13}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 33
+| blockstun     = 24
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1<br>{{sf6-adv|PC|[-1 PC Ground]}}
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.572
+| notes         = Whiffs on crouching opponents unless they extend a vertical hurtbox; 2 extra recovery frames on block; good horizontal anti-air that puts airborne opponents into limited juggle state (higher launch on Punish Counter juggle); {{sf6-adv|VP|+11}} before Punish Counter crumple state goes airborne; extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Ryu_2lp.png
+| hitboxes      = SF6_Ryu_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 9
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 11
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.94
+| pushbackHit   = 0.277
+| pushbackBlk   = 0.330
+| notes         = Chains into 5LP/2LP/2LK; topmost hurtbox on frames 1-5 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Ryu_2mp.png
+| hitboxes      = SF6_Ryu_2mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 13(15)
+| total         = 22(24)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|E|0}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|VP|+4}}
+| hitstun       = 22
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.14
+| notes         = 2f extra recovery on whiff; combo and pressure tool; topmost hurtbox on frames 1-9 is vulnerable only to aerial strikes (preventing its use as an anti-air); extends a wider hurtbox until the end of recovery
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Ryu_2hp.png
+| hitboxes      = SF6_Ryu_2hp_hitbox_preview.png, SF6_Ryu_2hp_hitbox_1.png, SF6_Ryu_2hp_hitbox_2.png, SF6_Ryu_2hp_hitbox_3.png
+| damage        = 800
+| startup       = 9
+| active        = 6
+| recovery      = 21(22)
+| total         = 35
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-7}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+9}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-3}}
+| hitstun       = 27(22)
+| blockstun     = 19
+| hitstop       = 13
+| driveDmgBlk   = 7500
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.137
+| notes         = Forces stand on hit; decent anti-air; cannot hit cross-ups; fist hurtbox is invincible to air strikes on frame 9; head hurtbox is invincible to air strikes on frames 10-14; only 1st active frame is cancelable (extends a combo-only hitbox to match the range of the 2nd active frame for combo consistency); () refers to hit/block recovery on 1st active frame only; 5f less hitstun on active frames 2-5 (can be punishable on meaty timing)
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Ryu_2lk.png
+| hitboxes      = SF6_Ryu_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 10
+| total         = 16
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| notes         = Chains into 5LP/2LP/2LK
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Ryu_2mk.png
+| hitboxes      = SF6_Ryu_2mk_hitbox.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 19
+| total         = 29
+| guard         = L
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 23
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.482
+| notes         = Range: 1.482; DR cancel is delayed until after active frames
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Low Spinning Sweep
+| images        = SF6_Ryu_2hk.png
+| hitboxes      = SF6_Ryu_2hk_hitbox.png
+| damage        = 900
+| startup       = 9
+| active        = 3
+| recovery      = 23(29)
+| total         = 34(40)
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +40
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = HKD +47
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| afterDRHit    = KD +40
+| afterDRBlk    = {{sf6-adv|VM|-8}}
+| blockstun     = 19
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 1.793
+| notes         = Good range and hitbox priority; has some juggle potential; on block, always plays out a fixed 29f recovery (cannot be made safer with meaty timing)
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Ryu_jlp.png
+| hitboxes      = SF6_Ryu_jlp_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4(+9)}}
+| blockAdv      = {{sf6-adv|E|0}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+8(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.80
+| notes         = Can be used as a fuzzy instant overhead
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Ryu_jmp.png
+| hitboxes      = SF6_Ryu_jmp_hitbox_preview.png, SF6_Ryu_jmp_hitbox_1.png, SF6_Ryu_jmp_hitbox_2.png
+| damage        = 350x2
+| startup       = 8
+| active        = 2,3
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitAdv        = {{sf6-adv|VP|+10(+13)}}
+| blockAdv      = {{sf6-adv|VP|+6(+9)}}
+| punishAdv     = {{sf6-adv|VP|+14(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15,17 (19)
+| blockstun     = 11,13 (15)
+| hitstop       = 8,10
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 500x2
+| superGainHit  = 250x2 (175x2)
+| superGainBlk  = 125x2 (62x2)
+| jugStart      = 1,1 Air
+| jugIncrease   = 1,1
+| jugLimit      = 6,7
+| atkRange      = 0.85
+| notes         = Both hits are cancelable to Air Tatsu and put airborne opponents into a limited juggle state; if 1st hit is stand blocked, the 2nd hit will not hit overhead against crouch block; lower body projectile invuln 8-22f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Ryu_jhp.png
+| hitboxes      = SF6_Ryu_jhp_hitbox.png
+| damage        = 800
+| startup       = 9
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+15)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+12(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.06
+| notes         = Spike knockdown on counter hit/Punish Counter vs. airborne opponents; lower body projectile invuln 9-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Ryu_jlk.png
+| hitboxes      = SF6_Ryu_jlk_hitbox.png
+| damage        = 300
+| startup       = 6
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+9(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.55
+| notes         = Cross-up
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Ryu_jmk.png
+| hitboxes      = SF6_Ryu_jmk_hitbox.png
+| damage        = 500
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+13)}}
+| blockAdv      = {{sf6-adv|VP|+4(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.15
+| notes         = Cross-up; lower body projectile invuln 7-20f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Ryu_jhk.png
+| hitboxes      = SF6_Ryu_jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 8
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+15)}}
+| blockAdv      = {{sf6-adv|VP|+5(+11)}}
+| punishAdv     = {{sf6-adv|VP|+13(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.20
+| notes         = Strong jump-in from mid to long range; lower body projectile invuln 10-17f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 6MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6mp | moveType = ground_normal
+| input         = 6MP
+| name          = Collarbone Breaker
+| images        = SF6_Ryu_6mp.png
+| hitboxes      = SF6_Ryu_6mp_hitbox_preview.png, SF6_Ryu_6mp_hitbox_1.png, SF6_Ryu_6mp_hitbox_2.png
+| damage        = 300x2
+| startup       = 20
+| active        = 1,3
+| recovery      = 19
+| total         = 42
+| guard         = H,H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 17,25 (26)
+| blockstun     = 17,19 (20)
+| hitstop       = 8,10
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 750x2
+| superGainHit  = 250x2 (175x2)
+| superGainBlk  = 125x2 (62x2)
+| jugStart      = 1
+| jugIncrease   = 1,1
+| jugLimit      = 0,0
+| atkRange      = 1.701 (1.552)
+| notes         = Counter-hit/Punish Counter/Drive Rush frame advantage applies to both hits; 2nd hit is no longer an overhead if the first hit connects; up to +5 on hit with meaty timing for a meterless combo extension
+}}
+
+===== 6HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6hp | moveType = ground_normal
+| input         = 6HP
+| name          = Solar Plexus Strike
+| images        = SF6_Ryu_6hp.png
+| hitboxes      = SF6_Ryu_6hp_hitbox_preview.png, SF6_Ryu_6hp_hitbox_1.png, SF6_Ryu_6hp_hitbox_2.png
+| damage        = 400x2
+| startup       = 20
+| active        = 2,3
+| recovery      = 16
+| total         = 40
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|VP|+7}}
+| hitstun       = 25,25 (27)
+| blockstun     = 8,22 (24)
+| hitstop       = 10,12
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [4000x2]
+| driveGain     = 1250x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 0,1
+| jugIncrease   = 0,1
+| jugLimit      = 0,0
+| atkRange      = 1.877 (1.728)
+| notes         = 2 hits; good forward-moving combo starter and pressure tool; if 1st hit connects on an extended hurtbox, becomes {{sf6-adv|VP|+6}} on Counter-hit or {{sf6-adv|VP|+8}} on Punish Counter; Counter-hit/Punish Counter frame advantage applies to both hits; can be very advantageous if 1st hit trades with a light normal; 1st hit puts opponent into free juggle state so that the 2nd hit connects (to prevent Ryu from being punishable)
+}}
+
+===== 4HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_4hp | moveType = ground_normal
+| input         = 4HP
+| name          = Short Uppercut
+| images        = SF6_Ryu_4hp.png
+| hitboxes      = SF6_Ryu_4hp_hitbox_preview.png, SF6_Ryu_4hp_hitbox_1.png, SF6_Ryu_4hp_hitbox_2.png, SF6_Ryu_4hp_hitbox_3.png
+| damage        = 800
+| startup       = 7
+| active        = 4
+| recovery      = 25(26)
+| total         = 35(36)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-13}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| DRcancelHit   = {{sf6-adv|VP|+20}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|VM|-9}}
+| hitstun       = 30(22)
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.88
+| notes         = Forces stand on hit; only 1st active frame is cancelable; () refers to hit/block recovery on 1st active frame only; extremely short range makes it finicky in combos; 8f less hitstun on active frames 2-4 (can be punishable with meaty timing)
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Axe Kick
+| images        = SF6_Ryu_4hk_1.png
+| hitboxes      = SF6_Ryu_4hk_hitbox_1.png, SF6_Ryu_4hk_hitbox_2_3_preview.png, SF6_Ryu_4hk_hitbox_2.png, SF6_Ryu_4hk_hitbox_3.png
+| damage        = 400x2
+| startup       = 10(20)
+| active        = 5(5)3
+| recovery      = 21
+| total         = 43
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 37(17)
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| DRcancelHit   = {{sf6-adv|VP|+10(+14)}}
+| DRcancelBlk   = {{sf6-adv|VP|+4(+10)}}
+| afterDRHit    = {{sf6-adv|VP|+4}}
+| afterDRBlk    = {{sf6-adv|VP|0}}
+| hitstun       = 20,24 (34)
+| blockstun     = 14,20 (30)
+| hitstop       = 10,12
+| driveDmgBlk   = 2000,1000
+| driveDmgHit   = [3000x2]
+| driveGain     = 1500,2000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1,1
+| jugIncrease   = 1,4
+| jugLimit      = 0,3
+| atkRange      = 1.564 (0.766)
+| notes         = () refers to 2nd hit startup; 1st hit forces stand and puts airborne opponents into a limited juggle state; 2nd hit puts airborne opponents into OTG bounce state; both hits are cancelable; Counter-hit and Punish Counter frame advantage applies to both hits
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Whirlwind Kick
+| images        = SF6_Ryu_6hk.png
+| hitboxes      = SF6_Ryu_6hk_hitbox.png
+| damage        = 800
+| startup       = 16
+| active        = 4
+| recovery      = 20
+| total         = 39
+| guard         = LH
+| cancel        = Sp*
+| hitconfirm    = 19
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.924
+| notes         = Cancelable to regular/OD Air Tatsu on hit/block; Low Crush on frames 13-20 (not airborne); high pushback on block; puts airborne opponents into limited juggle state; good juggle option after midscreen OD High Blade Kick for corner carry and oki; proximity guard box begins on frame 2 and reaches the maximum attack range (prevents opponents from walking back out of the attack startup)
+}}
+
+== Target Combos ==
+===== 5MP~LK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5mp_lk | moveType = ground_normal
+| input         = 5MP~LK
+| name          = Fuwa Triple Strike 1
+| images        = SF6_Ryu_5lk.png
+| hitboxes      = SF6_Ryu_5mp_lk_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 3
+| recovery      = 16
+| total         = 23
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 35
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| hitstun       = 20
+| blockstun     = 15
+| hitstop       = 10
+| driveDmgBlk   = 1000
+| driveDmgHit   = [2000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| notes         = Hits consistently at max 5MP range, but the LK can whiff if 5MP connects on an extended hurtbox; can be spaced safely against most characters for a spacing trap
+}}
+
+===== 5MP~LK~HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5mp_lk_hk | moveType = ground_normal
+| input         = 5MP~LK~HK
+| name          = Fuwa Triple Strike 2
+| images        = SF6_Ryu_5mp_lk_hk.png
+| hitboxes      = SF6_Ryu_5mp_lk_hk_hitbox.png
+| damage        = 900(720)
+| startup       = 17
+| active        = 4
+| recovery      = 20
+| total         = 40
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +36
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +36
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| notes         = (refers to scaled damage); 6f gap before HK on block; cancels to Denjin Charge by inputting 2P on hit only (KD Adv. +7)
+}}
+
+===== 5HP~HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5hp_hk | moveType = ground_normal
+| input         = 5HP~HK
+| name          = High Double Strike
+| images        = SF6_Ryu_5hk.png
+| hitboxes      = SF6_Ryu_5hp_hk_hitbox.png
+| damage        = 1000
+| startup       = 9
+| active        = 4
+| recovery      = 20
+| total         = 32
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +39
+| blockAdv      = {{sf6-adv|VM|-8(-18)}}
+| punishAdv     = KD +37
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 7000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 1
+| notes         = HK cannot hit vs. crouch block (much more unsafe); cancels to Denjin Charge by inputting 2P on hit only (KD Adv. +10); can juggle into MP/OD Shoryuken or SA3 in the corner
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_lplk | moveType = throw
+| input         = LPLK
+| name          = Shoulder Throw
+| images        = SF6_Ryu_lplk.png
+| hitboxes      = SF6_Ryu_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +17
+| blockAdv      = -
+| punishAdv     = HKD +17
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Has access to corner throw loops without walking or dashing (whiff 5LP or manually time the next throw); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Somersault Throw
+| images        = SF6_Ryu_4lplk.png
+| hitboxes      = SF6_Ryu_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +11
+| blockAdv      = -
+| punishAdv     = HKD +11
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Side switches; no throw/strike oki after back throwing opponent into corner; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_hphk | moveType = drive
+| input         = HPHK
+| name          = Shingeki
+| images        = SF6_Ryu_hphk.png
+| hitboxes      = SF6_Ryu_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.541
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Chest Strike (Block)
+| images        = SF6_Ryu_6hphk.png
+| hitboxes      = SF6_Ryu_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.675
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Chest Strike (Recovery)
+| images        = SF6_Ryu_6hphk.png
+| hitboxes      = SF6_Ryu_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.675
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Ryu_mpmk.png
+| hitboxes      = SF6_Ryu_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Ryu_66.png
+| hitboxes      = SF6_Ryu_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.525 (min/throw), 1.878 (min/block), 3.628 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Ryu_66.png
+| hitboxes      = SF6_Ryu_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Hadoken ===
+===== 236LP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236lp | moveType = Special
+| input         = 236LP
+| name          = Hadoken
+| images        = SF6_Ryu_236lp.png
+| hitboxes      = SF6_Ryu_236lp_hitbox.png
+| damage        = 700
+| chip          = 175
+| startup       = 16
+| active        = -
+| recovery      = 31
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 34
+| blockstun     = 27
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.055
+| notes         = 1-hit projectile; puts airborne opponents into limited juggle state
+}}
+
+===== 236MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236mp | moveType = Special
+| input         = 236MP
+| name          = Hadoken
+| images        = SF6_Ryu_236lp.png
+| hitboxes      = SF6_Ryu_236p_hitbox.png
+| damage        = 700
+| chip          = 175
+| startup       = 14
+| active        = -
+| recovery      = 33
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|M|0}}
+| blockAdv      = {{sf6-adv|VM|-7}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| hitstun       = 34
+| blockstun     = 27
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.070
+| notes         = 1-hit projectile; puts airborne opponents into limited juggle state
+}}
+
+===== 236HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236hp | moveType = Special
+| input         = 236HP
+| name          = Hadoken
+| images        = SF6_Ryu_236lp.png
+| hitboxes      = SF6_Ryu_236p_hitbox.png
+| damage        = 700
+| chip          = 175
+| startup       = 12
+| active        = -
+| recovery      = 35
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|M|-2}}
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| hitstun       = 34
+| blockstun     = 27
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.085
+| notes         = 1-hit projectile; puts airborne opponents into limited juggle state
+}}
+
+===== 236PP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236pp | moveType = Special
+| input         = 236PP
+| name          = Hadoken
+| images        = SF6_Ryu_236pp.png
+| hitboxes      = SF6_Ryu_236pp_hitbox.png
+| damage        = 500x2
+| chip          = 125x2
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 12
+| active        = -
+| recovery      = 28
+| total         = 40
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 12
+| hitAdv        = KD +54
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = KD +54
+| perfParryAdv  = {{sf6-adv|VM|-7}}
+| blockstun     = 28 total
+| hitstop       = 9,9
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1
+| jugIncrease   = 1,2
+| jugLimit      = 1,6
+| projSpeed     = 0.112
+| notes         = 2-hit OD projectile; puts opponent into limited juggle state on hit
+}}
+
+===== 236HP(charged) =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236p(charged) | moveType = Special
+| input         = 236HP
+| name          = Denjin Charge Hadoken
+| images        = SF6_Ryu_236p_charge.png
+| hitboxes      = SF6_Ryu_236p_charge_hitbox.png
+| damage        = 500x2
+| chip          = 125x2
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 12
+| active        = -
+| recovery      = 28
+| total         = 40
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 12
+| hitAdv        = KD +54
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = KD +54
+| perfParryAdv  = {{sf6-adv|VM|-7}}
+| blockstun     = 28 total
+| hitstop       = 9,9
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = [1500x2]
+| driveGain     = 500x2
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1
+| jugIncrease   = 1,2
+| jugLimit      = 1,6
+| projSpeed     = 0.12
+| notes         = 2-hit projectile; puts opponent into limited juggle state on hit; only comes out when the HP button is pressed
+}}
+
+===== 236PP(charged) =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236pp(charged) | moveType = Special
+| input         = 236PP
+| name          = Denjin Charge Hadoken
+| images        = SF6_Ryu_236pp_charge.png
+| hitboxes      = SF6_Ryu_236pp_charge_hitbox.png
+| damage        = 400x3 (1200)
+| chip          = 100x3 (300)
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 12
+| active        = -
+| recovery      = 26
+| total         = 38
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 13
+| hitAdv        = KD +57
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +57
+| perfParryAdv  = {{sf6-adv|VP|+6}}
+| blockstun     = 29 total
+| hitstop       = 5,5,8
+| driveDmgBlk   = 1250x3
+| driveDmgHit   = [1000x2,3000]
+| driveGain     = -20000
+| superGainHit  = 300x3 (210x3)
+| superGainBlk  = 150x3 (75x3)
+| jugStart      = 1
+| jugIncrease   = 1,1,1
+| jugLimit      = 3,3,6
+| projSpeed     = 0.145
+| notes         = 3-hit OD projectile; puts opponent into limited juggle state on hit
+}}
+
+=== Shoryuken ===
+===== 623LP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_623lp | moveType = Special
+| input         = 623LP
+| name          = Shoryuken
+| images        = SF6_Ryu_623p.png
+| hitboxes      = SF6_Ryu_623p_hitbox.png
+| damage        = 1100(800)
+| chip          = 275
+| dmgScaling    = 30% Starter
+| startup       = 5
+| active        = 10
+| recovery      = 21+12 land
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-23}}
+| punishAdv     = KD +38
+| perfParryAdv  = {{sf6-adv|VM|-41}}
+| blockstun     = 22
+| hitstop       = 15(13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-14 Air
+| airborne      = 7-35 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5(7)
+| atkRange      = 0.906 (1st)
+| notes         = Has juggle potential; puts opponent into limited juggle state (can juggle after a high corner anti-air); cannot hit cross-up; does reduced damage and higher juggle limit on active frames 4-10 (weaker as a high-connect anti-air)
+}}
+
+===== 623MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_623mp | moveType = Special
+| input         = 623MP
+| name          = Shoryuken
+| images        = SF6_Ryu_623p.png
+| hitboxes      = SF6_Ryu_623p_hitbox.png
+| damage        = 1200(800)
+| chip          = 300
+| dmgScaling    = 30% Starter
+| startup       = 6
+| active        = 10
+| recovery      = 30+12 land
+| total         = 57
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-32}}
+| punishAdv     = KD +34
+| perfParryAdv  = {{sf6-adv|VM|-50}}
+| blockstun     = 22
+| hitstop       = 15(13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-9 Air
+| airborne      = 8-45 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5(7)
+| atkRange      = 0.966 (1st)
+| notes         = Has juggle potential; cannot hit cross-up; does reduced damage and higher juggle limit on active frames 4-10 (weaker as a high-connect anti-air)
+}}
+
+===== 623HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_623hp | moveType = Special
+| input         = 623HP
+| name          = Shoryuken
+| images        = SF6_Ryu_623p.png
+| hitboxes      = SF6_Ryu_623p_hitbox.png
+| damage        = 1400(800)
+| chip          = 350
+| dmgScaling    = 30% Starter
+| startup       = 7
+| active        = 10
+| recovery      = 34+12 land
+| total         = 62
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 22
+| hitAdv        = KD +37(+29)
+| blockAdv      = {{sf6-adv|VM|-39}}
+| punishAdv     = KD +37(+29)
+| perfParryAdv  = {{sf6-adv|VM|-57}}
+| blockstun     = 22
+| hitstop       = 20(13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-8 Air
+| airborne      = 9-50 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5(7)
+| atkRange      = 1.186 (1st)
+| notes         = Has juggle potential; cannot hit cross-up; does reduced damage and higher juggle limit on active frames 3-10 (weaker as a high-connect anti-air); higher knockdown advantage on the first 2 active frames (+37 refers to 1st active frame, +29 refers to anti-air with 3rd active frame; actual advantage varies based on height/distance)
+}}
+
+===== 623PP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_623pp | moveType = Special
+| input         = 623PP
+| name          = Shoryuken
+| images        = SF6_Ryu_623pp.png
+| hitboxes      = SF6_Ryu_623pp_hitbox.png
+| damage        = 800x2
+| chip          = 200x2
+| startup       = 6
+| active        = 2,8
+| recovery      = 37+15 land
+| total         = 67
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +29
+| blockAdv      = {{sf6-adv|VM|-40}}
+| punishAdv     = KD +29
+| perfParryAdv  = {{sf6-adv|VM|-60}}
+| blockstun     = 22 total
+| hitstop       = 20,13
+| driveDmgBlk   = 2000x2
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| invuln        = 1-8 Full
+| airborne      = 8-52 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 6(7)
+| atkRange      = 1.006 (1st)
+| notes         = Has juggle potential; cannot hit cross-up; only 2nd hit will connect if used too early as an anti-air; extends a combo-only hitbox to make the 1st active frame more consistent
+}}
+
+=== Tatsumaki Senpukyaku ===
+===== 214LK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214lk | moveType = Special
+| input         = 214LK
+| name          = Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214k.png
+| hitboxes      = SF6_Ryu_214k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 12
+| active        = 3
+| recovery      = 14+18 land
+| total         = 46
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +35
+| perfParryAdv  = {{sf6-adv|VM|-33}}
+| blockstun     = 21
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 3000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = 5-28 (FKD)
+| jugStart      = 4
+| jugIncrease   = 4
+| jugLimit      = 3
+| atkRange      = 1.96 (1.84)
+| notes         = Can hit crouching opponents
+}}
+
+===== 214MK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214mk | moveType = Special
+| input         = 214MK
+| name          = Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214k.png
+| hitboxes      = SF6_Ryu_214k_hitbox.png
+| damage        = 1000
+| chip          = 250x2
+| startup       = 14
+| active        = 2(13)2
+| recovery      = 11+20 land
+| total         = 61
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23(+38)
+| blockAdv      = {{sf6-adv|VM|-13(-28)}}
+| punishAdv     = KD +23(+38)
+| perfParryAdv  = {{sf6-adv|VM|-31}}
+| blockstun     = 20,20
+| hitstop       = 15,15
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [5000]
+| driveGain     = 3500(3500x2)
+| superGainHit  = 1300 (910)
+| superGainBlk  = 650x2 (325x2)
+| invuln        = 10-41 Lower Body Projectile
+| airborne      = 8-41 (FKD)
+| jugStart      = 4,4
+| jugIncrease   = 4,4
+| jugLimit      = 3,3
+| atkRange      = 2.98 (1.94)
+| notes         = Only 1st hit can connect on crouching (stand blocking 1st hit forces 2nd hit to be blocked, even if crouching); later hits have better KD Advantage
+}}
+
+===== 214HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214hk | moveType = Special
+| input         = 214HK
+| name          = Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214k.png
+| hitboxes      = SF6_Ryu_214k_hitbox.png
+| damage        = 1200
+| chip          = 300x3
+| startup       = 16
+| active        = 2(13)2(13)2
+| recovery      = 14+17 land
+| total         = 78
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +20(+35)(+50)
+| blockAdv      = {{sf6-adv|VM|-13(-28)(-43)}}
+| punishAdv     = KD +20(+35)(+50)
+| perfParryAdv  = {{sf6-adv|VM|-31}}
+| blockstun     = 20,20,20
+| hitstop       = 15,15,15
+| driveDmgBlk   = 2000x3
+| driveDmgHit   = [5000]
+| driveGain     = 4000 (4000x3)
+| superGainHit  = 1400 (980)
+| superGainBlk  = 700x3 (350x3)
+| invuln        = 10-61 Lower Body Projectile
+| airborne      = 10-61 (FKD)
+| jugStart      = 4,4,4
+| jugIncrease   = 4,4,4
+| jugLimit      = 3,3,3
+| atkRange      = 4.935 (2.30)
+| notes         = Only 1st hit can connect on crouching (stand blocking any hit forces next hit to be blocked, even if crouching); later hits have better KD Advantage; puts opponent into limited juggle state (can juggle afterward if 3rd hit connects)
+}}
+
+===== 214KK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214kk | moveType = Special
+| input         = 214KK
+| name          = Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214kk.png
+| hitboxes      = SF6_Ryu_214kk_hitbox.png, SF6_Ryu_214kk2_hitbox.png, SF6_Ryu_214kk3_hitbox.png
+| damage        = 200x5
+| chip          = 50x5
+| startup       = 13
+| active        = 2(4)2(4)2(3)2(4)2
+| recovery      = 10+13 land
+| total         = 60
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +57
+| blockAdv      = {{sf6-adv|VM|-14(-32)}}
+| punishAdv     = KD +57
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 34 total
+| hitstop       = 6,2x3,15
+| driveDmgBlk   = 800x5
+| driveDmgHit   = [1000x5]
+| driveGain     = -20000
+| superGainHit  = 160x4,360 (112x4,252)
+| superGainBlk  = 80x4,180 (40x4,90)
+| airborne      = 5-47 (FKD)
+| jugStart      = 2 ground / 1x5 air
+| jugIncrease   = 1x4,2
+| jugLimit      = 1,3,5,7,9
+| atkRange      = 1.74
+| notes         = Can hit crouching opponents; puts opponent into limited juggle state; on hit, 1st hit has vacuum effect; on max range block, some hits can drop (-32 at worse)
+}}
+
+=== Air Tatsumaki Senpukyaku ===
+===== j.214K =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_j214k | moveType = Special
+| input         = j.214K
+| name          = Aerial Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214k.png
+| hitboxes      = SF6_Ryu_j214k_hitbox.png
+| damage        = 900
+| chip          = 225x2
+| dmgScaling    = 30% Starter
+| startup       = 11
+| active        = 2(5)2(6)2
+| recovery      = 16 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +46(+52)
+| blockAdv      = {{sf6-adv|VM|-6{{sf6-adv|P|(+3)}}}}
+| punishAdv     = KD +46(+52)
+| perfParryAdv  = {{sf6-adv|VM|-21(-15)}}
+| blockstun     = 20(16)
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| airborne      = Until Land (FKD)
+| jugStart      = 5
+| jugIncrease   = 1
+| jugLimit      = 8 forward / 3 back
+| atkRange      = 1.12
+| notes         = Can be input during forward jump; not an overhead; can cross-up (4f less blockstun when landing as a cross-up); at least +3 on block vs. crouching opponents; puts opponent into limited juggle state (can juggle 2HK or SA1); the last 13f of recovery puts Ryu in a crouching state
+}}
+
+====== 6HK~214K ======
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6hk_214k | moveType = Special
+| input         = 6HK~214K
+| name          = Aerial Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214k.png
+| hitboxes      = SF6_Ryu_j214k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 11
+| active        = 3
+| recovery      = 13+16 land
+| total         = 42
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-16}}
+| punishAdv     = KD +38
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| airborne      = 1-26 (FKD)
+| jugStart      = 4
+| jugIncrease   = 4
+| jugLimit      = 3
+| atkRange      = 1.79 (1.67)
+| notes         = Version canceled from 6HK; no follow-up juggle like after jumping Air Tatsu; the last frame of recovery puts Ryu in a crouching state; useful juggle ender after midscreen OD High Blade Kick for damage, corner carry, and oki
+}}
+
+===== j.214KK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_j214kk | moveType = Special
+| input         = j.214KK
+| name          = Aerial Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214kk.png
+| hitboxes      = SF6_Ryu_j214kk_hitbox.png, SF6_Ryu_j214kk2_hitbox.png, SF6_Ryu_j214kk3_hitbox.png
+| damage        = 300,200x3,600 (1500)
+| chip          = 75,50x3,150 (375)
+| dmgScaling    = Combo (15% extra)
+| startup       = 11
+| active        = 2(1)3(1)3(1)3(2)2
+| recovery      = 16 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +45(+51)
+| blockAdv      = {{sf6-adv|VM|-29(-32)}}
+| punishAdv     = KD +45(+51)
+| perfParryAdv  = {{sf6-adv|VM|-46(-43)}}
+| blockstun     = 27 total
+| hitstop       = 6,2x3,15
+| driveDmgBlk   = 800x5
+| driveDmgHit   = [1000x5]
+| driveGain     = -20000
+| superGainHit  = 200,100x4 (140,70x4)
+| superGainBlk  = 100,50x4 (50,25x4)
+| airborne      = Until Land (FKD)
+| jugStart      = 1x5
+| jugIncrease   = 1x5
+| jugLimit      = 10,11,12,13,14
+| atkRange      = 1.559 (1.31)
+| notes         = Can be input during forward jump; cannot hit cross-up; cannot hit crouching opponents (unless they extend a vertical hurtbox), and 1st hit can only hit standing opponents on the final 3 airborne frames of jump; puts opponent into limited juggle state; the last 13f of recovery puts Ryu in a crouching state
+}}
+
+====== 6HK~214KK ======
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6hk_214kk | moveType = Special
+| input         = 6HK~214KK
+| name          = Aerial Tatsumaki Senpu-kyaku
+| images        = SF6_Ryu_214kk.png
+| hitboxes      = SF6_Ryu_j214kk_hitbox.png, SF6_Ryu_j214kk2_hitbox.png, SF6_Ryu_j214kk3_hitbox.png
+| damage        = 300,200x3,600 (1500)
+| chip          = 75
+| dmgScaling    = Combo (15% extra)
+| startup       = 11
+| active        = 2(1)2(2)2(2)2(3)2
+| recovery      = 12+16 land
+| total         = 56
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +47(+48)
+| blockAdv      = {{sf6-adv|VM|-30}}
+| punishAdv     = KD +47(+48)
+| blockstun     = 16
+| hitstop       = 6,2x3,15
+| driveDmgBlk   = 800
+| driveDmgHit   = [1000x5]
+| driveGain     = -20000
+| superGainHit  = 200,100x4 (140,70x4)
+| superGainBlk  = 100 (50)
+| airborne      = 1-40 (FKD)
+| jugStart      = 1x5
+| jugIncrease   = 1x5
+| jugLimit      = 10,11,12,13,14
+| atkRange      = 2.17 (1.93)
+| notes         = Version canceled from 6HK; can hit crouching opponents unlike the jumping version; puts opponent into limited juggle state (follow-up only possible near the corner); the last frame of recovery puts Ryu in a crouching state
+}}
+
+=== High Blade Kick ===
+===== 236LK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236lk | moveType = Special
+| input         = 236LK
+| name          = High Blade Kick
+| images        = SF6_Ryu_236k.png
+| hitboxes      = SF6_Ryu_236k_hitbox.png
+| damage        = 1100
+| chip          = 275
+| startup       = 14
+| active        = 6
+| recovery      = 22
+| total         = 41
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 22
+| hitAdv        = KD +42~46
+| blockAdv      = {{sf6-adv|VM|-11(-7)}}
+| punishAdv     = KD +42~46
+| perfParryAdv  = {{sf6-adv|VM|-26(-22)}}
+| blockstun     = 20
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = 3000
+| superGainHit  = 1400 (980)
+| superGainBlk  = 700 (350)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.962 (1.751)
+| notes         = Puts opponent into limited juggle state on hit; sets up auto-timed safe jump against cornered opponents; can combo when canceled from any normal except 5LP; the last 2 active frames have identical range (the listed best-case frame advantage is when spaced at max range, active frame 5)
+}}
+
+===== 236MK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236mk | moveType = Special
+| input         = 236MK
+| name          = High Blade Kick
+| images        = SF6_Ryu_236k.png
+| hitboxes      = SF6_Ryu_236k_hitbox.png
+| damage        = 1200
+| chip          = 300
+| startup       = 18
+| active        = 9
+| recovery      = 19(22)
+| total         = 45(48)
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 25
+| hitAdv        = KD +40~46
+| blockAdv      = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| punishAdv     = KD +40~46
+| perfParryAdv  = {{sf6-adv|VM|-26(-20)}}
+| blockstun     = 20
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [7000]
+| driveGain     = 3500
+| superGainHit  = 1400 (980)
+| superGainBlk  = 700 (350)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.162 (1.951)
+| notes         = Puts opponent into limited juggle state on hit; can be spaced safely due to its range and high active frame count; 3 extra recovery frames on whiff; the last 3 active frames have identical range (the listed best-case frame advantage is when spaced at max range, active frame 7)
+}}
+
+===== 236HK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236hk | moveType = Special
+| input         = 236HK
+| name          = High Blade Kick
+| images        = SF6_Ryu_236k.png
+| hitboxes      = SF6_Ryu_236k_hitbox.png
+| damage        = 1300
+| chip          = 325
+| startup       = 27
+| active        = 9
+| recovery      = 15
+| total         = 50
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 30
+| hitAdv        = KD +45~51
+| blockAdv      = {{sf6-adv|M|-3}}{{sf6-adv|P|(+5)}}
+| punishAdv     = KD +96~102 Tumble
+| perfParryAdv  = {{sf6-adv|VM|-22(-16)}}
+| blockstun     = 21
+| hitstop       = 20
+| driveDmgBlk   = 10000
+| driveDmgHit   = [10000]
+| driveGain     = 5000
+| superGainHit  = 1400 (980)
+| superGainBlk  = 700 (350)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.612 (1.969)
+| notes         = Puts opponent into limited juggle state on hit (can follow up with 623MP, 623PP, or SA3 in corner); Punish Counter tumble state can be hit OTG; has great range and forward movement, making it a useful poke in neutral; the last 3 active frames have identical range (the listed best-case frame advantage is when spaced at max range, active frame 7)
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236kk | moveType = Special
+| input         = 236KK
+| name          = High Blade Kick
+| images        = SF6_Ryu_236kk.png
+| hitboxes      = SF6_Ryu_236kk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = Combo (5% extra)
+| startup       = 17
+| active        = 5
+| recovery      = 33
+| total         = 54
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 27
+| hitAdv        = Wall Bounce +49(65)
+| blockAdv      = {{sf6-adv|VM|-18}}
+| punishAdv     = Wall Bounce +49(65)
+| perfParryAdv  = {{sf6-adv|VM|-36}}
+| blockstun     = 20
+| hitstop       = 20
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 2
+| jugLimit      = 10
+| atkRange      = 2.062 (1.851)
+| notes         = Wall Bounce into limited juggle state on hit; if close to corner, opponent flies over Ryu's head
+}}
+
+=== Hashogeki ===
+===== 214LP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214lp | moveType = Special
+| input         = 214LP
+| name          = Hashogeki
+| images        = SF6_Ryu_214p.png
+| hitboxes      = SF6_Ryu_214lp_hitbox.png
+| damage        = 700
+| chip          = 175
+| startup       = 12
+| active        = 6
+| recovery      = 18
+| total         = 35
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 24
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +59 Spin
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 15
+| driveDmgBlk   = 2000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 2
+| notes         = Strike hitbox but can nullify 1-hit meterless projectiles; puts opponent into spinning juggle state on counter-hit/Punish Counter; excellent Burnout pressure tool (+1 on block, but increased pushback against Burnout)
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214mp | moveType = Special
+| input         = 214MP
+| name          = Hashogeki
+| images        = SF6_Ryu_214p.png
+| hitboxes      = SF6_Ryu_214mp_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 19
+| active        = 6
+| recovery      = 17
+| total         = 41
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 23
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +58 Spin
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 25
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 2
+| notes         = Strike hitbox but can nullify 1-hit meterless projectiles; puts opponent into spinning juggle state on counter-hit/Punish Counter
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214hp | moveType = Special
+| input         = 214HP
+| name          = Hashogeki
+| images        = SF6_Ryu_214p.png
+| hitboxes      = SF6_Ryu_214hp_hitbox.png
+| damage        = 400x2
+| chip          = 100x2
+| startup       = 30
+| active        = 6
+| recovery      = 19
+| total         = 54
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 39
+| hitAdv        = KD +61 Spin
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +61 Spin
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 27 total
+| hitstop       = 15,15
+| driveDmgBlk   = 3000x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2
+| superGainHit  = 700,400 (490,280)
+| superGainBlk  = 350,200 (175,100)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 0,1
+| notes         = 2 hits, even if it connects on final active frame; strike hitbox but can nullify 1-hit meterless projectiles; puts opponent into spinning juggle state on hit; leaves Ryu inside throw range for a strike/throw mixup on block
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214pp | moveType = Special
+| input         = 214PP
+| name          = Hashogeki
+| images        = SF6_Ryu_214pp.png
+| hitboxes      = SF6_Ryu_214pp_hitbox.png
+| damage        = 1100
+| chip          = 275
+| dmgScaling    = Combo (2 hits)
+| startup       = 18
+| active        = 6
+| recovery      = 20
+| total         = 43
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 22
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| hitstun       = 29
+| blockstun     = 29
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 900 (630)
+| superGainBlk  = 450 (225)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = Strike hitbox but can nullify 1-hit OD projectiles or any meterless projectiles; great pressure tool
+}}
+
+===== 214HP(charged) =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214p(charged) | moveType = Special
+| input         = 214HP
+| name          = Denjin Charge Hashogeki
+| images        = SF6_Ryu_214p_charge.png
+| hitboxes      = SF6_Ryu_214p_charge_hitbox.png
+| damage        = 400x2
+| chip          = 100x2
+| startup       = 20
+| active        = 6
+| recovery      = 19(31)
+| total         = 44
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 38
+| hitAdv        = KD +62 Spin
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD +62 Spin
+| perfParryAdv  = {{sf6-adv|VM|-36}}
+| blockstun     = 41 total
+| hitstop       = 15 / 17,15
+| driveDmgBlk   = 3000x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2
+| superGainHit  = 700,400 (490,280)
+| superGainBlk  = 350,200 (175,100)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 3,4
+| notes         = () refers to recovery on block; strike hitbox but can nullify 2-hit meterless projectile; puts opponent into spinning juggle state on hit; only comes out when the Heavy Punch button is pressed
+}}
+
+===== 214PP(charged) =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214pp(charged) | moveType = Special
+| input         = 214PP
+| name          = Denjin Charge Hashogeki
+| images        = SF6_Ryu_214pp_charge.png
+| hitboxes      = SF6_Ryu_214pp_charge_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 18
+| active        = 6
+| recovery      = 19
+| total         = 42
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 22
+| hitAdv        = KD +87 Crumple
+| blockAdv      = {{sf6-adv|VP|+4}}
+| punishAdv     = KD +91 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 29
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 1100 (770)
+| superGainBlk  = 550 (275)
+| jugStart      = -1 ground / 1 air
+| jugIncrease   = 1
+| jugLimit      = 2
+| notes         = 1-hit; strike hitbox but can nullify 1-hit OD projectile or any meterless projectile; crumple state is +14 before opponent becomes airborne
+}}
+
+=== Denjin Charge ===
+===== 22P =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_22p | moveType = Special
+| input         = 22P
+| name          = Denjin Charge
+| images        = SF6_Ryu_22p.png
+| hitboxes      = SF6_Ryu_22p_hitbox.png
+| damage        = -
+| startup       = 50
+| active        = -
+| recovery      = 2
+| total         = 52
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Charges up next fireball-based move (Hadoken, Hashogeki, SA1, SA2) into a more powerful Denjin version; Ryu is in a counter-hit state for the entire animation; gains the Denjin charge on frame 50; can only store 1 stock at a time (does not persist between rounds); can also be performed after 5HP~HK or 5MP~LK~HK (on hit) by inputting 2P
+}}
+
+== Super Arts ==
+===== 236236P =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236236p | moveType = Super
+| input         = 236236P
+| name          = Shinku Hadoken
+| images        = SF6_Ryu_236236p.png
+| hitboxes      = SF6_Ryu_236236p_hitbox.png
+| damage        = 400x5 (2000)
+| chip          = 100x5 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 7
+| active        = -
+| recovery      = 79
+| total         = 86
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +26
+| blockAdv      = {{sf6-adv|VM|-24}}
+| punishAdv     = KD +26
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| blockstun     = 56 total
+| hitstop       = 8x5
+| driveDmgBlk   = 500x5
+| driveDmgHit   = 1000x5
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-8 Strike/Throw
+| armor         = Break
+| jugStart      = 1x4,100
+| jugIncrease   = 1x4,100
+| jugLimit      = 99x5
+| projSpeed     = 0.15
+| notes         = 5-hit Super projectile; button strength does not affect projectile speed; opponent cannot jump over projectile after Super freeze if within ~1/2 screen; can be preformed even when an OD Hadoken is on screen
+}}
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236236p_denjin | moveType = Super
+| input         = 236236P
+| name          = Denjin Hadoken
+| images        = SF6_Ryu_236236p_denjin.png
+| hitboxes      = SF6_Ryu_236236p_denjin_hitbox.png
+| damage        = 200x7,1000 (2400)
+| chip          = 50x7,150 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 7
+| active        = -
+| recovery      = 82
+| total         = 89
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +27
+| blockAdv      = {{sf6-adv|VM|-24}}
+| punishAdv     = KD +27
+| perfParryAdv  = {{sf6-adv|VP|+5}}
+| blockstun     = 59 total
+| hitstop       = 4x7,0 (5x7,8)
+| driveDmgBlk   = 300x7,400 (2500)
+| driveDmgHit   = 600x7,800 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-8 Strike/Throw
+| armor         = Break
+| jugStart      = 1x7,100
+| jugIncrease   = 1x7,100
+| jugLimit      = 99x8
+| projSpeed     = 0.24
+| notes         = 8-hit Super projectile; button strength does not affect projectile speed; opponent cannot jump over projectile after Super freeze if within ~1/2 screen; consumes Denjin stock for slightly more damage and KD Advantage; can be performed even when an OD Hadoken is on screen
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214214p | moveType = Super
+| input         = 214214P
+| name          = Shin Hashogeki Lv.1
+| images        = SF6_Ryu_214214p.png
+| hitboxes      = SF6_Ryu_214214p_hitbox.png
+| damage        = '''2800'''
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = '''12'''
+| active        = 6
+| recovery      = 39
+| total         = 56
+| guard         = LH
+| cancel        = -
+| hitAdv        = '''KD +20'''
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = '''KD +20'''
+| perfParryAdv  = {{sf6-adv|VM|-43}}
+| blockstun     = 25
+| hitstop       = 18
+| driveDmgBlk   = 4000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 99
+| notes         = Can hold the button to charge to a higher level for more damage (in exchange for less invincibility); if button is held up to 5f after Super freeze, this invuln is extended up to the 2nd active frame (up to 18f); strike hitbox; Burnout chip damage does not changed based on charge level
+}}
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214214p_denjin | moveType = Super
+| input         = 214214P
+| name          = Denjin Hashogeki Lv.1
+| images        = SF6_Ryu_214214p_denjin.png
+| hitboxes      = SF6_Ryu_214214p_denjin_hitbox.png
+| damage        = '''3200'''
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = '''12'''
+| active        = 6
+| recovery      = 39
+| total         = 56
+| guard         = LH
+| cancel        = -
+| hitAdv        = '''KD +20'''
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = '''KD +20'''
+| perfParryAdv  = {{sf6-adv|VM|-43}}
+| blockstun     = 25
+| hitstop       = 18
+| driveDmgBlk   = 4000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 99
+| notes         = Can hold the button to charge to a higher level for more damage (in exchange for less invincibility); if button is held up to 5f after Super freeze, this invuln is extended up to the 2nd active frame (up to 18f); strike hitbox; Burnout chip damage does not changed based on charge level; consumes Denjin stock for slightly more damage
+}}
+
+====== 214214P (Lv.2) ======
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214214p_lv2 | moveType = Super
+| input         = 214214P (Hold Lv.2)
+| name          = Shin Hashogeki Lv.2
+| images        = SF6_Ryu_214214p.png
+| hitboxes      = SF6_Ryu_214214p_hold_hitbox.png
+| damage        = '''2900'''
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = '''18~'''
+| active        = 6
+| recovery      = 39
+| total         = 62~
+| guard         = LH
+| cancel        = -
+| hitAdv        = '''KD +20'''
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = '''KD +20'''
+| perfParryAdv  = {{sf6-adv|VM|-43}}
+| blockstun     = 25
+| hitstop       = 20
+| driveDmgBlk   = 6000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-9 Full
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 99
+| notes         = Loses 4 invincibility frames if held; invincibility can be reduced to 1-7f if the button is held the minimum length of time for Lv.2 charge (6f after Super freeze); strike hitbox; Burnout chip damage does not changed based on charge level
+}}
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214214p_denjin_lv2 | moveType = Super
+| input         = 214214P (Hold Lv.2)
+| name          = Denjin Hashogeki Lv.2
+| images        = SF6_Ryu_214214p_denjin.png
+| hitboxes      = SF6_Ryu_214214p_hold_denjin_hitbox.png
+| damage        = '''3300'''
+| chip          = 750
+| dmgScaling    = 40% Minimum; Combo (2 hits)
+| startup       = '''18~'''
+| active        = 6
+| recovery      = 39
+| total         = 62~
+| guard         = LH
+| cancel        = -
+| hitAdv        = '''KD +78 Tumble'''
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = '''KD +78 Tumble'''
+| perfParryAdv  = {{sf6-adv|VM|-43}}
+| blockstun     = 25
+| hitstop       = 20
+| driveDmgBlk   = 6000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-9 Full
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 99
+| notes         = Loses 4 invincibility frames if held; invincibility can be reduced to 1-7f if the button is held the minimum length of time for Lv.2 charge (6f after Super freeze); strike hitbox; Burnout chip damage does not changed based on charge level; consumes Denjin stock for slightly more damage; Denjin version gives the tumbling OTG state that can lead to follow-up juggles (this is the only version that incurs damage scaling in combos)
+}}
+
+====== 214214P (Lv.3) ======
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214214p_lv3 | moveType = Super
+| input         = 214214P (Hold Lv.3)
+| name          = Shin Hashogeki Lv.3
+| images        = SF6_Ryu_214214p.png
+| hitboxes      = SF6_Ryu_214214p_hitbox.png
+| damage        = '''3000'''
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = '''50~'''
+| active        = 6
+| recovery      = 39
+| total         = 94~
+| guard         = LH
+| cancel        = -
+| hitAdv        = '''KD +78 Tumble'''
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = '''KD +78 Tumble'''
+| perfParryAdv  = {{sf6-adv|VM|-43}}
+| blockstun     = 25
+| hitstop       = 23
+| driveDmgBlk   = 10000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-9 Full
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 99
+| notes         = Loses 4 invincibility frames if held; full charge causes tumble OTG state; strike hitbox; Burnout chip damage does not changed based on charge level; extremely high pushback on block (can be difficult to punish without holding Parry into immediate Drive Rush)
+}}
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_214214p_denjin_lv3 | moveType = Super
+| input         = 214214P (Hold Lv.3)
+| name          = Denjin Hashogeki Lv.3
+| images        = SF6_Ryu_214214p_denjin.png
+| hitboxes      = SF6_Ryu_214214p_denjin_hitbox.png
+| damage        = '''3400'''
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = '''50~'''
+| active        = 6
+| recovery      = 39
+| total         = 94~
+| guard         = LH
+| cancel        = -
+| hitAdv        = '''KD +78 Tumble'''
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = '''KD +78 Tumble'''
+| perfParryAdv  = {{sf6-adv|VM|-43}}
+| blockstun     = 25
+| hitstop       = 23
+| driveDmgBlk   = 10000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-9 Full
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 99
+| notes         = Loses 4 invincibility frames if held; full charge causes tumble OTG state; strike hitbox; Burnout chip damage does not changed based on charge level; extremely high pushback on block (can be difficult to punish without holding Parry into immediate Drive Rush); consumes Denjin stock for slightly more damage
+}}
+
+===== 236236K =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236236k | moveType = Super
+| input         = 236236K
+| name          = Shin Shoryuken
+| images        = SF6_Ryu_236236k.png
+| hitboxes      = SF6_Ryu_236236k_hitbox.png
+| damage        = 4000 (3600)
+| chip          = 400,300x2,50x2 (1000~1100)
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 5(2)
+| active        = 12
+| recovery      = 32+39 land
+| total         = 87
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +14
+| blockAdv      = {{sf6-adv|VM|-50(-54)}}
+| punishAdv     = HKD +14
+| perfParryAdv  = {{sf6-adv|VM|-74}}
+| blockstun     = 31/29 total
+| hitstop       = 7,8,8,8
+| driveDmgBlk   = 2500x3
+| driveDmgHit   = 15000(3000x5)
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-16 Full
+| armor         = Break
+| airborne      = 7-48 (FKD)
+| jugStart      = [1]
+| jugIncrease   = [1x5]
+| jugLimit      = 99 [99x5]
+| atkRange      = 1.10 (1st)
+| notes         = More hits connect on block vs. tall standing characters (these extra hits do not deal any additional Drive Damage on block); active frames 3-12 cause a non-cinematic hit that does reduced damage (400x4,2000); cannot anti-air cross-ups; starts up faster only when canceled from HP Shoryuken; cinematic time regenerates ~2.2 Drive bars for Ryu
+}}
+
+====== 236236K (CA) ======
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_236236k(ca) | moveType = Super
+| input         = 236236K
+| name          = Shin Shoryuken (CA)
+| images        = SF6_Ryu_236236k(ca).png
+| hitboxes      = SF6_Ryu_236236k_hitbox.png
+| damage        = 4500 (4400)
+| chip          = 650,300x2,50x2 (1250~1350)
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 5(2)
+| active        = 12
+| recovery      = 32+39 land
+| total         = 87
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +14
+| blockAdv      = {{sf6-adv|VM|-50(-54)}}
+| punishAdv     = HKD +14
+| perfParryAdv  = {{sf6-adv|VM|-74}}
+| blockstun     = 31/29 total
+| hitstop       = 8,8,8,13
+| driveDmgBlk   = 4000,3000x2
+| driveDmgHit   = 20000(4000x5)
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-16 Full
+| armor         = Break
+| airborne      = 7-48 (FKD)
+| jugStart      = [1]
+| jugIncrease   = [1x5]
+| jugLimit      = 99 [99x5]
+| atkRange      = 1.10 (1st)
+| notes         = More hits connect on block vs. tall standing characters (these extra hits do not deal any additional Drive Damage on block); active frames 3-12 cause a non-cinematic hit that does slightly reduced damage (400x2,1200x3); cannot anti-air cross-ups; starts up faster only when canceled from HP Shoryuken; available at 25% HP or below; cinematic time regenerates ~2.3 Drive bars for Ryu
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Ryu_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 210 (total)
+| active        = -
+| recovery      = -
+| total         = 210
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Come on!"
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Ryu_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 124 (total)
+| active        = -
+| recovery      = -
+| total         = 124
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = *Slaps face*
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Ryu_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 209 (total)
+| active        = -
+| recovery      = -
+| total         = 209
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Your footwork's sloppy."
+}}
+
+===== 2PPPKKK =====
+{{FrameData-SF6 | chara = Ryu | moveId = ryu_2pppkkk | moveType = taunt
+| input         = 2PPPKKK
+| name          = Down Taunt
+| images        = SF6_Ryu_2pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 154 (total)
+| active        = -
+| recovery      = -
+| total         = 154
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Come!"
+}}
+
+
+{{Character Subnav SF6 | chara=Ryu }}
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category:Ryu]]

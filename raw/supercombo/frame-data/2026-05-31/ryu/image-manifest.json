@@ -1,0 +1,2861 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-05-31T06:58:16Z",
+  "source": "SuperCombo Wiki",
+  "character": "Ryu",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Ryu",
+      "filename": "SF6 Ryu Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Ryu",
+      "filename": "SF6 Ryu Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Ryu_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Ryu_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Ryu_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Ryu_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Ryu_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Ryu_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Ryu_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Ryu_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Ryu_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Ryu_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Ryu_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Ryu_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Ryu_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Ryu_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Ryu_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Ryu_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ryu_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ryu_2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ryu_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ryu_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ryu_2hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Ryu_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Ryu_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Ryu_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Ryu_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2hk",
+      "input": "2HK",
+      "name": "Low Spinning Sweep",
+      "filename": "SF6_Ryu_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_2hk",
+      "input": "2HK",
+      "name": "Low Spinning Sweep",
+      "filename": "SF6_Ryu_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Ryu_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Ryu_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ryu_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ryu_jmp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ryu_jmp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ryu_jmp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Ryu_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Ryu_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Ryu_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Ryu_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Ryu_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Ryu_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Ryu_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Ryu_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6mp",
+      "input": "6MP",
+      "name": "Collarbone Breaker",
+      "filename": "SF6_Ryu_6mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6mp",
+      "input": "6MP",
+      "name": "Collarbone Breaker",
+      "filename": "SF6_Ryu_6mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6mp",
+      "input": "6MP",
+      "name": "Collarbone Breaker",
+      "filename": "SF6_Ryu_6mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6mp",
+      "input": "6MP",
+      "name": "Collarbone Breaker",
+      "filename": "SF6_Ryu_6mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6hp",
+      "input": "6HP",
+      "name": "Solar Plexus Strike",
+      "filename": "SF6_Ryu_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hp",
+      "input": "6HP",
+      "name": "Solar Plexus Strike",
+      "filename": "SF6_Ryu_6hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hp",
+      "input": "6HP",
+      "name": "Solar Plexus Strike",
+      "filename": "SF6_Ryu_6hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hp",
+      "input": "6HP",
+      "name": "Solar Plexus Strike",
+      "filename": "SF6_Ryu_6hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_4hp",
+      "input": "4HP",
+      "name": "Short Uppercut",
+      "filename": "SF6_Ryu_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hp",
+      "input": "4HP",
+      "name": "Short Uppercut",
+      "filename": "SF6_Ryu_4hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hp",
+      "input": "4HP",
+      "name": "Short Uppercut",
+      "filename": "SF6_Ryu_4hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hp",
+      "input": "4HP",
+      "name": "Short Uppercut",
+      "filename": "SF6_Ryu_4hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hp",
+      "input": "4HP",
+      "name": "Short Uppercut",
+      "filename": "SF6_Ryu_4hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_4hk",
+      "input": "4HK",
+      "name": "Axe Kick",
+      "filename": "SF6_Ryu_4hk_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hk",
+      "input": "4HK",
+      "name": "Axe Kick",
+      "filename": "SF6_Ryu_4hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hk",
+      "input": "4HK",
+      "name": "Axe Kick",
+      "filename": "SF6_Ryu_4hk_hitbox_2_3_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hk",
+      "input": "4HK",
+      "name": "Axe Kick",
+      "filename": "SF6_Ryu_4hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4hk",
+      "input": "4HK",
+      "name": "Axe Kick",
+      "filename": "SF6_Ryu_4hk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6hk",
+      "input": "6HK",
+      "name": "Whirlwind Kick",
+      "filename": "SF6_Ryu_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hk",
+      "input": "6HK",
+      "name": "Whirlwind Kick",
+      "filename": "SF6_Ryu_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5mp_lk",
+      "input": "5MP~LK",
+      "name": "Fuwa Triple Strike 1",
+      "filename": "SF6_Ryu_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5mp_lk",
+      "input": "5MP~LK",
+      "name": "Fuwa Triple Strike 1",
+      "filename": "SF6_Ryu_5mp_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5mp_lk_hk",
+      "input": "5MP~LK~HK",
+      "name": "Fuwa Triple Strike 2",
+      "filename": "SF6_Ryu_5mp_lk_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5mp_lk_hk",
+      "input": "5MP~LK~HK",
+      "name": "Fuwa Triple Strike 2",
+      "filename": "SF6_Ryu_5mp_lk_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5hp_hk",
+      "input": "5HP~HK",
+      "name": "High Double Strike",
+      "filename": "SF6_Ryu_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_5hp_hk",
+      "input": "5HP~HK",
+      "name": "High Double Strike",
+      "filename": "SF6_Ryu_5hp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_lplk",
+      "input": "LPLK",
+      "name": "Shoulder Throw",
+      "filename": "SF6_Ryu_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_lplk",
+      "input": "LPLK",
+      "name": "Shoulder Throw",
+      "filename": "SF6_Ryu_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_4lplk",
+      "input": "4LPLK",
+      "name": "Somersault Throw",
+      "filename": "SF6_Ryu_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_4lplk",
+      "input": "4LPLK",
+      "name": "Somersault Throw",
+      "filename": "SF6_Ryu_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_hphk",
+      "input": "HPHK",
+      "name": "Shingeki",
+      "filename": "SF6_Ryu_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_hphk",
+      "input": "HPHK",
+      "name": "Shingeki",
+      "filename": "SF6_Ryu_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6hphk",
+      "input": "6HPHK",
+      "name": "Chest Strike (Block)",
+      "filename": "SF6_Ryu_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hphk",
+      "input": "6HPHK",
+      "name": "Chest Strike (Block)",
+      "filename": "SF6_Ryu_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Chest Strike (Recovery)",
+      "filename": "SF6_Ryu_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Chest Strike (Recovery)",
+      "filename": "SF6_Ryu_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Ryu_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Ryu_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Ryu_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Ryu_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Ryu_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Ryu_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236lp",
+      "input": "236LP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236lp",
+      "input": "236LP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236mp",
+      "input": "236MP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236mp",
+      "input": "236MP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236hp",
+      "input": "236HP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236hp",
+      "input": "236HP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236pp",
+      "input": "236PP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236pp",
+      "input": "236PP",
+      "name": "Hadoken",
+      "filename": "SF6_Ryu_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236p(charged)",
+      "input": "236HP",
+      "name": "Denjin Charge Hadoken",
+      "filename": "SF6_Ryu_236p_charge.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236p(charged)",
+      "input": "236HP",
+      "name": "Denjin Charge Hadoken",
+      "filename": "SF6_Ryu_236p_charge_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236pp(charged)",
+      "input": "236PP",
+      "name": "Denjin Charge Hadoken",
+      "filename": "SF6_Ryu_236pp_charge.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236pp(charged)",
+      "input": "236PP",
+      "name": "Denjin Charge Hadoken",
+      "filename": "SF6_Ryu_236pp_charge_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_623lp",
+      "input": "623LP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_623lp",
+      "input": "623LP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_623mp",
+      "input": "623MP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_623mp",
+      "input": "623MP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_623hp",
+      "input": "623HP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_623hp",
+      "input": "623HP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_623pp",
+      "input": "623PP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_623pp",
+      "input": "623PP",
+      "name": "Shoryuken",
+      "filename": "SF6_Ryu_623pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214lk",
+      "input": "214LK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214lk",
+      "input": "214LK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214mk",
+      "input": "214MK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214mk",
+      "input": "214MK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214hk",
+      "input": "214HK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214hk",
+      "input": "214HK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214kk2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214kk3_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_j214k",
+      "input": "j.214K",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_j214k",
+      "input": "j.214K",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6hk_214k",
+      "input": "6HK~214K",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hk_214k",
+      "input": "6HK~214K",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214kk2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214kk3_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6hk_214kk",
+      "input": "6HK~214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hk_214kk",
+      "input": "6HK~214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hk_214kk",
+      "input": "6HK~214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214kk2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_6hk_214kk",
+      "input": "6HK~214KK",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "filename": "SF6_Ryu_j214kk3_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236lk",
+      "input": "236LK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236lk",
+      "input": "236LK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236mk",
+      "input": "236MK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236mk",
+      "input": "236MK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236hk",
+      "input": "236HK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236hk",
+      "input": "236HK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236kk",
+      "input": "236KK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236kk",
+      "input": "236KK",
+      "name": "High Blade Kick",
+      "filename": "SF6_Ryu_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214lp",
+      "input": "214LP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214lp",
+      "input": "214LP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214mp",
+      "input": "214MP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214mp",
+      "input": "214MP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214hp",
+      "input": "214HP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214hp",
+      "input": "214HP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214pp",
+      "input": "214PP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214pp",
+      "input": "214PP",
+      "name": "Hashogeki",
+      "filename": "SF6_Ryu_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214p(charged)",
+      "input": "214HP",
+      "name": "Denjin Charge Hashogeki",
+      "filename": "SF6_Ryu_214p_charge.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214p(charged)",
+      "input": "214HP",
+      "name": "Denjin Charge Hashogeki",
+      "filename": "SF6_Ryu_214p_charge_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214pp(charged)",
+      "input": "214PP",
+      "name": "Denjin Charge Hashogeki",
+      "filename": "SF6_Ryu_214pp_charge.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214pp(charged)",
+      "input": "214PP",
+      "name": "Denjin Charge Hashogeki",
+      "filename": "SF6_Ryu_214pp_charge_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_22p",
+      "input": "22P",
+      "name": "Denjin Charge",
+      "filename": "SF6_Ryu_22p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_22p",
+      "input": "22P",
+      "name": "Denjin Charge",
+      "filename": "SF6_Ryu_22p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236236p",
+      "input": "236236P",
+      "name": "Shinku Hadoken",
+      "filename": "SF6_Ryu_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236236p",
+      "input": "236236P",
+      "name": "Shinku Hadoken",
+      "filename": "SF6_Ryu_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236236p_denjin",
+      "input": "236236P",
+      "name": "Denjin Hadoken",
+      "filename": "SF6_Ryu_236236p_denjin.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236236p_denjin",
+      "input": "236236P",
+      "name": "Denjin Hadoken",
+      "filename": "SF6_Ryu_236236p_denjin_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214214p",
+      "input": "214214P",
+      "name": "Shin Hashogeki Lv.1",
+      "filename": "SF6_Ryu_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214214p",
+      "input": "214214P",
+      "name": "Shin Hashogeki Lv.1",
+      "filename": "SF6_Ryu_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214214p_denjin",
+      "input": "214214P",
+      "name": "Denjin Hashogeki Lv.1",
+      "filename": "SF6_Ryu_214214p_denjin.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214214p_denjin",
+      "input": "214214P",
+      "name": "Denjin Hashogeki Lv.1",
+      "filename": "SF6_Ryu_214214p_denjin_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214214p_lv2",
+      "input": "214214P (Hold Lv.2)",
+      "name": "Shin Hashogeki Lv.2",
+      "filename": "SF6_Ryu_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214214p_lv2",
+      "input": "214214P (Hold Lv.2)",
+      "name": "Shin Hashogeki Lv.2",
+      "filename": "SF6_Ryu_214214p_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214214p_denjin_lv2",
+      "input": "214214P (Hold Lv.2)",
+      "name": "Denjin Hashogeki Lv.2",
+      "filename": "SF6_Ryu_214214p_denjin.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214214p_denjin_lv2",
+      "input": "214214P (Hold Lv.2)",
+      "name": "Denjin Hashogeki Lv.2",
+      "filename": "SF6_Ryu_214214p_hold_denjin_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214214p_lv3",
+      "input": "214214P (Hold Lv.3)",
+      "name": "Shin Hashogeki Lv.3",
+      "filename": "SF6_Ryu_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214214p_lv3",
+      "input": "214214P (Hold Lv.3)",
+      "name": "Shin Hashogeki Lv.3",
+      "filename": "SF6_Ryu_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_214214p_denjin_lv3",
+      "input": "214214P (Hold Lv.3)",
+      "name": "Denjin Hashogeki Lv.3",
+      "filename": "SF6_Ryu_214214p_denjin.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_214214p_denjin_lv3",
+      "input": "214214P (Hold Lv.3)",
+      "name": "Denjin Hashogeki Lv.3",
+      "filename": "SF6_Ryu_214214p_denjin_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236236k",
+      "input": "236236K",
+      "name": "Shin Shoryuken",
+      "filename": "SF6_Ryu_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236236k",
+      "input": "236236K",
+      "name": "Shin Shoryuken",
+      "filename": "SF6_Ryu_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_236236k(ca)",
+      "input": "236236K",
+      "name": "Shin Shoryuken (CA)",
+      "filename": "SF6_Ryu_236236k(ca).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ryu_236236k(ca)",
+      "input": "236236K",
+      "name": "Shin Shoryuken (CA)",
+      "filename": "SF6_Ryu_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Ryu_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Ryu_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Ryu_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ryu_2pppkkk",
+      "input": "2PPPKKK",
+      "name": "Down Taunt",
+      "filename": "SF6_Ryu_2pppkkk.png"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "File:SF6 Ryu 214214p denjin hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/9/9a/SF6_Ryu_214214p_denjin_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214214p_denjin_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "96ec93feb209d4f89f0d44eb92bbf75f36457847",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214214p_denjin_hitbox.png",
+      "byte_count": 357814,
+      "sha256": "sha256:1447e9947936c21cbf8ccba2d85c61430f50a75f78a9c63eb31e6129ed5306b1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214214p denjin.png",
+      "url": "https://wiki.supercombo.gg/images/a/ae/SF6_Ryu_214214p_denjin.png",
+      "target_path": "images/files/SF6_Ryu_214214p_denjin.png",
+      "mime": "image/png",
+      "source_sha1": "5345d17088aa1961682faf476dd8fa36c11538d5",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214214p_denjin.png",
+      "byte_count": 617329,
+      "sha256": "sha256:7dc06a9ae7f5ae705c38059f5dc834ac6ec407147653cc25a2de962ed70f11b3",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214214p hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/0/07/SF6_Ryu_214214p_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214214p_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "9baee843dd7c3c28576891db4e073d86136ce2b0",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214214p_hitbox.png",
+      "byte_count": 321544,
+      "sha256": "sha256:b7c2199ba289eaee3ce392d5f0096bc9b1f77b5a731b0baa21c3220f34e37aa4",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214214p hold denjin hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/1/1d/SF6_Ryu_214214p_hold_denjin_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214214p_hold_denjin_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "0a0cfa043e60cb869a495aea53366623568c585e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214214p_hold_denjin_hitbox.png",
+      "byte_count": 330626,
+      "sha256": "sha256:77a8ff7b2d55a9711ba672f91cf0100b22edd7bf5335f9c6ee74b3022c5ab377",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214214p hold hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/0/05/SF6_Ryu_214214p_hold_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214214p_hold_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "c838f0ccd57a5c4ff07b6753d4bdc8b9d3e9a02b",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214214p_hold_hitbox.png",
+      "byte_count": 317447,
+      "sha256": "sha256:5fd79ddd45805c1bae8b27c980cfb268937ff7505f31d38d873e3f210f896919",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214214p.png",
+      "url": "https://wiki.supercombo.gg/images/8/8a/SF6_Ryu_214214p.png",
+      "target_path": "images/files/SF6_Ryu_214214p.png",
+      "mime": "image/png",
+      "source_sha1": "8c18d702570139bfc8ab70b477bd899f29c9797d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214214p.png",
+      "byte_count": 556183,
+      "sha256": "sha256:7f0eaef33497afe697706f6072448979734835dfac72e80e3d7a3bb479b0e89a",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214hp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/2/24/SF6_Ryu_214hp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214hp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "bc5093a882d905eba0db924fa7c8329b75828c6b",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214hp_hitbox.png",
+      "byte_count": 331182,
+      "sha256": "sha256:f111b2ea3247247bd6e9a414416723be8c9066ed029462136caa5b34c9dd93cf",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214k hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/c/cd/SF6_Ryu_214k_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214k_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "6fb2168f41b3095db1bb6d8b231a2c66a30ee6f9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214k_hitbox.png",
+      "byte_count": 337368,
+      "sha256": "sha256:73d163beab0ac97d5e59a8f14e4a2c3f8e958710f525e93b4b6c57384c2bc528",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214k.png",
+      "url": "https://wiki.supercombo.gg/images/d/dc/SF6_Ryu_214k.png",
+      "target_path": "images/files/SF6_Ryu_214k.png",
+      "mime": "image/png",
+      "source_sha1": "f6ffb3b1e0671edb9fdd4bbc64d5cb9684cb97a2",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214k.png",
+      "byte_count": 376538,
+      "sha256": "sha256:5811a9a8b17913941fafd54189e61e7db07e4be1b289fdca99f9959edc424130",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214kk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/8/87/SF6_Ryu_214kk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214kk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "9ad0e2001dd0155ec2173f4b56542c94b1f8ba42",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214kk_hitbox.png",
+      "byte_count": 227879,
+      "sha256": "sha256:6b0f7fc68bc51d512cdebcfbedf57e71a50bd95e7c73998fda870696ed8da8d9",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214kk.png",
+      "url": "https://wiki.supercombo.gg/images/a/a7/SF6_Ryu_214kk.png",
+      "target_path": "images/files/SF6_Ryu_214kk.png",
+      "mime": "image/png",
+      "source_sha1": "f1dbfa9ce22e491fcc0ded23000024d98cf8f23e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214kk.png",
+      "byte_count": 259160,
+      "sha256": "sha256:11c02ab397fbf26e7434bb0780aeb0a7e739afa69df0e0a31efcf07099788cac",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214kk2 hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/a/aa/SF6_Ryu_214kk2_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214kk2_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "be4b3fd61dedc3c1e135dc61129cd1ab217c65b7",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214kk2_hitbox.png",
+      "byte_count": 234058,
+      "sha256": "sha256:92398c49a9d63cff492c86a30ef9d7b0a9e465751bf98666a7839c7d86919a62",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214kk3 hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/5/52/SF6_Ryu_214kk3_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214kk3_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "c191bc75bc1c52451d450647ca5f258ae18ab953",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214kk3_hitbox.png",
+      "byte_count": 148567,
+      "sha256": "sha256:f4b409a7e6e138579188b73a746783dc261b5d1eec263be24240aa99ff20c154",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214lp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/5/5e/SF6_Ryu_214lp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214lp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "64b9be48eef8c152f912fac62741b98173d06265",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214lp_hitbox.png",
+      "byte_count": 314609,
+      "sha256": "sha256:6c0fb03e5124cd64d3e6bb490ac56286185a106b3e09c3a27c642fdfe95d122f",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214mp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/9/92/SF6_Ryu_214mp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214mp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "7a7ff729b88c8fa829ea5d77a4a2b253304aa016",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214mp_hitbox.png",
+      "byte_count": 328660,
+      "sha256": "sha256:fec166a22544d3fd228fa619ceff173909acbad40df284ae741b09136fe4860d",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214p charge hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/2/2d/SF6_Ryu_214p_charge_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214p_charge_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "9fc67c1cdd3f40f6bfefdad8b947cf8fb91e1ac3",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214p_charge_hitbox.png",
+      "byte_count": 390603,
+      "sha256": "sha256:5a51d1f98c63a2929d5d51a08823387f733bafb5bf63f526b8fb05d23d4a97b3",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214p charge.png",
+      "url": "https://wiki.supercombo.gg/images/1/1b/SF6_Ryu_214p_charge.png",
+      "target_path": "images/files/SF6_Ryu_214p_charge.png",
+      "mime": "image/png",
+      "source_sha1": "d2f47dc7727943359ee60e17a72f970753cc08d4",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214p_charge.png",
+      "byte_count": 376123,
+      "sha256": "sha256:6fe1530fff71c161eee097e02b5edef7a8524d14653fb806f75670f7f167c3b3",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214p.png",
+      "url": "https://wiki.supercombo.gg/images/3/30/SF6_Ryu_214p.png",
+      "target_path": "images/files/SF6_Ryu_214p.png",
+      "mime": "image/png",
+      "source_sha1": "5e44de205a9b1a8b55ffbaf0fc05d0ffa05deb34",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214p.png",
+      "byte_count": 295419,
+      "sha256": "sha256:0ddc3fb673ed73228d4a1e5dcd40fee177b71729f9088dc2870a10eccfc2e367",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214pp charge hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/0/0e/SF6_Ryu_214pp_charge_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214pp_charge_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "d91fc3eb48a37b8d594f04d598ecde94618bef25",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214pp_charge_hitbox.png",
+      "byte_count": 375711,
+      "sha256": "sha256:3983a009ee1c8f184efec5025b7ab3cc8744c5fa80c41204fe219c5150edcf8e",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214pp charge.png",
+      "url": "https://wiki.supercombo.gg/images/b/bc/SF6_Ryu_214pp_charge.png",
+      "target_path": "images/files/SF6_Ryu_214pp_charge.png",
+      "mime": "image/png",
+      "source_sha1": "6000bfab9ee82ef109bc718531108474cf67e53c",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214pp_charge.png",
+      "byte_count": 368106,
+      "sha256": "sha256:5fc89bc75c5a758334a751a1627e46291f2fd4260ec529511bd66d000478a8a9",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214pp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/c/ca/SF6_Ryu_214pp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_214pp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "7fa5503fc5db1c337942920d1b3ee99263624235",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214pp_hitbox.png",
+      "byte_count": 353539,
+      "sha256": "sha256:b4fc59362ae7e57f71109fee26a64f18949eac7be0957f1acded74942a43542b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 214pp.png",
+      "url": "https://wiki.supercombo.gg/images/3/3b/SF6_Ryu_214pp.png",
+      "target_path": "images/files/SF6_Ryu_214pp.png",
+      "mime": "image/png",
+      "source_sha1": "d9e6dcd0f08f28980fb149026e29923a90600f9d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_214pp.png",
+      "byte_count": 314930,
+      "sha256": "sha256:325fabae00c3f972bcedfbc7dd30a484771b72fe81c007b24546a4c1245fddc1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 22p hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/8/84/SF6_Ryu_22p_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_22p_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "cfe59e1af1e78914307e5de164db43182d118507",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_22p_hitbox.png",
+      "byte_count": 188068,
+      "sha256": "sha256:1313d3b718e4562631269e08dd4c46abc6f2fc39756bfd5de55fdf8ae165afa0",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 22p.png",
+      "url": "https://wiki.supercombo.gg/images/e/e9/SF6_Ryu_22p.png",
+      "target_path": "images/files/SF6_Ryu_22p.png",
+      "mime": "image/png",
+      "source_sha1": "06cd1cb73e7e557168c955617877ed8ad58371c9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_22p.png",
+      "byte_count": 401003,
+      "sha256": "sha256:5e10fc4c26d3bfa981213c32371a47d873405e9ec706bf8f518b393ecf00beea",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236k hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/d/d7/SF6_Ryu_236236k_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236236k_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "2ed54b86d8d412b0ae7391b6f31852f77b8a2caf",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236k_hitbox.png",
+      "byte_count": 516484,
+      "sha256": "sha256:8bc2908aa10846f58895257b8daa6f954bde9378d5e0f1a06a1e5667e3c5fb1c",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236k(ca).png",
+      "url": "https://wiki.supercombo.gg/images/0/04/SF6_Ryu_236236k%28ca%29.png",
+      "target_path": "images/files/SF6_Ryu_236236k(ca).png",
+      "mime": "image/png",
+      "source_sha1": "e5bc94161a87a076da27ca909e53375aae3cdeee",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236k(ca).png",
+      "byte_count": 306455,
+      "sha256": "sha256:25d9ff22e670be1343fbe9dcccf83cb5245c3a9d6f55aae6ce16fae8ad729c6c",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236k.png",
+      "url": "https://wiki.supercombo.gg/images/8/87/SF6_Ryu_236236k.png",
+      "target_path": "images/files/SF6_Ryu_236236k.png",
+      "mime": "image/png",
+      "source_sha1": "5f821c7600b4599a7e12d09a033f8f16be59e379",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236k.png",
+      "byte_count": 327886,
+      "sha256": "sha256:2a2fa56d42a5d7ea665906d866a32d02a34ff9b51941eb0795dccf71ee97c814",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236p denjin hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/6a/SF6_Ryu_236236p_denjin_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236236p_denjin_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "94da5bdc6085cde3d72943db84afe75486b4d9b8",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236p_denjin_hitbox.png",
+      "byte_count": 297503,
+      "sha256": "sha256:bcf7698ca3e8104176f22c2c59cfae0401dd7941910926224e9ec79d99e2c396",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236p denjin.png",
+      "url": "https://wiki.supercombo.gg/images/a/ae/SF6_Ryu_236236p_denjin.png",
+      "target_path": "images/files/SF6_Ryu_236236p_denjin.png",
+      "mime": "image/png",
+      "source_sha1": "48b174e7fc2ef5d556084eaf5492adc9931b1caa",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236p_denjin.png",
+      "byte_count": 401213,
+      "sha256": "sha256:e512a64115e5473b4cb5e3453597af399f8a3b278cae8e99575b6b62d7fba2e1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236p hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/b/b0/SF6_Ryu_236236p_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236236p_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "5016b2924d40efadfe730b901590b0d9a4ea4732",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236p_hitbox.png",
+      "byte_count": 281137,
+      "sha256": "sha256:b3203ef18d7f51300c7ab8a695d26c7aee84dc790b3f819cf9843bf322555355",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236236p.png",
+      "url": "https://wiki.supercombo.gg/images/3/36/SF6_Ryu_236236p.png",
+      "target_path": "images/files/SF6_Ryu_236236p.png",
+      "mime": "image/png",
+      "source_sha1": "6b14353d50229f30462cbfaf1b41d46c62f3695b",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236236p.png",
+      "byte_count": 349577,
+      "sha256": "sha256:81876dc9a8eca16c697811f3a671aa4f6e7810de7d90c14177e5762ab2f057b6",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236k hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/4/41/SF6_Ryu_236k_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236k_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "d7e9db8232718b23fe4e1460aea306d3c362b552",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236k_hitbox.png",
+      "byte_count": 150217,
+      "sha256": "sha256:4adda2db9a2fbd4c6279623c0ea73fcbb77a11ef0e8e9405e090f9e7e5a58f6b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236k.png",
+      "url": "https://wiki.supercombo.gg/images/8/8f/SF6_Ryu_236k.png",
+      "target_path": "images/files/SF6_Ryu_236k.png",
+      "mime": "image/png",
+      "source_sha1": "37d6ac2b0a50237ac6a8f4cc86345a7917cf59d0",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236k.png",
+      "byte_count": 263267,
+      "sha256": "sha256:1b61aeeb8516ae119f04d9fec386966981aa872e8b209d1cebd4d5e81c911cb6",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236kk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/2/20/SF6_Ryu_236kk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236kk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "8b71d1ce82ce7fe440403bffa02c869e02325d5e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236kk_hitbox.png",
+      "byte_count": 271557,
+      "sha256": "sha256:8aecb9ef71e4dd24310ce3429cebed8626fad960688790265a4abb7c750e13b1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236kk.png",
+      "url": "https://wiki.supercombo.gg/images/1/1c/SF6_Ryu_236kk.png",
+      "target_path": "images/files/SF6_Ryu_236kk.png",
+      "mime": "image/png",
+      "source_sha1": "9e5c852df3896c742a2f2f7d03b615ffc6701142",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236kk.png",
+      "byte_count": 234245,
+      "sha256": "sha256:c7d7375c6706ab98d4f3a95308791654bdb22a99604090619fe14577a6d5fbed",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236lp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/e/ed/SF6_Ryu_236lp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236lp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "d634d9d2ce81a2ac305061534a708496b35a426d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236lp_hitbox.png",
+      "byte_count": 227844,
+      "sha256": "sha256:796eea2080c802c6f8ed7cd8e2e1aacf88953a5bccfef53071a048ab74927cd6",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236lp.png",
+      "url": "https://wiki.supercombo.gg/images/3/3f/SF6_Ryu_236lp.png",
+      "target_path": "images/files/SF6_Ryu_236lp.png",
+      "mime": "image/png",
+      "source_sha1": "c31af64b4a5758cc44910f7c378b8065b2ac1f2a",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236lp.png",
+      "byte_count": 269964,
+      "sha256": "sha256:c13d929a17cce6efea45bba1791f83e1fba09038351a230b70f7f7dcb684c827",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236p charge hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/d/d6/SF6_Ryu_236p_charge_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236p_charge_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "92461787f03f2436d05eac0ad1a30b39f60741c7",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236p_charge_hitbox.png",
+      "byte_count": 251231,
+      "sha256": "sha256:6cebfd247b1eda8f60f8310208d9f971685c5831f370db161da7d6167a86356e",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236p charge.png",
+      "url": "https://wiki.supercombo.gg/images/d/de/SF6_Ryu_236p_charge.png",
+      "target_path": "images/files/SF6_Ryu_236p_charge.png",
+      "mime": "image/png",
+      "source_sha1": "2b086368df1b18be3a5f172472754e09fe1efb74",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236p_charge.png",
+      "byte_count": 300205,
+      "sha256": "sha256:6b016c875953cb21edfde3ce67b4304753850bf1769b36a2e7c1de3a221f1c74",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236pp charge hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/3/30/SF6_Ryu_236pp_charge_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236pp_charge_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "4b471cb696520960f57bcf98fa2a61af85734f3a",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236pp_charge_hitbox.png",
+      "byte_count": 140418,
+      "sha256": "sha256:1721f51e84fac673e23220d5c527b51b06d2f34cff03b9411227c79d23da71fa",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236pp charge.png",
+      "url": "https://wiki.supercombo.gg/images/0/01/SF6_Ryu_236pp_charge.png",
+      "target_path": "images/files/SF6_Ryu_236pp_charge.png",
+      "mime": "image/png",
+      "source_sha1": "d4b9d71490a08eb8030176461ff98aeb0f85fb93",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236pp_charge.png",
+      "byte_count": 159155,
+      "sha256": "sha256:f24e86da6abe65c7ca9e2e4f6e684d281baba9fb249fe33755a355e4b6eeb8e3",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236pp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/7/7c/SF6_Ryu_236pp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_236pp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "a0bc7df212d558ed473ad76007dc2dbc63f6d35d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236pp_hitbox.png",
+      "byte_count": 146911,
+      "sha256": "sha256:c3417c30b22d26375a2729b00355f2d8608a020e4a8dc22bb468adabae590c33",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 236pp.png",
+      "url": "https://wiki.supercombo.gg/images/3/3b/SF6_Ryu_236pp.png",
+      "target_path": "images/files/SF6_Ryu_236pp.png",
+      "mime": "image/png",
+      "source_sha1": "14a264b5dc8d4453efbdd13d71d1fe960407f292",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_236pp.png",
+      "byte_count": 339370,
+      "sha256": "sha256:0433d387f27e9dc521f9fd9b566d6470692d2896eb6a910d5daffcaecacb3171",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/0/08/SF6_Ryu_2hk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_2hk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "349bfa36ba23d947bdb44edce62ee3577f606acf",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hk_hitbox.png",
+      "byte_count": 170820,
+      "sha256": "sha256:7b1ed49f973fc1e8e7137daf0bf4b7eb70628d8af12b82d70a5a475adf86832b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hk.png",
+      "url": "https://wiki.supercombo.gg/images/8/83/SF6_Ryu_2hk.png",
+      "target_path": "images/files/SF6_Ryu_2hk.png",
+      "mime": "image/png",
+      "source_sha1": "aed74dcb593b00302f92b50ede8f28489ba3a0f6",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hk.png",
+      "byte_count": 184238,
+      "sha256": "sha256:b6f58ee1568d4d1d8b9d1803ab3fc4d05ebc8058f1de6b9f962565c86b682a26",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hp hitbox 1.png",
+      "url": "https://wiki.supercombo.gg/images/d/d1/SF6_Ryu_2hp_hitbox_1.png",
+      "target_path": "images/files/SF6_Ryu_2hp_hitbox_1.png",
+      "mime": "image/png",
+      "source_sha1": "9f3fcb85fa2d0c359e176b954321c6c887c44d01",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hp_hitbox_1.png",
+      "byte_count": 182892,
+      "sha256": "sha256:443b93a63592a1db024ab814af9bf1bb9d137a9ae53fd053790efe92647c5bcb",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hp hitbox 2.png",
+      "url": "https://wiki.supercombo.gg/images/4/4c/SF6_Ryu_2hp_hitbox_2.png",
+      "target_path": "images/files/SF6_Ryu_2hp_hitbox_2.png",
+      "mime": "image/png",
+      "source_sha1": "4ef351c48c4501c86710bc5a23c21b4da4c8efb8",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hp_hitbox_2.png",
+      "byte_count": 172374,
+      "sha256": "sha256:ecf3e4f58eaa1bd884b85ea7ea79ca47f80df09d9baccc4d7a4ba16bf89cf958",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hp hitbox 3.png",
+      "url": "https://wiki.supercombo.gg/images/d/d2/SF6_Ryu_2hp_hitbox_3.png",
+      "target_path": "images/files/SF6_Ryu_2hp_hitbox_3.png",
+      "mime": "image/png",
+      "source_sha1": "4363b2ad4f914b3b7b4f92d98a3ffc9df72c483a",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hp_hitbox_3.png",
+      "byte_count": 163506,
+      "sha256": "sha256:fc640fabf8e6917e6bf0f3fbc42024ced3406444a77ee61767cb32ab5d80c0d5",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hp hitbox preview.png",
+      "url": "https://wiki.supercombo.gg/images/3/32/SF6_Ryu_2hp_hitbox_preview.png",
+      "target_path": "images/files/SF6_Ryu_2hp_hitbox_preview.png",
+      "mime": "image/png",
+      "source_sha1": "df8d8a7417fc9beee912655d11e70c7d88aaa3e6",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hp_hitbox_preview.png",
+      "byte_count": 520569,
+      "sha256": "sha256:0d7960fae69f9bbef17f06cd987963b16c16af0b10e702d62f5feabfb1f93346",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2hp.png",
+      "url": "https://wiki.supercombo.gg/images/3/30/SF6_Ryu_2hp.png",
+      "target_path": "images/files/SF6_Ryu_2hp.png",
+      "mime": "image/png",
+      "source_sha1": "2223158e4cf90ff21814cecb472186adbc0645bf",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2hp.png",
+      "byte_count": 234148,
+      "sha256": "sha256:91bf9ea28662c29eadfde2a7b1d27633b9750bc321882a4de32cb9369f6afd59",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2lk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/6e/SF6_Ryu_2lk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_2lk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "2fd8b00cec9323d99f834251461be359dee6d40c",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2lk_hitbox.png",
+      "byte_count": 171957,
+      "sha256": "sha256:937aa4e556cde63a99afb573669ba15f67ff25cded99f41c232f52e837dbd42b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2lk.png",
+      "url": "https://wiki.supercombo.gg/images/b/ba/SF6_Ryu_2lk.png",
+      "target_path": "images/files/SF6_Ryu_2lk.png",
+      "mime": "image/png",
+      "source_sha1": "5f0fa7e17992bedb765eca67b0b908d658cbac93",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2lk.png",
+      "byte_count": 271462,
+      "sha256": "sha256:0902f5144b05e499868ed11a94f405e096c81ea11beb6eb9c8c698c101197ff5",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2lp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/65/SF6_Ryu_2lp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_2lp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "8e16112d0741ecafa0d79174232551697f26f3ad",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2lp_hitbox.png",
+      "byte_count": 174185,
+      "sha256": "sha256:60088f4db4ac8d446ff5a867e08b4aef076974fc0efca24e07ff0e90ae26732a",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2lp.png",
+      "url": "https://wiki.supercombo.gg/images/7/7e/SF6_Ryu_2lp.png",
+      "target_path": "images/files/SF6_Ryu_2lp.png",
+      "mime": "image/png",
+      "source_sha1": "fdb4d06a8bfbf9c7f615d2c7441c60c7ab4c8f60",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2lp.png",
+      "byte_count": 299173,
+      "sha256": "sha256:90850620e063085abe626979a25324306010c8b19ea74c919ced833c50c0a718",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2mk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/69/SF6_Ryu_2mk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_2mk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "3a63d1e3d4d5d3d283db381047c193662210e3eb",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2mk_hitbox.png",
+      "byte_count": 178148,
+      "sha256": "sha256:cef7cdfbcf08d1c2aeae1ff7b31b0de2f55e12c00d643df291caa034b2393bee",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2mk.png",
+      "url": "https://wiki.supercombo.gg/images/7/78/SF6_Ryu_2mk.png",
+      "target_path": "images/files/SF6_Ryu_2mk.png",
+      "mime": "image/png",
+      "source_sha1": "31e045c5ffce080af69b18df5d4e0eb2be479499",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2mk.png",
+      "byte_count": 176733,
+      "sha256": "sha256:698b80dae2b5e562cdd760d5f87f25e323ee90b7e9ea99062cf3bb6e09a18023",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2mp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/c/c4/SF6_Ryu_2mp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_2mp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "5b09eb0aed9f1185d9beb21186da174177717fc9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2mp_hitbox.png",
+      "byte_count": 180579,
+      "sha256": "sha256:6906856686dd21563e82f093330f138b76169a3fc1dde035dd252da298d63a6b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2mp.png",
+      "url": "https://wiki.supercombo.gg/images/d/d7/SF6_Ryu_2mp.png",
+      "target_path": "images/files/SF6_Ryu_2mp.png",
+      "mime": "image/png",
+      "source_sha1": "8508025202530b7b0701ef48af89eeb31e38123b",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2mp.png",
+      "byte_count": 259167,
+      "sha256": "sha256:b114905be4c47b6e936dd0234d8a3e6d5930f69e906657c451a7e8b68f5259ca",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 2pppkkk.png",
+      "url": "https://wiki.supercombo.gg/images/9/97/SF6_Ryu_2pppkkk.png",
+      "target_path": "images/files/SF6_Ryu_2pppkkk.png",
+      "mime": "image/png",
+      "source_sha1": "d9fc5310cdde6ca1aaf04e9a371ca957d98e73f6",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_2pppkkk.png",
+      "byte_count": 331305,
+      "sha256": "sha256:de77bdf6e1af2981b739c8a356a070af0cea7fd66d083dd37c86f1d5e6de7896",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hk 1.png",
+      "url": "https://wiki.supercombo.gg/images/8/87/SF6_Ryu_4hk_1.png",
+      "target_path": "images/files/SF6_Ryu_4hk_1.png",
+      "mime": "image/png",
+      "source_sha1": "ccfeb1174627e830412ac760c36aaf7ce1a5112c",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hk_1.png",
+      "byte_count": 293478,
+      "sha256": "sha256:838a727f562964298d7368b54509285154dd5db8b101f629a921b47efd7bd3f7",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hk hitbox 1.png",
+      "url": "https://wiki.supercombo.gg/images/6/67/SF6_Ryu_4hk_hitbox_1.png",
+      "target_path": "images/files/SF6_Ryu_4hk_hitbox_1.png",
+      "mime": "image/png",
+      "source_sha1": "eaff0530f0ac21a604e4f273fabe88dcf942cf80",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hk_hitbox_1.png",
+      "byte_count": 154721,
+      "sha256": "sha256:68af9d01273136e669d65aa91c05073447f2f455a962e346e9011ffd244fe44e",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hk hitbox 2 3 preview.png",
+      "url": "https://wiki.supercombo.gg/images/8/8a/SF6_Ryu_4hk_hitbox_2_3_preview.png",
+      "target_path": "images/files/SF6_Ryu_4hk_hitbox_2_3_preview.png",
+      "mime": "image/png",
+      "source_sha1": "ff92ac22a0611c34c35257d8ba18c187e0455afc",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hk_hitbox_2_3_preview.png",
+      "byte_count": 336672,
+      "sha256": "sha256:bd291e77e55ba30335ba33ab19c766f0757fe4736e045e338a12ea442a08472e",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hk hitbox 2.png",
+      "url": "https://wiki.supercombo.gg/images/d/d8/SF6_Ryu_4hk_hitbox_2.png",
+      "target_path": "images/files/SF6_Ryu_4hk_hitbox_2.png",
+      "mime": "image/png",
+      "source_sha1": "be1d35ccebb69db9f0a80757f48cb8ab6c6ae714",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hk_hitbox_2.png",
+      "byte_count": 171113,
+      "sha256": "sha256:90abf4af2ecf792a821f925d416cb256559278c65ed4a96f45027760dd799cf0",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hk hitbox 3.png",
+      "url": "https://wiki.supercombo.gg/images/a/ad/SF6_Ryu_4hk_hitbox_3.png",
+      "target_path": "images/files/SF6_Ryu_4hk_hitbox_3.png",
+      "mime": "image/png",
+      "source_sha1": "2e501af70646f8db369526f3157c16a998f1fec7",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hk_hitbox_3.png",
+      "byte_count": 165357,
+      "sha256": "sha256:0705d1bf9baf2a977346120abb7d08e9f995b264bb3c9d684c7becf2366afe16",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hp hitbox 1.png",
+      "url": "https://wiki.supercombo.gg/images/3/36/SF6_Ryu_4hp_hitbox_1.png",
+      "target_path": "images/files/SF6_Ryu_4hp_hitbox_1.png",
+      "mime": "image/png",
+      "source_sha1": "aa7a4ff0b34d105c27abbebe6ae2f95a163fc5a9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hp_hitbox_1.png",
+      "byte_count": 205331,
+      "sha256": "sha256:c9e3e06927249957436df45ca13521e04d98f132a2cef03104ee0e7ce4b49928",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hp hitbox 2.png",
+      "url": "https://wiki.supercombo.gg/images/7/71/SF6_Ryu_4hp_hitbox_2.png",
+      "target_path": "images/files/SF6_Ryu_4hp_hitbox_2.png",
+      "mime": "image/png",
+      "source_sha1": "5d86b7bd1814615699d36ac45d35232a86ef2aaa",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hp_hitbox_2.png",
+      "byte_count": 214018,
+      "sha256": "sha256:31e023f874b32d447380c14d45cb79b1e9c671e467a82e74935bf034d42d196c",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hp hitbox 3.png",
+      "url": "https://wiki.supercombo.gg/images/2/29/SF6_Ryu_4hp_hitbox_3.png",
+      "target_path": "images/files/SF6_Ryu_4hp_hitbox_3.png",
+      "mime": "image/png",
+      "source_sha1": "bc85864de00ebd516688692366d71df5d45ed539",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hp_hitbox_3.png",
+      "byte_count": 208110,
+      "sha256": "sha256:c7c95cb4e317fb5d115f5d80f65fd1bbfdee50ea7ad04f9da1ad6c66d86390e5",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hp hitbox preview.png",
+      "url": "https://wiki.supercombo.gg/images/2/2f/SF6_Ryu_4hp_hitbox_preview.png",
+      "target_path": "images/files/SF6_Ryu_4hp_hitbox_preview.png",
+      "mime": "image/png",
+      "source_sha1": "9039ab0072f8f6fa6d1abf14a45674f7c0649684",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hp_hitbox_preview.png",
+      "byte_count": 626816,
+      "sha256": "sha256:57490c528f8fc559c39e796ffa9106a56fa1a8091e53898d721f91e5b54edaf2",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4hp.png",
+      "url": "https://wiki.supercombo.gg/images/3/3f/SF6_Ryu_4hp.png",
+      "target_path": "images/files/SF6_Ryu_4hp.png",
+      "mime": "image/png",
+      "source_sha1": "900511ebc9f9d05ba214b69299d52b42526afe37",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4hp.png",
+      "byte_count": 275602,
+      "sha256": "sha256:f15224803a489ee909479c62e1c95bf41d1ac4130b592a90e91be6d60776b113",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4lplk.png",
+      "url": "https://wiki.supercombo.gg/images/7/72/SF6_Ryu_4lplk.png",
+      "target_path": "images/files/SF6_Ryu_4lplk.png",
+      "mime": "image/png",
+      "source_sha1": "a9532066321eeb1bad966f3e693a959c8239be34",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4lplk.png",
+      "byte_count": 227101,
+      "sha256": "sha256:2d66ddfd13feb01b2aab87873cf2bbdc531a1aaa1d4817904dd521a7123742a2",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 4pppkkk.png",
+      "url": "https://wiki.supercombo.gg/images/6/63/SF6_Ryu_4pppkkk.png",
+      "target_path": "images/files/SF6_Ryu_4pppkkk.png",
+      "mime": "image/png",
+      "source_sha1": "13c905ccaeaf206f7939fdbd9f812bd0bc0b5d3b",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_4pppkkk.png",
+      "byte_count": 218643,
+      "sha256": "sha256:930e0cee1ef791eec5cdb8a02a4f9f3792b2bd9dd3bf88e6e539a0cc81be8bde",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5hk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/9/9a/SF6_Ryu_5hk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5hk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "48856e5d1425e44e0ed7da7ed007bbfe62ba49bb",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5hk_hitbox.png",
+      "byte_count": 207151,
+      "sha256": "sha256:01b328dbe521b8ff266cd33becfb4cfe914784b0ada17409e708149841fa1def",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5hk.png",
+      "url": "https://wiki.supercombo.gg/images/b/b1/SF6_Ryu_5hk.png",
+      "target_path": "images/files/SF6_Ryu_5hk.png",
+      "mime": "image/png",
+      "source_sha1": "cae3754691557d8cc32a9af1a07c54baf32394b9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5hk.png",
+      "byte_count": 246326,
+      "sha256": "sha256:19ec70dc0384fc75cf431d72ad7d97d34fbf404ec61c2f429f3ebd3826144f02",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5hp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/5/56/SF6_Ryu_5hp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5hp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "9c553768bd37fd84410590cfec6c30d648b9fddb",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5hp_hitbox.png",
+      "byte_count": 180847,
+      "sha256": "sha256:5a244eefd68e63617cbf9ad363a87d9a1983f2d546afff98193ca1881e74602f",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5hp hk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/3/33/SF6_Ryu_5hp_hk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5hp_hk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "e5be94afb943f8125306515a98d0d281dfc00ba8",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5hp_hk_hitbox.png",
+      "byte_count": 208645,
+      "sha256": "sha256:1698ad61d256ebf84deec496783b0e4a64b3427dc1970eef0f5eb4a7113213dd",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5hp.png",
+      "url": "https://wiki.supercombo.gg/images/0/00/SF6_Ryu_5hp.png",
+      "target_path": "images/files/SF6_Ryu_5hp.png",
+      "mime": "image/png",
+      "source_sha1": "f420fb32155b7cd5ae41153c9a5e0ab6d1df6e33",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5hp.png",
+      "byte_count": 262169,
+      "sha256": "sha256:669736b1389c71e7906a5e33d50ee601896e8badc60feebe01169715555eec92",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5lk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/c/c5/SF6_Ryu_5lk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5lk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "85d880be32bd21260dc2644575d84aead43625a9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5lk_hitbox.png",
+      "byte_count": 176162,
+      "sha256": "sha256:271153472dea9d8d2e8ead975a8e950b99261180bfc2e379686a9f094a9b5e2b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5lk.png",
+      "url": "https://wiki.supercombo.gg/images/4/4e/SF6_Ryu_5lk.png",
+      "target_path": "images/files/SF6_Ryu_5lk.png",
+      "mime": "image/png",
+      "source_sha1": "b5d46e37ca0e702bea564a33bf31c109a49c99b9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5lk.png",
+      "byte_count": 250171,
+      "sha256": "sha256:a61f70b6e14bafdaa226957ca9499d83bf3cfa4b6d4214f35e619356f8da7d4a",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5lp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/9/99/SF6_Ryu_5lp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5lp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "5953149a2403c25c412ca549922948bef4c20095",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5lp_hitbox.png",
+      "byte_count": 201115,
+      "sha256": "sha256:89478f26febe5fe148b5f5428468bcb79f7a1c159381171332c2103e3b8b94a1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5lp.png",
+      "url": "https://wiki.supercombo.gg/images/4/49/SF6_Ryu_5lp.png",
+      "target_path": "images/files/SF6_Ryu_5lp.png",
+      "mime": "image/png",
+      "source_sha1": "c42f25d2afd84b040ad63780e72cdc6d10d9950e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5lp.png",
+      "byte_count": 252524,
+      "sha256": "sha256:174911848eed0febeb511b5762af9504ea7cf894350cf5f3426f42b0cd450bd8",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/6e/SF6_Ryu_5mk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5mk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "2b2676d1f70eb7e7fc7d2fa1278a8d1ec0e26ba2",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mk_hitbox.png",
+      "byte_count": 195178,
+      "sha256": "sha256:15b9d5d7d56ea9e63a4821730c0598a6d6eabe19a18ed20613ecd94601127cdc",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mk.png",
+      "url": "https://wiki.supercombo.gg/images/8/85/SF6_Ryu_5mk.png",
+      "target_path": "images/files/SF6_Ryu_5mk.png",
+      "mime": "image/png",
+      "source_sha1": "39eec4ae6d28315cf7c122e32a81dafd97afdce2",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mk.png",
+      "byte_count": 215223,
+      "sha256": "sha256:f64f3096d83770006755b59874276554bf68655fc5f71f0424652a5ce7bda48d",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/6c/SF6_Ryu_5mp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5mp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "9fe1733fbe5c21f0bcb6eb9505e64a7efb139e4e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mp_hitbox.png",
+      "byte_count": 174648,
+      "sha256": "sha256:9ebfe461dfd192e095f7998578cf540bbe0da2f6a330752f0405980742caf8d0",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mp lk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/6/65/SF6_Ryu_5mp_lk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5mp_lk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "125ef45afa5e717a95cff2968e6572fb2041239b",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mp_lk_hitbox.png",
+      "byte_count": 176738,
+      "sha256": "sha256:6772a79ca43f891368894fb63aa9698cd30fd665ccc57cbb5f64699230d6c615",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mp lk hk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/a/a3/SF6_Ryu_5mp_lk_hk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_5mp_lk_hk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "3276d19f4bc1b5b5d2bff551f56e22768045916c",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mp_lk_hk_hitbox.png",
+      "byte_count": 168489,
+      "sha256": "sha256:f9261cc9957b684d056acada963ac62153e851ff5cf5ea12d5ad30e9b1268735",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mp lk hk.png",
+      "url": "https://wiki.supercombo.gg/images/e/e7/SF6_Ryu_5mp_lk_hk.png",
+      "target_path": "images/files/SF6_Ryu_5mp_lk_hk.png",
+      "mime": "image/png",
+      "source_sha1": "4e20e3e63fba05bfc81ab96f4637e2b1ecc9b041",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mp_lk_hk.png",
+      "byte_count": 222101,
+      "sha256": "sha256:5ef81ee1bb932e1b97f77fbc6da1f964639bbdcf07c3928b70737b8d8e4c1c66",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5mp.png",
+      "url": "https://wiki.supercombo.gg/images/b/b6/SF6_Ryu_5mp.png",
+      "target_path": "images/files/SF6_Ryu_5mp.png",
+      "mime": "image/png",
+      "source_sha1": "5ee2c38ed8fae2cbd0fcf6da677da1bf0c22b0b6",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5mp.png",
+      "byte_count": 264490,
+      "sha256": "sha256:7dfb00b57ccc7c193c1bcc060676002af9d6e2f51a2119a58bd64fb49f1815f9",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 5pppkkk.png",
+      "url": "https://wiki.supercombo.gg/images/8/83/SF6_Ryu_5pppkkk.png",
+      "target_path": "images/files/SF6_Ryu_5pppkkk.png",
+      "mime": "image/png",
+      "source_sha1": "e85a82ac3e178b5bdaddc26badcf572c7fb6f07f",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_5pppkkk.png",
+      "byte_count": 213770,
+      "sha256": "sha256:79b4f1ec266b15d186b6fe815f1d59afe3fac08305ee227e9ad66606c9701352",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 623p hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/2/22/SF6_Ryu_623p_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_623p_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "7c672d21f5bc0d5258332247c6d904d1e1a084f0",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_623p_hitbox.png",
+      "byte_count": 211789,
+      "sha256": "sha256:410ddf5e9070526b678c183bc0cba838824c59d6587702c313c0cbea06a63c63",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 623p.png",
+      "url": "https://wiki.supercombo.gg/images/7/7e/SF6_Ryu_623p.png",
+      "target_path": "images/files/SF6_Ryu_623p.png",
+      "mime": "image/png",
+      "source_sha1": "bc41fba4cae0cb660a812bfa0249b60585fa1d96",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_623p.png",
+      "byte_count": 406819,
+      "sha256": "sha256:bf518b561b77332a6fd48cb754b1fb05e4442ef96a43a79de46a226ddb04cade",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 623pp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/7/7d/SF6_Ryu_623pp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_623pp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "c556417fdd58df6a4e195a000592daf36e67a363",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_623pp_hitbox.png",
+      "byte_count": 200560,
+      "sha256": "sha256:536c182b0c1c1e653e5f4a870152abfd6f4587615969716a3b6ce0ab8e0d6900",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 623pp.png",
+      "url": "https://wiki.supercombo.gg/images/6/61/SF6_Ryu_623pp.png",
+      "target_path": "images/files/SF6_Ryu_623pp.png",
+      "mime": "image/png",
+      "source_sha1": "e01f65a8f7258802c3cccfcd52d09a7081884ed9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_623pp.png",
+      "byte_count": 249949,
+      "sha256": "sha256:cf2777c8d371dd08abbbc1b3df88c12fd7acf087d98f03061f8ef71cee7bd1b4",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 66 hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/f/fc/SF6_Ryu_66_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_66_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "a17ea3dece36a2e60d0ba815c5816bfaf92a6b7f",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_66_hitbox.png",
+      "byte_count": 155889,
+      "sha256": "sha256:6deaf4be5e4320c1001d1b8d2bf5a68a6db4cf8ba12b789a42826e639c0670bd",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 66.png",
+      "url": "https://wiki.supercombo.gg/images/e/e3/SF6_Ryu_66.png",
+      "target_path": "images/files/SF6_Ryu_66.png",
+      "mime": "image/png",
+      "source_sha1": "e6781b169d8cde7762220fc9333640bacad0a659",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_66.png",
+      "byte_count": 396789,
+      "sha256": "sha256:24050dbcb34bc8d040c43dbaf2de8f5f8e2eb0cd848fe16b766ce03ebbee8706",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/2/2a/SF6_Ryu_6hk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_6hk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "0f8dbe6be8db555f3bbbae02d390412e1d2710f9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hk_hitbox.png",
+      "byte_count": 158559,
+      "sha256": "sha256:af7cf361d5d39900b2b92961e4181fa83ce3c4536d0f340d81b6ff6b4e06e8c9",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hk.png",
+      "url": "https://wiki.supercombo.gg/images/8/86/SF6_Ryu_6hk.png",
+      "target_path": "images/files/SF6_Ryu_6hk.png",
+      "mime": "image/png",
+      "source_sha1": "6b6e6644cb66d9f28874f77a5436c216311cb0e1",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hk.png",
+      "byte_count": 205500,
+      "sha256": "sha256:ea9f297c4da9879562bb9da70e26b4176340e5ee039ccddb83f21458a8c756f9",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hp hitbox 1.png",
+      "url": "https://wiki.supercombo.gg/images/7/7c/SF6_Ryu_6hp_hitbox_1.png",
+      "target_path": "images/files/SF6_Ryu_6hp_hitbox_1.png",
+      "mime": "image/png",
+      "source_sha1": "73fb9369c870886dad4d362c704c35bf78c45362",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hp_hitbox_1.png",
+      "byte_count": 196792,
+      "sha256": "sha256:bfd2c8ff79d3f7acd34ffd89b84d6eae8dbe33ff1e158c3d10114183f8c98198",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hp hitbox 2.png",
+      "url": "https://wiki.supercombo.gg/images/3/3c/SF6_Ryu_6hp_hitbox_2.png",
+      "target_path": "images/files/SF6_Ryu_6hp_hitbox_2.png",
+      "mime": "image/png",
+      "source_sha1": "73075116de81c1c40a3208b4515437a0610751e5",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hp_hitbox_2.png",
+      "byte_count": 198525,
+      "sha256": "sha256:bf771767b91dca311863479987e4e900803bcb196c6f011004dc61b5794ba3bc",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hp hitbox preview.png",
+      "url": "https://wiki.supercombo.gg/images/c/cb/SF6_Ryu_6hp_hitbox_preview.png",
+      "target_path": "images/files/SF6_Ryu_6hp_hitbox_preview.png",
+      "mime": "image/png",
+      "source_sha1": "305b59a36d2f95d8bb365036343c7330f827d0b9",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hp_hitbox_preview.png",
+      "byte_count": 395422,
+      "sha256": "sha256:adcce5ad9751835b5079eaf806613358783a783a6165eefc41963b0a38d3f218",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hp.png",
+      "url": "https://wiki.supercombo.gg/images/f/fc/SF6_Ryu_6hp.png",
+      "target_path": "images/files/SF6_Ryu_6hp.png",
+      "mime": "image/png",
+      "source_sha1": "96acb51c05a2b04d8d29732aa6d8ab39a5de979d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hp.png",
+      "byte_count": 286677,
+      "sha256": "sha256:6853bfab1597da5c0903e4a64294b88c07cd13e6ee6f00e4c3c33e6cfe5cfafe",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hphk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/8/89/SF6_Ryu_6hphk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_6hphk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "fbc7fd2c88cd993ab61e66f612e0971dabde92ba",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hphk_hitbox.png",
+      "byte_count": 195820,
+      "sha256": "sha256:af49d2ba476e5f3537e22be57d6242e94e03a2c47105614b94177d036e09991e",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6hphk.png",
+      "url": "https://wiki.supercombo.gg/images/b/b6/SF6_Ryu_6hphk.png",
+      "target_path": "images/files/SF6_Ryu_6hphk.png",
+      "mime": "image/png",
+      "source_sha1": "ccadcd2f769302f6153ab19fdae3ac3e8bdfbce4",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6hphk.png",
+      "byte_count": 431808,
+      "sha256": "sha256:f71a5a8aaf3f3fa2445ff256fa0d8e3382d3dc45be9c691fd4326d74190b0355",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6mp hitbox 1.png",
+      "url": "https://wiki.supercombo.gg/images/b/bc/SF6_Ryu_6mp_hitbox_1.png",
+      "target_path": "images/files/SF6_Ryu_6mp_hitbox_1.png",
+      "mime": "image/png",
+      "source_sha1": "0ad4dcc5be8b6fc6d1a7d246e6182b7d5fcd474a",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6mp_hitbox_1.png",
+      "byte_count": 174365,
+      "sha256": "sha256:82106a696e7b53d1afb41373a98f7fd7d1f044ebbc5281818fb0f1c009c2c231",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6mp hitbox 2.png",
+      "url": "https://wiki.supercombo.gg/images/9/99/SF6_Ryu_6mp_hitbox_2.png",
+      "target_path": "images/files/SF6_Ryu_6mp_hitbox_2.png",
+      "mime": "image/png",
+      "source_sha1": "d132502e43d421cbe598fdc398c449f1b9081078",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6mp_hitbox_2.png",
+      "byte_count": 166545,
+      "sha256": "sha256:74ec30db889f24e65191c101595297cf5948727a9e2c83ab2c5c16fc87359510",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6mp hitbox preview.png",
+      "url": "https://wiki.supercombo.gg/images/3/3a/SF6_Ryu_6mp_hitbox_preview.png",
+      "target_path": "images/files/SF6_Ryu_6mp_hitbox_preview.png",
+      "mime": "image/png",
+      "source_sha1": "6a8ca211609c4a550052476fdc0a3b8a5a98f345",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6mp_hitbox_preview.png",
+      "byte_count": 340724,
+      "sha256": "sha256:9908d9fb7b46cb84af2320fdc29864dd90180c6de8fee135e60e850e76b8b88d",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6mp.png",
+      "url": "https://wiki.supercombo.gg/images/3/3b/SF6_Ryu_6mp.png",
+      "target_path": "images/files/SF6_Ryu_6mp.png",
+      "mime": "image/png",
+      "source_sha1": "18a7fc744c01ef28b7f65bc023a922066c55702d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6mp.png",
+      "byte_count": 244290,
+      "sha256": "sha256:26ccf07375de6b45e61482e1d65e17e9ed6dd6b53a383240d7b4157c2d4adbf5",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu 6pppkkk.png",
+      "url": "https://wiki.supercombo.gg/images/f/f5/SF6_Ryu_6pppkkk.png",
+      "target_path": "images/files/SF6_Ryu_6pppkkk.png",
+      "mime": "image/png",
+      "source_sha1": "5397e825fee2987b63c7b0c3b1dea432f54aa7a5",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_6pppkkk.png",
+      "byte_count": 226089,
+      "sha256": "sha256:8d1392b2cc401e07777aecafafa02b23b82e740e80e5239a69d3899a15382a09",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu Face.png",
+      "url": "https://wiki.supercombo.gg/images/0/0e/SF6_Ryu_Face.png",
+      "target_path": "images/files/SF6_Ryu_Face.png",
+      "mime": "image/png",
+      "source_sha1": "61a3565536eaef03a98fa554f5b8d383bdcd3ffb",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_Face.png",
+      "byte_count": 519540,
+      "sha256": "sha256:371f659df09059c2bf63bb1ada2ed3f4cd2ce280040d2f1cb2587e29725e7755",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu Portrait.png",
+      "url": "https://wiki.supercombo.gg/images/1/19/SF6_Ryu_Portrait.png",
+      "target_path": "images/files/SF6_Ryu_Portrait.png",
+      "mime": "image/png",
+      "source_sha1": "03dd74e13362c5ca765978faf09433e1ba946993",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_Portrait.png",
+      "byte_count": 1807428,
+      "sha256": "sha256:a0b57aa102c4ed023ed474e10dfa9196f9e8bc55e281585b09039c7df7b33111",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu hphk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/d/d7/SF6_Ryu_hphk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_hphk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "854025c1dc02ee88216cf21608151b2ea738feae",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_hphk_hitbox.png",
+      "byte_count": 246555,
+      "sha256": "sha256:c1c110b43597b42f478c070fff10c773c369cc37c7c932cde60fe12180ee5ba7",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu hphk.png",
+      "url": "https://wiki.supercombo.gg/images/9/92/SF6_Ryu_hphk.png",
+      "target_path": "images/files/SF6_Ryu_hphk.png",
+      "mime": "image/png",
+      "source_sha1": "6ab9a0192ebeb42adff5dfc052594064a8d86a99",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_hphk.png",
+      "byte_count": 461745,
+      "sha256": "sha256:ec12b034c5fa1b9a393fd315d0665b5a4358398482705f61444f374275ef7995",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu j214k hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/9/94/SF6_Ryu_j214k_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_j214k_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "19e81d478aa78ff0e8950afcf68660d1ba1a78a1",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_j214k_hitbox.png",
+      "byte_count": 346451,
+      "sha256": "sha256:67c6ebf81682522d83ea2e622ec43af9c3b5127a4d4a45955bffc31ee705916e",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu j214kk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/2/2e/SF6_Ryu_j214kk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_j214kk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "d842bd84871c0882315f1e8bdacb81cd10032c73",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_j214kk_hitbox.png",
+      "byte_count": 222900,
+      "sha256": "sha256:f47a9b52d1bc88bc804191abd06612c38e86d9d9b04b4b5db4109025f2f1a04f",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu j214kk2 hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/1/1d/SF6_Ryu_j214kk2_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_j214kk2_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "f5e68b202f226c299e74ac5655b70d502e30d54a",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_j214kk2_hitbox.png",
+      "byte_count": 228015,
+      "sha256": "sha256:11dc28be763a557cd53e066bd5ac27db841b659b7e2b665fb464592e484a8973",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu j214kk3 hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/e/e1/SF6_Ryu_j214kk3_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_j214kk3_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "04f40e7329a400d6428c46abdce85f9011f11499",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_j214kk3_hitbox.png",
+      "byte_count": 142249,
+      "sha256": "sha256:e8ee5d941f50063f61ed244df906ea7c88a9f9682ba0802a08fb5db4ea64fc07",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jhk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/1/13/SF6_Ryu_jhk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_jhk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "49896309340fddff6d352937b9c8401aff2c337a",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jhk_hitbox.png",
+      "byte_count": 185033,
+      "sha256": "sha256:e0b925f58c86e775fa08a5eb7c7d7c5b867f974884b20b1a452e4a94e3c2c5df",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jhk.png",
+      "url": "https://wiki.supercombo.gg/images/e/e4/SF6_Ryu_jhk.png",
+      "target_path": "images/files/SF6_Ryu_jhk.png",
+      "mime": "image/png",
+      "source_sha1": "95d3f994d75e72b94efa53f9ca555c370b110b8c",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jhk.png",
+      "byte_count": 271295,
+      "sha256": "sha256:b8cfb71bb17ebce500b97d0a5292de8667ba5588b0014f11251fc8568c8516f9",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jhp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/3/3e/SF6_Ryu_jhp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_jhp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "47000e882d1cc1486e347b4e9ae4525a46c4e05e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jhp_hitbox.png",
+      "byte_count": 190318,
+      "sha256": "sha256:2f08fc1dbda2441578b737cb5f758904a18ebb3487220b8706ce94a914da2d61",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jhp.png",
+      "url": "https://wiki.supercombo.gg/images/d/db/SF6_Ryu_jhp.png",
+      "target_path": "images/files/SF6_Ryu_jhp.png",
+      "mime": "image/png",
+      "source_sha1": "5910f4662a6a6f84a87007c20325b786c93b9929",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jhp.png",
+      "byte_count": 188665,
+      "sha256": "sha256:b2ef276f73f843cefae9352945461d34695eab19a8cc65352fe0e0fc92379870",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jlk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/4/4a/SF6_Ryu_jlk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_jlk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "b87b485f66be4a6242acee089c69ec3e17ca9afc",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jlk_hitbox.png",
+      "byte_count": 133755,
+      "sha256": "sha256:a1a6eeca384352d23f8e514b6f784dbf485e0cdcd526b007c04d6f455778d14a",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jlk.png",
+      "url": "https://wiki.supercombo.gg/images/4/43/SF6_Ryu_jlk.png",
+      "target_path": "images/files/SF6_Ryu_jlk.png",
+      "mime": "image/png",
+      "source_sha1": "569aa03fc8a07b1a251819301d8dbe8842caaa1e",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jlk.png",
+      "byte_count": 370479,
+      "sha256": "sha256:e62308aca381ec8b601e5a7fbf1c1ff32d0c78e62dc4310bbfc531b16ee1c086",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jlp hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/b/b5/SF6_Ryu_jlp_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_jlp_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "24d719000250783970a687cab6b2ca7d451e36dc",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jlp_hitbox.png",
+      "byte_count": 131317,
+      "sha256": "sha256:e83f931dcab24fbfb60ff5261b587e00b853f8a0707ee3f6e014d66348275b33",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jlp.png",
+      "url": "https://wiki.supercombo.gg/images/c/c2/SF6_Ryu_jlp.png",
+      "target_path": "images/files/SF6_Ryu_jlp.png",
+      "mime": "image/png",
+      "source_sha1": "5618b294c965b654aa207545034483861572eacf",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jlp.png",
+      "byte_count": 353901,
+      "sha256": "sha256:dec9741f64fb123c49b40137396d47c2cb3356687e11133a1ec9633e9494084b",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jmk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/3/3b/SF6_Ryu_jmk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_jmk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "21d6730b5e0bddcea84bc5d2677266b141050aad",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jmk_hitbox.png",
+      "byte_count": 165509,
+      "sha256": "sha256:d0075753ad5439b64871e6c3d47f31befc92aa6cee81d71b1225315c7b8292bb",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jmk.png",
+      "url": "https://wiki.supercombo.gg/images/3/35/SF6_Ryu_jmk.png",
+      "target_path": "images/files/SF6_Ryu_jmk.png",
+      "mime": "image/png",
+      "source_sha1": "40b6ca4c27cbed9819fc96f7179d58886625585c",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jmk.png",
+      "byte_count": 232561,
+      "sha256": "sha256:a77369b78c6fec50d14f5c54076b0baaf96aeb9265300f21d56ad2d62443394c",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jmp hitbox 1.png",
+      "url": "https://wiki.supercombo.gg/images/6/6c/SF6_Ryu_jmp_hitbox_1.png",
+      "target_path": "images/files/SF6_Ryu_jmp_hitbox_1.png",
+      "mime": "image/png",
+      "source_sha1": "44cbfb95afc9e5b3ee2bcac6adf4dd603ac3d78f",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jmp_hitbox_1.png",
+      "byte_count": 171477,
+      "sha256": "sha256:2f2355c083e311b96c99fe770d27aa4e20848b06f7491406bd90942bc62fb0cb",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jmp hitbox 2.png",
+      "url": "https://wiki.supercombo.gg/images/9/9a/SF6_Ryu_jmp_hitbox_2.png",
+      "target_path": "images/files/SF6_Ryu_jmp_hitbox_2.png",
+      "mime": "image/png",
+      "source_sha1": "02dedb7b9e4ef01184512c8d03136e5864325b75",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jmp_hitbox_2.png",
+      "byte_count": 193437,
+      "sha256": "sha256:3a2cc8b1a7160c6ae4802fe4ab2c35856b2aeefb7e90a11c82c801e7a2efe269",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jmp hitbox preview.png",
+      "url": "https://wiki.supercombo.gg/images/6/61/SF6_Ryu_jmp_hitbox_preview.png",
+      "target_path": "images/files/SF6_Ryu_jmp_hitbox_preview.png",
+      "mime": "image/png",
+      "source_sha1": "c3674ef9f0318e9079ae3ab33a09cafcbea960c4",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jmp_hitbox_preview.png",
+      "byte_count": 365379,
+      "sha256": "sha256:87525c6feb6b40418cdaff0d3c54d297f89f9bc75104be03ee31b2acbe6f2a67",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu jmp.png",
+      "url": "https://wiki.supercombo.gg/images/7/71/SF6_Ryu_jmp.png",
+      "target_path": "images/files/SF6_Ryu_jmp.png",
+      "mime": "image/png",
+      "source_sha1": "bc32d384b23a26edc0d6d83c7fe83c4de4aba0fc",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_jmp.png",
+      "byte_count": 176843,
+      "sha256": "sha256:1c4a389f22a9622b5e9133cda3151fa83eb7aea5755a9f4fe8629c0854611339",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu lplk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/a/ab/SF6_Ryu_lplk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_lplk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "b06aad73487e43a8dddb40c1a0b1b814a460424d",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_lplk_hitbox.png",
+      "byte_count": 189935,
+      "sha256": "sha256:adf6d01062460424f97cf6db4fb23b352b9888910a226056a5b151f65a951c12",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu lplk.png",
+      "url": "https://wiki.supercombo.gg/images/3/3c/SF6_Ryu_lplk.png",
+      "target_path": "images/files/SF6_Ryu_lplk.png",
+      "mime": "image/png",
+      "source_sha1": "133d7871d4634a4583ead75c3c2a22fc4801d089",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_lplk.png",
+      "byte_count": 261347,
+      "sha256": "sha256:ea1c54ad9708180a7b066fa68ce5a6501dbb0dba04020cb99c3db1389e7cfbf1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu mpmk hitbox.png",
+      "url": "https://wiki.supercombo.gg/images/1/14/SF6_Ryu_mpmk_hitbox.png",
+      "target_path": "images/files/SF6_Ryu_mpmk_hitbox.png",
+      "mime": "image/png",
+      "source_sha1": "c2b26d204f1fb1dbafe6d5e7b378373c6073ee25",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_mpmk_hitbox.png",
+      "byte_count": 190209,
+      "sha256": "sha256:bd5eb85fafeba02fcf7acfe351fedd5bf93a6c4aed2d15c7d788a02d97a92da1",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ryu mpmk.png",
+      "url": "https://wiki.supercombo.gg/images/8/8c/SF6_Ryu_mpmk.png",
+      "target_path": "images/files/SF6_Ryu_mpmk.png",
+      "mime": "image/png",
+      "source_sha1": "9d230b0c9864c058465ad04f2f38f549cdecce63",
+      "path": "raw/supercombo/frame-data/2026-05-31/ryu/images/files/SF6_Ryu_mpmk.png",
+      "byte_count": 296991,
+      "sha256": "sha256:e1d36c7ec861c538891454bf9a674445515a4c92a00a9fccd59dfee155f3fe73",
+      "ok": true
+    }
+  ],
+  "missing_titles": [
+    "File:SF6 Ryu 236p hitbox.png"
+  ],
+  "download_images": true
+}
