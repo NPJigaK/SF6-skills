@@ -1,0 +1,31 @@
+{
+  "official_rows": 69,
+  "supercombo_rows": 64,
+  "crosswalk_status_counts": {
+    "matched": 63,
+    "matched_manual": 4,
+    "unmatched": 2
+  },
+  "matched_distinct_supercombo_rows": 57,
+  "supercombo_unmatched_rows": 7,
+  "supercombo_rows_matched_multiple_times": {
+    "jp_214p": 3,
+    "jp_214pp": 3,
+    "jp_22p": 3,
+    "jp_22pp": 3,
+    "jp_mpmk": 3
+  },
+  "source_raw_root": "raw/supercombo/frame-data/2026-05-31/jp",
+  "official_csv": "wiki/outputs/data/frame-data/jp/classic.csv",
+  "crosswalk_policy": {
+    "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
+    "supercombo_primary_key": "move_id",
+    "candidate_matching": [
+      "official Classic input tokens are converted to command signatures",
+      "special and super motions may also match a strength-collapsed input family",
+      "category/moveType compatibility and simple field equality increase candidate score",
+      "JP-specific name overrides are used for Vihhat follow-ups and Drive Rush system rows",
+      "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
+    ]
+  }
+}

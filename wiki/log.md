@@ -884,3 +884,31 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `imageinfo` で missing になった 11 件の画像参照を、削除済み/未作成ファイルとして扱うか、filename 正規化で再解決できるか。
   - 公式 JP data と SuperCombo `moveId` rows の crosswalk policy をどう定義するか。
   - SuperCombo の HTML 装飾付き frame advantage を、公式 CSV と比較可能な値へ正規化する schema をいつ作るか。
+
+## [2026-05-31] 出力 | SuperCombo JP 派生データと公式 JP 候補照合
+- 追加:
+  - `tools/extract_supercombo_frame_data.py`
+  - `wiki/outputs/data/supercombo/frame-data/jp/frames.csv`
+  - `wiki/outputs/data/supercombo/frame-data/jp/frames.json`
+  - `wiki/outputs/data/supercombo/frame-data/jp/character.csv`
+  - `wiki/outputs/data/supercombo/frame-data/jp/schema.json`
+  - `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-official-classic.csv`
+  - `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-summary.json`
+  - `wiki/outputs/data/supercombo/frame-data/jp/supercombo-unmatched.csv`
+  - `wiki/outputs/reports/2026-05-31-supercombo-jp-official-crosswalk.md`
+- 更新:
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `tools/extract_supercombo_frame_data.py` は SuperCombo validation passed の raw snapshot だけを入力にする。
+  - `frames.csv` は 64 rows、`character.csv` は 1 row。
+  - 公式 JP Classic 69 rows との候補照合は、automatic matched 63、JP 固有名 override matched 4、unmatched 2。
+  - SuperCombo 側は 64 rows 中 57 distinct rows が候補照合され、7 rows が公式 Classic frame row にはない補助候補として残った。
+  - `python3 -m py_compile tools/extract_supercombo_frame_data.py` は成功。
+- 注意:
+  - crosswalk は最終マージではなく review 用候補。公式に存在する基本フレーム値は Capcom 公式 data を正とする。
+  - `前方ステップ` と `後方ステップ` は公式側 unmatched。SuperCombo では frame row ではなく character data の dash fields に対応する可能性がある。
+- 未解決事項:
+  - `matched_manual` 4件と多対一対応 rows を人間レビューして、正式 merge policy に昇格するか。
+  - SuperCombo unmatched 7 rows を公式 row の補助情報として扱うか、SuperCombo-only rows として保持するか。
