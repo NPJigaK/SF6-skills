@@ -2,7 +2,7 @@
 type: output
 output_type: report
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-01
 status: active
 sources:
   - "[[sources/capcom-official-ryu-frame-data]]"
@@ -39,6 +39,7 @@ related:
   - "[[concepts/frame-data]]"
   - "[[entities/street-fighter-6]]"
   - "[[reviews/2026-05-30-official-frame-data-roster-capture-review]]"
+  - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "公式フレームデータ coverage"
 ---
@@ -47,7 +48,7 @@ aliases:
 
 ## 要約
 
-この wiki には 30 Street Fighter 6 character data slugs 分の Classic / Modern frame-data outputs がある。4 captures は人間レビュー済み accepted。2026-05-30 の 26 captures は自動 validation passed だが、人間レビューは未完了。
+この wiki には 30 Street Fighter 6 character data slugs 分の Classic / Modern frame-data outputs がある。現在の raw entrypoint は `raw/frame-data/official/<data-slug>/` の latest mirror 固定パスで、capture date は各 manifest の `capture_label` に残す。4 captures は人間レビュー済み accepted。2026-05-30 の 26 captures は自動 validation passed だが、人間レビューは未完了。
 
 ## Coverage table
 
@@ -86,12 +87,15 @@ aliases:
 
 ## ソース参照
 
-- raw snapshots: `raw/official/frame-data/<date>/<data-slug>/`
+- raw snapshots: `raw/frame-data/official/<data-slug>/`
+- provenance: `raw/frame-data/official/<data-slug>/manifest.json` の `capture_label` / `created_at_utc` / `storage_policy`
 - derived CSVs: `wiki/outputs/data/frame-data/<data-slug>/`
 - batch review: [[reviews/2026-05-30-official-frame-data-roster-capture-review]]
+- raw layout synthesis: [[syntheses/frame-data-raw-layout]]
 
 ## メモ
 
 - `gouki_akuma` と `vega_mbison` は、official site で frame-data table を持つ slug。
 - すべてが同日 capture ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30。
+- capture date は path ではなく manifest の `capture_label` で追う。path は latest mirror の現在位置を示す。
 - 個別技の値は、再利用できる question / synthesis が必要になるまで CSV と raw DOM artifacts に残す。

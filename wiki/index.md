@@ -2,14 +2,24 @@
 
 このファイルは LLM-maintained wiki の内容指向カタログです。質問に答える時や、読むべき wiki page を決める時は最初にこのファイルを見ます。
 
+## Frame-data Raw Layout
+
+現在の frame-data raw entrypoint は latest mirror 固定パスです。capture date や source revision は path ではなく manifest で確認します。詳細は [[syntheses/frame-data-raw-layout]]。
+
+| Source family | Raw entrypoint | Provenance | Main outputs |
+|---|---|---|---|
+| Capcom official | `raw/frame-data/official/<data-slug>/manifest.json`、`classic/`、`modern/` | manifest の `capture_label` / `created_at_utc` / `storage_policy` | `wiki/outputs/data/frame-data/<data-slug>/`、[[outputs/reports/2026-05-30-official-frame-data-coverage]] |
+| SuperCombo JP | `raw/frame-data/supercombo/jp/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]]、[[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] |
+| SuperCombo Ryu | `raw/frame-data/supercombo/ryu/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]、[[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] |
+
 ## Sources
 
 | Page | Summary | Source date | Source type | Status |
 |---|---|---:|---|---|
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。Drive System、frame data、juggle、notation 用語を含む community source。 | 2026-05-26 | wiki_page | active |
-| [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw capture。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 123 件を含む community source。 | 2026-05-31 | community_frame_data | active |
-| [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw capture。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 133 件、conditional variant link を含む community source。 | 2026-06-01 | community_frame_data | active |
-| [[sources/capcom-official-ryu-frame-data]] | Capcom 公式 Ryu（リュウ） frame-data capture。Classic 75 rows / Modern 69 rows。 | 2026-05-27 | official_frame_data | active |
+| [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw capture。新 raw path は `raw/frame-data/supercombo/jp/`。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 123 件を含む community source。 | 2026-05-30 | community_frame_data | active |
+| [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw capture。新 raw path は `raw/frame-data/supercombo/ryu/`。Data wikitext、Cargo API、DOM、5タブ screenshot、画像 133 件、conditional variant link を含む community source。 | 2026-05-30 | community_frame_data | active |
+| [[sources/capcom-official-ryu-frame-data]] | Capcom 公式 Ryu（リュウ） frame-data capture。新 raw path は `raw/frame-data/official/ryu/`。Classic 75 rows / Modern 69 rows。 | 2026-05-27 | official_frame_data | active |
 | [[sources/capcom-official-luke-frame-data]] | Capcom 公式 Luke（ルーク） frame-data capture。Classic 76 rows / Modern 73 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-jamie-frame-data]] | Capcom 公式 Jamie（ジェイミー） frame-data capture。Classic 103 rows / Modern 98 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-chun-li-frame-data]] | Capcom 公式 Chun-Li（春麗） frame-data capture。Classic 78 rows / Modern 72 rows。 | 2026-05-27 | official_frame_data | active |
@@ -23,7 +33,7 @@
 | [[sources/capcom-official-dee-jay-frame-data]] | Capcom 公式 Dee Jay（ディージェイ） frame-data capture。Classic 105 rows / Modern 101 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-manon-frame-data]] | Capcom 公式 Manon（マノン） frame-data capture。Classic 59 rows / Modern 53 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-marisa-frame-data]] | Capcom 公式 Marisa（マリーザ） frame-data capture。Classic 91 rows / Modern 80 rows。 | 2026-05-30 | official_frame_data | active |
-| [[sources/capcom-official-jp-frame-data]] | Capcom 公式 JP frame-data capture。Classic 69 rows / Modern 65 rows。 | 2026-05-26 | official_frame_data | active |
+| [[sources/capcom-official-jp-frame-data]] | Capcom 公式 JP frame-data capture。新 raw path は `raw/frame-data/official/jp/`。Classic 69 rows / Modern 65 rows。 | 2026-05-26 | official_frame_data | active |
 | [[sources/capcom-official-zangief-frame-data]] | Capcom 公式 Zangief（ザンギエフ） frame-data capture。Classic 72 rows / Modern 66 rows。 | 2026-05-27 | official_frame_data | active |
 | [[sources/capcom-official-lily-frame-data]] | Capcom 公式 Lily（リリー） frame-data capture。Classic 74 rows / Modern 71 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-cammy-frame-data]] | Capcom 公式 Cammy（キャミィ） frame-data capture。Classic 75 rows / Modern 73 rows。 | 2026-05-30 | official_frame_data | active |
@@ -45,7 +55,7 @@
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo JP raw community capture。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
+| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo JP/Ryu raw community capture、latest mirror raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit などの community terms。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。 | [[concepts/frame-data]] |
 
@@ -53,8 +63,8 @@
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo JP community frame-data capture の game context。 | other |
-| [[entities/supercombo-wiki]] | glossary と JP frame-data raw capture の掲載元である community wiki。 | other |
+| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo JP/Ryu community frame-data capture、raw layout の game context。 | other |
+| [[entities/supercombo-wiki]] | glossary と JP/Ryu frame-data raw capture の掲載元である community wiki。 | other |
 | [[entities/capcom]] | 公式 Street Fighter 6 frame-data sources の publisher。 | company |
 | [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs がある character。 | character |
@@ -91,6 +101,7 @@
 
 | Page | Summary | Updated |
 |---|---|---:|
+| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。JP/Ryu の official / SuperCombo raw entrypoint と成果物への接続を整理する。 | 2026-06-01 |
 
 ## Questions
 

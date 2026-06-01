@@ -4,10 +4,10 @@ source_type: official_frame_data
 title: "Capcom 公式 Terry（テリー） フレームデータ"
 author: "Capcom"
 publisher: "Capcom"
-raw_path: "raw/official/frame-data/2026-05-30/terry/manifest.json"
+raw_path: "raw/frame-data/official/terry/manifest.json"
 original_url: "https://www.streetfighter.com/6/ja-jp/character/terry/frame"
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-01
 captured_at_utc: "2026-05-30T06:58:14Z"
 status: active
 confidence: high
@@ -34,7 +34,7 @@ Capcom 公式サイトの Terry（テリー） フレームデータを、Classi
 
 ## 重要ポイント
 
-1. raw snapshot は `raw/official/frame-data/2026-05-30/terry/` 配下に日付付きで保存されている。`raw/` は原本保存層なので、この wiki 再コンパイルでは変更しない。
+1. raw snapshot は `raw/frame-data/official/terry/` 配下の latest mirror 固定パスに保存されている。capture date はパスではなく manifest の `capture_label` で追う。`raw/` は原本保存層なので、この wiki 再コンパイルでは変更しない。
 2. Classic は 66 行、Modern は 60 行の技データを持つ。
 3. 派生 CSV は技名、入力 token 表示、入力 token JSON、発生、持続、硬直、ヒット/ガード硬直差、キャンセル、ダメージ、補正、Drive gauge、SA 増加、属性、備考を保持する。
 4. 表ヘッダの説明は `wiki/outputs/data/frame-data/terry/classic.field-meanings.json` と `wiki/outputs/data/frame-data/terry/modern.field-meanings.json` に分離して保存されている。
@@ -44,9 +44,9 @@ Capcom 公式サイトの Terry（テリー） フレームデータを、Classi
 
 | 主張 | 根拠 | 信頼度 | メモ |
 |---|---|---|---|
-| publisher は Capcom で、source URL は公式 Street Fighter 6 サイトの Terry（テリー） frame page。 | `raw/official/frame-data/2026-05-30/terry/manifest.json`; `raw/official/frame-data/2026-05-30/terry/*/metadata.json` | high | metadata が publisher、locale、source URL、character slug、control scheme を記録している。 |
-| Classic と Modern は同じ公式 page の別 tab として保存されている。 | `raw/official/frame-data/2026-05-30/terry/classic/metadata.json`; `raw/official/frame-data/2026-05-30/terry/modern/metadata.json` | high | metadata が Classic tab index 0、Modern tab index 1 を記録している。 |
-| 派生データは Classic 66 行、Modern 60 行。 | `raw/official/frame-data/2026-05-30/terry/manifest.json`; `wiki/outputs/data/frame-data/terry/classic.csv`; `wiki/outputs/data/frame-data/terry/modern.csv` | high | CSV 行数は raw DOM 由来の table row count と対応する。 |
+| publisher は Capcom で、source URL は公式 Street Fighter 6 サイトの Terry（テリー） frame page。 | `raw/frame-data/official/terry/manifest.json`; `raw/frame-data/official/terry/*/metadata.json` | high | metadata が publisher、locale、source URL、character slug、control scheme を記録している。 |
+| Classic と Modern は同じ公式 page の別 tab として保存されている。 | `raw/frame-data/official/terry/classic/metadata.json`; `raw/frame-data/official/terry/modern/metadata.json` | high | metadata が Classic tab index 0、Modern tab index 1 を記録している。 |
+| 派生データは Classic 66 行、Modern 60 行。 | `raw/frame-data/official/terry/manifest.json`; `wiki/outputs/data/frame-data/terry/classic.csv`; `wiki/outputs/data/frame-data/terry/modern.csv` | high | CSV 行数は raw DOM 由来の table row count と対応する。 |
 | field meanings は per-move CSV とは別に保存されている。 | `wiki/outputs/data/frame-data/terry/classic.field-meanings.json`; `wiki/outputs/data/frame-data/terry/modern.field-meanings.json` | high | Classic 7 records、Modern 8 records。 |
 
 ## 関連概念
@@ -72,9 +72,9 @@ Capcom 公式サイトの Terry（テリー） フレームデータを、Classi
 
 ## ソースメモ
 
-- Raw manifest: `raw/official/frame-data/2026-05-30/terry/manifest.json`
-- Classic raw capture: `raw/official/frame-data/2026-05-30/terry/classic/`
-- Modern raw capture: `raw/official/frame-data/2026-05-30/terry/modern/`
+- Raw manifest: `raw/frame-data/official/terry/manifest.json`
+- Classic raw capture: `raw/frame-data/official/terry/classic/`
+- Modern raw capture: `raw/frame-data/official/terry/modern/`
 - Derived Classic CSV: `wiki/outputs/data/frame-data/terry/classic.csv`
 - Derived Modern CSV: `wiki/outputs/data/frame-data/terry/modern.csv`
 - Derived field meanings:

@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-05-31
+updated: 2026-06-01
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -10,6 +10,7 @@ sources:
   - "[[sources/supercombo-ryu-frame-data]]"
 related:
   - "[[entities/street-fighter-6]]"
+  - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "SuperCombo Wiki"
 tags:
@@ -21,7 +22,7 @@ tags:
 
 ## 要約
 
-SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source と、JP / Ryu frame-data raw community capture の掲載元。
+SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source と、JP / Ryu frame-data raw community capture の掲載元。現在の SuperCombo frame-data raw entrypoint は `raw/frame-data/supercombo/<character>/`。
 
 ## 年表
 
@@ -36,11 +37,13 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 - 現在の wiki には SuperCombo Wiki 由来の source page が 3 つある。
 - SuperCombo Wiki は community wiki source として扱い、公式 Capcom source より低い confidence で使う。
 - JP / Ryu frame-data capture は official data と重なる基本フレーム値の正とはせず、公式にない notes、range、juggle、hitbox image などの候補 source として保持する。
+- JP / Ryu frame-data raw は latest mirror 固定パスに保存し、source revision は各 manifest の `source_revision` で追う。
 
 ## 関連概念
 
 - [[concepts/drive-system]]
 - [[concepts/frame-data]]
+- [[syntheses/frame-data-raw-layout]]
 - [[concepts/fighting-game-notation]]
 - [[concepts/juggle-system]]
 

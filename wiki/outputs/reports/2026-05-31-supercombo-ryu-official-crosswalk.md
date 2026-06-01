@@ -11,6 +11,7 @@ related:
   - "[[concepts/frame-data]]"
   - "[[entities/ryu]]"
   - "[[reviews/2026-05-31-supercombo-ryu-frame-data-capture-review]]"
+  - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "SuperCombo Ryu official crosswalk"
   - "Ryu SuperCombo 公式照合"
@@ -106,6 +107,6 @@ SuperCombo Ryu raw capture から review 用の派生 CSV/JSON を作成し、Ca
 - SuperCombo source: [[sources/supercombo-ryu-frame-data]]
 - 公式 source: [[sources/capcom-official-ryu-frame-data]]
 - SuperCombo validation: [[reviews/2026-05-31-supercombo-ryu-frame-data-capture-review]]
-- Raw SuperCombo manifest: `raw/supercombo/frame-data/2026-05-31/ryu/manifest.json`
+- Raw SuperCombo manifest: `raw/frame-data/supercombo/ryu/manifest.json`
 - Crosswalk summary: `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-summary.json`
 - Enriched output report: [[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]]

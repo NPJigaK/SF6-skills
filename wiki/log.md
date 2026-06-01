@@ -1085,3 +1085,39 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 未解決事項:
   - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
   - conditional variant link を他 character にも使う場合、どこまで汎用 schema 化するか。
+
+## [2026-06-01] Wiki 更新 | frame-data raw latest mirror 配置の反映
+- 追加:
+  - `wiki/syntheses/frame-data-raw-layout.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/jp.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/outputs/reports/2026-05-30-official-frame-data-coverage.md`
+  - `wiki/outputs/reports/2026-05-31-supercombo-jp-official-crosswalk.md`
+  - `wiki/outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk.md`
+  - `wiki/outputs/data/supercombo/frame-data/jp/frames.json`
+  - `wiki/outputs/data/supercombo/frame-data/jp/schema.json`
+  - `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-summary.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/frames.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/schema.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-summary.json`
+  - `wiki/sources/capcom-official-*-frame-data.md`
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/sources/supercombo-ryu-frame-data.md`
+- 決定:
+  - frame-data raw の現在の入口は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスとして説明する。
+  - capture date は path ではなく official manifest の `capture_label` / `created_at_utc`、SuperCombo manifest の `capture_label` / `captured_at_utc` / `source_revision` で追う。
+  - historical log / review に残る旧 date-based path は当時の履歴として扱い、現在の読者向け入口は source page、coverage report、synthesis、index に置く。
+- 検証:
+  - `raw/frame-data/official/*/manifest.json` を確認し、30 official slugs が `storage_policy: latest_frame_data_mirror`、Classic / Modern captures、derived output paths を持つことを確認した。
+  - `raw/frame-data/supercombo/jp/manifest.json` と `raw/frame-data/supercombo/ryu/manifest.json` を確認し、`capture_label: 2026-05-30`、`storage_policy: latest_frame_data_mirror`、`source_revision` があることを確認した。
+  - `wiki/index.md` の SuperCombo JP / Ryu `Source date` は、取得日ではなく manifest の `capture_label` / source revision に合わせて `2026-05-30` とした。
+  - `wiki/sources`、`wiki/outputs/reports`、`wiki/concepts`、`wiki/entities`、`wiki/index.md` の現在参照用ページに旧 `raw/official/frame-data/...` / `raw/supercombo/frame-data/...` path が残っていないことを `rg` で確認した。
+  - `wiki/outputs/data/supercombo/frame-data/{jp,ryu}/` の `source_raw_root` / `raw_root` も新 raw path に更新した。
+- 未解決事項:
+  - official manifest の `raw_review_status` と wiki review page の accepted / pending 状態を同期する運用ルール。
+  - `latest_frame_data_mirror` 再取得時に旧 mirror をどこまで外部 artifact として保持するか。

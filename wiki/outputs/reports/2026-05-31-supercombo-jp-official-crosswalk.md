@@ -2,7 +2,7 @@
 type: output
 output_type: report
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 status: active
 sources:
   - "[[sources/supercombo-jp-frame-data]]"
@@ -11,6 +11,7 @@ related:
   - "[[concepts/frame-data]]"
   - "[[entities/jp]]"
   - "[[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]]"
+  - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "SuperCombo JP official crosswalk"
   - "JP SuperCombo 公式照合"
@@ -92,6 +93,6 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 - SuperCombo source: [[sources/supercombo-jp-frame-data]]
 - 公式 source: [[sources/capcom-official-jp-frame-data]]
 - SuperCombo validation: [[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]]
-- Raw SuperCombo manifest: `raw/supercombo/frame-data/2026-05-31/jp/manifest.json`
+- Raw SuperCombo manifest: `raw/frame-data/supercombo/jp/manifest.json`
 - Crosswalk summary: `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-summary.json`
 - Enriched output report: [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]]
