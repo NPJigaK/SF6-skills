@@ -1025,3 +1025,63 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 未解決事項:
   - Ryu の review-required 13 rows を人間レビューする。
   - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
+
+## [2026-05-31] レビュー | Ryu 公式 + SuperCombo 補助行の人間レビュー反映
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-official-classic.csv`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-summary.json`
+  - `wiki/outputs/data/supercombo/frame-data/ryu/supercombo-unmatched.csv`
+  - `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.csv`
+  - `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.json`
+  - `wiki/outputs/data/enriched/frame-data/ryu/supercombo-only.csv`
+  - `wiki/outputs/data/enriched/frame-data/ryu/summary.json`
+  - `wiki/outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk.md`
+  - `wiki/outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data.md`
+  - `wiki/sources/supercombo-ryu-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 決定:
+  - `[電刃錬気]波動拳`、`[電刃錬気]OD 波動拳`、`[電刃錬気]波掌撃`、`[電刃錬気]SA1 真空波動拳` は Denjin / charged variant の `move_id` に補助リンクする。
+  - `SA2 真波掌撃（Lv2/Lv3）` と `[電刃錬気]SA2 真波掌撃（Lv2/Lv3）` は hold-level variant の `move_id` に補助リンクする。
+  - `OD 波掌撃` は active duration conflict 付き補助情報として扱い、公式 active `18-22` を正とする。
+  - `パリィドライブラッシュ` と `キャンセルドライブラッシュ` は補助リンクとして採用する。
+- 検証:
+  - enriched status は `enriched` 60 rows、`enriched_reviewed` 13 rows、`official_only` 2 rows。
+  - human review decisions は `supplemental_link` 8、`hold_level_supplemental_link` 4、`conflict_supplemental_only` 1。
+  - crosswalk は matched 61、matched_manual 10、ambiguous 2、unmatched 2。
+  - SuperCombo-only rows は 6。`6HK~214K` / `6HK~214KK` と taunt 4件のみ。
+  - 公式由来列は `wiki/outputs/data/frame-data/ryu/classic.csv` と enriched output で全行一致した。
+  - `uv run python -m py_compile tools/extract_supercombo_frame_data.py tools/build_official_supercombo_enriched_data.py` は成功。
+- 注意:
+  - 公式に存在する damage / startup / active / recovery などの基本数値は公式列を正とし、SuperCombo 値は `supercombo_*` 補助列として保持する。
+  - SA2 Lv2 / Lv3 の SuperCombo startup `18~` / `50~` は hold-level 補助情報で、公式 startup 20 / 70 を上書きしない。
+- 未解決事項:
+  - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
+  - SuperCombo-only の `6HK~214K` / `6HK~214KK` を公式 row の補助情報として扱うか。
+
+## [2026-06-01] レビュー | Ryu SuperCombo-only 空中竜巻 variant link
+- 更新:
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.json`
+  - `wiki/outputs/data/enriched/frame-data/ryu/schema.json`
+  - `wiki/outputs/data/enriched/frame-data/ryu/summary.json`
+  - `wiki/outputs/data/enriched/frame-data/ryu/supercombo-only.csv`
+  - `wiki/outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data.md`
+  - `wiki/outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk.md`
+  - `wiki/sources/supercombo-ryu-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 決定:
+  - `ryu_6hk_214k` は primary official row 41 `空中竜巻旋風脚`、enabled-by row 23 `旋風脚` の conditional variant として扱う。
+  - `ryu_6hk_214kk` は primary official row 42 `OD 空中竜巻旋風脚`、enabled-by row 23 `旋風脚` の conditional variant として扱う。
+  - row 23 `旋風脚` の damage 800 / startup 16 と、キャンセル後の空中竜巻派生 damage / startup は合算・上書きしない。
+- 検証:
+  - SuperCombo-only suggested handling は `supplemental_variant_row` 2、`supercombo_only_taunt` 4。
+  - `supercombo-only.csv` に `primary_official_row_order`、`enabled_by_official_row_order`、`link_note` などの link fields を追加した。
+  - 公式由来列は `wiki/outputs/data/frame-data/ryu/classic.csv` と enriched output で全行一致した。
+  - `uv run python -m py_compile tools/build_official_supercombo_enriched_data.py` は成功。
+- 未解決事項:
+  - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
+  - conditional variant link を他 character にも使う場合、どこまで汎用 schema 化するか。

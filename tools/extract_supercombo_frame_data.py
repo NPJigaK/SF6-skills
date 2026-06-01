@@ -159,6 +159,17 @@ JP_NAME_OVERRIDES = {
     "キャンセルドライブラッシュ": "jp_mpmk_66_drc",
 }
 
+RYU_NAME_OVERRIDES = {
+    "[電刃錬気]波動拳": "ryu_236p(charged)",
+    "[電刃錬気]OD 波動拳": "ryu_236pp(charged)",
+    "[電刃錬気]波掌撃": "ryu_214p(charged)",
+    "[電刃錬気]SA1 真空波動拳": "ryu_236236p_denjin",
+    "SA2 真波掌撃（Lv2）": "ryu_214214p_lv2",
+    "SA2 真波掌撃（Lv3）": "ryu_214214p_lv3",
+    "[電刃錬気]SA2 真波掌撃（Lv2）": "ryu_214214p_denjin_lv2",
+    "[電刃錬気]SA2 真波掌撃（Lv3）": "ryu_214214p_denjin_lv3",
+}
+
 GENERIC_NAME_OVERRIDE_PATTERNS = {
     "パリィドライブラッシュ": "{character_slug}_mpmk_66_pdr",
     "キャンセルドライブラッシュ": "{character_slug}_mpmk_66_drc",
@@ -416,6 +427,10 @@ def build_crosswalk(
                     override_move_id = move_id
                     override_source = "jp_name_override"
                     break
+        elif character_slug == "ryu":
+            override_move_id = RYU_NAME_OVERRIDES.get(official["official_move_name"], "")
+            if override_move_id:
+                override_source = "ryu_name_override"
         if not override_move_id:
             for name_part, move_id_pattern in GENERIC_NAME_OVERRIDE_PATTERNS.items():
                 if name_part in official["official_move_name"]:
@@ -626,7 +641,8 @@ def main(argv: list[str]) -> int:
                     "official Classic input tokens are converted to command signatures",
                     "special and super motions may also match a strength-collapsed input family",
                     "category/moveType compatibility and simple field equality increase candidate score",
-                    "JP-specific name overrides are used for Vihhat follow-ups and Drive Rush system rows",
+                    "character-specific name overrides are used for reviewed variants such as JP Vihhat follow-ups and Ryu Denjin / hold-level rows",
+                    "generic name overrides are used for Drive Rush system rows",
                     "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id",
                 ],
             },
