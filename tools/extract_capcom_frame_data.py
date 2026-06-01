@@ -12,7 +12,7 @@ from capture_capcom_frame_data import csv_rows_from_dom, field_meanings_from_dom
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--date-label", default="2026-05-26")
+    parser.add_argument("--date-label", help="Deprecated; frame-data raw uses fixed latest paths.")
     parser.add_argument("--character-slug", default="jp")
     parser.add_argument("--mode", choices=["classic", "modern"], action="append")
     return parser.parse_args(argv)
@@ -26,9 +26,8 @@ def main(argv: list[str]) -> int:
         raw_dir = (
             args.repo_root
             / "raw"
-            / "official"
             / "frame-data"
-            / args.date_label
+            / "official"
             / args.character_slug
             / mode
         )

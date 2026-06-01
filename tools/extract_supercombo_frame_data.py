@@ -532,16 +532,16 @@ def build_crosswalk(
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--date-label", required=True)
+    parser.add_argument("--date-label", help="Deprecated; frame-data raw uses fixed latest paths.")
     parser.add_argument("--character-slug", default="jp")
-    parser.add_argument("--official-date-label", default="2026-05-26")
+    parser.add_argument("--official-date-label", help="Deprecated; official frame-data raw uses fixed latest paths.")
     parser.add_argument("--official-mode", default="classic")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
-    raw_root = args.repo_root / "raw" / "supercombo" / "frame-data" / args.date_label / args.character_slug
+    raw_root = args.repo_root / "raw" / "frame-data" / "supercombo" / args.character_slug
     output_dir = args.repo_root / "wiki" / "outputs" / "data" / "supercombo" / "frame-data" / args.character_slug
     templates = read_json(raw_root / "data.templates.json")
     validation = read_json(raw_root / "validation.json")

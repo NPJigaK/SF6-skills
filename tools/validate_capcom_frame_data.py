@@ -16,7 +16,7 @@ from capture_capcom_frame_data import csv_rows_from_dom, field_meanings_from_dom
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--date-label", required=True)
+    parser.add_argument("--date-label", help="Deprecated; frame-data raw uses fixed latest paths.")
     parser.add_argument("--character-slug", required=True)
     parser.add_argument("--mode", choices=["classic", "modern"], action="append")
     return parser.parse_args(argv)
@@ -43,8 +43,8 @@ def assert_equal(actual: Any, expected: Any, message: str) -> None:
         raise AssertionError(f"{message}: expected {expected!r}, got {actual!r}")
 
 
-def validate_mode(repo_root: Path, date_label: str, character_slug: str, mode: str) -> dict[str, Any]:
-    raw_dir = repo_root / "raw" / "official" / "frame-data" / date_label / character_slug / mode
+def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, Any]:
+    raw_dir = repo_root / "raw" / "frame-data" / "official" / character_slug / mode
     output_dir = repo_root / "wiki" / "outputs" / "data" / "frame-data" / character_slug
 
     page_html_path = raw_dir / "page.html"
@@ -119,7 +119,7 @@ def main(argv: list[str]) -> int:
     args = parse_args(argv)
     modes = args.mode or ["classic", "modern"]
     results = [
-        validate_mode(args.repo_root, args.date_label, args.character_slug, mode)
+        validate_mode(args.repo_root, args.character_slug, mode)
         for mode in modes
     ]
     print(json.dumps({"validated": results}, ensure_ascii=False, indent=2))

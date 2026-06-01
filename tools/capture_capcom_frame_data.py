@@ -483,7 +483,6 @@ def capture_mode(
     character_slug: str,
     mode: str,
     output_root: Path,
-    date_label: str,
     viewport_width: int,
     viewport_height: int,
 ) -> RawModeCapture:
@@ -498,7 +497,7 @@ def capture_mode(
     remove_obstructions(page)
     horizontal_metrics = ensure_full_table_width(page, viewport_width, viewport_height)
 
-    raw_dir = output_root / "raw" / "official" / "frame-data" / date_label / character_slug / mode
+    raw_dir = output_root / "raw" / "frame-data" / "official" / character_slug / mode
     raw_dir.mkdir(parents=True, exist_ok=True)
     page_html_path = raw_dir / "page.html"
     table_dom_path = raw_dir / "table.dom.json"
@@ -572,7 +571,7 @@ def capture_mode(
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--character-slug", default="jp")
-    parser.add_argument("--date-label", default="2026-05-26")
+    parser.add_argument("--date-label", default=datetime.now(UTC).strftime("%Y-%m-%d"))
     parser.add_argument("--source-url")
     parser.add_argument("--output-root", type=Path, default=Path("."))
     parser.add_argument("--viewport-width", type=int, default=1920)
@@ -604,7 +603,6 @@ def main(argv: list[str]) -> int:
                 character_slug=args.character_slug,
                 mode=mode,
                 output_root=args.output_root,
-                date_label=args.date_label,
                 viewport_width=args.viewport_width,
                 viewport_height=args.viewport_height,
             )
@@ -628,9 +626,8 @@ def main(argv: list[str]) -> int:
         table_dom_path = (
             args.output_root
             / "raw"
-            / "official"
             / "frame-data"
-            / args.date_label
+            / "official"
             / args.character_slug
             / mode
             / "table.dom.json"
@@ -652,7 +649,8 @@ def main(argv: list[str]) -> int:
         "source_type": "official_frame_data",
         "source_url": args.source_url,
         "character_slug": args.character_slug,
-        "date_label": args.date_label,
+        "capture_label": args.date_label,
+        "storage_policy": "latest_frame_data_mirror",
         "raw_review_status": "pending_human_review",
         "repository_scope": "repo_raw_capture",
         "captures": [
@@ -680,9 +678,8 @@ def main(argv: list[str]) -> int:
     manifest_path = (
         args.output_root
         / "raw"
-        / "official"
         / "frame-data"
-        / args.date_label
+        / "official"
         / args.character_slug
         / "manifest.json"
     )

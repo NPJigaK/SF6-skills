@@ -1,0 +1,43 @@
+{
+  "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
+  "created_at_utc": "2026-05-30T06:53:25Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_frame_data",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/character/ingrid/frame",
+  "character_slug": "ingrid",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "captures": [
+    {
+      "mode": "classic",
+      "raw_dir": "raw/frame-data/official/ingrid/classic",
+      "page_html": "raw/frame-data/official/ingrid/classic/page.html",
+      "table_dom_json": "raw/frame-data/official/ingrid/classic/table.dom.json",
+      "screenshot_png": "raw/frame-data/official/ingrid/classic/screenshot.png",
+      "metadata_json": "raw/frame-data/official/ingrid/classic/metadata.json",
+      "row_count": 75,
+      "table_sha256": "sha256:dca6b295f9b367dc211fb3ca20d035af9e3f5aed291a667b68428bf5386893a3"
+    },
+    {
+      "mode": "modern",
+      "raw_dir": "raw/frame-data/official/ingrid/modern",
+      "page_html": "raw/frame-data/official/ingrid/modern/page.html",
+      "table_dom_json": "raw/frame-data/official/ingrid/modern/table.dom.json",
+      "screenshot_png": "raw/frame-data/official/ingrid/modern/screenshot.png",
+      "metadata_json": "raw/frame-data/official/ingrid/modern/metadata.json",
+      "row_count": 74,
+      "table_sha256": "sha256:82c290a283407b3534f94e7d5df76d08b244500c81dc758856464786168b8678"
+    }
+  ],
+  "derived_outputs": [
+    "wiki/outputs/data/frame-data/ingrid/classic.csv",
+    "wiki/outputs/data/frame-data/ingrid/modern.csv",
+    "wiki/outputs/data/frame-data/ingrid/classic.field-meanings.json",
+    "wiki/outputs/data/frame-data/ingrid/modern.field-meanings.json"
+  ],
+  "tool": "tools/capture_capcom_frame_data.py",
+  "capture_label": "2026-05-30",
+  "storage_policy": "latest_frame_data_mirror"
+}

@@ -231,6 +231,30 @@ def fetch_page_metadata(session: StealthySession, titles: list[str], *, timeout_
     }
 
 
+def source_revision_metadata(page_metadata: dict[str, Any]) -> dict[str, Any]:
+    pages: list[dict[str, Any]] = []
+    for page in page_metadata.get("query", {}).get("pages", []):
+        revision = (page.get("revisions") or [{}])[0]
+        timestamp = revision.get("timestamp") or page.get("touched")
+        pages.append(
+            {
+                "title": page.get("title"),
+                "pageid": page.get("pageid"),
+                "lastrevid": page.get("lastrevid"),
+                "revision_timestamp": timestamp,
+                "touched": page.get("touched"),
+            }
+        )
+    timestamps = [page["revision_timestamp"] for page in pages if page.get("revision_timestamp")]
+    latest_timestamp = max(timestamps) if timestamps else None
+    return {
+        "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+        "label": latest_timestamp[:10] if latest_timestamp else None,
+        "latest_revision_timestamp": latest_timestamp,
+        "pages": pages,
+    }
+
+
 def split_top_level(value: str, separator: str = "|") -> list[str]:
     parts: list[str] = []
     current: list[str] = []
@@ -818,7 +842,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
-    root = args.repo_root / "raw" / "supercombo" / "frame-data" / args.date_label / args.character_slug
+    root = args.repo_root / "raw" / "frame-data" / "supercombo" / args.character_slug
     paths = CapturePaths(
         root=root,
         screenshots_dir=root / "screenshots",
@@ -866,6 +890,7 @@ def main(argv: list[str]) -> int:
             titles=[data_title, page_title],
         )
         write_json(paths.api_dir / "page-metadata.json", page_metadata)
+        source_revision = source_revision_metadata(page_metadata)
 
         frame_cargo = fetch_json(
             session,
@@ -982,6 +1007,9 @@ def main(argv: list[str]) -> int:
         "source_type": "community_frame_data",
         "character": character,
         "character_slug": args.character_slug,
+        "capture_label": source_revision.get("label") or args.date_label,
+        "source_revision": source_revision,
+        "storage_policy": "latest_frame_data_mirror",
         "source_urls": {
             "frame_data_page": frame_page_url,
             "frame_data_raw": frame_raw_url,
@@ -1017,6 +1045,9 @@ def main(argv: list[str]) -> int:
             "captured_at_utc": utc_now(),
             "character": character,
             "character_slug": args.character_slug,
+            "capture_label": source_revision.get("label") or args.date_label,
+            "source_revision": source_revision,
+            "storage_policy": "latest_frame_data_mirror",
             "raw_root": str(root),
             "metadata": "metadata.json",
             "validation": "validation.json",

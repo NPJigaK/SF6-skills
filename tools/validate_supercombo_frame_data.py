@@ -282,6 +282,7 @@ def data_rows(table: dict[str, Any]) -> list[list[str]]:
 
 
 def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[str, Any]:
+    manifest = read_json(root / "manifest.json")
     metadata = read_json(root / "metadata.json")
     templates = read_json(root / "data.templates.json")
     display_queries = read_json(root / "frame-data.cargo-queries.json")["queries"]
@@ -406,6 +407,9 @@ def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[st
         "validation_schema_version": "supercombo_frame_capture_validation/v1",
         "validated_at_utc": utc_now(),
         "raw_root": str(root),
+        "capture_label": manifest.get("capture_label"),
+        "source_revision": manifest.get("source_revision"),
+        "storage_policy": manifest.get("storage_policy", "latest_frame_data_mirror"),
         "status": "passed" if not failures else "failed",
         "failures": failures,
         "warnings": warnings,
@@ -440,7 +444,7 @@ def group_by(records: list[dict[str, Any]], field: str) -> dict[str, list[dict[s
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--date-label", required=True)
+    parser.add_argument("--date-label", help="Deprecated; frame-data raw uses fixed latest paths.")
     parser.add_argument("--character-slug", default="jp")
     parser.add_argument("--expected-frame-count", type=int)
     return parser.parse_args(argv)
@@ -448,7 +452,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
-    root = args.repo_root / "raw" / "supercombo" / "frame-data" / args.date_label / args.character_slug
+    root = args.repo_root / "raw" / "frame-data" / "supercombo" / args.character_slug
     result = validate_capture(root, expected_frame_count=args.expected_frame_count)
     write_json(root / "validation.json", result)
     print(json.dumps(result["summary"], ensure_ascii=False, indent=2))
