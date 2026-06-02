@@ -1,0 +1,52 @@
+{
+  "manifest_schema_version": "supercombo_frame_raw_capture_manifest/v1",
+  "captured_at_utc": "2026-06-02T01:58:06Z",
+  "character": "Ingrid",
+  "character_slug": "ingrid",
+  "capture_label": "2026-06-02",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-02",
+    "latest_revision_timestamp": "2026-06-02T01:44:56Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Ingrid/Data",
+        "pageid": 97720,
+        "lastrevid": 365281,
+        "revision_timestamp": "2026-06-02T01:44:56Z",
+        "touched": "2026-06-02T01:44:56Z"
+      },
+      {
+        "title": "Street Fighter 6/Ingrid/Frame data",
+        "pageid": 97724,
+        "lastrevid": 362024,
+        "revision_timestamp": "2026-04-22T23:42:21Z",
+        "touched": "2026-06-02T01:44:59Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "raw_root": "raw\\frame-data\\supercombo\\ingrid",
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": [
+    "api\\page-metadata.json",
+    "cargo\\character-data.json",
+    "cargo\\frame-data.json",
+    "data.raw.wikitext",
+    "data.templates.json",
+    "frame-data.cargo-queries.json",
+    "frame-data.raw.wikitext",
+    "image-manifest.json",
+    "imageinfo.json",
+    "images\\files\\SF6_Ingrid_Face.png",
+    "images\\files\\SF6_Ingrid_Portrait.png",
+    "rendered\\page.html",
+    "rendered\\tables.dom.json",
+    "screenshots\\details.png",
+    "screenshots\\general.png",
+    "screenshots\\meter.png",
+    "screenshots\\notes.png",
+    "screenshots\\properties.png"
+  ]
+}

@@ -12,6 +12,7 @@
 | SuperCombo JP | `raw/frame-data/supercombo/jp/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]]、[[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] |
 | SuperCombo Ryu | `raw/frame-data/supercombo/ryu/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]、[[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] |
 | SuperCombo Zangief | `raw/frame-data/supercombo/zangief/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]、[[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] |
+| SuperCombo Ingrid | `raw/frame-data/supercombo/ingrid/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]、[[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
 
 ## Sources
 
@@ -21,6 +22,7 @@
 | [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/jp/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 123 件を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/ryu/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 133 件、conditional variant link を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-zangief-frame-data]] | SuperCombo Wiki の Zangief frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/zangief/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 165 件、360/720 と近距離/中距離/遠距離 override を含む community source。 | 2026-06-01 | community_frame_data | active |
+| [[sources/supercombo-ingrid-frame-data]] | SuperCombo Wiki の Ingrid frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/ingrid/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、image refs 164 件、imageinfo resolved title 2 件 / missing title 156 件、公式 Classic との補助列付き output を含む community source。 | 2026-06-02 | community_frame_data | active |
 | [[sources/capcom-official-ryu-frame-data]] | Capcom 公式 Ryu（リュウ） frame-data capture。新 raw path は `raw/frame-data/official/ryu/`。Classic 75 rows / Modern 69 rows。 | 2026-05-27 | official_frame_data | active |
 | [[sources/capcom-official-luke-frame-data]] | Capcom 公式 Luke（ルーク） frame-data capture。Classic 76 rows / Modern 73 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-jamie-frame-data]] | Capcom 公式 Jamie（ジェイミー） frame-data capture。Classic 103 rows / Modern 98 rows。 | 2026-05-30 | official_frame_data | active |
@@ -57,7 +59,7 @@
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo JP/Ryu/Zangief community raw 取得データ、latest mirror raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
+| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo JP/Ryu/Zangief/Ingrid community raw 取得データ、公式 + SuperCombo 補助列付き output、latest mirror raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit などの community terms。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。 | [[concepts/frame-data]] |
 
@@ -65,8 +67,8 @@
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo JP/Ryu/Zangief community frame-data 取得データ、raw layout の game context。 | other |
-| [[entities/supercombo-wiki]] | glossary と JP/Ryu/Zangief frame-data raw 取得データの掲載元である community wiki。 | other |
+| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo JP/Ryu/Zangief/Ingrid community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
+| [[entities/supercombo-wiki]] | glossary と JP/Ryu/Zangief/Ingrid frame-data raw 取得データ、公式補助 output の source である community wiki。 | other |
 | [[entities/capcom]] | 公式 Street Fighter 6 frame-data sources の publisher。 | company |
 | [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs がある character。 | character |
@@ -97,13 +99,13 @@
 | [[entities/sagat]] | Sagat（サガット）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/c-viper]] | C. Viper（C.ヴァイパー）。公式 Classic / Modern frame-data outputs がある character。 | character |
 | [[entities/alex]] | Alex（アレックス）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/ingrid]] | Ingrid（イングリッド）。公式 Classic / Modern frame-data outputs がある character。 | character |
+| [[entities/ingrid]] | Ingrid（イングリッド）。公式 Classic / Modern frame-data outputs、SuperCombo community raw frame-data 取得データ、レビュー済み補助 output がある character。 | character |
 
 ## Syntheses
 
 | Page | Summary | Updated |
 |---|---|---:|
-| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。JP/Ryu/Zangief の official / SuperCombo raw entrypoint と成果物への接続を整理する。 | 2026-06-02 |
+| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。JP/Ryu/Zangief/Ingrid の official / SuperCombo raw entrypoint と成果物への接続を整理する。 | 2026-06-02 |
 
 ## Questions
 
@@ -127,12 +129,16 @@
 | [[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] | report | Capcom 公式 Ryu Classic CSV を正として保持し、SuperCombo 補助列を付与した output。レビュー済み13行と conditional variant link を含む。 | 2026-06-01 |
 | [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]] | report | SuperCombo Zangief の派生 output と Capcom 公式 Zangief Classic CSV の照合。360/720、hold、近距離/中距離/遠距離、CA variant override を含む。 | 2026-06-02 |
 | [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] | report | Capcom 公式 Zangief Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み25行と SuperCombo-only taunt 4行を含む。 | 2026-06-02 |
+| [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]] | report | SuperCombo Ingrid の派生 output と Capcom 公式 Ingrid Classic CSV の照合。Sun Crest stock level、OD Sun Shot 共有 row、SA1/SA2、Drive Rush override を含む。 | 2026-06-02 |
+| [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] | report | Capcom 公式 Ingrid Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み26行、official-only 2行、SuperCombo-only 13行を含む。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
 | `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
 | `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した data と SuperCombo-only row。 | 2026-05-31 |
 | `wiki/outputs/data/supercombo/frame-data/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
 | `wiki/outputs/data/enriched/frame-data/ryu/` | csv/json | 公式 Ryu Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、レビュー済み行、conditional variant link。 | 2026-06-01 |
 | `wiki/outputs/data/supercombo/frame-data/zangief/` | csv/json | SuperCombo Zangief の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-02 |
 | `wiki/outputs/data/enriched/frame-data/zangief/` | csv/json | 公式 Zangief Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、`enriched_reviewed` 行、SuperCombo-only taunt row。 | 2026-06-02 |
+| `wiki/outputs/data/supercombo/frame-data/ingrid/` | csv/json | SuperCombo Ingrid の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-02 |
+| `wiki/outputs/data/enriched/frame-data/ingrid/` | csv/json | 公式 Ingrid Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、`enriched_reviewed` 26行、SuperCombo-only 13行。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
 | `wiki/outputs/data/frame-data/ryu/` | csv/json | Ryu（リュウ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
 | `wiki/outputs/data/frame-data/luke/` | csv/json | Luke（ルーク） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
 | `wiki/outputs/data/frame-data/jamie/` | csv/json | Jamie（ジェイミー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
@@ -177,3 +183,5 @@
 | [[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]] | capture_validation | SuperCombo JP frame-data raw 取得データの自動検証レビュー。 | open |
 | [[reviews/2026-05-31-supercombo-ryu-frame-data-capture-review]] | capture_validation | SuperCombo Ryu frame-data raw 取得データの自動検証レビュー。 | open |
 | [[reviews/2026-06-02-supercombo-zangief-frame-data-capture-review]] | capture_validation | SuperCombo Zangief frame-data raw 取得データの自動検証レビュー。 | open |
+| [[reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review]] | capture_validation | SuperCombo Ingrid frame-data raw 取得データの自動検証レビュー。補助データ26行 accepted、imageinfo missing 156 件と SuperCombo-only 9行の扱いが残る。 | open |
+| [[reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview]] | prereview | SuperCombo Ingrid の公式 row に直接照合しない 9 行を外部 web evidence も使って事前レビュー。特殊隠しコマンド / Monoid 操作として通常回答から分離し、accept ではなく pending。 | open |

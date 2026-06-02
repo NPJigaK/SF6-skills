@@ -197,6 +197,33 @@ ZANGIEF_NAME_OVERRIDES = {
     "CA ボリショイストームバスター": "zangief_720+p(ca)",
 }
 
+INGRID_NAME_OVERRIDES = {
+    "サテライトリープ": "ingrid_jhk_jhk",
+    "OD 弱 サンシュート": "ingrid_236lpmp",
+    "OD 中 サンシュート": "ingrid_236lpmp",
+    "OD 強 サンシュート": "ingrid_236mphp",
+    "弱 サンフレア": "ingrid_214lp",
+    "サンフレア(Lv1)": "ingrid_214mp",
+    "サンフレア(Lv2)": "ingrid_214hp_1stock",
+    "サンフレア(Lv3)": "ingrid_214hp_2stock",
+    "OD サンフレア(Lv1)": "ingrid_214pp",
+    "OD サンフレア(Lv2)": "ingrid_214pp_1stock",
+    "OD サンフレア(Lv3)": "ingrid_214pp_2stock",
+    "弱ソーラーフレア": "ingrid_j214lp",
+    "ソーラーフレア(Lv1)": "ingrid_j214mp",
+    "ソーラーフレア(Lv2)": "ingrid_j214hp_1stock",
+    "ソーラーフレア(Lv3)": "ingrid_j214hp_2stock",
+    "OD ソーラーフレア(Lv1)": "ingrid_j214pp",
+    "OD ソーラーフレア(Lv2)": "ingrid_j214pp_1stock",
+    "OD ソーラーフレア(Lv3)": "ingrid_j214pp_2stock",
+    "SA1 サンシャイン(Lv1)": "ingrid_236236k_0stock",
+    "SA1 サンシャイン(Lv2)": "ingrid_236236k_hold_1stock",
+    "SA1 サンシャイン(Lv3)": "ingrid_236236k_hold_2stock",
+    "SA2 サンオーダー(Lv1)": "ingrid_214214p_0stock",
+    "SA2 サンオーダー(Lv2)": "ingrid_214214p_hold_1stock",
+    "SA2 サンオーダー(Lv3)": "ingrid_214214p_hold_2stock",
+}
+
 GENERIC_NAME_OVERRIDE_PATTERNS = {
     "パリィドライブラッシュ": "{character_slug}_mpmk_66_pdr",
     "キャンセルドライブラッシュ": "{character_slug}_mpmk_66_drc",
@@ -464,6 +491,10 @@ def build_crosswalk(
             override_move_id = ZANGIEF_NAME_OVERRIDES.get(official["official_move_name"], "")
             if override_move_id:
                 override_source = "zangief_name_override"
+        elif character_slug == "ingrid":
+            override_move_id = INGRID_NAME_OVERRIDES.get(official["official_move_name"], "")
+            if override_move_id:
+                override_source = "ingrid_name_override"
         if not override_move_id:
             for name_part, move_id_pattern in GENERIC_NAME_OVERRIDE_PATTERNS.items():
                 if name_part in official["official_move_name"]:
@@ -674,7 +705,7 @@ def main(argv: list[str]) -> int:
                     "official Classic input tokens are converted to command signatures",
                     "special and super motions may also match a strength-collapsed input family",
                     "category/moveType compatibility and simple field equality increase candidate score",
-                    "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, and Zangief 360/720 / close-mid-far rows",
+                    "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
                     "generic name overrides are used for Drive Rush system rows",
                     "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id",
                 ],

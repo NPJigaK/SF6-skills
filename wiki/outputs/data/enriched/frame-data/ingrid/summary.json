@@ -1,0 +1,38 @@
+{
+  "official_rows": 75,
+  "supercombo_rows": 83,
+  "enriched_rows": 75,
+  "supercombo_only_rows": 13,
+  "enrichment_status_counts": {
+    "enriched": 47,
+    "enriched_reviewed": 26,
+    "official_only": 2
+  },
+  "review_flag_counts": {
+    "manual_match": 26,
+    "multiple_candidates": 10,
+    "supercombo_row_reused": 5
+  },
+  "basic_field_conflict_counts": {},
+  "human_review_status_counts": {
+    "accepted": 26
+  },
+  "human_review_decision_counts": {
+    "supplemental_link": 4,
+    "shared_variant_supplemental_link": 2,
+    "stock_build_supplemental_link": 2,
+    "stock_level_supplemental_link": 18
+  },
+  "supercombo_reused_move_ids": [
+    "ingrid_236lpmp",
+    "ingrid_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only_taunt": 4,
+    "supercombo_only": 9
+  },
+  "official_csv": "wiki\\outputs\\data\\frame-data\\ingrid\\classic.csv",
+  "supercombo_frames_csv": "wiki\\outputs\\data\\supercombo\\frame-data\\ingrid\\frames.csv",
+  "crosswalk_csv": "wiki\\outputs\\data\\supercombo\\frame-data\\ingrid\\crosswalk-official-classic.csv",
+  "output_csv": "wiki\\outputs\\data\\enriched\\frame-data\\ingrid\\classic-supercombo.csv"
+}

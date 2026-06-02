@@ -1,0 +1,109 @@
+{
+  "queries": [
+    {
+      "section": "Character Data",
+      "block_sha256": "sha256:a89fc80979e338b254f958d0323a5bb8bc8872e2c21acb312037fd51b8f62c68",
+      "raw": "{{#cargo_query:tables=SF6_CharacterData\n|fields=CONCAT('[[file:', portrait, '|100px|link=]] ')=<big>Ingrid</big>,hp=HP,throwRange=Throw<br>Range,fwdWalkSpd=Fwd Walk<br>Speed,bwdWalkSpd=Back Walk<br>Speed,fwdDashSpd=Fwd Dash<br>Speed,bwdDashSpd=Back Dash<br>Speed,fwdDashDist=Fwd Dash<br>Distance,bwdDashDist=Back Dash<br>Distance,jumpSpd=Jump<br>Speed,fwdJumpDist=Fwd Jump<br>Distance,bwdJumpDist=Back Jump<br>Distance,jumpApex=Jump<br>Apex\n|where=chara=\"Ingrid\"\n|format=table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:0a785feaec687d622c5e7dd580955947e42660c3233f10a9e158f4143bd9be3c",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard,IF(cancel='{{{cancel}}}', \"\", cancel)=Cancel,IF(hitconfirm='{{{hitconfirm}}}', \"\", hitconfirm)=Hitconfirm\n|where=chara=\"Ingrid\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:4363196bd382eedec98cf431c59cb9bd63b164dfddf8ae81f16d1c33e63d78eb",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(DRcancelHit='{{{DRcancelHit}}}', \"\", DRcancelHit)=DR Cancel onHit,IF(DRcancelBlk='{{{DRcancelBlk}}}', \"\", DRcancelBlk)=DR Cancel onBlock,IF(afterDRHit='{{{afterDRHit}}}', \"\", afterDRHit)=After DR onHit,IF(afterDRBlk='{{{afterDRBlk}}}', \"\", afterDRBlk)=After DR onBlock,IF(hitstun='{{{hitstun}}}', \"\", hitstun)=Hitstun,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Ingrid\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:945e2bcd0cf148317097baeadf0d7d7135f630118be4bcb1162278b4d324b752",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', \"\", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', \"\", superGainBlk)=SuperGain Block\n|where=chara=\"Ingrid\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:9ad1a295c89ffdc17288309661c729d9f66f94ab3d3a3e9f27517ea349d94b63",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(airborne='{{{airborne}}}', \"\", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Ingrid\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:c13140786e4df7c9929f5294c76b6143811904b96517dc90a4a1a68a1ce70b57",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Ingrid\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:09a6957157b8fef7b8d8dc9b8f437b89a0bbec13a390a1328ef861eaae740de8",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard\n|where=chara=\"Ingrid\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:88c6b5a9f8100a4676e9b36a1ae3e68dea806b6551c3f0c8ede26c0496c91af7",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(chip='{{{chip}}}', \"\", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Ingrid\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:7a814718a2ac7c95383e1d75f7a16c42a26b2f39aa2fc387a9b41607de4359f9",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', \"\", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit\n|where=chara=\"Ingrid\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:c7f1b57f9b74a3f42526cfddcc0669025018daa3086dd32f84baf93208c2eb87",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Ingrid\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:ac9ed6a6c212f241376b896fa77b0f9f57b07792dec06057d3dbc8a289c32dd9",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Ingrid\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:7893ca776b34a43e30739e014ce9d05489ce14baec764b5ec25aa99e5284f374",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard,IF(cancel='{{{cancel}}}', \"\", cancel)=Cancel,IF(hitconfirm='{{{hitconfirm}}}', \"\", hitconfirm)=Hitconfirm\n|where=chara=\"Ingrid\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:d113456ca3acd608653d01562c0e454800491fc0d4540ce9d75f55b8f58b3fd1",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(chip='{{{chip}}}', \"\", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Ingrid\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:5a40c68080ecc1cf43de8356fcdb64d247f5edc00fe2ba557f86e39d8206b2c3",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', \"\", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', \"\", superGainBlk)=SuperGain Block\n|where=chara=\"Ingrid\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:0a5b8fc423a216086cb8d1d0c23a80fcb3708337372a4b292ebbde98d00d9eca",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(airborne='{{{airborne}}}', \"\", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Ingrid\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:a902a9c6d52d356071848390e012d6b5304f9afff7a366d4dbfb90b556c61ae7",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Ingrid\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:c596be6f85d3ec66f69eb592476ff0734d813144f15491596e436d261bc6d7e3",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard\n|where=chara=\"Ingrid\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:d3558560a4295f33146871980d733da01eaa441766eb2acdfa153aac80e4e6d8",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(chip='{{{chip}}}', \"\", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Ingrid\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:c3132e102a3f4e2ca221aa8c5ea78c069d5727e0e172be984cdc8cd9c232aeb7",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', \"\", superGainBlk)=SuperGain Block\n|where=chara=\"Ingrid\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:1c92062a5ddb6bdad9060b1085c1e8603f977c5335e2f92c734541bc5008db04",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(airborne='{{{airborne}}}', \"\", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Ingrid\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:a88a5d651e0b67ee4a45f16fc7dbb5f7d431b37c87a56d2e063f536d6bbc8420",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Ingrid\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    }
+  ]
+}

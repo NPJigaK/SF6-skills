@@ -2,6 +2,106 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-02] 事前レビュー | SuperCombo Ingrid SuperCombo-only 9 行
+- 作成:
+  - `wiki/reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview.md`
+- 更新:
+  - `wiki/reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - SuperCombo Ingrid の公式 row に直接照合しない 9 行（Big Laser?、Burnout Attack?、Sun Octopus?、Monoid 関連）について、ネット検索と外部 page 確認を使って事前レビューした。
+  - Capcom News / Steam official announcements / 公式 frame-data では通常掲載範囲に hidden 9 行を確認できず、公式 row への統合根拠にはしない。
+  - Twisted Voxel、Reddit、Street Fighter Wiki の Dark Ingrid / Monoid pages は、Shin/Dark Ingrid 変身、Monoid 経由、`22PPP`、`214214K`、`360/412369+KK` の存在条件を補強する secondary / community evidence として扱う。
+  - 今回は accept ではない。`human_review_status`、`human_review_decision`、公式 row への照合、補助列付き output は変更していない。
+  - repo の現段階では domain-specific な answer policy field や新 schema は作らず、既存の `supercombo-only.csv` / `suggested_handling` と review note の tags / 説明で「通常回答には混ぜない」ことを表す。
+- 未解決事項:
+  - hidden / Dark / Shin Ingrid と Monoid 操作 row を reader-facing data として公開する場合、通常の Ingrid frame-data とどう分けて表示するか。
+  - 既存の `suggested_handling` の `supercombo_only` を、将来 `supercombo_only_hidden_command` や `supercombo_only_taunt_summon` のように細分化する必要があるか。
+  - accept 前に Capcom 公式動画、公式 command list、in-game training/frame meter で追加検証するか。
+
+## [2026-06-02] レビュー | SuperCombo Ingrid 補助データのレビュー対象行
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/supercombo/frame-data/ingrid/`
+  - `wiki/outputs/data/enriched/frame-data/ingrid/`
+  - `wiki/outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk.md`
+  - `wiki/outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data.md`
+  - `wiki/sources/supercombo-ingrid-frame-data.md`
+  - `wiki/reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review.md`
+  - `wiki/entities/ingrid.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Ingrid の SuperCombo raw から派生 frame-data CSV/JSON を生成し、Capcom 公式 Ingrid Classic CSV との crosswalk を作成した。
+  - crosswalk は公式 75 rows / SuperCombo 83 rows、自動一致 47、name override 一致 26、公式側未照合 2。
+  - 補助列付き output は `enriched` 47、`enriched_reviewed` 26、`official_only` 2。`enriched_review_required` は 0。
+  - レビュー対象 26 行は `human_review_status: accepted`。decision は `supplemental_link` 4、`shared_variant_supplemental_link` 2、`stock_build_supplemental_link` 2、`stock_level_supplemental_link` 18。
+  - Sun Crest stock level、OD Sun Shot 共有 row、SA1 / SA2 stock level、Drive Rush を公式値を正とする補助リンクとして扱う。
+  - 公式列と補助列付き output の公式由来列が一致することを検証した。
+- 未解決事項:
+  - `imageinfo` missing 156 件が source 側の欠損なのか、filename 正規化や API title 変換で再解決可能なのか。
+  - 公式 row に直接照合しない SuperCombo-only 9 行（Big Laser?、Burnout Attack?、Sun Octopus?、Monoid 関連）を、特殊隠しコマンド / Monoid 操作に関係する通常利用外 row として通常回答から分離する方針を事前レビューした。
+
+## [2026-06-02] 取り込み | SuperCombo Ingrid フレームデータ wiki ingest
+- 原本:
+  - `raw/frame-data/supercombo/ingrid/manifest.json`
+  - `raw/frame-data/supercombo/ingrid/validation.json`
+  - `raw/frame-data/supercombo/ingrid/data.raw.wikitext`
+  - `raw/frame-data/supercombo/ingrid/frame-data.raw.wikitext`
+  - `raw/frame-data/supercombo/ingrid/cargo/`
+  - `raw/frame-data/supercombo/ingrid/rendered/`
+  - `raw/frame-data/supercombo/ingrid/screenshots/`
+  - `raw/frame-data/supercombo/ingrid/image-manifest.json`
+- 作成:
+  - `wiki/sources/supercombo-ingrid-frame-data.md`
+  - `wiki/reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/entities/ingrid.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/log.md`
+- メモ:
+  - SuperCombo Ingrid raw 取得データを source summary と capture review note として wiki layer に取り込んだ。
+  - `validation.json` の status は `passed`。83 件の frame template、1 件の character template、21 件の表示 Cargo query、20 件の DOM table comparison が通過している。
+  - source revision label は `2026-06-02`。Data page revision は `2026-06-02T01:44:56Z`、Frame data page revision は `2026-04-22T23:42:21Z`。
+  - 画像参照は 164 refs、`imageinfo` の distinct title は 158 件。解決できた title は face / portrait の 2 件のみで、156 title は missing。取得済み画像も 2 件。
+  - 今回は wiki ingest が範囲なので、派生 frame-data CSV/JSON、公式 Classic との crosswalk、補助列付き output は作成していない。
+- 未解決事項:
+  - Ingrid の move / hitbox image refs の大半が SuperCombo API の `imageinfo` で missing になる理由を確認する。
+  - Sun Crest、Monoid、Shin Ingrid 関連 rows を公式 Classic data とどの schema で照合するか。
+  - 次 step で派生 frame-data output と公式 Classic との crosswalk を作るか。
+
+## [2026-06-02] 取り込み | SuperCombo Ingrid フレームデータ raw 取得
+- 原本:
+  - `raw/frame-data/supercombo/ingrid/manifest.json`
+  - `raw/frame-data/supercombo/ingrid/data.raw.wikitext`
+  - `raw/frame-data/supercombo/ingrid/frame-data.raw.wikitext`
+  - `raw/frame-data/supercombo/ingrid/cargo/`
+  - `raw/frame-data/supercombo/ingrid/rendered/`
+  - `raw/frame-data/supercombo/ingrid/screenshots/`
+  - `raw/frame-data/supercombo/ingrid/images/files/`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - SuperCombo Ingrid を `https://wiki.supercombo.gg/w/Street_Fighter_6/Ingrid/Frame_data` と関連 Data page から取得した。
+  - source revision label は `2026-06-02`。Data page revision は `2026-06-02T01:44:56Z`、Frame data page revision は `2026-04-22T23:42:21Z`。
+  - 今回は raw 取得までに範囲を限定し、派生 data output、source summary、review note は作成していない。
+  - 検証は 83 件の frame template、1 件の character template、21 件の表示 Cargo query、20 件の DOM table comparison で通過した。
+  - 画像参照は 164 refs、`imageinfo` の distinct title は 158 件。2 title だけ解決され、156 title は missing だった。取得できた画像は face と portrait の 2 件。
+- 未解決事項:
+  - Ingrid の move / hitbox image refs の大半が SuperCombo API の `imageinfo` で missing になる理由を、次の source summary / review 作成時に確認する。
+  - 次 step で派生 frame-data output と公式 Classic との crosswalk を作るか。
+
 ## [2026-06-02] レビュー | Zangief SuperCombo 補助データのレビュー対象行
 - 更新:
   - `tools/build_official_supercombo_enriched_data.py`

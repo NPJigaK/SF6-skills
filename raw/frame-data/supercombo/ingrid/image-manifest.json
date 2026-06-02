@@ -1,0 +1,1503 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-02T01:58:00Z",
+  "source": "SuperCombo Wiki",
+  "character": "Ingrid",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Ingrid",
+      "filename": "SF6 Ingrid Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Ingrid",
+      "filename": "SF6 Ingrid Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Ingrid_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Ingrid_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Ingrid_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Ingrid_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Ingrid_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Ingrid_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Ingrid_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Ingrid_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Ingrid_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Ingrid_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Ingrid_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Ingrid_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Ingrid_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Ingrid_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Ingrid_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Ingrid_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ingrid_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Ingrid_2hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Ingrid_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Ingrid_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Ingrid_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Ingrid_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2hk",
+      "input": "2HK",
+      "name": "Orbital Kick",
+      "filename": "SF6_Ingrid_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2hk",
+      "input": "2HK",
+      "name": "Orbital Kick",
+      "filename": "SF6_Ingrid_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Ingrid_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Ingrid_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ingrid_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ingrid_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Ingrid_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Ingrid_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Ingrid_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Ingrid_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Ingrid_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Ingrid_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Ingrid_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Ingrid_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_6mp",
+      "input": "6MP",
+      "name": "Sun Bright",
+      "filename": "SF6_Ingrid_6mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_6mp",
+      "input": "6MP",
+      "name": "Sun Bright",
+      "filename": "SF6_Ingrid_6mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_6hp",
+      "input": "6HP",
+      "name": "Halo Flight",
+      "filename": "SF6_Ingrid_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_6hp",
+      "input": "6HP",
+      "name": "Halo Flight",
+      "filename": "SF6_Ingrid_6hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4mk",
+      "input": "4MK",
+      "name": "Glowing Touch 1",
+      "filename": "SF6_Ingrid_4mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_4mk",
+      "input": "4MK",
+      "name": "Glowing Touch 1",
+      "filename": "SF6_Ingrid_4mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4hp",
+      "input": "4HP",
+      "name": "Luminous Uppercut 1",
+      "filename": "SF6_Ingrid_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_4hp",
+      "input": "4HP",
+      "name": "Luminous Uppercut 1",
+      "filename": "SF6_Ingrid_4hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5mp_mk",
+      "input": "5MP~MK",
+      "name": "Pretty Heel Kick",
+      "filename": "SF6_Ingrid_5mp_mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_5mp_mk",
+      "input": "5MP~MK",
+      "name": "Pretty Heel Kick",
+      "filename": "SF6_Ingrid_5mp_mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4mk_hp",
+      "input": "4MK~HP",
+      "name": "Glowing Touch 2",
+      "filename": "SF6_Ingrid_4mk_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_4mk_hp",
+      "input": "4MK~HP",
+      "name": "Glowing Touch 2",
+      "filename": "SF6_Ingrid_4mk_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4hp_hp",
+      "input": "4HP~HP",
+      "name": "Luminous Uppercut 2",
+      "filename": "SF6_Ingrid_4hp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_4hp_hp",
+      "input": "4HP~HP",
+      "name": "Luminous Uppercut 2",
+      "filename": "SF6_Ingrid_4hp_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_jhk_jhk",
+      "input": "j.HK~j.HK",
+      "name": "Satellite Leap",
+      "filename": "SF6_Ingrid_jhk_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_jhk_jhk",
+      "input": "j.HK~j.HK",
+      "name": "Satellite Leap",
+      "filename": "SF6_Ingrid_jhk_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_lplk",
+      "input": "LPLK",
+      "name": "Strange Knuckle",
+      "filename": "SF6_Ingrid_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_lplk",
+      "input": "LPLK",
+      "name": "Strange Knuckle",
+      "filename": "SF6_Ingrid_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4lplk",
+      "input": "4LPLK",
+      "name": "Gravity Drop",
+      "filename": "SF6_Ingrid_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_4lplk",
+      "input": "4LPLK",
+      "name": "Gravity Drop",
+      "filename": "SF6_Ingrid_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_hphk",
+      "input": "HPHK",
+      "name": "Twinkle Kick",
+      "filename": "SF6_Ingrid_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_hphk",
+      "input": "HPHK",
+      "name": "Twinkle Kick",
+      "filename": "SF6_Ingrid_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_6hphk",
+      "input": "6HPHK",
+      "name": "Odd Flight (Block)",
+      "filename": "SF6_Ingrid_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_6hphk",
+      "input": "6HPHK",
+      "name": "Odd Flight (Block)",
+      "filename": "SF6_Ingrid_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Odd Flight (Recovery)",
+      "filename": "SF6_Ingrid_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Odd Flight (Recovery)",
+      "filename": "SF6_Ingrid_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Ingrid_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Ingrid_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Ingrid_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Ingrid_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Ingrid_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Ingrid_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236lp",
+      "input": "236LP",
+      "name": "Sun Shot",
+      "filename": "SF6_Ingrid_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236lp",
+      "input": "236LP",
+      "name": "Sun Shot",
+      "filename": "SF6_Ingrid_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236mp",
+      "input": "236MP",
+      "name": "Sun Shot",
+      "filename": "SF6_Ingrid_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236mp",
+      "input": "236MP",
+      "name": "Sun Shot",
+      "filename": "SF6_Ingrid_236mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236hp",
+      "input": "236HP",
+      "name": "Sun Shot",
+      "filename": "SF6_Ingrid_236hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236hp",
+      "input": "236HP",
+      "name": "Sun Shot",
+      "filename": "SF6_Ingrid_236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236lpmp",
+      "input": "236LPMP or 236LPHP",
+      "name": "Sun Shot (L/M)",
+      "filename": "SF6_Ingrid_236lpmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236lpmp",
+      "input": "236LPMP or 236LPHP",
+      "name": "Sun Shot (L/M)",
+      "filename": "SF6_Ingrid_236lpmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236mphp",
+      "input": "236MPHP",
+      "name": "Sun Shot (H)",
+      "filename": "SF6_Ingrid_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236mphp",
+      "input": "236MPHP",
+      "name": "Sun Shot (H)",
+      "filename": "SF6_Ingrid_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214lp",
+      "input": "214LP (HOLD OK)",
+      "name": "Sun Flare",
+      "filename": "SF6_Ingrid_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214lp",
+      "input": "214LP (HOLD OK)",
+      "name": "Sun Flare",
+      "filename": "SF6_Ingrid_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214mp",
+      "input": "214MP",
+      "name": "Sun Flare",
+      "filename": "SF6_Ingrid_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214mp",
+      "input": "214MP",
+      "name": "Sun Flare",
+      "filename": "SF6_Ingrid_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214hp_1stock",
+      "input": "214HP (1 Stock)",
+      "name": "Sun Flare (1 Stock)",
+      "filename": "SF6_Ingrid_214hp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214hp_1stock",
+      "input": "214HP (1 Stock)",
+      "name": "Sun Flare (1 Stock)",
+      "filename": "SF6_Ingrid_214hp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214hp_2stock",
+      "input": "214HP (2 Stock)",
+      "name": "Sun Flare (2 Stock))",
+      "filename": "SF6_Ingrid_214hp_2stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214hp_2stock",
+      "input": "214HP (2 Stock)",
+      "name": "Sun Flare (2 Stock))",
+      "filename": "SF6_Ingrid_214hp_2stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214pp",
+      "input": "214PP",
+      "name": "Sun Flare",
+      "filename": "SF6_Ingrid_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214pp",
+      "input": "214PP",
+      "name": "Sun Flare",
+      "filename": "SF6_Ingrid_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214pp_1stock",
+      "input": "214PP (1 Stock)",
+      "name": "Sun Flare (1 Stock)",
+      "filename": "SF6_Ingrid_214pp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214pp_1stock",
+      "input": "214PP (1 Stock)",
+      "name": "Sun Flare (1 Stock)",
+      "filename": "SF6_Ingrid_214pp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214pp_2stock",
+      "input": "214PP (2 Stock)",
+      "name": "Sun Flare (2 Stock)",
+      "filename": "SF6_Ingrid_214pp_2stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214pp_2stock",
+      "input": "214PP (2 Stock)",
+      "name": "Sun Flare (2 Stock)",
+      "filename": "SF6_Ingrid_214pp_2stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214lp",
+      "input": "j.214LP",
+      "name": "Solar Burst",
+      "filename": "SF6_Ingrid_j214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214lp",
+      "input": "j.214LP",
+      "name": "Solar Burst",
+      "filename": "SF6_Ingrid_j214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214mp",
+      "input": "j.214MP",
+      "name": "Solar Burst",
+      "filename": "SF6_Ingrid_j214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214mp",
+      "input": "j.214MP",
+      "name": "Solar Burst",
+      "filename": "SF6_Ingrid_j214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214hp_1stock",
+      "input": "j.214HP (1 Stock)",
+      "name": "Solar Burst (1 Stock)",
+      "filename": "SF6_Ingrid_j214hp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214hp_1stock",
+      "input": "j.214HP (1 Stock)",
+      "name": "Solar Burst (1 Stock)",
+      "filename": "SF6_Ingrid_j214hp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214hp_2stock",
+      "input": "j.214HP (2 Stock)",
+      "name": "Solar Burst (2 Stock)",
+      "filename": "SF6_Ingrid_j214hp_2stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214hp_2stock",
+      "input": "j.214HP (2 Stock)",
+      "name": "Solar Burst (2 Stock)",
+      "filename": "SF6_Ingrid_j214hp_2stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214pp",
+      "input": "j.214PP",
+      "name": "Solar Burst",
+      "filename": "SF6_Ingrid_j214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214pp",
+      "input": "j.214PP",
+      "name": "Solar Burst",
+      "filename": "SF6_Ingrid_j214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214pp_1stock",
+      "input": "j.214PP (1 Stock)",
+      "name": "Solar Burst (1 Stock)",
+      "filename": "SF6_Ingrid_j214pp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214pp_1stock",
+      "input": "j.214PP (1 Stock)",
+      "name": "Solar Burst (1 Stock)",
+      "filename": "SF6_Ingrid_j214pp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_j214pp_2stock",
+      "input": "j.214PP (2 Stock)",
+      "name": "Solar Burst (2 Stock)",
+      "filename": "SF6_Ingrid_j214pp_2stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_j214pp_2stock",
+      "input": "j.214PP (2 Stock)",
+      "name": "Solar Burst (2 Stock)",
+      "filename": "SF6_Ingrid_j214pp_2stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236lk",
+      "input": "236LK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236lk",
+      "input": "236LK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236mk",
+      "input": "236MK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236mk",
+      "input": "236MK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236hk",
+      "input": "236HK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236hk",
+      "input": "236HK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236kk",
+      "input": "236KK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236kk",
+      "input": "236KK",
+      "name": "Sun Rise",
+      "filename": "SF6_Ingrid_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_22k",
+      "input": "22K",
+      "name": "Sun Veil",
+      "filename": "SF6_Ingrid_22k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_22k",
+      "input": "22K",
+      "name": "Sun Veil",
+      "filename": "SF6_Ingrid_22k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_22kk",
+      "input": "22KK",
+      "name": "Sun Veil",
+      "filename": "SF6_Ingrid_22kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_22kk",
+      "input": "22KK",
+      "name": "Sun Veil",
+      "filename": "SF6_Ingrid_22kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_6kkk",
+      "input": "6KKK",
+      "name": "Vanishing Sun (Forward)",
+      "filename": "SF6_Ingrid_6kkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_6kkk",
+      "input": "6KKK",
+      "name": "Vanishing Sun (Forward)",
+      "filename": "SF6_Ingrid_6kkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2kkk",
+      "input": "2KKK",
+      "name": "Vanishing Sun (Down)",
+      "filename": "SF6_Ingrid_2kkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_2kkk",
+      "input": "2KKK",
+      "name": "Vanishing Sun (Down)",
+      "filename": "SF6_Ingrid_2kkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4kkk",
+      "input": "4KKK",
+      "name": "Vanishing Sun (Back)",
+      "filename": "SF6_Ingrid_4kkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_4kkk",
+      "input": "4KKK",
+      "name": "Vanishing Sun (Back)",
+      "filename": "SF6_Ingrid_4kkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236236k_0stock",
+      "input": "236236K (0 Stock)",
+      "name": "Shining Sun (0 Stock)",
+      "filename": "SF6_Ingrid_236236k_0stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236236k_0stock",
+      "input": "236236K (0 Stock)",
+      "name": "Shining Sun (0 Stock)",
+      "filename": "SF6_Ingrid_236236k_0stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236236k_hold_1stock",
+      "input": "236236[K] (1 Stock)",
+      "name": "Shining Sun (1 Stock)",
+      "filename": "SF6_Ingrid_236236k_hold_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236236k_hold_1stock",
+      "input": "236236[K] (1 Stock)",
+      "name": "Shining Sun (1 Stock)",
+      "filename": "SF6_Ingrid_236236k_hold_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236236k_hold_2stock",
+      "input": "236236[K] (2 Stock)",
+      "name": "Shining Sun (2 Stock)",
+      "filename": "SF6_Ingrid_236236k_hold_2stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236236k_hold_2stock",
+      "input": "236236[K] (2 Stock)",
+      "name": "Shining Sun (2 Stock)",
+      "filename": "SF6_Ingrid_236236k_hold_2stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214214p_0stock",
+      "input": "214214P (0 Stock)",
+      "name": "Order of the Sun (0 Stock)",
+      "filename": "SF6_Ingrid_214214p_0stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214214p_0stock",
+      "input": "214214P (0 Stock)",
+      "name": "Order of the Sun (0 Stock)",
+      "filename": "SF6_Ingrid_214214p_0stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214214p_hold_1stock",
+      "input": "214214[P] (1 Stock)",
+      "name": "Order of the Sun (1 Stock)",
+      "filename": "SF6_Ingrid_214214p_hold_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214214p_hold_1stock",
+      "input": "214214[P] (1 Stock)",
+      "name": "Order of the Sun (1 Stock)",
+      "filename": "SF6_Ingrid_214214p_hold_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214214p_hold_2stock",
+      "input": "214214[P] (2 Stock)",
+      "name": "Order of the Sun (2 Stock)",
+      "filename": "SF6_Ingrid_214214p_hold_2stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214214p_hold_2stock",
+      "input": "214214[P] (2 Stock)",
+      "name": "Order of the Sun (2 Stock)",
+      "filename": "SF6_Ingrid_214214p_hold_2stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236236p",
+      "input": "236236P",
+      "name": "Cosmic Ray",
+      "filename": "SF6_Ingrid_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236236p",
+      "input": "236236P",
+      "name": "Cosmic Ray",
+      "filename": "SF6_Ingrid_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_236236p(ca)",
+      "input": "236236P",
+      "name": "Cosmic Ray (CA)",
+      "filename": "SF6_Ingrid_236236p_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_236236p(ca)",
+      "input": "236236P",
+      "name": "Cosmic Ray (CA)",
+      "filename": "SF6_Ingrid_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Ingrid_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Ingrid_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Ingrid_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_2pppkkk",
+      "input": "2PPPKKK",
+      "name": "Down Taunt",
+      "filename": "SF6_Ingrid_2pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_22ppp",
+      "input": "22PPP",
+      "name": "Big Laser?",
+      "filename": "SF6_Ingrid_22ppp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_22ppp",
+      "input": "22PPP",
+      "name": "Big Laser?",
+      "filename": "SF6_Ingrid_22ppp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_214214k",
+      "input": "214214K",
+      "name": "Burnout Attack?",
+      "filename": "SF6_Ingrid_214214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_214214k",
+      "input": "214214K",
+      "name": "Burnout Attack?",
+      "filename": "SF6_Ingrid_214214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_360kk",
+      "input": "360+KK",
+      "name": "Sun Octopus?",
+      "filename": "SF6_Ingrid_360kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_360kk",
+      "input": "360+KK",
+      "name": "Sun Octopus?",
+      "filename": "SF6_Ingrid_360kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_monoid_l",
+      "input": "LP or LK",
+      "name": "Monoid Low Dive",
+      "filename": "SF6_ingrid_monoid_l.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_monoid_l",
+      "input": "LP or LK",
+      "name": "Monoid Low Dive",
+      "filename": "SF6_ingrid_monoid_l_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_monoid_m",
+      "input": "MP or MK",
+      "name": "Monoid Overhead Hammer",
+      "filename": "SF6_ingrid_monoid_m.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_monoid_m",
+      "input": "MP or MK",
+      "name": "Monoid Overhead Hammer",
+      "filename": "SF6_ingrid_monoid_m_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_monoid_h",
+      "input": "HP or HK",
+      "name": "Monoid Star Thrust",
+      "filename": "SF6_ingrid_monoid_h.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_monoid_h",
+      "input": "HP or HK",
+      "name": "Monoid Star Thrust",
+      "filename": "SF6_ingrid_monoid_h_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_monoid_hphk",
+      "input": "HP+HK",
+      "name": "Monoid Beam",
+      "filename": "SF6_ingrid_monoid_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_monoid_hphk",
+      "input": "HP+HK",
+      "name": "Monoid Beam",
+      "filename": "SF6_ingrid_monoid_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_monoid_jx",
+      "input": "j.X",
+      "name": "Monoid Aerial Strike",
+      "filename": "SF6_ingrid_monoid_jx.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_monoid_jx",
+      "input": "j.X",
+      "name": "Monoid Aerial Strike",
+      "filename": "SF6_ingrid_monoid_jx_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ingrid_monoid_super",
+      "input": "214236HP/HK",
+      "name": "Monoid Super",
+      "filename": "SF6_ingrid_monoid_super.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ingrid_monoid_super",
+      "input": "214236HP/HK",
+      "name": "Monoid Super",
+      "filename": "SF6_ingrid_monoid_super_hitbox.png"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "File:SF6 Ingrid Face.png",
+      "url": "https://wiki.supercombo.gg/images/0/0c/SF6_Ingrid_Face.png",
+      "target_path": "images\\files\\SF6_Ingrid_Face.png",
+      "mime": "image/png",
+      "source_sha1": "19062be9c2168dfc36f4757017469710127f4197",
+      "path": "raw\\frame-data\\supercombo\\ingrid\\images\\files\\SF6_Ingrid_Face.png",
+      "byte_count": 123012,
+      "sha256": "sha256:59d195bbbc4be0d17def51ec30171d083d3ac6085d6f79758f944aa1d0303baa",
+      "ok": true
+    },
+    {
+      "title": "File:SF6 Ingrid Portrait.png",
+      "url": "https://wiki.supercombo.gg/images/8/8e/SF6_Ingrid_Portrait.png",
+      "target_path": "images\\files\\SF6_Ingrid_Portrait.png",
+      "mime": "image/png",
+      "source_sha1": "6ada08dd748117f5aa9081c10bf0309e997f946f",
+      "path": "raw\\frame-data\\supercombo\\ingrid\\images\\files\\SF6_Ingrid_Portrait.png",
+      "byte_count": 539097,
+      "sha256": "sha256:d9639d5472acd46e3518381aabdc9f96b47e22c53f96cf2d31706cb5300ab3bd",
+      "ok": true
+    }
+  ],
+  "missing_titles": [
+    "File:SF6 Ingrid 236kk hitbox.png",
+    "File:SF6 Ingrid 236kk.png",
+    "File:SF6 Ingrid 236hp hitbox.png",
+    "File:SF6 Ingrid 236hp.png",
+    "File:SF6 Ingrid 236hk hitbox.png",
+    "File:SF6 Ingrid 236hk.png",
+    "File:SF6 Ingrid 236236p hitbox.png",
+    "File:SF6 Ingrid 236236p ca.png",
+    "File:SF6 Ingrid 236236p.png",
+    "File:SF6 Ingrid 236236k hold 2stock hitbox.png",
+    "File:SF6 Ingrid 236236k hold 2stock.png",
+    "File:SF6 Ingrid 236236k hold 1stock hitbox.png",
+    "File:SF6 Ingrid 236236k hold 1stock.png",
+    "File:SF6 Ingrid 236236k 0stock hitbox.png",
+    "File:SF6 Ingrid 236236k 0stock.png",
+    "File:SF6 Ingrid 22ppp hitbox.png",
+    "File:SF6 Ingrid 22ppp.png",
+    "File:SF6 Ingrid 22kk hitbox.png",
+    "File:SF6 Ingrid 22kk.png",
+    "File:SF6 Ingrid 22k hitbox.png",
+    "File:SF6 Ingrid 22k.png",
+    "File:SF6 Ingrid 214pp hitbox.png",
+    "File:SF6 Ingrid 214pp 2stock hitbox.png",
+    "File:SF6 Ingrid 214pp 2stock.png",
+    "File:SF6 Ingrid 214pp 1stock hitbox.png",
+    "File:SF6 Ingrid 214pp 1stock.png",
+    "File:SF6 Ingrid 214pp.png",
+    "File:SF6 Ingrid 214mp hitbox.png",
+    "File:SF6 Ingrid 214mp.png",
+    "File:SF6 Ingrid 214lp hitbox.png",
+    "File:SF6 Ingrid 214lp.png",
+    "File:SF6 Ingrid 214hp 2stock hitbox.png",
+    "File:SF6 Ingrid 214hp 2stock.png",
+    "File:SF6 Ingrid 214hp 1stock hitbox.png",
+    "File:SF6 Ingrid 214hp 1stock.png",
+    "File:SF6 Ingrid 214214p hold 2stock hitbox.png",
+    "File:SF6 Ingrid 214214p hold 2stock.png",
+    "File:SF6 Ingrid 214214p hold 1stock hitbox.png",
+    "File:SF6 Ingrid 214214p hold 1stock.png",
+    "File:SF6 Ingrid 214214p 0stock hitbox.png",
+    "File:SF6 Ingrid 214214p 0stock.png",
+    "File:SF6 Ingrid 214214k hitbox.png",
+    "File:SF6 Ingrid 214214k.png",
+    "File:SF6 Ingrid 5hp hitbox.png",
+    "File:SF6 Ingrid 5hp.png",
+    "File:SF6 Ingrid 5hk hitbox.png",
+    "File:SF6 Ingrid 5hk.png",
+    "File:SF6 Ingrid 4pppkkk.png",
+    "File:SF6 Ingrid 4mk hp hitbox.png",
+    "File:SF6 Ingrid 4mk hp.png",
+    "File:SF6 Ingrid 4mk hitbox.png",
+    "File:SF6 Ingrid 4mk.png",
+    "File:SF6 Ingrid 4lplk.png",
+    "File:SF6 Ingrid 4kkk hitbox.png",
+    "File:SF6 Ingrid 4kkk.png",
+    "File:SF6 Ingrid 4hp hp hitbox.png",
+    "File:SF6 Ingrid 4hp hp.png",
+    "File:SF6 Ingrid 4hp hitbox.png",
+    "File:SF6 Ingrid 4hp.png",
+    "File:SF6 Ingrid 360kk hitbox.png",
+    "File:SF6 Ingrid 360kk.png",
+    "File:SF6 Ingrid 2pppkkk.png",
+    "File:SF6 Ingrid 2mp hitbox.png",
+    "File:SF6 Ingrid 2mp.png",
+    "File:SF6 Ingrid 2mk hitbox.png",
+    "File:SF6 Ingrid 2mk.png",
+    "File:SF6 Ingrid 2lp hitbox.png",
+    "File:SF6 Ingrid 2lp.png",
+    "File:SF6 Ingrid 2lk hitbox.png",
+    "File:SF6 Ingrid 2lk.png",
+    "File:SF6 Ingrid 2kkk hitbox.png",
+    "File:SF6 Ingrid 2kkk.png",
+    "File:SF6 Ingrid 2hp hitbox.png",
+    "File:SF6 Ingrid 2hp.png",
+    "File:SF6 Ingrid 2hk hitbox.png",
+    "File:SF6 Ingrid 2hk.png",
+    "File:SF6 Ingrid 236pp hitbox.png",
+    "File:SF6 Ingrid 236pp.png",
+    "File:SF6 Ingrid 236mp hitbox.png",
+    "File:SF6 Ingrid 236mp.png",
+    "File:SF6 Ingrid 236mk hitbox.png",
+    "File:SF6 Ingrid 236mk.png",
+    "File:SF6 Ingrid 236lpmp hitbox.png",
+    "File:SF6 Ingrid 236lpmp.png",
+    "File:SF6 Ingrid 236lp hitbox.png",
+    "File:SF6 Ingrid 236lp.png",
+    "File:SF6 Ingrid 236lk hitbox.png",
+    "File:SF6 Ingrid 236lk.png",
+    "File:SF6 Ingrid jlk.png",
+    "File:SF6 Ingrid jhp hitbox.png",
+    "File:SF6 Ingrid jhp.png",
+    "File:SF6 Ingrid jhk jhk hitbox.png",
+    "File:SF6 Ingrid jhk jhk.png",
+    "File:SF6 Ingrid jhk hitbox.png",
+    "File:SF6 Ingrid jhk.png",
+    "File:SF6 Ingrid j214pp hitbox.png",
+    "File:SF6 Ingrid j214pp 2stock hitbox.png",
+    "File:SF6 Ingrid j214pp 2stock.png",
+    "File:SF6 Ingrid j214pp 1stock hitbox.png",
+    "File:SF6 Ingrid j214pp 1stock.png",
+    "File:SF6 Ingrid j214pp.png",
+    "File:SF6 Ingrid j214mp hitbox.png",
+    "File:SF6 Ingrid j214mp.png",
+    "File:SF6 Ingrid j214lp hitbox.png",
+    "File:SF6 Ingrid j214lp.png",
+    "File:SF6 Ingrid j214hp 2stock hitbox.png",
+    "File:SF6 Ingrid j214hp 2stock.png",
+    "File:SF6 Ingrid j214hp 1stock hitbox.png",
+    "File:SF6 Ingrid j214hp 1stock.png",
+    "File:SF6 Ingrid hphk hitbox.png",
+    "File:SF6 Ingrid hphk.png",
+    "File:SF6 Ingrid 6pppkkk.png",
+    "File:SF6 Ingrid 6mp hitbox.png",
+    "File:SF6 Ingrid 6mp.png",
+    "File:SF6 Ingrid 6kkk hitbox.png",
+    "File:SF6 Ingrid 6kkk.png",
+    "File:SF6 Ingrid 6hphk hitbox.png",
+    "File:SF6 Ingrid 6hphk.png",
+    "File:SF6 Ingrid 6hp hitbox.png",
+    "File:SF6 Ingrid 6hp.png",
+    "File:SF6 Ingrid 66 hitbox.png",
+    "File:SF6 Ingrid 66.png",
+    "File:SF6 Ingrid 5pppkkk.png",
+    "File:SF6 Ingrid 5mp mk hitbox.png",
+    "File:SF6 Ingrid 5mp mk.png",
+    "File:SF6 Ingrid 5mp hitbox.png",
+    "File:SF6 Ingrid 5mp.png",
+    "File:SF6 Ingrid 5mk hitbox.png",
+    "File:SF6 Ingrid 5mk.png",
+    "File:SF6 Ingrid 5lp hitbox.png",
+    "File:SF6 Ingrid 5lp.png",
+    "File:SF6 Ingrid 5lk hitbox.png",
+    "File:SF6 Ingrid 5lk.png",
+    "File:SF6 ingrid monoid super hitbox.png",
+    "File:SF6 ingrid monoid super.png",
+    "File:SF6 ingrid monoid m hitbox.png",
+    "File:SF6 ingrid monoid m.png",
+    "File:SF6 ingrid monoid l hitbox.png",
+    "File:SF6 ingrid monoid l.png",
+    "File:SF6 ingrid monoid jx hitbox.png",
+    "File:SF6 ingrid monoid jx.png",
+    "File:SF6 ingrid monoid hphk hitbox.png",
+    "File:SF6 ingrid monoid hphk.png",
+    "File:SF6 ingrid monoid h hitbox.png",
+    "File:SF6 ingrid monoid h.png",
+    "File:SF6 Ingrid mpmk hitbox.png",
+    "File:SF6 Ingrid mpmk.png",
+    "File:SF6 Ingrid lplk hitbox.png",
+    "File:SF6 Ingrid lplk.png",
+    "File:SF6 Ingrid jmp hitbox.png",
+    "File:SF6 Ingrid jmp.png",
+    "File:SF6 Ingrid jmk hitbox.png",
+    "File:SF6 Ingrid jmk.png",
+    "File:SF6 Ingrid jlp hitbox.png",
+    "File:SF6 Ingrid jlp.png",
+    "File:SF6 Ingrid jlk hitbox.png"
+  ],
+  "download_images": true
+}

@@ -9,6 +9,7 @@ sources:
   - "[[sources/supercombo-jp-frame-data]]"
   - "[[sources/supercombo-ryu-frame-data]]"
   - "[[sources/supercombo-zangief-frame-data]]"
+  - "[[sources/supercombo-ingrid-frame-data]]"
   - "[[sources/capcom-official-ryu-frame-data]]"
   - "[[sources/capcom-official-luke-frame-data]]"
   - "[[sources/capcom-official-jamie-frame-data]]"
@@ -86,7 +87,7 @@ tags:
 
 ## 要約
 
-Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data source、SuperCombo JP / Ryu / Zangief community frame-data 取得データの game context。現在、community glossary concepts、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、SuperCombo JP / Ryu / Zangief raw 取得データがある。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
+Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data source、SuperCombo JP / Ryu / Zangief / Ingrid community frame-data 取得データの game context。現在、community glossary concepts、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、SuperCombo JP / Ryu / Zangief / Ingrid raw 取得データがある。JP / Ryu / Zangief / Ingrid は公式 Classic + SuperCombo 補助データも作成済み。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
 
 ## 年表
 
@@ -126,12 +127,14 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 | 2026-05-31 | SuperCombo Wiki の JP frame-data page を raw wikitext、Cargo API、DOM、5タブ screenshot、画像として保存した。 | [[sources/supercombo-jp-frame-data]] |
 | 2026-05-31 | SuperCombo Wiki の Ryu frame-data page を raw wikitext、Cargo API、DOM、5タブ screenshot、画像として保存した。 | [[sources/supercombo-ryu-frame-data]] |
 | 2026-06-02 | SuperCombo Wiki の Zangief frame-data page を raw wikitext、Cargo API、DOM、5タブのスクリーンショット、画像として保存した。 | [[sources/supercombo-zangief-frame-data]] |
+| 2026-06-02 | SuperCombo Wiki の Ingrid frame-data page を raw wikitext、Cargo API、DOM、5タブのスクリーンショット、画像参照情報として保存した。 | [[sources/supercombo-ingrid-frame-data]] |
+| 2026-06-02 | Ingrid の公式 Classic + SuperCombo 補助データを作成し、レビュー対象 26 行を accepted にした。 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
 
 ## 関連する主張
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
 - Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 CSV として保持している。
-- SuperCombo JP / Ryu / Zangief frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image などを後で統合する候補 data を含む。
+- SuperCombo JP / Ryu / Zangief / Ingrid frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image などを後で統合する候補 data を含む。JP / Ryu / Zangief / Ingrid は公式 Classic rows を正とする補助列付き output を持つ。ただし Ingrid は face / portrait 以外の move / hitbox 画像がほぼ未解決。
 - frame-data raw の取得日 / source revision は path ではなく manifest の `capture_label` / `source_revision` で確認する。
 - 30 character data slugs の coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30 の capture。
 
@@ -146,4 +149,4 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 ## 未解決の質問
 
 - 公式 patch notes や Battle Change List を ingest して、frame-data の変化を時系列で扱うべきか。
-- SuperCombo frame-data を全 character に広げる前に、JP / Ryu / Zangief で official/SuperCombo crosswalk policy を確定すべきか。
+- SuperCombo frame-data を全 character に広げる前に、JP / Ryu / Zangief / Ingrid で採用した official/SuperCombo crosswalk policy を標準手順として固定するべきか。
