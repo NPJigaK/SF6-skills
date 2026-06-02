@@ -1,0 +1,44 @@
+{
+  "official_rows": 72,
+  "supercombo_rows": 68,
+  "enriched_rows": 72,
+  "supercombo_only_rows": 4,
+  "enrichment_status_counts": {
+    "enriched": 45,
+    "enriched_reviewed": 25,
+    "official_only": 2
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,startup": 1,
+    "manual_match": 24,
+    "multiple_candidates": 2,
+    "supercombo_row_reused": 11
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 1,
+    "startup": 1
+  },
+  "human_review_status_counts": {
+    "accepted": 25
+  },
+  "human_review_decision_counts": {
+    "hold_supplemental_link": 3,
+    "supplemental_link": 19,
+    "conflict_supplemental_only": 1,
+    "movement_variant_supplemental_link": 2
+  },
+  "supercombo_reused_move_ids": [
+    "zangief_236236p",
+    "zangief_2lk",
+    "zangief_2lp",
+    "zangief_5lp",
+    "zangief_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only_taunt": 4
+  },
+  "official_csv": "wiki\\outputs\\data\\frame-data\\zangief\\classic.csv",
+  "supercombo_frames_csv": "wiki\\outputs\\data\\supercombo\\frame-data\\zangief\\frames.csv",
+  "crosswalk_csv": "wiki\\outputs\\data\\supercombo\\frame-data\\zangief\\crosswalk-official-classic.csv",
+  "output_csv": "wiki\\outputs\\data\\enriched\\frame-data\\zangief\\classic-supercombo.csv"
+}

@@ -113,12 +113,14 @@ CHARACTER_FIELD_MAP = [
 ]
 
 IMAGE_TOKEN_TO_COMMAND = {
+    "key-u": "8",
     "key-d": "2",
     "key-dr": "3",
     "key-r": "6",
     "key-dl": "1",
     "key-l": "4",
     "key-nutral": "5",
+    "key-circle": "360+",
     "key-plus": "",
     "key-or": "/",
     "arrow_3": "~",
@@ -145,7 +147,7 @@ SOURCE_SECTIONS = {
 
 OFFICIAL_CATEGORY_TO_MOVE_TYPES = {
     "通常技": {"ground_normal", "air_normal", "normal"},
-    "特殊技": {"ground_normal", "normal"},
+    "特殊技": {"ground_normal", "air_normal", "normal"},
     "必殺技": {"special"},
     "スーパーアーツ": {"super"},
     "通常投げ": {"throw"},
@@ -168,6 +170,31 @@ RYU_NAME_OVERRIDES = {
     "SA2 真波掌撃（Lv3）": "ryu_214214p_lv3",
     "[電刃錬気]SA2 真波掌撃（Lv2）": "ryu_214214p_denjin_lv2",
     "[電刃錬気]SA2 真波掌撃（Lv3）": "ryu_214214p_denjin_lv3",
+}
+
+ZANGIEF_NAME_OVERRIDES = {
+    "立ち強P（ダイナマイトパンチ）（ホールド）": "zangief_5hp_hold",
+    "ジャンプ強K（ドロップキック）（ホールド）": "zangief_jhk_hold",
+    "フライングボディプレス": "zangief_j2hp",
+    "フライングヘッドバット": "zangief_j8hp",
+    "OD ダブルラリアット": "zangief_ppp",
+    "弱 スクリューパイルドライバー": "zangief_360lp",
+    "中 スクリューパイルドライバー": "zangief_360mp",
+    "強 スクリューパイルドライバー": "zangief_360hp",
+    "OD スクリューパイルドライバー": "zangief_360pp",
+    "ボルシチダイナマイト": "zangief_j360k",
+    "OD ボルシチダイナマイト": "zangief_j360kk",
+    "ロシアンスープレックス": "zangief_63214k_close",
+    "OD ロシアンスープレックス": "zangief_63214kk_close",
+    "シベリアンエクスプレス（近距離版）": "zangief_63214k_mid",
+    "OD シベリアンエクスプレス（近距離版）": "zangief_63214kk_mid",
+    "シベリアンエクスプレス（遠距離版）": "zangief_63214k_far",
+    "OD シベリアンエクスプレス（遠距離版）": "zangief_63214kk_far",
+    "SA2 サイクロンラリアット（ホールド）": "zangief_236236p_hold_p",
+    "SA2 サイクロンラリアット（その場）": "zangief_236236p",
+    "SA2 サイクロンラリアット（移動）": "zangief_236236p",
+    "SA3 ボリショイストームバスター": "zangief_720+p",
+    "CA ボリショイストームバスター": "zangief_720+p(ca)",
 }
 
 GENERIC_NAME_OVERRIDE_PATTERNS = {
@@ -307,7 +334,7 @@ def token_command_from_official(row: dict[str, str]) -> str:
             if value.strip() in {"or", "OR"}:
                 raw_parts.append("/")
     command = "".join(raw_parts)
-    command = command.replace("+", "")
+    command = command.replace("360+360+", "720+")
     command = re.sub(r"/+", "/", command)
     command = command.replace("5/6LPLK", "LPLK")
     if jump and command and not command.startswith("j."):
@@ -319,6 +346,8 @@ def token_command_from_official(row: dict[str, str]) -> str:
 
 def input_family(command: str, category: str) -> str:
     if category in {"必殺技", "スーパーアーツ"}:
+        command = re.sub(r"(?:LPMPHP)$", "PPP", command)
+        command = re.sub(r"(?:LKMKHK)$", "KKK", command)
         command = re.sub(r"(?:LPMP|LPHP|MPHP|PP)$", "PP", command)
         command = re.sub(r"(?:LKMK|LKHK|MKHK|KK)$", "KK", command)
         command = re.sub(r"(?:LP|MP|HP)$", "P", command)
@@ -431,6 +460,10 @@ def build_crosswalk(
             override_move_id = RYU_NAME_OVERRIDES.get(official["official_move_name"], "")
             if override_move_id:
                 override_source = "ryu_name_override"
+        elif character_slug == "zangief":
+            override_move_id = ZANGIEF_NAME_OVERRIDES.get(official["official_move_name"], "")
+            if override_move_id:
+                override_source = "zangief_name_override"
         if not override_move_id:
             for name_part, move_id_pattern in GENERIC_NAME_OVERRIDE_PATTERNS.items():
                 if name_part in official["official_move_name"]:
@@ -641,7 +674,7 @@ def main(argv: list[str]) -> int:
                     "official Classic input tokens are converted to command signatures",
                     "special and super motions may also match a strength-collapsed input family",
                     "category/moveType compatibility and simple field equality increase candidate score",
-                    "character-specific name overrides are used for reviewed variants such as JP Vihhat follow-ups and Ryu Denjin / hold-level rows",
+                    "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, and Zangief 360/720 / close-mid-far rows",
                     "generic name overrides are used for Drive Rush system rows",
                     "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id",
                 ],

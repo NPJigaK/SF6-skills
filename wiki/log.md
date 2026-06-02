@@ -1,6 +1,85 @@
 # Wiki Log
 
-This is the chronological append-only activity log for the LLM-maintained wiki.
+これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
+
+## [2026-06-02] レビュー | Zangief SuperCombo 補助データのレビュー対象行
+- 更新:
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/enriched/frame-data/zangief/classic-supercombo.csv`
+  - `wiki/outputs/data/enriched/frame-data/zangief/classic-supercombo.json`
+  - `wiki/outputs/data/enriched/frame-data/zangief/summary.json`
+  - `wiki/outputs/data/enriched/frame-data/zangief/schema.json`
+  - `wiki/outputs/data/enriched/frame-data/zangief/supercombo-only.csv`
+  - `wiki/outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data.md`
+  - `wiki/outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk.md`
+  - `wiki/sources/supercombo-zangief-frame-data.md`
+  - `wiki/reviews/2026-06-02-supercombo-zangief-frame-data-capture-review.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Zangief の `enriched_review_required` 25 行を、JP/Ryu と同じ形式で `human_review_*` 列に反映した。
+  - review decision の内訳は `supplemental_link` 19 件、`hold_supplemental_link` 3 件、`movement_variant_supplemental_link` 2 件、`conflict_supplemental_only` 1 件。
+  - 公式列は正として保持し、SuperCombo の range、juggle、notes、hitbox、damage decomposition、startup decomposition は補助情報として扱う。
+  - `ツンドラストーム` は startup / active duration conflict があるため、公式値を正とした `conflict_supplemental_only` として accepted にした。
+- 未解決事項:
+  - `imageinfo` で missing の 4 件を source 側の欠損として扱うか、filename 正規化で再解決するか。
+
+## [2026-06-02] ルール更新 | wiki/log.md と Zangief 追記の日本語化
+- 更新:
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - `wiki/log.md`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/sources/supercombo-zangief-frame-data.md`
+  - `wiki/reviews/2026-06-02-supercombo-zangief-frame-data-capture-review.md`
+  - `wiki/outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk.md`
+  - `wiki/outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data.md`
+- メモ:
+  - `wiki/log.md` も読者向け wiki 本文として日本語優先にするルールを `AGENTS.md` と `CLAUDE.md` に明記した。
+  - 直近の Zangief 追記と関連カタログ文の英語説明ラベルを、日本語の読者向け表現へ寄せた。
+  - `wiki/log.md` の過去エントリに残っていた共通ラベルと未解決事項の英語文も、意味を変えない範囲で日本語へ置き換えた。
+  - `raw/` 配下の原本は変更していない。
+- 未解決事項:
+  - 既存 wiki 全体に残る English/ASCII technical terms を、構造識別子・公式用語として許容する範囲と追加 lint 対象にする範囲に分けるか。
+
+## [2026-06-02] ingest | SuperCombo Zangief フレームデータ
+- 原本:
+  - `raw/frame-data/supercombo/zangief/manifest.json`
+  - `raw/frame-data/supercombo/zangief/data.raw.wikitext`
+  - `raw/frame-data/supercombo/zangief/frame-data.raw.wikitext`
+- 作成:
+  - `wiki/sources/supercombo-zangief-frame-data.md`
+  - `wiki/reviews/2026-06-02-supercombo-zangief-frame-data-capture-review.md`
+  - `wiki/outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk.md`
+  - `wiki/outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data.md`
+  - `wiki/outputs/data/supercombo/frame-data/zangief/`
+  - `wiki/outputs/data/enriched/frame-data/zangief/`
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/log.md`
+- メモ:
+  - SuperCombo Zangief を Scrapling で `https://wiki.supercombo.gg/w/Street_Fighter_6/Zangief/Frame_data` から取得した。
+  - source revision label は `2026-06-01`。Data page revision は `2026-06-01T07:31:24Z`、Frame data page revision は `2024-10-19T05:08:24Z`。
+  - 検証は 68 件の frame template、1 件の character template、21 件の表示 Cargo query、20 件の DOM table comparison、165 件の画像ダウンロードで通過した。
+  - Zangief 専用の照合処理として、`key-circle` / 360 / 720 input、hold row、近距離/中距離/遠距離 row、CA variant を追加した。
+  - 照合サマリーは 46 件の自動一致、24 件の `matched_manual`、2 件の公式側未照合、4 件の SuperCombo-only taunt row。
+  - 補助列付きデータのサマリーは 45 件の `enriched`、25 件の `enriched_review_required`、2 件の `official_only`。公式列を正とする方針は維持している。
+- 未解決事項:
+  - Zangief の name override による 24 件の一致を、レビュー済み補助リンクとして採用できるか。
+  - `imageinfo` で missing になった 4 件が、source 側の欠損なのか filename 正規化で解決できる問題なのか。
+  - `ツンドラストーム` の startup / active duration 差分を別の review note に切り出すべきか。
 
 ## [2026-06-01] Wiki 更新 | frame-data raw latest mirror 配置の反映
 - 追加:
@@ -57,7 +136,7 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 検証:
   - SuperCombo-only suggested handling は `supplemental_variant_row` 2、`supercombo_only_taunt` 4。
   - `supercombo-only.csv` に `primary_official_row_order`、`enabled_by_official_row_order`、`link_note` などの link fields を追加した。
-  - 公式由来列は `wiki/outputs/data/frame-data/ryu/classic.csv` と enriched output で全行一致した。
+  - 公式由来列は `wiki/outputs/data/frame-data/ryu/classic.csv` と補助列付き output で全行一致した。
   - `uv run python -m py_compile tools/build_official_supercombo_enriched_data.py` は成功。
 - 未解決事項:
   - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
@@ -87,9 +166,9 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
 - 検証:
   - enriched status は `enriched` 60 rows、`enriched_reviewed` 13 rows、`official_only` 2 rows。
   - human review decisions は `supplemental_link` 8、`hold_level_supplemental_link` 4、`conflict_supplemental_only` 1。
-  - crosswalk は matched 61、matched_manual 10、ambiguous 2、unmatched 2。
+  - 照合結果は `matched` 61、`matched_manual` 10、`ambiguous` 2、`unmatched` 2。
   - SuperCombo-only rows は 6。`6HK~214K` / `6HK~214KK` と taunt 4件のみ。
-  - 公式由来列は `wiki/outputs/data/frame-data/ryu/classic.csv` と enriched output で全行一致した。
+  - 公式由来列は `wiki/outputs/data/frame-data/ryu/classic.csv` と補助列付き output で全行一致した。
   - `uv run python -m py_compile tools/extract_supercombo_frame_data.py tools/build_official_supercombo_enriched_data.py` は成功。
 - 注意:
   - 公式に存在する damage / startup / active / recovery などの基本数値は公式列を正とし、SuperCombo 値は `supercombo_*` 補助列として保持する。
@@ -129,7 +208,7 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Ryu の `enriched_review_required` 13 rows は accepted 扱いにしない。
   - `パリィドライブラッシュ` / `キャンセルドライブラッシュ` は generic name override で紐づけるが、人間レビューは未完了。
 - 未解決事項:
-  - Ryu の review-required 13 rows を人間レビューする。
+  - Ryu のレビュー対象 13 行を人間レビューする。
   - 前方/後方ステップを SuperCombo CharacterData dash fields と別リンクするか。
 
 ## [2026-05-31] 取り込み | SuperCombo Ryu フレームデータ取得
@@ -233,14 +312,14 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - SuperCombo 側は 64 rows 中 57 distinct rows が候補照合され、7 rows が公式 Classic frame row にはない補助候補として残った。
   - `python3 -m py_compile tools/extract_supercombo_frame_data.py` は成功。
 - 注意:
-  - crosswalk は最終マージではなく review 用候補。公式に存在する基本フレーム値は Capcom 公式 data を正とする。
+  - 照合結果は最終マージではなくレビュー用候補。公式に存在する基本フレーム値は Capcom 公式 data を正とする。
   - `前方ステップ` と `後方ステップ` は公式側 unmatched。SuperCombo では frame row ではなく character data の dash fields に対応する可能性がある。
 - 未解決事項:
   - `matched_manual` 4件と多対一対応 rows を人間レビューして、正式 merge policy に昇格するか。
   - SuperCombo unmatched 7 rows を公式 row の補助情報として扱うか、SuperCombo-only rows として保持するか。
 
 ## [2026-05-31] 取り込み | SuperCombo JP フレームデータの生データ取得
-- Raw source:
+- 原本:
   - `raw/supercombo/frame-data/2026-05-31/jp/manifest.json`
   - `raw/supercombo/frame-data/2026-05-31/jp/data.raw.wikitext`
   - `raw/supercombo/frame-data/2026-05-31/jp/frame-data.raw.wikitext`
@@ -335,13 +414,13 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - この質問ではなし。
 
 ## [2026-05-30] ingest | Official frame-data coverage for remaining roster
-- Read:
+- 読み込み:
   - `AGENTS.md`
   - `wiki/index.md`
   - recent entries in `wiki/log.md`
   - existing official frame-data source, entity, review, and concept pages
   - official Capcom frame-data pages via `tools/capture_capcom_frame_data.py`
-- Created raw snapshots:
+- raw snapshot 作成:
   - `raw/official/frame-data/2026-05-30/luke/`
   - `raw/official/frame-data/2026-05-30/jamie/`
   - `raw/official/frame-data/2026-05-30/guile/`
@@ -368,7 +447,7 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `raw/official/frame-data/2026-05-30/cviper/`
   - `raw/official/frame-data/2026-05-30/alex/`
   - `raw/official/frame-data/2026-05-30/ingrid/`
-- Created wiki pages:
+- wiki page 作成:
   - `wiki/sources/capcom-official-luke-frame-data.md`
   - `wiki/sources/capcom-official-jamie-frame-data.md`
   - `wiki/sources/capcom-official-guile-frame-data.md`
@@ -423,7 +502,7 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/entities/ingrid.md`
   - `wiki/reviews/2026-05-30-official-frame-data-roster-capture-review.md`
   - `wiki/outputs/reports/2026-05-30-official-frame-data-coverage.md`
-- Updated:
+- 更新:
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/street-fighter-6.md`
   - `wiki/entities/capcom.md`
@@ -433,85 +512,81 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/sources/capcom-official-zangief-frame-data.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Derived outputs:
+- 派生 output:
   - Added Classic and Modern CSV plus field-meaning JSON outputs under
     `wiki/outputs/data/frame-data/<data-slug>/` for 26 new character data slugs.
-- Validation:
+- 検証:
   - `tools/validate_capcom_frame_data.py` passed for all 26 new 2026-05-30
     captures.
   - Existing accepted JP, Ryu, Chun-Li, and Zangief captures were also
     revalidated against their raw snapshots.
   - Total coverage is now 30 character data slugs with Classic and Modern
     derived outputs.
-- Notes:
-  - The official frame-data table slugs are `gouki_akuma` and `vega_mbison`,
-    not the shorter character navigation slugs `gouki` and `vega`.
-  - An empty generated `raw/official/frame-data/2026-05-30/gouki/manifest.json`
-    from the failed short-slug attempt was removed before filing the ingest.
-- Open questions:
-  - Should the 26 new captures be human-reviewed individually or accepted as a
-    batch after representative screenshot review?
-  - Should JP, Ryu, Chun-Li, and Zangief be recaptured under a 2026-05-30 date
-    label for a single-date full-roster snapshot?
+- メモ:
+  - 公式 frame-data table slug は `gouki_akuma` と `vega_mbison` であり、短い character navigation slug の `gouki` / `vega` ではない。
+  - short slug で失敗した試行から生成された空の `raw/official/frame-data/2026-05-30/gouki/manifest.json` は、ingest 記録前に削除した。
+- 未解決事項:
+  - 26 件の新規取得データを個別に人間レビューするか、代表スクリーンショットの確認後に batch として accepted にするか。
+  - roster 全体を単一日付 snapshot にするため、JP、Ryu、Chun-Li、Zangief を `2026-05-30` date label で再取得するか。
 
 ## [2026-05-27] concept-update | Frame-data comparison policy
-- Read:
+- 読み込み:
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/reviews/2026-05-27-health-check.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/concepts/fighting-game-notation.md`
-- Updated:
+- 更新:
   - `wiki/concepts/frame-data.md`
   - `wiki/concepts/fighting-game-notation.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Decisions recorded:
+- 記録した決定:
   - Classic/Modern frame-data comparisons default to exact official move-name
     matching.
   - Likely corresponding move-name variants are annotated rather than silently
     normalized.
   - Command notation in reader-facing answers remains a display-only transform
     for now; raw input tokens remain source-preserving data.
-- Open questions:
+- 未解決事項:
   - When, if ever, should display-only command notation become a formal wiki
     notation schema?
 
 ## [2026-05-27] human-review | Accept post-Zangief wiki health check
-- Reviewed:
+- レビュー:
   - `wiki/reviews/2026-05-27-health-check.md`
   - source-page stale open question cleanup
   - accepted character entity cleanup
-- Updated:
+- 更新:
   - `wiki/reviews/2026-05-27-health-check.md`
   - `wiki/log.md`
-- Decision:
+- 決定:
   - Accepted the health check while keeping `status: open`.
   - Accepted keeping JP, Ryu, Chun-Li, and Zangief validation results in the
     health check.
   - Accepted deletion of stale source-page questions about whether already-filed
     comparison pages should be created.
   - Accepted cleanup of accepted character entity wording.
-- Design decisions:
+- 設計判断:
   - Command notation remains a display-only transform for now.
   - Classic/Modern move comparison defaults to exact official move-name matching.
   - Likely corresponding name variants, such as `しゃがみ強K（ビッグスタンプ）` and
     `ビッグスタンプ`, should be annotated rather than silently normalized.
-- Notes:
+- メモ:
   - Older open questions in `wiki/log.md` remain unchanged because the log is
     append-only.
 
 ## [2026-05-27] lint | post-Zangief wiki health check
-- Read:
+- 読み込み:
   - `AGENTS.md`
   - `wiki/index.md`
   - recent `wiki/log.md` entries
   - official frame-data source pages
   - accepted character entity pages
   - filed Classic/Modern comparison question pages
-- Created:
+- 作成:
   - `wiki/reviews/2026-05-27-health-check.md`
-- Updated:
+- 更新:
   - `wiki/sources/capcom-official-jp-frame-data.md`
   - `wiki/sources/capcom-official-ryu-frame-data.md`
   - `wiki/sources/capcom-official-chun-li-frame-data.md`
@@ -522,7 +597,7 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/entities/zangief.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Checks:
+- 確認:
   - Non-template wiki pages have no broken wikilinks.
   - Content pages have frontmatter.
   - Existing non-template wiki pages were registered in `wiki/index.md`.
@@ -530,25 +605,24 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     summaries.
   - Accepted JP, Ryu, Chun-Li, and Zangief frame-data outputs passed validation
     against raw snapshots.
-- Cleanup:
+- クリーンアップ:
   - Removed stale source open questions about filing comparison pages that now
     exist.
   - Removed stale wording implying accepted captures were still waiting for
     human review.
-- Open questions:
-  - Should command-input normalization become a formal wiki concept?
-  - Should move-name identity normalization be introduced before more
-    Classic/Modern comparison pages are created?
+- 未解決事項:
+  - command-input normalization を正式な wiki concept にするか。
+  - 追加の Classic/Modern comparison page を作る前に、move-name identity normalization を導入するか。
 
 ## [2026-05-27] query | Zangief Classic vs Modern frame-data comparison
-- Question:
+- 質問:
   - Zangiefのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
-- Created:
+- 作成:
   - `wiki/questions/zangief-modern-vs-classic-frame-data-moves-and-inputs.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Answer summary:
+- 回答要約:
   - Classic has 72 official frame-data items and Modern has 66.
   - Exact official move-name matching gives 65 shared names, 7 Classic-only
     names, and 1 Modern-only name.
@@ -560,12 +634,11 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     fields match for shared move-name items.
   - One/two-circle inputs are rendered in the answer as readable command
     notation while the raw source keeps the original input tokens.
-- Open questions:
-  - Should future comparison pages normalize move identity across name variants,
-    or keep exact official move-name matching as the default?
+- 未解決事項:
+  - 今後の comparison page で name variant をまたいだ move identity normalization を行うか、公式技名の完全一致を default のままにするか。
 
 ## [2026-05-27] human-review | Accept official Zangief frame-data capture
-- Updated:
+- 更新:
   - `wiki/sources/capcom-official-zangief-frame-data.md`
   - `wiki/entities/zangief.md`
   - `wiki/reviews/2026-05-27-official-zangief-frame-data-capture-review.md`
@@ -573,9 +646,9 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/log.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/street-fighter-6.md`
-- Decision:
+- 決定:
   - Accepted.
-- Reviewer checks:
+- レビュー確認:
   - Full validation passed for Classic 72 rows and Modern 66 rows.
   - `page.html` table hashes match `table.dom.json`.
   - Saved CSV rows match raw-DOM-regenerated rows.
@@ -585,31 +658,30 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Zangief-specific inputs such as `key-circle`, `key-circle key-circle`,
     command grabs, Modern SP/AUTO shortcuts, and parenthesized normal-command
     alternatives are retained.
-- Cleanup:
-  - Aligned the review index table's review type labels with review page
-    frontmatter by using `capture_validation`.
+- クリーンアップ:
+  - review index table の review type label を、review page frontmatter に合わせて `capture_validation` に統一した。
 
 ## [2026-05-27] ingest | Capcom official Zangief frame data
-- Raw source:
+- 原本:
   - `raw/official/frame-data/2026-05-27/zangief/manifest.json`
   - `raw/official/frame-data/2026-05-27/zangief/classic/`
   - `raw/official/frame-data/2026-05-27/zangief/modern/`
-- Derived outputs:
+- 派生 output:
   - `wiki/outputs/data/frame-data/zangief/classic.csv`
   - `wiki/outputs/data/frame-data/zangief/modern.csv`
   - `wiki/outputs/data/frame-data/zangief/classic.field-meanings.json`
   - `wiki/outputs/data/frame-data/zangief/modern.field-meanings.json`
-- Created:
+- 作成:
   - `wiki/sources/capcom-official-zangief-frame-data.md`
   - `wiki/entities/zangief.md`
   - `wiki/reviews/2026-05-27-official-zangief-frame-data-capture-review.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/capcom.md`
   - `wiki/entities/street-fighter-6.md`
-- Validation:
+- 検証:
   - Capture command succeeded for `https://www.streetfighter.com/6/ja-jp/character/zangief/frame`.
   - Extract command reproduced 72 Classic rows and 66 Modern rows from raw DOM.
   - Full validation confirmed `page.html` table hashes, raw DOM, derived CSV,
@@ -619,23 +691,22 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     footer for both Classic and Modern captures.
   - Zangief-specific command-grab and one/two-circle input tokens are retained
     in `input_token_json`.
-- Status:
+- 状態:
   - Pending human review before marking the Zangief capture accepted.
-- Open questions:
-  - Should a Zangief Classic/Modern comparison question be filed after human
-    review?
+- 未解決事項:
+  - 人間レビュー後に Zangief Classic/Modern comparison question を file back するか。
   - Which character should be used next to stress-test unusual frame-data table
     formats?
 
 ## [2026-05-27] query | Chun-Li Classic vs Modern frame-data comparison
-- Question:
+- 質問:
   - Chun-Liのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
-- Created:
+- 作成:
   - `wiki/questions/chun-li-modern-vs-classic-frame-data-moves-and-inputs.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Answer summary:
+- 回答要約:
   - Classic has 78 official frame-data items and Modern has 72.
   - Exact official move-name matching gives 71 shared names, 7 Classic-only
     names, and 1 Modern-only name.
@@ -645,12 +716,11 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     rows have identical input displays.
   - Damage differs on 15 shared move-name items; other captured frame/gauge/cancel
     fields match for shared move-name items.
-- Open questions:
-  - Should future comparison pages normalize move identity across name variants,
-    or keep exact official move-name matching as the default?
+- 未解決事項:
+  - 今後の comparison page で name variant をまたいだ move identity normalization を行うか、公式技名の完全一致を default のままにするか。
 
 ## [2026-05-27] human-review | Accept official Chun-Li frame-data capture
-- Updated:
+- 更新:
   - `wiki/sources/capcom-official-chun-li-frame-data.md`
   - `wiki/entities/chun-li.md`
   - `wiki/reviews/2026-05-27-official-chun-li-frame-data-capture-review.md`
@@ -658,9 +728,9 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/log.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/street-fighter-6.md`
-- Decision:
+- 決定:
   - Accepted.
-- Reviewer checks:
+- レビュー確認:
   - Raw placement matches the JP and Ryu conventions.
   - Classic and Modern screenshots show the intended Chun-Li official tables
     without visible horizontal cutoff or obstructing overlays.
@@ -671,51 +741,50 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Chun-Li source, entity, review, and outputs are reachable from the index.
   - Stance-like, branch, charge, and air-action inputs are retained in
     `input_token_json`.
-- Cleanup:
+- クリーンアップ:
   - Restored `[[entities/jp]]` to `wiki/concepts/frame-data.md` frontmatter
     `related` to match the page connections and index.
-- Notes:
+- メモ:
   - Source and review statuses were moved from `pending_human_review` to active
     or accepted as appropriate.
 
 ## [2026-05-27] ingest | Capcom official Chun-Li frame data
-- Raw source:
+- 原本:
   - `raw/official/frame-data/2026-05-27/chunli/manifest.json`
   - `raw/official/frame-data/2026-05-27/chunli/classic/`
   - `raw/official/frame-data/2026-05-27/chunli/modern/`
-- Derived outputs:
+- 派生 output:
   - `wiki/outputs/data/frame-data/chunli/classic.csv`
   - `wiki/outputs/data/frame-data/chunli/modern.csv`
   - `wiki/outputs/data/frame-data/chunli/classic.field-meanings.json`
   - `wiki/outputs/data/frame-data/chunli/modern.field-meanings.json`
-- Created:
+- 作成:
   - `wiki/sources/capcom-official-chun-li-frame-data.md`
   - `wiki/entities/chun-li.md`
   - `wiki/reviews/2026-05-27-official-chun-li-frame-data-capture-review.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/capcom.md`
   - `wiki/entities/street-fighter-6.md`
-- Validation:
+- 検証:
   - Capture command succeeded for `https://www.streetfighter.com/6/ja-jp/character/chunli/frame`.
   - Extract command reproduced 78 Classic rows and 72 Modern rows from raw DOM.
   - Metadata reports separate Classic and Modern tab captures with no visible
     Cookiebot or navigation overlays after cleanup.
   - LLM visual check confirmed the screenshots include the table width.
-- Status:
+- 状態:
   - Pending human review before marking the Chun-Li capture accepted.
-- Open questions:
-  - Should a Chun-Li Classic/Modern comparison question be filed after human
-    review?
+- 未解決事項:
+  - 人間レビュー後に Chun-Li Classic/Modern comparison question を file back するか。
   - Which character should be used next to stress-test unusual frame-data table
     formats?
 
 ## [2026-05-27] query | Ryu Modern vs Classic frame-data counts and inputs
-- Question:
+- 質問:
   - Ryuのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
-- Read:
+- 読み込み:
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/sources/capcom-official-ryu-frame-data.md`
@@ -723,12 +792,12 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/entities/ryu.md`
   - `wiki/outputs/data/frame-data/ryu/classic.csv`
   - `wiki/outputs/data/frame-data/ryu/modern.csv`
-- Created:
+- 作成:
   - `wiki/questions/ryu-modern-vs-classic-frame-data-moves-and-inputs.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Answer summary:
+- 回答要約:
   - Classic has 75 official frame-data items and Modern has 69.
   - Exact official move-name matching gives 68 shared names, 7 Classic-only
     names, and 1 Modern-only name.
@@ -738,12 +807,11 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     rows have identical input displays.
   - Damage differs on 22 shared move-name items; other captured frame/gauge/cancel
     fields match for shared move-name items.
-- Open questions:
-  - Should future comparison pages normalize move identity across name variants,
-    or keep exact official move-name matching as the default?
+- 未解決事項:
+  - 今後の comparison page で name variant をまたいだ move identity normalization を行うか、公式技名の完全一致を default のままにするか。
 
 ## [2026-05-27] human-review | Accept official Ryu frame-data capture
-- Updated:
+- 更新:
   - `wiki/sources/capcom-official-ryu-frame-data.md`
   - `wiki/entities/ryu.md`
   - `wiki/reviews/2026-05-27-official-ryu-frame-data-capture-review.md`
@@ -751,9 +819,9 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/log.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/street-fighter-6.md`
-- Decision:
+- 決定:
   - Accepted.
-- Reviewer checks:
+- レビュー確認:
   - Raw placement matches the JP convention.
   - Classic and Modern screenshots show the intended Ryu official tables without
     visible horizontal cutoff or obstructing overlays.
@@ -762,12 +830,12 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - Field meanings are present: Classic 7 records, Modern 8 records, including
     the Modern SP-button 80% damage note.
   - Ryu source, entity, review, and outputs are reachable from the index.
-- Notes:
+- メモ:
   - Source and review statuses were moved from `pending_human_review` to active
     or accepted as appropriate.
 
 ## [2026-05-27] schema | Simplify official frame-data CSV rows
-- Updated:
+- 更新:
   - `tools/capture_capcom_frame_data.py`
   - `tools/extract_capcom_frame_data.py`
   - `README.md`
@@ -776,53 +844,51 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/outputs/data/frame-data/ryu/classic.csv`
   - `wiki/outputs/data/frame-data/ryu/modern.csv`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed repeated source-level metadata from per-move CSV rows.
-  - `publisher`, `game`, `locale`, `source_url`, character, control scheme,
-    raw capture path, and screenshot path remain in raw manifests, raw metadata,
-    output paths, and wiki source pages.
+  - `publisher`、`game`、`locale`、`source_url`、character、control scheme、raw 取得 path、screenshot path は raw manifest、raw metadata、output path、wiki source page に残す。
   - Kept CSVs focused on row-level frame-data fields to make diffs and manual
     inspection easier.
 
 ## [2026-05-27] ingest | Capcom official Ryu frame data
-- Raw source:
+- 原本:
   - `raw/official/frame-data/2026-05-27/ryu/manifest.json`
   - `raw/official/frame-data/2026-05-27/ryu/classic/`
   - `raw/official/frame-data/2026-05-27/ryu/modern/`
-- Derived outputs:
+- 派生 output:
   - `wiki/outputs/data/frame-data/ryu/classic.csv`
   - `wiki/outputs/data/frame-data/ryu/modern.csv`
   - `wiki/outputs/data/frame-data/ryu/classic.field-meanings.json`
   - `wiki/outputs/data/frame-data/ryu/modern.field-meanings.json`
-- Created:
+- 作成:
   - `wiki/sources/capcom-official-ryu-frame-data.md`
   - `wiki/entities/ryu.md`
   - `wiki/reviews/2026-05-27-official-ryu-frame-data-capture-review.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/capcom.md`
   - `wiki/entities/street-fighter-6.md`
-- Validation:
+- 検証:
   - Capture command succeeded for `https://www.streetfighter.com/6/ja-jp/character/ryu/frame`.
   - Extract command reproduced 75 Classic rows and 69 Modern rows from raw DOM.
   - Metadata reports separate Classic and Modern tab captures with no visible
     Cookiebot or navigation overlays after cleanup.
   - LLM visual check confirmed the screenshots include the table width.
-- Status:
+- 状態:
   - Pending human review before marking the Ryu capture accepted.
-- Open questions:
-  - Should a Ryu Classic/Modern comparison question be filed after human review?
-  - Which character should stress-test unusual frame-data table formats next?
+- 未解決事項:
+  - 人間レビュー後に Ryu Classic/Modern comparison question を file back するか。
+  - 次に unusual frame-data table format の stress-test 対象にする character はどれか。
 
 ## [2026-05-27] review-removal | Remove stale initial health check
-- Removed:
+- 削除:
   - `wiki/reviews/2026-05-26-health-check.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed the initial health check because it described the early wiki state
     around a now-deleted filed-back juggle answer.
   - Kept `wiki/reviews/2026-05-26-official-jp-frame-data-capture-review.md`
@@ -830,66 +896,66 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     capture and remains useful evidence.
 
 ## [2026-05-27] query-removal | Remove low-quality juggle answer
-- Removed:
+- 削除:
   - `wiki/questions/how-juggles-work-internally.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed the filed-back juggle question because the current answer quality
     and reader-facing shape no longer match the standard established by later
     question-page tuning.
   - Kept the underlying SuperCombo source and related concept pages intact; this
     is a removal of a weak answer, not a rejection of the source.
-- Follow-up:
+- フォローアップ:
   - Re-answer the juggle mechanism question later after the relevant official
     Capcom terminology or a stronger source has been ingested.
 
 ## [2026-05-27] query-review | Format JP command examples
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Wrapped command notation examples in inline code for readability.
 
 ## [2026-05-27] query-review | Sort JP damage differences by move family
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Reordered the damage-difference table so variants of the same move family,
     such as Stribog and Triglav, stay adjacent.
 
 ## [2026-05-27] query-review | Remove bare source footer from JP comparison
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed the bare `参照元` wikilink from the answer body because the source
     is already recorded in frontmatter.
   - Kept the evidence section focused on what was checked rather than exposing
     wiki navigation details to the reader.
 
 ## [2026-05-27] query-review | Make JP comparison answer less implementation-facing
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed implementation-facing wording such as CSV, derived data, and row
     counting from the durable answer prose.
   - Reworded the answer around official frame-data items, move names, input
     displays, and the practical Classic/Modern differences a reader asked for.
 
 ## [2026-05-27] schema | Keep question pages reader-facing
-- Updated:
+- 更新:
   - `AGENTS.md`
   - `CLAUDE.md`
   - `ROADMAP.md`
   - `wiki/templates/question.md`
   - `wiki/questions/how-juggles-work-internally.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed `Filed-back updates` from the question template and the existing
     juggle question page.
   - Clarified that `wiki/questions/` pages are durable reader-facing answers.
@@ -897,58 +963,58 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     in `wiki/log.md` or the final task report, not in question pages.
 
 ## [2026-05-26] query-review | Simplify evidence wording
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Replaced internal derived-output file paths in the evidence section with
     user-facing source wording.
   - Kept the wiki source link as the traceability anchor.
 
 ## [2026-05-26] query-review | Remove workflow notes from JP answer
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Removed the `File-back` workflow section from the durable answer page.
   - Shortened the caveats so user-facing prose does not expose unnecessary
     storage-field details.
 
 ## [2026-05-26] query-review | Prefer official column wording
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Replaced internal comparison field names in user-facing prose with official
     table wording such as 技名 and 入力表示.
   - Kept storage field names only where the page explicitly discusses stored
     evidence fields.
 
 ## [2026-05-26] query-review | Display command notation for JP comparison
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Replaced raw DOM tokens such as `key-d` and `icon_punch_l` in user-facing
     examples with readable command notation such as ↓, ↘, →, 弱P, and 強K.
   - Left raw token field names in the limitations section to clarify the stored
     evidence format.
 
 ## [2026-05-26] query-review | Japanese wording for JP Modern vs Classic answer
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Converted user-facing section headings and explanatory prose to Japanese.
   - Kept technical field names such as `move_name`, `input_raw_display`, and
     token names unchanged where they identify stored data fields.
 
 ## [2026-05-26] query-review | Improve JP Modern vs Classic answer
-- Updated:
+- 更新:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Reworked the answer to start with a user-facing conclusion instead of a CSV
     implementation detail.
   - Added the practical interpretation that shared move-name rows have the same
@@ -957,9 +1023,9 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     remains raw DOM-token output, not normalized command notation.
 
 ## [2026-05-26] query | JP Modern vs Classic frame-data counts and inputs
-- Question:
+- 質問:
   - JPのモダンとクラシックで、フレームデータ上の技数や入力はどう違いますか？
-- Read:
+- 読み込み:
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/sources/capcom-official-jp-frame-data.md`
@@ -967,68 +1033,63 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/entities/jp.md`
   - `wiki/outputs/data/frame-data/jp/classic.csv`
   - `wiki/outputs/data/frame-data/jp/modern.csv`
-- Created:
+- 作成:
   - `wiki/questions/jp-modern-vs-classic-frame-data-moves-and-inputs.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Answer summary:
+- 回答要約:
   - Classic has 69 official derived frame-data rows and Modern has 65.
   - Modern has no unique move-name rows compared with Classic; Classic-only
     rows are standing LK, crouching MP, crouching HK, and Heavy Stribog.
   - Of 65 shared move names, 62 have different raw input displays and 3
     movement/system rows have identical raw input displays.
-- Open questions:
-  - Should future comparisons normalize `input_raw_display` into conventional
-    command notation, or continue comparing raw DOM-token displays only?
+- 未解決事項:
+  - 今後の比較で `input_raw_display` を conventional command notation に正規化するか、raw DOM-token display だけを比較し続けるか。
 
 ## [2026-05-26] ingest | Capcom official JP frame data
-- Raw source:
+- 原本:
   - `raw/official/frame-data/2026-05-26/jp/manifest.json`
   - `raw/official/frame-data/2026-05-26/jp/classic/`
   - `raw/official/frame-data/2026-05-26/jp/modern/`
-- Derived outputs:
+- 派生 output:
   - `wiki/outputs/data/frame-data/jp/classic.csv`
   - `wiki/outputs/data/frame-data/jp/modern.csv`
   - `wiki/outputs/data/frame-data/jp/classic.field-meanings.json`
   - `wiki/outputs/data/frame-data/jp/modern.field-meanings.json`
-- Tooling:
+- ツール:
   - Added `pyproject.toml` and `uv.lock` for Scrapling-based capture tooling.
   - Added `tools/capture_capcom_frame_data.py`.
   - Added `tools/extract_capcom_frame_data.py`.
   - Fixed capture URL handling so `--source-url` is derived from
     `--character-slug` unless explicitly provided, and explicit URLs must match
     the slug.
-- Created:
+- 作成:
   - `wiki/sources/capcom-official-jp-frame-data.md`
   - `wiki/entities/capcom.md`
   - `wiki/entities/jp.md`
   - `wiki/reviews/2026-05-26-official-jp-frame-data-capture-review.md`
-- Updated:
+- 更新:
   - `README.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/entities/street-fighter-6.md`
   - `wiki/index.md`
   - `wiki/log.md`
-- Review:
-  - Human review accepted the raw snapshot and derived outputs for wiki ingest.
-  - Classic data row count is 69; Modern data row count is 65.
+- レビュー:
+  - 人間レビューで raw snapshot と派生 output を wiki ingest 対象として accepted にした。
+  - Classic data row count は 69、Modern data row count は 65。
   - `*.field-meanings.json` stores table-header help text separately from row
     CSVs.
-- Notes:
-  - Raw official captures remain dated snapshots under `raw/official/`.
-  - Stable derived CSV paths under `wiki/outputs/data/` are intended to make
-    future update diffs easier to review.
-- Open questions:
-  - Should the next official capture cover all characters, or one additional
-    character first to validate the pipeline?
-  - Should a normalized command notation be generated later from raw input
-    tokens?
-  - Which official update-history source should be ingested to explain future
-    frame-data changes?
+- メモ:
+  - 公式 raw 取得データは `raw/official/` 配下の dated snapshot として保持する。
+  - `wiki/outputs/data/` 配下の安定した派生 CSV path は、将来の update diff をレビューしやすくするために使う。
+- 未解決事項:
+  - 次の公式取得で全 character を対象にするか、pipeline 検証のためにまず 1 character を追加するか。
+  - raw input token から normalized command notation を後で生成するか。
+  - 将来の frame-data change を説明するため、どの公式 update-history source を ingest するか。
 
 ## [2026-05-26] lint | Initial wiki health check
-- Checked:
+- 確認:
   - broken wikilinks
   - pages missing from `wiki/index.md`
   - missing frontmatter
@@ -1038,12 +1099,12 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - uncited claims
   - missing concepts
   - data gaps
-- Created:
+- 作成:
   - `wiki/reviews/2026-05-26-health-check.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Findings:
+- 所見:
   - No broken wikilinks, missing index entries, or missing frontmatter were
     found.
   - Open knowledge gaps remain around official Capcom terminology sources,
@@ -1051,10 +1112,10 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     policy.
 
 ## [2026-05-26] query-review | Refine juggle explanation
-- Updated:
+- 更新:
   - `wiki/questions/how-juggles-work-internally.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Weakened wording from direct hit/whiff language to whether the hit is
     allowed by the juggle rules.
   - Clarified that spacing, timing, hitboxes, and hurtboxes still matter.
@@ -1062,30 +1123,30 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
     ingested or cited by this wiki page.
 
 ## [2026-05-26] query | How juggles work internally
-- Question:
+- 質問:
   - `ジャグルって内部的にどういう仕組みで発生するんですか？`
-- Read:
+- 読み込み:
   - `wiki/index.md`
   - `wiki/concepts/juggle-system.md`
   - `wiki/concepts/frame-data.md`
   - `wiki/sources/supercombo-street-fighter-6-glossary.md`
   - `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md`
-- Created:
+- 作成:
   - `wiki/questions/how-juggles-work-internally.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
+- メモ:
   - Filed the answer back into the wiki because it is likely to be reusable.
   - Answer is limited to the currently ingested SuperCombo Wiki glossary source.
-- Open questions:
+- 未解決事項:
   - Ingest an official source later to compare official Combo Count terminology
     against community juggle terminology.
 
 ## [2026-05-26] ingest | Street Fighter 6/Glossary
-- Raw source:
+- 原本:
   - `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md`
-- Created:
+- 作成:
   - `wiki/sources/supercombo-street-fighter-6-glossary.md`
   - `wiki/concepts/drive-system.md`
   - `wiki/concepts/frame-data.md`
@@ -1093,23 +1154,21 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/concepts/fighting-game-notation.md`
   - `wiki/entities/street-fighter-6.md`
   - `wiki/entities/supercombo-wiki.md`
-- Updated:
+- 更新:
   - `wiki/index.md`
   - `wiki/log.md`
-- Notes:
-  - Captured Obsidian Web Clipper output as an exact raw source copy.
-  - The raw source checksum matched the original file in Downloads before wiki
-    compilation began.
-  - The source page footer says it was last edited on 31 January 2026 at 11:22;
-    this was noted to avoid confusing source freshness with wiki creation date.
-  - Treated SuperCombo Wiki as a community wiki source with medium confidence.
-- Open questions:
-  - Should SuperCombo Wiki receive a standard source confidence policy?
-  - Should the malformed numpad-direction table be recaptured from the source?
-  - Which official source should be ingested next for terminology comparison?
+- メモ:
+  - Obsidian Web Clipper output を exact raw source copy として保存した。
+  - wiki compilation 開始前に、raw source checksum が Downloads の元ファイルと一致することを確認した。
+  - source page footer には 2026-01-31 11:22 に last edited とある。source freshness と wiki creation date を混同しないよう記録した。
+  - SuperCombo Wiki は medium confidence の community wiki source として扱った。
+- 未解決事項:
+  - SuperCombo Wiki に標準 source confidence policy を設定するか。
+  - malformed numpad-direction table を source から再取得するか。
+  - terminology comparison のため、次にどの公式 source を ingest するか。
 
 ## [2026-05-26] schema | Initialize LLM Wiki scaffold
-- Created:
+- 作成:
   - `AGENTS.md`
   - `CLAUDE.md`
   - `README.md`
@@ -1117,6 +1176,6 @@ This is the chronological append-only activity log for the LLM-maintained wiki.
   - `wiki/index.md`
   - `wiki/log.md`
   - `wiki/templates/`
-- Notes:
+- メモ:
   - Initialized the domain-independent raw/wiki/schema structure.
   - No raw sources have been ingested yet.

@@ -41,6 +41,10 @@ LLM は wiki を書き、リンクし、保守します。
 またはソース忠実性のために英語が必要な場合を除き、`wiki/` ページ、永続回答、統合分析、
 outputs、reviews、source summary の本文は日本語を優先してください。
 
+`wiki/log.md` も読者向けの wiki 本文として扱い、見出し、作業分類、メモ、未解決事項は
+日本語を優先してください。英語の workflow label を使う場合も日本語説明を併記し、
+ファイル名、path、コマンド、field 名、status 値、公式用語は English/ASCII のまま維持してよいです。
+
 構造識別子は安定してツールで扱いやすい形に保ちます。
 
 - ディレクトリ名、ファイル名、slug、YAML frontmatter の key、field 名、tool 名、
