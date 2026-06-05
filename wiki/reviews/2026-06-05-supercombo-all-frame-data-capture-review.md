@@ -26,7 +26,7 @@ tags:
 
 SuperCombo Wiki の Street Fighter 6 frame-data は、30 キャラ分の raw capture、Cargo API、表示 DOM、5タブ別スクリーンショット、画像参照情報まで保存し、自動検証は 30/30 で `passed`。raw 取得の completeness については、現時点で追加の人間判断待ちはない。
 
-ただし、公式 Classic data との統合では、`enriched_review_required` が合計 1296 行、SuperCombo-only が合計 620 行残る。これは「取得が不完全」という意味ではなく、公式値を正とした補助リンクとして accept してよいか、また SuperCombo-only row を通常回答に混ぜてよいかを人間が判断する必要がある、という意味。
+ただし、公式 Classic data との統合では、`enriched_review_required` が合計 1295 行、SuperCombo-only が合計 620 行残る。これは「取得が不完全」という意味ではなく、公式値を正とした補助リンクとして accept してよいか、また SuperCombo-only row を通常回答に混ぜてよいかを人間が判断する必要がある、という意味。
 
 ## 検証サマリー
 
@@ -37,9 +37,9 @@ SuperCombo Wiki の Street Fighter 6 frame-data は、30 キャラ分の raw cap
 | validation `failed` | 0 |
 | SuperCombo frame rows | 2306 |
 | 公式 Classic rows | 2361 |
-| enriched | 591 |
+| enriched | 592 |
 | enriched_reviewed | 69 |
-| enriched_review_required | 1296 |
+| enriched_review_required | 1295 |
 | official_only | 405 |
 | SuperCombo-only rows | 620 |
 | imageinfo missing titles | 599 |
@@ -74,7 +74,7 @@ SuperCombo Wiki の Street Fighter 6 frame-data は、30 キャラ分の raw cap
 | `cviper` | C.Viper | 36 | 18 | 14 |
 | `deejay` | Dee Jay | 33 | 47 | 52 |
 | `dhalsim` | Dhalsim | 53 | 9 | 11 |
-| `ed` | Ed | 39 | 13 | 11 |
+| `ed` | Ed | 38 | 13 | 11 |
 | `ehonda` | E.Honda | 32 | 21 | 19 |
 | `elena` | Elena | 43 | 19 | 14 |
 | `gouki_akuma` | Akuma | 59 | 25 | 10 |
@@ -97,7 +97,19 @@ SuperCombo Wiki の Street Fighter 6 frame-data は、30 キャラ分の raw cap
 | `vega_mbison` | M.Bison | 24 | 34 | 25 |
 | `zangief` | Zangief | 22 | 4 | 2 |
 
-JP / Ryu / Zangief / Ingrid の既存 accepted decision 69 行は保持した。2026-06-06 の fail-closed policy 以降は、それ以外の複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field を持つ行も `enriched_review_required` に落としている。`着地後N` と `N land` は landing recovery の表記差として正規化したが、括弧付き damage / startup / recovery は条件付き値として review queue に残している。
+JP / Ryu / Zangief / Ingrid の既存 accepted decision 69 行は保持した。2026-06-06 の fail-closed policy 以降は、それ以外の複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field を持つ行も `enriched_review_required` に落としている。`着地後N` と `N land` は landing recovery の表記差として正規化した。`400x2` や `300,400` のような括弧・注記なしの多段 damage 合計も機械比較できるが、候補選択 score には使わない。括弧付き damage / startup / recovery は条件付き値として review queue に残している。
+
+## レビューキュー
+
+`enrichment_review_queues` は review flags を人間が処理しやすい粒度に束ねる field。キューは `enriched_review_required` の理由を分けるためのもので、accept 済み扱いにはしない。
+
+| queue | 件数 | 主な元 flag |
+|---|---:|---|
+| `uncomparable_notation` | 1138 | `uncomparable_basic_field:*` |
+| `structural_ambiguity` | 851 | `multiple_candidates`, `supercombo_row_reused` |
+| `condition_dependent_field` | 554 | `condition_dependent_supercombo_field:*` |
+| `field_conflict` | 199 | `basic_field_conflict:*` |
+| `manual_or_ambiguous_match` | 161 | `manual_match`, `ambiguous_match` |
 
 ## 注意点
 
@@ -109,7 +121,7 @@ JP / Ryu / Zangief / Ingrid の既存 accepted decision 69 行は保持した。
 
 ## 未解決の質問
 
-- `enriched_review_required` 1296 行を、character ごとにどの順序で accept / reject / supplemental-only に分けるか。
+- `enriched_review_required` 1295 行を、queue と character のどちらを優先して accept / reject / supplemental-only に分けるか。
 - SuperCombo-only 620 行を taunt、conditional variant、hidden / non-standard row、公式未掲載 row などに細分化する必要があるか。
 - imageinfo missing 599 件について、source 側の欠損として扱うか、filename 正規化で再解決を試すか。
 - C.Viper の `air_normal8` を、今後の extractor / validator の通常 section に含めるべきか、非標準 row として明示的に分離するべきか。

@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-05
+updated: 2026-06-06
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -136,7 +136,7 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
 - Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 CSV として保持している。
-- SuperCombo 30キャラ分の frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image refs などを後で統合する候補 data を含む。公式 Classic rows を正とする補助列付き output は 30 キャラ分ある。ただし複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field を持つ行には人間レビュー待ちの補助行が残る。
+- SuperCombo 30キャラ分の frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image refs などを後で統合する候補 data を含む。公式 Classic rows を正とする補助列付き output は 30 キャラ分ある。ただし複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き field を持つ行には人間レビュー待ちの補助行が残り、`enrichment_review_queues` で理由を分離している。
 - frame-data raw の取得日 / source revision は path ではなく manifest の `capture_label` / `source_revision` で確認する。
 - 30 character data slugs の coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30 の capture。
 
@@ -151,5 +151,5 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 ## 未解決の質問
 
 - 公式 patch notes や Battle Change List を ingest して、frame-data の変化を時系列で扱うべきか。
-- SuperCombo frame-data 30キャラ分の `enriched_review_required` 1296 行を、どの順序で人間レビューするか。
+- SuperCombo frame-data 30キャラ分の `enriched_review_required` 1295 行を、どの順序で人間レビューするか。
 - SuperCombo-only 620 行を、通常回答から分離すべき row と補助情報として使える row にどう分類するか。

@@ -22,6 +22,20 @@
     "uncomparable_basic_field:recovery": 2,
     "uncomparable_basic_field:startup": 2
   },
+  "review_queue_counts": {
+    "condition_dependent_field": 16,
+    "manual_or_ambiguous_match": 6,
+    "structural_ambiguity": 18,
+    "uncomparable_notation": 24
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 5,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 7,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation;structural_ambiguity": 4,
+    "manual_or_ambiguous_match;uncomparable_notation;structural_ambiguity": 2,
+    "uncomparable_notation": 1,
+    "uncomparable_notation;structural_ambiguity": 5
+  },
   "basic_field_conflict_counts": {},
   "uncomparable_basic_field_counts": {
     "active_duration": 16,

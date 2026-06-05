@@ -55,7 +55,7 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 | SuperCombo frame-data raw capture は 30 キャラ分そろっている。 | `raw/frame-data/supercombo/<character_slug>/manifest.json`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | 30/30 で manifest と validation がある。 |
 | 30 キャラすべてで自動検証 status は `passed`。 | `raw/frame-data/supercombo/<character_slug>/validation.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | raw template、Cargo row、表示 DOM table を照合した。 |
 | SuperCombo raw/Cargo の frame rows は合計 2306 行、公式 Classic rows は合計 2361 行。 | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]; `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json` | high | 集計は生成済み JSON から作成。 |
-| enriched output の `enriched_review_required` は合計 1296 行残っている。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 既存 accepted 69 行とは別。勝手に accept していない。 |
+| enriched output の `enriched_review_required` は合計 1295 行残っている。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 既存 accepted 69 行とは別。勝手に accept していない。 |
 | SuperCombo-only rows は合計 620 行ある。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/supercombo-only.csv`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | taunt、派生 variant、公式 row に直接照合しない行を含む。 |
 | 新規 26 キャラは画像ファイルをダウンロードしていない。 | `raw/frame-data/supercombo/<character_slug>/image-manifest.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 画像 refs と imageinfo は保存済み。既存 JP/Ryu/Zangief/Ingrid の画像取得状態は保持。 |
 
@@ -74,12 +74,12 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 
 - 以前は SuperCombo source summary が JP / Ryu / Zangief / Ingrid に限られていた。2026-06-05 時点では raw capture と派生 output は 30 キャラ分ある。
 - 公式列を SuperCombo 値で上書きする方針にはしていない。公式 data がある行は Capcom 公式 Classic CSV を正とし、SuperCombo は補助列に入れる。
-- `enriched_review_required` は未レビューであり、推測で accepted にしていない。2026-06-06 の fail-closed policy 以降は、新規 26 キャラだけでなく既存 4 キャラの未レビュー補助行も review queue に戻している。括弧付き damage / startup / recovery は条件付き SuperCombo field として review queue に残し、`着地後N` と `N land` の landing recovery 表記差のみ機械正規化した。
+- `enriched_review_required` は未レビューであり、推測で accepted にしていない。2026-06-06 の fail-closed policy 以降は、新規 26 キャラだけでなく既存 4 キャラの未レビュー補助行も review queue に戻している。括弧付き damage / startup / recovery は条件付き SuperCombo field として review queue に残す。`着地後N` と `N land` の landing recovery 表記差、括弧・注記なしの多段 damage 合計は機械正規化したが、多段 damage は候補選択 score には使わない。
 - SuperCombo-only rows は通常回答へ自動混入させない前提で、公式 rows とは別 CSV に分離している。ただし Ingrid の特殊隠しコマンド / Monoid rows 以外の全キャラ分の細分類はまだ未レビュー。
 
 ## 未解決の質問
 
-- `enriched_review_required` 1296 行を、どの順序で人間レビューするか。
+- `enriched_review_required` 1295 行を、queue と character のどちらを優先して人間レビューするか。
 - SuperCombo-only 620 行のうち、taunt、条件付き variant、hidden / non-standard row、公式未掲載 row をどう細分化するか。
 - imageinfo missing 599 件が source 側の欠損なのか、filename 正規化や API title 変換で再解決可能なのか。
 - C.Viper の `moveType=air_normal8` row を、SuperCombo 表示 query に出ない非標準 moveType として保持するだけでよいか、将来の派生 section に含めるべきか。

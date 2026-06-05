@@ -29,6 +29,24 @@
     "uncomparable_basic_field:damage,recovery": 2,
     "uncomparable_basic_field:recovery": 7
   },
+  "review_queue_counts": {
+    "condition_dependent_field": 19,
+    "field_conflict": 9,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 34,
+    "uncomparable_notation": 29
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 7,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 9,
+    "field_conflict;condition_dependent_field;uncomparable_notation;structural_ambiguity": 1,
+    "field_conflict;structural_ambiguity": 7,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 1,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "structural_ambiguity": 10,
+    "uncomparable_notation": 3,
+    "uncomparable_notation;structural_ambiguity": 6
+  },
   "basic_field_conflict_counts": {
     "active_duration": 6,
     "damage": 8,

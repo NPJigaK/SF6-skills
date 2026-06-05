@@ -408,6 +408,22 @@ def primary_damage_number(value: str) -> str:
     return ""
 
 
+def multihit_damage_sum(value: str) -> str:
+    text = value.replace(" ", "").strip()
+    if "x" not in text and "," not in text:
+        return ""
+    if not re.fullmatch(r"\d+(?:x\d+)?(?:,\d+(?:x\d+)?)*", text):
+        return ""
+    total = 0
+    for part in text.split(","):
+        if "x" in part:
+            damage, hits = part.split("x", 1)
+            total += int(damage) * int(hits)
+        else:
+            total += int(part)
+    return str(total)
+
+
 def condition_parenthetical_primary(value: str) -> str:
     text = value.strip()
     match = re.fullmatch(r"([+-]?\d+)\s*\([^)]*\)", text)
@@ -447,7 +463,7 @@ def active_duration(value: str) -> str:
 
 def comparable_value(field: str, value: str) -> str:
     if field == "damage":
-        return primary_damage_number(value)
+        return primary_damage_number(value) or multihit_damage_sum(value)
     if field == "active_duration":
         return active_duration(value)
     return simple_number(value)
@@ -492,6 +508,8 @@ def compare_basic_field(field: str, official_raw: str, supercombo_raw: str) -> d
     if official_value and supercombo_value:
         result["comparable"] = True
         result["match"] = official_value == supercombo_value
+        if field == "damage" and multihit_damage_sum(supercombo_text):
+            result["reason"] = "multihit_damage_sum"
     else:
         result["comparable"] = False
         if not official_value and not supercombo_value:
@@ -543,6 +561,8 @@ def candidate_score(official: dict[str, str], candidate: dict[str, str], officia
     comparisons = compare_fields(official, candidate)
     for field, item in comparisons.items():
         if item.get("match") is True:
+            if field == "damage" and item.get("reason") == "multihit_damage_sum":
+                continue
             score += 3
             reasons.append(f"{field}_match")
     return score, reasons

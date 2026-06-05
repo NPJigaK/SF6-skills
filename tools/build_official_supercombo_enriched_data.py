@@ -61,6 +61,7 @@ SUPPLEMENTAL_FRAME_FIELDS = [
 ENRICHMENT_META_FIELDS = [
     "enrichment_status",
     "enrichment_review_flags",
+    "enrichment_review_queues",
     "supercombo_match_status",
     "supercombo_match_method",
     "supercombo_candidate_count",
@@ -617,6 +618,27 @@ def needs_human_review(flags: list[str]) -> bool:
     return any(flag.startswith(REVIEW_REQUIRED_FLAG_PREFIXES) for flag in flags)
 
 
+def review_queues_from_flags(flags: list[str]) -> list[str]:
+    queues: list[str] = []
+
+    def add(queue: str) -> None:
+        if queue not in queues:
+            queues.append(queue)
+
+    for flag in flags:
+        if flag.startswith(("manual_match", "ambiguous_match")):
+            add("manual_or_ambiguous_match")
+        elif flag.startswith("basic_field_conflict"):
+            add("field_conflict")
+        elif flag.startswith("condition_dependent_supercombo_field"):
+            add("condition_dependent_field")
+        elif flag.startswith(("multiple_candidates", "supercombo_row_reused")):
+            add("structural_ambiguity")
+        elif flag.startswith("uncomparable_basic_field"):
+            add("uncomparable_notation")
+    return queues
+
+
 def supplemental_only_handling(*, character_slug: str, row: dict[str, str]) -> str:
     move_type = row.get("move_type", "")
     move_id = row.get("move_id", "")
@@ -675,6 +697,8 @@ def build_enriched(
 
     enriched_rows: list[dict[str, str]] = []
     flag_counts: Counter[str] = Counter()
+    queue_counts: Counter[str] = Counter()
+    queue_combination_counts: Counter[str] = Counter()
     conflict_counts: Counter[str] = Counter()
     uncomparable_counts: Counter[str] = Counter()
     status_counts: Counter[str] = Counter()
@@ -683,8 +707,13 @@ def build_enriched(
         row = dict(official)
         crosswalk = crosswalk_by_official_order.get(str(official_index), {})
         flags = review_flags(crosswalk, reused_move_ids) if crosswalk else []
+        queues = review_queues_from_flags(flags)
         for flag in flags:
             flag_counts[flag] += 1
+        for queue in queues:
+            queue_counts[queue] += 1
+        if queues:
+            queue_combination_counts[";".join(queues)] += 1
         conflicts = conflict_fields(crosswalk.get("field_comparisons_json", "{}")) if crosswalk else []
         for conflict in conflicts:
             conflict_counts[conflict] += 1
@@ -709,6 +738,7 @@ def build_enriched(
 
         row["enrichment_status"] = status
         row["enrichment_review_flags"] = ";".join(flags)
+        row["enrichment_review_queues"] = ";".join(queues)
         row["supercombo_match_status"] = crosswalk.get("match_status", "")
         row["supercombo_match_method"] = crosswalk.get("match_method", "")
         row["supercombo_candidate_count"] = crosswalk.get("candidate_count", "")
@@ -741,6 +771,8 @@ def build_enriched(
         "supercombo_only_rows": len(supercombo_only_output),
         "enrichment_status_counts": dict(status_counts),
         "review_flag_counts": dict(sorted(flag_counts.items())),
+        "review_queue_counts": dict(sorted(queue_counts.items())),
+        "review_queue_combination_counts": dict(sorted(queue_combination_counts.items())),
         "basic_field_conflict_counts": dict(sorted(conflict_counts.items())),
         "uncomparable_basic_field_counts": dict(sorted(uncomparable_counts.items())),
         "human_review_status_counts": dict(

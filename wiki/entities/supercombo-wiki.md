@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-05
+updated: 2026-06-06
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -45,7 +45,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 - SuperCombo Wiki は community wiki source として扱い、公式 Capcom source より低い confidence で使う。
 - 30キャラ分の SuperCombo frame-data 取得データは official data と重なる基本フレーム値の正とはせず、公式にない notes、range、juggle、hitbox image refs などの補助 source として保持する。公式 + SuperCombo 補助 output では公式列を正とし、SuperCombo は `supercombo_*` 列に入れる。
 - SuperCombo frame-data raw は latest mirror 固定パスに保存し、source revision は各 manifest の `source_revision` で追う。
-- JP / Ryu / Zangief / Ingrid には既存の人間レビュー済み補助行がある。2026-06-06 の fail-closed policy 以降は accepted 69 行を保持し、複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field を持つ未レビュー補助行 1296 行を review queue に残している。
+- JP / Ryu / Zangief / Ingrid には既存の人間レビュー済み補助行がある。2026-06-06 の fail-closed policy 以降は accepted 69 行を保持し、複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field を持つ未レビュー補助行 1295 行を review queue に残している。
 - Ingrid は imageinfo で face / portrait の 2 件しか解決できていないため、move / hitbox 画像の利用には追加確認が必要。
 
 ## 関連概念
@@ -61,4 +61,4 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 - 追加 source ingest 後、community wiki source の標準 confidence policy を定義するべきか。
 - Zangief / Ingrid の SuperCombo name override と review flags を標準 policy として採用できるか。
 - imageinfo missing 599 件を、source 側の欠損として扱うか、filename 正規化で再解決するか。
-- 未レビュー補助行 1296 行をどの順序で人間レビューするか。
+- 未レビュー補助行 1295 行をどの順序で人間レビューするか。

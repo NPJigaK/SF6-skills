@@ -11,7 +11,7 @@
   "review_flag_counts": {
     "basic_field_conflict:active_duration": 3,
     "basic_field_conflict:active_duration,recovery": 1,
-    "basic_field_conflict:damage": 6,
+    "basic_field_conflict:damage": 7,
     "basic_field_conflict:recovery": 1,
     "condition_dependent_supercombo_field:damage": 13,
     "condition_dependent_supercombo_field:damage,recovery": 1,
@@ -19,25 +19,46 @@
     "manual_match": 2,
     "multiple_candidates": 39,
     "supercombo_row_reused": 10,
-    "uncomparable_basic_field:active_duration": 4,
-    "uncomparable_basic_field:active_duration,damage": 13,
-    "uncomparable_basic_field:active_duration,damage,recovery": 5,
+    "uncomparable_basic_field:active_duration": 6,
+    "uncomparable_basic_field:active_duration,damage": 11,
+    "uncomparable_basic_field:active_duration,damage,recovery": 4,
     "uncomparable_basic_field:active_duration,damage,recovery,startup": 7,
-    "uncomparable_basic_field:active_duration,damage,startup": 2,
-    "uncomparable_basic_field:damage": 8,
+    "uncomparable_basic_field:active_duration,damage,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery": 1,
+    "uncomparable_basic_field:active_duration,startup": 1,
+    "uncomparable_basic_field:damage": 7,
     "uncomparable_basic_field:damage,recovery": 7,
     "uncomparable_basic_field:damage,startup": 3,
     "uncomparable_basic_field:recovery": 2,
     "uncomparable_basic_field:startup": 5
   },
+  "review_queue_counts": {
+    "condition_dependent_field": 21,
+    "field_conflict": 12,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 45,
+    "uncomparable_notation": 55
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 12,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 7,
+    "field_conflict": 4,
+    "field_conflict;structural_ambiguity": 4,
+    "field_conflict;uncomparable_notation": 1,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 3,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "structural_ambiguity": 12,
+    "uncomparable_notation": 11,
+    "uncomparable_notation;structural_ambiguity": 19
+  },
   "basic_field_conflict_counts": {
     "active_duration": 4,
-    "damage": 6,
+    "damage": 7,
     "recovery": 2
   },
   "uncomparable_basic_field_counts": {
     "active_duration": 31,
-    "damage": 45,
+    "damage": 40,
     "recovery": 21,
     "startup": 17
   },

@@ -18,12 +18,31 @@
     "manual_match": 2,
     "multiple_candidates": 19,
     "supercombo_row_reused": 3,
-    "uncomparable_basic_field:active_duration,damage": 13,
+    "uncomparable_basic_field:active_duration": 5,
+    "uncomparable_basic_field:active_duration,damage": 8,
     "uncomparable_basic_field:active_duration,damage,recovery": 4,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 10,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 6,
+    "uncomparable_basic_field:active_duration,recovery,startup": 4,
     "uncomparable_basic_field:damage": 3,
     "uncomparable_basic_field:damage,recovery": 3,
     "uncomparable_basic_field:recovery": 4
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 15,
+    "field_conflict": 2,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 22,
+    "uncomparable_notation": 37
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 7,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 5,
+    "field_conflict;condition_dependent_field;uncomparable_notation": 1,
+    "field_conflict;uncomparable_notation": 1,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "structural_ambiguity": 6,
+    "uncomparable_notation": 10,
+    "uncomparable_notation;structural_ambiguity": 11
   },
   "basic_field_conflict_counts": {
     "active_duration": 1,
@@ -31,7 +50,7 @@
   },
   "uncomparable_basic_field_counts": {
     "active_duration": 27,
-    "damage": 33,
+    "damage": 24,
     "recovery": 21,
     "startup": 10
   },

@@ -2,6 +2,37 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-06] 修正 | 多段 damage 正規化とレビューキュー分離
+- 作成:
+  - `tools/test_supercombo_enrichment_review.py`
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `tools/test_supercombo_frame_comparison.py`
+  - `wiki/outputs/data/supercombo/frame-data/`
+  - `wiki/outputs/data/enriched/frame-data/`
+  - `wiki/outputs/reports/2026-06-05-supercombo-all-frame-data-coverage.md`
+  - `wiki/reviews/2026-06-05-supercombo-all-frame-data-capture-review.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+- メモ:
+  - `$adversarial-review` の事前レビュー結果を踏まえ、`400x2` や `300,400` のような括弧・注記なしの多段 damage 合計だけを機械比較対象にした。
+  - 多段 damage 合計は `multihit_damage_sum` として field 比較に使うが、候補選択 score には使わない。これにより SuperCombo-only 行の増減は発生していない。
+  - `enrichment_review_queues` を追加し、`uncomparable_notation`、`structural_ambiguity`、`condition_dependent_field`、`field_conflict`、`manual_or_ambiguous_match` に review flags を束ねた。
+  - 30 キャラ再生成後、`enriched` 592、`enriched_reviewed` 69、`enriched_review_required` 1295、`official_only` 405、SuperCombo-only 620 になった。
+  - review queue 件数は `uncomparable_notation` 1138、`structural_ambiguity` 851、`condition_dependent_field` 554、`field_conflict` 199、`manual_or_ambiguous_match` 161。
+- 検証:
+  - `python tools\test_supercombo_frame_comparison.py`
+  - `python tools\test_supercombo_enrichment_review.py`
+  - `python tools\audit_supercombo_enriched_review_status.py --repo-root .`
+- 未解決事項:
+  - 次の review pass を queue 単位で進めるか、character 単位で進めるか。
+  - SuperCombo-only 620 行を taunt、条件付き variant、hidden / non-standard row、公式未掲載 row などに細分化する必要があるか。
+
 ## [2026-06-06] 修正 | 条件付き SuperCombo field の fail-closed 化と landing recovery 正規化
 - 作成:
   - `tools/test_supercombo_frame_comparison.py`

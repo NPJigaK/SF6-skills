@@ -23,6 +23,18 @@
     "uncomparable_basic_field:recovery": 4,
     "uncomparable_basic_field:startup": 1
   },
+  "review_queue_counts": {
+    "condition_dependent_field": 20,
+    "structural_ambiguity": 16,
+    "uncomparable_notation": 30
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 12,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 8,
+    "structural_ambiguity": 3,
+    "uncomparable_notation": 5,
+    "uncomparable_notation;structural_ambiguity": 5
+  },
   "basic_field_conflict_counts": {},
   "uncomparable_basic_field_counts": {
     "active_duration": 10,

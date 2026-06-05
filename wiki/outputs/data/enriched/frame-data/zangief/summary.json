@@ -30,6 +30,24 @@
     "uncomparable_basic_field:recovery,startup": 1,
     "uncomparable_basic_field:startup": 8
   },
+  "review_queue_counts": {
+    "condition_dependent_field": 34,
+    "field_conflict": 1,
+    "manual_or_ambiguous_match": 24,
+    "structural_ambiguity": 13,
+    "uncomparable_notation": 44
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 8,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 8,
+    "field_conflict": 1,
+    "manual_or_ambiguous_match": 2,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 16,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation;structural_ambiguity": 2,
+    "manual_or_ambiguous_match;uncomparable_notation": 4,
+    "uncomparable_notation": 3,
+    "uncomparable_notation;structural_ambiguity": 3
+  },
   "basic_field_conflict_counts": {
     "active_duration": 1,
     "startup": 1

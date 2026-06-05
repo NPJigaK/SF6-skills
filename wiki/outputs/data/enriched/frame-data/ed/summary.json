@@ -4,8 +4,8 @@
   "enriched_rows": 70,
   "supercombo_only_rows": 13,
   "enrichment_status_counts": {
-    "enriched": 20,
-    "enriched_review_required": 39,
+    "enriched": 21,
+    "enriched_review_required": 38,
     "official_only": 11
   },
   "review_flag_counts": {
@@ -21,11 +21,29 @@
     "uncomparable_basic_field:active_duration,damage": 3,
     "uncomparable_basic_field:active_duration,damage,recovery": 6,
     "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
-    "uncomparable_basic_field:damage": 7,
-    "uncomparable_basic_field:damage,recovery": 3,
-    "uncomparable_basic_field:recovery": 4,
+    "uncomparable_basic_field:damage": 6,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 5,
     "uncomparable_basic_field:recovery,startup": 4,
     "uncomparable_basic_field:startup": 2
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 20,
+    "field_conflict": 5,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 22,
+    "uncomparable_notation": 31
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 9,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 7,
+    "field_conflict;condition_dependent_field;uncomparable_notation;structural_ambiguity": 2,
+    "field_conflict;structural_ambiguity": 2,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 1,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "structural_ambiguity": 5,
+    "uncomparable_notation": 5,
+    "uncomparable_notation;structural_ambiguity": 5
   },
   "basic_field_conflict_counts": {
     "active_duration": 5,
@@ -35,7 +53,7 @@
   },
   "uncomparable_basic_field_counts": {
     "active_duration": 12,
-    "damage": 22,
+    "damage": 20,
     "recovery": 20,
     "startup": 9
   },

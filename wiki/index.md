@@ -133,9 +133,9 @@
 | [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] | report | Capcom 公式 Zangief Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み25行と SuperCombo-only taunt 4行を含む。 | 2026-06-02 |
 | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]] | report | SuperCombo Ingrid の派生 output と Capcom 公式 Ingrid Classic CSV の照合。Sun Crest stock level、OD Sun Shot 共有 row、SA1/SA2、Drive Rush override を含む。 | 2026-06-02 |
 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] | report | Capcom 公式 Ingrid Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み26行、official-only 2行、SuperCombo-only 13行を含む。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
-| [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | report | SuperCombo frame-data 30キャラ分の raw capture / validation / official crosswalk / enriched output coverage。未レビュー補助行 1296 行、レビュー済み 69 行、SuperCombo-only 620 行を含む。 | 2026-06-06 |
+| [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | report | SuperCombo frame-data 30キャラ分の raw capture / validation / official crosswalk / enriched output coverage。未レビュー補助行 1295 行、レビュー済み 69 行、SuperCombo-only 620 行、review queue 集計を含む。 | 2026-06-06 |
 | `wiki/outputs/data/supercombo/frame-data/<character_slug>/` | csv/json | SuperCombo 30キャラ分の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-05 |
-| `wiki/outputs/data/enriched/frame-data/<character_slug>/` | csv/json | 公式 Classic rows に SuperCombo `supercombo_*` 補助列を付与した data。既存レビュー済み 69 行を保持し、複数候補・再利用・基本 field conflict・比較不能 field は未レビュー補助行として残す。 | 2026-06-06 |
+| `wiki/outputs/data/enriched/frame-data/<character_slug>/` | csv/json | 公式 Classic rows に SuperCombo `supercombo_*` 補助列を付与した data。既存レビュー済み 69 行を保持し、複数候補・再利用・基本 field conflict・比較不能 field・条件付き field は `enrichment_review_queues` で分離する。 | 2026-06-06 |
 | `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
 | `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した data と SuperCombo-only row。 | 2026-05-31 |
 | `wiki/outputs/data/supercombo/frame-data/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
@@ -190,4 +190,4 @@
 | [[reviews/2026-06-02-supercombo-zangief-frame-data-capture-review]] | capture_validation | SuperCombo Zangief frame-data raw 取得データの自動検証レビュー。 | open |
 | [[reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review]] | capture_validation | SuperCombo Ingrid frame-data raw 取得データの自動検証レビュー。補助データ26行 accepted、imageinfo missing 156 件と SuperCombo-only 9行の扱いが残る。 | open |
 | [[reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview]] | prereview | SuperCombo Ingrid の公式 row に直接照合しない 9 行を外部 web evidence も使って事前レビュー。特殊隠しコマンド / Monoid 操作として通常回答から分離し、accept ではなく pending。 | open |
-| [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | capture_validation | SuperCombo frame-data 30キャラ分の batch capture review。raw capture は 30/30 passed、未レビュー補助行 1296 行と SuperCombo-only 620 行が残る。 | open |
+| [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | capture_validation | SuperCombo frame-data 30キャラ分の batch capture review。raw capture は 30/30 passed、未レビュー補助行 1295 行と SuperCombo-only 620 行が残り、review queue で理由を分離している。 | open |

@@ -13,9 +13,8 @@
     "basic_field_conflict:active_duration,damage,startup": 4,
     "basic_field_conflict:active_duration,recovery": 1,
     "basic_field_conflict:damage,recovery": 2,
-    "basic_field_conflict:damage,recovery,startup": 1,
+    "basic_field_conflict:damage,recovery,startup": 2,
     "basic_field_conflict:recovery": 5,
-    "basic_field_conflict:recovery,startup": 1,
     "basic_field_conflict:startup": 1,
     "condition_dependent_supercombo_field:damage": 8,
     "condition_dependent_supercombo_field:recovery": 4,
@@ -23,8 +22,8 @@
     "manual_match": 2,
     "multiple_candidates": 23,
     "supercombo_row_reused": 26,
-    "uncomparable_basic_field:active_duration": 9,
-    "uncomparable_basic_field:active_duration,damage": 5,
+    "uncomparable_basic_field:active_duration": 13,
+    "uncomparable_basic_field:active_duration,damage": 1,
     "uncomparable_basic_field:active_duration,damage,recovery": 4,
     "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
     "uncomparable_basic_field:damage": 7,
@@ -32,15 +31,32 @@
     "uncomparable_basic_field:recovery": 8,
     "uncomparable_basic_field:startup": 2
   },
+  "review_queue_counts": {
+    "condition_dependent_field": 15,
+    "field_conflict": 17,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 37,
+    "uncomparable_notation": 41
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 5,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 8,
+    "field_conflict;structural_ambiguity": 5,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 11,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 1,
+    "manual_or_ambiguous_match;field_conflict;condition_dependent_field;uncomparable_notation": 1,
+    "uncomparable_notation": 2,
+    "uncomparable_notation;structural_ambiguity": 13
+  },
   "basic_field_conflict_counts": {
     "active_duration": 7,
-    "damage": 9,
+    "damage": 10,
     "recovery": 12,
     "startup": 9
   },
   "uncomparable_basic_field_counts": {
     "active_duration": 22,
-    "damage": 22,
+    "damage": 18,
     "recovery": 18,
     "startup": 6
   },
