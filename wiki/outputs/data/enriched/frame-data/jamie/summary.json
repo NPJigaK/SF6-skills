@@ -1,0 +1,60 @@
+{
+  "official_rows": 103,
+  "supercombo_rows": 115,
+  "enriched_rows": 103,
+  "supercombo_only_rows": 25,
+  "enrichment_status_counts": {
+    "enriched_review_required": 75,
+    "enriched": 21,
+    "official_only": 7
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration": 3,
+    "basic_field_conflict:active_duration,recovery": 1,
+    "basic_field_conflict:damage": 6,
+    "basic_field_conflict:recovery": 1,
+    "condition_dependent_supercombo_field:damage": 13,
+    "condition_dependent_supercombo_field:damage,recovery": 1,
+    "condition_dependent_supercombo_field:recovery": 7,
+    "manual_match": 2,
+    "multiple_candidates": 39,
+    "supercombo_row_reused": 10,
+    "uncomparable_basic_field:active_duration": 4,
+    "uncomparable_basic_field:active_duration,damage": 13,
+    "uncomparable_basic_field:active_duration,damage,recovery": 5,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 7,
+    "uncomparable_basic_field:active_duration,damage,startup": 2,
+    "uncomparable_basic_field:damage": 8,
+    "uncomparable_basic_field:damage,recovery": 7,
+    "uncomparable_basic_field:damage,startup": 3,
+    "uncomparable_basic_field:recovery": 2,
+    "uncomparable_basic_field:startup": 5
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 4,
+    "damage": 6,
+    "recovery": 2
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 31,
+    "damage": 45,
+    "recovery": 21,
+    "startup": 17
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "Jamie_4hp_dl2",
+    "Jamie_6mk_dl2",
+    "Jamie_j214k_dl2",
+    "Jamie_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 17,
+    "supercombo_only_taunt": 8
+  },
+  "official_csv": "wiki/outputs/data/frame-data/jamie/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/jamie/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/jamie/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/jamie/classic-supercombo.csv"
+}

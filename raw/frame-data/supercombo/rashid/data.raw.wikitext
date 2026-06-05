@@ -1,0 +1,2582 @@
+{{Character Subnav SF6 | chara=Rashid }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Rashid
+| name          = Rashid
+| portrait      = SF6 Rashid Portrait.png
+| icon          = SF6 Rashid Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.045
+| bwdWalkSpd    = 0.032
+| fwdDashSpd    = 18
+| bwdDashSpd    = 25
+| fwdDashDist   = 1.20 (1.86)
+| bwdDashDist   = 1.10 (1.91)
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90 (5.07)
+| bwdJumpDist   = 1.52 (3.63)
+| dRushMin      = 0.796
+| dRushBlock    = 2.253
+| dRushMax      = 2.998
+}}
+''Note: Air Currents can affect the following movement options, increasing their distance: Forward Dash (1-14f), Back Dash (1-16f), Forward Jump (5-30f), Back Jump (5-29f), and Neutral Jump (5-21f, distance 1.82).''
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Rashid_5lp.png
+| hitboxes      = SF6_Rashid_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 9
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA 
+| hitconfirm    = 12
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.11
+| pushbackHit   = 0.405
+| pushbackBlk   = 0.418
+| notes         = Chains into 5LP/2LP/2LK
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Rashid_5mp.png
+| hitboxes      = SF6_Rashid_5mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 3
+| recovery      = 14
+| total         = 22
+| guard         = LH
+| cancel        = TC Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 22
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.132
+| notes         = Useful for starting combos and block pressure; has a Target Combo follow-up that can be canceled into 236LP for safety on block or into higher damage routes on hit
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Rashid_5hp.png
+| hitboxes      = SF6_Rashid_5hp_hitbox.png
+| damage        = 800
+| startup       = 9
+| active        = 3
+| recovery      = 21
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+9}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.449
+| notes         = Decent mid-range button with a strong hitbox for counterpoking; can combo to 214HK after Drive Rush or Punish Counter; special/DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Rashid_5lk.png
+| hitboxes      = SF6_Rashid_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 10
+| total         = 16
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 16
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| pushbackHit   = 0.266
+| pushbackBlk   = 0.271
+| notes         = Highest hitstun light normal makes it useful for special cancels (the only light normal that can combo into 214LK naturally); DR cancel is delayed until after active frames
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Rashid_5mk.png
+| hitboxes      = SF6_Rashid_5mk_hitbox.png
+| damage        = 600
+| startup       = 8
+| active        = 3
+| recovery      = 17(19)
+| total         = 27(29)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 26
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.578
+| notes         = Combo starter that links into 5MP or into itself on counter-hit; 2 extra recovery frames on whiff
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Rashid_5hk.png
+| hitboxes      = SF6_Rashid_5hk_hitbox_preview.png, SF6_Rashid_5hk_hitbox_1.png, SF6_Rashid_5hk_hitbox_2.png, SF6_Rashid_5hk_hitbox_3.png
+| damage        = 800
+| startup       = 13
+| active        = 8
+| recovery      = 18
+| total         = 38
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|M|-1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = KD +49 Launch
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| afterDRHit    = {{sf6-adv|P|+3}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 25
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 4000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 2 air<br>{{sf6-adv|PC|[3 PC Ground]}}
+| jugIncrease   = 2
+| jugLimit      = 1
+| atkRange      = 1.964
+| notes         = Puts airborne opponents into limited juggle state; Punish Counter launches grounded opponents into limited juggle state and causes airborne opponents to fall closer to Rashid; decent anti-air hitbox, but very slow and cannot hit cross-up; high pushback on hit and block; forces stand on hit; final 2 active frames whiff on crouching opponents unless they extend a vertical hurtbox; has an extended hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Rashid_2lp.png
+| hitboxes      = SF6_Rashid_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 7
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-2}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.02
+| rangeNotes    = Less range than 5LP (4f startup), but links to 5HP on Punish Counter
+| notes         = Chains into 5LP/2LP/2LK; DR cancel is delayed until after 2nd active frame; topmost hurtbox on frames 1-7 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Rashid_2mp.png
+| hitboxes      = SF6_Rashid_2mp_hitbox_preview.png, SF6_Rashid_2mp_hitbox_1.png, SF6_Rashid_2mp_hitbox_2.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 13
+| total         = 22
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 21
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.168 (0.877)
+| notes         = Combo and pressure tool with many active frames for easy oki; can anti-air on frames 7-9 but cannot hit opponents behind Rashid; whiffs on crouching opponents at longer ranges unless they extend a vertical hurtbox
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Rashid_2hp.png
+| hitboxes      = SF6_Rashid_2hp_hitbox.png
+| damage        = 900
+| dmgScaling    = 20% Starter
+| startup       = 12
+| active        = 3
+| recovery      = 21(23)
+| total         = 35(37)
+| guard         = LH
+| cancel        = SA
+| hitconfirm    = 17 (SA)
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 29
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.748 (1.663)
+| notes         = Decent poke that can be buffered into supers; good close range Punish Counter starter (combos into 5HP), but high pushback makes it less reliable at longer ranges; 2 extra recovery frames on whiff; topmost hurtboxes on frames 8-14 are projectile invincible (avoids Sagat's MP/HP Tiger Shot)
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Rashid_2lk.png
+| hitboxes      = SF6_Rashid_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 8
+| total         = 15
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.10
+| notes         = Chains into 5LP/2LP/2LK
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Rashid_2mk.png
+| hitboxes      = SF6_Rashid_2mk_hitbox.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 7
+| active        = 3
+| recovery      = 18
+| total         = 27
+| guard         = L
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|M|-1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|P|+3}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| DRcancelHit   = {{sf6-adv|VP|+8}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|P|+3}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 20
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.405
+| notes         = Standard cancelable low poke; Range: 1.405; DR cancel is delayed until after active frames
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Cyclone Slicer
+| images        = SF6_Rashid_2hk.png
+| hitboxes      = SF6_Rashid_2hk_hitbox.png
+| damage        = 900
+| startup       = 9
+| active        = 3
+| recovery      = 24(28)
+| total         = 35(39)
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +31
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = HKD +47
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| afterDRHit    = KD +31
+| afterDRBlk    = {{sf6-adv|VM|-7}}
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| atkRange      = 1.711
+| notes         = Can be juggled into even without Drive Rush; 4f extra recovery on block; disadvantage on block is fixed regardless of which active frame connects (cannot make it safer when meaty)
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Rashid_jlp.png
+| hitboxes      = SF6_Rashid_jlp_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+9)}}
+| blockAdv      = {{sf6-adv|VP|+4(+5)}}
+| punishAdv     = {{sf6-adv|VP|+12(+13)}}
+| perfParryAdv  = {{sf6-adv|M|-3(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.85
+| notes         = Quick air-to-air
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Rashid_jmp.png
+| hitboxes      = SF6_Rashid_jmp_hitbox.png
+| damage        = 600
+| startup       = 9
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitAdv        = {{sf6-adv|VP|+9(+11)}}
+| blockAdv      = {{sf6-adv|VP|+5(+7)}}
+| punishAdv     = {{sf6-adv|VP|+13(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1 air
+| jugIncrease   = 10
+| jugLimit      = 5
+| atkRange      = 0.93
+| notes         = Puts airborne opponents into limited juggle state; cancels into j.214K from forward jumps; lower body projectile invuln 9-22f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Rashid_jhp.png
+| hitboxes      = SF6_Rashid_jhp_hitbox_preview.png, SF6_Rashid_jhp_hitbox_1.png, SF6_Rashid_jhp_hitbox_2.png
+| damage        = 400x2
+| startup       = 8
+| active        = 4(2)3
+| recovery      = 3 land
+| total         = -
+| guard         = H,H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+15)}}
+| blockAdv      = {{sf6-adv|VP|+7(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19,19
+| blockstun     = 15,15
+| hitstop       = 10,10
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1 air
+| jugIncrease   = 0
+| jugLimit      = 0,1
+| atkRange      = 1.07 (0.94)
+| notes         = 1st hit puts airborne opponents into limited juggle state, 2nd hit causes spike knockdown; if 1st hit is stand blocked, the 2nd hit will not hit overhead against crouch block; lower body projectile invuln 8-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Rashid_jlk.png
+| hitboxes      = SF6_Rashid_jlk_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7(+9)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+11(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.17
+| notes         = Longest horizontal range of Rashid's jump normals
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Rashid_jmk.png
+| hitboxes      = SF6_Rashid_jmk_hitbox.png
+| damage        = 500
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7(+13)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+9)}}
+| punishAdv     = {{sf6-adv|VP|+11(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.72
+| notes         = Cross-up; lower body projectile invuln 7-20f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Rashid_jhk.png
+| hitboxes      = SF6_Rashid_jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+15)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+12(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.02
+| notes         = When used after j.214K or 214P~4K, causes a spike knockdown vs. airborne opponents; lower body projectile invuln 10-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+=== Wall Jump ===
+===== 9 (near wall) =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_walljump | moveType = Special
+| input         = 9 (against wall)
+| name          = Wall Jump
+| images        = SF6_Rashid_walljump.png
+| hitboxes      = SF6_Rashid_walljump_hitbox.png
+| damage        = -
+| startup       = -
+| active        = -
+| recovery      = -
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = Until Land (FKD)
+| notes         = Counter-hit state during entire duration; can be done from Back or Neutral jump if fully against the wall, or after Forward Jump against a cornered opponent; cannot be performed after j.2HP or j.214K
+}}
+
+== Command Normals ==
+===== 6MP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6mp | moveType = ground_normal
+| input         = 6MP
+| name          = Flapping Spin
+| images        = SF6_Rashid_6mp.png, SF6_Rashid_6mp2.png
+| hitboxes      = SF6_Rashid_6mp_hitbox_preview.png, SF6_Rashid_6mp_hitbox_1.png, SF6_Rashid_6mp_hitbox_2.png
+| damage        = 300x2
+| startup       = 8(24)
+| active        = 2(14)2
+| recovery      = 18
+| total         = 43
+| guard         = LH
+| cancel        = Sp SA (1st)
+| hitconfirm    = 11
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| DRcancelHit   = {{sf6-adv|VP|+13}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 23,21 (37)
+| blockstun     = 17,17 (33)
+| hitstop       = 8,8
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 750x2
+| superGainHit  = 250x2 (175x2)
+| superGainBlk  = 125x2 (62x2)
+| jugStart      = 1 air (1st)
+| jugIncrease   = 1,1
+| jugLimit      = 4,4
+| atkRange      = 2.436 (1.461)
+| notes         = () refers to startup of 2nd hit; 1st hit puts airborne opponents into limited juggle state (or maintains juggle state when used mid-combo); 2nd hit causes air reset; counter-hit/Punish Counter bonus advantage applies to both hits; decent range for whiff punishing; can be affected by Air Current on frames 3-10 (travels fullscreen)
+}}
+
+===== 6HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6hp | moveType = ground_normal
+| input         = 6HP
+| name          = Beak Assault
+| images        = SF6_Rashid_6hp.png
+| hitboxes      = SF6_Rashid_6hp_hitbox.png
+| damage        = 800
+| startup       = 22
+| active        = 3
+| recovery      = 21
+| total         = 45
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 27
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.863 (1.817)
+| notes         = Long-ranged overhead that can lead to combos if well-spaced; not actually airborne despite the animation; can be affected by Air Current on frames 4-25 (travels nearly fullscreen)
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Crescent Kick
+| images        = SF6_Rashid_6hk.png
+| hitboxes      = SF6_Rashid_6hk_hitbox_preview.png, SF6_Rashid_6hk_hitbox_1.png, SF6_Rashid_6hk_hitbox_2.png
+| damage        = 900
+| dmgScaling    = 20% Starter
+| startup       = 16
+| active        = 4
+| recovery      = 20(23)
+| total         = 39(42)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+5)}}
+| blockAdv      = {{sf6-adv|M|-3}}{{sf6-adv|E|(0)}}
+| punishAdv     = {{sf6-adv|VP|+6(+9)}}
+| perfParryAdv  = {{sf6-adv|VM|-22(-19)}}
+| afterDRHit    = {{sf6-adv|VP|+6(+9)}}
+| afterDRBlk    = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+4)}}
+| hitstun       = 26
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 7-19 Lower Body
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.892 (1.805)
+| notes         = 3f extra recovery on whiff; useful for hopping over low pokes and comboing into MP normals on Punish Counter, but not actually airborne; good option out of Drive Rush; can be spaced to hit on later active frames for better advantage; can be affected by Air Current on frames 6-19 (travels fullscreen)
+}}
+
+===== j.2HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_j2hp | moveType = air_normal
+| input         = j.2HP
+| name          = Blitz Strike
+| images        = SF6_Rashid_j2hp.png
+| hitboxes      = SF6_Rashid_j2hp_hitbox.png
+| damage        = 850
+| dmgScaling    = 15% Starter
+| startup       = 10
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitconfirm    = 14
+| hitAdv        = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-1)}}
+| blockAdv      = {{sf6-adv|VM|-29(-21)}}
+| punishAdv     = {{sf6-adv|VM|-5}}{{sf6-adv|P|(+3)}}
+| perfParryAdv  = {{sf6-adv|VM|-44(-36)}}
+| hitstun       = 37
+| blockstun     = 17
+| hitstop       = 12
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| airborne      = Until Land (FKD after bounce)
+| jugStart      = 1 air
+| jugIncrease   = 1(0)
+| jugLimit      = 12(16)
+| atkRange      = 0.63
+| notes         = Can be performed during forward jump or after j.214K; causes spike knockdown and OTG juggle state vs. airborne opponents; cancelable into j.214K; bounces off opponent on hit/block/parry, allowing Rashid to follow up with another airborne move (except another j.2HP) on frames 12-23; if Rashid hits airborne opponent 1f before landing, he lands immediately rather than bouncing; listed frame advantage assumes a grounded opponent and no follow-up air attack; juggle data in () refers to version after j.214K; lower body projectile invuln 10-19f except around attack hitbox 
+}}
+
+===== j.8HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_j8hk | moveType = air_normal
+| input         = j.8HK
+| name          = Aerial Shot
+| images        = SF6_Rashid_j8hk.png
+| hitboxes      = SF6_Rashid_j8hk_hitbox_preview.png, SF6_Rashid_j8hk_hitbox_1.png, SF6_Rashid_j8hk_hitbox_2.png
+| damage        = 800
+| startup       = 8
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+12(+15)}}
+| blockAdv      = {{sf6-adv|VP|+8(+11)}}
+| punishAdv     = {{sf6-adv|VP|+16(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1 air
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.02
+| notes         = During neutral jump only; puts airborne opponents into limited juggle state, making it a useful air-to-air; lower body projectile invuln 8-19f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== 6[6] =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_66_hold | moveType = Special
+| input         = 6[6]
+| name          = Run
+| images        = SF6_Rashid_66_hold.png
+| hitboxes      = SF6_Rashid_66_hold_hitbox.png
+| damage        = -
+| startup       = 18
+| active        = -
+| recovery      = 5(18)
+| total         = 90
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Input by holding forward after a forward dash; cancelable into 6P or 6K follow-ups on frames 18-72; after 72f, Rashid has 18f stopping recovery if no follow-up is input (90f total); stopping the run early has 5f recovery; no stopping recovery if jumping forward out of the run animation (neutral/back jump still plays out the 5f recovery); counter-hit state during entire run animation; affected by Air Current for entire duration except for 18f recovery, causing Rashid to run faster
+}}
+
+====== 6[6]~6P ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_66_hold_6p | moveType = ground_normal
+| input         = 6[6]~6P
+| name          = Backup
+| images        = SF6_Rashid_66_hold_6p.png
+| hitboxes      = SF6_Rashid_66_hold_6p_hitbox_preview.png, SF6_Rashid_66_hold_6p_hitbox_1.png, SF6_Rashid_66_hold_6p_hitbox_2.png
+| damage        = 400x2
+| dmgScaling    = 20% Starter
+| startup       = 18+8
+| active        = 10
+| recovery      = 17
+| total         = 34
+| guard         = L,LH
+| cancel        = SA (2nd, hit only)
+| hitconfirm    = 43 SA
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|VM|-10}}{{sf6-adv|M|(-1)}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-25(-16)}}
+| hitstun       = 48 total
+| blockstun     = 17
+| hitstop       = 9,8
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2500,5000]
+| driveGain     = 1000x2 (1000)
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250 (125)
+| invuln        = 1-19 Upper Body Projectile
+| jugStart      = 0,1
+| jugIncrease   = 0,1
+| jugLimit      = 10,10
+| atkRange      = 2.728 (1.965)
+| notes         = Crouching state for entire move duration; on hit, connects twice and switches sides, remaining projectile invincible throughout the entire animation; on block, connects once and stays on the same side; if opponent is cornered, Rashid is close enough for a follow-up combo; counter-hit/Punish Counter bonus advantage applies to both hits; frames 1-17 can be affected by Air Current
+}}
+
+====== 6[6]~6K ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_66_hold_6k | moveType = ground_normal
+| input         = 6[6]~6K
+| name          = Tempest Moon 
+| images        = SF6_Rashid_66_hold_6k.png
+| hitboxes      = SF6_Rashid_66_hold_6k_hitbox_1.png, SF6_Rashid_66_hold_6k_hitbox_2_3_preview.png, SF6_Rashid_66_hold_6k_hitbox_2.png, SF6_Rashid_66_hold_6k_hitbox_3.png
+| damage        = 600x2
+| dmgScaling    = 15% Starter
+| startup       = 18+16
+| active        = 2(4)3
+| recovery      = 21
+| total         = 45
+| guard         = LH,LH
+| cancel        = SA (2nd)
+| hitconfirm    = 30(14) SA
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-22(-21)}}
+| hitstun       = 33 total
+| blockstun     = 26 total
+| hitstop       = 10,10
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [5000x2]
+| driveGain     = 1000x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| invuln        = 6-21 Throw
+| airborne      = 6-21 (FKD)
+| jugStart      = 1 air
+| jugIncrease   = 1,1
+| jugLimit      = 10,10
+| atkRange      = 2.597 (2.076)
+| notes         = Counter-hit/Punish Counter bonus advantage applies to both hits; frames 1-3 can be affected by Air Current, becoming the Enhanced version
+}}
+
+====== 6[6]~6K (Air Current)======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_66_hold_6k_enhanced | moveType = ground_normal
+| input         = 6[6]~6K (Air Current)
+| name          = Tempest Moon (Air Current)
+| images        = SF6_Rashid_66_hold_6k.png
+| hitboxes      = SF6_Rashid_66_hold_6k_air_hitbox_1_2_preview.png, SF6_Rashid_66_hold_6k_air_hitbox_3_4_preview.png, SF6_Rashid_66_hold_6k_air_hitbox_1.png, SF6_Rashid_66_hold_6k_hitbox_2.png, SF6_Rashid_66_hold_6k_air_hitbox_3.png, SF6_Rashid_66_hold_6k_air_hitbox_4.png
+| damage        = 400x2,600
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 18+9
+| active        = 3(21)2(3)3
+| recovery      = 22
+| total         = 62
+| guard         = LH,LH
+| cancel        = -
+| hitAdv        = KD +56 OTG / KD +22
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = KD +56 OTG / KD +22
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| blockstun     = 49 total
+| hitstop       = 10,10,11
+| driveDmgBlk   = 2000,2500x2
+| driveDmgHit   = [5000,2500x2]
+| driveGain     = 500,1000x2
+| superGainHit  = 200x3 (140x3)
+| superGainBlk  = 100x3 (50x3)
+| airborne      = 21-36 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1,1,1
+| jugLimit      = 4,10,10
+| atkRange      = 3.89 / 3.369 (1.711)
+| notes         = Puts opponent into limited juggle OTG state if first hit connects (regular knockdown if first hit doesn't connect)
+}}
+
+===== 6KK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6kk | moveType = Special
+| input         = 6KK
+| name          = Side Flip
+| images        = SF6_Rashid_6kk.png
+| hitboxes      = SF6_Rashid_6kk_hitbox.png
+| damage        = -
+| startup       = 32 total
+| active        = -
+| recovery      = -
+| total         = 32
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Can input 4KK/5KK/6KK follow-up on frames 19-25; collision box disappears frames 8-23, allowing Rashid to pass through opponents; can be affected by Air Current on frames 2-20, traveling nearly fullscreen; travel distance: 1.7 (3.62 enhanced)
+}}
+
+====== 6KK~KK ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6kk_kk | moveType = Special
+| input         = 6KK~KK
+| name          = Front Flip
+| images        = SF6_Rashid_6kk_kk.png
+| hitboxes      = SF6_Rashid_6kk_kk_hitbox.png
+| damage        = -
+| startup       = 18+51 total
+| active        = -
+| recovery      = 8 land
+| total         = 51
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = 11-43 (FKD)
+| notes         = Input during 6KK; holding forward/back/neutral direction affects flip distance; can use any air attack frames 22-40; can be affected by Air Current on frames 1-36, traveling forward fullscreen
+}}
+
+== Target Combos ==
+===== 5MP~HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5mp_hk | moveType = ground_normal
+| input         = 5MP~HK
+| name          = Rising Kick
+| images        = SF6_Rashid_5mp_hk.png
+| hitboxes      = SF6_Rashid_5mp_hk_hitbox.png
+| damage        = 400
+| dmgScaling    = Combo (2 hits)
+| startup       = 13
+| active        = 4
+| recovery      = 36
+| total         = 52
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 49
+| hitAdv        = KD +42
+| blockAdv      = {{sf6-adv|VM|-20}}
+| punishAdv     = KD +42
+| DRcancelHit   = KD +65
+| DRcancelBlk   = {{sf6-adv|P|+3}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 1000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = Puts opponent into limited juggle state; both hits form a true blockstring and can cancel to 236LP for safety; special/DR cancel is delayed until after 4th recovery frame
+}}
+
+== Throws ==
+===== Forward Throw =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_lplk | moveType = throw
+| input         = LPLK
+| name          = Riding Glider
+| images        = SF6_Rashid_lplk.png
+| hitboxes      = SF6_Rashid_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +27
+| blockAdv      = -
+| punishAdv     = HKD +27
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Allows for a corner throw loop by holding Run for 18-20f, then letting go before throwing (17-20f for Blanka/E.Honda/Zangief); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== Back Throw =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Sunset Drop
+| images        = SF6_Rashid_4lplk.png
+| hitboxes      = SF6_Rashid_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +24
+| blockAdv      = -
+| punishAdv     = HKD +24
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Side switches; Rashid can pressure with DR~6HK (+1 oB) midscreen or corner; or DR~2HP in the corner (huge pushback, links to SA1); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== Air Throw =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_jlplk | moveType = throw
+| input         = j.LPLK
+| name          = Desert Slider
+| images        = SF6_Rashid_jlplk.png
+| hitboxes      = SF6_Rashid_jlplk_hitbox.png
+| damage        = 1200 (2040)
+| startup       = 5
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +27
+| blockAdv      = -
+| punishAdv     = HKD +27
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000(2800)]}}
+| atkRange      = 0.80
+| notes         = Useful air-to-air against close range jumps; in the corner, can get oki with Drive Rush
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_hphk | moveType = drive
+| input         = HPHK
+| name          = Eagle Edge
+| images        = SF6_Rashid_hphk.png
+| hitboxes      = SF6_Rashid_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.579
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Eagle Slash (Block)
+| images        = SF6_Rashid_6hphk.png
+| hitboxes      = SF6_Rashid_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 2.25
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Eagle Slash (Recovery)
+| images        = SF6_Rashid_6hphk.png
+| hitboxes      = SF6_Rashid_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 2.25
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Rashid_mpmk.png
+| hitboxes      = SF6_Rashid_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Rashid_66.png
+| hitboxes      = SF6_Rashid_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.796 (min/throw), 2.253 (min/block), 2.998 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Rashid_66.png
+| hitboxes      = SF6_Rashid_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Spinning Mixer ===
+===== 236LP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236lp | moveType = Special
+| input         = 236LP
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236lp.png
+| hitboxes      = SF6_Rashid_236lp_hitbox.png
+| damage        = 300,200x2 (700)
+| chip          = 75,50x2 (175)
+| dmgScaling    = 30% Starter
+| startup       = 8
+| active        = 3(5)2(4)2
+| recovery      = 19(24)
+| total         = 42(47)
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 10
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 37 total
+| blockstun     = 32 total
+| hitstop       = 6,5,5
+| driveDmgBlk   = 2000,500x2
+| driveDmgHit   = [1500x2,2000]
+| driveGain     = 500x2,1000
+| superGainHit  = 400,200x2 (280,140x2)
+| superGainBlk  = 200,100x2 (100,50x2)
+| jugStart      = 1,1,1 air
+| jugIncrease   = 1,1,1
+| jugLimit      = 5,5,5
+| atkRange      = 2.248 (1.03)
+| notes         = Great pressure tool that is safe on block and can blow throw armor; 5f extra recovery on whiff; Counter-hit/Punish Counter bonus advantage applies through all hits (allows for follow-up combo); can be affected by Air Current on frames 2-16; if the 3rd hit whiffs in a Burnout pressure sequence, Rashid is safe at -3 oB
+}}
+====== 236LP (Air Current) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236lp_enhanced | moveType = Special
+| input         = 236LP (Air Current)
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236lp_air.png
+| hitboxes      = SF6_Rashid_236lp_air_hitbox.png
+| damage        = 200,100x8 (1000)
+| chip          = 50,25x8 (250)
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 6
+| active        = 2(4)3(3)3(4)3(3)<br>3(4)3(3)3(4)3(3)3
+| recovery      = 15
+| total         = 74
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 9
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| hitstun       = 73 total
+| blockstun     = 71 total
+| hitstop       = 6,2x7,9
+| driveDmgBlk   = 500x8,1000
+| driveDmgHit   = [500x8,1000]
+| driveGain     = 100x9
+| superGainHit  = 100,50x8 (70,35x8)
+| superGainBlk  = 50,25x8 (25,12x8)
+| jugStart      = 0x8,7 air
+| jugIncrease   = 0x8,7
+| jugLimit      = 9x9
+| atkRange      = 7.58 (0.86)
+| notes         = Fullscreen advancing move that gives a combo on hit and frame advantage on block; counter-hit/Punish Counter bonus advantage applies through all hits (allows for a stronger follow-up combo)
+}}
+
+===== 236MP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236mp | moveType = Special
+| input         = 236MP
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236mp.png
+| hitboxes      = SF6_Rashid_236mp_hitbox_preview.png, SF6_Rashid_236mp_hitbox_1.png, SF6_Rashid_236mp_hitbox_2.png, SF6_Rashid_236mp_hitbox_3.png
+| damage        = 300,100x3,200 (800)
+| chip          = 75,25x2 (100~125)
+| dmgScaling    = 10% Starter
+| startup       = 8
+| active        = 1,2(2)2(5)2(3)2
+| recovery      = 34+14 land
+| total         = 74
+| guard         = LH
+| cancel        = SA3, (Sp/SA land)
+| hitconfirm    = 11
+| hitAdv        = KD +31
+| blockAdv      = {{sf6-adv|VM|-45(-49)}}
+| punishAdv     = KD +31
+| perfParryAdv  = {{sf6-adv|VM|-65}}
+| blockstun     = 22(18)
+| hitstop       = 4,3x3,9
+| driveDmgBlk   = 2500x3
+| driveDmgHit   = [5000]
+| driveGain     = 400x5 (400x3)
+| superGainHit  = 300,100x3,200 (210,70x3,140)
+| superGainBlk  = 100x3 (50x3)
+| invuln        = 6-14 Air
+| airborne      = 13-60 (FKD)
+| jugStart      = 1x4,6
+| jugIncrease   = 0x4,6
+| jugLimit      = 5x5
+| atkRange      = 0.956 (1st)
+| notes         = The last 11f of landing recovery is cancelable into special moves or supers on hit only; 4f worse advantage and 1 less hit when crouch blocked; cannot anti-air cross-ups; can be affected by Air Current on frames 2-8
+}}
+====== 236MP (Air Current) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236mp_enhanced | moveType = Special
+| input         = 236MP (Air Current)
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236mp_air.png
+| hitboxes      = SF6_Rashid_236mp_air_hitbox.png
+| damage        = 200x2,100x8,200 (1400)
+| chip          = 75x2,100x3 (350~450)
+| startup       = 5
+| active        = 1,2(2)2(4)2(3)2(6)<br>2(3)2(5)2(3)2(5)2(3)2
+| recovery      = 37+24 land
+| total         = 120
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 8
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-75(-83)(-88)}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-90(-103)}}
+| blockstun     = 41(28)
+| hitstop       = 2x10,8
+| driveDmgBlk   = 1250x5
+| driveDmgHit   = [5000]
+| driveGain     = 150x10,500 (150x5)
+| superGainHit  = 150x2,50x8,100 (105x2,35x8,70)
+| superGainBlk  = 75x2,25x3 (37x2,12x3)
+| invuln        = 3-11 Air
+| airborne      = 9-96 (FKD)
+| jugStart      = 1,0x9,1
+| jugIncrease   = 0x10,1
+| jugLimit      = 10x2,20x9
+| atkRange      = 0.956 (1st)
+| notes         = On block, gets +1 hit vs. tall standing characters, and -1 hit vs. crouching characters (affects block data, chip, meter gain, etc.); cannot anti-air cross-ups; travels fullscreen
+}}
+
+===== 236HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236hp | moveType = Special
+| input         = 236HP
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236hp.png
+| hitboxes      = SF6_Rashid_236hp_hitbox.png
+| damage        = 100x5,700 (1200)
+| chip          = 25
+| startup       = 6
+| active        = 2(2)3(3)3(4)<br>3(4)3(4)3
+| recovery      = 24+14 land
+| total         = 77
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +33
+| blockAdv      = {{sf6-adv|VM|-55}}
+| punishAdv     = KD +33
+| perfParryAdv  = {{sf6-adv|VM|-70}}
+| blockstun     = 17
+| hitstop       = 3x5,10
+| driveDmgBlk   = 5000
+| driveDmgHit   = [5000]
+| driveGain     = 200x5,1000 (200)
+| superGainHit  = 100x5,500 (70x5,350)
+| superGainBlk  = 50 (25)
+| invuln        = 6-12 Air, 8-10 Throw
+| airborne      = 8-63 (FKD)
+| jugStart      = 1x5,5
+| jugIncrease   = 0x5,99
+| jugLimit      = 5x5,7
+| atkRange      = 0.98 (1st)
+| notes         = Good anti-air that can hit cross-ups; can be affected by Air Current on frames 2-5; if the final hit whiffs as an anti-air, Rashid can get a follow-up juggle
+}}
+====== 236HP (Air Current) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236hp_enhanced | moveType = Special
+| input         = 236HP (Air Current)
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236hp.png
+| hitboxes      = SF6_Rashid_236hp_hitbox.png
+| damage        = 125x8,800 (1800)
+| chip          = 31
+| startup       = 5
+| active        = 2(2)3(3)3(4)3(3)<br>3(2)3(2)3(2)3(3)3
+| recovery      = 39+14 land
+| total         = 104
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +27
+| blockAdv      = {{sf6-adv|VM|-83}}
+| punishAdv     = KD +27
+| perfParryAdv  = {{sf6-adv|VM|-98}}
+| blockstun     = 17
+| hitstop       = 2x8,10
+| driveDmgBlk   = 5000
+| driveDmgHit   = [5000]
+| driveGain     = 200x8,1000 (200)
+| superGainHit  = 110x8,120 (77x8,84)
+| superGainBlk  = 55 (27)
+| invuln        = 5-11 Air, 7-9 Throw
+| airborne      = 7-90 (FKD)
+| jugStart      = 1x8,5
+| jugIncrease   = 0x8,99
+| jugLimit      = 10x9
+| atkRange      = 0.98 (1st)
+| notes         = Good anti-air that can hit cross-ups
+}}
+
+===== 236PP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236pp | moveType = Special
+| input         = 236PP
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236pp.png
+| hitboxes      = SF6_Rashid_236pp_hitbox_1.png, SF6_Rashid_236pp_hitbox_2.png
+| damage        = 300x2,100x6,200 (1400)
+| chip          = 75x2,25 (150~175)
+| dmgScaling    = 20% Starter
+| startup       = 6
+| active        = 1,2(2)3(2)4(2)<br>4(2)4(2)4(2)4(2)3
+| recovery      = 38+24 land<br>(34+20 land oB)
+| total         = 110(77)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +9
+| blockAdv      = {{sf6-adv|VM|-53}}
+| punishAdv     = KD +9
+| perfParryAdv  = {{sf6-adv|VM|-70}}
+| blockstun     = 19
+| hitstop       = 4,4,2x6,4
+| driveDmgBlk   = 2500x2
+| driveGain     = -20000
+| superGainHit  = 100x8,200 (70x8,140)
+| superGainBlk  = 50x2 (25x2)
+| invuln        = 1-8 Full, 9-13 Air
+| airborne      = 10-86 (FKD)
+| jugStart      = 1x8,99
+| jugIncrease   = 0x8,99
+| jugLimit      = 10x2,20x7
+| atkRange      = 0.956 (1st)
+| notes         = Shorter animation with less landing recovery on block only; cannot anti-air cross-ups; can only hit twice vs. grounded opponents (will not break DI armor); 5f extra knockdown advantage if the final hit whiffs (keeps Rashid safe); can be affected by Air Current on frames 2-8
+}}
+====== 236PP (Air Current)======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236pp_enhanced | moveType = Special
+| input         = 236PP (Air Current)
+| name          = Spinning Mixer
+| images        = SF6_Rashid_236pp.png
+| hitboxes      = SF6_Rashid_236pp_air_hitbox.png
+| damage        = 200x2,100x8,200 (1400)
+| chip          = 50x2,25x4 (200)
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 1,2(2)3(2)4(2)4(2)<br>4(2)4(2)4(2)4(2)4
+| recovery      = 36+24 land
+| total         = 119
+| guard         = LH
+| cancel        = Sp* (air)
+| hitconfirm    = 99 oH / 83 oB
+| hitAdv        = KD +42
+| blockAdv      = {{sf6-adv|VM|-77(-89)}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-91(-107)}}
+| blockstun     = 39(27)
+| hitstop       = 4,4,2x8,8
+| driveDmgBlk   = 1250x6
+| driveGain     = -20000
+| superGainHit  = 100x2,50x9 (70x2,35x9)
+| superGainBlk  = 100x2,50x4 (50x2,25x4)
+| invuln        = 1-6 Full
+| airborne      = 8-95 (FKD)
+| jugStart      = 1x2,0x8,1
+| jugIncrease   = 0x10,1
+| jugLimit      = 10x2,20x9
+| atkRange      = 0.956 (1st)
+| notes         = Cannot anti-air cross-ups; 12f worse advantage and 2 fewer hits when crouch blocked; on hit or block, Rashid can cancel into j.214K on frames 67-71 after the active period
+}}
+
+=== Eagle Spike ===
+===== 214LK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214lk | moveType = Special
+| input         = 214LK
+| name          = Eagle Spike
+| images        = SF6_Rashid_214lk.png
+| hitboxes      = SF6_Rashid_214lk_hitbox.png
+| damage        = 1100
+| chip          = 275
+| startup       = 15
+| active        = 13
+| recovery      = 11+20 land<br>(19+32 land oB)
+| total         = 58
+| guard         = LH
+| cancel        = SA3 (hit)
+| hitconfirm    = 37 SA
+| hitAdv        = KD +30(+42)
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +30(+42)
+| perfParryAdv  = {{sf6-adv|VM|-50}}
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| airborne      = 9-38 (FKD)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 4
+| atkRange      = 2.723 (1.298)
+| notes         = Puts opponent into limited juggle state on hit (can lead to follow-up juggles if well spaced); on block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); on hit, Rashid gets better KD Advantage on later active frames; can be affected by Air Current on frames 4-14; SA3 cancel occurs on hit only, allowing it to be freely buffered for extra damage
+}}
+====== 214LK (Air Current) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214lk_enhanced | moveType = Special
+| input         = 214LK (Air Current)
+| name          = Eagle Spike (Air Current)
+| images        = SF6_Rashid_214lk_air.png
+| hitboxes      = SF6_Rashid_214lk_hitbox.png
+| damage        = 1300
+| chip          = 325
+| startup       = 14
+| active        = 13
+| recovery      = 11+22 land<br>(19+20 land oB)
+| total         = 59
+| guard         = LH
+| cancel        = SA3 (hit)
+| hitconfirm    = 38 SA
+| hitAdv        = KD +35(+47)
+| blockAdv      = {{sf6-adv|VM|-24}}
+| punishAdv     = KD +35(+47)
+| perfParryAdv  = {{sf6-adv|VM|-38}}
+| blockstun     = 16
+| hitstop       = 12
+| driveDmgBlk   = 5000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| airborne      = 8-37 (FKD)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 4
+| atkRange      = 4.318 (1.873)
+| notes         = Puts opponent into limited juggle state on hit; on block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); on hit, Rashid gets better KD Advantage on later active frames; SA3 cancel occurs on hit only, allowing it to be freely buffered for extra damage
+}}
+
+===== 214MK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214mk | moveType = Special
+| input         = 214MK
+| name          = Eagle Spike 
+| images        = SF6_Rashid_214mk.png
+| hitboxes      = SF6_Rashid_214mk_hitbox.png
+| damage        = 1300
+| chip          = 325
+| startup       = 21
+| active        = 13
+| recovery      = 5+21 land<br>(22+33 land oB)
+| total         = 59
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +52(+64)
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +52(+64)
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1100 (770)
+| superGainBlk  = 550 (275)
+| airborne      = 12-38 (FKD)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 2
+| atkRange      = 4.067 (1.752)
+| notes         = Puts opponent into limited juggle state on hit; on block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); on hit, Rashid gets better KD Advantage on later active frames; opponent slides on the ground for great corner carry; can be affected by Air Current on frames 6-27
+}}
+====== 214MK (Air Current) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214mk_enhanced | moveType = Special
+| input         = 214MK (Air Current)
+| name          = Eagle Spike (Air Current)
+| images        = SF6_Rashid_214mk_air.png
+| hitboxes      = SF6_Rashid_214mk_hitbox.png
+| damage        = 1500
+| chip          = 375
+| startup       = 17
+| active        = 15
+| recovery      = 5+45 land<br>(22+12 land oH/oB)
+| total         = 81
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +59
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +113 Tumble
+| perfParryAdv  = {{sf6-adv|VM|-33}}
+| blockstun     = 20
+| hitstop       = 15(19)
+| driveDmgBlk   = 8000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = 8-36 (FKD)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 2
+| atkRange      = 5.13 (1.63)
+| notes         = Functions identically to enhanced 214HK; puts opponent into limited juggle state on hit; on hit/block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); opponent slides on the ground for great corner carry; Punish Counter tumble allows for a follow-up 214K for even more damage and corner carry
+}}
+
+===== 214HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214hk | moveType = Special
+| input         = 214HK
+| name          = Eagle Spike
+| images        = SF6_Rashid_214hk.png
+| hitboxes      = SF6_Rashid_214mk_hitbox.png
+| damage        = 1500
+| chip          = 375
+| startup       = 26
+| active        = 13
+| recovery      = 6+21 land<br>(22+33 land oB)
+| total         = 65
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +56(+68)
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +56(+68)
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 20
+| hitstop       = 15(19)
+| driveDmgBlk   = 8000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = 15-44 (FKD)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 2
+| atkRange      = 5.379 (2.296)
+| notes         = Puts opponent into limited juggle state on hit; on block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); on hit, Rashid gets better KD Advantage on later active frames; opponent slides on the ground for great corner carry; can be affected by Air Current on frames 6-30
+}}
+====== 214HK (Air Current) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214hk_enhanced | moveType = Special
+| input         = 214HK (Air Current)
+| name          = Eagle Spike (Air Current)
+| images        = SF6_Rashid_214hk.png
+| hitboxes      = SF6_Rashid_214mk_hitbox.png
+| damage        = 1500
+| chip          = 375
+| startup       = 17
+| active        = 15
+| recovery      = 5+45 land<br>(22+12 land oH/oB)
+| total         = 81
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +59
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +113 Tumble
+| perfParryAdv  = {{sf6-adv|VM|-33}}
+| blockstun     = 20
+| hitstop       = 15(19)
+| driveDmgBlk   = 8000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = 8-36 (FKD)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 2
+| atkRange      = 5.13 (1.63)
+| notes         = Functions identically to enhanced 214MK; puts opponent into limited juggle state on hit; on hit/block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); opponent slides on the ground for great corner carry; Punish Counter tumble allows for a follow-up 214K for even more damage and corner carry
+}}
+
+===== 214KK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214kk | moveType = Special
+| input         = 214KK
+| name          = Eagle Spike
+| images        = SF6_Rashid_214kk.png
+| hitboxes      = SF6_Rashid_214mk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| dmgScaling    = Combo (2 hits)
+| startup       = 21
+| active        = 13
+| recovery      = 7+19 land<br>(22+33 land oB)
+| total         = 59
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +53(+65)
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +53(+65)
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 20
+| hitstop       = 15(18)
+| driveDmgBlk   = 8000
+| driveDmgHit   = [8000]
+| driveGain     = -20000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| airborne      = 12-40 (FKD)
+| jugStart      = 4
+| jugIncrease   = 4
+| jugLimit      = 4
+| atkRange      = 4.959 (2.236)
+| notes         = Puts opponent into limited juggle state on hit and side switches if the opponent is not cornered; on block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); on hit, Rashid gets better KD Advantage on later active frames; can be affected by Air Current on frames 6-29
+}}
+====== 214KK (Air Current)======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214kk_enhanced | moveType = Special
+| input         = 214KK (Air Current)
+| name          = Eagle Spike (Air Current)
+| images        = SF6_Rashid_214kk.png
+| hitboxes      = SF6_Rashid_214mk_hitbox.png
+| damage        = 1300
+| chip          = 325
+| startup       = 18
+| active        = 14
+| recovery      = 7+15 land<br>(22+21 land oB)
+| total         = 53
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +53(+65)
+| blockAdv      = {{sf6-adv|VM|-24}}
+| punishAdv     = KD +53(+65)
+| perfParryAdv  = {{sf6-adv|VM|-42}}
+| blockstun     = 20
+| hitstop       = 15(18)
+| driveDmgBlk   = 8000
+| driveDmgHit   = [8000]
+| driveGain     = -20000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| invuln        = 7-37 Projectile
+| airborne      = 9-37 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| atkRange      = 5.657 (2.486)
+| notes         = Puts opponent into limited juggle state on hit and side switches if the opponent is not cornered; on block, bounces off opponent with extra recovery (frame advantage unaffected by which active frame connects); on hit, Rashid gets better KD Advantage on later active frames
+}}
+
+=== Whirlwind Shot ===
+===== 236K =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236k | moveType = Special
+| input         = 236K
+| name          = Whirlwind Shot
+| images        = SF6_Rashid_236k.png
+| hitboxes      = SF6_Rashid_236k_hitbox_1.png, SF6_Rashid_236k_hitbox_2.png
+| damage        = 600
+| chip          = 150
+| startup       = 11+6
+| active        = -
+| recovery      = 35
+| total         = 52
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|M|-1}}
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = {{sf6-adv|P|+3}}
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| hitstun       = 35
+| blockstun     = 27
+| hitstop       = (9)
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 5
+| projSpeed     = 0.03 (1-2f) / 0.1 LK / 0.07 MK / 0.04 HK
+| notes         = 1-hit projectile that travels forward before arcing upward; can hold button to charge for a powered-up version; trajectory depends on button strength (LK = farthest/horizontal, MK = middle, HK = shortest/vertical); projectile comes out in 6f if button is released from frames 11-27 (total startup 17-33f); cannot use if SA2 is active
+}}
+
+====== 236{K} ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236k_partial_hold | moveType = Special
+| input         = 236{K}
+| name          = Whirlwind Shot (Partial Hold)
+| images        = SF6_Rashid_236k_hold.png
+| hitboxes      = SF6_Rashid_236k_hitbox_1.png, SF6_Rashid_236k_hitbox_2.png
+| damage        = 600,300
+| chip          = 150,75
+| startup       = 28+6
+| active        = -
+| recovery      = 35
+| total         = 69(88)
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|E|0}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| hitstun       = 41 total
+| blockstun     = 36 total
+| hitstop       = (9,9)
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = [1500x2]
+| driveGain     = 500x2
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1 air
+| jugIncrease   = 2,0
+| jugLimit      = 4,7
+| projSpeed     = 0.03 (1-2f) / 0.1 LK / 0.07 MK / 0.04 HK
+| notes         = 2-hit projectile; trajectory depends on button strength (LK = farthest/horizontal, MK = middle, HK = shortest/vertical); must hold button 28f; counter-hit/Punish Counter bonus advantage applies to both hits; projectile comes out in 6f if button is released from frames 28-47 (total startup 34-53f); cannot use if SA2 is active
+}}
+
+====== 236[K] ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236k_hold | moveType = Special
+| input         = 236[K]
+| name          = Whirlwind Shot (Hold)
+| images        = SF6_Rashid_236k_hold.png
+| hitboxes      = SF6_Rashid_236k_hitbox_1.png, SF6_Rashid_236k_hitbox_2.png
+| damage        = 400x2,200
+| chip          = 100x2,50
+| startup       = 53
+| active        = -
+| recovery      = 35
+| total         = 88
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 9
+| hitAdv        = {{sf6-adv|VP|+16}}
+| blockAdv      = {{sf6-adv|VP|+8}}
+| punishAdv     = {{sf6-adv|VP|+20}}
+| perfParryAdv  = {{sf6-adv|M|-3}}
+| hitstun       = 52 total
+| blockstun     = 44 total
+| hitstop       = (9,9,8)
+| driveDmgBlk   = 800x2,900
+| driveDmgHit   = [1000x3]
+| driveGain     = 300x2,400
+| superGainHit  = 200x3 (140x3)
+| superGainBlk  = 100x3 (50x3)
+| jugStart      = 1 air
+| jugIncrease   = 1,0,0
+| jugLimit      = 5,7,7
+| projSpeed     = 0.03 (1-2f) / 0.1 LK / 0.07 MK / 0.04 HK
+| notes         = 3-hit projectile; trajectory depends on button strength (LK = farthest/horizontal, MK = middle, HK = shortest/vertical); must hold button 48f for fully charged version; counter-hit/Punish Counter bonus advantage applies to all hits; creates Air Current effect on frame 51 next to Rashid that lasts 60f and enhances many of his moves; cannot use if SA2 is active
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236kk | moveType = Special
+| input         = 236KK
+| name          = Whirlwind Shot
+| images        = SF6_Rashid_236kk.png
+| hitboxes      = SF6_Rashid_236kk_hitbox_1.png, SF6_Rashid_236kk_hitbox_2.png
+| damage        = 300,400
+| chip          = 75,100
+| dmgScaling    = 25% Starter; Combo (extra 15%)
+| startup       = 17
+| active        = -
+| recovery      = 35
+| total         = 52
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 12
+| hitAdv        = KD +49
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +49
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| blockstun     = 34 total
+| hitstop       = (7,7)
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = [1500x2]
+| driveGain     = -20000
+| superGainHit  = 400,200 (280,140)
+| superGainBlk  = 200,100 (100,50)
+| jugStart      = 0,2
+| jugIncrease   = 1,1
+| jugLimit      = 2,7
+| projSpeed     = 0.03 (1-2f) / 0.09 (3f~)
+| notes         = 2-hit OD projectile; 2nd hit puts opponent into limited juggle state on hit; travels fullscreen; hitbox is low to the ground, making many low-profile anti-projectile moves ineffective; projectile comes out in 6f if button is released from frames 11-34 (total startup 17-40f); cannot use if SA2 is active
+}}
+
+====== 236[KK] ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236kk_hold | moveType = Special
+| input         = 236[KK]
+| name          = Whirlwind Shot (Hold)
+| images        = SF6_Rashid_236kk_hold.png
+| hitboxes      = SF6_Rashid_236kk_hitbox_1.png, SF6_Rashid_236kk_hitbox_2.png
+| damage        = 400x3
+| chip          = 100x3
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 38
+| active        = -
+| recovery      = 35
+| total         = 73
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 12
+| hitAdv        = KD +65
+| blockAdv      = {{sf6-adv|VP|+10}}
+| punishAdv     = KD +65
+| perfParryAdv  = {{sf6-adv|M|-3}}
+| blockstun     = 46 total
+| hitstop       = (7,7,8)
+| driveDmgBlk   = 800x2,900
+| driveDmgHit   = [1000x3]
+| driveGain     = -20000
+| superGainHit  = 200x3 (140x3)
+| superGainBlk  = 100,200,100 (50,100,50)
+| jugStart      = 1
+| jugIncrease   = 0,0,1
+| jugLimit      = 3,3,3
+| projSpeed     = 0.03 (1-2f) / 0.09 (3f~)
+| notes         = 3-hit OD projectile; 3rd hit puts opponent into limited juggle state on hit; must hold button 32f for fully charged version; travels fullscreen; cancelable into Wing Stroke (4K) and Rolling Assault (6K) follow-ups on frame 55 (can be buffered on frame 37 onward); cancel into Roll is -4 oB from point blank but massively plus on block from farther away; hitbox is low to the ground, making many low-profile anti-projectile moves ineffective; creates Air Current effect on frame 38 next to Rashid that lasts 70f and enhances many of his moves; cannot use if SA2 is active
+}}
+
+=== Arabian Cyclone ===
+===== 214LP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214lp | moveType = Special
+| input         = 214LP
+| name          = Arabian Cyclone
+| images        = SF6_Rashid_214lp.png, SF6_Rashid_214lp_2.png
+| hitboxes      = SF6_Rashid_214p_hitbox_1.png, SF6_Rashid_214p_hitbox_2.png
+| damage        = 400x2
+| chip          = 150,50
+| startup       = 15
+| active        = 3(1)15
+| recovery      = 28(14)
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 20
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-27(-13)}}
+| hitstun       = 35 total / 31 tornado
+| blockstun     = 27 total / 23 tornado
+| hitstop       = 8 / 9(7) tornado
+| driveDmgBlk   = 3000,1000
+| driveDmgHit   = [5000,3000]
+| driveGain     = 1000x2
+| superGainHit  = 400,200 (280,140)
+| superGainBlk  = 200,100 (100,50)
+| invuln        = 15-17 Projectile (Leg)
+| jugStart      = 1,1 air
+| jugIncrease   = 3,1
+| jugLimit      = 4,5
+| atkRange      = 1.561 (1.50)
+| notes         = Strike hitbox; spawns a tornado with 1 hit of projectile durability; cancelable into 4K Wing Stroke or 6K Rolling Assault on frames 21-22; Counter-hit/Punish Counter bonus advantage applies to both hits; high active frame count makes it great for oki; 28f recovery is total time after the tornado spawns; 14f recovery is total time after tornado disappears; advantage when canceled into 6K Roll: {{sf6-adv|VM|-5}}/{{sf6-adv|VM|-13}}
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214mp | moveType = Special
+| input         = 214MP
+| name          = Arabian Cyclone
+| images        = SF6_Rashid_214mp.png
+| hitboxes      = SF6_Rashid_214p_hitbox_1.png, SF6_Rashid_214p_hitbox_2.png
+| damage        = 400,500
+| chip          = 175,50
+| startup       = 20
+| active        = 3(1)15
+| recovery      = 26(12)
+| total         = 50
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 19
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-25(-11)}}
+| hitstun       = 35 total / 31 tornado
+| blockstun     = 27 total / 23 tornado
+| hitstop       = 8 / 9(7) tornado
+| driveDmgBlk   = 4000,1000
+| driveDmgHit   = [5000,3000]
+| driveGain     = 1000x2
+| superGainHit  = 400,200 (280,140)
+| superGainBlk  = 200,100 (100,50)
+| invuln        = 20-22 Projectile (Leg)
+| jugStart      = 1,1 air
+| jugIncrease   = 3,1
+| jugLimit      = 4,5
+| atkRange      = 1.561 (1.50)
+| notes         = Strike hitbox; spawns a tornado with 1 hit of projectile durability; cancelable into 4K Wing Stroke or 6K Rolling Assault on frames 26-27; Counter-hit/Punish Counter bonus advantage applies to both hits; high active frame count makes it great for oki; in the corner, Rashid can consistently link 5LK on hit; 26f recovery is total time after the tornado spawns; 12f recovery is total time after tornado disappears; safe against Drive Reversal if the opponent blocks the 2nd hit; advantage when canceled into 6K Roll: {{sf6-adv|VM|-5}}/{{sf6-adv|VM|-13}}
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214hp | moveType = Special
+| input         = 214HP
+| name          = Arabian Cyclone
+| images        = SF6_Rashid_214hp.png
+| hitboxes      = SF6_Rashid_214p_hitbox_1.png, SF6_Rashid_214p_hitbox_2.png
+| damage        = 400,300x2
+| chip          = 200,25x2
+| startup       = 27
+| active        = 3(1)15
+| recovery      = 29(24)
+| total         = 69
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 19
+| hitAdv        = KD +40
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +40
+| perfParryAdv  = {{sf6-adv|VM|-41(-17)}}
+| hitstun       = 8,29 tornado
+| blockstun     = 41 total / 8,29 tornado
+| hitstop       = 8 / 6,8(9,9) tornado
+| driveDmgBlk   = 5000,500x2
+| driveDmgHit   = [5000,1500x2]
+| driveGain     = 1000,500x2
+| superGainHit  = 400,100x2 (280,70x2)
+| superGainBlk  = 200,50x2 (100,25x2)
+| invuln        = 27-29 Projectile (Leg)
+| jugStart      = 5 ground / 1,1,1 air
+| jugIncrease   = 1,1,3
+| jugLimit      = 1,5,5
+| atkRange      = 1.593 (1.515)
+| notes         = Strike hitbox; spawns a tornado with 2 hits of projectile durability; first hit puts opponent into limited juggle state; the 2-hit tornado does not cause a knockdown on its own, and carries Counter-hit/Punish Counter advantage through both hits if it connects; cancelable into 4K Wing Stroke or 6K Rolling Assault on frames 33-34; high active frame count makes it great for oki; 29f recovery is total time after the tornado's 2nd hit occurs; 24f recovery is total time after tornado disappears; advantage when canceled into 6K Roll: KD+43/{{sf6-adv|P|+1}}
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214pp | moveType = Special
+| input         = 214PP
+| name          = Arabian Cyclone
+| images        = SF6_Rashid_214pp.png
+| hitboxes      = SF6_Rashid_214p_hitbox_1.png, SF6_Rashid_214p_hitbox_2.png
+| damage        = 400x2
+| chip          = 100x2
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 20
+| active        = 3(1)29
+| recovery      = 25(29)
+| total         = 49(53)
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 21
+| hitAdv        = KD +49
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = KD +49
+| perfParryAdv  = {{sf6-adv|VM|-28}}{{sf6-adv|P|(+1)}}
+| hitstun       = 24 tornado
+| blockstun     = 24 total / 20 tornado
+| hitstop       = 8,(4)
+| driveDmgBlk   = 5000,1000
+| driveDmgHit   = [5000,1500]
+| driveGain     = -20000
+| superGainHit  = 400,200 (280,140)
+| superGainBlk  = 200,100 (100,50)
+| invuln        = 20-22 Projectile (Leg)
+| jugStart      = 1,0
+| jugIncrease   = 1,1
+| jugLimit      = 1,6
+| atkRange      = 1.953 (1.892)
+| notes         = Strike hitbox (making it vulnerable to opponent's wakeup SA1); spawns a tornado with 1 hit of OD projectile durability; first hit puts opponent into limited juggle state; the tornado does not cause a knockdown on its own; cancelable into 4K Wing Stroke or 6K Rolling Assault on frames 26-27; creates an Air Current on frame 53 (after the first tornado dissipates) that lasts 60f and enhances many of Rashid's moves; 4f extra recovery on block; the listed recovery time begins after the tornado's first active frame (Rashid recovers before the tornado disappears); advantage when canceled into 6K Roll: KD+39/{{sf6-adv|VM|-16}}
+}}
+
+=== Wing Stroke ===
+===== 214P~4K =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214p_4k | moveType = Special
+| input         = 214P~4K
+| name          = Wing Stroke
+| images        = SF6_Rashid_214p_4k.png
+| hitboxes      = SF6_Rashid_214p_4k_hitbox.png
+| damage        = -
+| startup       = 32
+| active        = -
+| recovery      = 6 land
+| total         = 67
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = 22-61 (FKD)
+| notes         = Cancelable into air normals/specials on frames 32-51; can be affected by Air Current on frames 23-47; 6f landing recovery occurs if no air move is used
+}}
+
+=== Rolling Assault ===
+===== 214P~6K =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214p_6k | moveType = Special
+| input         = 214P~6K
+| name          = Rolling Assault
+| images        = SF6_Rashid_214p_6k.png
+| hitboxes      = SF6_Rashid_214p_6k_hitbox.png
+| damage        = -
+| startup       = -
+| active        = -
+| recovery      = 33
+| total         = 33
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 5-30 Upper Body Projectile
+| notes         = Crouching state 6-33f; cancelable into Nail Assault follow-up on frames 17-20; can be affected by Air Current on frames 8-25; can roll under most projectiles (loses to low ones like Juri 236LK or Rashid 236KK); Hit/Block Advantage after 214P connects: 214LP/214MP {{sf6-adv|VM|-5/-13}}; 214HP KD+43/{{sf6-adv|P|+1}}; 214PP KD+39/{{sf6-adv|VM|-16}}
+}}
+
+=== Nail Assault ===
+===== 214P~6K~K =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214p_6k_k | moveType = Special
+| input         = 214P~6K~K
+| name          = Nail Assault
+| images        = SF6_Rashid_214p_6k_k.png
+| hitboxes      = SF6_Rashid_214p_6k_k_hitbox.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = 20% Starter
+| startup       = 17
+| active        = 3
+| recovery      = 26
+| total         = 45
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 16
+| hitAdv        = KD +44
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = KD +44
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 20
+| hitstop       = 12
+| driveDmgBlk   = 5000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| invuln        = 1-19 Upper Body Projectile
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.811
+| notes         = Puts opponent into limited juggle state; crouching state for entire move duration; cannot hit cross-ups behind Rashid; outside of juggles, only combos naturally from 214HP/214PP versions
+}}
+
+=== Arabian Skyhigh ===
+===== j.214LK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_j214lk | moveType = Special
+| input         = j.214LK
+| name          = Arabian Skyhigh
+| images        = SF6_Rashid_j214lk.png, SF6_Rashid_j214lk_2.png
+| hitboxes      = SF6_Rashid_j214k_hitbox_1.png, SF6_Rashid_j214k_hitbox_2.png
+| damage        = 600
+| chip          = 150
+| startup       = 13(14)
+| active        = 9
+| recovery      = 3 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +16(+18)~
+| blockAdv      = {{sf6-adv|VM|-32(-35)}}
+| punishAdv     = KD +16(+18)~
+| perfParryAdv  = {{sf6-adv|VM|-53(-51)}}
+| blockstun     = 20
+| hitstop       = 8
+| driveDmgBlk   = 4000
+| driveDmgHit   = [9000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| invuln        = 1-21 Projectile (Leg)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| notes         = From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle state on hit; has minimum height restriction (will not activate after low-height j.2HP); KD Advantage varies greatly based on the height it connects; performs a double-jump after the initial flip kick (shortest trajectory); can be affected by Air Current on frames 1-13
+}}
+
+===== j.214MK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_j214mk | moveType = Special
+| input         = j.214MK
+| name          = Arabian Skyhigh
+| images        = SF6_Rashid_j214mk.png
+| hitboxes      = SF6_Rashid_j214k_hitbox_1.png, SF6_Rashid_j214k_hitbox_2.png
+| damage        = 700
+| chip          = 175
+| startup       = 18(19)
+| active        = 9
+| recovery      = 3 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +18(+20)~
+| blockAdv      = {{sf6-adv|VM|-35(-38)}}
+| punishAdv     = KD +18(+20)~
+| perfParryAdv  = {{sf6-adv|VM|-56(-53)}}
+| blockstun     = 20
+| hitstop       = 8
+| driveDmgBlk   = 5000
+| driveDmgHit   = [9000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| invuln        = 1-26 Projectile (Leg)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| notes         = From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle state on hit; has minimum height restriction (will not activate after low-height j.2HP); KD Advantage varies greatly based on the height it connects; performs a double-jump after the initial flip kick (medium trajectory, similar to normal jump); can be affected by Air Current on frames 1-18
+}}
+
+===== j.214HK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_j214hk | moveType = Special
+| input         = j.214HK
+| name          = Arabian Skyhigh
+| images        = SF6_Rashid_j214hk.png
+| hitboxes      = SF6_Rashid_j214k_hitbox_1.png, SF6_Rashid_j214k_hitbox_2.png
+| damage        = 800
+| chip          = 200
+| startup       = 21(22)
+| active        = 9
+| recovery      = 3 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +20(+22)~
+| blockAdv      = {{sf6-adv|VM|-43(-46)}}
+| punishAdv     = KD +20(+22)~
+| perfParryAdv  = {{sf6-adv|VM|-63(-61)}}
+| blockstun     = 20
+| hitstop       = 8
+| driveDmgBlk   = 6000
+| driveDmgHit   = [9000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| invuln        = 1-29 Projectile (Leg)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| notes         = From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle state on hit; has minimum height restriction (will not activate after low-height j.2HP); KD Advantage varies greatly based on the height it connects; performs a double-jump after the initial flip kick (longest trajectory); can be affected by Air Current on frames 1-21
+}}
+
+===== j.214KK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_j214kk | moveType = Special
+| input         = j.214KK
+| name          = Arabian Skyhigh
+| images        = SF6_Rashid_j214kk.png
+| hitboxes      = SF6_Rashid_j214kk_hitbox_preview.png, SF6_Rashid_j214kk_hitbox_1.png, SF6_Rashid_j214kk_hitbox_2.png, SF6_Rashid_j214kk_hitbox_3.png
+| damage        = 1000,500
+| chip          = 250
+| startup       = 13(14)
+| active        = 9
+| recovery      = 3 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +34(+35)~
+| blockAdv      = {{sf6-adv|VM|-25(-29)}}
+| punishAdv     = KD +34(+35)~
+| perfParryAdv  = {{sf6-adv|VM|-47(-43)}}
+| blockstun     = 20
+| hitstop       = 8
+| driveDmgBlk   = 7000
+| driveDmgHit   = [4500x2]
+| driveGain     = -20000
+| superGainHit  = 800,200 (560,140)
+| superGainBlk  = 400 (200)
+| invuln        = 1-21 Projectile (Leg)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1,1
+| jugLimit      = 15,99
+| notes         = From forward jump or 6KK~KK only; 1st active frame can only connect in juggles; puts opponent into limited juggle OTG state on hit; has minimum height restriction (will not activate after low-height j.2HP); performs a double-jump after the initial flip kick; on hit, transitions into a follow-up divekick that is projectile invincible; can be affected by Air Current on frames 1-13
+}}
+
+== Super Arts ==
+===== 236236K =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236236k | moveType = Super
+| input         = 236236K
+| name          = Super Rashid Kick
+| images        = SF6_Rashid_236236k.png
+| hitboxes      = SF6_Rashid_236236k_hitbox.png
+| damage        = 2100(1800)
+| chip          = 500
+| dmgScaling    = 30% Minimum
+| startup       = 9
+| active        = 7
+| recovery      = 20+56 land<br>(33+42 land oB)
+| total         = 91
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +1(+7~14)
+| blockAdv      = {{sf6-adv|VM|-53}}
+| punishAdv     = KD +1(+7~14)
+| perfParryAdv  = {{sf6-adv|VM|-76}}
+| blockstun     = 25
+| hitstop       = 10
+| driveDmgBlk   = 2500
+| driveDmgHit   = 5000
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-15 Strike/Throw
+| armor         = Break
+| airborne      = 9-35 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 1.684 (1st)
+| notes         = Useful anti-air and combo/juggle tool; deals 300 less damage vs. airborne opponents with variable KD Advantage based on juggle height; grounded hit gives a cinematic that switches sides; bounces far away on block, but easily punished with dash or Drive Rush starter; listed recovery is on whiff/(block); only 500 damage on first hit if it trades
+}}
+
+===== 214214K =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_214214k | moveType = Super
+| input         = 214214K
+| name          = Ysaar
+| images        = SF6_Rashid_214214k.png
+| hitboxes      = SF6_Rashid_214214k_hitbox.png
+| damage        = 200x5
+| chip          = 80x5
+| dmgScaling    = 40% Minimum; Combo (2 hits)
+| startup       = 11
+| active        = [349]
+| recovery      = 22
+| total         = 33
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +104
+| blockAdv      = {{sf6-adv|VP|+33}}
+| punishAdv     = KD +104
+| perfParryAdv  = {{sf6-adv|VP|+32}}
+| blockstun     = 56 total
+| hitstop       = (7,7,7,7,8)
+| driveDmgBlk   = 1000x5
+| driveDmgHit   = 2000x5
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 0x5
+| jugLimit      = 99
+| projSpeed     = 0.01 (7f~) / after 214P: 0.06 (1-7f), 0.115 (8f~)
+| notes         = No invincibility; puts opponent into limited juggle state; spawns a 5-hit Super projectile tornado; travels fullscreen on its own, and Rashid can kick it with 214P to make it travel faster (can also kick tornado in the opposite direction after a side switch); tornado remains active even if it disappears off-screen; creates Air Current that lasts until 120f after Super dissipates (enhances many of Rashid's moves); listed KD Advantage is from point blank connect; cannot use 236K Whirlwind Shot while Super is active; cannot gain Super Art gauge while the projectile hitbox is active
+}}
+
+===== 236236P =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236236p | moveType = Super
+| input         = 236236P
+| name          = Altair
+| images        = SF6_Rashid_236236p.png
+| hitboxes      = SF6_Rashid_236236p_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 11
+| active        = 18
+| recovery      = 82
+| total         = 110
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +17
+| blockAdv      = {{sf6-adv|VM|-75}}
+| punishAdv     = HKD +17
+| perfParryAdv  = {{sf6-adv|VM|-98}}
+| blockstun     = 25
+| hitstop       = 6
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-15 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.746 (1.584)
+| notes         = Reaches about half screen; cinematic time regenerates ~1.8 Drive bars for Rashid; only deals 10 damage when trading with opponent's attack
+}}
+
+====== 236236P (CA) ======
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_236236p(ca) | moveType = Super
+| input         = 236236P
+| name          = Altair (CA)
+| images        = SF6_Rashid_236236p(ca).png
+| hitboxes      = SF6_Rashid_236236p_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 11
+| active        = 18
+| recovery      = 82
+| total         = 110
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +18
+| blockAdv      = {{sf6-adv|VM|-75}}
+| punishAdv     = HKD +18
+| perfParryAdv  = {{sf6-adv|VM|-98}}
+| blockstun     = 25
+| hitstop       = 6
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-15 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.746 (1.584)
+| notes         = Reaches about half screen; 1f better KD Advantage over non-CA version; available at 25% HP or below; cinematic time regenerates ~1.9 Drive bars for Rashid; only deals 10 damage when trading with opponent's attack
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Rashid_5pppkkk.png
+| hitboxes      = SF6_Rashid_5pppkkk_hitbox_1.png, SF6_Rashid_5pppkkk_hitbox_2.png
+| damage        = -
+| startup       = 534 (total)
+| active        = -
+| recovery      = -
+| total         = 534
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Do this... and this... and this. It's easy as pie."; hurtbox shifts as Rashid moves (lower body invuln frames 52-74, 83-107, 208-236; low profile 121-141, 169-186)
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Rashid_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 545 (total)
+| active        = -
+| recovery      = -
+| total         = 545
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Hmm? Hey look, just relax and have fun, alright?"
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Rashid | moveId = rashid_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Rashid_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 220 (total)
+| active        = -
+| recovery      = -
+| total         = 220
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Check this out! Now you try."
+}}
+
+
+{{Character Subnav SF6 | chara=Rashid }}
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category:Rashid]]

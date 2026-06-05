@@ -1,0 +1,2584 @@
+{{Character Subnav SF6 | chara=Kimberly }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Kimberly
+| name          = Kimberly
+| portrait      = SF6 Kimberly Portrait.png
+| icon          = SF6 Kimberly Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.0505 (0.0561)
+| bwdWalkSpd    = 0.033 (0.0366)
+| fwdDashSpd    = 18
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.409
+| bwdDashDist   = 0.893
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.817
+| dRushBlock    = 2.479
+| dRushMax      = 3.565
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Kimberly_5lp.png
+| hitboxes      = SF6_Kimberly_5lp_hitbox.png
+| damage        = 270
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 8
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA TC
+| hitconfirm    = 12
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|M|-2}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 15
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.97
+| rangeNotes    = Kimberly's shortest light punish, but links into 5HP on Punish Counter for stronger conversions
+| notes         = Chains into 5LP/2LP/2LK or into Bushin Prism Strikes; Run~Stop cancel: -8/-15 (OD: -5/-12)
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Kimberly_5mp.png
+| hitboxes      = SF6_Kimberly_5mp_hitbox.png
+| damage        = 540
+| startup       = 6
+| active        = 3
+| recovery      = 18
+| total         = 26
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+9}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 24
+| blockstun     = 19
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.169
+| notes         = Important combo tool with a Target Combo follow-up; Run~Stop cancel: +1/-4 (OD: +4/-1); collision box extends forward, allowing Kimberly to set up a tricky auto-shimmy with whiffed 5MP on a knocked down opponent; cancel into Run~Stop leaves Kim at +0 oB vs. Burnout (against reversal Super, sets up timing to kara cancel her next attack into Parry/Super)
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Kimberly_5hp.png
+| hitboxes      = SF6_Kimberly_5hp_hitbox.png
+| damage        = 630
+| startup       = 9
+| active        = 3
+| recovery      = 20
+| total         = 31
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17 {{sf6-adv|PC|(27 PC)}}
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+23 Stagger}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+16}}
+| DRcancelBlk   = {{sf6-adv|VP|+9}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 26
+| blockstun     = 19
+| hitstop       = 13 {{sf6-adv|PC|(25 PC)}}
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.41
+| notes         = In punishes, can cancel to Run~Stop or Teleport to maintain close position, then link into 5HK or 5HP; single hit confirmable, but will not combo to 236HP on the final cancel frame; Run~Stop cancel: +3/-4 (OD: +6/-1); can frame trap into meterless Arc Step; edge of hitbox is raised to make the attack more vulnerable to low-profile attacks; extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Kimberly_5lk.png
+| hitboxes      = SF6_Kimberly_5lk_hitbox.png
+| damage        = 270
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 11
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.20
+| notes         = Good range for a cancelable light normal; possible to chain 4 lights (2LP, 2LP, 5LP, 5LK) into 236LP/Super or into 214HK vs. standing; Run~Stop cancel: -8/-12 (OD: -5/-9)
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Kimberly_5mk.png
+| hitboxes      = SF6_Kimberly_5mk_hitbox.png
+| damage        = 540
+| dmgScaling    = 15% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 18
+| total         = 28
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 22
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.458
+| notes         = Most important normal in footsies, particularly canceled into Drive Rush; Run~Stop cancel: -1/-6 (OD: +2/-3)
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Kimberly_5hk.png
+| hitboxes      = SF6_Kimberly_5hk_hitbox.png
+| damage        = 630
+| startup       = 12
+| active        = 4
+| recovery      = 17
+| total         = 32
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+11}}
+| afterDRBlk    = {{sf6-adv|VP|+6}}
+| hitstun       = 28
+| blockstun     = 23
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.42 (1.363)
+| notes         = Whiffs vs. crouching opponents if not point blank unless they extend a vertical hurtbox; good combo and pressure starter; upper body is Air Invuln 10-15f (decent anti-air, but a little slow and cannot hit cross-up); the small hitbox on Kimberly's foot can only hit airborne opponents
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Kimberly_2lp.png
+| hitboxes      = SF6_Kimberly_2lp_hitbox.png
+| damage        = 270
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 7
+| total         = 13
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 14
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| pushbackHit   = 0.289
+| pushbackBlk   = 0.259
+| notes         = Chains into 5LP/2LP/2LK; Run~Stop cancel: -9/-14 (OD: -6/-11)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Kimberly_2mp.png
+| hitboxes      = SF6_Kimberly_2mp_hitbox.png
+| damage        = 500
+| startup       = 6
+| active        = 3
+| recovery      = 13(15)
+| total         = 21(23)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|VP|+11}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 23
+| blockstun     = 15
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1200
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.11
+| notes         = 2f extra recovery on whiff; important combo tool; Run~Stop cancel: -1/-9 (OD: +2/-6); special/DR cancel is delayed until after 2nd active frame; extends a hurtbox on whiff until the end of recovery (feet 6-23f, arm 6-15f with partial retraction 16-23f)
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Kimberly_2hp.png
+| hitboxes      = SF6_Kimberly_2hp_hitbox_preview.png, SF6_Kimberly_2hp_hitbox_1.png, SF6_Kimberly_2hp_hitbox_2.png
+| damage        = 720
+| startup       = 8
+| active        = 6
+| recovery      = 17
+| total         = 30
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 20
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+16}}
+| DRcancelBlk   = {{sf6-adv|VP|+11}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 26
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.62
+| notes         = Forces stand on hit; good anti-air but cannot hit cross-up; in Drive Rush juggles, opponent is kept high enough to connect instant j.236PP for a ground bounce; can be up to +8/+3 meaty; best button for Run pressure (cancel into Arc Step beats 4f light normals); Run~Stop cancel: +3/-2 (OD: +6/+1)
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Kimberly_2lk.png
+| hitboxes      = SF6_Kimberly_2lk_hitbox.png
+| damage        = 180
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 7
+| total         = 14
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 14
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.03
+| notes         = Chains into 5LP/2LP/2LK; slightly more pushback than other combo-starting lights, but can still chain 3 lights if starting point blank; can link to 5MP/2MP on Counter-hit or into 2HP out of close range Drive rush
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Kimberly_2mk.png
+| hitboxes      = SF6_Kimberly_2mk_hitbox.png
+| damage        = 540
+| dmgScaling    = 20% Starter
+| startup       = 7
+| active        = 3
+| recovery      = 16
+| total         = 25
+| guard         = L
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 24
+| blockstun     = 20
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1200
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.17
+| notes         = Non-cancelable, but can combo afterward and is a great option out of Drive Rush
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Water Kick
+| images        = SF6_Kimberly_2hk.png
+| hitboxes      = SF6_Kimberly_2hk_hitbox.png
+| damage        = 810
+| startup       = 8
+| active        = 3
+| recovery      = 24
+| total         = 34
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = HKD +43
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| afterDRHit    = KD +38
+| afterDRBlk    = {{sf6-adv|VM|-6}}
+| blockstun     = 17
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 1.52
+| rangeNotes    = Less range on active frames 2-3
+| notes         = Has some juggle potential; can be used in place of 236LP in some juggles for extra meter build and higher KD advantage
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Kimberly_jlp.png
+| hitboxes      = SF6_Kimberly_jlp_hitbox.png
+| damage        = 270
+| startup       = 4
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7(+9)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+11(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.75
+| notes         = Quick air-to-air
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Kimberly_jmp.png
+| hitboxes      = SF6_Kimberly_jmp_hitbox.png
+| damage        = 450
+| startup       = 6
+| active        = 4
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp SA2
+| hitAdv        = {{sf6-adv|VP|+11(+13)}}
+| blockAdv      = {{sf6-adv|VP|+7(+9)}}
+| punishAdv     = {{sf6-adv|VP|+15(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 4
+| jugIncrease   = 4
+| jugLimit      = 4
+| atkRange      = 0.90
+| notes         = Puts airborne opponents into limited juggle state; lower body projectile invuln 6-28f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Kimberly_jhp.png
+| hitboxes      = SF6_Kimberly_jhp_hitbox.png
+| damage        = 630
+| startup       = 8
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+16)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+13(+20)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 20
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 5
+| atkRange      = 0.68
+| notes         = Causes spike knockdown vs. airborne opponents; best hitbox for opponents directly below Kimberly; useful in juggles with 2 spraycans as it does not increase the opponent's juggle count; lower body projectile invuln 8-30f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Heavy Kick
+| images        = SF6_Kimberly_jlk.png
+| hitboxes      = SF6_Kimberly_jlk_hitbox.png
+| damage        = 270
+| startup       = 5
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard	        = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+9(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 2
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.55
+| notes         = Cross-up; can be used as a fuzzy instant overhead (vs. Blanka, will not work after perfect safe jump j.HP/j.HK timing, making it useless in corner spraycan setup)
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_jmk | moveType = air_normal
+| input         = j.MK
+| name	        = Jumping Medium Kick
+| images        = SF6_Kimberly_jmk.png
+| hitboxes      = SF6_Kimberly_jmk_hitbox.png
+| damage        = 540
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard	        = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+13)}}
+| blockAdv      = {{sf6-adv|VP|+4(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 2
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.06
+| notes         = Cross-up; lower body projectile invuln 7-30f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Kimberly_jhk.png
+| hitboxes      = SF6_Kimberly_jhk_hitbox.png
+| damage        = 630
+| startup       = 9
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard	        = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+16)}}
+| blockAdv      = {{sf6-adv|VP|+6(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+20)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 20
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 2
+| jugIncrease   = 5
+| jugLimit      = 5
+| atkRange      = 1.09
+| notes         = Great horizontal range and a good downward hitbox; useful for air resets after corner wallsplat into 6HK; lower body projectile invuln 9-35f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== j.2MP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_j2mp | moveType = air_normal
+| input         = j.2MP
+| name          = Elbow Drop
+| images        = SF6_Kimberly_j2mp.png
+| hitboxes      = SF6_Kimberly_j2mp_hitbox.png
+| damage        = 540
+| startup       = 13
+| active        = until land
+| recovery      = 8 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4(+8)}}
+| blockAdv      = {{sf6-adv|M|-3}}{{sf6-adv|P|(+1)}}
+| punishAdv     = {{sf6-adv|VP|+8(+12)}}
+| perfParryAdv  = {{sf6-adv|VM|-11(-7)}}
+| hitstun       = 17
+| blockstun     = 10
+| hitstop       = 13
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| atkRange      = 0.60
+| notes         = Can only be performed from Forward Jump; spike KD vs. airborne opponents; stops Kimberly's air momentum (useful for baiting anti-airs); maximum advantage is only possible when input at the latest possible timing (frame 30 of jump; otherwise, connects with 2nd to last active frame); minimum advantage is more likely to apply to tall standing characters, but is usually at least {{sf6-adv|VP|+5}}/{{sf6-adv|M|-2}}
+}}
+
+===== 3MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_3mk | moveType = ground_normal
+| input         = 3MK
+| name          = Water Slicer Slide
+| images        = SF6_Kimberly_3mk.png
+| hitboxes      = SF6_Kimberly_3mk_hitbox.png
+| damage        = 450
+| dmgScaling    = 15% Starter
+| startup       = 11
+| active        = 10
+| recovery      = 16
+| total         = 36
+| guard         = L
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| blockAdv      = {{sf6-adv|VM|-5}}{{sf6-adv|E|(0)}}
+| punishAdv     = {{sf6-adv|VP|+5(+10)}} / KD +37
+| perfParryAdv  = {{sf6-adv|VM|-24(-15)}}
+| afterDRHit    = {{sf6-adv|VP|+5(+10)}}
+| afterDRBlk    = {{sf6-adv|M|-1}}{{sf6-adv|VP|(+4)}}
+| hitstun       = 23
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| invuln        = 9-21 Upper Body Projectile
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.564 (2.027)
+| notes         = Low profile 9-21f (combined with upper body projectile invuln, great at avoiding projectiles); the large extended hurtbox above her leg is also projectile invuln (more susceptible to mid counter-pokes in neutral); if it connects in a free juggle, puts airborne opponents into limited juggle state; the first 4 active frames have a set recovery that locks the frame advantage to +1/-5, and also cause a knockdown on Punish Counter (does not apply to later active frames, allowing combo extensions after punishing projectiles)
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Windmill Kick
+| images        = SF6_Kimberly_4hk.png
+| hitboxes      = SF6_Kimberly_4hk_hitbox.png
+| damage        = 720
+| dmgScaling    = 25% Starter
+| startup       = 22
+| active        = 2
+| recovery      = 19
+| total         = 42
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 10
+| jugLimit      = 10
+| atkRange      = 1.195
+| notes         = Forces crouch on hit, making opponents wider for easier follow-up links; causes spike KD vs. airborne opponents; allows link to 2LP naturally, and 5MP link out of Drive Rush (DR momentum does not allow 2MP, 5MP or 2HP to reach opponent)
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Hisen Kick
+| images        = SF6_Kimberly_6hk.png
+| hitboxes      = SF6_Kimberly_6hk_hitbox.png
+| damage        = 720
+| dmgScaling    = 20% Starter
+| startup       = 27
+| active        = 3
+| recovery      = 3+18(10) land
+| total         = 50(42)
+| guard         = LH
+| cancel        = Jmp
+| hitconfirm    = 21 (hop)
+| hitAdv        = {{sf6-adv|P|+1(+2)}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+5(+6)}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| afterDRHit    = {{sf6-adv|VP|+5(+6)}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25(26)
+| blockstun     = 13
+| hitstop       = 17
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 3000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = 18-32 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| atkRange      = 2.923 (2.901)
+| notes         = Can hop over low pokes for a Punish Counter combo; puts airborne opponents into limited juggle state; can cancel into forward, neutral, or back jump on hit or block; 8f less recovery on block only; 1f more hitstun vs. crouching opponents; much shorter range on the final active frame
+}}
+
+====== 6HK~8 ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_6hk_8 | moveType = ground_normal
+| input         = 6HK~8
+| name          = Step Up (neutral hop)
+| images        = SF6_Kimberly_6hk_8.png
+| hitboxes      = SF6_Kimberly_6hk_8_hitbox.png
+| damage        = -
+| startup       = 20
+| active        = -
+| recovery      = 30+3
+| total         = 33
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VM|-10(-9)}}
+| blockAdv      = {{sf6-adv|VM|-22}}
+| punishAdv     = {{sf6-adv|VM|-6(-5)}}
+| airborne      = Until Land (FKD)
+| notes         = Startup refers to earliest frame that Kimberly can perform air follow-ups after Hop
+}}
+
+====== 6HK~9 ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_6hk_9 | moveType = ground_normal
+| input         = 6HK~9
+| name          = Step Up (forward hop)
+| images        = SF6_Kimberly_6hk_9.png
+| hitboxes      = SF6_Kimberly_6hk_9_hitbox.png
+| damage        = -
+| startup       = 20
+| active        = -
+| recovery      = 30+3
+| total         = 33
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VM|-10(-9)}}
+| blockAdv      = {{sf6-adv|VM|-22}}
+| punishAdv     = {{sf6-adv|VM|-6(-5)}}
+| airborne      = Until Land (FKD)
+| notes         = Crosses over the opponent; startup refers to earliest frame that Kimberly can perform air follow-ups after Hop
+}}
+
+====== 6HK~7 ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_6hk_7 | moveType = ground_normal
+| input         = 6HK~7
+| name          = Step Up (backward hop)
+| images        = SF6_Kimberly_6hk_7.png
+| hitboxes      = SF6_Kimberly_6hk_7_hitbox.png
+| damage        = -
+| startup       = 16
+| active        = -
+| recovery      = 30+3
+| total         = 33
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VM|-10(-9)}}
+| blockAdv      = {{sf6-adv|VM|-22}}
+| punishAdv     = {{sf6-adv|VM|-6(-5)}}
+| airborne      = Until Land (FKD)
+| notes         = Startup refers to earliest frame that Kimberly can perform air follow-ups after Hop
+}}
+
+== Target Combos == 
+===== 5LP~MP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp_mp | moveType = ground_normal
+| input         = 5LP~MP
+| name          = Bushin Prism Strikes 1
+| images        = SF6_Kimberly_5lp_mp.png
+| hitboxes      = SF6_Kimberly_5mp_hitbox.png
+| damage        = 360(288)
+| startup       = 6
+| active        = 3
+| recovery      = 18
+| total         = 26
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 29
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| hitstun       = 22
+| blockstun     = 15
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 800
+| superGainHit  = 400 (280)
+| superGainBlk  = 200 (100)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| notes         = () refers to scaled damage from 5LP combo starter; difficult for most characters to punish if well spaced (e.g. 2LP, 5LP, 5LP~MP)
+}}
+
+====== 5LP~MP~HP ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp_mp_hp | moveType = ground_normal
+| input         = 5LP~MP~HP
+| name          = Bushin Prism Strikes 2
+| images        = SF6_Kimberly_5lp_mp_hp.png
+| hitboxes      = SF6_Kimberly_5lp_mp_hp_hitbox.png
+| damage        = 440(308)
+| startup       = 12
+| active        = 2
+| recovery      = 25
+| total         = 38
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 50-51
+| hitAdv        = KD +47
+| blockAdv      = {{sf6-adv|VM|-10}}
+| blockstun     = 17
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveGain     = 1500
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| notes         = () refers to scaled damage from 5LP combo starter; puts opponent into limited juggle state; can juggle with Bushin Senpukyaku in the corner; gives strong KD Adv. for oki, such as Spray Can setups
+}}
+
+====== 5LP~MP~HP~HK ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp_mp_hp_hk | moveType = ground_normal
+| input         = 5LP~MP~HP~HK
+| name          = Bushin Prism Strikes 3
+| images        = SF6_Kimberly_5lp_mp_hp_hk.png
+| hitboxes      = SF6_Kimberly_5lp_mp_hp_hk_hitbox.png
+| damage        = 520(312)
+| startup       = 26
+| active        = 3
+| recovery      = 19(24)
+| total         = 47(52)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +49(+26)
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +26
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| blockstun     = 15
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| notes         = () refers to scaled damage from 5LP combo starter; 5f extra recovery on block; 10f gap between final 2 hits on block; airborne hit causes a small ground bounce that increases knockdown advantage, allowing for a spraycan setup (will always occur unless the first 3 hits are blocked before the final hit connects)
+}}
+
+====== 5LP~MP~2HP ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp_mp_2hp | moveType = ground_normal
+| input         = 5LP~MP~2HP
+| name          = Bushin Hellchain 1
+| images        = SF6_Kimberly_5lp_mp_2hp.png
+| hitboxes      = SF6_Kimberly_5lp_mp_2hp_hitbox.png
+| damage        = 580(406)
+| startup       = 10
+| active        = 2
+| recovery      = 25
+| total         = 36
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 50-51
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-10}}
+| hitstun       = 29
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveGain     = 1500
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| notes         = () refers to scaled damage from 5LP combo starter; useful against Drive Impacts, as this hit will land as a +4 counter-hit at point blank range; on hit, leaves Kimberly close for a strike/throw mixup
+}}
+
+====== 5LP~MP~2HP~HK ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp_mp_2hp_hk | moveType = ground_normal
+| input         = 5LP~MP~2HP~HK
+| name          = Bushin Hellchain 2
+| images        = SF6_Kimberly_5lp_mp_2hp_hk.png
+| hitboxes      = SF6_Kimberly_5lp_mp_2hp_hk_hitbox.png
+| damage        = 750(450)
+| startup       = 15
+| active        = 3
+| recovery      = 24
+| total         = 41
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +26(+45)
+| blockAdv      = {{sf6-adv|VM|-12}}
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveGain     = 1500
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| notes         = () refers to scaled damage from 5LP combo starter; knocks opponent far away on hit; true blockstring even at max delay; (better KD Adv. after a DR juggle, maintains limited juggle state)
+}}
+
+====== 5LP~MP~2HP~2HK ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5lp_mp_2hp_2hk | moveType = ground_normal
+| input         = 5LP~MP~2HP~2HK
+| name          = Bushin Hellchain Throw
+| images        = SF6_Kimberly_5lp_mp_2hp_2hk.png
+| hitboxes      = SF6_Kimberly_5lp_mp_2hp_2hk_hitbox.png
+| damage        = 750(450)
+| startup       = 15
+| active        = 3
+| recovery      = 23
+| total         = 40
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +16
+| blockAdv      = {{sf6-adv|VM|-12}}
+| blockstun     = 14
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveGain     = 1500
+| superGainHit  = 700 (490)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = () refers to scaled damage from 5LP combo starter; throws opponent backwards for a side switch; very useful when Kimberly is cornered; cannot hit airborne opponents; true blockstring even at max delay; leads to a 9f safejab setup with immediate DR~2LP
+}}
+
+===== 5MP~HP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_5mp_hp | moveType = ground_normal
+| input         = 5MP~HP
+| name          = Bushin Tiger Fangs
+| images        = SF6_Kimberly_5mp_hp.png
+| hitboxes      = SF6_Kimberly_5mp_hp_hitbox_preview.png, SF6_Kimberly_5mp_hp_hitbox_1.png, SF6_Kimberly_5mp_hp_hitbox_2.png
+| damage        = 360
+| startup       = 10
+| active        = 3
+| recovery      = 26
+| total         = 38
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 38-40
+| hitAdv        = KD +28
+| blockAdv      = {{sf6-adv|VM|-12}}
+| DRcancelHit   = KD +47
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| blockstun     = 17
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [8000]
+| driveGain     = 1500
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = Puts opponent into a limited juggle state; will not combo into 236HP; Run~Stop cancel: KD+34/-6 (OD: KD+37/-3)
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_lplk | moveType = throw
+| input         = LPLK
+| name          = Ripcord Throw
+| images        = SF6_Kimberly_lplk.png
+| hitboxes      = SF6_Kimberly_lplk_hitbox.png
+| damage        = 1082 (1838)
+| dmgScaling    = 20% Starter; 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +17
+| blockAdv      = -
+| punishAdv     = HKD +17
+| driveDmgHit   = [5000x2]
+| driveGain     = 1000x2
+| superGainHit  = 1000x2(700x2) {{sf6-adv|PC|[PC:2000x2]}}
+| jugStart      = 0,1
+| atkRange      = 0.80
+| notes         = Can walk forward for a strong manually-timed corner throw loop; starter scaling applies to Spraycan juggle follow-ups; damage distribution is 501,581 (PC: 700,1138) and only the first hit will apply damage when comboing into Spraycan; Punish Counter also splits Meter data into 2 equal hits (only deals +199 damage and 0.5 bars of Drive Damage on spraycan setups vs. Parry); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Bell Ringer
+| images        = SF6_Kimberly_4lplk.png
+| hitboxes      = SF6_Kimberly_lplk_hitbox.png
+| damage        = 1082 (1839)
+| dmgScaling    = 20% Starter; 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +8
+| blockAdv      = -
+| punishAdv     = HKD +8
+| driveDmgHit   = [5000x2]
+| driveGain     = 1000x2
+| superGainHit  = 1000x2(700x2) {{sf6-adv|PC|[PC:2000x2]}}
+| jugStart      = 0,1
+| atkRange      = 0.80
+| notes         = Side switches; no throw oki after back throwing opponent into corner, but can meaty with strikes; starter scaling applies to Spraycan juggle follow-ups (requires staggered 2x Spraycans, follow-up juggles very limited); damage distribution is 401,681 (PC: 451,1388) and only the first hit will apply damage when comboing into Spraycan; Punish Counter also splits Meter data into 2 equal hits (only deals +50 damage and 0.5 bars of Drive Damage on spraycan juggles); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_hphk | moveType = drive
+| input         = HPHK
+| name          = Steadfast Strike
+| images        = SF6_Kimberly_hphk.png
+| hitboxes      = SF6_Kimberly_hphk_hitbox.png
+| damage        = 720
+| chip          = 180
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.543
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Shapeless State (Block)
+| images        = SF6_Kimberly_6hphk.png
+| hitboxes      = SF6_Kimberly_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.51
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]]; SA3 install increases recoverable damage to 555
+}}
+
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Shapeless State (Recovery)
+| images        = SF6_Kimberly_6hphk.png
+| hitboxes      = SF6_Kimberly_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.51
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); SA3 install increases recoverable damage to 555; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Kimberly_mpmk.png
+| hitboxes      = SF6_Kimberly_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Kimberly_66.png
+| hitboxes      = SF6_Kimberly_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.817 (min/throw), 2.479 (min/block), 3.565 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Kimberly_66.png
+| hitboxes      = SF6_Kimberly_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Bushin Senpukyaku ===
+===== 214LK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214lk | moveType = special
+| input         = 214LK
+| name          = Bushin Senpukyaku
+| images        = SF6_Kimberly_214lk.png
+| hitboxes      = SF6_Kimberly_214lk_hitbox.png
+| damage        = 360,270,360 (990)
+| chip          = 90
+| startup       = 6
+| active        = 6(1)6(1)6(8)3
+| recovery      = 6+17 land
+| total         = 59
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-30}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-52}}
+| blockstun     = 24
+| hitstop       = 13 / 3,3,9(13)
+| driveDmgBlk   = 1000
+| driveDmgHit   = [5000]
+| driveGain     = 500x2,1000 (500)
+| superGainHit  = 250x2,500 (175x2,350)
+| superGainBlk  = 125 (62)
+| invuln        = 5-11 Air, 7-11 Throw, 7-42 Lower Body Projectile
+| airborne      = 7-42 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1/1/1
+| jugLimit      = 4/8/9
+| atkRange      = 0.95 (1st)
+| notes         = Cannot hit cross-up; if first hit (active frames 1-6) whiffs, still hits 3 times but the first hit only does 90 damage
+}}
+
+===== 214MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214mk | moveType = special
+| input         = 214MK
+| name          = Bushin Senpukyaku
+| images        = SF6_Kimberly_214mk.png
+| hitboxes      = SF6_Kimberly_214mk_hitbox.png
+| damage        = 360x3 (1080)
+| chip          = 90
+| startup       = 7
+| active        = 6(1)6(1)6(8)3
+| recovery      = 8+17 land
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +22
+| blockAdv      = {{sf6-adv|VM|-32}}
+| punishAdv     = KD +22
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 24
+| hitstop       = 13 / 3,3,9(13)
+| driveDmgBlk   = 1000
+| driveDmgHit   = [5000]
+| driveGain     = 500x2,1000 (500)
+| superGainHit  = 250x2,500 (175x2,350)
+| superGainBlk  = 125 (62)
+| invuln        = 6-12 Air, 8-12 Throw, 8-45 Lower Body Projectile
+| airborne      = 8-45 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1/1/1
+| jugLimit      = 4/8/9
+| atkRange      = 1.00 (1st)
+| notes         = Cannot hit cross-up; if first hit (active frames 1-6) whiffs, still hits 3 times but the first hit only does 90 damage
+}}
+
+===== 214HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214hk | moveType = special
+| input         = 214HK
+| name          = Bushin Senpukyaku
+| images        = SF6_Kimberly_214hk.png
+| hitboxes      = SF6_Kimberly_214hk_hitbox.png
+| damage        = 450,360x2 (1170)
+| chip          = 112
+| startup       = 8
+| active        = 6(1)6(1)6(8)3
+| recovery      = 11+17 land
+| total         = 66
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +21
+| blockAdv      = {{sf6-adv|VM|-35}}
+| punishAdv     = KD +21
+| perfParryAdv  = {{sf6-adv|VM|-57}}
+| blockstun     = 24
+| hitstop       = 13 / 3,3,9(13)
+| driveDmgBlk   = 1000
+| driveDmgHit   = [5000]
+| driveGain     = 500x2,1000 (500)
+| superGainHit  = 250x2,500 (175x2,350)
+| superGainBlk  = 125 (62)
+| invuln        = 7-13 Air, 9-13 Throw, 9-49 Lower Body Projectile
+| airborne      = 9-49 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1/1/1
+| jugLimit      = 4/8/9
+| atkRange      = 1.05 (1st)
+| notes         = Cannot hit cross-up; often too slow to work in juggles; if first hit (active frames 1-6) whiffs, still hits 3 times but the first hit only does 180 damage
+}}
+
+===== 214KK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214kk | moveType = special
+| input         = 214KK
+| name          = Bushin Senpukyaku
+| images        = SF6_Kimberly_214kk.png
+| hitboxes      = SF6_Kimberly_214hk_hitbox.png
+| damage        = 450,200x3,360 (1410)
+| chip          = 112
+| dmgScaling    = 30% Starter
+| startup       = 6
+| active        = 6(1)6(1)6(1)6(1)2
+| recovery      = 12+17 land
+| total         = 64
+| guard         = LH
+| cancel        = SA2 (4th)
+| hitconfirm    = 36 SA
+| hitAdv        = KD +21
+| blockAdv      = {{sf6-adv|VM|-40}}
+| punishAdv     = KD +21
+| perfParryAdv  = {{sf6-adv|VM|-57}}
+| blockstun     = 19
+| hitstop       = 13 / 2x4,9(13)
+| driveDmgBlk   = 1000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 200x4,400 (140x4,280)
+| superGainBlk  = 100 (50)
+| invuln        = 1-11 Air, 7-11 Throw, 7-47 Lower Body Projectile
+| airborne      = 7-47 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1/1/1/1/1
+| jugLimit      = 10/11/12/13/14
+| atkRange      = 1.05 (1st)
+| notes         = Cannot hit cross-up; higher juggle potential than other versions; other than SA2 cancel, starter scaling only occurs if Spraycan detonates immediately after first grounded hit, or after a high-connect 4-hit 214KK
+}}
+
+=== Aerial Bushin Senpukyaku ===
+===== j.214K =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_j214k | moveType = special
+| input         = j.214K
+| name          = Aerial Bushin Senpukyaku
+| images        = SF6_Kimberly_j214k.png
+| hitboxes      = SF6_Kimberly_j214k_hitbox.png
+| damage        = 225x2,450 (900)
+| chip          = 56x2,112
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 2(7)2(7)2
+| recovery      = 12 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4(+8)}}<br>(KD +38~42)
+| blockAdv      = {{sf6-adv|M|-1{{sf6-adv|VP|(+4)}}}}
+| punishAdv     = {{sf6-adv|VP|+8(+12)}}
+| perfParryAdv  = {{sf6-adv|VM|-16(-11)}}
+| hitstun       = 21
+| blockstun     = 17
+| hitstop       = 13 / 7,7,9(13)
+| driveDmgBlk   = 1000x2,2000
+| driveDmgHit   = [1700x2,1600]
+| driveGain     = 500x2,1000
+| superGainHit  = 250x2,500 (175x2,350)
+| superGainBlk  = 125x2,250 (62x2,125)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1/1/1
+| jugLimit      = 15/16/17
+| notes         = Only possible during forward jump or after 6HK Forward Hop; can be done immediately with Tiger Knee motion (2149K); inputting at the end of Kimberly's jump arc allows 3 hits vs. standing, 1 hit vs. crouching (otherwise, 1 hit vs. standing and whiffs on crouching); listed () KD advantage refers to air juggled version
+}}
+
+===== j.214KK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_j214kk | moveType = special
+| input         = j.214KK
+| name          = Aerial Bushin Senpukyaku
+| images        = SF6_Kimberly_j214kk.png
+| hitboxes      = SF6_Kimberly_j214kk_hitbox.png
+| damage        = 450,90x2,270,450 (1350)
+| chip          = 112,22,112
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 8
+| active        = 2(2)3(2)2(2)3(2)2
+| recovery      = 12 land
+| total         = -
+| guard         = LH
+| cancel        = SA2
+| hitAdv        = {{sf6-adv|VP|+5(+8)}}<br>(KD +46~51)
+| blockAdv      = {{sf6-adv|M|-1{{sf6-adv|VP|(+4)}}}}
+| punishAdv     = {{sf6-adv|VP|+8(12)}}
+| perfParryAdv  = {{sf6-adv|VM|-19(-11)}}
+| hitstun       = 21
+| blockstun     = 17
+| hitstop       = 13 / 3x4,9(13)
+| driveDmgBlk   = 1000x3
+| driveDmgHit   = [1000x5]
+| driveGain     = -20000
+| superGainHit  = 200x4,400 (140x4,280)
+| superGainBlk  = 100x2,200 (50x2,100)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1/1/1/1/1
+| jugLimit      = 10/11/12/13/14
+| notes         = Only possible during forward jump or after 6HK Forward Hop; can be done immediately with Tiger Knee motion (2149K); inputting at the end of Kimberly's jump arc allows 3 hits vs. standing, 1 hit vs. crouching (otherwise, 1 hit vs. standing and whiffs on crouching); can cross-up at close range vs. standing opponents (useful to escape corner throw loops if opponent is at +2 or worse); listed () KD advantage refers to air juggled version; can cancel into SA2 mid-air, or follow up with SA3 after landing in the corner
+}}
+
+=== Vagabond Edge ===
+===== 236LP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236lp | moveType = special
+| input         = 236LP
+| name          = Vagabond Edge
+| images        = SF6_Kimberly_236lp.png
+| hitboxes      = SF6_Kimberly_236lp_hitbox.png
+| damage        = 810
+| chip          = 202
+| dmgScaling    = 20% Starter
+| startup       = 10
+| active        = 3
+| recovery      = 21
+| total         = 33
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+5)}}<br>(KD +30~36)
+| blockAdv      = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| punishAdv     = {{sf6-adv|VP|+7(+9)}}
+| perfParryAdv  = {{sf6-adv|VM|-22(-20)}}
+| hitstun       = 27
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.838 (1.624)
+| notes         = Has juggle potential; good for safe pressure against opponents in Burnout (0 oB, setting up a follow-up 2LP that trades with 4f normals and can kara cancel into Parry/Super if the opponent performs a reversal Super); strongest 236P version when Super canceling; () refers to KD Adv. when juggled into (lower height gives lower KD Adv.); 3rd active frame has extra range, allowing it to be spaced for safety or combo extensions; extends a large hurtbox on whiff until the end of recovery
+}}
+
+===== 236MP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236mp | moveType = special
+| input         = 236MP
+| name          = Vagabond Edge
+| images        = SF6_Kimberly_236mp.png
+| hitboxes      = SF6_Kimberly_236mp_hitbox.png
+| damage        = 540x2 (1080)
+| chip          = 135
+| startup       = 17
+| active        = 2
+| recovery      = 28
+| total         = 46
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 14
+| hitAdv        = KD +37<br>(KD +26)
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 21
+| hitstop       = 13 / 9,13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [4000x2]
+| driveGain     = 1200x2 (1200)
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1/1
+| jugLimit      = 20/21
+| atkRange      = 2.19 (2.138)
+| notes         = 2nd hit only comes out on hit; () refers to reduced KD Adv. when juggled into; (note: frame display shows 3f extra block recovery, but this is a bug - total frame count remains unchanged)
+}}
+
+===== 236HP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236hp | moveType = special
+| input         = 236HP
+| name          = Vagabond Edge
+| images        = SF6_Kimberly_236hp.png
+| hitboxes      = SF6_Kimberly_236hp_hitbox.png
+| damage        = 360,180 (540)
+| chip          = 90
+| startup       = 24
+| active        = 2
+| recovery      = 28
+| total         = 53
+| guard         = LH
+| cancel        = SA3 (1st) / Jmp
+| hitconfirm    = 14
+| hitAdv        = KD +56
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +56
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 21
+| hitstop       = 13 / 9,13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [3000x2]
+| driveGain     = 1000x2 (1000)
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250 (125)
+| jugStart      = 1/2
+| jugIncrease   = 1/1
+| jugLimit      = 1/2
+| atkRange      = 2.747 (2.698)
+| notes         = Puts opponent into limited juggle state; very limited juggle potential, so it won't combo from 5MP~HP; 2nd hit only comes out on hit; forward jump cancelable on hit only; (note: frame display shows 3f extra block recovery, but this is a bug - total frame count remains unchanged)
+}}
+
+===== 236PP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236pp | moveType = special
+| input         = 236PP
+| name          = Vagabond Edge
+| images        = SF6_Kimberly_236pp.png
+| hitboxes      = SF6_Kimberly_236hp_hitbox.png
+| damage        = 360,180 (540)
+| chip          = 90
+| startup       = 17
+| active        = 2
+| recovery      = 28
+| total         = 46
+| guard         = LH
+| cancel        = SA2 SA3 (1st) / Jmp
+| hitconfirm    = 14
+| hitAdv        = KD +56
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +56
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 21
+| hitstop       = 13 / 9,13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [3000x2]
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250 (125)
+| jugStart      = 1/2
+| jugIncrease   = 1/1
+| jugLimit      = 1/2
+| atkRange      = 2.375 (2.317)
+| notes         = Puts opponent into limited juggle state; 2nd hit only comes out on hit; forward jump cancelable on hit only; gives the launch of 236HP with the startup and juggle potential of 236MP; (note: frame display shows 3f extra block recovery, but this is a bug - total frame count remains unchanged)
+}}
+
+=== Sprint ===
+===== 236K =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k | moveType = special
+| input         = 236K
+| name          = Sprint
+| images        = SF6_Kimberly_236k.png
+| hitboxes      = SF6_Kimberly_236k_hitbox.png
+| damage        = -
+| startup       = 8~
+| active        = -
+| recovery      = -
+| total         = 55
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Holding forward causes Kimberly to continue running without activating Arc Step (must not let go of forward input at any point); can hold forward + button to activate follow-up at the earliest possible timing; Movement speed: 0.112/frame during cancelable frames
+}}
+
+===== 236K~LK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_lk | moveType = special
+| input         = 236K~LK
+| name          = Torso Cleaver
+| images        = SF6_Kimberly_236k_lk.png
+| hitboxes      = SF6_Kimberly_236k_lk_hitbox_1.png, SF6_Kimberly_236k_lk_hitbox_2.png, SF6_Kimberly_236k_lk_hitbox_3.png, SF6_Kimberly_236k_lk_hitbox_preview.png
+| damage        = 900
+| chip          = 225
+| startup       = 8+21
+| active        = 7
+| recovery      = 16
+| total         = 43
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 27
+| hitAdv        = KD +41<br>(KD +53~66)
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = KD +41<br>(KD +53~66)
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| blockstun     = 24
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 2.128 (+Run)
+| notes         = Kicking legs are Anti-Air Invuln 18-27f (cannot hit cross-up); active frames 3-7 only hit airborne opponents above Kimberly (only active frames 1-2 are useful for meaty pressure); puts opponent into limited juggle state; () refers to higher KD advantage when juggled into
+}}
+
+===== 236K~MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_mk | moveType = special
+| input         = 236K~MK
+| name          = Shadow Slide
+| images        = SF6_Kimberly_236k_mk.png
+| hitboxes      = SF6_Kimberly_236k_mk_hitbox.png
+| damage        = 720
+| chip          = 180
+| dmgScaling    = 20% Starter
+| startup       = 8+10
+| active        = 12
+| recovery      = 19
+| total         = 40
+| guard         = L
+| cancel        = SA3
+| hitconfirm    = 16
+| hitAdv        = KD +39~50<br>(KD +42~53)
+| blockAdv      = {{sf6-adv|VM|-12}}{{sf6-adv|M|(-1)}}
+| punishAdv     = KD +39~50<br>(KD +42~53)
+| perfParryAdv  = {{sf6-adv|VM|-29}}{{sf6-adv|VM|(-18)}}
+| blockstun     = 19
+| hitstop       = 6
+| driveDmgBlk   = 4000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| atkRange      = 3.61 (2.08) (+Run)
+| notes         = 6-21f low profile and upper body projectile invuln (only on the Slide itself); puts opponent into limited juggle state; advantage varies significantly depending on which active frame connects; () refers to KD advantage when juggled into (KD +47 from 5MP~HP unless delayed); cancel to SA3 can whiff when used from longer range
+}}
+
+===== 236K~HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_hk | moveType = special
+| input         = 236K~HK
+| name          = Neck Hunter
+| images        = SF6_Kimberly_236k_hk.png
+| hitboxes      = SF6_Kimberly_236k_hk_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 8+19
+| active        = 5
+| recovery      = 19
+| total         = 42
+| guard         = H
+| cancel        = SA3
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.287 (+Run)
+| notes         = SA3 cancel can only combo in high connect juggles, or if overhead is absorbed by armor
+}}
+
+===== 236K~P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_p | moveType = special
+| input         = 236K~P
+| name          = Emergency Stop
+| images        = SF6_Kimberly_236k_p.png
+| hitboxes      = SF6_Kimberly_236k_p_hitbox.png
+| damage        = -
+| startup       = 8+14
+| active        = -
+| recovery      = -
+| total         = 22
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Latest possible stop occurs after 41f (55f total animation); shortest Run~Stop distance: 1.64
+}}
+
+===== 236K (close) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_prox | moveType = special
+| input         = 236K (close)
+| name          = Arc Step
+| images        = SF6_Kimberly_236k_prox.png
+| hitboxes      = SF6_Kimberly_236k_prox_hitbox.png
+| damage        = 270,180 (450)
+| chip          = 67,45 (112)
+| startup       = 15+6
+| active        = 2(6)2<br>(Whiff: 1)
+| recovery      = 26+4 land<br>(Whiff: 25)
+| total         = 46(60)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|P|+3}}
+| perfParryAdv  = {{sf6-adv|VM|-30}}
+| hitstun       = 43 total
+| blockstun     = 34 total
+| hitstop       = 6,12(6)
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 500x2
+| superGainHit  = 100x2 (70x2)
+| superGainBlk  = 50x2 (25x2)
+| airborne      = 22-56 (FKD), hit/block only
+| jugStart      = 1/0
+| jugIncrease   = 1/0
+| jugLimit      = 1/2
+| notes         = Can frame trap vs. 4f normals when canceled from 2HP, 5HP, or 5MP; only comes out if there is an opponent at close range on or near the ground after the 15th frame of Sprint; if opponent becomes airborne after startup, the whiffed attack has 1f active + 25f recovery; if Perfect Parried, Kimberly becomes airborne before opponent can Throw punish (can be punished with Drive Impact airborne connect or a Forced Knockdown normal up to 6f startup)
+}}
+
+===== 236K (close)~K =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_prox_k | moveType = special
+| input         = 236K (close)~K
+| name          = Bushin Hojin Kick
+| images        = SF6_Kimberly_236k_prox_k.png
+| hitboxes      = SF6_Kimberly_236k_prox_k_hitbox.png
+| damage        = 630
+| chip          = 157
+| startup       = 8+15+13
+| active        = 6
+| recovery      = 20 land
+| total         = 38
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +29(+31)
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +29(+31)
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| notes         = KD Adv. is +31 if Arc Step is blocked, +30 on hit midscreen, +29 on hit in the corner
+}}
+
+===== 236K (close)~P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236k_prox_p | moveType = special
+| input         = 236K (close)~P
+| name          = Bushin Izuna Otoshi
+| images        = SF6_Kimberly_236k_prox_p.png
+| hitboxes      = SF6_Kimberly_236k_prox_p_hitbox.png
+| damage        = 1440
+| startup       = 8+15+13
+| active        = 6
+| recovery      = 40 land
+| total         = 58
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +31
+| blockAdv      = -
+| punishAdv     = HKD +31
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 3000 (2100)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = Grabs standing/crouching opponents, whiffs vs. airborne (can be backdashed)
+}}
+
+=== OD Sprint ===
+===== 236KK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk | moveType = special
+| input         = 236KK
+| name          = Sprint
+| images        = SF6_Kimberly_236kk.png
+| hitboxes      = SF6_Kimberly_236k_hitbox.png
+| damage        = -
+| startup       = 8(6)~
+| active        = -
+| recovery      = -
+| total         = 54
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| notes         = Holding forward causes Kimberly to continue running without activating Arc Step (must not let go of forward input at any point); cancels into follow-ups after 8 frames minimum (can cancel into Emergency Stop 2f earlier); Movement speed: 0.135/frame during cancelable frames
+}}
+
+===== 236KK~LK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_lk | moveType = special
+| input         = 236KK~LK
+| name          = Torso Cleaver
+| images        = SF6_Kimberly_236kk_lk.png
+| hitboxes      = SF6_Kimberly_236k_lk_hitbox_1.png, SF6_Kimberly_236k_lk_hitbox_2.png, SF6_Kimberly_236k_lk_hitbox_3.png, SF6_Kimberly_236k_lk_hitbox_preview.png
+| damage        = 540x2
+| chip          = 135x2
+| startup       = 8+17
+| active        = 2,5
+| recovery      = 16
+| total         = 39
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 34
+| hitAdv        = KD +43<br>(KD +56~66)
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD +43<br>(KD +56~66)
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| blockstun     = 26 total
+| hitstop       = 7,13
+| driveDmgBlk   = 3000x2
+| driveDmgHit   = [4000x2]
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 0/1
+| jugIncrease   = 0/1
+| jugLimit      = 7/8
+| atkRange      = 2.128 (+Run)
+| notes         = Kicking legs are Anti-Air Invuln 14-23f (cannot hit cross-up); active frames 3-7 only hit airborne opponents above Kimberly (only active frames 1-2 are useful for meaty pressure); 2nd hit will expand its hitbox if the 1st hit connects, allowing both to connect on hit/block; puts opponent into limited juggle state (launches high in juggles, allowing Drive Rush 2HP loops); () refers to higher KD advantage when juggled into
+}}
+
+===== 236KK~MK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_mk | moveType = special
+| input         = 236KK~MK
+| name          = Shadow Slide
+| images        = SF6_Kimberly_236kk_mk.png
+| hitboxes      = SF6_Kimberly_236k_mk_hitbox.png
+| damage        = 700,200 (900)
+| chip          = 175,50 (225)
+| dmgScaling    = 20% Starter
+| startup       = 8+8
+| active        = 8,4
+| recovery      = 19
+| total         = 38
+| guard         = L,L
+| cancel        = SA2 SA3 (1st)
+| hitconfirm    = 16
+| hitAdv        = KD +47~50<br>(KD +49~52)
+| blockAdv      = {{sf6-adv|VM|-10(-7)}}
+| punishAdv     = KD +47~50<br>(KD +49~52)
+| perfParryAdv  = {{sf6-adv|VM|-21(-18)}}
+| hitstun       = 26,KD
+| blockstun     = 19,13 (21)
+| hitstop       = 4,6
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [4000x2]
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 0/1
+| jugIncrease   = 0/1
+| jugLimit      = 3/4
+| atkRange      = 3.61 (2.08) (+Run)
+| notes         = 4-19f low profile and upper body projectile invuln (only on the Slide itself); puts opponent into limited juggle state; advantage varies significantly depending on which active frame of the 2nd hit connects; () refers to KD advantage when juggled into (KD +49 from 5MP~HP unless delayed); 1st hit forces stand vs. grounded opponents (ensures SA2 cancel can connect); if the 1st hit connects with the opponent, the 2nd hit has a greatly expanded vertical hitbox to ensure juggle consistency
+}}
+
+===== 236KK~HK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_hk | moveType = special
+| input         = 236KK~HK
+| name          = Neck Hunter
+| images        = SF6_Kimberly_236kk_hk.png
+| hitboxes      = SF6_Kimberly_236kk_hk_hitbox.png
+| damage        = 810,270 (1080)
+| chip          = 202,67 (269)
+| startup       = 8+15
+| active        = 2,3
+| recovery      = 19
+| total         = 38
+| guard         = H
+| cancel        = SA2 SA3 (2nd)
+| hitAdv        = KD +25(+44)
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = KD +25
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| blockstun     = 23 total
+| hitstop       = 7,13
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [4000x2]
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 0/1
+| jugIncrease   = 0/1
+| jugLimit      = 10
+| atkRange      = 2.287 (+Run)
+| notes         = Puts airborne opponents into short OTG juggle state (only SA2/SA3 cancels can follow up); Super cancels whiff vs. grounded opponents
+}}
+
+===== 236KK~P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_p | moveType = special
+| input         = 236KK~P
+| name          = Emergency Stop
+| images        = SF6_Kimberly_236kk_p.png
+| hitboxes      = SF6_Kimberly_236k_p_hitbox.png
+| damage        = -
+| startup       = 6+13
+| active        = -
+| recovery      = -
+| total         = 19
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Allows combo extensions from 5HP or 2HP, like a Drive Rush cancel for 2 bars with no damage scaling; latest possible stop occurs after 41f (54f total animation); shortest OD Run~Stop distance: 1.48
+}}
+
+===== 236KK (close) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_prox | moveType = special
+| input         = 236KK (close)
+| name          = Arc Step
+| images        = SF6_Kimberly_236kk_prox.png
+| hitboxes      = SF6_Kimberly_236k_prox_hitbox.png
+| damage        = 180,90 (270)
+| chip          = 45,22 (67)
+| startup       = 13+6
+| active        = 2(6)2<br>(Whiff: 1)
+| recovery      = 26+4 land<br>(Whiff: 25)
+| total         = 44(58/60)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|P|+3}}
+| perfParryAdv  = {{sf6-adv|VM|-30}}
+| hitstun       = 43 total
+| blockstun     = 34 total
+| hitstop       = 6,12(6)
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| superGainHit  = 100x2 (70x2)
+| superGainBlk  = 50x2 (25x2)
+| airborne      = 20-54 (FKD), hit/block only
+| jugStart      = 1/0
+| jugIncrease   = 1/0
+| jugLimit      = 1/2
+| notes         = True blockstring when canceled from 2HP; can frame trap vs. 4f normals when canceled from 5HP, 5MP, 5MK, or 5MP~HP; only comes out if there is an opponent at close range on or near the ground after the 13th frame of OD Sprint; if opponent becomes airborne after startup, the whiffed attack has 1f active + 25f recovery; if Perfect Parried, Kimberly becomes airborne before opponent can Throw punish (can be punished with Drive Impact airborne connect or a Forced Knockdown normal up to 6f startup)
+}}
+
+===== 236KK (close)~K =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_prox_k | moveType = special
+| input         = 236KK (close)~K
+| name          = Bushin Hojin Kick
+| images        = SF6_Kimberly_236kk_prox_k.png
+| hitboxes      = SF6_Kimberly_236kk_prox_k_hitbox.png
+| damage        = 420,210 (630)
+| chip          = 105
+| startup       = 8+13+13
+| active        = 6
+| recovery      = 20 land
+| total         = 38
+| guard         = LH
+| cancel        = SA2
+| hitAdv        = KD +43 (Wall Splat +86)
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +43 (Wall Splat +86)
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| blockstun     = 15
+| hitstop       = 13 / 6,13
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000x2]
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250 (125)
+| airborne      = Until Land (FKD)
+| jugStart      = 3/1
+| jugIncrease   = 1/1
+| jugLimit      = 3/5
+| notes         = Causes Wall Splat on hit near the corner; 2nd hit of the divekick occurs on hit only (1 hit on whiff or block); SA2 cancel works on either hit
+}}
+
+===== 236KK (close)~P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236kk_prox_p | moveType = special
+| input         = 236KK (close)~P
+| name          = Bushin Izuna Otoshi
+| images        = SF6_Kimberly_236kk_prox_p.png
+| hitboxes      = SF6_Kimberly_236k_prox_p_hitbox.png
+| damage        = 900
+| dmgScaling    = 20% Starter
+| startup       = 8+13+13
+| active        = 6
+| recovery      = 40 land
+| total         = 58
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +94 (OTG)
+| blockAdv      = -
+| punishAdv     = HKD +94 (OTG)
+| driveDmgHit   = [10000]
+| superGainHit  = 1000 (700)
+| airborne      = Until Land (FKD)
+| jugStart      = 2
+| notes         = Throw connects against grounded opponents, whiffs vs. airborne or backdash; opponent is put into a limited juggle OTG state (slightly less time for juggle follow-ups than j.236PP)
+}}
+
+=== Hidden Variable ===
+===== 214P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214p | moveType = special
+| input         = 214P
+| name          = Hidden Variable
+| images        = SF6_Kimberly_214p.png
+| hitboxes      = SF6_Kimberly_214p_hitbox.png
+| damage        = -
+| startup       = 19
+| active        = 8
+| recovery      = 17(7)
+| total         = 43(33)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 19-26 Full
+| notes         = After reappearing, 7f recovery is cancelable into any attack except Parry or another 214P (otherwise 17f recovery); grants forward momentum when canceled into attacks, unlocking some unique combo routes due to pushback (slower attacks do not benefit from this momentum); normals (except 2HK or command normals) performed after reappearing add +3 to the move's Juggle Limit and put airborne opponents into a limited juggle state (similar to Drive Rush juggles except that the attacks still increase the juggle counter by the usual amount)
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214pp | moveType = special
+| input         = 214PP
+| name          = Hidden Variable
+| images        = SF6_Kimberly_214pp.png
+| hitboxes      = SF6_Kimberly_214pp_hitbox.png
+| damage        = -
+| startup       = 19
+| active        = 8
+| recovery      = 16(7)+3 land
+| total         = 45(33)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| invuln        = 19-26 Full
+| airborne      = 22-42 (FKD)
+| notes         = After reappearing, can act after 7f recovery; air follow-ups have the same properties as regular jump attacks (including 3 landing recovery frames); if Kimberly does not act, she has 1 punishable landing recovery frame, then 2 landing frames where she can block or cancel into an attack; cannot use j.236P after reappearing mid-air
+}}
+
+
+=== Genius at Play ===
+===== 22P (refill) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_22p_0stock | moveType = special
+| input         = 22P (refill)
+| name          = Genius at Play
+| images        = SF6_Kimberly_22p(0).png
+| hitboxes      = SF6_Kimberly_22p(0)_hitbox.png
+| damage        = -
+| startup       = 42
+| active        = -
+| recovery      = 2
+| total         = 44
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Refills 1 spray can; cannot reload if a spray can is currently stocked or is active on-screen
+}}
+
+===== 22PP (refill) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_22pp_0stock | moveType = special
+| input         = 22PP (refill)
+| name          = Genius at Play
+| images        = SF6_Kimberly_22pp(0).png
+| hitboxes      = SF6_Kimberly_22p(0)_hitbox.png
+| damage        = -
+| startup       = 42
+| active        = -
+| recovery      = 2
+| total         = 44
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| notes         = Refills 2 spray cans; cannot reload if a spray can is currently stocked or is active on-screen
+}}
+
+=== Shuriken Bomb ===
+===== 22P (1 stock) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_22p_1stock | moveType = special
+| input         = 22P (1 stock)
+| name          = Shuriken Bomb
+| images        = SF6_Kimberly_22p(1).png
+| hitboxes      = SF6_Kimberly_22p(1)_hitbox.png
+| damage        = 450
+| chip          = 112
+| dmgScaling    = 10% Starter
+| startup       = 18(122~128)
+| active        = [10]
+| recovery      = 26
+| total         = 44
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +88
+| blockAdv      = -
+| punishAdv     = KD +88
+| blockstun     = 30
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 4
+| notes         = Button strength determines distance; can throw a second can even while one is active on-screen (but cannot reload during this time); spraycan spawns on frame 18 (if Kimberly is hit before this, it will not be thrown); LP can hits the ground on frame 24 and explodes on frame 122; MP can hits the ground on frame 26 and explodes on frame 124; HP can hits the ground on frame 30 and explodes on frame 128; explosion can juggle if opponent is thrown immediately afterwards (MP/HP cans give more time for juggle follow-ups); puts opponent into free juggle state, or maintains the current juggle state if comboed into; important tool for corner oki scenarios; spraycan disappears if SA2 is activated
+}}
+
+===== 22PP (2 stock) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_22pp_2stock | moveType = special
+| input         = 22PP (2 stock)
+| name          = Shuriken Bomb Spread
+| images        = SF6_Kimberly_22p(2).png
+| hitboxes      = SF6_Kimberly_22p(2)_hitbox.png
+| damage        = 450x2 (900)
+| chip          = 112x2 (224)
+| dmgScaling    = 10% Starter
+| startup       = 18(122~128)
+| active        = [10 each]
+| recovery      = 26
+| total         = 44
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD~
+| blockAdv      = -
+| punishAdv     = KD~
+| blockstun     = 30 each / 35 total
+| hitstop       = 13,13
+| driveDmgBlk   = 4000x2
+| driveDmgHit   = [6000]
+| driveGain     = 1000x2
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 4
+| notes         = Button strengths determine distance of each can (each strength of spraycan reaches the ground with the same timing as the 1-stock version); cannot reload while spraycans are active on-screen; spraycans spawn on frame 18 (if Kimberly is hit before this, they will not be thrown); LP+HP gives near-simultaneous explosions (6f gap between hits); LP+HP version can be useful in corner setups with Drive Impact that will break armor on the opponent's counter-DI; LP+MP and MP+HP versions result in a staggered explosion (explode on frames 122/170 or 124/174 respectively); staggered explosions combo on hit, and leave a blockstring gap of 19f for LP+MP and 20f for MP+HP; the staggered version generally gives stronger combos and allows for multiple mixups in one sequence; staggered version allows for extended blockstring sequences that can deal incredible Drive damage; many non-cinematic reversals can be punished after landing even when hitting Kimberly; the first explosion can juggle if opponent is thrown immediately afterwards; puts opponent into free juggle state, or maintains the current juggle state if comboed into; spraycan disappears if SA2 is activated; the 2nd can does not add any extra hits of damage scaling, but will take on the scaling level of any other hits that occur between the spraycan explosions (e.g. 1st can 70%, j.HP 60%, 2nd can 60%)
+}}
+
+=== Nue Twister ===
+===== j.236P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_j236p | moveType = special
+| input         = j.236P
+| name          = Nue Twister
+| images        = SF6_Kimberly_j236p.png
+| hitboxes      = SF6_Kimberly_j236p_hitbox.png
+| damage        = 1440
+| startup       = 5
+| active        = 3
+| recovery      = 20 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +22
+| blockAdv      = -
+| punishAdv     = HKD +22
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2500 (1750)
+| airborne      = Until Land (FKD)
+| jugStart      = 2
+| jugIncrease   = 2
+| jugLimit      = 2
+| atkRange      = 1.00
+| notes         = Air throw that can be comboed into; good combo ender due to damage and decent okizeme, especially in the corner; no minimum height requirement; the first 15 landing recovery frames put Kimberly in a crouching state; Range: 1.0
+}}
+
+===== j.236PP =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_j236pp | moveType = special
+| input         = j.236PP
+| name          = Nue Twister
+| images        = SF6_Kimberly_j236pp.png
+| hitboxes      = SF6_Kimberly_j236p_hitbox.png
+| damage        = 900
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 5
+| active        = 3
+| recovery      = 20 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +98 OTG
+| blockAdv      = -
+| punishAdv     = HKD +98 OTG
+| driveDmgHit   = [10000]
+| driveGain     = -20000
+| superGainHit  = 1000 (700)
+| airborne      = Until Land (FKD)
+| jugStart      = 2
+| jugIncrease   = 2
+| jugLimit      = 2
+| atkRange      = 1.00
+| notes         = Air throw that can be comboed into; causes OTG bounce (limited juggle state); no minimum height requirement; the first 15 landing recovery frames put Kimberly in a crouching state; Range: 1.0
+}}
+
+== Super Arts ==
+===== 236236K (0 stock) =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236236k_0stock | moveType = super
+| input         = 236236K
+| name          = Bushin Beats
+| images        = SF6_Kimberly_236236k.png, SF6_Kimberly_236236k_2.png
+| hitboxes      = SF6_Kimberly_236236k_hitbox.png
+| damage        = 1800
+| chip          = 500
+| dmgScaling    = 30% Minimum
+| startup       = 10
+| active        = 15
+| recovery      = 40
+| total         = 66
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +22
+| blockAdv      = {{sf6-adv|VM|-25}}
+| punishAdv     = KD +22
+| perfParryAdv  = {{sf6-adv|VM|-39}}
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 2500
+| driveDmgHit   = 5000
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-12 Strike/Throw
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 100
+| jugLimit      = 100
+| atkRange      = 3.564 (1.678)
+| notes         = Travels ~75% screen length; does not throw spraycan without holding the button
+}}
+
+====== 236236K (1 stock) ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236236k_1stock | moveType = super
+| input         = 236236[K]
+| name          = Bushin Thunderous Beats
+| images        = SF6_Kimberly_236236k.png
+| hitboxes      = SF6_Kimberly_236236k_hitbox.png
+| damage        = 2200
+| chip          = 500
+| dmgScaling    = 30% Minimum
+| startup       = 10
+| active        = 15
+| recovery      = 40
+| total         = 66
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-25}}
+| punishAdv     = KD +38
+| perfParryAdv  = {{sf6-adv|VM|-39}}
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 2500
+| driveDmgHit   = 5001
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-12 Strike/Throw
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 100
+| jugLimit      = 100
+| atkRange      = 3.564 (1.678)
+| notes         = Holding the button consumes 1 can for better damage and oki; travels ~75% screen length; spraycan only does 1 Drive damage to prevent opponent from recovering Drive meter too quickly
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_214214p | moveType = super
+| input         = 214214P
+| name          = Bushin Scramble
+| images        = SF6_Kimberly_214214p.png
+| hitboxes      = SF6_Kimberly_214214p_hitbox.png
+| damage        = 2800
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 13
+| active        = until land
+| recovery      = 39 land
+| total         = 59
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +22
+| blockAdv      = {{sf6-adv|VM|-26(-20)}}
+| punishAdv     = KD +22
+| perfParryAdv  = {{sf6-adv|VM|-44(-38)}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break
+| airborne      = 2-20 (FKD)
+| jugLimit      = 100
+| atkRange      = 2.74
+| notes         = Becomes airborne during screen freeze (can dodge grounded attacks despite not having invincibility); screen freeze causes active spraycans to disappear; first hit before cinematic does 300 damage
+}}
+
+====== j.214214P ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_j214214p | moveType = super
+| input         = j.214214P
+| name          = Soaring Bushin Scramble
+| images        = SF6_Kimberly_j214214p.png
+| hitboxes      = SF6_Kimberly_214214p_hitbox.png
+| damage        = 2800
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 13(2)
+| active        = until land
+| recovery      = 39 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +22
+| blockAdv      = {{sf6-adv|VM|-26(-20)}}
+| punishAdv     = KD +22
+| perfParryAdv  = {{sf6-adv|VM|-43(-38)}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break
+| airborne      = Until Land (FKD)
+| jugLimit      = 100
+| notes         = Can only be used from Forward Jump; screen freeze causes active spraycans to disappear; first hit before cinematic does 300 damage; 2f startup when canceled from OD special moves only
+}}
+
+===== 236236P =====
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236236p | moveType = super
+| input         = 236236P
+| name          = Bushin Ninjastar Cypher
+| images        = SF6_Kimberly_236236p.png
+| hitboxes      = SF6_Kimberly_236236p_hitbox.png
+| damage        = 4000
+| chip          = 1110
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 8
+| active        = 6
+| recovery      = 51
+| total         = 64
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +16
+| blockAdv      = {{sf6-adv|VM|-35}}
+| punishAdv     = HKD +16
+| perfParryAdv  = {{sf6-adv|VM|-55}}
+| blockstun     = 22
+| hitstop       = 20
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 100
+| atkRange      = 1.842 (1.578)
+| notes         = Immediately upon activation, Kimberly gains 11% buff to attack damage and walk speed for the rest of the match; cinematic time regenerates ~1.9 Drive bars for Kimberly
+}}
+
+====== 236236P (CA) ======
+{{FrameData-SF6 | chara = Kimberly | moveId = kimberly_236236p(ca) | moveType = super
+| input         = 236236P
+| name          = Bushin Ninjastar Cypher (CA)
+| images        = SF6_Kimberly_236236p(ca).png
+| hitboxes      = SF6_Kimberly_236236p_hitbox.png
+| damage        = 4500
+| chip          = 1387
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 8
+| active        = 6
+| recovery      = 51
+| total         = 64
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +16
+| blockAdv      = {{sf6-adv|VM|-35}}
+| punishAdv     = HKD +16
+| perfParryAdv  = {{sf6-adv|VM|-55}}
+| blockstun     = 22
+| hitstop       = 20
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 100
+| atkRange      = 1.842 (1.578)
+| notes         = Immediately upon activation, Kimberly gains 11% buff to attack damage and walk speed for the rest of the match; available at 25% HP or below; cinematic time regenerates ~2.1 Drive bars for Kimberly
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = Kimberly_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Kimberly_5pppkkk.png
+| damage        = -
+| startup       = 200 (total)
+| active        = -
+| recovery      = -
+| total         = 200
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Man, come on, I'm ready to go!"; during SA3 install, this taunt can be input with 2PPPKKK instead
+}}
+===== 5PPPKKK Install =====
+{{FrameData-SF6 | chara = Kimberly | moveId = Kimberly_5pppkkk_install | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Kimberly_5pppkkk_install.png
+| damage        = -
+| startup       = 545 (total)
+| active        = -
+| recovery      = -
+| total         = 545
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = (Dance animation during SA3 only)
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = Kimberly_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Kimberly_6pppkkk.png
+| damage        = -
+| startup       = 290 (total)
+| active        = -
+| recovery      = -
+| total         = 290
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Dōmo arigatō, from the Bushinryu!"
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Kimberly | moveId = Kimberly_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Kimberly_4pppkkk.png
+| damage        = -
+| startup       = 328 (total)
+| active        = -
+| recovery      = -
+| total         = 328
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Rin Pyo To Sha Kai Jin Retsu Zai Zen!"
+}}
+
+
+{{Character Subnav SF6 | chara=Kimberly }}
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category:Kimberly]]

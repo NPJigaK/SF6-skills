@@ -1,0 +1,1304 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:22:14Z",
+  "source": "SuperCombo Wiki",
+  "character": "Dhalsim",
+  "cargo_character": "Dhalsim",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Dhalsim",
+      "filename": "SF6 Dhalsim Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Dhalsim",
+      "filename": "SF6 Dhalsim Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Dhalsim_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Dhalsim_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Dhalsim_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Dhalsim_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Dhalsim_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Dhalsim_5hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Dhalsim_5hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Dhalsim_5hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Dhalsim_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Dhalsim_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Dhalsim_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Dhalsim_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Dhalsim_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Dhalsim_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Dhalsim_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Dhalsim_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Dhalsim_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Dhalsim_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Dhalsim_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Dhalsim_2hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Dhalsim_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Dhalsim_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Dhalsim_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Dhalsim_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2hk",
+      "input": "2HK",
+      "name": "Long Sliding Kick",
+      "filename": "SF6_Dhalsim_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2hk",
+      "input": "2HK",
+      "name": "Long Sliding Kick",
+      "filename": "SF6_Dhalsim_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Dhalsim_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Dhalsim_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Dhalsim_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Dhalsim_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp_hitbox_preview_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp_hitbox_preview_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Dhalsim_jhp_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Dhalsim_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Dhalsim_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Dhalsim_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Dhalsim_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Dhalsim_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Dhalsim_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_4mp",
+      "input": "4MP",
+      "name": "Yoga Uppercut",
+      "filename": "SF6_Dhalsim_4mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4mp",
+      "input": "4MP",
+      "name": "Yoga Uppercut",
+      "filename": "SF6_Dhalsim_4mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4mp",
+      "input": "4MP",
+      "name": "Yoga Uppercut",
+      "filename": "SF6_Dhalsim_4mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4mp",
+      "input": "4MP",
+      "name": "Yoga Uppercut",
+      "filename": "SF6_Dhalsim_4mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4mp",
+      "input": "4MP",
+      "name": "Yoga Uppercut",
+      "filename": "SF6_Dhalsim_4mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_4hp",
+      "input": "4HP",
+      "name": "Yoga Lance",
+      "filename": "SF6_Dhalsim_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4hp",
+      "input": "4HP",
+      "name": "Yoga Lance",
+      "filename": "SF6_Dhalsim_4hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_4mk",
+      "input": "4MK",
+      "name": "Divine Kick",
+      "filename": "SF6_Dhalsim_4mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4mk",
+      "input": "4MK",
+      "name": "Divine Kick",
+      "filename": "SF6_Dhalsim_4mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_4hk",
+      "input": "4HK",
+      "name": "Yoga Mountain",
+      "filename": "SF6_Dhalsim_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4hk",
+      "input": "4HK",
+      "name": "Yoga Mountain",
+      "filename": "SF6_Dhalsim_4hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_1hp",
+      "input": "1HP",
+      "name": "Nirvana Punch",
+      "filename": "SF6_Dhalsim_1hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_1hp",
+      "input": "1HP",
+      "name": "Nirvana Punch",
+      "filename": "SF6_Dhalsim_1hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_1lk",
+      "input": "1LK",
+      "name": "Agile Kick",
+      "filename": "SF6_Dhalsim_1lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_1lk",
+      "input": "1LK",
+      "name": "Agile Kick",
+      "filename": "SF6_Dhalsim_1lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_1mk",
+      "input": "1MK",
+      "name": "Thrust Kick",
+      "filename": "SF6_Dhalsim_1mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_1mk",
+      "input": "1MK",
+      "name": "Thrust Kick",
+      "filename": "SF6_Dhalsim_1mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_1hk",
+      "input": "1HK",
+      "name": "Karma Kick",
+      "filename": "SF6_Dhalsim_1hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_1hk",
+      "input": "1HK",
+      "name": "Karma Kick",
+      "filename": "SF6_Dhalsim_1hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j2lp",
+      "input": "j.2LP",
+      "name": "Yoga Mummy",
+      "filename": "SF6_Dhalsim_j2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j2lp",
+      "input": "j.2LP",
+      "name": "Yoga Mummy",
+      "filename": "SF6_Dhalsim_j2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j2lk",
+      "input": "j.2LK",
+      "name": "Drill Kick",
+      "filename": "SF6_Dhalsim_j2k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j2lk",
+      "input": "j.2LK",
+      "name": "Drill Kick",
+      "filename": "SF6_Dhalsim_j2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j2mk",
+      "input": "j.2MK",
+      "name": "Drill Kick",
+      "filename": "SF6_Dhalsim_j2k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j2mk",
+      "input": "j.2MK",
+      "name": "Drill Kick",
+      "filename": "SF6_Dhalsim_j2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j2hk",
+      "input": "j.2HK",
+      "name": "Drill Kick",
+      "filename": "SF6_Dhalsim_j2k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j2hk",
+      "input": "j.2HK",
+      "name": "Drill Kick",
+      "filename": "SF6_Dhalsim_j2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_lplk",
+      "input": "LPLK",
+      "name": "Yoga Smash",
+      "filename": "SF6_Dhalsim_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_lplk",
+      "input": "LPLK",
+      "name": "Yoga Smash",
+      "filename": "SF6_Dhalsim_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_4lplk",
+      "input": "4LPLK",
+      "name": "Yoga Throw",
+      "filename": "SF6_Dhalsim_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_4lplk",
+      "input": "4LPLK",
+      "name": "Yoga Throw",
+      "filename": "SF6_Dhalsim_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2lplk",
+      "input": "2LPLK",
+      "name": "Yoga Splash",
+      "filename": "SF6_Dhalsim_2lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2lplk",
+      "input": "2LPLK",
+      "name": "Yoga Splash",
+      "filename": "SF6_Dhalsim_2lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_hphk",
+      "input": "HPHK",
+      "name": "Yoga Rise",
+      "filename": "SF6_Dhalsim_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_hphk",
+      "input": "HPHK",
+      "name": "Yoga Rise",
+      "filename": "SF6_Dhalsim_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_6hphk",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Block)",
+      "filename": "SF6_Dhalsim_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6hphk",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Block)",
+      "filename": "SF6_Dhalsim_6hphk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6hphk",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Block)",
+      "filename": "SF6_Dhalsim_6hphk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6hphk",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Block)",
+      "filename": "SF6_Dhalsim_6hphk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Recovery)",
+      "filename": "SF6_Dhalsim_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Recovery)",
+      "filename": "SF6_Dhalsim_6hphk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Recovery)",
+      "filename": "SF6_Dhalsim_6hphk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Yoga Illusion (Recovery)",
+      "filename": "SF6_Dhalsim_6hphk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Dhalsim_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Dhalsim_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Dhalsim_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Dhalsim_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Dhalsim_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Dhalsim_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236p",
+      "input": "236P",
+      "name": "Yoga Fire",
+      "filename": "SF6_Dhalsim_236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236p",
+      "input": "236P",
+      "name": "Yoga Fire",
+      "filename": "SF6_Dhalsim_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236p_hold",
+      "input": "236[P]",
+      "name": "Yoga Fire (hold)",
+      "filename": "SF6_Dhalsim_236p_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236p_hold",
+      "input": "236[P]",
+      "name": "Yoga Fire (hold)",
+      "filename": "SF6_Dhalsim_236p_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236pp",
+      "input": "236PP",
+      "name": "Yoga Fire",
+      "filename": "SF6_Dhalsim_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236pp",
+      "input": "236PP",
+      "name": "Yoga Fire",
+      "filename": "SF6_Dhalsim_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236k",
+      "input": "236LK",
+      "name": "Yoga Arch",
+      "filename": "SF6_Dhalsim_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236k",
+      "input": "236LK",
+      "name": "Yoga Arch",
+      "filename": "SF6_Dhalsim_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236k",
+      "input": "236LK",
+      "name": "Yoga Arch",
+      "filename": "SF6_Dhalsim_236k_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236kk",
+      "input": "236KK",
+      "name": "Yoga Arch",
+      "filename": "SF6_Dhalsim_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236kk",
+      "input": "236KK",
+      "name": "Yoga Arch",
+      "filename": "SF6_Dhalsim_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214lp",
+      "input": "63214LP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214lp",
+      "input": "63214LP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214mp",
+      "input": "63214MP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214mp",
+      "input": "63214MP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214hp",
+      "input": "63214HP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214hp",
+      "input": "63214HP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214pp",
+      "input": "63214PP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214pp",
+      "input": "63214PP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214pp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214pp",
+      "input": "63214PP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214pp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214pp",
+      "input": "63214PP",
+      "name": "Yoga Flame",
+      "filename": "SF6_Dhalsim_63214pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214lk",
+      "input": "63214LK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214lk",
+      "input": "63214LK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214lk",
+      "input": "63214LK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214mk",
+      "input": "63214MK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214mk",
+      "input": "63214MK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214mk",
+      "input": "63214MK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214hk",
+      "input": "63214HK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214hk",
+      "input": "63214HK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214hk",
+      "input": "63214HK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_63214kk",
+      "input": "63214KK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_63214kk",
+      "input": "63214KK",
+      "name": "Yoga Blast",
+      "filename": "SF6_Dhalsim_63214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j63214p",
+      "input": "j.63214LP",
+      "name": "Yoga Comet",
+      "filename": "SF6_Dhalsim_j63214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j63214p",
+      "input": "j.63214LP",
+      "name": "Yoga Comet",
+      "filename": "SF6_Dhalsim_j63214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j63214pp",
+      "input": "j.63214PP",
+      "name": "Yoga Comet",
+      "filename": "SF6_Dhalsim_j63214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j63214pp",
+      "input": "j.63214PP",
+      "name": "Yoga Comet",
+      "filename": "SF6_Dhalsim_j63214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_2kk",
+      "input": "2KK or 3KK",
+      "name": "Yoga Float",
+      "filename": "SF6_Dhalsim_2kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_2kk",
+      "input": "2KK or 3KK",
+      "name": "Yoga Float",
+      "filename": "SF6_Dhalsim_2kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j2kk",
+      "input": "j.2KK",
+      "name": "Aerial Yoga Float",
+      "filename": "SF6_Dhalsim_j2kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j2kk",
+      "input": "j.2KK",
+      "name": "Aerial Yoga Float",
+      "filename": "SF6_Dhalsim_j2kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_6ppp_6kkk_4ppp_4kkk",
+      "input": "4 or 6 + PPP/KKK",
+      "name": "Yoga Teleport",
+      "filename": "SF6_Dhalsim_6ppp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_6ppp_6kkk_4ppp_4kkk",
+      "input": "4 or 6 + PPP/KKK",
+      "name": "Yoga Teleport",
+      "filename": "SF6_Dhalsim_6ppp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_j6ppp_6kkk_4ppp_4kkk",
+      "input": "4 or 6 + j.PPP/j.KKK",
+      "name": "Aerial Yoga Teleport",
+      "filename": "SF6_Dhalsim_6ppp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_j6ppp_6kkk_4ppp_4kkk",
+      "input": "4 or 6 + j.PPP/j.KKK",
+      "name": "Aerial Yoga Teleport",
+      "filename": "SF6_Dhalsim_6ppp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236236lp",
+      "input": "236236LP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236236lp",
+      "input": "236236LP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236236mp",
+      "input": "236236MP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236236mp",
+      "input": "236236MP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236236mp",
+      "input": "236236MP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236mp_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236236hp",
+      "input": "236236HP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236236hp",
+      "input": "236236HP",
+      "name": "Yoga Inferno",
+      "filename": "SF6_Dhalsim_236236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_214214k",
+      "input": "214214K",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_214214k",
+      "input": "214214K",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_214214k",
+      "input": "214214K",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_214214k",
+      "input": "214214K",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hitbox3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_214214k_partial_hold",
+      "input": "214214{K}",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_214214k_partial_hold",
+      "input": "214214{K}",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_214214k_hold",
+      "input": "214214[K]",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_214214k_hold",
+      "input": "214214[K]",
+      "name": "Yoga Sunburst",
+      "filename": "SF6_Dhalsim_214214k_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236236k",
+      "input": "236236K",
+      "name": "Merciless Yoga",
+      "filename": "SF6_Dhalsim_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236236k",
+      "input": "236236K",
+      "name": "Merciless Yoga",
+      "filename": "SF6_Dhalsim_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_236236k(ca)",
+      "input": "236236K",
+      "name": "Merciless Yoga (CA)",
+      "filename": "SF6_Dhalsim_236236k(ca).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "dhalsim_236236k(ca)",
+      "input": "236236K",
+      "name": "Merciless Yoga (CA)",
+      "filename": "SF6_Dhalsim_236236k(ca)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Dhalsim_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Dhalsim_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "dhalsim_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Dhalsim_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Dhalsim 236pp hitbox.png",
+    "File:SF6 Dhalsim 236p hold hitbox.png",
+    "File:SF6 Dhalsim 236p hold.png",
+    "File:SF6 Dhalsim 236kk hitbox.png",
+    "File:SF6 Dhalsim 236236k(ca) hitbox.png",
+    "File:SF6 Dhalsim 214214k hold hitbox.png",
+    "File:SF6 Dhalsim 63214hk.png",
+    "File:SF6 Dhalsim j63214pp hitbox.png",
+    "File:SF6 Dhalsim j2kk hitbox.png",
+    "File:SF6 Dhalsim j2kk.png",
+    "File:SF6 Dhalsim 63214mk.png"
+  ],
+  "download_images": false
+}

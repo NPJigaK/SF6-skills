@@ -1,0 +1,109 @@
+{
+  "queries": [
+    {
+      "section": "Character Data",
+      "block_sha256": "sha256:0592a86d31cca79419d6f6c4a955c6295dfc57a343dfe3dea2b5d3b2add1aa48",
+      "raw": "{{#cargo_query:tables=SF6_CharacterData\n|fields=CONCAT('[[file:', portrait, '|100px|link=]] ')=<big>Alex</big>,hp=HP,throwRange=Throw<br>Range,fwdWalkSpd=Fwd Walk<br>Speed,bwdWalkSpd=Back Walk<br>Speed,fwdDashSpd=Fwd Dash<br>Speed,bwdDashSpd=Back Dash<br>Speed,fwdDashDist=Fwd Dash<br>Distance,bwdDashDist=Back Dash<br>Distance,jumpSpd=Jump<br>Speed,fwdJumpDist=Fwd Jump<br>Distance,bwdJumpDist=Back Jump<br>Distance,jumpApex=Jump<br>Apex\n|where=chara=\"Alex\"\n|format=table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:77cf4bf9c1f7c19e2ea8d4023aa526d897417d3c5591e5275945846015766280",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard,IF(cancel='{{{cancel}}}', \"\", cancel)=Cancel,IF(hitconfirm='{{{hitconfirm}}}', \"\", hitconfirm)=Hitconfirm\n|where=chara=\"Alex\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:f9af33ac2656ce364bd982e19051953e153ce5fe09579f689127106a81c1ab26",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(DRcancelHit='{{{DRcancelHit}}}', \"\", DRcancelHit)=DR Cancel onHit,IF(DRcancelBlk='{{{DRcancelBlk}}}', \"\", DRcancelBlk)=DR Cancel onBlock,IF(afterDRHit='{{{afterDRHit}}}', \"\", afterDRHit)=After DR onHit,IF(afterDRBlk='{{{afterDRBlk}}}', \"\", afterDRBlk)=After DR onBlock,IF(hitstun='{{{hitstun}}}', \"\", hitstun)=Hitstun,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Alex\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:12c9f2cdf73ba5a56c4b7e9bb759aec0208f6850b3fa514ca2521b322c352bd6",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', \"\", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', \"\", superGainBlk)=SuperGain Block\n|where=chara=\"Alex\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:f13a3a050854c8ca5dd069fbe2ef912fbe23b401a5379a89442360e771efb6fb",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(airborne='{{{airborne}}}', \"\", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Alex\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Normals and Target Combos",
+      "block_sha256": "sha256:ea5012b0a97b1d7d703bf833fa102516f45dd66bfa1a8199c0351f6d7dcfa800",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Alex\"  and (moveType=\"ground_normal\" or moveType=\"normal\" or moveType=\"air_normal\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:74872b300058f99d532e6c193396f3b2cd55eb8c69221481a6d4331c983404b8",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard\n|where=chara=\"Alex\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:b4aa17b2e8e2e18ec9166fa6845f324af1f03ffde8511b9a48b625d2da532a23",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(chip='{{{chip}}}', \"\", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Alex\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:670a3450f0be3a436d6472533cef7b078d78d81edfe7f69fe79ce4c2d10e0ebc",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', \"\", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit\n|where=chara=\"Alex\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:0d950d81ee9bf421754307320153834161f443c768d85b287ab22bc87392e2ab",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Alex\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Drive and Throw",
+      "block_sha256": "sha256:52b885c1f2c235ba93ff57b94eb6fc25c24b9f4295d3ca165087335a16117efe",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Alex\"  and (moveType = \"drive\" or moveType=\"throw\")\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:e6aa0203283d33acf4fde84d170f0022feba157d40cfcc615fbb2cde36a7b029",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard,IF(cancel='{{{cancel}}}', \"\", cancel)=Cancel,IF(hitconfirm='{{{hitconfirm}}}', \"\", hitconfirm)=Hitconfirm\n|where=chara=\"Alex\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:8cb40a242755e4451b8e87bc1e7e1e21f72c66a518b0682c9c271e19ba4f1fc3",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(chip='{{{chip}}}', \"\", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Alex\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:f73c07e2acb39cd03afe4733b58c9c630706b32d3753318836987eeab0e23efe",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', \"\", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', \"\", superGainBlk)=SuperGain Block\n|where=chara=\"Alex\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:df8995bef5e205b5e5a1dbefcf67e3c9355c5336826ecb73d8d2a7a2d7bd4e47",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(airborne='{{{airborne}}}', \"\", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Alex\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Specials",
+      "block_sha256": "sha256:25e6d030c08c9cc398b57385bb21a85fec84f6e5e74d8691c32e9044ea07026f",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Alex\"  and moveType = \"special\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:9f36522e47abfae91876a0e6af3b5471f423310b837a39c4ad4e02a3680071ca",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(damage='{{{damage}}}', \"\", damage)=Damage,IF(startup='{{{startup}}}', \"\", startup)=Startup,IF(active='{{{active}}}', \"\", active)=Active,IF(recovery='{{{recovery}}}', \"\", recovery)=Recovery,IF(total='{{{total}}}', \"\", total)=Total,IF(hitAdv='{{{hitAdv}}}', \"\", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', \"\", blockAdv)=Block Adv,IF(guard='{{{guard}}}', \"\", guard)=Guard\n|where=chara=\"Alex\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:62566a49d212dd0767ea74bcc4beaf4ee068049a3caf675ce4893ea6251dc767",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(chip='{{{chip}}}', \"\", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', \"\", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', \"\", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', \"\", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', \"\", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', \"\", hitstop)=Hitstop\n|where=chara=\"Alex\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:2464c16fafabef0a25ea71d2d635da2072bc7d16f482713fefe60033a84afeba",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', \"\", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', \"\", driveDmgHit)=DriveDmg Hit[PC],IF(superGainHit='{{{superGainHit}}}', \"\", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', \"\", superGainBlk)=SuperGain Block\n|where=chara=\"Alex\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:98258ee41ce54db088e850bd6f77175b312582e7008a0c5a701a6b1ec01ef0e6",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(invuln='{{{invuln}}}', \"\", invuln)=Invuln,IF(armor='{{{armor}}}', \"\", armor)=Armor,IF(airborne='{{{airborne}}}', \"\", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', \"\", atkRange)=Range,IF(jugStart='{{{jugStart}}}', \"\", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', \"\", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', \"\", jugLimit)=Juggle Limit\n|where=chara=\"Alex\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    },
+    {
+      "section": "Supers",
+      "block_sha256": "sha256:9fb8441eb283662cdd4f3d88bc7dc2d65569ff3e8d2c4d62264f5b76e83b221c",
+      "raw": "{{#cargo_query:tables=SF6_FrameData\n|fields=input,IF(notes='{{{notes}}}', \"\", notes)=Notes\n|where=chara=\"Alex\"  and moveType = \"super\"\n|format=dynamic table\n|order by=_rowID\n|rows per page=50\n}}"
+    }
+  ]
+}

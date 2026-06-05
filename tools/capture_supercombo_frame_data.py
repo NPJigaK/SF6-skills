@@ -880,6 +880,7 @@ def main(argv: list[str]) -> int:
 
         character_templates = parse_template_blocks(data_raw, "CharacterData-SF6")
         frame_templates = parse_template_blocks(data_raw, "FrameData-SF6")
+        cargo_character = str((character_templates[0] if character_templates else {}).get("chara") or character)
         display_queries = parse_display_cargo_queries(frame_raw)
         write_json(root / "data.templates.json", {"character": character_templates, "frames": frame_templates})
         write_json(root / "frame-data.cargo-queries.json", {"queries": display_queries})
@@ -899,7 +900,7 @@ def main(argv: list[str]) -> int:
                     "action": "cargoquery",
                     "tables": "SF6_FrameData",
                     "fields": "_rowID=rowID," + ",".join(FRAME_FIELDS),
-                    "where": f'chara="{character}"',
+                    "where": f'chara="{cargo_character}"',
                     "order_by": "_rowID",
                     "limit": "500",
                     "format": "json",
@@ -915,7 +916,7 @@ def main(argv: list[str]) -> int:
                     "action": "cargoquery",
                     "tables": "SF6_CharacterData",
                     "fields": "_rowID=rowID," + ",".join(CHARACTER_FIELDS),
-                    "where": f'chara="{character}"',
+                    "where": f'chara="{cargo_character}"',
                     "order_by": "_rowID",
                     "limit": "50",
                     "format": "json",
@@ -950,6 +951,7 @@ def main(argv: list[str]) -> int:
             "captured_at_utc": utc_now(),
             "source": "SuperCombo Wiki",
             "character": character,
+            "cargo_character": cargo_character,
             "refs": image_refs,
             "downloads": [],
             "missing_titles": imageinfo.get("missing_titles", []),
@@ -1006,6 +1008,7 @@ def main(argv: list[str]) -> int:
         "game": "Street Fighter 6",
         "source_type": "community_frame_data",
         "character": character,
+        "cargo_character": cargo_character,
         "character_slug": args.character_slug,
         "capture_label": source_revision.get("label") or args.date_label,
         "source_revision": source_revision,
@@ -1044,6 +1047,7 @@ def main(argv: list[str]) -> int:
             "manifest_schema_version": "supercombo_frame_raw_capture_manifest/v1",
             "captured_at_utc": utc_now(),
             "character": character,
+            "cargo_character": cargo_character,
             "character_slug": args.character_slug,
             "capture_label": source_revision.get("label") or args.date_label,
             "source_revision": source_revision,

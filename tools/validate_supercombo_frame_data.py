@@ -16,7 +16,7 @@ from capture_supercombo_frame_data import cargo_records, sha256_file, write_json
 
 DISPLAY_TABLES = {
     "Normals and Target Combos": {
-        "move_types": {"ground_normal", "normal", "air_normal"},
+        "move_types": {"ground_normal", "normal", "air_normal", "serenity_stream"},
         "tabs": {
             "General": [
                 ("input", "input"),
@@ -197,6 +197,7 @@ DISPLAY_TABLES = {
         },
     },
 }
+DISPLAY_ROWS_PER_PAGE = 50
 
 
 def normalized_move_type(value: Any) -> str:
@@ -229,12 +230,19 @@ def template_to_text(match: re.Match[str]) -> str:
     return args[-1]
 
 
-def wiki_to_text(value: str) -> str:
+def strip_mediawiki_list_markers(text: str, *, field_name: str) -> str:
+    if field_name == "notes" and re.fullmatch(r"\*[^*\n].*\*", text.strip()):
+        return text
+    return re.sub(r"(?m)^\*+\s*", "", text)
+
+
+def wiki_to_text(value: str, *, field_name: str = "") -> str:
     if not value:
         return ""
     value = value.strip()
     value = re.sub(r"<!--.*?-->", "", value, flags=re.DOTALL)
     value = re.sub(r"<br\s*/?>", " ", value, flags=re.IGNORECASE)
+    value = strip_mediawiki_list_markers(value, field_name=field_name)
     value = re.sub(r"\[\[[^|\]]+\|([^\]]+)\]\]", r"\1", value)
     value = re.sub(r"\[\[([^\]]+)\]\]", r"\1", value)
     for _ in range(12):
@@ -251,7 +259,7 @@ def display_value(record: dict[str, Any], field: str) -> str:
     value = str(record.get(field, "")).strip()
     if not value or value == f"{{{{{{{field}}}}}}}":
         return ""
-    return wiki_to_text(value)
+    return wiki_to_text(value, field_name=field)
 
 
 def frame_records_for_section(frames: list[dict[str, Any]], section: str) -> list[dict[str, Any]]:
@@ -351,24 +359,32 @@ def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[st
             expected = expected_table(frame_templates, section, tab)
             actual_headers = table.get("headers", [])
             actual_rows = data_rows(table)
+            pagination_limited = len(expected["rows"]) > len(actual_rows) == DISPLAY_ROWS_PER_PAGE
+            expected_rows_for_dom = expected["rows"][: len(actual_rows)] if pagination_limited else expected["rows"]
             comparison: dict[str, Any] = {
                 "section": section,
                 "tab": tab,
                 "expected_rows": len(expected["rows"]),
                 "actual_rows": len(actual_rows),
+                "compared_rows": len(expected_rows_for_dom),
+                "pagination_limited": pagination_limited,
                 "header_match": actual_headers == expected["headers"],
-                "row_count_match": len(actual_rows) == len(expected["rows"]),
-                "input_order_match": [row[0] for row in actual_rows] == [row[0] for row in expected["rows"]],
+                "row_count_match": len(actual_rows) == len(expected["rows"]) or pagination_limited,
+                "input_order_match": [row[0] for row in actual_rows] == [row[0] for row in expected_rows_for_dom],
                 "cell_mismatches": [],
                 "note_mismatches": [],
             }
             if actual_headers != expected["headers"]:
                 failures.append(f"{section}/{tab} headers differ: {actual_headers!r} != {expected['headers']!r}")
-            if len(actual_rows) != len(expected["rows"]):
+            if pagination_limited:
+                warnings.append(
+                    f"{section}/{tab} rendered table is paginated; compared first {len(actual_rows)} of {len(expected['rows'])} rows"
+                )
+            elif len(actual_rows) != len(expected["rows"]):
                 failures.append(f"{section}/{tab} row count differs: {len(actual_rows)} != {len(expected['rows'])}")
-            if [row[0] for row in actual_rows] != [row[0] for row in expected["rows"]]:
+            if [row[0] for row in actual_rows] != [row[0] for row in expected_rows_for_dom]:
                 failures.append(f"{section}/{tab} input order differs")
-            for row_index, (actual_row, expected_row) in enumerate(zip(actual_rows, expected["rows"], strict=False), start=1):
+            for row_index, (actual_row, expected_row) in enumerate(zip(actual_rows, expected_rows_for_dom, strict=False), start=1):
                 for cell_index, (actual_cell, expected_cell) in enumerate(zip(actual_row, expected_row, strict=False), start=1):
                     if actual_cell == expected_cell:
                         continue

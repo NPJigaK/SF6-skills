@@ -1,0 +1,81 @@
+{
+  "official_rows": 87,
+  "supercombo_rows": 87,
+  "enriched_rows": 87,
+  "supercombo_only_rows": 35,
+  "enrichment_status_counts": {
+    "enriched_review_required": 76,
+    "official_only": 9,
+    "enriched": 2
+  },
+  "review_flag_counts": {
+    "ambiguous_match": 1,
+    "basic_field_conflict:active_duration,damage": 1,
+    "basic_field_conflict:damage": 19,
+    "basic_field_conflict:recovery": 4,
+    "condition_dependent_supercombo_field:damage": 4,
+    "condition_dependent_supercombo_field:recovery": 10,
+    "condition_dependent_supercombo_field:recovery,startup": 2,
+    "condition_dependent_supercombo_field:startup": 4,
+    "manual_match": 2,
+    "multiple_candidates": 19,
+    "supercombo_row_reused": 51,
+    "uncomparable_basic_field:active_duration": 2,
+    "uncomparable_basic_field:active_duration,damage": 5,
+    "uncomparable_basic_field:active_duration,damage,recovery": 4,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 5,
+    "uncomparable_basic_field:active_duration,damage,startup": 4,
+    "uncomparable_basic_field:active_duration,recovery": 3,
+    "uncomparable_basic_field:damage": 4,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 9
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 1,
+    "damage": 20,
+    "recovery": 4
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 23,
+    "damage": 24,
+    "recovery": 23,
+    "startup": 9
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "Juri_236hk",
+    "Juri_236lk",
+    "Juri_236mk",
+    "Juri_2hk",
+    "Juri_2hp",
+    "Juri_2lk",
+    "Juri_2lp",
+    "Juri_2mk",
+    "Juri_2mp",
+    "Juri_4hk",
+    "Juri_5hk",
+    "Juri_5hp",
+    "Juri_5lk",
+    "Juri_5lp",
+    "Juri_5mk",
+    "Juri_5mp",
+    "Juri_6hp",
+    "Juri_6mk",
+    "Juri_6mp",
+    "Juri_jhp",
+    "Juri_jlk",
+    "Juri_jlp",
+    "Juri_jmk",
+    "Juri_jmp",
+    "Juri_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 32,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/juri/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/juri/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/juri/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/juri/classic-supercombo.csv"
+}

@@ -1,0 +1,2395 @@
+{{Character Subnav SF6 | chara=Cammy }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Cammy
+| name          = Cammy
+| portrait      = SF6 Cammy Portrait.png
+| icon          = SF6 Cammy Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.0505
+| bwdWalkSpd    = 0.033
+| fwdDashSpd    = 18
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.32
+| bwdDashDist   = 1.002
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.603
+| dRushBlock    = 2.027
+| dRushMax      = 2.796
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Cammy_5lp.png
+| hitboxes      = SF6_Cammy_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 7
+| total         = 13
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-3}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 15
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| pushbackHit   = 0.352
+| pushbackBlk   = 0.304
+| notes         = Chains into 5LP/2LP/2LK; extended hurtbox appears for 2f before active; DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Cammy_5mp.png
+| hitboxes      = SF6_Cammy_5mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 13
+| total         = 22
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 23
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.04
+| notes         = Can get frame advantage with meaty timing and leads to good conversions on counter-hit; decent Drive Rush starter (links to 5HP on hit, frame traps into itself) but doesn't carry much forward momentum; extended hurtbox remains for 4f after active frames
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Cammy_5hp.png
+| hitboxes      = SF6_Cammy_5hp_hitbox.png
+| damage        = 800
+| startup       = 8
+| active        = 3
+| recovery      = 20
+| total         = 30
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 17 Sp / 19 TC
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.39
+| notes         = Great disjointed hitbox; moves Cammy far forward during startup, giving it good range but making it easier to whiff punish; good Drive Rush starter (good momentum, links into 4MP~HK if close enough or frame traps into 5LP/2LP)
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Cammy_5lk.png
+| hitboxes      = SF6_Cammy_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 10
+| total         = 17
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.27
+| notes         = Good range for 5f punishes and light conversions; extended hurtbox appears for 2f before active; special cancel is delayed until after active frames (prevents OD Spiral Arrow combo); DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Cammy_5mk.png
+| hitboxes      = SF6_Cammy_5mk_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 3
+| recovery      = 18
+| total         = 28
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 24
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.57
+| notes         = Great ranged poke, vulnerable to DI if predicted; extended hurtbox remains for 7f after active frames, making it somewhat more whiff punishable
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Cammy_5hk.png
+| hitboxes      = SF6_Cammy_5hk_hitbox.png
+| damage        = 900
+| startup       = 11
+| active        = 3
+| recovery      = 19(21)
+| total         = 32(34)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-3}}
+| punishAdv     = KD +44
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|E|+1}}
+| hitstun       = 24
+| blockstun     = 19
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 10
+| jugLimit      = 10
+| atkRange      = 1.879
+| notes         = 2f extra recovery on whiff; great ranged poke; Punish Counter knockdown does not lead to follow-up combo, but gives great corner carry; extends a hurtbox 1f before active that is vulnerable to projectiles; crouch-sized hurtbox on frames 1-28; particularly vulnerable to Drive Impact in neutral; can anti-air some long range jump-ins; has high juggle potential (causes air reset when juggled into)
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Cammy_2lp.png
+| hitboxes      = SF6_Cammy_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 8
+| total         = 13
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 12
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-3}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 15
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| pushbackHit   = 0.352
+| pushbackBlk   = 0.304
+| notes         = Chains into 5LP/2LP/2LK; extended hurtbox appears for 2f before active; DR cancel is delayed until after active frames
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Cammy_2mp.png
+| hitboxes      = SF6_Cammy_2mp_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 3
+| recovery      = 14(17)
+| total         = 23(26)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+5}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 22
+| blockstun     = 15
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.335
+| notes         = Good counterpoke and useful combo filler after 2HP or CH 5LP/2LP/5MP; 3f extra recovery on whiff; extends a wide hurtbox during recovery on whiff
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Cammy_2hp.png
+| hitboxes      = SF6_Cammy_2hp_hitbox.png
+| damage        = 700
+| startup       = 10
+| active        = 4
+| recovery      = 15
+| total         = 28
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| afterDRHit    = {{sf6-adv|VP|+11}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.08
+| notes         = Forces stand; Good for starting pressure, especially with meaty timing (236HK + Dash 2HP sets gives enough advantage to link 5HP); extended hurtbox appears for 2f before active; situationally useful anti-air
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Cammy_2lk.png
+| hitboxes      = SF6_Cammy_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 7
+| total         = 14
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 13
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.14
+| notes         = Chains into 5LP/2LP/2LK; low hitconfirm starter; extended hurtbox appears for 2f before active and remains 5f after active
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Cammy_2mk.png
+| hitboxes      = SF6_Cammy_2mk_hitbox.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 18
+| total         = 28
+| guard         = L
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| DRcancelHit   = {{sf6-adv|VP|+10}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 22
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.49
+| notes         = Great ranged cancelable low poke; very useful when canceled to DR; extended hurtbox appears for 1f before active and remains 6f after active; special/DR cancel is delayed until after active frames; Range: 1.49
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Grounded Sweep
+| images        = SF6_Cammy_2hk.png
+| hitboxes      = SF6_Cammy_2hk_hitbox.png
+| damage        = 900
+| startup       = 9
+| active        = 3
+| recovery      = 24
+| total         = 35
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = HKD +43
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| afterDRHit    = KD +38
+| afterDRBlk    = {{sf6-adv|VM|-6}}
+| blockstun     = 17
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 3
+| jugLimit      = 3
+| atkRange      = 1.73
+| notes         = Disjointed hitbox gives it some neutral utility; has juggle potential (KD +37~39); extended hurtbox remains for 6f after active frames
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Cammy_jlp.png
+| hitboxes      = SF6_Cammy_jlp_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+9)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+10(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.65
+| notes         = Quick air-to-air
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Cammy_jmp.png
+| hitboxes      = SF6_Cammy_jmp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 8
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp SA2
+| hitAdv        = {{sf6-adv|VP|+10(+13)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+4)}}
+| punishAdv     = {{sf6-adv|VP|+14(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 8
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1200
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 4
+| jugLimit      = 1
+| atkRange      = 0.80
+| notes         = Puts airborne opponents into limited juggle state; cancels into j.214K/j.214214P on forward jump only; low blockstun means there will always be a blockstring gap if canceled; lower body projectile invuln 6-28f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Cammy_jhp.png
+| hitboxes      = SF6_Cammy_jhp_hitbox.png
+| damage        = 800
+| startup       = 8
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+15)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+12(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 3
+| jugLimit      = 3
+| atkRange      = 0.80
+| notes         = Causes spike knockdown vs. airborne opponents; good hitbox disjoint near Cammy's fists; lower body projectile invuln 8-35f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Cammy_jlk.png
+| hitboxes      = SF6_Cammy_jlk_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+10)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+10(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.52
+| notes         = Cross-up; can be used as a fuzzy instant overhead (except vs. Blanka)
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Cammy_jmk.png
+| hitboxes      = SF6_Cammy_jmk_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+12(+13)}}
+| blockAdv      = {{sf6-adv|VP|+8(+9)}}
+| punishAdv     = {{sf6-adv|VP|+16(+17)}}
+| perfParryAdv  = {{sf6-adv|M|-3(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1200
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.16
+| notes         = Long hitbox can work as a ranged air-to-air; lower body projectile invuln 7-30f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Cammy_jhk.png
+| hitboxes      = SF6_Cammy_jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+15)}}
+| blockAdv      = {{sf6-adv|VP|+7(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.16
+| notes         = Good jump-in from long range, especially mixed with empty jump or j.214K to bait anti-airs; can air-to-air from long range; lower body projectile invuln 10-35f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 4MP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_4mp | moveType = ground_normal
+| input         = 4MP
+| name          = Lift Uppercut
+| images        = SF6_Cammy_4mp.png
+| hitboxes      = SF6_Cammy_4mp_hitbox_preview.png, SF6_Cammy_4mp_hitbox_1.png, SF6_Cammy_4mp_hitbox_2.png, SF6_Cammy_4mp_hitbox_3.png
+| damage        = 500
+| startup       = 5
+| active        = 5
+| recovery      = 12
+| total         = 21
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 21
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.826
+| rangeNotes    = Short range but strong 5f punish starter if it reaches
+| notes         = Forces stand (required for 4MP~HK TC); useful anti-air starting on frame 6 but can often trade or whiff against close jumps; extended arm hurtbox on active frames 3-5 is anti-air invulnerable; combos naturally from 5LP/2LP/5MP at close range
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Assault Blade
+| images        = SF6_Cammy_4hk.png
+| hitboxes      = SF6_Cammy_4hk_hitbox_preview.png, SF6_Cammy_4hk_hitbox_1.png, SF6_Cammy_4hk_hitbox_2.png
+| damage        = 800
+| dmgScaling    = 20% Starter
+| startup       = 9
+| active        = 3
+| recovery      = 18
+| total         = 29
+| guard         = LH
+| cancel        = Sp SA Jmp
+| hitconfirm    = 17
+| hitAdv        = KD +54
+| blockAdv      = {{sf6-adv|VM|-7}}
+| punishAdv     = KD +54
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| DRcancelHit   = KD +65
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = Free Juggle
+| afterDRBlk    = {{sf6-adv|M|-3}}
+| blockstun     = 14
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.09
+| notes         = Whiffs on crouching opponents; jump cancelable on hit only; puts opponents into limited juggle state on hit (free juggle if started from Drive Rush)
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Delayed Ripper
+| images        = SF6_Cammy_6hk.png
+| hitboxes      = SF6_Cammy_6hk_hitbox.png
+| damage        = 800
+| dmgScaling    = 20% Starter
+| startup       = 18
+| active        = 3
+| recovery      = 20(25)
+| total         = 40(45)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 19
+| hitAdv        = KD +31
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +52 Launch
+| perfParryAdv  = {{sf6-adv|VM|-26}}
+| DRcancelHit   = KD +42
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = KD +31
+| afterDRBlk    = {{sf6-adv|VM|-8}}
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.443
+| notes         = 5f extra recovery on whiff/block; pulls back hurtbox on frame 5-14 (auto-shimmy tool); low blockstun means that DR Cancel is the only way to make it safe; extended hurtbox remains for 9f after active frames; special cancel is delayed until after 2nd recovery frame; DR cancel is delayed until after active frames; can juggle into DRC~5HP~HK on normal hit or 214LP on Punish Counter for strong juggle routes
+}}
+
+== Target Combos ==
+===== 4MP~HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_4mp_hk | moveType = ground_normal
+| input         = 4MP~HK
+| name          = Lift Combination
+| images        = SF6_Cammy_4mp_hk.png
+| hitboxes      = SF6_Cammy_4hk_hitbox_preview.png, SF6_Cammy_4hk_hitbox_1.png, SF6_Cammy_4hk_hitbox_2.png
+| damage        = 600
+| startup       = 9
+| active        = 3
+| recovery      = 23
+| total         = 34
+| guard         = LH
+| cancel        = Sp SA Jmp
+| hitconfirm    = 37~41
+| hitAdv        = KD +49
+| blockAdv      = {{sf6-adv|VM|-12(-19)}}
+| DRcancelHit   = KD +65
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| blockstun     = 14
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = Whiffs on crouch blocking opponents (works on crouching hit because 4MP forces stand); jump cancelable on hit only; puts opponent into limited juggle state; has 5f more recovery than 4HK on its own, resulting in more limited juggle follow-ups
+}}
+
+===== 5HP~HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5hp_hk | moveType = ground_normal
+| input         = 5HP~HK
+| name          = Swing Combination
+| images        = SF6_Cammy_5hp_hk.png, SF6_Cammy_5hp_hk_2.png
+| hitboxes      = SF6_Cammy_5hp_hk_hitbox_preview.png, SF6_Cammy_5hp_hk_hitbox_1.png, SF6_Cammy_5hp_hk_hitbox_2.png
+| damage        = 400,400
+| dmgScaling    = Combo (2 hits, 2nd hit only); each hit scales separately
+| startup       = 13
+| active        = 4(12)3
+| recovery      = 29
+| total         = 60
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 42~46 1st / 77~81 2nd
+| hitAdv        = KD +26
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +26
+| perfParryAdv  = {{sf6-adv|VM|-30}}
+| DRcancelHit   = KD +39
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| blockstun     = 8,20
+| hitstop       = 11,13
+| driveDmgBlk   = 3000x2
+| driveDmgHit   = [7000]
+| driveGain     = 1500,2500
+| superGainHit  = 500,1000 (350,700)
+| superGainBlk  = 250,500 (125,250)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 1,2
+| notes         = 2 hits; leaves a 9f gap between 1st and 2nd hit on block; 1st hit of HK is cancelable into j.214K (9f gap) or SA2; 2nd hit acts as a cancelable grounded normal; 2nd hit is cancelable into Supers after 5 recovery frames and into specials/DI/DR after 7 recovery frames
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_lplk | moveType = throw
+| input         = LPLK
+| name          = Rough Landing
+| images        = SF6_Cammy_lplk.png
+| hitboxes      = SF6_Cammy_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +17
+| blockAdv      = -
+| punishAdv     = HKD +17
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Can walk for a manually-timed corner throw loop; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Delta Throw
+| images        = SF6_Cammy_4lplk.png
+| hitboxes      = SF6_Cammy_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +14
+| blockAdv      = -
+| punishAdv     = HKD +14
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = No throw oki after corner side switch; can use Drive Rush 5MP (+3 oB, links to 5HP on hit), or Drive Rush 2MP to set up trade combo vs. reversal 4f normals; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== j.LPLK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_jlplk | moveType = throw
+| input         = j.LPLK
+| name          = Leg Scissors Choke
+| images        = SF6_Cammy_jlplk.png
+| hitboxes      = SF6_Cammy_jlplk_hitbox.png
+| damage        = 1200 (2040)
+| startup       = 5
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +22
+| blockAdv      = -
+| punishAdv     = HKD +22
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000(2800)]}}
+| atkRange      = 0.80
+| notes         = Can get throw oki if opponent is near the corner (no oki midscreen even with Drive Rush)
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_hphk | moveType = drive
+| input         = HPHK
+| name          = Spin Raider
+| images        = SF6_Cammy_hphk.png
+| hitboxes      = SF6_Cammy_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.544
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Countersnipe (Block)
+| images        = SF6_Cammy_6hphk.png
+| hitboxes      = SF6_Cammy_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.39
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Countersnipe (Recovery)
+| images        = SF6_Cammy_6hphk.png
+| hitboxes      = SF6_Cammy_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.39
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Cammy_mpmk.png
+| hitboxes      = SF6_Cammy_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Cammy_66.png
+| hitboxes      = SF6_Cammy_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.603 (min/throw), 2.027 (min/block), 2.796 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Cammy_66.png
+| hitboxes      = SF6_Cammy_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Spiral Arrow ===
+===== 236LK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236lk | moveType = special
+| input         = 236LK
+| name          = Spiral Arrow
+| images        = SF6_Cammy_236lk.png
+| hitboxes      = SF6_Cammy_236k_hitbox_preview.png, SF6_Cammy_236k_hitbox_1.png, SF6_Cammy_236k_hitbox_2.png
+| damage        = 800
+| chip          = 200
+| startup       = 9
+| active        = 13
+| recovery      = 21
+| total         = 42
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +26(+48)
+| blockAdv      = {{sf6-adv|VM|-12{{sf6-adv|E|(0)}}}}
+| punishAdv     = KD +26(+48)
+| perfParryAdv  = {{sf6-adv|VM|-32(-20)}}
+| blockstun     = 22
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 9-24 Throw
+| airborne      = 9-24 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| atkRange      = 2.574 (1.417)
+| notes         = Can be spaced safely; useful in corner juggle routes after 5HP~HK, DR~4HK > 4HK, or blocked Drive Impact
+}}
+
+===== 236MK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236mk | moveType = special
+| input         = 236MK
+| name          = Spiral Arrow
+| images        = SF6_Cammy_236mk.png
+| hitboxes      = SF6_Cammy_236k_hitbox_preview.png, SF6_Cammy_236k_hitbox_1.png, SF6_Cammy_236k_hitbox_2.png
+| damage        = 900
+| chip          = 225
+| startup       = 9
+| active        = 15
+| recovery      = 21
+| total         = 44
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +26(+48)
+| blockAdv      = {{sf6-adv|VM|-14{{sf6-adv|E|(0)}}}}
+| punishAdv     = KD +26(+48)
+| perfParryAdv  = {{sf6-adv|VM|-34(-20)}}
+| blockstun     = 22
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 9-26 Throw
+| airborne      = 9-26 (FKD)
+| jugStart      = 1
+| jugIncrease   = 3
+| jugLimit      = 3
+| atkRange      = 3.051 (1.417)
+| notes         = Can be spaced safely; best version for buffers in neutral; useful in corner juggle routes into 623K
+}}
+
+===== 236HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hk | moveType = special
+| input         = 236HK
+| name          = Spiral Arrow
+| images        = SF6_Cammy_236hk.png
+| hitboxes      = SF6_Cammy_236hk_hitbox_preview.png, SF6_Cammy_236hk_hitbox_1.png, SF6_Cammy_236hk_hitbox_2.png
+| damage        = 300,700
+| chip          = 75,175
+| startup       = 15
+| active        = 3(1)12
+| recovery      = 21
+| total         = 51
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 14
+| hitAdv        = KD +29(+48)
+| blockAdv      = {{sf6-adv|VM|-12{{sf6-adv|M|(-1)}}}}
+| punishAdv     = KD +29(+48)
+| perfParryAdv  = {{sf6-adv|VM|-28}} (2-hit), {{sf6-adv|VM|-31(-20)}}
+| blockstun     = 25(21)
+| hitstop       = 10,13
+| driveDmgBlk   = 1000,4000
+| driveDmgHit   = [2500x2]
+| driveGain     = 600,2000
+| superGainHit  = 200,600 (140,420)
+| superGainBlk  = 100,300 (50,150)
+| invuln        = 18-33 Throw
+| airborne      = 18-33 (FKD)
+| jugStart      = 1 (2nd hit)
+| jugIncrease   = 1,3
+| jugLimit      = 0,3
+| atkRange      = 4.058 (1.783)
+| notes         = Only 1st hit is super cancelable (very low damage route); holding HK results in a powered up version
+}}
+
+===== 236[HK] =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hk_hold | moveType = special
+| input         = 236[HK]
+| name          = Spiral Arrow
+| images        = SF6_Cammy_236hk_hold.png
+| hitboxes      = SF6_Cammy_236hk_hold_hitbox_preview.png, SF6_Cammy_236hk_hold_hitbox_1.png, SF6_Cammy_236hk_hold_hitbox_2.png
+| damage        = 150x4,200
+| chip          = 37x4,50
+| startup       = 27(25)
+| active        = 3(1)12
+| recovery      = 20
+| total         = 62(60)
+| guard         = LH
+| cancel        = SA3 (4th)
+| hitconfirm    = 34
+| hitAdv        = KD +47 Launch
+| blockAdv      = {{sf6-adv|VM|-14}}
+| punishAdv     = KD +47 Launch
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| blockstun     = 24 total
+| hitstop       = 5,5,5,5,<br>13(11)Hit/16(14)Blk
+| driveDmgBlk   = 300x4,2800 (4000)
+| driveDmgHit   = [1000x5]
+| driveGain     = 150x4,1900 (2500)
+| superGainHit  = 200x5 (140x5)
+| superGainBlk  = 100x5 (50x5)
+| invuln        = 29-45 Throw
+| airborne      = 30-45 (FKD)
+| jugStart      = 4 (1,21 air)
+| jugIncrease   = 0x4,21
+| jugLimit      = 10x5
+| atkRange      = 4.550 (2.023)
+| notes         = Switches sides on hit; puts opponent into limited juggle state; super cancel comes out on 4th hit; holding HK for 9-15f gives regular 236HK with slower startup; holding 16-17f results in a full charge 2f faster than normal (allows it to combo from CH 5HP or PC 2MP)
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236kk | moveType = special
+| input         = 236KK
+| name          = Spiral Arrow
+| images        = SF6_Cammy_236kk.png
+| hitboxes      = SF6_Cammy_236kk_hitbox_preview.png, SF6_Cammy_236kk_hitbox_1.png, SF6_Cammy_236kk_hitbox_2.png
+| damage        = 150x4,200
+| chip          = 37x4,50
+| dmgScaling    = Combo (5% extra)
+| startup       = 13
+| active        = 3(1)12
+| recovery      = 20
+| total         = 48
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 34 (4th)
+| hitAdv        = KD +47 Launch
+| blockAdv      = {{sf6-adv|VM|-14}}
+| punishAdv     = KD +47 Launch
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| blockstun     = 24 total
+| hitstop       = 5,5,5,5,<br>13(11)Hit/16(14)Blk
+| driveDmgBlk   = 300x4,2800 (4000)
+| driveDmgHit   = [1000x5]
+| driveGain     = -20000
+| superGainHit  = 200x5 (140x5)
+| superGainBlk  = 100x5 (50x5)
+| invuln        = 15-31 Throw
+| airborne      = 16-31 (FKD)
+| jugStart      = 4 (1,21 air)
+| jugIncrease   = 0x4,21
+| jugLimit      = 10x5
+| atkRange      = 4.550 (1.783)
+| notes         = Switches sides on hit; puts opponent into limited juggle state
+}}
+
+=== Cannon Spike ===
+===== 623LK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_623lk | moveType = special
+| input         = 623LK
+| name          = Cannon Spike
+| images        = SF6_Cammy_623lk.png
+| hitboxes      = SF6_Cammy_623k_hitbox.png
+| damage        = 900(800)
+| chip          = 225
+| startup       = 5
+| active        = 12
+| recovery      = 24+16 Land
+| total         = 56
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +20
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +20
+| perfParryAdv  = {{sf6-adv|VM|-50}}
+| blockstun     = 16
+| hitstop       = 12(13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-14 Air
+| airborne      = 7-40 (FKD)
+| jugStart      = 1
+| jugIncrease   = 40
+| jugLimit      = 4/40
+| atkRange      = 0.88 (1st)
+| notes         = Shortest horizontal range (good close-range anti-air but can whiff in grounded combos); () refers to damage and juggle limit on active frames 3-12; SA3 cancel whiffs on hit; cannot anti-air cross-ups
+}}
+
+===== 623MK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_623mk | moveType = special
+| input         = 623MK
+| name          = Cannon Spike
+| images        = SF6_Cammy_623mk.png
+| hitboxes      = SF6_Cammy_623k_hitbox.png
+| damage        = 1000(800)
+| chip          = 250
+| startup       = 6
+| active        = 12
+| recovery      = 25+16 Land
+| total         = 58
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +21
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +21
+| perfParryAdv  = {{sf6-adv|VM|-50}}
+| blockstun     = 16
+| hitstop       = 12(13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-9 Air
+| airborne      = 8-42 (FKD)
+| jugStart      = 1
+| jugIncrease   = 40
+| jugLimit      = 4/40
+| atkRange      = 1.30 (1st)
+| notes         = Medium horizontal range (good all-purpose anti-air and juggle ender); () refers to damage and juggle limit on active frames 3-12; SA3 cancel whiffs on hit; cannot anti-air cross-ups
+}}
+
+===== 623HK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_623hk | moveType = special
+| input         = 623HK
+| name          = Cannon Spike
+| images        = SF6_Cammy_623hk.png
+| hitboxes      = SF6_Cammy_623k_hitbox.png
+| damage        = 1200(800)
+| chip          = 300
+| startup       = 7
+| active        = 12
+| recovery      = 28+16 Land
+| total         = 62
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +22
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = KD +22
+| perfParryAdv  = {{sf6-adv|VM|-50}}
+| blockstun     = 16
+| hitstop       = 12(13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-8 Air
+| airborne      = 9-46 (FKD)
+| jugStart      = 1
+| jugIncrease   = 40
+| jugLimit      = 4/40
+| atkRange      = 1.05 (1st)
+| notes         = Longest horizontal range (good for long range anti-airs and neutral jumps; best grounded combo ender); () refers to damage and juggle limit on active frames 3-12; SA3 cancel whiffs on hit; cannot anti-air cross-ups
+}}
+
+===== 623[HK] =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_623hk_hold | moveType = special
+| input         = 623[HK]
+| name          = Cannon Spike
+| images        = SF6_Cammy_623hk_hold.png
+| hitboxes      = SF6_Cammy_623kk_hitbox.png
+| damage        = 1100,100x4 (900)
+| chip          = 275
+| startup       = 24(22)
+| active        = 12
+| recovery      = 29+16 Land
+| total         = 80(78)
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 12
+| hitAdv        = KD +16
+| blockAdv      = {{sf6-adv|VM|-40}}
+| punishAdv     = KD +16
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 16
+| hitstop       = 10,5,5,5,13 (13)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 700,200x3,700 (700)
+| superGainHit  = 600,100x4 (420,70x4)
+| superGainBlk  = 300 (150)
+| invuln        = 1-7 Air, 20-25 Full
+| airborne      = 26-64 (FKD)
+| jugStart      = 1x5
+| jugIncrease   = 1,0x3,40
+| jugLimit      = 4/40,40x4
+| atkRange      = 1.09 (1st)
+| notes         = Long horizontal range (but can drop when canceled from 5HP outside close range); () refers to damage and juggle limit on active frames 5-12 (becomes 1 hit if these frames connect); switches sides on hit; first hit can successfully juggle to SA3; holding HK for 15-16f results in a full charge up to 2f faster (full invuln window shifts 2f earlier, and allows it to combo from CH 2MP); cannot anti-air cross-ups
+}}
+
+===== 623KK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_623kk | moveType = special
+| input         = 623KK
+| name          = Cannon Spike
+| images        = SF6_Cammy_623kk.png
+| hitboxes      = SF6_Cammy_623kk_hitbox.png
+| damage        = 600,100x3,600 (900)
+| chip          = 275
+| startup       = 6
+| active        = 12
+| recovery      = 30+16 Land
+| total         = 63
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +19
+| blockAdv      = {{sf6-adv|VM|-40}}
+| punishAdv     = KD +19
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 16
+| hitstop       = 10,5,5,5,13 (13)
+| driveDmgBlk   = 2000
+| driveGain     = -20000
+| superGainHit  = 600,100x4 (420,70x4)
+| superGainBlk  = 300 (150)
+| invuln        = 1-7 Full
+| airborne      = 8-47 (FKD)
+| jugStart      = 1x5
+| jugIncrease   = 1,0x3,40
+| jugLimit      = 4/40,40x4
+| atkRange      = 1.04 (1st)
+| notes         = Long horizontal range (good for punishes and long range anti-airs); () refers to damage and juggle limit on active frames 4-12 (becomes 1 hit); cannot anti-air cross-ups
+}}
+
+=== Quick Spin Knuckle ===
+===== 214LP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_214lp | moveType = special
+| input         = 214LP
+| name          = Quick Spin Knuckle
+| images        = SF6_Cammy_214lp.png
+| hitboxes      = SF6_Cammy_214p_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 21
+| active        = 4
+| recovery      = 16
+| total         = 40
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| hitstun       = 22
+| blockstun     = 17
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1 air
+| jugIncrease   = 3
+| jugLimit      = 1
+| atkRange      = 2.131
+| notes         = Puts airborne opponents into limited juggle state (keeps opponents closer than other versions and has some juggle potential); good frame trap from 5HP (2f gap) that leads to Counter-hit confirm
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_214mp | moveType = special
+| input         = 214MP
+| name          = Quick Spin Knuckle
+| images        = SF6_Cammy_214mp.png
+| hitboxes      = SF6_Cammy_214p_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter
+| startup       = 24
+| active        = 4
+| recovery      = 16
+| total         = 43
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| hitstun       = 23
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 9-23 Projectile
+| jugStart      = 1 air
+| jugIncrease   = 3
+| jugLimit      = 0
+| atkRange      = 2.760
+| notes         = Puts airborne opponents into limited juggle state
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_214hp | moveType = special
+| input         = 214HP
+| name          = Quick Spin Knuckle
+| images        = SF6_Cammy_214hp.png
+| hitboxes      = SF6_Cammy_214p_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 28
+| active        = 4
+| recovery      = 17
+| total         = 48
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 26
+| blockstun     = 24
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [9000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 9-27 Projectile
+| jugStart      = 1 air
+| jugIncrease   = 3
+| jugLimit      = 0
+| atkRange      = 3.360
+| notes         = Puts airborne opponents into limited juggle state
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_214pp | moveType = special
+| input         = 214PP
+| name          = Quick Spin Knuckle
+| images        = SF6_Cammy_214pp.png
+| hitboxes      = SF6_Cammy_214pp_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 25(28)
+| active        = 4
+| recovery      = 17
+| total         = 45
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 28
+| blockstun     = 19
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = -20000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 9-24(20) Projectile
+| jugStart      = 1 air
+| jugIncrease   = 3
+| jugLimit      = 0
+| atkRange      = 3.290
+| notes         = No collision box on frames 1-10 (can cross-up from close range); puts airborne opponents into limited juggle state
+}}
+
+=== Cannon Strike ===
+===== j.214K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_j214k | moveType = special
+| input         = j.214K
+| name          = Cannon Strike
+| images        = SF6_Cammy_j214k.png
+| hitboxes      = SF6_Cammy_j214k_hitbox.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = 20% Starter
+| startup       = 13
+| active        = 11 (until land)
+| recovery      = 12 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|M|-2}}{{sf6-adv|VP|(+11)}}
+| blockAdv      = {{sf6-adv|VM|-8}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-22(-11)}}
+| hitstun       = 22(24)
+| blockstun     = 16(18)
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 2500
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1 air
+| jugIncrease   = 10
+| jugLimit      = 10
+| notes         = Forward jump only; cancelable from j.MP; button strength affects dive trajectory (LK short, MK mid, HK far); spike knockdown vs. airborne opponents; HK version worst-case frame advantage is 1f better than LK/MK versions; 2f extra hitstun and blockstun if it connects on the final 2 active frames before landing (screen shake occurs, guaranteeing an advantage of at least +10/+4)
+}}
+
+===== j.214KK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_j214kk | moveType = special
+| input         = j.214KK
+| name          = Cannon Strike
+| images        = SF6_Cammy_j214kk.png
+| hitboxes      = SF6_Cammy_j214hk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter; 10% Immediate
+| startup       = 13
+| active        = 12 (until land)
+| recovery      = 12 land
+| total         = -
+| guard         = LH
+| cancel        = SA2
+| hitconfirm    = 15~22
+| hitAdv        = {{sf6-adv|E|0}}{{sf6-adv|VP|(+11)}}
+| blockAdv      = {{sf6-adv|M|-2}}{{sf6-adv|VP|(+7)}}
+| punishAdv     = {{sf6-adv|VP|+4(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-20(-11)}}
+| hitstun       = 22(24)
+| blockstun     = 18(20)
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = -20000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 2 air
+| jugIncrease   = 2
+| jugLimit      = 5
+| notes         = Forward jump only; cancelable from j.MP; puts airborne opponents into limited juggle state; hitconfirm reaction time is longer the higher the divekick connects (cancelable until landing); frame advantage on hit/block is fixed when connecting on the first active frame (e.g. as a corner throw escape); 2f extra hitstun and blockstun if it connects on the final 2 active frames before landing (screen shake occurs, guaranteeing an advantage of at least +10/+6)
+}}
+
+=== Hooligan Combination ===
+===== 236P =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236p | moveType = special
+| input         = 236P
+| name          = Hooligan Combination
+| images        = SF6_Cammy_236p.png
+| hitboxes      = SF6_Cammy_236p_hitbox.png
+| damage        = -
+| startup       = 20(40)
+| active        = -
+| recovery      = -
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 7-40 Lower Body Projectile
+| airborne      = 7-40 (FKD)
+| notes         = Startup refers to earliest/latest follow-up input timings; trajectory depends on button strength (LP short/high, MP middle, HP far/low); LP and MP versions can cross over close standing opponents; HP version can cross over close crouching opponents
+}}
+
+===== 236[HP] =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hp_hold | moveType = special
+| input         = 236[HP]
+| name          = Hooligan Combination
+| images        = SF6_Cammy_236p.png
+| hitboxes      = SF6_Cammy_236p_hitbox.png
+| damage        = -
+| startup       = 40(60)
+| active        = -
+| recovery      = -
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 27-60 Lower Body Projectile
+| airborne      = 27-60 (FKD)
+| notes         = Startup refers to earliest/latest follow-up input timings; holding HP for 18-19f results in a full charge up to 2f faster than normal; can cross over crouching opponents; follow-ups gain properties of OD versions (except for SA2 cancelability)
+}}
+
+===== 236PP =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236pp | moveType = special
+| input         = 236PP
+| name          = Hooligan Combination
+| images        = SF6_Cammy_236pp.png
+| hitboxes      = SF6_Cammy_236p_hitbox.png
+| damage        = -
+| startup       = 20(40)
+| active        = -
+| recovery      = -
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| invuln        = 7-40 Lower Body Projectile
+| airborne      = 7-40 (FKD)
+| notes         = Startup refers to earliest/latest follow-up input timings; button combination affects trajectory (LP+MP=LP, LP+HP=MP, MP+HP=HP); follow-ups have enhanced OD properties
+}}
+
+=== Razor's Edge Slicer ===
+===== 236P~No Input =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236p_no_input | moveType = special
+| input         = 236P~No Input
+| name          = Razor's Edge Slicer
+| images        = SF6_Cammy_236p_no_input.png
+| hitboxes      = SF6_Cammy_236p_no_input_hitbox.png
+| damage        = 1000
+| chip          = 250
+| dmgScaling    = 20% Starter
+| startup       = 50
+| active        = 9
+| recovery      = 13
+| total         = 71
+| guard         = L
+| cancel        = SA3
+| hitconfirm    = 22
+| hitAdv        = KD +48
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +48
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| blockstun     = 24
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 10
+| jugLimit      = 10
+| notes         = Puts opponent into limited juggle state on hit; low profile 50-63f; crouching state during recovery
+}}
+
+===== 236[HP]~No Input =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hp_hold_no_input | moveType = special
+| input         = 236[HP]~No Input
+| name          = Razor's Edge Slicer
+| images        = SF6_Cammy_236p_no_input.png
+| hitboxes      = SF6_Cammy_236pp_no_input_hitbox_preview.png, SF6_Cammy_236p_no_input_hitbox.png, SF6_Cammy_236pp_no_input_hitbox_2.png
+| damage        = 800,400
+| chip          = 200,100
+| dmgScaling    = 20% Starter
+| startup       = 70
+| active        = 9(10)5
+| recovery      = 17
+| total         = 110(108)
+| guard         = L,L
+| cancel        = SA3
+| hitconfirm    = 50
+| hitAdv        = KD +48
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +48
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| blockstun     = 43(24)
+| hitstop       = 13,13
+| driveDmgBlk   = 3000,2000
+| driveDmgHit   = [3500x2]
+| driveGain     = 2500,1500
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1 (2nd hit)
+| jugIncrease   = 10,10
+| jugLimit      = 10,10
+| notes         = Puts opponent into limited juggle state on hit; low profile 70-98f; can be up to 2f faster if HP is held for only 18f; crouching state during recovery
+}}
+
+===== 236PP~No Input =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236pp_no_input | moveType = special
+| input         = 236PP~No Input
+| name          = Razor's Edge Slicer
+| images        = SF6_Cammy_236pp_no_input.png
+| hitboxes      = SF6_Cammy_236pp_no_input_hitbox_preview.png, SF6_Cammy_236p_no_input_hitbox.png, SF6_Cammy_236pp_no_input_hitbox_2.png
+| damage        = 800,400
+| chip          = 200,100
+| dmgScaling    = 20% Starter
+| startup       = 50
+| active        = 9(10)5
+| recovery      = 17
+| total         = 90
+| guard         = L,L
+| cancel        = SA2 SA3
+| hitconfirm    = 50
+| hitAdv        = KD +48
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +48
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| blockstun     = 43(24)
+| hitstop       = 13,13
+| driveDmgBlk   = 3000,2000
+| driveDmgHit   = [3500x2]
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1 (2nd hit)
+| jugIncrease   = 10,10
+| jugLimit      = 10,10
+| notes         = Puts opponent into limited juggle state on hit; low profile 50-80f; crouching state during recovery
+}}
+
+=== Hooligan Cannon Strike ===
+===== 236P~K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236p_k | moveType = special
+| input         = 236P~K
+| name          = Hooligan Cannon Strike
+| images        = SF6_Cammy_236p_k.png
+| hitboxes      = SF6_Cammy_j214lk_hitbox.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = 20% Starter
+| startup       = 20+13
+| active        = until land
+| recovery      = 12 land
+| total         = 54~
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|M|-1{{sf6-adv|VP|(+9)}}}}
+| blockAdv      = {{sf6-adv|VM|-7{{sf6-adv|P|(+3)}}}}
+| punishAdv     = {{sf6-adv|P|+3{{sf6-adv|VP|(+13)}}}}
+| perfParryAdv  = {{sf6-adv|VM|-20(-12)}}
+| hitstun       = 22
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1 air
+| jugIncrease   = 10
+| jugLimit      = 10
+| notes         = Startup refers to earliest timing from Hooligan; button strength affects divekick trajectory (LK short, MK medium, HK far); spike knockdown vs. airborne opponents; autocorrects toward opponent after crossing over
+}}
+
+===== 236[HP]~K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hp_hold_k | moveType = special
+| input         = 236[HP]~K
+| name          = Hooligan Cannon Strike
+| images        = SF6_Cammy_236p_k.png
+| hitboxes      = SF6_Cammy_j214hk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter; 10% Immediate
+| startup       = 40+13
+| active        = until land
+| recovery      = 12 land
+| total         = 74~
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|M|-1{{sf6-adv|VP|(+9)}}}}
+| blockAdv      = {{sf6-adv|E|0{{sf6-adv|VP|(+5)}}}}
+| punishAdv     = {{sf6-adv|P|+3{{sf6-adv|VP|(+13)}}}}
+| perfParryAdv  = {{sf6-adv|VM|-16(-11)}}
+| hitstun       = 22
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 2 air
+| jugIncrease   = 2
+| jugLimit      = 5
+| notes         = Startup refers to earliest timing from Hooligan; button strength does not affect divekick trajectory; puts airborne opponents into limited juggle state; autocorrects toward opponent after crossing over; can be up to 2f faster if HP is held for only 18f
+}}
+
+===== 236PP~K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236pp_k | moveType = special
+| input         = 236PP~K
+| name          = Hooligan Cannon Strike
+| images        = SF6_Cammy_236pp_k.png
+| hitboxes      = SF6_Cammy_j214hk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter; 10% Immediate
+| startup       = 20+13
+| active        = until land
+| recovery      = 12 land
+| total         = 54~
+| guard         = LH
+| cancel        = SA2
+| hitconfirm    = 19
+| hitAdv        = {{sf6-adv|M|-1{{sf6-adv|VP|(+9)}}}}
+| blockAdv      = {{sf6-adv|E|0{{sf6-adv|VP|(+5)}}}}
+| punishAdv     = {{sf6-adv|P|+3{{sf6-adv|VP|(+13)}}}}
+| perfParryAdv  = {{sf6-adv|VM|-16(-11)}}
+| hitstun       = 22
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 2 air
+| jugIncrease   = 2
+| jugLimit      = 5
+| notes         = Startup refers to earliest timing from Hooligan; button strength does not affect divekick trajectory; puts airborne opponents into limited juggle state; autocorrects toward opponent after crossing over
+}}
+
+=== Reverse Edge ===
+===== 236P~2K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236p_2k | moveType = special
+| input         = 236P~2K
+| name          = Reverse Edge
+| images        = SF6_Cammy_236p_2k.png
+| hitboxes      = SF6_Cammy_236p_2k_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter
+| startup       = 20+18
+| active        = 4
+| recovery      = 13 land
+| total         = 56~
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+9)}}
+| blockAdv      = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-1)}}
+| punishAdv     = {{sf6-adv|VP|+9(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-18(-14)}}
+| hitstun       = 25
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1 air
+| jugIncrease   = 3
+| jugLimit      = 10
+| notes         = 236P trajectory affects frame advantage (lower height is better); up to 3f more recovery before landing (depends on activation height); does not autocorrect toward opponent after crossing over; crouching state during landing recovery
+}}
+
+===== 236[HP]~2K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hp_hold_2k | moveType = special
+| input         = 236[HP]~2K
+| name          = Reverse Edge
+| images        = SF6_Cammy_236hp_hold_2k.png
+| hitboxes      = SF6_Cammy_236pp_2k_hitbox.png
+| damage        = 600x2
+| chip          = 150x2
+| dmgScaling    = 20% Starter
+| startup       = 40+18
+| active        = 4(14)4
+| recovery      = 13 land
+| total         = 92~
+| guard         = H,H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+12}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| hitstun       = 43 total
+| blockstun     = 33 total
+| hitstop       = 13,13
+| driveDmgBlk   = 3000x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 2000x2
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| airborne      = Until Land (FKD)
+| jugStart      = 0,1 air
+| jugIncrease   = 1,5
+| jugLimit      = 4,5
+| notes         = 2 hits; causes OTG bounce vs. airborne opponents that can juggle into 623MK/HK/KK or SA1/SA3 Super (low height juggle connect will not allow time for follow-up); does not autocorrect toward opponent after crossing over; crouching state during landing recovery; can be up to 2f faster if HP is held for only 18f
+}}
+
+===== 236PP~2K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236pp_2k | moveType = special
+| input         = 236PP~2K
+| name          = Reverse Edge
+| images        = SF6_Cammy_236pp_2k.png
+| hitboxes      = SF6_Cammy_236pp_2k_hitbox.png
+| damage        = 600x2
+| chip          = 150x2
+| dmgScaling    = 20% Starter
+| startup       = 20+18
+| active        = 4(14)4
+| recovery      = 13 land
+| total         = 72~
+| guard         = H,H
+| cancel        = SA2
+| hitconfirm    = 45
+| hitAdv        = {{sf6-adv|VP|+8}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+12}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| hitstun       = 43 total
+| blockstun     = 33 total
+| hitstop       = 9,13
+| driveDmgBlk   = 4000x2
+| driveDmgHit   = [3500x2]
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| airborne      = Until Land (FKD)
+| jugStart      = 0,1 air
+| jugIncrease   = 0,1
+| jugLimit      = 4,5
+| notes         = 2 hits; causes OTG bounce vs. airborne opponents that can juggle into 623MK/HK/KK or any Super (low height juggle connect will only allow canceled Air SA2 to connect); does not autocorrect toward opponent after crossing over; crouching state during landing recovery
+}}
+
+=== Fatal Leg Twister ===
+===== 236P~LPLK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236p_lplk | moveType = special
+| input         = 236P~LPLK
+| name          = Fatal Leg Twister
+| images        = SF6_Cammy_236p_lplk.png
+| hitboxes      = SF6_Cammy_236p_lplk_hitbox.png
+| damage        = 1800 (2070)
+| startup       = 20+10
+| active        = 3
+| recovery      = 30 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +18
+| blockAdv      = -
+| punishAdv     = HKD +18
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 3000 (2100)
+| airborne      = Until Land (FKD)
+| notes         = Throws standing opponents only; 15% damage increase on Punish Counter; up to 8f more total recovery before landing (depends on activation height); crouching state during landing recovery; extends a proximity guard box that immediately forces a crouch blocking opponent's hurtbox to reach its crouching height, preventing uncrouchable meaty setups (but can still throw opponents that hold straight down on wakeup)
+}}
+
+===== 236[HP]~LPLK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hp_hold_lplk | moveType = special
+| input         = 236[HP]~LPLK
+| name          = Fatal Leg Twister
+| images        = SF6_Cammy_236p_lplk.png
+| hitboxes      = SF6_Cammy_236p_lplk_hitbox.png
+| damage        = 1000 (1150)
+| dmgScaling    = 20% Starter
+| startup       = 40+10
+| active        = 3
+| recovery      = 30 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +60 Launch
+| blockAdv      = -
+| punishAdv     = HKD +60 Launch
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| notes         = Throws standing opponents only; puts opponent into limited juggle state; 15% damage increase on Punish Counter; up to 2f more total recovery before landing (depends on activation height); crouching state during landing recovery; can be up to 2f faster if HP is held for only 18f; extends a proximity guard box that immediately forces a crouch blocking opponent's hurtbox to reach its crouching height, preventing uncrouchable meaty setups (but can still throw opponents that hold straight down on wakeup)
+}}
+
+===== 236PP~LPLK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236pp_lplk | moveType = special
+| input         = 236PP~LPLK
+| name          = Fatal Leg Twister
+| images        = SF6_Cammy_236pp_lplk.png
+| hitboxes      = SF6_Cammy_236p_lplk_hitbox.png
+| damage        = 1000 (1150)
+| dmgScaling    = 30% Starter
+| startup       = 20+10
+| active        = 3
+| recovery      = 30 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = HKD +60 Launch
+| blockAdv      = -
+| punishAdv     = HKD +60 Launch
+| driveDmgHit   = [10000]
+| superGainHit  = 1000 (700)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| notes         = Throws standing opponents only; puts opponent into limited juggle state; 15% damage increase on Punish Counter; up to 8f more recovery before landing (depends on activation height); crouching state during landing recovery; extends a proximity guard box that immediately forces a crouch blocking opponent's hurtbox to reach its crouching height, preventing uncrouchable meaty setups (but can still throw opponents that hold straight down on wakeup)
+}}
+
+=== Silent Step ===
+===== 236P~P =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236p_p | moveType = special
+| input         = 236P~P
+| name          = Silent Step
+| images        = SF6_Cammy_236p_p.png
+| hitboxes      = SF6_Cammy_236p_p_hitbox.png
+| damage        = -
+| startup       = 20~
+| active        = -
+| recovery      = 4(12)+10 land
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = Until Land (FKD)
+| notes         = Stops forward trajectory; recovery before landing depends on activation height; Cammy is in crouching state during recovery; useful for baiting reversals in setups where throw/overhead/divekick could hit meaty
+}}
+
+===== 236[HP]~P =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236hp_hold_p | moveType = special
+| input         = 236[HP]~P
+| name          = Silent Step
+| images        = SF6_Cammy_236p_p.png
+| hitboxes      = SF6_Cammy_236p_p_hitbox.png
+| damage        = -
+| startup       = 40~
+| active        = -
+| recovery      = 4(7)+10 land
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = Until Land (FKD)
+| notes         = Stops forward trajectory; recovery before landing depends on activation height; Cammy is in crouching state during recovery; useful for baiting reversals in setups where throw/overhead/divekick could hit meaty; can be up to 2f faster if HP is held for only 18f
+}}
+
+===== 236PP~P =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236pp_p | moveType = special
+| input         = 236PP~P
+| name          = Silent Step
+| images        = SF6_Cammy_236pp_p.png
+| hitboxes      = SF6_Cammy_236p_p_hitbox.png
+| damage        = -
+| startup       = 20~
+| active        = -
+| recovery      = 4(9)+10 land
+| total         = -
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = Until Land (FKD)
+| notes         = Stops forward trajectory; recovery before landing depends on activation height; Cammy is in crouching state during recovery; useful for baiting reversals in setups where throw/overhead/divekick could hit meaty
+}}
+
+== Super Arts ==
+===== 236236K =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236236k | moveType = super
+| input         = 236236K
+| name          = Spin Drive Smasher
+| images        = SF6_Cammy_236236k.png
+| hitboxes      = SF6_Cammy_236236k_hitbox.png
+| damage        = 2000
+| chip          = 100x5
+| dmgScaling    = 30% Minimum
+| startup       = 9
+| active        = 4,3,3,3,3
+| recovery      = 38
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +10
+| blockAdv      = {{sf6-adv|VM|-24(-22)}}
+| punishAdv     = KD +10
+| perfParryAdv  = {{sf6-adv|VM|-37(-43)}}
+| blockstun     = 30 total
+| hitstop       = 5,5,5,5,13
+| driveDmgBlk   = 500x5
+| driveDmgHit   = 500x6,2000 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-11 Strike/Throw
+| armor         = Break
+| airborne      = 12-27 (FKD)
+| jugLimit      = 100
+| atkRange      = 4.278 (1.299)
+| notes         = Great combo tool with high juggle potential and corner carry; 5th hits transitions into launching follow-up on hit only; damage distribution: 100,200x3,100,200,1000
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_214214p | moveType = super
+| input         = 214214P
+| name          = Killer Bee Spin
+| images        = SF6_Cammy_214214p.png
+| hitboxes      = SF6_Cammy_214214p_hitbox.png
+| damage        = 3000 (220x6)
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 13
+| active        = 9
+| recovery      = 37 land
+| total         = 58
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +12 (KD +70 Launch)
+| blockAdv      = {{sf6-adv|VM|-24(-18)}}
+| punishAdv     = HKD +12 (KD +70 Launch)
+| perfParryAdv  = {{sf6-adv|VM|-42(-36)}}
+| blockstun     = 20
+| hitstop       = 16
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 (5700-8800)
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break
+| airborne      = Until Land (FKD)
+| jugStart      = 1 air
+| jugIncrease   = 0
+| jugLimit      = 30
+| atkRange      = 2.5
+| notes         = Can escape grounded meaty attacks, but usually results in Cammy whiffing over opponent's head; puts airborne opponents into limited juggle state (no cinematic), number of airborne hits varies based on juggle height; Drive Damage distribution: 900x3-x7,3000; only deals 250 damage on the first hit if it trades
+}}
+
+====== j.214214P ======
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_j214214p | moveType = super
+| input         = j.214214P
+| name          = Aerial Killer Bee Spin
+| images        = SF6_Cammy_214214p.png
+| hitboxes      = SF6_Cammy_214214p_hitbox.png
+| damage        = 3000 (220x8)
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 13
+| active        = until land
+| recovery      = 37 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +12 (KD +70 Launch)
+| blockAdv      = {{sf6-adv|VM|-23(-18)}}
+| punishAdv     = HKD +12 (KD +70 Launch)
+| perfParryAdv  = {{sf6-adv|VM|-41(-36)}}
+| blockstun     = 20
+| hitstop       = 16
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 (5700-10000)
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break
+| airborne      = Until Land (FKD)
+| jugStart      = 1 air
+| jugIncrease   = 0
+| jugLimit      = 30
+| notes         = Forward jump only; puts airborne opponents into limited juggle state (no cinematic), number of airborne hits varies based on juggle height; non-cinematic Drive Damage distribution: 900x3-x7,3700; only deals 250 damage on the first hit if it trades
+}}
+
+===== 236236P =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236236p | moveType = super
+| input         = 236236P
+| name          = Delta Red Assault
+| images        = SF6_Cammy_236236p.png
+| hitboxes      = SF6_Cammy_236236p_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 9
+| active        = 15
+| recovery      = 38
+| total         = 61
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +17
+| blockAdv      = {{sf6-adv|VM|-33(-23)}}
+| punishAdv     = HKD +17
+| perfParryAdv  = {{sf6-adv|VM|-51(-41)}}
+| blockstun     = 20
+| hitstop       = 20
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| airborne      = 9-27 (FKD)
+| jugLimit      = 100
+| atkRange      = 5.09 (2.20)
+| notes         = Full screen anti-projectile move (can lose to slow projectiles at max range); combos from charged 623[HP], 214P, or 236HK 1st hit when canceled into; cinematic time regenerates ~1.9 Drive bars for Cammy; only deals 500 damage on the first hit if it trades (only the first 5 active frames are invincible)
+}}
+
+====== 236236P (CA) ======
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_236236p(ca) | moveType = super
+| input         = 236236P
+| name          = Delta Red Assault (CA)
+| images        = SF6_Cammy_236236p(ca).png
+| hitboxes      = SF6_Cammy_236236p_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 9
+| active        = 15
+| recovery      = 38
+| total         = 61
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +22
+| blockAdv      = {{sf6-adv|VM|-33(-23)}}
+| punishAdv     = HKD +22
+| perfParryAdv  = {{sf6-adv|VM|-51(-41)}}
+| blockstun     = 20
+| hitstop       = 20
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| airborne      = 9-27 (FKD)
+| jugLimit      = 100
+| atkRange      = 5.09 (2.20)
+| notes         = Full screen anti-projectile move (can lose to slow projectiles at max range); combos from charged 623[HP], 214P, or 236HK 1st hit when canceled into; available at 25% HP or below; cinematic time regenerates ~1.9 Drive bars for Cammy; only deals 500 damage on the first hit if it trades (only the first 5 active frames are invincible)
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Cammy_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 335 (total)
+| active        = -
+| recovery      = -
+| total         = 335
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Sigh... Do you plan to fight at all?"
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Cammy_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 255 (total)
+| active        = -
+| recovery      = -
+| total         = 255
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Time to meet your maker."
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Cammy | moveId = cammy_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Cammy_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 340 (total)
+| active        = -
+| recovery      = -
+| total         = 340
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "(Biiiig stretch)"
+}}
+
+
+{{Character Subnav SF6 | chara=Cammy }}
+{{Navbox-SF6}}
+[[Category:Street Fighter 6]]
+[[Category:Cammy]]

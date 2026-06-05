@@ -1,0 +1,58 @@
+{
+  "official_rows": 91,
+  "supercombo_rows": 84,
+  "enriched_rows": 91,
+  "supercombo_only_rows": 34,
+  "enrichment_status_counts": {
+    "enriched": 15,
+    "enriched_review_required": 42,
+    "official_only": 34
+  },
+  "review_flag_counts": {
+    "ambiguous_match": 2,
+    "basic_field_conflict:active_duration": 1,
+    "basic_field_conflict:active_duration,startup": 1,
+    "condition_dependent_supercombo_field:damage": 7,
+    "condition_dependent_supercombo_field:recovery": 14,
+    "condition_dependent_supercombo_field:startup": 2,
+    "manual_match": 2,
+    "multiple_candidates": 15,
+    "supercombo_row_reused": 13,
+    "uncomparable_basic_field:active_duration": 6,
+    "uncomparable_basic_field:active_duration,damage": 2,
+    "uncomparable_basic_field:active_duration,damage,recovery": 7,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
+    "uncomparable_basic_field:active_duration,damage,startup": 2,
+    "uncomparable_basic_field:damage": 6,
+    "uncomparable_basic_field:damage,recovery": 5,
+    "uncomparable_basic_field:recovery": 6
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 2,
+    "startup": 1
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 21,
+    "damage": 26,
+    "recovery": 22,
+    "startup": 6
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "blanka_214p",
+    "blanka_214pp",
+    "blanka_236236p",
+    "blanka_63214kk",
+    "blanka_jhp",
+    "blanka_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 31,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/blanka/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/blanka/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/blanka/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/blanka/classic-supercombo.csv"
+}

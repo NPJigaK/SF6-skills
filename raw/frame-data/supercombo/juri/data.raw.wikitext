@@ -1,0 +1,2791 @@
+{{Character Subnav SF6 | chara=Juri }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Juri
+| name          = Juri
+| portrait      = SF6 Juri Portrait.png
+| icon          = SF6 Juri Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.047
+| bwdWalkSpd    = 0.032
+| fwdDashSpd    = 22
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.903
+| bwdDashDist   = 1.114
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.641
+| dRushBlock    = 2.479
+| dRushMax      = 3.999
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Juri_5lp.png
+| hitboxes      = SF6_Juri_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 4
+| recovery      = 7
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 14
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-3}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 16
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.85
+| pushbackHit   = 0.319
+| pushbackBlk   = 0.333
+| notes         = Chains into 5LP/2LP/2LK; high active frame count makes it a useful meaty (up to +8/+1); SA2 cancel: +8/+1; DR cancel is delayed until after 3rd active frame
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5lp_fse | moveType = ground_normal
+| input         = 5LP (FSE Chain)
+| name          = Standing Light Punch
+| images        = SF6_Juri_5lp.png
+| hitboxes      = SF6_Juri_5lp_hitbox.png
+| damage        = 100
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 4
+| recovery      = 7
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 14 Sp / 16 Chn
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-3}}
+| hitstun       = 16
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 125
+| driveDmgHit   = [500]
+| driveGain     = 62
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 0.85
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; DR cancel is delayed until after 3rd active frame
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Juri_5mp.png
+| hitboxes      = SF6_Juri_5mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 12
+| total         = 21
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+11}}
+| afterDRBlk    = {{sf6-adv|VP|+6}}
+| hitstun       = 23
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.93
+| notes         = Strong combo/pressure starter and meaty tool, especially out of Drive Rush to minimize pushback; meaty timing can be up to +10/+5; SA2 cancel: +14/+9; special/DR cancel is delayed until after 2nd active frame
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5mp_fse | moveType = ground_normal
+| input         = 5MP (FSE Chain)
+| name          = Standing Medium Punch
+| images        = SF6_Juri_5mp.png
+| hitboxes      = SF6_Juri_5mp_hitbox.png
+| damage        = 400
+| startup       = 6
+| active        = 4
+| recovery      = 12
+| total         = 21
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 16 Sp / 18 Chn
+| hitAdv        = {{sf6-adv|VP|+7}}
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+11}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| hitstun       = 23
+| blockstun     = 18
+| hitstop       = 9
+| driveDmgBlk   = 750
+| driveDmgHit   = [1000]
+| driveGain     = 375
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 0.93
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; 2f shorter hitconfirm window when chained into; special/DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Juri_5hp.png
+| hitboxes      = SF6_Juri_5hp_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 3
+| recovery      = 24
+| total         = 36
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|M|-1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|P|+3}}
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| DRcancelHit   = {{sf6-adv|VP|+16}}
+| DRcancelBlk   = {{sf6-adv|VP|+12}}
+| afterDRHit    = {{sf6-adv|P|+3}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 26
+| blockstun     = 22
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.588 (1.49)
+| notes         = Forces stand on hit; good whiff punish tool with long range; large hurtbox makes it weak as an anti-air; SA2 cancel: +18/+14
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5hp_fse | moveType = ground_normal
+| input         = 5HP (FSE Chain)
+| name          = Standing Heavy Punch
+| images        = SF6_Juri_5hp.png
+| hitboxes      = SF6_Juri_5hp_hitbox.png
+| damage        = 600
+| startup       = 10
+| active        = 3
+| recovery      = 24
+| total         = 36
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 17 Sp / 19 Chn
+| hitAdv        = KD +29
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = KD +29
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| DRcancelHit   = KD +46
+| DRcancelBlk   = {{sf6-adv|VP|+12}}
+| blockstun     = 22
+| hitstop       = 12
+| driveDmgBlk   = 1250
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.588 (1.49)
+| notes         = Chained version during SA2 (FSE); forces stand on hit; maintains juggle state vs. airborne opponents; 1f shorter hitconfirm window when chained into
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Juri_5lk.png
+| hitboxes      = SF6_Juri_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 9
+| total         = 16
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 13
+| blockstun     = 7
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.16
+| notes         = Good range for a light normal, but can't combo into 214MK; SA2 cancel: +5/0; special cancel is delayed until after 2nd active frame
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5lk_fse | moveType = ground_normal
+| input         = 5LK (FSE Chain)
+| name          = Standing Light Kick
+| images        = SF6_Juri_5lk.png
+| hitboxes      = SF6_Juri_5lk_hitbox.png
+| damage        = 100
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 9
+| total         = 16
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13 Sp / 15 Chn
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| hitstun       = 13
+| blockstun     = 7
+| hitstop       = 9
+| driveDmgBlk   = 125
+| driveDmgHit   = [500]
+| driveGain     = 62
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.16
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; special cancel is delayed until after 2nd active frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Juri_5mk_1.png, SF6_Juri_5mk_2.png
+| hitboxes      = SF6_Juri_5mk_hitbox_preview.png, SF6_Juri_5mk_hitbox_1.png, SF6_Juri_5mk_hitbox_2.png
+| damage        = 400,300 (700)
+| startup       = 5(8)
+| active        = 2(1)3
+| recovery      = 17
+| total         = 27
+| guard         = LH
+| cancel        = Sp SA (1st)
+| hitconfirm    = 14
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}} / {{sf6-adv|VM|-18}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+5}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 27,23
+| blockstun     = 15,16
+| hitstop       = 11,11
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [3000x2]
+| driveGain     = 1000x2
+| superGainHit  = 350,700 (245,490)
+| superGainBlk  = 175,350 (87,175)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 0,0
+| atkRange      = 1.427 (0.74)
+| rangeNotes    = Extremely short range as a 5-frame punish (0.74), but more rewarding when landed
+| notes         = 8f startup for 2nd hit only; 1st hit can combo from 5LP and has enough hitstun to combo to 214HK for a launch and Fuha stock; great poke in neutral (1st hit can interrupt opponent's button while 2nd hit extends for long range); very effective when used out of Drive Rush; SA2 cancel: +19/+7 (1st hit)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5mk_fse | moveType = ground_normal
+| input         = 5MK (FSE Chain)
+| name          = Standing Medium Kick
+| images        = SF6_Juri_5mk_1.png, SF6_Juri_5mk_2.png
+| hitboxes      = SF6_Juri_5mk_hitbox_preview.png, SF6_Juri_5mk_hitbox_1.png, SF6_Juri_5mk_hitbox_2.png
+| damage        = 300,200
+| startup       = 5(8)
+| active        = 2(1)3
+| recovery      = 17
+| total         = 27
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 29(15) Sp / 31(17) Chn
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}} / {{sf6-adv|VM|-18}}
+| DRcancelHit   = {{sf6-adv|VP|+13}} / {{sf6-adv|VP|+13}}
+| DRcancelBlk   = {{sf6-adv|VP|+5}} / {{sf6-adv|VP|+6}}
+| hitstun       = 23,23
+| blockstun     = 15,16
+| hitstop       = 9,9
+| driveDmgBlk   = 500x2
+| driveDmgHit   = [750x2]
+| driveGain     = 250x2
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,11
+| atkRange      = 1.427 (0.74)
+| notes         = Chained version during SA2 (FSE); 1st hit has 4f less hitstun (cannot combo into 214HK); when chained into, 4f shorter hitconfirm window (2f if 2nd hit only); maintains juggle state vs. airborne opponents
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Juri_5hk.png
+| hitboxes      = SF6_Juri_5hk_hitbox.png
+| damage        = 900
+| dmgScaling    = 20% Starter
+| startup       = 17
+| active        = 4
+| recovery      = 19
+| total         = 39
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+5)}}
+| blockAdv      = {{sf6-adv|M|-3}}{{sf6-adv|E|(0)}}
+| punishAdv     = KD +42(+45) Launch
+| perfParryAdv  = {{sf6-adv|VM|-21(-18)}}
+| afterDRHit    = {{sf6-adv|VP|+6(+9)}}
+| afterDRBlk    = {{sf6-adv|VP|+1}}{{sf6-adv|VP|(+4)}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 4000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = {{sf6-adv|PC|1 PC Ground}}<br>{{sf6-adv|PC|[1 CH/PC Air]}}
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.264 (2.19)
+| notes         = Not airborne despite the animation; Counter-Hit/Punish Counter puts airborne opponents into limited juggle state; Punish Counter also puts grounded opponents into limited juggle state with a follow-up juggle; long range and safe on block makes it great in neutral; better frame advantage when well spaced (very difficult to connect with the final active frame); extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5hk_fse | moveType = ground_normal
+| input         = 5HK (FSE Chain)
+| name          = Standing Heavy Kick
+| images        = SF6_Juri_5hk.png
+| hitboxes      = SF6_Juri_5hk_hitbox.png
+| damage        = 700
+| dmgScaling    = 20% Starter
+| startup       = 17
+| active        = 4
+| recovery      = 19
+| total         = 39
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 26 Sp/Chn (PC: 38)
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +34
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+7}} (KD +39)
+| DRcancelBlk   = {{sf6-adv|P|+2}}
+| blockstun     = 20
+| hitstop       = 11
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2500]
+| driveGain     = 1000
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.264 (2.19)
+| notes         = Becomes fully cancelable during FSE, even when not chained into; not airborne despite the animation; maintains juggle state vs. airborne opponents; 2f shorter hitconfirm window when chained into; special/DR cancel is delayed until after 5th recovery frame; extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Juri_2lp.png
+| hitboxes      = SF6_Juri_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 8
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.92
+| pushbackHit   = 0.320
+| pushbackBlk   = 0.330
+| notes         = Chains into 5LP/2LP/2LK; SA2 cancel: +7/+2; DR cancel is delayed until after 2nd active frame
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2lp_fse | moveType = ground_normal
+| input         = 2LP (FSE Chain)
+| name          = Crouching Light Punch
+| images        = SF6_Juri_2lp.png
+| hitboxes      = SF6_Juri_2lp_hitbox.png
+| damage        = 100
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 8
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13 Sp / 15 Chn
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 125
+| driveDmgHit   = [500]
+| driveGain     = 62
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 0.92
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; DR cancel is delayed until after 2nd active frame
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Juri_2mp.png
+| hitboxes      = SF6_Juri_2mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 14(15)
+| total         = 23(24)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| DRcancelHit   = {{sf6-adv|VP|+13}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 23
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.12
+| notes         = 1f extra recovery on whiff and extends a wider hurtbox until the end of recovery; good combo tool and useful when buffered in neutral; good anti-air for horizontal approaches (hitbox is above her extended fist); SA2 cancel: +15/+8
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2mp_fse | moveType = ground_normal
+| input         = 2MP (FSE Chain)
+| name          = Crouching Medium Punch
+| images        = SF6_Juri_2mp.png
+| hitboxes      = SF6_Juri_2mp_hitbox.png
+| damage        = 400
+| startup       = 6
+| active        = 4
+| recovery      = 14(15)
+| total         = 23(24)
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 16 Sp / 18 Chn
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| DRcancelHit   = {{sf6-adv|VP|+13}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| hitstun       = 23
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 750
+| driveDmgHit   = [1000]
+| driveGain     = 375
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.12
+| notes         = Chained version during SA2 (FSE); 1f extra recovery on whiff and extends a wider hurtbox until the end of recovery; maintains juggle state vs. airborne opponents; 2f shorter hitconfirm window when chained into
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Juri_2hp.png
+| hitboxes      = SF6_Juri_2hp_hitbox.png
+| damage        = 900
+| startup       = 8
+| active        = 4
+| recovery      = 23
+| total         = 34
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| DRcancelHit   = {{sf6-adv|VP|+20}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|VM|-7}}
+| hitstun       = 30
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.873
+| notes         = Forces stand on hit; great anti-air but cannot hit cross-up (upward leg hurtbox is anti-air invincible on frames 8-15); Punish Counter puts airborne opponents into spinning free juggle state; all active frames are cancelable; powerful combo starter after a canceled Drive Rush hitconfirm; SA2 cancel: +22/+8
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2hp_fse | moveType = ground_normal
+| input         = 2HP (FSE Chain)
+| name          = Crouching Heavy Punch
+| images        = SF6_Juri_2hp.png
+| hitboxes      = SF6_Juri_2hp_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 4
+| recovery      = 23
+| total         = 34
+| guard         = LH
+| cancel        = Sp SA Jmp
+| hitconfirm    = 16 Sp / 18 Jmp / 20 Chn
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = KD +34
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| DRcancelHit   = KD +51
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 1250
+| driveDmgHit   = [2000]
+| driveGain     = 750
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 0.873
+| notes         = Chained version of 2HP during SA2 (FSE); jump cancelable on hit only; when jump canceled, FSE air normals cause juggle state; 2f shorter CHAIN react window when chained into
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Juri_2lk.png
+| hitboxes      = SF6_Juri_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 8
+| total         = 15
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.97
+| notes         = Chains into 5LP/2LP/2LK; becomes fully cancelable during Feng Shui Engine
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2lk_fse | moveType = ground_normal
+| input         = 2LK (FSE Chain)
+| name          = Crouching Light Kick
+| images        = SF6_Juri_2lk.png
+| hitboxes      = SF6_Juri_2lk_hitbox.png
+| damage        = 100
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 8
+| total         = 15
+| guard         = L
+| cancel        = Chn Sp SA
+| hitconfirm    = 15 Sp/Chn
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 125
+| driveDmgHit   = [500]
+| driveGain     = 62
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 0.97
+| notes         = Chained version during SA2 (FSE); 2f shorter special hitconfirm window when chained into; maintains juggle state vs. airborne opponents
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Juri_2mk.png
+| hitboxes      = SF6_Juri_2mk_hitbox.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 19
+| total         = 29
+| guard         = L
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 23
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.517 (1.446)
+| rangeNotes    = 1st active frame: 1.446
+| notes         = Excellent range for a cancelable low poke in neutral; SA2 cancel: +15/+8; Range: 1.517 (1st frame: 1.446); DR cancel is delayed until after active frames; has an extended hurtbox on whiff until the end of recovery
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2mk_fse | moveType = ground_normal
+| input         = 2MK (FSE Chain)
+| name          = Crouching Medium Kick
+| images        = SF6_Juri_2mk.png
+| hitboxes      = SF6_Juri_2mk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 19
+| total         = 29
+| guard         = L
+| cancel        = Chn Sp SA
+| hitconfirm    = 13 Sp / 15 Chn
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| hitstun       = 23
+| blockstun     = 16
+| hitstop       = 8
+| driveDmgBlk   = 500
+| driveDmgHit   = [1000]
+| driveGain     = 250
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.517 (1.446)
+| notes         = Chained version during SA2 (FSE); 1f shorter hitconfirm window when chained into; maintains juggle state vs. airborne opponents; Range: 1.517 (1st frame: 1.446); DR cancel is delayed until after active frames; has an extended hurtbox on whiff until the end of recovery
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Slash Kick
+| images        = SF6_Juri_2hk.png
+| hitboxes      = SF6_Juri_2hk_hitbox.png
+| damage        = 900
+| startup       = 10
+| active        = 3
+| recovery      = 23
+| total         = 35
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = HKD +47
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| afterDRHit    = KD +38
+| afterDRBlk    = {{sf6-adv|VM|-7}}
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.798 (1.787)
+| notes         = Becomes fully cancelable during Feng Shui Engine (even when not chained into)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_2hk_fse | moveType = ground_normal
+| input         = 2HK (FSE Chain)
+| name          = Slash Kick
+| images        = SF6_Juri_2hk.png
+| hitboxes      = SF6_Juri_2hk_hitbox.png
+| damage        = 700
+| startup       = 10
+| active        = 3
+| recovery      = 23
+| total         = 35
+| guard         = L
+| cancel        = Sp SA
+| hitconfirm    = 17 Sp / 19 Chn
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = HKD +47
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = KD +54
+| DRcancelBlk   = {{sf6-adv|VP|+5}}
+| blockstun     = 15
+| hitstop       = 9
+| driveDmgBlk   = 1000
+| driveDmgHit   = [2500]
+| driveGain     = 750
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.798 (1.787)
+| notes         = Chained version of 2HP during SA2 (FSE); maintains juggle state vs. airborne opponents; 4f shorter hitconfirm window when chained into
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Juri_jlp.png
+| hitboxes      = SF6_Juri_jlp_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+9)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+10(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.82
+| notes         = During FSE forward jump, can cancel into divekick
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jlp_fse | moveType = air_normal
+| input         = j.LP (FSE Chain)
+| name          = Jumping Light Punch
+| images        = SF6_Juri_jlp.png
+| hitboxes      = SF6_Juri_jlp_hitbox.png
+| damage        = 100
+| startup       = 5
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = {{sf6-adv|VP|+9}}
+| blockAdv      = {{sf6-adv|VP|+5}}
+| punishAdv     = {{sf6-adv|VP|+13}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 375
+| driveGain     = 125
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 0.82
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Juri_jmp.png
+| hitboxes      = SF6_Juri_jmp_hitbox.png
+| damage        = 500
+| startup       = 7
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitAdv        = {{sf6-adv|VP|+4(+13)}}
+| blockAdv      = {{sf6-adv|M|-2}}{{sf6-adv|VP|(+7)}}
+| punishAdv     = {{sf6-adv|VP|+8(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 11
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.79
+| notes         = Puts airborne opponents into limited juggle state; cancelable into divekick; instant j.MP > j.214KK is a useful option against corner throw loops (much less punishable than a blocked reversal); can only be used as a fuzzy instant overhead if the opponent is in Burnout and blocks a deep j.HK
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jmp_fse | moveType = air_normal
+| input         = j.MP (FSE Chain)
+| name          = Jumping Medium Punch
+| images        = SF6_Juri_jmp.png
+| hitboxes      = SF6_Juri_jmp_hitbox.png
+| damage        = 300
+| startup       = 7
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = -
+| blockAdv      = -
+| hitstun       = 17
+| blockstun     = 11
+| hitstop       = 11
+| driveGain     = 250
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 0.79
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Juri_jhp.png
+| hitboxes      = SF6_Juri_jhp_hitbox.png
+| damage        = 900
+| startup       = 12
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = HKD +23(+34)
+| blockAdv      = {{sf6-adv|E|0}}{{sf6-adv|VP|(+7)}}
+| punishAdv     = HKD +23(+34)
+| perfParryAdv  = {{sf6-adv|VM|-13(-6)}}
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 100
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.16
+| notes         = Cross-up; causes a spike knockdown vs. airborne opponents with no Hard Knockdown; better KD Adv. when hitting lower to the ground; Juri's collision box prevents her from connecting this on grounded opponents late in her jump arc (cannot use in safe jump setups); during FSE forward jump, can cancel into divekick; lower body projectile invuln 12-23f (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jhp_fse | moveType = air_normal
+| input         = j.HP (FSE Chain)
+| name          = Jumping Heavy Punch
+| images        = SF6_Juri_jhp.png
+| hitboxes      = SF6_Juri_jhp_hitbox.png
+| damage        = 700
+| startup       = 12
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = KD
+| blockAdv      = -
+| blockstun     = 15
+| hitstop       = 13
+| driveGain     = 500
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 0.16
+| notes         = Chained version during SA2 (FSE); lower body projectile invuln 12-23f
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Juri_jlk.png
+| hitboxes      = SF6_Juri_jlk_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+9(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.55
+| notes         = Cross-up; can be used as a fuzzy instant overhead (vs. Blanka, will not work after perfect safe jump j.HK timing); during FSE forward jump, can cancel into divekick
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jlk_fse | moveType = air_normal
+| input         = j.LK (FSE Chain)
+| name          = Jumping Light Kick
+| images        = SF6_Juri_jlk.png
+| hitboxes      = SF6_Juri_jlk_hitbox.png
+| damage        = 100
+| startup       = 4
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = -
+| blockAdv      = -
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveGain     = 125
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 0.55
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Juri_jmk.png
+| hitboxes      = SF6_Juri_jmk_hitbox.png
+| damage        = 500
+| startup       = 6
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+13)}}
+| blockAdv      = {{sf6-adv|VP|+4(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.09
+| notes         = Cross-up; during FSE forward jump, can cancel into divekick; lower body projectile invuln 6-20f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jmk_fse | moveType = air_normal
+| input         = j.MK (FSE Chain)
+| name          = Jumping Medium Kick
+| images        = SF6_Juri_jmk.png
+| hitboxes      = SF6_Juri_jmk_hitbox.png
+| damage        = 300
+| startup       = 6
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = {{sf6-adv|VP|+10(+13)}}
+| blockAdv      = {{sf6-adv|VP|+6(+9)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 625
+| driveDmgHit   = [1000]
+| driveGain     = 250
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 1.09
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; lower body projectile invuln 6-20f except around attack hitbox
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jhk | moveType = air_normal
+| input         = 7HK or 9HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Juri_jhk.png
+| hitboxes      = SF6_Juri_jhk_hitbox_preview.png, SF6_Juri_jhk_hitbox_1.png, SF6_Juri_jhk_hitbox_2.png, SF6_Juri_jhk_hitbox_3.png
+| damage        = 800
+| startup       = 10
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+15)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+11)}}
+| punishAdv     = {{sf6-adv|VP|+10(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.96
+| notes         = During FSE forward jump, can cancel into divekick; lower body projectile invuln 10-13f and kicking leg 10-19f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jhk_fse | moveType = air_normal
+| input         = j.HK (FSE Chain)
+| name          = Jumping Heavy Kick
+| images        = SF6_Juri_jhk.png
+| hitboxes      = SF6_Juri_jhk_hitbox_preview.png, SF6_Juri_jhk_hitbox_1.png, SF6_Juri_jhk_hitbox_2.png, SF6_Juri_jhk_hitbox_3.png
+| damage        = 600
+| startup       = 10
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = -
+| blockAdv      = -
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 1000
+| driveGain     = 500
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 0.96
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; lower body projectile invuln 10-13f and kicking leg 10-19f
+}}
+
+===== 8j.HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_8jhk | moveType = air_normal
+| input         = 8HK
+| name          = Neutral Jump Heavy Kick
+| images        = SF6_Juri_8jhk.png
+| hitboxes      = SF6_Juri_8jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 4
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+15)}}
+| blockAdv      = {{sf6-adv|VP|+7(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| notes         = Hits on both sides (can cross-up if opponent tries to move underneath Juri); can be used as an air-to-air; when chained after FSE nj.MP, puts airborne opponents into juggle state; lower body projectile invuln 10-13f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_8jhk_fse | moveType = air_normal
+| input         = 8HK (FSE Chain)
+| name          = Neutral Jumping Heavy Kick
+| images        = SF6_Juri_8jhk.png
+| hitboxes      = SF6_Juri_8jhk_hitbox.png
+| damage        = 600
+| startup       = 10
+| active        = 4
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Chn Sp
+| hitAdv        = -
+| blockAdv      = -
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveGain     = 500
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| atkRange      = 1.05
+| notes         = Chained version during SA2 (FSE); maintains juggle state vs. airborne opponents; lower body projectile invuln 10-13f
+}}
+
+== Command Normals ==
+===== 6MP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6mp | moveType = ground_normal
+| input         = 6MP
+| name          = Kyosesho
+| images        = SF6_Juri_6mp.png
+| hitboxes      = SF6_Juri_6mp_hitbox.png
+| damage        = 600
+| startup       = 8
+| active        = 3
+| recovery      = 17
+| total         = 27
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 24
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1(2)
+| jugLimit      = 0
+| atkRange      = 1.478
+| notes         = Continues juggle state when comboed into (e.g. after 214KK free juggle launch); SA2 cancel: +16/+9
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6mp_fse | moveType = air_normal
+| input         = 6MP (FSE Chain)
+| name          = Kyosesho
+| images        = SF6_Juri_6mp.png
+| hitboxes      = SF6_Juri_6mp_hitbox.png
+| damage        = 400
+| startup       = 8
+| active        = 3
+| recovery      = 17
+| total         = 27
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 15 Sp / 17 Chn
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| hitstun       = 24
+| blockstun     = 17
+| hitstop       = 9
+| driveDmgBlk   = 750
+| driveDmgHit   = [1000]
+| driveGain     = 375
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.478
+| notes         = Chained version during SA2 (FSE); 2f shorter hitconfirm window when chained into; maintains juggle state vs. airborne opponents
+}}
+
+===== 6MK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6mk | moveType = ground_normal
+| input         = 6MK
+| name          = Senkai Kick
+| images        = SF6_Juri_6mk.png
+| hitboxes      = SF6_Juri_6mk_hitbox_preview.png, SF6_Juri_6mk_hitbox_1.png, SF6_Juri_6mk_hitbox_2.png
+| damage        = 600
+| startup       = 21
+| active        = 2
+| recovery      = 21(23)
+| total         = 43(45)
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1500
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.845 (1.837)
+| notes         = Not airborne despite the animation; 2 extra recovery frames on whiff
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6mk_fse | moveType = ground_normal
+| input         = 6MK (FSE Chain)
+| name          = Senkai Kick
+| images        = SF6_Juri_6mk.png
+| hitboxes      = SF6_Juri_6mk_hitbox_preview.png, SF6_Juri_6mk_hitbox_1.png, SF6_Juri_6mk_hitbox_2.png
+| damage        = 400
+| startup       = 21
+| active        = 2
+| recovery      = 21(23)
+| total         = 43(45)
+| guard         = H
+| cancel        = Sp SA
+| hitconfirm    = 14 Sp/Chn
+| hitAdv        = KD +25
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +25
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = KD +37
+| DRcancelBlk   = {{sf6-adv|VP|+9}}
+| blockstun     = 20
+| hitstop       = 9
+| driveDmgBlk   = 625
+| driveDmgHit   = [1250]
+| driveGain     = 375
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.845 (1.837)
+| notes         = Chained Feng Shui Engine version; not airborne despite the animation; the special/chain cancel window only applies when chaining into 6MK and the KD doesn't allow anything to juggle on hit; 2 extra recovery frames on whiff; special/DR cancel is delayed until after 2nd active frame
+}}
+
+===== 6HP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6hp | moveType = ground_normal
+| input         = 6HP
+| name          = Renko Kicks
+| images        = SF6_Juri_6hp.png, SF6_Juri_6hp_2.png
+| hitboxes      = SF6_Juri_6hp_hitbox_preview.png, SF6_Juri_6hp_hitbox_1.png, SF6_Juri_6hp_hitbox_2.png
+| damage        = 500x2
+| startup       = 15(23)
+| active        = 3(5)3
+| recovery      = 20(23)
+| total         = 45(48)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 27/14
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+16}} / {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}} / {{sf6-adv|VP|+9}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 26,25
+| blockstun     = 16,19
+| hitstop       = 5,10
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [5000x2]
+| driveGain     = 1250x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1
+| jugIncrease   = 1,1
+| jugLimit      = 0,1
+| atkRange      = 1.90 (1.78)
+| notes         = 3f extra recovery on whiff; both hits are cancelable; 23f startup for 2nd hit only; 1st hit has more hitstun and blockstun for cancels; both hits put airborne opponent into limited juggle state; carries counter-hit/Punish Counter advantage through both hits; extended whiff hurtbox lasts until the end of recovery; SA2 cancel: +18/+8 (1st hit), +17/+11 (2nd hit)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6hp_fse | moveType = air_normal
+| input         = 6HP (FSE Chain)
+| name          = Renko Kicks
+| images        = SF6_Juri_6hp.png, SF6_Juri_6hp_2.png
+| hitboxes      = SF6_Juri_6hp_hitbox_preview.png, SF6_Juri_6hp_hitbox_1.png, SF6_Juri_6hp_hitbox_2.png
+| damage        = 400x2
+| startup       = 15(23)
+| active        = 3(5)3
+| recovery      = 20(23)
+| total         = 45(48)
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 27(14) Sp / 29(16) Chn
+| hitAdv        = KD +40
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = KD +40
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = KD +48/+53
+| DRcancelBlk   = {{sf6-adv|VP|+6}} / {{sf6-adv|VP|+9}}
+| blockstun     = 16,19
+| hitstop       = 5,6
+| driveDmgBlk   = 625x2
+| driveDmgHit   = [1250x2]
+| driveGain     = 313,312
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,11
+| atkRange      = 2.15 (1.78)
+| notes         = Chained version during SA2 (FSE); 3f extra recovery on whiff; maintains juggle state vs. airborne opponents; 4f shorter hitconfirm window when chained into; canceling the 1st hit uses less juggle potential, allowing alternate juggle routes in exchange for some initial damage; extended whiff hurtbox lasts until the end of recovery
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Korenzan
+| images        = SF6_Juri_4hk.png, SF6_Juri_4hk_2.png
+| hitboxes      = SF6_Juri_4hk_hitbox_1.png, SF6_Juri_4hk_hitbox_2_preview.png, SF6_Juri_4hk_hitbox_2.png, SF6_Juri_4hk_hitbox_3.png
+| damage        = 400x2
+| startup       = 10(19)
+| active        = 3(6)3
+| recovery      = 19
+| total         = 40
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 39/17
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+10}} / {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}} / {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 20,24 (33 total)
+| blockstun     = 14,16 (25 total)
+| hitstop       = 13,13
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [4000x2]
+| driveGain     = 1500,2000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 0,1
+| atkRange      = 1.72 (1.187)
+| notes         = Both hits are cancelable; 1st hit forces stand and puts airborne opponents into limited juggle state; 2nd hit causes OTG bounce vs. airborne opponents; 19f startup for 2nd hit only; carries counter-hit/Punish Counter advantage through both hits; SA2 cancel: +12/+6 (1st hit), +16/+8 (2nd hit)
+}}
+{{FrameData-SF6 | chara = Juri | moveId = Juri_4hk_fse | moveType = air_normal
+| input         = 4HK (FSE Chain)
+| name          = Korenzan
+| images        = SF6_Juri_4hk.png, SF6_Juri_4hk_2.png
+| hitboxes      = SF6_Juri_4hk_hitbox_1.png, SF6_Juri_4hk_hitbox_2_preview.png, SF6_Juri_4hk_hitbox_2.png, SF6_Juri_4hk_hitbox_3.png
+| damage        = 300x2
+| startup       = 10(19)
+| active        = 3(6)3
+| recovery      = 19
+| total         = 40
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 39(17) Sp / 41(19) Chn
+| hitAdv        = KD +39
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +39
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = KD +51
+| DRcancelBlk   = {{sf6-adv|VP|+4}} / {{sf6-adv|VP|+6}}
+| blockstun     = 14,16 (25 total)
+| hitstop       = 9,9
+| driveDmgBlk   = 375x2
+| driveDmgHit   = [1000x2]
+| driveGain     = 375,500
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,11
+| atkRange      = 1.72 (1.187)
+| notes         = Chained version during SA2 (FSE); both hits knock down; 2nd hit causes OTG bounce vs. airborne opponents; 8f shorter hitconfirm window when chained into
+}}
+
+== Target Combos ==
+===== 5MP~4HP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5mp_4hp | moveType = ground_normal
+| input         = 5MP~4HP
+| name          = Death Crest 1
+| images        = SF6_Juri_5mp_4hp.png
+| hitboxes      = SF6_Juri_5mp_4hp_hitbox.png
+| damage        = 500
+| startup       = 12
+| active        = 3
+| recovery      = 20
+| total         = 34
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 44(14) TC
+| hitAdv        = KD +33
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +33
+| blockstun     = 20
+| hitstop       = 10
+| driveDmgBlk   = 2000
+| driveDmgHit   = [7000]
+| driveGain     = 1000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| notes         = Safe Target Combo starter that leaves ample time to confirm the final hit; leaves a 2f blockstring gap after 5MP
+}}
+
+====== 5MP~4HP~HP ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5mp_4hp_hp | moveType = ground_normal
+| input         = 5MP~4HP~HP
+| name          = Death Crest 2
+| images        = SF6_Juri_5mp_4hp_hp.png
+| hitboxes      = SF6_Juri_5mp_4hp_hp_hitbox.png
+| damage        = 600(480)
+| startup       = 17
+| active        = 3
+| recovery      = 27
+| total         = 46
+| guard         = LH
+| cancel        = SA (hit)
+| hitconfirm    = 80(50) SA (hit)
+| hitAdv        = KD +32
+| blockAdv      = {{sf6-adv|VM|-16}}
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 14
+| hitstop       = 13
+| driveDmgBlk   = 1000
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| notes         = (refers to scaled damage); not airborne despite the animation; always a true blockstring from 4HP; puts opponent into limited juggle state; cannot cancel into Super on block
+}}
+
+== Throws ==
+===== Forward Throw =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_lplk | moveType = throw
+| input         = LPLK
+| name          = Spider Fang Throw
+| images        = SF6_Juri_lplk.png
+| hitboxes      = SF6_Juri_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +25
+| blockAdv      = -
+| punishAdv     = HKD +25
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Has access to corner throw loops by dashing (+3); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== Back Throw =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Shadow Kick Throw
+| images        = SF6_Juri_4lplk.png
+| hitboxes      = SF6_Juri_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +18
+| blockAdv      = -
+| punishAdv     = HKD +18
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = No throw oki after back throwing opponent into corner, but can use meaty strikes; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== Air Throw =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_jlplk | moveType = throw
+| input         = j.LPLK
+| name          = Zanka-sen
+| images        = SF6_Juri_jlplk.png
+| hitboxes      = SF6_Juri_jlplk_hitbox.png
+| damage        = 1200 (2040)
+| startup       = 5
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +2(+4)
+| blockAdv      = -
+| punishAdv     = HKD +2(+4)
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000(2800)]}}
+| atkRange      = 0.80
+| notes         = KD Adv. varies based on height (lower height = worse advantage); switches sides; no oki after throwing opponent back into the corner
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_hphk | moveType = drive
+| input         = HPHK
+| name          = Sekkan Kick
+| images        = SF6_Juri_hphk.png
+| hitboxes      = SF6_Juri_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.511
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Kaita Raid (Block)
+| images        = SF6_Juri_6hphk.png
+| hitboxes      = SF6_Juri_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.60
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Kaita Raid (Recovery)
+| images        = SF6_Juri_6hphk.png
+| hitboxes      = SF6_Juri_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.60
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Juri_mpmk.png
+| hitboxes      = SF6_Juri_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Juri | moveId = juri_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Juri_66.png
+| hitboxes      = SF6_Juri_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.641 (min/throw), 2.479 (min/block), 3.999 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Juri | moveId = juri_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Juri_66.png
+| hitboxes      = SF6_Juri_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Fuhajin ===
+===== 214LK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214lk | moveType = Special
+| input         = 214LK
+| name          = Fuhajin
+| images        = SF6_Juri_214lk.png
+| hitboxes      = SF6_Juri_214lk_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 10
+| active        = 4
+| recovery      = 19(21)
+| total         = 32(34)
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 19
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| blockstun     = 21
+| hitstop       = 9(11)
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 0.95
+| notes         = Gains 1 Fuha stock on hit/block/whiff on frame 10; 1-hit projectile clash hitbox on frames 8-13; puts opponent into limited juggle state (only combos into SA3); does not move forward during startup; 2f extra recovery on whiff; 8f hitstop when clashing with projectile
+}}
+
+===== 214MK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214mk | moveType = Special
+| input         = 214MK
+| name          = Fuhajin
+| images        = SF6_Juri_214mk.png
+| hitboxes      = SF6_Juri_214mk_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 13
+| active        = 4
+| recovery      = 21
+| total         = 37
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 24
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 19
+| hitstop       = 9(11)
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.526
+| notes         = Gains 1 Fuha stock on hit/block/whiff on frame 13; 1-hit projectile clash hitbox on frames 11-16; puts opponent into limited juggle state (only combos into SA3); takes small step forward, making it more consistent in combos (but does not combo naturally from 5LK); 8f hitstop when clashing with projectile
+}}
+
+===== 214HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214hk | moveType = Special
+| input         = 214HK
+| name          = Fuhajin
+| images        = SF6_Juri_214hk.png
+| hitboxes      = SF6_Juri_214hk_hitbox.png
+| damage        = 500
+| chip          = 125
+| startup       = 25
+| active        = 5
+| recovery      = 19(21)
+| total         = 48(50)
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 16
+| hitAdv        = KD +46
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +46
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| blockstun     = 15
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 3
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.80
+| notes         = Gains 1 Fuha stock on hit/block/whiff on frame 25; 1-hit projectile clash hitbox on frames 23-28; launches opponent high into a limited juggle state; takes large step forward (but only combos naturally from 5HP, 2HP, and first hit of 5MK and 6HP); 2f extra recovery on block; 8f hitstop when clashing with projectile
+}}
+
+===== 214KK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214kk | moveType = Special
+| input         = 214KK
+| name          = Fuhajin
+| images        = SF6_Juri_214kk.png
+| hitboxes      = SF6_Juri_214kk_hitbox.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = Combo (2 hits)
+| startup       = 12
+| active        = 6
+| recovery      = 21
+| total         = 38
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 30
+| hitAdv        = KD +45
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +45
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| blockstun     = 15
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 2
+| atkRange      = 1.619
+| notes         = Gains 1 Fuha stock on hit/block/whiff on frame 12; 2-hit OD projectile clash hitbox on frames 10-17; launches opponent high into a free juggle state (limited juggle when 214KK is juggled into); takes small step forward (consistent like the MK version while comboing naturally from light normals); SA2 cancel: KD+49/-8; 8f hitstop when clashing with projectile
+}}
+
+=== Saihasho ===
+===== 236LK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236lk | moveType = Special
+| input         = 236LK
+| name          = Saihasho
+| images        = SF6_Juri_236lk.png
+| hitboxes      = SF6_Juri_236lk_hitbox.png, SF6_Juri_236lk_hitbox2.png
+| damage        = 400
+| chip          = 100
+| startup       = 16
+| active        = 10
+| recovery      = 20
+| total         = 45
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 3
+| hitAdv        = {{sf6-adv|M|-2}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 31
+| blockstun     = 22
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.028
+| notes         = 1-hit projectile hitbox (can lose to projectile-invuln moves); very short range
+}}
+
+====== 236LK_Stock ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236lk_stock | moveType = Special
+| input         = 236LK (1 Stock)
+| name          = Saihasho
+| images        = SF6_Juri_236lk_stock.png
+| hitboxes      = SF6_Juri_236lk_stock_hitbox.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 16
+| active        = [80]
+| recovery      = 29
+| total         = 45
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 3 (SA/follow-up)
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 28
+| blockstun     = 27
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.028
+| notes         = 1-hit projectile; costs 1 Fuha stock; can press MK or HK to cancel into other 236K specials for 1 Fuha stock (within the first 3 active frames)
+}}
+
+====== 236LKMK ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236lkmk | moveType = Special
+| input         = 236LKMK
+| name          = Saihasho
+| images        = SF6_Juri_236lkmk.png
+| hitboxes      = SF6_Juri_236lkmk_hitbox.png
+| damage        = 400x2
+| chip          = 100x2
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 11
+| active        = [120]
+| recovery      = 27
+| total         = 38
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 7 SA / 4 follow-up
+| hitAdv        = KD +39
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-6}}
+| blockstun     = 26 total
+| hitstop       = 5,6
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 1,2
+| jugLimit      = 3,4
+| projSpeed     = 0.035
+| notes         = 2-hit OD projectile; only the 2nd hit knocks down; can press MK or HK to cancel into other OD 236K specials for 1 Fuha stock and 1 Drive bar; SA2 cancel: KD+57/+17
+}}
+
+=== Ankensatsu ===
+===== 236MK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236mk | moveType = Special
+| input         = 236MK
+| name          = Ankensatsu
+| images        = SF6_Juri_236mk.png
+| hitboxes      = SF6_Juri_236mk_hitbox_preview.png, SF6_Juri_236mk_hitbox_1.png, SF6_Juri_236mk_hitbox_2.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 24
+| active        = 4
+| recovery      = 19 land
+| total         = 46
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 23
+| hitAdv        = {{sf6-adv|VP|+5}}<br>(KD +24~26)
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 28
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = 8-27 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 2.35 (2.12)
+| notes         = 8-27f low crush; KD vs. airborne opponents; hitbox gradually expands forward during active frames (easier to space more safely); active frames 2-4 cause a knockdown; proximity guard box appears on frame 5 to make it harder for the opponent to walk out of range
+}}
+
+====== 236MK_Stock ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236mk_stock | moveType = Special
+| input         = 236MK (1 Stock)
+| name          = Ankensatsu
+| images        = SF6_Juri_236mk_stock.png
+| hitboxes      = SF6_Juri_236mk_hitbox_preview.png, SF6_Juri_236mk_hitbox_1.png, SF6_Juri_236mk_hitbox_2.png
+| damage        = 600
+| chip          = 150
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 24
+| active        = 4
+| recovery      = 19 land
+| total         = 46
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 23 (SA/follow-up)
+| hitAdv        = {{sf6-adv|VP|+8}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+12}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 31
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = 8-27 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.35 (2.12)
+| notes         = Costs 1 Fuha stock; 8-27f low crush; puts airborne opponents into a limited juggle OTG bounce state (useful for SA3 cancel); can press LK or HK to cancel into other 236K specials for 1 Fuha stock; hitbox gradually expands forward during active frames (easier to space more safely)
+}}
+
+====== 236LKHK ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236lkhk | moveType = Special
+| input         = 236LKHK
+| name          = Ankensatsu
+| images        = SF6_Juri_236lkhk.png
+| hitboxes      = SF6_Juri_236mk_hitbox_preview.png, SF6_Juri_236mk_hitbox_1.png, SF6_Juri_236mk_hitbox_2.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 24
+| active        = 4
+| recovery      = 19 land
+| total         = 46
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 23 (SA/follow-up)
+| hitAdv        = {{sf6-adv|VP|+9}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+13}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 32
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = 8-27 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 11
+| atkRange      = 2.35 (2.12)
+| notes         = 8-27f low crush; puts airborne opponents into a limited juggle OTG bounce state; pressing LK or HK cancels to other OD 236K specials for 1 Fuha stock + 1 Drive bar; hitbox gradually expands forward during active frames (easier to space more safely); SA2 cancel: +16/-3
+}}
+
+=== Go Ohsatsu ===
+===== 236HK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236hk | moveType = Special
+| input         = 236HK
+| name          = Go Ohsatsu
+| images        = SF6_Juri_236hk.png
+| hitboxes      = SF6_Juri_236hk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| startup       = 18
+| active        = 4
+| recovery      = 27
+| total         = 48
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 22
+| hitAdv        = KD +27
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = KD +27
+| perfParryAdv  = {{sf6-adv|VM|-29}}
+| blockstun     = 20
+| hitstop       = 12(14)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 1000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 2.693 (2.613)
+| notes         = Puts airborne opponents into limited juggle state (only high airborne connect launches high enough for follow-up juggle besides SA3 cancel); good juggle ender for damage when canceling to SA3
+}}
+
+====== 236HK_Stock ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236hk_stock | moveType = Special
+| input         = 236HK
+| name          = Go Ohsatsu (1 Stock)
+| images        = SF6_Juri_236hk_stock.png, SF6_Juri_236hk_stock_2.png
+| hitboxes      = SF6_Juri_236hk_stock_hitbox.png
+| damage        = 700,500 (1200)
+| chip          = 175,125 (300)
+| startup       = 18
+| active        = 4(12)3
+| recovery      = 27
+| total         = 63
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 36 (SA/follow-up)
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 34 total
+| hitstop       = 4,12 (6,14)
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2
+| superGainHit  = 400,300 (280,210)
+| superGainBlk  = 200,150 (100,75)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 1,1
+| jugLimit      = 6,7
+| atkRange      = 3.771 (2.613)
+| notes         = Costs 1 Fuha stock; both hits are Super cancelable; can press LK or MK to cancel into other 236K specials for 1 Fuha stock; puts opponent into limited juggle state (only airborne hit launches high enough for follow-up juggle besides SA3 cancel); good for damage when comboing into SA3
+}}
+
+====== 236MKHK ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236mkhk | moveType = Special
+| input         = 236MKHK
+| name          = Go Ohsatsu
+| images        = SF6_Juri_236mkhk.png
+| hitboxes      = SF6_Juri_236mkhk_hitbox.png
+| damage        = 400x3 (1200)
+| chip          = 100x3 (300)
+| dmgScaling    = 20% Starter
+| startup       = 18
+| active        = 4(12)3(28)5
+| recovery      = 28
+| total         = 97
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 77(38) (SA/follow-up)
+| hitAdv        = KD +32
+| blockAdv      = {{sf6-adv|VM|-16}}
+| punishAdv     = KD +32
+| perfParryAdv  = {{sf6-adv|VM|-31}}
+| blockstun     = 64 total
+| hitstop       = 4,5,12 (6,7,14)
+| driveDmgBlk   = 2000x3
+| driveDmgHit   = [1700x2,1600]
+| driveGain     = -20000
+| superGainHit  = 300x2,200 (210x2,140)
+| superGainBlk  = 150x2,100 (75x2,50)
+| jugStart      = 4 ground / 1,3,1 air
+| jugIncrease   = 1,3,1
+| jugLimit      = 6,7,10
+| atkRange      = 5.482 (2.613)
+| notes         = All 3 hits are Super cancelable; first hit keeps opponent grounded, 2nd and 3rd hits put opponent into limited juggle state; can press LK or MK to cancel any hit into other OD 236K specials for 1 Fuha stock and 1 Drive bar; SA2 cancel: +17/+17 (1st hit), KD+54/+15 (2nd hit), KD+52/+4 (3rd hit); 3rd hit cannot juggle into held SA2 dash attack
+}}
+
+=== Tensenrin ===
+===== 623LP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_623LP | moveType = Special
+| input         = 623LP
+| name          = Tensenrin
+| images        = SF6_Juri_623lp.png
+| hitboxes      = SF6_Juri_623lp_hitbox_preview.png, SF6_Juri_623lp_hitbox_1.png, SF6_Juri_623lp_hitbox_2.png
+| damage        = 400x2
+| chip          = 100x2
+| startup       = 11
+| active        = 3(2)2
+| recovery      = 22
+| total         = 39
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 21
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-27(-22)}}
+| blockstun     = 21 total
+| hitstop       = 3,6
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 1,2
+| jugLimit      = 4,5
+| atkRange      = 1.821 (1.496)
+| notes         = Both hits are SA3 cancelable; not airborne; fairly consistent combo ender; 2nd hit has a combo-only hitbox for juggle consistency
+}}
+
+===== 623MP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_623MP | moveType = Special
+| input         = 623MP
+| name          = Tensenrin
+| images        = SF6_Juri_623mp.png
+| hitboxes      = SF6_Juri_623mp_hitbox.png
+| damage        = 300x4 (1200)
+| chip          = 75x2 (150)
+| startup       = 5
+| active        = 8(5)2(3)2
+| recovery      = 24+14 land
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +31
+| blockAdv      = {{sf6-adv|VM|-37}}
+| punishAdv     = KD +31
+| perfParryAdv  = {{sf6-adv|VM|-49(-56)}}
+| blockstun     = 21 total
+| hitstop       = 4,3,3,13
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [5000]
+| driveGain     = 500x4 (500x2)
+| superGainHit  = 300x2,200x2 (210x2,140x2)
+| superGainBlk  = 150x2 (75x2)
+| invuln        = 1-8 Air
+| airborne      = 9-48 (FKD)
+| jugStart      = 4 ground / 1x4 air
+| jugIncrease   = 1x4
+| jugLimit      = 2,5,10,11
+| atkRange      = 0.88 (1st)
+| notes         = Strong anti-air but cannot hit cross-up; slightly less horizontal range than 623HP
+}}
+
+===== 623HP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_623HP | moveType = Special
+| input         = 623HP
+| name          = Tensenrin
+| images        = SF6_Juri_623hp.png
+| hitboxes      = SF6_Juri_623hp_hitbox.png
+| damage        = 300x4 (1200)
+| chip          = 75,(75)
+| startup       = 5
+| active        = 8(5)2(3)2
+| recovery      = 24+14 land
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +28
+| blockAdv      = {{sf6-adv|VM|-37(-41)}}
+| punishAdv     = KD +28
+| perfParryAdv  = {{sf6-adv|VM|-49(-56)}}
+| blockstun     = 21 total (17 crouch)
+| hitstop       = 4,3,3,13
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [5000]
+| driveGain     = 500x4 (500x2)
+| superGainHit  = 300x2,200x2 (210x2,140x2)
+| superGainBlk  = 150x2 (75x2)
+| invuln        = 1-8 Air
+| airborne      = 7-48 (FKD)
+| jugStart      = 4 ground / 1x4 air
+| jugIncrease   = 1x4
+| jugLimit      = 2,5,10,11
+| atkRange      = 1.061 (1st)
+| notes         = Only 1 hit connects vs. crouch block (4f worse oB, less chip damage); strong combo ender and anti-air but cannot hit cross-up; slightly more horizontal range than 623MP
+}}
+
+===== 623PP =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_623PP | moveType = Special
+| input         = 623PP
+| name          = Tensenrin
+| images        = SF6_Juri_623pp.png
+| hitboxes      = SF6_Juri_623pp_hitbox.png
+| damage        = 600,200x3,400 (1600)
+| chip          = 150,50 (200)
+| startup       = 6
+| active        = 4(1)2(6)2(2)2
+| recovery      = 32+19 land
+| total         = 75
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +5
+| blockAdv      = {{sf6-adv|VM|-48}}
+| punishAdv     = KD +5
+| perfParryAdv  = {{sf6-adv|VM|-68}}
+| blockstun     = 22 total
+| hitstop       = 3x4,8
+| driveDmgBlk   = 2000x2
+| driveGain     = -20000
+| superGainHit  = 400,100x3,200 (280,70x3,140)
+| superGainBlk  = 200,50 (100,25)
+| invuln        = 1-9 Full
+| airborne      = 10-56 (FKD)
+| jugStart      = 1x4,10
+| jugIncrease   = 1,0x3,10
+| jugLimit      = 6,8x3,50
+| atkRange      = 1.03 (1st)
+| notes         = Juri's primary reversal option; final attack comes out on hit only; cannot hit cross-up
+}}
+
+=== Shiku-sen ===
+===== j.214K =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_j214K | moveType = Special
+| input         = j.214K
+| name          = Shiku-sen
+| images        = SF6_Juri_j214K.png
+| hitboxes      = SF6_Juri_j214K_hitbox.png
+| damage        = 400
+| chip          = 100
+| startup       = 18
+| active        = until landing
+| recovery      = 18 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +34(+41)
+| blockAdv      = {{sf6-adv|VM|-10{{sf6-adv|M|(-3)}}}}
+| punishAdv     = KD +34(+41)
+| perfParryAdv  = {{sf6-adv|VM|-24(-17)}}
+| blockstun     = 16
+| hitstop       = 5
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| notes         = During forward jump only; can input follow-up on hit only; puts opponent into limited juggle state (lower connect allows better follow-up juggles); button strength does not affect trajectory
+}}
+
+====== j.214K~K ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_j214K~K | moveType = Special
+| input         = j.214K~K
+| name          = Shiren-sen
+| images        = SF6_Juri_j214K~K.png
+| hitboxes      = SF6_Juri_j214K~K_hitbox.png
+| damage        = 300x2,600 (1200)
+| startup       = 6
+| active        = 4(4)4(17)4
+| recovery      = 23(29)+12 land
+| total         = 77
+| guard         = -
+| cancel        = -
+| hitAdv        = KD +28(+33)
+| blockAdv      = -
+| punishAdv     = KD +28(+33)
+| hitstop       = 2,3,10
+| driveGain     = 600x3
+| superGainHit  = 200x3 (140x3)
+| airborne      = Until Land (FKD)
+| jugIncrease   = 0,0,1
+| jugLimit      = 21x3
+| notes         = Comes out on hit only; can delay the input to get better KD Advantage; no follow-up after juggle state; Juri is in a crouching state during landing recovery; total recovery time before landing varies by juggle height
+}}
+
+===== j.214KK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_j214kk | moveType = Special
+| input         = j.214KK
+| name          = OD Shiku-sen
+| images        = SF6_Juri_j214kk.png
+| hitboxes      = SF6_Juri_j214kk_hitbox.png
+| damage        = 300
+| chip          = 75
+| startup       = 16
+| active        = until landing
+| recovery      = 18 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +37(+44)
+| blockAdv      = {{sf6-adv|VM|-10{{sf6-adv|M|(-3)}}}}
+| punishAdv     = KD +37(+44)
+| perfParryAdv  = {{sf6-adv|VM|-24(-17)}}
+| blockstun     = 16
+| hitstop       = 5
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 20
+| notes         = During forward jump only; can input follow-up on hit only; puts opponent into limited juggle state
+}}
+
+====== j.214KK~K ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_j214KK~K | moveType = Special
+| input         = j.214KK~K
+| name          = OD Shiren-sen
+| images        = SF6_Juri_j214KK~K.png
+| hitboxes      = SF6_Juri_j214KK~K_hitbox.png
+| damage        = 300x3 (900)
+| startup       = 6
+| active        = 4(4)4(17)4
+| recovery      = 27(34)+7 land
+| total         = 77
+| guard         = -
+| cancel        = -
+| hitAdv        = KD +50(+57)
+| blockAdv      = -
+| punishAdv     = KD +50(+57)
+| hitstop       = 2,2,12
+| superGainHit  = 200x3 (140x3)
+| airborne      = Until Land (FKD)
+| jugIncrease   = 0,0,1
+| jugLimit      = 21x3
+| notes         = Puts opponent into limited juggle state; comes out on hit only; can delay the input to get better juggle follow-ups and better KD Adv.; Juri is in a crouching state during landing recovery; total recovery time before landing varies by juggle height
+}}
+
+== Super Arts ==
+===== 236236K =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236236k | moveType = Super
+| input         = 236236K
+| name          = Sakkai Fuhazan
+| images        = SF6_Juri_236236k.png
+| hitboxes      = SF6_Juri_236236k_hitbox.png, SF6_Juri_236236k_hitbox2.png, SF6_Juri_236236k_hitbox3.png
+| damage        = 1800
+| chip          = 83x5,85 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 7
+| active        = -
+| recovery      = 201 total
+| total         = 201
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +26(+49)
+| blockAdv      = {{sf6-adv|VM|-32}}
+| punishAdv     = KD +26(+49)
+| perfParryAdv  = {{sf6-adv|VM|-51}}
+| blockstun     = 54,46,30
+| hitstop       = 3,6,6,8,6,10
+| driveDmgBlk   = 500,400x5 (2500)
+| driveDmgHit   = 800x5,1000 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-8 Strike/Throw
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 0x5,99
+| jugLimit      = 99
+| projSpeed     = 0.12 / 0.22 final
+| notes         = Projectile hitbox; active frames and KD Adv. are highly variable based on screen position; Full Dmg distribution: 200x4,300,700
+}}
+====== 236236[K] ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_236236k_hold | moveType = Super
+| input         = 236236[K]
+| name          = Sakkai Fuhazan (hold)
+| images        = SF6_Juri_236236k.png
+| hitboxes      = SF6_Juri_236236k_hitbox.png
+| damage        = 2100
+| chip          = 83x5,85 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 7
+| active        = -
+| recovery      = 201 Total
+| total         = 201
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +26(+49)
+| blockAdv      = {{sf6-adv|VM|-32}}
+| punishAdv     = KD +26(+49)
+| perfParryAdv  = {{sf6-adv|VM|-51}}
+| blockstun     = 54,46,30
+| hitstop       = 3,6,6,8,6,10
+| driveDmgBlk   = 500,400x5 (2500)
+| driveDmgHit   = 800x5,1000 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-8 Strike/Throw
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 0x5,99
+| jugLimit      = 99
+| projSpeed     = 0.12 / 0.22 final
+| notes         = Projectile hitbox; requires one Fuha stock to use (consumes this stock); active frames and KD Adv. are highly variable based on screen position; Full Dmg distribution: 200x4,300,1000
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214214p | moveType = Super
+| input         = 214214P
+| name          = Feng Shui Engine
+| images        = SF6_Juri_214214P.png
+| hitboxes      = SF6_Juri_214214P_hitbox.png
+| damage        = -
+| startup       = 1
+| active        = [600]
+| recovery      = 6
+| total         = 7
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| notes         = Lasts 600 frames (10 seconds); timer stops counting down during attack hit/block freeze; allows Juri to chain into normals of equal or ascending strength (cannot chain back into the same attack); chains change the properties of certain moves (6MK and Heavy normals become knockdowns); 5HK/2LK/2HK/6MK become cancelable
+}}
+
+====== 214214[P] ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214214p_hold | moveType = Super
+| input         = 214214[P]
+| name          = Feng Shui Engine (hold)
+| images        = SF6_Juri_214214P_hold.png
+| hitboxes      = SF6_Juri_214214P_hold_hitbox.png
+| damage        = 300
+| chip          = 75
+| dmgScaling    = 40% Minimum
+| startup       = 9
+| active        = 11
+| recovery      = 26
+| total         = 45
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VM|-4}}{{sf6-adv|VP|(+6)}}
+| blockAdv      = {{sf6-adv|VM|-17(-7)}}
+| punishAdv     = {{sf6-adv|E|0{{sf6-adv|VP|(+10)}}}}
+| perfParryAdv  = {{sf6-adv|VM|-33(-25)}}
+| hitstun       = 33
+| blockstun     = 20
+| hitstop       = 10
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| armor         = Break
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 99
+| atkRange      = 3.113 (1.894)
+| notes         = Holding the button performs a dash attack; puts airborne opponents into free juggle state or maintains existing juggle state; can cancel on hit/block into any normal; afterwards, has same properties as regular Feng Shui Engine activation; dash attack cannot hit cross-up
+}}
+
+===== 214214K =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214214k | moveType = Super
+| input         = 214214K
+| name          = Kaisen Dankai Raku
+| images        = SF6_Juri_214214k.png
+| hitboxes      = SF6_Juri_214214k_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10
+| active        = 4
+| recovery      = 52
+| total         = 65
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +22
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = HKD +22
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 20
+| hitstop       = 17
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.199 (2.096)
+| notes         = Cinematic time regenerates ~2 Drive bars for Juri
+}}
+
+====== 214214K (CA) ======
+{{FrameData-SF6 | chara = Juri | moveId = Juri_214214k(ca) | moveType = Super
+| input         = 214214K
+| name          = Kaisen Dankai Raku (CA)
+| images        = SF6_Juri_214214k_ca.png
+| hitboxes      = SF6_Juri_214214k_ca_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10
+| active        = 4
+| recovery      = 52
+| total         = 65
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +20
+| blockAdv      = {{sf6-adv|VM|-36}}
+| punishAdv     = HKD +20
+| perfParryAdv  = {{sf6-adv|VM|-54}}
+| blockstun     = 20
+| hitstop       = 17
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.199 (2.096)
+| notes         = Available at 25% HP or below; cinematic time regenerates ~2.4 Drive bars for Juri
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Juri_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 294 (total)
+| active        = -
+| recovery      = -
+| total         = 294
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "You gonna keep me waiting, babe?"
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Juri_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 199 (total)
+| active        = -
+| recovery      = -
+| total         = 199
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Killer beam! Or whatever."
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Juri | moveId = Juri_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Juri_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 185 (total)
+| active        = -
+| recovery      = -
+| total         = 185
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "What are you waiting for?"
+}}
+
+
+{{Character Subnav SF6 | chara=Juri }}
+{{Navbox-SF6}}
+[[Category:Street Fighter 6]]
+[[Category:Juri]]

@@ -4,16 +4,35 @@
   "enriched_rows": 75,
   "supercombo_only_rows": 13,
   "enrichment_status_counts": {
-    "enriched": 47,
+    "enriched": 24,
+    "enriched_review_required": 23,
     "enriched_reviewed": 26,
     "official_only": 2
   },
   "review_flag_counts": {
+    "basic_field_conflict:recovery": 5,
+    "condition_dependent_supercombo_field:damage": 19,
+    "condition_dependent_supercombo_field:recovery": 10,
     "manual_match": 26,
     "multiple_candidates": 10,
-    "supercombo_row_reused": 5
+    "supercombo_row_reused": 5,
+    "uncomparable_basic_field:active_duration,damage": 3,
+    "uncomparable_basic_field:active_duration,damage,recovery": 8,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 8,
+    "uncomparable_basic_field:active_duration,recovery": 6,
+    "uncomparable_basic_field:damage": 12,
+    "uncomparable_basic_field:damage,recovery": 3,
+    "uncomparable_basic_field:recovery": 5
   },
-  "basic_field_conflict_counts": {},
+  "basic_field_conflict_counts": {
+    "recovery": 5
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 25,
+    "damage": 34,
+    "recovery": 30,
+    "startup": 8
+  },
   "human_review_status_counts": {
     "accepted": 26
   },
@@ -31,8 +50,8 @@
     "supercombo_only_taunt": 4,
     "supercombo_only": 9
   },
-  "official_csv": "wiki\\outputs\\data\\frame-data\\ingrid\\classic.csv",
-  "supercombo_frames_csv": "wiki\\outputs\\data\\supercombo\\frame-data\\ingrid\\frames.csv",
-  "crosswalk_csv": "wiki\\outputs\\data\\supercombo\\frame-data\\ingrid\\crosswalk-official-classic.csv",
-  "output_csv": "wiki\\outputs\\data\\enriched\\frame-data\\ingrid\\classic-supercombo.csv"
+  "official_csv": "wiki/outputs/data/frame-data/ingrid/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/ingrid/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/ingrid/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/ingrid/classic-supercombo.csv"
 }

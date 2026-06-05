@@ -4,19 +4,41 @@
   "enriched_rows": 75,
   "supercombo_only_rows": 6,
   "enrichment_status_counts": {
-    "enriched": 60,
+    "enriched": 17,
+    "enriched_review_required": 43,
     "enriched_reviewed": 13,
     "official_only": 2
   },
   "review_flag_counts": {
     "ambiguous_match": 2,
     "basic_field_conflict:active_duration": 1,
+    "condition_dependent_supercombo_field:damage": 6,
+    "condition_dependent_supercombo_field:damage,startup": 2,
+    "condition_dependent_supercombo_field:recovery": 12,
+    "condition_dependent_supercombo_field:startup": 1,
     "manual_match": 10,
     "multiple_candidates": 25,
-    "supercombo_row_reused": 3
+    "supercombo_row_reused": 3,
+    "uncomparable_basic_field:active_duration": 3,
+    "uncomparable_basic_field:active_duration,damage": 7,
+    "uncomparable_basic_field:active_duration,damage,recovery": 9,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:active_duration,damage,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery": 3,
+    "uncomparable_basic_field:damage": 6,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:damage,recovery,startup": 2,
+    "uncomparable_basic_field:recovery": 7,
+    "uncomparable_basic_field:startup": 4
   },
   "basic_field_conflict_counts": {
     "active_duration": 1
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 26,
+    "damage": 30,
+    "recovery": 26,
+    "startup": 10
   },
   "human_review_status_counts": {
     "accepted": 13

@@ -1,0 +1,2128 @@
+{{Character Subnav SF6 | chara=C.Viper | tag=Viper }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = C.Viper
+| name          = C. Viper
+| portrait      = SF6 Cviper Portrait.png
+| icon          = SF6 Cviper Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.0452
+| bwdWalkSpd    = 0.031
+| fwdDashSpd    = 21
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.50
+| bwdDashDist   = 0.80
+| jumpSpd       = 4+38+3<br>(6+40+3)
+| jumpApex      = 2.11<br>(2.195)
+| fwdJumpDist   = 1.90<br>(3.00)
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.374
+| dRushBlock    = 1.756
+| dRushMax      = 3.355
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a followup attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a followup attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Cviper_5lp.png
+| hitboxes      = SF6_Cviper_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 8
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA HJ
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 15
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| pushbackHit   = 0.288
+| pushbackBlk   = 0.333
+| notes         = Chains into 5LP/2LP/2LK; 214HP Feint cancel: -4 oH / -10 oB; more range than 2LP but worse advantage on hit/block
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Cviper_5mp.png
+| hitboxes      = SF6_Cviper_5mp_hitbox.png
+| damage        = 600
+| startup       = 8
+| active        = 4
+| recovery      = 12
+| total         = 23
+| guard         = LH
+| cancel        = Sp SA HJ
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 22
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| notes         = Primary combo and frame trap starter; 214HP Feint cancel: +3 oH / -2 oB
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Cviper_5hp.png
+| hitboxes      = SF6_Cviper_5hp_hitbox.png
+| damage        = 900
+| startup       = 12
+| active        = 3
+| recovery      = 21
+| total         = 35
+| guard         = LH
+| cancel        = HJ
+| hitconfirm    = 17 (HJ)
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 27
+| blockstun     = 22
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.78
+| notes         = Long range poke that can be converted into damaging combos with High Jump cancel into Feint or Seismo; HJC~214HP Feint cancel: +6 oH / +1 oB
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Cviper_5lk.png
+| hitboxes      = SF6_Cviper_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 11
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA HJ
+| hitconfirm    = 13 (DR: 14)
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 17
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.20
+| notes         = Primary 5f punish tool; higher hitstun than other lights (can combo into 214MP); links from 2LP allowing C.Viper to combo 4 light normals; DR cancel is delayed until after active frames; 214HP Feint cancel: -2 oH / -7 oB
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Cviper_5mk.png
+| hitboxes      = SF6_Cviper_5mk_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 3
+| recovery      = 18(20)
+| total         = 28(30)
+| guard         = LH
+| cancel        = HJ
+| hitconfirm    = 15 (HJ)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.57
+| notes         = Strong poke that can combo into specials with a High Jump cancel (214HP can whiff at farther ranges); 2f extra recovery on whiff; HJC~214HP Feint cancel: +4 oH / -3 oB
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Cviper_5hk.png
+| hitboxes      = SF6_Cviper_5hk_hitbox.png
+| damage        = 900
+| startup       = 10
+| active        = 4
+| recovery      = 20
+| total         = 33
+| guard         = LH
+| cancel        = HJ
+| hitconfirm    = 18 (HJ)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+19}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 28
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 2
+| jugIncrease   = 1
+| jugLimit      = 3
+| atkRange      = 1.36
+| notes         = Staggers opponent on Punish Counter; shorter range vs. crouching opponents; puts airborne opponents into a limited juggle OTG bounce that can be followed up with High Jump cancel into Thunder Dash, OD Burning Kick, or any Super; can be juggled into after Seismo > HJC Air Burning Kick, then High Jump canceled into more damage; extends a hurtbox 1f before active that is vulnerable to projectiles; HJC~214HP Feint cancel: +7 oH / 0 oB / +22 onPC; HJC~214K~Dash cancel onPC: +8 meterless / +11 OD; strict 2f timing to input HJC into grounded Burning Kick (cannot be buffered on the first frame of High Jump)
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Cviper_2lp.png
+| hitboxes      = SF6_Cviper_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 8
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA HJ
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 16
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.95
+| pushbackHit   = 0.276
+| pushbackBlk   = 0.330
+| notes         = Chains into 5LP/2LP/2LK; DR cancel is delayed until after 2nd active frame; 214HP Feint cancel: -3 oH / -9 oB; topmost hurtbox on frames 1-6 is vulnerable only to aerial attacks, preventing its use as an anti-air
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Cviper_2mp.png
+| hitboxes      = SF6_Cviper_2mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 16
+| total         = 25
+| guard         = LH
+| cancel        = Sp SA HJ
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (250)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.14
+| notes         = High hitstun for a medium normal (combos into OD Seismo); special/DI/High Jump cancel is delayed until after 2nd active frame; 214HP Feint cancel: +5 oH / -2 oB; topmost hurtbox on frames 1-8 is vulnerable only to aerial attacks, preventing its use as an anti-air
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Cviper_2hp.png
+| hitboxes      = SF6_Cviper_2hp_hitbox.png
+| damage        = 800
+| startup       = 9
+| active        = 3
+| recovery      = 20
+| total         = 31
+| guard         = LH
+| cancel        = Sp SA HJ
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.54
+| notes         = C.Viper's main cancelable poke (no High Jump cancel required) that combos into meterless Seismic Hammer; forces stand on hit; 214HP Feint cancel: +6 oH / -1 oB
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Cviper_2lk.png
+| hitboxes      = SF6_Cviper_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 9
+| total         = 15
+| guard         = L
+| cancel        = Chn HJ
+| hitconfirm    = 12 (HJ)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.06
+| notes         = Chains into 5LP/2LP/2LK; can be High Jump canceled allowing for stronger combo options than most 2LKs; HJC~214HP Feint cancel: -6 oH / -11 oB
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Cviper_2mk.png
+| hitboxes      = SF6_Cviper_2mk_hitbox.png
+| damage        = 600
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 17
+| total         = 27
+| guard         = L
+| cancel        = HJ
+| hitconfirm    = 13 (HJ)
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 25
+| blockstun     = 19
+| hitstop       = 9
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.60
+| rangeNotes    = High Jump cancel only (requires 1 bar)
+| notes         = Amazing range for a low poke that can lead to combos with High Jump cancel; HJC~214HP Feint cancel: +4 oH / -2 oB
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Viper Kick
+| images        = SF6_Cviper_2hk.png
+| hitboxes      = SF6_Cviper_2hk_hitbox.png
+| damage        = 900
+| startup       = 10
+| active        = 3
+| recovery      = 25(29)
+| total         = 37(41)
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-11}}
+| punishAdv     = HKD +45
+| perfParryAdv  = {{sf6-adv|VM|-30}}
+| afterDRHit    = KD +34
+| afterDRBlk    = {{sf6-adv|VM|-7}}
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.89
+| notes         = 4f extra recovery on block; C. Viper's only standard normal that cannot be High Jump canceled; does not have natural juggle potential unlike most sweeps; Punish Counter sets up a safe jump using High Jump (fairly impractical outside the corner, as a forward High Jump usually sails over the opponent)
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Cviper_jlp.png
+| hitboxes      = SF6_Cviper_jlp_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+9)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+10(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.74
+| notes         = Forces stand on hit; short range air-to-air with an upward angle
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Cviper_jmp.png
+| hitboxes      = SF6_Cviper_jmp_hitbox_preview.png, SF6_Cviper_jmp_hitbox_1.png, SF6_Cviper_jmp_hitbox_2.png
+| damage        = 600
+| startup       = 8
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitAdv        = {{sf6-adv|VP|+8(+11)}}
+| blockAdv      = {{sf6-adv|VP|+6(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 2
+| atkRange      = 1.02 (0.81)
+| notes         = Puts airborne opponents into a limited juggle state; cancelable into Aerial Burning Kick on forward or neutral jump; lower body projectile invuln 8-22f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Cviper_jhp.png
+| hitboxes      = SF6_Cviper_jhp_hitbox_preview.png, SF6_Cviper_jhp_hitbox_1.png, SF6_Cviper_jhp_hitbox_2.png
+| damage        = 800
+| startup       = 11
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+16)}}
+| blockAdv      = {{sf6-adv|VP|+6(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+20)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 20
+| blockstun     = 15
+| hitstop       = 12
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 10
+| jugLimit      = 10
+| atkRange      = 1.04
+| notes         = Spike knockdown vs. airborne opponents; forces stand on hit; good hitbox for vertical approaches; lower body projectile invuln 11-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Cviper_jlk.png
+| hitboxes      = SF6_Cviper_jlk_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 7
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+9)}}
+| blockAdv      = {{sf6-adv|E|0}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+7(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.89
+| notes         = Can be used as a fuzzy instant overhead; strong hitbox priority; against tall standing characters, can combo any close range button into High Jump canceled j.LK on the way up
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Cviper_jmk.png
+| hitboxes      = SF6_Cviper_jmk_hitbox.png
+| damage        = 500
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7(+13)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+9)}}
+| punishAdv     = {{sf6-adv|VP|+11(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| notes         = Cross-up; strong overall jump-in (great hitbox priority and the most range of her forward jump normals); lower body projectile invuln 7-20f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Cviper_jhk.png
+| hitboxes      = SF6_Cviper_jhk_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 7
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitAdv        = {{sf6-adv|VP|+11(+16)}}
+| blockAdv      = {{sf6-adv|VP|+6(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+20)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 20
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 0.55
+| notes         = Cross-up; cancelable into Aerial Burn Kick (only combos naturally into HK/OD version on grounded opponents, and cannot juggle after air-to-air connect due to air reset); cancelable until the 37th airborne frame of a forward jump or High Jump; lower body projectile invuln 8-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== 8j.HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_8jhk | moveType = air_normal8
+| input         = 8HK
+| name          = Neutral Jump Heavy Kick
+| images        = SF6_Cviper_8jhk.png
+| hitboxes      = SF6_Cviper_8jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 7
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+16)}}
+| blockAdv      = {{sf6-adv|VP|+6(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+20)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 20
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.20
+| notes         = Longest horizontal range of Viper's air normals; in the corner or against wide characters (Blanka/E.Honda/Zangief), can combo Punish Counter 5HK into High Jump cancel nj.HK for powerful combo extension; lower body projectile invuln 10-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 6MP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_6mp | moveType = ground_normal
+| input         = 6MP
+| name          = Viper Elbow
+| images        = SF6_Cviper_6mp.png
+| hitboxes      = SF6_Cviper_6mp_hitbox.png
+| damage        = 600
+| startup       = 22
+| active        = 3
+| recovery      = 20
+| total         = 44
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.43 (1.36)
+| notes         = 16-27f Low Crush (not airborne or throw invincible)
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Double Kick
+| images        = SF6_Cviper_6hk_1.png, SF6_Cviper_6hk_2.png
+| hitboxes      = SF6_Cviper_6hk_hitbox_1.png, SF6_Cviper_6hk_hitbox_2.png
+| damage        = 450x2
+| dmgScaling    = 20% Starter
+| startup       = 11
+| active        = 3(15)3
+| recovery      = 16
+| total         = 47
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 24,23 (41 total)
+| blockstun     = 21,17 (35 total)
+| hitstop       = 9,11
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [5000x2]
+| driveGain     = 1500x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 1,2
+| atkRange      = 1.81 (1.62)
+| notes         = 2 hits; carries counter-hit/Punish Counter advantage through both hits; if 1st hit is Perfect Parried, opponent can interrupt 2nd hit with 16f or faster attack; useful approach tool from Drive Rush (strike/throw mixup on block, 2MP link on hit); can be spaced effectively in neutral to keep C.Viper out of the opponent's throw range on block
+}}
+
+== Target Combos ==
+C.Viper has no target combos.
+
+== Throws ==
+===== Forward Throw =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_lplk | moveType = throw
+| input         = LPLK
+| name          = High Impulse
+| images        = SF6_Cviper_lplk.png
+| hitboxes      = SF6_Cviper_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +28
+| blockAdv      = -
+| punishAdv     = HKD +28
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Grants a corner throw loop by walking or dashing (+7, requires delayed throw); can pressure with MK Burning Kick (+2 oB, DI-safe), MK Burning Kick ~ Double Burn (also +2 oB, true blockstring, gives better Drive damage but the sequence loses to wakeup DI), or HK Burning Kick ~ Double Burn (leaves a small blockstring gap between hits, allowing C. Viper to land and counter-DI); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== Back Throw =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Thunder Cradle
+| images        = SF6_Cviper_4lplk.png
+| hitboxes      = SF6_Cviper_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +19
+| blockAdv      = -
+| punishAdv     = HKD +19
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Side switch; can pressure with Drive Rush after a corner side switch (but cannot beat reversal 4f normals with another throw); meaty LK Burning Kick can lead to a DI-safe Double Burn blockstring, but loses to wakeup Drive Impact; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_hphk | moveType = drive
+| input         = HPHK
+| name          = Viper Cannon
+| images        = SF6_Cviper_hphk.png
+| hitboxes      = SF6_Cviper_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| guard         = LH
+| cancel        = -
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.549
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Counter Spark (Block)
+| images        = SF6_Cviper_6hphk.png
+| hitboxes      = SF6_Cviper_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.91
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Counter Spark (Recovery)
+| images        = SF6_Cviper_6hphk.png
+| hitboxes      = SF6_Cviper_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.91
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Cviper_mpmk.png
+| hitboxes      = SF6_Cviper_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| hitAdv        = -
+| blockAdv      = -
+| guard         = -
+| cancel        = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Cviper_66.png
+| hitboxes      = SF6_Cviper_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.374 (min/throw), 1.756 (min/block), 3.355 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Cviper_66.png
+| hitboxes      = SF6_Cviper_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== High Jump ===
+===== 2~8 =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_2_8 | moveType = Special
+| input         = 2~8
+| name          = High Jump
+| images        = SF6_Cviper_2_8.png
+| hitboxes      = SF6_Cviper_2_8_hitbox.png
+| damage        = -
+| startup       = 6 prejump
+| active        = 40 air
+| recovery      = 3 land
+| total         = 49
+| guard         = -
+| cancel        = Sp SA
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| airborne      = 7-46 (FKD)
+| notes         = Costs 1 bar of Drive gauge (except during SA1 install); jumps slightly higher and over 50% farther than a standard jump; can be input in neutral or canceled on hit/block from all normals (except 2HK/6MP/6HK) and from Seismic Hammer; can be input as a forward or neutral jump (cannot High Jump backwards, but attempting this as a cancel results in neutral jump); cancelable into grounded special moves and Supers during prejump frames 2-6, effectively allowing any HJ-cancelable attack to be special/super cancelable; C. Viper is in a Counter-hit state for the entire duration and in a Forced Knockdown state when airborne; Drive Gauge recovery acts similar to OD specials (can start regaining meter quickly, effectively refunding part of its cost by hitting the opponent afterward; grounded High Jump Cancel into grounded Burning Kick cannot be buffered on the first jump frame (results in a strict 2f window to properly input a combo sequence like juggled 5HK > HJC OD Burning Kick); can be used in safe jump setups with a KD Advantage of +45; the Up direction must be input no later than the 8th frame after initiating the Down direction (holding down before inputting a jump does not result in a High Jump)
+}}
+
+=== Thunder Dash ===
+===== 214LP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214lp | moveType = Special
+| input         = 214LP
+| name          = Thunder Dash
+| images        = SF6_Cviper_214lp.png
+| hitboxes      = SF6_Cviper_214lp_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 17
+| active        = 4
+| recovery      = 23
+| total         = 43
+| guard         = LH
+| cancel        = SA3 Feint
+| hitconfirm    = 18 (SA/Follow-up)
+| hitAdv        = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+4)}}
+| blockAdv      = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-1)}}
+| punishAdv     = {{sf6-adv|VP|+5(8)}}
+| perfParryAdv  = {{sf6-adv|VM|-25(-22)}}
+| hitstun       = 28
+| blockstun     = 23
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 14-20 Upper Body Proj
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| atkRange      = 2.24 (1.77)
+| notes         = Crouch-sized hurtbox on frames 14-43 (standing state); can be spaced meaty for better advantage (very precise spacing required for the final active frame to connect); can duck under projectiles with precise timing (impractical as a reaction to fast fireballs, and can be clipped on her back during recovery against slow fireballs); combos naturally from medium/heavy normals; punishing a projectile can link into lights, 2MP, or SA2 depending on the range; startup can be canceled into Feint by inputting K (feint occurs after 12 startup frames); cancelable into Tracer Combination (6PP) on hit/block only
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214mp | moveType = Special
+| input         = 214MP
+| name          = Thunder Dash
+| images        = SF6_Cviper_214mp.png
+| hitboxes      = SF6_Cviper_214mp_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 16
+| active        = 4
+| recovery      = 22
+| total         = 41
+| guard         = LH
+| cancel        = SA3 Feint
+| hitconfirm    = 18 (SA/Follow-up)
+| hitAdv        = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+4)}}
+| blockAdv      = {{sf6-adv|M|-3}}{{sf6-adv|E|(0)}}
+| punishAdv     = {{sf6-adv|VP|+5(+8)}}
+| perfParryAdv  = {{sf6-adv|VM|-24(-21)}}
+| hitstun       = 27
+| blockstun     = 23
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 3
+| atkRange      = 1.84 (1.54)
+| notes         = Less range than LP version but safe on block at all ranges; can be spaced meaty for better advantage; combos from 5LK naturally; startup can be canceled into Feint by inputting K (feint occurs after 8 startup frames); cancelable into Tracer Combination (6PP) on hit/block only; can perform a risky frame trap into follow-up on block (2f gap) unless the move connects on the final 2 active frames
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214hp | moveType = Special
+| input         = 214HP
+| name          = Thunder Dash
+| images        = SF6_Cviper_214hp.png
+| hitboxes      = SF6_Cviper_214hp_hitbox_preview.png, SF6_Cviper_214hp_hitbox_1.png, SF6_Cviper_214hp_hitbox_2.png
+| damage        = 900
+| chip          = 225
+| startup       = 7
+| active        = 10
+| recovery      = 15+22 land
+| total         = 53
+| guard         = LH
+| cancel        = Feint
+| hitconfirm    = 25 (Follow-up)
+| hitAdv        = KD +21<br>(KD +18~35)
+| blockAdv      = {{sf6-adv|VM|-24}}
+| punishAdv     = KD +21<br>(KD +18~35)
+| perfParryAdv  = {{sf6-adv|VM|-45}}
+| blockstun     = 23
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-9 Air
+| airborne      = 9-31 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.02
+| notes         = Upward trajectory for juggles and anti-airs; cannot hit cross-up; combos from all light normals; can whiff in long-range cancels like 5MK > HJC 214HP; startup can be canceled into Feint by inputting K (feint occurs after 6 startup frames, leading to the best advantage of all feint cancels); feint-canceled version still maintains anti-air invincibility on frames 1-6, allowing C.Viper to "spot dodge" some airborne attacks with precise timing for a better punish; variable knockdown advantage on airborne opponents; cancelable into Tracer Combination (6PP) on hit only (can whiff on high juggled opponents)
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214pp | moveType = Special
+| input         = 214PP
+| name          = Thunder Dash
+| images        = SF6_Cviper_214pp.png
+| hitboxes      = SF6_Cviper_214pp_hitbox_preview.png, SF6_Cviper_214pp_hitbox_1.png, SF6_Cviper_214pp_hitbox_2.png
+| damage        = 800x2
+| chip          = 200x2
+| dmgScaling    = 30% Starter; Combo (2 hits)
+| startup       = 18
+| active        = 4(16)4
+| recovery      = 21
+| total         = 62
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 47(18)
+| hitAdv        = KD +42
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 43(23)
+| hitstop       = 9,13
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [4000x2]
+| driveGain     = -20000
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 5,6
+| atkRange      = 3.56/3.38 (1.99/1.71)
+| notes         = 2 hits with a large gap in between; range of the 1st hit is in between LP/MP versions (total range is longer but easily interruptible if 1st hit whiffs); combos from medium and heavy normals; allows an easy hitconfirm into SA2/SA3 while remaining safe on block; leaves C.Viper inside throw range with block advantage on burned out opponents, making it a strong chip and pressure tool; cannot perform feint cancels or Tracer Combination follow-ups; if Perfect Parried, opponent can interrupt 2nd hit with 18f or faster attack; extremely disjointed hitbox makes it a strong approach tool at midrange; sets up a safe jump on grounded hit (midscreen, can only connect with max range j.MK)
+}}
+
+==== Thunder Dash Feint ====
+===== 214P~K =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214p_k | moveType = Special
+| input         = 214P~K
+| name          = Thunder Dash Feint
+| images        = SF6_Cviper_214p_k.png
+| hitboxes      = SF6_Cviper_214p_k_hitbox.png
+| damage        = -
+| startup       = 12/8/6
+| active        = -
+| recovery      = 12
+| total         = 24/20/18
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Feint animation lasts 12f but occurs at a different timing from each meterless strength of Thunder Dash (LP 12+12 / MP 8+12 / HP 6+12); can be input more easily by holding any K while inputting 214P; 214HP version gives better combo potential from 2HP or from High Jump canceled 5HP/5HK; Counter-hit state for entire feint animation
+}}
+
+==== Tracer Combination ====
+===== 214LP~6PP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214lp_6pp | moveType = Special
+| input         = 214LP~6PP
+| name          = Tracer Combination
+| images        = SF6_Cviper_214lp_6pp.png
+| hitboxes      = SF6_Cviper_214lp_6pp_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 15
+| active        = 3
+| recovery      = 28
+| total         = 45
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 48 (both hits)
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +37
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [4000]
+| driveGain     = -10000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| invuln        = 1-17 Upper Body Proj
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.52 (2.30)
+| notes         = Costs 1 extra bar of Drive gauge (except during SA1 install); maintains the Projectile Invuln and crouch-sized hurtbox of 214LP on frames 1-17; best version for confirming into SA3 (combos naturally); forms a true blockstring from 214LP; gives solid oki with Drive Rush or a Forward Dash + manually timed walk
+}}
+
+===== 214MP~6PP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214mp_6pp | moveType = Special
+| input         = 214MP~6PP
+| name          = Tracer Combination
+| images        = SF6_Cviper_214mp_6pp.png
+| hitboxes      = SF6_Cviper_214mp_6pp_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 21
+| active        = 4
+| recovery      = 25
+| total         = 49
+| guard         = LH
+| cancel        = *SA3
+| hitconfirm    = 55*
+| hitAdv        = KD +18<br>(KD +30~34)
+| blockAdv      = {{sf6-adv|VM|-13}}
+| punishAdv     = KD +18
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [4000]
+| driveGain     = -10000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.21 (2.15)
+| notes         = Costs 1 extra bar of Drive gauge (except during SA1 install); cancel into SA3 does not combo on grounded opponents; puts airborne opponents into a limited juggle OTG bounce state (KD +30 at lowest height, allows SA3 cancel to juggle); 2f gap on block can set up a risky frame trap (no gap during Burnout or if the final 2 active frames of 214MP connect); grounded hit gives the worst oki of all Thunder Dash follow-ups (-3 after Dash)
+}}
+
+===== 214HP~6PP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214hp_6pp | moveType = Special
+| input         = 214HP~6PP
+| name          = Tracer Combination
+| images        = SF6_Cviper_214hp_6pp.png
+| hitboxes      = SF6_Cviper_214hp_6pp_hitbox.png
+| damage        = 500
+| chip          = -
+| startup       = 17
+| active        = 4
+| recovery      = 11+26 land
+| total         = 57
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +25(+34)
+| blockAdv      = -
+| hitstop       = 13
+| driveGain     = -10000
+| superGainHit  = 500 (350)
+| airborne      = Until Land
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.67 (2.46)
+| notes         = Costs 1 extra bar of Drive gauge (except during SA1 install); can only be canceled into on hit; can whiff on high juggled opponents; gives the best oki out of all Thunder Dash follow-ups; useful way to extend C. Viper's anti-air damage
+}}
+
+=== Burning Kick ===
+===== 236LK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236lk | moveType = Special
+| input         = 236LK
+| name          = Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_236k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 23
+| active        = 5
+| recovery      = 7+13 land
+| total         = 47
+| guard         = LH
+| cancel        = -
+| hitconfirm    = 18 (Follow-up)
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|M|-2}}{{sf6-adv|P|(+2)}}
+| punishAdv     = KD +43
+| perfParryAdv  = {{sf6-adv|VM|-23(-19)}}
+| blockstun     = 23
+| hitstop       = 10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 14-27 Lower Body Proj
+| airborne      = 5-34 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.84 (1.78)
+| notes         = Shortest trajectory; cannot hit cross-up; Punish Counter gives an extra +5 KD advantage (allows combo into KK follow-up); primarily used for beating throw techs and crouching buttons; connects from about C. Viper's maximum poke range; very difficult to space more safely in neutral due to minimal forward movement during active frames
+}}
+
+===== 236MK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236mk | moveType = Special
+| input         = 236MK
+| name          = Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_236k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 25
+| active        = 5
+| recovery      = 7+13 land
+| total         = 49
+| guard         = LH
+| cancel        = -
+| hitconfirm    = 18 (Follow-up)
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|M|-2}}{{sf6-adv|P|(+2)}}
+| punishAdv     = KD +43
+| perfParryAdv  = {{sf6-adv|VM|-23(-19)}}
+| blockstun     = 23
+| hitstop       = 10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 16-29 Lower Body Proj
+| airborne      = 5-36 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.27 (2.17)
+| notes         = Medium trajectory; cannot hit cross-up; Punish Counter gives an extra +5 KD advantage (allows combo into KK follow-up); useful for crushing low pokes from outside their max range and for approaching in neutral while staying out of the opponent's throw range on block
+}}
+
+===== 236HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236hk | moveType = Special
+| input         = 236HK
+| name          = Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_236k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 27
+| active        = 5
+| recovery      = 7+13 land
+| total         = 51
+| guard         = LH
+| cancel        = -
+| hitconfirm    = 18 (Follow-up)
+| hitAdv        = KD +38
+| blockAdv      = {{sf6-adv|M|-2}}{{sf6-adv|P|(+2)}}
+| punishAdv     = KD +43
+| perfParryAdv  = {{sf6-adv|VM|-23(-19)}}
+| blockstun     = 23
+| hitstop       = 10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 18-31 Lower Body Proj
+| airborne      = 5-38 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 3.14 (2.92)
+| notes         = Farthest trajectory; cannot hit cross-up; Punish Counter gives an extra +5 KD advantage (allows combo into KK follow-up); useful as a safe approach tool from long range (but more likely to land inside opponent's throw range on block); easiest version to space meaty for extra advantage due to forward movement during active frames; works well as a predictive fireball counter due to its range, safety, and lower body projectile invuln frames
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236kk | moveType = Special
+| input         = 236KK
+| name          = Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_236kk_hitbox_preview.png, SF6_Cviper_236kk_hitbox_1.png, SF6_Cviper_236kk_hitbox_2.png
+| damage        = 700,800 (1500)
+| chip          = 175,200 (375)
+| dmgScaling    = 30% Starter; Combo (2 hits)
+| startup       = 8
+| active        = 3(21)4
+| recovery      = 8+13 land
+| total         = 56
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 58(26)
+| hitAdv        = KD +43
+| blockAdv      = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-1)}}
+| punishAdv     = KD +43
+| perfParryAdv  = {{sf6-adv|VM|-23(-20)}}
+| blockstun     = 45(21)
+| hitstop       = 8,10
+| driveDmgBlk   = 2000,3000
+| driveDmgHit   = [5000x2]
+| driveGain     = -20000
+| superGainHit  = 500,700 (350,490)
+| superGainBlk  = 250,350 (125,175)
+| airborne      = 11-43 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,10
+| atkRange      = 3.71 (1.48)
+| notes         = Best horizontal range for combo consistency; 2 hits (cannot be interrupted on block); cannot hit cross-up; recovery is cancelable into SA2/SA3 after 11f on hit or block; very difficult to space meaty for extra advantage due to minimal forward movement during 2nd hit's active frames; important juggle tool after launches into Air Burning Kick or juggled 5HK ground bounce; combo from 5HK > HJC requires a strict 2f input window (cannot buffer on the first High Jump frame, and results in air version on frame 4 onward)
+}}
+
+==== Knuckled Pursuit ====
+===== 236K~PP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236k_pp | moveType = Special
+| input         = 236K~PP
+| name          = Knuckled Pursuit
+| images        = SF6_Cviper_236k_pp.png
+| hitboxes      = SF6_Cviper_236k_pp_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 12
+| active        = 4
+| recovery      = 14+20 land
+| total         = 49
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23(+30)
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +24(+31)
+| blockstun     = 23
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [4000]
+| driveGain     = -10000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.43 (2.19)
+| notes         = Costs 1 extra bar of Drive gauge (except during SA1 install); true blockstring and natural combo from Burning Kick; higher KD advantage if Burning Kick lands as a Punish Counter or hits airborne opponent; KD +9 when follow-up hits a grounded opponent (e.g. after Burning Kick is absorbed by 1-hit armor like Luke 236KK or Zangief Charged 5HP)
+}}
+
+==== Double Burn ====
+===== 236K~KK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236k_kk | moveType = Special
+| input         = 236K~KK
+| name          = Double Burn
+| images        = SF6_Cviper_236k_kk.png
+| hitboxes      = SF6_Cviper_236k_kk_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 21
+| active        = 5
+| recovery      = 3+17 land
+| total         = 45
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +40<br>(KD +34~40)
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = KD +40<br>(KD +34~40)
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 27
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = -10000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.55 (2.35)
+| notes         = Costs 1 extra bar of Drive gauge (except during SA1 install); leaves a 3f gap on block from Burning Kick that can beat non-invincible attacks (but loses to Drive Impact and anti-air invuln moves); true blockstring vs. opponents in Burnout and +6 oB making it a great pressure tool; KD +40 on grounded opponents (e.g. frame trap after Burning Kick) and +34 on airborne opponents (e.g. combo after PC Burning Kick or in juggle routes, up to KD +40 in very high juggles); does not combo naturally from Burning Kick on grounded opponents (requires Punish Counter or airborne connect); whiffing this attack on grounded hit results in a +13 knockdown with oki only possible in the corner
+}}
+
+=== Aerial Burning Kick ===
+===== j.236LK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_j236lk | moveType = Special
+| input         = j.236LK
+| name          = Aerial Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_j236k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 22
+| active        = 7
+| recovery      = 13(14/21) land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +38(+43)
+| blockAdv      = {{sf6-adv|VM|-5}}{{sf6-adv|P|(+2)}}
+| punishAdv     = KD +38(+43)
+| perfParryAdv  = {{sf6-adv|VM|-24(-18)}}
+| blockstun     = 22 (HJ:21)
+| hitstop       = 10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 22-28 Lower Body Proj
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.04
+| notes         = Can be input from a forward/neutral jump or High Jump; stops forward air momentum; can hit crossup; 1f extra landing recovery frame when blocked as a cross-up; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +39 / -2 oB (regular jump), KD +43 / +1 oB (High Jump)
+}}
+
+===== j.236MK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_j236mk | moveType = Special
+| input         = j.236MK
+| name          = Aerial Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_j236k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 20
+| active        = 7
+| recovery      = 13(14/21) land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +37(+48)
+| blockAdv      = {{sf6-adv|VM|-5}}{{sf6-adv|VP|(+8)}}
+| punishAdv     = KD +37(+48)
+| perfParryAdv  = {{sf6-adv|VM|-24(-12)}}
+| blockstun     = 22 (HJ:21)
+| hitstop       = 10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 20-26 Lower Body Proj
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.04
+| notes         = Can be input from a forward/neutral jump or High Jump; maintains some forward air momentum; can hit crossup; 1f extra landing recovery frame when blocked as a cross-up; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +40 / -1 oB (regular jump), KD +43 / +1 oB (High Jump); using this version after Seismic Hammer launch allows a midscreen juggle into MP Thunder Dash + Tracer Combination (great damage, oki, and potential SA3 cancel with less meter cost than OD Burning Kick routes)
+}}
+
+===== j.236HK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_j236hk | moveType = Special
+| input         = j.236HK
+| name          = Aerial Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_j236k_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 18
+| active        = 7
+| recovery      = 13(14/21) land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +36(+48)
+| blockAdv      = {{sf6-adv|VM|-5}}{{sf6-adv|VP|(+7)}}
+| punishAdv     = KD +36(+48)
+| perfParryAdv  = {{sf6-adv|VM|-24(-13)}}
+| blockstun     = 22 (HJ:21)
+| hitstop       = 10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 18-24 Lower Body Proj
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.04
+| notes         = Can be input from a forward/neutral jump or High Jump; maintains the most forward air momentum; effective approach tool when used from immediate High Jump; can hit crossup; 1f extra landing recovery frame when blocked as a cross-up; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +38 / -3 oB (regular jump), KD +41 / -1 oB (High Jump)
+}}
+
+===== j.236KK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_j236kk | moveType = Special
+| input         = j.236KK
+| name          = Aerial Burning Kick
+| images        = SF6_Cviper_236k.png
+| hitboxes      = SF6_Cviper_j236k_hitbox.png
+| damage        = 1000
+| chip          = 250
+| startup       = 18
+| active        = 7
+| recovery      = 13(21) land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35(+48)
+| blockAdv      = {{sf6-adv|M|-1}}{{sf6-adv|VP|(+13)}}
+| punishAdv     = KD +35(+48)
+| perfParryAdv  = {{sf6-adv|VM|-25(-13)}}
+| blockstun     = 28(26)
+| hitstop       = 10
+| driveDmgBlk   = 5000
+| driveDmgHit   = [7000]
+| driveGain     = -20000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 18-24 Lower Body Proj
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.04
+| notes         = Can be input from a forward/neutral jump or High Jump; same air trajectory as Heavy version; can hit crossup; 8f extra landing recovery on whiff after crossing over the opponent; comes out after 7 airborne frames (normal jump) or 3 airborne frames (High Jump); High Jump version deals 1f less blockstun but hits lower to the ground resulting in better advantage when used low to the ground; advantage on knockdown or block varies greatly depending on angle, distance, and height when activated; earliest input timing (Tiger Knee input) at close range results in KD +37 / +2 oB (regular jump), KD +41 / +4 oB (High Jump)
+}}
+
+=== Seismic Hammer ===
+===== 623P =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_623p | moveType = Special
+| input         = 623P
+| name          = Seismic Hammer
+| images        = SF6_Cviper_623p.png
+| hitboxes      = SF6_Cviper_623p_hitbox_preview.png
+| damage        = 700
+| chip          = 175
+| dmgScaling    = 20% Starter
+| startup       = 24
+| active        = 8
+| recovery      = 26
+| total         = 57
+| guard         = L
+| cancel        = SA3 HJ Feint
+| hitconfirm    = 8 SA / 18 HJ
+| hitAdv        = KD +53
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = KD +53
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 24
+| hitstop       = 10
+| driveDmgBlk   = 2000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 2
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = 1-hit standard projectile; button strength determines projectile distance (LP close, MP ~50% screen, HP ~80% screen); puts opponents into a limited juggle state; combos from 2HP or from High Jump canceled 5HP/5HK; cancelable into High Jump on hit or block for 1 extra Drive bar (no extra cost during SA1 install); all strengths will not go beyond the corner; can transition into Seismo Feint after 11f (total Feint duration 27f); HJC~214HP Feint cancel: KD +61 / -2 oB; great tool for Burnout pressure (can repeatedly chain Seismos together with High Jump cancels until pushed out of range); can connect 9 consecutive HP Seismos on a blocking cornered opponent (if starting from a canceled normal, 5HP > HJC Seismo is the best option with 8 consecutive Seismo chains); hitbox is very low to the ground, allowing opponent to block when landing from an empty jump
+}}
+
+===== 623PP =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_623pp | moveType = Special
+| input         = 623PP
+| name          = Seismic Hammer
+| images        = SF6_Cviper_623p.png
+| hitboxes      = SF6_Cviper_623pp_hitbox.png
+| damage        = 900
+| chip          = 225
+| dmgScaling    = 20% Starter
+| startup       = 19
+| active        = 8
+| recovery      = 26
+| total         = 52
+| guard         = L
+| cancel        = SA2 SA3 HJ Feint
+| hitconfirm    = 8 SA / 18 HJ
+| hitAdv        = KD +53
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +53
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| blockstun     = 26
+| hitstop       = 10
+| driveDmgBlk   = 2000
+| driveDmgHit   = [7000]
+| driveGain     = -20000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 2
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = 1-hit OD projectile; covers wide area in front of C. Viper (~50% screen); puts opponents into a limited juggle state; combos from medium normals; cancelable into High Jump on hit or block for 1 extra Drive bar (no extra cost during SA1 install); startup cannot be canceled with Seismo Feint; HJC~214HP Feint cancel: KD +61 / 0 oB; hitbox is very low to the ground, allowing opponent to block when landing from an empty jump; hurtbox expands forward beginning on the 2nd active frame
+}}
+
+==== Seismic Hammer Feint ====
+===== 623P~K =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_623p_k | moveType = Special
+| input         = 623P~K
+| name          = Seismic Hammer Feint
+| images        = SF6_Cviper_623p_k.png
+| hitboxes      = SF6_Cviper_623p_k_hitbox.png
+| damage        = -
+| startup       = 11
+| active        = -
+| recovery      = 16
+| total         = 27
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Useful for baiting neutral responses like jumps or anti-projectile Supers; much slower than HP Thunder Dash feint (not useful for combos/pressure when canceled from normals); can only be performed from meterless Seismic Hammer after 11 frames of startup (27f total animation); can be performed by holding K for easier execution; Counter-hit state for entire feint animation
+}}
+
+=== Focus Force ===
+===== 214K =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214k | moveType = Special
+| input         = 214K
+| name          = Focus Force (Lv.1)
+| images        = SF6_Cviper_214k_1.png, SF6_Cviper_214k_2.png
+| hitboxes      = SF6_Cviper_214k_hitbox_1.png, SF6_Cviper_214k_hitbox_preview.png, SF6_Cviper_214k_hitbox_2.png, SF6_Cviper_214k_hitbox_3.png
+| damage        = 500x2 (1000)
+| chip          = 125x2 (250)
+| dmgScaling    = 50% Starter
+| startup       = 13+10
+| active        = 4(4)4
+| recovery      = 36
+| total         = 70
+| guard         = LH
+| cancel        = Dash
+| hitAdv        = KD +24
+| blockAdv      = {{sf6-adv|VM|-16}}
+| punishAdv     = KD +26
+| perfParryAdv  = {{sf6-adv|VM|-38(-35)}}
+| hitstun       = 27,KD
+| blockstun     = 21,24 (32 total)
+| hitstop       = 10,13
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [3000x2]
+| driveGain     = 2000x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| armor         = 6-13(19)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 3,4
+| atkRange      = 2.42 (1.85)
+| notes         = Lv.1 version when uncharged or when button is held up to 19f; can hold button longer to charge to a stronger version (20f Lv.2 / 59f Lv.3); 1-hit armor frames cover the full body, ending immediately if button is released after frame 13; absorbing a strike results in an automatic counter-attack with 10f startup (comes out on frame 14 at the earliest); absorbing an attack early in the armor frames makes it possible for the counter-attack to be blocked; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 12 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); 2f extra knockdown advantage on Punish Counter; only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke); Focus + Dash can be used to absorb projectiles when Drive gauge is too low for Parry; can be used against Drive Impact while in Burnout (but armor starts too late to work in most DI-cancel blockstrings)
+}}
+
+===== 214KK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214kk | moveType = Special
+| input         = 214KK
+| name          = Focus Force (Lv.1)
+| images        = SF6_Cviper_214k_1.png, SF6_Cviper_214k_2.png
+| hitboxes      = SF6_Cviper_214k_hitbox_1.png, SF6_Cviper_214k_hitbox_preview.png, SF6_Cviper_214k_hitbox_2.png, SF6_Cviper_214k_hitbox_3.png
+| damage        = 750x2 (1500)
+| chip          = 187x2 (374)
+| dmgScaling    = 50% Starter
+| startup       = 10+10
+| active        = 4(4)4
+| recovery      = 36
+| total         = 67
+| guard         = LH
+| cancel        = Dash
+| hitAdv        = KD +24
+| blockAdv      = {{sf6-adv|VM|-16}}
+| punishAdv     = KD +26
+| perfParryAdv  = {{sf6-adv|VM|-38(-35)}}
+| hitstun       = 27,KD
+| blockstun     = 21,24 (32 total)
+| hitstop       = 10,12
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [4000x2]
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| armor         = 3-10(19)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 3,4
+| atkRange      = 2.42 (1.85)
+| notes         = Lv.1 version when uncharged or when button is held up to 19f; can hold button longer to charge to a stronger version (20f Lv.2 / 57f Lv.3); 1-hit armor frames cover the full body, ending immediately if button is released after frame 10; absorbing a strike results in an automatic counter-attack with 10f startup (comes out on frame 11 at the earliest); absorbing an attack early in the armor frames makes it possible for the counter-attack to be blocked; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 9 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); 2f extra knockdown advantage on Punish Counter; only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)
+}}
+
+==== Charged Focus Force ====
+===== 214{K} =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214k_partial_hold | moveType = Special
+| input         = 214{K}
+| name          = Focus Force (Lv.2)
+| images        = SF6_Cviper_214k_1.png, SF6_Cviper_214k_2.png
+| hitboxes      = SF6_Cviper_214k_hitbox_1.png, SF6_Cviper_214k_hitbox_preview.png, SF6_Cviper_214k_hitbox_2.png, SF6_Cviper_214k_hitbox_3.png
+| damage        = 600x2 (1200)
+| chip          = 150x2 (300)
+| dmgScaling    = 50% Starter
+| startup       = 20~58+10
+| active        = 4(4)4
+| recovery      = 36
+| total         = 77~115
+| guard         = LH
+| cancel        = Dash
+| hitAdv        = KD +26
+| blockAdv      = {{sf6-adv|VM|-16}}
+| punishAdv     = KD +56 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-38(-35)}}
+| hitstun       = 27,KD
+| blockstun     = 21,24 (32 total)
+| hitstop       = 12,12
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [3000x2]
+| driveGain     = 2000x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| armor         = 6~release
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 3,4
+| atkRange      = 2.42 (1.85)
+| notes         = Partially charged Lv.2 version when button is held at least 20f (up to 58f); Punish Counter causes a limited juggle crumple state (+8 before opponent falls to the ground); 1-hit armor frames cover the full body, ending immediately if button is released after frame 13; attack hitbox starts up 10f after button release (no armor on these frames); absorbing a strike results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 12 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke); Focus + Dash can be used to absorb projectiles when Drive gauge is too low for Parry
+}}
+
+===== 214{KK} =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214kk_partial_hold | moveType = Special
+| input         = 214{KK}
+| name          = Focus Force (Lv.2)
+| images        = SF6_Cviper_214k_1.png, SF6_Cviper_214k_2.png
+| hitboxes      = SF6_Cviper_214k_hitbox_1.png, SF6_Cviper_214k_hitbox_preview.png, SF6_Cviper_214k_hitbox_2.png, SF6_Cviper_214k_hitbox_3.png
+| damage        = 850x2 (1700)
+| chip          = 212x2 (424)
+| dmgScaling    = 50% Starter
+| startup       = 20~56+10
+| active        = 4(4)4
+| recovery      = 36
+| total         = 77~113
+| guard         = LH
+| cancel        = Dash
+| hitAdv        = KD +26
+| blockAdv      = {{sf6-adv|VM|-16}}
+| punishAdv     = KD +56 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-38(-35)}}
+| hitstun       = 27,KD
+| blockstun     = 21,24 (32 total)
+| hitstop       = 12,12
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [4000x2]
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| armor         = 3~release
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 3,4
+| atkRange      = 2.42 (1.85)
+| notes         = Partially charged Lv.2 version when button is held at least 20f (up to 56f); Punish Counter causes a limited juggle crumple state (+8 before opponent falls to the ground); 1-hit armor frames cover the full body, ending immediately if button is released after frame 10; attack hitbox starts up 10f after button release (no armor on these frames); absorbing a strike results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 9 until button is released (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)
+}}
+
+===== 214[K] =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214k_hold | moveType = Special
+| input         = 214[K]
+| name          = Focus Force (Lv.3)
+| images        = SF6_Cviper_214k_1.png, SF6_Cviper_214k_2.png
+| hitboxes      = SF6_Cviper_214k_hitbox_1.png, SF6_Cviper_214k_hitbox_preview.png, SF6_Cviper_214k_hitbox_2.png, SF6_Cviper_214k_hitbox_3.png
+| damage        = 700x2 (1400)
+| chip          = 175x2 (350)
+| dmgScaling    = 20% Starter
+| startup       = 59+10
+| active        = 4(4)4
+| recovery      = 36
+| total         = 116
+| guard         = LH
+| cancel        = Dash
+| hitAdv        = KD +73 Crumple
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = KD +77 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-38(-35)}}
+| hitstun       = 27,KD
+| blockstun     = 19,30 (38 total)
+| hitstop       = 12,12
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [4000x2]
+| driveGain     = 2500x2
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| armor         = 6-59
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,10
+| atkRange      = 2.42 (1.85)
+| notes         = Fully charged Lv.3 version when button is held at least 59f; Punish Counter causes a limited juggle crumple state (+29 before opponent falls to the ground); 1-hit armor frames cover the full body; attack hitbox starts up 10f after reaching full charge (no armor on these frames); absorbing a strike while charging results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 12-60 (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)
+}}
+
+===== 214[KK] =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214kk_hold | moveType = Special
+| input         = 214[KK]
+| name          = Focus Force (Lv.3)
+| images        = SF6_Cviper_214k_1.png, SF6_Cviper_214k_2.png
+| hitboxes      = SF6_Cviper_214k_hitbox_1.png, SF6_Cviper_214k_hitbox_preview.png, SF6_Cviper_214k_hitbox_2.png, SF6_Cviper_214k_hitbox_3.png
+| damage        = 1000x2 (2000)
+| chip          = 250x2 (500)
+| dmgScaling    = 20% Starter
+| startup       = 57+10
+| active        = 4(4)4
+| recovery      = 36
+| total         = 114
+| guard         = LH
+| cancel        = Dash
+| hitAdv        = KD +73 Crumple
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = KD +77 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-38(-35)}}
+| hitstun       = 27,KD
+| blockstun     = 19,30 (38 total)
+| hitstop       = 12,12
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [5000x2]
+| driveGain     = -20000
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| armor         = 3-57
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,10
+| atkRange      = 2.42 (1.85)
+| notes         = Fully charged Lv.3 version when button is held at least 57f; Punish Counter causes a limited juggle crumple state (+29 before opponent falls to the ground); extremely powerful combo starter for Stun or punishing very unsafe Supers; 1-hit armor frames cover the full body; attack hitbox starts up 10f after reaching full charge (no armor on these frames); absorbing a strike while charging results in an automatic counter-attack with 10f startup; C. Viper incurs only 7f armor hitstop from absorbing a strike; armor can absorb projectiles but does not perform counter-attack (C. Viper incurs 10f projectile hitstop during armor); cancelable into Forward Dash from frame 9-58 (not possible after absorbing a strike); C. Viper is in a Punish Counter state for entire duration (including Forward Dash cancel); only the first hit gains the bonus damage from a Counter-hit/Punish Counter; -17 on Punish Counter if only the first hit of counter-attack reaches opponent (e.g. absorbing a ranged Dhalsim poke)
+}}
+
+== Super Arts ==
+===== 236236K =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_236236k | moveType = Super
+| input         = 236236K
+| name          = Limit Decoupler
+| images        = SF6_Cviper_236236k.png
+| hitboxes      = SF6_Cviper_236236k_hitbox_preview.png, SF6_Cviper_236236k_hitbox_1.png, SF6_Cviper_236236k_hitbox_2.png
+| damage        = 800,1200 (2000)
+| chip          = 250x2 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 8
+| active        = 4(3)6
+| recovery      = 22+31 land
+| total         = 73
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +21
+| blockAdv      = {{sf6-adv|VM|-34}}
+| punishAdv     = KD +21
+| perfParryAdv  = {{sf6-adv|VM|-57}}
+| blockstun     = 21,25 (32 total)
+| hitstop       = 10,15
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = 2500x2
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-11 Strike/Throw, 12-20 Air
+| armor         = Break
+| airborne      = 12-42 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 99,99
+| atkRange      = 1.59 (1.49)
+| notes         = Puts C.Viper into an install state on frame 21 (after active frames) that removes the meter cost of her 1-bar moves (High Jump, extensions from Thunder Dash and Burning Kick) and also causes the 1-bar special follow-ups to build 3000 Drive gauge on hit/block; during Burnout, the install ends after one use of these moves; install lasts for 700 frames (11.7 seconds) and freezes during hitstop or cinematics; cannot build additional Super gauge while install is active; KD advantage varies slightly when used in juggles or as an anti-air; if 1st hit is Perfect Parried, opponent can interrupt 2nd hit with 5f or faster attack that reaches around standing chest-height; if 1st hit trades with a projectile at close range, C. Viper can pick up a juggle into 214HP, SA1, or SA2 depending on the distance and fireball hitstun (useful in blockstrings with a large gap, like Terry 5HP > Round Wave)
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214214p | moveType = Super
+| input         = 214214P
+| name          = Mission Complete
+| images        = SF6_Cviper_214214p.png
+| hitboxes      = SF6_Cviper_214214p_hitbox.png
+| damage        = 3000
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 7
+| active        = 4
+| recovery      = 45
+| total         = 55
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +19
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = HKD +19
+| perfParryAdv  = {{sf6-adv|VM|-47}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-10 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 1.71
+| notes         = Strong reversal but short range makes it a poor projectile counter; cinematic carries opponent over half screen; cannot be executed using easy input shortcuts when inputting with HP button or immediately after High Jump (to prevent input overlap issues with HP Thunder Dash and Feint cancels)
+}}
+
+===== 214214K =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214214k | moveType = Super
+| input         = 214214K
+| name          = Hard Luck Rejector
+| images        = SF6_Cviper_214214k.png
+| hitboxes      = SF6_Cviper_214214k_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10
+| active        = 4
+| recovery      = 54
+| total         = 67
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +21
+| blockAdv      = {{sf6-adv|VM|-38}}
+| punishAdv     = HKD +21
+| perfParryAdv  = {{sf6-adv|VM|-56}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.06 (1.92)
+| notes         = Short range makes it a poor projectile counter; cinematic time regenerates ~2 Drive bars for C.Viper
+}}
+
+====== 214214K (CA) ======
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_214214k(ca) | moveType = Super
+| input         = 214214K
+| name          = Hard Luck Rejector (CA)
+| images        = SF6_Cviper_214214k_ca.png
+| hitboxes      = SF6_Cviper_214214k_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10
+| active        = 4
+| recovery      = 54
+| total         = 67
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +23
+| blockAdv      = {{sf6-adv|VM|-38}}
+| punishAdv     = HKD +23
+| perfParryAdv  = {{sf6-adv|VM|-56}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.06 (1.92)
+| notes         = Short range makes it a poor projectile counter; available at 25% HP or below; cinematic time regenerates ~2.2 Drive bars for C.Viper
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Cviper_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 605 (total)
+| active        = -
+| recovery      = -
+| total         = 605
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Ugh, could you just like, give up now? I have other work to do."
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Cviper_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 740 (total)
+| active        = -
+| recovery      = -
+| total         = 740
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "I hate to admit, you're not half bad! Even messed up my makeup. Hmm, alright, all done up."
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = C.Viper | moveId = c.viper_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Cviper_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 965 (total)
+| active        = -
+| recovery      = -
+| total         = 965
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Begins with "You're a stubborn one —" / "You're becoming a pain in —" / "I have a few new tricks up —" / "Decouple power limiters —" / "This is going on far too —" / "I think it's about time I —"; after being interrupted, plays out one of 6 potential phone conversations.
+}}
+
+
+{{Character Subnav SF6 | chara=C.Viper | tag=Viper }}
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category:C. Viper]]

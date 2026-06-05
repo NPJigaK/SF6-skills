@@ -1,0 +1,1488 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:38:15Z",
+  "source": "SuperCombo Wiki",
+  "character": "Lily",
+  "cargo_character": "Lily",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Lily",
+      "filename": "SF6 Lily Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Lily",
+      "filename": "SF6 Lily Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Lily_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Lily_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Lily_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Lily_5mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Lily_5mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Lily_5mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Lily_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Lily_5hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Lily_5hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Lily_5hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Lily_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Lily_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Lily_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Lily_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Lily_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Lily_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Lily_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Lily_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Lily_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Lily_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Lily_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Lily_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Lily_2hp_hitbox_2_3_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Lily_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Lily_2hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Lily_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Lily_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Lily_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Lily_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2hk",
+      "input": "2HK",
+      "name": "Squall Kick",
+      "filename": "SF6_Lily_2hk_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_2hk",
+      "input": "2HK",
+      "name": "Squall Kick",
+      "filename": "SF6_Lily_2hk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2hk",
+      "input": "2HK",
+      "name": "Squall Kick",
+      "filename": "SF6_Lily_2hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_2hk",
+      "input": "2HK",
+      "name": "Squall Kick",
+      "filename": "SF6_Lily_2hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Lily_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Lily_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Lily_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Lily_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Lily_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Lily_jhp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Lily_jhp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Lily_jhp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Lily_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Lily_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Lily_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Lily_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Lily_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Lily_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_6hp",
+      "input": "6HP",
+      "name": "Desert Storm 1",
+      "filename": "SF6_Lily_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp",
+      "input": "6HP",
+      "name": "Desert Storm 1",
+      "filename": "SF6_Lily_6hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp",
+      "input": "6HP",
+      "name": "Desert Storm 1",
+      "filename": "SF6_Lily_6hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp",
+      "input": "6HP",
+      "name": "Desert Storm 1",
+      "filename": "SF6_Lily_6hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_4hp",
+      "input": "4HP",
+      "name": "Horn Breaker",
+      "filename": "SF6_Lily_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_4hp",
+      "input": "4HP",
+      "name": "Horn Breaker",
+      "filename": "SF6_Lily_4hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_3hp",
+      "input": "3HP",
+      "name": "Ridge Thrust",
+      "filename": "SF6_Lily_3hp_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_3hp",
+      "input": "3HP",
+      "name": "Ridge Thrust",
+      "filename": "SF6_Lily_3hp_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_3hp",
+      "input": "3HP",
+      "name": "Ridge Thrust",
+      "filename": "SF6_Lily_3hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_3hp",
+      "input": "3HP",
+      "name": "Ridge Thrust",
+      "filename": "SF6_Lily_3hp_hitbox_2_3_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_3hp",
+      "input": "3HP",
+      "name": "Ridge Thrust",
+      "filename": "SF6_Lily_3hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_3hp",
+      "input": "3HP",
+      "name": "Ridge Thrust",
+      "filename": "SF6_Lily_3hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_j2hp",
+      "input": "j.2HP",
+      "name": "Great Spin",
+      "filename": "SF6_Lily_j2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_j2hp",
+      "input": "j.2HP",
+      "name": "Great Spin",
+      "filename": "SF6_Lily_j2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_j2hp",
+      "input": "j.2HP",
+      "name": "Great Spin",
+      "filename": "SF6_Lily_j2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_j2hp",
+      "input": "j.2HP",
+      "name": "Great Spin",
+      "filename": "SF6_Lily_j2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_6hp_hp",
+      "input": "6HP~HP",
+      "name": "Desert Storm 2",
+      "filename": "SF6_Lily_6hp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp_hp",
+      "input": "6HP~HP",
+      "name": "Desert Storm 2",
+      "filename": "SF6_Lily_6hp_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_6hp_hp_hp",
+      "input": "6HP~HP~HP",
+      "name": "Desert Storm 3",
+      "filename": "SF6_Lily_6hp_hp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp_hp_hp",
+      "input": "6HP~HP~HP",
+      "name": "Desert Storm 3",
+      "filename": "SF6_Lily_6hp_hp_hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp_hp_hp",
+      "input": "6HP~HP~HP",
+      "name": "Desert Storm 3",
+      "filename": "SF6_Lily_6hp_hp_hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hp_hp_hp",
+      "input": "6HP~HP~HP",
+      "name": "Desert Storm 3",
+      "filename": "SF6_Lily_6hp_hp_hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jmp_mp",
+      "input": "j.MP~MP",
+      "name": "Double Arrow",
+      "filename": "SF6_Lily_jmp_mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jmp_mp",
+      "input": "j.MP~MP",
+      "name": "Double Arrow",
+      "filename": "SF6_Lily_jmp_mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_lplk",
+      "input": "LPLK",
+      "name": "Canyon Throw",
+      "filename": "SF6_Lily_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_lplk",
+      "input": "LPLK",
+      "name": "Canyon Throw",
+      "filename": "SF6_Lily_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_4lplk",
+      "input": "4LPLK",
+      "name": "Falling Cliff",
+      "filename": "SF6_Lily_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_4lplk",
+      "input": "4LPLK",
+      "name": "Falling Cliff",
+      "filename": "SF6_Lily_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_hphk",
+      "input": "HPHK",
+      "name": "Earth's Rage",
+      "filename": "SF6_Lily_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_hphk",
+      "input": "HPHK",
+      "name": "Earth's Rage",
+      "filename": "SF6_Lily_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_6hphk",
+      "input": "6HPHK",
+      "name": "Cross Hammer (Block)",
+      "filename": "SF6_Lily_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hphk",
+      "input": "6HPHK",
+      "name": "Cross Hammer (Block)",
+      "filename": "SF6_Lily_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Cross Hammer (Recovery)",
+      "filename": "SF6_Lily_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Cross Hammer (Recovery)",
+      "filename": "SF6_Lily_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Lily_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Lily_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Lily_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Lily_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Lily_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Lily_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214lp",
+      "input": "214LP",
+      "name": "Condor Wind (stock)",
+      "filename": "SF6_Lily_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214lp",
+      "input": "214LP",
+      "name": "Condor Wind (stock)",
+      "filename": "SF6_Lily_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214mp",
+      "input": "214MP (HOLD OK)",
+      "name": "Condor Wind (attack)",
+      "filename": "SF6_Lily_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214mp",
+      "input": "214MP (HOLD OK)",
+      "name": "Condor Wind (attack)",
+      "filename": "SF6_Lily_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214hp",
+      "input": "214HP (HOLD OK)",
+      "name": "Condor Wind (attack)",
+      "filename": "SF6_Lily_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214hp",
+      "input": "214HP (HOLD OK)",
+      "name": "Condor Wind (attack)",
+      "filename": "SF6_Lily_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214pp",
+      "input": "214PP (HOLD OK)",
+      "name": "Condor Wind (attack)",
+      "filename": "SF6_Lily_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214pp",
+      "input": "214PP (HOLD OK)",
+      "name": "Condor Wind (attack)",
+      "filename": "SF6_Lily_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214pp_hold",
+      "input": "214[PP]",
+      "name": "Condor Wind (stock)",
+      "filename": "SF6_Lily_214pp_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214pp_hold",
+      "input": "214[PP]",
+      "name": "Condor Wind (stock)",
+      "filename": "SF6_Lily_214pp_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236lk",
+      "input": "236LK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236lk",
+      "input": "236LK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236mk",
+      "input": "236MK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236mk",
+      "input": "236MK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236hk",
+      "input": "236HK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236hk",
+      "input": "236HK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236kk",
+      "input": "236KK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236kk",
+      "input": "236KK",
+      "name": "Condor Spire",
+      "filename": "SF6_Lily_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236lk_1stock",
+      "input": "W.236LK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236lk_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236lk_1stock",
+      "input": "W.236LK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236lk_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236lk_1stock",
+      "input": "W.236LK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236lk_1stock_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236mk_1stock",
+      "input": "W.236MK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236mk_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236mk_1stock",
+      "input": "W.236MK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236mk_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236hk_1stock",
+      "input": "W.236HK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236hk_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236hk_1stock",
+      "input": "W.236HK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236hk_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236mkhk_1stock",
+      "input": "W.236MKHK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236kk_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236mkhk_1stock",
+      "input": "W.236MKHK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236kk_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236mkhk_1stock",
+      "input": "W.236MKHK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236kk_1stock_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236lkmk_1stock",
+      "input": "W.236LKMK or W.236LKHK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236kk_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236lkmk_1stock",
+      "input": "W.236LKMK or W.236LKHK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236kk_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236lkmk_1stock",
+      "input": "W.236LKMK or W.236LKHK",
+      "name": "Condor Spire (Windclad)",
+      "filename": "SF6_Lily_236kk_1stock_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623lp",
+      "input": "623LP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623lp",
+      "input": "623LP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623mp",
+      "input": "623MP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp",
+      "input": "623MP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp",
+      "input": "623MP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp",
+      "input": "623MP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp",
+      "input": "623MP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623hp",
+      "input": "623HP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623hp",
+      "input": "623HP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623pp",
+      "input": "623PP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623pp",
+      "input": "623PP",
+      "name": "Tomahawk Buster",
+      "filename": "SF6_Lily_623pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623lp_1stock",
+      "input": "W.623LP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623lp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623lp_1stock",
+      "input": "W.623LP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623lp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623mp_1stock",
+      "input": "W.623MP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623mp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp_1stock",
+      "input": "W.623MP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623mp_1stock_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp_1stock",
+      "input": "W.623MP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623mp_1stock_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp_1stock",
+      "input": "W.623MP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623mp_1stock_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623mp_1stock",
+      "input": "W.623MP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623mp_1stock_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623hp_1stock",
+      "input": "W.623HP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623hp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623hp_1stock",
+      "input": "W.623HP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623hp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_623pp_1stock",
+      "input": "W.623PP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623pp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_623pp_1stock",
+      "input": "W.623PP",
+      "name": "Tomahawk Buster (Windclad)",
+      "filename": "SF6_Lily_623pp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jpp",
+      "input": "j.PP",
+      "name": "Condor Dive",
+      "filename": "SF6_Lily_jpp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jpp",
+      "input": "j.PP",
+      "name": "Condor Dive",
+      "filename": "SF6_Lily_jpp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jpp",
+      "input": "j.PP",
+      "name": "Condor Dive",
+      "filename": "SF6_Lily_jpp_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jppp",
+      "input": "j.PPP",
+      "name": "Condor Dive",
+      "filename": "SF6_Lily_jppp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jppp",
+      "input": "j.PPP",
+      "name": "Condor Dive",
+      "filename": "SF6_Lily_jppp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jpp_1stock",
+      "input": "W.j.PP",
+      "name": "Condor Dive (Windclad)",
+      "filename": "SF6_Lily_jpp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jpp_1stock",
+      "input": "W.j.PP",
+      "name": "Condor Dive (Windclad)",
+      "filename": "SF6_Lily_jpp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jpp_1stock",
+      "input": "W.j.PP",
+      "name": "Condor Dive (Windclad)",
+      "filename": "SF6_Lily_jpp_1stock_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jpp_1stock",
+      "input": "W.j.PP",
+      "name": "Condor Dive (Windclad)",
+      "filename": "SF6_Lily_jpp_1stock_hitbox3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jppp_1stock",
+      "input": "W.j.PPP",
+      "name": "Condor Dive (Windclad)",
+      "filename": "SF6_Lily_jppp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_jppp_1stock",
+      "input": "W.j.PPP",
+      "name": "Condor Dive (Windclad)",
+      "filename": "SF6_Lily_jppp_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jpp_pp_1stock",
+      "input": "W.j.PP~PP",
+      "name": "Dive Follow-up",
+      "filename": "SF6_Lily_jpp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_jpp_ppp_1stock",
+      "input": "W.j.PP~PPP",
+      "name": "Dive Follow-up",
+      "filename": "SF6_Lily_jppp_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_360lp",
+      "input": "360+LP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_360lp",
+      "input": "360+LP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_360mp",
+      "input": "360+MP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_360mp",
+      "input": "360+MP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_360hp",
+      "input": "360+HP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_360hp",
+      "input": "360+HP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_360pp",
+      "input": "360+PP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_360pp",
+      "input": "360+PP",
+      "name": "Mexican Typhoon",
+      "filename": "SF6_Lily_360pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236236p",
+      "input": "236236P",
+      "name": "Breezing Hawk",
+      "filename": "SF6_Lily_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236236p",
+      "input": "236236P",
+      "name": "Breezing Hawk",
+      "filename": "SF6_Lily_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236236k",
+      "input": "236236K",
+      "name": "Thunderbird",
+      "filename": "SF6_Lily_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236236k",
+      "input": "236236K",
+      "name": "Thunderbird",
+      "filename": "SF6_Lily_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_236236k_1stock",
+      "input": "236236K",
+      "name": "Thunderbird (Windclad)",
+      "filename": "SF6_Lily_236236k_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_236236k_1stock",
+      "input": "236236K",
+      "name": "Thunderbird (Windclad)",
+      "filename": "SF6_Lily_236236k_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_j236236k",
+      "input": "j.236236K",
+      "name": "Soaring Thunderbird",
+      "filename": "SF6_Lily_j236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_j236236k",
+      "input": "j.236236K",
+      "name": "Soaring Thunderbird",
+      "filename": "SF6_Lily_j236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_j236236k_1stock",
+      "input": "j.236236K",
+      "name": "Soaring Thunderbird (Windclad)",
+      "filename": "SF6_Lily_j236236k_1stock.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_j236236k_1stock",
+      "input": "j.236236K",
+      "name": "Soaring Thunderbird (Windclad)",
+      "filename": "SF6_Lily_j236236k_1stock_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214214p",
+      "input": "214214P",
+      "name": "Raging Typhoon",
+      "filename": "SF6_Lily_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214214p",
+      "input": "214214P",
+      "name": "Raging Typhoon",
+      "filename": "SF6_Lily_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_214214p(ca)",
+      "input": "214214P",
+      "name": "Raging Typhoon (CA)",
+      "filename": "SF6_Lily_214214p(ca).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_214214p(ca)",
+      "input": "214214P",
+      "name": "Raging Typhoon (CA)",
+      "filename": "SF6_Lily_214214p(ca)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_5pppkkk",
+      "input": "5PPPKKK (HOLD OK)",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Lily_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "lily_5pppkkk",
+      "input": "5PPPKKK (HOLD OK)",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Lily_5pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Lily_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "lily_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Lily_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Lily 236mk hitbox.png",
+    "File:SF6 Lily 236mk 1stock hitbox.png",
+    "File:SF6 Lily 236mk 1stock.png",
+    "File:SF6 Lily 236mk.png",
+    "File:SF6 Lily 236hk hitbox.png",
+    "File:SF6 Lily 236hk 1stock hitbox.png",
+    "File:SF6 Lily 236hk 1stock.png",
+    "File:SF6 Lily 236hk.png",
+    "File:SF6 Lily 214pp hold hitbox.png",
+    "File:SF6 Lily 214pp hitbox.png",
+    "File:SF6 Lily 214hp hitbox.png",
+    "File:SF6 Lily 214hp.png",
+    "File:SF6 Lily 214214p(ca) hitbox.png",
+    "File:SF6 Lily 360pp hitbox.png",
+    "File:SF6 Lily 360mp.png",
+    "File:SF6 Lily 360hp.png",
+    "File:SF6 Lily j236236k 1stock hitbox.png",
+    "File:SF6 Lily j236236k 1stock.png",
+    "File:SF6 Lily j236236k.png",
+    "File:SF6 Lily 623mp 1stock.png",
+    "File:SF6 Lily 623mp.png",
+    "File:SF6 Lily 623hp 1stock hitbox.png",
+    "File:SF6 Lily 623hp 1stock.png",
+    "File:SF6 Lily 623hp.png",
+    "File:SF6 Lily jppp hitbox.png",
+    "File:SF6 Lily jppp 1stock hitbox.png",
+    "File:SF6 Lily j236236k hitbox.png"
+  ],
+  "download_images": false
+}

@@ -1,0 +1,2409 @@
+{{Character Subnav SF6 | chara=Luke }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Luke
+| name          = Luke
+| portrait      = SF6 Luke Portrait.png
+| icon          = SF6 Luke Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.047
+| bwdWalkSpd    = 0.032
+| fwdDashSpd    = 19
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.467
+| bwdDashDist   = 0.751
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.817
+| dRushBlock    = 2.499
+| dRushMax      = 3.461
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Luke_5lp.png
+| hitboxes      = SF6_Luke_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 7
+| active        = 2
+| recovery      = 11(14)
+| total         = 19(22)
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 15 (14 TC)
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 11
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.38 (1.31)
+| notes         = Long range for a cancelable light normal, good whiff punish tool; 3f extra recovery on whiff; greatly extends hurtbox for 3f before active, making it susceptible to counterpokes; special/DR cancel is delayed until after active frames
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Luke_5mp.png
+| hitboxes      = SF6_Luke_5mp_hitbox.png
+| damage        = 600
+| startup       = 9
+| active        = 4
+| recovery      = 16
+| total         = 28
+| guard         = LH
+| cancel        = SA TC
+| hitconfirm    = 16 SA / 17 TC
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 22
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.673 (1.553)
+| notes         = Good whiff punish tool when buffered into Target Combo or Super
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Luke_5hp.png
+| hitboxes      = SF6_Luke_5hp_hitbox.png,SF6_Luke_5hp_hitbox_2.png,SF6_Luke_5hp_hitbox_3.png
+| damage        = 800
+| startup       = 10
+| active        = 3
+| recovery      = 23(22)
+| total         = 35(34)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 27
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.687 (1.462)
+| notes         = Good whiff punish tool due to its long range and cancelability; extends a vertical collision box to reduce the risk of whiffing under opponent mid-juggle
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Luke_5lk.png
+| hitboxes      = SF6_Luke_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 12
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 12 (DR: 13)
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 17
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.26
+| notes         = DR cancel is delayed until after 1st recovery frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Luke_5mk.png
+| hitboxes      = SF6_Luke_5mk_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 3
+| recovery      = 16(19)
+| total         = 26(29)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 24
+| blockstun     = 20
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.53
+| notes         = Good neutral poke; 3f extra recovery on whiff; lifts up leg hurtbox on frames 4-11, making it strong vs. low attacks
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Luke_5hk.png
+| hitboxes      = SF6_Luke_5hk_hitbox.png, SF6_Luke_5hk_hitbox_2.png, SF6_Luke_5hk_hitbox_3.png
+| damage        = 900
+| startup       = 10
+| active        = 7
+| recovery      = 16
+| total         = 32
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+8)}}
+| blockAdv      = {{sf6-adv|VM|-5}}{{sf6-adv|P|(+1)}}
+| punishAdv     = KD +49(+55)
+| perfParryAdv  = {{sf6-adv|VM|-21(-15)}}
+| afterDRHit    = {{sf6-adv|VP|+6(+12)}}
+| afterDRBlk    = {{sf6-adv|M|-1}}{{sf6-adv|VP|(+5)}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 4000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.663 (1.304)
+| notes         = 8-15f Low Crush (feet are strike invincible); puts airborne opponents into limited juggle state; Punish Counter launches opponent high into a limited juggle state; can be spaced for significantly better advantage; extends a hurtbox 1f before active that is vulnerable to projectiles; first 2 active frames have shorter range (makes it easier to space properly); causes camera shake effect on block when connecting with final active frame (easier to tell when Luke has advantage)
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Luke_2lp.png
+| hitboxes      = SF6_Luke_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 10
+| total         = 15
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-2}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 16
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.11
+| pushbackHit   = 0.351
+| pushbackBlk   = 0.330
+| notes         = Chains into 2LP/2LK; Luke's only 4f normal, useful in 3-hit light confirms; DR cancel is delayed until after 1st recovery frame; topmost hurtbox on frames 1-5 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Luke_2mp.png
+| hitboxes      = SF6_Luke_2mp_hitbox.png
+| damage        = 600
+| dmgScaling    = 15% Starter
+| startup       = 6
+| active        = 2
+| recovery      = 14(17)
+| total         = 21(24)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| DRcancelHit   = {{sf6-adv|VP|+11}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 21
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.24
+| notes         = 3f extra recovery on whiff; great pressure tool with high reward on counter-hit or when canceled to Drive Rush; has an extended hurtbox on whiff until the end of recovery; topmost hurtbox on frames 1-7 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Luke_2hp.png
+| hitboxes      = SF6_Luke_2hp_hitbox.png,SF6_Luke_2hp_hitbox_2.png,SF6_Luke_2hp_hitbox_3.png
+| damage        = 800
+| dmgScaling    = Combo (5% Extra)
+| startup       = 7
+| active        = 5
+| recovery      = 24
+| total         = 35
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-13}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| DRcancelHit   = {{sf6-adv|VP|+20}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|VM|-9}}
+| hitstun       = 30
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.93
+| notes         = Forces stand on hit; only the first active frame is cancelable; good anti-air hitbox but cannot hit cross-ups
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Luke_2lk.png
+| hitboxes      = SF6_Luke_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 11
+| total         = 18
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| afterDRHit    = {{sf6-adv|VP|+4}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 14
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| notes         = Chains into 2LP/2LK
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Luke_2mk.png
+| hitboxes      = SF6_Luke_2mk_hitbox.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 19
+| total         = 29
+| guard         = L
+| cancel        = Sp SA TC
+| hitconfirm    = 13 (17 TC)
+| hitAdv        = {{sf6-adv|M|-2}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+8}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|P|+2}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 20
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.482 (1.44)
+| rangeNotes    = 1st active frame: 1.44
+| notes         = Moves Luke forward, greatly increasing its range despite the stubby-looking animation; Range: 1.482 (1st active frame: 1.44); DR cancel is delayed until after active frames; has an extended hurtbox on whiff until the end of recovery
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Trench Breaker
+| images        = SF6_Luke_2hk.png
+| hitboxes      = SF6_Luke_2hk_hitbox.png, SF6_Luke_2hk_hitbox_2.png
+| damage        = 900
+| startup       = 10
+| active        = 3
+| recovery      = 24(26)
+| total         = 36
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +40
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = HKD +47
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| afterDRHit    = KD +40
+| afterDRBlk    = {{sf6-adv|VM|-5}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 2
+| atkRange      = 1.661
+| notes         = Has juggle potential; has a fixed 26f recovery on block regardless of which active frame connects (always -9 oB even when meaty)
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Luke_jlp.png
+| hitboxes      = SF6_Luke_jlp_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 9
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+9)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+9(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.01
+| notes         = 
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Luke_jmp.png
+| hitboxes      = SF6_Luke_jmp_hitbox.png, SF6_Luke_jmp_hitbox_2.png
+| damage        = 700
+| startup       = 9
+| active        = 4
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = Sp
+| hitAdv        = {{sf6-adv|VP|+9(+11)}}
+| blockAdv      = {{sf6-adv|VP|+5(+7)}}
+| punishAdv     = {{sf6-adv|VP|+13(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 10
+| jugLimit      = 4
+| atkRange      = 1.01
+| notes         = Puts airborne opponents into limited juggle state; has some juggle potential; can significantly delay the cancel into j.214P, allowing unique combos after pf.214[LP]; lower body projectile invuln 9-22f (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Luke_jhp.png
+| hitboxes      = SF6_Luke_jhp_hitbox.png, SF6_Luke_jhp_hitbox_2.png
+| damage        = 800
+| startup       = 9
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+15)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+11)}}
+| punishAdv     = {{sf6-adv|VP|+10(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 0.92
+| notes         = Spike knockdown on counter-hit/Punish Counter vs. airborne opponents; good close range jump-in and neutral jump throw bait tool; lower body projectile invuln 9-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Luke_jlk.png
+| hitboxes      = SF6_Luke_jlk_hitbox.png
+| damage        = 300
+| startup       = 6
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+9(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.55
+| notes         = Cross-up
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Luke_jmk.png
+| hitboxes      = SF6_Luke_jmk_hitbox.png
+| damage        = 500
+| startup       = 7
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+13)}}
+| blockAdv      = {{sf6-adv|VP|+4(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.09
+| notes         = Cross-up; lower body projectile invuln 7-20f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Luke_jhk.png
+| hitboxes      = SF6_Luke_jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+15)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+12(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.13
+| notes         = Better horizontal range than j.HP for long-range jumps; lower body projectile invuln 10-19f except around attack hitbox, and 10-24f for lowest part of foot hurtbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 6MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_6mp | moveType = ground_normal
+| input         = 6MP
+| name          = Rawhide
+| images        = SF6_Luke_6mp.png
+| hitboxes      = SF6_Luke_6mp_hitbox.png, SF6_Luke_6mp_hitbox_2.png
+| damage        = 600
+| startup       = 21
+| active        = 2
+| recovery      = 21
+| total         = 43
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 25
+| blockstun     = 21
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [5000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| atkRange      = 1.373 (1.293)
+| notes         = Causes spike knockdown vs. airborne opponents; has some juggle potential
+}}
+
+===== 4HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_4hp | moveType = ground_normal
+| input         = 4HP
+| name          = Suppressor
+| images        = SF6_Luke_4hp.png
+| hitboxes      = SF6_Luke_4hp_hitbox.png
+| damage        = 800
+| startup       = 16
+| active        = 3
+| recovery      = 20
+| total         = 38
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| DRcancelHit   = {{sf6-adv|VP|+16}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.08 (1.019)
+| notes         = Pulls back hurtbox frames 5-12 for an auto-shimmy tool (also very strong when used out of Drive Rush)
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Outlaw Kick
+| images        = SF6_Luke_4hk.png
+| hitboxes      = SF6_Luke_4hk_hitbox.png
+| damage        = 1000
+| startup       = 12
+| active        = 4
+| recovery      = 24
+| total         = 39
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|VM|-3}}
+| punishAdv     = {{sf6-adv|VP|+17 Stagger}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|M|+1}}
+| hitstun       = 32
+| blockstun     = 22
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.487
+| notes         = Whiffs on crouching opponents at farther ranges unless they extend a vertical hurtbox; puts airborne opponents into spinning limited juggle state; no head hurtbox during active frames, making it a useful anti-air; after DR~4HK on block, Luke is at the edge of throw range and can also threaten with 2LK~2LP to punish walk back, or 2LP to beat reversal 4f normals; extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+===== 6HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_6hp | moveType = ground_normal
+| input         = 6HP
+| name          = Brutal Spike
+| images        = SF6_Luke_6hp.png
+| hitboxes      = SF6_Luke_6hp_hitbox.png
+| damage        = 800
+| startup       = 16
+| active        = 3
+| recovery      = 15(19)
+| total         = 33(37)
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 23
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 21
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.90
+| notes         = 4f extra recovery on whiff; 5f gap on block into TC follow-up
+}}
+
+== Target Combos ==
+===== 5LP~MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5lp_mp | moveType = ground_normal
+| input         = 5LP~MP
+| name          = Triple Impact
+| images        = SF6_Luke_5lp_mp.png
+| hitboxes      = SF6_Luke_5lp_mp_hitbox.png
+| damage        = 400(320)
+| startup       = 8
+| active        = 4
+| recovery      = 20
+| total         = 31
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 36
+| hitAdv        = {{sf6-adv|M|-2}}
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| hitstun       = 22
+| blockstun     = 15
+| hitstop       = 10
+| driveDmgBlk   = 1000
+| driveDmgHit   = [4000]
+| driveGain     = 500
+| superGainHit  = 400 (280)
+| superGainBlk  = 200 (100)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = () refers to scaled damage when starting combo with 5LP
+}}
+
+====== 5LP~MP~HP ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5lp_mp_hp | moveType = ground_normal
+| input         = 5LP~MP~HP
+| name          = Triple Impact 2
+| images        = SF6_Luke_5lp_mp_hp.png
+| hitboxes      = SF6_Luke_5lp_mp_hp_hitbox.png,SF6_Luke_5lp_mp_hp_hitbox_2.png
+| damage        = 800(560)
+| startup       = 10
+| active        = 3
+| recovery      = 27
+| total         = 39
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 59
+| hitAdv        = KD +27
+| blockAdv      = {{sf6-adv|VM|-14}}
+| punishAdv     = KD +27
+| DRcancelHit   = KD +46
+| DRcancelBlk   = {{sf6-adv|VP|+5}}
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 1500
+| driveGain     = 500
+| superGainHit  = 400 (280)
+| superGainBlk  = 200 (100)
+| notes         = () refers to scaled damage when starting combo with 5LP; puts opponent into limited juggle state; special/DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MP~MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5mp_mp | moveType = ground_normal
+| input         = 5MP~MP
+| name          = Snapback Combo
+| images        = SF6_Luke_5mp_mp.png
+| hitboxes      = SF6_Luke_5mp_mp_hitbox.png
+| damage        = 300
+| startup       = 12
+| active        = 2
+| recovery      = 23
+| total         = 36
+| guard         = LH
+| cancel        = SA
+| hitconfirm    = 39
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| hitstun       = 25
+| blockstun     = 17
+| hitstop       = 5
+| driveDmgBlk   = 1000
+| driveDmgHit   = [4000]
+| driveGain     = 400
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = Useful buffer from 5MP in neutral that can end with Super or the full Target Combo sequence; Super cancel is delayed until after 4th recovery frame
+}}
+
+====== 5MP~MP~MP ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5mp_mp_mp | moveType = ground_normal
+| input         = 5MP~MP~MP
+| name          = Snapback Combo 2
+| images        = SF6_Luke_5mp_mp_mp.png
+| hitboxes      = SF6_Luke_5mp_mp_mp_hitbox.png
+| damage        = 300(240)
+| startup       = 11
+| active        = 2
+| recovery      = 29
+| total         = 41
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 60
+| hitAdv        = {{sf6-adv|VM|-6}}
+| blockAdv      = {{sf6-adv|VM|-14}}
+| punishAdv     = {{sf6-adv|M|-2}}
+| hitstun       = 25
+| blockstun     = 17
+| hitstop       = 5
+| driveDmgBlk   = 1000
+| driveGain     = 1000
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| notes         = () refers to scaled damage
+}}
+
+====== 5MP~MP~MP~MP ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5mp_mp_mp_mp | moveType = ground_normal
+| input         = 5MP~MP~MP~MP
+| name          = Snapback Combo 3
+| images        = SF6_Luke_5mp_mp_mp_mp.png
+| hitboxes      = SF6_Luke_5mp_mp_mp_mp_hitbox.png
+| damage        = 500(350)
+| startup       = 11
+| active        = 2
+| recovery      = 27
+| total         = 39
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +34
+| blockstun     = 17
+| hitstop       = 13
+| driveDmgBlk   = 1500
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| notes         = () refers to scaled damage; full sequence builds significant Drive gauge; knockdown grants a perfect meaty Dash + 5HK (+1 on Block even vs. midscreen Back Rise)
+}}
+
+===== 6HP~HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_6hp_hp | moveType = ground_normal
+| input         = 6HP~HP
+| name          = Double Impact
+| images        = SF6_Luke_6hp_hp.png
+| hitboxes      = SF6_Luke_6hp_hp_hitbox.png
+| damage        = 600
+| dmgScaling    = Combo (2 hits), Hit/CH only
+| startup       = 11
+| active        = 2
+| recovery      = 34
+| total         = 46
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 47(15)
+| hitAdv        = KD +20
+| blockAdv      = {{sf6-adv|VM|-19}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| perfParryAdv  = {{sf6-adv|VM|-34}}
+| DRcancelHit   = KD +46<br>{{sf6-adv|PC|(PC {{sf6-adv|VP|+28}})}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| blockstun     = 17
+| hitstop       = 12
+| driveDmgBlk   = 2000
+| driveDmgHit   = [7000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = 5f gap on block between hits; causes a staggered tailspin when performed after Punish Counter 6HP (allows a cancel into fully charged Flash Knuckle of any strength or a +28 DR Cancel); this Punish Counter version forces stand and does not incur any extra damage scaling
+}}
+
+===== 2MK~2HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_2mk_2hp | moveType = ground_normal
+| input         = 2MK~2HP
+| name          = Nose Breaker
+| images        = SF6_Luke_2mk_2hp.png
+| hitboxes      = SF6_Luke_2mk_2hp_hitbox.png
+| damage        = 600(480)
+| startup       = 9
+| active        = 3
+| recovery      = 25
+| total         = 36
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| hitstun       = 30
+| blockstun     = 20
+| hitstop       = 12
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = 
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_lplk | moveType = throw
+| input         = LPLK
+| name          = Sweeper
+| images        = SF6_Luke_lplk.png
+| hitboxes      = SF6_Luke_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +19
+| blockAdv      = -
+| punishAdv     = HKD +19
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Has access to corner throw loop, requires walking with manual timing (4f timing leniency to beat reversal 4f buttons); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Scrapper
+| images        = SF6_Luke_4lplk.png
+| hitboxes      = SF6_Luke_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +14
+| blockAdv      = -
+| punishAdv     = HKD +14
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Side switches; no throw oki after back throwing opponent into corner, but can threaten with meaty strikes; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_hphk | moveType = drive
+| input         = HPHK
+| name          = Muzzle Flash
+| images        = SF6_Luke_hphk.png
+| hitboxes      = SF6_Luke_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.450
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Battering Ram (Block)
+| images        = SF6_Luke_6hphk.png
+| hitboxes      = SF6_Luke_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.38
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Luke | moveId = Luke_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Battering Ram (Recovery)
+| images        = SF6_Luke_6hphk.png
+| hitboxes      = SF6_Luke_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.38
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Luke_mpmk.png
+| hitboxes      = SF6_Luke_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Luke | moveId = luke_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Luke_66.png
+| hitboxes      = SF6_Luke_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.817 (min/throw), 2.499 (min/block), 3.461 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Luke | moveId = luke_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Luke_66.png
+| hitboxes      = SF6_Luke_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Sand Blast ===
+===== 236LP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236lp | moveType = special
+| input         = 236LP
+| name          = Sand Blast
+| images        = SF6_Luke_236lp.png
+| hitboxes      = SF6_Luke_236p_hitbox.png, SF6_Luke_236p_hitbox_2.png, SF6_Luke_236p_hitbox_3.png
+| damage        = 600
+| chip          = 150
+| startup       = 14
+| active        = [5]
+| recovery      = 33
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|M|-3}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|P|+1}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| hitstun       = 31
+| blockstun     = 26
+| hitstop       = 8
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| projSpeed     = 0.12 (14-15f), 0.42 (16-18f)
+| notes         = 1-hit projectile, travels ~48% screen length; [] refers to projectile active time
+}}
+
+===== 236MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236mp | moveType = special
+| input         = 236MP
+| name          = Sand Blast
+| images        = SF6_Luke_236mp.png
+| hitboxes      = SF6_Luke_236p_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 17
+| active        = [7]
+| recovery      = 30
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| hitstun       = 31
+| blockstun     = 26
+| hitstop       = 8
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| projSpeed     = 0.12 (17-18f), 0.42 (19-23f)
+| notes         = 1-hit projectile, travels ~66% screen length; [] refers to projectile active time
+}}
+
+===== 236HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236hp | moveType = special
+| input         = 236HP
+| name          = Sand Blast
+| images        = SF6_Luke_236hp.png
+| hitboxes      = SF6_Luke_236p_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 20
+| active        = [10]
+| recovery      = 27
+| total         = 47
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| hitstun       = 31
+| blockstun     = 26
+| hitstop       = 8
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| projSpeed     = 0.12 (20-21f), 0.42 (22-29f)
+| notes         = 1-hit projectile, travels ~91% screen length; [] refers to projectile active time
+}}
+
+===== 236PP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236pp | moveType = special
+| input         = 236PP
+| name          = Sand Blast
+| images        = SF6_Luke_236pp.png
+| hitboxes      = SF6_Luke_236pp_hitbox.png, SF6_Luke_236pp_hitbox_2.png
+| damage        = 400x2
+| chip          = 100x2
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 16
+| active        = -
+| recovery      = 24
+| total         = 40
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 8 SA / 16 follow-up
+| hitAdv        = KD +41
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +41
+| perfParryAdv  = {{sf6-adv|M|-3}}
+| blockstun     = 23
+| hitstop       = 5,6
+| driveDmgBlk   = 1500x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 0,1
+| jugIncrease   = 0,3
+| jugLimit      = 7,8
+| projSpeed     = 0.12 (16-17f), 0.42 (18f~)
+| notes         = 2-hit OD projectile, full screen length; puts opponent into limited juggle state; can follow up with PP for 1 extra Drive bar; extends a projectile invuln hurtbox on frames 19-36 (more vulnerable to ranged jumps and anti-projectile moves)
+}}
+
+====== 236PP~PP ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236pp_pp | moveType = special
+| input         = 236PP~PP
+| name          = Fatal Shot
+| images        = SF6_Luke_236pp_pp.png
+| hitboxes      = SF6_Luke_236pp_pp_hitbox.png, SF6_Luke_236pp_pp_hitbox_2.png
+| damage        = 1000(800)
+| chip          = 150
+| startup       = 8
+| active        = -
+| recovery      = 42
+| total         = 50
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +46~58
+| blockAdv      = {{sf6-adv|VM|-21}}
+| punishAdv     = KD +46~58
+| perfParryAdv  = {{sf6-adv|VM|-32}}
+| blockstun     = 39~43 total
+| hitstop       = 10
+| driveDmgBlk   = 1000
+| driveDmgHit   = [7000]
+| driveGain     = -10000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 11
+| projSpeed     = 0.2
+| notes         = 1-hit OD projectile; costs 1 extra Drive bar; () refers to scaled damage after 236PP connects; causes a wallsplat on hit (can combo near the corner, or whiff 236K~P to safely gain ground); extends a projectile invuln hurtbox on frames 10-32 (more vulnerable to ranged jumps and anti-projectile moves)
+}}
+
+=== Rising Uppercut ===
+===== 623LP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_623lp | moveType = special
+| input         = 623LP
+| name          = Rising Uppercut
+| images        = SF6_Luke_623lp.png
+| hitboxes      = SF6_Luke_623p_hitbox.png
+| damage        = 900(800)
+| chip          = 225
+| startup       = 5
+| active        = 10
+| recovery      = 22+12 land
+| total         = 48
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +28
+| blockAdv      = {{sf6-adv|VM|-27}}
+| punishAdv     = KD +28
+| perfParryAdv  = {{sf6-adv|VM|-42}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 1-14 Air
+| airborne      = 7-36 (FKD)
+| jugStart      = 1(5)
+| jugIncrease   = 1(5)
+| jugLimit      = 15(17)
+| atkRange      = 0.86 (1st)
+| notes         = Reduced damage and higher juggle start/increase/limit on active frames 3-10; cannot hit cross-up; does not juggle into SA3 despite being cancelable; much higher juggle limit than other versions of Rising Uppercut (useful in corner juggles)
+}}
+
+===== 623MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_623mp | moveType = special
+| input         = 623MP
+| name          = Rising Uppercut
+| images        = SF6_Luke_623mp.png
+| hitboxes      = SF6_Luke_623p_hitbox.png
+| damage        = 1000(800)
+| chip          = 250
+| startup       = 6
+| active        = 10
+| recovery      = 24+12 land
+| total         = 51
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +28
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = KD +28
+| perfParryAdv  = {{sf6-adv|VM|-44}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 1-8 Air
+| airborne      = 8-39 (FKD)
+| jugStart      = 1(5)
+| jugIncrease   = 1(5)
+| jugLimit      = 5(7)
+| atkRange      = 1.174 (1st)
+| notes         = Reduced damage and higher juggle start/increase/limit on active frames 3-10; cannot hit cross-up; does not juggle into SA3 despite being cancelable
+}}
+
+===== 623HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_623hp | moveType = special
+| input         = 623HP
+| name          = Rising Uppercut
+| images        = SF6_Luke_623hp.png
+| hitboxes      = SF6_Luke_623p_hitbox.png
+| damage        = 1200(800)
+| chip          = 300
+| startup       = 9
+| active        = 10
+| recovery      = 25+15 land
+| total         = 58
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +29
+| blockAdv      = {{sf6-adv|VM|-33}}
+| punishAdv     = KD +29
+| perfParryAdv  = {{sf6-adv|VM|-48}}
+| blockstun     = 17
+| hitstop       = 20
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| invuln        = 1-9 Air
+| airborne      = 11-43 (FKD)
+| jugStart      = 1(5)
+| jugIncrease   = 1(5)
+| jugLimit      = 5(7)
+| atkRange      = 1.094 (1st)
+| notes         = Reduced damage and higher juggle start/increase/limit on active frames 2-10; cannot hit cross-up; does not juggle into SA3 despite being cancelable
+}}
+
+===== 623PP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_623pp | moveType = special
+| input         = 623PP
+| name          = Rising Uppercut
+| images        = SF6_Luke_623pp.png
+| hitboxes      = SF6_Luke_623pp_hitbox.png
+| damage        = 800(600),600
+| chip          = 200,(150)
+| startup       = 6
+| active        = 3,7
+| recovery      = 35+15 land
+| total         = 65
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +25
+| blockAdv      = {{sf6-adv|VM|-40(-43)}}
+| punishAdv     = KD +25
+| perfParryAdv  = {{sf6-adv|VM|-58}}
+| blockstun     = 20(17)
+| hitstop       = 12,15
+| driveDmgBlk   = 2000x2
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| invuln        = 1-10 Full
+| airborne      = 8-50 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,11
+| atkRange      = 1.261 (1st)
+| notes         = Reduced damage 3rd active frame of 1st hit (will only do 1 hit for 600 damage on later active frames); cannot hit cross-up; can cancel into PP follow-up on hit for 1 Drive bar; 2nd hit whiffs vs. crouch block (reduced chip damage, worse advantage)
+}}
+
+====== 623PP~PP ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_623pp_pp | moveType = special
+| input         = 623PP~PP
+| name          = Slam Dunk
+| images        = SF6_Luke_623pp_pp.png
+| hitboxes      = SF6_Luke_623pp_pp_hitbox.png
+| damage        = 600
+| startup       = 16
+| active        = 3
+| recovery      = 14+16 land
+| total         = 48
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +14
+| blockAdv      = -
+| punishAdv     = KD +14
+| hitstop       = 13
+| driveGain     = -10000
+| superGainHit  = 700 (490)
+| jugStart      = 10
+| jugIncrease   = 10
+| jugLimit      = 50
+| notes         = Follow-up on hit only for 1 additional Drive bar; can whiff against high juggled opponent; counts as a separate hit for damage scaling
+}}
+
+=== Flash Knuckle ===
+===== 214LP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214lp | moveType = special
+| input         = 214LP
+| name          = LP Flash Knuckle
+| images        = SF6_Luke_214lp.png
+| hitboxes      = SF6_Luke_214lp_hitbox.png
+| damage        = 700
+| chip          = 175
+| startup       = 13
+| active        = 3
+| recovery      = 27
+| total         = 42
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 19
+| hitAdv        = KD +36
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = KD +36
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 18
+| hitstop       = 15
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 4
+| atkRange      = 1.77 (1.618)
+| notes         = Puts opponent into limited juggle state; no head hurtbox on frames 6-17 for improved anti-air; the final 2 recovery frames are cancelable on Hit into specials/Supers (enables a corner juggle into 623LP or SA2)
+}}
+
+====== 214[LP] ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214lp_hold | moveType = special
+| input         = 214[LP]
+| name          = LP Flash Knuckle (hold)
+| images        = SF6_Luke_214lp_hold.png
+| hitboxes      = SF6_Luke_214lp_hold_hitbox.png
+| damage        = 600,200
+| chip          = 150,50
+| dmgScaling    = Both hits apply scaling
+| startup       = 26
+| active        = 2,2
+| recovery      = 25(26)
+| total         = 54(55)
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +54
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +54
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 21 total
+| hitstop       = 15,5
+| driveDmgBlk   = 3000,1000
+| driveDmgHit   = [4000,2000]
+| driveGain     = 2000,250
+| superGainHit  = 500,100 (350,70)
+| superGainBlk  = 250,50 (125,25)
+| jugStart      = 0,3
+| jugIncrease   = 0,3
+| jugLimit      = 2,2
+| atkRange      = 1.669 (1.618)
+| notes         = Puts opponent into limited juggle state; active frames 3-4 can nullify normal 1-hit projectiles; canceling to SA3 will cause juggle to whiff; 1f more recovery on hit/block; no head hurtbox on frames 6-29 for improved anti-air
+}}
+
+====== pf.214[LP] ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214lp_perfect | moveType = special
+| input         = pf.214[LP]
+| name          = LP Flash Knuckle (perfect)
+| images        = SF6_Luke_214lp_perfect.png
+| hitboxes      = SF6_Luke_214lp_hold_hitbox.png
+| damage        = 700,200
+| chip          = 175,50
+| dmgScaling    = Both hits apply scaling
+| startup       = 26
+| active        = 2,2
+| recovery      = 22(23)
+| total         = 51(52)
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = KD +56
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +56
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| blockstun     = 18 total
+| hitstop       = 15,5
+| driveDmgBlk   = 3000,1000
+| driveDmgHit   = [4000,2000]
+| driveGain     = 2000,250
+| superGainHit  = 500,200 (350,140)
+| superGainBlk  = 250,100 (125,50)
+| jugStart      = 0,3
+| jugIncrease   = 0,3
+| jugLimit      = 2,2
+| atkRange      = 1.669 (1.618)
+| notes         = Hold LP 18-20f for perfect version; launches opponent high into a limited juggle state; active frames 3-4 can nullify normal 1-hit projectiles; canceling to SA3 will cause juggle to whiff; 1f more recovery on hit/block; no head hurtbox on frames 6-29 for improved anti-air
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214mp | moveType = special
+| input         = 214MP
+| name          = MP Flash Knuckle
+| images        = SF6_Luke_214mp.png
+| hitboxes      = SF6_Luke_214mp_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 19
+| active        = 3
+| recovery      = 27
+| total         = 48
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| hitstun       = 33
+| blockstun     = 22
+| hitstop       = 12
+| driveDmgBlk   = 5000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 7
+| atkRange      = 2.184 (1.943)
+| notes         = Leaves opponent standing on hit, very slightly out of throw range; knocks airborne opponents far away into a limited juggle state
+}}
+
+====== 214[MP] ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214mp_hold | moveType = special
+| input         = 214[MP]
+| name          = MP Flash Knuckle (hold)
+| images        = SF6_Luke_214mp_hold.png
+| hitboxes      = SF6_Luke_214mp_hold_hitbox.png
+| damage        = 800,200
+| chip          = 200,50
+| dmgScaling    = Both hits apply scaling
+| startup       = 29
+| active        = 2,2
+| recovery      = 26
+| total         = 58
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 20
+| hitAdv        = KD +54(+67)
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +54(+67)
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 27 total
+| hitstop       = 12,5
+| driveDmgBlk   = 5000,1000
+| driveDmgHit   = [6000,2000]
+| driveGain     = 2000,0
+| superGainHit  = 700,100 (490,70)
+| superGainBlk  = 350,50 (175,25)
+| jugStart      = 1
+| jugIncrease   = 1,0
+| jugLimit      = 7,8
+| atkRange      = 2.006 (1.943)
+| notes         = Wall Bounce on hit for a limited juggle state; active frames 3-4 can nullify normal 1-hit projectiles; higher KD Adv when farther from wall (opponent may bounce over Luke's head if too close to the wall); SA3 cancel only juggles properly in corner; 1f more recovery on hit/block; cannot combo naturally when canceled from 2HP
+}}
+
+====== pf.214[MP] ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214mp_perfect | moveType = special
+| input         = pf.214[MP]
+| name          = MP Flash Knuckle (perfect)
+| images        = SF6_Luke_214mp_perfect.png
+| hitboxes      = SF6_Luke_214mp_hold_hitbox.png
+| damage        = 850,250
+| chip          = 213,63
+| startup       = 29
+| active        = 2,2
+| recovery      = 26(27)
+| total         = 58(59)
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 18
+| hitAdv        = KD +53(+66)
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +53(+66)
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 27 total
+| hitstop       = 12,5
+| driveDmgBlk   = 5000,1000
+| driveDmgHit   = [6000,2000]
+| driveGain     = 2000,0 (1000,0)
+| superGainHit  = 700,200 (490,140)
+| superGainBlk  = 350,100 (175,50)
+| jugStart      = 1
+| jugIncrease   = 1,0
+| jugLimit      = 7,8
+| atkRange      = 2.006 (1.943)
+| notes         = Hold MP 18-20f for perfect version; Wall Bounce on hit for a limited juggle state; active frames 3-4 can nullify normal 1-hit projectiles; higher KD Adv. when farther from wall (opponent may bounce over Luke's head if too close to the wall); SA3 cancel only juggles properly in corner; 1f more recovery on hit/block; perfect timing allows natural combo from 2HP cancel
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214hp | moveType = special
+| input         = 214HP
+| name          = HP Flash Knuckle
+| images        = SF6_Luke_214hp.png
+| hitboxes      = SF6_Luke_214hp_hitbox.png
+| damage        = 1000
+| chip          = 250
+| startup       = 22
+| active        = 3
+| recovery      = 21
+| total         = 45
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 19
+| hitAdv        = KD +42(+31)
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| blockstun     = 20
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [8000]
+| driveGain     = 2500
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.422 (2.226)
+| notes         = Puts opponent into limited juggle state (can only juggle into canceled SA3); worse KD advantage vs. airborne opponents (+31 when juggled after 5LP~MP~HP); can cancel into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-15
+}}
+
+====== 214[HP] ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214hp_hold | moveType = special
+| input         = 214[HP]
+| name          = HP Flash Knuckle (hold)
+| images        = SF6_Luke_214hp_hold.png
+| hitboxes      = SF6_Luke_214hp_hold_hitbox.png
+| damage        = 1000,300
+| chip          = 250,75
+| dmgScaling    = Both hits apply scaling
+| startup       = 33
+| active        = 2,2
+| recovery      = 24(25)
+| total         = 60
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 25
+| hitAdv        = KD +64
+| blockAdv      = {{sf6-adv|VP|+4}}
+| punishAdv     = KD +64
+| perfParryAdv  = {{sf6-adv|VM|-26}}
+| blockstun     = 32 total
+| hitstop       = 15 / 17,5
+| driveDmgBlk   = 6000,1000
+| driveDmgHit   = [7000,2000]
+| driveGain     = 1500x2
+| superGainHit  = 800,300 (560,210)
+| superGainBlk  = 400,150 (200,75)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,11
+| atkRange      = 2.422 (2.336)
+| notes         = 1f extra recovery on hit/block; active frames 3-4 can nullify normal 1-hit projectiles; cancelable into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-25; leaves opponent close on block for a 2LK~2LP hitconfirm or a 1f microwalk into throw (slightly longer if opponent walks back) 
+}}
+
+====== pf.214[HP] ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214hp_perfect | moveType = special
+| input         = pf.214[HP]
+| name          = HP Flash Knuckle (perfect)
+| images        = SF6_Luke_214hp_perfect.png
+| hitboxes      = SF6_Luke_214hp_hold_hitbox.png
+| damage        = 1200,400
+| chip          = 300,100
+| dmgScaling    = Both hits apply scaling
+| startup       = 33
+| active        = 2,2
+| recovery      = 24(25)
+| total         = 60
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 30
+| hitAdv        = KD +64
+| blockAdv      = {{sf6-adv|VP|+4}}
+| punishAdv     = KD +64
+| perfParryAdv  = {{sf6-adv|VM|-26}}
+| blockstun     = 32 total
+| hitstop       = 15 / 17,5
+| driveDmgBlk   = 6000,1000
+| driveDmgHit   = [7000,2000]
+| driveGain     = 1500x2
+| superGainHit  = 800,400 (560,280)
+| superGainBlk  = 400,200 (200,100)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10,11
+| atkRange      = 2.422 (2.336)
+| notes         = Hold HP 18-20f for perfect version; active frames 3-4 can nullify normal 1-hit projectiles; 1f more recovery on hit/block; cancelable into SA3 on reaction if opponent attempts a Drive Impact; pulls back hurtbox on frames 5-25; leaves opponent close on block for a 2LK~2LP hitconfirm or a 1f microwalk into throw (slightly longer if opponent walks back) 
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214pp | moveType = special
+| input         = 214PP
+| name          = OD Flash Knuckle
+| images        = SF6_Luke_214pp.png
+| hitboxes      = SF6_Luke_214pp_hitbox.png, SF6_Luke_214pp2_hitbox.png
+| damage        = 400x2
+| chip          = 100
+| startup       = 15
+| active        = 3
+| recovery      = 39
+| total         = 56
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 14 (1st) / 47 (2nd)
+| hitAdv        = KD +62
+| blockAdv      = {{sf6-adv|VM|-22}}
+| punishAdv     = KD +62
+| perfParryAdv  = {{sf6-adv|VM|-40}}
+| blockstun     = 20
+| hitstop       = 10,15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [3000x2]
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250 (125)
+| jugStart      = 0,4
+| jugIncrease   = 0,4
+| jugLimit      = 3,4
+| atkRange      = 1.907 (1.809)
+| notes         = Puts opponent into limited juggle state; active frames 3-4 can nullify normal 1-hit projectiles; listed recovery is for blocked/whiffed version (on hit, automatically transitions to 2nd hit); 1st hit is cancelable into PP follow-up for 1 extra Drive bar on hit only; can juggle directly into any Super (canceling into Super will cause SA3 to whiff; SA2 will whiff on final cancelable frame)
+}}
+
+====== 214PP~PP ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214pp_pp | moveType = special
+| input         = 214PP~PP
+| name          = DDT
+| images        = SF6_Luke_214pp_pp.png
+| hitboxes      = SF6_Luke_214pp_pp_hitbox.png
+| damage        = 2500
+| startup       = 1
+| active        = -
+| recovery      = -
+| total         = 161
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +12
+| blockAdv      = -
+| punishAdv     = HKD +12
+| driveGain     = -10000
+| superGainHit  = 3000 (2100)
+| jugLimit      = 10
+| notes         = Costs 1 extra Drive bar on 214PP 1st hit only (cannot activate on block or when armor absorbed); leaves Luke close enough to walk in for a strike/throw mixup; counts as a separate hit from 214PP for damage scaling; in juggles, only connects on opponents low to the ground and will not come out if opponent is juggled higher
+}}
+
+=== Aerial Flash Knuckle ===
+===== j.214P =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_j214P | moveType = special
+| input         = j.214P
+| name          = Aerial Flash Knuckle
+| images        = SF6_Luke_j214p.png
+| hitboxes      = SF6_Luke_j214p_hitbox.png
+| damage        = 700
+| chip          = 175
+| startup       = 14
+| active        = 5
+| recovery      = 13(20) land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = {{sf6-adv|VM|-12{{sf6-adv|P|(+3)}}}}
+| punishAdv     = KD ~
+| perfParryAdv  = {{sf6-adv|VM|-28(-13)}}
+| blockstun     = 18
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| atkRange      = 1.185 (1.061)
+| notes         = Can be input during forward/neutral jump (or back jump when canceled from j.MP); 7f extra landing recovery on whiff if input during the first 32 jump frames; Luke is in a crouching state from 4th landing recovery frame onward; improved frame advantage when done lower to the ground, and spaced out at farther ranges; can only be up to -1 on block if not precisely spaced; can partially charge the attack and release early for better juggle advantage after 214[LP]
+}}
+
+===== j.214[P] =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_j214p_hold | moveType = special
+| input         = j.214[P]
+| name          = Aerial Flash Knuckle (hold)
+| images        = SF6_Luke_j214p_hold.png
+| hitboxes      = SF6_Luke_j214p_hold_hitbox.png
+| damage        = 1000
+| chip          = 250
+| startup       = 23
+| active        = 6
+| recovery      = 15 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = {{sf6-adv|VM|-30(-21)}}
+| punishAdv     = KD ~
+| perfParryAdv  = {{sf6-adv|VM|-46(-32)}}
+| blockstun     = 18
+| hitstop       = 15
+| driveDmgBlk   = 7000
+| driveDmgHit   = [9000]
+| driveGain     = 2000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| atkRange      = 1.82 (1.49)
+| notes         = Can be input during forward/neutral jump (or back jump when canceled from j.MP); the final 12 recovery frames are in a crouching state; puts the opponent into a limited juggle state (can follow-up with 623LP if opponent is juggled at max height)
+}}
+
+===== j.214PP =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_j214pp | moveType = special
+| input         = j.214PP
+| name          = Aerial Flash Knuckle
+| images        = SF6_Luke_j214pp.png
+| hitboxes      = SF6_Luke_j214_hold_hitbox.png
+| damage        = 1300
+| chip          = 325
+| startup       = 14
+| active        = 6
+| recovery      = 15 land
+| total         = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD ~
+| blockAdv      = {{sf6-adv|VM|-33(-21)}}
+| punishAdv     = KD ~
+| perfParryAdv  = {{sf6-adv|VM|-49(-37)}}
+| blockstun     = 18
+| hitstop       = 20
+| driveDmgBlk   = 7000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 2
+| atkRange      = 1.77 (1.51)
+| notes         = Can be input during forward/neutral jump (or back jump when canceled from j.MP); the final 12 recovery frames are in a crouching state; puts the opponent into a limited juggle state; kara-canceling the startup with j.214P~PP can affect Luke's trajectory and frame advantage
+}}
+
+=== Avenger ===
+===== 236K =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236k | moveType = special
+| input         = 236K
+| name          = Avenger
+| images        = SF6_Luke_236k.png
+| hitboxes      = SF6_Luke_236k_hitbox.png
+| damage        = -
+| startup       = 12
+| active        = -
+| recovery      = 33
+| total         = 45
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Follow-up P or K can be input on frames 12-32; Luke is in a counter-hit state for entire duration
+}}
+
+====== 236K~P ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236k_p | moveType = special
+| input         = 236K~P
+| name          = No Chaser
+| images        = SF6_Luke_236k_p.png
+| hitboxes      = SF6_Luke_236k_p_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 12+12
+| active        = 10
+| recovery      = 16
+| total         = 37
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 27
+| hitAdv        = KD +32(+41)
+| blockAdv      = {{sf6-adv|VM|-6{{sf6-adv|P|(+3)}}}}
+| punishAdv     = KD +32(+41)
+| perfParryAdv  = {{sf6-adv|VM|-24(-15)}}
+| blockstun     = 20
+| hitstop       = 15
+| driveDmgBlk   = 5000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 20
+| jugLimit      = 10
+| atkRange      = 2.79 (2.14) (+Run)
+| notes         = Puts opponent into limited juggle state; very late connect to juggle into 623LP/MP, SA1, or SA2 (otherwise, can only cancel into SA3)
+}}
+
+====== 236K~K ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236k_k | moveType = special
+| input         = 236K~K
+| name          = Impaler
+| images        = SF6_Luke_236k_k.png
+| hitboxes      = SF6_Luke_236k_k_hitbox.png, SF6_Luke_236k_k2_hitbox.png
+| damage        = 1200
+| chip          = 300
+| startup       = 12+13
+| active        = 8
+| recovery      = 22(27)
+| total         = 42(47)
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +30(+35)
+| blockAdv      = {{sf6-adv|VM|-8{{sf6-adv|M|(-3)}}}}
+| punishAdv     = KD +30(+35)
+| perfParryAdv  = {{sf6-adv|VM|-26(-21)}}
+| blockstun     = 25
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2200
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = 4-19 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 3.32 (2.65) (+Run)
+| notes         = First 2 active frames can only hit airborne opponents; 3rd active frame hits grounded and gives the best KD Advantage (cannot hit meaty to allow a follow-up juggle); Luke is in a crouching state for entire recovery duration; puts opponents into limited juggle state; 5f extra recovery on whiff
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236kk | moveType = special
+| input         = 236KK
+| name          = Avenger
+| images        = SF6_Luke_236kk.png
+| hitboxes      = SF6_Luke_236kk_hitbox.png
+| damage        = -
+| startup       = 11
+| active        = [33]
+| recovery      = 10
+| total         = 45
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| armor         = 3-35
+| notes         = Armor does not apply to follow-up attacks; follow-up P or K can be input up to frame 32; follow-up can start immediately after armor hit freeze without waiting for any additional Avenger startup frames to occur; Luke is in a Punish Counter state for entire duration
+}}
+
+====== 236KK~P ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236kk_p | moveType = special
+| input         = 236KK~P
+| name          = No Chaser
+| images        = SF6_Luke_236kk_p.png
+| hitboxes      = SF6_Luke_236k_p_hitbox.png
+| damage        = 1300
+| chip          = 325
+| dmgScaling    = 50% Starter
+| startup       = 11+12
+| active        = 10
+| recovery      = 16
+| total         = 37
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 27
+| hitAdv        = KD +32(+41)
+| blockAdv      = {{sf6-adv|VM|-6{{sf6-adv|P|(+3)}}}}
+| punishAdv     = KD +32(+41)
+| perfParryAdv  = {{sf6-adv|VM|-24(-15)}}
+| blockstun     = 20
+| hitstop       = 15
+| driveDmgBlk   = 5000
+| driveDmgHit   = [5000]
+| superGainHit  = 1250 (875)
+| superGainBlk  = 625 (312)
+| jugStart      = 1
+| jugIncrease   = 20
+| jugLimit      = 10
+| atkRange      = 2.79 (2.14) (+Run)
+| notes         = Puts opponent into limited juggle state; very late connect to juggle into 623LP/MP, SA1, or SA2 (otherwise, can only cancel into SA2 or SA3); midscreen, later active frames canceled into SA2 will whiff
+}}
+
+====== 236KK~K ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236kk_k | moveType = special
+| input         = 236KK~K
+| name          = Impaler
+| images        = SF6_Luke_236kk_k.png
+| hitboxes      = SF6_Luke_236kk_k_hitbox.png, SF6_Luke_236kk_k2_hitbox.png
+| damage        = 1200
+| chip          = 300
+| dmgScaling    = 50% Starter
+| startup       = 11+13
+| active        = 8
+| recovery      = 19
+| total         = 39
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +38(+43)
+| blockAdv      = {{sf6-adv|M|-3}}{{sf6-adv|P|(+2)}}
+| punishAdv     = KD +38(+43)
+| perfParryAdv  = {{sf6-adv|VM|-23(-18)}}
+| blockstun     = 22
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| superGainHit  = 1250 (875)
+| superGainBlk  = 625 (312)
+| airborne      = 4-19 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 3.35 (2.97) (+Run)
+| notes         = First 2 active frames can only hit airborne opponents; Luke is in a crouching state for entire recovery duration; puts opponent into limited juggle state
+}}
+
+== Super Arts ==
+===== 236236P =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236236p | moveType = super
+| input         = 236236P
+| name          = Vulcan Blast
+| images        = SF6_Luke_236236p.png
+| hitboxes      = SF6_Luke_236236p_hitbox.png, SF6_Luke_236236p2_hitbox.png
+| damage        = 300x4,800 (2000)
+| chip          = 100x5
+| dmgScaling    = 30% Minimum
+| startup       = 6
+| active        = 13(1)7(2)7(23)5
+| recovery      = 45
+| total         = 108
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +17(+30)
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = KD +17(+30)
+| perfParryAdv  = {{sf6-adv|VM|-29}}
+| blockstun     = 74 total
+| hitstop       = 8x3,10,1
+| driveDmgBlk   = 500x5
+| driveDmgHit   = 1000x5
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-6 Strike/Throw
+| armor         = Break
+| jugIncrease   = 0x4,99
+| jugLimit      = 99
+| notes         = 5 hit Super projectile, first 4 hits travel 65% screen, final hit goes fullscreen; higher KD Adv. when farther from wall; extends a projectile-vulnerable hurtbox during startup frames 2-5 (more difficult to use as an anti-fireball tool)
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_214214p | moveType = super
+| input         = 214214P
+| name          = Eraser
+| images        = SF6_Luke_214214p.png
+| hitboxes      = SF6_Luke_214214p_hitbox.png
+| damage        = 2800
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 5
+| active        = 3
+| recovery      = 51
+| total         = 58
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +2
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = KD +2
+| perfParryAdv  = {{sf6-adv|VM|-52}}
+| blockstun     = 25
+| hitstop       = 7 / 10x3,2x5,3,45
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-7 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 1.16 (1.06)
+| notes         = Extremely fast super that works well in juggles; in the corner, gives Luke an auto-timed strike/throw mixup; on hit, the animation is not invincible until the very end (can be hit by delayed projectiles like Kimberly Spraycan or JP Amnesia orbs); Full Dmg distribution: 300x3,200x6,700
+}}
+
+===== 236236K =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236236k | moveType = super
+| input         = 236236K
+| name          = Pale Rider
+| images        = SF6_Luke_236236k.png
+| hitboxes      = SF6_Luke_236236k_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10(27)
+| active        = 4
+| recovery      = 66(92)
+| total         = 122
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +18
+| blockAdv      = {{sf6-adv|VM|-42}}
+| punishAdv     = HKD +18
+| perfParryAdv  = {{sf6-adv|VM|-65}}
+| blockstun     = 25
+| hitstop       = 2
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 3.799 (1.684)
+| notes         = Luke runs forward; active frames occur upon reaching the opponent or on frame 27 (whichever occurs first) but invincibility is not extended when far from opponent; has juggle potential; on block, bounces away with a fixed recovery period (whiff recovery is 26f slower); cinematic time regenerates ~2 Drive bars for Luke; takes opponent to Memphis
+}}
+
+====== 236236K (CA) ======
+{{FrameData-SF6 | chara = Luke | moveId = Luke_236236k(ca) | moveType = super
+| input         = 236236K
+| name          = Pale Rider (CA)
+| images        = SF6_Luke_236236k_ca.png
+| hitboxes      = SF6_Luke_236236k_ca_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10(27)
+| active        = 4
+| recovery      = 66(92)
+| total         = 122
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +18
+| blockAdv      = {{sf6-adv|VM|-42}}
+| punishAdv     = HKD +18
+| perfParryAdv  = {{sf6-adv|VM|-65}}
+| blockstun     = 25
+| hitstop       = 2
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 3.799 (1.684)
+| notes         = Luke runs forward; active frames occur upon reaching the opponent or on frame 27 (whichever occurs first) but invincibility is not extended when far from opponent; has juggle potential; on block, bounces away with a fixed recovery period (whiff recovery is 26f slower); cinematic time regenerates ~2.3 Drive bars for Luke; available at 25% HP or below; does not take opponent to Memphis
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Luke_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 96 (total)
+| active        = -
+| recovery      = -
+| total         = 96
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Come on!"
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Luke_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 180 (total)
+| active        = -
+| recovery      = -
+| total         = 180
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Yeah! Let's let it fly!"
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Luke | moveId = Luke_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Luke_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 109 (total)
+| active        = -
+| recovery      = -
+| total         = 109
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Hadooken!"
+}}
+
+
+{{Character Subnav SF6 | chara=Luke }}
+{{Navbox-SF6}}
+[[Category:Street Fighter 6]]
+[[Category:Luke]]

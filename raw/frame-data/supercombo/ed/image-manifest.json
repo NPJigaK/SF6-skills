@@ -1,0 +1,1060 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:23:31Z",
+  "source": "SuperCombo Wiki",
+  "character": "Ed",
+  "cargo_character": "Ed",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Ed",
+      "filename": "SF6 Ed Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Ed",
+      "filename": "SF6 Ed Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Ed_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Ed_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Ed_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Ed_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Ed_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Ed_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Ed_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Ed_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Ed_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Ed_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Ed_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Ed_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Ed_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Ed_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Ed_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Ed_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2hp",
+      "input": "2HP",
+      "name": "Low Hook Punch",
+      "filename": "SF6_Ed_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2hp",
+      "input": "2HP",
+      "name": "Low Hook Punch",
+      "filename": "SF6_Ed_2hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Ed_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Ed_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Ed_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Ed_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2hk",
+      "input": "2HK",
+      "name": "Crouching Heavy Kick",
+      "filename": "SF6_Ed_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2hk",
+      "input": "2HK",
+      "name": "Crouching Heavy Kick",
+      "filename": "SF6_Ed_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Ed_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Ed_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ed_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Ed_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Ed_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Ed_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Ed_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Ed_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Ed_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Ed_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Ed_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Ed_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5hp_hold_lv1",
+      "input": "5[HP]",
+      "name": "Psycho Knuckle (Lv.1)",
+      "filename": "SF6_Ed_5hp_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5hp_hold_lv1",
+      "input": "5[HP]",
+      "name": "Psycho Knuckle (Lv.1)",
+      "filename": "SF6_Ed_5hp_hold_start_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5hp_hold_lv1",
+      "input": "5[HP]",
+      "name": "Psycho Knuckle (Lv.1)",
+      "filename": "SF6_Ed_5hp_hold_lv1_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5hp_hold_lv2",
+      "input": "5[HP]",
+      "name": "Psycho Knuckle (Lv.2)",
+      "filename": "SF6_Ed_5hp_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5hp_hold_lv2",
+      "input": "5[HP]",
+      "name": "Psycho Knuckle (Lv.2)",
+      "filename": "SF6_Ed_5hp_hold_start_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5hp_hold_lv2",
+      "input": "5[HP]",
+      "name": "Psycho Knuckle (Lv.2)",
+      "filename": "SF6_Ed_5hp_hold_lv2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6hp",
+      "input": "6HP",
+      "name": "Cobra Punch",
+      "filename": "SF6_Ed_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_6hp",
+      "input": "6HP",
+      "name": "Cobra Punch",
+      "filename": "SF6_Ed_6hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5lk_lk",
+      "input": "5LK~LK",
+      "name": "Flicker Combination 1",
+      "filename": "SF6_Ed_5lk_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5lk_lk",
+      "input": "5LK~LK",
+      "name": "Flicker Combination 1",
+      "filename": "SF6_Ed_5lk_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5lk_lk_lk",
+      "input": "5LK~LK~LK",
+      "name": "Flicker Combination 2",
+      "filename": "SF6_Ed_5lk_lk_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5lk_lk_lk",
+      "input": "5LK~LK~LK",
+      "name": "Flicker Combination 2",
+      "filename": "SF6_Ed_5lk_lk_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5mp_hp",
+      "input": "5MP~HP",
+      "name": "Body Blow Combination",
+      "filename": "SF6_Ed_5mp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5mp_hp",
+      "input": "5MP~HP",
+      "name": "Body Blow Combination",
+      "filename": "SF6_Ed_5mp_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5mk_mk",
+      "input": "5MK~MK",
+      "name": "Hitman Combination 1",
+      "filename": "SF6_Ed_5mk_mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5mk_mk",
+      "input": "5MK~MK",
+      "name": "Hitman Combination 1",
+      "filename": "SF6_Ed_5mk_mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5mk_mk_hp",
+      "input": "5MK~MK~HP",
+      "name": "Hitman Combination 2",
+      "filename": "SF6_Ed_5mk_mk_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_5mk_mk_hp",
+      "input": "5MK~MK~HP",
+      "name": "Hitman Combination 2",
+      "filename": "SF6_Ed_5mk_mk_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_2hk_hp",
+      "input": "2HK~HP",
+      "name": "Low Smash Combination",
+      "filename": "SF6_Ed_2hk_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_2hk_hp",
+      "input": "2HK~HP",
+      "name": "Low Smash Combination",
+      "filename": "SF6_Ed_2hk_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_lplk",
+      "input": "LPLK",
+      "name": "Face Buster",
+      "filename": "SF6_Ed_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_lplk",
+      "input": "LPLK",
+      "name": "Face Buster",
+      "filename": "SF6_Ed_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_4lplk",
+      "input": "4LPLK",
+      "name": "Rib Crusher",
+      "filename": "SF6_Ed_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_4lplk",
+      "input": "4LPLK",
+      "name": "Rib Crusher",
+      "filename": "SF6_Ed_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_hphk",
+      "input": "HPHK",
+      "name": "Turn Punch",
+      "filename": "SF6_Ed_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_hphk",
+      "input": "HPHK",
+      "name": "Turn Punch",
+      "filename": "SF6_Ed_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6hphk",
+      "input": "6HPHK",
+      "name": "Hammer Blow (Block)",
+      "filename": "SF6_Ed_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_6hphk",
+      "input": "6HPHK",
+      "name": "Hammer Blow (Block)",
+      "filename": "SF6_Ed_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hammer Blow (Recovery)",
+      "filename": "SF6_Ed_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hammer Blow (Recovery)",
+      "filename": "SF6_Ed_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Ed_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Ed_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Ed_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Ed_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Ed_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Ed_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236p",
+      "input": "236P",
+      "name": "Psycho Spark",
+      "filename": "SF6_Ed_236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236p",
+      "input": "236P",
+      "name": "Psycho Spark",
+      "filename": "SF6_Ed_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236pp",
+      "input": "236PP",
+      "name": "Psycho Spark",
+      "filename": "SF6_Ed_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236pp",
+      "input": "236PP",
+      "name": "Psycho Spark",
+      "filename": "SF6_Ed_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236p_6p",
+      "input": "236P~6P",
+      "name": "Psycho Shoot",
+      "filename": "SF6_Ed_236p_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236p_6p",
+      "input": "236P~6P",
+      "name": "Psycho Shoot",
+      "filename": "SF6_Ed_236p_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236pp_6p",
+      "input": "236PP~6P",
+      "name": "Psycho Shoot",
+      "filename": "SF6_Ed_236pp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236pp_6p",
+      "input": "236PP~6P",
+      "name": "Psycho Shoot",
+      "filename": "SF6_Ed_236pp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_623lp",
+      "input": "623LP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_623lp",
+      "input": "623LP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_623mp",
+      "input": "623MP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_623mp",
+      "input": "623MP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_623hp",
+      "input": "623HP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_623hp",
+      "input": "623HP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_623pp",
+      "input": "623PP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_623pp",
+      "input": "623PP",
+      "name": "Psycho Uppercut",
+      "filename": "SF6_Ed_623pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_214lp",
+      "input": "214LP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_214lp",
+      "input": "214LP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_214mp",
+      "input": "214MP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_214mp",
+      "input": "214MP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_214hp",
+      "input": "214HP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_214hp",
+      "input": "214HP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_214pp",
+      "input": "214PP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_214pp",
+      "input": "214PP",
+      "name": "Psycho Blitz",
+      "filename": "SF6_Ed_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236lk",
+      "input": "236LK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236lk",
+      "input": "236LK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236lk_hold",
+      "input": "236[LK]",
+      "name": "Psycho Flicker (Hold)",
+      "filename": "SF6_Ed_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236lk_hold",
+      "input": "236[LK]",
+      "name": "Psycho Flicker (Hold)",
+      "filename": "SF6_Ed_236lk_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236mk",
+      "input": "236MK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236mk",
+      "input": "236MK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236mk_hold",
+      "input": "236[MK]",
+      "name": "Psycho Flicker (Hold)",
+      "filename": "SF6_Ed_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236mk_hold",
+      "input": "236[MK]",
+      "name": "Psycho Flicker (Hold)",
+      "filename": "SF6_Ed_236mk_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236hk",
+      "input": "236HK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236hk",
+      "input": "236HK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236hk_hold",
+      "input": "236[HK]",
+      "name": "Psycho Flicker (Hold)",
+      "filename": "SF6_Ed_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236hk_hold",
+      "input": "236[HK]",
+      "name": "Psycho Flicker (Hold)",
+      "filename": "SF6_Ed_236hk_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236kk",
+      "input": "236KK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236kk",
+      "input": "236KK",
+      "name": "Psycho Flicker",
+      "filename": "SF6_Ed_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_4kk",
+      "input": "4KK",
+      "name": "Kill Rush (Backward)",
+      "filename": "SF6_Ed_4kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_4kk",
+      "input": "4KK",
+      "name": "Kill Rush (Backward)",
+      "filename": "SF6_Ed_4kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6kk",
+      "input": "5/6KK",
+      "name": "Kill Rush (Forward)",
+      "filename": "SF6_Ed_6kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_6kk",
+      "input": "5/6KK",
+      "name": "Kill Rush (Forward)",
+      "filename": "SF6_Ed_6kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6kk_6p",
+      "input": "5/6KK~6P",
+      "name": "Kill Switch Break",
+      "filename": "SF6_Ed_6kk_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_6kk_6p",
+      "input": "5/6KK~6P",
+      "name": "Kill Switch Break",
+      "filename": "SF6_Ed_6kk_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6kk_dl_6p",
+      "input": "5/6KK~dl.6P",
+      "name": "Kill Switch Chaser",
+      "filename": "SF6_Ed_6kk_dl_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_6kk_dl_6p",
+      "input": "5/6KK~dl.6P",
+      "name": "Kill Switch Chaser",
+      "filename": "SF6_Ed_6kk_dl_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236236k",
+      "input": "236236K",
+      "name": "Psycho Storm",
+      "filename": "SF6_Ed_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236236k",
+      "input": "236236K",
+      "name": "Psycho Storm",
+      "filename": "SF6_Ed_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_214214p",
+      "input": "214214P",
+      "name": "Psycho Cannon",
+      "filename": "SF6_Ed_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_214214p",
+      "input": "214214P",
+      "name": "Psycho Cannon",
+      "filename": "SF6_Ed_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236236p",
+      "input": "236236P",
+      "name": "Psycho Chamber",
+      "filename": "SF6_Ed_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236236p",
+      "input": "236236P",
+      "name": "Psycho Chamber",
+      "filename": "SF6_Ed_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_236236p(ca)",
+      "input": "236236P",
+      "name": "Psycho Chamber (CA)",
+      "filename": "SF6_Ed_236236p_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "ed_236236p(ca)",
+      "input": "236236P",
+      "name": "Psycho Chamber (CA)",
+      "filename": "SF6_Ed_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Ed_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Ed_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "ed_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Ed_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [],
+  "download_images": false
+}

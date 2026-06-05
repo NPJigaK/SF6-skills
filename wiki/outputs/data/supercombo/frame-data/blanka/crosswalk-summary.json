@@ -1,0 +1,34 @@
+{
+  "official_rows": 91,
+  "supercombo_rows": 84,
+  "crosswalk_status_counts": {
+    "matched": 53,
+    "unmatched": 34,
+    "ambiguous": 2,
+    "matched_manual": 2
+  },
+  "matched_distinct_supercombo_rows": 50,
+  "supercombo_unmatched_rows": 34,
+  "supercombo_rows_matched_multiple_times": {
+    "blanka_214p": 2,
+    "blanka_214pp": 2,
+    "blanka_236236p": 2,
+    "blanka_63214kk": 2,
+    "blanka_jhp": 2,
+    "blanka_mpmk": 3
+  },
+  "source_raw_root": "raw/frame-data/supercombo/blanka",
+  "official_csv": "wiki/outputs/data/frame-data/blanka/classic.csv",
+  "crosswalk_policy": {
+    "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
+    "supercombo_primary_key": "move_id",
+    "candidate_matching": [
+      "official Classic input tokens are converted to command signatures",
+      "special and super motions may also match a strength-collapsed input family",
+      "category/moveType compatibility and simple field equality increase candidate score",
+      "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
+      "generic name overrides are used for Drive Rush system rows",
+      "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
+    ]
+  }
+}

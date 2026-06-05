@@ -1,0 +1,129 @@
+{
+  "metadata_schema_version": "supercombo_frame_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-06-05T06:06:00Z",
+  "publisher": "SuperCombo Wiki",
+  "game": "Street Fighter 6",
+  "source_type": "community_frame_data",
+  "character": "Alex",
+  "character_slug": "alex",
+  "capture_label": "2026-06-02",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-02",
+    "latest_revision_timestamp": "2026-06-02T02:19:35Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Alex/Data",
+        "pageid": 93105,
+        "lastrevid": 365286,
+        "revision_timestamp": "2026-06-02T02:19:35Z",
+        "touched": "2026-06-02T02:19:35Z"
+      },
+      {
+        "title": "Street Fighter 6/Alex/Frame data",
+        "pageid": 93111,
+        "lastrevid": 350611,
+        "revision_timestamp": "2026-01-22T00:44:27Z",
+        "touched": "2026-06-02T02:19:37Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "source_urls": {
+    "frame_data_page": "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex/Frame_data",
+    "frame_data_raw": "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex/Frame_data?action=raw",
+    "data_raw": "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex/Data?action=raw"
+  },
+  "capture_method": "scrapling_stealthy_session_cloudflare_page_action",
+  "capture_adjustments": {
+    "block_ads": true,
+    "removed_iframes_ads_and_sticky_ui_from_screenshots": true,
+    "captured_tabs": [
+      "General",
+      "Details",
+      "Meter",
+      "Properties",
+      "Notes"
+    ],
+    "downloaded_resolved_images": false
+  },
+  "counts": {
+    "character_templates": 1,
+    "frame_templates": 76,
+    "display_cargo_queries": 21,
+    "cargo_frame_rows": 76,
+    "cargo_character_rows": 1,
+    "image_refs": 187,
+    "distinct_image_refs": 174,
+    "imageinfo_resolved": 162,
+    "imageinfo_missing": 12,
+    "downloaded_images": 0,
+    "failed_image_downloads": 0
+  },
+  "artifacts": {
+    "api\\page-metadata.json": {
+      "byte_count": 1838,
+      "sha256": "sha256:5e8e6d72d2bf12da2e9ab35b60b3b847b8cf5058b4cbfcb8d0718003121967ac"
+    },
+    "cargo\\character-data.json": {
+      "byte_count": 719,
+      "sha256": "sha256:08c09c6695d969f625c9f124230eaabd313748c01364e967b08ca19aa1f0e423"
+    },
+    "cargo\\frame-data.json": {
+      "byte_count": 162661,
+      "sha256": "sha256:cef0aeea7d4d7680933ae01e1a029205a2033b2fbdd23ea9ea1ce082eeca4e53"
+    },
+    "data.raw.wikitext": {
+      "byte_count": 96753,
+      "sha256": "sha256:eef74a8352381245f081536beb12fe8a934d0289d591eaabdc9812cd4700a41f"
+    },
+    "data.templates.json": {
+      "byte_count": 105745,
+      "sha256": "sha256:222108e636feaaa2bf0693db01c67a22e9c02f4e600871d6040087d3eeb19ca3"
+    },
+    "frame-data.cargo-queries.json": {
+      "byte_count": 14069,
+      "sha256": "sha256:3cfc4a70526287fd9e6c3229268891c55c0ce67b92445b0908deb2880a0af004"
+    },
+    "frame-data.raw.wikitext": {
+      "byte_count": 10949,
+      "sha256": "sha256:374296eed9e4ba313cc5d6310e28907b3fc47117572c81bc45062d2e6fa31473"
+    },
+    "image-manifest.json": {
+      "byte_count": 40830,
+      "sha256": "sha256:02cff0a35029c9736ef394f96df76f6906d3111ae272723fa5e9ae71878880e5"
+    },
+    "imageinfo.json": {
+      "byte_count": 121367,
+      "sha256": "sha256:7217e0d49abb4092d9746053be14351571a5f7df84a33bc980cc48a7c6c7b626"
+    },
+    "rendered\\page.html": {
+      "byte_count": 521335,
+      "sha256": "sha256:2b7810829d4ed079ff21022319f31e5dbcbcbbda82ebd6a6019b15c59535504a"
+    },
+    "rendered\\tables.dom.json": {
+      "byte_count": 792880,
+      "sha256": "sha256:a3821e512231ffa33d6c80130b348e4e75b285d825144be674a6363dbcb11d57"
+    },
+    "screenshots\\details.png": {
+      "byte_count": 1003727,
+      "sha256": "sha256:d9ff39c2285b33c113b37e8af8e33690d403f20222a0311473444e2637c3fd5c"
+    },
+    "screenshots\\general.png": {
+      "byte_count": 1027895,
+      "sha256": "sha256:806a86c317984507d8ebb439b125483676adbdad5b14e61c5762f60ea5efa56e"
+    },
+    "screenshots\\meter.png": {
+      "byte_count": 939032,
+      "sha256": "sha256:d5710f9f9799cf18e6b3f0ad7529e20d706711170b5fa21c5ffcf35de5c4e21f"
+    },
+    "screenshots\\notes.png": {
+      "byte_count": 2523337,
+      "sha256": "sha256:3f712431af3da4ae4e767b3ad40ea2f6fb9521740f5993595c3e3df80c0d1194"
+    },
+    "screenshots\\properties.png": {
+      "byte_count": 847890,
+      "sha256": "sha256:afa042fa8e0187e54885b359f2770905776e63466b2df46bc0f623987f9ea07f"
+    }
+  }
+}

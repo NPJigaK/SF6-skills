@@ -1,0 +1,1656 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:45:14Z",
+  "source": "SuperCombo Wiki",
+  "character": "Sagat",
+  "cargo_character": "Sagat",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Sagat",
+      "filename": "SF6 Sagat Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Sagat",
+      "filename": "SF6 Sagat Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Sagat_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Sagat_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Sagat_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Sagat_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Sagat_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Sagat_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Sagat_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Sagat_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Sagat_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Sagat_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Sagat_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Sagat_5hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Sagat_5hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Sagat_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Sagat_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Sagat_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Sagat_2mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Sagat_2mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Sagat_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Sagat_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Sagat_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Sagat_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Sagat_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Sagat_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Sagat_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2hk",
+      "input": "2HK",
+      "name": "Tiger Kick",
+      "filename": "SF6_Sagat_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2hk",
+      "input": "2HK",
+      "name": "Tiger Kick",
+      "filename": "SF6_Sagat_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2hk",
+      "input": "2HK",
+      "name": "Tiger Kick",
+      "filename": "SF6_Sagat_2hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Sagat_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Sagat_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Sagat_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Sagat_jmp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Sagat_jmp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Sagat_jmp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Sagat_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Sagat_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Sagat_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Sagat_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Sagat_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Sagat_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Sagat_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Sagat_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_6mp",
+      "input": "6MP",
+      "name": "Tiger Heavy Elbow",
+      "filename": "SF6_Sagat_6mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6mp",
+      "input": "6MP",
+      "name": "Tiger Heavy Elbow",
+      "filename": "SF6_Sagat_6mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6mp",
+      "input": "6MP",
+      "name": "Tiger Heavy Elbow",
+      "filename": "SF6_Sagat_6mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_4hp",
+      "input": "4HP",
+      "name": "Tiger Monolith",
+      "filename": "SF6_Sagat_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_4hp",
+      "input": "4HP",
+      "name": "Tiger Monolith",
+      "filename": "SF6_Sagat_4hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_4hp",
+      "input": "4HP",
+      "name": "Tiger Monolith",
+      "filename": "SF6_Sagat_4hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_4hp",
+      "input": "4HP",
+      "name": "Tiger Monolith",
+      "filename": "SF6_Sagat_4hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_4hp",
+      "input": "4HP",
+      "name": "Tiger Monolith",
+      "filename": "SF6_Sagat_4hp_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_6lk",
+      "input": "6LK",
+      "name": "Step Low Kick",
+      "filename": "SF6_Sagat_6lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6lk",
+      "input": "6LK",
+      "name": "Step Low Kick",
+      "filename": "SF6_Sagat_6lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_6hk",
+      "input": "6HK",
+      "name": "Step High Kick",
+      "filename": "SF6_Sagat_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6hk",
+      "input": "6HK",
+      "name": "Step High Kick",
+      "filename": "SF6_Sagat_6hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6hk",
+      "input": "6HK",
+      "name": "Step High Kick",
+      "filename": "SF6_Sagat_6hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5mk_hk",
+      "input": "5MK~HK",
+      "name": "Step Middle Kick",
+      "filename": "SF6_Sagat_5mk_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5mk_hk",
+      "input": "5MK~HK",
+      "name": "Step Middle Kick",
+      "filename": "SF6_Sagat_5mk_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Tiger Sting",
+      "filename": "SF6_Sagat_5hp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Tiger Sting",
+      "filename": "SF6_Sagat_5hp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2mp_hp",
+      "input": "2MP~HP",
+      "name": "Tiger Slash",
+      "filename": "SF6_Sagat_2mp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2mp_hp",
+      "input": "2MP~HP",
+      "name": "Tiger Slash",
+      "filename": "SF6_Sagat_2mp_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_2mp_hk",
+      "input": "2MP~HK",
+      "name": "Tiger Rise",
+      "filename": "SF6_Sagat_2mp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_2mp_hk",
+      "input": "2MP~HK",
+      "name": "Tiger Rise",
+      "filename": "SF6_Sagat_2mp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_lplk",
+      "input": "LPLK",
+      "name": "Tiger Hang",
+      "filename": "SF6_Sagat_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_lplk",
+      "input": "LPLK",
+      "name": "Tiger Hang",
+      "filename": "SF6_Sagat_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_4lplk",
+      "input": "4LPLK",
+      "name": "Tiger Carry",
+      "filename": "SF6_Sagat_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_4lplk",
+      "input": "4LPLK",
+      "name": "Tiger Carry",
+      "filename": "SF6_Sagat_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_hphk",
+      "input": "HPHK",
+      "name": "Tiger Punishment",
+      "filename": "SF6_Sagat_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_hphk",
+      "input": "HPHK",
+      "name": "Tiger Punishment",
+      "filename": "SF6_Sagat_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_6hphk",
+      "input": "6HPHK",
+      "name": "Tiger Twin Babel (Block)",
+      "filename": "SF6_Sagat_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6hphk",
+      "input": "6HPHK",
+      "name": "Tiger Twin Babel (Block)",
+      "filename": "SF6_Sagat_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Tiger Twin Babel (Recovery)",
+      "filename": "SF6_Sagat_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Tiger Twin Babel (Recovery)",
+      "filename": "SF6_Sagat_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Sagat_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Sagat_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Sagat_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Sagat_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Sagat_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Sagat_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236lp",
+      "input": "236LP",
+      "name": "Low Tiger Shot",
+      "filename": "SF6_Sagat_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lp",
+      "input": "236LP",
+      "name": "Low Tiger Shot",
+      "filename": "SF6_Sagat_236lp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lp",
+      "input": "236LP",
+      "name": "Low Tiger Shot",
+      "filename": "SF6_Sagat_236lp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236lpmp",
+      "input": "236LPMP or 236LPHP",
+      "name": "Low Tiger Shot",
+      "filename": "SF6_Sagat_236lpmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lpmp",
+      "input": "236LPMP or 236LPHP",
+      "name": "Low Tiger Shot",
+      "filename": "SF6_Sagat_236lpmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236mp",
+      "input": "236MP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mp",
+      "input": "236MP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mp",
+      "input": "236MP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236hp",
+      "input": "236HP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hp",
+      "input": "236HP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hp",
+      "input": "236HP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236mphp",
+      "input": "236MPHP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mphp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mphp",
+      "input": "236MPHP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mphp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mphp",
+      "input": "236MPHP",
+      "name": "High Tiger Shot",
+      "filename": "SF6_Sagat_236mphp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623lp",
+      "input": "623LP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623mp",
+      "input": "623MP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp",
+      "input": "623HP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623p_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623hp_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623hp_hold_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623hp_hold_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623hp_hold_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623p_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623hp_hold",
+      "input": "623[HP]",
+      "name": "Tiger Uppercut (hold)",
+      "filename": "SF6_Sagat_623p_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_623pp",
+      "input": "623PP",
+      "name": "Tiger Uppercut",
+      "filename": "SF6_Sagat_623pp_hitbox_7.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236lk",
+      "input": "236LK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lk",
+      "input": "236LK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236lk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lk",
+      "input": "236LK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236lk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lk",
+      "input": "236LK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236lk",
+      "input": "236LK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236mk",
+      "input": "236MK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mk",
+      "input": "236MK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236mk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mk",
+      "input": "236MK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236mk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mk",
+      "input": "236MK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236mk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mk",
+      "input": "236MK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236mk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236mk",
+      "input": "236MK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236mk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236hk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236hk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236hk",
+      "input": "236HK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236hk_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236kk",
+      "input": "236KK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236kk",
+      "input": "236KK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236kk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236kk",
+      "input": "236KK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236kk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236kk",
+      "input": "236KK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236kk",
+      "input": "236KK",
+      "name": "Tiger Knee Crush",
+      "filename": "SF6_Sagat_236kk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214lk",
+      "input": "214LK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214lk",
+      "input": "214LK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214lk",
+      "input": "214LK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214lk",
+      "input": "214LK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214mk",
+      "input": "214MK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214mk",
+      "input": "214MK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214mk",
+      "input": "214MK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214mk",
+      "input": "214MK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_preview_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_preview_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214hk",
+      "input": "214HK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_preview_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_preview_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk",
+      "input": "214KK",
+      "name": "Tiger Nexus",
+      "filename": "SF6_Sagat_214hk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214k_6lk",
+      "input": "214K~6LK",
+      "name": "Mighty Tiger",
+      "filename": "SF6_Sagat_214k_6lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214k_6lk",
+      "input": "214K~6LK",
+      "name": "Mighty Tiger",
+      "filename": "SF6_Sagat_214k_6lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214kk_6lk",
+      "input": "214KK~6LK",
+      "name": "Mighty Tiger",
+      "filename": "SF6_Sagat_214k_6lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk_6lk",
+      "input": "214KK~6LK",
+      "name": "Mighty Tiger",
+      "filename": "SF6_Sagat_214k_6lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214k_6mk",
+      "input": "214K~6MK",
+      "name": "Greedy Tiger",
+      "filename": "SF6_Sagat_214k_6mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214k_6mk",
+      "input": "214K~6MK",
+      "name": "Greedy Tiger",
+      "filename": "SF6_Sagat_214k_6mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214kk_6mk",
+      "input": "214KK~6MK",
+      "name": "Greedy Tiger",
+      "filename": "SF6_Sagat_214k_6mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk_6mk",
+      "input": "214KK~6MK",
+      "name": "Greedy Tiger",
+      "filename": "SF6_Sagat_214k_6mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214k_6hk",
+      "input": "214K~6HK",
+      "name": "Nova Tiger",
+      "filename": "SF6_Sagat_214k_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214k_6hk",
+      "input": "214K~6HK",
+      "name": "Nova Tiger",
+      "filename": "SF6_Sagat_214k_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214kk_6hk",
+      "input": "214KK~6HK",
+      "name": "Nova Tiger",
+      "filename": "SF6_Sagat_214k_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214kk_6hk",
+      "input": "214KK~6HK",
+      "name": "Nova Tiger",
+      "filename": "SF6_Sagat_214k_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236236p",
+      "input": "236236P",
+      "name": "Tiger Cannon",
+      "filename": "SF6_Sagat_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236236p",
+      "input": "236236P",
+      "name": "Tiger Cannon",
+      "filename": "SF6_Sagat_236236p_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236236p",
+      "input": "236236P",
+      "name": "Tiger Cannon",
+      "filename": "SF6_Sagat_236236p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214214k",
+      "input": "214214K",
+      "name": "Savage Tiger",
+      "filename": "SF6_Sagat_214214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_214214k",
+      "input": "214214K",
+      "name": "Savage Tiger",
+      "filename": "SF6_Sagat_214214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214214k_5",
+      "input": "214214K~5",
+      "name": "Savage Tiger Raid<br>(Damage)",
+      "filename": "SF6_Sagat_214214k_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214214k_6",
+      "input": "214214K~6",
+      "name": "Savage Tiger Zenith<br>(Launcher)",
+      "filename": "SF6_Sagat_214214k_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214214k_4",
+      "input": "214214K~4",
+      "name": "Savage Tiger Pendulum<br>(Side Switch)",
+      "filename": "SF6_Sagat_214214k_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_214214k_2",
+      "input": "214214K~2",
+      "name": "Savage Tiger Stomp<br>(Oki)",
+      "filename": "SF6_Sagat_214214k_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236236k",
+      "input": "236236K",
+      "name": "Tiger Vanquisher",
+      "filename": "SF6_Sagat_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236236k",
+      "input": "236236K",
+      "name": "Tiger Vanquisher",
+      "filename": "SF6_Sagat_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_236236k(ca)",
+      "input": "236236K",
+      "name": "Tiger Vanquisher (CA)",
+      "filename": "SF6_Sagat_236236k_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "sagat_236236k(ca)",
+      "input": "236236K",
+      "name": "Tiger Vanquisher (CA)",
+      "filename": "SF6_Sagat_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Sagat_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Sagat_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "sagat_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Sagat_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Sagat 236mphp.png",
+    "File:SF6 Sagat 236lpmp.png",
+    "File:SF6 Sagat 623pp.png"
+  ],
+  "download_images": false
+}

@@ -1,0 +1,70 @@
+{
+  "official_rows": 76,
+  "supercombo_rows": 75,
+  "enriched_rows": 76,
+  "supercombo_only_rows": 22,
+  "enrichment_status_counts": {
+    "enriched": 14,
+    "enriched_review_required": 47,
+    "official_only": 15
+  },
+  "review_flag_counts": {
+    "ambiguous_match": 2,
+    "basic_field_conflict:active_duration": 2,
+    "basic_field_conflict:active_duration,startup": 1,
+    "basic_field_conflict:damage": 1,
+    "basic_field_conflict:damage,startup": 1,
+    "basic_field_conflict:recovery": 1,
+    "basic_field_conflict:recovery,startup": 1,
+    "basic_field_conflict:startup": 1,
+    "condition_dependent_supercombo_field:damage": 9,
+    "condition_dependent_supercombo_field:damage,startup": 1,
+    "condition_dependent_supercombo_field:recovery": 8,
+    "condition_dependent_supercombo_field:startup": 4,
+    "manual_match": 2,
+    "multiple_candidates": 22,
+    "supercombo_row_reused": 15,
+    "uncomparable_basic_field:active_duration": 1,
+    "uncomparable_basic_field:active_duration,damage": 3,
+    "uncomparable_basic_field:active_duration,damage,recovery": 11,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:active_duration,recovery": 3,
+    "uncomparable_basic_field:active_duration,recovery,startup": 1,
+    "uncomparable_basic_field:damage": 8,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:damage,recovery,startup": 1,
+    "uncomparable_basic_field:recovery": 4,
+    "uncomparable_basic_field:recovery,startup": 3
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 3,
+    "damage": 2,
+    "recovery": 2,
+    "startup": 4
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 22,
+    "damage": 28,
+    "recovery": 28,
+    "startup": 8
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "ken_214lk",
+    "ken_5hk",
+    "ken_5lk",
+    "ken_5mk",
+    "ken_623hk",
+    "ken_623lp",
+    "ken_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 19,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/ken/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/ken/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/ken/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/ken/classic-supercombo.csv"
+}

@@ -1,0 +1,210 @@
+{{Character Subnav SF6 | chara=Lily }}
+
+==Frame Data Tables==
+
+===Character Data===
+{{#cargo_query:tables=SF6_CharacterData
+|fields=CONCAT('[[file:', portrait, '|100px|link=]] ')=<big>Lily</big>,hp=HP,throwRange=Throw<br>Range,fwdWalkSpd=Fwd Walk<br>Speed,bwdWalkSpd=Back Walk<br>Speed,fwdDashSpd=Fwd Dash<br>Speed,bwdDashSpd=Back Dash<br>Speed,fwdDashDist=Fwd Dash<br>Distance,bwdDashDist=Back Dash<br>Distance,jumpSpd=Jump<br>Speed,fwdJumpDist=Fwd Jump<br>Distance,bwdJumpDist=Back Jump<br>Distance,jumpApex=Jump<br>Apex
+|where=chara="Lily"
+|format=table
+|order by=_rowID
+|rows per page=50
+}}
+
+===Normals and Target Combos===
+----
+<tabber> General=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(damage='{{{damage}}}', "", damage)=Damage,IF(startup='{{{startup}}}', "", startup)=Startup,IF(active='{{{active}}}', "", active)=Active,IF(recovery='{{{recovery}}}', "", recovery)=Recovery,IF(total='{{{total}}}', "", total)=Total,IF(hitAdv='{{{hitAdv}}}', "", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', "", blockAdv)=Block Adv,IF(guard='{{{guard}}}', "", guard)=Guard,IF(cancel='{{{cancel}}}', "", cancel)=Cancel,IF(hitconfirm='{{{hitconfirm}}}', "", hitconfirm)=Hitconfirm
+|where=chara="Lily"  and (moveType="ground_normal" or moveType="normal" or moveType="air_normal")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Details=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(dmgScaling='{{{dmgScaling}}}', "", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', "", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', "", perfParryAdv)=PerfParry Adv,IF(DRcancelHit='{{{DRcancelHit}}}', "", DRcancelHit)=DR Cancel onHit,IF(DRcancelBlk='{{{DRcancelBlk}}}', "", DRcancelBlk)=DR Cancel onBlock,IF(afterDRHit='{{{afterDRHit}}}', "", afterDRHit)=After DR onHit,IF(afterDRBlk='{{{afterDRBlk}}}', "", afterDRBlk)=After DR onBlock,IF(hitstun='{{{hitstun}}}', "", hitstun)=Hitstun,IF(blockstun='{{{blockstun}}}', "", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', "", hitstop)=Hitstop
+|where=chara="Lily"  and (moveType="ground_normal" or moveType="normal" or moveType="air_normal")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Meter=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', "", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', "", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', "", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', "", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', "", superGainBlk)=SuperGain Block
+|where=chara="Lily"  and (moveType="ground_normal" or moveType="normal" or moveType="air_normal")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Properties=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(invuln='{{{invuln}}}', "", invuln)=Invuln,IF(armor='{{{armor}}}', "", armor)=Armor,IF(airborne='{{{airborne}}}', "", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', "", atkRange)=Range,IF(jugStart='{{{jugStart}}}', "", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', "", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', "", jugLimit)=Juggle Limit
+|where=chara="Lily"  and (moveType="ground_normal" or moveType="normal" or moveType="air_normal")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Notes=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(notes='{{{notes}}}', "", notes)=Notes
+|where=chara="Lily"  and (moveType="ground_normal" or moveType="normal" or moveType="air_normal")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+</tabber>
+
+===Drive and Throw===
+----
+<tabber> General=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(damage='{{{damage}}}', "", damage)=Damage,IF(startup='{{{startup}}}', "", startup)=Startup,IF(active='{{{active}}}', "", active)=Active,IF(recovery='{{{recovery}}}', "", recovery)=Recovery,IF(total='{{{total}}}', "", total)=Total,IF(hitAdv='{{{hitAdv}}}', "", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', "", blockAdv)=Block Adv,IF(guard='{{{guard}}}', "", guard)=Guard
+|where=chara="Lily"  and (moveType = "drive" or moveType="throw")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Details=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(chip='{{{chip}}}', "", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', "", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', "", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', "", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', "", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', "", hitstop)=Hitstop
+|where=chara="Lily"  and (moveType = "drive" or moveType="throw")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Meter=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', "", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', "", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', "", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', "", superGainHit)=SuperGain Hit
+|where=chara="Lily"  and (moveType = "drive" or moveType="throw")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Properties=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(invuln='{{{invuln}}}', "", invuln)=Invuln,IF(armor='{{{armor}}}', "", armor)=Armor,IF(atkRange='{{{atkRange}}}', "", atkRange)=Range,IF(jugStart='{{{jugStart}}}', "", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', "", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', "", jugLimit)=Juggle Limit
+|where=chara="Lily"  and (moveType = "drive" or moveType="throw")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Notes=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(notes='{{{notes}}}', "", notes)=Notes
+|where=chara="Lily"  and (moveType = "drive" or moveType="throw")
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+</tabber>
+
+===Specials===
+----
+<tabber> General=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(damage='{{{damage}}}', "", damage)=Damage,IF(startup='{{{startup}}}', "", startup)=Startup,IF(active='{{{active}}}', "", active)=Active,IF(recovery='{{{recovery}}}', "", recovery)=Recovery,IF(total='{{{total}}}', "", total)=Total,IF(hitAdv='{{{hitAdv}}}', "", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', "", blockAdv)=Block Adv,IF(guard='{{{guard}}}', "", guard)=Guard,IF(cancel='{{{cancel}}}', "", cancel)=Cancel,IF(hitconfirm='{{{hitconfirm}}}', "", hitconfirm)=Hitconfirm
+|where=chara="Lily"  and moveType = "special"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Details=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(chip='{{{chip}}}', "", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', "", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', "", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', "", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', "", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', "", hitstop)=Hitstop
+|where=chara="Lily"  and moveType = "special"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Meter=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', "", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', "", driveDmgHit)=DriveDmg Hit[PC],IF(driveGain='{{{driveGain}}}', "", driveGain)=Drive Gain,IF(superGainHit='{{{superGainHit}}}', "", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', "", superGainBlk)=SuperGain Block
+|where=chara="Lily"  and moveType = "special"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Properties=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(invuln='{{{invuln}}}', "", invuln)=Invuln,IF(armor='{{{armor}}}', "", armor)=Armor,IF(airborne='{{{airborne}}}', "", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', "", atkRange)=Range,IF(jugStart='{{{jugStart}}}', "", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', "", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', "", jugLimit)=Juggle Limit
+|where=chara="Lily"  and moveType = "special"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Notes=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(notes='{{{notes}}}', "", notes)=Notes
+|where=chara="Lily"  and moveType = "special"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+</tabber>
+
+===Supers===
+----
+<tabber> General=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(damage='{{{damage}}}', "", damage)=Damage,IF(startup='{{{startup}}}', "", startup)=Startup,IF(active='{{{active}}}', "", active)=Active,IF(recovery='{{{recovery}}}', "", recovery)=Recovery,IF(total='{{{total}}}', "", total)=Total,IF(hitAdv='{{{hitAdv}}}', "", hitAdv)=Hit Adv,IF(blockAdv='{{{blockAdv}}}', "", blockAdv)=Block Adv,IF(guard='{{{guard}}}', "", guard)=Guard
+|where=chara="Lily"  and moveType = "super"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Details=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(chip='{{{chip}}}', "", chip)=Chip,IF(dmgScaling='{{{dmgScaling}}}', "", dmgScaling)=Dmg Scaling,IF(punishAdv='{{{punishAdv}}}', "", punishAdv)=Punish Adv,IF(perfParryAdv='{{{perfParryAdv}}}', "", perfParryAdv)=PerfParry Adv,IF(blockstun='{{{blockstun}}}', "", blockstun)=Blockstun,IF(hitstop='{{{hitstop}}}', "", hitstop)=Hitstop
+|where=chara="Lily"  and moveType = "super"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Meter=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(driveDmgBlk='{{{driveDmgBlk}}}', "", driveDmgBlk)=DriveDmg Block,IF(driveDmgHit='{{{driveDmgHit}}}', "", driveDmgHit)=DriveDmg Hit[PC],IF(superGainHit='{{{superGainHit}}}', "", superGainHit)=SuperGain Hit,IF(superGainBlk='{{{superGainBlk}}}', "", superGainBlk)=SuperGain Block
+|where=chara="Lily"  and moveType = "super"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Properties=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(invuln='{{{invuln}}}', "", invuln)=Invuln,IF(armor='{{{armor}}}', "", armor)=Armor,IF(airborne='{{{airborne}}}', "", airborne)=Airborne,IF(atkRange='{{{atkRange}}}', "", atkRange)=Range,IF(jugStart='{{{jugStart}}}', "", jugStart)=Juggle Start,IF(jugIncrease='{{{jugIncrease}}}', "", jugIncrease)=Juggle Increase,IF(jugLimit='{{{jugLimit}}}', "", jugLimit)=Juggle Limit
+|where=chara="Lily"  and moveType = "super"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+|-|
+Notes=
+{{#cargo_query:tables=SF6_FrameData
+|fields=input,IF(notes='{{{notes}}}', "", notes)=Notes
+|where=chara="Lily"  and moveType = "super"
+|format=dynamic table
+|order by=_rowID
+|rows per page=50
+}}
+</tabber>
+<br>
+
+{{Character Subnav SF6 | chara=Lily}}
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category: Lily]]

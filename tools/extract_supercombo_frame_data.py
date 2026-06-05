@@ -138,6 +138,7 @@ SOURCE_SECTIONS = {
     "ground_normal": "Normals and Target Combos",
     "normal": "Normals and Target Combos",
     "air_normal": "Normals and Target Combos",
+    "serenity_stream": "Normals and Target Combos",
     "drive": "Drive and Throw",
     "throw": "Drive and Throw",
     "special": "Specials",
@@ -146,8 +147,8 @@ SOURCE_SECTIONS = {
 }
 
 OFFICIAL_CATEGORY_TO_MOVE_TYPES = {
-    "通常技": {"ground_normal", "air_normal", "normal"},
-    "特殊技": {"ground_normal", "air_normal", "normal"},
+    "通常技": {"ground_normal", "air_normal", "normal", "serenity_stream"},
+    "特殊技": {"ground_normal", "air_normal", "normal", "serenity_stream"},
     "必殺技": {"special"},
     "スーパーアーツ": {"super"},
     "通常投げ": {"throw"},
@@ -266,6 +267,16 @@ def template_to_text(match: re.Match[str]) -> str:
     return args[-1]
 
 
+def strip_mediawiki_list_markers(text: str, *, field_name: str) -> str:
+    if field_name == "notes" and re.fullmatch(r"\*[^*\n].*\*", text.strip()):
+        return text
+    return re.sub(r"(?m)^\*+\s*", "", text)
+
+
+def repo_path(path: Path) -> str:
+    return path.as_posix()
+
+
 def wiki_to_text(value: Any, *, field_name: str = "") -> str:
     text = str(value or "").strip()
     if not text:
@@ -274,6 +285,7 @@ def wiki_to_text(value: Any, *, field_name: str = "") -> str:
         return ""
     text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
     text = re.sub(r"<br\s*/?>", " ", text, flags=re.IGNORECASE)
+    text = strip_mediawiki_list_markers(text, field_name=field_name)
     text = re.sub(r"\[\[[^|\]]+\|([^\]]+)\]\]", r"\1", text)
     text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
     for _ in range(12):
@@ -389,6 +401,38 @@ def simple_number(value: str) -> str:
     return ""
 
 
+def primary_damage_number(value: str) -> str:
+    text = value.strip()
+    if re.fullmatch(r"[+-]?\d+", text):
+        return text
+    return ""
+
+
+def condition_parenthetical_primary(value: str) -> str:
+    text = value.strip()
+    match = re.fullmatch(r"([+-]?\d+)\s*\([^)]*\)", text)
+    if match:
+        return match.group(1)
+    return ""
+
+
+def landing_recovery_value(value: str) -> str:
+    text = value.strip()
+    match = re.fullmatch(r"着地後(\d+)", text)
+    if match:
+        return f"land:{match.group(1)}"
+    match = re.fullmatch(r"(\d+)\+着地後(\d+)", text)
+    if match:
+        return f"{match.group(1)}+land:{match.group(2)}"
+    match = re.fullmatch(r"(\d+) land", text)
+    if match:
+        return f"land:{match.group(1)}"
+    match = re.fullmatch(r"(\d+)\+(\d+) land", text)
+    if match:
+        return f"{match.group(1)}+land:{match.group(2)}"
+    return ""
+
+
 def active_duration(value: str) -> str:
     text = value.strip()
     if re.fullmatch(r"\d+", text):
@@ -401,21 +445,76 @@ def active_duration(value: str) -> str:
     return ""
 
 
+def comparable_value(field: str, value: str) -> str:
+    if field == "damage":
+        return primary_damage_number(value)
+    if field == "active_duration":
+        return active_duration(value)
+    return simple_number(value)
+
+
+def compare_basic_field(field: str, official_raw: str, supercombo_raw: str) -> dict[str, Any] | None:
+    official_text = official_raw.strip()
+    supercombo_text = supercombo_raw.strip()
+    if not official_text and not supercombo_text:
+        return None
+
+    official_value = comparable_value(field, official_text)
+    supercombo_value = comparable_value(field, supercombo_text)
+    condition_value = ""
+    if field in {"damage", "startup", "recovery"}:
+        condition_value = condition_parenthetical_primary(supercombo_text)
+    result: dict[str, Any] = {
+        "official_raw": official_text,
+        "supercombo_raw": supercombo_text,
+        "official": official_value,
+        "supercombo": condition_value or supercombo_value,
+    }
+    if field == "recovery":
+        official_landing = landing_recovery_value(official_text)
+        supercombo_landing = landing_recovery_value(supercombo_text)
+        if official_landing or supercombo_landing:
+            result["official"] = official_landing
+            result["supercombo"] = supercombo_landing
+            if official_landing and supercombo_landing:
+                result["comparable"] = True
+                result["match"] = official_landing == supercombo_landing
+                if result["match"]:
+                    result["reason"] = "landing_recovery_equivalent"
+            else:
+                result["comparable"] = False
+                result["reason"] = "official_uncomparable" if not official_landing else "supercombo_uncomparable"
+            return result
+    if condition_value:
+        result["comparable"] = False
+        result["reason"] = "condition_dependent_supercombo_field"
+        return result
+    if official_value and supercombo_value:
+        result["comparable"] = True
+        result["match"] = official_value == supercombo_value
+    else:
+        result["comparable"] = False
+        if not official_value and not supercombo_value:
+            result["reason"] = "both_uncomparable"
+        elif not official_value:
+            result["reason"] = "official_uncomparable"
+        else:
+            result["reason"] = "supercombo_uncomparable"
+    return result
+
+
 def compare_fields(official: dict[str, str], supercombo: dict[str, str]) -> dict[str, Any]:
-    comparisons = {
-        "startup": (simple_number(official["startup"]), simple_number(supercombo["startup"])),
-        "active_duration": (active_duration(official["active"]), active_duration(supercombo["active"])),
-        "recovery": (simple_number(official["recovery"]), simple_number(supercombo["recovery"])),
-        "damage": (simple_number(official["damage"]), simple_number(supercombo["damage"])),
+    raw_fields = {
+        "startup": (official["startup"], supercombo["startup"]),
+        "active_duration": (official["active"], supercombo["active"]),
+        "recovery": (official["recovery"], supercombo["recovery"]),
+        "damage": (official["damage"], supercombo["damage"]),
     }
     result: dict[str, Any] = {}
-    for field, (official_value, supercombo_value) in comparisons.items():
-        if official_value and supercombo_value:
-            result[field] = {
-                "official": official_value,
-                "supercombo": supercombo_value,
-                "match": official_value == supercombo_value,
-            }
+    for field, (official_raw, supercombo_raw) in raw_fields.items():
+        comparison = compare_basic_field(field, official_raw, supercombo_raw)
+        if comparison is not None:
+            result[field] = comparison
     return result
 
 
@@ -443,7 +542,7 @@ def candidate_score(official: dict[str, str], candidate: dict[str, str], officia
         reasons.append("non_ca_variant")
     comparisons = compare_fields(official, candidate)
     for field, item in comparisons.items():
-        if item["match"]:
+        if item.get("match") is True:
             score += 3
             reasons.append(f"{field}_match")
     return score, reasons
@@ -618,7 +717,7 @@ def main(argv: list[str]) -> int:
     write_json(
         output_dir / "frames.json",
         {
-            "source_raw_root": str(raw_root),
+            "source_raw_root": repo_path(raw_root),
             "row_count": len(frame_rows),
             "rows": frame_json_rows(templates["frames"]),
         },
@@ -629,7 +728,7 @@ def main(argv: list[str]) -> int:
         {
             "schema_version": "supercombo_frame_data_outputs/v1",
             "source": "SuperCombo Wiki",
-            "raw_root": str(raw_root),
+            "raw_root": repo_path(raw_root),
             "files": {
                 "frames_csv": "frames.csv",
                 "frames_json": "frames.json",
@@ -696,8 +795,8 @@ def main(argv: list[str]) -> int:
         output_dir / "crosswalk-summary.json",
         {
             **summary,
-            "source_raw_root": str(raw_root),
-            "official_csv": str(official_csv),
+            "source_raw_root": repo_path(raw_root),
+            "official_csv": repo_path(official_csv),
             "crosswalk_policy": {
                 "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
                 "supercombo_primary_key": "move_id",

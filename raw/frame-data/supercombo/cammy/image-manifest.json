@@ -1,0 +1,1389 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:10:11Z",
+  "source": "SuperCombo Wiki",
+  "character": "Cammy",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Cammy",
+      "filename": "SF6 Cammy Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Cammy",
+      "filename": "SF6 Cammy Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Cammy_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Cammy_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Cammy_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Cammy_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Cammy_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Cammy_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Cammy_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Cammy_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Cammy_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Cammy_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Cammy_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Cammy_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Cammy_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Cammy_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Cammy_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Cammy_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Cammy_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Cammy_2hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Cammy_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Cammy_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Cammy_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Cammy_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_2hk",
+      "input": "2HK",
+      "name": "Grounded Sweep",
+      "filename": "SF6_Cammy_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_2hk",
+      "input": "2HK",
+      "name": "Grounded Sweep",
+      "filename": "SF6_Cammy_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Cammy_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Cammy_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Cammy_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Cammy_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Cammy_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Cammy_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Cammy_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Cammy_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Cammy_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Cammy_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Cammy_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Cammy_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_4mp",
+      "input": "4MP",
+      "name": "Lift Uppercut",
+      "filename": "SF6_Cammy_4mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp",
+      "input": "4MP",
+      "name": "Lift Uppercut",
+      "filename": "SF6_Cammy_4mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp",
+      "input": "4MP",
+      "name": "Lift Uppercut",
+      "filename": "SF6_Cammy_4mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp",
+      "input": "4MP",
+      "name": "Lift Uppercut",
+      "filename": "SF6_Cammy_4mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp",
+      "input": "4MP",
+      "name": "Lift Uppercut",
+      "filename": "SF6_Cammy_4mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_4hk",
+      "input": "4HK",
+      "name": "Assault Blade",
+      "filename": "SF6_Cammy_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4hk",
+      "input": "4HK",
+      "name": "Assault Blade",
+      "filename": "SF6_Cammy_4hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4hk",
+      "input": "4HK",
+      "name": "Assault Blade",
+      "filename": "SF6_Cammy_4hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4hk",
+      "input": "4HK",
+      "name": "Assault Blade",
+      "filename": "SF6_Cammy_4hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_6hk",
+      "input": "6HK",
+      "name": "Delayed Ripper",
+      "filename": "SF6_Cammy_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_6hk",
+      "input": "6HK",
+      "name": "Delayed Ripper",
+      "filename": "SF6_Cammy_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_4mp_hk",
+      "input": "4MP~HK",
+      "name": "Lift Combination",
+      "filename": "SF6_Cammy_4mp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp_hk",
+      "input": "4MP~HK",
+      "name": "Lift Combination",
+      "filename": "SF6_Cammy_4hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp_hk",
+      "input": "4MP~HK",
+      "name": "Lift Combination",
+      "filename": "SF6_Cammy_4hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4mp_hk",
+      "input": "4MP~HK",
+      "name": "Lift Combination",
+      "filename": "SF6_Cammy_4hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Swing Combination",
+      "filename": "SF6_Cammy_5hp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Swing Combination",
+      "filename": "SF6_Cammy_5hp_hk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Swing Combination",
+      "filename": "SF6_Cammy_5hp_hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Swing Combination",
+      "filename": "SF6_Cammy_5hp_hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_5hp_hk",
+      "input": "5HP~HK",
+      "name": "Swing Combination",
+      "filename": "SF6_Cammy_5hp_hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_lplk",
+      "input": "LPLK",
+      "name": "Rough Landing",
+      "filename": "SF6_Cammy_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_lplk",
+      "input": "LPLK",
+      "name": "Rough Landing",
+      "filename": "SF6_Cammy_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_4lplk",
+      "input": "4LPLK",
+      "name": "Delta Throw",
+      "filename": "SF6_Cammy_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_4lplk",
+      "input": "4LPLK",
+      "name": "Delta Throw",
+      "filename": "SF6_Cammy_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_jlplk",
+      "input": "j.LPLK",
+      "name": "Leg Scissors Choke",
+      "filename": "SF6_Cammy_jlplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_jlplk",
+      "input": "j.LPLK",
+      "name": "Leg Scissors Choke",
+      "filename": "SF6_Cammy_jlplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_hphk",
+      "input": "HPHK",
+      "name": "Spin Raider",
+      "filename": "SF6_Cammy_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_hphk",
+      "input": "HPHK",
+      "name": "Spin Raider",
+      "filename": "SF6_Cammy_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_6hphk",
+      "input": "6HPHK",
+      "name": "Countersnipe (Block)",
+      "filename": "SF6_Cammy_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_6hphk",
+      "input": "6HPHK",
+      "name": "Countersnipe (Block)",
+      "filename": "SF6_Cammy_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Countersnipe (Recovery)",
+      "filename": "SF6_Cammy_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Countersnipe (Recovery)",
+      "filename": "SF6_Cammy_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Cammy_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Cammy_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Cammy_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Cammy_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Cammy_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Cammy_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236lk",
+      "input": "236LK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236lk",
+      "input": "236LK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236lk",
+      "input": "236LK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236k_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236lk",
+      "input": "236LK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236mk",
+      "input": "236MK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236mk",
+      "input": "236MK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236k_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236mk",
+      "input": "236MK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236k_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236mk",
+      "input": "236MK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hk",
+      "input": "236HK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hk",
+      "input": "236HK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hk",
+      "input": "236HK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hk",
+      "input": "236HK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hk_hold",
+      "input": "236[HK]",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hk_hold",
+      "input": "236[HK]",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hold_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hk_hold",
+      "input": "236[HK]",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hold_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hk_hold",
+      "input": "236[HK]",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236hk_hold_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236kk",
+      "input": "236KK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236kk",
+      "input": "236KK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236kk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236kk",
+      "input": "236KK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236kk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236kk",
+      "input": "236KK",
+      "name": "Spiral Arrow",
+      "filename": "SF6_Cammy_236kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_623lk",
+      "input": "623LK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_623lk",
+      "input": "623LK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_623mk",
+      "input": "623MK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_623mk",
+      "input": "623MK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_623hk",
+      "input": "623HK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_623hk",
+      "input": "623HK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_623hk_hold",
+      "input": "623[HK]",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623hk_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_623hk_hold",
+      "input": "623[HK]",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_623kk",
+      "input": "623KK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_623kk",
+      "input": "623KK",
+      "name": "Cannon Spike",
+      "filename": "SF6_Cammy_623kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_214lp",
+      "input": "214LP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_214lp",
+      "input": "214LP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_214mp",
+      "input": "214MP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_214mp",
+      "input": "214MP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_214hp",
+      "input": "214HP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_214hp",
+      "input": "214HP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_214pp",
+      "input": "214PP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_214pp",
+      "input": "214PP",
+      "name": "Quick Spin Knuckle",
+      "filename": "SF6_Cammy_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_j214k",
+      "input": "j.214K",
+      "name": "Cannon Strike",
+      "filename": "SF6_Cammy_j214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_j214k",
+      "input": "j.214K",
+      "name": "Cannon Strike",
+      "filename": "SF6_Cammy_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_j214kk",
+      "input": "j.214KK",
+      "name": "Cannon Strike",
+      "filename": "SF6_Cammy_j214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_j214kk",
+      "input": "j.214KK",
+      "name": "Cannon Strike",
+      "filename": "SF6_Cammy_j214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236p",
+      "input": "236P",
+      "name": "Hooligan Combination",
+      "filename": "SF6_Cammy_236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236p",
+      "input": "236P",
+      "name": "Hooligan Combination",
+      "filename": "SF6_Cammy_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hp_hold",
+      "input": "236[HP]",
+      "name": "Hooligan Combination",
+      "filename": "SF6_Cammy_236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold",
+      "input": "236[HP]",
+      "name": "Hooligan Combination",
+      "filename": "SF6_Cammy_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236pp",
+      "input": "236PP",
+      "name": "Hooligan Combination",
+      "filename": "SF6_Cammy_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp",
+      "input": "236PP",
+      "name": "Hooligan Combination",
+      "filename": "SF6_Cammy_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236p_no_input",
+      "input": "236P~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236p_no_input.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236p_no_input",
+      "input": "236P~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236p_no_input_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hp_hold_no_input",
+      "input": "236[HP]~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236p_no_input.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_no_input",
+      "input": "236[HP]~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236pp_no_input_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_no_input",
+      "input": "236[HP]~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236p_no_input_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_no_input",
+      "input": "236[HP]~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236pp_no_input_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236pp_no_input",
+      "input": "236PP~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236pp_no_input.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_no_input",
+      "input": "236PP~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236pp_no_input_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_no_input",
+      "input": "236PP~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236p_no_input_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_no_input",
+      "input": "236PP~No Input",
+      "name": "Razor's Edge Slicer",
+      "filename": "SF6_Cammy_236pp_no_input_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236p_k",
+      "input": "236P~K",
+      "name": "Hooligan Cannon Strike",
+      "filename": "SF6_Cammy_236p_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236p_k",
+      "input": "236P~K",
+      "name": "Hooligan Cannon Strike",
+      "filename": "SF6_Cammy_j214lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hp_hold_k",
+      "input": "236[HP]~K",
+      "name": "Hooligan Cannon Strike",
+      "filename": "SF6_Cammy_236p_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_k",
+      "input": "236[HP]~K",
+      "name": "Hooligan Cannon Strike",
+      "filename": "SF6_Cammy_j214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236pp_k",
+      "input": "236PP~K",
+      "name": "Hooligan Cannon Strike",
+      "filename": "SF6_Cammy_236pp_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_k",
+      "input": "236PP~K",
+      "name": "Hooligan Cannon Strike",
+      "filename": "SF6_Cammy_j214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236p_2k",
+      "input": "236P~2K",
+      "name": "Reverse Edge",
+      "filename": "SF6_Cammy_236p_2k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236p_2k",
+      "input": "236P~2K",
+      "name": "Reverse Edge",
+      "filename": "SF6_Cammy_236p_2k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hp_hold_2k",
+      "input": "236[HP]~2K",
+      "name": "Reverse Edge",
+      "filename": "SF6_Cammy_236hp_hold_2k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_2k",
+      "input": "236[HP]~2K",
+      "name": "Reverse Edge",
+      "filename": "SF6_Cammy_236pp_2k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236pp_2k",
+      "input": "236PP~2K",
+      "name": "Reverse Edge",
+      "filename": "SF6_Cammy_236pp_2k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_2k",
+      "input": "236PP~2K",
+      "name": "Reverse Edge",
+      "filename": "SF6_Cammy_236pp_2k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236p_lplk",
+      "input": "236P~LPLK",
+      "name": "Fatal Leg Twister",
+      "filename": "SF6_Cammy_236p_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236p_lplk",
+      "input": "236P~LPLK",
+      "name": "Fatal Leg Twister",
+      "filename": "SF6_Cammy_236p_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hp_hold_lplk",
+      "input": "236[HP]~LPLK",
+      "name": "Fatal Leg Twister",
+      "filename": "SF6_Cammy_236p_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_lplk",
+      "input": "236[HP]~LPLK",
+      "name": "Fatal Leg Twister",
+      "filename": "SF6_Cammy_236p_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236pp_lplk",
+      "input": "236PP~LPLK",
+      "name": "Fatal Leg Twister",
+      "filename": "SF6_Cammy_236pp_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_lplk",
+      "input": "236PP~LPLK",
+      "name": "Fatal Leg Twister",
+      "filename": "SF6_Cammy_236p_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236p_p",
+      "input": "236P~P",
+      "name": "Silent Step",
+      "filename": "SF6_Cammy_236p_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236p_p",
+      "input": "236P~P",
+      "name": "Silent Step",
+      "filename": "SF6_Cammy_236p_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236hp_hold_p",
+      "input": "236[HP]~P",
+      "name": "Silent Step",
+      "filename": "SF6_Cammy_236p_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236hp_hold_p",
+      "input": "236[HP]~P",
+      "name": "Silent Step",
+      "filename": "SF6_Cammy_236p_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236pp_p",
+      "input": "236PP~P",
+      "name": "Silent Step",
+      "filename": "SF6_Cammy_236pp_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236pp_p",
+      "input": "236PP~P",
+      "name": "Silent Step",
+      "filename": "SF6_Cammy_236p_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236236k",
+      "input": "236236K",
+      "name": "Spin Drive Smasher",
+      "filename": "SF6_Cammy_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236236k",
+      "input": "236236K",
+      "name": "Spin Drive Smasher",
+      "filename": "SF6_Cammy_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_214214p",
+      "input": "214214P",
+      "name": "Killer Bee Spin",
+      "filename": "SF6_Cammy_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_214214p",
+      "input": "214214P",
+      "name": "Killer Bee Spin",
+      "filename": "SF6_Cammy_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_j214214p",
+      "input": "j.214214P",
+      "name": "Aerial Killer Bee Spin",
+      "filename": "SF6_Cammy_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_j214214p",
+      "input": "j.214214P",
+      "name": "Aerial Killer Bee Spin",
+      "filename": "SF6_Cammy_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236236p",
+      "input": "236236P",
+      "name": "Delta Red Assault",
+      "filename": "SF6_Cammy_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236236p",
+      "input": "236236P",
+      "name": "Delta Red Assault",
+      "filename": "SF6_Cammy_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_236236p(ca)",
+      "input": "236236P",
+      "name": "Delta Red Assault (CA)",
+      "filename": "SF6_Cammy_236236p(ca).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "cammy_236236p(ca)",
+      "input": "236236P",
+      "name": "Delta Red Assault (CA)",
+      "filename": "SF6_Cammy_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Cammy_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Cammy_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "cammy_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Cammy_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Cammy 236mk.png",
+    "File:SF6 Cammy 236hp hold 2k.png",
+    "File:SF6 Cammy 236hk hold.png",
+    "File:SF6 Cammy 236hk.png",
+    "File:SF6 Cammy 214mp.png",
+    "File:SF6 Cammy 214hp.png",
+    "File:SF6 Cammy 623mk.png",
+    "File:SF6 Cammy 623hk hold.png",
+    "File:SF6 Cammy 623hk.png"
+  ],
+  "download_images": false
+}

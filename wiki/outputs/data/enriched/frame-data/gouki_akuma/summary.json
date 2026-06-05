@@ -1,0 +1,63 @@
+{
+  "official_rows": 91,
+  "supercombo_rows": 91,
+  "enriched_rows": 91,
+  "supercombo_only_rows": 25,
+  "enrichment_status_counts": {
+    "enriched": 22,
+    "enriched_review_required": 59,
+    "official_only": 10
+  },
+  "review_flag_counts": {
+    "ambiguous_match": 2,
+    "basic_field_conflict:active_duration,damage,startup": 1,
+    "basic_field_conflict:damage": 7,
+    "condition_dependent_supercombo_field:damage": 4,
+    "condition_dependent_supercombo_field:recovery": 11,
+    "condition_dependent_supercombo_field:recovery,startup": 1,
+    "condition_dependent_supercombo_field:startup": 4,
+    "multiple_candidates": 24,
+    "supercombo_row_reused": 23,
+    "uncomparable_basic_field:active_duration": 1,
+    "uncomparable_basic_field:active_duration,damage": 5,
+    "uncomparable_basic_field:active_duration,damage,recovery": 9,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 10,
+    "uncomparable_basic_field:active_duration,recovery": 4,
+    "uncomparable_basic_field:active_duration,recovery,startup": 10,
+    "uncomparable_basic_field:damage": 4,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 10,
+    "uncomparable_basic_field:startup": 3
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 1,
+    "damage": 8,
+    "startup": 1
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 39,
+    "damage": 30,
+    "recovery": 45,
+    "startup": 23
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "akuma_214lk",
+    "akuma_236hp",
+    "akuma_236k",
+    "akuma_236lp",
+    "akuma_236mp",
+    "akuma_236pp",
+    "akuma_j236p",
+    "akuma_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 20,
+    "supercombo_only_taunt": 5
+  },
+  "official_csv": "wiki/outputs/data/frame-data/gouki_akuma/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/gouki_akuma/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/gouki_akuma/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/gouki_akuma/classic-supercombo.csv"
+}

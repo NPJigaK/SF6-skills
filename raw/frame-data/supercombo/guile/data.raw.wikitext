@@ -1,0 +1,2215 @@
+{{Character Subnav SF6 | chara=Guile}}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Guile
+| name          = Guile
+| portrait      = SF6 Guile Portrait.png
+| icon          = SF6 Guile Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.043
+| bwdWalkSpd    = 0.032
+| fwdDashSpd    = 21
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.567
+| bwdDashDist   = 0.74
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.805
+| dRushBlock    = 1.898
+| dRushMax      = 3.461
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Guile_5LP.png
+| hitboxes      = SF6_Guile_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 7
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-2}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 14
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.07
+| rangeNotes    = Slightly more range than 2LP while still allowing link to 5HP
+| notes         = Chains into 5LP/2LP/2LK; SA2 cancel: +7/+1
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Guile_5MP.png
+| hitboxes      = SF6_Guile_5mp_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 3
+| recovery      = 15
+| total         = 24
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 15 (17 TC)
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|E|0}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|VP|+4}}
+| hitstun       = 24
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.94
+| notes         = Main combo starter, can chain into 4HP Target Combo; SA2 cancel: +17/+11
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Guile_5HP.png
+| hitboxes      = SF6_Guile_5hp_hitbox_preview.png, SF6_Guile_5hp_hitbox_1.png, SF6_Guile_5hp_hitbox_2.png
+| damage        = 900
+| dmgScaling    = 20% Starter
+| startup       = 7
+| active        = 3
+| recovery      = 23
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|M|-1}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+14 Stagger}}
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|P|+3}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.408 (1.251)
+| notes         = Stagger effect makes it useful as a whiff punish; extends a hurtbox 1f before active that is vulnerable to projectiles; SA2 cancel: +18/+13
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Guile_5LK.png
+| hitboxes      = SF6_Guile_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 12
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 12 (DR: 13)
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.27
+| notes         = Decent range light poke, but must let go of back charge before LK input making the execution a bit harder; SA2 cancel: +10/+6; DR cancel is delayed until after 1st recovery frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Guile_5MK.png
+| hitboxes      = SF6_Guile_5mk_hitbox.png
+| damage        = 700
+| startup       = 7
+| active        = 5
+| recovery      = 18
+| total         = 29
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 24
+| blockstun     = 19
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.436
+| notes         = Solid anti-air
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Guile_5HK.png
+| hitboxes      = SF6_Guile_5hk_hitbox.png
+| damage        = 800
+| dmgScaling    = 20% Starter
+| startup       = 13
+| active        = 3
+| recovery      = 21
+| total         = 36
+| guard         = LH
+| cancel        = SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 28
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.906
+| notes         = SA2 cancel: +21/+13; can link into 2LP at point blank, 2MP on close range Counter-hit, or 5HP on mid-range Punish Counter
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Guile_2LP.png
+| hitboxes      = SF6_Guile_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 8
+| total         = 14
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+4}}
+| DRcancelBlk   = {{sf6-adv|M|-3}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 16
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.03
+| pushbackHit   = 0.468
+| pushbackBlk   = 0.389
+| notes         = Chains into 5LP/2LP/2LK; SA2 cancel: +9/+2; DR cancel is delayed until after active frames; topmost hurtbox on frames 1-6 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Guile_2MP.png
+| hitboxes      = SF6_Guile_2mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 3
+| recovery      = 13(16)
+| total         = 21(24)
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 15 (16 TC)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| DRcancelHit   = {{sf6-adv|VP|+10}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 20
+| blockstun     = 14
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.22
+| notes         = 3f extra recovery on whiff; low pushback on hit; chains into itself for a launching Target Combo; has an extended hurtbox on whiff until the end of recovery; SA2 cancel: +13/+7; topmost hurtbox on frames 1-8 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Guile_2HP.png
+| hitboxes      = SF6_Guile_2hp_hitbox_preview.png, SF6_Guile_2hp_hitbox_1.png, SF6_Guile_2hp_hitbox_2.png
+| damage        = 900
+| startup       = 9
+| active        = 5
+| recovery      = 20
+| total         = 33
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+4}}
+| afterDRBlk    = {{sf6-adv|VM|-5}}
+| hitstun       = 25
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.91
+| notes         = Good vertical anti-air (cannot hit cross-up); forces stand on hit (useful to create consistent spacing in Sonic Boom loops); SA2 cancel: +18/+9
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Guile_2LK.png
+| hitboxes      = SF6_Guile_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 12
+| total         = 18
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.17
+| notes         = Chains into 5LP/2LP/2LK
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Guile_2MK.png
+| hitboxes      = SF6_Guile_2mk_hitbox_preview.png, SF6_Guile_2mk_hitbox_1.png, SF6_Guile_2mk_hitbox_2.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 18
+| total         = 28
+| guard         = L
+| cancel        = TC
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 25
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.593 (1.423)
+| notes         = Good poke, especially when used from Drive Rush; significantly more range on 2nd active frame (may not work as an 8f punish at some ranges)
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Dragon Sweep
+| images        = SF6_Guile_2HK.png, SF6_Guile_2HK_2.png
+| hitboxes      = SF6_Guile_2hk_hitbox_1.png, SF6_Guile_2hk_hitbox_2.png
+| damage        = 450x2
+| dmgScaling    = 20% Starter
+| startup       = 9
+| active        = 2(16)3
+| recovery      = 21
+| total         = 50
+| guard         = L,L
+| cancel        = TC
+| hitconfirm    = 26 {{sf6-adv|PC|(29 PC)}}
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = HKD +44
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| afterDRHit    = KD +34
+| afterDRBlk    = {{sf6-adv|VM|-8}}
+| hitstun       = 19,-
+| blockstun     = 19,12
+| hitstop       = 13,13
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [10000]
+| driveGain     = 1500x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1
+| jugIncrease   = 1,120
+| jugLimit      = 5,5
+| atkRange      = 2.037 (1.739)
+| rangeNotes    = 2 hits; Range: 2nd / 1st; Range 1.76 on final active frame of 1st hit
+| notes         = 2 hits; both hits have juggle potential; 1st hit launches opponent into limited juggle state on Punish Counter; Target Combo follow-up only combos on Drive Rush, Punish Counter, or when 2HK is juggled into
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jump LP
+| images        = SF6_Guile_jlp.png
+| hitboxes      = SF6_Guile_jlp_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4(+9)}}
+| blockAdv      = {{sf6-adv|E|0}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+8(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| notes         = Can be used as a fuzzy instant overhead
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jump MP
+| images        = SF6_Guile_jmp.png
+| hitboxes      = SF6_Guile_jmp_hitbox.png
+| damage        = 700
+| startup       = 7
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+11)}}
+| blockAdv      = {{sf6-adv|VP|+5(+7)}}
+| punishAdv     = {{sf6-adv|VP|+13(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.11
+| notes         = Puts airborne opponents into limited juggle state; lower body projectile invuln 7-22f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jump HP
+| images        = SF6_Guile_jhp.png
+| hitboxes      = SF6_Guile_jhp_hitbox_preview.png, SF6_Guile_jhp_hitbox_1.png, SF6_Guile_jhp_hitbox_2.png
+| damage        = 800
+| startup       = 9
+| active        = 4
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7(+15)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+11)}}
+| punishAdv     = {{sf6-adv|VP|+11(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.24
+| notes         = Spikes airborne opponents on counter-hit/Punish Counter; lower body projectile invuln 9-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jump LK
+| images        = SF6_Guile_jlk.png
+| hitboxes      = SF6_Guile_jlk_hitbox.png
+| damage        = 300
+| startup       = 6
+| active        = 10
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+9(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.55
+| notes         = Cross-up
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jump MK
+| images        = SF6_Guile_jmk.png
+| hitboxes      = SF6_Guile_jmk_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 7
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+13)}}
+| blockAdv      = {{sf6-adv|VP|+7(+9)}}
+| punishAdv     = {{sf6-adv|VP|+15(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.09
+| notes         = Lower body projectile invuln 7-20f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jump HK
+| images        = SF6_Guile_jhk.png
+| hitboxes      = SF6_Guile_jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+10(+15)}}
+| blockAdv      = {{sf6-adv|VP|+6(+11)}}
+| punishAdv     = {{sf6-adv|VP|+14(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.14
+| notes         = Decent horizontal jump-in; lower body projectile invuln 10-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 6MP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_6mp | moveType = ground_normal
+| input         = 6MP
+| name          = Full Bullet Magnum
+| images        = SF6_Guile_6mp.png
+| hitboxes      = SF6_Guile_6mp_hitbox.png
+| damage        = 800
+| startup       = 20
+| active        = 3
+| recovery      = 19
+| total         = 41
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 24
+| blockstun     = 19
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.465
+| notes         = Fast and high damage for a command overhead; spike knockdown vs. airborne opponents
+}}
+
+===== 6HP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_6hp | moveType = ground_normal
+| input         = 6HP
+| name          = Spinning Back Knuckle
+| images        = SF6_Guile_6hp.png
+| hitboxes      = SF6_Guile_6hp_hitbox.png
+| damage        = 800
+| startup       = 16
+| active        = 3
+| recovery      = 20
+| total         = 38
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|VP|+7}}
+| hitstun       = 28
+| blockstun     = 26
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [12000]
+| driveGain     = 5000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.921 (1.856)
+| notes         = Whiffs vs. crouching opponents; has some juggle potential; long forward movement
+}}
+
+===== 4HP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4hp | moveType = ground_normal
+| input         = 4HP
+| name          = Burning Straight
+| images        = SF6_Guile_4hp.png
+| hitboxes      = SF6_Guile_4hp_hitbox.png
+| damage        = 800
+| startup       = 9
+| active        = 3
+| recovery      = 21
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|E|0}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.49
+| notes         = Good buffer tool that allows Guile to maintain back charge; SA2 cancel: +18/+13
+}}
+
+===== 4LK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4lk | moveType = ground_normal
+| input         = 4LK
+| name          = Knee Bazooka
+| images        = SF6_Guile_4lk.png
+| hitboxes      = SF6_Guile_4lk_hitbox.png
+| damage        = 500
+| startup       = 8
+| active        = 5
+| recovery      = 15
+| total         = 27
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|E|0}}{{sf6-adv|VP|(+4)}}
+| blockAdv      = {{sf6-adv|VM|-4}}{{sf6-adv|E|(0)}}
+| punishAdv     = {{sf6-adv|VP|+4(+8)}}
+| perfParryAdv  = {{sf6-adv|VM|-18(-14)}}
+| afterDRHit    = {{sf6-adv|VP|+4(+8)}}
+| afterDRBlk    = {{sf6-adv|E|0}}{{sf6-adv|VP|(+4)}}
+| hitstun       = 20
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.587 (1.323)
+| notes         = 7-17f low crush (not airborne); has some juggle potential; great approach option out of Drive Rush; the final active frame requires incredible precise spacing to connect (for practical purposes, the max frame advantage is {{sf6-adv|P|+3}}/{{sf6-adv|M|-1}})
+}}
+
+===== 4MK or 6MK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4mk_or_6mk | moveType = ground_normal
+| input         = 4MK or 6MK
+| name          = Rolling Sobat
+| images        = SF6_Guile_4mk_or_6mk.png
+| hitboxes      = SF6_Guile_6mk_hitbox.png, SF6_Guile_4mk_hitbox.png
+| damage        = 700
+| startup       = 11
+| active        = 3
+| recovery      = 18(21)
+| total         = 31(34)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+3}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 24
+| blockstun     = 15
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [6000]
+| driveGain     = 1500
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.863 Fwd / 0.767 Back
+| notes         = 7-17f low crush (not airborne); has some juggle potential; 6MK version has 3f extra recovery on whiff; strong neutral tool; better hitbox priority on 4MK version
+}}
+
+===== 6HK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_6hk | moveType = ground_normal
+| input         = 6HK
+| name          = Reverse Spin Kick
+| images        = SF6_Guile_6hk.png
+| hitboxes      = SF6_Guile_6hk_hitbox.png
+| damage        = 1000
+| startup       = 17
+| active        = 3
+| recovery      = 26
+| total         = 45
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|M|-1}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +55 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| afterDRHit    = {{sf6-adv|P|+3}}
+| afterDRBlk    = {{sf6-adv|VM|-4}}
+| hitstun       = 28
+| blockstun     = 21
+| hitstop       = 15
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 4-28 Throw
+| jugStart      = 1<br>{{sf6-adv|PC|[-1 PC Ground]}}
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.086
+| notes         = 4-28f low crush/throw invuln (not airborne); Counter-hit causes knockdown vs. grounded/airborne opponents (KD +29~); Punish Counter causes crumple vs. grounded and limited juggle state vs. airborne; extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+===== 3HK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_3hk | moveType = ground_normal
+| input         = 3HK
+| name          = Guile High Kick
+| images        = SF6_Guile_3hk.png
+| hitboxes      = SF6_Guile_3hk_hitbox.png
+| damage        = 1000
+| startup       = 10
+| active        = 3
+| recovery      = 23
+| total         = 35
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 23(30)
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = KD +51 Spin
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = {{sf6-adv|VP|+9}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+4}}
+| afterDRBlk    = {{sf6-adv|VM|-5}}
+| hitstun       = -
+| blockstun     = 17
+| hitstop       = 13(20)
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1<br>{{sf6-adv|PC|[0 PC]}}
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.559
+| notes         = Whiffs on crouching opponents unless they extend a vertical hurtbox; puts airborne opponents into limited juggle state on CH; puts grounded/airborne opponents into free juggle state on PC; not a reliable anti-air; SA2 cancel: +12/+3; special/DR cancel is delayed until after 5th recovery frame; extends a hurtbox 1f before active that is vulnerable to projectiles 
+}}
+
+== Target Combos ==
+===== 5MP~4HP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_5mp_4hp | moveType = ground_normal
+| input         = 5MP~4HP
+| name          = Recoil Cannon
+| images        = SF6_Guile_5mp_4hp.png
+| hitboxes      = SF6_Guile_5mp_4hp_hitbox.png
+| damage        = 600
+| startup       = 16
+| active        = 3
+| recovery      = 26
+| total         = 44
+| guard         = LH
+| cancel        = Sp SA kara
+| hitconfirm    = 50-51
+| hitAdv        = KD +35
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = KD +35
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| DRcancelHit   = KD +54
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [7000]
+| driveGain     = 1000
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = 2f gap on block; puts opponents into limited juggle state; frames 8-9 of 4HP animation are kara-cancelable (shifts Guile backwards); SA2 cancel: KD+57/+13
+}}
+
+===== 2MP~2MP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_2mp_2mp | moveType = ground_normal
+| input         = 2MP~2MP
+| name          = Double Shot
+| images        = SF6_Guile_2mp_2mp.png
+| hitboxes      = SF6_Guile_2mp_2mp_hitbox.png
+| damage        = 360
+| dmgScaling    = 10% Immediate
+| startup       = 12
+| active        = 3
+| recovery      = 16
+| total         = 30
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 41(15)
+| hitAdv        = KD +44
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +44
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| DRcancelHit   = KD +53
+| DRcancelBlk   = {{sf6-adv|P|+3}}
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 1500
+| driveDmgHit   = [4000]
+| driveGain     = 500
+| superGainHit  = 250 (175)
+| superGainBlk  = 125 (62)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = Puts opponents into limited juggle state; +12 extra KD Adv when canceled into SA2; 2f gap between hits on block; SA2 cancel: KD+56/+6
+}}
+
+===== 2MK~6MP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_2mk_6mp | moveType = ground_normal
+| input         = 2MK~6MP
+| name          = Drake Fang
+| images        = SF6_Guile_6mp.png
+| hitboxes      = SF6_Guile_6mp_hitbox.png
+| damage        = 800(640)
+| startup       = 20
+| active        = 3
+| recovery      = 21
+| total         = 42
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = KD +47
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| hitstun       = 25
+| blockstun     = 19
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [2000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = () refers to 20% scaled damage from 2MK combo starter; low into overhead string; has a 5f gap between hits on block that can lead to trade combos; causes spike knockdown vs. airborne opponents; Counter-hit/Punish Counter puts the opponent into a limited juggle OTG bounce state; 2nd hit maintains the CH/PC state from the initial 2MK
+}}
+
+===== 2HK~3HK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_2hk_3hk | moveType = ground_normal
+| input         = 2HK~3HK
+| name          = Phantom Cutter
+| images        = SF6_Guile_3hk.png
+| hitboxes      = SF6_Guile_3hk_hitbox.png
+| damage        = 600(480)
+| startup       = 10
+| active        = 3
+| recovery      = 25
+| total         = 37
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 57 {{sf6-adv|PC|(60 PC)}}
+| hitAdv        = KD +33
+| blockAdv      = {{sf6-adv|VM|-10(-30)}}
+| punishAdv     = KD +35
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = KD +44(45)
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| blockstun     = 16
+| hitstop       = 13
+| driveDmgBlk   = 7000
+| driveDmgHit   = [7000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = (refers to 20% scaled damage from 2HK); only combos from 1st hit of 2HK on Punish Counter, after Drive Rush, or in juggles; very lenient confirm window; puts opponent into limited juggle state; whiffs on crouching opponents (works after Punish Counter 2HK due to juggle state); SA2 cancel: KD +47/+4; special/DR cancel is delayed until after 5th recovery frame
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_lplk | moveType = throw
+| input         = LPLK
+| name          = Dragon Suplex
+| images        = SF6_Guile_lplk.png
+| hitboxes      = SF6_Guile_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +15
+| blockAdv      = -
+| punishAdv     = HKD +15
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = No corner throw loop without Drive Rush (with frame-perfect timing, can throw loop vs. Blanka, E. Honda, and Zangief); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Judo Throw
+| images        = SF6_Guile_4lplk.png
+| hitboxes      = SF6_Guile_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +18
+| blockAdv      = -
+| punishAdv     = HKD +18
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Side switch; Drive Rush is required for throw/strike oki after back throwing opponent into corner; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== j.LPLK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_jlplk | moveType = throw
+| input         = j.LPLK
+| name          = Flying Mare
+| images        = SF6_Guile_jlplk.png
+| hitboxes      = SF6_Guile_jlplk_hitbox.png
+| damage        = 1200 (2040)
+| startup       = 5
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +21(23)
+| blockAdv      = -
+| punishAdv     = HKD +21(23)
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000(2800)]}}
+| atkRange      = 0.67
+| notes         = Higher air throw gives slightly better KD Adv.; gives oki if near the corner
+}}
+
+===== j.4LPLK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_j4lplk | moveType = throw
+| input         = j.4LPLK
+| name          = Flying Buster Drop
+| images        = SF6_Guile_j4lplk.png
+| hitboxes      = SF6_Guile_j4lplk_hitbox.png
+| damage        = 1200 (2040)
+| startup       = 5
+| active        = 3
+| recovery      = 3 land
+| total         = -
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +15
+| blockAdv      = -
+| punishAdv     = HKD +15
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000(2800)]}}
+| atkRange      = 0.67
+| notes         = Side switch; if throwing opponent back into the corner, can Drive Rush for meaty strike (no true throw oki)
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_hphk | moveType = drive
+| input         = HPHK
+| name          = Blitz Combination
+| images        = SF6_Guile_hphk.png
+| hitboxes      = SF6_Guile_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.481
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Strike Eagle (Block)
+| images        = SF6_Guile_6hphk.png
+| hitboxes      = SF6_Guile_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.01
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Guile | moveId = Guile_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Strike Eagle (Recovery)
+| images        = SF6_Guile_6hphk.png
+| hitboxes      = SF6_Guile_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.01
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Guile_mpmk.png
+| hitboxes      = SF6_Guile_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Guile | moveId = guile_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Guile_66.png
+| hitboxes      = SF6_Guile_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.805 (min/throw), 1.898 (min/block), 3.461 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Guile | moveId = guile_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Guile_66.png
+| hitboxes      = SF6_Guile_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Sonic Boom ===
+===== [4]6LP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_46lp | moveType = special
+| input         = [4]6LP
+| name          = Sonic Boom
+| images        = SF6_Guile_46lp.png, SF6_Guile_46lp_perfect.png
+| hitboxes      = SF6_Guile_46lp_hitbox.png
+| damage        = 550 (600)
+| chip          = 138 (150)
+| startup       = 10
+| active        = -
+| recovery      = 30
+| total         = 40
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 11
+| hitAdv        = {{sf6-adv|P|+3{{sf6-adv|VP|(+4)}}}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7(8)}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| hitstun       = 34(35)
+| blockstun     = 28
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.047
+| notes         = 1-hit projectile; 45f charge (charge lasts 10f after releasing back direction); input 6+LP within 3f of each other for Perfect timing (better damage and Hit advantage); can follow up with Sonic Break (6P) during SA2; arm hurtbox appears 2f before active
+}}
+
+===== [4]6MP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_46mp | moveType = special
+| input         = [4]6MP
+| name          = Sonic Boom
+| images        = SF6_Guile_46mp.png
+| hitboxes      = SF6_Guile_46mp_hitbox.png
+| damage        = 550 (600)
+| chip          = 138 (150)
+| startup       = 10
+| active        = -
+| recovery      = 30
+| total         = 40
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 11
+| hitAdv        = {{sf6-adv|P|+3{{sf6-adv|VP|(+4)}}}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7(8)}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| hitstun       = 34(35)
+| blockstun     = 28
+| hitstop       = 8
+| driveDmgBlk   = 4000
+| driveDmgHit   = [3000]
+| driveGain     = 500
+| superGainHit  = 450 (315)
+| superGainBlk  = 225 (112)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.064
+| notes         = 1-hit projectile; 45f charge (charge lasts 10f after releasing back direction); input 6+MP within 3f of each other for Perfect timing (better damage and Hit advantage); can follow up with Sonic Break (6P) during SA2; arm hurtbox appears 2f before active; has the most Drive Damage and Super Gain of all meterless versions, giving it a unique purpose
+}}
+
+===== [4]6HP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_46hp | moveType = special
+| input         = [4]6HP
+| name          = Sonic Boom
+| images        = SF6_Guile_46hp.png
+| hitboxes      = SF6_Guile_46hp_hitbox.png
+| damage        = 550 (600)
+| chip          = 138 (150)
+| startup       = 10
+| active        = -
+| recovery      = 30
+| total         = 40
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 11
+| hitAdv        = {{sf6-adv|P|+3{{sf6-adv|VP|(+4)}}}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7(8)}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| hitstun       = 34(35)
+| blockstun     = 28
+| hitstop       = 8
+| driveDmgBlk   = 3000
+| driveDmgHit   = [3000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.091
+| notes         = 1-hit projectile; 45f charge (charge lasts 10f after releasing back direction); input 6+HP within 3f of each other for Perfect timing (better damage and Hit advantage); can follow up with Sonic Break (6P) during SA2; arm hurtbox appears 2f before active
+}}
+
+===== [4]6PP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_46pp | moveType = special
+| input         = [4]6PP
+| name          = Sonic Boom
+| images        = SF6_Guile_46pp.png
+| hitboxes      = SF6_Guile_46pp_hitbox.png
+| damage        = 500x2 (1000)
+| chip          = 125x2
+| dmgScaling    = 20% Starter
+| startup       = 10
+| active        = -
+| recovery      = 28
+| total         = 38
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 11
+| hitAdv        = KD +48
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD +48
+| perfParryAdv  = {{sf6-adv|VM|-7}}
+| blockstun     = 32 total
+| hitstop       = 5,6
+| driveDmgBlk   = 1000x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 1,2
+| jugLimit      = 7,8
+| projSpeed     = 0.12
+| notes         = 2-hit OD projectile; 45f charge (charge lasts 13f after releasing back direction); does not have a Perfect timing version; puts opponents into limited juggle state; can follow up with Sonic Break (6P) during SA2; SA2 cancel: KD+65/+25
+}}
+
+=== Somersault Kick ===
+===== [2]8LK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_28lk | moveType = special
+| input         = [2]8LK
+| name          = Somersault Kick
+| images        = SF6_Guile_28lk.png, SF6_Guile_28lk_perfect.png
+| hitboxes      = SF6_Guile_28lk_hitbox.png
+| damage        = 1000 (1200)
+| chip          = 250 (300)
+| dmgScaling    = 30% Starter
+| startup       = 5
+| active        = 6
+| recovery      = 26+15 land
+| total         = 51
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17
+| hitAdv        = KD +36
+| blockAdv      = {{sf6-adv|VM|-30}}
+| punishAdv     = KD +36
+| perfParryAdv  = {{sf6-adv|VM|-45}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-7 Air
+| airborne      = 8-36 (FKD)
+| jugStart      = 51
+| jugIncrease   = 51
+| jugLimit      = 50
+| atkRange      = 1.095 (1st)
+| notes         = 45f charge (charge lasts 12f after releasing down direction); cannot hit cross-ups; input 8+LK within 3f of each other for Perfect timing (better damage); does 200 less damage on active frames 3-6 (800 regular, 1000 perfect)
+}}
+
+===== [2]8MK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_28mk | moveType = special
+| input         = [2]8MK
+| name          = Somersault Kick
+| images        = SF6_Guile_28mk.png
+| hitboxes      = SF6_Guile_28mk_hitbox.png
+| damage        = 1100 (1300)
+| chip          = 275 (325)
+| dmgScaling    = 30% Starter
+| startup       = 6
+| active        = 6
+| recovery      = 27+15 land
+| total         = 53
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17
+| hitAdv        = KD +37
+| blockAdv      = {{sf6-adv|VM|-31}}
+| punishAdv     = KD +37
+| perfParryAdv  = {{sf6-adv|VM|-46}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-8 Air
+| airborne      = 8-38 (FKD)
+| jugStart      = 51
+| jugIncrease   = 51
+| jugLimit      = 50
+| atkRange      = 1.249 (1st)
+| notes         = 45f charge (charge lasts 12f after releasing down direction); cannot hit cross-ups; input 8+MK within 3f of each other for Perfect timing (better damage); does 300 less damage on active frames 3-6 (800 regular, 1000 perfect)
+}}
+
+===== [2]8HK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_28hk | moveType = special
+| input         = [2]8HK
+| name          = Somersault Kick
+| images        = SF6_Guile_28hk.png
+| hitboxes      = SF6_Guile_28hk_hitbox.png
+| damage        = 1200 (1400)
+| chip          = 300 (350)
+| dmgScaling    = 30% Starter
+| startup       = 7
+| active        = 6
+| recovery      = 28+15 land
+| total         = 55
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17
+| hitAdv        = KD +39
+| blockAdv      = {{sf6-adv|VM|-32}}
+| punishAdv     = KD +39
+| perfParryAdv  = {{sf6-adv|VM|-47}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 1-9 Air
+| airborne      = 8-40 (FKD)
+| jugStart      = 51
+| jugIncrease   = 51
+| jugLimit      = 50
+| atkRange      = 1.42 (1st)
+| notes         = 45f charge (charge lasts 12f after releasing down direction); cannot hit cross-ups; input 8+HK within 3f of each other for Perfect timing (better damage); does 400 less damage on active frames 3-6 (800 regular, 1000 perfect)
+}}
+
+===== [2]8KK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_28kk | moveType = special
+| input         = [2]8KK
+| name          = Somersault Kick
+| images        = SF6_Guile_28kk.png
+| hitboxes      = SF6_Guile_28kk_hitbox.png
+| damage        = 1000(700),600
+| chip          = 250,150
+| startup       = 6
+| active        = 4,2
+| recovery      = 26+20 land
+| total         = 57
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +29
+| blockAdv      = {{sf6-adv|VM|-33(-37)}}
+| punishAdv     = KD +29
+| perfParryAdv  = {{sf6-adv|VM|-50}}
+| blockstun     = 19 total (15 crouch)
+| hitstop       = 15,15
+| driveDmgBlk   = 2000x2
+| driveGain     = -20000
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| invuln        = 1-11 Full
+| airborne      = 8-37 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,110
+| jugLimit      = 110,120
+| atkRange      = 1.33 (1st)
+| notes         = 45f charge (charge lasts 15f after releasing down direction); cannot hit cross-ups; does not have a Perfect timing version; 2nd hit whiffs vs. crouch block (4f worse advantage, less chip damage); 1st hit does 300 less damage on active frames 3-4 (high anti-air or long range connect)
+}}
+
+=== Sonic Blade ===
+===== 214LP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214lp | moveType = special
+| input         = 214LP
+| name          = Sonic Blade
+| images        = SF6_Guile_214lp.png
+| hitboxes      = SF6_Guile_214lp_hitbox.png, SF6_Guile_214lp_hitbox2.png
+| damage        = 400
+| chip          = 100
+| startup       = 16
+| active        = [45]
+| recovery      = 26
+| total         = 42
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = {{sf6-adv|M|-3}}
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = {{sf6-adv|P|+1}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| hitstun       = 24
+| blockstun     = 23
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.00
+| notes         = 1 hit; [] refers to stationary projectile active time; can enhance a Sonic Boom by inputting 6P during recovery (no charge required), or by using [4]6P through the Sonic Blade after 214P recovery; Guile has a wide lower body hurtbox, making him vulnerable to ranged low pokes and sweeps; cannot activate SA1 while Sonic Blade is active on-screen
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214mp | moveType = special
+| input         = 214MP
+| name          = Sonic Blade
+| images        = SF6_Guile_214mp.png
+| hitboxes      = SF6_Guile_214mp_hitbox.png
+| damage        = 400
+| chip          = 100
+| startup       = 21
+| active        = [85]
+| recovery      = 29
+| total         = 50
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = {{sf6-adv|VM|-6}}
+| blockAdv      = {{sf6-adv|VM|-7}}
+| punishAdv     = {{sf6-adv|M|-2}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 24
+| blockstun     = 23
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.004
+| notes         = 1 hit; [] refers to projectile active time (very slow forward movement); can enhance a Sonic Boom by inputting 6P during recovery (no charge required), or by using [4]6P through the Sonic Blade after 214P recovery; Guile has a wide lower body hurtbox, making him vulnerable to ranged low pokes and sweeps; cannot activate SA1 while Sonic Blade is active on-screen
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214hp | moveType = special
+| input         = 214HP
+| name          = Sonic Blade
+| images        = SF6_Guile_214hp.png
+| hitboxes      = SF6_Guile_214hp_hitbox.png
+| damage        = 250x2 (500)
+| chip          = 63x2
+| startup       = 31
+| active        = [100]
+| recovery      = 23
+| total         = 54
+| guard         = LH
+| cancel        = SA3
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|P|+1}}
+| perfParryAdv  = {{sf6-adv|M|-2}}
+| hitstun       = 25
+| blockstun     = 23 total
+| hitstop       = 4,4
+| driveDmgBlk   = 1000x2
+| driveDmgHit   = [3000]
+| driveGain     = 1000x2
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1 air
+| jugIncrease   = 1,1
+| jugLimit      = 1,1
+| projSpeed     = 0.005
+| notes         = 2 hits; [] refers to projectile active time (very slow forward movement); can enhance a Sonic Boom by inputting 6P during recovery (no charge required), or by using [4]6P through the Sonic Blade after 214P recovery; Guile has a wide lower body hurtbox, making him vulnerable to ranged low pokes and sweeps; cannot activate SA1 while Sonic Blade is active on-screen
+}}
+
+===== 214P~6P =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214p_6p | moveType = special
+| input         = 214P ~ 6P
+| name          = Sonic Cross
+| images        = SF6_Guile_214p_6p.png, SF6_Guile_214p_6p_perfect.png
+| hitboxes      = SF6_Guile_214p_6p_hitbox.png
+| damage        = 600(800),400
+| chip          = 150(200),100
+| startup       = 10
+| active        = -
+| recovery      = 28
+| total         = 38
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 11
+| hitAdv        = KD +44~
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = KD +44~
+| perfParryAdv  = {{sf6-adv|VM|-9~}}
+| blockstun     = 28
+| hitstop       = 8,12
+| driveDmgBlk   = [1500/3000/2000],2000
+| driveDmgHit   = [1500x2]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 1,2
+| jugLimit      = 1,8
+| projSpeed     = LP 0.035 (9f~) / MP 0.064 / HP 0.081
+| notes         = No charge required to throw projectile; the 6P button strength determines projectile speed and Drive damage on block (LP 3500 / MP 5000 / HP 4000); enhanced version becomes a 2-hit projectile that puts opponents into limited juggle state on hit; input 6+P within 3f of each other for Perfect Boom (+200 damage on 1st hit); if Sonic Blade dissipates before Boom passes through it, the projectile is not enhanced; the projectile speed of 214P~6LP is very slow for the first 8 frames (almost stationary); arm hurtbox appears 2f before active
+}}
+
+===== 214P~6PP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214p_6pp | moveType = special
+| input         = 214P ~ 6PP
+| name          = Sonic Cross
+| images        = SF6_Guile_214p_6pp.png
+| hitboxes      = SF6_Guile_214p_6pp_hitbox.png
+| damage        = 400x2,500 (1300)
+| chip          = 100x2,125
+| startup       = 10
+| active        = -
+| recovery      = 28
+| total         = 38
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 11
+| hitAdv        = KD +48~
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD +48~
+| perfParryAdv  = {{sf6-adv|VP|+4~}}
+| blockstun     = 30
+| hitstop       = 8x3
+| driveDmgBlk   = 2500x2,1000
+| driveDmgHit   = [1000x2,3000]
+| driveGain     = -20000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 1,2
+| jugLimit      = 7,8
+| projSpeed     = 1-8f: 0.005+0.005/frame; 9f: 0.155 + 0.005/frame
+| notes         = No charge required to throw projectile; enhanced version becomes a 3-hit OD projectile that puts opponents into limited juggle state on hit; if Sonic Blade dissipates before OD Boom passes through it, the projectile remains a regular OD Sonic Boom; SA2 cancel: KD+65/+25; projectile speed accelerates until no longer on screen
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214pp | moveType = special
+| input         = 214PP
+| name          = Sonic Cross
+| images        = SF6_Guile_214pp.png
+| hitboxes      = SF6_Guile_214pp_hitbox.png
+| damage        = 300x2
+| chip          = 75x2
+| startup       = 15
+| active        = [100]
+| recovery      = 24
+| total         = 39
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 6
+| hitAdv        = KD +57
+| blockAdv      = {{sf6-adv|VM|-4}}
+| punishAdv     = KD +57
+| perfParryAdv  = {{sf6-adv|M|-3}}
+| blockstun     = 21 total
+| hitstop       = 5,5
+| driveDmgBlk   = 1000x2
+| driveDmgHit   = [3000]
+| driveGain     = -20000
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 2 ground / 1,1 air
+| jugIncrease   = 1,1
+| jugLimit      = 1,1
+| projSpeed     = 0.0025 L / 0.005 M / 0.01 H
+| notes         = 2-hit OD projectile; button combination determines forward movement speed of the projectile (LP+MP slowest, LP+HP mid, MP+HP fastest); [] refers to projectile active time; on grounded connect, 1st hit knocks down and the 2nd hit remains active; either hit puts opponent into limited juggle state; cannot activate SA1 while Sonic Blade is active on-screen; SA2 cancel: KD+68/+11
+}}
+
+===== 214PP~6P =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214pp_6p | moveType = special
+| input         = 214PP ~ 6P
+| name          = Sonic Cross
+| images        = SF6_Guile_214pp_6p.png
+| hitboxes      = SF6_Guile_214pp_6p_hitbox.png
+| damage        = 400x2,500 (1300)
+| chip          = 100x2,125
+| startup       = 10
+| active        = -
+| recovery      = 28
+| total         = 38
+| guard         = LH
+| cancel        = SA2* SA3
+| hitconfirm    = 11
+| hitAdv        = KD +47
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +47
+| perfParryAdv  = {{sf6-adv|VM|-9~}}
+| blockstun     = 30
+| hitstop       = 8x3
+| driveDmgBlk   = 2500x2,1000
+| driveDmgHit   = [1000x2,3000]
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1 ground / 1,1 air
+| jugIncrease   = 0,2
+| jugLimit      = 5,8
+| projSpeed     = 1-8f: 0.005+0.005/frame; 9f: 0.155 + 0.005/frame
+| notes         = No charge required to throw projectile; puts opponents into limited juggle state; only the Enhanced Boom is cancelable to SA2; if the OD Sonic Blade is blocked immediately at close range, it will dissipate before the Boom follow-up comes out, making the cancel impossible; SA2 cancel: KD+64/+24; projectile speed accelerates until no longer on screen
+}}
+
+===== 214PP~6PP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214pp_6pp | moveType = special
+| input         = 214PP ~ 6PP
+| name          = Sonic Cross
+| images        = SF6_Guile_214pp_6pp.png
+| hitboxes      = SF6_Guile_214pp_6pp_hitbox.png
+| damage        = 400x3,500 (1700)
+| chip          = 100x3,125
+| startup       = 10
+| active        = -
+| recovery      = 28
+| total         = 38
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 11
+| hitAdv        = KD Spin + Splat
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD Spin + Wallsplat
+| perfParryAdv  = {{sf6-adv|VP|+15~}}
+| blockstun     = 31
+| hitstop       = 8x3
+| driveDmgBlk   = 2500x3,1000
+| driveDmgHit   = [1000x3,3000]
+| driveGain     = -10000(-20000)
+| superGainHit  = 800 (560)
+| superGainBlk  = 400 (200)
+| jugStart      = 1 ground / 1x4 air
+| jugIncrease   = 0x3,2
+| jugLimit      = 6x3,8
+| projSpeed     = 1-8f: 0.008+0.008/frame; 9f: 2.08 + 0.008/frame
+| notes         = No charge required to throw projectile; puts opponents into limited juggle state; costs 3 total stocks of Drive Gauge counting the initial Sonic Blade activation (4 stocks if you delay with a manual OD Sonic Boom); causes a short wallsplat animation if the opponent is near the corner; SA2 cancel: KD+65/+25; projectile speed accelerates until no longer on screen
+}}
+
+=== Sonic Break ===
+===== PP =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_pp | moveType = special
+| input         = PP
+| name          = Sonic Break
+| images        = SF6_Guile_pp.png
+| hitboxes      = SF6_Guile_pp_hitbox.png
+| damage        = 600 each
+| chip          = 150 each
+| startup       = 11
+| active        = -
+| recovery      = 25
+| total         = 36
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| hitstun       = 28
+| blockstun     = 24
+| hitstop       = 8
+| driveDmgBlk   = 2000 each
+| driveDmgHit   = 1000/[3000]
+| driveGain     = 1000
+| superGainHit  = 300* (210)
+| superGainBlk  = 150* (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = LP 0.05 / MP 0.064 / HP 0.081
+| notes         = 1-hit projectile; only possible during SA2 install (1500f timer); each use drains timer by 200f (maximum 5 per sequence); projectile speed changes based on directional input (1PP/4PP slow, 5PP/2PP medium, 6PP/3PP fast); Guile only builds super meter for himself if projectile connects after install timer has expired
+}}
+
+===== [4]6P~P Follow-up =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_46p_p_followup | moveType = special
+| input         = [4]6P~P
+| name          = Sonic Break (follow-up)
+| images        = SF6_Guile_46p_p_followup.png
+| hitboxes      = SF6_Guile_46p_p_followup_hitbox.png
+| damage        = 600 each
+| chip          = 150 each
+| startup       = 11
+| active        = -
+| recovery      = 25
+| total         = 36
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| hitstun       = 28
+| blockstun     = 24
+| hitstop       = 8
+| driveDmgBlk   = 2000 each
+| driveDmgHit   = 1000/[3000]
+| driveGain     = 1000
+| superGainHit  = 300* (210)
+| superGainBlk  = 150* (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = LP 0.05 / MP 0.064 / HP 0.081
+| notes         = 1-hit projectile; only possible during SA2 install (1500f timer); each use drains timer by 200f (maximum 4 follow-ups per sequence); button strength determines projectile speed; Guile only builds super meter for himself if projectile connects after install timer has expired
+}}
+
+===== [4]6PP~P Follow-up =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_46pp_p_followup | moveType = special
+| input         = [4]6PP~P
+| name          = OD Sonic Break (follow-up)
+| images        = SF6_Guile_46pp_p_followup.png
+| hitboxes      = SF6_Guile_46pp_p_followup_hitbox.png
+| damage        = 500x2 (1000)
+| chip          = 125x2
+| startup       = 11
+| active        = -
+| recovery      = 24
+| total         = 35
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +54~
+| blockAdv      = {{sf6-adv|P|+3}}
+| punishAdv     = KD +54~
+| blockstun     = 28 total
+| hitstop       = 6,6
+| driveDmgBlk   = 2500x2 each
+| driveDmgHit   = 7002 each
+| superGainHit  = 300x2* (210x2)
+| superGainBlk  = 150x2* (75x2)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 8,8
+| projSpeed     = 0.12
+| notes         = 2-hit OD projectile; only possible during SA2 install (1500f timer); each use drains timer by 200f (maximum 2 follow-ups per sequence); Guile only builds super meter for himself if projectile connects after install timer has expired
+}}
+
+== Super Arts ==
+===== [4]646P =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4646p | moveType = super
+| input         = [4]646P
+| name          = Sonic Hurricane
+| images        = SF6_Guile_4646p.png
+| hitboxes      = SF6_Guile_4646p_hitbox.png
+| damage        = 200x6,800 (2000)
+| chip          = 50x6,200
+| dmgScaling    = 30% Minimum
+| startup       = 8(11)
+| active        = 51
+| recovery      = 81
+| total         = 89
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +41
+| blockAdv      = {{sf6-adv|VM|-26}}
+| punishAdv     = KD +41
+| perfParryAdv  = {{sf6-adv|VP|+30}}
+| blockstun     = 56 total
+| hitstop       = 2x6
+| driveDmgBlk   = 360x6,340 (2500)
+| driveDmgHit   = 720x6,680 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-8 Strike/Throw
+| armor         = Break
+| jugStart      = 1
+| jugIncrease   = 1x6,99
+| jugLimit      = 99
+| notes         = 45f charge (charge lasts 22f after releasing back direction); 7-hit Super projectile; can input this horizontal version with LP or MP; cannot be used while Sonic Blade projectile is active on-screen; for the first 3 active frames, most of the hitbox only connects if the opponent is already in hitstun (only the very base of the hitbox is active; functionally 11f startup to reach its full range)
+}}
+
+====== [4]646HP ======
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4646hp | moveType = super
+| input         = [4]646HP
+| name          = Sonic Hurricane
+| images        = SF6_Guile_4646hp.png
+| hitboxes      = SF6_Guile_4646hp_hitbox.png
+| damage        = 200x6,600 (1800)
+| chip          = 50x6,200
+| dmgScaling    = 30% Minimum
+| startup       = 7
+| active        = 52
+| recovery      = 68
+| total         = 75
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +70
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +70
+| perfParryAdv  = {{sf6-adv|VP|+48}}
+| blockstun     = 67 total
+| hitstop       = 1,10x5
+| driveDmgBlk   = 360x6,340 (2500)
+| driveDmgHit   = 720x6,680 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| armor         = Break
+| jugStart      = 100
+| jugIncrease   = 0x6,100
+| jugLimit      = 99
+| notes         = 45f charge (charge lasts 22f after releasing back direction); 7-hit Super projectile; primarily used in air juggles (whiffs on crouching opponents unless they extend a vertical hurtbox, can hit standing opponents at close range); puts opponent into limited juggle state; KD Adv. can vary depending on juggle height; cannot be used while Sonic Blade projectile is active on-screen
+}}
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_214214p | moveType = super
+| input         = 214214P
+| name          = Solid Puncher
+| images        = SF6_Guile_214214p.png
+| hitboxes      = SF6_Guile_214214p_hitbox.png
+| damage        = -
+| startup       = 1
+| active        = (1500)
+| recovery      = 5
+| total         = 6
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| notes         = Gives access to Sonic Break follow-ups; remaining active time decreases by 200f with each Sonic Break use (maximum 7 uses)
+}}
+
+===== [4]646K =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4646k | moveType = super
+| input         = [4]646K
+| name          = Crossfire Somersault
+| images        = SF6_Guile_4646k.png
+| hitboxes      = SF6_Guile_4646k_hitbox.png, SF6_Guile_4646k_hitbox2.png
+| damage        = 4000(3000)
+| chip          = 1000(750)
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 9
+| active        = 6
+| recovery      = 30+40 land
+| total         = 84
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +16
+| blockAdv      = {{sf6-adv|VM|-59}}
+| punishAdv     = HKD +16
+| perfParryAdv  = {{sf6-adv|VM|-74}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000(10000)
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-14 Full
+| armor         = Break
+| airborne      = 12-44 (FKD)
+| jugStart      = 101
+| jugIncrease   = 101
+| jugLimit      = 100
+| atkRange      = 1.394 (1st)
+| notes         = 45f charge (charge lasts 22f after releasing back direction); active frames 3-6 give a non-cinematic hit with reduced damage and chip; cannot hit cross-up; cinematic time regenerates ~1.8 Drive bars for Guile
+}}
+
+====== [4]646K (CA) ======
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4646k(ca) | moveType = super
+| input         = [4]646K
+| name          = Crossfire Somersault (CA)
+| images        = SF6_Guile_4646k_ca.png
+| hitboxes      = SF6_Guile_4646k_ca_hitbox.png
+| damage        = 4500(3500)
+| chip          = 1250(875)
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 9
+| active        = 6
+| recovery      = 30+40 land
+| total         = 84
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +16
+| blockAdv      = {{sf6-adv|VM|-59}}
+| punishAdv     = HKD +16
+| perfParryAdv  = {{sf6-adv|VM|-74}}
+| blockstun     = 17
+| hitstop       = 15
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000(10000)
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-14 Full
+| armor         = Break
+| airborne      = 12-44 (FKD)
+| jugStart      = 101
+| jugIncrease   = 101
+| jugLimit      = 100
+| atkRange      = 1.394 (1st)
+| notes         = 45f charge (charge lasts 22f after releasing back direction); active frames 3-6 give a non-cinematic hit with reduced damage and chip; cannot hit cross-up; available at 25% HP or below; cinematic time regenerates ~2 Drive bars for Guile
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Guile_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 116 (total)
+| active        = -
+| recovery      = -
+| total         = 116
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Got you in my sights."
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Guile_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 225 (total)
+| active        = -
+| recovery      = -
+| total         = 225
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "You won't know what hit you."
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Guile_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 325 (total)
+| active        = -
+| recovery      = -
+| total         = 325
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "This is a war, and I'm ready for you."
+}}
+
+===== 2PPPKKK =====
+{{FrameData-SF6 | chara = Guile | moveId = Guile_2pppkkk | moveType = taunt
+| input         = 2PPPKKK
+| name          = Down Taunt
+| images        = SF6_Guile_2pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 73 (total)
+| active        = -
+| recovery      = -
+| total         = 73
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Come on!"
+}}
+
+
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category: Guile]]

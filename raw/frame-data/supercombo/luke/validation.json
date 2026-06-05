@@ -1,0 +1,328 @@
+{
+  "validation_schema_version": "supercombo_frame_capture_validation/v1",
+  "validated_at_utc": "2026-06-05T06:56:59Z",
+  "raw_root": "raw\\frame-data\\supercombo\\luke",
+  "capture_label": "2026-06-01",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-01",
+    "latest_revision_timestamp": "2026-06-01T07:40:21Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Luke/Data",
+        "pageid": 65951,
+        "lastrevid": 365226,
+        "revision_timestamp": "2026-06-01T07:40:21Z",
+        "touched": "2026-06-01T07:40:21Z"
+      },
+      {
+        "title": "Street Fighter 6/Luke/Frame data",
+        "pageid": 68274,
+        "lastrevid": 310366,
+        "revision_timestamp": "2024-10-19T05:11:55Z",
+        "touched": "2026-06-01T07:40:23Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "status": "passed",
+  "failures": [],
+  "warnings": [
+    "9 imageinfo titles are missing"
+  ],
+  "summary": {
+    "character_templates": 1,
+    "frame_templates": 74,
+    "display_cargo_queries": 21,
+    "cargo_frame_rows": 74,
+    "cargo_character_rows": 1,
+    "move_type_counts": {
+      "air_normal": 6,
+      "drive": 6,
+      "ground_normal": 23,
+      "special": 30,
+      "super": 4,
+      "taunt": 3,
+      "throw": 2
+    },
+    "duplicate_inputs": {
+      "6HPHK": [
+        "Luke_6hphk",
+        "Luke_6hphk_recovery"
+      ],
+      "236236K": [
+        "Luke_236236k",
+        "Luke_236236k(ca)"
+      ]
+    },
+    "rendered_tab_states": 5,
+    "table_comparisons": 20,
+    "image_refs": 166,
+    "imageinfo_resolved": 144,
+    "imageinfo_missing": 9,
+    "downloaded_images": 0,
+    "failed_image_downloads": 0
+  },
+  "table_comparisons": [
+    {
+      "section": "Normals and Target Combos",
+      "tab": "General",
+      "expected_rows": 29,
+      "actual_rows": 29,
+      "compared_rows": 29,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "General",
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "General",
+      "expected_rows": 30,
+      "actual_rows": 30,
+      "compared_rows": 30,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "General",
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "compared_rows": 4,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Details",
+      "expected_rows": 29,
+      "actual_rows": 29,
+      "compared_rows": 29,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Details",
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Details",
+      "expected_rows": 30,
+      "actual_rows": 30,
+      "compared_rows": 30,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Details",
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "compared_rows": 4,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Meter",
+      "expected_rows": 29,
+      "actual_rows": 29,
+      "compared_rows": 29,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Meter",
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Meter",
+      "expected_rows": 30,
+      "actual_rows": 30,
+      "compared_rows": 30,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Meter",
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "compared_rows": 4,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Properties",
+      "expected_rows": 29,
+      "actual_rows": 29,
+      "compared_rows": 29,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Properties",
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Properties",
+      "expected_rows": 30,
+      "actual_rows": 30,
+      "compared_rows": 30,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Properties",
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "compared_rows": 4,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Notes",
+      "expected_rows": 29,
+      "actual_rows": 29,
+      "compared_rows": 29,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Notes",
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Notes",
+      "expected_rows": 30,
+      "actual_rows": 30,
+      "compared_rows": 30,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Notes",
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "compared_rows": 4,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    }
+  ]
+}

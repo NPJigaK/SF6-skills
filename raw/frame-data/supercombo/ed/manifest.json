@@ -1,0 +1,51 @@
+{
+  "manifest_schema_version": "supercombo_frame_raw_capture_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:23:31Z",
+  "character": "Ed",
+  "cargo_character": "Ed",
+  "character_slug": "ed",
+  "capture_label": "2026-06-02",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-02",
+    "latest_revision_timestamp": "2026-06-02T02:58:22Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Ed/Data",
+        "pageid": 77505,
+        "lastrevid": 365288,
+        "revision_timestamp": "2026-06-02T02:58:22Z",
+        "touched": "2026-06-02T02:58:22Z"
+      },
+      {
+        "title": "Street Fighter 6/Ed/Frame data",
+        "pageid": 77509,
+        "lastrevid": 310382,
+        "revision_timestamp": "2024-10-19T05:29:14Z",
+        "touched": "2026-06-02T02:58:24Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "raw_root": "raw\\frame-data\\supercombo\\ed",
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": [
+    "api\\page-metadata.json",
+    "cargo\\character-data.json",
+    "cargo\\frame-data.json",
+    "data.raw.wikitext",
+    "data.templates.json",
+    "frame-data.cargo-queries.json",
+    "frame-data.raw.wikitext",
+    "image-manifest.json",
+    "imageinfo.json",
+    "rendered\\page.html",
+    "rendered\\tables.dom.json",
+    "screenshots\\details.png",
+    "screenshots\\general.png",
+    "screenshots\\meter.png",
+    "screenshots\\notes.png",
+    "screenshots\\properties.png"
+  ]
+}

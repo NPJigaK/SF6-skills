@@ -1,0 +1,1561 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:11:29Z",
+  "source": "SuperCombo Wiki",
+  "character": "Chun-Li",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Chun-Li",
+      "filename": "SF6 Chun-Li Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Chun-Li",
+      "filename": "SF6 Chun-Li Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Chun-Li_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Chun-Li_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Chun-Li_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Chun-Li_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Chun-Li_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Chun-Li_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Chun-Li_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Chun-Li_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Chun-Li_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Chun-Li_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Chun-Li_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Chun-Li_5hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Chun-Li_5hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Chun-Li_5hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Chun-Li_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Chun-Li_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Chun-Li_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Chun-Li_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Chun-Li_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Chun-Li_2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Chun-Li_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Chun-Li_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Chun-Li_2hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Chun-Li_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Chun-Li_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Chun-Li_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Chun-Li_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_2hk",
+      "input": "2HK",
+      "name": "Gen Assassin Kick",
+      "filename": "SF6_Chun-Li_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_2hk",
+      "input": "2HK",
+      "name": "Gen Assassin Kick",
+      "filename": "SF6_Chun-Li_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Chun-Li_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Chun-Li_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Chun-Li_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Chun-Li_jmp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Chun-Li_jmp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Chun-Li_jmp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Chun-Li_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Chun-Li_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Chun-Li_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Chun-Li_jlk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Chun-Li_jlk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Chun-Li_jlk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Chun-Li_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Chun-Li_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jhk",
+      "input": "7HK or 9HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Chun-Li_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jhk",
+      "input": "7HK or 9HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Chun-Li_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_8jhk",
+      "input": "8HK",
+      "name": "Neutral Jump Heavy Kick",
+      "filename": "SF6_Chun-Li_8jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_8jhk",
+      "input": "8HK",
+      "name": "Neutral Jump Heavy Kick",
+      "filename": "SF6_Chun-Li_8jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_walljump",
+      "input": "9 (against wall)",
+      "name": "Wall Jump",
+      "filename": "SF6_Chun-Li_walljump.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_walljump",
+      "input": "9 (against wall)",
+      "name": "Wall Jump",
+      "filename": "SF6_Chun-Li_walljump_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_6mp",
+      "input": "4/6MP",
+      "name": "Swift Thrust",
+      "filename": "SF6_Chun-Li_6mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6mp",
+      "input": "4/6MP",
+      "name": "Swift Thrust",
+      "filename": "SF6_Chun-Li_6mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_4hp",
+      "input": "4HP",
+      "name": "Hakkei",
+      "filename": "SF6_Chun-Li_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_4hp",
+      "input": "4HP",
+      "name": "Hakkei",
+      "filename": "SF6_Chun-Li_4hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_3hp",
+      "input": "3HP",
+      "name": "Water Lotus Fist",
+      "filename": "SF6_Chun-Li_3hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_3hp",
+      "input": "3HP",
+      "name": "Water Lotus Fist",
+      "filename": "SF6_Chun-Li_3hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_6hk",
+      "input": "6HK",
+      "name": "Yokusen Kick",
+      "filename": "SF6_Chun-Li_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hk",
+      "input": "6HK",
+      "name": "Yokusen Kick",
+      "filename": "SF6_Chun-Li_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_3hk",
+      "input": "3HK",
+      "name": "Falling Crane",
+      "filename": "SF6_Chun-Li_3hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_3hk",
+      "input": "3HK",
+      "name": "Falling Crane",
+      "filename": "SF6_Chun-Li_3hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j2mk",
+      "input": "j.2MK",
+      "name": "Yoso Kick",
+      "filename": "SF6_Chun-Li_j2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j2mk",
+      "input": "j.2MK",
+      "name": "Yoso Kick",
+      "filename": "SF6_Chun-Li_j2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jhp_jhp",
+      "input": "j.HP~j.HP",
+      "name": "Soaring Eagle Punches",
+      "filename": "SF6_Chun-Li_jhp_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jhp_jhp",
+      "input": "j.HP~j.HP",
+      "name": "Soaring Eagle Punches",
+      "filename": "SF6_Chun-Li_jhp_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j2mk_2",
+      "input": "j.2MK~j.2MK",
+      "name": "Yoso Kick 2",
+      "filename": "SF6_Chun-Li_j2mk_j2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j2mk_2",
+      "input": "j.2MK~j.2MK",
+      "name": "Yoso Kick 2",
+      "filename": "SF6_Chun-Li_j2mk_j2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j2mk_3",
+      "input": "j.2MK~j.2MK~j.2MK",
+      "name": "Yoso Kick 3",
+      "filename": "SF6_Chun-Li_j2mk_j2mk_j2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j2mk_3",
+      "input": "j.2MK~j.2MK~j.2MK",
+      "name": "Yoso Kick 3",
+      "filename": "SF6_Chun-Li_j2mk_j2mk_j2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p",
+      "input": "214P",
+      "name": "Serenity Stream",
+      "filename": "SF6_Chun-Li_214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p",
+      "input": "214P",
+      "name": "Serenity Stream",
+      "filename": "SF6_Chun-Li_214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_214p",
+      "input": "214P~214P",
+      "name": "Serenity Stream Exit",
+      "filename": "SF6_Chun-Li_214p_214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_214p",
+      "input": "214P~214P",
+      "name": "Serenity Stream Exit",
+      "filename": "SF6_Chun-Li_214p_214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_lp",
+      "input": "214P~LP",
+      "name": "Orchid Palm",
+      "filename": "SF6_Chun-Li_214p_lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_lp",
+      "input": "214P~LP",
+      "name": "Orchid Palm",
+      "filename": "SF6_Chun-Li_214p_lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_mp",
+      "input": "214P~MP",
+      "name": "Snake Strike",
+      "filename": "SF6_Chun-Li_214p_mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_mp",
+      "input": "214P~MP",
+      "name": "Snake Strike",
+      "filename": "SF6_Chun-Li_214p_mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_hp",
+      "input": "214P~HP",
+      "name": "Lotus Fist",
+      "filename": "SF6_Chun-Li_214p_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_hp",
+      "input": "214P~HP",
+      "name": "Lotus Fist",
+      "filename": "SF6_Chun-Li_214p_hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_hp",
+      "input": "214P~HP",
+      "name": "Lotus Fist",
+      "filename": "SF6_Chun-Li_214p_hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_hp",
+      "input": "214P~HP",
+      "name": "Lotus Fist",
+      "filename": "SF6_Chun-Li_214p_hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_lk",
+      "input": "214P~LK",
+      "name": "Forward Strike",
+      "filename": "SF6_Chun-Li_214p_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_lk",
+      "input": "214P~LK",
+      "name": "Forward Strike",
+      "filename": "SF6_Chun-Li_214p_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_mk",
+      "input": "214P~MK",
+      "name": "Senpu Kick",
+      "filename": "SF6_Chun-Li_214p_mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_mk",
+      "input": "214P~MK",
+      "name": "Senpu Kick",
+      "filename": "SF6_Chun-Li_214p_mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214p_hk",
+      "input": "214P~HK",
+      "name": "Tenku Kick",
+      "filename": "SF6_Chun-Li_214p_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214p_hk",
+      "input": "214P~HK",
+      "name": "Tenku Kick",
+      "filename": "SF6_Chun-Li_214p_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_lplk",
+      "input": "LPLK",
+      "name": "Koshuto",
+      "filename": "SF6_Chun-Li_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_lplk",
+      "input": "LPLK",
+      "name": "Koshuto",
+      "filename": "SF6_Chun-Li_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_4lplk",
+      "input": "4LPLK",
+      "name": "Taiji Fan",
+      "filename": "SF6_Chun-Li_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_4lplk",
+      "input": "4LPLK",
+      "name": "Taiji Fan",
+      "filename": "SF6_Chun-Li_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_jlplk",
+      "input": "j.LPLK",
+      "name": "Ryuseiraku",
+      "filename": "SF6_Chun-Li_jlplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_jlplk",
+      "input": "j.LPLK",
+      "name": "Ryuseiraku",
+      "filename": "SF6_Chun-Li_jlplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_hphk",
+      "input": "HPHK",
+      "name": "Hosen Kick",
+      "filename": "SF6_Chun-Li_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_hphk",
+      "input": "HPHK",
+      "name": "Hosen Kick",
+      "filename": "SF6_Chun-Li_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_6hphk",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Block)",
+      "filename": "SF6_Chun-Li_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hphk",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Block)",
+      "filename": "SF6_Chun-Li_6hphk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hphk",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Block)",
+      "filename": "SF6_Chun-Li_6hphk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hphk",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Block)",
+      "filename": "SF6_Chun-Li_6hphk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Recovery)",
+      "filename": "SF6_Chun-Li_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Recovery)",
+      "filename": "SF6_Chun-Li_6hphk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Recovery)",
+      "filename": "SF6_Chun-Li_6hphk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hoyoku Kick (Recovery)",
+      "filename": "SF6_Chun-Li_6hphk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Chun-Li_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Chun-Li_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "chun-Li_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Chun-Li_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "chun-Li_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Chun-Li_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "chun-Li_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Chun-Li_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "chun-Li_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Chun-Li_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_46lp",
+      "input": "[4]6LP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_46lp",
+      "input": "[4]6LP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_46mp",
+      "input": "[4]6MP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_46mp",
+      "input": "[4]6MP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_46hp",
+      "input": "[4]6HP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_46hp",
+      "input": "[4]6HP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_46pp",
+      "input": "[4]6PP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_46pp",
+      "input": "[4]6PP",
+      "name": "Kikoken",
+      "filename": "SF6_Chun-Li_46pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236lk",
+      "input": "236LK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236lk",
+      "input": "236LK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236lk",
+      "input": "236LK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236lk_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236lk",
+      "input": "236LK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236lk_hitbox3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236mk",
+      "input": "236MK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236mk",
+      "input": "236MK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236hk",
+      "input": "236HK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236hk",
+      "input": "236HK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236kk",
+      "input": "236KK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236kk",
+      "input": "236KK",
+      "name": "Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236kk_kk",
+      "input": "236KK~KK",
+      "name": "Lightning Kick Barrage",
+      "filename": "SF6_Chun-Li_236kk_kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236kk_kk",
+      "input": "236KK~KK",
+      "name": "Lightning Kick Barrage",
+      "filename": "SF6_Chun-Li_236kk_kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j236lk",
+      "input": "j.236LK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236lk",
+      "input": "j.236LK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236lk",
+      "input": "j.236LK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236lk_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236lk",
+      "input": "j.236LK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236lk_hitbox3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236lk",
+      "input": "j.236LK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236lk_hitbox4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j236mk",
+      "input": "j.236MK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236mk",
+      "input": "j.236MK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j236hk",
+      "input": "j.236HK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236hk",
+      "input": "j.236HK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j236kk",
+      "input": "j.236KK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236kk",
+      "input": "j.236KK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236kk",
+      "input": "j.236KK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236kk_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236kk",
+      "input": "j.236KK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236kk_hitbox3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236kk",
+      "input": "j.236KK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236kk_hitbox4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236kk",
+      "input": "j.236KK",
+      "name": "Aerial Hundred Lightning Kicks",
+      "filename": "SF6_Chun-Li_j236kk_hitbox5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_28lk",
+      "input": "[2]8LK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_28lk",
+      "input": "[2]8LK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_28lk",
+      "input": "[2]8LK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28lk_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_28mk",
+      "input": "[2]8MK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_28mk",
+      "input": "[2]8MK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_28hk",
+      "input": "[2]8HK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_28hk",
+      "input": "[2]8HK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_28kk",
+      "input": "[2]8KK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_28kk",
+      "input": "[2]8KK",
+      "name": "Spinning Bird Kick",
+      "filename": "SF6_Chun-Li_28kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214lk",
+      "input": "214LK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214lk",
+      "input": "214LK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214mk",
+      "input": "214MK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214mk",
+      "input": "214MK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214hk",
+      "input": "214HK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214hk",
+      "input": "214HK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214kk",
+      "input": "214KK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214kk",
+      "input": "214KK",
+      "name": "Hazanshu",
+      "filename": "SF6_Chun-Li_214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_22lk",
+      "input": "22LK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_22lk",
+      "input": "22LK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_22mk",
+      "input": "22MK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_22mk",
+      "input": "22MK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_22hk",
+      "input": "22HK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_22hk",
+      "input": "22HK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_22kk",
+      "input": "22KK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_22kk",
+      "input": "22KK",
+      "name": "Tensho Kicks",
+      "filename": "SF6_Chun-Li_22kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236236p",
+      "input": "236236P",
+      "name": "Kikosho",
+      "filename": "SF6_Chun-Li_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236236p",
+      "input": "236236P",
+      "name": "Kikosho",
+      "filename": "SF6_Chun-Li_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_j236236p",
+      "input": "j.236236P",
+      "name": "Aerial Kikosho",
+      "filename": "SF6_Chun-Li_j236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_j236236p",
+      "input": "j.236236P",
+      "name": "Aerial Kikosho",
+      "filename": "SF6_Chun-Li_j236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_236236k",
+      "input": "236236K",
+      "name": "Hoyoku-sen",
+      "filename": "SF6_Chun-Li_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236236k",
+      "input": "236236K",
+      "name": "Hoyoku-sen",
+      "filename": "SF6_Chun-Li_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_236236k",
+      "input": "236236K",
+      "name": "Hoyoku-sen",
+      "filename": "SF6_Chun-Li_236236k_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214214k",
+      "input": "214214K",
+      "name": "Soten Ranka",
+      "filename": "SF6_Chun-Li_214214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k",
+      "input": "214214K",
+      "name": "Soten Ranka",
+      "filename": "SF6_Chun-Li_214214k_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k",
+      "input": "214214K",
+      "name": "Soten Ranka",
+      "filename": "SF6_Chun-Li_214214k_hitbox_2_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k",
+      "input": "214214K",
+      "name": "Soten Ranka",
+      "filename": "SF6_Chun-Li_214214k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k",
+      "input": "214214K",
+      "name": "Soten Ranka",
+      "filename": "SF6_Chun-Li_214214k_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_214214k(ca)",
+      "input": "214214K",
+      "name": "Soten Ranka (CA)",
+      "filename": "SF6_Chun-Li_214214k_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k(ca)",
+      "input": "214214K",
+      "name": "Soten Ranka (CA)",
+      "filename": "SF6_Chun-Li_214214k_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k(ca)",
+      "input": "214214K",
+      "name": "Soten Ranka (CA)",
+      "filename": "SF6_Chun-Li_214214k_hitbox_2_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k(ca)",
+      "input": "214214K",
+      "name": "Soten Ranka (CA)",
+      "filename": "SF6_Chun-Li_214214k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_214214k(ca)",
+      "input": "214214K",
+      "name": "Soten Ranka (CA)",
+      "filename": "SF6_Chun-Li_214214k_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Chun-Li_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Chun-Li_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Chun-Li_5pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Chun-Li_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Chun-Li_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Chun-Li_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Chun-Li 22mk hitbox.png",
+    "File:SF6 Chun-Li 22mk.png",
+    "File:SF6 Chun-Li 22hk hitbox.png",
+    "File:SF6 Chun-Li 22hk.png",
+    "File:SF6 Chun-Li 214mk hitbox.png",
+    "File:SF6 Chun-Li 214mk.png",
+    "File:SF6 Chun-Li 214kk hitbox.png",
+    "File:SF6 Chun-Li 214hk hitbox.png",
+    "File:SF6 Chun-Li 214hk.png",
+    "File:SF6 Chun-Li 46hp hitbox.png",
+    "File:SF6 Chun-Li 46hp.png",
+    "File:SF6 Chun-Li 28mk hitbox.png",
+    "File:SF6 Chun-Li 28mk.png",
+    "File:SF6 Chun-Li 28kk hitbox.png",
+    "File:SF6 Chun-Li 28hk hitbox.png",
+    "File:SF6 Chun-Li 28hk.png",
+    "File:SF6 Chun-Li 236mk hitbox.png",
+    "File:SF6 Chun-Li 236mk.png",
+    "File:SF6 Chun-Li 236kk kk hitbox.png",
+    "File:SF6 Chun-Li 236kk hitbox.png",
+    "File:SF6 Chun-Li 236kk.png",
+    "File:SF6 Chun-Li 236hk hitbox.png",
+    "File:SF6 Chun-Li 236hk.png",
+    "File:SF6 Chun-Li j236hk hitbox.png",
+    "File:SF6 Chun-Li j236hk.png",
+    "File:SF6 Chun-Li 46mp hitbox.png",
+    "File:SF6 Chun-Li 46mp.png",
+    "File:SF6 Chun-Li j236mk hitbox.png",
+    "File:SF6 Chun-Li j236mk.png"
+  ],
+  "download_images": false
+}

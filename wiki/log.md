@@ -2,6 +2,99 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-06] 修正 | 条件付き SuperCombo field の fail-closed 化と landing recovery 正規化
+- 作成:
+  - `tools/test_supercombo_frame_comparison.py`
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `tools/audit_supercombo_enriched_review_status.py`
+  - `wiki/outputs/data/supercombo/frame-data/`
+  - `wiki/outputs/data/enriched/frame-data/`
+  - `wiki/outputs/reports/2026-06-05-supercombo-all-frame-data-coverage.md`
+  - `wiki/reviews/2026-06-05-supercombo-all-frame-data-capture-review.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+- メモ:
+  - `$adversarial-review` の `adversarial_reviewer` が、`800(700)` や `2800 (3220)` のような括弧付き damage が primary 値だけで `enriched` に通る no-ship finding を出した。
+  - `damage` / `startup` / `recovery` の括弧付き SuperCombo 値は `condition_dependent_supercombo_field:<field>` として扱い、人間レビューなしでは `enriched` にしない。
+  - `audit_supercombo_enriched_review_status.py` は条件付き括弧値が `enriched` に残る場合も失敗する。修正前は 102 件を検出した。
+  - `着地後N` と `N land`、および `A+着地後B` と `A+B land` は landing recovery の表記差として機械正規化する。
+  - 30 キャラ再生成後、`enriched` 591、`enriched_reviewed` 69、`enriched_review_required` 1296、`official_only` 405、SuperCombo-only 620 になった。
+- 検証:
+  - `python tools\test_supercombo_frame_comparison.py`
+  - `python tools\audit_supercombo_enriched_review_status.py --repo-root .`
+- 未解決事項:
+  - `enriched_review_required` 1296 行のうち、条件付き field、構造的 ambiguity、基本 field conflict を別々の review queue としてどう処理するか。
+  - 多段 damage (`400x2` など) は notes / source evidence を確認してから、別段階で安全な正規化候補にするか判断する。
+  - SuperCombo-only 620 行を taunt、conditional variant、hidden / non-standard row、公式未掲載 row などに細分化する必要があるか。
+
+## [2026-06-06] 修正 | SuperCombo enriched status の fail-closed 化
+- 作成:
+  - `tools/audit_supercombo_enriched_review_status.py`
+- 更新:
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/outputs/data/supercombo/frame-data/`
+  - `wiki/outputs/data/enriched/frame-data/`
+  - `wiki/outputs/reports/2026-06-05-supercombo-all-frame-data-coverage.md`
+  - `wiki/reviews/2026-06-05-supercombo-all-frame-data-capture-review.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+- メモ:
+  - adversarial review で、複数候補・SuperCombo row 再利用・比較不能な基本 field を持つ補助リンクが `enriched` のまま公開される no-ship finding が出た。
+  - 先に `tools/audit_supercombo_enriched_review_status.py` を追加し、現状で 663 件の risky `enriched` を検出することを確認した。
+  - `damage` の `2500 (2875)` のような parenthetical value は primary damage として比較し、Alex の `パワードロップ` は `basic_field_conflict:damage` を持つ `enriched_review_required` になった。
+  - 複数候補、SuperCombo row 再利用、manual/ambiguous match、基本 field conflict、比較不能 field は、人間レビュー済み decision がない限り `enriched_review_required` に落とす fail-closed policy にした。
+  - 既存の `human_review_status: accepted` 69 行は `enriched_reviewed` として保持した。
+  - 30 キャラ再生成後、`enriched` 524、`enriched_reviewed` 69、`enriched_review_required` 1363、`official_only` 405 になった。
+- 未解決事項:
+  - `enriched_review_required` 1363 行をどの順序で人間レビューするか。
+  - SuperCombo-only 621 行を taunt、conditional variant、hidden / non-standard row、公式未掲載 row などに細分化する必要があるか。
+  - 比較不能 field のうち、将来安全に自動比較できる notation を増やすか。
+
+## [2026-06-05] 取り込み | SuperCombo 全キャラフレームデータ batch capture
+- 作成:
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/reviews/2026-06-05-supercombo-all-frame-data-capture-review.md`
+  - `wiki/outputs/reports/2026-06-05-supercombo-all-frame-data-coverage.md`
+  - `raw/frame-data/supercombo/<character_slug>/` の新規 26 キャラ分
+  - `wiki/outputs/data/supercombo/frame-data/<character_slug>/` の新規 26 キャラ分
+  - `wiki/outputs/data/enriched/frame-data/<character_slug>/` の新規 26 キャラ分
+- 更新:
+  - `tools/capture_supercombo_frame_data.py`
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/validate_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/outputs/data/supercombo/frame-data/`
+  - `wiki/outputs/data/enriched/frame-data/`
+- メモ:
+  - SuperCombo Wiki の Street Fighter 6 frame-data は 30 キャラ分の raw capture と派生 output がそろった。
+  - raw validation は 30/30 で `passed`。SuperCombo raw/Cargo の frame rows は合計 2306 行、公式 Classic rows は合計 2361 行。
+  - 新規 26 キャラは `--no-download-images` で取得した。画像ファイル本体は保存していないが、image refs、`imageinfo.json`、`image-manifest.json`、DOM は保存している。
+  - 公式 Classic との crosswalk と、公式列を正として SuperCombo を `supercombo_*` 補助列に入れる enriched output を 30 キャラ分生成した。
+  - JP / Ryu / Zangief / Ingrid の既存人間レビュー済み行は保持し、新規 26 キャラの補助行は勝手に accept していない。
+  - Chun-Li の `serenity_stream`、Dee Jay の Cargo key `Dee_Jay`、C.Viper の `cancel=*SA3` 表示正規化、Jamie Specials table の pagination を source に従って extractor / validator に反映した。
+  - C.Viper の `moveType=air_normal8` は SuperCombo 表示 query に出ない非標準 row として保持し、推測で `air_normal` 扱いにはしていない。
+- 未解決事項:
+  - `enriched_review_required` 233 行をどの順序で人間レビューするか。
+  - SuperCombo-only 621 行を taunt、conditional variant、hidden / non-standard row、公式未掲載 row などに細分化する必要があるか。
+  - imageinfo missing 599 件を source 側の欠損として扱うか、filename 正規化で再解決を試すか。
+  - 新規 26 キャラの個別 character entity page へ、batch coverage 以上の詳細をどこまで反映するか。
+
 ## [2026-06-02] 事前レビュー | SuperCombo Ingrid SuperCombo-only 9 行
 - 作成:
   - `wiki/reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview.md`

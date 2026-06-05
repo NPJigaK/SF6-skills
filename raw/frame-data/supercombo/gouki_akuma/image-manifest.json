@@ -1,0 +1,1613 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:27:45Z",
+  "source": "SuperCombo Wiki",
+  "character": "Akuma",
+  "cargo_character": "Akuma",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Akuma",
+      "filename": "SF6 Akuma Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Akuma",
+      "filename": "SF6 Akuma Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Akuma_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Akuma_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Akuma_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Akuma_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Akuma_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Akuma_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Akuma_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Akuma_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Akuma_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Akuma_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Akuma_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Akuma_5hk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Akuma_5hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Akuma_5hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Akuma_5hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Akuma_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Akuma_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Akuma_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Akuma_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Akuma_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Akuma_2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Akuma_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Akuma_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Akuma_2hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Akuma_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Akuma_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Akuma_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Akuma_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2hk",
+      "input": "2HK",
+      "name": "Low Cutter",
+      "filename": "SF6_Akuma_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2hk",
+      "input": "2HK",
+      "name": "Low Cutter",
+      "filename": "SF6_Akuma_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Akuma_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Akuma_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Akuma_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Akuma_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Akuma_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Akuma_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Akuma_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Akuma_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Akuma_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Akuma_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Akuma_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Akuma_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6mp",
+      "input": "6MP",
+      "name": "Skull Splitter",
+      "filename": "SF6_Akuma_6mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6mp",
+      "input": "6MP",
+      "name": "Skull Splitter",
+      "filename": "SF6_Akuma_6mp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6mp",
+      "input": "6MP",
+      "name": "Skull Splitter",
+      "filename": "SF6_Akuma_6mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6mp",
+      "input": "6MP",
+      "name": "Skull Splitter",
+      "filename": "SF6_Akuma_6mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6mk",
+      "input": "6MK",
+      "name": "Resso Snap Kick",
+      "filename": "SF6_Akuma_6mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6mk",
+      "input": "6MK",
+      "name": "Resso Snap Kick",
+      "filename": "SF6_Akuma_6mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6hp",
+      "input": "6HP",
+      "name": "Kikoku",
+      "filename": "SF6_Akuma_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6hp",
+      "input": "6HP",
+      "name": "Kikoku",
+      "filename": "SF6_Akuma_6hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_4hk",
+      "input": "4HK",
+      "name": "Rago High Kick",
+      "filename": "SF6_Akuma_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_4hk",
+      "input": "4HK",
+      "name": "Rago High Kick",
+      "filename": "SF6_Akuma_4hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j2mk",
+      "input": "j.2MK",
+      "name": "Tenmaku Blade Kick",
+      "filename": "SF6_Akuma_j2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j2mk",
+      "input": "j.2MK",
+      "name": "Tenmaku Blade Kick",
+      "filename": "SF6_Akuma_j2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5mp_mp",
+      "input": "5MP~MP",
+      "name": "Viscera Piercer",
+      "filename": "SF6_Akuma_5mp_mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5mp_mp",
+      "input": "5MP~MP",
+      "name": "Viscera Piercer",
+      "filename": "SF6_Akuma_5mp_mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5mk_hk",
+      "input": "5MK~HK",
+      "name": "Bone Crusher Axe Kick",
+      "filename": "SF6_Akuma_5mk_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5mk_hk",
+      "input": "5MK~HK",
+      "name": "Bone Crusher Axe Kick",
+      "filename": "SF6_Akuma_5mk_hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5mk_hk",
+      "input": "5MK~HK",
+      "name": "Bone Crusher Axe Kick",
+      "filename": "SF6_Akuma_5mk_hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5mk_hk",
+      "input": "5MK~HK",
+      "name": "Bone Crusher Axe Kick",
+      "filename": "SF6_Akuma_5mk_hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6hp_6hp",
+      "input": "6HP~6HP",
+      "name": "Kikoku Combination 1",
+      "filename": "SF6_Akuma_6hp_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6hp_6hp",
+      "input": "6HP~6HP",
+      "name": "Kikoku Combination 1",
+      "filename": "SF6_Akuma_6hp_6hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6hp_6hp_hk",
+      "input": "6HP~6HP~HK",
+      "name": "Kikoku Combination 2",
+      "filename": "SF6_Akuma_6hp_6hp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6hp_6hp_hk",
+      "input": "6HP~6HP~HK",
+      "name": "Kikoku Combination 2",
+      "filename": "SF6_Akuma_6hp_6hp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_lplk",
+      "input": "LPLK",
+      "name": "Goshoha",
+      "filename": "SF6_Akuma_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_lplk",
+      "input": "LPLK",
+      "name": "Goshoha",
+      "filename": "SF6_Akuma_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_4lplk",
+      "input": "4LPLK",
+      "name": "Shuretto",
+      "filename": "SF6_Akuma_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_4lplk",
+      "input": "4LPLK",
+      "name": "Shuretto",
+      "filename": "SF6_Akuma_4lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_hphk",
+      "input": "HPHK",
+      "name": "Oni Goroshi",
+      "filename": "SF6_Akuma_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_hphk",
+      "input": "HPHK",
+      "name": "Oni Goroshi",
+      "filename": "SF6_Akuma_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6hphk",
+      "input": "6HPHK",
+      "name": "Souha Double Palm (Block)",
+      "filename": "SF6_Akuma_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6hphk",
+      "input": "6HPHK",
+      "name": "Souha Double Palm (Block)",
+      "filename": "SF6_Akuma_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Souha Double Palm (Recovery)",
+      "filename": "SF6_Akuma_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Souha Double Palm (Recovery)",
+      "filename": "SF6_Akuma_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Akuma_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Akuma_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Akuma_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Akuma_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Akuma_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Akuma_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236lp",
+      "input": "236LP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236lp",
+      "input": "236LP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236mp",
+      "input": "236MP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236mp",
+      "input": "236MP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236hp",
+      "input": "236HP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236hp",
+      "input": "236HP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236pp",
+      "input": "236PP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236pp",
+      "input": "236PP",
+      "name": "Gou Hadoken",
+      "filename": "SF6_Akuma_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236p_partial_hold",
+      "input": "236{P}",
+      "name": "Gou Hadoken Lv.2",
+      "filename": "SF6_Akuma_236p_partial_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236p_partial_hold",
+      "input": "236{P}",
+      "name": "Gou Hadoken Lv.2",
+      "filename": "SF6_Akuma_236p_partial_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236p_hold",
+      "input": "236[P]",
+      "name": "Gou Hadoken Lv.3",
+      "filename": "SF6_Akuma_236p_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236p_hold",
+      "input": "236[P]",
+      "name": "Gou Hadoken Lv.3",
+      "filename": "SF6_Akuma_236p_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236pp_hold",
+      "input": "236[PP]",
+      "name": "OD Gou Hadoken Lv.2",
+      "filename": "SF6_Akuma_236pp_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236pp_hold",
+      "input": "236[PP]",
+      "name": "OD Gou Hadoken Lv.2",
+      "filename": "SF6_Akuma_236pp_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j236p",
+      "input": "j.236P",
+      "name": "Zanku Hadoken",
+      "filename": "SF6_Akuma_j236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j236p",
+      "input": "j.236P",
+      "name": "Zanku Hadoken",
+      "filename": "SF6_Akuma_j236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j236pp",
+      "input": "j.236PP",
+      "name": "Zanku Hadoken",
+      "filename": "SF6_Akuma_j236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j236pp",
+      "input": "j.236PP",
+      "name": "Zanku Hadoken",
+      "filename": "SF6_Akuma_j236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_623lp",
+      "input": "623LP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_623lp",
+      "input": "623LP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_623mp",
+      "input": "623MP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_623mp",
+      "input": "623MP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_623hp",
+      "input": "623HP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_623hp",
+      "input": "623HP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_623pp",
+      "input": "623PP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_623pp",
+      "input": "623PP",
+      "name": "Gou Shoryuken",
+      "filename": "SF6_Akuma_623pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214lk",
+      "input": "214LK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214lk",
+      "input": "214LK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214mk",
+      "input": "214MK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214mk",
+      "input": "214MK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214hk",
+      "input": "214HK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214hk",
+      "input": "214HK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214kk",
+      "input": "214KK",
+      "name": "Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_214kk_2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j214k",
+      "input": "j.214K",
+      "name": "Aerial Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_j214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j214k",
+      "input": "j.214K",
+      "name": "Aerial Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_j214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Tatsumaki Zanku-Kyaku",
+      "filename": "SF6_Akuma_j214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214lp",
+      "input": "214LP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214lp",
+      "input": "214LP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214mp",
+      "input": "214MP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214mp",
+      "input": "214MP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214hp",
+      "input": "214HP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214hp",
+      "input": "214HP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214pp",
+      "input": "214PP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214pp",
+      "input": "214PP",
+      "name": "Adamant Flame",
+      "filename": "SF6_Akuma_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214lp_6p",
+      "input": "214LP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214lp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214lp_6p",
+      "input": "214LP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214lp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214mp_6p",
+      "input": "214MP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214mp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214mp_6p",
+      "input": "214MP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214mp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214hp_6p",
+      "input": "214HP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214hp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214hp_6p",
+      "input": "214HP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214hp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214pp_6p",
+      "input": "214PP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214pp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214pp_6p",
+      "input": "214PP~6P",
+      "name": "Adamant Flame Follow-Up",
+      "filename": "SF6_Akuma_214pp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236k",
+      "input": "236K",
+      "name": "Demon Raid",
+      "filename": "SF6_Akuma_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236k",
+      "input": "236K",
+      "name": "Demon Raid",
+      "filename": "SF6_Akuma_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk",
+      "input": "236KK",
+      "name": "Demon Raid",
+      "filename": "SF6_Akuma_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk",
+      "input": "236KK",
+      "name": "Demon Raid",
+      "filename": "SF6_Akuma_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236k_no_input",
+      "input": "236K~No Input",
+      "name": "Demon Low Slash",
+      "filename": "SF6_Akuma_236k_no_input.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236k_no_input",
+      "input": "236K~No Input",
+      "name": "Demon Low Slash",
+      "filename": "SF6_Akuma_236k_no_input_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk_no_input",
+      "input": "236KK~No Input",
+      "name": "Demon Low Slash",
+      "filename": "SF6_Akuma_236kk_no_input.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk_no_input",
+      "input": "236KK~No Input",
+      "name": "Demon Low Slash",
+      "filename": "SF6_Akuma_236kk_no_input_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236k_p",
+      "input": "236K~P",
+      "name": "Demon Guillotine",
+      "filename": "SF6_Akuma_236k_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236k_p",
+      "input": "236K~P",
+      "name": "Demon Guillotine",
+      "filename": "SF6_Akuma_236k_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk_p",
+      "input": "236KK~P",
+      "name": "Demon Guillotine",
+      "filename": "SF6_Akuma_236kk_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk_p",
+      "input": "236KK~P",
+      "name": "Demon Guillotine",
+      "filename": "SF6_Akuma_236kk_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236k_k",
+      "input": "236K~K",
+      "name": "Demon Blade Kick",
+      "filename": "SF6_Akuma_236k_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236k_k",
+      "input": "236K~K",
+      "name": "Demon Blade Kick",
+      "filename": "SF6_Akuma_236k_k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk_k",
+      "input": "236KK~K",
+      "name": "Demon Blade Kick",
+      "filename": "SF6_Akuma_236kk_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk_k",
+      "input": "236KK~K",
+      "name": "Demon Blade Kick",
+      "filename": "SF6_Akuma_236kk_k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236k_2_hold",
+      "input": "236K~[2]",
+      "name": "Demon Swoop",
+      "filename": "SF6_Akuma_236k_2_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236k_2_hold",
+      "input": "236K~[2]",
+      "name": "Demon Swoop",
+      "filename": "SF6_Akuma_236k_2_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk_2_hold",
+      "input": "236KK~[2]",
+      "name": "Demon Swoop",
+      "filename": "SF6_Akuma_236kk_2_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk_2_hold",
+      "input": "236KK~[2]",
+      "name": "Demon Swoop",
+      "filename": "SF6_Akuma_236kk_2_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk_j236p",
+      "input": "236KK~j.236P",
+      "name": "Demon Gou Zanku",
+      "filename": "SF6_Akuma_236kk_j236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk_j236p",
+      "input": "236KK~j.236P",
+      "name": "Demon Gou Zanku",
+      "filename": "SF6_Akuma_236kk_j236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236kk_j214k",
+      "input": "236KK~j.214K",
+      "name": "Demon Gou Rasen",
+      "filename": "SF6_Akuma_236kk_j214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236kk_j214k",
+      "input": "236KK~j.214K",
+      "name": "Demon Gou Rasen",
+      "filename": "SF6_Akuma_236kk_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_4kkk",
+      "input": "4KKK",
+      "name": "Ashura Senku (Backward)",
+      "filename": "SF6_Akuma_4kkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_4kkk",
+      "input": "4KKK",
+      "name": "Ashura Senku (Backward)",
+      "filename": "SF6_Akuma_4kkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6kkk",
+      "input": "6KKK",
+      "name": "Ashura Senku (Forward)",
+      "filename": "SF6_Akuma_6kkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6kkk",
+      "input": "6KKK",
+      "name": "Ashura Senku (Forward)",
+      "filename": "SF6_Akuma_6kkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6kkk_lplk",
+      "input": "6KKK~LPLK",
+      "name": "Oboro Throw",
+      "filename": "SF6_Akuma_6kkk_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6kkk_lplk",
+      "input": "6KKK~LPLK",
+      "name": "Oboro Throw",
+      "filename": "SF6_Akuma_6kkk_lplk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6kkk_lplk",
+      "input": "6KKK~LPLK",
+      "name": "Oboro Throw",
+      "filename": "SF6_Akuma_6kkk_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236236p",
+      "input": "236236P",
+      "name": "Messatsu Gohado",
+      "filename": "SF6_Akuma_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236236p",
+      "input": "236236P",
+      "name": "Messatsu Gohado",
+      "filename": "SF6_Akuma_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j236236k",
+      "input": "j.236236K",
+      "name": "Tenma Gozanku",
+      "filename": "SF6_Akuma_j236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j236236k",
+      "input": "j.236236K",
+      "name": "Tenma Gozanku",
+      "filename": "SF6_Akuma_j236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214214p",
+      "input": "214214P",
+      "name": "Empyrean’s End",
+      "filename": "SF6_Akuma_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214214p",
+      "input": "214214P",
+      "name": "Empyrean’s End",
+      "filename": "SF6_Akuma_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236236k",
+      "input": "236236K",
+      "name": "Sip of Calamity",
+      "filename": "SF6_Akuma_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236236k",
+      "input": "236236K",
+      "name": "Sip of Calamity",
+      "filename": "SF6_Akuma_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_236236k(ca)",
+      "input": "236236K",
+      "name": "Sip of Calamity (CA)",
+      "filename": "SF6_Akuma_236236k_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_236236k(ca)",
+      "input": "236236K",
+      "name": "Sip of Calamity (CA)",
+      "filename": "SF6_Akuma_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_lp_lp_6lk_hp(ca)",
+      "input": "LP~LP~6LK~HP",
+      "name": "Shun Goku Satsu (CA)",
+      "filename": "SF6_Akuma_lp_lp_6lk_hp(ca).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_lp_lp_6lk_hp(ca)",
+      "input": "LP~LP~6LK~HP",
+      "name": "Shun Goku Satsu (CA)",
+      "filename": "SF6_Akuma_lp_lp_6lk_hp(ca)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_j214pp",
+      "input": "j.214PP",
+      "name": "Double Zanku Hadoken",
+      "filename": "SF6_Akuma_j214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_j214pp",
+      "input": "j.214PP",
+      "name": "Double Zanku Hadoken",
+      "filename": "SF6_Akuma_j214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_214214k",
+      "input": "214214K",
+      "name": "Misogi",
+      "filename": "SF6_Akuma_214214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_214214k",
+      "input": "214214K",
+      "name": "Misogi",
+      "filename": "SF6_Akuma_214214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_22ppp",
+      "input": "22PPP",
+      "name": "Kongou-Kokuretsuzan",
+      "filename": "SF6_Akuma_22ppp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_22ppp",
+      "input": "22PPP",
+      "name": "Kongou-Kokuretsuzan",
+      "filename": "SF6_Akuma_22ppp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Akuma_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Akuma_5pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Akuma_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Akuma_6pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Akuma_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Akuma_4pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_4pppkkk_2pppkkk",
+      "input": "4PPPKKK~2PPPKKK",
+      "name": "Back~Down Taunt",
+      "filename": "SF6_Akuma_4pppkkk_2pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_4pppkkk_2pppkkk",
+      "input": "4PPPKKK~2PPPKKK",
+      "name": "Back~Down Taunt",
+      "filename": "SF6_Akuma_4pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "akuma_2pppkkk",
+      "input": "2PPPKKK",
+      "name": "Down Taunt",
+      "filename": "SF6_Akuma_2pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "akuma_2pppkkk",
+      "input": "2PPPKKK",
+      "name": "Down Taunt",
+      "filename": "SF6_Akuma_2pppkkk_hitbox.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Akuma 236hp hitbox.png",
+    "File:SF6 Akuma 236hp.png",
+    "File:SF6 Akuma 214pp hitbox.png",
+    "File:SF6 Akuma 214pp.png",
+    "File:SF6 Akuma 214mp hitbox.png",
+    "File:SF6 Akuma 214mp.png",
+    "File:SF6 Akuma 214mk.png",
+    "File:SF6 Akuma 214kk.png",
+    "File:SF6 Akuma 214hp hitbox.png",
+    "File:SF6 Akuma 214hp.png",
+    "File:SF6 Akuma 236pp hold.png",
+    "File:SF6 Akuma 236pp.png",
+    "File:SF6 Akuma 236mp hitbox.png",
+    "File:SF6 Akuma 236mp.png",
+    "File:SF6 Akuma 236kk p hitbox.png",
+    "File:SF6 Akuma 236kk p.png",
+    "File:SF6 Akuma 236kk no input hitbox.png",
+    "File:SF6 Akuma 236kk no input.png",
+    "File:SF6 Akuma 236kk k hitbox.png",
+    "File:SF6 Akuma 236kk k.png",
+    "File:SF6 Akuma 236kk j236p hitbox.png",
+    "File:SF6 Akuma 236kk j214k hitbox.png",
+    "File:SF6 Akuma 236kk hitbox.png",
+    "File:SF6 Akuma 236kk 2 hold hitbox.png",
+    "File:SF6 Akuma 236kk 2 hold.png",
+    "File:SF6 Akuma 236kk.png",
+    "File:SF6 Akuma 623mp hitbox.png",
+    "File:SF6 Akuma 623mp.png",
+    "File:SF6 Akuma 623hp.png",
+    "File:SF6 Akuma 4lplk hitbox.png",
+    "File:SF6 Akuma j236pp.png",
+    "File:SF6 Akuma j214kk.png"
+  ],
+  "download_images": false
+}

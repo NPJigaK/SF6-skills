@@ -1,0 +1,414 @@
+{
+  "validation_schema_version": "supercombo_frame_capture_validation/v1",
+  "validated_at_utc": "2026-06-05T06:56:57Z",
+  "raw_root": "raw\\frame-data\\supercombo\\jamie",
+  "capture_label": "2026-06-01",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-01",
+    "latest_revision_timestamp": "2026-06-01T07:16:07Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Jamie/Data",
+        "pageid": 65947,
+        "lastrevid": 365201,
+        "revision_timestamp": "2026-06-01T07:16:07Z",
+        "touched": "2026-06-01T07:16:07Z"
+      },
+      {
+        "title": "Street Fighter 6/Jamie/Frame data",
+        "pageid": 68271,
+        "lastrevid": 310372,
+        "revision_timestamp": "2024-10-19T05:17:28Z",
+        "touched": "2026-06-01T07:16:10Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "status": "passed",
+  "failures": [],
+  "warnings": [
+    "Specials/General rendered table is paginated; compared first 50 of 55 rows",
+    "Specials/Details rendered table is paginated; compared first 50 of 55 rows",
+    "Specials/Meter rendered table is paginated; compared first 50 of 55 rows",
+    "Specials/Properties rendered table is paginated; compared first 50 of 55 rows",
+    "Specials/Notes rendered table is paginated; compared first 50 of 55 rows",
+    "39 imageinfo titles are missing"
+  ],
+  "summary": {
+    "character_templates": 1,
+    "frame_templates": 115,
+    "display_cargo_queries": 21,
+    "cargo_frame_rows": 115,
+    "cargo_character_rows": 1,
+    "move_type_counts": {
+      "air_normal": 6,
+      "drive": 6,
+      "ground_normal": 32,
+      "special": 55,
+      "super": 5,
+      "taunt": 8,
+      "throw": 3
+    },
+    "duplicate_inputs": {
+      "5LP": [
+        "Jamie_5lp",
+        "Jamie_5lp_dl2"
+      ],
+      "6MK": [
+        "Jamie_6mk",
+        "Jamie_6mk_dl2"
+      ],
+      "4HP": [
+        "Jamie_4hp_dl2",
+        "Jamie_4hp_dl3"
+      ],
+      "6HK": [
+        "Jamie_6hk_dl2",
+        "Jamie_6hk_dl4"
+      ],
+      "6HPHK": [
+        "Jamie_6hphk_dl2",
+        "Jamie_6hphk_dl2_recovery"
+      ],
+      "22P (hold)": [
+        "Jamie_22p_2",
+        "Jamie_22p_3",
+        "Jamie_22p_4"
+      ],
+      "236LP": [
+        "Jamie_236lp_dl2",
+        "Jamie_236lp_dl4"
+      ],
+      "236MP": [
+        "Jamie_236mp_dl2",
+        "Jamie_236mp_dl4"
+      ],
+      "236HP": [
+        "Jamie_236hp_dl2",
+        "Jamie_236hp_dl4"
+      ],
+      "236PP": [
+        "Jamie_236pp_dl2",
+        "Jamie_236pp_dl4"
+      ],
+      "236LP~6P": [
+        "Jamie_236lp_6p_dl2",
+        "Jamie_236lp_6p_dl4"
+      ],
+      "236MP~6P": [
+        "Jamie_236mp_6p_dl2",
+        "Jamie_236mp_6p_dl4"
+      ],
+      "236HP~6P": [
+        "Jamie_236hp_6p_dl2",
+        "Jamie_236hp_6p_dl4"
+      ],
+      "236PP~6P": [
+        "Jamie_236pp_6p_dl2",
+        "Jamie_236pp_6p_dl4"
+      ],
+      "236LP~6P~6P": [
+        "Jamie_236lp_6p_6p_dl2",
+        "Jamie_236lp_6p_6p_dl4"
+      ],
+      "236MP~6P~6P": [
+        "Jamie_236mp_6p_6p_dl2",
+        "Jamie_236mp_6p_6p_dl4"
+      ],
+      "236HP~6P~6P": [
+        "Jamie_236hp_6p_6p_dl2",
+        "Jamie_236hp_6p_6p_dl4"
+      ],
+      "236PP~6P~6P": [
+        "Jamie_236pp_6p_6p_dl2",
+        "Jamie_236pp_6p_6p_dl4"
+      ],
+      "236236P": [
+        "Jamie_236236p_dl2",
+        "Jamie_236236p(ca)_dl2"
+      ],
+      "5PPPKKK": [
+        "Jamie_5pppkkk",
+        "Jamie_5pppkkk_dl4",
+        "Jamie_4pppkkk"
+      ],
+      "6PPPKKK": [
+        "Jamie_6pppkkk",
+        "Jamie_6pppkkk_dl1",
+        "Jamie_6pppkkk_dl2",
+        "Jamie_6pppkkk_dl3",
+        "Jamie_6pppkkk_dl4"
+      ]
+    },
+    "rendered_tab_states": 5,
+    "table_comparisons": 20,
+    "image_refs": 288,
+    "imageinfo_resolved": 210,
+    "imageinfo_missing": 39,
+    "downloaded_images": 0,
+    "failed_image_downloads": 0
+  },
+  "table_comparisons": [
+    {
+      "section": "Normals and Target Combos",
+      "tab": "General",
+      "expected_rows": 38,
+      "actual_rows": 38,
+      "compared_rows": 38,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "General",
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "General",
+      "expected_rows": 55,
+      "actual_rows": 50,
+      "compared_rows": 50,
+      "pagination_limited": true,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "General",
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Details",
+      "expected_rows": 38,
+      "actual_rows": 38,
+      "compared_rows": 38,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Details",
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Details",
+      "expected_rows": 55,
+      "actual_rows": 50,
+      "compared_rows": 50,
+      "pagination_limited": true,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Details",
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Meter",
+      "expected_rows": 38,
+      "actual_rows": 38,
+      "compared_rows": 38,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Meter",
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Meter",
+      "expected_rows": 55,
+      "actual_rows": 50,
+      "compared_rows": 50,
+      "pagination_limited": true,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Meter",
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Properties",
+      "expected_rows": 38,
+      "actual_rows": 38,
+      "compared_rows": 38,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Properties",
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Properties",
+      "expected_rows": 55,
+      "actual_rows": 50,
+      "compared_rows": 50,
+      "pagination_limited": true,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Properties",
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Normals and Target Combos",
+      "tab": "Notes",
+      "expected_rows": 38,
+      "actual_rows": 38,
+      "compared_rows": 38,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Drive and Throw",
+      "tab": "Notes",
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Specials",
+      "tab": "Notes",
+      "expected_rows": 55,
+      "actual_rows": 50,
+      "compared_rows": 50,
+      "pagination_limited": true,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    },
+    {
+      "section": "Supers",
+      "tab": "Notes",
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
+      "header_match": true,
+      "row_count_match": true,
+      "input_order_match": true,
+      "cell_mismatches": [],
+      "note_mismatches": []
+    }
+  ]
+}

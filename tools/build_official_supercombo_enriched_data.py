@@ -85,6 +85,16 @@ SUPERCOMBO_ONLY_LINK_FIELDS = [
     "link_note",
 ]
 
+REVIEW_REQUIRED_FLAG_PREFIXES = (
+    "manual_match",
+    "ambiguous_match",
+    "basic_field_conflict",
+    "condition_dependent_supercombo_field",
+    "multiple_candidates",
+    "supercombo_row_reused",
+    "uncomparable_basic_field",
+)
+
 HUMAN_REVIEW_DECISIONS_BY_CHARACTER = {
     "jp": {
         "43": {
@@ -549,6 +559,10 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def repo_path(path: Path) -> str:
+    return path.as_posix()
+
+
 def conflict_fields(comparisons_json: str) -> list[str]:
     comparisons = json.loads(comparisons_json or "{}")
     return [
@@ -558,20 +572,49 @@ def conflict_fields(comparisons_json: str) -> list[str]:
     ]
 
 
+def uncomparable_fields(comparisons_json: str) -> list[str]:
+    comparisons = json.loads(comparisons_json or "{}")
+    return [
+        field
+        for field, item in comparisons.items()
+        if item.get("comparable") is False
+    ]
+
+
+def condition_dependent_fields(comparisons_json: str) -> list[str]:
+    comparisons = json.loads(comparisons_json or "{}")
+    return [
+        field
+        for field, item in comparisons.items()
+        if item.get("reason") == "condition_dependent_supercombo_field"
+    ]
+
+
 def review_flags(crosswalk_row: dict[str, str], reused_move_ids: set[str]) -> list[str]:
     flags: list[str] = []
-    conflicts = conflict_fields(crosswalk_row.get("field_comparisons_json", "{}"))
+    comparisons_json = crosswalk_row.get("field_comparisons_json", "{}")
+    conflicts = conflict_fields(comparisons_json)
+    uncomparable = uncomparable_fields(comparisons_json)
+    condition_dependent = condition_dependent_fields(comparisons_json)
     if crosswalk_row.get("match_status") == "matched_manual":
         flags.append("manual_match")
     if crosswalk_row.get("match_status") == "ambiguous":
         flags.append("ambiguous_match")
     if conflicts:
         flags.append("basic_field_conflict:" + ",".join(conflicts))
+    if condition_dependent:
+        flags.append("condition_dependent_supercombo_field:" + ",".join(condition_dependent))
+    if uncomparable:
+        flags.append("uncomparable_basic_field:" + ",".join(uncomparable))
     if int(crosswalk_row.get("candidate_count") or "0") > 1:
         flags.append("multiple_candidates")
     if crosswalk_row.get("supercombo_move_id") in reused_move_ids:
         flags.append("supercombo_row_reused")
     return flags
+
+
+def needs_human_review(flags: list[str]) -> bool:
+    return any(flag.startswith(REVIEW_REQUIRED_FLAG_PREFIXES) for flag in flags)
 
 
 def supplemental_only_handling(*, character_slug: str, row: dict[str, str]) -> str:
@@ -633,6 +676,7 @@ def build_enriched(
     enriched_rows: list[dict[str, str]] = []
     flag_counts: Counter[str] = Counter()
     conflict_counts: Counter[str] = Counter()
+    uncomparable_counts: Counter[str] = Counter()
     status_counts: Counter[str] = Counter()
 
     for official_index, official in enumerate(official_rows, start=1):
@@ -644,13 +688,14 @@ def build_enriched(
         conflicts = conflict_fields(crosswalk.get("field_comparisons_json", "{}")) if crosswalk else []
         for conflict in conflicts:
             conflict_counts[conflict] += 1
+        uncomparable = uncomparable_fields(crosswalk.get("field_comparisons_json", "{}")) if crosswalk else []
+        for field in uncomparable:
+            uncomparable_counts[field] += 1
 
         supercombo_move_id = crosswalk.get("supercombo_move_id", "")
         supercombo = supercombo_by_id.get(supercombo_move_id)
         if supercombo:
-            status = "enriched_review_required" if any(
-                flag.startswith(("manual_match", "ambiguous_match", "basic_field_conflict")) for flag in flags
-            ) else "enriched"
+            status = "enriched_review_required" if needs_human_review(flags) else "enriched"
             for field in SUPPLEMENTAL_FRAME_FIELDS:
                 row[f"supercombo_{field}"] = supercombo.get(field, "")
         else:
@@ -697,6 +742,7 @@ def build_enriched(
         "enrichment_status_counts": dict(status_counts),
         "review_flag_counts": dict(sorted(flag_counts.items())),
         "basic_field_conflict_counts": dict(sorted(conflict_counts.items())),
+        "uncomparable_basic_field_counts": dict(sorted(uncomparable_counts.items())),
         "human_review_status_counts": dict(
             Counter(row["human_review_status"] for row in enriched_rows if row["human_review_status"])
         ),
@@ -756,9 +802,9 @@ def main(argv: list[str]) -> int:
         {
             "schema_version": "official_supercombo_enriched_frame_data/v1",
             "authority": "official_fields_authoritative",
-            "official_csv": str(official_csv),
-            "supercombo_frames_csv": str(supercombo_csv),
-            "crosswalk_csv": str(crosswalk_csv),
+            "official_csv": repo_path(official_csv),
+            "supercombo_frames_csv": repo_path(supercombo_csv),
+            "crosswalk_csv": repo_path(crosswalk_csv),
             "summary": summary,
             "rows": enriched_rows,
         },
@@ -788,10 +834,10 @@ def main(argv: list[str]) -> int:
         output_dir / "summary.json",
         {
             **summary,
-            "official_csv": str(official_csv),
-            "supercombo_frames_csv": str(supercombo_csv),
-            "crosswalk_csv": str(crosswalk_csv),
-            "output_csv": str(output_dir / f"{args.official_mode}-supercombo.csv"),
+            "official_csv": repo_path(official_csv),
+            "supercombo_frames_csv": repo_path(supercombo_csv),
+            "crosswalk_csv": repo_path(crosswalk_csv),
+            "output_csv": repo_path(output_dir / f"{args.official_mode}-supercombo.csv"),
         },
     )
     print(json.dumps(summary, ensure_ascii=False, indent=2))

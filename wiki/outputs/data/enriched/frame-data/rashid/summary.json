@@ -1,0 +1,71 @@
+{
+  "official_rows": 85,
+  "supercombo_rows": 79,
+  "enriched_rows": 85,
+  "supercombo_only_rows": 24,
+  "enrichment_status_counts": {
+    "enriched": 19,
+    "enriched_review_required": 55,
+    "official_only": 11
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,damage,startup": 2,
+    "basic_field_conflict:active_duration,startup": 1,
+    "basic_field_conflict:damage": 6,
+    "basic_field_conflict:damage,startup": 1,
+    "basic_field_conflict:recovery": 2,
+    "basic_field_conflict:recovery,startup": 2,
+    "basic_field_conflict:startup": 3,
+    "condition_dependent_supercombo_field:damage": 4,
+    "condition_dependent_supercombo_field:recovery": 14,
+    "condition_dependent_supercombo_field:startup": 5,
+    "manual_match": 2,
+    "multiple_candidates": 22,
+    "supercombo_row_reused": 30,
+    "uncomparable_basic_field:active_duration,damage": 5,
+    "uncomparable_basic_field:active_duration,damage,recovery": 14,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 2,
+    "uncomparable_basic_field:active_duration,damage,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery,startup": 9,
+    "uncomparable_basic_field:damage": 2,
+    "uncomparable_basic_field:damage,recovery": 4,
+    "uncomparable_basic_field:damage,startup": 1,
+    "uncomparable_basic_field:recovery": 12,
+    "uncomparable_basic_field:startup": 3
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 3,
+    "damage": 9,
+    "recovery": 4,
+    "startup": 9
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 31,
+    "damage": 29,
+    "recovery": 41,
+    "startup": 16
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "rashid_214hk",
+    "rashid_214kk",
+    "rashid_214lk",
+    "rashid_214mk",
+    "rashid_236hp",
+    "rashid_236k",
+    "rashid_236kk",
+    "rashid_236lp",
+    "rashid_236mp",
+    "rashid_236pp",
+    "rashid_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 21,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/rashid/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/rashid/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/rashid/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/rashid/classic-supercombo.csv"
+}

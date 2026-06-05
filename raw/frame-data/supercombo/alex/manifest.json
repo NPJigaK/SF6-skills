@@ -1,0 +1,50 @@
+{
+  "manifest_schema_version": "supercombo_frame_raw_capture_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:07:20Z",
+  "character": "Alex",
+  "character_slug": "alex",
+  "capture_label": "2026-06-02",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-02",
+    "latest_revision_timestamp": "2026-06-02T02:19:35Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Alex/Data",
+        "pageid": 93105,
+        "lastrevid": 365286,
+        "revision_timestamp": "2026-06-02T02:19:35Z",
+        "touched": "2026-06-02T02:19:35Z"
+      },
+      {
+        "title": "Street Fighter 6/Alex/Frame data",
+        "pageid": 93111,
+        "lastrevid": 350611,
+        "revision_timestamp": "2026-01-22T00:44:27Z",
+        "touched": "2026-06-02T02:19:37Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "raw_root": "raw\\frame-data\\supercombo\\alex",
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": [
+    "api\\page-metadata.json",
+    "cargo\\character-data.json",
+    "cargo\\frame-data.json",
+    "data.raw.wikitext",
+    "data.templates.json",
+    "frame-data.cargo-queries.json",
+    "frame-data.raw.wikitext",
+    "image-manifest.json",
+    "imageinfo.json",
+    "rendered\\page.html",
+    "rendered\\tables.dom.json",
+    "screenshots\\details.png",
+    "screenshots\\general.png",
+    "screenshots\\meter.png",
+    "screenshots\\notes.png",
+    "screenshots\\properties.png"
+  ]
+}

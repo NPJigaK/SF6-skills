@@ -1,0 +1,2233 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:39:40Z",
+  "source": "SuperCombo Wiki",
+  "character": "Mai",
+  "cargo_character": "Mai",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Mai",
+      "filename": "SF6 Mai Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Mai",
+      "filename": "SF6 Mai Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Mai_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Mai_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Mai_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Mai_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Mai_5mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Mai_5mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mai_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mai_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mai_5hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Mai_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Mai_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Mai_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Mai_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Mai_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Mai_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Mai_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Mai_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Mai_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Mai_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mai_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mai_2hp_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mai_2hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mai_2hp_2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Mai_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Mai_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Mai_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Mai_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_2hk",
+      "input": "2HK",
+      "name": "Sori Geri",
+      "filename": "SF6_Mai_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_2hk",
+      "input": "2HK",
+      "name": "Sori Geri",
+      "filename": "SF6_Mai_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Mai_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Mai_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Mai_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Mai_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Mai_jmp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Mai_jmp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mai_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mai_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mai_jhp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mai_jhp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Mai_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Mai_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Mai_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Mai_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Mai_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Mai_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_6mp",
+      "input": "6MP",
+      "name": "Senkotsu Uchi",
+      "filename": "SF6_Mai_6mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_6mp",
+      "input": "6MP",
+      "name": "Senkotsu Uchi",
+      "filename": "SF6_Mai_6mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_4hk",
+      "input": "4HK",
+      "name": "Hoshi Kujaku 1",
+      "filename": "SF6_Mai_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_4hk",
+      "input": "4HK",
+      "name": "Hoshi Kujaku 1",
+      "filename": "SF6_Mai_4hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5lk_lk",
+      "input": "5LK~LK",
+      "name": "Hien Ren Kyaku 1",
+      "filename": "SF6_Mai_5lk_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5lk_lk",
+      "input": "5LK~LK",
+      "name": "Hien Ren Kyaku 1",
+      "filename": "SF6_Mai_5lk_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5lk_lk_lk",
+      "input": "5LK~LK~LK",
+      "name": "Hien Ren Kyaku 2",
+      "filename": "SF6_Mai_5lk_lk_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_5lk_lk_lk",
+      "input": "5LK~LK~LK",
+      "name": "Hien Ren Kyaku 2",
+      "filename": "SF6_Mai_5lk_lk_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_4hk_hk",
+      "input": "4HK~HK",
+      "name": "Hoshi Kujaku 2",
+      "filename": "SF6_Mai_4hk_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_4hk_hk",
+      "input": "4HK~HK",
+      "name": "Hoshi Kujaku 2",
+      "filename": "SF6_Mai_4hk_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_lplk",
+      "input": "LPLK",
+      "name": "Shiranui Gourin",
+      "filename": "SF6_Mai_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_lplk",
+      "input": "LPLK",
+      "name": "Shiranui Gourin",
+      "filename": "SF6_Mai_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_4lplk",
+      "input": "4LPLK",
+      "name": "Fuusha Kuzushi",
+      "filename": "SF6_Mai_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_4lplk",
+      "input": "4LPLK",
+      "name": "Fuusha Kuzushi",
+      "filename": "SF6_Mai_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_jlplk",
+      "input": "j.LPLK",
+      "name": "Yume Zakura",
+      "filename": "SF6_Mai_jlplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_jlplk",
+      "input": "j.LPLK",
+      "name": "Yume Zakura",
+      "filename": "SF6_Mai_jlplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_hphk",
+      "input": "HPHK",
+      "name": "Botan Ichige",
+      "filename": "SF6_Mai_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_hphk",
+      "input": "HPHK",
+      "name": "Botan Ichige",
+      "filename": "SF6_Mai_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_6hphk",
+      "input": "6HPHK",
+      "name": "Yusura Ume (Block)",
+      "filename": "SF6_Mai_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_6hphk",
+      "input": "6HPHK",
+      "name": "Yusura Ume (Block)",
+      "filename": "SF6_Mai_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Yusura Ume (Recovery)",
+      "filename": "SF6_Mai_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Yusura Ume (Recovery)",
+      "filename": "SF6_Mai_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Mai_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Mai_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Mai_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Mai_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Mai_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Mai_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236lp",
+      "input": "236LP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lp",
+      "input": "236LP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236lp_flame",
+      "input": "236LP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236p_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lp_flame",
+      "input": "236LP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236p_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236mp",
+      "input": "236MP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236mp",
+      "input": "236MP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236mp_flame",
+      "input": "236MP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236p_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236mp_flame",
+      "input": "236MP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236p_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236hp",
+      "input": "236HP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236hp",
+      "input": "236HP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236hp_flame",
+      "input": "236HP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236p_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236hp_flame",
+      "input": "236HP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236p_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236pp",
+      "input": "236PP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp",
+      "input": "236PP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp",
+      "input": "236PP",
+      "name": "Kachousen",
+      "filename": "SF6_Mai_236pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236pp_flame",
+      "input": "236PP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236pp_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp_flame",
+      "input": "236PP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp_flame",
+      "input": "236PP",
+      "name": "Kachousen (Flame)",
+      "filename": "SF6_Mai_236pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236p_hold",
+      "input": "236[P]",
+      "name": "Kachousen (Hold)",
+      "filename": "SF6_Mai_236p_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236p_hold",
+      "input": "236[P]",
+      "name": "Kachousen (Hold)",
+      "filename": "SF6_Mai_236p_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236p_hold",
+      "input": "236[P]",
+      "name": "Kachousen (Hold)",
+      "filename": "SF6_Mai_236p_hold_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236p_flame_hold",
+      "input": "236[P]",
+      "name": "Kachousen (Flame+Hold)",
+      "filename": "SF6_Mai_236p_flame_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236p_flame_hold",
+      "input": "236[P]",
+      "name": "Kachousen (Flame+Hold)",
+      "filename": "SF6_Mai_236p_flame_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236pp_hold",
+      "input": "236[PP]",
+      "name": "Kachousen (Hold)",
+      "filename": "SF6_Mai_236pp_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp_hold",
+      "input": "236[PP]",
+      "name": "Kachousen (Hold)",
+      "filename": "SF6_Mai_236pp_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236pp_flame_hold",
+      "input": "236[PP]",
+      "name": "Kachousen (Flame+Hold)",
+      "filename": "SF6_Mai_236pp_flame_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp_flame_hold",
+      "input": "236[PP]",
+      "name": "Kachousen (Flame+Hold)",
+      "filename": "SF6_Mai_236pp_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236pp_hold_6p",
+      "input": "236[PP]~6P",
+      "name": "Midare Kachousen",
+      "filename": "SF6_Mai_236pp_hold_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp_hold_6p",
+      "input": "236[PP]~6P",
+      "name": "Midare Kachousen",
+      "filename": "SF6_Mai_236pp_hold_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236pp_hold_6p_flame",
+      "input": "236[PP]~6P",
+      "name": "Midare Kachousen (Flame)",
+      "filename": "SF6_Mai_236pp_hold_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236pp_hold_6p_flame",
+      "input": "236[PP]~6P",
+      "name": "Midare Kachousen (Flame)",
+      "filename": "SF6_Mai_236pp_hold_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214lp",
+      "input": "214LP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214lp",
+      "input": "214LP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214lp_flame",
+      "input": "214LP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214lp_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214lp_flame",
+      "input": "214LP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214mp",
+      "input": "214MP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214mp",
+      "input": "214MP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214mp",
+      "input": "214MP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214mp",
+      "input": "214MP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214mp_flame",
+      "input": "214MP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214mp_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214mp_flame",
+      "input": "214MP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214mp_flame",
+      "input": "214MP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214mp_flame",
+      "input": "214MP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214mp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214hp",
+      "input": "214HP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214hp",
+      "input": "214HP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214hp",
+      "input": "214HP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214hp",
+      "input": "214HP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214hp_flame",
+      "input": "214HP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214hp_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214hp_flame",
+      "input": "214HP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214hp_flame",
+      "input": "214HP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214hp_flame",
+      "input": "214HP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214pp",
+      "input": "214PP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp",
+      "input": "214PP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp",
+      "input": "214PP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp",
+      "input": "214PP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp",
+      "input": "214PP",
+      "name": "Ryuuenbu",
+      "filename": "SF6_Mai_214pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214pp_flame",
+      "input": "214PP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214pp_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp_flame",
+      "input": "214PP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp_flame",
+      "input": "214PP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214mp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp_flame",
+      "input": "214PP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214pp_flame",
+      "input": "214PP",
+      "name": "Ryuuenbu (Flame)",
+      "filename": "SF6_Mai_214pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236k_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236lk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236lk_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236lk_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236k_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236lk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236lk_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236lk_flame",
+      "input": "236LK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236lk_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236mk",
+      "input": "236MK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236mk",
+      "input": "236MK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236mk_flame",
+      "input": "236MK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236mk_flame",
+      "input": "236MK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236hk",
+      "input": "236HK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236hk",
+      "input": "236HK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236hk_flame",
+      "input": "236HK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236hk_flame",
+      "input": "236HK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236kk",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236kk",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236kk",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236kk",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236kk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236kk_flame",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236kk_flame",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236kk_flame",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236kk_flame",
+      "input": "236KK",
+      "name": "Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236kk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623lk",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox_full.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_7.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623lk_flame",
+      "input": "623LK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_full.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623mk",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623mk_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623mk_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623mk_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623mk_flame",
+      "input": "623MK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623lk_flame_hitbox_7.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623hk",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623hk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623hk_hitbox_full.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_7.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623hk_flame",
+      "input": "623HK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623hk_flame_hitbox_full.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623kk",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623kk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623kk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin",
+      "filename": "SF6_Mai_623kk_hitbox_full.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_623kk_flame",
+      "input": "623KK",
+      "name": "Hishou Ryuuenjin (Flame)",
+      "filename": "SF6_Mai_623kk_flame_hitbox_full.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_j214p",
+      "input": "j.214P",
+      "name": "Musasabi no Mai",
+      "filename": "SF6_Mai_j214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j214p",
+      "input": "j.214P",
+      "name": "Musasabi no Mai",
+      "filename": "SF6_Mai_j214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_j214p_flame",
+      "input": "j.214P",
+      "name": "Musasabi no Mai (Flame)",
+      "filename": "SF6_Mai_j214p_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j214p_flame",
+      "input": "j.214P",
+      "name": "Musasabi no Mai (Flame)",
+      "filename": "SF6_Mai_j214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_j214pp",
+      "input": "j.214PP",
+      "name": "Musasabi no Mai",
+      "filename": "SF6_Mai_j214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j214pp",
+      "input": "j.214PP",
+      "name": "Musasabi no Mai",
+      "filename": "SF6_Mai_j214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_j214pp_flame",
+      "input": "j.214PP",
+      "name": "Musasabi no Mai (Flame)",
+      "filename": "SF6_Mai_j214pp_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j214pp_flame",
+      "input": "j.214PP",
+      "name": "Musasabi no Mai (Flame)",
+      "filename": "SF6_Mai_j214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236236p",
+      "input": "236236P",
+      "name": "Kagerou no Mai",
+      "filename": "SF6_Mai_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236p",
+      "input": "236236P",
+      "name": "Kagerou no Mai",
+      "filename": "SF6_Mai_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236p",
+      "input": "236236P",
+      "name": "Kagerou no Mai",
+      "filename": "SF6_Mai_236236p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236236p_flame",
+      "input": "236236P",
+      "name": "Kagerou no Mai (Flame)",
+      "filename": "SF6_Mai_236236p_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236p_flame",
+      "input": "236236P",
+      "name": "Kagerou no Mai (Flame)",
+      "filename": "SF6_Mai_236236p_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236p_flame",
+      "input": "236236P",
+      "name": "Kagerou no Mai (Flame)",
+      "filename": "SF6_Mai_236236p_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236p_flame",
+      "input": "236236P",
+      "name": "Kagerou no Mai (Flame)",
+      "filename": "SF6_Mai_236236p_flame_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_236236k_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_236236k_flame",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236236k_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k_flame",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236236k_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k_flame",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236236k_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k_flame",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236236k_flame_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_236236k_flame",
+      "input": "236236K",
+      "name": "Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_236236k_flame_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_j236236k",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_j236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j236236k",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_j236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j236236k",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_j236236k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j236236k",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi",
+      "filename": "SF6_Mai_j236236k_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_j236236k_flame",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_j236236k_flame.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j236236k_flame",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_j236236k_flame_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_j236236k_flame",
+      "input": "j.236236K",
+      "name": "Air Chou Hissatsu Shinobi Bachi (Flame)",
+      "filename": "SF6_Mai_j236236k_flame_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_5.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_6.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_7.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura",
+      "filename": "SF6_Mai_214214p_hitbox_8.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_214214p(ca)",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura (CA)",
+      "filename": "SF6_Mai_214214p_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_214214p(ca)",
+      "input": "214214P",
+      "name": "Shiranui Ryuu: Enbu Ada Zakura (CA)",
+      "filename": "SF6_Mai_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Mai_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_5pppkkk_2pppkkk",
+      "input": "5PPPKKK~2PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Mai_5pppkkk_2pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Mai_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Mai_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Mai_4pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "mai_4pppkkk_hold",
+      "input": "4[PPPKKK]",
+      "name": "Back Taunt",
+      "filename": "SF6_Mai_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_4pppkkk_hold",
+      "input": "4[PPPKKK]",
+      "name": "Back Taunt",
+      "filename": "SF6_Mai_4pppkkk_hold_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "mai_4pppkkk_hold",
+      "input": "4[PPPKKK]",
+      "name": "Back Taunt",
+      "filename": "SF6_Mai_4pppkkk_hitbox.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Mai 214pp flame.png",
+    "File:SF6 Mai 214mp flame.png",
+    "File:SF6 Mai 214lp flame.png",
+    "File:SF6 Mai 214hp flame.png",
+    "File:SF6 Mai 236pp flame hold.png",
+    "File:SF6 Mai 236pp flame.png",
+    "File:SF6 Mai 236pp.png",
+    "File:SF6 Mai 236p flame hold hitbox.png",
+    "File:SF6 Mai 236p flame hold.png",
+    "File:SF6 Mai 236p flame hitbox.png",
+    "File:SF6 Mai 236p flame.png",
+    "File:SF6 Mai 236mp hitbox.png",
+    "File:SF6 Mai 236mp.png",
+    "File:SF6 Mai 236mk hitbox.png",
+    "File:SF6 Mai 236mk.png",
+    "File:SF6 Mai 236hp hitbox.png",
+    "File:SF6 Mai 236hp.png",
+    "File:SF6 Mai 236hk hitbox.png",
+    "File:SF6 Mai 236hk.png",
+    "File:SF6 Mai 623hk flame.png",
+    "File:SF6 Mai 623mk flame.png",
+    "File:SF6 Mai 623lk flame.png",
+    "File:SF6 Mai 623kk flame.png",
+    "File:SF6 Mai 623kk.png",
+    "File:SF6 Mai j236236k flame.png",
+    "File:SF6 Mai j214pp flame.png",
+    "File:SF6 Mai j214pp.png",
+    "File:SF6 Mai j214p flame.png"
+  ],
+  "download_images": false
+}

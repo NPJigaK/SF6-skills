@@ -1,0 +1,49 @@
+{
+  "official_rows": 72,
+  "supercombo_rows": 75,
+  "enriched_rows": 72,
+  "supercombo_only_rows": 34,
+  "enrichment_status_counts": {
+    "enriched": 23,
+    "enriched_review_required": 24,
+    "official_only": 25
+  },
+  "review_flag_counts": {
+    "ambiguous_match": 6,
+    "condition_dependent_supercombo_field:damage": 3,
+    "condition_dependent_supercombo_field:recovery": 11,
+    "condition_dependent_supercombo_field:startup": 2,
+    "multiple_candidates": 15,
+    "supercombo_row_reused": 11,
+    "uncomparable_basic_field:active_duration,damage": 6,
+    "uncomparable_basic_field:active_duration,damage,recovery": 10,
+    "uncomparable_basic_field:damage": 2,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 2,
+    "uncomparable_basic_field:startup": 2
+  },
+  "basic_field_conflict_counts": {},
+  "uncomparable_basic_field_counts": {
+    "active_duration": 16,
+    "damage": 20,
+    "recovery": 14,
+    "startup": 2
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "m.bison_214hp",
+    "m.bison_214lp",
+    "m.bison_214mp",
+    "m.bison_214pp",
+    "m.bison_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 28,
+    "supercombo_only_taunt": 6
+  },
+  "official_csv": "wiki/outputs/data/frame-data/vega_mbison/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/vega_mbison/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/vega_mbison/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/vega_mbison/classic-supercombo.csv"
+}

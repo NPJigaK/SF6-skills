@@ -1,0 +1,1422 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:48:19Z",
+  "source": "SuperCombo Wiki",
+  "character": "M.Bison",
+  "cargo_character": "M.Bison",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "M. Bison",
+      "filename": "SF6 Mbison Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "M. Bison",
+      "filename": "SF6 Mbison Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Mbison_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Mbison_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Mbison_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Mbison_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mbison_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mbison_5hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mbison_5hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Mbison_5hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Mbison_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Mbison_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Mbison_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Mbison_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Mbison_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Mbison_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Mbison_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Mbison_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Mbison_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Mbison_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mbison_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mbison_2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mbison_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Mbison_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Mbison_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Mbison_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Mbison_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Mbison_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_2hk",
+      "input": "2HK",
+      "name": "Shadow Sweep",
+      "filename": "SF6_Mbison_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_2hk",
+      "input": "2HK",
+      "name": "Shadow Sweep",
+      "filename": "SF6_Mbison_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Mbison_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Mbison_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Mbison_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Mbison_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mbison_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mbison_jhp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mbison_jhp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Mbison_jhp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Mbison_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jlk",
+      "input": "j.LK",
+      "name": "Jumping Light Kick",
+      "filename": "SF6_Mbison_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Mbison_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Mbison_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Mbison_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Mbison_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_6hp",
+      "input": "6HP",
+      "name": "Psycho Hammer",
+      "filename": "SF6_Mbison_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_6hp",
+      "input": "6HP",
+      "name": "Psycho Hammer",
+      "filename": "SF6_Mbison_6hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_4hk",
+      "input": "4HK",
+      "name": "Evil Knee",
+      "filename": "SF6_Mbison_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_4hk",
+      "input": "4HK",
+      "name": "Evil Knee",
+      "filename": "SF6_Mbison_4hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_3hk",
+      "input": "3HK",
+      "name": "Hover Kick",
+      "filename": "SF6_Mbison_3hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_3hk",
+      "input": "3HK",
+      "name": "Hover Kick",
+      "filename": "SF6_Mbison_3hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5mp_6hp",
+      "input": "5MP~6HP",
+      "name": "Shadow Hammer",
+      "filename": "SF6_Mbison_6hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5mp_6hp",
+      "input": "5MP~6HP",
+      "name": "Shadow Hammer",
+      "filename": "SF6_Mbison_5mp_6hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5mp_2hk",
+      "input": "5MP~2HK",
+      "name": "Shadow Spear",
+      "filename": "SF6_Mbison_5mp_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_5mp_2hk",
+      "input": "5MP~2HK",
+      "name": "Shadow Spear",
+      "filename": "SF6_Mbison_5mp_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_jmp_jmp",
+      "input": "j.MP~j.MP",
+      "name": "Hell Attack",
+      "filename": "SF6_Mbison_jmp_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_jmp_jmp",
+      "input": "j.MP~j.MP",
+      "name": "Hell Attack",
+      "filename": "SF6_Mbison_jmp_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_lplk",
+      "input": "LPLK",
+      "name": "Deadly Throw",
+      "filename": "SF6_Mbison_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_lplk",
+      "input": "LPLK",
+      "name": "Deadly Throw",
+      "filename": "SF6_Mbison_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_4lplk",
+      "input": "4LPLK",
+      "name": "Death Tower",
+      "filename": "SF6_Mbison_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_4lplk",
+      "input": "4LPLK",
+      "name": "Death Tower",
+      "filename": "SF6_Mbison_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_hphk",
+      "input": "HPHK",
+      "name": "Hell Twist",
+      "filename": "SF6_Mbison_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_hphk",
+      "input": "HPHK",
+      "name": "Hell Twist",
+      "filename": "SF6_Mbison_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_6hphk",
+      "input": "6HPHK",
+      "name": "Hell Drive (Block)",
+      "filename": "SF6_Mbison_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_6hphk",
+      "input": "6HPHK",
+      "name": "Hell Drive (Block)",
+      "filename": "SF6_Mbison_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hell Drive (Recovery)",
+      "filename": "SF6_Mbison_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Hell Drive (Recovery)",
+      "filename": "SF6_Mbison_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Mbison_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Mbison_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Mbison_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Mbison_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Mbison_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Mbison_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_psycho_mine",
+      "input": "-",
+      "name": "Psycho Mine (Detonation)",
+      "filename": "SF6_Mbison_psycho_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_psycho_mine",
+      "input": "-",
+      "name": "Psycho Mine (Detonation)",
+      "filename": "SF6_Mbison_psycho_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46lp",
+      "input": "[4]6LP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46lp",
+      "input": "[4]6LP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46lp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46lp",
+      "input": "[4]6LP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46mp",
+      "input": "[4]6MP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46mp",
+      "input": "[4]6MP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46mp",
+      "input": "[4]6MP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46hp",
+      "input": "[4]6HP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46hp",
+      "input": "[4]6HP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46hp",
+      "input": "[4]6HP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46pp",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46pp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46pp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher Attack",
+      "filename": "SF6_Mbison_46pp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46lp_mine",
+      "input": "[4]6LP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46lp_mine",
+      "input": "[4]6LP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46lp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46lp_mine",
+      "input": "[4]6LP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46mp_mine",
+      "input": "[4]6MP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46mp_mine",
+      "input": "[4]6MP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46mp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46mp_mine",
+      "input": "[4]6MP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46hp_mine",
+      "input": "[4]6HP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46hp_mine",
+      "input": "[4]6HP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46hp_mine",
+      "input": "[4]6HP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_46pp_mine",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46pp_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp_mine",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46pp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp_mine",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46pp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp_mine",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_46pp_mine",
+      "input": "[4]6PP",
+      "name": "Psycho Crusher (Mine)",
+      "filename": "SF6_Mbison_46pp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236lk",
+      "input": "236LK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236lk",
+      "input": "236LK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236mk",
+      "input": "236MK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236mk",
+      "input": "236MK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236hk",
+      "input": "236HK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236hk",
+      "input": "236HK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236kk",
+      "input": "236KK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236kk",
+      "input": "236KK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236kk",
+      "input": "236KK",
+      "name": "Double Knee Press",
+      "filename": "SF6_Mbison_236kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214lp",
+      "input": "214LP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214lp",
+      "input": "214LP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214lp_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214lp",
+      "input": "214LP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214mp",
+      "input": "214MP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214mp",
+      "input": "214MP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214hp",
+      "input": "214HP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214hp",
+      "input": "214HP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214pp",
+      "input": "214PP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214pp",
+      "input": "214PP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214pp_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214pp",
+      "input": "214PP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214pp",
+      "input": "214PP",
+      "name": "Backfist Combo",
+      "filename": "SF6_Mbison_214pp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214lp_mine",
+      "input": "214LP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214lp_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214lp_mine",
+      "input": "214LP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214lp_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214mp_mine",
+      "input": "214MP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214mp_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214mp_mine",
+      "input": "214MP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214mp_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214hp_mine",
+      "input": "214HP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214hp_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214hp_mine",
+      "input": "214HP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214hp_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214pp_mine",
+      "input": "214PP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214pp_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214pp_mine",
+      "input": "214PP",
+      "name": "Backfist Combo (Mine)",
+      "filename": "SF6_Mbison_214pp_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28k",
+      "input": "[2]8K",
+      "name": "Shadow Rise",
+      "filename": "SF6_Mbison_28k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28k",
+      "input": "[2]8K",
+      "name": "Shadow Rise",
+      "filename": "SF6_Mbison_28k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28kk",
+      "input": "[2]8KK",
+      "name": "Shadow Rise",
+      "filename": "SF6_Mbison_28k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28kk",
+      "input": "[2]8KK",
+      "name": "Shadow Rise",
+      "filename": "SF6_Mbison_28kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28k_p",
+      "input": "[2]8K~P",
+      "name": "Devil Reverse",
+      "filename": "SF6_Mbison_28k_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28k_p",
+      "input": "[2]8K~P",
+      "name": "Devil Reverse",
+      "filename": "SF6_Mbison_28k_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28k_p",
+      "input": "[2]8K~P",
+      "name": "Devil Reverse",
+      "filename": "SF6_Mbison_28k_p_cross_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28kk_p",
+      "input": "[2]8KK~P or [2]8K~PP",
+      "name": "Devil Reverse",
+      "filename": "SF6_Mbison_28kk_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28kk_p",
+      "input": "[2]8KK~P or [2]8K~PP",
+      "name": "Devil Reverse",
+      "filename": "SF6_Mbison_28kk_p_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28kk_p",
+      "input": "[2]8KK~P or [2]8K~PP",
+      "name": "Devil Reverse",
+      "filename": "SF6_Mbison_28kk_p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28k_p_mine",
+      "input": "[2]8K~P",
+      "name": "Devil Reverse (Mine)",
+      "filename": "SF6_Mbison_28k_p_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28k_p_mine",
+      "input": "[2]8K~P",
+      "name": "Devil Reverse (Mine)",
+      "filename": "SF6_Mbison_28k_p_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28kk_p_mine",
+      "input": "[2]8KK~P or [2]8K~PP",
+      "name": "Devil Reverse (Mine)",
+      "filename": "SF6_Mbison_28kk_p_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28kk_p_mine",
+      "input": "[2]8KK~P or [2]8K~PP",
+      "name": "Devil Reverse (Mine)",
+      "filename": "SF6_Mbison_28kk_p_mine_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28k_k",
+      "input": "[2]8K~K",
+      "name": "Head Press",
+      "filename": "SF6_Mbison_28k_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28k_k",
+      "input": "[2]8K~K",
+      "name": "Head Press",
+      "filename": "SF6_Mbison_28k_k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28kk_k",
+      "input": "[2]8KK~K or [2]8K~KK",
+      "name": "Head Press",
+      "filename": "SF6_Mbison_28kk_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28kk_k",
+      "input": "[2]8KK~K or [2]8K~KK",
+      "name": "Head Press",
+      "filename": "SF6_Mbison_28kk_k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_28k_k_p",
+      "input": "[2]8K~K~P",
+      "name": "Somersault Skull Diver",
+      "filename": "SF6_Mbison_28k_k_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_28k_k_p",
+      "input": "[2]8K~K~P",
+      "name": "Somersault Skull Diver",
+      "filename": "SF6_Mbison_28k_k_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236236k",
+      "input": "236236K",
+      "name": "Knee Press Nightmare",
+      "filename": "SF6_Mbison_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236236k",
+      "input": "236236K",
+      "name": "Knee Press Nightmare",
+      "filename": "SF6_Mbison_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236236k",
+      "input": "236236K",
+      "name": "Knee Press Nightmare",
+      "filename": "SF6_Mbison_236236k_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214214k",
+      "input": "214214K",
+      "name": "Psycho Punisher",
+      "filename": "SF6_Mbison_214214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214214k",
+      "input": "214214K",
+      "name": "Psycho Punisher",
+      "filename": "SF6_Mbison_214214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236236p",
+      "input": "236236P",
+      "name": "Unlimited Psycho Crusher",
+      "filename": "SF6_Mbison_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236236p",
+      "input": "236236P",
+      "name": "Unlimited Psycho Crusher",
+      "filename": "SF6_Mbison_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_236236p(ca)",
+      "input": "236236P",
+      "name": "Unlimited Psycho Crusher (CA)",
+      "filename": "SF6_Mbison_236236p_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_236236p(ca)",
+      "input": "236236P",
+      "name": "Unlimited Psycho Crusher (CA)",
+      "filename": "SF6_Mbison_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_4ppp",
+      "input": "6 or 4 + PPP/KKK",
+      "name": "Bison Warp",
+      "filename": "SF6_MBison_4ppp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_623pp",
+      "input": "623PP",
+      "name": "Psycho Burst",
+      "filename": "SF6_MBison_623pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_623pp",
+      "input": "623PP",
+      "name": "Psycho Burst",
+      "filename": "SF6_MBison_623pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_214214p",
+      "input": "214214P",
+      "name": "Final Psycho Crusher",
+      "filename": "SF6_MBison_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_214214p",
+      "input": "214214P",
+      "name": "Final Psycho Crusher",
+      "filename": "SF6_MBison_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Mbison_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5pppkkk_8",
+      "input": "5PPPKKK~8",
+      "name": "Neutral Taunt (Up)",
+      "filename": "SF6_Mbison_5pppkkk_8.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_5pppkkk_2",
+      "input": "5PPPKKK~2",
+      "name": "Neutral Taunt (Down)",
+      "filename": "SF6_Mbison_5pppkkk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Mbison_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_6pppkkk_mine",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (Mine)",
+      "filename": "SF6_Mbison_6pppkkk_mine.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Mbison_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "m.bison_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Mbison_4pppkkk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Mbison_4pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "m.bison_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Mbison_4pppkkk_hitbox_2.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Mbison 236mk hitbox.png",
+    "File:SF6 Mbison 236mk.png",
+    "File:SF6 Mbison 236hk hitbox.png",
+    "File:SF6 Mbison 236hk.png",
+    "File:SF6 Mbison 214pp mine hitbox.png",
+    "File:SF6 Mbison 214pp mine.png",
+    "File:SF6 Mbison 214mp mine hitbox.png",
+    "File:SF6 Mbison 214mp mine.png",
+    "File:SF6 Mbison 214mp hitbox.png",
+    "File:SF6 Mbison 214mp.png",
+    "File:SF6 Mbison 214lp mine hitbox.png",
+    "File:SF6 Mbison 214lp mine.png",
+    "File:SF6 Mbison 214hp mine hitbox.png",
+    "File:SF6 Mbison 214hp mine.png",
+    "File:SF6 Mbison 214hp hitbox.png",
+    "File:SF6 Mbison 214hp.png",
+    "File:SF6 MBison 623pp hitbox.png",
+    "File:SF6 MBison 214214p hitbox.png",
+    "File:SF6 Mbison 46pp.png",
+    "File:SF6 Mbison 28kk p mine hitbox.png",
+    "File:SF6 Mbison 28kk p mine.png",
+    "File:SF6 Mbison 28kk k hitbox.png",
+    "File:SF6 Mbison 28kk k.png",
+    "File:SF6 Mbison 28k p mine hitbox.png",
+    "File:SF6 Mbison 28k p mine.png"
+  ],
+  "download_images": false
+}

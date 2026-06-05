@@ -1,0 +1,43 @@
+{
+  "official_rows": 91,
+  "supercombo_rows": 90,
+  "crosswalk_status_counts": {
+    "matched": 77,
+    "unmatched": 10,
+    "ambiguous": 2,
+    "matched_manual": 2
+  },
+  "matched_distinct_supercombo_rows": 64,
+  "supercombo_unmatched_rows": 26,
+  "supercombo_rows_matched_multiple_times": {
+    "marisa_236236p": 3,
+    "marisa_236hp": 2,
+    "marisa_236lp": 2,
+    "marisa_236mp": 2,
+    "marisa_236pp": 2,
+    "marisa_2hk": 2,
+    "marisa_2hp": 2,
+    "marisa_3hp": 2,
+    "marisa_4hp": 2,
+    "marisa_5hk": 2,
+    "marisa_5hp": 2,
+    "marisa_6hk": 2,
+    "marisa_jhk": 2,
+    "marisa_jhp": 2,
+    "marisa_mpmk": 3
+  },
+  "source_raw_root": "raw/frame-data/supercombo/marisa",
+  "official_csv": "wiki/outputs/data/frame-data/marisa/classic.csv",
+  "crosswalk_policy": {
+    "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
+    "supercombo_primary_key": "move_id",
+    "candidate_matching": [
+      "official Classic input tokens are converted to command signatures",
+      "special and super motions may also match a strength-collapsed input family",
+      "category/moveType compatibility and simple field equality increase candidate score",
+      "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
+      "generic name overrides are used for Drive Rush system rows",
+      "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
+    ]
+  }
+}

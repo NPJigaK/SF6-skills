@@ -13,12 +13,14 @@
 | SuperCombo Ryu | `raw/frame-data/supercombo/ryu/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]、[[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] |
 | SuperCombo Zangief | `raw/frame-data/supercombo/zangief/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]、[[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] |
 | SuperCombo Ingrid | `raw/frame-data/supercombo/ingrid/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]、[[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
+| SuperCombo all characters | `raw/frame-data/supercombo/<character_slug>/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | 各 manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]、`wiki/outputs/data/supercombo/frame-data/<character_slug>/`、`wiki/outputs/data/enriched/frame-data/<character_slug>/` |
 
 ## Sources
 
 | Page | Summary | Source date | Source type | Status |
 |---|---|---:|---|---|
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。Drive System、frame data、juggle、notation 用語を含む community source。 | 2026-05-26 | wiki_page | active |
+| [[sources/supercombo-street-fighter-6-frame-data-batch]] | SuperCombo Wiki の Street Fighter 6 frame-data 30キャラ batch capture。raw wikitext、Cargo API、DOM、5タブ screenshot、公式 Classic との派生 output を含む。 | 2026-06-05 | community_frame_data | active |
 | [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/jp/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 123 件を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/ryu/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 133 件、conditional variant link を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-zangief-frame-data]] | SuperCombo Wiki の Zangief frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/zangief/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 165 件、360/720 と近距離/中距離/遠距離 override を含む community source。 | 2026-06-01 | community_frame_data | active |
@@ -59,7 +61,7 @@
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo JP/Ryu/Zangief/Ingrid community raw 取得データ、公式 + SuperCombo 補助列付き output、latest mirror raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
+| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo 30キャラ community raw 取得データ、公式 + SuperCombo 補助列付き output、latest mirror raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit などの community terms。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。 | [[concepts/frame-data]] |
 
@@ -67,45 +69,45 @@
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo JP/Ryu/Zangief/Ingrid community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
-| [[entities/supercombo-wiki]] | glossary と JP/Ryu/Zangief/Ingrid frame-data raw 取得データ、公式補助 output の source である community wiki。 | other |
+| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
+| [[entities/supercombo-wiki]] | glossary と 30キャラ分の SuperCombo frame-data raw 取得データ、公式補助 output の source である community wiki。 | other |
 | [[entities/capcom]] | 公式 Street Fighter 6 frame-data sources の publisher。 | company |
-| [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/jamie]] | Jamie（ジェイミー）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/chun-li]] | Chun-Li（春麗）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/guile]] | Guile（ガイル）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/kimberly]] | Kimberly（キンバリー）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/juri]] | Juri（ジュリ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/ken]] | Ken（ケン）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/blanka]] | Blanka（ブランカ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/dhalsim]] | Dhalsim（ダルシム）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/e-honda]] | E. Honda（エドモンド本田）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/dee-jay]] | Dee Jay（ディージェイ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/manon]] | Manon（マノン）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/marisa]] | Marisa（マリーザ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/jp]] | JP。公式 Classic / Modern frame-data outputs と SuperCombo raw community frame-data capture がある character。 | character |
-| [[entities/zangief]] | Zangief（ザンギエフ）。公式 Classic / Modern frame-data outputs と SuperCombo community raw frame-data 取得データがある character。 | character |
-| [[entities/lily]] | Lily（リリー）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/cammy]] | Cammy（キャミィ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/rashid]] | Rashid（ラシード）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/aki]] | A.K.I.。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/ed]] | Ed（エド）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/gouki-akuma]] | Gouki / Akuma（豪鬼）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/vega-m-bison]] | Vega / M. Bison（ベガ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/terry]] | Terry（テリー）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/mai]] | Mai（不知火舞）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/elena]] | Elena（エレナ）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/sagat]] | Sagat（サガット）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/c-viper]] | C. Viper（C.ヴァイパー）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/alex]] | Alex（アレックス）。公式 Classic / Modern frame-data outputs がある character。 | character |
-| [[entities/ingrid]] | Ingrid（イングリッド）。公式 Classic / Modern frame-data outputs、SuperCombo community raw frame-data 取得データ、レビュー済み補助 output がある character。 | character |
+| [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/jamie]] | Jamie（ジェイミー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/chun-li]] | Chun-Li（春麗）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/guile]] | Guile（ガイル）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/kimberly]] | Kimberly（キンバリー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/juri]] | Juri（ジュリ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/ken]] | Ken（ケン）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/blanka]] | Blanka（ブランカ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/dhalsim]] | Dhalsim（ダルシム）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/e-honda]] | E. Honda（エドモンド本田）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/dee-jay]] | Dee Jay（ディージェイ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/manon]] | Manon（マノン）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/marisa]] | Marisa（マリーザ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/jp]] | JP。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/zangief]] | Zangief（ザンギエフ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/lily]] | Lily（リリー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/cammy]] | Cammy（キャミィ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/rashid]] | Rashid（ラシード）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/aki]] | A.K.I.。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/ed]] | Ed（エド）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/gouki-akuma]] | Gouki / Akuma（豪鬼）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/vega-m-bison]] | Vega / M. Bison（ベガ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/terry]] | Terry（テリー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/mai]] | Mai（不知火舞）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/elena]] | Elena（エレナ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/sagat]] | Sagat（サガット）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/c-viper]] | C. Viper（C.ヴァイパー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/alex]] | Alex（アレックス）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
+| [[entities/ingrid]] | Ingrid（イングリッド）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
 
 ## Syntheses
 
 | Page | Summary | Updated |
 |---|---|---:|
-| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。JP/Ryu/Zangief/Ingrid の official / SuperCombo raw entrypoint と成果物への接続を整理する。 | 2026-06-02 |
+| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と成果物への接続を整理する。 | 2026-06-05 |
 
 ## Questions
 
@@ -131,6 +133,9 @@
 | [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] | report | Capcom 公式 Zangief Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み25行と SuperCombo-only taunt 4行を含む。 | 2026-06-02 |
 | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]] | report | SuperCombo Ingrid の派生 output と Capcom 公式 Ingrid Classic CSV の照合。Sun Crest stock level、OD Sun Shot 共有 row、SA1/SA2、Drive Rush override を含む。 | 2026-06-02 |
 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] | report | Capcom 公式 Ingrid Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み26行、official-only 2行、SuperCombo-only 13行を含む。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
+| [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | report | SuperCombo frame-data 30キャラ分の raw capture / validation / official crosswalk / enriched output coverage。未レビュー補助行 1296 行、レビュー済み 69 行、SuperCombo-only 620 行を含む。 | 2026-06-06 |
+| `wiki/outputs/data/supercombo/frame-data/<character_slug>/` | csv/json | SuperCombo 30キャラ分の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-05 |
+| `wiki/outputs/data/enriched/frame-data/<character_slug>/` | csv/json | 公式 Classic rows に SuperCombo `supercombo_*` 補助列を付与した data。既存レビュー済み 69 行を保持し、複数候補・再利用・基本 field conflict・比較不能 field は未レビュー補助行として残す。 | 2026-06-06 |
 | `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
 | `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した data と SuperCombo-only row。 | 2026-05-31 |
 | `wiki/outputs/data/supercombo/frame-data/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
@@ -185,3 +190,4 @@
 | [[reviews/2026-06-02-supercombo-zangief-frame-data-capture-review]] | capture_validation | SuperCombo Zangief frame-data raw 取得データの自動検証レビュー。 | open |
 | [[reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review]] | capture_validation | SuperCombo Ingrid frame-data raw 取得データの自動検証レビュー。補助データ26行 accepted、imageinfo missing 156 件と SuperCombo-only 9行の扱いが残る。 | open |
 | [[reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview]] | prereview | SuperCombo Ingrid の公式 row に直接照合しない 9 行を外部 web evidence も使って事前レビュー。特殊隠しコマンド / Monoid 操作として通常回答から分離し、accept ではなく pending。 | open |
+| [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | capture_validation | SuperCombo frame-data 30キャラ分の batch capture review。raw capture は 30/30 passed、未レビュー補助行 1296 行と SuperCombo-only 620 行が残る。 | open |

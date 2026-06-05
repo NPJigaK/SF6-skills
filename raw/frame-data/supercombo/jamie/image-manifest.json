@@ -1,0 +1,2356 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:30:41Z",
+  "source": "SuperCombo Wiki",
+  "character": "Jamie",
+  "cargo_character": "Jamie",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Jamie",
+      "filename": "SF6 Jamie Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Jamie",
+      "filename": "SF6 Jamie Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5lp",
+      "input": "5LP",
+      "name": "Stand LP (DL0)",
+      "filename": "SF6_Jamie_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5lp",
+      "input": "5LP",
+      "name": "Stand LP (DL0)",
+      "filename": "SF6_Jamie_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5lp_dl2",
+      "input": "5LP",
+      "name": "Stand LP (DL2)",
+      "filename": "SF6_Jamie_5lp_dl1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5lp_dl2",
+      "input": "5LP",
+      "name": "Stand LP (DL2)",
+      "filename": "SF6_Jamie_5lp_dl1_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5mp_dl2",
+      "input": "5MP",
+      "name": "Stand MP (DL2)",
+      "filename": "SF6_Jamie_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5mp_dl2",
+      "input": "5MP",
+      "name": "Stand MP (DL2)",
+      "filename": "SF6_Jamie_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5hp_dl2",
+      "input": "5HP",
+      "name": "Stand HP (DL2)",
+      "filename": "SF6_Jamie_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hp_dl2",
+      "input": "5HP",
+      "name": "Stand HP (DL2)",
+      "filename": "SF6_Jamie_5hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hp_dl2",
+      "input": "5HP",
+      "name": "Stand HP (DL2)",
+      "filename": "SF6_Jamie_5hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hp_dl2",
+      "input": "5HP",
+      "name": "Stand HP (DL2)",
+      "filename": "SF6_Jamie_5hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hp_dl2",
+      "input": "5HP",
+      "name": "Stand HP (DL2)",
+      "filename": "SF6_Jamie_5hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5lk_dl2",
+      "input": "5LK",
+      "name": "Stand LK (DL2)",
+      "filename": "SF6_Jamie_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5lk_dl2",
+      "input": "5LK",
+      "name": "Stand LK (DL2)",
+      "filename": "SF6_Jamie_5lk_mash.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5lk_dl2",
+      "input": "5LK",
+      "name": "Stand LK (DL2)",
+      "filename": "SF6_Jamie_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5lk_dl2",
+      "input": "5LK",
+      "name": "Stand LK (DL2)",
+      "filename": "SF6_Jamie_5lk_mash_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5mk_dl2",
+      "input": "5MK",
+      "name": "Stand MK (DL2)",
+      "filename": "SF6_Jamie_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5mk_dl2",
+      "input": "5MK",
+      "name": "Stand MK (DL2)",
+      "filename": "SF6_Jamie_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5hk_dl2",
+      "input": "5HK",
+      "name": "Stand HK (DL2)",
+      "filename": "SF6_Jamie_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hk_dl2",
+      "input": "5HK",
+      "name": "Stand HK (DL2)",
+      "filename": "SF6_Jamie_5hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hk_dl2",
+      "input": "5HK",
+      "name": "Stand HK (DL2)",
+      "filename": "SF6_Jamie_5hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5hk_dl2",
+      "input": "5HK",
+      "name": "Stand HK (DL2)",
+      "filename": "SF6_Jamie_5hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2lp_dl2",
+      "input": "2LP",
+      "name": "Crouch LP (DL2)",
+      "filename": "SF6_Jamie_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2lp_dl2",
+      "input": "2LP",
+      "name": "Crouch LP (DL2)",
+      "filename": "SF6_Jamie_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2mp_dl2",
+      "input": "2MP",
+      "name": "Crouch MP (DL2)",
+      "filename": "SF6_Jamie_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2mp_dl2",
+      "input": "2MP",
+      "name": "Crouch MP (DL2)",
+      "filename": "SF6_Jamie_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2hp_dl2",
+      "input": "2HP",
+      "name": "Crouch HP (DL2)",
+      "filename": "SF6_Jamie_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hp_dl2",
+      "input": "2HP",
+      "name": "Crouch HP (DL2)",
+      "filename": "SF6_Jamie_2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hp_dl2",
+      "input": "2HP",
+      "name": "Crouch HP (DL2)",
+      "filename": "SF6_Jamie_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hp_dl2",
+      "input": "2HP",
+      "name": "Crouch HP (DL2)",
+      "filename": "SF6_Jamie_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hp_dl2",
+      "input": "2HP",
+      "name": "Crouch HP (DL2)",
+      "filename": "SF6_Jamie_2hp_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2lk_dl2",
+      "input": "2LK",
+      "name": "Crouch LK (DL2)",
+      "filename": "SF6_Jamie_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2lk_dl2",
+      "input": "2LK",
+      "name": "Crouch LK (DL2)",
+      "filename": "SF6_Jamie_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2mk_dl2",
+      "input": "2MK",
+      "name": "Crouch MK (DL2)",
+      "filename": "SF6_Jamie_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2mk_dl2",
+      "input": "2MK",
+      "name": "Crouch MK (DL2)",
+      "filename": "SF6_Jamie_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2hk_dl2",
+      "input": "2HK",
+      "name": "Crouch HK (DL2)",
+      "filename": "SF6_Jamie_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hk_dl2",
+      "input": "2HK",
+      "name": "Crouch HK (DL2)",
+      "filename": "SF6_Jamie_2hk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hk_dl2",
+      "input": "2HK",
+      "name": "Crouch HK (DL2)",
+      "filename": "SF6_Jamie_2hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hk_dl2",
+      "input": "2HK",
+      "name": "Crouch HK (DL2)",
+      "filename": "SF6_Jamie_2hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jlp_dl2",
+      "input": "j.LP",
+      "name": "Jump LP (DL2)",
+      "filename": "SF6_Jamie_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jlp_dl2",
+      "input": "j.LP",
+      "name": "Jump LP (DL2)",
+      "filename": "SF6_Jamie_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jmp_dl2",
+      "input": "j.MP",
+      "name": "Jump MP (DL2)",
+      "filename": "SF6_Jamie_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jmp_dl2",
+      "input": "j.MP",
+      "name": "Jump MP (DL2)",
+      "filename": "SF6_Jamie_jmp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jmp_dl2",
+      "input": "j.MP",
+      "name": "Jump MP (DL2)",
+      "filename": "SF6_Jamie_jmp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jmp_dl2",
+      "input": "j.MP",
+      "name": "Jump MP (DL2)",
+      "filename": "SF6_Jamie_jmp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jhp_dl2",
+      "input": "j.HP",
+      "name": "Jump HP (DL2)",
+      "filename": "SF6_Jamie_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhp_dl2",
+      "input": "j.HP",
+      "name": "Jump HP (DL2)",
+      "filename": "SF6_Jamie_jhp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhp_dl2",
+      "input": "j.HP",
+      "name": "Jump HP (DL2)",
+      "filename": "SF6_Jamie_jhp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhp_dl2",
+      "input": "j.HP",
+      "name": "Jump HP (DL2)",
+      "filename": "SF6_Jamie_jhp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jlk_dl2",
+      "input": "j.LK",
+      "name": "Jump LK (DL2)",
+      "filename": "SF6_Jamie_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jlk_dl2",
+      "input": "j.LK",
+      "name": "Jump LK (DL2)",
+      "filename": "SF6_Jamie_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jmk_dl2",
+      "input": "j.MK",
+      "name": "Jump MK (DL2)",
+      "filename": "SF6_Jamie_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jmk_dl2",
+      "input": "j.MK",
+      "name": "Jump MK (DL2)",
+      "filename": "SF6_Jamie_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_hitbox_preview_1_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_hitbox_preview_3_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_jhk_dl2",
+      "input": "j.HK",
+      "name": "Jump HK (DL2)",
+      "filename": "SF6_Jamie_jhk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2kk_dl2",
+      "input": "2KK",
+      "name": "Tensei Kick (DL2)",
+      "filename": "SF6_Jamie_2kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2kk_dl2",
+      "input": "2KK",
+      "name": "Tensei Kick (DL2)",
+      "filename": "SF6_Jamie_2kk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2kk_dl2",
+      "input": "2KK",
+      "name": "Tensei Kick (DL2)",
+      "filename": "SF6_Jamie_2kk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2kk_dl2",
+      "input": "2KK",
+      "name": "Tensei Kick (DL2)",
+      "filename": "SF6_Jamie_2kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6mk",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL0)",
+      "filename": "SF6_Jamie_6mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL0)",
+      "filename": "SF6_Jamie_6mk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL0)",
+      "filename": "SF6_Jamie_6mk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL0)",
+      "filename": "SF6_Jamie_6mk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6mk_dl2",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL2)",
+      "filename": "SF6_Jamie_6mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_dl2",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_dl2_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_dl2",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_dl2_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_dl2",
+      "input": "6MK",
+      "name": "Falling Star Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_dl2_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_4hp_dl2",
+      "input": "4HP",
+      "name": "Hermit's Elbow (DL2)",
+      "filename": "SF6_Jamie_4hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_4hp_dl2",
+      "input": "4HP",
+      "name": "Hermit's Elbow (DL2)",
+      "filename": "SF6_Jamie_4hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_4hp_dl3",
+      "input": "4HP",
+      "name": "Hermit's Elbow (DL3)",
+      "filename": "SF6_Jamie_4hp_dl3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_4hp_dl3",
+      "input": "4HP",
+      "name": "Hermit's Elbow (DL3)",
+      "filename": "SF6_Jamie_4hp_dl3_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hk_dl2",
+      "input": "6HK",
+      "name": "Senei Kick (DL2)",
+      "filename": "SF6_Jamie_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_dl2",
+      "input": "6HK",
+      "name": "Senei Kick (DL2)",
+      "filename": "SF6_Jamie_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hk_dl4",
+      "input": "6HK",
+      "name": "Senei Kick (DL4)",
+      "filename": "SF6_Jamie_6hk_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_dl4",
+      "input": "6HK",
+      "name": "Senei Kick (DL4)",
+      "filename": "SF6_Jamie_6hk_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2hk_hk_dl2",
+      "input": "2HK~HK",
+      "name": "Phantom Sway (DL2)",
+      "filename": "SF6_Jamie_2hk_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hk_hk_dl2",
+      "input": "2HK~HK",
+      "name": "Phantom Sway (DL2)",
+      "filename": "SF6_Jamie_2hk_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_2hk_hk_p_dl2",
+      "input": "2HK~HK~P",
+      "name": "Phantom Sway + Drink (DL2)",
+      "filename": "SF6_Jamie_2hk_hk_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_2hk_hk_p_dl2",
+      "input": "2HK~HK~P",
+      "name": "Phantom Sway + Drink (DL2)",
+      "filename": "SF6_Jamie_2hk_hk_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5lp_lk_dl2",
+      "input": "5LP~LK",
+      "name": "Bitter Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_5lp_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5lp_lk_dl2",
+      "input": "5LP~LK",
+      "name": "Bitter Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_5lp_lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5lp_lk_mp_dl2",
+      "input": "5LP~LK~MP",
+      "name": "Bitter Strikes 2 (DL2)",
+      "filename": "SF6_Jamie_5lp_lk_mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5lp_lk_mp_dl2",
+      "input": "5LP~LK~MP",
+      "name": "Bitter Strikes 2 (DL2)",
+      "filename": "SF6_Jamie_5lp_lk_mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6mk_mk_dl2",
+      "input": "6MK~MK",
+      "name": "Full Moon Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_mk_dl2",
+      "input": "6MK~MK",
+      "name": "Full Moon Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_mk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_mk_dl2",
+      "input": "6MK~MK",
+      "name": "Full Moon Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_mk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_mk_dl2",
+      "input": "6MK~MK",
+      "name": "Full Moon Kick (DL2)",
+      "filename": "SF6_Jamie_6mk_mk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6mk_mk_p_dl2",
+      "input": "6MK~MK~P",
+      "name": "Full Moon Kick + Drink (DL2)",
+      "filename": "SF6_Jamie_6mk_mk_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6mk_mk_p_dl2",
+      "input": "6MK~MK~P",
+      "name": "Full Moon Kick + Drink (DL2)",
+      "filename": "SF6_Jamie_6mk_mk_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_4hp_hp_dl3",
+      "input": "4HP~HP",
+      "name": "Intoxicated Assault 1 (DL3)",
+      "filename": "SF6_Jamie_4hp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_4hp_hp_dl3",
+      "input": "4HP~HP",
+      "name": "Intoxicated Assault 1 (DL3)",
+      "filename": "SF6_Jamie_4hp_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_4hp_hp_hk_dl3",
+      "input": "4HP~HP~HK",
+      "name": "Intoxicated Assault 2 (DL3)",
+      "filename": "SF6_Jamie_4hp_hp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_4hp_hp_hk_dl3",
+      "input": "4HP~HP~HK",
+      "name": "Intoxicated Assault 2 (DL3)",
+      "filename": "SF6_Jamie_4hp_hp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hk_4hk_dl4",
+      "input": "6HK~4HK",
+      "name": "Ransui Haze (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_dl4",
+      "input": "6HK~4HK",
+      "name": "Ransui Haze (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hk_4hk_p_close_dl4",
+      "input": "6HK~4HK~P (close)",
+      "name": "Ransui Haze Headbutt (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_close.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_p_close_dl4",
+      "input": "6HK~4HK~P (close)",
+      "name": "Ransui Haze Headbutt (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_close_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hk_4hk_p_mid_dl4",
+      "input": "6HK~4HK~P (mid)",
+      "name": "Ransui Haze Triple Fist (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_mid.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_p_mid_dl4",
+      "input": "6HK~4HK~P (mid)",
+      "name": "Ransui Haze Triple Fist (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_mid_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_p_mid_dl4",
+      "input": "6HK~4HK~P (mid)",
+      "name": "Ransui Haze Triple Fist (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_mid_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_p_mid_dl4",
+      "input": "6HK~4HK~P (mid)",
+      "name": "Ransui Haze Triple Fist (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_mid_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_p_mid_dl4",
+      "input": "6HK~4HK~P (mid)",
+      "name": "Ransui Haze Triple Fist (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_mid_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hk_4hk_p_far_dl4",
+      "input": "6HK~4HK~P (far)",
+      "name": "Ransui Haze Drink (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_far.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hk_4hk_p_far_dl4",
+      "input": "6HK~4HK~P (far)",
+      "name": "Ransui Haze Drink (DL4)",
+      "filename": "SF6_Jamie_6hk_4hk_p_far_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_lplk_dl2",
+      "input": "LPLK",
+      "name": "Back Shaver (DL2)",
+      "filename": "SF6_Jamie_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_lplk_dl2",
+      "input": "LPLK",
+      "name": "Back Shaver (DL2)",
+      "filename": "SF6_Jamie_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_lplk_dl2_hold",
+      "input": "LPLK (hold)",
+      "name": "Back Shaver + Drink (DL2)",
+      "filename": "SF6_Jamie_lplk_hold.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_lplk_dl2_hold",
+      "input": "LPLK (hold)",
+      "name": "Back Shaver + Drink (DL2)",
+      "filename": "SF6_Jamie_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_4lplk_dl2",
+      "input": "4LPLK",
+      "name": "Wheel Punch (DL2)",
+      "filename": "SF6_Jamie_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_4lplk_dl2",
+      "input": "4LPLK",
+      "name": "Wheel Punch (DL2)",
+      "filename": "SF6_Jamie_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_hphk_dl2",
+      "input": "HPHK",
+      "name": "Vainglory Strike (DL2)",
+      "filename": "SF6_Jamie_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_hphk_dl2",
+      "input": "HPHK",
+      "name": "Vainglory Strike (DL2)",
+      "filename": "SF6_Jamie_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hphk_dl2",
+      "input": "6HPHK",
+      "name": "Leg Sweep (Block)",
+      "filename": "SF6_Jamie_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hphk_dl2",
+      "input": "6HPHK",
+      "name": "Leg Sweep (Block)",
+      "filename": "SF6_Jamie_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6hphk_dl2_recovery",
+      "input": "6HPHK",
+      "name": "Leg Sweep (Recovery)",
+      "filename": "SF6_Jamie_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6hphk_dl2_recovery",
+      "input": "6HPHK",
+      "name": "Leg Sweep (Recovery)",
+      "filename": "SF6_Jamie_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Jamie_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Jamie_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "jamie_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Jamie_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "jamie_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Jamie_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "jamie_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Jamie_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "jamie_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Jamie_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_22p",
+      "input": "22P",
+      "name": "The Devil Inside",
+      "filename": "SF6_Jamie_22p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_22p",
+      "input": "22P",
+      "name": "The Devil Inside",
+      "filename": "SF6_Jamie_22p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_22p_2",
+      "input": "22P (hold)",
+      "name": "The Devil Inside (2 drinks)",
+      "filename": "SF6_Jamie_22p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_22p_2",
+      "input": "22P (hold)",
+      "name": "The Devil Inside (2 drinks)",
+      "filename": "SF6_Jamie_22p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_22p_3",
+      "input": "22P (hold)",
+      "name": "The Devil Inside (3 drinks)",
+      "filename": "SF6_Jamie_22p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_22p_3",
+      "input": "22P (hold)",
+      "name": "The Devil Inside (3 drinks)",
+      "filename": "SF6_Jamie_22p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_22p_4",
+      "input": "22P (hold)",
+      "name": "The Devil Inside (4 drinks)",
+      "filename": "SF6_Jamie_22p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_22p_4",
+      "input": "22P (hold)",
+      "name": "The Devil Inside (4 drinks)",
+      "filename": "SF6_Jamie_22p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_22p_activation",
+      "input": "22P (activation)",
+      "name": "The Devil Inside (DL4 activation)",
+      "filename": "SF6_Jamie_22p_activation.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_22p_activation",
+      "input": "22P (activation)",
+      "name": "The Devil Inside (DL4 activation)",
+      "filename": "SF6_Jamie_22p_activation_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_dl2",
+      "input": "236LP",
+      "name": "LP Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_dl2",
+      "input": "236LP",
+      "name": "LP Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_dl4",
+      "input": "236LP",
+      "name": "LP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_dl4",
+      "input": "236LP",
+      "name": "LP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_dl4_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_dl4",
+      "input": "236LP",
+      "name": "LP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_dl4",
+      "input": "236LP",
+      "name": "LP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_dl4_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_dl2",
+      "input": "236MP",
+      "name": "MP Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_dl2",
+      "input": "236MP",
+      "name": "MP Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_dl4",
+      "input": "236MP",
+      "name": "MP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236mp_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_dl4",
+      "input": "236MP",
+      "name": "MP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236mp_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_dl2",
+      "input": "236HP",
+      "name": "HP Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_dl2",
+      "input": "236HP",
+      "name": "HP Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_dl4",
+      "input": "236HP",
+      "name": "HP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236hp_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_dl4",
+      "input": "236HP",
+      "name": "HP Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236hp_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_dl2",
+      "input": "236PP",
+      "name": "OD Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_dl2",
+      "input": "236PP",
+      "name": "OD Freeflow Strikes 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_dl4",
+      "input": "236PP",
+      "name": "OD Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236pp_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_dl4",
+      "input": "236PP",
+      "name": "OD Freeflow Strikes 1 (DL4)",
+      "filename": "SF6_Jamie_236pp_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_dl2",
+      "input": "236LP~6P",
+      "name": "LP Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6p_dl2",
+      "input": "236LP~6P",
+      "name": "LP Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_dl4",
+      "input": "236LP~6P",
+      "name": "LP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_dl4",
+      "input": "236LP~6P",
+      "name": "LP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_dl4_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6p_dl4",
+      "input": "236LP~6P",
+      "name": "LP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_dl4_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6p_dl4",
+      "input": "236LP~6P",
+      "name": "LP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_dl4_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_6p_dl2",
+      "input": "236MP~6P",
+      "name": "MP Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236mp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_6p_dl2",
+      "input": "236MP~6P",
+      "name": "MP Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236mp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_6p_dl4",
+      "input": "236MP~6P",
+      "name": "MP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236mp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_6p_dl4",
+      "input": "236MP~6P",
+      "name": "MP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236mp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_6p_dl2",
+      "input": "236HP~6P",
+      "name": "HP Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236hp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_6p_dl2",
+      "input": "236HP~6P",
+      "name": "HP Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236hp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_6p_dl4",
+      "input": "236HP~6P",
+      "name": "HP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236hp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_6p_dl4",
+      "input": "236HP~6P",
+      "name": "HP Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236hp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_6p_dl2",
+      "input": "236PP~6P",
+      "name": "OD Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236pp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_6p_dl2",
+      "input": "236PP~6P",
+      "name": "OD Freeflow Strikes Punch 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_6p_dl4",
+      "input": "236PP~6P",
+      "name": "OD Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236pp_6p_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_6p_dl4",
+      "input": "236PP~6P",
+      "name": "OD Freeflow Strikes Punch 1 (DL4)",
+      "filename": "SF6_Jamie_236pp_6p_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_6p_dl2",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236lp_6p_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6p_6p_dl2",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236lp_6p_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_6p_dl4",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_6p_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_6p_dl4",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_6p_dl4_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6p_6p_dl4",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_6p_dl4_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6p_6p_dl4",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_6p_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6p_6p_dl4",
+      "input": "236LP~6P~6P",
+      "name": "LP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236lp_6p_6p_dl4_hitbox2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_6p_6p_dl2",
+      "input": "236MP~6P~6P",
+      "name": "MP Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236mp_6p_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_6p_6p_dl2",
+      "input": "236MP~6P~6P",
+      "name": "MP Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236mp_6p_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_6p_6p_dl4",
+      "input": "236MP~6P~6P",
+      "name": "MP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236mp_6p_6p_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_6p_6p_dl4",
+      "input": "236MP~6P~6P",
+      "name": "MP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236mp_6p_6p_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_6p_6p_dl2",
+      "input": "236HP~6P~6P",
+      "name": "HP Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236hp_6p_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_6p_6p_dl2",
+      "input": "236HP~6P~6P",
+      "name": "HP Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236hp_6p_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_6p_6p_dl4",
+      "input": "236HP~6P~6P",
+      "name": "HP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236hp_6p_6p_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_6p_6p_dl4",
+      "input": "236HP~6P~6P",
+      "name": "HP Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236hp_6p_6p_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_6p_6p_dl2",
+      "input": "236PP~6P~6P",
+      "name": "OD Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236pp_6p_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_6p_6p_dl2",
+      "input": "236PP~6P~6P",
+      "name": "OD Freeflow Strikes Punch 2 (DL2)",
+      "filename": "SF6_Jamie_236lp_6p_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_6p_6p_dl4",
+      "input": "236PP~6P~6P",
+      "name": "OD Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236pp_6p_6p_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_6p_6p_dl4",
+      "input": "236PP~6P~6P",
+      "name": "OD Freeflow Strikes Punch 2 (DL4)",
+      "filename": "SF6_Jamie_236pp_6p_6p_dl4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6k_dl2",
+      "input": "236LP~6K",
+      "name": "LP Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6k_dl2",
+      "input": "236LP~6K",
+      "name": "LP Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_6k_dl2",
+      "input": "236MP~6K",
+      "name": "MP Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236mp_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_6k_dl2",
+      "input": "236MP~6K",
+      "name": "MP Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236mp_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_6k_dl2",
+      "input": "236HP~6K",
+      "name": "HP Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236hp_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_6k_dl2",
+      "input": "236HP~6K",
+      "name": "HP Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236hp_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_6k_dl2",
+      "input": "236PP~6K",
+      "name": "OD Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236pp_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_6k_dl2",
+      "input": "236PP~6K",
+      "name": "OD Freeflow Kicks 1 (DL2)",
+      "filename": "SF6_Jamie_236lp_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lp_6k_6k_dl2",
+      "input": "236LP~6K~6K",
+      "name": "LP Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236lp_6k_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lp_6k_6k_dl2",
+      "input": "236LP~6K~6K",
+      "name": "LP Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236lp_6k_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mp_6k_6k_dl2",
+      "input": "236MP~6K~6K",
+      "name": "MP Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236mp_6k_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mp_6k_6k_dl2",
+      "input": "236MP~6K~6K",
+      "name": "MP Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236mp_6k_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hp_6k_6k_dl2",
+      "input": "236HP~6K~6K",
+      "name": "HP Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236hp_6k_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hp_6k_6k_dl2",
+      "input": "236HP~6K~6K",
+      "name": "HP Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236hp_6k_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236pp_6k_6k_dl2",
+      "input": "236PP~6K~6K",
+      "name": "OD Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236pp_6k_6k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236pp_6k_6k_dl2",
+      "input": "236PP~6K~6K",
+      "name": "OD Freeflow Kicks 2 (DL2)",
+      "filename": "SF6_Jamie_236lp_6k_6k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214lp_dl2",
+      "input": "214LP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214lp_dl2",
+      "input": "214LP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214mp_dl2",
+      "input": "214MP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214mp_dl2",
+      "input": "214MP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214hp_dl2",
+      "input": "214HP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214hp_dl2",
+      "input": "214HP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214pp_dl2",
+      "input": "214PP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214pp_dl2",
+      "input": "214PP",
+      "name": "Swagger Step (DL2)",
+      "filename": "SF6_Jamie_214lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214p_6p",
+      "input": "214P~6P",
+      "name": "Swagger Hermit Punch (DL4)",
+      "filename": "SF6_Jamie_214p_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214p_6p",
+      "input": "214P~6P",
+      "name": "Swagger Hermit Punch (DL4)",
+      "filename": "SF6_Jamie_214p_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214pp_6p",
+      "input": "214PP~6P",
+      "name": "Swagger Hermit Punch (DL4)",
+      "filename": "SF6_Jamie_214pp_6p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214pp_6p",
+      "input": "214PP~6P",
+      "name": "Swagger Hermit Punch (DL4)",
+      "filename": "SF6_Jamie_214pp_6p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_623lk_dl2",
+      "input": "623LK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_623lk_dl2",
+      "input": "623LK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_623lk_dl2",
+      "input": "623LK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_623mk_dl2",
+      "input": "623MK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_623mk_dl2",
+      "input": "623MK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_623hk_dl2",
+      "input": "623HK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_623hk_dl2",
+      "input": "623HK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_623kk_dl2",
+      "input": "623KK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_623kk_dl2",
+      "input": "623KK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_623kk_dl2",
+      "input": "623KK",
+      "name": "Arrow Kick (DL2)",
+      "filename": "SF6_Jamie_623kk2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_j214k_dl2",
+      "input": "j.214K",
+      "name": "Luminous Dive Kick (DL2)",
+      "filename": "SF6_Jamie_j214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_j214k_dl2",
+      "input": "j.214K",
+      "name": "Luminous Dive Kick (DL2)",
+      "filename": "SF6_Jamie_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_j214kk_dl2",
+      "input": "j.214KK",
+      "name": "Luminous Dive Kick (DL2)",
+      "filename": "SF6_Jamie_j214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_j214kk_dl2",
+      "input": "j.214KK",
+      "name": "Luminous Dive Kick (DL2)",
+      "filename": "SF6_Jamie_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236lk_dl2",
+      "input": "236LK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lk_dl2",
+      "input": "236LK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236lk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236lk_dl2",
+      "input": "236LK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236mk_dl2",
+      "input": "236MK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mk_dl2",
+      "input": "236MK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236mk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mk_dl2",
+      "input": "236MK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236mk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236mk_dl2",
+      "input": "236MK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236mk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236hk_dl2",
+      "input": "236HK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hk_dl2",
+      "input": "236HK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236hk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hk_dl2",
+      "input": "236HK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236hk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236hk_dl2",
+      "input": "236HK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236hk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236kk_dl2",
+      "input": "236KK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236kk_dl2",
+      "input": "236KK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236kk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236kk_dl2",
+      "input": "236KK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236kk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236kk_dl2",
+      "input": "236KK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236kk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236kk_dl2",
+      "input": "236KK",
+      "name": "Bakkai (DL2)",
+      "filename": "SF6_Jamie_236kk_hitbox_4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_63214k_dl3",
+      "input": "63214K",
+      "name": "Tenshin (DL3)",
+      "filename": "SF6_Jamie_63214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_63214k_dl3",
+      "input": "63214K",
+      "name": "Tenshin (DL3)",
+      "filename": "SF6_Jamie_63214k_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_63214k_dl3",
+      "input": "63214K",
+      "name": "Tenshin (DL3)",
+      "filename": "SF6_Jamie_63214k_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_63214k_dl3",
+      "input": "63214K",
+      "name": "Tenshin (DL3)",
+      "filename": "SF6_Jamie_63214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_63214kk_dl3",
+      "input": "63214KK",
+      "name": "Tenshin (DL3)",
+      "filename": "SF6_Jamie_63214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_63214kk_dl3",
+      "input": "63214KK",
+      "name": "Tenshin (DL3)",
+      "filename": "SF6_Jamie_63214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236236k_dl2",
+      "input": "236236K",
+      "name": "Breakin'",
+      "filename": "SF6_Jamie_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236k_dl2",
+      "input": "236236K",
+      "name": "Breakin'",
+      "filename": "SF6_Jamie_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236k_dl2",
+      "input": "236236K",
+      "name": "Breakin'",
+      "filename": "SF6_Jamie_236236k2_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236k_dl2",
+      "input": "236236K",
+      "name": "Breakin'",
+      "filename": "SF6_Jamie_236236k3_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236k_dl2",
+      "input": "236236K",
+      "name": "Breakin'",
+      "filename": "SF6_Jamie_236236k4_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236236k_drink_dl2",
+      "input": "236236K~[2]",
+      "name": "Breakin' ~ Drink",
+      "filename": "SF6_Jamie_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236k_drink_dl2",
+      "input": "236236K~[2]",
+      "name": "Breakin' ~ Drink",
+      "filename": "SF6_Jamie_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_214214p",
+      "input": "214214P",
+      "name": "The Devil's Song (DL0-DL4)",
+      "filename": "SF6_Jamie_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_214214p",
+      "input": "214214P",
+      "name": "The Devil's Song (DL0-DL4)",
+      "filename": "SF6_Jamie_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236236p_dl2",
+      "input": "236236P",
+      "name": "Getsuga Saiho (DL2)",
+      "filename": "SF6_Jamie_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236p_dl2",
+      "input": "236236P",
+      "name": "Getsuga Saiho (DL2)",
+      "filename": "SF6_Jamie_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236p_dl2",
+      "input": "236236P",
+      "name": "Getsuga Saiho (DL2)",
+      "filename": "SF6_Jamie_236236p_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_236236p(ca)_dl2",
+      "input": "236236P",
+      "name": "Getsuga Saiho (CA) (DL2)",
+      "filename": "SF6_Jamie_236236p_ca.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_236236p(ca)_dl2",
+      "input": "236236P",
+      "name": "Getsuga Saiho (CA) (DL2)",
+      "filename": "SF6_Jamie_236236p_ca_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt (DL0-DL3)",
+      "filename": "SF6_Jamie_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt (DL0-DL3)",
+      "filename": "SF6_Jamie_5pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_5pppkkk_dl4",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt (DL4)",
+      "filename": "SF6_Jamie_5pppkkk_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_5pppkkk_dl4",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt (DL4)",
+      "filename": "SF6_Jamie_5pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL0)",
+      "filename": "SF6_Jamie_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL0)",
+      "filename": "SF6_Jamie_6pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6pppkkk_dl1",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL1)",
+      "filename": "SF6_Jamie_6pppkkk_dl1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6pppkkk_dl1",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL1)",
+      "filename": "SF6_Jamie_6pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6pppkkk_dl2",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL2)",
+      "filename": "SF6_Jamie_6pppkkk_dl2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6pppkkk_dl2",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL2)",
+      "filename": "SF6_Jamie_6pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6pppkkk_dl3",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL3)",
+      "filename": "SF6_Jamie_6pppkkk_dl3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6pppkkk_dl3",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL3)",
+      "filename": "SF6_Jamie_6pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_6pppkkk_dl4",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL4)",
+      "filename": "SF6_Jamie_6pppkkk_dl4.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_6pppkkk_dl4",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt (DL4)",
+      "filename": "SF6_Jamie_6pppkkk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Jamie_4pppkkk",
+      "input": "5PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Jamie_4pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "Jamie_4pppkkk",
+      "input": "5PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Jamie_4pppkkk_hitbox.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Jamie 236hp dl4 hitbox.png",
+    "File:SF6 Jamie 236hp dl4.png",
+    "File:SF6 Jamie 236hp 6p hitbox.png",
+    "File:SF6 Jamie 236hp 6p 6p hitbox.png",
+    "File:SF6 Jamie 236hp 6p 6p dl4 hitbox.png",
+    "File:SF6 Jamie 236hp 6p 6p dl4.png",
+    "File:SF6 Jamie 236hp 6p 6p.png",
+    "File:SF6 Jamie 236hp 6p.png",
+    "File:SF6 Jamie 236hp 6k hitbox.png",
+    "File:SF6 Jamie 236hp 6k 6k hitbox.png",
+    "File:SF6 Jamie 236hp 6k 6k.png",
+    "File:SF6 Jamie 236hp 6k.png",
+    "File:SF6 Jamie 236hp.png",
+    "File:SF6 Jamie 236236p ca hitbox.png",
+    "File:SF6 Jamie 214pp 6p hitbox.png",
+    "File:SF6 Jamie 214mp hitbox.png",
+    "File:SF6 Jamie 214mp.png",
+    "File:SF6 Jamie 214hp hitbox.png",
+    "File:SF6 Jamie 214hp.png",
+    "File:SF6 Jamie 236mp 6p 6p hitbox.png",
+    "File:SF6 Jamie 236mp 6p 6p dl4 hitbox.png",
+    "File:SF6 Jamie 236mp 6p 6p dl4.png",
+    "File:SF6 Jamie 236mp 6p 6p.png",
+    "File:SF6 Jamie 236mp 6p.png",
+    "File:SF6 Jamie 236mp 6k hitbox.png",
+    "File:SF6 Jamie 236mp 6k 6k hitbox.png",
+    "File:SF6 Jamie 236mp 6k 6k.png",
+    "File:SF6 Jamie 236mp 6k.png",
+    "File:SF6 Jamie 236mp.png",
+    "File:SF6 Jamie 236hp hitbox.png",
+    "File:SF6 Jamie 236pp dl4 hitbox.png",
+    "File:SF6 Jamie 236pp 6p dl4 hitbox.png",
+    "File:SF6 Jamie 236pp 6p 6p dl4 hitbox.png",
+    "File:SF6 Jamie 236mp dl4 hitbox.png",
+    "File:SF6 Jamie 236mp dl4.png",
+    "File:SF6 Jamie 236mp 6p hitbox.png",
+    "File:SF6 Jamie 5pppkkk hitbox.png",
+    "File:SF6 Jamie 4pppkkk hitbox.png",
+    "File:SF6 Jamie 6pppkkk hitbox.png"
+  ],
+  "download_images": false
+}

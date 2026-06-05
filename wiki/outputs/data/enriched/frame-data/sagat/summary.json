@@ -1,0 +1,53 @@
+{
+  "official_rows": 70,
+  "supercombo_rows": 69,
+  "enriched_rows": 70,
+  "supercombo_only_rows": 15,
+  "enrichment_status_counts": {
+    "enriched": 19,
+    "enriched_review_required": 39,
+    "official_only": 12
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:startup": 2,
+    "condition_dependent_supercombo_field:damage": 6,
+    "condition_dependent_supercombo_field:recovery": 11,
+    "condition_dependent_supercombo_field:recovery,startup": 1,
+    "condition_dependent_supercombo_field:startup": 2,
+    "manual_match": 2,
+    "multiple_candidates": 17,
+    "supercombo_row_reused": 7,
+    "uncomparable_basic_field:active_duration,damage": 3,
+    "uncomparable_basic_field:active_duration,damage,recovery": 10,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:active_duration,recovery": 3,
+    "uncomparable_basic_field:damage": 7,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 7,
+    "uncomparable_basic_field:startup": 2
+  },
+  "basic_field_conflict_counts": {
+    "startup": 2
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 19,
+    "damage": 25,
+    "recovery": 25,
+    "startup": 5
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "sagat_236mphp",
+    "sagat_623hp",
+    "sagat_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 12,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/sagat/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/sagat/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/sagat/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/sagat/classic-supercombo.csv"
+}

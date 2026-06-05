@@ -24,7 +24,8 @@
       "official Classic input tokens are converted to command signatures",
       "special and super motions may also match a strength-collapsed input family",
       "category/moveType compatibility and simple field equality increase candidate score",
-      "JP-specific name overrides are used for Vihhat follow-ups and Drive Rush system rows",
+      "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
+      "generic name overrides are used for Drive Rush system rows",
       "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
     ]
   }

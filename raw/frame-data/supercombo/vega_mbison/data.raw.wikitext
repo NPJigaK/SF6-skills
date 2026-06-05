@@ -1,0 +1,2441 @@
+{{Character Subnav SF6 | chara=M.Bison | tag=Mbison }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = M.Bison
+| name          = M. Bison
+| portrait      = SF6 Mbison Portrait.png
+| icon          = SF6 Mbison Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.048
+| bwdWalkSpd    = 0.0312
+| fwdDashSpd    = 19
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.54
+| bwdDashDist   = 0.754
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.593
+| dRushBlock    = 2.650
+| dRushMax      = 4.425
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a followup attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a followup attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Mbison_5lp.png
+| hitboxes      = SF6_Mbison_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 11
+| total         = 17
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 12 (DR: 13)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-11}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|M|-2}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 17
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.26
+| notes         = Chains into 5LP/2LP/2LK; good range for a 5f jab; DR cancel is delayed until after 1st recovery frame; when 5LP is chained into, a follow-up chain occurs 1f earlier than usual (e.g. 5LP~5LP has 2f blockstring gap, but 5LP~5LP~5LP has 1f gap between the 2nd/3rd hits)
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Mbison_5mp.png
+| hitboxes      = SF6_Mbison_5mp_hitbox.png
+| damage        = 600
+| startup       = 8
+| active        = 3
+| recovery      = 15
+| total         = 25
+| guard         = LH
+| cancel        = Sp SA TC
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|E|0}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| DRcancelHit   = {{sf6-adv|VP|+14}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|VP|+4}}
+| hitstun       = 24
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.288
+| notes         = Counter-hit required to combo into 6HP Target Combo; combo and pressure starter
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Mbison_5hp.png
+| hitboxes      = SF6_Mbison_5hp_hitbox_preview.png, SF6_Mbison_5hp_hitbox_1.png, SF6_Mbison_5hp_hitbox_2.png
+| damage        = 1000
+| dmgScaling    = 20% Starter
+| startup       = 19
+| active        = 3
+| recovery      = 17(20)
+| total         = 38(41)
+| guard         = LH
+| cancel        = SA
+| hitconfirm    = 17 {{sf6-adv|PC|(29 PC)}}
+| hitAdv        = {{sf6-adv|VP|+4(+6)}}
+| blockAdv      = {{sf6-adv|P|+1(+3)}}
+| punishAdv     = {{sf6-adv|VP|+17(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-18(-16)}}
+| afterDRHit    = {{sf6-adv|VP|+8(+10)}}
+| afterDRBlk    = {{sf6-adv|VP|+5(+7)}}
+| hitstun       = 24
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.071 (1.822)
+| notes         = Slow advancing poke with good hitbox priority; 3f extra recovery on whiff/armor; can be spaced for better frame advantage; can be hitconfirmed into Super; slams airborne opponents down into limited juggle OTG state (higher bounce on Punish Counter allows more juggle follow-ups); extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Mbison_5lk.png
+| hitboxes      = SF6_Mbison_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 10
+| total         = 15
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 12
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.097
+| pushbackHit   = 0.213
+| pushbackBlk   = 0.218
+| notes         = Good light string ender that moves Bison forward (keeps him closer after a cancel, allowing more consistent combos like 2LK, 2LP, 5LK > 214LP); rare light normal that is plus after DR Cancel on block
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Mbison_5mk.png
+| hitboxes      = SF6_Mbison_5mk_hitbox.png
+| damage        = 700
+| startup       = 10
+| active        = 3
+| recovery      = 17
+| total         = 29
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 22
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.729
+| notes         = Poke with great range and hitbox priority; extends a wider hurtbox until the end of recovery
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Mbison_5hk.png
+| hitboxes      = SF6_Mbison_5hk_hitbox.png
+| damage        = 900
+| startup       = 13
+| active        = 4
+| recovery      = 19
+| total         = 35
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +73 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 29
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.59
+| notes         = Punish Counter crumple is +7 before opponent goes airborne; extended foot hurtbox is anti-air invuln while active on frames 13-16; whiffs on crouching opponents at longer ranges; puts airborne opponents into limited juggle state (much higher launch on Punish Counter); extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Mbison_2lp.png
+| hitboxes      = SF6_Mbison_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 2
+| recovery      = 10
+| total         = 15
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 12
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|M|-1}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 16
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.06
+| pushbackHit   = 0.404
+| pushbackBlk   = 0.385
+| notes         = Chains into 5LP/2LP/2LK; DR cancel is delayed until after active frames; topmost hurtbox on frames 1-5 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Mbison_2mp.png
+| hitboxes      = SF6_Mbison_2mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 3
+| recovery      = 14(17)
+| total         = 22(25)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 15
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-15}}
+| DRcancelHit   = {{sf6-adv|VP|+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+6}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 22
+| blockstun     = 16
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.30
+| notes         = 3f extra recovery on whiff; great range for a 6f medium (great for buffers and combos); topmost hurtbox on frames 1-8 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Mbison_2hp.png
+| hitboxes      = SF6_Mbison_2hp_hitbox_preview.png, SF6_Mbison_2hp_hitbox_1.png, SF6_Mbison_2hp_hitbox_2.png
+| damage        = 900
+| startup       = 10
+| active        = 6
+| recovery      = 21
+| total         = 36
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-9}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-25}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+8}}
+| afterDRHit    = {{sf6-adv|VP|+4}}
+| afterDRBlk    = {{sf6-adv|VM|-5}}
+| hitstun       = 27
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.80
+| notes         = Forces stand; puts airborne opponents into limited juggle state on Counter-hit/Punish Counter; slow anti-air with good vertical hitbox priority on frames 12-15 but cannot hit cross-up; only first 2 active frames are cancelable
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Mbison_2lk.png
+| hitboxes      = SF6_Mbison_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 10
+| total         = 16
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 16
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.05
+| notes         = Chains into 5LP/2LP/2LK; links naturally into 4f lights without chaining and can link to 2MP on counter-hit (rare for a 2LK)
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Mbison_2mk.png
+| hitboxes      = SF6_Mbison_2mk_hitbox.png
+| damage        = 500
+| dmgScaling    = 20% Starter
+| startup       = 8
+| active        = 3
+| recovery      = 19
+| total         = 29
+| guard         = L
+| cancel        = Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|M|-2}}
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| DRcancelHit   = {{sf6-adv|VP|+8}}
+| DRcancelBlk   = {{sf6-adv|VP|+4}}
+| afterDRHit    = {{sf6-adv|P|+2}}
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| hitstun       = 20
+| blockstun     = 16
+| hitstop       = 9
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.482
+| notes         = Solid cancelable low poke; DR cancel is delayed until after active frames; extends a wide hurtbox through the first 9 recovery frames before starting to recede; Range: 1.482
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Shadow Sweep
+| images        = SF6_Mbison_2hk.png
+| hitboxes      = SF6_Mbison_2hk_hitbox.png
+| damage        = 900
+| startup       = 11
+| active        = 3
+| recovery      = 26
+| total         = 39
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +29
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = HKD +45
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| afterDRHit    = KD +29
+| afterDRBlk    = {{sf6-adv|VM|-8}}
+| blockstun     = 17
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 1.991
+| notes         = Sweep with good range and hitbox priority; has juggle potential; puts airborne opponents into a limited juggle state (can combo with well-timed Psycho Mine detonation); can be difficult for some characters to punish when well spaced
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Mbison_jlp.png
+| hitboxes      = SF6_Mbison_jlp_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 4
+| recovery      = 3 land
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+9)}}
+| blockAdv      = {{sf6-adv|VP|+4(+5)}}
+| punishAdv     = {{sf6-adv|VP|+12(+13)}}
+| perfParryAdv  = {{sf6-adv|M|-3(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.12
+| notes         = Decent air-to-air
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Mbison_jmp.png
+| hitboxes      = SF6_Mbison_jmp_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 4
+| recovery      = 3 land
+| guard         = H
+| cancel        = TC
+| hitAdv        = {{sf6-adv|VP|+9(+11)}}
+| blockAdv      = {{sf6-adv|VP|+5(+7)}}
+| punishAdv     = {{sf6-adv|VP|+13(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 1.16
+| notes         = Great air-to-air with a long cancel window into Hell Attack; puts airborne opponents into limited juggle state; lower body projectile invuln 8-22f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Mbison_jhp.png
+| hitboxes      = SF6_Mbison_jhp_hitbox_preview.png, SF6_Mbison_jhp_hitbox_1.png, SF6_Mbison_jhp_hitbox_2.png
+| damage        = 800
+| startup       = 9
+| active        = 6
+| recovery      = 3 land
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+7(+15)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+11)}}
+| punishAdv     = {{sf6-adv|VP|+11(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 0.92
+| notes         = Good vertical hitbox for close jumps; spike knockdown vs. airborne opponents on Counter-hit/Punish Counter; lower body projectile invuln 9-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Mbison_jlk.png
+| hitboxes      = SF6_Mbison_jlk_hitbox.png
+| damage        = 300
+| startup       = 5
+| active        = 7
+| recovery      = 3 land
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+10)}}
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+6)}}
+| punishAdv     = {{sf6-adv|VP|+9(+14)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.21
+| notes         = Cross-up; decent air-to-air
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Mbison_jmk.png
+| hitboxes      = SF6_Mbison_jmk_hitbox.png
+| damage        = 500
+| startup       = 7
+| active        = 7
+| recovery      = 3 land
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+13)}}
+| blockAdv      = {{sf6-adv|VP|+4(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.63
+| notes         = Cross-up; lower body projectile invuln 7-20f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Mbison_jhk.png
+| hitboxes      = SF6_Mbison_jhk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 6
+| recovery      = 3 land
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+11(+15)}}
+| blockAdv      = {{sf6-adv|VP|+7(+11)}}
+| punishAdv     = {{sf6-adv|VP|+15(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 0
+| atkRange      = 1.34
+| notes         = Longest horizontal range of Bison's air normals; lower body projectile invuln 10-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 6HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_6hp | moveType = ground_normal
+| input         = 6HP
+| name          = Psycho Hammer
+| images        = SF6_Mbison_6hp.png
+| hitboxes      = SF6_Mbison_6hp_hitbox.png
+| damage        = 800
+| startup       = 22
+| active        = 3
+| recovery      = 20
+| total         = 44
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = {{sf6-adv|VP|+7}}
+| afterDRBlk    = {{sf6-adv|P|+1}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 1.507
+| notes         = Safe overhead with follow-up combos out of Drive Rush; slams airborne opponents down into limited juggle OTG state
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Evil Knee
+| images        = SF6_Mbison_4hk.png
+| hitboxes      = SF6_Mbison_4hk_hitbox.png
+| damage        = 800
+| startup       = 10
+| active        = 4
+| recovery      = 17
+| total         = 30
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 18
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| DRcancelHit   = {{sf6-adv|VP|+15}}
+| DRcancelBlk   = {{sf6-adv|VP|+12}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|VP|+5}}
+| hitstun       = 25
+| blockstun     = 22
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [8000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.075
+| notes         = Forces stand; good combo/pressure/oki tool but short horizontal range; low pushback on hit/block
+}}
+
+===== 3HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_3hk | moveType = ground_normal
+| input         = 3HK
+| name          = Hover Kick
+| images        = SF6_Mbison_3hk.png
+| hitboxes      = SF6_Mbison_3hk_hitbox.png
+| damage        = 900
+| startup       = 15
+| active        = 10
+| recovery      = 23
+| total         = 47
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +25(+34)
+| blockAdv      = {{sf6-adv|VM|-15(-6)}}
+| punishAdv     = HKD +41(+50)
+| perfParryAdv  = {{sf6-adv|VM|-31(-22)}}
+| afterDRHit    = KD +25(+34)
+| afterDRBlk    = {{sf6-adv|VM|-11}}{{sf6-adv|M|(-2)}}
+| blockstun     = 18
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 3.47 (1.753)
+| rangeNotes    = Slides forward; Range 1.75 on 1st active frame
+| notes         = Full-screen slide that can be spaced (but always punishable except vs. Burnout); has juggle potential (not a Hard Knockdown when juggled into); crouching state for entire duration
+}}
+
+== Target Combos ==
+===== 5MP~6HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5mp_6hp | moveType = ground_normal
+| input         = 5MP~6HP
+| name          = Shadow Hammer
+| images        = SF6_Mbison_6hp.png
+| hitboxes      = SF6_Mbison_5mp_6hp_hitbox.png
+| damage        = 800
+| startup       = 22
+| active        = 3
+| recovery      = 20
+| total         = 44
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| notes         = Puts airborne opponents into limited juggle OTG bounce state; combos from 5MP only on CH/PC/DR or with meaty timing; safe on block, but has an interruptible 7f gap on block 
+}}
+
+===== 5MP~2HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5mp_2hk | moveType = ground_normal
+| input         = 5MP~2HK
+| name          = Shadow Spear
+| images        = SF6_Mbison_5mp_2hk.png
+| hitboxes      = SF6_Mbison_5mp_2hk_hitbox.png
+| damage        = 700
+| startup       = 16
+| active        = 4
+| recovery      = 20
+| total         = 39
+| guard         = L
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-22}}
+| hitstun       = 27
+| blockstun     = 21
+| hitstop       = 13
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 3000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = Safe low ender from 5MP with only a 1f gap on block; can link into light normals when landing as a counter-hit
+}}
+
+===== j.MP~j.MP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_jmp_jmp | moveType = air_normal
+| input         = j.MP~j.MP
+| name          = Hell Attack
+| images        = SF6_Mbison_jmp_jmp.png
+| hitboxes      = SF6_Mbison_jmp_jmp_hitbox.png
+| damage        = 700
+| startup       = 7
+| active        = 4
+| recovery      = 3 land
+| guard         = LH
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| hitstop       = 11
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| jugIncrease   = 2
+| jugLimit      = 2
+| notes         = Keeps airborne opponents in a limited juggle state after j.MP; can be delayed significantly, giving Bison better advantage to juggle after landing
+}}
+
+== Throws ==
+===== Forward Throw =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_lplk | moveType = throw
+| input         = LPLK
+| name          = Deadly Throw
+| images        = SF6_Mbison_lplk.png
+| hitboxes      = SF6_Mbison_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +21
+| blockAdv      = -
+| punishAdv     = HKD +21
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Can dash for auto-timed +2 corner throw loop, or walk for manual timing (better for baiting throw tech); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== Back Throw =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Death Tower
+| images        = SF6_Mbison_4lplk.png
+| hitboxes      = SF6_Mbison_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +18
+| blockAdv      = -
+| punishAdv     = HKD +18
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Side switches; can Drive Rush for oki after throwing opponent into corner (DR~5MP is auto-timed for tick throw or combo), or pressure with ranged normals (no real midscreen oki); a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_hphk | moveType = drive
+| input         = HPHK
+| name          = Hell Twist
+| images        = SF6_Mbison_hphk.png
+| hitboxes      = SF6_Mbison_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| guard         = LH
+| cancel        = -
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.537
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Hell Drive (Block)
+| images        = SF6_Mbison_6hphk.png
+| hitboxes      = SF6_Mbison_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.66
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Hell Drive (Recovery)
+| images        = SF6_Mbison_6hphk.png
+| hitboxes      = SF6_Mbison_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.66
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Mbison_mpmk.png
+| hitboxes      = SF6_Mbison_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| hitAdv        = -
+| blockAdv      = -
+| guard         = -
+| cancel        = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Mbison_66.png
+| hitboxes      = SF6_Mbison_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.593 (min/throw), 2.650 (min/block), 4.425 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Mbison_66.png
+| hitboxes      = SF6_Mbison_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+
+== Special Moves ==
+=== Psycho Mine Detonation ===
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_psycho_mine | moveType = Special
+| input         = -
+| name          = Psycho Mine (Detonation)
+| images        = SF6_Mbison_psycho_mine.png
+| hitboxes      = SF6_Mbison_psycho_mine_hitbox.png
+| damage        = 500
+| chip          = 125
+| startup       = 300
+| active        = 1
+| recovery      = -
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD
+| blockAdv      = -
+| punishAdv     = KD
+| blockstun     = 30
+| hitstop       = 5
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 99
+| notes         = Projectile hitbox (can be avoided with projectile invuln moves, including some with upper-body invuln); Mine dissipates if Bison is hit; explosion happens automatically 300f after a mine has been planted by the 2nd hit of Backfist Combo; also triggered by Psycho Crusher, Backfist Combo, and Devil Reverse on hit/block (only Backfist Combo triggers the detonation on Perfect Parry); explosion puts opponent into free juggle state or maintains existing juggle state; performing Forward Taunt causes Bison to start a countdown to trigger the explosion; explosion only counts as a hit for damage scaling when the timer expires (not when automatically activated from a special move)
+}}
+
+=== Psycho Crusher Attack ===
+===== [4]6LP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46lp | moveType = Special
+| input         = [4]6LP
+| name          = Psycho Crusher Attack
+| images        = SF6_Mbison_46lp.png
+| hitboxes      = SF6_Mbison_46lp_hitbox_1.png, SF6_Mbison_46p_hitbox_2.png
+| damage        = 1200
+| chip          = 300
+| dmgScaling    = 30% Starter
+| startup       = 14
+| active        = 16
+| recovery      = 24
+| total         = 53
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17 SA
+| hitAdv        = KD +24(+39)
+| blockAdv      = {{sf6-adv|VM|-20(-5)}}
+| punishAdv     = KD +24(+39)
+| perfParryAdv  = {{sf6-adv|VM|-38(-23)}}
+| blockstun     = 20
+| hitstop       = 10
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| invuln        = 6-15 Air, 15-29 Projectile (Head/Arm)
+| airborne      = 20-29 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 3.917 (1.343)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when LP is input); 1-hit projectile clash hitbox on frames 14-29
+}}
+
+===== [4]6MP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46mp | moveType = Special
+| input         = [4]6MP
+| name          = Psycho Crusher Attack
+| images        = SF6_Mbison_46lp.png
+| hitboxes      = SF6_Mbison_46mp_hitbox_1.png, SF6_Mbison_46p_hitbox_2.png
+| damage        = 1400
+| chip          = 350
+| dmgScaling    = 30% Starter
+| startup       = 20
+| active        = 16
+| recovery      = 24
+| total         = 59
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 15 SA
+| hitAdv        = KD +24(+39)
+| blockAdv      = {{sf6-adv|VM|-20(-5)}}
+| punishAdv     = KD +24(+39)
+| perfParryAdv  = {{sf6-adv|VM|-38(-23)}}
+| blockstun     = 20
+| hitstop       = 8
+| driveDmgBlk   = 7000
+| driveDmgHit   = [10000]
+| driveGain     = 3500
+| superGainHit  = 1300 (910)
+| superGainBlk  = 650 (325)
+| invuln        = 6-21 Air, 21-35 Projectile (Head/Arm)
+| airborne      = 26-35 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 4.15 (1.328)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when MP is input); 1-hit projectile clash hitbox on frames 20-35
+}}
+
+===== [4]6HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46hp | moveType = Special
+| input         = [4]6HP
+| name          = Psycho Crusher Attack
+| images        = SF6_Mbison_46lp.png
+| hitboxes      = SF6_Mbison_46hp_hitbox_1.png, SF6_Mbison_46p_hitbox_2.png
+| damage        = 1600
+| chip          = 400
+| dmgScaling    = 30% Starter
+| startup       = 24
+| active        = 26
+| recovery      = 24
+| total         = 73
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 15 SA
+| hitAdv        = KD +14(+39)
+| blockAdv      = {{sf6-adv|VM|-23}}{{sf6-adv|P|(+2)}}
+| punishAdv     = KD +14(+39)
+| perfParryAdv  = {{sf6-adv|VM|-48(-23)}}
+| blockstun     = 27
+| hitstop       = 8
+| driveDmgBlk   = 8000
+| driveDmgHit   = [10000]
+| driveGain     = 5000
+| superGainHit  = 1500 (1050)
+| superGainBlk  = 750 (375)
+| invuln        = 6-25 Air, 23-49 Projectile (Head/Arm)
+| airborne      = 30-49 (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 5.609 (1.353)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when HP is input); 1-hit projectile clash hitbox on frames 24-49
+}}
+
+===== [4]6PP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46pp | moveType = Special
+| input         = [4]6PP
+| name          = Psycho Crusher Attack
+| images        = SF6_Mbison_46pp.png
+| hitboxes      = SF6_Mbison_46pp_hitbox_preview.png, SF6_Mbison_46pp_hitbox_1.png, SF6_Mbison_46pp_hitbox_2.png, SF6_Mbison_46pp_hitbox_3.png
+| damage        = 400x2,500 (1300)
+| chip          = 100x2,125 (325)
+| dmgScaling    = 30% Starter
+| startup       = 16
+| active        = 7,6,3
+| recovery      = 20
+| total         = 51
+| guard         = LH
+| cancel        = SA2* SA3
+| hitconfirm    = 47/35/24 SA
+| hitAdv        = KD +35(+37)
+| blockAdv      = {{sf6-adv|M|-3(-1)}}
+| punishAdv     = KD +35(+37)
+| perfParryAdv  = {{sf6-adv|VM|-25(-19)}}
+| blockstun     = 33/25/20 total
+| hitstop       = 5,5,15
+| driveDmgBlk   = 1500x2,2000 (5000)
+| driveDmgHit   = [7000]
+| driveGain     = -20000
+| superGainHit  = 400x3 (280x3)
+| superGainBlk  = 200x3 (100x3)
+| invuln        = 6-17 Air, 13-31 Projectile
+| airborne      = 20-31 (FKD)
+| jugStart      = 1x4
+| jugIncrease   = 1x4
+| jugLimit      = 10
+| atkRange      = 4.869 (1.60)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when PP is input); cancel into SA2 does not combo
+}}
+
+==== Psycho Crusher (Mine) ====
+===== [4]6LP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46lp_mine | moveType = Special
+| input         = [4]6LP
+| name          = Psycho Crusher (Mine)
+| images        = SF6_Mbison_46lp.png
+| hitboxes      = SF6_Mbison_46lp_hitbox_1.png, SF6_Mbison_46p_hitbox_2.png
+| damage        = 1200,500 (1700)
+| chip          = 300,125 (425)
+| dmgScaling    = 30% Starter
+| startup       = 14
+| active        = 14,1
+| recovery      = 23
+| total         = 53
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 17 SA
+| hitAdv        = KD +39(+42)
+| blockAdv      = {{sf6-adv|VP|+6}}
+| punishAdv     = KD +39(+42)
+| perfParryAdv  = {{sf6-adv|VM|-38(-23)}}
+| blockstun     = 46 total
+| hitstop       = 16,15,8
+| driveDmgBlk   = 6000,3000 (9000)
+| driveDmgHit   = [10000]
+| driveGain     = 2000x2 (4000)
+| superGainHit  = 1200,500 (840,350)
+| superGainBlk  = 600,250 (425,125)
+| invuln        = 6-15 Air, 15-29 Projectile (Head/Arm)
+| airborne      = 20-29 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10
+| atkRange      = 3.917 (1.343)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when LP is input); strike hitbox surrounded by a 1-hit projectile clash hitbox on frames 14-29; detonates Psycho Mine on hit/block (does not trigger on Perfect Parry); puts opponent into limited juggle state (cancel into SA3 connects before Psycho Mine explodes); KD advantage depends on spacing (+41 close range, +42 most mid ranges, +39 on last active frame); useful pressure tool after Backfist Combo due to its block advantage, but is susceptible to Perfect Parry; when Perfect Parried, Bison will usually be airborne as the opponent punishes
+}}
+
+===== [4]6MP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46mp_mine | moveType = Special
+| input         = [4]6MP
+| name          = Psycho Crusher (Mine)
+| images        = SF6_Mbison_46lp.png
+| hitboxes      = SF6_Mbison_46mp_hitbox_1.png, SF6_Mbison_46p_hitbox_2.png
+| damage        = 1400,500 (1900)
+| chip          = 350,125 (475)
+| dmgScaling    = 30% Starter
+| startup       = 20
+| active        = 16,1
+| recovery      = 23
+| total         = 59
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 15 SA
+| hitAdv        = KD +39(+42)
+| blockAdv      = {{sf6-adv|VP|+6}}
+| punishAdv     = KD +39(+42)
+| perfParryAdv  = {{sf6-adv|VM|-38(-23)}}
+| blockstun     = 46 total
+| hitstop       = 16,15,8
+| driveDmgBlk   = 7000,3000 (10000)
+| driveDmgHit   = [10000]
+| driveGain     = 3500,2000 (5500)
+| superGainHit  = 1300,500 (910,350)
+| superGainBlk  = 650,250 (325,125)
+| invuln        = 6-21 Air, 21-35 Projectile (Head/Arm)
+| airborne      = 26-35 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10
+| atkRange      = 4.15 (1.328)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when MP is input); strike hitbox surrounded by a 1-hit projectile clash hitbox on frames 20-35; detonates Psycho Mine on hit/block (does not trigger on Perfect Parry); puts opponent into limited juggle state (cancel into SA3 connects before Psycho Mine explodes); KD advantage depends on spacing (+41 close range, +42 most mid ranges, +39 on last active frame); useful pressure tool after Backfist Combo due to its block advantage, but is susceptible to Perfect Parry; when Perfect Parried, Bison will usually be airborne as the opponent punishes
+}}
+
+===== [4]6HP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46hp_mine | moveType = Special
+| input         = [4]6HP
+| name          = Psycho Crusher (Mine)
+| images        = SF6_Mbison_46lp.png
+| hitboxes      = SF6_Mbison_46hp_hitbox_1.png, SF6_Mbison_46p_hitbox_2.png
+| damage        = 1600,500 (2100)
+| chip          = 400,125 (525)
+| dmgScaling    = 30% Starter
+| startup       = 24
+| active        = 26,1
+| recovery      = 23
+| total         = 73
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 15 SA
+| hitAdv        = KD +46(+51)
+| blockAdv      = {{sf6-adv|VP|+5}}
+| punishAdv     = KD +46(+51)
+| perfParryAdv  = {{sf6-adv|VM|-48(-23)}}
+| blockstun     = 55 total
+| hitstop       = 16,15,9
+| driveDmgBlk   = 8000,3000 (11000)
+| driveDmgHit   = [10000]
+| driveGain     = 5000,2000 (7000)
+| superGainHit  = 1500,500 (1050,350)
+| superGainBlk  = 750,250 (375,125)
+| invuln        = 6-25 Air, 23-49 Projectile (Head/Arm)
+| airborne      = 30-49 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 10
+| atkRange      = 5.609 (1.353)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when HP is input); strike hitbox surrounded by a 1-hit projectile clash hitbox on frames 24-49; detonates Psycho Mine on hit/block (does not trigger on Perfect Parry); puts opponent into limited juggle state, allowing a follow-up juggle (SA1 midscreen, 214LP/SA3 corner); KD advantage depends on spacing (+46 close range, +51 most mid/far ranges); useful pressure tool after Backfist Combo due to its block advantage, but is susceptible to Perfect Parry; when Perfect Parried, Bison will usually be airborne as the opponent punishes
+}}
+
+===== [4]6PP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_46pp_mine | moveType = Special
+| input         = [4]6PP
+| name          = Psycho Crusher (Mine)
+| images        = SF6_Mbison_46pp_mine.png
+| hitboxes      = SF6_Mbison_46pp_hitbox_preview.png, SF6_Mbison_46pp_hitbox_1.png, SF6_Mbison_46pp_hitbox_2.png, SF6_Mbison_46pp_hitbox_3.png
+| damage        = 400x4 (1600)
+| chip          = 100x3,125 (425)
+| dmgScaling    = 30% Starter<br>(OTG - see Notes)
+| startup       = 16
+| active        = 7,6,3(1)1
+| recovery      = 18
+| total         = 51
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +82(+83)
+| blockAdv      = {{sf6-adv|VP|+10}}
+| punishAdv     = KD +82(+83)
+| perfParryAdv  = {{sf6-adv|VM|-25(-19)}}
+| blockstun     = 31~46 total
+| hitstop       = 5,5,12,9
+| driveDmgBlk   = 1500x2,2000,3000 (8000)
+| driveDmgHit   = [7000]
+| driveGain     = -20000
+| superGainHit  = 400x3,1600 (280x3,1120)
+| superGainBlk  = 200x3,250 (100x3,125)
+| invuln        = 6-17 Air, 13-31 Projectile
+| airborne      = 20-31 (FKD)
+| jugStart      = 3 (Forced)
+| jugIncrease   = 3 (Forced)
+| jugLimit      = 10
+| atkRange      = 4.869 (1.60)
+| notes         = 45f charge time (charge lasts 8f after releasing back direction, and must be holding forward when PP is input); strike hitbox (no projectile clash since Bison has full projectile invuln); detonates Psycho Mine on hit/block (does not trigger on Perfect Parry); launches opponent high into a limited juggle state, followed by an OTG bounce; when juggling late on these OTG bounce frames, an extra 10% Immediate Scaling is applied to the follow-ups (but an earlier juggle has no extra scaling); useful pressure tool after Backfist Combo due to its block advantage, but is susceptible to Perfect Parry; when Perfect Parried, Bison will usually be airborne as the opponent punishes; POSSIBLE BUG: on a high airborne connect, the automatic follow-up will not trigger, but explosion still occurs; however, the opponent is still considered to have a Psycho Mine on their body which can be detonated again
+}}
+
+=== Double Knee Press ===
+===== 236LK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236lk | moveType = Special
+| input         = 236LK
+| name          = Double Knee Press
+| images        = SF6_Mbison_236lk.png
+| hitboxes      = SF6_Mbison_236lk_hitbox.png
+| damage        = 300,500 (800)
+| chip          = 75,125 (200)
+| dmgScaling    = 30% Starter
+| startup       = 13
+| active        = 2(1)2
+| recovery      = 20(25)
+| total         = 37(42)
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 16 SA
+| hitAdv        = {{sf6-adv|P|+2(+3)}}
+| blockAdv      = {{sf6-adv|VM|-5(-4)}}
+| punishAdv     = {{sf6-adv|VP|+6(+7)}}
+| perfParryAdv  = {{sf6-adv|VM|-28(-19)}}
+| hitstun       = 27(24)
+| blockstun     = 20(17)
+| hitstop       = 12,12
+| driveDmgBlk   = 2000,3000 (5000)
+| driveDmgHit   = [2000,3000]
+| driveGain     = 750x2 (1500)
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| jugStart      = 1,1
+| jugIncrease   = 0,1
+| jugLimit      = 10
+| atkRange      = 2.362 (2.01)
+| notes         = 5f extra recovery on whiff; Low Crush 7-15f (not airborne); Counter-hit/Punish Counter bonus advantage carries through both hits; strong pressure tool that gives strike/throw mixup on hit while easily spaced safely on block
+}}
+
+===== 236MK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236mk | moveType = Special
+| input         = 236MK
+| name          = Double Knee Press
+| images        = SF6_Mbison_236mk.png
+| hitboxes      = SF6_Mbison_236mk_hitbox.png
+| damage        = 300,600 (900)
+| chip          = 75,150 (225)
+| dmgScaling    = 20% Starter
+| startup       = 17
+| active        = 2(1)2
+| recovery      = 20(25)
+| total         = 41(46)
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 16 SA
+| hitAdv        = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+4)}}
+| blockAdv      = {{sf6-adv|VM|-5(-4)}}
+| punishAdv     = {{sf6-adv|VP|+7(+8)}}
+| perfParryAdv  = {{sf6-adv|VM|-28(-19)}}
+| hitstun       = 28(25)
+| blockstun     = 20(17)
+| hitstop       = 12,12
+| driveDmgBlk   = 2000,3000 (5000)
+| driveDmgHit   = [2000,3000]
+| driveGain     = 1000x2 (2000)
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1,1
+| jugIncrease   = 0,1
+| jugLimit      = 10
+| atkRange      = 2.89 (2.538)
+| notes         = 5f extra recovery on whiff; Low Crush 11-19f (not airborne); Counter-hit/Punish Counter bonus advantage carries through both hits; strong pressure tool that gives strike/throw mixup on hit while easily spaced safely on block
+}}
+
+===== 236HK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236hk | moveType = Special
+| input         = 236HK
+| name          = Double Knee Press
+| images        = SF6_Mbison_236hk.png
+| hitboxes      = SF6_Mbison_236hk_hitbox.png
+| damage        = 500,700 (1200)
+| chip          = 125,175 (300)
+| startup       = 22
+| active        = 2(1)2
+| recovery      = 20(25)
+| total         = 46(51)
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 16 SA
+| hitAdv        = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+4)}}
+| blockAdv      = {{sf6-adv|VM|-4}}{{sf6-adv|M|(-3)}}
+| punishAdv     = {{sf6-adv|VP|+7(+8)}}
+| perfParryAdv  = {{sf6-adv|VM|-28(-19)}}
+| hitstun       = 28(25)
+| blockstun     = 21(18)
+| hitstop       = 12,12
+| driveDmgBlk   = 2000,3000 (5000)
+| driveDmgHit   = [2000,3000]
+| driveGain     = 1250x2 (2500)
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 1,1
+| jugIncrease   = 0,1
+| jugLimit      = 10
+| atkRange      = 3.286 (2.802)
+| notes         = 5f extra recovery on whiff; Low Crush 14-24f (not airborne); Counter-hit/Punish Counter bonus advantage carries through both hits; extremely powerful punish starter due to high damage, frame advantage, and lack of damage scaling; strong pressure tool that gives strike/throw mixup on hit while easily spaced safely on block
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236kk | moveType = Special
+| input         = 236KK
+| name          = Double Knee Press
+| images        = SF6_Mbison_236kk.png
+| hitboxes      = SF6_Mbison_236kk_hitbox.png, SF6_Mbison_236kk_hitbox_2.png
+| damage        = 250x2,300 (800)
+| chip          = 62x2,75 (199)
+| dmgScaling    = Combo (2-hit)
+| startup       = 17
+| active        = 2(1)2(17)3
+| recovery      = 28
+| total         = 69
+| guard         = LH
+| cancel        = SA2 SA3 (2nd)
+| hitconfirm    = 31 SA
+| hitAdv        = KD +55
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +55
+| perfParryAdv  = {{sf6-adv|VM|-51(-29)}}
+| blockstun     = 38/35/16 total
+| hitstop       = 12,12,13
+| driveDmgBlk   = 1000x3 (3000)
+| driveDmgHit   = [1500x2,2000]
+| driveGain     = -20000
+| superGainHit  = 200x2,600 (140x2,420)
+| superGainBlk  = 100x2,300 (50x2,150)
+| jugStart      = 1,1,3
+| jugIncrease   = 0,0,2
+| jugLimit      = 2
+| atkRange      = 4.097 (2.785)
+| notes         = Low Crush 12-19f (not airborne); puts opponent into limited juggle state; cancel is only useful if the first 2 hits are absorbed by Drive Impact (stronger juggle routes always possible); 3rd hit comes out even on whiff
+}}
+
+=== Backfist Combo ===
+===== 214LP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214lp | moveType = Special
+| input         = 214LP
+| name          = Backfist Combo
+| images        = SF6_Mbison_214lp.png, SF6_Mbison_214lp_2.png
+| hitboxes      = SF6_Mbison_214lp_hitbox.png
+| damage        = 300,400 (700)
+| chip          = 75,100 (175)
+| startup       = 13
+| active        = 2(10)5
+| recovery      = 25(28)
+| total         = 54(57)
+| guard         = LH
+| cancel        = SA3 (2nd)
+| hitconfirm    = 49 SA
+| hitAdv        = KD +21
+| blockAdv      = {{sf6-adv|VM|-14}}
+| punishAdv     = KD +21
+| perfParryAdv  = {{sf6-adv|VM|-40(-28)}}
+| blockstun     = 28(16)
+| hitstop       = 16,15
+| driveDmgBlk   = 3000x2 (6000)
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2 (2000)
+| superGainHit  = 400x2 (280x2)
+| superGainBlk  = 200x2 (100x2)
+| jugStart      = 1 (1,1 Air)
+| jugIncrease   = 0,1
+| jugLimit      = 10
+| atkRange      = 1.64 (1.239)
+| notes         = Plants Psycho Mine onto opponent on 2nd hit (detonates after 300f or when another Backfist Combo, Psycho Crusher, or Devil Reverse connects); useful ender for many juggles (higher KD advantage in high-connect juggles); 3f extra recovery on hit
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214mp | moveType = Special
+| input         = 214MP
+| name          = Backfist Combo
+| images        = SF6_Mbison_214mp.png
+| hitboxes      = SF6_Mbison_214mp_hitbox.png
+| damage        = 300,500 (800)
+| chip          = 75,125 (200)
+| startup       = 17
+| active        = 2(10)5
+| recovery      = 26(29)
+| total         = 59(62)
+| guard         = LH
+| cancel        = SA3 (2nd)
+| hitconfirm    = 49 SA
+| hitAdv        = KD +20
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +20
+| perfParryAdv  = {{sf6-adv|VM|-41(-29)}}
+| blockstun     = 28(16)
+| hitstop       = 16,15
+| driveDmgBlk   = 3000x2 (6000)
+| driveDmgHit   = [2500x2]
+| driveGain     = 1250x2 (2500)
+| superGainHit  = 600x2 (420x2)
+| superGainBlk  = 300x2 (150x2)
+| jugStart      = 1 (1,1 Air)
+| jugIncrease   = 0,1
+| jugLimit      = 10
+| atkRange      = 2.205 (1.705)
+| notes         = Plants Psycho Mine onto opponent on 2nd hit (detonates after 300f or when another Backfist Combo, Psycho Crusher, or Devil Reverse connects); useful ender for some juggles (higher KD advantage in high-connect juggles); +23 KD Advantage sets up a dash into strike/throw mixup, or a perfectly meaty 6HP (+5 oH / -1 oB); 3f extra recovery on hit
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214hp | moveType = Special
+| input         = 214HP
+| name          = Backfist Combo
+| images        = SF6_Mbison_214hp.png
+| hitboxes      = SF6_Mbison_214hp_hitbox.png
+| damage        = 300,600 (900)
+| chip          = 75,150 (225)
+| startup       = 22
+| active        = 3(10)5
+| recovery      = 26
+| total         = 65
+| guard         = LH
+| cancel        = SA3 (2nd)
+| hitconfirm    = 50 SA
+| hitAdv        = KD +31
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +31
+| perfParryAdv  = {{sf6-adv|VM|-42(-29)}}
+| blockstun     = 29(16)
+| hitstop       = 16,15
+| driveDmgBlk   = 3000x2 (6000)
+| driveDmgHit   = [2500x2]
+| driveGain     = 1250x2 (2500)
+| superGainHit  = 500[600],500 (350[420],350)
+| superGainBlk  = 250x2 (125x2)
+| jugStart      = 1 (1,1 Air)
+| jugIncrease   = 0,1
+| jugLimit      = 10
+| atkRange      = 3.088 (2.363)
+| notes         = Plants Psycho Mine onto opponent on 2nd hit (detonates after 300f or when another Backfist Combo, Psycho Crusher, or Devil Reverse connects); useful ender for some juggles (higher KD advantage in high-connect juggles); Potential Bug: builds more Super gauge on hit when comboed into (denoted with [] in data)
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214pp | moveType = Special
+| input         = 214PP
+| name          = Backfist Combo
+| images        = SF6_Mbison_214pp.png, SF6_Mbison_214pp_2.png
+| hitboxes      = SF6_Mbison_214pp_hitbox.png, SF6_Mbison_214pp_hitbox_2.png
+| damage        = 400x3 (1200)
+| chip          = 100x3 (300)
+| startup       = 14
+| active        = 2(19)3(23)3
+| recovery      = 44
+| total         = 107
+| guard         = LH
+| cancel        = SA2 SA3 (3rd)
+| hitconfirm    = 86 SA
+| hitAdv        = KD +24
+| blockAdv      = {{sf6-adv|VM|-25}}
+| punishAdv     = KD +24
+| perfParryAdv  = {{sf6-adv|VM|-92(-71)(-45)}}
+| blockstun     = 69/48/22 total
+| hitstop       = 10,15,8(5)
+| driveDmgBlk   = 3000x3 (9000)
+| driveDmgHit   = [2000x2,3000]
+| driveGain     = -20000
+| superGainHit  = 300x2,400 (210x2,280)
+| superGainBlk  = 150x2,200 (75x2,100)
+| jugStart      = 1
+| jugIncrease   = 0,0,0
+| jugLimit      = 10
+| atkRange      = 3.523 (1.745)
+| notes         = Plants Psycho Mine onto opponent on 2nd hit (detonates after 300f or when another Backfist Combo, Psycho Crusher, or Devil Reverse connects); puts opponent into limited juggle OTG state on hit; useful ender for some juggles (higher KD advantage in high-connect juggles)
+}}
+
+==== Backfist Combo (Mine) ====
+===== 214LP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214lp_mine | moveType = Special
+| input         = 214LP
+| name          = Backfist Combo (Mine)
+| images        = SF6_Mbison_214lp_mine.png
+| hitboxes      = SF6_Mbison_214lp_mine_hitbox.png
+| damage        = 300,500x2 (1300)
+| chip          = 75,125x2 (325)
+| startup       = 13
+| active        = 2(10)5,1
+| recovery      = 24 
+| total         = 54
+| guard         = LH
+| cancel        = SA3 (2nd)
+| hitconfirm    = 51 SA
+| hitAdv        = KD +42
+| blockAdv      = {{sf6-adv|VP|+9}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-6(-12)}}
+| blockstun     = 51(39)
+| hitstop       = 16,15,8
+| driveDmgBlk   = 3000x3 (9000)
+| driveDmgHit   = [2500x2,3000]
+| driveGain     = 1000x2,2000 (4000)
+| superGainHit  = 400x2,500 (280x2,350)
+| superGainBlk  = 200x2,250 (100x2,125)
+| jugStart      = 2 (3 Air)
+| jugIncrease   = 0,1,1
+| jugLimit      = 10x3
+| atkRange      = 1.64 (1.239)
+| notes         = Detonates Psycho Mine on hit/block; Mine detonation does not count as a hit for damage scaling; puts opponent into limited juggle state; sets up auto-timed safe jump vs. grounded or low-height opponents; 2nd hit triggers Mine detonation even on Perfect Parry (punishable 5f gap before explosion hits); lets Bison maintain pressure on block; can be timed to plant another Psycho Mine if the previous one detonates during this attack's hitstun
+}}
+
+===== 214MP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214mp_mine | moveType = Special
+| input         = 214MP
+| name          = Backfist Combo (Mine)
+| images        = SF6_Mbison_214mp_mine.png
+| hitboxes      = SF6_Mbison_214mp_mine_hitbox.png
+| damage        = 300,600,500 (1400)
+| chip          = 75,150,125 (350)
+| startup       = 17
+| active        = 2(10)5,1
+| recovery      = 25
+| total         = 59
+| guard         = LH
+| cancel        = SA3 (2nd)
+| hitconfirm    = 51 SA
+| hitAdv        = KD +44
+| blockAdv      = {{sf6-adv|VP|+9}}
+| punishAdv     = KD +44
+| perfParryAdv  = {{sf6-adv|VM|-6(-13)}}
+| blockstun     = 52(40)
+| hitstop       = 16,15,8
+| driveDmgBlk   = 3000x3 (9000)
+| driveDmgHit   = [2500x2,3000]
+| driveGain     = 1250x2,2000 (4500)
+| superGainHit  = 600x2,500 (420x2,350)
+| superGainBlk  = 300x2,250 (150x2,125)
+| jugStart      = 2 (3 Air)
+| jugIncrease   = 0,1,1
+| jugLimit      = 10x3
+| atkRange      = 2.205 (1.705)
+| notes         = Detonates Psycho Mine on hit/block; Mine detonation does not count as a hit for damage scaling; puts opponent into limited juggle state; can juggle into 2HK or SA1/SA3 anywhere on screen; 2nd hit triggers Mine detonation even on Perfect Parry (punishable 5f gap before explosion hits); lets Bison maintain pressure on block; can be timed to plant another Psycho Mine if the previous one detonates during this attack's hitstun
+}}
+
+===== 214HP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214hp_mine | moveType = Special
+| input         = 214HP
+| name          = Backfist Combo (Mine)
+| images        = SF6_Mbison_214hp_mine.png
+| hitboxes      = SF6_Mbison_214hp_mine_hitbox.png
+| damage        = 300,700,500 (1500)
+| chip          = 75,175,125 (375)
+| startup       = 22
+| active        = 3(10)5,1
+| recovery      = 25
+| total         = 65
+| guard         = LH
+| cancel        = SA3 (2nd)
+| hitconfirm    = 52 SA
+| hitAdv        = KD +49
+| blockAdv      = {{sf6-adv|VP|+9}}
+| punishAdv     = KD +49
+| perfParryAdv  = {{sf6-adv|VM|-6(-13)}}
+| blockstun     = 53(40)
+| hitstop       = 16,15,9
+| driveDmgBlk   = 3000x3 (9000)
+| driveDmgHit   = [2500x2,3000]
+| driveGain     = 1250x2,2000 (4500)
+| superGainHit  = 500[600],500x2 (350[420],350x2)
+| superGainBlk  = 250x3 (125x3)
+| jugStart      = 2 (3 Air)
+| jugIncrease   = 0,1,1
+| jugLimit      = 10x3
+| atkRange      = 3.088 (2.363)
+| notes         = Detonates Psycho Mine on hit/block; Mine detonation does not count as a hit for damage scaling; puts opponent into limited juggle state that allows follow-up juggles (can combo into midscreen 2HK / 3HK / LP Crusher / OD Backfist / SA1 / SA3, as well as corner LP Backfist); 2nd hit triggers Mine detonation even on Perfect Parry (punishable 5f gap before explosion hits); lets Bison maintain pressure on block; can be timed to plant another Psycho Mine if the previous one detonates during this attack's hitstun; POSSIBLE BUG: builds more Super gauge when comboed into compared to raw connect
+}}
+
+===== 214PP (Mine) =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214pp_mine | moveType = Special
+| input         = 214PP
+| name          = Backfist Combo (Mine)
+| images        = SF6_Mbison_214pp_mine.png
+| hitboxes      = SF6_Mbison_214pp_mine_hitbox.png
+| damage        = 400,500,400x2 (1700)
+| chip          = 100,125,100x2 (425)
+| startup       = 14
+| active        = 2(19)1(26)1,1
+| recovery      = 44
+| total         = 107
+| guard         = LH
+| cancel        = SA2 SA3 (4th)
+| hitconfirm    = 103 SA
+| hitAdv        = KD +48
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = KD +48
+| perfParryAdv  = {{sf6-adv|VM|-6(-29)}}
+| blockstun     = 91/70/44 total
+| hitstop       = 10,15,5,15
+| driveDmgBlk   = 3000x4 (12000)
+| driveDmgHit   = [2000x2,3000x2]
+| driveGain     = -20000
+| superGainHit  = 300x2,400,500 (210x2,280,350)
+| superGainBlk  = 150x2,200,250 (75x2,100,125)
+| jugStart      = 2
+| jugIncrease   = 0x3,1
+| jugLimit      = 10x4
+| atkRange      = 3.523 (1.745)
+| notes         = Detonates Psycho Mine on hit/block; Mine detonation does not count as a hit for damage scaling; launches opponent into a limited juggle state that allows follow-up juggles; 3rd hit triggers Mine detonation even on Perfect Parry (punishable 5f gap before explosion hits); does not let Bison maintain block pressure like the meterless versions; can be timed to plant another Psycho Mine if the previous one detonates during this attack's hitstun
+}}
+
+=== Shadow Rise ===
+===== [2]8K =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28k | moveType = Special
+| input         = [2]8K
+| name          = Shadow Rise
+| images        = SF6_Mbison_28k.png
+| hitboxes      = SF6_Mbison_28k_hitbox.png
+| damage        = -
+| startup       = 18~46
+| active        = -
+| recovery      = 4/9/13 land
+| total         = 53/58/63
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = 9-49 (FKD)
+| notes         = 40f charge time (charge lasts 10f after releasing down direction); button strength determines trajectory (LK close, MK mid, HK far); landing recovery and total frame refers to LK/MK/HK version respectively; Bison is in a crouching state on the final landing recovery frame; can use the OD versions of follow-ups by pressing PP or KK; foot hurtbox is projectile invincible
+}}
+
+===== [2]8KK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28kk | moveType = Special
+| input         = [2]8KK
+| name          = Shadow Rise
+| images        = SF6_Mbison_28k.png
+| hitboxes      = SF6_Mbison_28kk_hitbox.png
+| damage        = -
+| startup       = 16~42
+| active        = -
+| recovery      = 5 land
+| total         = 55
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -20000
+| invuln        = 1-8 Throw
+| airborne      = 9-50 (FKD)
+| notes         = 40f charge time (charge lasts 10f after releasing down direction); automatically tracks opponent's location; follow-ups will become their respective OD versions without spending additional Drive gauge; Bison is in a crouching state on the final landing recovery frame
+}}
+
+==== Devil Reverse ====
+===== [2]8K~P =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28k_p | moveType = Special
+| input         = [2]8K~P
+| name          = Devil Reverse
+| images        = SF6_Mbison_28k_p.png
+| hitboxes      = SF6_Mbison_28k_p_hitbox.png, SF6_Mbison_28k_p_cross_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 18+16
+| active        = until land
+| recovery      = 10 land
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +35(+43)
+| blockAdv      = {{sf6-adv|P|+1}}{{sf6-adv|VP|(+9)}}
+| punishAdv     = KD +35(+43)
+| perfParryAdv  = {{sf6-adv|VM|-17(-9)}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = 2500
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| atkRange      = 1.27
+| notes         = Can be steered left/right; cannot hit cross-up (but will turn around if Punch is input behind the opponent); puts opponent into limited juggle state; gives good advantage on block; final landing recovery frame is in a crouching state; extends a wide full-body hurtbox forward on frame 9~ and a forward/downward hurtbox on the arms while active (easy to anti-air) 
+}}
+
+===== [2]8KK~P or [2]8K~PP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28kk_p | moveType = Special
+| input         = [2]8KK~P or [2]8K~PP
+| name          = Devil Reverse
+| images        = SF6_Mbison_28kk_p.png
+| hitboxes      = SF6_Mbison_28kk_p_hitbox_1.png, SF6_Mbison_28kk_p_hitbox_2.png
+| damage        = 700x2 (1400)
+| chip          = 175x2 (350)
+| startup       = 16+21
+| active        = until land
+| recovery      = 5(10) land
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +35(+43)
+| blockAdv      = {{sf6-adv|VP|+4(+10)}}
+| punishAdv     = KD +35(+43)
+| perfParryAdv  = {{sf6-adv|VM|-13(-8)}}
+| blockstun     = 35 total
+| hitstop       = 3,15
+| driveDmgBlk   = 4000x2 (8000)
+| driveDmgHit   = [3500x2]
+| driveGain     = -20000
+| superGainHit  = 800x2 (560x2)
+| superGainBlk  = 400x2 (200x2)
+| airborne      = Until Land (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 15
+| atkRange      = 1.30
+| notes         = 2 hits; can be steered left/right; cannot hit cross-up (but will turn around if Punch is input behind the opponent); 5f extra landing recovery on whiff; puts opponent into limited juggle state; gives good advantage on block; on whiff, final landing recovery frame is in a crouching state; on hit/block, all landing recovery frames are in a crouching state; does not extend a wide hurtbox like the meterless version, making it better for approaching
+}}
+
+===== Devil Reverse (Mine) =====
+====== [2]8K~P (Mine) ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28k_p_mine | moveType = Special
+| input         = [2]8K~P
+| name          = Devil Reverse (Mine)
+| images        = SF6_Mbison_28k_p_mine.png
+| hitboxes      = SF6_Mbison_28k_p_mine_hitbox.png
+| damage        = 800,700,500 (2000)
+| chip          = 200,175,125 (500)
+| startup       = 18+16
+| active        = until land
+| recovery      = 8 land
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +52(+58)
+| blockAdv      = {{sf6-adv|VP|+21(+27)}}
+| punishAdv     = KD +52(+58)
+| perfParryAdv  = {{sf6-adv|VM|-17(-9)}}
+| blockstun     = 80 total
+| hitstop       = 13,14,10
+| driveDmgBlk   = 6000,3000x2 (12000)
+| driveDmgHit   = [5000,2500,3000]
+| driveGain     = 2500,1250,2000 (5750)
+| superGainHit  = 2300 (1610)
+| superGainBlk  = 1150 (575)
+| airborne      = Until Land (FKD)
+| jugStart      = 4
+| jugIncrease   = 1,2,1
+| jugLimit      = 15
+| atkRange      = 1.27
+| notes         = Detonates Psycho Mine on hit/block (does not trigger on Perfect Parry); can be steered left/right; cannot hit cross-up (but will turn around if Punch is input behind the opponent); gives great advantage on block or a juggle on hit (follow-ups possible in the corner); Bison is in a crouching state during landing recovery; extends a wide full-body hurtbox forward on frame 9~ and a forward/downward hurtbox on the arms while active (easy to anti-air) 
+}}
+
+====== [2]8KK~P or [2]8K~PP (Mine) ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28kk_p_mine | moveType = Special
+| input         = [2]8KK~P or [2]8K~PP
+| name          = Devil Reverse (Mine)
+| images        = SF6_Mbison_28kk_p_mine.png
+| hitboxes      = SF6_Mbison_28kk_p_mine_hitbox.png
+| damage        = 700x3,500 (2600)
+| chip          = 175x3,125 (650)
+| startup       = 16+21
+| active        = until land
+| recovery      = 8 land
+| guard         = H
+| cancel        = -
+| hitAdv        = KD +54(+59)
+| blockAdv      = {{sf6-adv|VP|+23(+28)}}
+| punishAdv     = KD +54(+59)
+| perfParryAdv  = {{sf6-adv|VM|-13(-8)}}
+| blockstun     = 92 total
+| hitstop       = 3,5,16,12
+| driveDmgBlk   = 4000,3000x3 (13000)
+| driveDmgHit   = [3500x2,3000x2]
+| driveGain     = -20000
+| superGainHit  = 2100 (1470)
+| superGainBlk  = 1050 (525)
+| airborne      = Until Land (FKD)
+| jugStart      = 4
+| jugIncrease   = 1,1,1,1
+| jugLimit      = 15
+| atkRange      = 1.30
+| notes         = Detonates Psycho Mine on hit/block (does not trigger on Perfect Parry); can be steered left/right; cannot hit cross-up (but will turn around if Punch is input behind the opponent); gives great advantage on block or a juggle on hit (follow-ups possible in the corner); Bison is in a crouching state during landing recovery; does not extend a wide hurtbox like the meterless version, making it better for approaching
+}}
+
+==== Head Press ====
+===== [2]8K~K =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28k_k | moveType = Special
+| input         = [2]8K~K
+| name          = Head Press
+| images        = SF6_Mbison_28k_k.png
+| hitboxes      = SF6_Mbison_28k_k_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 18+15
+| active        = until land
+| recovery      = 26 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VM|-29(-23)}}
+| blockAdv      = {{sf6-adv|VM|-39(-38)}}
+| punishAdv     = HKD +13(+15)
+| perfParryAdv  = {{sf6-adv|VM|-30(-25)}}
+| hitstun       = 29
+| blockstun     = 22
+| hitstop       = 3
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = 2500
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = Until Land (FKD)
+| jugStart      = 2
+| jugIncrease   = 2
+| jugLimit      = 15
+| atkRange      = 0.49
+| notes         = Bounces off opponent's head on hit/block/armor (can steer left/right after bounce); can hit cross-up; Hard Knockdown on Punish Counter; puts airborne opponents into limited juggle OTG state; Bison can auto-correct to face the opponent before descending; good hitbox and delayed descent makes it tricky to anti-air; drops straight to the ground on Perfect Parry (no follow-up possible)
+}}
+
+===== [2]8KK~K or [2]8K~KK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28kk_k | moveType = Special
+| input         = [2]8KK~K or [2]8K~KK
+| name          = Head Press
+| images        = SF6_Mbison_28kk_k.png
+| hitboxes      = SF6_Mbison_28kk_k_hitbox.png
+| damage        = 2000(1200)
+| chip          = 100
+| startup       = 16+15
+| active        = until land
+| recovery      = 12 land
+| guard         = H
+| cancel        = -
+| hitAdv        = HKD +27
+| blockAdv      = {{sf6-adv|VP|+4(+7)}}
+| punishAdv     = HKD +27
+| perfParryAdv  = {{sf6-adv|VM|-16(-11)}}
+| blockstun     = 22
+| hitstop       = 8
+| driveDmgBlk   = 6000
+| driveDmgHit   = [10000]
+| driveGain     = -20000
+| superGainHit  = 1800 (1260)
+| superGainBlk  = 400 (200)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| atkRange      = 0.49
+| notes         = Can also be input after meterless Shadow Rise; transitions to cinematic follow-up on grounded hit (causing Psycho Mine to disappear); lands near opponent on block (does not bounce like meterless version); puts airborne opponents into limited juggle OTG state, dealing 800 less damage
+}}
+
+===== Somersault Skull Diver =====
+====== [2]8K~K~P ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_28k_k_p | moveType = Special
+| input         = [2]8K~K~P
+| name          = Somersault Skull Diver
+| images        = SF6_Mbison_28k_k_p.png
+| hitboxes      = SF6_Mbison_28k_k_p_hitbox.png
+| damage        = 800
+| chip          = 200
+| startup       = 12
+| active        = 10
+| recovery      = 10 land
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+14)}}
+| blockAdv      = {{sf6-adv|P|+3}}{{sf6-adv|VP|(+9)}}
+| punishAdv     = {{sf6-adv|VP|+12(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-14(-9)}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = 2500
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| airborne      = Until Land (FKD)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 15
+| atkRange      = 1.18
+| notes         = Can only be performed after meterless Head Press after bouncing on hit/block/armor; lower body hurtbox shifts upward 1-21f (startup + active) as Bison tucks his knees in; puts airborne opponents into limited juggle state; cannot be performed after Perfect Parry or after connecting on a counter like JP's Amnesia or Marisa's charged SA1
+}}
+
+== Super Arts ==
+===== 236236K =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236236k | moveType = Super
+| input         = 236236K
+| name          = Knee Press Nightmare
+| images        = SF6_Mbison_236236k.png
+| hitboxes      = SF6_Mbison_236236k_hitbox.png, SF6_Mbison_236236k_hitbox_2.png
+| damage        = 2000 (600~1200)
+| chip          = 100x3,200 (500)
+| dmgScaling    = 30% Minimum
+| startup       = 10
+| active        = 2(1)3(31)2(1)2
+| recovery      = 62
+| total         = 113
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +11<br>(KD +2)
+| blockAdv      = {{sf6-adv|VM|-41}}
+| punishAdv     = KD +11<br>(KD +2)
+| perfParryAdv  = {{sf6-adv|VM|-102(-65)}}
+| blockstun     = 63/26 total
+| hitstop       = 8,8,8,8
+| driveDmgBlk   = 600x3,700 (2500)
+| driveDmgHit   = 500x6,2000 (5000)
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| invuln        = 1-11 Strike/Throw
+| armor         = Break
+| jugIncrease   = 99
+| jugLimit      = 99
+| atkRange      = 5.522 (2.539)
+| notes         = First hit cause Bison to enter the full animation; connecting with the 2nd-4th hits leads to a weaker version with only 600-1200 damage and much worse KD advantage; causes planted Psycho Mine to disappear; opponents can jump out after Super freeze to escape chip damage (except Dhalsim/Lily/Zangief)
+}}
+
+===== 214214K =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214214k | moveType = Super
+| input         = 214214K
+| name          = Psycho Punisher
+| images        = SF6_Mbison_214214k.png
+| hitboxes      = SF6_Mbison_214214k_hitbox.png
+| damage        = 3000
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 24
+| active        = 7
+| recovery      = 52
+| total         = 82
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +23
+| blockAdv      = {{sf6-adv|VM|-34}}
+| punishAdv     = HKD +23
+| perfParryAdv  = {{sf6-adv|VM|-57}}
+| blockstun     = 25
+| hitstop       = 5
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-30 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 4.763 (1.583)
+| notes         = Can steer left/right during startup; can hit cross-up; causes planted Psycho Mine to disappear; can be used as a fullscreen punish against projectiles or install moves that would normally be safe due to distance; cannot be beaten by air-invuln moves because Bison is technically never considered airborne
+}}
+
+===== 236236P =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236236p | moveType = Super
+| input         = 236236P
+| name          = Unlimited Psycho Crusher
+| images        = SF6_Mbison_236236p.png
+| hitboxes      = SF6_Mbison_236236p_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10(5)
+| active        = 6
+| recovery      = 65
+| total         = 80
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +15
+| blockAdv      = {{sf6-adv|VM|-46}}
+| punishAdv     = HKD +15
+| perfParryAdv  = {{sf6-adv|VM|-69}}
+| blockstun     = 25
+| hitstop       = 2
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-15 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.379 (1.875)
+| notes         = Travels slightly under 1/2 screen making it a viable projectile counter; opponent cannot jump out after Super freeze to escape chip damage; cinematic time regenerates ~2 Drive bars for M. Bison; causes planted Psycho Mine to disappear; only 5f startup when canceled from special moves
+}}
+
+====== 236236P (CA) ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_236236p(ca) | moveType = Super
+| input         = 236236P
+| name          = Unlimited Psycho Crusher (CA)
+| images        = SF6_Mbison_236236p_ca.png
+| hitboxes      = SF6_Mbison_236236p_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 10(5)
+| active        = 6
+| recovery      = 65
+| total         = 80
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +15
+| blockAdv      = {{sf6-adv|VM|-46}}
+| punishAdv     = HKD +15
+| perfParryAdv  = {{sf6-adv|VM|-69}}
+| blockstun     = 25
+| hitstop       = 2
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-15 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 2.379 (1.875)
+| notes         = Travels slightly under 1/2 screen making it a viable projectile counter; available at 25% HP or below; opponent cannot jump out after Super freeze to escape chip damage; cinematic time regenerates ~2.2 Drive bars for M. Bison; causes planted Psycho Mine to disappear; only 5f startup when canceled from special moves
+}}
+
+== Hidden Arts ==
+=== Bison Warp ===
+===== 6 or 4 + PPP/KKK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_4ppp | moveType = Special
+| input         = 6 or 4 + PPP/KKK
+| name          = Bison Warp
+| images        = SF6_MBison_4ppp.png
+| hitboxes      = 
+| damage        = -
+| startup       = -
+| active        = -
+| recovery      = 43
+| total         = 43
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 1-16 Full
+| notes         = Shin Bison only (requires detonating Psycho Mine with Forward Taunt); 6PPP appears behind opponent unless fully cornered, and 4PPP appears directly in front of the opponent (close enough to throw or confirm 2 light normals); 4PPP teleports backward 1.50 units; 4KKK teleports backward 2.50 units; can be canceled into from normals, allowing it to dodge Drive Reversal or Drive Impact and potentially punish (-5 on immediate Teleport cancel vs. immediate Drive Reversal; distance varies by opponent)
+}}
+
+=== Psycho Burst ===
+===== 623PP =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_623pp | moveType = Special
+| input         = 623PP
+| name          = Psycho Burst
+| images        = SF6_MBison_623pp.png
+| hitboxes      = SF6_MBison_623pp_hitbox.png
+| damage        = 1200
+| chip          = 300
+| startup       = 15
+| active        = 4
+| recovery      = 47
+| total         = 65
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +17
+| blockAdv      = {{sf6-adv|VM|-28}}
+| punishAdv     = KD +17
+| perfParryAdv  = {{sf6-adv|VM|-49}}
+| blockstun     = 23
+| hitstop       = 0(8)
+| driveDmgBlk   = 6000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1200 (840)
+| superGainBlk  = 600 (300)
+| invuln        = 1-18 Full
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 0.93
+| notes         = Shin Bison only (requires detonating Psycho Mine with Forward Taunt); very slow but meterless reversal; cannot hit cross-up
+}}
+
+=== Final Psycho Crusher ===
+===== 214214P =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_214214p | moveType = Super
+| input         = 214214P
+| name          = Final Psycho Crusher
+| images        = SF6_MBison_214214p.png
+| hitboxes      = SF6_MBison_214214p_hitbox.png
+| damage        = 3000
+| chip          = 750
+| dmgScaling    = 40% Minimum
+| startup       = 9(15)
+| active        = 13
+| recovery      = 48+48
+| total         = 117
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD 0(+6)
+| blockAdv      = {{sf6-adv|VM|-94(-88)}}
+| punishAdv     = KD 0(+6)
+| perfParryAdv  = {{sf6-adv|VM|-107(-101)}}
+| blockstun     = 15
+| hitstop       = 12(15)
+| driveDmgBlk   = 8000
+| driveDmgHit   = 10000
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-69 Full
+| armor         = Break
+| airborne      = 2-69
+| jugLimit      = 99
+| atkRange      = 2.12 (1st)
+| notes         = Shin Bison only (requires detonating Psycho Mine with Forward Taunt); cannot hit cross-up; 1st active frame only connects when Bison is cornered (usually connects on 7th active frame midscreen, making it functionally 15f startup); fullscreen anti-air and anti-projectile Super; during recovery, flies off-screen then reappears on the opposite side of opponent (does not switch sides vs. cornered opponents on HIT
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Mbison_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 544 (total)
+| active        = -
+| recovery      = -
+| total         = 544
+| hitAdv        = -
+| blockAdv      = -
+| guard         = -
+| cancel        = -
+| notes         = "A gnat like you will be buried here."; can change to alternate taunts by holding Up or Down on frame 235
+}}
+
+====== 5PPPKKK~8 ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5pppkkk_8 | moveType = taunt
+| input         = 5PPPKKK~8
+| name          = Neutral Taunt (Up)
+| images        = SF6_Mbison_5pppkkk_8.png
+| hitboxes      = 
+| damage        = -
+| startup       = 475 (total)
+| active        = -
+| recovery      = -
+| total         = 475
+| hitAdv        = -
+| blockAdv      = -
+| guard         = -
+| cancel        = -
+| notes         = "A gnat like you is of no use to me."; must be holding Up on frame 235 of Neutral Taunt
+}}
+
+====== 5PPPKKK~2 ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_5pppkkk_2 | moveType = taunt
+| input         = 5PPPKKK~2
+| name          = Neutral Taunt (Down)
+| images        = SF6_Mbison_5pppkkk_2.png
+| hitboxes      = 
+| damage        = -
+| startup       = 770 (total)
+| active        = -
+| recovery      = -
+| total         = 770
+| hitAdv        = -
+| blockAdv      = -
+| guard         = -
+| cancel        = -
+| notes         = "A gnat like you has no value to anyone. You're a worthless piece of trash!"; must be holding Down on frame 235 of Neutral Taunt
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Mbison_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 411 (total)
+| active        = -
+| recovery      = -
+| total         = 411
+| hitAdv        = -
+| blockAdv      = -
+| guard         = -
+| cancel        = -
+| notes         = "Hmph. Do you fear me?"
+}}
+
+====== 6PPPKKK (Mine) ======
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_6pppkkk_mine | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt (Mine)
+| images        = SF6_Mbison_6pppkkk_mine.png
+| hitboxes      = 
+| damage        = 500
+| chip          = 125
+| startup       = 409
+| active        = 2
+| recovery      = 150
+| total         = 560
+| hitAdv        = KD
+| blockAdv      = -
+| punishAdv     = KD
+| guard         = LH
+| cancel        = -
+| blockstun     = 30
+| hitstop       = 5
+| driveDmgBlk   = 3000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 0
+| jugLimit      = 99
+| notes         = "Three. Two. One. BOOM! Hahahaha."; detonates a planted Psycho Mine at the end of the countdown; taunt activation can overwrite the previous explosion timer
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = M.Bison | moveId = m.bison_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Mbison_4pppkkk.png, SF6_Mbison_4pppkkk_2.png
+| hitboxes      = SF6_Mbison_4pppkkk_hitbox.png, SF6_Mbison_4pppkkk_hitbox_2.png
+| damage        = 0
+| startup       = 400+42 (792 total)
+| active        = 4
+| recovery      = 202
+| total         = 442(792)
+| hitAdv        = KD -96
+| blockAdv      = -
+| punishAdv     = KD -92
+| guard         = -
+| cancel        = -
+| notes         = "My power howls. Face me!"; if opponent steps within range, Bison unleashes an unblockable strike that knocks down for no damage ("Not yet."); attack still comes out even if opponent stands behind Bison; if opponent does not approach: "Hmm. Coward."
+}}
+
+
+{{Character Subnav SF6 | chara=M.Bison | tag=Mbison }}
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]
+[[Category:M. Bison]]

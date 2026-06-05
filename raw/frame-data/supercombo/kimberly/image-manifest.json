@@ -1,0 +1,1436 @@
+{
+  "image_manifest_schema_version": "supercombo_frame_image_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:36:51Z",
+  "source": "SuperCombo Wiki",
+  "character": "Kimberly",
+  "cargo_character": "Kimberly",
+  "refs": [
+    {
+      "source": "CharacterData-SF6",
+      "field": "portrait",
+      "moveId": "",
+      "input": "",
+      "name": "Kimberly",
+      "filename": "SF6 Kimberly Portrait.png"
+    },
+    {
+      "source": "CharacterData-SF6",
+      "field": "icon",
+      "moveId": "",
+      "input": "",
+      "name": "Kimberly",
+      "filename": "SF6 Kimberly Face.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Kimberly_5lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp",
+      "input": "5LP",
+      "name": "Standing Light Punch",
+      "filename": "SF6_Kimberly_5lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Kimberly_5mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5mp",
+      "input": "5MP",
+      "name": "Standing Medium Punch",
+      "filename": "SF6_Kimberly_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Kimberly_5hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5hp",
+      "input": "5HP",
+      "name": "Standing Heavy Punch",
+      "filename": "SF6_Kimberly_5hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Kimberly_5lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lk",
+      "input": "5LK",
+      "name": "Standing Light Kick",
+      "filename": "SF6_Kimberly_5lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Kimberly_5mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5mk",
+      "input": "5MK",
+      "name": "Standing Medium Kick",
+      "filename": "SF6_Kimberly_5mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Kimberly_5hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5hk",
+      "input": "5HK",
+      "name": "Standing Heavy Kick",
+      "filename": "SF6_Kimberly_5hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Kimberly_2lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2lp",
+      "input": "2LP",
+      "name": "Crouching Light Punch",
+      "filename": "SF6_Kimberly_2lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Kimberly_2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2mp",
+      "input": "2MP",
+      "name": "Crouching Medium Punch",
+      "filename": "SF6_Kimberly_2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Kimberly_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Kimberly_2hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Kimberly_2hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2hp",
+      "input": "2HP",
+      "name": "Crouching Heavy Punch",
+      "filename": "SF6_Kimberly_2hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Kimberly_2lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2lk",
+      "input": "2LK",
+      "name": "Crouching Light Kick",
+      "filename": "SF6_Kimberly_2lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Kimberly_2mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2mk",
+      "input": "2MK",
+      "name": "Crouching Medium Kick",
+      "filename": "SF6_Kimberly_2mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_2hk",
+      "input": "2HK",
+      "name": "Water Kick",
+      "filename": "SF6_Kimberly_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_2hk",
+      "input": "2HK",
+      "name": "Water Kick",
+      "filename": "SF6_Kimberly_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Kimberly_jlp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_jlp",
+      "input": "j.LP",
+      "name": "Jumping Light Punch",
+      "filename": "SF6_Kimberly_jlp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Kimberly_jmp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_jmp",
+      "input": "j.MP",
+      "name": "Jumping Medium Punch",
+      "filename": "SF6_Kimberly_jmp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Kimberly_jhp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_jhp",
+      "input": "j.HP",
+      "name": "Jumping Heavy Punch",
+      "filename": "SF6_Kimberly_jhp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_jlk",
+      "input": "j.LK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Kimberly_jlk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_jlk",
+      "input": "j.LK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Kimberly_jlk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Kimberly_jmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_jmk",
+      "input": "j.MK",
+      "name": "Jumping Medium Kick",
+      "filename": "SF6_Kimberly_jmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Kimberly_jhk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_jhk",
+      "input": "j.HK",
+      "name": "Jumping Heavy Kick",
+      "filename": "SF6_Kimberly_jhk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_j2mp",
+      "input": "j.2MP",
+      "name": "Elbow Drop",
+      "filename": "SF6_Kimberly_j2mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_j2mp",
+      "input": "j.2MP",
+      "name": "Elbow Drop",
+      "filename": "SF6_Kimberly_j2mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_3mk",
+      "input": "3MK",
+      "name": "Water Slicer Slide",
+      "filename": "SF6_Kimberly_3mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_3mk",
+      "input": "3MK",
+      "name": "Water Slicer Slide",
+      "filename": "SF6_Kimberly_3mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_4hk",
+      "input": "4HK",
+      "name": "Windmill Kick",
+      "filename": "SF6_Kimberly_4hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_4hk",
+      "input": "4HK",
+      "name": "Windmill Kick",
+      "filename": "SF6_Kimberly_4hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_6hk",
+      "input": "6HK",
+      "name": "Hisen Kick",
+      "filename": "SF6_Kimberly_6hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_6hk",
+      "input": "6HK",
+      "name": "Hisen Kick",
+      "filename": "SF6_Kimberly_6hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_6hk_8",
+      "input": "6HK~8",
+      "name": "Step Up (neutral hop)",
+      "filename": "SF6_Kimberly_6hk_8.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_6hk_8",
+      "input": "6HK~8",
+      "name": "Step Up (neutral hop)",
+      "filename": "SF6_Kimberly_6hk_8_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_6hk_9",
+      "input": "6HK~9",
+      "name": "Step Up (forward hop)",
+      "filename": "SF6_Kimberly_6hk_9.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_6hk_9",
+      "input": "6HK~9",
+      "name": "Step Up (forward hop)",
+      "filename": "SF6_Kimberly_6hk_9_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_6hk_7",
+      "input": "6HK~7",
+      "name": "Step Up (backward hop)",
+      "filename": "SF6_Kimberly_6hk_7.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_6hk_7",
+      "input": "6HK~7",
+      "name": "Step Up (backward hop)",
+      "filename": "SF6_Kimberly_6hk_7_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp_mp",
+      "input": "5LP~MP",
+      "name": "Bushin Prism Strikes 1",
+      "filename": "SF6_Kimberly_5lp_mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp_mp",
+      "input": "5LP~MP",
+      "name": "Bushin Prism Strikes 1",
+      "filename": "SF6_Kimberly_5mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp_mp_hp",
+      "input": "5LP~MP~HP",
+      "name": "Bushin Prism Strikes 2",
+      "filename": "SF6_Kimberly_5lp_mp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp_mp_hp",
+      "input": "5LP~MP~HP",
+      "name": "Bushin Prism Strikes 2",
+      "filename": "SF6_Kimberly_5lp_mp_hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp_mp_hp_hk",
+      "input": "5LP~MP~HP~HK",
+      "name": "Bushin Prism Strikes 3",
+      "filename": "SF6_Kimberly_5lp_mp_hp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp_mp_hp_hk",
+      "input": "5LP~MP~HP~HK",
+      "name": "Bushin Prism Strikes 3",
+      "filename": "SF6_Kimberly_5lp_mp_hp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp_mp_2hp",
+      "input": "5LP~MP~2HP",
+      "name": "Bushin Hellchain 1",
+      "filename": "SF6_Kimberly_5lp_mp_2hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp_mp_2hp",
+      "input": "5LP~MP~2HP",
+      "name": "Bushin Hellchain 1",
+      "filename": "SF6_Kimberly_5lp_mp_2hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp_mp_2hp_hk",
+      "input": "5LP~MP~2HP~HK",
+      "name": "Bushin Hellchain 2",
+      "filename": "SF6_Kimberly_5lp_mp_2hp_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp_mp_2hp_hk",
+      "input": "5LP~MP~2HP~HK",
+      "name": "Bushin Hellchain 2",
+      "filename": "SF6_Kimberly_5lp_mp_2hp_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5lp_mp_2hp_2hk",
+      "input": "5LP~MP~2HP~2HK",
+      "name": "Bushin Hellchain Throw",
+      "filename": "SF6_Kimberly_5lp_mp_2hp_2hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5lp_mp_2hp_2hk",
+      "input": "5LP~MP~2HP~2HK",
+      "name": "Bushin Hellchain Throw",
+      "filename": "SF6_Kimberly_5lp_mp_2hp_2hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_5mp_hp",
+      "input": "5MP~HP",
+      "name": "Bushin Tiger Fangs",
+      "filename": "SF6_Kimberly_5mp_hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5mp_hp",
+      "input": "5MP~HP",
+      "name": "Bushin Tiger Fangs",
+      "filename": "SF6_Kimberly_5mp_hp_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5mp_hp",
+      "input": "5MP~HP",
+      "name": "Bushin Tiger Fangs",
+      "filename": "SF6_Kimberly_5mp_hp_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_5mp_hp",
+      "input": "5MP~HP",
+      "name": "Bushin Tiger Fangs",
+      "filename": "SF6_Kimberly_5mp_hp_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_lplk",
+      "input": "LPLK",
+      "name": "Ripcord Throw",
+      "filename": "SF6_Kimberly_lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_lplk",
+      "input": "LPLK",
+      "name": "Ripcord Throw",
+      "filename": "SF6_Kimberly_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_4lplk",
+      "input": "4LPLK",
+      "name": "Bell Ringer",
+      "filename": "SF6_Kimberly_4lplk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_4lplk",
+      "input": "4LPLK",
+      "name": "Bell Ringer",
+      "filename": "SF6_Kimberly_lplk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_hphk",
+      "input": "HPHK",
+      "name": "Steadfast Strike",
+      "filename": "SF6_Kimberly_hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_hphk",
+      "input": "HPHK",
+      "name": "Steadfast Strike",
+      "filename": "SF6_Kimberly_hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_6hphk",
+      "input": "6HPHK",
+      "name": "Shapeless State (Block)",
+      "filename": "SF6_Kimberly_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_6hphk",
+      "input": "6HPHK",
+      "name": "Shapeless State (Block)",
+      "filename": "SF6_Kimberly_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Shapeless State (Recovery)",
+      "filename": "SF6_Kimberly_6hphk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_6hphk_recovery",
+      "input": "6HPHK",
+      "name": "Shapeless State (Recovery)",
+      "filename": "SF6_Kimberly_6hphk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Kimberly_mpmk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_mpmk",
+      "input": "MPMK",
+      "name": "Drive Parry",
+      "filename": "SF6_Kimberly_mpmk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Kimberly_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_mpmk_66_pdr",
+      "input": "MPMK~66",
+      "name": "Parry Drive Rush",
+      "filename": "SF6_Kimberly_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Kimberly_66.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_mpmk_66_drc",
+      "input": "MPMK or 66",
+      "name": "Drive Rush Cancel",
+      "filename": "SF6_Kimberly_66_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214lk",
+      "input": "214LK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214lk",
+      "input": "214LK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214lk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214mk",
+      "input": "214MK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214mk",
+      "input": "214MK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214hk",
+      "input": "214HK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214hk",
+      "input": "214HK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214kk",
+      "input": "214KK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214kk",
+      "input": "214KK",
+      "name": "Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_214hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_j214k",
+      "input": "j.214K",
+      "name": "Aerial Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_j214k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_j214k",
+      "input": "j.214K",
+      "name": "Aerial Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_j214k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_j214kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_j214kk",
+      "input": "j.214KK",
+      "name": "Aerial Bushin Senpukyaku",
+      "filename": "SF6_Kimberly_j214kk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236lp",
+      "input": "236LP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236lp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236lp",
+      "input": "236LP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236lp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236mp",
+      "input": "236MP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236mp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236mp",
+      "input": "236MP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236mp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236hp",
+      "input": "236HP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236hp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236hp",
+      "input": "236HP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236pp",
+      "input": "236PP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236pp",
+      "input": "236PP",
+      "name": "Vagabond Edge",
+      "filename": "SF6_Kimberly_236hp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k",
+      "input": "236K",
+      "name": "Sprint",
+      "filename": "SF6_Kimberly_236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k",
+      "input": "236K",
+      "name": "Sprint",
+      "filename": "SF6_Kimberly_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_lk",
+      "input": "236K~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_lk",
+      "input": "236K~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_lk",
+      "input": "236K~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_lk",
+      "input": "236K~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_lk",
+      "input": "236K~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_mk",
+      "input": "236K~MK",
+      "name": "Shadow Slide",
+      "filename": "SF6_Kimberly_236k_mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_mk",
+      "input": "236K~MK",
+      "name": "Shadow Slide",
+      "filename": "SF6_Kimberly_236k_mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_hk",
+      "input": "236K~HK",
+      "name": "Neck Hunter",
+      "filename": "SF6_Kimberly_236k_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_hk",
+      "input": "236K~HK",
+      "name": "Neck Hunter",
+      "filename": "SF6_Kimberly_236k_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_p",
+      "input": "236K~P",
+      "name": "Emergency Stop",
+      "filename": "SF6_Kimberly_236k_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_p",
+      "input": "236K~P",
+      "name": "Emergency Stop",
+      "filename": "SF6_Kimberly_236k_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_prox",
+      "input": "236K (close)",
+      "name": "Arc Step",
+      "filename": "SF6_Kimberly_236k_prox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_prox",
+      "input": "236K (close)",
+      "name": "Arc Step",
+      "filename": "SF6_Kimberly_236k_prox_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_prox_k",
+      "input": "236K (close)~K",
+      "name": "Bushin Hojin Kick",
+      "filename": "SF6_Kimberly_236k_prox_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_prox_k",
+      "input": "236K (close)~K",
+      "name": "Bushin Hojin Kick",
+      "filename": "SF6_Kimberly_236k_prox_k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236k_prox_p",
+      "input": "236K (close)~P",
+      "name": "Bushin Izuna Otoshi",
+      "filename": "SF6_Kimberly_236k_prox_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236k_prox_p",
+      "input": "236K (close)~P",
+      "name": "Bushin Izuna Otoshi",
+      "filename": "SF6_Kimberly_236k_prox_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk",
+      "input": "236KK",
+      "name": "Sprint",
+      "filename": "SF6_Kimberly_236kk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk",
+      "input": "236KK",
+      "name": "Sprint",
+      "filename": "SF6_Kimberly_236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_lk",
+      "input": "236KK~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236kk_lk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_lk",
+      "input": "236KK~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_1.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_lk",
+      "input": "236KK~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_lk",
+      "input": "236KK~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_3.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_lk",
+      "input": "236KK~LK",
+      "name": "Torso Cleaver",
+      "filename": "SF6_Kimberly_236k_lk_hitbox_preview.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_mk",
+      "input": "236KK~MK",
+      "name": "Shadow Slide",
+      "filename": "SF6_Kimberly_236kk_mk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_mk",
+      "input": "236KK~MK",
+      "name": "Shadow Slide",
+      "filename": "SF6_Kimberly_236k_mk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_hk",
+      "input": "236KK~HK",
+      "name": "Neck Hunter",
+      "filename": "SF6_Kimberly_236kk_hk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_hk",
+      "input": "236KK~HK",
+      "name": "Neck Hunter",
+      "filename": "SF6_Kimberly_236kk_hk_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_p",
+      "input": "236KK~P",
+      "name": "Emergency Stop",
+      "filename": "SF6_Kimberly_236kk_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_p",
+      "input": "236KK~P",
+      "name": "Emergency Stop",
+      "filename": "SF6_Kimberly_236k_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_prox",
+      "input": "236KK (close)",
+      "name": "Arc Step",
+      "filename": "SF6_Kimberly_236kk_prox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_prox",
+      "input": "236KK (close)",
+      "name": "Arc Step",
+      "filename": "SF6_Kimberly_236k_prox_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_prox_k",
+      "input": "236KK (close)~K",
+      "name": "Bushin Hojin Kick",
+      "filename": "SF6_Kimberly_236kk_prox_k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_prox_k",
+      "input": "236KK (close)~K",
+      "name": "Bushin Hojin Kick",
+      "filename": "SF6_Kimberly_236kk_prox_k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236kk_prox_p",
+      "input": "236KK (close)~P",
+      "name": "Bushin Izuna Otoshi",
+      "filename": "SF6_Kimberly_236kk_prox_p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236kk_prox_p",
+      "input": "236KK (close)~P",
+      "name": "Bushin Izuna Otoshi",
+      "filename": "SF6_Kimberly_236k_prox_p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214p",
+      "input": "214P",
+      "name": "Hidden Variable",
+      "filename": "SF6_Kimberly_214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214p",
+      "input": "214P",
+      "name": "Hidden Variable",
+      "filename": "SF6_Kimberly_214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214pp",
+      "input": "214PP",
+      "name": "Hidden Variable",
+      "filename": "SF6_Kimberly_214pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214pp",
+      "input": "214PP",
+      "name": "Hidden Variable",
+      "filename": "SF6_Kimberly_214pp_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_22p_0stock",
+      "input": "22P (refill)",
+      "name": "Genius at Play",
+      "filename": "SF6_Kimberly_22p(0).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_22p_0stock",
+      "input": "22P (refill)",
+      "name": "Genius at Play",
+      "filename": "SF6_Kimberly_22p(0)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_22pp_0stock",
+      "input": "22PP (refill)",
+      "name": "Genius at Play",
+      "filename": "SF6_Kimberly_22pp(0).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_22pp_0stock",
+      "input": "22PP (refill)",
+      "name": "Genius at Play",
+      "filename": "SF6_Kimberly_22p(0)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_22p_1stock",
+      "input": "22P (1 stock)",
+      "name": "Shuriken Bomb",
+      "filename": "SF6_Kimberly_22p(1).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_22p_1stock",
+      "input": "22P (1 stock)",
+      "name": "Shuriken Bomb",
+      "filename": "SF6_Kimberly_22p(1)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_22pp_2stock",
+      "input": "22PP (2 stock)",
+      "name": "Shuriken Bomb Spread",
+      "filename": "SF6_Kimberly_22p(2).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_22pp_2stock",
+      "input": "22PP (2 stock)",
+      "name": "Shuriken Bomb Spread",
+      "filename": "SF6_Kimberly_22p(2)_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_j236p",
+      "input": "j.236P",
+      "name": "Nue Twister",
+      "filename": "SF6_Kimberly_j236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_j236p",
+      "input": "j.236P",
+      "name": "Nue Twister",
+      "filename": "SF6_Kimberly_j236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_j236pp",
+      "input": "j.236PP",
+      "name": "Nue Twister",
+      "filename": "SF6_Kimberly_j236pp.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_j236pp",
+      "input": "j.236PP",
+      "name": "Nue Twister",
+      "filename": "SF6_Kimberly_j236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236236k_0stock",
+      "input": "236236K",
+      "name": "Bushin Beats",
+      "filename": "SF6_Kimberly_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236236k_0stock",
+      "input": "236236K",
+      "name": "Bushin Beats",
+      "filename": "SF6_Kimberly_236236k_2.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236236k_0stock",
+      "input": "236236K",
+      "name": "Bushin Beats",
+      "filename": "SF6_Kimberly_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236236k_1stock",
+      "input": "236236[K]",
+      "name": "Bushin Thunderous Beats",
+      "filename": "SF6_Kimberly_236236k.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236236k_1stock",
+      "input": "236236[K]",
+      "name": "Bushin Thunderous Beats",
+      "filename": "SF6_Kimberly_236236k_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_214214p",
+      "input": "214214P",
+      "name": "Bushin Scramble",
+      "filename": "SF6_Kimberly_214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_214214p",
+      "input": "214214P",
+      "name": "Bushin Scramble",
+      "filename": "SF6_Kimberly_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_j214214p",
+      "input": "j.214214P",
+      "name": "Soaring Bushin Scramble",
+      "filename": "SF6_Kimberly_j214214p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_j214214p",
+      "input": "j.214214P",
+      "name": "Soaring Bushin Scramble",
+      "filename": "SF6_Kimberly_214214p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236236p",
+      "input": "236236P",
+      "name": "Bushin Ninjastar Cypher",
+      "filename": "SF6_Kimberly_236236p.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236236p",
+      "input": "236236P",
+      "name": "Bushin Ninjastar Cypher",
+      "filename": "SF6_Kimberly_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "kimberly_236236p(ca)",
+      "input": "236236P",
+      "name": "Bushin Ninjastar Cypher (CA)",
+      "filename": "SF6_Kimberly_236236p(ca).png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "hitboxes",
+      "moveId": "kimberly_236236p(ca)",
+      "input": "236236P",
+      "name": "Bushin Ninjastar Cypher (CA)",
+      "filename": "SF6_Kimberly_236236p_hitbox.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Kimberly_5pppkkk",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Kimberly_5pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Kimberly_5pppkkk_install",
+      "input": "5PPPKKK",
+      "name": "Neutral Taunt",
+      "filename": "SF6_Kimberly_5pppkkk_install.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Kimberly_6pppkkk",
+      "input": "6PPPKKK",
+      "name": "Forward Taunt",
+      "filename": "SF6_Kimberly_6pppkkk.png"
+    },
+    {
+      "source": "FrameData-SF6",
+      "field": "images",
+      "moveId": "Kimberly_4pppkkk",
+      "input": "4PPPKKK",
+      "name": "Back Taunt",
+      "filename": "SF6_Kimberly_4pppkkk.png"
+    }
+  ],
+  "downloads": [],
+  "missing_titles": [
+    "File:SF6 Kimberly 22pp(0).png",
+    "File:SF6 Kimberly 214mk.png",
+    "File:SF6 Kimberly 214hk.png",
+    "File:SF6 Kimberly 236kk p.png",
+    "File:SF6 Kimberly j214kk.png",
+    "File:SF6 Kimberly j214k.png",
+    "File:SF6 Kimberly j214214p.png"
+  ],
+  "download_images": false
+}

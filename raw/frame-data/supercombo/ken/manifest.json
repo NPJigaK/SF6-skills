@@ -1,0 +1,51 @@
+{
+  "manifest_schema_version": "supercombo_frame_raw_capture_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:35:34Z",
+  "character": "Ken",
+  "cargo_character": "Ken",
+  "character_slug": "ken",
+  "capture_label": "2026-06-01",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-01",
+    "latest_revision_timestamp": "2026-06-01T07:38:26Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/Ken/Data",
+        "pageid": 65932,
+        "lastrevid": 365220,
+        "revision_timestamp": "2026-06-01T07:38:26Z",
+        "touched": "2026-06-01T07:38:26Z"
+      },
+      {
+        "title": "Street Fighter 6/Ken/Frame data",
+        "pageid": 68276,
+        "lastrevid": 310369,
+        "revision_timestamp": "2024-10-19T05:13:52Z",
+        "touched": "2026-06-01T07:38:30Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "raw_root": "raw\\frame-data\\supercombo\\ken",
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": [
+    "api\\page-metadata.json",
+    "cargo\\character-data.json",
+    "cargo\\frame-data.json",
+    "data.raw.wikitext",
+    "data.templates.json",
+    "frame-data.cargo-queries.json",
+    "frame-data.raw.wikitext",
+    "image-manifest.json",
+    "imageinfo.json",
+    "rendered\\page.html",
+    "rendered\\tables.dom.json",
+    "screenshots\\details.png",
+    "screenshots\\general.png",
+    "screenshots\\meter.png",
+    "screenshots\\notes.png",
+    "screenshots\\properties.png"
+  ]
+}

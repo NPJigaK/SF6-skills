@@ -1,0 +1,60 @@
+{
+  "official_rows": 89,
+  "supercombo_rows": 69,
+  "enriched_rows": 89,
+  "supercombo_only_rows": 9,
+  "enrichment_status_counts": {
+    "enriched": 25,
+    "enriched_review_required": 53,
+    "official_only": 11
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration": 3,
+    "basic_field_conflict:damage": 3,
+    "condition_dependent_supercombo_field:damage": 6,
+    "condition_dependent_supercombo_field:recovery": 6,
+    "condition_dependent_supercombo_field:startup": 6,
+    "manual_match": 2,
+    "multiple_candidates": 13,
+    "supercombo_row_reused": 26,
+    "uncomparable_basic_field:active_duration": 4,
+    "uncomparable_basic_field:active_duration,damage": 1,
+    "uncomparable_basic_field:active_duration,damage,recovery": 15,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:active_duration,recovery": 6,
+    "uncomparable_basic_field:active_duration,recovery,startup": 6,
+    "uncomparable_basic_field:damage": 3,
+    "uncomparable_basic_field:damage,recovery": 6,
+    "uncomparable_basic_field:recovery": 5
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 3,
+    "damage": 3
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 35,
+    "damage": 28,
+    "recovery": 41,
+    "startup": 9
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "dhalsim_214214k",
+    "dhalsim_236k",
+    "dhalsim_236kk",
+    "dhalsim_236p",
+    "dhalsim_236pp",
+    "dhalsim_2hk",
+    "dhalsim_j63214p",
+    "dhalsim_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 6,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/dhalsim/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/dhalsim/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/dhalsim/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/dhalsim/classic-supercombo.csv"
+}

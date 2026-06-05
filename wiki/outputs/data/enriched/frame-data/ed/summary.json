@@ -1,0 +1,59 @@
+{
+  "official_rows": 70,
+  "supercombo_rows": 65,
+  "enriched_rows": 70,
+  "supercombo_only_rows": 13,
+  "enrichment_status_counts": {
+    "enriched": 20,
+    "enriched_review_required": 39,
+    "official_only": 11
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,damage": 2,
+    "basic_field_conflict:active_duration,damage,recovery": 1,
+    "basic_field_conflict:active_duration,damage,recovery,startup": 1,
+    "basic_field_conflict:active_duration,recovery,startup": 1,
+    "condition_dependent_supercombo_field:damage": 5,
+    "condition_dependent_supercombo_field:recovery": 15,
+    "manual_match": 2,
+    "multiple_candidates": 16,
+    "supercombo_row_reused": 12,
+    "uncomparable_basic_field:active_duration,damage": 3,
+    "uncomparable_basic_field:active_duration,damage,recovery": 6,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:damage": 7,
+    "uncomparable_basic_field:damage,recovery": 3,
+    "uncomparable_basic_field:recovery": 4,
+    "uncomparable_basic_field:recovery,startup": 4,
+    "uncomparable_basic_field:startup": 2
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 5,
+    "damage": 4,
+    "recovery": 3,
+    "startup": 2
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 12,
+    "damage": 22,
+    "recovery": 20,
+    "startup": 9
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "ed_236hk",
+    "ed_236lk",
+    "ed_236mk",
+    "ed_5hp",
+    "ed_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 10,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/ed/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/supercombo/frame-data/ed/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/supercombo/frame-data/ed/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/enriched/frame-data/ed/classic-supercombo.csv"
+}

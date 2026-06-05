@@ -1,0 +1,2891 @@
+{{Character Subnav SF6 | chara=Dee_Jay | tag=DeeJay }}
+
+== Character Vitals ==
+{{CharacterData-SF6
+| chara         = Dee_Jay
+| name          = Dee Jay
+| portrait      = SF6 Dee_Jay Portrait.png
+| icon          = SF6 Dee_Jay Face.png
+| hp            = 10000
+| throwRange    = 0.8
+| throwHurtbox  = 0.33
+| fwdWalkSpd    = 0.043
+| bwdWalkSpd    = 0.032
+| fwdDashSpd    = 19
+| bwdDashSpd    = 23
+| fwdDashDist   = 1.50
+| bwdDashDist   = 0.90
+| jumpSpd       = 4+38+3
+| jumpApex      = 2.115
+| fwdJumpDist   = 1.90
+| bwdJumpDist   = 1.52
+| dRushMin      = 0.763
+| dRushBlock    = 2.535
+| dRushMax      = 2.713
+}}
+
+
+<!---
+All possible move variables
+Can delete row if not applicable, EXCEPT input / name / images / startup / active / recovery / cancel / damage / guard / hitAdv / blockAdv (that appears on main page)
+For hit/block/punish/perfParry advantage, use the sf6-adv template to change the color (NOT on knockdowns)
+sf6-adv|color code|number; color codes: VM (-4 or worse), M (-3 to -1), E (0), P (+1 to +3), VP (+4 or better)
+| input         = (move input in Numpad notation)
+| name          = (Official move name)
+| images        = (PNG filename of move image)
+| hitboxes      = (PNG filename of hitbox image)
+| damage        = (Attack's damage value for each hit; separate by commas and use "xN" for multiple hits of the same damage)
+| chip          = (Attack's chip damage value vs. opponents in Burnout for each hit)
+| dmgScaling    = (Amount/Type of damage scaling applied to move; Starter = beginning of combo, Combo = mid-combo (applies to next move), Immediate = mid-combo (applies to this move)
+| startup       = (Startup frames, including the first active frame)
+| active        = (Total number of active frames, separated per hit; also includes gaps in parentheses; e.g. 3,2,3 without gap or 2(5)2 with gap)
+| recovery      = (Recovery frames after active frames end; airborne moves should have recovery split into air+landing frames)
+| total         = (Total frame count of the move)
+| guard         = (Direction a move must be blocked; L = low, H = high/overhead, LH = block either direction, T = throw)
+| cancel        = (Move's cancel ability; Chn = chain, TC = target combo, Jmp = Jump, Sp = special, SA = any super, SA(N) = Super Art N)
+| hitconfirm    = (Hitconfirm reaction window when canceling into specials, supers, target combos, etc; from first hit frame until final cancel frame)
+| hitAdv        = (Frame advantage on Hit; no color template on Knockdown; can list a range of values if move can be spaced out)
+| blockAdv      = (Frame advantage on Block; can list a range of values if move can be spaced out; do not list a block KD Advantage on throws)
+| punishAdv     = (Frame advantage on Punish Counter + effects like Spin, Tumble, Crumple, etc.)
+| perfParryAdv  = (Frame advantage of a move that is Perfect Parried on the first active frame, or a range of values for moves that can be spaced out)
+| DRcancelHit   = (Hit advantage of a NORMAL CANCELED INTO DRIVE RUSH on hit; calculated from the moment a follow-up attack is possible)
+| DRcancelBlk   = (Block advantage of a NORMAL CANCELED INTO DRIVE RUSH on block; calculated from the moment a follow-up attack is possible)
+| afterDRHit    = (Hit advantage of a normal/command normal when used AFTER Drive Rush; +4 from hitAdv, but may also affect juggle state)
+| afterDRBlk    = (Block advantage of a normal/command normal when used AFTER Drive Rush; +4 from blockAdv)
+| hitstun       = (Number of GROUNDED HITSTUN frames caused by attack; for multi-hit moves, separate by hit if possible or list as "N Total")
+| blockstun     = (Number of BLOCKSTUN frames caused by attack; for multi-hit moves, separate each hit if possible or list as "N Total")
+| hitstop       = (Number of HITSTOP/HITFREEZE frames caused by attack; if attacker/defender have different hitstop, list both)
+| driveDmgBlk   = (Amount of Drive Meter drained from opponent when attack is blocked)
+| driveDmgHit   = (Amount of Drive Meter drained from opponent when attack hits; put [Punish Counter] value in square brackets)
+| driveGain     = (Amount of Drive Meter built or spent upon activation; if different between Hit/Block, list it as Hit(Block); 10000 = 1 bar)
+| superGainHit  = (Amount of Super Meter built when attack hits, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| superGainBlk  = (Amount of Super Meter built when attack is blocked, or spent upon activation; formatted as Attacker(Defender); 10000 = 1 bar)
+| invuln        = (Type/Amount of Invulnerability [Full, Air, Projectile, Throw, Upper Body etc.]; use most recent Hitbox Viewer, not in-game frame meter)
+| armor         = (Any armor frames, number of armor hits, and location on body (e.g. Upper Body Armor); can also list Armor Break property)
+| airborne      = (Any airborne frames of the attack; list FKD for Forced Knockdown state)
+| jugStart      = (Opponent's juggle count after attack begins a juggle; often has different value vs. grounded and airborne opponent)
+| jugIncrease   = (Amount the opponent's juggle count is increased when connecting mid-juggle)
+| jugLimit      = (Maximum juggle count that still allows the move to connect against juggled opponent; 0 only hits in free juggle state)
+| projSpeed     = (Movement speed of projectiles; if movement speed changes over time, list multiple values)
+| atkRange      = (Range for certain attacks, generally normals/throws/DI; moves with extra horizontal movement listed as MaxRange(MinRange), e.g. Slides or 2-hit moves)
+| rangeNotes    = (Details for the Range Comparison cargo tables, leave empty unless needed)
+| pushbackHit   = (Primarily for 4F light normals on Hit for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| pushbackBlk   = (Primarily for 4F light normals on Block for use in Game Data cargo tables - pushback distance should not include overlapping collision boxes)
+| notes         = (Additional details about the move that do not have their own dedicated field)
+--->
+
+== Normals ==
+=== Standing Normals ===
+===== 5LP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5lp | moveType = ground_normal
+| input         = 5LP
+| name          = Standing Light Punch
+| images        = SF6_Dee_Jay_5lp.png
+| hitboxes      = SF6_Dee_Jay_5lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 4
+| active        = 3
+| recovery      = 6
+| total         = 12
+| guard         = LH
+| cancel        = Chn Sp SA TC
+| hitconfirm    = 13 (12 TC)
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}
+| DRcancelHit   = {{sf6-adv|P|+3}}
+| DRcancelBlk   = {{sf6-adv|M|-2}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 13
+| blockstun     = 8
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250(150)
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.04
+| pushbackHit   = 0.409
+| pushbackBlk   = 0.428
+| notes         = Chains into 5LP/2LP/2LK; very low recovery makes it safer than most lights when Perfect Parried; [4]6LP cancel: -9/-14; 236LK cancel: -14/-19
+}}
+
+===== 5MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mp | moveType = ground_normal
+| input         = 5MP
+| name          = Standing Medium Punch
+| images        = SF6_Dee_Jay_5mp.png
+| hitboxes      = SF6_Dee_Jay_5mp_hitbox.png
+| damage        = 600
+| startup       = 7
+| active        = 3
+| recovery      = 13
+| total         = 22
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 21 (~MP), 17 (~HP)
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-14}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|VP|+6}}
+| hitstun       = 21
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.18
+| notes         = Good combo/frame trap starter with 2 different Target Combo follow-ups
+}}
+
+===== 5HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5hp | moveType = ground_normal
+| input         = 5HP
+| name          = Standing Heavy Punch
+| images        = SF6_Dee_Jay_5hp.png, SF6_Dee_Jay_5hp_2.png
+| hitboxes      = SF6_Dee_Jay_5hp_hitbox_preview.png, SF6_Dee_Jay_5hp_hitbox_1.png, SF6_Dee_Jay_5hp_hitbox_2.png
+| damage        = 800(700)
+| dmgScaling    = 20% Starter
+| startup       = 9
+| active        = 6
+| recovery      = 18
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA (close)
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|P|+3{{sf6-adv|VP|(+8)}}}}
+| blockAdv      = {{sf6-adv|VM|-4{{sf6-adv|P|(+1)}}}}
+| punishAdv     = {{sf6-adv|VP|+7(+12)}}
+| perfParryAdv  = {{sf6-adv|VM|-22(-17)}}
+| DRcancelHit   = {{sf6-adv|VP|+17}}
+| DRcancelBlk   = {{sf6-adv|VP|+10}}
+| afterDRHit    = {{sf6-adv|VP|+7(+12)}}
+| afterDRBlk    = {{sf6-adv|E|0}}{{sf6-adv|VP|(+5)}}
+| hitstun       = 27
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 5000
+| driveDmgHit   = [8000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.796 (0.962)
+| notes         = The first 2 active frames are cancelable, can hit crouching, and force stand (important for [2]8HK combo routes); active frames 3-6 deal 100 less damage and have much longer range, but are not cancelable and whiff on crouching opponents (unless they extend a vertical hurtbox); much better frame advantage on a long-range connect (useful as a shimmy tool and punish starter); [4]6LP cancel: +5/-2; 236LK cancel: 0/-7
+}}
+
+===== 5LK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5lk | moveType = ground_normal
+| input         = 5LK
+| name          = Standing Light Kick
+| images        = SF6_Dee_Jay_5lk.png
+| hitboxes      = SF6_Dee_Jay_5lk_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 12
+| total         = 18
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 14
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-12}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|P|+1}}
+| afterDRHit    = {{sf6-adv|VP|+6}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 16
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.239
+| notes         = Good buffer tool; combos into 236HK on hit, or 236KK on Punish Counter making it a useful 5f punish tool; [4]6LP cancel: -6/-10; 236LK cancel: -11/-15; DR cancel is delayed until after 2nd active frame
+}}
+
+===== 5MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mk | moveType = ground_normal
+| input         = 5MK
+| name          = Standing Medium Kick
+| images        = SF6_Dee_Jay_5mk.png
+| hitboxes      = SF6_Dee_Jay_5mk_hitbox.png
+| damage        = 600
+| startup       = 9
+| active        = 3
+| recovery      = 16
+| total         = 27
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 25
+| blockstun     = 18
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 700 (490)
+| superGainBlk  = 350 (175)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.618
+| notes         = Decent neutral poke that can lead to combos at close range
+}}
+
+===== 5HK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5hk | moveType = ground_normal
+| input         = 5HK
+| name          = Standing Heavy Kick
+| images        = SF6_Dee_Jay_5hk.png
+| hitboxes      = SF6_Dee_Jay_5hk_hitbox.png
+| damage        = 800
+| dmgScaling    = 20% Starter
+| startup       = 12
+| active        = 3
+| recovery      = 22(26)
+| total         = 36(40)
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+18 Stagger}}
+| perfParryAdv  = {{sf6-adv|VM|-23}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 26
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 6000
+| driveDmgHit   = [8000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.939
+| notes         = Great poke that leads to full Drive Rush conversions on Punish Counter (or a spinning limited juggle state on airborne Punish Counter); 4f extra recovery on whiff; extends a hurtbox 1f before active that is vulnerable to projectiles
+}}
+
+=== Crouching Normals ===
+===== 2LP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_2lp | moveType = ground_normal
+| input         = 2LP
+| name          = Crouching Light Punch
+| images        = SF6_Dee_Jay_2lp.png
+| hitboxes      = SF6_Dee_Jay_2lp_hitbox.png
+| damage        = 300
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 3
+| recovery      = 8
+| total         = 15
+| guard         = LH
+| cancel        = Chn Sp SA
+| hitconfirm    = 13
+| hitAdv        = {{sf6-adv|VP|+4}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+8}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}
+| DRcancelHit   = {{sf6-adv|VP|+5}}
+| DRcancelBlk   = {{sf6-adv|E|0}}
+| afterDRHit    = {{sf6-adv|VP|+8}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 15
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.18
+| rangeNotes    = Slightly shorter than 5LK but better follow-ups
+| notes         = Chains into 5LP/2LP/2LK; [4]6LP cancel: -7/-12; 236LK cancel: -12/-17; topmost hurtbox on frames 1-7 is vulnerable only to aerial strikes (preventing its use as an anti-air)
+}}
+
+===== 2MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_2mp | moveType = ground_normal
+| input         = 2MP
+| name          = Crouching Medium Punch
+| images        = SF6_Dee_Jay_2mp.png
+| hitboxes      = SF6_Dee_Jay_2mp_hitbox.png
+| damage        = 600
+| startup       = 6
+| active        = 4
+| recovery      = 14(15)
+| total         = 23(24)
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 19*
+| hitAdv        = {{sf6-adv|VP|+5}}
+| blockAdv      = {{sf6-adv|M|-1}}
+| punishAdv     = {{sf6-adv|VP|+9}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| DRcancelHit   = {{sf6-adv|VP|+13}}
+| DRcancelBlk   = {{sf6-adv|VP|+7}}
+| afterDRHit    = {{sf6-adv|VP|+9}}
+| afterDRBlk    = {{sf6-adv|P|+3}}
+| hitstun       = 23
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 3000
+| driveDmgHit   = [4000]
+| driveGain     = 1500
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.225
+| notes         = 1f extra recovery on whiff; good combo/buffer tool and meaty normal; good hitbox priority against low pokes; very long special hitconfirm window (but only 13f when canceling to 214MP or 16f into 236KK); when used out of Drive Rush, can link to 5HP on crouching opponents; [4]6LP cancel: +1/-5; 236LK cancel: -4/-10
+}}
+
+===== 2HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_2hp | moveType = ground_normal
+| input         = 2HP
+| name          = Crouching Heavy Punch
+| images        = SF6_Dee_Jay_2hp.png
+| hitboxes      = SF6_Dee_Jay_2hp_hitbox.png
+| damage        = 800
+| startup       = 8
+| active        = 2
+| recovery      = 20
+| total         = 29
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+12 Stagger}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| afterDRHit    = {{sf6-adv|VP|+10}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 28
+| blockstun     = 20
+| hitstop       = 13(20)
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.449
+| notes         = Forces Stand on hit (important combo starter for [2]8K routes); good combo/punish starter; Punish Counter vs. airborne causes limited juggle state and Hard Knockdown (but generally no juggle follow-up)
+}}
+
+===== 2LK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_2lk | moveType = ground_normal
+| input         = 2LK
+| name          = Crouching Light Kick
+| images        = SF6_Dee_Jay_2lk.png
+| hitboxes      = SF6_Dee_Jay_2lk_hitbox.png
+| damage        = 200
+| dmgScaling    = 20% Starter
+| startup       = 5
+| active        = 2
+| recovery      = 10
+| total         = 16
+| guard         = L
+| cancel        = Chn
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-10}}
+| afterDRHit    = {{sf6-adv|P|+6}}
+| afterDRBlk    = {{sf6-adv|P|+2}}
+| hitstun       = 14
+| blockstun     = 10
+| hitstop       = 9
+| driveDmgBlk   = 500
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.22
+| notes         = Chains into 5LP/2LP/2LK
+}}
+
+===== 2MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_2mk | moveType = ground_normal
+| input         = 2MK
+| name          = Crouching Medium Kick
+| images        = SF6_Dee_Jay_2mk.png
+| hitboxes      = SF6_Dee_Jay_2mk_hitbox.png
+| damage        = 700
+| startup       = 8
+| active        = 4
+| recovery      = 19
+| total         = 30
+| guard         = L
+| cancel        = -
+| hitAdv        = KD +29
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = HKD +29
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| afterDRHit    = KD +29
+| afterDRBlk    = {{sf6-adv|M|-2}}
+| blockstun     = 17
+| hitstop       = 11
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.52
+| rangeNotes    = Faster/safer than traditional sweep
+| notes         = Acts like a sweep, but safer (difficult for many characters to punish); HKD on Punish Counter only; good hitbox priority; has an extended hurtbox on whiff until the end of recovery
+}}
+
+===== 2HK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_2hk | moveType = ground_normal
+| input         = 2HK
+| name          = Sliding Heel Kick
+| images        = SF6_Dee_Jay_2hk.png
+| hitboxes      = SF6_Dee_Jay_2hk_hitbox.png
+| damage        = 900
+| startup       = 14
+| active        = 10
+| recovery      = 15
+| total         = 38
+| guard         = L
+| cancel        = -
+| hitAdv        = HKD +33(+42)
+| blockAdv      = {{sf6-adv|VM|-11}}{{sf6-adv|M|(-2)}}
+| punishAdv     = HKD +52(+61)
+| perfParryAdv  = {{sf6-adv|VM|-23(-14)}}
+| afterDRHit    = HKD +33(+42)
+| afterDRBlk    = {{sf6-adv|VM|-7}}{{sf6-adv|P|(+2)}}
+| blockstun     = 14
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [10000]
+| driveGain     = 3000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 12-23 Air (Legs/Upper Body)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.186 (1.622)
+| rangeNotes    = Slides forward; Range 1.62 on 1st active frame
+| notes         = Can anti-air (solid hitbox, but slow startup); puts airborne opponents into limited juggle state (better juggle adv. on CH/PC)
+}}
+
+=== Jumping Normals ===
+===== j.LP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jlp | moveType = air_normal
+| input         = j.LP
+| name          = Jumping Light Punch
+| images        = SF6_Dee_Jay_jlp.png
+| hitboxes      = SF6_Dee_Jay_jlp_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 7
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+4(+9)}}
+| blockAdv      = {{sf6-adv|E|0}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+8(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-7}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.02
+| notes         = Can be used as a fuzzy instant overhead
+}}
+
+===== j.MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jmp | moveType = air_normal
+| input         = j.MP
+| name          = Jumping Medium Punch
+| images        = SF6_Dee_Jay_jmp.png
+| hitboxes      = SF6_Dee_Jay_jmp_hitbox.png
+| damage        = 700
+| startup       = 6
+| active        = 4
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = TC
+| hitAdv        = {{sf6-adv|VP|+10(+11)}}
+| blockAdv      = {{sf6-adv|VP|+6(+7)}}
+| punishAdv     = {{sf6-adv|VP|+14(+15)}}
+| perfParryAdv  = {{sf6-adv|M|-3(-2)}}
+| hitstun       = 15
+| blockstun     = 11
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1 air
+| jugIncrease   = 10
+| jugLimit      = 2
+| atkRange      = 0.91
+| notes         = Puts airborne opponents into limited juggle state; can chain to j.HP for a spike knockdown (very lenient 25f cancel window); lower body projectile invuln 6-22f (if used immediately on the way up, can avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jhp | moveType = air_normal
+| input         = j.HP
+| name          = Jumping Heavy Punch
+| images        = SF6_Dee_Jay_jhp.png
+| hitboxes      = SF6_Dee_Jay_jhp_hitbox.png
+| damage        = 800
+| startup       = 9
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+15)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+12(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.78
+| notes         = Causes spike knockdown vs. airborne opponents; lower body projectile invuln 9-23f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.LK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jlk | moveType = air_normal
+| input         = j.LK
+| name          = Jumping Light Kick
+| images        = SF6_Dee_Jay_jlk.png
+| hitboxes      = SF6_Dee_Jay_jlk_hitbox.png
+| damage        = 300
+| startup       = 4
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+9)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+5)}}
+| punishAdv     = {{sf6-adv|VP|+10(+13)}}
+| perfParryAdv  = {{sf6-adv|VM|-5}}{{sf6-adv|M|(-2)}}
+| hitstun       = 13
+| blockstun     = 9
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 500
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 0.95
+| notes         = Decent air-to-air normal
+}}
+
+===== j.MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jmk | moveType = air_normal
+| input         = j.MK
+| name          = Jumping Medium Kick
+| images        = SF6_Dee_Jay_jmk.png
+| hitboxes      = SF6_Dee_Jay_jmk_hitbox.png
+| damage        = 500
+| startup       = 8
+| active        = 6
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+9(+13)}}
+| blockAdv      = {{sf6-adv|VP|+5(+9)}}
+| punishAdv     = {{sf6-adv|VP|+13(+17)}}
+| perfParryAdv  = {{sf6-adv|VM|-6}}{{sf6-adv|M|(-2)}}
+| hitstun       = 17
+| blockstun     = 13
+| hitstop       = 11
+| driveDmgBlk   = 2500
+| driveDmgHit   = [4000]
+| driveGain     = 1000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.35
+| notes         = Cross-up; lower body projectile invuln 8-21f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+===== j.HK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jhk | moveType = air_normal
+| input         = j.HK
+| name          = Jumping Heavy Kick
+| images        = SF6_Dee_Jay_jhk.png
+| hitboxes      = SF6_Dee_Jay_jhk_hitbox_preview.png, SF6_Dee_Jay_jhk_hitbox_1.png, SF6_Dee_Jay_jhk_hitbox_2.png, SF6_Dee_Jay_jhk_hitbox_3.png
+| damage        = 800
+| startup       = 10
+| active        = 5
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+8(+15)}}
+| blockAdv      = {{sf6-adv|VP|+4(+11)}}
+| punishAdv     = {{sf6-adv|VP|+12(+19)}}
+| perfParryAdv  = {{sf6-adv|VM|-9}}{{sf6-adv|M|(-2)}}
+| hitstun       = 19
+| blockstun     = 15
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 1.19
+| notes         = Decent jump-in that hits in front of Dee Jay before swinging his leg downward; lower body projectile invuln 10-19f except around attack hitbox (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Command Normals ==
+===== 6MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_6mk | moveType = ground_normal
+| input         = 6MK
+| name          = Sunrise Heel
+| images        = SF6_Dee_Jay_6mk.png
+| hitboxes      = SF6_Dee_Jay_6mk_hitbox_preview.png, SF6_Dee_Jay_6mk_hitbox_1.png, SF6_Dee_Jay_6mk_hitbox_2.png, SF6_Dee_Jay_6mk_hitbox_3.png
+| damage        = 700
+| startup       = 19(21)
+| active        = 5
+| recovery      = 16
+| total         = 39
+| guard         = LH
+| cancel        = SA
+| hitconfirm    = 19(18)
+| hitAdv        = {{sf6-adv|VP|+5(+6)}}
+| blockAdv      = {{sf6-adv|P|+1(+2)}}
+| punishAdv     = {{sf6-adv|VP|+9(+10)}}
+| perfParryAdv  = {{sf6-adv|VM|-17(-16)}}
+| afterDRHit    = {{sf6-adv|VP|+9(+10)}}
+| afterDRBlk    = {{sf6-adv|VP|+5(+6)}}
+| hitstun       = 24
+| blockstun     = 20
+| hitstop       = 12
+| driveDmgBlk   = 4000
+| driveDmgHit   = [6000]
+| driveGain     = 2000
+| superGainHit  = 500 (350)
+| superGainBlk  = 250 (125)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 5
+| atkRange      = 2.234 (2.00)
+| notes         = The first 2 active frames only hit airborne opponents (great vertical hitbox that causes a spike knockdown); () refers to startup vs. grounded opponents and 1f better advantage vs. crouching opponents; not an overhead despite the animation; good tool for oki or approaching in neutral with long range and forward movement
+}}
+
+===== 4HK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_4hk | moveType = ground_normal
+| input         = 4HK
+| name          = Face Breaker
+| images        = SF6_Dee_Jay_4hk.png
+| hitboxes      = SF6_Dee_Jay_4hk_hitbox_preview.png, SF6_Dee_Jay_4hk_hitbox_1.png, SF6_Dee_Jay_4hk_hitbox_2.png
+| damage        = 500,300 (800)
+| startup       = 7
+| active        = 2,4
+| recovery      = 20
+| total         = 32
+| guard         = LH
+| cancel        = Sp SA
+| hitconfirm    = 34
+| hitAdv        = {{sf6-adv|P|+1}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+5}}
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| DRcancelHit   = {{sf6-adv|VP|+17/+12}}
+| DRcancelBlk   = {{sf6-adv|VP|+7/+6}}
+| afterDRHit    = {{sf6-adv|VP|+5}}
+| afterDRBlk    = {{sf6-adv|M|-1}}
+| hitstun       = 27,25 (27 total)
+| blockstun     = 17,19 (21 total)
+| hitstop       = 13,13
+| driveDmgBlk   = 3000,2000
+| driveDmgHit   = [4000x2]
+| driveGain     = 1000x2
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250x2 (125x2)
+| invuln        = 4-12 Air (Head)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0(1)
+| atkRange      = 0.962 (0.92)
+| notes         = Forces Stand on hit; good anti-air but cannot hit cross-up; 1st hit puts airborne opponents into limited juggle state; 2nd hit causes air reset (Punish Counter causes both hits to juggle); if only 2nd hit connects, it deals the full 800 damage and Drive/Super meter gain; CH/PC advantage carries through both hits; [4]6LP cancel: +5/-5 1st hit, 0/-6 2nd hit; 236LK cancel: 0/-10 1st hit, -5/-11 2nd hit; 2nd hit special/DR cancel is delayed until after active frames; juggle limit of the 2nd hit is increased by 1 only when the first hit connects
+}}
+
+===== j.2LK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_j2lk | moveType = air_normal
+| input         = j.2LK
+| name          = Knee Shot
+| images        = SF6_Dee_Jay_j2lk.png
+| hitboxes      = SF6_Dee_Jay_j2lk_hitbox.png
+| damage        = 300
+| startup       = 6
+| active        = until land
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+5(+11)}}
+| blockAdv      = {{sf6-adv|P|+2}}{{sf6-adv|VP|(+8)}}
+| punishAdv     = {{sf6-adv|VP|+9(+15)}}
+| perfParryAdv  = {{sf6-adv|VM|-8}}{{sf6-adv|M|(-2)}}
+| hitstun       = 15
+| blockstun     = 12
+| hitstop       = 9
+| driveDmgBlk   = 1500
+| driveDmgHit   = [2000]
+| driveGain     = 2000
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = Forward Jump only; alters jump trajectory (up to 5f faster than normal jump depending on timing); can get better advantage when spaced out or vs. crouching opponents (non-meaty Knee Shot vs. crouching is usually around +9 oH / +6 oB); Punish Counter state from 2nd active frame until end of landing recovery; lower body projectile invuln 6f~land around back leg only (cannot be used to avoid the 2nd hit of JP's OD Amnesia bombs)
+}}
+
+== Target Combos ==
+===== 5LP~MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5lp_mk | moveType = ground_normal
+| input         = 5LP~MK
+| name          = Threebeat Combo 1
+| images        = SF6_Dee_Jay_5lp_mk.png
+| hitboxes      = SF6_Dee_Jay_5lp_mk_hitbox.png
+| damage        = 400(320)
+| dmgScaling    = 20% Starter
+| startup       = 9
+| active        = 3
+| recovery      = 20
+| total         = 31
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 35-36 (17)
+| hitAdv        = {{sf6-adv|P|+2}}<br>{{sf6-adv|VM|(-19 whiff)}}
+| blockAdv      = {{sf6-adv|M|-3}}<br>{{sf6-adv|VM|(-24 whiff)}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 25
+| blockstun     = 20
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [2000]
+| driveGain     = 250
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 0
+| notes         = 2-3f blockstring gap between hits; () refers to scaled damage after 5LP combo starter; can whiff on crouching opponents at max range (will not whiff if 5LP hits as a Punish Counter)
+}}
+
+====== 5LP~MK~MK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5lp_mk_mk | moveType = ground_normal
+| input         = 5LP~MK~MK
+| name          = Threebeat Combo 2
+| images        = SF6_Dee_Jay_5lp_mk_mk.png
+| hitboxes      = SF6_Dee_Jay_5lp_mk_mk_hitbox.png
+| damage        = 625(438)
+| startup       = 14
+| active        = 3
+| recovery      = 19
+| total         = 35
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| hitstun       = 25
+| blockstun     = 14
+| hitstop       = 11
+| driveDmgBlk   = 2000
+| driveDmgHit   = [4000]
+| driveGain     = 500
+| superGainHit  = 400 (280)
+| superGainBlk  = 200 (100)
+| notes         = Leaves opponent in range for a strike/throw mixup on hit; always a true blockstring after 5LP~MK; () refers to scaled damage from 5LP combo starter, but also is scaled to 500 damage if the first MK begins the combo
+}}
+
+===== 5MP~HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mp_hp | moveType = ground_normal
+| input         = 5MP~HP
+| name          = Dee Jay Special 1
+| images        = SF6_Dee_Jay_5hp.png
+| hitboxes      = SF6_Dee_Jay_5mp_hp_hitbox_preview.png, SF6_Dee_Jay_5mp_hp_hitbox_1.png, SF6_Dee_Jay_5mp_hp_hitbox_2.png
+| damage        = 500
+| startup       = 11
+| active        = 7
+| recovery      = 24
+| total         = 41
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 42-43
+| hitAdv        = {{sf6-adv|M|-2}}{{sf6-adv|P|(+2)}}
+| blockAdv      = {{sf6-adv|VM|-11(-7)}}
+| punishAdv     = {{sf6-adv|P|+2}}
+| hitstun       = 29
+| blockstun     = 20
+| hitstop       = 9
+| driveDmgBlk   = 3000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| notes         = At max 5MP range, HP hits late for improved frame advantage (but active frames 5-7 whiff on crouching opponents); always a true blockstring from 5MP; continues limited juggle state if juggled into (after Drive Rush, airborne crumple, or wall splat)
+}}
+
+====== 5MP~HP~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mp_hp_hk | moveType = ground_normal
+| input         = 5MP~HP~HK
+| name          = Dee Jay Special 2
+| images        = SF6_Dee_Jay_5hk.png
+| hitboxes      = SF6_Dee_Jay_5hk_hitbox.png
+| damage        = 600(480)
+| startup       = 13
+| active        = 3
+| recovery      = 30
+| total         = 45
+| guard         = LH
+| cancel        = SA
+| hitconfirm    = 72-73
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-13}}
+| punishAdv     = KD +34
+| blockstun     = 20
+| hitstop       = 12
+| driveDmgBlk   = 5000
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 2
+| notes         = () refers to scaled damage after 5MP combo starter; puts opponent into spinning limited juggle state; Super cancel is delayed until after 1st recovery frame
+}}
+
+===== 5MP~MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mp_mp | moveType = ground_normal
+| input         = 5MP~MP
+| name          = Funky Dance 1
+| images        = SF6_Dee_Jay_5mp_mp.png
+| hitboxes      = SF6_Dee_Jay_5mp_mp_hitbox.png
+| damage        = 500
+| startup       = 12
+| active        = 2
+| recovery      = 17(19)
+| total         = 30(32)
+| guard         = LH
+| cancel        = TC
+| hitconfirm    = 15 (~HP on CH)
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-19}}
+| hitstun       = 21
+| blockstun     = 19
+| hitstop       = 11
+| driveDmgBlk   = 1000
+| driveDmgHit   = [4000]
+| driveGain     = 400
+| superGainHit  = 300 (210)
+| superGainBlk  = 150 (75)
+| jugIncrease   = 0
+| jugLimit      = 1
+| notes         = True blockstring from 5MP, but can be delayed significantly (up to 4f blockstring gap); landing a counter-hit allows 5MP~MP~HP to fully combo; continues limited juggle state if juggled into (after Drive Rush, airborne crumple, or wall splat); great in Drive Rush juggles that can get fullscreen corner carry; 2f extra recovery on block
+}}
+
+====== 5MP~MP~HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mp_mp_hp | moveType = ground_normal
+| input         = 5MP~MP~HP
+| name          = Funky Dance 2
+| images        = SF6_Dee_Jay_5mp_mp_hp.png
+| hitboxes      = SF6_Dee_Jay_5mp_mp_hp_hitbox.png
+| damage        = 900
+| startup       = 20
+| active        = 2
+| recovery      = 24
+| total         = 45
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +43
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +43
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| blockstun     = 18
+| hitstop       = 15
+| driveDmgBlk   = 7000
+| driveDmgHit   = [7000]
+| driveGain     = 2500
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 2
+| notes         = Doesn't combo on grounded hit unless 5MP~MP lands as a counter-hit; unsafe ender on block with a 3f blockstring gap (can frame trap opponent's button if they try to challenge); works will in Drive Rush juggles; puts opponent into limited juggle state
+}}
+
+====== 5MP~MP~4HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5mp_mp_4hp | moveType = ground_normal
+| input         = 5MP~MP~4HP
+| name          = Funky Dance Feint
+| images        = SF6_Dee_Jay_5mp_mp_4hp.png
+| hitboxes      = SF6_Dee_Jay_5mp_mp_4hp_hitbox.png
+| damage        = -
+| startup       = -
+| active        = -
+| recovery      = 22 total
+| total         = 22
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VM|-3}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|P|+1}}
+| notes         = Similar animation to 5MP~MP~HP; used to bait opponents that expect Dee Jay to stop at 5MP~MP or frame trap with the HP ender; Dee Jay is in a counter-hit state for entire feint duration
+}}
+
+===== j.MP~HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_jmp_hp | moveType = air_normal
+| input         = j.MP~HP
+| name          = Party in the Air
+| images        = SF6_Dee_Jay_jhp.png
+| hitboxes      = SF6_Dee_Jay_jmp_hp_hitbox_preview.png, SF6_Dee_Jay_jmp_hp_hitbox_1.png, SF6_Dee_Jay_jmp_hp_hitbox_2.png
+| damage        = 700
+| startup       = 8
+| active        = 7
+| recovery      = 3 land
+| total         = -
+| guard         = H
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| hitstop       = 13
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| jugIncrease   = 99
+| jugLimit      = 50
+| notes         = Causes spike knockdown vs. airborne opponents
+}}
+
+== Throws ==
+===== LPLK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_lplk | moveType = throw
+| input         = LPLK
+| name          = Diss Track
+| images        = SF6_Dee_Jay_lplk.png
+| hitboxes      = SF6_Dee_Jay_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +34
+| blockAdv      = -
+| punishAdv     = HKD +34
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = Allows corner throw loop by walking or dashing; dash + whiff 5LP sets up +3 situation; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+===== 4LPLK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_4lplk | moveType = throw
+| input         = 4LPLK
+| name          = Flip Throw
+| images        = SF6_Dee_Jay_4lplk.png
+| hitboxes      = SF6_Dee_Jay_lplk_hitbox.png
+| damage        = 1200 (2040)
+| dmgScaling    = 20% Immediate
+| startup       = 5
+| active        = 3
+| recovery      = 23
+| total         = 30
+| guard         = T
+| cancel        = -
+| hitAdv        = KD +22
+| blockAdv      = -
+| punishAdv     = HKD +22
+| driveDmgHit   = [10000]
+| driveGain     = 2000
+| superGainHit  = 2000(1400) {{sf6-adv|PC|[PC:4000]}}
+| atkRange      = 0.80
+| notes         = After back throw into corner, Dee Jay is +3 after dash (out of throw range but can beat wakeup buttons with 2MP); must Drive Rush for true strike/throw oki; a successful Throw Escape builds 0.5 Drive bars for the defender; Throw Escape is awarded to a random player if input simultaneously
+}}
+
+== Drive Moves ==
+===== HPHK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_hphk | moveType = drive
+| input         = HPHK
+| name          = Wild Beat
+| images        = SF6_Dee_Jay_hphk.png
+| hitboxes      = SF6_Dee_Jay_hphk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter (Hit)<br>20% Multiplier (Block)
+| startup       = 26
+| active        = 2
+| recovery      = 35
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +35 / Wall Splat KD +65
+| blockAdv      = {{sf6-adv|M|-3}} / Wall Splat HKD +72
+| punishAdv     = Crumple (Standing +21, Juggle +46, HKD +104)
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 34
+| hitstop       = 25
+| driveDmgBlk   = 5000
+| driveDmgHit   = 10000 [15000]
+| driveGain     = -10000
+| superGainHit  = [3000(2100)]
+| armor         = 1-27
+| jugStart      = 0
+| jugIncrease   = 1
+| jugLimit      = 0
+| atkRange      = 2.52
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Impact|Drive Impact]]. Airborne connect gives spinning juggle state on Punish Counter or corner Wall Splat with variable height.
+}}
+
+===== 6HPHK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_6hphk | moveType = drive
+| input         = 6HPHK
+| name          = Leg Scratch (Block)
+| images        = SF6_Dee_Jay_6hphk.png
+| hitboxes      = SF6_Dee_Jay_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 20
+| active        = 3
+| recovery      = 26(31)
+| total         = 48(53)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000
+| invuln        = 1-22 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.66
+| notes         = Performed by inputting 6HPHK during blockstun; 5f extra recovery on hit; freezes the screen for 4f during startup; see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_6hphk_recovery | moveType = drive
+| input         = 6HPHK
+| name          = Leg Scratch (Recovery)
+| images        = SF6_Dee_Jay_6hphk.png
+| hitboxes      = SF6_Dee_Jay_6hphk_hitbox.png
+| damage        = 500 recoverable
+| chip          = 125 recoverable
+| startup       = 18
+| active        = 3
+| recovery      = 26(31)
+| total         = 46(51)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-6}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-27}}
+| blockstun     = 23
+| hitstop       = 20
+| driveGain     = -20000(-10000)
+| invuln        = 1-20 Full
+| armor         = Break
+| jugStart      = 200
+| jugIncrease   = 100
+| jugLimit      = 1
+| atkRange      = 1.66
+| notes         = Performed by holding 6HPHK on wakeup; 5f extra recovery on hit; does not have any screen freeze except for a 12f freeze when interacting with the opponent's throw hitbox (this also refunds 1 Drive bar after punishing the throw); see [[Street_Fighter_6/Gauges#Drive_Reversal|Drive Reversal]].
+}}
+
+===== MPMK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_mpmk | moveType = drive
+| input         = MPMK
+| name          = Drive Parry
+| images        = SF6_Dee_Jay_mpmk.png
+| hitboxes      = SF6_Dee_Jay_mpmk_hitbox.png
+| damage        = -
+| dmgScaling    = 50% Multiplier (Perfect)
+| startup       = 1
+| active        = 12 or until released
+| recovery      = 33(1)(11)
+| total         = 45(3)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -5000,250~
+| invuln        = 6 Full (after Perfect Parry)
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Parry|Drive Parry]]. Perfect Parrying has only 1F of recovery and disables the opponent from canceling their attack. Perfect Parrying projectiles puts you into fixed 11 frames of recovery. After a Perfect Parry, all Super Gauge gain is reduced by 20% and Drive Gauge gain/damage is reduced by 50% for the entire punish combo.
+}}
+
+===== MPMK~66 =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_mpmk_66_pdr | moveType = drive
+| input         = MPMK~66
+| name          = Parry Drive Rush
+| images        = SF6_Dee_Jay_66.png
+| hitboxes      = SF6_Dee_Jay_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 3+8
+| active        = -
+| recovery      = 15(37)
+| total         = 26(48)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -10000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 1-bar version performed out of a Parry; startup refers to minimum time before an attack can cancel the Drive Rush animation (if performed immediately after a successful Parry, only 1+8 startup); the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties; Distance: 0.763 (min/throw), 2.535 (min/block), 2.713 (max/final DR frame)
+}}
+
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_mpmk_66_drc | moveType = drive
+| input         = MPMK or 66
+| name          = Drive Rush Cancel
+| images        = SF6_Dee_Jay_66.png
+| hitboxes      = SF6_Dee_Jay_66_hitbox.png
+| damage        = -
+| dmgScaling    = 15% Multiplier (Mid-Combo)
+| startup       = 9
+| active        = -
+| recovery      = 15(37)
+| total         = 24(46)
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| driveGain     = -30000
+| notes         = See [[Street_Fighter_6/Gauges#Drive_Rush|Drive Rush]]; 3-bar version performed on hit/block from a cancelable normal; can also be performed on whiff from cancelable light normals; startup refers to minimum time before an attack can cancel the Drive Rush animation; the first 15 recovery frames are cancelable into any attack; the final 22 recovery frames are cancelable into any attack or movement option or blocking (except Parry); only Normal and Command Normal attacks are enhanced with +4 frame advantage and improved juggle properties
+}}
+
+== Special Moves ==
+=== Air Slasher ===
+===== [4]6LP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_46lp | moveType = special
+| input         = [4]6LP
+| name          = Air Slasher
+| images        = SF6_Dee_Jay_46lp.png
+| hitboxes      = SF6_Dee_Jay_46lp_hitbox.png
+| damage        = -
+| startup       = -
+| active        = -
+| recovery      = 21
+| total         = 21
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = 45 charge time (holds charge for 10f after release); feint that can be used to bait opponent's reaction or extend close range combos/blockstrings
+}}
+
+===== [4]6MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_46mp | moveType = special
+| input         = [4]6MP
+| name          = Air Slasher
+| images        = SF6_Dee_Jay_46mp.png
+| hitboxes      = SF6_Dee_Jay_46mp_hitbox.png
+| damage        = 600
+| chip          = 150
+| startup       = 17
+| active        = -
+| recovery      = 27
+| total         = 44
+| guard         = LH
+| cancel        = SA3 22PP
+| hitconfirm    = 4
+| hitAdv        = {{sf6-adv|E|0}}
+| blockAdv      = {{sf6-adv|VM|-5}}
+| punishAdv     = {{sf6-adv|VP|+4}}
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| hitstun       = 28
+| blockstun     = 23
+| hitstop       = 8
+| driveDmgBlk   = 2500
+| driveDmgHit   = [3000]
+| driveGain     = 1000
+| superGainHit  = 600 (420)
+| superGainBlk  = 300 (150)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| projSpeed     = 0.03 (1-2f), 0.115 (3f~)
+| notes         = 45 charge time (holds charge for 10f after release); 1-hit projectile; safest zoning option against jumps and anti-projectile moves; can be canceled into Speedy Maracas after 23f even on whiff
+}}
+
+===== [4]6HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_46hp | moveType = special
+| input         = [4]6HP
+| name          = Air Slasher
+| images        = SF6_Dee_Jay_46hp.png
+| hitboxes      = SF6_Dee_Jay_46hp_hitbox.png
+| damage        = 500x2
+| chip          = 125x2
+| startup       = 17(34)
+| active        = -
+| recovery      = 43
+| total         = 60
+| guard         = LH
+| cancel        = SA3 22PP
+| hitconfirm    = 21
+| hitAdv        = {{sf6-adv|P|+3}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+7}}
+| perfParryAdv  = {{sf6-adv|VM|-16}}
+| hitstun       = 30,30
+| blockstun     = 24,24
+| hitstop       = 8,8
+| driveDmgBlk   = 2500x2
+| driveDmgHit   = [1500x2]
+| driveGain     = 750x2
+| superGainHit  = 450x2 (315x2)
+| superGainBlk  = 225x2 (112x2)
+| jugStart      = 1,1
+| jugIncrease   = 1,1
+| jugLimit      = 1,1
+| projSpeed     = 0.03 (1-2f), 0.115/0.155 (3f~)
+| notes         = 45 charge time (holds charge for 10f after release); throws two 1-hit projectiles; useful option in fireball wars but very vulnerable to jumps and anti-projectile moves; Counter-hit/Punish Counter bonus advantage applies to both hits; () refers to startup of 2nd fireball; recovery is counted after first projectile startup; 2nd projectile moves faster than the 1st; can be canceled into Speedy Maracas after 35f even on whiff
+}}
+
+===== [4]6PP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_46pp | moveType = special
+| input         = [4]6PP
+| name          = Air Slasher
+| images        = SF6_Dee_Jay_46pp.png
+| hitboxes      = SF6_Dee_Jay_46pp_hitbox.png, SF6_Dee_Jay_46pp_hitbox2.png
+| damage        = 500x2
+| chip          = 125x2
+| dmgScaling    = 20% Starter
+| startup       = 10(23)
+| active        = [11(1)~]
+| recovery      = 35
+| total         = 45
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 17
+| hitAdv        = {{sf6-adv|VP|+5}} (KD +69)
+| blockAdv      = {{sf6-adv|P|+2}}
+| punishAdv     = {{sf6-adv|VP|+9}} (KD +69)
+| perfParryAdv  = {{sf6-adv|VM|-13}}
+| hitstun       = 29,29
+| blockstun     = 26,26 (24,24)
+| hitstop       = 11,6 (9,9)
+| driveDmgBlk   = 1250x2
+| driveDmgHit   = [2500x2]
+| driveGain     = -20000
+| superGainHit  = 300x2 (210x2)
+| superGainBlk  = 150x2 (75x2)
+| jugStart      = 1 far
+| jugIncrease   = 1,2
+| jugLimit      = 7,8 close / 8,10 far
+| projSpeed     = 0.15 (22f~)
+| notes         = 45 charge time (holds charge for 10f after release); throws two 1-hit projectiles at close range; Counter-hit/Punish Counter bonus advantage carries through both hits; from farther ranges, they merge into a single 2-hit projectile that knocks down on hit (puts opponent into limited juggle state); powerful option for zoning, pressure, Burnout chip sequences, and fireball wars; very low pushback on block, allowing for corner loops and pressure; puts airborne opponents into limited juggle state; projectile starts moving forward on frame 22; can be canceled into Speedy Maracas after 31f even on whiff
+}}
+
+=== Jackknife Maximum ===
+===== [2]8LK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_28lk | moveType = special
+| input         = [2]8LK
+| name          = Jackknife Maximum
+| images        = SF6_Dee_Jay_28lk.png
+| hitboxes      = SF6_Dee_Jay_28lk_hitbox.png
+| damage        = -
+| startup       = 23
+| active        = -
+| recovery      = 22+6 land
+| total         = 51
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| airborne      = 6-45 (FKD)
+| notes         = 40f charge time (holds charge for 12f after release); startup refers to earliest air normal timing; 6f landing recovery only applies to empty jump version (air normals have the usual 3f landing recovery)
+}}
+
+===== [2]8MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_28mk | moveType = special
+| input         = [2]8MK
+| name          = Jackknife Maximum
+| images        = SF6_Dee_Jay_28mk.png
+| hitboxes      = SF6_Dee_Jay_28mk_hitbox.png
+| damage        = 600,500 (1100)
+| chip          = 150
+| startup       = 6
+| active        = 4(9)4
+| recovery      = 22+10 land
+| total         = 54
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +41
+| blockAdv      = {{sf6-adv|VM|-32}}
+| punishAdv     = KD +41
+| perfParryAdv  = {{sf6-adv|VM|-47}}
+| blockstun     = 17
+| hitstop       = 8,10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [2500x2]
+| driveGain     = 1000x2 (1000)
+| superGainHit  = 500x2 (350x2)
+| superGainBlk  = 250 (125)
+| invuln        = 1-5 Air, 5-6 Throw
+| airborne      = 5-44 (FKD)
+| jugStart      = 1,1
+| jugIncrease   = 1,3
+| jugLimit      = 1,3
+| atkRange      = 1.595 (1st)
+| notes         = 40f charge time (holds charge for 12f after release); whiffs on crouching opponents unless they extend a vertical attack hurtbox; puts opponent into limited juggle state (can follow up with [2]8HK/KK or SA1 depending on distance from opponent); can trade with jump-ins due to short invincibility window; cannot hit cross-up
+}}
+
+===== [2]8HK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_28hk | moveType = special
+| input         = [2]8HK
+| name          = Jackknife Maximum
+| images        = SF6_Dee_Jay_28hk.png
+| hitboxes      = SF6_Dee_Jay_28hk_hitbox_preview.png, SF6_Dee_Jay_28hk_hitbox_1.png, SF6_Dee_Jay_28hk_hitbox_2.png, SF6_Dee_Jay_28hk_hitbox_3.png
+| damage        = 600,200,500 (1300)
+| chip          = 150
+| startup       = 5
+| active        = 5(7)5(8)4
+| recovery      = 17+15 land
+| total         = 65
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +42(+37)
+| blockAdv      = {{sf6-adv|VM|-44}}
+| punishAdv     = KD +42
+| perfParryAdv  = {{sf6-adv|VM|-59}}
+| blockstun     = 17
+| hitstop       = 6,6(4),10
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = 1000,500x2 (1000)
+| superGainHit  = 600,300x2 (420,210x2)
+| superGainBlk  = 300 (150)
+| invuln        = 1-9 Air, 5 Throw
+| airborne      = 5-50 (FKD)
+| jugStart      = 1,1,1
+| jugIncrease   = 1,3,99
+| jugLimit      = 4,3,12
+| atkRange      = 1.59 (1st)
+| notes         = 40f charge time (holds charge for 12f after release); whiffs on crouching opponents unless they extend a vertical attack hurtbox; gives a perfect safe jump setup when connecting vs. grounded opponents; when juggled after [2]8MK, the +37 KD Adv. sets up a safe jump with j.2LK; last hit ends juggle state due to +100 juggle count increase; cannot hit cross-up
+}}
+
+===== [2]8KK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_28kk | moveType = special
+| input         = [2]8KK
+| name          = Jackknife Maximum
+| images        = SF6_Dee_Jay_28kk.png
+| hitboxes      = SF6_Dee_Jay_28kk_hitbox_preview.png, SF6_Dee_Jay_28kk_hitbox_1.png, SF6_Dee_Jay_28kk_hitbox_2.png, SF6_Dee_Jay_28kk_hitbox_3.png
+| damage        = 300x5 (1500)
+| chip          = 75
+| startup       = 6
+| active        = 6(7)3(9)3
+| recovery      = 29+15 land
+| total         = 77
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +23
+| blockAdv      = {{sf6-adv|VM|-55}}
+| punishAdv     = KD +23
+| perfParryAdv  = {{sf6-adv|VM|-70}}
+| blockstun     = 17
+| hitstop       = 5,5,8,5,12
+| driveDmgBlk   = 4200
+| driveGain     = -20000
+| superGainHit  = 200x5 (140x5)
+| superGainBlk  = 100 (50)
+| invuln        = 1-11 Full
+| airborne      = 5-62 (FKD)
+| jugStart      = 1,1,10x3
+| jugIncrease   = 1,1,10x3
+| jugLimit      = 6,7,50x3
+| atkRange      = 1.75 (1st)
+| notes         = 40f charge time (holds charge for 12f after release); 2nd/3rd hits whiff on crouching opponents unless they extend a vertical hurtbox; puts opponent into limited juggle state; cannot hit cross-up; at close range, may cross over opponents on whiff/block; on hit only, Dee Jay performs 2 extra hits that spike the opponent to the ground
+}}
+
+=== Rolling Sobat ===
+===== 236LK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236lk | moveType = special
+| input         = 236LK
+| name          = Roll Through Feint
+| images        = SF6_Dee_Jay_236lk.png
+| hitboxes      = SF6_Dee_Jay_236lk_hitbox.png
+| damage        = -
+| startup       = -
+| active        = -
+| recovery      = 26
+| total         = 26
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Useful feint for mixups and for frame-kill setups; Distance: 0.945
+}}
+
+===== 236MK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236mk | moveType = special
+| input         = 236MK
+| name          = Quick Rolling Sobat
+| images        = SF6_Dee_Jay_236mk.png, SF6_Dee_Jay_236mk_2.png
+| hitboxes      = SF6_Dee_Jay_236mk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| startup       = 12
+| active        = 3
+| recovery      = 23
+| total         = 37
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 18
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-6(-4)}}
+| punishAdv     = KD +34
+| perfParryAdv  = {{sf6-adv|VM|-24(-22)}}
+| blockstun     = 20
+| hitstop       = 13
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| atkRange      = 2.128 (2.014)
+| notes         = Good neutral and whiff punish tool, especially against low pokes; can be spaced to be safe on block
+}}
+
+===== 236HK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236hk | moveType = special
+| input         = 236HK
+| name          = Double Rolling Sobat
+| images        = SF6_Dee_Jay_236hk.png
+| hitboxes      = SF6_Dee_Jay_236hk_hitbox.png
+| damage        = 700x2 (1400)
+| chip          = 175x2
+| dmgScaling    = 25% Starter
+| startup       = 15
+| active        = 3(18)4
+| recovery      = 24
+| total         = 63
+| guard         = LH
+| cancel        = SA3 (1st)
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-26}}
+| hitstun       = 21,30
+| blockstun     = 21,18
+| hitstop       = 11,13
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [3500x2]
+| driveGain     = 1000x2
+| superGainHit  = 750x2 (525x2)
+| superGainBlk  = 375x2 (187x2)
+| jugStart      = 1
+| jugIncrease   = 1,1
+| jugLimit      = 13,14
+| atkRange      = 3.353 (2.33)
+| notes         = Stays close to opponent for +2 strike/throw mixup on hit; Counter-hit/Punish Counter bonus frame advantage carries through both hits; when canceled to SA3, weaker than MK version due to missing the 2nd hit
+}}
+
+===== 236KK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236kk | moveType = special
+| input         = 236KK
+| name          = Double Rolling Sobat
+| images        = SF6_Dee_Jay_236kk.png
+| hitboxes      = SF6_Dee_Jay_236kk_hitbox.png
+| damage        = 700,600 (1300)
+| chip          = 175,150
+| dmgScaling    = 20% Starter; Combo (2 hits)
+| startup       = 19
+| active        = 2(9)3
+| recovery      = 19
+| total         = 51
+| guard         = LH
+| cancel        = SA2 SA3 (2nd)
+| hitconfirm    = 45
+| hitAdv        = KD +39
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = KD +39
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| blockstun     = 11,20
+| hitstop       = 12,15
+| driveDmgBlk   = 2000x2
+| driveDmgHit   = [3500x2]
+| driveGain     = -20000
+| superGainHit  = 750x2 (525x2)
+| superGainBlk  = 375x2 (187x2)
+| jugStart      = 10,10
+| jugIncrease   = 1,1
+| jugLimit      = 13,14
+| atkRange      = 3.405 (2.255)
+| notes         = Low crush 14-28f (not airborne); puts opponent into limited juggle state (can only combo into SA2/SA3 vs. grounded, but much more lenient juggle state vs. airborne opponents); somewhat weak to Drive Impact because only 2nd hit is Super cancelable
+}}
+
+=== Machine Gun Uppercut ===
+===== 214LP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214lp | moveType = special
+| input         = 214LP
+| name          = Machine Gun Uppercut
+| images        = SF6_Dee_Jay_214lp.png
+| hitboxes      = SF6_Dee_Jay_214lp_hitbox.png
+| damage        = 1650 (800)
+| chip          = 37
+| startup       = 15
+| active        = 4
+| recovery      = 35
+| total         = 53
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 48 hit / 10 blk
+| hitAdv        = KD +34
+| blockAdv      = {{sf6-adv|VM|-19}}
+| punishAdv     = KD +34
+| perfParryAdv  = {{sf6-adv|VM|-37}}
+| blockstun     = 20
+| hitstop       = 3x8,15 / 7
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2000,3000]
+| driveGain     = 200x8,1000 (200)
+| superGainHit  = 1700[600] (1190[420])
+| superGainBlk  = 50 (25)
+| jugStart      = 1
+| jugIncrease   = 1,1
+| jugLimit      = 0,5
+| atkRange      = 1.035
+| notes         = Damage Distribution: 150x5,200x3,300; () refers to damage on high juggle (puts opponent into limited juggle state); combo/juggle tool; combos naturally from 2MP; doesn't play out full animation on block or on high juggle connect; cancels on 1st or 8th hit; Punish Counter Drive Dmg refers to before and after Super cancelable hit; good anti-air hitbox but cannot hit cross-up and is too slow for practical AA purposes
+}}
+
+===== 214MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214mp | moveType = special
+| input         = 214MP
+| name          = Machine Gun Uppercut
+| images        = SF6_Dee_Jay_214mp.png
+| hitboxes      = SF6_Dee_Jay_214mp_hitbox.png
+| damage        = 1900 (800)
+| chip          = 25
+| startup       = 22
+| active        = 4
+| recovery      = 35
+| total         = 60
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 57 hit / 10 blk
+| hitAdv        = KD +32
+| blockAdv      = {{sf6-adv|VM|-19}}
+| punishAdv     = KD +32
+| perfParryAdv  = {{sf6-adv|VM|-37}}
+| blockstun     = 20
+| hitstop       = 3x11,20 / 7
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2750,2250]
+| driveGain     = 200x11,1000 (200)
+| superGainHit  = 1700[600] (1190[420])
+| superGainBlk  = 50 (25)
+| jugStart      = 1
+| jugIncrease   = 1,1
+| jugLimit      = 0,5
+| atkRange      = 1.275
+| notes         = Damage Distribution: 100x5,150x3,200x3,350; () refers to damage on high juggle (puts opponent into limited juggle state); combo/juggle tool; combos naturally from 5HP; doesn't play out full animation on block or on high juggle connect; cancels on 1st or 11th hit; Punish Counter Drive dmg refers to before and after Super cancelable hit; good anti-air hitbox but cannot hit cross-up and is too slow for practical AA purposes
+}}
+
+===== 214HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214hp | moveType = special
+| input         = 214HP
+| name          = Machine Gun Uppercut
+| images        = SF6_Dee_Jay_214hp.png
+| hitboxes      = SF6_Dee_Jay_214hp_hitbox.png
+| damage        = 2200 (800)
+| chip          = 25
+| startup       = 28
+| active        = 4
+| recovery      = 35
+| total         = 66
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 90 hit / 10 blk
+| hitAdv        = KD +40
+| blockAdv      = {{sf6-adv|VM|-19}}
+| punishAdv     = KD +40
+| perfParryAdv  = {{sf6-adv|VM|-37}}
+| blockstun     = 20
+| hitstop       = 3x15,20 / 7
+| driveDmgBlk   = 3000
+| driveDmgHit   = [2600,2400]
+| driveGain     = 200x15,1000 (200)
+| superGainHit  = 2500[600] (1750[420])
+| superGainBlk  = 50 (25)
+| jugStart      = 20 (1 air)
+| jugIncrease   = 1x12,20
+| jugLimit      = 3x4,8x5,15x3,20
+| atkRange      = 1.641
+| notes         = Damage Distribution: 100x4,150x4,100x4,180x3,260; () refers to damage on high juggle (puts opponent into limited juggle state, and can potentially link SA3 for huge damage); combo/juggle tool; requires CH/PC/DR 5HP or 4HK(1st) to combo on the ground; doesn't play out full animation on block or on high juggle connect; cancels on 1st or 13th hit; Punish Counter Drive dmg refers to before and after Super cancelable hit; good anti-air hitbox but cannot hit cross-up and is too slow for practical AA purposes
+}}
+
+===== 214PP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214pp | moveType = special
+| input         = 214PP
+| name          = Machine Gun Uppercut
+| images        = SF6_Dee_Jay_214pp.png
+| hitboxes      = SF6_Dee_Jay_214pp_hitbox.png
+| damage        = 2500 (800)
+| chip          = 25
+| dmgScaling    = Combo (2 hits)
+| startup       = 26
+| active        = 4
+| recovery      = 35
+| total         = 64
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 116 hit / 10 blk
+| hitAdv        = HKD +23
+| blockAdv      = {{sf6-adv|VM|-19}}
+| punishAdv     = HKD +23
+| perfParryAdv  = {{sf6-adv|VM|-37}}
+| blockstun     = 20
+| hitstop       = 3x15,10(16),20 / 7
+| driveDmgBlk   = 3000
+| driveDmgHit   = [3000,2000]
+| driveGain     = -20000
+| superGainHit  = 2100,1000[600] (1470,700[420])
+| superGainBlk  = 50 (25)
+| jugStart      = 1 air
+| jugIncrease   = 1x16
+| jugLimit      = 5x4,10x4,12x4,15x3,20,99
+| atkRange      = 1.641
+| notes         = Damage Distribution: 100x12,150x3,200,650; () refers to damage on high juggle; combo/juggle tool; only combos naturally from 5HP or 4HK (1st hit), or from 2MP after Punish Counter or Drive Rush; doesn't play out full animation on block or on high juggle connect; cancel occurs on 1st or 2nd to last hit; Punish Counter Drive dmg refers to before and after Super cancelable hit; good anti-air hitbox but cannot hit cross-up and is too slow for practical AA purposes
+}}
+
+=== Jus Cool ===
+===== 214K =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214k | moveType = special
+| input         = 214K
+| name          = Jus Cool
+| images        = SF6_Dee_Jay_214k.png
+| hitboxes      = SF6_Dee_Jay_214k_hitbox.png
+| damage        = -
+| startup       = 13
+| active        = -
+| recovery      = 24
+| total         = 37
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Can input follow-ups on frames 13-25 (variable timing allows stronger mixups and reaction to opponent's response); useful shimmy tool that can be canceled into to bait the opponent's defensive button press; Distance: 0.602 back
+}}
+
+====== 214K~LK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214k_lk | moveType = special
+| input         = 214K~LK
+| name          = Funky Slicer
+| images        = SF6_Dee_Jay_214k_lk.png
+| hitboxes      = SF6_Dee_Jay_214k_lk_hitbox.png
+| damage        = 800
+| chip          = 200
+| dmgScaling    = 20% Starter
+| startup       = 13+12
+| active        = 3
+| recovery      = 20(22)(25)
+| total         = 34(36)(39)
+| guard         = L
+| cancel        = SA3
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|P|+2}}
+| blockAdv      = {{sf6-adv|M|-3}}
+| punishAdv     = {{sf6-adv|VP|+6}}
+| perfParryAdv  = {{sf6-adv|VM|-21}}
+| hitstun       = 27
+| blockstun     = 20
+| hitstop       = 12
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 10
+| notes         = Safe low ender; 2f extra recovery on hit, 5f extra recovery on whiff or vs. armor; good for whiff punishing after baiting opponent with 214K; against opponents in Burnout, canceling from 5HP into 214K~LK allows for a frame trap that leads to counter-hit combos
+}}
+
+====== 214K~MK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214k_mk | moveType = special
+| input         = 214K~MK
+| name          = Waning Moon
+| images        = SF6_Dee_Jay_214k_mk.png
+| hitboxes      = SF6_Dee_Jay_214k_mk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| dmgScaling    = 30% Starter
+| startup       = 13+25
+| active        = 3
+| recovery      = 16
+| total         = 43
+| guard         = H
+| cancel        = -
+| hitAdv        = HKD +27(+28)
+| blockAdv      = {{sf6-adv|P|+1}}
+| punishAdv     = HKD +51(+53) OTG
+| perfParryAdv  = {{sf6-adv|VM|-17}}
+| blockstun     = 20
+| hitstop       = 9
+| driveDmgBlk   = 6000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugIncrease   = 1
+| jugLimit      = 10
+| notes         = 12-22f low crush (not airborne); gives great oki on hit or additional pressure on block; causes spike knockdown vs. airborne opponents; causes limited juggle OTG bounce on Punish Counter
+}}
+
+====== 214K~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214k_hk | moveType = special
+| input         = 214K~HK
+| name          = Maximum Strike
+| images        = SF6_Dee_Jay_214k_hk.png
+| hitboxes      = SF6_Dee_Jay_214k_hk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| startup       = 13+15
+| active        = 5
+| recovery      = 25
+| total         = 44
+| guard         = LH
+| cancel        = SA3
+| hitconfirm    = 20
+| hitAdv        = KD +45
+| blockAdv      = {{sf6-adv|VM|-10}}
+| punishAdv     = KD +45
+| perfParryAdv  = {{sf6-adv|VM|-28}}
+| blockstun     = 20
+| hitstop       = 14
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| driveGain     = 2000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 15-19 Air (Leg)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 10
+| notes         = Upper body hurtbox shrinks down on frames 6-14 and 20-44; puts the opponent into limited juggle state; can work as an anti-air if opponent jumps during Sway startup and can hit cross-up; the upper hitbox whiffs on crouching opponents unless they extend a vertical hurtbox (can only hit crouchers at very close range)
+}}
+
+====== 214K~6P ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214k_6p | moveType = special
+| input         = 214K~6P
+| name          = Juggling Dash
+| images        = SF6_Dee_Jay_214k_6p.png
+| hitboxes      = SF6_Dee_Jay_214k_6p_hitbox.png
+| damage        = -
+| startup       = 13
+| active        = -
+| recovery      = 27
+| total         = 40
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| invuln        = 1-20 Projectile
+| notes         = Startup refers to fastest 214K animation before 6P can be input, recovery refers to 6P dash animation; cancelable into 4P backdash on frames 18-23 of dash; can low profile under many high attacks while dashing; Distance: 2.36 forward
+}}
+
+====== 214K~6P~4P ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214k_6p_4p | moveType = special
+| input         = 214K~6P~4P
+| name          = Juggling Sway
+| images        = SF6_Dee_Jay_214k_6p_4p.png
+| hitboxes      = SF6_Dee_Jay_214k_6p_4p_hitbox.png
+| damage        = -
+| startup       = 13+17
+| active        = -
+| recovery      = 29
+| total         = 59
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = Startup refers to fastest 214K + 6P animation before 4P can be input, recovery refers to the 4P dash animation; only 1f faster than letting 6P dash finish and ending with regular backdash; Distance: 1.0 back; can follow up with Jus Cool LK / MK / HK follow-ups (but not another Juggling Dash)
+}}
+
+
+===== 214KK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214kk | moveType = special
+| input         = 214KK
+| name          = Jus Cool
+| images        = SF6_Dee_Jay_214kk.png
+| hitboxes      = SF6_Dee_Jay_214kk_hitbox.png
+| damage        = 500
+| chip          = 125
+| startup       = 8
+| active        = 5
+| recovery      = 36(37)
+| total         = 48(49)
+| guard         = LH
+| cancel        = -
+| hitAdv        = KD +33
+| blockAdv      = {{sf6-adv|VM|-18}}
+| punishAdv     = KD +33
+| perfParryAdv  = {{sf6-adv|VM|-40}}
+| blockstun     = 24
+| hitstop       = 12
+| driveDmgBlk   = 4000
+| driveDmgHit   = [5000]
+| driveGain     = -20000
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1
+| jugIncrease   = 1
+| jugLimit      = 1
+| atkRange      = 0.819
+| notes         = 1f extra recovery on block; can input attack follow-ups on frames 25-37 (frames 13-25 of the sway itself), and can input 6P dash follow-up after frame 19; puts opponent into limited juggle state; attack follow-ups can be input 3f earlier on block, allowing for 4f frame trap with LK follow-up; Distance: 0.74 back
+}}
+
+====== 214KK~LK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214kk_lk | moveType = special
+| input         = 214KK~LK
+| name          = Funky Slicer
+| images        = SF6_Dee_Jay_214kk_lk.png
+| hitboxes      = SF6_Dee_Jay_214kk_lk_hitbox.png
+| damage        = 900
+| chip          = 225
+| startup       = 25+9
+| active        = 3
+| recovery      = 19(24)
+| total         = 30(35)
+| guard         = L
+| cancel        = SA2 SA3
+| hitconfirm    = 16
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+16}}
+| perfParryAdv  = {{sf6-adv|VM|-20}}
+| hitstun       = 28
+| blockstun     = 20
+| hitstop       = 12
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 1 air
+| jugIncrease   = 1
+| jugLimit      = 10
+| notes         = Safe low ender; 5f extra recovery on whiff or vs. armor; good for whiff punishing after baiting opponent with 214KK; earliest timing on block gives 4f gap that can set up trade combos into 5HP
+}}
+
+====== 214KK~MK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214kk_mk | moveType = special
+| input         = 214KK~MK
+| name          = Waning Moon
+| images        = SF6_Dee_Jay_214kk_mk.png
+| hitboxes      = SF6_Dee_Jay_214kk_mk_hitbox.png
+| damage        = 1100
+| chip          = 275
+| startup       = 25+19(21)
+| active        = 5
+| recovery      = 17
+| total         = 40
+| guard         = H
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6(+7)}}
+| blockAdv      = {{sf6-adv|M|-2}}
+| punishAdv     = {{sf6-adv|VP|+10(+11)}}
+| perfParryAdv  = {{sf6-adv|VM|-18}}
+| hitstun       = 27(25)
+| blockstun     = 18
+| hitstop       = 9
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| jugStart      = 4 air<br>{{sf6-adv|PC|[1 PC]}}
+| jugIncrease   = 4
+| jugLimit      = 10
+| notes         = Safe overhead ender that can lead to follow-up combos on hit; 12-22f low crush (not airborne); first 2 active frames can only hit airborne; +7 on hit vs. standing; +6 on hit vs. all crouching characters (most likely scenario due to being an overhead); causes OTG bounce vs. airborne opponents (can juggle into any Super, OD Jackknife, or MK/HK Sobat); Punish Counter vs. airborne gives a more lenient juggle state on ground bounce
+}}
+
+====== 214KK~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214kk_hk | moveType = special
+| input         = 214KK~HK
+| name          = Maximum Strike
+| images        = SF6_Dee_Jay_214kk_hk.png
+| hitboxes      = SF6_Dee_Jay_214kk_hk_hitbox.png
+| damage        = 1000
+| chip          = 250
+| dmgScaling    = Combo (2 hits)
+| startup       = 25+11
+| active        = 5
+| recovery      = 21
+| total         = 36
+| guard         = LH
+| cancel        = SA2 SA3
+| hitconfirm    = 20
+| hitAdv        = KD +55(+57)
+| blockAdv      = {{sf6-adv|VM|-8}}
+| punishAdv     = KD +65(+57)
+| perfParryAdv  = {{sf6-adv|VM|-24}}
+| blockstun     = 18
+| hitstop       = 14
+| driveDmgBlk   = 4000
+| driveDmgHit   = [7000]
+| superGainHit  = 1000 (700)
+| superGainBlk  = 500 (250)
+| invuln        = 6-36 Upper Body
+| jugStart      = 2<br>{{sf6-adv|PC|[0 PC Ground]}}
+| jugIncrease   = 2
+| jugLimit      = 10
+| notes         = Puts the opponent into limited juggle state (free juggle state on grounded Punish Counter; requires initial 214KK to whiff); the upper hitbox whiffs on crouching opponents unless they extend a vertical hurtbox (can only hit crouchers at very close range); can work as an anti-air if opponent jumps during Sway startup, and can hit cross-up
+}}
+
+====== 214KK~6P ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214kk_6p | moveType = special
+| input         = 214KK~6P
+| name          = Juggling Dash
+| images        = SF6_Dee_Jay_214kk_6p.png
+| hitboxes      = SF6_Dee_Jay_214kk_6p_hitbox.png
+| damage        = -
+| startup       = 19
+| active        = -
+| recovery      = 22
+| total         = 41
+| guard         = -
+| cancel        = -
+| hitAdv        = KD +40
+| blockAdv      = {{sf6-adv|VM|-15}}
+| punishAdv     = KD +40
+| invuln        = 1-17 Projectile
+| notes         = Can be input after 19f of 214KK (startup refers to this pre-dash period); hit/block adv. refers to data after 214KK attack connects (fastest timing); can cancel into 4P backdash on frames 18-23 of dash; can low profile under many high attacks while dashing; after 214KK launch, can dash to switch sides and follow up with a juggled [2]8K or SA1; Distance: 2.0 forward
+}}
+
+====== 214KK~6P~4P ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214kk_6p_4p | moveType = special
+| input         = 214KK~6P~4P
+| name          = Juggling Sway
+| images        = SF6_Dee_Jay_214kk_6p_4p.png
+| hitboxes      = SF6_Dee_Jay_214kk_6p_4p_hitbox.png
+| damage        = -
+| startup       = 19+16
+| active        = -
+| recovery      = 22
+| total         = 57
+| guard         = -
+| cancel        = -
+| hitAdv        = KD +24
+| blockAdv      = {{sf6-adv|VM|-31}}
+| punishAdv     = KD +24
+| notes         = Hit/block advantage refers to data after 214KK attack connects (fastest timing); only 1f faster than letting 6P dash finish and ending with regular backdash; Distance: 1.0 back; can follow up with OD Jus Cool LK / MK / HK follow-ups (but not another Juggling Dash)
+}}
+
+=== Speedy Maracas ===
+===== 22PP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_22pp | moveType = special
+| input         = 22PP
+| name          = Speedy Maracas
+| images        = SF6_Dee_Jay_22pp.png
+| hitboxes      = SF6_Dee_Jay_22pp_hitbox.png
+| damage        = -
+| startup       = 88 minimum
+| active        = -
+| recovery      = 38
+| total         = 126~
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| superGainHit  = 2000 + 49/frame
+| notes         = Can hold buttons to extend dance; counter-hit state for entire duration; can be canceled into from any version of [4]6P (remains in a Punish Counter state afterwards); builds Super Art gauge (2000 after 88f, then 49 per frame beginning on frame 109 when held); recovery starts after 88f when tapped or when buttons are released; takes 272f to build 1 bar; if Dee Jay reaches 2 bars of Super Gauge, transitions to a new dance animation with more recovery
+}}
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_22pp_2bar | moveType = special
+| input         = 22PP
+| name          = Speedy Maracas (2+ Bars)
+| images        = SF6_Dee_Jay_22pp.png
+| hitboxes      = SF6_Dee_Jay_22pp_hitbox.png
+| damage        = -
+| startup       = 95(168) minimum
+| active        = -
+| recovery      = 38
+| total         = 133~
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| superGainHit  = 2000 + 49/frame
+| notes         = If Dee Jay reaches 2 bars of meter, he enters a second dance animation that lasts an extra 73f; can hold buttons to extend dance; counter-hit state for entire duration; can be canceled into from any version of [4]6P (remains in a Punish Counter state afterwards); builds Super Art gauge (2000 after 68f, then 49 per frame beginning on frame 96 when held); recovery starts after 95f when tapped (168f if tapping puts Dee Jay at 2 bars), or when buttons are released; takes 259f to go from 2 to 3 bars
+}}
+
+== Super Arts ==
+===== 236236K =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236k | moveType = super
+| input         = 236236K
+| name          = The Greatest Sobat
+| images        = SF6_Dee_Jay_236236k.png
+| hitboxes      = SF6_Dee_Jay_236236k_hitbox.png
+| damage        = 2000
+| chip          = 500
+| dmgScaling    = 30% Minimum; 40% Starter
+| startup       = 7
+| active        = 4
+| recovery      = 33
+| total         = 43
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +44
+| blockAdv      = {{sf6-adv|VM|-12}}
+| punishAdv     = HKD +79 Crumple
+| perfParryAdv  = {{sf6-adv|VM|-35}}
+| blockstun     = 25
+| hitstop       = 18
+| driveDmgBlk   = 2500
+| driveDmgHit   = 5000
+| superGainHit  = -10000
+| superGainBlk  = -10000
+| armor         = Break
+| jugStart      = 1 air<br>{{sf6-adv|PC|[-1 CH/PC Ground]}}<br>{{sf6-adv|PC|[0 PC Air]}}
+| jugIncrease   = 1
+| jugLimit      = 19
+| atkRange      = 1.82
+| notes         = Crumples on Counter-hit (HKD +66) and on Punish Counter (HKD +79); after crumple, Dee Jay is +4 on CH and +6 on PC before opponent becomes airborne, after which opponent is in a juggle state; causes sliding Hard Knockdown vs. airborne opponents; Punish Counter vs. airborne opponents causes a wall bounce and free juggle state (opponent can fly over Dee Jay's head if near the corner); 4-14f low crush (not airborne); does not extend hurtbox during attack (can force a trade vs. some projectiles for a follow-up combo); cannot be used as a reversal like most Lv.1 Supers; high pushback on block makes it safe against most characters when spaced
+}}
+
+===== 236236LP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp | moveType = super
+| input         = 236236LP
+| name          = Lowkey Sunrise Festival
+| images        = SF6_Dee_Jay_236236p.png
+| hitboxes      = SF6_Dee_Jay_236236lp_hitbox.png
+| damage        = 300<br>(~2600)
+| chip          = 750
+| dmgScaling    = 40% Minimum; 25% Starter; Combo (3 hits)
+| startup       = 12
+| active        = 5
+| recovery      = 46
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-49}}
+| hitstun       = 48
+| blockstun     = 22
+| hitstop       = 6(8) oH / 11(13) oB
+| driveDmgBlk   = 5000
+| driveDmgHit   = 1000 (10000 total)
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-16 Full
+| armor         = Break
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 99
+| atkRange      = 2.477 (2.37)
+| notes         = LP~MP~HP~LK~MK~HK follow-ups (on hit only) must be manually timed (LP sequence is easiest but lowest damage and cannot use cinematic HP/HK enders); all follow-ups up to MK are +6 on hit with no additional damage scaling; full invincibility extended 1-29f on hit; KD +27 when juggled into; forces stand; cannot hit cross-up; applies 30% scaling to Super Art gain until end of combo
+}}
+
+====== 236236LP~LP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp_lp | moveType = super
+| input         = ~LP (1)
+| name          = +LP (Lowkey Hit 1)
+| images        = SF6_Dee_Jay_236236lp_lp.png
+| hitboxes      = SF6_Dee_Jay_236236lp_lp_hitbox.png
+| damage        = 175
+| dmgScaling    = 40% Minimum
+| startup       = 11
+| active        = 4
+| recovery      = 25
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}} (KD +41)
+| blockAdv      = -
+| hitstun       = 35
+| hitstop       = 6
+| driveDmgHit   = 800
+| invuln        = 1-25 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; 45f timing window after 236236LP; KD +41 when juggled into (can juggle afterwards)
+}}
+
+====== 236236LP~LP~MP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp_lp_mp | moveType = super
+| input         = ~MP (2)
+| name          = +MP (Lowkey Hit 2)
+| images        = SF6_Dee_Jay_236236lp_lp_mp.png
+| hitboxes      = SF6_Dee_Jay_236236lp_lp_mp_hitbox.png
+| damage        = 175
+| dmgScaling    = 40% Minimum
+| startup       = 10
+| active        = 3
+| recovery      = 23
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 32
+| hitstop       = 7
+| driveDmgHit   = 800
+| invuln        = 1-21 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; f timing window after 236236LP~LP; KD +57 OTG Bounce when juggled into
+}}
+
+====== 236236LP~LP~MP~HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp_lp_mp_hp | moveType = super
+| input         = ~HP (3)
+| name          = +HP (Lowkey Hit 3)
+| images        = SF6_Dee_Jay_236236lp_lp_mp_hp.png
+| hitboxes      = SF6_Dee_Jay_236236lp_lp_mp_hp_hitbox.png
+| damage        = 175
+| dmgScaling    = 40% Minimum
+| startup       = 12
+| active        = 3
+| recovery      = 24
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 33
+| hitstop       = 6
+| driveDmgHit   = 800
+| invuln        = 1-28 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; f timing window after 236236LP~LP~MP; KD +49 when juggled into (can juggle afterwards)
+}}
+
+====== 236236LP~LP~MP~HP~LK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp_lp_mp_hp_lk | moveType = super
+| input         = ~LK (4)
+| name          = +LK (Lowkey Hit 4)
+| images        = SF6_Dee_Jay_236236lp_lp_mp_hp_lk.png
+| hitboxes      = SF6_Dee_Jay_236236lp_lp_mp_hp_lk_hitbox.png
+| damage        = 175
+| dmgScaling    = 40% Minimum
+| startup       = 15
+| active        = 4
+| recovery      = 35
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 45
+| hitstop       = 5
+| driveDmgHit   = 800
+| invuln        = 1-31 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; f timing window after 236236LP~LP~MP~HP; KD +41 when juggled into
+}}
+
+====== 236236LP~LP~MP~HP~LK~MK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp_lp_mp_hp_lk_mk | moveType = super
+| input         = ~MK (5)
+| name          = +MK (Lowkey Hit 5)
+| images        = SF6_Dee_Jay_236236lp_lp_mp_hp_lk_mk.png
+| hitboxes      = SF6_Dee_Jay_236236lp_lp_mp_hp_lk_mk_hitbox.png
+| damage        = 200
+| dmgScaling    = 40% Minimum
+| startup       = 17
+| active        = 3
+| recovery      = 47
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 56
+| hitstop       = 0
+| driveDmgHit   = 800
+| invuln        = 1-38 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; f timing window after 236236LP~LP~MP~HP~LK; KD +32 when juggled into
+}}
+
+====== 236236LP~LP~MP~HP~LK~MK~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236lp_lp_mp_hp_lk_mk_hk | moveType = super
+| input         = ~HK (End)
+| name          = +HK (Lowkey Hit End)
+| images        = SF6_Dee_Jay_236236lp_lp_mp_hp_lk_mk_hk.png
+| hitboxes      = SF6_Dee_Jay_236236lp_lp_mp_hp_lk_mk_hk_hitbox.png
+| damage        = 500,900
+| dmgScaling    = 40% Minimum
+| startup       = 18
+| active        = 3(5)3
+| recovery      = 79
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +29
+| blockAdv      = -
+| hitstop       = 9,26
+| driveDmgHit   = 2500x2
+| invuln        = 1-28 Projectile
+| jugIncrease   = 1,1
+| jugLimit      = 50
+| notes         = Comes out on hit only; f timing window after 236236LP~LP~MP~HP~LK~MK; HKD +28 when juggled into
+}}
+
+===== 236236MP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp | moveType = super
+| input         = 236236MP
+| name          = Marvelous Sunrise Festival
+| images        = SF6_Dee_Jay_236236mp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_hitbox.png
+| damage        = 300<br>(1700~2800)
+| chip          = 750
+| dmgScaling    = 40% Minimum; 25% Starter; Combo (3 hits)
+| startup       = 12
+| active        = 5
+| recovery      = 46
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-49}}
+| hitstun       = 48
+| blockstun     = 22
+| hitstop       = 4(6) oH / 11(13) oB
+| driveDmgBlk   = 5000
+| driveDmgHit   = 500 (5000-10000 total)
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-16 Full
+| armor         = Break
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 99
+| atkRange      = 2.477 (2.37)
+| notes         = LP~MP~HP~LK~MK~HK follow-ups (on hit only) must be manually timed (MP sequence gives medium damage with medium difficulty); perfect rhythm gives more damage; non-perfect rhythm ender cannot follow up after the crumple knockdown; all follow-ups up to MK are +6 on hit with no additional damage scaling; full invincibility extended 1-29f on hit; KD +27 when juggled into; forces stand; cannot hit cross-up; applies 30% scaling to Super Art gain until end of combo
+}}
+
+====== 236236MP~LP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp | moveType = super
+| input         = ~LP (1)
+| name          = +LP (Marvelous Hit 1)
+| images        = SF6_Dee_Jay_236236mp_lp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_lp_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 11
+| active        = 4
+| recovery      = 25
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 35
+| hitstop       = 6(4)
+| driveDmgHit   = 500
+| invuln        = 1-25(27) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 11f timing window after 236236MP; KD +41 when juggled into (can juggle afterward)
+}}
+
+====== 236236MP~LP~MP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp | moveType = super
+| input         = ~MP (2)
+| name          = +MP (Marvelous Hit 2)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_lp_mp_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 10
+| active        = 3
+| recovery      = 23
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 32
+| hitstop       = 7(5)
+| driveDmgHit   = 500
+| invuln        = 1-21(23) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 18f timing window after 236236MP~LP; KD +57 OTG Bounce when juggled into
+}}
+
+====== 236236MP~LP~MP~HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp_hp | moveType = super
+| input         = ~HP (3)
+| name          = +HP (Marvelous Hit 3)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_lp_mp_hp_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 12
+| active        = 3
+| recovery      = 24
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 33
+| hitstop       = 6(4)
+| driveDmgHit   = 500
+| invuln        = 1-27(28) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 16f timing window after 236236MP~LP~MP; KD +48~49 when juggled into (can juggle afterward)
+}}
+
+====== 236236MP~LP~MP~HP~LK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp_hp_lk | moveType = super
+| input         = ~LK (4)
+| name          = +LK (Marvelous Hit 4)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 15
+| active        = 4
+| recovery      = 35
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 45
+| hitstop       = 5(3)
+| driveDmgHit   = 500
+| invuln        = 1-29(31) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 19f timing window after 236236MP~LP~MP~HP; KD +40~41 when juggled into
+}}
+
+====== 236236MP~LP~MP~HP~LK~MK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp_hp_lk_mk | moveType = super
+| input         = ~MK (5)
+| name          = +MK (Marvelous Hit 5)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_mk_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_mk_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 17
+| active        = 3
+| recovery      = 47
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 56
+| hitstop       = 0
+| driveDmgHit   = 500
+| invuln        = 1-38 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 19f timing window after 236236MP~LP~MP~HP~LK; KD +32 when juggled into
+}}
+
+====== 236236MP~LP~MP~HP~LK~MK~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp_hp_lk_mk_hk | moveType = super
+| input         = ~HK (6)
+| name          = +HK (Marvelous Hit 6)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_mk_hk_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_mk_hk_hitbox.png
+| damage        = 400,600(200x2)
+| dmgScaling    = 40% Minimum
+| startup       = 18
+| active        = 3(5)3
+| recovery      = 79(64)
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +19 (KD +46)
+| blockAdv      = -
+| hitstop       = 9,21(9,9)
+| driveDmgHit   = 1000x2
+| invuln        = 1-28(34) Projectile
+| jugIncrease   = 1,1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 22f timing window after 236236MP~LP~MP~HP~LK~MK; KD +26 when juggled into
+}}
+
+====== 236236MP~LP~MP~HP~LK~MK~HK~HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp_hp_lk_mk_hk_hp | moveType = super
+| input         = ~HP (End)
+| name          = Climactic Strike
+| images        = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hp.png
+| hitboxes      = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hp_hitbox.png
+| damage        = 400,700
+| dmgScaling    = 40% Minimum
+| startup       = 1
+| active        = -
+| recovery      = 181 total
+| total         = 181
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +24(+18)
+| blockAdv      = -
+| driveDmgHit   = 5000
+| invuln        = 1-181 Full
+| notes         = Switches sides; only possible after landing all rhythm timings; () refers to KD Adv. when juggled into; 42f timing window after 236236MP~LP~MP~HP~LK~MK~HK
+}}
+
+====== 236236MP~LP~MP~HP~LK~MK~HK~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236mp_lp_mp_hp_lk_mk_hk_hk | moveType = super
+| input         = ~HK (End)
+| name          = Encore Beat
+| images        = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hk.png
+| hitboxes      = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hk_hitbox.png
+| damage        = 1100
+| dmgScaling    = 40% Minimum
+| startup       = 1
+| active        = -
+| recovery      = 151 total
+| total         = 151
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +34(+37)
+| blockAdv      = -
+| driveDmgHit   = 5000
+| invuln        = 1-151 Full
+| notes         = Stays on same side; only possible after landing all rhythm timings; () refers to KD Adv. when juggled into; 42f timing window after 236236MP~LP~MP~HP~LK~MK~HK
+}}
+
+
+===== 236236HP =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp | moveType = super
+| input         = 236236HP
+| name          = Headliner Sunrise Festival
+| images        = SF6_Dee_Jay_236236lp.png
+| hitboxes      = SF6_Dee_Jay_236236hp_hitbox.png
+| damage        = 200<br>(1700~3000)
+| chip          = 750
+| dmgScaling    = 40% Minimum; 25% Starter; Combo (3 hits)
+| startup       = 12
+| active        = 5
+| recovery      = 46
+| total         = 62
+| guard         = LH
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = {{sf6-adv|VM|-29}}
+| punishAdv     = {{sf6-adv|VP|+10}}
+| perfParryAdv  = {{sf6-adv|VM|-49}}
+| hitstun       = 48
+| blockstun     = 22
+| hitstop       = 3(5) oH / 11(13) oB
+| driveDmgBlk   = 5000
+| driveDmgHit   = 500
+| superGainHit  = -20000
+| superGainBlk  = -20000
+| invuln        = 1-16 Full
+| armor         = Break
+| jugStart      = 0
+| jugIncrease   = 0
+| jugLimit      = 99
+| atkRange      = 2.477 (2.37)
+| notes         = LP~MP~HP~LK~MK~HK follow-ups (on hit only) must be manually timed (HP sequence gives highest damage with hardest difficulty); perfect rhythm gives more damage; non-perfect rhythm ender cannot follow up after the crumple knockdown; all follow-ups up to MK are +6 on hit with no additional damage scaling; full invincibility extended 1-29f on hit; KD +27 when juggled into; forces stand; cannot hit cross-up; applies 30% scaling to Super Art gain until end of combo
+}}
+
+====== 236236HP~LP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp | moveType = super
+| input         = ~LP (1)
+| name          = +LP (Headliner Hit 1)
+| images        = SF6_Dee_Jay_236236mp_lp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236hp_lp_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 11
+| active        = 4
+| recovery      = 25
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}} (KD +41~42)
+| blockAdv      = -
+| hitstun       = 35
+| hitstop       = 6(3)
+| driveDmgHit   = 500
+| invuln        = 1-25(26) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; 9f timing window after 236236HP; KD +41~42 when juggled into (can juggle afterward)
+}}
+
+====== 236236HP~LP~MP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp | moveType = super
+| input         = ~MP (2)
+| name          = +MP (Headliner Hit 2)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236hp_lp_mp_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 10
+| active        = 3
+| recovery      = 23
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 32
+| hitstop       = 7(4)
+| driveDmgHit   = 500
+| invuln        = 1-21(23) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 9f timing window after 236236HP~LP; KD +57 OTG Bounce when juggled into
+}}
+
+====== 236236HP~LP~MP~HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp_hp | moveType = super
+| input         = ~HP (3)
+| name          = +HP (Headliner Hit 3)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236hp_lp_mp_hp_hitbox.png
+| damage        = 100(200)
+| dmgScaling    = 40% Minimum
+| startup       = 12
+| active        = 3
+| recovery      = 24
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 33
+| hitstop       = 6(3)
+| driveDmgHit   = 500
+| invuln        = 1-27(28) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 9f timing window after 236236HP~LP~MP; KD +49 when juggled into (can juggle afterward)
+}}
+
+====== 236236HP~LP~MP~HP~LK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp_hp_lk | moveType = super
+| input         = ~LK (4)
+| name          = +LK (Headliner Hit 4)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236hp_lp_mp_hp_lk_hitbox.png
+| damage        = 100(250)
+| dmgScaling    = 40% Minimum
+| startup       = 15
+| active        = 4
+| recovery      = 35
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 45
+| hitstop       = 5(2)
+| driveDmgHit   = 500
+| invuln        = 1-29(31) Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 9f timing window after 236236HP~LP~MP~HP; KD +41 when juggled into
+}}
+
+====== 236236HP~LP~MP~HP~LK~MK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp_hp_lk_mk | moveType = super
+| input         = ~MK (5)
+| name          = +MK (Headliner Hit 5)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_mk_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236hp_lp_mp_hp_lk_mk_hitbox.png
+| damage        = 100(250)
+| dmgScaling    = 40% Minimum
+| startup       = 17
+| active        = 3
+| recovery      = 47(46)
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = {{sf6-adv|VP|+6}}
+| blockAdv      = -
+| hitstun       = 56(55)
+| hitstop       = 0
+| driveDmgHit   = 500
+| invuln        = 1-38 Projectile
+| jugIncrease   = 1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 13f timing window after 236236HP~LP~MP~HP~LK; KD +32 when juggled into
+}}
+
+====== 236236HP~LP~MP~HP~LK~MK~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp_hp_lk_mk_hk | moveType = super
+| input         = ~HK (6)
+| name          = +HK (Headliner Hit 6)
+| images        = SF6_Dee_Jay_236236mp_lp_mp_hp_lk_mk_hk_rhythm.png
+| hitboxes      = SF6_Dee_Jay_236236hp_lp_mp_hp_lk_mk_hk_hitbox.png
+| damage        = 400,600(250x2)
+| dmgScaling    = 40% Minimum
+| startup       = 18
+| active        = 3(5)3
+| recovery      = 79(64)
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +19 (KD +46)
+| blockAdv      = -
+| hitstop       = 9,21(9,9)
+| driveDmgHit   = 1000x2
+| invuln        = 1-28(36) Projectile
+| jugIncrease   = 1,1
+| jugLimit      = 50
+| notes         = Comes out on hit only; () refers to correct rhythm timing; 15f timing window after 236236HP~LP~MP~HP~LK~MK; KD +26~27 when juggled into
+}}
+
+====== 236236HP~LP~MP~HP~LK~MK~HK~HP ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp_hp_lk_mk_hk_hp | moveType = super
+| input         = ~HP (End)
+| name          = Climactic Strike
+| images        = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hp.png
+| hitboxes      = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hp_hitbox.png
+| damage        = 400,800
+| dmgScaling    = 40% Minimum
+| startup       = 1
+| active        = -
+| recovery      = 181 total
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +24(+18)
+| blockAdv      = -
+| driveDmgHit   = 5000
+| invuln        = 1-181 Full
+| notes         = Switches sides; only possible after landing all rhythm timings; () refers to KD Adv. when juggled into; 42f timing window after 236236HP~LP~MP~HP~LK~MK~HK
+}}
+
+====== 236236HP~LP~MP~HP~LK~MK~HK~HK ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_236236hp_lp_mp_hp_lk_mk_hk_hk | moveType = super
+| input         = ~HK (End)
+| name          = Encore Beat
+| images        = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hk.png
+| hitboxes      = SF6_Dee_Jay_236236p_lp_mp_hp_lk_mk_hk_hk_hitbox.png
+| damage        = 1200
+| dmgScaling    = 40% Minimum
+| startup       = 1
+| active        = -
+| recovery      = 151 total
+| total         = 
+| guard         = -
+| cancel        = -
+| hitAdv        = HKD +34(+37)
+| blockAdv      = -
+| driveDmgHit   = 5000
+| invuln        = 1-151 Full
+| notes         = Stays on same side; only possible after landing all rhythm timings; () refers to KD Adv. when juggled into; 42f timing window after 236236HP~LP~MP~HP~LK~MK~HK
+}}
+
+
+===== 214214P =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214214p | moveType = super
+| input         = 214214P
+| name          = Weekend Pleasure
+| images        = SF6_Dee_Jay_214214p.png
+| hitboxes      = SF6_Dee_Jay_214214p_hitbox.png
+| damage        = 4000
+| chip          = 1000
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 9
+| active        = 5
+| recovery      = 48
+| total         = 61
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +26
+| blockAdv      = {{sf6-adv|VM|-28}}
+| punishAdv     = HKD +26
+| perfParryAdv  = {{sf6-adv|VM|-51}}
+| blockstun     = 25
+| hitstop       = 15
+| driveDmgBlk   = 7500
+| driveDmgHit   = 15000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 1.613
+| notes         = Cannot hit cross-up; cinematic time regenerates ~2 Drive bars for Dee Jay
+}}
+
+====== 214214P (CA) ======
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_214214p(ca) | moveType = super
+| input         = 214214P
+| name          = Weekend Pleasure (CA)
+| images        = SF6_Dee_Jay_214214p(ca).png
+| hitboxes      = SF6_Dee_Jay_214214p(ca)_hitbox.png
+| damage        = 4500
+| chip          = 1250
+| dmgScaling    = 50% Minimum; 10% Immediate (Sp)
+| startup       = 9
+| active        = 5
+| recovery      = 48
+| total         = 61
+| guard         = LH
+| cancel        = -
+| hitAdv        = HKD +22
+| blockAdv      = {{sf6-adv|VM|-28}}
+| punishAdv     = HKD +22
+| perfParryAdv  = {{sf6-adv|VM|-51}}
+| blockstun     = 25
+| hitstop       = 15
+| driveDmgBlk   = 10000
+| driveDmgHit   = 20000
+| superGainHit  = -30000
+| superGainBlk  = -30000
+| invuln        = 1-13 Full
+| armor         = Break
+| jugLimit      = 99
+| atkRange      = 1.613
+| notes         = Cannot hit cross-up; available at 25% HP or below; cinematic time regenerates ~2.3 Drive bars for Dee Jay
+}}
+
+== Taunts ==
+===== 5PPPKKK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_5pppkkk | moveType = taunt
+| input         = 5PPPKKK
+| name          = Neutral Taunt
+| images        = SF6_Dee_Jay_5pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 264 (total)
+| active        = -
+| recovery      = -
+| total         = 264
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Come on, let's dance!"
+}}
+
+===== 6PPPKKK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_6pppkkk | moveType = taunt
+| input         = 6PPPKKK
+| name          = Forward Taunt
+| images        = SF6_Dee_Jay_6pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 550 (total)
+| active        = -
+| recovery      = -
+| total         = 550
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Seriously, your rhythm is not cool mon. *whistles*"
+}}
+
+===== 4PPPKKK =====
+{{FrameData-SF6 | chara = Dee_Jay | moveId = dee_jay_4pppkkk | moveType = taunt
+| input         = 4PPPKKK
+| name          = Back Taunt
+| images        = SF6_Dee_Jay_4pppkkk.png
+| hitboxes      = 
+| damage        = -
+| startup       = 429 (total)
+| active        = -
+| recovery      = -
+| total         = 429
+| guard         = -
+| cancel        = -
+| hitAdv        = -
+| blockAdv      = -
+| notes         = "Ey, wah gwan? Ya feelin' down?"
+}}
+
+
+{{Character Subnav SF6 | chara=Dee_Jay | tag=DeeJay }}
+{{Navbox-SF6}}
+[[Category:Street Fighter 6]]
+[[Category:Dee Jay]]

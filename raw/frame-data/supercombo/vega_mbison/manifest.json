@@ -1,0 +1,51 @@
+{
+  "manifest_schema_version": "supercombo_frame_raw_capture_manifest/v1",
+  "captured_at_utc": "2026-06-05T06:48:19Z",
+  "character": "M.Bison",
+  "cargo_character": "M.Bison",
+  "character_slug": "vega_mbison",
+  "capture_label": "2026-06-01",
+  "source_revision": {
+    "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+    "label": "2026-06-01",
+    "latest_revision_timestamp": "2026-06-01T07:37:44Z",
+    "pages": [
+      {
+        "title": "Street Fighter 6/M.Bison/Data",
+        "pageid": 79191,
+        "lastrevid": 365215,
+        "revision_timestamp": "2026-06-01T07:37:44Z",
+        "touched": "2026-06-01T07:37:44Z"
+      },
+      {
+        "title": "Street Fighter 6/M.Bison/Frame data",
+        "pageid": 79196,
+        "lastrevid": 352824,
+        "revision_timestamp": "2026-02-08T21:07:18Z",
+        "touched": "2026-06-01T07:37:46Z"
+      }
+    ]
+  },
+  "storage_policy": "latest_frame_data_mirror",
+  "raw_root": "raw\\frame-data\\supercombo\\vega_mbison",
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": [
+    "api\\page-metadata.json",
+    "cargo\\character-data.json",
+    "cargo\\frame-data.json",
+    "data.raw.wikitext",
+    "data.templates.json",
+    "frame-data.cargo-queries.json",
+    "frame-data.raw.wikitext",
+    "image-manifest.json",
+    "imageinfo.json",
+    "rendered\\page.html",
+    "rendered\\tables.dom.json",
+    "screenshots\\details.png",
+    "screenshots\\general.png",
+    "screenshots\\meter.png",
+    "screenshots\\notes.png",
+    "screenshots\\properties.png"
+  ]
+}
