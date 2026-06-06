@@ -191,3 +191,4 @@
 | [[reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review]] | capture_validation | SuperCombo Ingrid frame-data raw 取得データの自動検証レビュー。補助データ26行 accepted、imageinfo missing 156 件と SuperCombo-only 9行の扱いが残る。 | open |
 | [[reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview]] | prereview | SuperCombo Ingrid の公式 row に直接照合しない 9 行を外部 web evidence も使って事前レビュー。特殊隠しコマンド / Monoid 操作として通常回答から分離し、accept ではなく pending。 | open |
 | [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | capture_validation | SuperCombo frame-data 30キャラ分の batch capture review。raw capture は 30/30 passed、未レビュー補助行 1295 行と SuperCombo-only 620 行が残り、review queue で理由を分離している。 | open |
+| [[reviews/2026-06-06-supercombo-field-conflict-queue-prereview]] | prereview | SuperCombo `field_conflict` 単独 11 行の事前レビュー。Jamie 酔いLv damage、Terry jMP/jMK 入れ替わり疑い、通常 source conflict を分離し、追加 accept はしていない。 | open |

@@ -2,6 +2,22 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-06] レビュー | SuperCombo field_conflict 単独キュー事前レビュー
+- 作成:
+  - `wiki/reviews/2026-06-06-supercombo-field-conflict-queue-prereview.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - `enrichment_review_queues == field_conflict` 単独の 11 行を抽出した。
+  - 追加で自動 accept できる行は見つからなかった。
+  - Jamie の 4 行は酔いLv damage scaling 由来の条件付き値として分離候補。
+  - Terry の jump MP / jump MK 2 行は active と damage が相互に入れ替わっている疑いがあり、source 確認が必要。
+  - Zangief Tundra Storm は既存レビュー済みなので、今回の未レビュー削減対象からは外す。
+- 未解決事項:
+  - Jamie の酔いLv damage scaling を `condition_dependent_field` 相当へ分類し直すか。
+  - Terry jMP / jMK の source conflict をどう扱うか。
+
 ## [2026-06-06] 修正 | 多段 damage 正規化とレビューキュー分離
 - 作成:
   - `tools/test_supercombo_enrichment_review.py`
