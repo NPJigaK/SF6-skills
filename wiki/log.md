@@ -2,6 +2,38 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-06] 修正 | frame-data capture validation guard
+- 作成:
+  - `tools/frame_data_integrity.py`
+  - `tools/test_capcom_capture_guards.py`
+  - `tools/test_supercombo_validation_integrity.py`
+- 更新:
+  - `tools/capture_capcom_frame_data.py`
+  - `tools/validate_capcom_frame_data.py`
+  - `tools/capture_supercombo_frame_data.py`
+  - `tools/validate_supercombo_frame_data.py`
+  - `tools/extract_supercombo_frame_data.py`
+  - `raw/frame-data/supercombo/<character_slug>/validation.json`
+  - `README.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/log.md`
+- メモ:
+  - SuperCombo capture は古い `validation.json` を削除し、validation は現在 raw metadata と実ファイル artifact hash の `raw_fingerprint` を保存する。
+  - SuperCombo extract は `status: passed` だけでなく `raw_fingerprint` 一致を要求するため、再取得後の古い validation で派生 output を生成しない。
+  - Capcom official capture / validate は Classic / Modern tab identity と未知 row shape を fail-closed にした。
+  - 30 キャラ分の SuperCombo validation を fingerprint 付き形式へ更新した。
+- 検証:
+  - `python tools\test_capcom_capture_guards.py`
+  - `python tools\test_supercombo_validation_integrity.py`
+  - `python tools\extract_supercombo_frame_data.py --repo-root . --character-slug jp`
+  - `python tools\test_supercombo_frame_comparison.py`
+  - `python tools\test_supercombo_enrichment_review.py`
+  - `python tools\audit_supercombo_enriched_review_status.py --repo-root .`
+  - `python tools\validate_capcom_frame_data.py --repo-root . --character-slug <all official slugs>`
+- 未解決事項:
+  - Capcom official manifest の `raw_review_status` と wiki review page の accepted / pending 状態を同期する運用ルールは別途決める。
+
 ## [2026-06-06] レビュー | SuperCombo field_conflict 単独キュー事前レビュー
 - 作成:
   - `wiki/reviews/2026-06-06-supercombo-field-conflict-queue-prereview.md`

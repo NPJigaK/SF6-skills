@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-01T21:54:25Z",
+  "validated_at_utc": "2026-06-06T08:09:06Z",
   "raw_root": "raw\\frame-data\\supercombo\\zangief",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -25,6 +25,1492 @@
     ]
   },
   "storage_policy": "latest_frame_data_mirror",
+  "raw_fingerprint": {
+    "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
+    "metadata_sha256": "sha256:f23ff2a82a716983a9bf10afd95985ea1d140f854188af024adf5c0a854c4dbd",
+    "capture_label": "2026-06-01",
+    "source_revision": {
+      "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+      "label": "2026-06-01",
+      "latest_revision_timestamp": "2026-06-01T07:31:24Z",
+      "pages": [
+        {
+          "title": "Street Fighter 6/Zangief/Data",
+          "pageid": 69264,
+          "lastrevid": 365204,
+          "revision_timestamp": "2026-06-01T07:31:24Z",
+          "touched": "2026-06-01T07:31:24Z"
+        },
+        {
+          "title": "Street Fighter 6/Zangief/Frame data",
+          "pageid": 69274,
+          "lastrevid": 310361,
+          "revision_timestamp": "2024-10-19T05:08:24Z",
+          "touched": "2026-06-01T07:31:26Z"
+        }
+      ]
+    },
+    "metadata_artifacts": {
+      "api/page-metadata.json": {
+        "byte_count": 1324,
+        "sha256": "sha256:6557bb0b6733028db0b0f388bdd14191f2ae83546d7f5b87f5554e65a45c1d5b"
+      },
+      "cargo/character-data.json": {
+        "byte_count": 736,
+        "sha256": "sha256:5d1bccb3c83d4187e5a6136a75bd3fca03acd4a14dcf70c36116ec29c99a12d4"
+      },
+      "cargo/frame-data.json": {
+        "byte_count": 138553,
+        "sha256": "sha256:c3f6942e52d18dc92da18c8738cb856e78aca81b500699afc897bfd97d0dc6ed"
+      },
+      "data.raw.wikitext": {
+        "byte_count": 80541,
+        "sha256": "sha256:5f8d2ecfad78533ad7f039f9fff3060bcd29befc9bc8b24f3abfaf941468aeea"
+      },
+      "data.templates.json": {
+        "byte_count": 88384,
+        "sha256": "sha256:5cbad3f753d348a5b3348a45a34e7f90849765a722302b9b5256ebcffeac7abd"
+      },
+      "frame-data.cargo-queries.json": {
+        "byte_count": 14135,
+        "sha256": "sha256:3cc272eb1b00bf48a6e05538edb5b3864f7642e03f494d404aceac03ae9e7c0d"
+      },
+      "frame-data.raw.wikitext": {
+        "byte_count": 11024,
+        "sha256": "sha256:fb1802c5e0592815e6f10d3d0f8d969bcf0684cbde9f953bf96a094c988e8738"
+      },
+      "image-manifest.json": {
+        "byte_count": 131046,
+        "sha256": "sha256:37348149f4db27b43015d9e34ceb71cfecc7d21fe7a1e1a9cd890ef591dd496e"
+      },
+      "imageinfo.json": {
+        "byte_count": 123851,
+        "sha256": "sha256:51b627aaf039263f2569e27620755400ed59dc7006b068b5f7661ea87b276b1f"
+      },
+      "images/files/SF6_Zangief_1lplk.png": {
+        "byte_count": 281627,
+        "sha256": "sha256:d573faaa7911f2d49a04cb518d122447f83aa6d4816a31c612c5c0764eef6438"
+      },
+      "images/files/SF6_Zangief_22hk.png": {
+        "byte_count": 321342,
+        "sha256": "sha256:140f2143fdd38271407758754015038291d34a65d6243301bb7942f6231f4757"
+      },
+      "images/files/SF6_Zangief_22hk_2.png": {
+        "byte_count": 437969,
+        "sha256": "sha256:de24d559a154d18e242c4b5743bbb9270ae360e2076e5fcda52a5750345b7db3"
+      },
+      "images/files/SF6_Zangief_22hk_hitbox.png": {
+        "byte_count": 274322,
+        "sha256": "sha256:cfe500546c01b80b36054b6a15b394b42143fe57a7e7f718934dd93c82baba25"
+      },
+      "images/files/SF6_Zangief_22mk.png": {
+        "byte_count": 382973,
+        "sha256": "sha256:0e932839042f51afc6f5734dfbde658ef2a39a6d0d8f9e6e4bdd29b1bd33b034"
+      },
+      "images/files/SF6_Zangief_22mk_hitbox.png": {
+        "byte_count": 257916,
+        "sha256": "sha256:1db2190644800ddd4e182cfb5a79490ed1a3ac4e192662d66d517f7377dc1025"
+      },
+      "images/files/SF6_Zangief_22mk_mk.png": {
+        "byte_count": 419077,
+        "sha256": "sha256:93d1b350b05eabe579ac41e8114e4a827f6ac95b2c45cc126f3bbc3ecf865685"
+      },
+      "images/files/SF6_Zangief_22mk_mk_hitbox.png": {
+        "byte_count": 257171,
+        "sha256": "sha256:c1cbbe2c035a8a33402541d25dc4c0bc71cb6bfb3ac9e9816144a79624163195"
+      },
+      "images/files/SF6_Zangief_22mk_mk_mk.png": {
+        "byte_count": 376670,
+        "sha256": "sha256:65b6ca4a9920bd9626a0009c9baa833525df1e28d4b526d65c4fd3b508d1c844"
+      },
+      "images/files/SF6_Zangief_22mk_mk_mk_hitbox.png": {
+        "byte_count": 230402,
+        "sha256": "sha256:a8c94741263fea5f5a0d5b81c492719b41ba6897d569c026de0b54393fcd8a79"
+      },
+      "images/files/SF6_Zangief_236236k.png": {
+        "byte_count": 398612,
+        "sha256": "sha256:85a12a357e8379ab045e5be6fbc604f7236009c51dec346e43d9f06cbdcb9952"
+      },
+      "images/files/SF6_Zangief_236236k_hitbox.png": {
+        "byte_count": 259898,
+        "sha256": "sha256:6b2633d879b8f43e819d41c7583084d72f916f914de06dfa582e1a928b3b4269"
+      },
+      "images/files/SF6_Zangief_236236p.png": {
+        "byte_count": 695139,
+        "sha256": "sha256:af440c9be0f30d97ff600fdaec534cc3510eabe672ee6c89d23fe5c8408d6927"
+      },
+      "images/files/SF6_Zangief_236236p_2.png": {
+        "byte_count": 530816,
+        "sha256": "sha256:b896770f6d637312a93e9cf91170a2b02f7fcec7b4b9777275840cb38ac6058d"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox1.png": {
+        "byte_count": 278741,
+        "sha256": "sha256:2481beb923d3616496c48b0cba89e10c379045e377824d5ecbc815621a72f4f6"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox2.png": {
+        "byte_count": 261783,
+        "sha256": "sha256:fbd251e6400ebe1131d06c179c390db2769a4cd1adfee9d096c2835c60e93158"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox3.png": {
+        "byte_count": 264209,
+        "sha256": "sha256:12e8dbe97e6b30d264a3c517927cb4eeafa2a21c75ad631d3d1844c81692ac2a"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox4.png": {
+        "byte_count": 283347,
+        "sha256": "sha256:b1b5faa41a19d8838143628c63305230c08058726cdd5531f4e2731ea552ac68"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox5.png": {
+        "byte_count": 251237,
+        "sha256": "sha256:3bd782f0362c7735bc085764bddce549690123b7c072abc2cfc10cda469b1fdf"
+      },
+      "images/files/SF6_Zangief_236236p_hold.png": {
+        "byte_count": 412237,
+        "sha256": "sha256:c5047e87a33367f7078192aca1463bd0c9b2c14349060cd08b714d1c4d250ffa"
+      },
+      "images/files/SF6_Zangief_2hk.png": {
+        "byte_count": 232183,
+        "sha256": "sha256:bff9cef2813660bad176f5f97b2ba5aac53cd03235ba3f738656d5b63b0a76d1"
+      },
+      "images/files/SF6_Zangief_2hk_hitbox.png": {
+        "byte_count": 194146,
+        "sha256": "sha256:ccb3018852429d582ab3f817526ec36b096604ea29fc6eba3d6d161241048ad7"
+      },
+      "images/files/SF6_Zangief_2hk_hitbox_2.png": {
+        "byte_count": 192675,
+        "sha256": "sha256:7193fdb65ee88844bcbfe4a7f779e6743f14729f212029b9fb8fd033bc34bf0a"
+      },
+      "images/files/SF6_Zangief_2hp.png": {
+        "byte_count": 511770,
+        "sha256": "sha256:22285699412f2b3195dbc13230698f22774ece53682c8e3106fe4b2ececac461"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox.png": {
+        "byte_count": 195661,
+        "sha256": "sha256:5aa6d0ad4648cfa381182a28faa4855f0492a6fe183fb7874b2dcbb3001e4346"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_2.png": {
+        "byte_count": 212468,
+        "sha256": "sha256:7f3006ac88d51041bfdcd6ed840890a062b9e5bf276bfe79edc3940248a1225f"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_3.png": {
+        "byte_count": 225467,
+        "sha256": "sha256:63689c26e451952dfb265affdf9277907d4f14754ccadc785613368eff7b22c3"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_4.png": {
+        "byte_count": 231901,
+        "sha256": "sha256:fb40c60ca53eb0957e3aafb771dea5901696d61ab7a8855a8ed171cae771dd58"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_5.png": {
+        "byte_count": 241011,
+        "sha256": "sha256:160be6b51757795348c8523101d7d30ec136af0e91bcbb06c217c481cb9eba23"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_6.png": {
+        "byte_count": 243302,
+        "sha256": "sha256:c1ab7d8e49ac2b86dce29bd4213463dd2d21e3acdb8f6de2f801c6318c619753"
+      },
+      "images/files/SF6_Zangief_2lk.png": {
+        "byte_count": 256006,
+        "sha256": "sha256:9663ce9d93ea06c6fac35d4a621c79a9ed01b9afda2e432680748cfe1bb30cf9"
+      },
+      "images/files/SF6_Zangief_2lk_hitbox.png": {
+        "byte_count": 207936,
+        "sha256": "sha256:1df33a79b99cb78f72e351da5435f6fc22ebd31c7281d46893a853c9e222862b"
+      },
+      "images/files/SF6_Zangief_2lp.png": {
+        "byte_count": 296180,
+        "sha256": "sha256:ce49e6253a02fde1e61124a1c955d8fe162095d31b81779222041f0d122b8f1e"
+      },
+      "images/files/SF6_Zangief_2lp_hitbox.png": {
+        "byte_count": 238583,
+        "sha256": "sha256:b897483841b2a813ec4dcd645f36e2ee77fe758de2c39796aa57b9485217925e"
+      },
+      "images/files/SF6_Zangief_2lplk.png": {
+        "byte_count": 168994,
+        "sha256": "sha256:32e7f5c004a6fbe2745cb86aec1d6da0f2b8be2d9f82a0270c6860c6b90499f3"
+      },
+      "images/files/SF6_Zangief_2mk.png": {
+        "byte_count": 283170,
+        "sha256": "sha256:0e5f07341330dc683dd2613a0d87005e1bc71851589553a42cec30d80f387c16"
+      },
+      "images/files/SF6_Zangief_2mk_hitbox.png": {
+        "byte_count": 243474,
+        "sha256": "sha256:967c34313205ff0ec627d95126d94c383d72cabfffafcc3a47b1f0775958f176"
+      },
+      "images/files/SF6_Zangief_2mp.png": {
+        "byte_count": 248226,
+        "sha256": "sha256:9f958eac24e9c80f61f28a0c4784fde816c8ba549b636e8227a956d04b00fd1f"
+      },
+      "images/files/SF6_Zangief_2mp_hitbox.png": {
+        "byte_count": 185304,
+        "sha256": "sha256:e6d954099a6736869ff783d6b8268728681eacc48d6e26e33ae31c1c0c75db2b"
+      },
+      "images/files/SF6_Zangief_2pppkkk.png": {
+        "byte_count": 243907,
+        "sha256": "sha256:bb0d2af6268514f056bc273aa67247db86bbe1efce6b5ef9ccbf0cde641159d1"
+      },
+      "images/files/SF6_Zangief_360hp_hitbox.png": {
+        "byte_count": 287536,
+        "sha256": "sha256:dfc5210bed7a318f69f91c69dae5ca72c926d5fcb838d986df8f989c75be429e"
+      },
+      "images/files/SF6_Zangief_360lp.png": {
+        "byte_count": 486701,
+        "sha256": "sha256:93b460fd0374ca09eeca98cd47a33a13399d0b58a1ca4680c8b633d3d0b838a8"
+      },
+      "images/files/SF6_Zangief_360lp_hitbox.png": {
+        "byte_count": 290829,
+        "sha256": "sha256:48cb1804563c804d1780366388a36a9ce70f5ee081f07416c537856f72a4c5a7"
+      },
+      "images/files/SF6_Zangief_360mp_hitbox.png": {
+        "byte_count": 287373,
+        "sha256": "sha256:0d61819865dcf57005d1f31e7f3a579419eedb796bca2cc5bdb83405a4ec57a8"
+      },
+      "images/files/SF6_Zangief_360pp.png": {
+        "byte_count": 428600,
+        "sha256": "sha256:e836d25e22376d02c4fabb312a23d14c5893b95b1cc5943e4b0620e5eada8b6e"
+      },
+      "images/files/SF6_Zangief_360pp_hitbox.png": {
+        "byte_count": 293743,
+        "sha256": "sha256:ea363644e9eb91b80307b610d8a4a8637fc387c07a18f8fbd2dd0f4c23570835"
+      },
+      "images/files/SF6_Zangief_3hk.png": {
+        "byte_count": 267490,
+        "sha256": "sha256:6ec3273e714ec8e6ea661b857198de5faa9199400a1be285d0895867394b57b7"
+      },
+      "images/files/SF6_Zangief_3hk_hitbox_1.png": {
+        "byte_count": 238950,
+        "sha256": "sha256:5085ddc01c5dbea0401b5126021fd17ef1dbf7a8ab263eb47ad9f6bc6bbe1e7c"
+      },
+      "images/files/SF6_Zangief_3hk_hitbox_2.png": {
+        "byte_count": 273582,
+        "sha256": "sha256:fafb68f52b52435aa3ae3e406baf864adb13b0b56ba71805e6d35e7856be4235"
+      },
+      "images/files/SF6_Zangief_3hk_hitbox_preview.png": {
+        "byte_count": 512645,
+        "sha256": "sha256:2685e06606fc7972e21133df65bcc72ea9f244d04a445428aaaaba320b6611be"
+      },
+      "images/files/SF6_Zangief_3lplk.png": {
+        "byte_count": 224155,
+        "sha256": "sha256:c8b669fbd41a19e363016362296df7901070c4f3dbe04478f79e4dc77f098089"
+      },
+      "images/files/SF6_Zangief_3mp.png": {
+        "byte_count": 286382,
+        "sha256": "sha256:efe073da6b5438bed5d5a89adb57376a4b023c15e257cbcad2369195b4226b4f"
+      },
+      "images/files/SF6_Zangief_3mp_hitbox.png": {
+        "byte_count": 235842,
+        "sha256": "sha256:3ff92636bb6a5ecac38efa52e6070d1068640e253f2efa6863e3ba31f2b1e477"
+      },
+      "images/files/SF6_Zangief_4lplk.png": {
+        "byte_count": 210782,
+        "sha256": "sha256:b6a6c138896a2aa12060fef7eaf610b667d271e01363033fd5dab52646da1702"
+      },
+      "images/files/SF6_Zangief_4pppkkk.png": {
+        "byte_count": 273750,
+        "sha256": "sha256:98590274299a5d4453134abfa5bfb3aba1cc56502098ffd68da4558c0fd16b35"
+      },
+      "images/files/SF6_Zangief_5hk.png": {
+        "byte_count": 342147,
+        "sha256": "sha256:28e95183c8e9476efe7edabf0f7b43296ff339020e473949eda8be9effe9c66a"
+      },
+      "images/files/SF6_Zangief_5hk_hitbox.png": {
+        "byte_count": 299532,
+        "sha256": "sha256:a223424a77eded6f720c2fc076ddf8dbef837e9d3b8e78eb578b4b820053c6b1"
+      },
+      "images/files/SF6_Zangief_5hp.png": {
+        "byte_count": 292074,
+        "sha256": "sha256:dd50824906ae7bc4acb5997445a6eedbefa881053c38ea1fa5ba0fc96bbe6143"
+      },
+      "images/files/SF6_Zangief_5hp_hitbox.png": {
+        "byte_count": 254975,
+        "sha256": "sha256:ce321a3e0b3fa53fab7bc84f2bc4f37d431b60883af98aa69ff22d3ac2eac234"
+      },
+      "images/files/SF6_Zangief_5hp_hitbox_2.png": {
+        "byte_count": 243784,
+        "sha256": "sha256:ae1dda70692f08214780100740ad2550b3126e1ecfb5456ad4bd65394a9e4887"
+      },
+      "images/files/SF6_Zangief_5hp_hitbox_3.png": {
+        "byte_count": 220241,
+        "sha256": "sha256:a8538422774e148b117469760b6076eceddda632ba30ed0a44c3c071e644b20a"
+      },
+      "images/files/SF6_Zangief_5hp_hold.png": {
+        "byte_count": 329579,
+        "sha256": "sha256:a400dcccdd72d2cb79af5eb81484eaa6b0dfb1b483bebe10a0f7a54cbddf6c78"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox.png": {
+        "byte_count": 267766,
+        "sha256": "sha256:717e501237bda9e3440c18b785f892cd689d233f2942011220f32a46a04e39be"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox_2.png": {
+        "byte_count": 245186,
+        "sha256": "sha256:579843281f66c8fcb0709f40d7920acf9d5b394c68d10a189cb37810b391d3fb"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox_3.png": {
+        "byte_count": 226118,
+        "sha256": "sha256:3e7e10eb69dafbbdf993741b2f6029329b70766047a17a658ed380b7f5d6e65d"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox_4.png": {
+        "byte_count": 213112,
+        "sha256": "sha256:c26f60a7830cbbcfb81cf953952f1a5ae575517192fc89da10e4310294c792ee"
+      },
+      "images/files/SF6_Zangief_5lk.png": {
+        "byte_count": 255534,
+        "sha256": "sha256:012fc9a3fe9ad7bc09fc9939c892538d548de4b77ade625b03895324da1ea1c0"
+      },
+      "images/files/SF6_Zangief_5lk_hitbox.png": {
+        "byte_count": 205717,
+        "sha256": "sha256:0339edbcb1bf89803502f8384f9a9bd21b04ea44f13437cc06c8643861254dcc"
+      },
+      "images/files/SF6_Zangief_5lp.png": {
+        "byte_count": 331269,
+        "sha256": "sha256:d8cec96ba7dc00bee16b918350335612b0357987cb50c12ce261ab00ceb8b7b3"
+      },
+      "images/files/SF6_Zangief_5lp_hitbox.png": {
+        "byte_count": 271464,
+        "sha256": "sha256:cb35cd5bcd9ad8d8c3160b0bd5b693364736fb24f1abcf975d620b40393b6c1b"
+      },
+      "images/files/SF6_Zangief_5lp_hitbox_2.png": {
+        "byte_count": 254650,
+        "sha256": "sha256:ef100589541fbfc08b779f5ea2e58c79d9b5c30f0ebc99b471e6251d2f29089d"
+      },
+      "images/files/SF6_Zangief_5lplk.png": {
+        "byte_count": 229847,
+        "sha256": "sha256:a82167da53d194c9c1e4a55dd098a36289a185c4bb1d9aa0e6f7c7dace1e9a5c"
+      },
+      "images/files/SF6_Zangief_5lplk_hitbox.png": {
+        "byte_count": 260673,
+        "sha256": "sha256:fc77afe5aa5f8d60b42149942614d1c180f5fd4411bad91acd6e5d027506cf91"
+      },
+      "images/files/SF6_Zangief_5mk.png": {
+        "byte_count": 281287,
+        "sha256": "sha256:940af0c7431f04a11a70ddbd81a7622beeed29c93b1c91b90d676cba95dba5b1"
+      },
+      "images/files/SF6_Zangief_5mk_hitbox.png": {
+        "byte_count": 244360,
+        "sha256": "sha256:2200bc89026604c55020b5c2163ec1041f14e6aa290c4fd6e1d6ee9dd7a288fe"
+      },
+      "images/files/SF6_Zangief_5mp.png": {
+        "byte_count": 324374,
+        "sha256": "sha256:6616fe505a69d2567febc87c5edde60837f6f215157eaf838338f535f750278e"
+      },
+      "images/files/SF6_Zangief_5mp_hitbox.png": {
+        "byte_count": 270805,
+        "sha256": "sha256:11fe9166699c62a20a2d188fad8f1ea44e55e76e52872cf3a59e13aeb55b915a"
+      },
+      "images/files/SF6_Zangief_5mp_mp.png": {
+        "byte_count": 356642,
+        "sha256": "sha256:1260d657a6cab3b424ca64ff993d8324a3458a3a430e7e5220420e3ba9ae1be1"
+      },
+      "images/files/SF6_Zangief_5mp_mp_hitbox.png": {
+        "byte_count": 297632,
+        "sha256": "sha256:3f2cf2d19536c0a5e83c7181ee85d7970eceebe905dfa49ccbea764e9e11f276"
+      },
+      "images/files/SF6_Zangief_5mp_mp_mp.png": {
+        "byte_count": 304293,
+        "sha256": "sha256:897992148eaf524d8891fdf3e2f2e0a72fbaa7b504575721294c6189fb924bc4"
+      },
+      "images/files/SF6_Zangief_5mp_mp_mp_hitbox.png": {
+        "byte_count": 246781,
+        "sha256": "sha256:912db891578fccd2c93cf2bbd648c2d6bef775eb86c5b42f600f27924db45fb3"
+      },
+      "images/files/SF6_Zangief_5pppkkk.png": {
+        "byte_count": 215597,
+        "sha256": "sha256:28b32bebe23ccf51a639111547d697a3baa5e96bf76614f74da90b62334d449d"
+      },
+      "images/files/SF6_Zangief_63214k_close.png": {
+        "byte_count": 441547,
+        "sha256": "sha256:a985afa3bf9a7f0b072e3b5347bdfe78a0dd4996261f45cee774e822fabbfb57"
+      },
+      "images/files/SF6_Zangief_63214k_close_hitbox.png": {
+        "byte_count": 269097,
+        "sha256": "sha256:098ed4a7774cc9d2fc016566bb42f3249ad96e0e7f9c9bdd506b36185a2240b5"
+      },
+      "images/files/SF6_Zangief_63214k_far.png": {
+        "byte_count": 643039,
+        "sha256": "sha256:4bcc5f38eb9db6f70280f0ad765d733751988166c5781271493d21108988efe2"
+      },
+      "images/files/SF6_Zangief_63214k_far_hitbox1.png": {
+        "byte_count": 331121,
+        "sha256": "sha256:dbca9b4f0b72e4cc51556d14d12f62a0ebf03c9aaa4d528edce773665ff71339"
+      },
+      "images/files/SF6_Zangief_63214k_far_hitbox2.png": {
+        "byte_count": 193086,
+        "sha256": "sha256:48145d5ae3b3cf9a2c6a9c37377dadad5ea329cc241080d48668049cfba7a376"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox1.png": {
+        "byte_count": 278766,
+        "sha256": "sha256:2048f2cc570a7c8d51aeb36297bf21c5380dccf64e13fc436e35326687656943"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox2.png": {
+        "byte_count": 226248,
+        "sha256": "sha256:2b03eb7a5f4236ae34f09f446a39c8e42e336c19ed4d7ca4e9dd2f1e28005ef7"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox3.png": {
+        "byte_count": 248018,
+        "sha256": "sha256:5b9e255bf0824cfecdad91015d7c3ad5d77d59e724dacf7cca70965d68e7e9d2"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox4.png": {
+        "byte_count": 727575,
+        "sha256": "sha256:b740b52121b89b9e4dd8443168a76437e58979f65c4ca914346f4b0e97086308"
+      },
+      "images/files/SF6_Zangief_63214k_mid_hitbox.png": {
+        "byte_count": 194374,
+        "sha256": "sha256:10ebf4c64ef3f985fb91f0aa1765e448fe8141cbd5c555ff03b7cf7f261cbf0b"
+      },
+      "images/files/SF6_Zangief_63214kk_close.png": {
+        "byte_count": 275904,
+        "sha256": "sha256:319b84f0aa655e6f4ff0eb970461cfe6042b5c9cdc78ce95420e2bd0056c3388"
+      },
+      "images/files/SF6_Zangief_63214kk_far.png": {
+        "byte_count": 577834,
+        "sha256": "sha256:abf713b6caaeea1ed154c5f23b4ab16ca63052539ddd09fb90cc2fc7e6abe15c"
+      },
+      "images/files/SF6_Zangief_63214kk_mid.png": {
+        "byte_count": 224059,
+        "sha256": "sha256:472daa110d5951b680ae9810858c23f23f7c0a4c05a4254d5c78d70fb0fa4213"
+      },
+      "images/files/SF6_Zangief_63214kk_mid_hitbox.png": {
+        "byte_count": 224059,
+        "sha256": "sha256:472daa110d5951b680ae9810858c23f23f7c0a4c05a4254d5c78d70fb0fa4213"
+      },
+      "images/files/SF6_Zangief_66.png": {
+        "byte_count": 534844,
+        "sha256": "sha256:9159aca0d84f29d0c0e0f1583e63ee933317f9cb485ffa9e0d0b473f74fae8fb"
+      },
+      "images/files/SF6_Zangief_66_hitbox.png": {
+        "byte_count": 235070,
+        "sha256": "sha256:c7a97494497fe8fa600fa8bdf284089fd08b1fb4d4f2cf1b7c5ec735eb493a52"
+      },
+      "images/files/SF6_Zangief_6hk.png": {
+        "byte_count": 754847,
+        "sha256": "sha256:7b438dd0ad2e8a038c58d7a8b9bf35cf08a21ef6cc5a8b8753e83dce31eb5a1e"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox.png": {
+        "byte_count": 217546,
+        "sha256": "sha256:c7d1a23eccdc90a530cf593d933768116702f34660ab65b967e899e945aafb14"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_2.png": {
+        "byte_count": 217874,
+        "sha256": "sha256:c5ca455ddb7789993c59d2727735178689b05ae99bc8ed0b9e1b0dae01a5f655"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_3.png": {
+        "byte_count": 234444,
+        "sha256": "sha256:b1c56ec4e23a95966a401d60ba48561961cb50575d5213128d17c35161b88163"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_4.png": {
+        "byte_count": 238503,
+        "sha256": "sha256:d9951477f2baaef3452dfcbed15af1198a681ed2555d649dac4a5841121ee98e"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_5.png": {
+        "byte_count": 235088,
+        "sha256": "sha256:94bf050ac9a7ae244f50a7954ef58296e7448f332cab6d71eedc3f1f361d9be2"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_6.png": {
+        "byte_count": 233700,
+        "sha256": "sha256:af1597d99ccf365ab95338055b45003fbb5d755265840fa806c66d3386475c76"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_7.png": {
+        "byte_count": 221370,
+        "sha256": "sha256:431b7f0e85c73fb6d16390015f75743a692fab803e11c9b4973cf2d3dad06347"
+      },
+      "images/files/SF6_Zangief_6hp.png": {
+        "byte_count": 321968,
+        "sha256": "sha256:15311c8c9667fba7ad9dab005dfdfdbde94de7aea3e8cb821bcea6c1d7e6f71e"
+      },
+      "images/files/SF6_Zangief_6hp_hitbox.png": {
+        "byte_count": 272739,
+        "sha256": "sha256:0186340d96bd9d03db10f2fc34a4d570f79cd65187a7b7460dbfc44a51e56994"
+      },
+      "images/files/SF6_Zangief_6hp_hitbox_2.png": {
+        "byte_count": 266583,
+        "sha256": "sha256:cf53282d3dc9b1e6d3b0559aeeba5abfa1b52a586784c21b60104542fc985326"
+      },
+      "images/files/SF6_Zangief_6hphk.png": {
+        "byte_count": 543106,
+        "sha256": "sha256:328401fe419f496a459d05d9dd925cb6a1ff252dc3a750e35797aea99cf024ce"
+      },
+      "images/files/SF6_Zangief_6hphk_hitbox.png": {
+        "byte_count": 307837,
+        "sha256": "sha256:df7458f3fe90f2f775ee14792a679760d9a15726512aaee7163e353970515f88"
+      },
+      "images/files/SF6_Zangief_6lplk.png": {
+        "byte_count": 242849,
+        "sha256": "sha256:4b0873a8e6e73b4c906242ce65cadaa310241bc4328c5bea09d912ae2e4c550c"
+      },
+      "images/files/SF6_Zangief_6lplk_hitbox.png": {
+        "byte_count": 267390,
+        "sha256": "sha256:af7df3aa85628172c0a8b4cca4ee2411d962dc3705d5b8f0b4687218779e2e33"
+      },
+      "images/files/SF6_Zangief_6mk.png": {
+        "byte_count": 275473,
+        "sha256": "sha256:116db09ec5a6d303c08da509cb2d03ee5276c96c76cf51cca883ab31b090d18a"
+      },
+      "images/files/SF6_Zangief_6mk_hitbox.png": {
+        "byte_count": 238955,
+        "sha256": "sha256:5c8e08259d2b81516a8a11584a8902274d52f48b28854229c0d3e108f8bb3a65"
+      },
+      "images/files/SF6_Zangief_6mk_hitbox_2.png": {
+        "byte_count": 251766,
+        "sha256": "sha256:dffb0d4a99a789064d920faa5eba344265d3051a438dba536bbac7d55dc445d8"
+      },
+      "images/files/SF6_Zangief_6pppkkk.png": {
+        "byte_count": 188342,
+        "sha256": "sha256:560cdb593df47a7c03ff212d1a3f8a391eee53d6bb6112dab14c66f1e4611fa7"
+      },
+      "images/files/SF6_Zangief_720+p(ca).png": {
+        "byte_count": 305746,
+        "sha256": "sha256:cba5c71447953743cd17e7ae8f053f643c662e582558be37076ff3b146ef9264"
+      },
+      "images/files/SF6_Zangief_720+p.png": {
+        "byte_count": 295864,
+        "sha256": "sha256:5e0a7f9a27247c2dc9872b413b58c62571f2bdcd8957d56501271dc33f3b8a7b"
+      },
+      "images/files/SF6_Zangief_720+p_hitbox.png": {
+        "byte_count": 284355,
+        "sha256": "sha256:223146e32e8ce50382c417bee224e6f7550ab4cd6b51d1d7b6c26389321cea06"
+      },
+      "images/files/SF6_Zangief_Face.png": {
+        "byte_count": 122901,
+        "sha256": "sha256:51faff0f6d9ae2fb226c15da7f09796726ababa6c041c84f5ca8e806ead6aa9f"
+      },
+      "images/files/SF6_Zangief_Portrait.png": {
+        "byte_count": 1506868,
+        "sha256": "sha256:1d57a5a70004e2eec93e6b024b529255ee12242bac6a89d34052ca02b782c0a0"
+      },
+      "images/files/SF6_Zangief_hphk.png": {
+        "byte_count": 711237,
+        "sha256": "sha256:da455637c6437efb7ce7416371290fb58a20ede3cc5250f8810ffacb716a4a54"
+      },
+      "images/files/SF6_Zangief_hphk_hitbox.png": {
+        "byte_count": 308290,
+        "sha256": "sha256:fbb7b165a6a48691e0e5b26aaf0b267510c03d7300ff03ef918de6fa2b2974d7"
+      },
+      "images/files/SF6_Zangief_j2hp.png": {
+        "byte_count": 282893,
+        "sha256": "sha256:a317246434f680168f9bec0e4099cb155129972ff3b3e05ce1b7be6f245de6c5"
+      },
+      "images/files/SF6_Zangief_j2hp_hitbox.png": {
+        "byte_count": 239544,
+        "sha256": "sha256:02990450ddbf842c0149c04a20ced5122253a99faa5a037e35c131c4ff11f0b5"
+      },
+      "images/files/SF6_Zangief_j360k.png": {
+        "byte_count": 497123,
+        "sha256": "sha256:065038e16a7dfd6e442311e54dcaf699ccecec6667f0caba2f8ebccbfd47cfa3"
+      },
+      "images/files/SF6_Zangief_j360k_hitbox.png": {
+        "byte_count": 235923,
+        "sha256": "sha256:98cb06ca9550cd12126d8863b726f4f0819743d398d0d04bd355cf025a604aa8"
+      },
+      "images/files/SF6_Zangief_j360kk.png": {
+        "byte_count": 359704,
+        "sha256": "sha256:aae4ede2a468d8793d761f494af49b315d89014935bd58b653b42eb83a4d7513"
+      },
+      "images/files/SF6_Zangief_j360kk_hitbox.png": {
+        "byte_count": 204917,
+        "sha256": "sha256:0bd26334dc5653820b3b9daee82728175f60c49fe4ce2e296228f2f774195850"
+      },
+      "images/files/SF6_Zangief_j8hp.png": {
+        "byte_count": 300010,
+        "sha256": "sha256:520386764577393784c839c922da823604605d3278168b2b6c09f20702995d7d"
+      },
+      "images/files/SF6_Zangief_j8hp_hitbox.png": {
+        "byte_count": 263481,
+        "sha256": "sha256:fca23ff64d430614787a26ba1831b94dace0586c73a5d22c77b19ebe971892fb"
+      },
+      "images/files/SF6_Zangief_jhk.png": {
+        "byte_count": 282198,
+        "sha256": "sha256:5fc354d99e5d4f815f5e8b6c3247d0ebb7bf28c4a4f68a675cf76f56e4addf87"
+      },
+      "images/files/SF6_Zangief_jhk_hitbox.png": {
+        "byte_count": 240767,
+        "sha256": "sha256:c8163cd7153bcef2f422bd104592d4aa3f8fec87e94c82b2ddd9eeac47a77c4b"
+      },
+      "images/files/SF6_Zangief_jhk_hold_hitbox.png": {
+        "byte_count": 240587,
+        "sha256": "sha256:86641d60bba001b6ee6639db7c142e8daa74b90150a2d8f0352b9384364de9cf"
+      },
+      "images/files/SF6_Zangief_jhp.png": {
+        "byte_count": 296014,
+        "sha256": "sha256:8eef1f04afa684dc3a9f9971773ef70c388d782c014b5449b2631b7962295864"
+      },
+      "images/files/SF6_Zangief_jhp_hitbox.png": {
+        "byte_count": 226459,
+        "sha256": "sha256:fb2943de43e42748ca0f1a1e119fdcc8ee4b861ea6933996f314c3a303127f8c"
+      },
+      "images/files/SF6_Zangief_jhp_hitbox_2.png": {
+        "byte_count": 251819,
+        "sha256": "sha256:87bd27bdca55e35d707479d90b927e73d18e926eb91e7c9518b5c745582421cf"
+      },
+      "images/files/SF6_Zangief_jhp_hitbox_3.png": {
+        "byte_count": 249299,
+        "sha256": "sha256:da9c6f500432dc458c6b796ac2f3a65b5df545522cb091bb43d795423355c5ee"
+      },
+      "images/files/SF6_Zangief_jlk.png": {
+        "byte_count": 231799,
+        "sha256": "sha256:687a5210f9529eb3727ba691a62a892da1c79997af30cc20a7bfd7a35432b0d9"
+      },
+      "images/files/SF6_Zangief_jlk_hitbox.png": {
+        "byte_count": 190253,
+        "sha256": "sha256:d2aed6699a6e840eae2e6c3d6c26d52d259f29dc376799ccc2c4c517bfe243a3"
+      },
+      "images/files/SF6_Zangief_jlp.png": {
+        "byte_count": 298215,
+        "sha256": "sha256:1d51585121bbb070f94f446ca3354ea9349a7bbf20ec2f049f35cb54d72d1f8e"
+      },
+      "images/files/SF6_Zangief_jlp_hitbox.png": {
+        "byte_count": 252509,
+        "sha256": "sha256:67961549fa3b601a955eb1438126855fa0df630f30fbb5ea95bbfe5a310b36b4"
+      },
+      "images/files/SF6_Zangief_jmk.png": {
+        "byte_count": 224708,
+        "sha256": "sha256:a537073a784e2690a5689d2394aaf78eae2db4c4311efb469403d4179f74bc68"
+      },
+      "images/files/SF6_Zangief_jmk_hitbox.png": {
+        "byte_count": 185764,
+        "sha256": "sha256:dd207be3338febccf64c81ab7c1ae0fcd819057fed529eb32e084a154f3d4d70"
+      },
+      "images/files/SF6_Zangief_jmp.png": {
+        "byte_count": 298172,
+        "sha256": "sha256:e0e092151f8625b9194dccf45e257d7f4666967f1545f7591550b069fd3ad971"
+      },
+      "images/files/SF6_Zangief_jmp_hitbox.png": {
+        "byte_count": 256140,
+        "sha256": "sha256:e46e489e991575103e24bfe2a863243269bb93dd9000930319ea30a6e4233447"
+      },
+      "images/files/SF6_Zangief_mpmk.png": {
+        "byte_count": 350373,
+        "sha256": "sha256:8f09feeaaf680a9ad24f27da69878c334b4796b5a49fe9dff8cd07e33cb5d5ae"
+      },
+      "images/files/SF6_Zangief_mpmk_hitbox.png": {
+        "byte_count": 240231,
+        "sha256": "sha256:531e82e215652882cc435b3198b6910308c36ffdd82b8e15e3d9537a858730e1"
+      },
+      "images/files/SF6_Zangief_pp.png": {
+        "byte_count": 299923,
+        "sha256": "sha256:4d27a0a84a9b12db02f5ed8407476bbf6085ba9c5d7803c9ab2c16106205c5f0"
+      },
+      "images/files/SF6_Zangief_pp_hitbox1.png": {
+        "byte_count": 276500,
+        "sha256": "sha256:8b720606c981489efe7e126cca367fea5a8b188e88df6719446d71277e174700"
+      },
+      "images/files/SF6_Zangief_pp_hitbox2.png": {
+        "byte_count": 223652,
+        "sha256": "sha256:a2ec463eeb5c2ad64f1a07f9063d3a89b390ee9a7b78531f2fe31d60799375d2"
+      },
+      "images/files/SF6_Zangief_pp_hitbox3.png": {
+        "byte_count": 251294,
+        "sha256": "sha256:59611928f818c08eebcc4de0ed6557f564ab96d95ab4a63f50c35333d783ca15"
+      },
+      "images/files/SF6_Zangief_pp_hitbox4.png": {
+        "byte_count": 264042,
+        "sha256": "sha256:9f911980e5c649567c51f467f2b95401ca6dc51a60bff4eeaf290f21d4546dc4"
+      },
+      "images/files/SF6_Zangief_pp_hitbox5.png": {
+        "byte_count": 248131,
+        "sha256": "sha256:c9f79cc70e0504774fa262cdb2a349705be66164bc9d6634a35f50624d60ab47"
+      },
+      "images/files/SF6_Zangief_pp_hitbox6.png": {
+        "byte_count": 465693,
+        "sha256": "sha256:a2768ef84eb841d7547eb6c7e78e0db853836fbb7d32648bdf1ee21647de577a"
+      },
+      "images/files/SF6_Zangief_pp_hitbox7.png": {
+        "byte_count": 497901,
+        "sha256": "sha256:0feccabf75b2543f8301e8fb3115aef9d55e086fcdcffd83c3b746dd8bfe84ee"
+      },
+      "images/files/SF6_Zangief_ppp.png": {
+        "byte_count": 343193,
+        "sha256": "sha256:a53fcd855693c2a382ac4bd4d2a1ceaf24a753f5eb850ec4ba171d95858bbb24"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_1.png": {
+        "byte_count": 265115,
+        "sha256": "sha256:9a2438794e16cbb0f569a43c99916b66307f365f73397bc74b194a6f1e2fb377"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_2.png": {
+        "byte_count": 206878,
+        "sha256": "sha256:45450379a82a06c3be97f3a8398013c8aae65cd028c7422e7b18594230cc5dec"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_3.png": {
+        "byte_count": 220077,
+        "sha256": "sha256:30090fe53cccef18fbdfabd0894a9a83ebd9d8fc13009bb4cde37420bda22665"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_4.png": {
+        "byte_count": 245488,
+        "sha256": "sha256:82b1d64926e442e752f352499a38924a9f56af93e6b2347217fc1d45e9db8a10"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_5.png": {
+        "byte_count": 283218,
+        "sha256": "sha256:2669ef66091e9e681c68ed6b5f1e85f91e920a66bc437f6ab7267625e43c1126"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_6.png": {
+        "byte_count": 244467,
+        "sha256": "sha256:20db2aada80edc80862b2574b26ce7fded561a8dcefc67fe284989c3a1c8f22e"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_7.png": {
+        "byte_count": 443967,
+        "sha256": "sha256:a1f8360e7177db774ae7b9434f42696ef18b6b52d8d558d841e52d580a41af8a"
+      },
+      "rendered/page.html": {
+        "byte_count": 501846,
+        "sha256": "sha256:7040efe2d09cc51767e8b33252cbc9d4b71c4a11176a86ac617ae5033600df1f"
+      },
+      "rendered/tables.dom.json": {
+        "byte_count": 713880,
+        "sha256": "sha256:05e8a4c97f33076844e101d3d5826977dd096073ff37561fd5610c0236c4acb1"
+      },
+      "screenshots/details.png": {
+        "byte_count": 987101,
+        "sha256": "sha256:7734f821455faae7a7afab902f945fc18bdb3a2ae61e66dadad9a21378f83f2b"
+      },
+      "screenshots/general.png": {
+        "byte_count": 1016449,
+        "sha256": "sha256:896cfcab2559f59d8d554ca31d4f7fd12dd07a33ee5c572491c22bbbc4a7b73c"
+      },
+      "screenshots/meter.png": {
+        "byte_count": 931682,
+        "sha256": "sha256:eb413a5a9390368acffd305e25a275e7c12ec3e1072d94a5c38c271fe8bf5b5d"
+      },
+      "screenshots/notes.png": {
+        "byte_count": 1798066,
+        "sha256": "sha256:17c54b538d53688426c71572c2b2d45d102da6e537c25ab6961f7c9a7107026a"
+      },
+      "screenshots/properties.png": {
+        "byte_count": 871423,
+        "sha256": "sha256:1315ce5b55876a7cebae6a2892cab471371d7804d54a1ce046e2480dfcb74e54"
+      }
+    },
+    "raw_files": {
+      "api/page-metadata.json": {
+        "byte_count": 1274,
+        "sha256": "sha256:829665e8fb8edc2b8138fff1eb71e110e5d72419407a049a841e99e5e8c4e39d"
+      },
+      "cargo/character-data.json": {
+        "byte_count": 708,
+        "sha256": "sha256:d21093a8e5e0ffb3d75fb254d7e1265acff5c1916ea34247680d6d0976020075"
+      },
+      "cargo/frame-data.json": {
+        "byte_count": 135150,
+        "sha256": "sha256:beb9839553e3ece18b9548074a9dac709ba99355c4520e2a846786ec1c486b7f"
+      },
+      "data.raw.wikitext": {
+        "byte_count": 78459,
+        "sha256": "sha256:24331b1f267e50ec308a8261f6c4a0e606649d0f7771da5902b59af5a63dab21"
+      },
+      "data.templates.json": {
+        "byte_count": 86164,
+        "sha256": "sha256:d24abedbb94620ab11aa4e879a3805dd24560ce1e3f06db08bfd647fc925dfa0"
+      },
+      "frame-data.cargo-queries.json": {
+        "byte_count": 14027,
+        "sha256": "sha256:ce0a827718773240d7871a6abd6d5b53029bf0d3671e61260ad9101ace209393"
+      },
+      "frame-data.raw.wikitext": {
+        "byte_count": 10815,
+        "sha256": "sha256:2d214a912dce95ec9c0f53f3f46acea2928d1e4b2d24cab9536aa995ed3bf2db"
+      },
+      "image-manifest.json": {
+        "byte_count": 127735,
+        "sha256": "sha256:4d3c016a45d5fd86e60243514f19927e14f965256af675693068923d96db0c72"
+      },
+      "imageinfo.json": {
+        "byte_count": 120345,
+        "sha256": "sha256:e6bee99b2e38c3ac28297d593e4c458d175203d1c086e456a9fdd55767d7aa66"
+      },
+      "images/files/SF6_Zangief_1lplk.png": {
+        "byte_count": 281627,
+        "sha256": "sha256:d573faaa7911f2d49a04cb518d122447f83aa6d4816a31c612c5c0764eef6438"
+      },
+      "images/files/SF6_Zangief_22hk.png": {
+        "byte_count": 321342,
+        "sha256": "sha256:140f2143fdd38271407758754015038291d34a65d6243301bb7942f6231f4757"
+      },
+      "images/files/SF6_Zangief_22hk_2.png": {
+        "byte_count": 437969,
+        "sha256": "sha256:de24d559a154d18e242c4b5743bbb9270ae360e2076e5fcda52a5750345b7db3"
+      },
+      "images/files/SF6_Zangief_22hk_hitbox.png": {
+        "byte_count": 274322,
+        "sha256": "sha256:cfe500546c01b80b36054b6a15b394b42143fe57a7e7f718934dd93c82baba25"
+      },
+      "images/files/SF6_Zangief_22mk.png": {
+        "byte_count": 382973,
+        "sha256": "sha256:0e932839042f51afc6f5734dfbde658ef2a39a6d0d8f9e6e4bdd29b1bd33b034"
+      },
+      "images/files/SF6_Zangief_22mk_hitbox.png": {
+        "byte_count": 257916,
+        "sha256": "sha256:1db2190644800ddd4e182cfb5a79490ed1a3ac4e192662d66d517f7377dc1025"
+      },
+      "images/files/SF6_Zangief_22mk_mk.png": {
+        "byte_count": 419077,
+        "sha256": "sha256:93d1b350b05eabe579ac41e8114e4a827f6ac95b2c45cc126f3bbc3ecf865685"
+      },
+      "images/files/SF6_Zangief_22mk_mk_hitbox.png": {
+        "byte_count": 257171,
+        "sha256": "sha256:c1cbbe2c035a8a33402541d25dc4c0bc71cb6bfb3ac9e9816144a79624163195"
+      },
+      "images/files/SF6_Zangief_22mk_mk_mk.png": {
+        "byte_count": 376670,
+        "sha256": "sha256:65b6ca4a9920bd9626a0009c9baa833525df1e28d4b526d65c4fd3b508d1c844"
+      },
+      "images/files/SF6_Zangief_22mk_mk_mk_hitbox.png": {
+        "byte_count": 230402,
+        "sha256": "sha256:a8c94741263fea5f5a0d5b81c492719b41ba6897d569c026de0b54393fcd8a79"
+      },
+      "images/files/SF6_Zangief_236236k.png": {
+        "byte_count": 398612,
+        "sha256": "sha256:85a12a357e8379ab045e5be6fbc604f7236009c51dec346e43d9f06cbdcb9952"
+      },
+      "images/files/SF6_Zangief_236236k_hitbox.png": {
+        "byte_count": 259898,
+        "sha256": "sha256:6b2633d879b8f43e819d41c7583084d72f916f914de06dfa582e1a928b3b4269"
+      },
+      "images/files/SF6_Zangief_236236p.png": {
+        "byte_count": 695139,
+        "sha256": "sha256:af440c9be0f30d97ff600fdaec534cc3510eabe672ee6c89d23fe5c8408d6927"
+      },
+      "images/files/SF6_Zangief_236236p_2.png": {
+        "byte_count": 530816,
+        "sha256": "sha256:b896770f6d637312a93e9cf91170a2b02f7fcec7b4b9777275840cb38ac6058d"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox1.png": {
+        "byte_count": 278741,
+        "sha256": "sha256:2481beb923d3616496c48b0cba89e10c379045e377824d5ecbc815621a72f4f6"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox2.png": {
+        "byte_count": 261783,
+        "sha256": "sha256:fbd251e6400ebe1131d06c179c390db2769a4cd1adfee9d096c2835c60e93158"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox3.png": {
+        "byte_count": 264209,
+        "sha256": "sha256:12e8dbe97e6b30d264a3c517927cb4eeafa2a21c75ad631d3d1844c81692ac2a"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox4.png": {
+        "byte_count": 283347,
+        "sha256": "sha256:b1b5faa41a19d8838143628c63305230c08058726cdd5531f4e2731ea552ac68"
+      },
+      "images/files/SF6_Zangief_236236p_hitbox5.png": {
+        "byte_count": 251237,
+        "sha256": "sha256:3bd782f0362c7735bc085764bddce549690123b7c072abc2cfc10cda469b1fdf"
+      },
+      "images/files/SF6_Zangief_236236p_hold.png": {
+        "byte_count": 412237,
+        "sha256": "sha256:c5047e87a33367f7078192aca1463bd0c9b2c14349060cd08b714d1c4d250ffa"
+      },
+      "images/files/SF6_Zangief_2hk.png": {
+        "byte_count": 232183,
+        "sha256": "sha256:bff9cef2813660bad176f5f97b2ba5aac53cd03235ba3f738656d5b63b0a76d1"
+      },
+      "images/files/SF6_Zangief_2hk_hitbox.png": {
+        "byte_count": 194146,
+        "sha256": "sha256:ccb3018852429d582ab3f817526ec36b096604ea29fc6eba3d6d161241048ad7"
+      },
+      "images/files/SF6_Zangief_2hk_hitbox_2.png": {
+        "byte_count": 192675,
+        "sha256": "sha256:7193fdb65ee88844bcbfe4a7f779e6743f14729f212029b9fb8fd033bc34bf0a"
+      },
+      "images/files/SF6_Zangief_2hp.png": {
+        "byte_count": 511770,
+        "sha256": "sha256:22285699412f2b3195dbc13230698f22774ece53682c8e3106fe4b2ececac461"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox.png": {
+        "byte_count": 195661,
+        "sha256": "sha256:5aa6d0ad4648cfa381182a28faa4855f0492a6fe183fb7874b2dcbb3001e4346"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_2.png": {
+        "byte_count": 212468,
+        "sha256": "sha256:7f3006ac88d51041bfdcd6ed840890a062b9e5bf276bfe79edc3940248a1225f"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_3.png": {
+        "byte_count": 225467,
+        "sha256": "sha256:63689c26e451952dfb265affdf9277907d4f14754ccadc785613368eff7b22c3"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_4.png": {
+        "byte_count": 231901,
+        "sha256": "sha256:fb40c60ca53eb0957e3aafb771dea5901696d61ab7a8855a8ed171cae771dd58"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_5.png": {
+        "byte_count": 241011,
+        "sha256": "sha256:160be6b51757795348c8523101d7d30ec136af0e91bcbb06c217c481cb9eba23"
+      },
+      "images/files/SF6_Zangief_2hp_hitbox_6.png": {
+        "byte_count": 243302,
+        "sha256": "sha256:c1ab7d8e49ac2b86dce29bd4213463dd2d21e3acdb8f6de2f801c6318c619753"
+      },
+      "images/files/SF6_Zangief_2lk.png": {
+        "byte_count": 256006,
+        "sha256": "sha256:9663ce9d93ea06c6fac35d4a621c79a9ed01b9afda2e432680748cfe1bb30cf9"
+      },
+      "images/files/SF6_Zangief_2lk_hitbox.png": {
+        "byte_count": 207936,
+        "sha256": "sha256:1df33a79b99cb78f72e351da5435f6fc22ebd31c7281d46893a853c9e222862b"
+      },
+      "images/files/SF6_Zangief_2lp.png": {
+        "byte_count": 296180,
+        "sha256": "sha256:ce49e6253a02fde1e61124a1c955d8fe162095d31b81779222041f0d122b8f1e"
+      },
+      "images/files/SF6_Zangief_2lp_hitbox.png": {
+        "byte_count": 238583,
+        "sha256": "sha256:b897483841b2a813ec4dcd645f36e2ee77fe758de2c39796aa57b9485217925e"
+      },
+      "images/files/SF6_Zangief_2lplk.png": {
+        "byte_count": 168994,
+        "sha256": "sha256:32e7f5c004a6fbe2745cb86aec1d6da0f2b8be2d9f82a0270c6860c6b90499f3"
+      },
+      "images/files/SF6_Zangief_2mk.png": {
+        "byte_count": 283170,
+        "sha256": "sha256:0e5f07341330dc683dd2613a0d87005e1bc71851589553a42cec30d80f387c16"
+      },
+      "images/files/SF6_Zangief_2mk_hitbox.png": {
+        "byte_count": 243474,
+        "sha256": "sha256:967c34313205ff0ec627d95126d94c383d72cabfffafcc3a47b1f0775958f176"
+      },
+      "images/files/SF6_Zangief_2mp.png": {
+        "byte_count": 248226,
+        "sha256": "sha256:9f958eac24e9c80f61f28a0c4784fde816c8ba549b636e8227a956d04b00fd1f"
+      },
+      "images/files/SF6_Zangief_2mp_hitbox.png": {
+        "byte_count": 185304,
+        "sha256": "sha256:e6d954099a6736869ff783d6b8268728681eacc48d6e26e33ae31c1c0c75db2b"
+      },
+      "images/files/SF6_Zangief_2pppkkk.png": {
+        "byte_count": 243907,
+        "sha256": "sha256:bb0d2af6268514f056bc273aa67247db86bbe1efce6b5ef9ccbf0cde641159d1"
+      },
+      "images/files/SF6_Zangief_360hp_hitbox.png": {
+        "byte_count": 287536,
+        "sha256": "sha256:dfc5210bed7a318f69f91c69dae5ca72c926d5fcb838d986df8f989c75be429e"
+      },
+      "images/files/SF6_Zangief_360lp.png": {
+        "byte_count": 486701,
+        "sha256": "sha256:93b460fd0374ca09eeca98cd47a33a13399d0b58a1ca4680c8b633d3d0b838a8"
+      },
+      "images/files/SF6_Zangief_360lp_hitbox.png": {
+        "byte_count": 290829,
+        "sha256": "sha256:48cb1804563c804d1780366388a36a9ce70f5ee081f07416c537856f72a4c5a7"
+      },
+      "images/files/SF6_Zangief_360mp_hitbox.png": {
+        "byte_count": 287373,
+        "sha256": "sha256:0d61819865dcf57005d1f31e7f3a579419eedb796bca2cc5bdb83405a4ec57a8"
+      },
+      "images/files/SF6_Zangief_360pp.png": {
+        "byte_count": 428600,
+        "sha256": "sha256:e836d25e22376d02c4fabb312a23d14c5893b95b1cc5943e4b0620e5eada8b6e"
+      },
+      "images/files/SF6_Zangief_360pp_hitbox.png": {
+        "byte_count": 293743,
+        "sha256": "sha256:ea363644e9eb91b80307b610d8a4a8637fc387c07a18f8fbd2dd0f4c23570835"
+      },
+      "images/files/SF6_Zangief_3hk.png": {
+        "byte_count": 267490,
+        "sha256": "sha256:6ec3273e714ec8e6ea661b857198de5faa9199400a1be285d0895867394b57b7"
+      },
+      "images/files/SF6_Zangief_3hk_hitbox_1.png": {
+        "byte_count": 238950,
+        "sha256": "sha256:5085ddc01c5dbea0401b5126021fd17ef1dbf7a8ab263eb47ad9f6bc6bbe1e7c"
+      },
+      "images/files/SF6_Zangief_3hk_hitbox_2.png": {
+        "byte_count": 273582,
+        "sha256": "sha256:fafb68f52b52435aa3ae3e406baf864adb13b0b56ba71805e6d35e7856be4235"
+      },
+      "images/files/SF6_Zangief_3hk_hitbox_preview.png": {
+        "byte_count": 512645,
+        "sha256": "sha256:2685e06606fc7972e21133df65bcc72ea9f244d04a445428aaaaba320b6611be"
+      },
+      "images/files/SF6_Zangief_3lplk.png": {
+        "byte_count": 224155,
+        "sha256": "sha256:c8b669fbd41a19e363016362296df7901070c4f3dbe04478f79e4dc77f098089"
+      },
+      "images/files/SF6_Zangief_3mp.png": {
+        "byte_count": 286382,
+        "sha256": "sha256:efe073da6b5438bed5d5a89adb57376a4b023c15e257cbcad2369195b4226b4f"
+      },
+      "images/files/SF6_Zangief_3mp_hitbox.png": {
+        "byte_count": 235842,
+        "sha256": "sha256:3ff92636bb6a5ecac38efa52e6070d1068640e253f2efa6863e3ba31f2b1e477"
+      },
+      "images/files/SF6_Zangief_4lplk.png": {
+        "byte_count": 210782,
+        "sha256": "sha256:b6a6c138896a2aa12060fef7eaf610b667d271e01363033fd5dab52646da1702"
+      },
+      "images/files/SF6_Zangief_4pppkkk.png": {
+        "byte_count": 273750,
+        "sha256": "sha256:98590274299a5d4453134abfa5bfb3aba1cc56502098ffd68da4558c0fd16b35"
+      },
+      "images/files/SF6_Zangief_5hk.png": {
+        "byte_count": 342147,
+        "sha256": "sha256:28e95183c8e9476efe7edabf0f7b43296ff339020e473949eda8be9effe9c66a"
+      },
+      "images/files/SF6_Zangief_5hk_hitbox.png": {
+        "byte_count": 299532,
+        "sha256": "sha256:a223424a77eded6f720c2fc076ddf8dbef837e9d3b8e78eb578b4b820053c6b1"
+      },
+      "images/files/SF6_Zangief_5hp.png": {
+        "byte_count": 292074,
+        "sha256": "sha256:dd50824906ae7bc4acb5997445a6eedbefa881053c38ea1fa5ba0fc96bbe6143"
+      },
+      "images/files/SF6_Zangief_5hp_hitbox.png": {
+        "byte_count": 254975,
+        "sha256": "sha256:ce321a3e0b3fa53fab7bc84f2bc4f37d431b60883af98aa69ff22d3ac2eac234"
+      },
+      "images/files/SF6_Zangief_5hp_hitbox_2.png": {
+        "byte_count": 243784,
+        "sha256": "sha256:ae1dda70692f08214780100740ad2550b3126e1ecfb5456ad4bd65394a9e4887"
+      },
+      "images/files/SF6_Zangief_5hp_hitbox_3.png": {
+        "byte_count": 220241,
+        "sha256": "sha256:a8538422774e148b117469760b6076eceddda632ba30ed0a44c3c071e644b20a"
+      },
+      "images/files/SF6_Zangief_5hp_hold.png": {
+        "byte_count": 329579,
+        "sha256": "sha256:a400dcccdd72d2cb79af5eb81484eaa6b0dfb1b483bebe10a0f7a54cbddf6c78"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox.png": {
+        "byte_count": 267766,
+        "sha256": "sha256:717e501237bda9e3440c18b785f892cd689d233f2942011220f32a46a04e39be"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox_2.png": {
+        "byte_count": 245186,
+        "sha256": "sha256:579843281f66c8fcb0709f40d7920acf9d5b394c68d10a189cb37810b391d3fb"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox_3.png": {
+        "byte_count": 226118,
+        "sha256": "sha256:3e7e10eb69dafbbdf993741b2f6029329b70766047a17a658ed380b7f5d6e65d"
+      },
+      "images/files/SF6_Zangief_5hp_hold_hitbox_4.png": {
+        "byte_count": 213112,
+        "sha256": "sha256:c26f60a7830cbbcfb81cf953952f1a5ae575517192fc89da10e4310294c792ee"
+      },
+      "images/files/SF6_Zangief_5lk.png": {
+        "byte_count": 255534,
+        "sha256": "sha256:012fc9a3fe9ad7bc09fc9939c892538d548de4b77ade625b03895324da1ea1c0"
+      },
+      "images/files/SF6_Zangief_5lk_hitbox.png": {
+        "byte_count": 205717,
+        "sha256": "sha256:0339edbcb1bf89803502f8384f9a9bd21b04ea44f13437cc06c8643861254dcc"
+      },
+      "images/files/SF6_Zangief_5lp.png": {
+        "byte_count": 331269,
+        "sha256": "sha256:d8cec96ba7dc00bee16b918350335612b0357987cb50c12ce261ab00ceb8b7b3"
+      },
+      "images/files/SF6_Zangief_5lp_hitbox.png": {
+        "byte_count": 271464,
+        "sha256": "sha256:cb35cd5bcd9ad8d8c3160b0bd5b693364736fb24f1abcf975d620b40393b6c1b"
+      },
+      "images/files/SF6_Zangief_5lp_hitbox_2.png": {
+        "byte_count": 254650,
+        "sha256": "sha256:ef100589541fbfc08b779f5ea2e58c79d9b5c30f0ebc99b471e6251d2f29089d"
+      },
+      "images/files/SF6_Zangief_5lplk.png": {
+        "byte_count": 229847,
+        "sha256": "sha256:a82167da53d194c9c1e4a55dd098a36289a185c4bb1d9aa0e6f7c7dace1e9a5c"
+      },
+      "images/files/SF6_Zangief_5lplk_hitbox.png": {
+        "byte_count": 260673,
+        "sha256": "sha256:fc77afe5aa5f8d60b42149942614d1c180f5fd4411bad91acd6e5d027506cf91"
+      },
+      "images/files/SF6_Zangief_5mk.png": {
+        "byte_count": 281287,
+        "sha256": "sha256:940af0c7431f04a11a70ddbd81a7622beeed29c93b1c91b90d676cba95dba5b1"
+      },
+      "images/files/SF6_Zangief_5mk_hitbox.png": {
+        "byte_count": 244360,
+        "sha256": "sha256:2200bc89026604c55020b5c2163ec1041f14e6aa290c4fd6e1d6ee9dd7a288fe"
+      },
+      "images/files/SF6_Zangief_5mp.png": {
+        "byte_count": 324374,
+        "sha256": "sha256:6616fe505a69d2567febc87c5edde60837f6f215157eaf838338f535f750278e"
+      },
+      "images/files/SF6_Zangief_5mp_hitbox.png": {
+        "byte_count": 270805,
+        "sha256": "sha256:11fe9166699c62a20a2d188fad8f1ea44e55e76e52872cf3a59e13aeb55b915a"
+      },
+      "images/files/SF6_Zangief_5mp_mp.png": {
+        "byte_count": 356642,
+        "sha256": "sha256:1260d657a6cab3b424ca64ff993d8324a3458a3a430e7e5220420e3ba9ae1be1"
+      },
+      "images/files/SF6_Zangief_5mp_mp_hitbox.png": {
+        "byte_count": 297632,
+        "sha256": "sha256:3f2cf2d19536c0a5e83c7181ee85d7970eceebe905dfa49ccbea764e9e11f276"
+      },
+      "images/files/SF6_Zangief_5mp_mp_mp.png": {
+        "byte_count": 304293,
+        "sha256": "sha256:897992148eaf524d8891fdf3e2f2e0a72fbaa7b504575721294c6189fb924bc4"
+      },
+      "images/files/SF6_Zangief_5mp_mp_mp_hitbox.png": {
+        "byte_count": 246781,
+        "sha256": "sha256:912db891578fccd2c93cf2bbd648c2d6bef775eb86c5b42f600f27924db45fb3"
+      },
+      "images/files/SF6_Zangief_5pppkkk.png": {
+        "byte_count": 215597,
+        "sha256": "sha256:28b32bebe23ccf51a639111547d697a3baa5e96bf76614f74da90b62334d449d"
+      },
+      "images/files/SF6_Zangief_63214k_close.png": {
+        "byte_count": 441547,
+        "sha256": "sha256:a985afa3bf9a7f0b072e3b5347bdfe78a0dd4996261f45cee774e822fabbfb57"
+      },
+      "images/files/SF6_Zangief_63214k_close_hitbox.png": {
+        "byte_count": 269097,
+        "sha256": "sha256:098ed4a7774cc9d2fc016566bb42f3249ad96e0e7f9c9bdd506b36185a2240b5"
+      },
+      "images/files/SF6_Zangief_63214k_far.png": {
+        "byte_count": 643039,
+        "sha256": "sha256:4bcc5f38eb9db6f70280f0ad765d733751988166c5781271493d21108988efe2"
+      },
+      "images/files/SF6_Zangief_63214k_far_hitbox1.png": {
+        "byte_count": 331121,
+        "sha256": "sha256:dbca9b4f0b72e4cc51556d14d12f62a0ebf03c9aaa4d528edce773665ff71339"
+      },
+      "images/files/SF6_Zangief_63214k_far_hitbox2.png": {
+        "byte_count": 193086,
+        "sha256": "sha256:48145d5ae3b3cf9a2c6a9c37377dadad5ea329cc241080d48668049cfba7a376"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox1.png": {
+        "byte_count": 278766,
+        "sha256": "sha256:2048f2cc570a7c8d51aeb36297bf21c5380dccf64e13fc436e35326687656943"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox2.png": {
+        "byte_count": 226248,
+        "sha256": "sha256:2b03eb7a5f4236ae34f09f446a39c8e42e336c19ed4d7ca4e9dd2f1e28005ef7"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox3.png": {
+        "byte_count": 248018,
+        "sha256": "sha256:5b9e255bf0824cfecdad91015d7c3ad5d77d59e724dacf7cca70965d68e7e9d2"
+      },
+      "images/files/SF6_Zangief_63214k_far_hurtbox4.png": {
+        "byte_count": 727575,
+        "sha256": "sha256:b740b52121b89b9e4dd8443168a76437e58979f65c4ca914346f4b0e97086308"
+      },
+      "images/files/SF6_Zangief_63214k_mid_hitbox.png": {
+        "byte_count": 194374,
+        "sha256": "sha256:10ebf4c64ef3f985fb91f0aa1765e448fe8141cbd5c555ff03b7cf7f261cbf0b"
+      },
+      "images/files/SF6_Zangief_63214kk_close.png": {
+        "byte_count": 275904,
+        "sha256": "sha256:319b84f0aa655e6f4ff0eb970461cfe6042b5c9cdc78ce95420e2bd0056c3388"
+      },
+      "images/files/SF6_Zangief_63214kk_far.png": {
+        "byte_count": 577834,
+        "sha256": "sha256:abf713b6caaeea1ed154c5f23b4ab16ca63052539ddd09fb90cc2fc7e6abe15c"
+      },
+      "images/files/SF6_Zangief_63214kk_mid.png": {
+        "byte_count": 224059,
+        "sha256": "sha256:472daa110d5951b680ae9810858c23f23f7c0a4c05a4254d5c78d70fb0fa4213"
+      },
+      "images/files/SF6_Zangief_63214kk_mid_hitbox.png": {
+        "byte_count": 224059,
+        "sha256": "sha256:472daa110d5951b680ae9810858c23f23f7c0a4c05a4254d5c78d70fb0fa4213"
+      },
+      "images/files/SF6_Zangief_66.png": {
+        "byte_count": 534844,
+        "sha256": "sha256:9159aca0d84f29d0c0e0f1583e63ee933317f9cb485ffa9e0d0b473f74fae8fb"
+      },
+      "images/files/SF6_Zangief_66_hitbox.png": {
+        "byte_count": 235070,
+        "sha256": "sha256:c7a97494497fe8fa600fa8bdf284089fd08b1fb4d4f2cf1b7c5ec735eb493a52"
+      },
+      "images/files/SF6_Zangief_6hk.png": {
+        "byte_count": 754847,
+        "sha256": "sha256:7b438dd0ad2e8a038c58d7a8b9bf35cf08a21ef6cc5a8b8753e83dce31eb5a1e"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox.png": {
+        "byte_count": 217546,
+        "sha256": "sha256:c7d1a23eccdc90a530cf593d933768116702f34660ab65b967e899e945aafb14"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_2.png": {
+        "byte_count": 217874,
+        "sha256": "sha256:c5ca455ddb7789993c59d2727735178689b05ae99bc8ed0b9e1b0dae01a5f655"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_3.png": {
+        "byte_count": 234444,
+        "sha256": "sha256:b1c56ec4e23a95966a401d60ba48561961cb50575d5213128d17c35161b88163"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_4.png": {
+        "byte_count": 238503,
+        "sha256": "sha256:d9951477f2baaef3452dfcbed15af1198a681ed2555d649dac4a5841121ee98e"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_5.png": {
+        "byte_count": 235088,
+        "sha256": "sha256:94bf050ac9a7ae244f50a7954ef58296e7448f332cab6d71eedc3f1f361d9be2"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_6.png": {
+        "byte_count": 233700,
+        "sha256": "sha256:af1597d99ccf365ab95338055b45003fbb5d755265840fa806c66d3386475c76"
+      },
+      "images/files/SF6_Zangief_6hk_hitbox_7.png": {
+        "byte_count": 221370,
+        "sha256": "sha256:431b7f0e85c73fb6d16390015f75743a692fab803e11c9b4973cf2d3dad06347"
+      },
+      "images/files/SF6_Zangief_6hp.png": {
+        "byte_count": 321968,
+        "sha256": "sha256:15311c8c9667fba7ad9dab005dfdfdbde94de7aea3e8cb821bcea6c1d7e6f71e"
+      },
+      "images/files/SF6_Zangief_6hp_hitbox.png": {
+        "byte_count": 272739,
+        "sha256": "sha256:0186340d96bd9d03db10f2fc34a4d570f79cd65187a7b7460dbfc44a51e56994"
+      },
+      "images/files/SF6_Zangief_6hp_hitbox_2.png": {
+        "byte_count": 266583,
+        "sha256": "sha256:cf53282d3dc9b1e6d3b0559aeeba5abfa1b52a586784c21b60104542fc985326"
+      },
+      "images/files/SF6_Zangief_6hphk.png": {
+        "byte_count": 543106,
+        "sha256": "sha256:328401fe419f496a459d05d9dd925cb6a1ff252dc3a750e35797aea99cf024ce"
+      },
+      "images/files/SF6_Zangief_6hphk_hitbox.png": {
+        "byte_count": 307837,
+        "sha256": "sha256:df7458f3fe90f2f775ee14792a679760d9a15726512aaee7163e353970515f88"
+      },
+      "images/files/SF6_Zangief_6lplk.png": {
+        "byte_count": 242849,
+        "sha256": "sha256:4b0873a8e6e73b4c906242ce65cadaa310241bc4328c5bea09d912ae2e4c550c"
+      },
+      "images/files/SF6_Zangief_6lplk_hitbox.png": {
+        "byte_count": 267390,
+        "sha256": "sha256:af7df3aa85628172c0a8b4cca4ee2411d962dc3705d5b8f0b4687218779e2e33"
+      },
+      "images/files/SF6_Zangief_6mk.png": {
+        "byte_count": 275473,
+        "sha256": "sha256:116db09ec5a6d303c08da509cb2d03ee5276c96c76cf51cca883ab31b090d18a"
+      },
+      "images/files/SF6_Zangief_6mk_hitbox.png": {
+        "byte_count": 238955,
+        "sha256": "sha256:5c8e08259d2b81516a8a11584a8902274d52f48b28854229c0d3e108f8bb3a65"
+      },
+      "images/files/SF6_Zangief_6mk_hitbox_2.png": {
+        "byte_count": 251766,
+        "sha256": "sha256:dffb0d4a99a789064d920faa5eba344265d3051a438dba536bbac7d55dc445d8"
+      },
+      "images/files/SF6_Zangief_6pppkkk.png": {
+        "byte_count": 188342,
+        "sha256": "sha256:560cdb593df47a7c03ff212d1a3f8a391eee53d6bb6112dab14c66f1e4611fa7"
+      },
+      "images/files/SF6_Zangief_720+p(ca).png": {
+        "byte_count": 305746,
+        "sha256": "sha256:cba5c71447953743cd17e7ae8f053f643c662e582558be37076ff3b146ef9264"
+      },
+      "images/files/SF6_Zangief_720+p.png": {
+        "byte_count": 295864,
+        "sha256": "sha256:5e0a7f9a27247c2dc9872b413b58c62571f2bdcd8957d56501271dc33f3b8a7b"
+      },
+      "images/files/SF6_Zangief_720+p_hitbox.png": {
+        "byte_count": 284355,
+        "sha256": "sha256:223146e32e8ce50382c417bee224e6f7550ab4cd6b51d1d7b6c26389321cea06"
+      },
+      "images/files/SF6_Zangief_Face.png": {
+        "byte_count": 122901,
+        "sha256": "sha256:51faff0f6d9ae2fb226c15da7f09796726ababa6c041c84f5ca8e806ead6aa9f"
+      },
+      "images/files/SF6_Zangief_hphk.png": {
+        "byte_count": 711237,
+        "sha256": "sha256:da455637c6437efb7ce7416371290fb58a20ede3cc5250f8810ffacb716a4a54"
+      },
+      "images/files/SF6_Zangief_hphk_hitbox.png": {
+        "byte_count": 308290,
+        "sha256": "sha256:fbb7b165a6a48691e0e5b26aaf0b267510c03d7300ff03ef918de6fa2b2974d7"
+      },
+      "images/files/SF6_Zangief_j2hp.png": {
+        "byte_count": 282893,
+        "sha256": "sha256:a317246434f680168f9bec0e4099cb155129972ff3b3e05ce1b7be6f245de6c5"
+      },
+      "images/files/SF6_Zangief_j2hp_hitbox.png": {
+        "byte_count": 239544,
+        "sha256": "sha256:02990450ddbf842c0149c04a20ced5122253a99faa5a037e35c131c4ff11f0b5"
+      },
+      "images/files/SF6_Zangief_j360k.png": {
+        "byte_count": 497123,
+        "sha256": "sha256:065038e16a7dfd6e442311e54dcaf699ccecec6667f0caba2f8ebccbfd47cfa3"
+      },
+      "images/files/SF6_Zangief_j360k_hitbox.png": {
+        "byte_count": 235923,
+        "sha256": "sha256:98cb06ca9550cd12126d8863b726f4f0819743d398d0d04bd355cf025a604aa8"
+      },
+      "images/files/SF6_Zangief_j360kk.png": {
+        "byte_count": 359704,
+        "sha256": "sha256:aae4ede2a468d8793d761f494af49b315d89014935bd58b653b42eb83a4d7513"
+      },
+      "images/files/SF6_Zangief_j360kk_hitbox.png": {
+        "byte_count": 204917,
+        "sha256": "sha256:0bd26334dc5653820b3b9daee82728175f60c49fe4ce2e296228f2f774195850"
+      },
+      "images/files/SF6_Zangief_j8hp.png": {
+        "byte_count": 300010,
+        "sha256": "sha256:520386764577393784c839c922da823604605d3278168b2b6c09f20702995d7d"
+      },
+      "images/files/SF6_Zangief_j8hp_hitbox.png": {
+        "byte_count": 263481,
+        "sha256": "sha256:fca23ff64d430614787a26ba1831b94dace0586c73a5d22c77b19ebe971892fb"
+      },
+      "images/files/SF6_Zangief_jhk.png": {
+        "byte_count": 282198,
+        "sha256": "sha256:5fc354d99e5d4f815f5e8b6c3247d0ebb7bf28c4a4f68a675cf76f56e4addf87"
+      },
+      "images/files/SF6_Zangief_jhk_hitbox.png": {
+        "byte_count": 240767,
+        "sha256": "sha256:c8163cd7153bcef2f422bd104592d4aa3f8fec87e94c82b2ddd9eeac47a77c4b"
+      },
+      "images/files/SF6_Zangief_jhk_hold_hitbox.png": {
+        "byte_count": 240587,
+        "sha256": "sha256:86641d60bba001b6ee6639db7c142e8daa74b90150a2d8f0352b9384364de9cf"
+      },
+      "images/files/SF6_Zangief_jhp.png": {
+        "byte_count": 296014,
+        "sha256": "sha256:8eef1f04afa684dc3a9f9971773ef70c388d782c014b5449b2631b7962295864"
+      },
+      "images/files/SF6_Zangief_jhp_hitbox.png": {
+        "byte_count": 226459,
+        "sha256": "sha256:fb2943de43e42748ca0f1a1e119fdcc8ee4b861ea6933996f314c3a303127f8c"
+      },
+      "images/files/SF6_Zangief_jhp_hitbox_2.png": {
+        "byte_count": 251819,
+        "sha256": "sha256:87bd27bdca55e35d707479d90b927e73d18e926eb91e7c9518b5c745582421cf"
+      },
+      "images/files/SF6_Zangief_jhp_hitbox_3.png": {
+        "byte_count": 249299,
+        "sha256": "sha256:da9c6f500432dc458c6b796ac2f3a65b5df545522cb091bb43d795423355c5ee"
+      },
+      "images/files/SF6_Zangief_jlk.png": {
+        "byte_count": 231799,
+        "sha256": "sha256:687a5210f9529eb3727ba691a62a892da1c79997af30cc20a7bfd7a35432b0d9"
+      },
+      "images/files/SF6_Zangief_jlk_hitbox.png": {
+        "byte_count": 190253,
+        "sha256": "sha256:d2aed6699a6e840eae2e6c3d6c26d52d259f29dc376799ccc2c4c517bfe243a3"
+      },
+      "images/files/SF6_Zangief_jlp.png": {
+        "byte_count": 298215,
+        "sha256": "sha256:1d51585121bbb070f94f446ca3354ea9349a7bbf20ec2f049f35cb54d72d1f8e"
+      },
+      "images/files/SF6_Zangief_jlp_hitbox.png": {
+        "byte_count": 252509,
+        "sha256": "sha256:67961549fa3b601a955eb1438126855fa0df630f30fbb5ea95bbfe5a310b36b4"
+      },
+      "images/files/SF6_Zangief_jmk.png": {
+        "byte_count": 224708,
+        "sha256": "sha256:a537073a784e2690a5689d2394aaf78eae2db4c4311efb469403d4179f74bc68"
+      },
+      "images/files/SF6_Zangief_jmk_hitbox.png": {
+        "byte_count": 185764,
+        "sha256": "sha256:dd207be3338febccf64c81ab7c1ae0fcd819057fed529eb32e084a154f3d4d70"
+      },
+      "images/files/SF6_Zangief_jmp.png": {
+        "byte_count": 298172,
+        "sha256": "sha256:e0e092151f8625b9194dccf45e257d7f4666967f1545f7591550b069fd3ad971"
+      },
+      "images/files/SF6_Zangief_jmp_hitbox.png": {
+        "byte_count": 256140,
+        "sha256": "sha256:e46e489e991575103e24bfe2a863243269bb93dd9000930319ea30a6e4233447"
+      },
+      "images/files/SF6_Zangief_mpmk.png": {
+        "byte_count": 350373,
+        "sha256": "sha256:8f09feeaaf680a9ad24f27da69878c334b4796b5a49fe9dff8cd07e33cb5d5ae"
+      },
+      "images/files/SF6_Zangief_mpmk_hitbox.png": {
+        "byte_count": 240231,
+        "sha256": "sha256:531e82e215652882cc435b3198b6910308c36ffdd82b8e15e3d9537a858730e1"
+      },
+      "images/files/SF6_Zangief_Portrait.png": {
+        "byte_count": 1506868,
+        "sha256": "sha256:1d57a5a70004e2eec93e6b024b529255ee12242bac6a89d34052ca02b782c0a0"
+      },
+      "images/files/SF6_Zangief_pp.png": {
+        "byte_count": 299923,
+        "sha256": "sha256:4d27a0a84a9b12db02f5ed8407476bbf6085ba9c5d7803c9ab2c16106205c5f0"
+      },
+      "images/files/SF6_Zangief_pp_hitbox1.png": {
+        "byte_count": 276500,
+        "sha256": "sha256:8b720606c981489efe7e126cca367fea5a8b188e88df6719446d71277e174700"
+      },
+      "images/files/SF6_Zangief_pp_hitbox2.png": {
+        "byte_count": 223652,
+        "sha256": "sha256:a2ec463eeb5c2ad64f1a07f9063d3a89b390ee9a7b78531f2fe31d60799375d2"
+      },
+      "images/files/SF6_Zangief_pp_hitbox3.png": {
+        "byte_count": 251294,
+        "sha256": "sha256:59611928f818c08eebcc4de0ed6557f564ab96d95ab4a63f50c35333d783ca15"
+      },
+      "images/files/SF6_Zangief_pp_hitbox4.png": {
+        "byte_count": 264042,
+        "sha256": "sha256:9f911980e5c649567c51f467f2b95401ca6dc51a60bff4eeaf290f21d4546dc4"
+      },
+      "images/files/SF6_Zangief_pp_hitbox5.png": {
+        "byte_count": 248131,
+        "sha256": "sha256:c9f79cc70e0504774fa262cdb2a349705be66164bc9d6634a35f50624d60ab47"
+      },
+      "images/files/SF6_Zangief_pp_hitbox6.png": {
+        "byte_count": 465693,
+        "sha256": "sha256:a2768ef84eb841d7547eb6c7e78e0db853836fbb7d32648bdf1ee21647de577a"
+      },
+      "images/files/SF6_Zangief_pp_hitbox7.png": {
+        "byte_count": 497901,
+        "sha256": "sha256:0feccabf75b2543f8301e8fb3115aef9d55e086fcdcffd83c3b746dd8bfe84ee"
+      },
+      "images/files/SF6_Zangief_ppp.png": {
+        "byte_count": 343193,
+        "sha256": "sha256:a53fcd855693c2a382ac4bd4d2a1ceaf24a753f5eb850ec4ba171d95858bbb24"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_1.png": {
+        "byte_count": 265115,
+        "sha256": "sha256:9a2438794e16cbb0f569a43c99916b66307f365f73397bc74b194a6f1e2fb377"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_2.png": {
+        "byte_count": 206878,
+        "sha256": "sha256:45450379a82a06c3be97f3a8398013c8aae65cd028c7422e7b18594230cc5dec"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_3.png": {
+        "byte_count": 220077,
+        "sha256": "sha256:30090fe53cccef18fbdfabd0894a9a83ebd9d8fc13009bb4cde37420bda22665"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_4.png": {
+        "byte_count": 245488,
+        "sha256": "sha256:82b1d64926e442e752f352499a38924a9f56af93e6b2347217fc1d45e9db8a10"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_5.png": {
+        "byte_count": 283218,
+        "sha256": "sha256:2669ef66091e9e681c68ed6b5f1e85f91e920a66bc437f6ab7267625e43c1126"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_6.png": {
+        "byte_count": 244467,
+        "sha256": "sha256:20db2aada80edc80862b2574b26ce7fded561a8dcefc67fe284989c3a1c8f22e"
+      },
+      "images/files/SF6_Zangief_ppp_hitbox_7.png": {
+        "byte_count": 443967,
+        "sha256": "sha256:a1f8360e7177db774ae7b9434f42696ef18b6b52d8d558d841e52d580a41af8a"
+      },
+      "manifest.json": {
+        "byte_count": 9549,
+        "sha256": "sha256:a96f04d54d66ab4c83f01169076776cf3b425d74983c369b47f66089aa15342d"
+      },
+      "metadata.json": {
+        "byte_count": 33507,
+        "sha256": "sha256:f23ff2a82a716983a9bf10afd95985ea1d140f854188af024adf5c0a854c4dbd"
+      },
+      "rendered/page.html": {
+        "byte_count": 501158,
+        "sha256": "sha256:693cf3142532812c8bddfcf31afa917c81b18c7c8d5138d5e5411b3db42551d6"
+      },
+      "rendered/tables.dom.json": {
+        "byte_count": 693083,
+        "sha256": "sha256:2f83670647d813498b01f20ad559e8f23ee9617ecdbdc267f94d54f8b7495fd8"
+      },
+      "screenshots/details.png": {
+        "byte_count": 987101,
+        "sha256": "sha256:7734f821455faae7a7afab902f945fc18bdb3a2ae61e66dadad9a21378f83f2b"
+      },
+      "screenshots/general.png": {
+        "byte_count": 1016449,
+        "sha256": "sha256:896cfcab2559f59d8d554ca31d4f7fd12dd07a33ee5c572491c22bbbc4a7b73c"
+      },
+      "screenshots/meter.png": {
+        "byte_count": 931682,
+        "sha256": "sha256:eb413a5a9390368acffd305e25a275e7c12ec3e1072d94a5c38c271fe8bf5b5d"
+      },
+      "screenshots/notes.png": {
+        "byte_count": 1798066,
+        "sha256": "sha256:17c54b538d53688426c71572c2b2d45d102da6e537c25ab6961f7c9a7107026a"
+      },
+      "screenshots/properties.png": {
+        "byte_count": 871423,
+        "sha256": "sha256:1315ce5b55876a7cebae6a2892cab471371d7804d54a1ce046e2480dfcb74e54"
+      }
+    }
+  },
   "status": "passed",
   "failures": [],
   "warnings": [
@@ -69,6 +1555,8 @@
       "tab": "General",
       "expected_rows": 32,
       "actual_rows": 32,
+      "compared_rows": 32,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -80,6 +1568,8 @@
       "tab": "General",
       "expected_rows": 12,
       "actual_rows": 12,
+      "compared_rows": 12,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -91,6 +1581,8 @@
       "tab": "General",
       "expected_rows": 15,
       "actual_rows": 15,
+      "compared_rows": 15,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -102,6 +1594,8 @@
       "tab": "General",
       "expected_rows": 5,
       "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -113,6 +1607,8 @@
       "tab": "Details",
       "expected_rows": 32,
       "actual_rows": 32,
+      "compared_rows": 32,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -124,6 +1620,8 @@
       "tab": "Details",
       "expected_rows": 12,
       "actual_rows": 12,
+      "compared_rows": 12,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -135,6 +1633,8 @@
       "tab": "Details",
       "expected_rows": 15,
       "actual_rows": 15,
+      "compared_rows": 15,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -146,6 +1646,8 @@
       "tab": "Details",
       "expected_rows": 5,
       "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -157,6 +1659,8 @@
       "tab": "Meter",
       "expected_rows": 32,
       "actual_rows": 32,
+      "compared_rows": 32,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -168,6 +1672,8 @@
       "tab": "Meter",
       "expected_rows": 12,
       "actual_rows": 12,
+      "compared_rows": 12,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -179,6 +1685,8 @@
       "tab": "Meter",
       "expected_rows": 15,
       "actual_rows": 15,
+      "compared_rows": 15,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -190,6 +1698,8 @@
       "tab": "Meter",
       "expected_rows": 5,
       "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -201,6 +1711,8 @@
       "tab": "Properties",
       "expected_rows": 32,
       "actual_rows": 32,
+      "compared_rows": 32,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -212,6 +1724,8 @@
       "tab": "Properties",
       "expected_rows": 12,
       "actual_rows": 12,
+      "compared_rows": 12,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -223,6 +1737,8 @@
       "tab": "Properties",
       "expected_rows": 15,
       "actual_rows": 15,
+      "compared_rows": 15,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -234,6 +1750,8 @@
       "tab": "Properties",
       "expected_rows": 5,
       "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -245,6 +1763,8 @@
       "tab": "Notes",
       "expected_rows": 32,
       "actual_rows": 32,
+      "compared_rows": 32,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -256,6 +1776,8 @@
       "tab": "Notes",
       "expected_rows": 12,
       "actual_rows": 12,
+      "compared_rows": 12,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -267,6 +1789,8 @@
       "tab": "Notes",
       "expected_rows": 15,
       "actual_rows": 15,
+      "compared_rows": 15,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -278,6 +1802,8 @@
       "tab": "Notes",
       "expected_rows": 5,
       "actual_rows": 5,
+      "compared_rows": 5,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,

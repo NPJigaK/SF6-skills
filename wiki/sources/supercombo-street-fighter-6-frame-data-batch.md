@@ -42,7 +42,7 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 
 1. raw snapshot（原本スナップショット）は `raw/frame-data/supercombo/<character_slug>/` 配下の latest mirror 固定パスに保存されている。source revision は path ではなく各 `manifest.json` の `capture_label` と `source_revision` で追う。
 2. 対象は A.K.I.、Akuma、Alex、Blanka、C.Viper、Cammy、Chun-Li、Dee Jay、Dhalsim、E.Honda、Ed、Elena、Guile、Ingrid、Jamie、JP、Juri、Ken、Kimberly、Lily、Luke、M.Bison、Mai、Manon、Marisa、Rashid、Ryu、Sagat、Terry、Zangief の 30 ページ。
-3. 30 キャラすべてで `validation.json` の status は `passed`。SuperCombo raw/Cargo 由来の frame rows は合計 2306 行。
+3. 30 キャラすべてで `validation.json` の status は `passed`。2026-06-06 以降の validation は現在 raw の `raw_fingerprint` を持ち、再取得後の古い validation では extract できない。SuperCombo raw/Cargo 由来の frame rows は合計 2306 行。
 4. 公式 Classic との crosswalk と、公式列を正として SuperCombo を `supercombo_*` 補助列に入れる enriched output を 30 キャラ分生成した。
 5. JP / Ryu / Zangief / Ingrid には既存の個別 source summary と人間レビュー済み補助行がある。2026-06-06 の fail-closed policy 以降も accepted 69 行は保持しているが、それ以外の複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field は `enriched_review_required` として扱う。
 6. 新規 26 キャラの capture は `--no-download-images` で実行した。画像ファイル本体は保存していないが、raw image refs、`imageinfo.json`、`image-manifest.json`、DOM 内の画像参照は保存している。
@@ -53,7 +53,7 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 | 主張 | 根拠 | 信頼度 | メモ |
 |---|---|---|---|
 | SuperCombo frame-data raw capture は 30 キャラ分そろっている。 | `raw/frame-data/supercombo/<character_slug>/manifest.json`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | 30/30 で manifest と validation がある。 |
-| 30 キャラすべてで自動検証 status は `passed`。 | `raw/frame-data/supercombo/<character_slug>/validation.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | raw template、Cargo row、表示 DOM table を照合した。 |
+| 30 キャラすべてで自動検証 status は `passed`。 | `raw/frame-data/supercombo/<character_slug>/validation.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | raw template、Cargo row、表示 DOM table を照合し、2026-06-06 以降は現在 raw の `raw_fingerprint` も保存する。 |
 | SuperCombo raw/Cargo の frame rows は合計 2306 行、公式 Classic rows は合計 2361 行。 | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]; `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json` | high | 集計は生成済み JSON から作成。 |
 | enriched output の `enriched_review_required` は合計 1295 行残っている。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 既存 accepted 69 行とは別。勝手に accept していない。 |
 | SuperCombo-only rows は合計 620 行ある。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/supercombo-only.csv`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | taunt、派生 variant、公式 row に直接照合しない行を含む。 |
@@ -67,6 +67,7 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 - `rendered/tables.dom.json` は実際に表示された table の DOM text / HTML / tab state を保存する。
 - `screenshots/*.png` は `General`、`Details`、`Meter`、`Properties`、`Notes` の各タブをページ全体で保存する。
 - `imageinfo.json` と `image-manifest.json` は画像参照、MediaWiki imageinfo、ダウンロード結果を保存する。
+- `validation.json` は検証 status に加え、現在 raw metadata と実ファイル artifact hash に対応する `raw_fingerprint` を保存する。capture 時は古い validation を削除し、extract 時は fingerprint 不一致を拒否する。
 - `wiki/outputs/data/supercombo/frame-data/<character_slug>/` は SuperCombo raw から作った派生 frame-data と公式 Classic crosswalk。
 - `wiki/outputs/data/enriched/frame-data/<character_slug>/` は公式 Classic rows を保持したまま SuperCombo 補助列を付与した output。
 

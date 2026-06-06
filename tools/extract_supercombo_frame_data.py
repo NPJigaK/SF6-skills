@@ -11,6 +11,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from frame_data_integrity import ensure_supercombo_validation_matches_current_raw
+
 
 FIELD_MAP = [
     ("damage", "damage"),
@@ -730,6 +732,7 @@ def main(argv: list[str]) -> int:
     validation = read_json(raw_root / "validation.json")
     if validation.get("status") != "passed":
         raise RuntimeError(f"SuperCombo validation is not passed: {validation.get('status')}")
+    ensure_supercombo_validation_matches_current_raw(raw_root, validation)
 
     frame_rows = frame_display_rows(templates["frames"])
     character_display_rows = character_rows(templates["character"])

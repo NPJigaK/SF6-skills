@@ -17,6 +17,8 @@ from urllib.parse import urlencode
 
 from scrapling.fetchers import StealthySession
 
+from frame_data_integrity import invalidate_supercombo_validation
+
 
 BASE_URL = "https://wiki.supercombo.gg"
 TAB_NAMES = ("General", "Details", "Meter", "Properties", "Notes")
@@ -843,6 +845,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
     root = args.repo_root / "raw" / "frame-data" / "supercombo" / args.character_slug
+    invalidate_supercombo_validation(root)
     paths = CapturePaths(
         root=root,
         screenshots_dir=root / "screenshots",
@@ -995,7 +998,7 @@ def main(argv: list[str]) -> int:
 
     artifacts: dict[str, Any] = {}
     for path in sorted(root.rglob("*")):
-        if not path.is_file() or path.name == "metadata.json":
+        if not path.is_file() or path.name in {"metadata.json", "validation.json"}:
             continue
         artifacts[str(path.relative_to(root))] = {
             "byte_count": path.stat().st_size,

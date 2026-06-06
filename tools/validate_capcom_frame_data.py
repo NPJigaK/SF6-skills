@@ -10,7 +10,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from capture_capcom_frame_data import csv_rows_from_dom, field_meanings_from_dom
+from capture_capcom_frame_data import (
+    csv_rows_from_dom,
+    field_meanings_from_dom,
+    unexpected_body_rows,
+    validate_mode_tab_state,
+)
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
@@ -61,6 +66,17 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
 
     table_hash_from_html = sha256_text(table_html_from_page(page_html))
     assert_equal(table_hash_from_html, table_dom["table_sha256"], f"{mode} page.html table hash")
+    tab_state = metadata.get("capture_adjustments", {}).get("tab_state")
+    if tab_state:
+        validate_mode_tab_state(mode, tab_state)
+
+    unexpected_rows = table_dom.get("unexpected_rows", unexpected_body_rows(table_dom["rows"]))
+    if unexpected_rows:
+        details = ", ".join(
+            f"row_index={row.get('row_index')} cell_count={row.get('cell_count')}"
+            for row in unexpected_rows[:5]
+        )
+        raise AssertionError(f"{mode} raw DOM has unexpected row shapes: {details}")
 
     expected_rows = csv_rows_from_dom(table_dom)
     if csv_rows != expected_rows:
@@ -86,6 +102,7 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
     manifest_count = metadata["artifacts"]["table_dom_json"]["data_row_count"]
     assert_equal(manifest_count, len(csv_rows), f"{mode} metadata row count")
     assert_equal(table_dom["data_row_count"], len(csv_rows), f"{mode} table DOM row count")
+    assert_equal(table_dom.get("unexpected_row_count", 0), 0, f"{mode} unexpected row count")
 
     screenshot = metadata["artifacts"]["screenshot_png"]
     horizontal_metrics = metadata["horizontal_metrics"]

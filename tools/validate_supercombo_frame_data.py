@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any
 
 from capture_supercombo_frame_data import cargo_records, sha256_file, write_json
+from frame_data_integrity import supercombo_raw_fingerprint
 
 
 DISPLAY_TABLES = {
@@ -292,6 +293,7 @@ def data_rows(table: dict[str, Any]) -> list[list[str]]:
 def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[str, Any]:
     manifest = read_json(root / "manifest.json")
     metadata = read_json(root / "metadata.json")
+    raw_fingerprint = supercombo_raw_fingerprint(root)
     templates = read_json(root / "data.templates.json")
     display_queries = read_json(root / "frame-data.cargo-queries.json")["queries"]
     frame_cargo = cargo_records(read_json(root / "cargo" / "frame-data.json"))
@@ -426,6 +428,7 @@ def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[st
         "capture_label": manifest.get("capture_label"),
         "source_revision": manifest.get("source_revision"),
         "storage_policy": manifest.get("storage_policy", "latest_frame_data_mirror"),
+        "raw_fingerprint": raw_fingerprint,
         "status": "passed" if not failures else "failed",
         "failures": failures,
         "warnings": warnings,

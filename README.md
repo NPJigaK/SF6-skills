@@ -176,39 +176,39 @@ status: raw
 公式フレームデータは記事ではなく、公式リファレンス / dataset-like source として扱います。
 Web Clipper Markdownではなく、再現できるツールでHTML、DOM、スクリーンショットを保存します。
 
-raw snapshot は日付を含むpathに置きます。
+この frame-data capture pipeline は、`raw/` の中でも履歴用 snapshot ではなく
+`storage_policy: latest_frame_data_mirror` の固定 mirror として保存します。
+由来の時点は path ではなく、各 `manifest.json` / `metadata.json` の provenance field と
+Git 履歴で確認します。
 
 ```text
-raw/official/frame-data/YYYY-MM-DD/<character>/<control-scheme>/
+raw/frame-data/official/<character>/<control-scheme>/
   page.html
   table.dom.json
   screenshot.png
   metadata.json
+raw/frame-data/official/<character>/manifest.json
 ```
 
-これは `raw/` を immutable source of truth として扱うためです。公式ページは同じURLでもアップデートで中身が変わるので、
-新しい取得は新しいsnapshotとして残します。
-
-一方で、フレーム変更の Git diff を見やすくするため、派生CSVは安定したpathに出します。
+派生CSVも安定したpathに出します。
 
 ```text
 wiki/outputs/data/frame-data/<character>/<control-scheme>.csv
 wiki/outputs/data/frame-data/<character>/<control-scheme>.field-meanings.json
 ```
 
-つまり、古い公式rawを上書きせず、比較しやすい派生データだけを更新します。
 CSVは技1項目ごとのデータに絞り、publisher、game、locale、source URL、
 character、control scheme、raw pathなどのsource-level metadataは
-`raw/official/.../manifest.json`、各 `metadata.json`、wiki source page に残します。
+`raw/frame-data/official/.../manifest.json`、各 `metadata.json`、wiki source page に残します。
 `*.field-meanings.json` には、表ヘッダの補足説明やtooltip相当の説明を保存します。
 
 ツールは `uv` で実行します。
 
 ```bash
 uv sync
-uv run python tools/capture_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
-uv run python tools/extract_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
-uv run python tools/validate_capcom_frame_data.py --character-slug jp --date-label 2026-05-26
+uv run python tools/capture_capcom_frame_data.py --character-slug jp
+uv run python tools/extract_capcom_frame_data.py --character-slug jp
+uv run python tools/validate_capcom_frame_data.py --character-slug jp
 ```
 
 `validate_capcom_frame_data.py` は全行について `page.html` 内の表、`table.dom.json`、
@@ -216,6 +216,53 @@ uv run python tools/validate_capcom_frame_data.py --character-slug jp --date-lab
 OCRするのではなく、表の横幅と高さを覆っていること、Cookieやnavigation overlayが
 残っていないことを確認します。値の正確性は、画像ではなく raw HTML / DOM / CSV の
 全行照合で確認します。
+
+Capcom 公式 capture は Classic / Modern tab の identity と active state も保存・検証します。
+表 body に category row でも通常データ row でもない未知の cell 数が出た場合は、
+その row を黙って捨てず、capture / extract / validate を失敗させます。
+
+## SuperComboフレームデータの置き方
+
+SuperCombo も fixed latest mirror として保存します。source revision は path ではなく、
+`manifest.json` の `source_revision` と `validation.json` の `raw_fingerprint` で確認します。
+
+```text
+raw/frame-data/supercombo/<character>/
+  data.raw.wikitext
+  frame-data.raw.wikitext
+  data.templates.json
+  frame-data.cargo-queries.json
+  cargo/
+  rendered/
+  screenshots/
+  imageinfo.json
+  image-manifest.json
+  metadata.json
+  manifest.json
+  validation.json
+```
+
+派生データは次に出します。
+
+```text
+wiki/outputs/data/supercombo/frame-data/<character>/
+wiki/outputs/data/enriched/frame-data/<character>/
+```
+
+実行順序は capture、validate、extract、必要に応じて enriched build です。
+
+```bash
+uv run python tools/capture_supercombo_frame_data.py --character JP --character-slug jp
+uv run python tools/validate_supercombo_frame_data.py --character-slug jp
+uv run python tools/extract_supercombo_frame_data.py --character-slug jp
+uv run python tools/build_official_supercombo_enriched_data.py --character-slug jp
+```
+
+`capture_supercombo_frame_data.py` は古い `validation.json` を削除します。
+`validate_supercombo_frame_data.py` は現在の raw metadata と実ファイル artifact hash から `raw_fingerprint` を作り、
+`validation.json` に保存します。`extract_supercombo_frame_data.py` は `status: passed` だけでなく
+`raw_fingerprint` が現在の raw と一致することを要求するため、再取得後に古い validation だけが
+残っている状態では派生データを生成しません。
 
 ## source を置いた後にLLMへ依頼すること
 

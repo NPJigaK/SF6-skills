@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-05T06:56:58Z",
+  "validated_at_utc": "2026-06-06T08:09:02Z",
   "raw_root": "raw\\frame-data\\supercombo\\lily",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -25,6 +25,172 @@
     ]
   },
   "storage_policy": "latest_frame_data_mirror",
+  "raw_fingerprint": {
+    "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
+    "metadata_sha256": "sha256:5399409d27c072b9c4f204af0a63cdfd59db04ed8fa3b5c1cea9ede6496a811e",
+    "capture_label": "2026-06-01",
+    "source_revision": {
+      "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+      "label": "2026-06-01",
+      "latest_revision_timestamp": "2026-06-01T07:35:13Z",
+      "pages": [
+        {
+          "title": "Street Fighter 6/Lily/Data",
+          "pageid": 69268,
+          "lastrevid": 365211,
+          "revision_timestamp": "2026-06-01T07:35:13Z",
+          "touched": "2026-06-01T07:35:13Z"
+        },
+        {
+          "title": "Street Fighter 6/Lily/Frame data",
+          "pageid": 69275,
+          "lastrevid": 310367,
+          "revision_timestamp": "2024-10-19T05:12:29Z",
+          "touched": "2026-06-01T07:35:15Z"
+        }
+      ]
+    },
+    "metadata_artifacts": {
+      "api/page-metadata.json": {
+        "byte_count": 1318,
+        "sha256": "sha256:8d686dc3d08deea9765906e95d874085f6cc5c2a8ca6cc039fcb1c6991d2d894"
+      },
+      "cargo/character-data.json": {
+        "byte_count": 720,
+        "sha256": "sha256:5ba7d643f33265243ad36ae2128c9540dfbb5730d4fd35059c3f1b6057bdad2b"
+      },
+      "cargo/frame-data.json": {
+        "byte_count": 151925,
+        "sha256": "sha256:8031b9a648332dac24a73a804d006f1898774d495b30c0ecf48d44547b2cba37"
+      },
+      "data.raw.wikitext": {
+        "byte_count": 92522,
+        "sha256": "sha256:8bbf6c96d284cb59fb351eac1675a788fbc239d105f39f042387f9aa63327a34"
+      },
+      "data.templates.json": {
+        "byte_count": 102134,
+        "sha256": "sha256:25cb09192a248a5e56ab2d93da0d87632171b1ba2b7c47aaa54d0ffd6a2a1c4f"
+      },
+      "frame-data.cargo-queries.json": {
+        "byte_count": 14069,
+        "sha256": "sha256:e125fd86933c7865c91aef8926528b63a73ae26c2bb0e535017150b506f4c376"
+      },
+      "frame-data.raw.wikitext": {
+        "byte_count": 10949,
+        "sha256": "sha256:3c862880e1841dc5738f3c2f8ad72376aeb848da1d239ff34f824d5f7ac29e71"
+      },
+      "image-manifest.json": {
+        "byte_count": 40522,
+        "sha256": "sha256:dc35246af9af0e31ba4263478bd10ded4477784beaafd61f33c14b9b01073ed2"
+      },
+      "imageinfo.json": {
+        "byte_count": 112135,
+        "sha256": "sha256:7a703cb448fd58e0c7e4b4103554a37c14169c424f9e027b54b469043762ca64"
+      },
+      "rendered/page.html": {
+        "byte_count": 517106,
+        "sha256": "sha256:a1b3042a31ae6667b4389e8996b24fd529b9e6e5e6f641377754eea4fe9bcbda"
+      },
+      "rendered/tables.dom.json": {
+        "byte_count": 796667,
+        "sha256": "sha256:48fbd85c440c038b810d6195173fa8702a4a640d84ea8d9b7789826d488ca739"
+      },
+      "screenshots/details.png": {
+        "byte_count": 1085651,
+        "sha256": "sha256:be491b984a5043a7ffeef1849b71588ec4694f688b27d73e428f5e6d95fad523"
+      },
+      "screenshots/general.png": {
+        "byte_count": 1097571,
+        "sha256": "sha256:dfc58dc5a739001d83073c9921226d5124fbcbb8463483144c891fb54b929fdc"
+      },
+      "screenshots/meter.png": {
+        "byte_count": 1004229,
+        "sha256": "sha256:984f9de8d60eff9b4db0c91c642c047ebfad253bce09fc6300481ddc5fa362e6"
+      },
+      "screenshots/notes.png": {
+        "byte_count": 1946434,
+        "sha256": "sha256:4032eedf6fc9861a7760ab0b41b870fe434939256621fd6293a02104d690cf5e"
+      },
+      "screenshots/properties.png": {
+        "byte_count": 927163,
+        "sha256": "sha256:9845407410102d91f375a6fa7821a16cdd0a984607d345221921a30f75edb6a3"
+      }
+    },
+    "raw_files": {
+      "api/page-metadata.json": {
+        "byte_count": 1318,
+        "sha256": "sha256:8d686dc3d08deea9765906e95d874085f6cc5c2a8ca6cc039fcb1c6991d2d894"
+      },
+      "cargo/character-data.json": {
+        "byte_count": 720,
+        "sha256": "sha256:5ba7d643f33265243ad36ae2128c9540dfbb5730d4fd35059c3f1b6057bdad2b"
+      },
+      "cargo/frame-data.json": {
+        "byte_count": 151925,
+        "sha256": "sha256:8031b9a648332dac24a73a804d006f1898774d495b30c0ecf48d44547b2cba37"
+      },
+      "data.raw.wikitext": {
+        "byte_count": 92522,
+        "sha256": "sha256:8bbf6c96d284cb59fb351eac1675a788fbc239d105f39f042387f9aa63327a34"
+      },
+      "data.templates.json": {
+        "byte_count": 102134,
+        "sha256": "sha256:25cb09192a248a5e56ab2d93da0d87632171b1ba2b7c47aaa54d0ffd6a2a1c4f"
+      },
+      "frame-data.cargo-queries.json": {
+        "byte_count": 14069,
+        "sha256": "sha256:e125fd86933c7865c91aef8926528b63a73ae26c2bb0e535017150b506f4c376"
+      },
+      "frame-data.raw.wikitext": {
+        "byte_count": 10949,
+        "sha256": "sha256:3c862880e1841dc5738f3c2f8ad72376aeb848da1d239ff34f824d5f7ac29e71"
+      },
+      "image-manifest.json": {
+        "byte_count": 40522,
+        "sha256": "sha256:dc35246af9af0e31ba4263478bd10ded4477784beaafd61f33c14b9b01073ed2"
+      },
+      "imageinfo.json": {
+        "byte_count": 112135,
+        "sha256": "sha256:7a703cb448fd58e0c7e4b4103554a37c14169c424f9e027b54b469043762ca64"
+      },
+      "manifest.json": {
+        "byte_count": 1594,
+        "sha256": "sha256:0337632f1634d629f98d1c622275014d6ae0dcb1256605e67f3070f9c09fef94"
+      },
+      "metadata.json": {
+        "byte_count": 4671,
+        "sha256": "sha256:5399409d27c072b9c4f204af0a63cdfd59db04ed8fa3b5c1cea9ede6496a811e"
+      },
+      "rendered/page.html": {
+        "byte_count": 517106,
+        "sha256": "sha256:a1b3042a31ae6667b4389e8996b24fd529b9e6e5e6f641377754eea4fe9bcbda"
+      },
+      "rendered/tables.dom.json": {
+        "byte_count": 796667,
+        "sha256": "sha256:48fbd85c440c038b810d6195173fa8702a4a640d84ea8d9b7789826d488ca739"
+      },
+      "screenshots/details.png": {
+        "byte_count": 1085651,
+        "sha256": "sha256:be491b984a5043a7ffeef1849b71588ec4694f688b27d73e428f5e6d95fad523"
+      },
+      "screenshots/general.png": {
+        "byte_count": 1097571,
+        "sha256": "sha256:dfc58dc5a739001d83073c9921226d5124fbcbb8463483144c891fb54b929fdc"
+      },
+      "screenshots/meter.png": {
+        "byte_count": 1004229,
+        "sha256": "sha256:984f9de8d60eff9b4db0c91c642c047ebfad253bce09fc6300481ddc5fa362e6"
+      },
+      "screenshots/notes.png": {
+        "byte_count": 1946434,
+        "sha256": "sha256:4032eedf6fc9861a7760ab0b41b870fe434939256621fd6293a02104d690cf5e"
+      },
+      "screenshots/properties.png": {
+        "byte_count": 927163,
+        "sha256": "sha256:9845407410102d91f375a6fa7821a16cdd0a984607d345221921a30f75edb6a3"
+      }
+    }
+  },
   "status": "passed",
   "failures": [],
   "warnings": [

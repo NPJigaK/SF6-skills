@@ -19,6 +19,11 @@ MODE_TABS = {
     "modern": 1,
 }
 
+MODE_IMAGE_TOKENS = {
+    "classic": "logo-classic",
+    "modern": "logo-modern",
+}
+
 COLUMN_KEYS = [
     "move",
     "startup",
@@ -227,6 +232,62 @@ def visible_overlay_counts(page: Any) -> dict[str, int]:
     )
 
 
+def tab_state_payload(page: Any, *, requested_mode: str, selected_tab_index: int) -> dict[str, Any]:
+    return page.evaluate(
+        """
+        (args) => {
+          const tabs = Array.from(document.querySelectorAll('ul[class*="frame_movelist_tabs"] li'));
+          return {
+            requested_mode: args.requestedMode,
+            selected_tab_index: args.selectedTabIndex,
+            tabs: tabs.map((tab, tabIndex) => {
+              const className = tab.className || '';
+              return {
+                tab_index: tabIndex,
+                text: (tab.innerText || tab.textContent || '').replace(/\\s+/g, ' ').trim(),
+                class_name: className,
+                image_sources: Array.from(tab.querySelectorAll('img')).map((img) => img.getAttribute('src') || img.src || ''),
+                image_alts: Array.from(tab.querySelectorAll('img')).map((img) => img.getAttribute('alt') || ''),
+                is_active: className.includes('active')
+                  || tab.getAttribute('aria-selected') === 'true'
+                  || tab.getAttribute('aria-current') === 'true'
+              };
+            })
+          };
+        }
+        """,
+        {"requestedMode": requested_mode, "selectedTabIndex": selected_tab_index},
+    )
+
+
+def tab_matches_mode(tab: dict[str, Any], mode: str) -> bool:
+    token = MODE_IMAGE_TOKENS[mode]
+    haystack = " ".join(
+        [
+            str(tab.get("text", "")),
+            str(tab.get("class_name", "")),
+            *[str(src) for src in tab.get("image_sources", [])],
+            *[str(alt) for alt in tab.get("image_alts", [])],
+        ]
+    ).lower()
+    return token in haystack
+
+
+def validate_mode_tab_state(mode: str, tab_state: dict[str, Any]) -> None:
+    tab_index = MODE_TABS[mode]
+    tabs = list(tab_state.get("tabs", []))
+    selected = next((tab for tab in tabs if tab.get("tab_index") == tab_index), None)
+    if selected is None:
+        raise ValueError(f"expected {mode} tab at index {tab_index}, but tab was missing")
+    if not tab_matches_mode(selected, mode):
+        raise ValueError(f"expected {mode} tab at index {tab_index}, got {selected!r}")
+    active_tabs = [tab for tab in tabs if tab.get("is_active")]
+    if active_tabs:
+        active = active_tabs[0]
+        if active.get("tab_index") != tab_index or not tab_matches_mode(active, mode):
+            raise ValueError(f"expected {mode} tab to be active, got {active!r}")
+
+
 def table_dom_payload(page: Any, *, source_url: str, character_slug: str, mode: str) -> dict[str, Any]:
     payload = page.evaluate(
         """
@@ -339,6 +400,7 @@ def table_dom_payload(page: Any, *, source_url: str, character_slug: str, mode: 
         """
     )
     rows = payload["rows"]
+    unexpected_rows = unexpected_body_rows(rows)
     return {
         "artifact_schema_version": "capcom_frame_table_dom/v1",
         "captured_at_utc": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
@@ -356,6 +418,8 @@ def table_dom_payload(page: Any, *, source_url: str, character_slug: str, mode: 
         "rows": rows,
         "data_row_count": sum(1 for row in rows if len(row["cells"]) == len(COLUMN_KEYS)),
         "category_row_count": sum(1 for row in rows if len(row["cells"]) == 1),
+        "unexpected_row_count": len(unexpected_rows),
+        "unexpected_rows": unexpected_rows,
     }
 
 
@@ -380,18 +444,40 @@ def move_name_from_cell(move_cell: dict[str, Any]) -> str:
     return str(move_cell.get("text", "")).strip()
 
 
+def unexpected_body_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    unexpected = []
+    for row in rows:
+        cells = row.get("cells", [])
+        if len(cells) in {1, len(COLUMN_KEYS)}:
+            continue
+        unexpected.append(
+            {
+                "row_index": row.get("row_index"),
+                "cell_count": len(cells),
+                "class_name": row.get("class_name", ""),
+                "cell_texts": [str(cell.get("text", "")) for cell in cells],
+            }
+        )
+    return unexpected
+
+
 def csv_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, str]]:
     records = []
     category = ""
     category_order = 0
     row_order = 0
+    unexpected_rows = unexpected_body_rows(table_dom["rows"])
+    if unexpected_rows:
+        details = ", ".join(
+            f"row_index={row.get('row_index')} cell_count={row.get('cell_count')}"
+            for row in unexpected_rows[:5]
+        )
+        raise ValueError(f"unexpected Capcom frame-data row shape: {details}")
     for row in table_dom["rows"]:
         cells = row["cells"]
         if len(cells) == 1:
             category = cells[0]["text"]
             category_order += 1
-            continue
-        if len(cells) != len(COLUMN_KEYS):
             continue
         row_order += 1
         mapped = dict(zip(COLUMN_KEYS, cells, strict=True))
@@ -495,6 +581,8 @@ def capture_mode(
     page.wait_for_timeout(1000)
     page.wait_for_selector("table", timeout=120_000)
     remove_obstructions(page)
+    tab_state = tab_state_payload(page, requested_mode=mode, selected_tab_index=tab_index)
+    validate_mode_tab_state(mode, tab_state)
     horizontal_metrics = ensure_full_table_width(page, viewport_width, viewport_height)
 
     raw_dir = output_root / "raw" / "frame-data" / "official" / character_slug / mode
@@ -530,6 +618,7 @@ def capture_mode(
             "cookiebot_removed_from_capture_dom": True,
             "site_header_navigation_removed_from_capture_dom": True,
             "viewport_expanded_to_table_width": True,
+            "tab_state": tab_state,
         },
         "overlay_visible_counts_after_cleanup": overlay_counts,
         "horizontal_metrics": horizontal_metrics,
@@ -545,6 +634,7 @@ def capture_mode(
                 "byte_count": table_dom_path.stat().st_size,
                 "data_row_count": table_dom["data_row_count"],
                 "category_row_count": table_dom["category_row_count"],
+                "unexpected_row_count": table_dom["unexpected_row_count"],
             },
             "screenshot_png": {
                 "path": "screenshot.png",

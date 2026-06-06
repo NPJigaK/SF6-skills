@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-02T05:14:53Z",
+  "validated_at_utc": "2026-06-06T08:09:00Z",
   "raw_root": "raw\\frame-data\\supercombo\\ingrid",
   "capture_label": "2026-06-02",
   "source_revision": {
@@ -25,6 +25,188 @@
     ]
   },
   "storage_policy": "latest_frame_data_mirror",
+  "raw_fingerprint": {
+    "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
+    "metadata_sha256": "sha256:9ef1fec6651b3a47d6f624bb8944da18191657efa387d9ded6afbbb43601d97b",
+    "capture_label": "2026-06-02",
+    "source_revision": {
+      "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
+      "label": "2026-06-02",
+      "latest_revision_timestamp": "2026-06-02T01:44:56Z",
+      "pages": [
+        {
+          "title": "Street Fighter 6/Ingrid/Data",
+          "pageid": 97720,
+          "lastrevid": 365281,
+          "revision_timestamp": "2026-06-02T01:44:56Z",
+          "touched": "2026-06-02T01:44:56Z"
+        },
+        {
+          "title": "Street Fighter 6/Ingrid/Frame data",
+          "pageid": 97724,
+          "lastrevid": 362024,
+          "revision_timestamp": "2026-04-22T23:42:21Z",
+          "touched": "2026-06-02T01:44:59Z"
+        }
+      ]
+    },
+    "metadata_artifacts": {
+      "api/page-metadata.json": {
+        "byte_count": 1838,
+        "sha256": "sha256:f85bdab75e953de5a4f8b1a1bf7b0da3bfb57d6bb0a04f00b89d68c54438a2ec"
+      },
+      "cargo/character-data.json": {
+        "byte_count": 726,
+        "sha256": "sha256:541badc7a9f93e701ae1fcc0a5616e5002d35e0c3eae5e3b5f0766987dc204f2"
+      },
+      "cargo/frame-data.json": {
+        "byte_count": 163139,
+        "sha256": "sha256:f8caf463bf68438eed8be042dfb4e53f6d1d6d516fc4226345f9656b52c7f7d9"
+      },
+      "data.raw.wikitext": {
+        "byte_count": 98380,
+        "sha256": "sha256:e643963c77946a1519eff421a571adbd9709cc96bbc6809c3f551f30329642c1"
+      },
+      "data.templates.json": {
+        "byte_count": 109623,
+        "sha256": "sha256:8eeec3cb3d4880776083919fbb5c57d969ff47666ce7cc914dd0df282c153778"
+      },
+      "frame-data.cargo-queries.json": {
+        "byte_count": 14113,
+        "sha256": "sha256:61904c7bd9d465f01968f8dc8e39991bdbbb5711b11ab4470eb8991ff865dea8"
+      },
+      "frame-data.raw.wikitext": {
+        "byte_count": 10999,
+        "sha256": "sha256:3cad7dcf9234096d7622a07699eb37b45a92d773b8ca39f9229fd4182e96506b"
+      },
+      "image-manifest.json": {
+        "byte_count": 43447,
+        "sha256": "sha256:e9abecdc8711b663aa33309f29a6c2cc1751f2237ded31daa9deaf8599b5153f"
+      },
+      "imageinfo.json": {
+        "byte_count": 34647,
+        "sha256": "sha256:da8c441107b19a20ff456d6de6aa08af5bd30a3fd9189be68fc19c6809867d45"
+      },
+      "images/files/SF6_Ingrid_Face.png": {
+        "byte_count": 123012,
+        "sha256": "sha256:59d195bbbc4be0d17def51ec30171d083d3ac6085d6f79758f944aa1d0303baa"
+      },
+      "images/files/SF6_Ingrid_Portrait.png": {
+        "byte_count": 539097,
+        "sha256": "sha256:d9639d5472acd46e3518381aabdc9f96b47e22c53f96cf2d31706cb5300ab3bd"
+      },
+      "rendered/page.html": {
+        "byte_count": 525120,
+        "sha256": "sha256:3ba2860d2784b799308cd053a1455bfa1cd33d2ca2a7d692e8efd0c6305f403a"
+      },
+      "rendered/tables.dom.json": {
+        "byte_count": 861730,
+        "sha256": "sha256:df74b8c75db407873d5762e3eb89d9ac0d2db2e605848ca906e92d4abb65680b"
+      },
+      "screenshots/details.png": {
+        "byte_count": 1078436,
+        "sha256": "sha256:cc37c6bb24dfa766b9cc6e6b865fbf4f2a506f99a3ff134965c7f8facd366120"
+      },
+      "screenshots/general.png": {
+        "byte_count": 1113649,
+        "sha256": "sha256:b1e34e1414c32602e166ebeb372b834eeee6b44f5041fd7e4977487b85a74ed3"
+      },
+      "screenshots/meter.png": {
+        "byte_count": 875116,
+        "sha256": "sha256:a7ff97a7fc2898aaac331f3a99780920f892764e7982440d473ed64c2e83c500"
+      },
+      "screenshots/notes.png": {
+        "byte_count": 2008862,
+        "sha256": "sha256:162d4bce4ed1306246d930c73bd1af9365305084b827200272324b13dae0ba0e"
+      },
+      "screenshots/properties.png": {
+        "byte_count": 885467,
+        "sha256": "sha256:efc8205efc20aea8e99d904048dd9a3df54996ede3877b9960e188edbad98233"
+      }
+    },
+    "raw_files": {
+      "api/page-metadata.json": {
+        "byte_count": 1838,
+        "sha256": "sha256:f85bdab75e953de5a4f8b1a1bf7b0da3bfb57d6bb0a04f00b89d68c54438a2ec"
+      },
+      "cargo/character-data.json": {
+        "byte_count": 726,
+        "sha256": "sha256:541badc7a9f93e701ae1fcc0a5616e5002d35e0c3eae5e3b5f0766987dc204f2"
+      },
+      "cargo/frame-data.json": {
+        "byte_count": 163139,
+        "sha256": "sha256:f8caf463bf68438eed8be042dfb4e53f6d1d6d516fc4226345f9656b52c7f7d9"
+      },
+      "data.raw.wikitext": {
+        "byte_count": 98380,
+        "sha256": "sha256:e643963c77946a1519eff421a571adbd9709cc96bbc6809c3f551f30329642c1"
+      },
+      "data.templates.json": {
+        "byte_count": 109623,
+        "sha256": "sha256:8eeec3cb3d4880776083919fbb5c57d969ff47666ce7cc914dd0df282c153778"
+      },
+      "frame-data.cargo-queries.json": {
+        "byte_count": 14113,
+        "sha256": "sha256:61904c7bd9d465f01968f8dc8e39991bdbbb5711b11ab4470eb8991ff865dea8"
+      },
+      "frame-data.raw.wikitext": {
+        "byte_count": 10999,
+        "sha256": "sha256:3cad7dcf9234096d7622a07699eb37b45a92d773b8ca39f9229fd4182e96506b"
+      },
+      "image-manifest.json": {
+        "byte_count": 43447,
+        "sha256": "sha256:e9abecdc8711b663aa33309f29a6c2cc1751f2237ded31daa9deaf8599b5153f"
+      },
+      "imageinfo.json": {
+        "byte_count": 34647,
+        "sha256": "sha256:da8c441107b19a20ff456d6de6aa08af5bd30a3fd9189be68fc19c6809867d45"
+      },
+      "images/files/SF6_Ingrid_Face.png": {
+        "byte_count": 123012,
+        "sha256": "sha256:59d195bbbc4be0d17def51ec30171d083d3ac6085d6f79758f944aa1d0303baa"
+      },
+      "images/files/SF6_Ingrid_Portrait.png": {
+        "byte_count": 539097,
+        "sha256": "sha256:d9639d5472acd46e3518381aabdc9f96b47e22c53f96cf2d31706cb5300ab3bd"
+      },
+      "manifest.json": {
+        "byte_count": 1664,
+        "sha256": "sha256:799b3cd9cdf5a6c29646e3f0d97dc8a4f7d30e9611c7a5d473e61671da49efe0"
+      },
+      "metadata.json": {
+        "byte_count": 5001,
+        "sha256": "sha256:9ef1fec6651b3a47d6f624bb8944da18191657efa387d9ded6afbbb43601d97b"
+      },
+      "rendered/page.html": {
+        "byte_count": 525120,
+        "sha256": "sha256:3ba2860d2784b799308cd053a1455bfa1cd33d2ca2a7d692e8efd0c6305f403a"
+      },
+      "rendered/tables.dom.json": {
+        "byte_count": 861730,
+        "sha256": "sha256:df74b8c75db407873d5762e3eb89d9ac0d2db2e605848ca906e92d4abb65680b"
+      },
+      "screenshots/details.png": {
+        "byte_count": 1078436,
+        "sha256": "sha256:cc37c6bb24dfa766b9cc6e6b865fbf4f2a506f99a3ff134965c7f8facd366120"
+      },
+      "screenshots/general.png": {
+        "byte_count": 1113649,
+        "sha256": "sha256:b1e34e1414c32602e166ebeb372b834eeee6b44f5041fd7e4977487b85a74ed3"
+      },
+      "screenshots/meter.png": {
+        "byte_count": 875116,
+        "sha256": "sha256:a7ff97a7fc2898aaac331f3a99780920f892764e7982440d473ed64c2e83c500"
+      },
+      "screenshots/notes.png": {
+        "byte_count": 2008862,
+        "sha256": "sha256:162d4bce4ed1306246d930c73bd1af9365305084b827200272324b13dae0ba0e"
+      },
+      "screenshots/properties.png": {
+        "byte_count": 885467,
+        "sha256": "sha256:efc8205efc20aea8e99d904048dd9a3df54996ede3877b9960e188edbad98233"
+      }
+    }
+  },
   "status": "passed",
   "failures": [],
   "warnings": [
@@ -69,6 +251,8 @@
       "tab": "General",
       "expected_rows": 26,
       "actual_rows": 26,
+      "compared_rows": 26,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -80,6 +264,8 @@
       "tab": "General",
       "expected_rows": 8,
       "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -91,6 +277,8 @@
       "tab": "General",
       "expected_rows": 36,
       "actual_rows": 36,
+      "compared_rows": 36,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -102,6 +290,8 @@
       "tab": "General",
       "expected_rows": 9,
       "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -113,6 +303,8 @@
       "tab": "Details",
       "expected_rows": 26,
       "actual_rows": 26,
+      "compared_rows": 26,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -124,6 +316,8 @@
       "tab": "Details",
       "expected_rows": 8,
       "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -135,6 +329,8 @@
       "tab": "Details",
       "expected_rows": 36,
       "actual_rows": 36,
+      "compared_rows": 36,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -146,6 +342,8 @@
       "tab": "Details",
       "expected_rows": 9,
       "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -157,6 +355,8 @@
       "tab": "Meter",
       "expected_rows": 26,
       "actual_rows": 26,
+      "compared_rows": 26,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -168,6 +368,8 @@
       "tab": "Meter",
       "expected_rows": 8,
       "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -179,6 +381,8 @@
       "tab": "Meter",
       "expected_rows": 36,
       "actual_rows": 36,
+      "compared_rows": 36,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -190,6 +394,8 @@
       "tab": "Meter",
       "expected_rows": 9,
       "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -201,6 +407,8 @@
       "tab": "Properties",
       "expected_rows": 26,
       "actual_rows": 26,
+      "compared_rows": 26,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -212,6 +420,8 @@
       "tab": "Properties",
       "expected_rows": 8,
       "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -223,6 +433,8 @@
       "tab": "Properties",
       "expected_rows": 36,
       "actual_rows": 36,
+      "compared_rows": 36,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -234,6 +446,8 @@
       "tab": "Properties",
       "expected_rows": 9,
       "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -245,6 +459,8 @@
       "tab": "Notes",
       "expected_rows": 26,
       "actual_rows": 26,
+      "compared_rows": 26,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -256,6 +472,8 @@
       "tab": "Notes",
       "expected_rows": 8,
       "actual_rows": 8,
+      "compared_rows": 8,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -267,6 +485,8 @@
       "tab": "Notes",
       "expected_rows": 36,
       "actual_rows": 36,
+      "compared_rows": 36,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
@@ -278,6 +498,8 @@
       "tab": "Notes",
       "expected_rows": 9,
       "actual_rows": 9,
+      "compared_rows": 9,
+      "pagination_limited": false,
       "header_match": true,
       "row_count_match": true,
       "input_order_match": true,
