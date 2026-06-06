@@ -1,0 +1,520 @@
+{
+  "manifest_schema_version": "capcom_battle_change_raw_capture_manifest/v1",
+  "created_at_utc": "2026-06-06T15:22:50Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_battle_change",
+  "source_url": "https://www.streetfighter.com/6/buckler/ja-jp/battle_change",
+  "data_url": "https://www.streetfighter.com/6/buckler/_next/data/JRgr9jaW-XektPBHKodsS/ja-jp/battle_change.json",
+  "build_id": "JRgr9jaW-XektPBHKodsS",
+  "current_version": "20260528",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "storage_policy": "latest_battle_change_mirror",
+  "capture_label": "2026-06-06",
+  "version_count": 20,
+  "versions": [
+    {
+      "id": "20260528",
+      "title": "2026.05.28 update"
+    },
+    {
+      "id": "20260415",
+      "title": "2026.04.15 update"
+    },
+    {
+      "id": "20260317",
+      "title": "2026.03.17 update"
+    },
+    {
+      "id": "20251216",
+      "title": "2025.12.16 update"
+    },
+    {
+      "id": "20251113",
+      "title": "2025.11.13 update"
+    },
+    {
+      "id": "20251022",
+      "title": "2025.10.22 update"
+    },
+    {
+      "id": "20251015",
+      "title": "2025.10.15 update"
+    },
+    {
+      "id": "20250901",
+      "title": "2025.09.01 update"
+    },
+    {
+      "id": "20250805",
+      "title": "2025.08.05 update"
+    },
+    {
+      "id": "202506",
+      "title": "202506 Ver."
+    },
+    {
+      "id": "20250205",
+      "title": "2025.02.05 update"
+    },
+    {
+      "id": "20241202",
+      "title": "2024.12.02 update"
+    },
+    {
+      "id": "20240924",
+      "title": "2024.09.24 update"
+    },
+    {
+      "id": "20240626",
+      "title": "2024.06.26 update"
+    },
+    {
+      "id": "202405",
+      "title": "202405 Ver."
+    },
+    {
+      "id": "20240227",
+      "title": "2024.02.27 update"
+    },
+    {
+      "id": "20231201",
+      "title": "2023.12.01 update"
+    },
+    {
+      "id": "20230927",
+      "title": "2023.09.27 update"
+    },
+    {
+      "id": "20230808",
+      "title": "2023.08.08 update"
+    },
+    {
+      "id": "20230724",
+      "title": "2023.07.24 update"
+    }
+  ],
+  "discovery": {
+    "raw_dir": "raw/battle-change/official/discovery",
+    "page_html": "raw/battle-change/official/discovery/page.html",
+    "data_json": "raw/battle-change/official/discovery/data.json",
+    "metadata_json": "raw/battle-change/official/discovery/metadata.json",
+    "summary": {
+      "version_id": "20260528",
+      "title": "2026.05.28 update",
+      "policy_count": 1,
+      "common_section_count": 5,
+      "common_change_count": 5,
+      "fighter_count": 14,
+      "fighter_detail_count": 18,
+      "fighter_change_count": 18,
+      "version_count": 20,
+      "fighter_list_count": 30
+    }
+  },
+  "captures": [
+    {
+      "version_id": "20260528",
+      "title": "2026.05.28 update",
+      "raw_dir": "raw/battle-change/official/versions/20260528",
+      "page_html": "raw/battle-change/official/versions/20260528/page.html",
+      "data_json": "raw/battle-change/official/versions/20260528/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20260528/metadata.json",
+      "summary": {
+        "version_id": "20260528",
+        "title": "2026.05.28 update",
+        "policy_count": 1,
+        "common_section_count": 5,
+        "common_change_count": 5,
+        "fighter_count": 14,
+        "fighter_detail_count": 18,
+        "fighter_change_count": 18,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20260415",
+      "title": "2026.04.15 update",
+      "raw_dir": "raw/battle-change/official/versions/20260415",
+      "page_html": "raw/battle-change/official/versions/20260415/page.html",
+      "data_json": "raw/battle-change/official/versions/20260415/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20260415/metadata.json",
+      "summary": {
+        "version_id": "20260415",
+        "title": "2026.04.15 update",
+        "policy_count": 0,
+        "common_section_count": 3,
+        "common_change_count": 3,
+        "fighter_count": 2,
+        "fighter_detail_count": 3,
+        "fighter_change_count": 3,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20260317",
+      "title": "2026.03.17 update",
+      "raw_dir": "raw/battle-change/official/versions/20260317",
+      "page_html": "raw/battle-change/official/versions/20260317/page.html",
+      "data_json": "raw/battle-change/official/versions/20260317/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20260317/metadata.json",
+      "summary": {
+        "version_id": "20260317",
+        "title": "2026.03.17 update",
+        "policy_count": 29,
+        "common_section_count": 4,
+        "common_change_count": 4,
+        "fighter_count": 28,
+        "fighter_detail_count": 149,
+        "fighter_change_count": 149,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20251216",
+      "title": "2025.12.16 update",
+      "raw_dir": "raw/battle-change/official/versions/20251216",
+      "page_html": "raw/battle-change/official/versions/20251216/page.html",
+      "data_json": "raw/battle-change/official/versions/20251216/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20251216/metadata.json",
+      "summary": {
+        "version_id": "20251216",
+        "title": "2025.12.16 update",
+        "policy_count": 4,
+        "common_section_count": 4,
+        "common_change_count": 4,
+        "fighter_count": 9,
+        "fighter_detail_count": 33,
+        "fighter_change_count": 33,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20251113",
+      "title": "2025.11.13 update",
+      "raw_dir": "raw/battle-change/official/versions/20251113",
+      "page_html": "raw/battle-change/official/versions/20251113/page.html",
+      "data_json": "raw/battle-change/official/versions/20251113/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20251113/metadata.json",
+      "summary": {
+        "version_id": "20251113",
+        "title": "2025.11.13 update",
+        "policy_count": 0,
+        "common_section_count": 2,
+        "common_change_count": 2,
+        "fighter_count": 1,
+        "fighter_detail_count": 2,
+        "fighter_change_count": 2,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20251022",
+      "title": "2025.10.22 update",
+      "raw_dir": "raw/battle-change/official/versions/20251022",
+      "page_html": "raw/battle-change/official/versions/20251022/page.html",
+      "data_json": "raw/battle-change/official/versions/20251022/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20251022/metadata.json",
+      "summary": {
+        "version_id": "20251022",
+        "title": "2025.10.22 update",
+        "policy_count": 0,
+        "common_section_count": 1,
+        "common_change_count": 1,
+        "fighter_count": 4,
+        "fighter_detail_count": 4,
+        "fighter_change_count": 4,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20251015",
+      "title": "2025.10.15 update",
+      "raw_dir": "raw/battle-change/official/versions/20251015",
+      "page_html": "raw/battle-change/official/versions/20251015/page.html",
+      "data_json": "raw/battle-change/official/versions/20251015/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20251015/metadata.json",
+      "summary": {
+        "version_id": "20251015",
+        "title": "2025.10.15 update",
+        "policy_count": 0,
+        "common_section_count": 4,
+        "common_change_count": 4,
+        "fighter_count": 13,
+        "fighter_detail_count": 18,
+        "fighter_change_count": 18,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20250901",
+      "title": "2025.09.01 update",
+      "raw_dir": "raw/battle-change/official/versions/20250901",
+      "page_html": "raw/battle-change/official/versions/20250901/page.html",
+      "data_json": "raw/battle-change/official/versions/20250901/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20250901/metadata.json",
+      "summary": {
+        "version_id": "20250901",
+        "title": "2025.09.01 update",
+        "policy_count": 0,
+        "common_section_count": 0,
+        "common_change_count": 0,
+        "fighter_count": 3,
+        "fighter_detail_count": 5,
+        "fighter_change_count": 5,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20250805",
+      "title": "2025.08.05 update",
+      "raw_dir": "raw/battle-change/official/versions/20250805",
+      "page_html": "raw/battle-change/official/versions/20250805/page.html",
+      "data_json": "raw/battle-change/official/versions/20250805/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20250805/metadata.json",
+      "summary": {
+        "version_id": "20250805",
+        "title": "2025.08.05 update",
+        "policy_count": 0,
+        "common_section_count": 0,
+        "common_change_count": 0,
+        "fighter_count": 17,
+        "fighter_detail_count": 24,
+        "fighter_change_count": 24,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "202506",
+      "title": "202506 Ver.",
+      "raw_dir": "raw/battle-change/official/versions/202506",
+      "page_html": "raw/battle-change/official/versions/202506/page.html",
+      "data_json": "raw/battle-change/official/versions/202506/data.json",
+      "metadata_json": "raw/battle-change/official/versions/202506/metadata.json",
+      "summary": {
+        "version_id": "202506",
+        "title": "202506 Ver.",
+        "policy_count": 26,
+        "common_section_count": 13,
+        "common_change_count": 15,
+        "fighter_count": 25,
+        "fighter_detail_count": 339,
+        "fighter_change_count": 339,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20250205",
+      "title": "2025.02.05 update",
+      "raw_dir": "raw/battle-change/official/versions/20250205",
+      "page_html": "raw/battle-change/official/versions/20250205/page.html",
+      "data_json": "raw/battle-change/official/versions/20250205/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20250205/metadata.json",
+      "summary": {
+        "version_id": "20250205",
+        "title": "2025.02.05 update",
+        "policy_count": 0,
+        "common_section_count": 4,
+        "common_change_count": 4,
+        "fighter_count": 12,
+        "fighter_detail_count": 13,
+        "fighter_change_count": 13,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20241202",
+      "title": "2024.12.02 update",
+      "raw_dir": "raw/battle-change/official/versions/20241202",
+      "page_html": "raw/battle-change/official/versions/20241202/page.html",
+      "data_json": "raw/battle-change/official/versions/20241202/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20241202/metadata.json",
+      "summary": {
+        "version_id": "20241202",
+        "title": "2024.12.02 update",
+        "policy_count": 25,
+        "common_section_count": 5,
+        "common_change_count": 5,
+        "fighter_count": 24,
+        "fighter_detail_count": 166,
+        "fighter_change_count": 167,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20240924",
+      "title": "2024.09.24 update",
+      "raw_dir": "raw/battle-change/official/versions/20240924",
+      "page_html": "raw/battle-change/official/versions/20240924/page.html",
+      "data_json": "raw/battle-change/official/versions/20240924/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20240924/metadata.json",
+      "summary": {
+        "version_id": "20240924",
+        "title": "2024.09.24 update",
+        "policy_count": 12,
+        "common_section_count": 6,
+        "common_change_count": 6,
+        "fighter_count": 20,
+        "fighter_detail_count": 63,
+        "fighter_change_count": 63,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20240626",
+      "title": "2024.06.26 update",
+      "raw_dir": "raw/battle-change/official/versions/20240626",
+      "page_html": "raw/battle-change/official/versions/20240626/page.html",
+      "data_json": "raw/battle-change/official/versions/20240626/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20240626/metadata.json",
+      "summary": {
+        "version_id": "20240626",
+        "title": "2024.06.26 update",
+        "policy_count": 0,
+        "common_section_count": 5,
+        "common_change_count": 5,
+        "fighter_count": 15,
+        "fighter_detail_count": 28,
+        "fighter_change_count": 28,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "202405",
+      "title": "202405 Ver.",
+      "raw_dir": "raw/battle-change/official/versions/202405",
+      "page_html": "raw/battle-change/official/versions/202405/page.html",
+      "data_json": "raw/battle-change/official/versions/202405/data.json",
+      "metadata_json": "raw/battle-change/official/versions/202405/metadata.json",
+      "summary": {
+        "version_id": "202405",
+        "title": "202405 Ver.",
+        "policy_count": 22,
+        "common_section_count": 13,
+        "common_change_count": 14,
+        "fighter_count": 21,
+        "fighter_detail_count": 464,
+        "fighter_change_count": 481,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20240227",
+      "title": "2024.02.27 update",
+      "raw_dir": "raw/battle-change/official/versions/20240227",
+      "page_html": "raw/battle-change/official/versions/20240227/page.html",
+      "data_json": "raw/battle-change/official/versions/20240227/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20240227/metadata.json",
+      "summary": {
+        "version_id": "20240227",
+        "title": "2024.02.27 update",
+        "policy_count": 4,
+        "common_section_count": 6,
+        "common_change_count": 6,
+        "fighter_count": 13,
+        "fighter_detail_count": 43,
+        "fighter_change_count": 43,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20231201",
+      "title": "2023.12.1 update",
+      "raw_dir": "raw/battle-change/official/versions/20231201",
+      "page_html": "raw/battle-change/official/versions/20231201/page.html",
+      "data_json": "raw/battle-change/official/versions/20231201/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20231201/metadata.json",
+      "summary": {
+        "version_id": "20231201",
+        "title": "2023.12.1 update",
+        "policy_count": 0,
+        "common_section_count": 4,
+        "common_change_count": 4,
+        "fighter_count": 13,
+        "fighter_detail_count": 35,
+        "fighter_change_count": 35,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20230927",
+      "title": "2023.09.27 update",
+      "raw_dir": "raw/battle-change/official/versions/20230927",
+      "page_html": "raw/battle-change/official/versions/20230927/page.html",
+      "data_json": "raw/battle-change/official/versions/20230927/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20230927/metadata.json",
+      "summary": {
+        "version_id": "20230927",
+        "title": "2023.09.27 update",
+        "policy_count": 0,
+        "common_section_count": 11,
+        "common_change_count": 11,
+        "fighter_count": 19,
+        "fighter_detail_count": 132,
+        "fighter_change_count": 132,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20230808",
+      "title": "2023.08.08 update",
+      "raw_dir": "raw/battle-change/official/versions/20230808",
+      "page_html": "raw/battle-change/official/versions/20230808/page.html",
+      "data_json": "raw/battle-change/official/versions/20230808/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20230808/metadata.json",
+      "summary": {
+        "version_id": "20230808",
+        "title": "2023.08.08 update",
+        "policy_count": 0,
+        "common_section_count": 1,
+        "common_change_count": 1,
+        "fighter_count": 3,
+        "fighter_detail_count": 5,
+        "fighter_change_count": 5,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    },
+    {
+      "version_id": "20230724",
+      "title": "2023.07.24 update",
+      "raw_dir": "raw/battle-change/official/versions/20230724",
+      "page_html": "raw/battle-change/official/versions/20230724/page.html",
+      "data_json": "raw/battle-change/official/versions/20230724/data.json",
+      "metadata_json": "raw/battle-change/official/versions/20230724/metadata.json",
+      "summary": {
+        "version_id": "20230724",
+        "title": "2023.07.24 update",
+        "policy_count": 0,
+        "common_section_count": 6,
+        "common_change_count": 6,
+        "fighter_count": 15,
+        "fighter_detail_count": 35,
+        "fighter_change_count": 35,
+        "version_count": 20,
+        "fighter_list_count": 30
+      }
+    }
+  ],
+  "tool": "tools/capture_capcom_battle_change.py"
+}

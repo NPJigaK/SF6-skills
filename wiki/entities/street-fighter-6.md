@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-06
+updated: 2026-06-07
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -41,6 +41,7 @@ sources:
   - "[[sources/capcom-official-c-viper-frame-data]]"
   - "[[sources/capcom-official-alex-frame-data]]"
   - "[[sources/capcom-official-ingrid-frame-data]]"
+  - "[[sources/capcom-official-battle-change-list]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/frame-data]]"
@@ -88,7 +89,7 @@ tags:
 
 ## 要約
 
-Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data source、SuperCombo community frame-data 取得データの game context。現在、community glossary concepts、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、SuperCombo raw 取得データ 30 キャラ分がある。公式 Classic + SuperCombo 補助データも 30 キャラ分作成済み。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
+Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data source、公式 Battle Change List、SuperCombo community frame-data 取得データの game context。現在、community glossary concepts、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、Capcom 公式 Battle Change List 20 version 分、SuperCombo raw 取得データ 30 キャラ分がある。公式 Classic + SuperCombo 補助データも 30 キャラ分作成済み。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
 
 ## 年表
 
@@ -131,11 +132,13 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 | 2026-06-02 | SuperCombo Wiki の Ingrid frame-data page を raw wikitext、Cargo API、DOM、5タブのスクリーンショット、画像参照情報として保存した。 | [[sources/supercombo-ingrid-frame-data]] |
 | 2026-06-02 | Ingrid の公式 Classic + SuperCombo 補助データを作成し、レビュー対象 26 行を accepted にした。 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
 | 2026-06-05 | SuperCombo Wiki の frame-data 30 キャラ分の raw capture、validation、公式 Classic crosswalk、補助列付き output をそろえた。 | [[sources/supercombo-street-fighter-6-frame-data-batch]], [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] |
+| 2026-06-07 | Capcom 公式 Battle Change List を 20 update version 分 raw capture し、1820 行の派生 change output を作成した。 | [[sources/capcom-official-battle-change-list]], [[reviews/2026-06-07-official-battle-change-capture-review]] |
 
 ## 関連する主張
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
 - Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 CSV として保持している。
+- Capcom 公式 Battle Change List capture は 2023-07-24 update から 2026-05-28 update までの 20 version を raw HTML / Next.js data JSON として保持し、policy / common / fighter change rows に派生抽出している。
 - SuperCombo 30キャラ分の frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image refs などを後で統合する候補 data を含む。公式 Classic rows を正とする補助列付き output は 30 キャラ分ある。ただし複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き field を持つ行には人間レビュー待ちの補助行が残り、`enrichment_review_queues` で理由を分離している。
 - frame-data raw の取得日 / source revision は path ではなく manifest の `capture_label` / `source_revision` で確認する。
 - 30 character data slugs の coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30 の capture。
@@ -150,6 +153,6 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 
 ## 未解決の質問
 
-- 公式 patch notes や Battle Change List を ingest して、frame-data の変化を時系列で扱うべきか。
+- Battle Change List の 20 version 分を、version 別 source page、character 別 synthesis、または時系列 synthesis のどれへ昇格するか。
 - SuperCombo frame-data 30キャラ分の `enriched_review_required` 1295 行を、どの順序で人間レビューするか。
 - SuperCombo-only 620 行を、通常回答から分離すべき row と補助情報として使える row にどう分類するか。

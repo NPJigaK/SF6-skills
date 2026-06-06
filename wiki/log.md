@@ -2,6 +2,49 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-07] ingest | Capcom official Battle Change List
+- 原本:
+  - `raw/battle-change/official/manifest.json`
+  - `raw/battle-change/official/discovery/`
+  - `raw/battle-change/official/versions/<version>/`
+- 派生 output:
+  - `wiki/outputs/data/battle-change/official/versions.csv`
+  - `wiki/outputs/data/battle-change/official/changes.csv`
+  - `wiki/outputs/data/battle-change/official/changes.json`
+  - `wiki/outputs/data/battle-change/official/schema.json`
+- ツール:
+  - Added `tools/capture_capcom_battle_change.py`.
+  - Added `tools/validate_capcom_battle_change.py`.
+  - Added `tools/extract_capcom_battle_change.py`.
+  - Added focused tests for capture helpers, raw validation, and extraction flattening.
+- 作成:
+  - `wiki/sources/capcom-official-battle-change-list.md`
+  - `wiki/reviews/2026-06-07-official-battle-change-capture-review.md`
+- 更新:
+  - `README.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `python tools/test_battle_change_capture.py`
+  - `python tools/test_battle_change_validation.py`
+  - `python tools/test_battle_change_extraction.py`
+  - `python tools/capture_capcom_battle_change.py --dry-run`
+  - `python tools/capture_capcom_battle_change.py --delay-seconds 0.25`
+  - `python tools/validate_capcom_battle_change.py`
+  - `python tools/extract_capcom_battle_change.py`
+- メモ:
+  - Discovery page の `adjust.versions` から 20 update version を列挙した。
+  - `_next/data/<buildId>/ja-jp/battle_change/<version>.json` を version ごとの構造化 raw response として保存した。
+  - 自動 validation は HTML 内 `__NEXT_DATA__` と `_next/data` JSON の `adjust` 一致、artifact hash、version ID 一致を確認した。
+  - 派生 output は 20 version / 1820 change rows。内訳は policy 123、common 100、fighter 1597。
+  - `version_title` と `version_selector_title` を別列化し、公式 source 内の表記差は `version_title_mismatch` で示す。`20231201` は page title `2023.12.1 update` と selector title `2023.12.01 update` が異なる。
+- 未解決事項:
+  - 20 version 分の本文を、version 別 source page、character 別 synthesis、時系列 synthesis のどれへ昇格するか。
+  - `text_html` の HTML fragment を読者向け plain text / Markdown に派生する方針を決める。
+  - 人間レビュー後に raw review status を accepted に更新するか。
+
 ## [2026-06-06] 修正 | frame-data capture validation guard
 - 作成:
   - `tools/frame_data_integrity.py`

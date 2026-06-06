@@ -55,6 +55,7 @@
 | [[sources/capcom-official-c-viper-frame-data]] | Capcom 公式 C. Viper（C.ヴァイパー） frame-data capture。Classic 69 rows / Modern 67 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-alex-frame-data]] | Capcom 公式 Alex（アレックス） frame-data capture。Classic 74 rows / Modern 73 rows。 | 2026-05-30 | official_frame_data | active |
 | [[sources/capcom-official-ingrid-frame-data]] | Capcom 公式 Ingrid（イングリッド） frame-data capture。Classic 75 rows / Modern 74 rows。 | 2026-05-30 | official_frame_data | active |
+| [[sources/capcom-official-battle-change-list]] | Capcom 公式 Battle Change List capture。20 update version、policy 123 rows / common 100 rows / fighter 1597 rows の派生 output を含む。 | 2026-06-06 | official_battle_change | active |
 
 ## Concepts
 
@@ -69,9 +70,9 @@
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
+| [[entities/street-fighter-6]] | glossary、公式 frame-data sources、公式 Battle Change List、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
 | [[entities/supercombo-wiki]] | glossary と 30キャラ分の SuperCombo frame-data raw 取得データ、公式補助 output の source である community wiki。 | other |
-| [[entities/capcom]] | 公式 Street Fighter 6 frame-data sources の publisher。 | company |
+| [[entities/capcom]] | 公式 Street Fighter 6 frame-data sources と Battle Change List の publisher。 | company |
 | [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
 | [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
 | [[entities/jamie]] | Jamie（ジェイミー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
@@ -136,6 +137,7 @@
 | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | report | SuperCombo frame-data 30キャラ分の raw capture / validation / official crosswalk / enriched output coverage。未レビュー補助行 1295 行、レビュー済み 69 行、SuperCombo-only 620 行、review queue 集計を含む。 | 2026-06-06 |
 | `wiki/outputs/data/supercombo/frame-data/<character_slug>/` | csv/json | SuperCombo 30キャラ分の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-05 |
 | `wiki/outputs/data/enriched/frame-data/<character_slug>/` | csv/json | 公式 Classic rows に SuperCombo `supercombo_*` 補助列を付与した data。既存レビュー済み 69 行を保持し、複数候補・再利用・基本 field conflict・比較不能 field・条件付き field は `enrichment_review_queues` で分離する。 | 2026-06-06 |
+| `wiki/outputs/data/battle-change/official/` | csv/json | Capcom 公式 Battle Change List 20 version 分の派生 output。`changes.csv/json` は policy / common / fighter change rows 1820 行を保持し、`text_html` は公式 HTML fragment を保持する。 | 2026-06-07 |
 | `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
 | `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した data と SuperCombo-only row。 | 2026-05-31 |
 | `wiki/outputs/data/supercombo/frame-data/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
@@ -192,3 +194,4 @@
 | [[reviews/2026-06-02-supercombo-ingrid-supercombo-only-prereview]] | prereview | SuperCombo Ingrid の公式 row に直接照合しない 9 行を外部 web evidence も使って事前レビュー。特殊隠しコマンド / Monoid 操作として通常回答から分離し、accept ではなく pending。 | open |
 | [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | capture_validation | SuperCombo frame-data 30キャラ分の batch capture review。raw capture は 30/30 passed、未レビュー補助行 1295 行と SuperCombo-only 620 行が残り、review queue で理由を分離している。 | open |
 | [[reviews/2026-06-06-supercombo-field-conflict-queue-prereview]] | prereview | SuperCombo `field_conflict` 単独 11 行の事前レビュー。Jamie 酔いLv damage、Terry jMP/jMK 入れ替わり疑い、通常 source conflict を分離し、追加 accept はしていない。 | open |
+| [[reviews/2026-06-07-official-battle-change-capture-review]] | capture_validation | Capcom 公式 Battle Change List 20 update version capture の自動検証レビュー。raw HTML / Next.js data JSON は artifact hash と payload 一致を通過し、派生 change rows は 1820 行。 | open |

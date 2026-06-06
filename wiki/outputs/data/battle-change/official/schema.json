@@ -1,0 +1,47 @@
+{
+  "schema_version": "capcom_battle_change_derived_outputs/v1",
+  "source_manifest": "raw/battle-change/official/manifest.json",
+  "changes_fields": [
+    "version_order",
+    "version_id",
+    "version_title",
+    "version_selector_title",
+    "version_title_mismatch",
+    "section_type",
+    "section_order",
+    "body_order",
+    "policy_title",
+    "common_title",
+    "fighter_order",
+    "fighter_id",
+    "fighter_alpha",
+    "fighter_tool_name",
+    "fighter_url_name",
+    "detail_order",
+    "detail_title",
+    "category",
+    "text_html",
+    "data_json_path"
+  ],
+  "version_fields": [
+    "version_order",
+    "version_id",
+    "version_title",
+    "version_selector_title",
+    "version_title_mismatch",
+    "policy_count",
+    "common_section_count",
+    "common_change_count",
+    "fighter_count",
+    "fighter_detail_count",
+    "fighter_change_count",
+    "data_json_path"
+  ],
+  "notes": [
+    "`version_title` is the per-version page title from that version's data JSON.",
+    "`version_selector_title` is the title from the discovery page version selector.",
+    "`version_title_mismatch` is true when those two official title strings differ.",
+    "`text_html` preserves official HTML fragments such as <br>, span, and class attributes.",
+    "Rows are derived from raw `_next/data` JSON, not translated or normalized source replacements."
+  ]
+}

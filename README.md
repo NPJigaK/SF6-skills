@@ -221,6 +221,53 @@ Capcom 公式 capture は Classic / Modern tab の identity と active state も
 表 body に category row でも通常データ row でもない未知の cell 数が出た場合は、
 その row を黙って捨てず、capture / extract / validate を失敗させます。
 
+## 公式Battle Change Listの置き方
+
+公式 Battle Change List は、公式の更新履歴 / battle balance source として扱います。
+frame-data と同じく履歴用 snapshot ではなく、`storage_policy: latest_battle_change_mirror`
+の固定 mirror として保存します。由来の時点は path ではなく `manifest.json` の
+`capture_label` / `created_at_utc` と Git 履歴で確認します。
+
+```text
+raw/battle-change/official/
+  manifest.json
+  discovery/
+    page.html
+    data.json
+    metadata.json
+  versions/<version>/
+    page.html
+    data.json
+    metadata.json
+```
+
+派生CSV / JSONは安定したpathに出します。
+
+```text
+wiki/outputs/data/battle-change/official/versions.csv
+wiki/outputs/data/battle-change/official/changes.csv
+wiki/outputs/data/battle-change/official/changes.json
+wiki/outputs/data/battle-change/official/schema.json
+```
+
+ツールは次の順で実行します。
+
+```bash
+python tools/capture_capcom_battle_change.py --dry-run
+python tools/capture_capcom_battle_change.py
+python tools/validate_capcom_battle_change.py
+python tools/extract_capcom_battle_change.py
+```
+
+`capture_capcom_battle_change.py` は discovery page の `adjust.versions` から
+全 version を列挙し、各 version の HTML と Next.js `_next/data` JSON を保存します。
+`validate_capcom_battle_change.py` は artifact hash、HTML `__NEXT_DATA__` と
+`data.json` の payload 一致、version ID 一致を確認します。`changes.csv` の
+`text_html` は公式 HTML fragment を保持し、翻訳・要約・正規化した raw replacement ではありません。
+version title は各 version page 由来の `version_title` と discovery selector 由来の
+`version_selector_title` を別列で保持し、公式 source 内の表記差は `version_title_mismatch`
+で明示します。
+
 ## SuperComboフレームデータの置き方
 
 SuperCombo も fixed latest mirror として保存します。source revision は path ではなく、

@@ -1,0 +1,56 @@
+{
+  "metadata_schema_version": "capcom_battle_change_raw_capture_metadata/v1",
+  "captured_at_utc": "2026-06-06T15:22:47Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_battle_change",
+  "version_id": "20231201",
+  "title": "2023.12.1 update",
+  "source_url": "https://www.streetfighter.com/6/buckler/ja-jp/battle_change/20231201",
+  "data_url": "https://www.streetfighter.com/6/buckler/_next/data/JRgr9jaW-XektPBHKodsS/ja-jp/battle_change/20231201.json",
+  "build_id": "JRgr9jaW-XektPBHKodsS",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_method": "scrapling_fetcher_chrome_impersonation",
+  "validation_summary": {
+    "version_id": "20231201",
+    "title": "2023.12.1 update",
+    "policy_count": 0,
+    "common_section_count": 4,
+    "common_change_count": 4,
+    "fighter_count": 13,
+    "fighter_detail_count": 35,
+    "fighter_change_count": 35,
+    "version_count": 20,
+    "fighter_list_count": 30
+  },
+  "responses": {
+    "page_html": {
+      "url": "https://www.streetfighter.com/6/buckler/ja-jp/battle_change/20231201",
+      "final_url": "https://www.streetfighter.com/6/buckler/ja-jp/battle_change/20231201",
+      "status": 200,
+      "byte_count": 200952,
+      "sha256": "sha256:575e2f76d6343f144afaf274106153d41b7dd11fac07c06bd7763a1cc09145b6"
+    },
+    "data_json": {
+      "url": "https://www.streetfighter.com/6/buckler/_next/data/JRgr9jaW-XektPBHKodsS/ja-jp/battle_change/20231201.json",
+      "final_url": "https://www.streetfighter.com/6/buckler/_next/data/JRgr9jaW-XektPBHKodsS/ja-jp/battle_change/20231201.json",
+      "status": 200,
+      "byte_count": 46406,
+      "sha256": "sha256:08e675de2b042229257b3699b6de7aad4618e82a629b06ea578db4b06a04fffd"
+    }
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "page.html",
+      "sha256": "sha256:575e2f76d6343f144afaf274106153d41b7dd11fac07c06bd7763a1cc09145b6",
+      "byte_count": 200952
+    },
+    "data_json": {
+      "path": "data.json",
+      "sha256": "sha256:08e675de2b042229257b3699b6de7aad4618e82a629b06ea578db4b06a04fffd",
+      "byte_count": 46406
+    }
+  }
+}
