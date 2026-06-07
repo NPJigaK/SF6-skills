@@ -137,6 +137,18 @@ wiki health check を依頼されたら:
 9. `wiki/log.md` に追記する。
 10. 変更ファイルと人間レビューが必要な項目を報告する。
 
+## Obsidian Markdown
+
+`wiki/` や Obsidian で閲覧する Markdown を作成・編集する場合は、repo-local
+skill として `.agents/skills/obsidian-markdown/SKILL.md` に配置した
+`$obsidian-markdown` skill を使ってよいです。Codex の skill は、明示的には
+`$obsidian-markdown` として呼び出し、暗黙的には task が skill の `description` に
+合う場合に選択されます。
+
+ただし、このリポジトリの正本ルールはこのファイルに従います。`raw/` 不変、
+source traceability、`wiki/index.md` / `wiki/log.md` 更新、言語ポリシー、
+page type、workflow は skill ではなく `AGENTS.md` / `CLAUDE.md` を優先します。
+
 ## Git とツール
 
 - LLM が保守した wiki 変更のレビュー面として Git diff を使う。
