@@ -61,8 +61,8 @@ SuperCombo Wiki の Ingrid フレームデータを、`Data?action=raw` の生 w
 | duplicate input は `6HPHK` と `236236P` の 2 種類。 | `raw/frame-data/supercombo/ingrid/validation.json`; `raw/frame-data/supercombo/ingrid/data.templates.json` | high | `6HPHK` は block/recovery、`236236P` は SA3/CA の variant。 |
 | Data page の最新 revision は 2026-06-02T01:44:56Z、Frame data 表示ページの revision は 2026-04-22T23:42:21Z。 | `raw/frame-data/supercombo/ingrid/api/page-metadata.json`; `raw/frame-data/supercombo/ingrid/manifest.json` | high | Data page は pageid 97720 / revid 365281、Frame data page は pageid 97724 / revid 362024。 |
 | image refs は 164 件、imageinfo の distinct title は 158 件で、face / portrait の 2 title しか解決できず、156 title が missing だった。 | `raw/frame-data/supercombo/ingrid/image-manifest.json`; `raw/frame-data/supercombo/ingrid/imageinfo.json`; `raw/frame-data/supercombo/ingrid/validation.json` | high | duplicate refs があるため refs 数と resolved + missing title 数は一致しない。downloaded images は 2 件、failed downloads は 0 件。 |
-| 公式 Classic 75 rows との crosswalk は、自動一致 47、name override 一致 26、公式側未照合 2 になった。 | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]; `wiki/outputs/data/supercombo/frame-data/ingrid/crosswalk-summary.json` | high | 公式側未照合は `前方ステップ` / `後方ステップ`。 |
-| 補助列付き output は `enriched` 47、`enriched_reviewed` 26、`official_only` 2 で、レビュー対象 26 行はすべて accepted。 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]]; `wiki/outputs/data/enriched/frame-data/ingrid/summary.json` | high | 公式列は保持し、SuperCombo 値は `supercombo_*` 補助列に入れる。 |
+| 公式 Classic 75 rows との crosswalk は、自動一致 47、name override 一致 26、公式側未照合 2 になった。 | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]; `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-summary.json` | high | 公式側未照合は `前方ステップ` / `後方ステップ`。 |
+| 補助列付き output は `enriched` 47、`enriched_reviewed` 26、`official_only` 2 で、レビュー対象 26 行はすべて accepted。 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]]; `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/summary.json` | high | 公式列は保持し、SuperCombo 値は `supercombo_*` 補助列に入れる。 |
 
 ## データ構造メモ
 
@@ -72,8 +72,8 @@ SuperCombo Wiki の Ingrid フレームデータを、`Data?action=raw` の生 w
 - `rendered/tables.dom.json` は実際に表示された table の DOM text / HTML / image refs / tab state を保存する。
 - `screenshots/*.png` は `General`、`Details`、`Meter`、`Properties`、`Notes` の各タブをページ全体で保存する。
 - `imageinfo.json` と `image-manifest.json` は画像参照、MediaWiki imageinfo、ダウンロード結果を保存する。ただし Ingrid では move / hitbox 画像の大半が missing になっている。
-- `wiki/outputs/data/supercombo/frame-data/ingrid/` は SuperCombo raw から作った派生 frame-data と公式 Classic crosswalk。
-- `wiki/outputs/data/enriched/frame-data/ingrid/` は公式 Classic rows を保持したまま SuperCombo 補助列を付与した output。
+- `wiki/outputs/data/frame-data/supercombo/ingrid/` は SuperCombo raw から作った派生 frame-data と公式 Classic crosswalk。
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/` は公式 Classic rows を保持したまま SuperCombo 補助列を付与した output。
 
 ## 既存 wiki との矛盾または更新
 
@@ -103,7 +103,7 @@ SuperCombo Wiki の Ingrid フレームデータを、`Data?action=raw` の生 w
 - スクリーンショット: `raw/frame-data/supercombo/ingrid/screenshots/`
 - 画像: `raw/frame-data/supercombo/ingrid/images/files/`
 - 検証結果: `raw/frame-data/supercombo/ingrid/validation.json`
-- SuperCombo 派生 output: `wiki/outputs/data/supercombo/frame-data/ingrid/`
-- 公式 + SuperCombo 補助 output: `wiki/outputs/data/enriched/frame-data/ingrid/`
+- SuperCombo 派生 output: `wiki/outputs/data/frame-data/supercombo/ingrid/`
+- 公式 + SuperCombo 補助 output: `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/`
 - crosswalk report: [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]
 - enriched report: [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]]

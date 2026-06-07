@@ -126,5 +126,5 @@ SuperCombo Wiki Ingrid フレームデータの raw 取得データは、自動�
 
 - [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]
 - [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]]
-- `wiki/outputs/data/supercombo/frame-data/ingrid/`
-- `wiki/outputs/data/enriched/frame-data/ingrid/`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/`

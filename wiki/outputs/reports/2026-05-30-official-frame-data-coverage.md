@@ -89,7 +89,7 @@ aliases:
 
 - raw snapshots: `raw/frame-data/official/<data-slug>/`
 - provenance: `raw/frame-data/official/<data-slug>/manifest.json` の `capture_label` / `created_at_utc` / `storage_policy`
-- derived CSVs: `wiki/outputs/data/frame-data/<data-slug>/`
+- derived CSVs: `wiki/outputs/data/frame-data/official/<data-slug>/`
 - batch review: [[reviews/2026-05-30-official-frame-data-roster-capture-review]]
 - raw layout synthesis: [[syntheses/frame-data-raw-layout]]
 

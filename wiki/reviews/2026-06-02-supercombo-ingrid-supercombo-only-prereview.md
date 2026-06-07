@@ -39,7 +39,7 @@ tags:
 
 これは accept ではない。`supercombo-only.csv` にある公式 row 非対応の 9 行について、外部 web evidence も使って事前レビューした記録である。`human_review_status`、`human_review_decision`、公式 row への照合、補助列付き output の accepted 判定は変更しない。
 
-対象は `wiki/outputs/data/enriched/frame-data/ingrid/supercombo-only.csv` のうち、`suggested_handling` が `supercombo_only` の 9 行。4 件の taunt row は対象外だが、`ingrid_4pppkkk` Back Taunt は Monoid と Shin Ingrid の enable condition として参照する。
+対象は `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/supercombo-only.csv` のうち、`suggested_handling` が `supercombo_only` の 9 行。4 件の taunt row は対象外だが、`ingrid_4pppkkk` Back Taunt は Monoid と Shin Ingrid の enable condition として参照する。
 
 この repo の現段階では、domain-specific な answer policy field や新しい community-extra schema は導入しない。通常の Ingrid frame-data への質問では、Capcom 公式 row と公式 row に紐づく補助列付き output を優先し、この 9 行は「特殊隠しコマンド / taunt-summon が明示された質問」でだけ参照する補足 evidence として扱う。
 

@@ -1,0 +1,39 @@
+{
+  "official_rows": 74,
+  "supercombo_rows": 75,
+  "crosswalk_status_counts": {
+    "matched": 67,
+    "unmatched": 5,
+    "matched_manual": 2
+  },
+  "matched_distinct_supercombo_rows": 55,
+  "supercombo_unmatched_rows": 20,
+  "supercombo_rows_matched_multiple_times": {
+    "lily_214lp": 3,
+    "lily_236hk": 2,
+    "lily_236kk": 2,
+    "lily_236lk": 2,
+    "lily_236mk": 2,
+    "lily_623hp": 2,
+    "lily_623lp": 2,
+    "lily_623mp": 2,
+    "lily_623pp": 2,
+    "lily_jpp": 2,
+    "lily_jppp": 2,
+    "lily_mpmk": 3
+  },
+  "source_raw_root": "raw/frame-data/supercombo/lily",
+  "official_csv": "wiki/outputs/data/frame-data/official/lily/classic.csv",
+  "crosswalk_policy": {
+    "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
+    "supercombo_primary_key": "move_id",
+    "candidate_matching": [
+      "official Classic input tokens are converted to command signatures",
+      "special and super motions may also match a strength-collapsed input family",
+      "category/moveType compatibility and simple field equality increase candidate score",
+      "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
+      "generic name overrides are used for Drive Rush system rows",
+      "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
+    ]
+  }
+}

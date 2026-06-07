@@ -24,17 +24,17 @@ Capcom 公式 Zangief Classic CSV を正として保持したまま、SuperCombo
 
 ## 生成ファイル
 
-- `wiki/outputs/data/enriched/frame-data/zangief/classic-supercombo.csv`
-- `wiki/outputs/data/enriched/frame-data/zangief/classic-supercombo.json`
-- `wiki/outputs/data/enriched/frame-data/zangief/supercombo-only.csv`
-- `wiki/outputs/data/enriched/frame-data/zangief/schema.json`
-- `wiki/outputs/data/enriched/frame-data/zangief/summary.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/supercombo-only.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/schema.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/summary.json`
 
 ## 方針
 
 | 項目 | 方針 |
 |---|---|
-| 公式列 | `wiki/outputs/data/frame-data/zangief/classic.csv` の列をそのまま保持する。 |
+| 公式列 | `wiki/outputs/data/frame-data/official/zangief/classic.csv` の列をそのまま保持する。 |
 | SuperCombo 補助列 | すべて `supercombo_*` prefix で追加し、公式値を上書きしない。 |
 | レビュー flag | manual match、基本値 conflict、多候補、SuperCombo row 再利用を `enrichment_review_flags` に残す。 |
 | 人間レビュー | Zangief のレビュー対象 25 行は人間レビュー済み。公式値を正とし、SuperCombo は補助情報として扱う。 |
@@ -122,5 +122,5 @@ Capcom 公式 Zangief Classic CSV を正として保持したまま、SuperCombo
 - 公式 source（根拠）: [[sources/capcom-official-zangief-frame-data]]
 - SuperCombo source（根拠）: [[sources/supercombo-zangief-frame-data]]
 - 候補照合: [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]
-- 補助列付き summary: `wiki/outputs/data/enriched/frame-data/zangief/summary.json`
-- Human review decisions: `wiki/outputs/data/enriched/frame-data/zangief/classic-supercombo.csv` の `human_review_*` 列
+- 補助列付き summary: `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/summary.json`
+- Human review decisions: `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.csv` の `human_review_*` 列

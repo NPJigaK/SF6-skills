@@ -4,16 +4,16 @@
 
 ## Frame-data Raw Layout
 
-現在の frame-data raw entrypoint は latest mirror 固定パスです。capture date や source revision は path ではなく manifest で確認します。詳細は [[syntheses/frame-data-raw-layout]]。
+現在の frame-data raw entrypoint は latest mirror 固定パスです。capture date や source revision は path ではなく manifest で確認します。派生 output は `wiki/outputs/data/frame-data/<variant>/<character>/` に置きます。詳細は [[syntheses/frame-data-raw-layout]]。
 
 | Source family | Raw entrypoint | Provenance | Main outputs |
 |---|---|---|---|
-| Capcom official | `raw/frame-data/official/<data-slug>/manifest.json`、`classic/`、`modern/` | manifest の `capture_label` / `created_at_utc` / `storage_policy` | `wiki/outputs/data/frame-data/<data-slug>/`、[[outputs/reports/2026-05-30-official-frame-data-coverage]] |
+| Capcom official | `raw/frame-data/official/<data-slug>/manifest.json`、`classic/`、`modern/` | manifest の `capture_label` / `created_at_utc` / `storage_policy` | `wiki/outputs/data/frame-data/official/<data-slug>/`、[[outputs/reports/2026-05-30-official-frame-data-coverage]] |
 | SuperCombo JP | `raw/frame-data/supercombo/jp/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]]、[[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] |
 | SuperCombo Ryu | `raw/frame-data/supercombo/ryu/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]、[[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] |
 | SuperCombo Zangief | `raw/frame-data/supercombo/zangief/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]、[[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] |
 | SuperCombo Ingrid | `raw/frame-data/supercombo/ingrid/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]、[[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
-| SuperCombo all characters | `raw/frame-data/supercombo/<character_slug>/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | 各 manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]、`wiki/outputs/data/supercombo/frame-data/<character_slug>/`、`wiki/outputs/data/enriched/frame-data/<character_slug>/` |
+| SuperCombo all characters | `raw/frame-data/supercombo/<character_slug>/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | 各 manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]、`wiki/outputs/data/frame-data/supercombo/<character_slug>/`、`wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/` |
 
 ## Sources
 
@@ -108,7 +108,7 @@
 
 | Page | Summary | Updated |
 |---|---|---:|
-| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と成果物への接続を整理する。 | 2026-06-05 |
+| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と data-family first output layout を整理する。 | 2026-06-07 |
 
 ## Questions
 
@@ -135,47 +135,47 @@
 | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]] | report | SuperCombo Ingrid の派生 output と Capcom 公式 Ingrid Classic CSV の照合。Sun Crest stock level、OD Sun Shot 共有 row、SA1/SA2、Drive Rush override を含む。 | 2026-06-02 |
 | [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] | report | Capcom 公式 Ingrid Classic CSV を正として保持し、SuperCombo 補助列を付与した output。人間レビュー済み26行、official-only 2行、SuperCombo-only 13行を含む。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
 | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | report | SuperCombo frame-data 30キャラ分の raw capture / validation / official crosswalk / enriched output coverage。未レビュー補助行 1295 行、レビュー済み 69 行、SuperCombo-only 620 行、review queue 集計を含む。 | 2026-06-06 |
-| `wiki/outputs/data/supercombo/frame-data/<character_slug>/` | csv/json | SuperCombo 30キャラ分の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-05 |
-| `wiki/outputs/data/enriched/frame-data/<character_slug>/` | csv/json | 公式 Classic rows に SuperCombo `supercombo_*` 補助列を付与した data。既存レビュー済み 69 行を保持し、複数候補・再利用・基本 field conflict・比較不能 field・条件付き field は `enrichment_review_queues` で分離する。 | 2026-06-06 |
+| `wiki/outputs/data/frame-data/supercombo/<character_slug>/` | csv/json | SuperCombo 30キャラ分の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-05 |
+| `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/` | csv/json | 公式 Classic rows に SuperCombo `supercombo_*` 補助列を付与した data。既存レビュー済み 69 行を保持し、複数候補・再利用・基本 field conflict・比較不能 field・条件付き field は `enrichment_review_queues` で分離する。 | 2026-06-06 |
 | `wiki/outputs/data/battle-change/official/` | csv/json | Capcom 公式 Battle Change List 20 version 分の派生 output。`changes.csv/json` は policy / common / fighter change rows 1820 行を保持し、`text_html` は公式 HTML fragment を保持する。 | 2026-06-07 |
-| `wiki/outputs/data/supercombo/frame-data/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
-| `wiki/outputs/data/enriched/frame-data/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した data と SuperCombo-only row。 | 2026-05-31 |
-| `wiki/outputs/data/supercombo/frame-data/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
-| `wiki/outputs/data/enriched/frame-data/ryu/` | csv/json | 公式 Ryu Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、レビュー済み行、conditional variant link。 | 2026-06-01 |
-| `wiki/outputs/data/supercombo/frame-data/zangief/` | csv/json | SuperCombo Zangief の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-02 |
-| `wiki/outputs/data/enriched/frame-data/zangief/` | csv/json | 公式 Zangief Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、`enriched_reviewed` 行、SuperCombo-only taunt row。 | 2026-06-02 |
-| `wiki/outputs/data/supercombo/frame-data/ingrid/` | csv/json | SuperCombo Ingrid の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-02 |
-| `wiki/outputs/data/enriched/frame-data/ingrid/` | csv/json | 公式 Ingrid Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、`enriched_reviewed` 26行、SuperCombo-only 13行。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
-| `wiki/outputs/data/frame-data/ryu/` | csv/json | Ryu（リュウ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
-| `wiki/outputs/data/frame-data/luke/` | csv/json | Luke（ルーク） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/jamie/` | csv/json | Jamie（ジェイミー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/chunli/` | csv/json | Chun-Li（春麗） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
-| `wiki/outputs/data/frame-data/guile/` | csv/json | Guile（ガイル） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/kimberly/` | csv/json | Kimberly（キンバリー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/juri/` | csv/json | Juri（ジュリ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/ken/` | csv/json | Ken（ケン） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/blanka/` | csv/json | Blanka（ブランカ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/dhalsim/` | csv/json | Dhalsim（ダルシム） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/ehonda/` | csv/json | E. Honda（エドモンド本田） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/deejay/` | csv/json | Dee Jay（ディージェイ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/manon/` | csv/json | Manon（マノン） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/marisa/` | csv/json | Marisa（マリーザ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/jp/` | csv/json | JP の Classic / Modern CSV と field-meaning JSON。 | 2026-05-26 |
-| `wiki/outputs/data/frame-data/zangief/` | csv/json | Zangief（ザンギエフ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
-| `wiki/outputs/data/frame-data/lily/` | csv/json | Lily（リリー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/cammy/` | csv/json | Cammy（キャミィ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/rashid/` | csv/json | Rashid（ラシード） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/aki/` | csv/json | A.K.I. の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/ed/` | csv/json | Ed（エド） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/gouki_akuma/` | csv/json | Gouki / Akuma（豪鬼） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/vega_mbison/` | csv/json | Vega / M. Bison（ベガ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/terry/` | csv/json | Terry（テリー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/mai/` | csv/json | Mai（不知火舞） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/elena/` | csv/json | Elena（エレナ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/sagat/` | csv/json | Sagat（サガット） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/cviper/` | csv/json | C. Viper（C.ヴァイパー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/alex/` | csv/json | Alex（アレックス） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
-| `wiki/outputs/data/frame-data/ingrid/` | csv/json | Ingrid（イングリッド） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/supercombo/jp/` | csv/json | SuperCombo JP の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
+| `wiki/outputs/data/frame-data/official-supercombo-enriched/jp/` | csv/json | 公式 JP Classic rows に SuperCombo `supercombo_*` 補助列を付与した data と SuperCombo-only row。 | 2026-05-31 |
+| `wiki/outputs/data/frame-data/supercombo/ryu/` | csv/json | SuperCombo Ryu の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-05-31 |
+| `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/` | csv/json | 公式 Ryu Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、レビュー済み行、conditional variant link。 | 2026-06-01 |
+| `wiki/outputs/data/frame-data/supercombo/zangief/` | csv/json | SuperCombo Zangief の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-02 |
+| `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/` | csv/json | 公式 Zangief Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、`enriched_reviewed` 行、SuperCombo-only taunt row。 | 2026-06-02 |
+| `wiki/outputs/data/frame-data/supercombo/ingrid/` | csv/json | SuperCombo Ingrid の派生 frames/character CSV、raw+display JSON、公式 Classic との候補照合。 | 2026-06-02 |
+| `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/` | csv/json | 公式 Ingrid Classic rows に SuperCombo `supercombo_*` 補助列を付与した data、`enriched_reviewed` 26行、SuperCombo-only 13行。特殊隠しコマンド / Monoid 操作の 9 行は通常回答から分離する。 | 2026-06-02 |
+| `wiki/outputs/data/frame-data/official/ryu/` | csv/json | Ryu（リュウ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
+| `wiki/outputs/data/frame-data/official/luke/` | csv/json | Luke（ルーク） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/jamie/` | csv/json | Jamie（ジェイミー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/chunli/` | csv/json | Chun-Li（春麗） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
+| `wiki/outputs/data/frame-data/official/guile/` | csv/json | Guile（ガイル） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/kimberly/` | csv/json | Kimberly（キンバリー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/juri/` | csv/json | Juri（ジュリ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/ken/` | csv/json | Ken（ケン） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/blanka/` | csv/json | Blanka（ブランカ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/dhalsim/` | csv/json | Dhalsim（ダルシム） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/ehonda/` | csv/json | E. Honda（エドモンド本田） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/deejay/` | csv/json | Dee Jay（ディージェイ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/manon/` | csv/json | Manon（マノン） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/marisa/` | csv/json | Marisa（マリーザ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/jp/` | csv/json | JP の Classic / Modern CSV と field-meaning JSON。 | 2026-05-26 |
+| `wiki/outputs/data/frame-data/official/zangief/` | csv/json | Zangief（ザンギエフ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-27 |
+| `wiki/outputs/data/frame-data/official/lily/` | csv/json | Lily（リリー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/cammy/` | csv/json | Cammy（キャミィ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/rashid/` | csv/json | Rashid（ラシード） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/aki/` | csv/json | A.K.I. の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/ed/` | csv/json | Ed（エド） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/gouki_akuma/` | csv/json | Gouki / Akuma（豪鬼） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/vega_mbison/` | csv/json | Vega / M. Bison（ベガ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/terry/` | csv/json | Terry（テリー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/mai/` | csv/json | Mai（不知火舞） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/elena/` | csv/json | Elena（エレナ） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/sagat/` | csv/json | Sagat（サガット） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/cviper/` | csv/json | C. Viper（C.ヴァイパー） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/alex/` | csv/json | Alex（アレックス） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
+| `wiki/outputs/data/frame-data/official/ingrid/` | csv/json | Ingrid（イングリッド） の Classic / Modern CSV と field-meaning JSON。 | 2026-05-30 |
 
 ## Reviews
 

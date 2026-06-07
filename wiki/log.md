@@ -2,6 +2,31 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-07] schema | output data layout migration
+- 変更:
+  - `wiki/outputs/data/frame-data/<character>/` を `wiki/outputs/data/frame-data/official/<character>/` に移動。
+  - `wiki/outputs/data/supercombo/frame-data/<character>/` を `wiki/outputs/data/frame-data/supercombo/<character>/` に移動。
+  - `wiki/outputs/data/enriched/frame-data/<character>/` を `wiki/outputs/data/frame-data/official-supercombo-enriched/<character>/` に移動。
+- 更新:
+  - `tools/capture_capcom_frame_data.py`
+  - `tools/extract_capcom_frame_data.py`
+  - `tools/validate_capcom_frame_data.py`
+  - `tools/extract_supercombo_frame_data.py`
+  - `tools/build_official_supercombo_enriched_data.py`
+  - `tools/audit_supercombo_enriched_review_status.py`
+  - `tools/test_supercombo_enrichment_review.py`
+  - `README.md`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - reader-facing wiki path references and generated output metadata.
+- メモ:
+  - `battle-change/official/` と同じく、第一階層を data family に揃える方針にした。
+  - enriched audit は missing root または 0 rows scan を失敗として扱うようにし、移設後の空パス成功を防ぐ。
+  - `raw/` 不変ルールにより、既存 raw manifest 内の旧 `derived_outputs` path は書き換えない。現在の output contract は README、tools、index、この synthesis を入口に確認する。
+- 未解決事項:
+  - 既存 raw manifest の `derived_outputs` を将来の manifest schema で historical field として明示するか。
+
 ## [2026-06-07] ingest | Capcom official Battle Change List
 - 原本:
   - `raw/battle-change/official/manifest.json`

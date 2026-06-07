@@ -54,9 +54,9 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 |---|---|---|---|
 | SuperCombo frame-data raw capture は 30 キャラ分そろっている。 | `raw/frame-data/supercombo/<character_slug>/manifest.json`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | 30/30 で manifest と validation がある。 |
 | 30 キャラすべてで自動検証 status は `passed`。 | `raw/frame-data/supercombo/<character_slug>/validation.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | raw template、Cargo row、表示 DOM table を照合し、2026-06-06 以降は現在 raw の `raw_fingerprint` も保存する。 |
-| SuperCombo raw/Cargo の frame rows は合計 2306 行、公式 Classic rows は合計 2361 行。 | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]; `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json` | high | 集計は生成済み JSON から作成。 |
-| enriched output の `enriched_review_required` は合計 1295 行残っている。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/summary.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 既存 accepted 69 行とは別。勝手に accept していない。 |
-| SuperCombo-only rows は合計 620 行ある。 | `wiki/outputs/data/enriched/frame-data/<character_slug>/supercombo-only.csv`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | taunt、派生 variant、公式 row に直接照合しない行を含む。 |
+| SuperCombo raw/Cargo の frame rows は合計 2306 行、公式 Classic rows は合計 2361 行。 | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]; `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/summary.json` | high | 集計は生成済み JSON から作成。 |
+| enriched output の `enriched_review_required` は合計 1295 行残っている。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/summary.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 既存 accepted 69 行とは別。勝手に accept していない。 |
+| SuperCombo-only rows は合計 620 行ある。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/supercombo-only.csv`; [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]] | high | taunt、派生 variant、公式 row に直接照合しない行を含む。 |
 | 新規 26 キャラは画像ファイルをダウンロードしていない。 | `raw/frame-data/supercombo/<character_slug>/image-manifest.json`; [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | high | 画像 refs と imageinfo は保存済み。既存 JP/Ryu/Zangief/Ingrid の画像取得状態は保持。 |
 
 ## データ構造メモ
@@ -68,8 +68,8 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 - `screenshots/*.png` は `General`、`Details`、`Meter`、`Properties`、`Notes` の各タブをページ全体で保存する。
 - `imageinfo.json` と `image-manifest.json` は画像参照、MediaWiki imageinfo、ダウンロード結果を保存する。
 - `validation.json` は検証 status に加え、現在 raw metadata と実ファイル artifact hash に対応する `raw_fingerprint` を保存する。capture 時は古い validation を削除し、extract 時は fingerprint 不一致を拒否する。
-- `wiki/outputs/data/supercombo/frame-data/<character_slug>/` は SuperCombo raw から作った派生 frame-data と公式 Classic crosswalk。
-- `wiki/outputs/data/enriched/frame-data/<character_slug>/` は公式 Classic rows を保持したまま SuperCombo 補助列を付与した output。
+- `wiki/outputs/data/frame-data/supercombo/<character_slug>/` は SuperCombo raw から作った派生 frame-data と公式 Classic crosswalk。
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/` は公式 Classic rows を保持したまま SuperCombo 補助列を付与した output。
 
 ## 既存 wiki との矛盾または更新
 
@@ -90,5 +90,5 @@ SuperCombo Wiki の Street Fighter 6 frame-data pages 30 キャラ分を、`Data
 - batch coverage report: [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]
 - batch capture review: [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]]
 - raw entrypoint: `raw/frame-data/supercombo/<character_slug>/manifest.json`
-- SuperCombo 派生 output: `wiki/outputs/data/supercombo/frame-data/<character_slug>/`
-- 公式 + SuperCombo 補助 output: `wiki/outputs/data/enriched/frame-data/<character_slug>/`
+- SuperCombo 派生 output: `wiki/outputs/data/frame-data/supercombo/<character_slug>/`
+- 公式 + SuperCombo 補助 output: `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/`

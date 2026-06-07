@@ -33,7 +33,7 @@ Mai（不知火舞） は、この wiki で Capcom 公式フレームデータ c
 
 - 公式 capture は Classic 90 行、Modern 85 行の frame-data rows を持つ。
 - 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
-- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/mai/` の CSV と raw DOM を source-preserving data として参照する。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/official/mai/` の CSV と raw DOM を source-preserving data として参照する。
 - この capture は自動検証済みだが、人間レビューは未完了。
 
 ## 関連概念

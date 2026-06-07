@@ -31,10 +31,10 @@ Chun-Li（春麗） の Capcom 公式 frame-data raw snapshot と派生 outputs 
 - `raw/official/frame-data/2026-05-27/chunli/classic/metadata.json`
 - `raw/official/frame-data/2026-05-27/chunli/modern/metadata.json`
 - `raw/official/frame-data/2026-05-27/chunli/manifest.json`
-- `wiki/outputs/data/frame-data/chunli/classic.csv`
-- `wiki/outputs/data/frame-data/chunli/modern.csv`
-- `wiki/outputs/data/frame-data/chunli/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/chunli/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/classic.csv`
+- `wiki/outputs/data/frame-data/official/chunli/modern.csv`
+- `wiki/outputs/data/frame-data/official/chunli/classic.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/modern.field-meanings.json`
 
 ## 確認内容
 

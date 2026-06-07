@@ -1,0 +1,75 @@
+{
+  "official_rows": 78,
+  "supercombo_rows": 79,
+  "enriched_rows": 78,
+  "supercombo_only_rows": 27,
+  "enrichment_status_counts": {
+    "enriched_review_required": 47,
+    "enriched": 13,
+    "official_only": 18
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,damage,recovery,startup": 2,
+    "basic_field_conflict:active_duration,damage,startup": 4,
+    "basic_field_conflict:recovery": 1,
+    "condition_dependent_supercombo_field:damage": 7,
+    "condition_dependent_supercombo_field:recovery": 5,
+    "condition_dependent_supercombo_field:startup": 1,
+    "multiple_candidates": 16,
+    "supercombo_row_reused": 15,
+    "uncomparable_basic_field:active_duration": 2,
+    "uncomparable_basic_field:active_duration,damage": 11,
+    "uncomparable_basic_field:active_duration,damage,recovery": 9,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 1,
+    "uncomparable_basic_field:damage": 5,
+    "uncomparable_basic_field:damage,recovery": 1,
+    "uncomparable_basic_field:recovery": 8
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 13,
+    "field_conflict": 7,
+    "structural_ambiguity": 31,
+    "uncomparable_notation": 37
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 8,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 5,
+    "field_conflict;structural_ambiguity": 2,
+    "field_conflict;uncomparable_notation": 1,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 4,
+    "structural_ambiguity": 8,
+    "uncomparable_notation": 7,
+    "uncomparable_notation;structural_ambiguity": 12
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 6,
+    "damage": 6,
+    "recovery": 3,
+    "startup": 6
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 23,
+    "damage": 27,
+    "recovery": 19,
+    "startup": 1
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "Chun-Li_5hk",
+    "Chun-Li_5hp",
+    "Chun-Li_5lk",
+    "Chun-Li_5lp",
+    "Chun-Li_5mk",
+    "Chun-Li_5mp",
+    "Chun-Li_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 24,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/chunli/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/chunli/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/chunli/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/chunli/classic-supercombo.csv"
+}

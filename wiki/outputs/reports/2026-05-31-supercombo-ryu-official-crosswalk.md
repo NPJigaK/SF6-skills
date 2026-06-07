@@ -27,13 +27,13 @@ SuperCombo Ryu raw capture から review 用の派生 CSV/JSON を作成し、Ca
 
 ## 生成ファイル
 
-- `wiki/outputs/data/supercombo/frame-data/ryu/frames.csv`
-- `wiki/outputs/data/supercombo/frame-data/ryu/frames.json`
-- `wiki/outputs/data/supercombo/frame-data/ryu/character.csv`
-- `wiki/outputs/data/supercombo/frame-data/ryu/schema.json`
-- `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-official-classic.csv`
-- `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-summary.json`
-- `wiki/outputs/data/supercombo/frame-data/ryu/supercombo-unmatched.csv`
+- `wiki/outputs/data/frame-data/supercombo/ryu/frames.csv`
+- `wiki/outputs/data/frame-data/supercombo/ryu/frames.json`
+- `wiki/outputs/data/frame-data/supercombo/ryu/character.csv`
+- `wiki/outputs/data/frame-data/supercombo/ryu/schema.json`
+- `wiki/outputs/data/frame-data/supercombo/ryu/crosswalk-official-classic.csv`
+- `wiki/outputs/data/frame-data/supercombo/ryu/crosswalk-summary.json`
+- `wiki/outputs/data/frame-data/supercombo/ryu/supercombo-unmatched.csv`
 
 ## 方針
 
@@ -100,7 +100,7 @@ SuperCombo Ryu raw capture から review 用の派生 CSV/JSON を作成し、Ca
 - `6HK~214K` / `6HK~214KK` は `旋風脚` 本体の数値とは混ぜず、SuperCombo-only の conditional variant link として保持する。
 - 公式の active は `6-8` のような発生フレーム範囲、SuperCombo の active は `3` のような持続フレーム数で表されることがある。単純比較では active duration に変換できる場合だけ比較する。
 - SA2 Lv2 / Lv3 の SuperCombo startup `18~` / `50~` は hold-level 補助情報であり、公式 startup 20 / 70 を置き換えない。
-- この report は review 用であり、`wiki/outputs/data/frame-data/ryu/` の公式 CSV を置き換えない。
+- この report は review 用であり、`wiki/outputs/data/frame-data/official/ryu/` の公式 CSV を置き換えない。
 
 ## 根拠
 
@@ -108,5 +108,5 @@ SuperCombo Ryu raw capture から review 用の派生 CSV/JSON を作成し、Ca
 - 公式 source: [[sources/capcom-official-ryu-frame-data]]
 - SuperCombo validation: [[reviews/2026-05-31-supercombo-ryu-frame-data-capture-review]]
 - Raw SuperCombo manifest: `raw/frame-data/supercombo/ryu/manifest.json`
-- Crosswalk summary: `wiki/outputs/data/supercombo/frame-data/ryu/crosswalk-summary.json`
+- Crosswalk summary: `wiki/outputs/data/frame-data/supercombo/ryu/crosswalk-summary.json`
 - Enriched output report: [[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]]

@@ -1,0 +1,35 @@
+{
+  "official_rows": 76,
+  "supercombo_rows": 75,
+  "crosswalk_status_counts": {
+    "matched": 57,
+    "unmatched": 15,
+    "ambiguous": 2,
+    "matched_manual": 2
+  },
+  "matched_distinct_supercombo_rows": 53,
+  "supercombo_unmatched_rows": 22,
+  "supercombo_rows_matched_multiple_times": {
+    "ken_214lk": 2,
+    "ken_5hk": 2,
+    "ken_5lk": 2,
+    "ken_5mk": 2,
+    "ken_623hk": 2,
+    "ken_623lp": 2,
+    "ken_mpmk": 3
+  },
+  "source_raw_root": "raw/frame-data/supercombo/ken",
+  "official_csv": "wiki/outputs/data/frame-data/official/ken/classic.csv",
+  "crosswalk_policy": {
+    "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
+    "supercombo_primary_key": "move_id",
+    "candidate_matching": [
+      "official Classic input tokens are converted to command signatures",
+      "special and super motions may also match a strength-collapsed input family",
+      "category/moveType compatibility and simple field equality increase candidate score",
+      "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
+      "generic name overrides are used for Drive Rush system rows",
+      "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
+    ]
+  }
+}

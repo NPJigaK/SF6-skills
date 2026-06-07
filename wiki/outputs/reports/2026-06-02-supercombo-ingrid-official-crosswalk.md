@@ -27,13 +27,13 @@ Sun Crest stock level、OD Sun Shot の共有 row、SA1 / SA2 の stock level、
 
 ## 生成ファイル
 
-- `wiki/outputs/data/supercombo/frame-data/ingrid/frames.csv`
-- `wiki/outputs/data/supercombo/frame-data/ingrid/frames.json`
-- `wiki/outputs/data/supercombo/frame-data/ingrid/character.csv`
-- `wiki/outputs/data/supercombo/frame-data/ingrid/schema.json`
-- `wiki/outputs/data/supercombo/frame-data/ingrid/crosswalk-official-classic.csv`
-- `wiki/outputs/data/supercombo/frame-data/ingrid/crosswalk-summary.json`
-- `wiki/outputs/data/supercombo/frame-data/ingrid/supercombo-unmatched.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/frames.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/frames.json`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/character.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/schema.json`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-official-classic.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-summary.json`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/supercombo-unmatched.csv`
 
 ## 方針
 
@@ -87,7 +87,7 @@ Sun Crest stock level、OD Sun Shot の共有 row、SA1 / SA2 の stock level、
 
 ## 注意点
 
-- この report はレビュー用であり、`wiki/outputs/data/frame-data/ingrid/` の公式 CSV を置き換えない。
+- この report はレビュー用であり、`wiki/outputs/data/frame-data/official/ingrid/` の公式 CSV を置き換えない。
 - Ingrid は imageinfo で face / portrait の 2 件しか解決できていない。SuperCombo の `supercombo_images` / `supercombo_hitboxes` は参照名として保持するが、画像ファイル自体を根拠に使うには追加確認が必要。
 - SuperCombo-only 9 行は公式 frame row と直接照合していない。これらを extra / hidden / community-only data として schema に入れるかは別途判断する。
 
@@ -97,5 +97,5 @@ Sun Crest stock level、OD Sun Shot の共有 row、SA1 / SA2 の stock level、
 - 公式 source（根拠）: [[sources/capcom-official-ingrid-frame-data]]
 - SuperCombo 検証: [[reviews/2026-06-02-supercombo-ingrid-frame-data-capture-review]]
 - SuperCombo 原本 manifest: `raw/frame-data/supercombo/ingrid/manifest.json`
-- 照合 summary: `wiki/outputs/data/supercombo/frame-data/ingrid/crosswalk-summary.json`
+- 照合 summary: `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-summary.json`
 - 補助列付き output report: [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]]

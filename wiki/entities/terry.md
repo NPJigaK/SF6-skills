@@ -33,7 +33,7 @@ Terry（テリー） は、この wiki で Capcom 公式フレームデータ ca
 
 - 公式 capture は Classic 66 行、Modern 60 行の frame-data rows を持つ。
 - 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
-- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/terry/` の CSV と raw DOM を source-preserving data として参照する。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/official/terry/` の CSV と raw DOM を source-preserving data として参照する。
 - この capture は自動検証済みだが、人間レビューは未完了。
 
 ## 関連概念

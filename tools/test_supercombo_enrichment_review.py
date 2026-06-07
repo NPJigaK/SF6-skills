@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+from pathlib import Path
+
+import pytest
+
+from audit_supercombo_enriched_review_status import audit
 from build_official_supercombo_enriched_data import review_queues_from_flags
 
 
@@ -40,6 +45,26 @@ def test_review_queue_mapping() -> None:
         ["uncomparable_notation"],
         "uncomparable notation queue",
     )
+
+
+def test_audit_rejects_missing_enriched_root(tmp_path: Path) -> None:
+    with pytest.raises(FileNotFoundError, match="official-supercombo-enriched"):
+        audit(tmp_path)
+
+
+def test_audit_rejects_empty_enriched_root(tmp_path: Path) -> None:
+    root = (
+        tmp_path
+        / "wiki"
+        / "outputs"
+        / "data"
+        / "frame-data"
+        / "official-supercombo-enriched"
+    )
+    root.mkdir(parents=True)
+
+    with pytest.raises(RuntimeError, match="no enriched rows"):
+        audit(tmp_path)
 
 
 def main() -> int:

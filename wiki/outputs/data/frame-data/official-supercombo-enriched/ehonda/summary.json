@@ -1,0 +1,69 @@
+{
+  "official_rows": 70,
+  "supercombo_rows": 65,
+  "enriched_rows": 70,
+  "supercombo_only_rows": 21,
+  "enrichment_status_counts": {
+    "enriched": 19,
+    "enriched_review_required": 32,
+    "official_only": 19
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,startup": 1,
+    "condition_dependent_supercombo_field:damage": 9,
+    "condition_dependent_supercombo_field:recovery": 4,
+    "condition_dependent_supercombo_field:startup": 2,
+    "multiple_candidates": 13,
+    "supercombo_row_reused": 13,
+    "uncomparable_basic_field:active_duration": 2,
+    "uncomparable_basic_field:active_duration,damage": 6,
+    "uncomparable_basic_field:active_duration,damage,recovery": 7,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:damage": 7,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 2,
+    "uncomparable_basic_field:startup": 1
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 15,
+    "field_conflict": 1,
+    "structural_ambiguity": 20,
+    "uncomparable_notation": 30
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 8,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 7,
+    "field_conflict;structural_ambiguity": 1,
+    "structural_ambiguity": 1,
+    "uncomparable_notation": 4,
+    "uncomparable_notation;structural_ambiguity": 11
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 1,
+    "startup": 1
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 18,
+    "damage": 25,
+    "recovery": 14,
+    "startup": 4
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "e.honda_214hp",
+    "e.honda_214lp",
+    "e.honda_214mp",
+    "e.honda_214pp",
+    "e.honda_jhp",
+    "e.honda_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 18,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/ehonda/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/ehonda/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/ehonda/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/ehonda/classic-supercombo.csv"
+}

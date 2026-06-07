@@ -1,0 +1,84 @@
+{
+  "official_rows": 72,
+  "supercombo_rows": 68,
+  "enriched_rows": 72,
+  "supercombo_only_rows": 4,
+  "enrichment_status_counts": {
+    "enriched_review_required": 22,
+    "enriched": 23,
+    "enriched_reviewed": 25,
+    "official_only": 2
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,startup": 1,
+    "condition_dependent_supercombo_field:damage": 17,
+    "condition_dependent_supercombo_field:damage,startup": 2,
+    "condition_dependent_supercombo_field:recovery": 8,
+    "condition_dependent_supercombo_field:startup": 7,
+    "manual_match": 24,
+    "multiple_candidates": 2,
+    "supercombo_row_reused": 11,
+    "uncomparable_basic_field:active_duration": 1,
+    "uncomparable_basic_field:active_duration,damage": 1,
+    "uncomparable_basic_field:active_duration,damage,recovery": 3,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
+    "uncomparable_basic_field:active_duration,startup": 1,
+    "uncomparable_basic_field:damage": 14,
+    "uncomparable_basic_field:damage,recovery": 5,
+    "uncomparable_basic_field:damage,startup": 2,
+    "uncomparable_basic_field:recovery": 4,
+    "uncomparable_basic_field:recovery,startup": 1,
+    "uncomparable_basic_field:startup": 8
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 34,
+    "field_conflict": 1,
+    "manual_or_ambiguous_match": 24,
+    "structural_ambiguity": 13,
+    "uncomparable_notation": 44
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 8,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 8,
+    "field_conflict": 1,
+    "manual_or_ambiguous_match": 2,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 16,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation;structural_ambiguity": 2,
+    "manual_or_ambiguous_match;uncomparable_notation": 4,
+    "uncomparable_notation": 3,
+    "uncomparable_notation;structural_ambiguity": 3
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 1,
+    "startup": 1
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 10,
+    "damage": 29,
+    "recovery": 17,
+    "startup": 16
+  },
+  "human_review_status_counts": {
+    "accepted": 25
+  },
+  "human_review_decision_counts": {
+    "hold_supplemental_link": 3,
+    "supplemental_link": 19,
+    "conflict_supplemental_only": 1,
+    "movement_variant_supplemental_link": 2
+  },
+  "supercombo_reused_move_ids": [
+    "zangief_236236p",
+    "zangief_2lk",
+    "zangief_2lp",
+    "zangief_5lp",
+    "zangief_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only_taunt": 4
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/zangief/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/zangief/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/zangief/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.csv"
+}

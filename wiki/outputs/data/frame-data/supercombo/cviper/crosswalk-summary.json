@@ -1,0 +1,31 @@
+{
+  "official_rows": 69,
+  "supercombo_rows": 64,
+  "crosswalk_status_counts": {
+    "matched": 55,
+    "unmatched": 14
+  },
+  "matched_distinct_supercombo_rows": 46,
+  "supercombo_unmatched_rows": 18,
+  "supercombo_rows_matched_multiple_times": {
+    "c.viper_214k": 3,
+    "c.viper_214kk": 3,
+    "c.viper_623p": 3,
+    "c.viper_jhk": 2,
+    "c.viper_mpmk": 3
+  },
+  "source_raw_root": "raw/frame-data/supercombo/cviper",
+  "official_csv": "wiki/outputs/data/frame-data/official/cviper/classic.csv",
+  "crosswalk_policy": {
+    "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
+    "supercombo_primary_key": "move_id",
+    "candidate_matching": [
+      "official Classic input tokens are converted to command signatures",
+      "special and super motions may also match a strength-collapsed input family",
+      "category/moveType compatibility and simple field equality increase candidate score",
+      "character-specific name overrides are used for variants requiring explicit move_id mapping, such as JP Vihhat follow-ups, Ryu Denjin / hold-level rows, Zangief 360/720 / close-mid-far rows, and Ingrid Sun Crest stock-level rows",
+      "generic name overrides are used for Drive Rush system rows",
+      "duplicate SuperCombo inputs are not merged; the selected candidate keeps move_id"
+    ]
+  }
+}

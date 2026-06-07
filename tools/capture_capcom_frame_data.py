@@ -711,8 +711,9 @@ def main(argv: list[str]) -> int:
     )
 
     output_data_dir = args.output_root / "wiki" / "outputs" / "data"
+    official_output_dir = output_data_dir / "frame-data" / "official" / args.character_slug
     for mode, rows in csv_rows_by_mode.items():
-        write_csv(output_data_dir / "frame-data" / args.character_slug / f"{mode}.csv", rows)
+        write_csv(official_output_dir / f"{mode}.csv", rows)
         table_dom_path = (
             args.output_root
             / "raw"
@@ -726,7 +727,7 @@ def main(argv: list[str]) -> int:
             table_dom_path.read_text(encoding="utf-8")
         )
         write_json(
-            output_data_dir / "frame-data" / args.character_slug / f"{mode}.field-meanings.json",
+            official_output_dir / f"{mode}.field-meanings.json",
             field_meanings_from_dom(table_dom),
         )
 
@@ -757,10 +758,10 @@ def main(argv: list[str]) -> int:
             for capture in captures
         ],
         "derived_outputs": [
-            f"wiki/outputs/data/frame-data/{args.character_slug}/{mode}.csv"
+            f"wiki/outputs/data/frame-data/official/{args.character_slug}/{mode}.csv"
             for mode in csv_rows_by_mode
         ] + [
-            f"wiki/outputs/data/frame-data/{args.character_slug}/{mode}.field-meanings.json"
+            f"wiki/outputs/data/frame-data/official/{args.character_slug}/{mode}.field-meanings.json"
             for mode in csv_rows_by_mode
         ],
         "tool": "tools/capture_capcom_frame_data.py",

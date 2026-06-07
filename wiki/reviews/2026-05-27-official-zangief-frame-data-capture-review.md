@@ -31,10 +31,10 @@ Zangief（ザンギエフ） の Capcom 公式 frame-data raw snapshot と派生
 - `raw/official/frame-data/2026-05-27/zangief/classic/metadata.json`
 - `raw/official/frame-data/2026-05-27/zangief/modern/metadata.json`
 - `raw/official/frame-data/2026-05-27/zangief/manifest.json`
-- `wiki/outputs/data/frame-data/zangief/classic.csv`
-- `wiki/outputs/data/frame-data/zangief/modern.csv`
-- `wiki/outputs/data/frame-data/zangief/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/zangief/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/zangief/classic.csv`
+- `wiki/outputs/data/frame-data/official/zangief/modern.csv`
+- `wiki/outputs/data/frame-data/official/zangief/classic.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/zangief/modern.field-meanings.json`
 
 ## 確認内容
 

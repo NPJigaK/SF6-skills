@@ -21,7 +21,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
     modes = args.mode or ["classic", "modern"]
-    output_dir = args.repo_root / "wiki" / "outputs" / "data" / "frame-data" / args.character_slug
+    output_dir = args.repo_root / "wiki" / "outputs" / "data" / "frame-data" / "official" / args.character_slug
     for mode in modes:
         raw_dir = (
             args.repo_root

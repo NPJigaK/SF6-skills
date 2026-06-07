@@ -99,9 +99,9 @@ Frame data は、技の発生、持続、硬直、有利不利、ダメージ、
 
 SuperCombo glossary は active frames、startup、recovery、cancel options、hit/block advantage、guard direction、damage、damage scaling、hitconfirm windows、Drive Rush Cancel advantage、actionable recovery などの用語を説明している。
 
-Capcom 公式 capture は、Classic / Modern controls の per-move data を raw HTML、raw DOM、screenshot、metadata、派生 CSV / field-meaning JSON として保持する。raw path は `raw/frame-data/official/<data-slug>/`。JP、Ryu、Chun-Li、Zangief は人間レビュー済み accepted。2026-05-30 の 26 captures は自動検証済みで、人間レビューは未完了。
+Capcom 公式 capture は、Classic / Modern controls の per-move data を raw HTML、raw DOM、screenshot、metadata、派生 CSV / field-meaning JSON として保持する。raw path は `raw/frame-data/official/<data-slug>/`、現在の派生 output は `wiki/outputs/data/frame-data/official/<data-slug>/`。JP、Ryu、Chun-Li、Zangief は人間レビュー済み accepted。2026-05-30 の 26 captures は自動検証済みで、人間レビューは未完了。
 
-SuperCombo 取得データは、community wiki の `Data?action=raw`、Cargo API、表示 DOM、5タブ別スクリーンショット、参照画像を保持する。raw path は `raw/frame-data/supercombo/<character>/`。公式 source と重なる基本フレーム値では Capcom 公式 data を優先し、SuperCombo は公式にない range、juggle、notes、hitbox image refs などを補助 source として扱う。30 キャラ分の公式 Classic rows を保持した SuperCombo 補助列付き output もあるが、JP / Ryu / Zangief / Ingrid 以外には人間レビュー待ちの補助行が残る。
+SuperCombo 取得データは、community wiki の `Data?action=raw`、Cargo API、表示 DOM、5タブ別スクリーンショット、参照画像を保持する。raw path は `raw/frame-data/supercombo/<character>/`、現在の派生 output は `wiki/outputs/data/frame-data/supercombo/<character>/`。公式 source と重なる基本フレーム値では Capcom 公式 data を優先し、SuperCombo は公式にない range、juggle、notes、hitbox image refs などを補助 source として扱う。30 キャラ分の公式 Classic rows を保持した SuperCombo 補助列付き output は `wiki/outputs/data/frame-data/official-supercombo-enriched/<character>/` にあり、JP / Ryu / Zangief / Ingrid 以外には人間レビュー待ちの補助行が残る。
 
 ## なぜ重要か
 

@@ -48,7 +48,10 @@ def condition_parenthetical_fields(comparisons_json: str) -> list[str]:
 
 
 def audit(repo_root: Path) -> dict[str, object]:
-    root = repo_root / "wiki" / "outputs" / "data" / "enriched" / "frame-data"
+    root = repo_root / "wiki" / "outputs" / "data" / "frame-data" / "official-supercombo-enriched"
+    if not root.exists():
+        raise FileNotFoundError(f"missing enriched data root: {root}")
+
     failures: list[dict[str, str]] = []
     rows_checked = 0
 
@@ -105,6 +108,9 @@ def audit(repo_root: Path) -> dict[str, object]:
                         "reason": "alex_power_drop_regression",
                     }
                 )
+
+    if rows_checked == 0:
+        raise RuntimeError(f"no enriched rows found under {root}")
 
     return {
         "rows_checked": rows_checked,

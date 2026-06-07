@@ -33,7 +33,7 @@ Lily（リリー） は、この wiki で Capcom 公式フレームデータ cap
 
 - 公式 capture は Classic 74 行、Modern 71 行の frame-data rows を持つ。
 - 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
-- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/lily/` の CSV と raw DOM を source-preserving data として参照する。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/official/lily/` の CSV と raw DOM を source-preserving data として参照する。
 - この capture は自動検証済みだが、人間レビューは未完了。
 
 ## 関連概念

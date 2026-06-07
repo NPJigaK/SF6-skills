@@ -1,0 +1,78 @@
+{
+  "official_rows": 75,
+  "supercombo_rows": 83,
+  "enriched_rows": 75,
+  "supercombo_only_rows": 13,
+  "enrichment_status_counts": {
+    "enriched": 24,
+    "enriched_review_required": 23,
+    "enriched_reviewed": 26,
+    "official_only": 2
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:recovery": 5,
+    "condition_dependent_supercombo_field:damage": 19,
+    "condition_dependent_supercombo_field:recovery": 10,
+    "manual_match": 26,
+    "multiple_candidates": 10,
+    "supercombo_row_reused": 5,
+    "uncomparable_basic_field:active_duration": 2,
+    "uncomparable_basic_field:active_duration,damage": 1,
+    "uncomparable_basic_field:active_duration,damage,recovery": 5,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 8,
+    "uncomparable_basic_field:active_duration,recovery": 9,
+    "uncomparable_basic_field:damage": 12,
+    "uncomparable_basic_field:damage,recovery": 3,
+    "uncomparable_basic_field:recovery": 5
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 29,
+    "field_conflict": 5,
+    "manual_or_ambiguous_match": 26,
+    "structural_ambiguity": 15,
+    "uncomparable_notation": 45
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 7,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 6,
+    "manual_or_ambiguous_match": 1,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 12,
+    "manual_or_ambiguous_match;field_conflict": 1,
+    "manual_or_ambiguous_match;field_conflict;condition_dependent_field;uncomparable_notation": 4,
+    "manual_or_ambiguous_match;uncomparable_notation": 6,
+    "manual_or_ambiguous_match;uncomparable_notation;structural_ambiguity": 2,
+    "structural_ambiguity": 2,
+    "uncomparable_notation": 3,
+    "uncomparable_notation;structural_ambiguity": 5
+  },
+  "basic_field_conflict_counts": {
+    "recovery": 5
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 25,
+    "damage": 29,
+    "recovery": 30,
+    "startup": 8
+  },
+  "human_review_status_counts": {
+    "accepted": 26
+  },
+  "human_review_decision_counts": {
+    "supplemental_link": 4,
+    "shared_variant_supplemental_link": 2,
+    "stock_build_supplemental_link": 2,
+    "stock_level_supplemental_link": 18
+  },
+  "supercombo_reused_move_ids": [
+    "ingrid_236lpmp",
+    "ingrid_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only_taunt": 4,
+    "supercombo_only": 9
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/ingrid/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/ingrid/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.csv"
+}

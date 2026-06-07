@@ -727,7 +727,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
     raw_root = args.repo_root / "raw" / "frame-data" / "supercombo" / args.character_slug
-    output_dir = args.repo_root / "wiki" / "outputs" / "data" / "supercombo" / "frame-data" / args.character_slug
+    output_dir = args.repo_root / "wiki" / "outputs" / "data" / "frame-data" / "supercombo" / args.character_slug
     templates = read_json(raw_root / "data.templates.json")
     validation = read_json(raw_root / "validation.json")
     if validation.get("status") != "passed":
@@ -771,6 +771,7 @@ def main(argv: list[str]) -> int:
         / "outputs"
         / "data"
         / "frame-data"
+        / "official"
         / args.character_slug
         / f"{args.official_mode}.csv"
     )

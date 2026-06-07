@@ -33,10 +33,10 @@ SA でキャンセル可能。
 ## 根拠
 
 - [[sources/capcom-official-chun-li-frame-data]]
-- `wiki/outputs/data/frame-data/chunli/classic.csv`
-- `wiki/outputs/data/frame-data/chunli/modern.csv`
-- `wiki/outputs/data/frame-data/chunli/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/chunli/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/classic.csv`
+- `wiki/outputs/data/frame-data/official/chunli/modern.csv`
+- `wiki/outputs/data/frame-data/official/chunli/classic.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/modern.field-meanings.json`
 
 ## Limits / uncertainty
 

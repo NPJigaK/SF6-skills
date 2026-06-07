@@ -193,8 +193,8 @@ raw/frame-data/official/<character>/manifest.json
 派生CSVも安定したpathに出します。
 
 ```text
-wiki/outputs/data/frame-data/<character>/<control-scheme>.csv
-wiki/outputs/data/frame-data/<character>/<control-scheme>.field-meanings.json
+wiki/outputs/data/frame-data/official/<character>/<control-scheme>.csv
+wiki/outputs/data/frame-data/official/<character>/<control-scheme>.field-meanings.json
 ```
 
 CSVは技1項目ごとのデータに絞り、publisher、game、locale、source URL、
@@ -292,8 +292,8 @@ raw/frame-data/supercombo/<character>/
 派生データは次に出します。
 
 ```text
-wiki/outputs/data/supercombo/frame-data/<character>/
-wiki/outputs/data/enriched/frame-data/<character>/
+wiki/outputs/data/frame-data/supercombo/<character>/
+wiki/outputs/data/frame-data/official-supercombo-enriched/<character>/
 ```
 
 実行順序は capture、validate、extract、必要に応じて enriched build です。

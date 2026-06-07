@@ -1,0 +1,77 @@
+{
+  "official_rows": 76,
+  "supercombo_rows": 74,
+  "enriched_rows": 76,
+  "supercombo_only_rows": 17,
+  "enrichment_status_counts": {
+    "enriched_review_required": 46,
+    "enriched": 21,
+    "official_only": 9
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:active_duration,damage": 1,
+    "basic_field_conflict:active_duration,damage,recovery,startup": 7,
+    "basic_field_conflict:active_duration,damage,startup": 1,
+    "condition_dependent_supercombo_field:damage": 10,
+    "condition_dependent_supercombo_field:recovery": 10,
+    "condition_dependent_supercombo_field:recovery,startup": 2,
+    "manual_match": 2,
+    "multiple_candidates": 19,
+    "supercombo_row_reused": 16,
+    "uncomparable_basic_field:active_duration,damage": 1,
+    "uncomparable_basic_field:active_duration,damage,recovery": 4,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
+    "uncomparable_basic_field:active_duration,recovery": 4,
+    "uncomparable_basic_field:damage": 10,
+    "uncomparable_basic_field:damage,recovery": 2,
+    "uncomparable_basic_field:recovery": 8,
+    "uncomparable_basic_field:recovery,startup": 2
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 22,
+    "field_conflict": 9,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 26,
+    "uncomparable_notation": 35
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 13,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 7,
+    "field_conflict;structural_ambiguity": 8,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 1,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "structural_ambiguity": 3,
+    "uncomparable_notation": 5,
+    "uncomparable_notation;structural_ambiguity": 7
+  },
+  "basic_field_conflict_counts": {
+    "active_duration": 9,
+    "damage": 9,
+    "recovery": 7,
+    "startup": 8
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 13,
+    "damage": 21,
+    "recovery": 24,
+    "startup": 6
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "Luke_214hp",
+    "Luke_214lp",
+    "Luke_214mp",
+    "Luke_214pp",
+    "Luke_j214P",
+    "Luke_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 14,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/luke/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/luke/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/luke/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/luke/classic-supercombo.csv"
+}

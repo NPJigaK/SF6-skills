@@ -31,10 +31,10 @@ JP の Capcom 公式 frame-data raw snapshot と派生 outputs は、人間レ�
 - `raw/official/frame-data/2026-05-26/jp/classic/metadata.json`
 - `raw/official/frame-data/2026-05-26/jp/modern/metadata.json`
 - `raw/official/frame-data/2026-05-26/jp/manifest.json`
-- `wiki/outputs/data/frame-data/jp/classic.csv`
-- `wiki/outputs/data/frame-data/jp/modern.csv`
-- `wiki/outputs/data/frame-data/jp/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/jp/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/jp/classic.csv`
+- `wiki/outputs/data/frame-data/official/jp/modern.csv`
+- `wiki/outputs/data/frame-data/official/jp/classic.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/jp/modern.field-meanings.json`
 
 ## 確認内容
 

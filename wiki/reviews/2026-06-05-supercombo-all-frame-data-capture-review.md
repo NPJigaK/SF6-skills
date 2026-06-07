@@ -131,5 +131,5 @@ JP / Ryu / Zangief / Ingrid の既存 accepted decision 69 行は保持した。
 - [[sources/supercombo-street-fighter-6-frame-data-batch]]
 - [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]
 - `raw/frame-data/supercombo/<character_slug>/`
-- `wiki/outputs/data/supercombo/frame-data/<character_slug>/`
-- `wiki/outputs/data/enriched/frame-data/<character_slug>/`
+- `wiki/outputs/data/frame-data/supercombo/<character_slug>/`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/`

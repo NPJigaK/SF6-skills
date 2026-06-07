@@ -26,17 +26,17 @@ SuperCombo-only 13 行のうち 9 行は、特殊隠しコマンド / Monoid 操
 
 ## 生成ファイル
 
-- `wiki/outputs/data/enriched/frame-data/ingrid/classic-supercombo.csv`
-- `wiki/outputs/data/enriched/frame-data/ingrid/classic-supercombo.json`
-- `wiki/outputs/data/enriched/frame-data/ingrid/supercombo-only.csv`
-- `wiki/outputs/data/enriched/frame-data/ingrid/schema.json`
-- `wiki/outputs/data/enriched/frame-data/ingrid/summary.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/supercombo-only.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/schema.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/summary.json`
 
 ## 方針
 
 | 項目 | 方針 |
 |---|---|
-| 公式列 | `wiki/outputs/data/frame-data/ingrid/classic.csv` の列をそのまま保持する。 |
+| 公式列 | `wiki/outputs/data/frame-data/official/ingrid/classic.csv` の列をそのまま保持する。 |
 | SuperCombo 補助列 | すべて `supercombo_*` prefix で追加し、公式値を上書きしない。 |
 | レビュー flag | manual match、多候補、SuperCombo row 再利用を `enrichment_review_flags` に残す。 |
 | 人間レビュー | Ingrid のレビュー対象 26 行は人間レビュー済み。公式値を正とし、SuperCombo は補助情報として扱う。 |
@@ -127,5 +127,5 @@ SuperCombo-only 13 行のうち 9 行は、特殊隠しコマンド / Monoid 操
 - 公式 source（根拠）: [[sources/capcom-official-ingrid-frame-data]]
 - SuperCombo source（根拠）: [[sources/supercombo-ingrid-frame-data]]
 - 候補照合: [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]
-- 補助列付き summary: `wiki/outputs/data/enriched/frame-data/ingrid/summary.json`
-- Human review decisions: `wiki/outputs/data/enriched/frame-data/ingrid/classic-supercombo.csv` の `human_review_*` 列
+- 補助列付き summary: `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/summary.json`
+- Human review decisions: `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.csv` の `human_review_*` 列

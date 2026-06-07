@@ -33,7 +33,7 @@ Kimberly（キンバリー） は、この wiki で Capcom 公式フレームデ
 
 - 公式 capture は Classic 86 行、Modern 84 行の frame-data rows を持つ。
 - 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
-- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/kimberly/` の CSV と raw DOM を source-preserving data として参照する。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/official/kimberly/` の CSV と raw DOM を source-preserving data として参照する。
 - この capture は自動検証済みだが、人間レビューは未完了。
 
 ## 関連概念

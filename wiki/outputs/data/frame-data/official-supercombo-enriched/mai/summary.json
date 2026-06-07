@@ -1,0 +1,92 @@
+{
+  "official_rows": 90,
+  "supercombo_rows": 87,
+  "enriched_rows": 90,
+  "supercombo_only_rows": 32,
+  "enrichment_status_counts": {
+    "enriched": 17,
+    "enriched_review_required": 69,
+    "official_only": 4
+  },
+  "review_flag_counts": {
+    "ambiguous_match": 41,
+    "basic_field_conflict:damage": 12,
+    "basic_field_conflict:damage,startup": 8,
+    "basic_field_conflict:startup": 6,
+    "condition_dependent_supercombo_field:damage": 5,
+    "condition_dependent_supercombo_field:damage,startup": 2,
+    "condition_dependent_supercombo_field:recovery": 12,
+    "condition_dependent_supercombo_field:startup": 4,
+    "manual_match": 2,
+    "multiple_candidates": 54,
+    "supercombo_row_reused": 48,
+    "uncomparable_basic_field:active_duration": 12,
+    "uncomparable_basic_field:active_duration,damage": 3,
+    "uncomparable_basic_field:active_duration,damage,recovery": 15,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 2,
+    "uncomparable_basic_field:active_duration,damage,startup": 2,
+    "uncomparable_basic_field:active_duration,recovery": 19,
+    "uncomparable_basic_field:active_duration,startup": 4,
+    "uncomparable_basic_field:damage": 4,
+    "uncomparable_basic_field:damage,recovery": 3,
+    "uncomparable_basic_field:recovery": 3
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 23,
+    "field_conflict": 26,
+    "manual_or_ambiguous_match": 43,
+    "structural_ambiguity": 57,
+    "uncomparable_notation": 67
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 9,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 4,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation;structural_ambiguity": 6,
+    "manual_or_ambiguous_match;field_conflict;condition_dependent_field;uncomparable_notation;structural_ambiguity": 2,
+    "manual_or_ambiguous_match;field_conflict;uncomparable_notation;structural_ambiguity": 24,
+    "manual_or_ambiguous_match;uncomparable_notation;structural_ambiguity": 9,
+    "structural_ambiguity": 2,
+    "uncomparable_notation": 1,
+    "uncomparable_notation;structural_ambiguity": 10
+  },
+  "basic_field_conflict_counts": {
+    "damage": 20,
+    "startup": 14
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 57,
+    "damage": 29,
+    "recovery": 42,
+    "startup": 8
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "mai_214hp",
+    "mai_214lp",
+    "mai_214mp",
+    "mai_214pp",
+    "mai_236236k",
+    "mai_236hk",
+    "mai_236hp",
+    "mai_236kk",
+    "mai_236lk",
+    "mai_236lp",
+    "mai_236mk",
+    "mai_236mp",
+    "mai_236pp",
+    "mai_623hk",
+    "mai_623kk",
+    "mai_623lk",
+    "mai_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 27,
+    "supercombo_only_taunt": 5
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/mai/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/mai/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/mai/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/mai/classic-supercombo.csv"
+}

@@ -24,17 +24,17 @@ Capcom 公式 Ryu Classic CSV を正として保持したまま、SuperCombo Ryu
 
 ## 生成ファイル
 
-- `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.csv`
-- `wiki/outputs/data/enriched/frame-data/ryu/classic-supercombo.json`
-- `wiki/outputs/data/enriched/frame-data/ryu/supercombo-only.csv`
-- `wiki/outputs/data/enriched/frame-data/ryu/schema.json`
-- `wiki/outputs/data/enriched/frame-data/ryu/summary.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/supercombo-only.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/schema.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/summary.json`
 
 ## 方針
 
 | 項目 | 方針 |
 |---|---|
-| 公式列 | `wiki/outputs/data/frame-data/ryu/classic.csv` の列をそのまま保持する。 |
+| 公式列 | `wiki/outputs/data/frame-data/official/ryu/classic.csv` の列をそのまま保持する。 |
 | SuperCombo 補助列 | すべて `supercombo_*` prefix で追加し、公式値を上書きしない。 |
 | review flag | ambiguous match、manual match、基本値 conflict、多候補、SuperCombo row reuse を `enrichment_review_flags` に残す。 |
 | 人間レビュー | Ryu の review 対象 13件は人間レビュー済み。公式値を正としたまま補助リンクとして採用する。 |
@@ -106,4 +106,4 @@ Capcom 公式 Ryu Classic CSV を正として保持したまま、SuperCombo Ryu
 - 公式 source: [[sources/capcom-official-ryu-frame-data]]
 - SuperCombo source: [[sources/supercombo-ryu-frame-data]]
 - 候補 crosswalk: [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]
-- Enriched summary: `wiki/outputs/data/enriched/frame-data/ryu/summary.json`
+- Enriched summary: `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/summary.json`

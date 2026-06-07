@@ -1,0 +1,64 @@
+{
+  "official_rows": 64,
+  "supercombo_rows": 64,
+  "enriched_rows": 64,
+  "supercombo_only_rows": 13,
+  "enrichment_status_counts": {
+    "enriched": 19,
+    "enriched_review_required": 34,
+    "official_only": 11
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:recovery": 1,
+    "condition_dependent_supercombo_field:damage": 2,
+    "condition_dependent_supercombo_field:damage,recovery": 1,
+    "condition_dependent_supercombo_field:recovery": 8,
+    "condition_dependent_supercombo_field:startup": 2,
+    "multiple_candidates": 16,
+    "supercombo_row_reused": 3,
+    "uncomparable_basic_field:active_duration": 1,
+    "uncomparable_basic_field:active_duration,damage": 5,
+    "uncomparable_basic_field:active_duration,damage,recovery": 4,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 5,
+    "uncomparable_basic_field:active_duration,recovery": 3,
+    "uncomparable_basic_field:damage": 6,
+    "uncomparable_basic_field:damage,recovery": 4,
+    "uncomparable_basic_field:recovery": 4
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 13,
+    "field_conflict": 1,
+    "structural_ambiguity": 19,
+    "uncomparable_notation": 32
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 10,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 3,
+    "field_conflict;uncomparable_notation": 1,
+    "structural_ambiguity": 2,
+    "uncomparable_notation": 4,
+    "uncomparable_notation;structural_ambiguity": 14
+  },
+  "basic_field_conflict_counts": {
+    "recovery": 1
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 18,
+    "damage": 24,
+    "recovery": 20,
+    "startup": 5
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "a.k.i._mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 10,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/aki/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/aki/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/aki/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/aki/classic-supercombo.csv"
+}

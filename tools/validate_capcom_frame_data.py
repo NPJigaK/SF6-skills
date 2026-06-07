@@ -50,7 +50,7 @@ def assert_equal(actual: Any, expected: Any, message: str) -> None:
 
 def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, Any]:
     raw_dir = repo_root / "raw" / "frame-data" / "official" / character_slug / mode
-    output_dir = repo_root / "wiki" / "outputs" / "data" / "frame-data" / character_slug
+    output_dir = repo_root / "wiki" / "outputs" / "data" / "frame-data" / "official" / character_slug
 
     page_html_path = raw_dir / "page.html"
     table_dom_path = raw_dir / "table.dom.json"

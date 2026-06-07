@@ -27,13 +27,13 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 
 ## 生成ファイル
 
-- `wiki/outputs/data/supercombo/frame-data/jp/frames.csv`
-- `wiki/outputs/data/supercombo/frame-data/jp/frames.json`
-- `wiki/outputs/data/supercombo/frame-data/jp/character.csv`
-- `wiki/outputs/data/supercombo/frame-data/jp/schema.json`
-- `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-official-classic.csv`
-- `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-summary.json`
-- `wiki/outputs/data/supercombo/frame-data/jp/supercombo-unmatched.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/frames.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/frames.json`
+- `wiki/outputs/data/frame-data/supercombo/jp/character.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/schema.json`
+- `wiki/outputs/data/frame-data/supercombo/jp/crosswalk-official-classic.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/crosswalk-summary.json`
+- `wiki/outputs/data/frame-data/supercombo/jp/supercombo-unmatched.csv`
 
 ## 方針
 
@@ -86,7 +86,7 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 - `matched_manual` の4件は enriched output で人間レビュー済み。`ヴィーハト・アクノ`、`パリィドライブラッシュ`、`キャンセルドライブラッシュ` は `supplemental_link`、`ヴィーハト・チェーニ` は `non_additive_supplemental_damage` として扱う。
 - `SA2 ラヴーシュカ` の startup conflict は、enriched output で `conflict_supplemental_only` として人間レビュー済み。公式 startup 29 を正とする。
 - 公式の active は `6-8` のような発生フレーム範囲、SuperCombo の active は `3` のような持続フレーム数で表されることがある。単純比較では active duration に変換できる場合だけ比較する。
-- この report は review 用であり、`wiki/outputs/data/frame-data/jp/` の公式 CSV を置き換えない。
+- この report は review 用であり、`wiki/outputs/data/frame-data/official/jp/` の公式 CSV を置き換えない。
 
 ## 根拠
 
@@ -94,5 +94,5 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 - 公式 source: [[sources/capcom-official-jp-frame-data]]
 - SuperCombo validation: [[reviews/2026-05-31-supercombo-jp-frame-data-capture-review]]
 - Raw SuperCombo manifest: `raw/frame-data/supercombo/jp/manifest.json`
-- Crosswalk summary: `wiki/outputs/data/supercombo/frame-data/jp/crosswalk-summary.json`
+- Crosswalk summary: `wiki/outputs/data/frame-data/supercombo/jp/crosswalk-summary.json`
 - Enriched output report: [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]]

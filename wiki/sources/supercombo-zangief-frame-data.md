@@ -46,8 +46,8 @@ SuperCombo Wiki の Zangief フレームデータを、`Data?action=raw` の生 
 7. `6HPHK` と `720+P` は同じ input を持つ複数 row があるため、SuperCombo raw の行識別には `moveId` を使う。input は表示・検索用であり、主キーにはしない。
 8. Zangief は 360 / 720 motion、近距離/中距離/遠距離版、hold 版、CA 版の対応があるため、公式 Classic との照合では Zangief 専用の name override を使って `move_id` に対応させている。
 9. この source は community data なので、公式 Capcom data と重なる基本フレーム値では公式を正とする。SuperCombo は公式にない range、juggle、hitbox image、notes などを後で追加統合する候補として扱う。
-10. レビュー用の派生 CSV/JSON と公式 Zangief Classic との照合結果は `wiki/outputs/data/supercombo/frame-data/zangief/` と [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]] に保存している。
-11. 公式列を保持した補助列付き output は `wiki/outputs/data/enriched/frame-data/zangief/` と [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] に保存している。
+10. レビュー用の派生 CSV/JSON と公式 Zangief Classic との照合結果は `wiki/outputs/data/frame-data/supercombo/zangief/` と [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]] に保存している。
+11. 公式列を保持した補助列付き output は `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/` と [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] に保存している。
 
 ## 重要な主張
 
@@ -60,8 +60,8 @@ SuperCombo Wiki の Zangief フレームデータを、`Data?action=raw` の生 
 | `SF6_FrameData` は move type として ground_normal 23、air_normal 9、drive 6、throw 6、special 15、super 5、taunt 4 を含む。 | `raw/frame-data/supercombo/zangief/validation.json` | high | taunt は表示ページの 4 section には含まれないが、raw/Cargo row として保存されている。 |
 | duplicate input は `6HPHK` と `720+P` の 2 種類。 | `raw/frame-data/supercombo/zangief/validation.json`; `raw/frame-data/supercombo/zangief/data.templates.json` | high | `6HPHK` は block/recovery、`720+P` は SA3/CA の variant。 |
 | Data page の最新 revision は 2026-06-01T07:31:24Z、Frame data 表示ページの revision は 2024-10-19T05:08:24Z。 | `raw/frame-data/supercombo/zangief/api/page-metadata.json` | high | Data page は pageid 69264 / revid 365204、Frame data page は pageid 69274 / revid 310361。 |
-| 公式 Zangief Classic との照合は 46 件の自動一致、24 件の Zangief / 汎用 name override による一致、2 件の公式側未照合を含む。 | `wiki/outputs/data/supercombo/frame-data/zangief/crosswalk-summary.json` | high | 公式側未照合は前方ステップ / 後方ステップ。 |
-| 補助列付き output は 45 件の `enriched`、25 件の `enriched_reviewed`、2 件の `official_only` を含む。 | `wiki/outputs/data/enriched/frame-data/zangief/summary.json` | high | 25 件のレビュー対象行は `accepted` 済み。SuperCombo-only rows は taunt 4 件。 |
+| 公式 Zangief Classic との照合は 46 件の自動一致、24 件の Zangief / 汎用 name override による一致、2 件の公式側未照合を含む。 | `wiki/outputs/data/frame-data/supercombo/zangief/crosswalk-summary.json` | high | 公式側未照合は前方ステップ / 後方ステップ。 |
+| 補助列付き output は 45 件の `enriched`、25 件の `enriched_reviewed`、2 件の `official_only` を含む。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/summary.json` | high | 25 件のレビュー対象行は `accepted` 済み。SuperCombo-only rows は taunt 4 件。 |
 
 ## データ構造メモ
 
@@ -97,7 +97,7 @@ SuperCombo Wiki の Zangief フレームデータを、`Data?action=raw` の生 
 - スクリーンショット: `raw/frame-data/supercombo/zangief/screenshots/`
 - 画像: `raw/frame-data/supercombo/zangief/images/files/`
 - 検証結果: `raw/frame-data/supercombo/zangief/validation.json`
-- 派生 output: `wiki/outputs/data/supercombo/frame-data/zangief/`
+- 派生 output: `wiki/outputs/data/frame-data/supercombo/zangief/`
 - 照合レポート: [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]
-- 補助列付き output: `wiki/outputs/data/enriched/frame-data/zangief/`
+- 補助列付き output: `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/`
 - 補助列付きレポート: [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]]

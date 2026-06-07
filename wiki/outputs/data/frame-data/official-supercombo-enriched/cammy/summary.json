@@ -1,0 +1,72 @@
+{
+  "official_rows": 75,
+  "supercombo_rows": 74,
+  "enriched_rows": 75,
+  "supercombo_only_rows": 21,
+  "enrichment_status_counts": {
+    "enriched": 20,
+    "enriched_review_required": 38,
+    "official_only": 17
+  },
+  "review_flag_counts": {
+    "basic_field_conflict:damage,recovery,startup": 1,
+    "basic_field_conflict:startup": 1,
+    "condition_dependent_supercombo_field:damage": 9,
+    "condition_dependent_supercombo_field:recovery": 7,
+    "condition_dependent_supercombo_field:startup": 4,
+    "manual_match": 2,
+    "multiple_candidates": 15,
+    "supercombo_row_reused": 9,
+    "uncomparable_basic_field:active_duration": 7,
+    "uncomparable_basic_field:active_duration,damage,recovery": 4,
+    "uncomparable_basic_field:active_duration,damage,recovery,startup": 5,
+    "uncomparable_basic_field:damage": 3,
+    "uncomparable_basic_field:damage,recovery": 8,
+    "uncomparable_basic_field:recovery": 5,
+    "uncomparable_basic_field:startup": 1
+  },
+  "review_queue_counts": {
+    "condition_dependent_field": 20,
+    "field_conflict": 2,
+    "manual_or_ambiguous_match": 2,
+    "structural_ambiguity": 20,
+    "uncomparable_notation": 33
+  },
+  "review_queue_combination_counts": {
+    "condition_dependent_field;uncomparable_notation": 10,
+    "condition_dependent_field;uncomparable_notation;structural_ambiguity": 7,
+    "field_conflict;condition_dependent_field;uncomparable_notation;structural_ambiguity": 1,
+    "field_conflict;uncomparable_notation;structural_ambiguity": 1,
+    "manual_or_ambiguous_match;condition_dependent_field;uncomparable_notation": 2,
+    "structural_ambiguity": 5,
+    "uncomparable_notation": 6,
+    "uncomparable_notation;structural_ambiguity": 6
+  },
+  "basic_field_conflict_counts": {
+    "damage": 1,
+    "recovery": 1,
+    "startup": 2
+  },
+  "uncomparable_basic_field_counts": {
+    "active_duration": 16,
+    "damage": 20,
+    "recovery": 22,
+    "startup": 6
+  },
+  "human_review_status_counts": {},
+  "human_review_decision_counts": {},
+  "supercombo_reused_move_ids": [
+    "cammy_236hk",
+    "cammy_236p",
+    "cammy_623hk",
+    "cammy_mpmk"
+  ],
+  "supercombo_only_suggested_handling_counts": {
+    "supercombo_only": 18,
+    "supercombo_only_taunt": 3
+  },
+  "official_csv": "wiki/outputs/data/frame-data/official/cammy/classic.csv",
+  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/cammy/frames.csv",
+  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/cammy/crosswalk-official-classic.csv",
+  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/cammy/classic-supercombo.csv"
+}
