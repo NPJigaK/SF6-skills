@@ -1,0 +1,53 @@
+{
+  "schema_version": "supercombo_character_data/v2",
+  "source_raw_root": "raw/frame-data/supercombo/marisa",
+  "fields": [
+    "row_order",
+    "chara",
+    "name",
+    "hp",
+    "throw_range",
+    "throw_hurtbox",
+    "forward_walk_speed",
+    "back_walk_speed",
+    "forward_dash_speed",
+    "back_dash_speed",
+    "forward_dash_distance",
+    "back_dash_distance",
+    "jump_speed",
+    "jump_apex",
+    "forward_jump_distance",
+    "back_jump_distance",
+    "drive_rush_min",
+    "drive_rush_block",
+    "drive_rush_max",
+    "portrait",
+    "icon"
+  ],
+  "row_count": 1,
+  "rows": [
+    {
+      "row_order": "1",
+      "chara": "Marisa",
+      "name": "Marisa",
+      "hp": "10500",
+      "throw_range": "0.9",
+      "throw_hurtbox": "0.38",
+      "forward_walk_speed": "0.039",
+      "back_walk_speed": "0.027",
+      "forward_dash_speed": "22",
+      "back_dash_speed": "25",
+      "forward_dash_distance": "1.40",
+      "back_dash_distance": "0.90",
+      "jump_speed": "4+38+3",
+      "jump_apex": "2.115",
+      "forward_jump_distance": "1.90",
+      "back_jump_distance": "1.52",
+      "drive_rush_min": "0.544",
+      "drive_rush_block": "1.903",
+      "drive_rush_max": "3.081",
+      "portrait": "SF6 Marisa Portrait.png",
+      "icon": "SF6 Marisa Face.png"
+    }
+  ]
+}

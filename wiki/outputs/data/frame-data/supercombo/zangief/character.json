@@ -1,0 +1,53 @@
+{
+  "schema_version": "supercombo_character_data/v2",
+  "source_raw_root": "raw/frame-data/supercombo/zangief",
+  "fields": [
+    "row_order",
+    "chara",
+    "name",
+    "hp",
+    "throw_range",
+    "throw_hurtbox",
+    "forward_walk_speed",
+    "back_walk_speed",
+    "forward_dash_speed",
+    "back_dash_speed",
+    "forward_dash_distance",
+    "back_dash_distance",
+    "jump_speed",
+    "jump_apex",
+    "forward_jump_distance",
+    "back_jump_distance",
+    "drive_rush_min",
+    "drive_rush_block",
+    "drive_rush_max",
+    "portrait",
+    "icon"
+  ],
+  "row_count": 1,
+  "rows": [
+    {
+      "row_order": "1",
+      "chara": "Zangief",
+      "name": "Zangief",
+      "hp": "11000",
+      "throw_range": "1.02",
+      "throw_hurtbox": "0.49",
+      "forward_walk_speed": "0.0364",
+      "back_walk_speed": "0.025",
+      "forward_dash_speed": "22",
+      "back_dash_speed": "25",
+      "forward_dash_distance": "1.007",
+      "back_dash_distance": "0.712",
+      "jump_speed": "5+38+3",
+      "jump_apex": "2.115",
+      "forward_jump_distance": "1.725",
+      "back_jump_distance": "1.406",
+      "drive_rush_min": "0.327",
+      "drive_rush_block": "1.455",
+      "drive_rush_max": "3.040",
+      "portrait": "SF6 Zangief Portrait.png",
+      "icon": "SF6 Zangief Face.png"
+    }
+  ]
+}

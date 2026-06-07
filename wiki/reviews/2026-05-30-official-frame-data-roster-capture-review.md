@@ -93,8 +93,8 @@ tags:
 - 新規 manifest はすべて `raw/official/frame-data/2026-05-30/<character>/` 配下にある。
 - 各 character は Classic / Modern raw directories を持ち、`page.html`、`table.dom.json`、`screenshot.png`、`metadata.json` が保存されている。
 - metadata と manifest は publisher、source URL、capture timestamp、character slug、control scheme を含む。
-- `tools/validate_capcom_frame_data.py` は、各 character / control scheme について、raw DOM artifact から saved CSV rows を再現した。
-- 同 tool は field-meaning JSON records も raw DOM artifact から再現した。
+- `tools/validate_capcom_frame_data.py` は、各 character / control scheme について、raw DOM artifact から saved JSON rows を再現した。
+- 同 tool は `field_meanings.records` も raw DOM artifact から再現した。
 - screenshot metadata は full table coverage と Cookiebot/navigation overlay removal を示す。
 - 既存 accepted の JP、Ryu、Chun-Li、Zangief captures も batch 後に再検証された。
 

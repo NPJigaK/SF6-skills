@@ -1,16 +1,15 @@
 {
-  "schema_version": "supercombo_frame_data_outputs/v1",
+  "schema_version": "supercombo_frame_data_outputs/v2",
   "source": "SuperCombo Wiki",
   "raw_root": "raw/frame-data/supercombo/guile",
   "files": {
-    "frames_csv": "frames.csv",
-    "frames_json": "frames.json",
-    "character_csv": "character.csv",
-    "crosswalk_csv": "crosswalk-official-classic.csv",
+    "frames": "frames.json",
+    "character": "character.json",
+    "crosswalk": "crosswalk-official-classic.json",
     "crosswalk_summary": "crosswalk-summary.json",
-    "supercombo_unmatched_csv": "supercombo-unmatched.csv"
+    "supercombo_unmatched": "supercombo-unmatched.json"
   },
-  "frame_csv_fields": [
+  "frame_fields": [
     "row_order",
     "section",
     "move_type",
@@ -58,7 +57,7 @@
     "hitboxes",
     "notes"
   ],
-  "character_csv_fields": [
+  "character_fields": [
     "row_order",
     "chara",
     "name",

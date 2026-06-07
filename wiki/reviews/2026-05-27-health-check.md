@@ -61,7 +61,7 @@ content pages には frontmatter missing はなかった。`wiki/index.md` と `
 | Chun-Li | 78 | 72 | passed |
 | Zangief | 72 | 66 | passed |
 
-validation は raw HTML / raw DOM snapshot から再生成した data と saved derived rows / field meanings を比較する。screenshots は page state、table width、overlay の visual coverage evidence として使い、cell-value source にはしない。
+validation は raw HTML / raw DOM snapshot から再生成した data と saved derived JSON rows / field meanings を比較する。screenshots は page state、table width、overlay の visual coverage evidence として使い、cell-value source にはしない。
 
 ## 知識上の問題
 

@@ -21,19 +21,19 @@ aliases:
 
 ## 要約
 
-SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Capcom 公式 JP Classic CSV との候補 crosswalk を生成した。これは最終マージではなく、公式 data を正としたまま SuperCombo の `moveId`、range、juggle、notes、画像をどの公式 row に紐づけられるか確認するためのレビュー面。
+SuperCombo JP raw capture から review 用の派生 JSON を作成し、Capcom 公式 JP Classic JSON との候補 crosswalk を生成した。これは最終マージではなく、公式 data を正としたまま SuperCombo の `moveId`、range、juggle、notes、画像をどの公式 row に紐づけられるか確認するためのレビュー面。
 
 この crosswalk を使った enriched output は [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] に保存している。
 
 ## 生成ファイル
 
-- `wiki/outputs/data/frame-data/supercombo/jp/frames.csv`
 - `wiki/outputs/data/frame-data/supercombo/jp/frames.json`
-- `wiki/outputs/data/frame-data/supercombo/jp/character.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/frames.json`
+- `wiki/outputs/data/frame-data/supercombo/jp/character.json`
 - `wiki/outputs/data/frame-data/supercombo/jp/schema.json`
-- `wiki/outputs/data/frame-data/supercombo/jp/crosswalk-official-classic.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/crosswalk-official-classic.json`
 - `wiki/outputs/data/frame-data/supercombo/jp/crosswalk-summary.json`
-- `wiki/outputs/data/frame-data/supercombo/jp/supercombo-unmatched.csv`
+- `wiki/outputs/data/frame-data/supercombo/jp/supercombo-unmatched.json`
 
 ## 方針
 
@@ -73,20 +73,20 @@ SuperCombo JP raw capture から review 用の派生 CSV/JSON を作成し、Cap
 
 | move_id | input | name | メモ |
 |---|---|---|---|
-| `jp_214pp_214hp` | `214PP~214HP` | OD Departure: Shadow | 公式 Classic CSV には独立 row がない候補。 |
+| `jp_214pp_214hp` | `214PP~214HP` | OD Departure: Shadow | 公式 Classic JSON には独立 row がない候補。 |
 | `jp_236k_hold` | `236[K]` | Torbalan Feint | hold/feint 系の補助 row。 |
 | `jp_22k_bomb` | `22K (Bomb)` | Amnesia Bomb | 当身成立後の bomb row。 |
 | `jp_22kk_bomb` | `22KK (Bomb)` | Amnesia Bomb | OD 当身成立後の bomb row。 |
-| `jp_5pppkkk` | `5PPPKKK` | Neutral Taunt | 公式 Classic CSV には taunt row がない。 |
-| `jp_6pppkkk` | `6PPPKKK` | Forward Taunt | 公式 Classic CSV には taunt row がない。 |
-| `jp_4pppkkk` | `4PPPKKK` | Back Taunt | 公式 Classic CSV には taunt row がない。 |
+| `jp_5pppkkk` | `5PPPKKK` | Neutral Taunt | 公式 Classic JSON には taunt row がない。 |
+| `jp_6pppkkk` | `6PPPKKK` | Forward Taunt | 公式 Classic JSON には taunt row がない。 |
+| `jp_4pppkkk` | `4PPPKKK` | Back Taunt | 公式 Classic JSON には taunt row がない。 |
 
 ## 注意点
 
 - `matched_manual` の4件は enriched output で人間レビュー済み。`ヴィーハト・アクノ`、`パリィドライブラッシュ`、`キャンセルドライブラッシュ` は `supplemental_link`、`ヴィーハト・チェーニ` は `non_additive_supplemental_damage` として扱う。
 - `SA2 ラヴーシュカ` の startup conflict は、enriched output で `conflict_supplemental_only` として人間レビュー済み。公式 startup 29 を正とする。
 - 公式の active は `6-8` のような発生フレーム範囲、SuperCombo の active は `3` のような持続フレーム数で表されることがある。単純比較では active duration に変換できる場合だけ比較する。
-- この report は review 用であり、`wiki/outputs/data/frame-data/official/jp/` の公式 CSV を置き換えない。
+- この report は review 用であり、`wiki/outputs/data/frame-data/official/jp/` の公式 JSON を置き換えない。
 
 ## 根拠
 

@@ -16,14 +16,14 @@
     "multiple_candidates": 16,
     "supercombo_row_reused": 3,
     "uncomparable_basic_field:active_duration": 4,
-    "uncomparable_basic_field:active_duration,damage,recovery": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 2,
     "uncomparable_basic_field:active_duration,recovery": 3,
+    "uncomparable_basic_field:active_duration,recovery,damage": 3,
     "uncomparable_basic_field:damage": 10,
-    "uncomparable_basic_field:damage,recovery": 2,
-    "uncomparable_basic_field:damage,startup": 2,
     "uncomparable_basic_field:recovery": 3,
-    "uncomparable_basic_field:startup": 2
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup": 2,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 2,
+    "uncomparable_basic_field:startup,damage": 2
   },
   "review_queue_counts": {
     "condition_dependent_field": 13,
@@ -54,8 +54,8 @@
     "supercombo_only": 4,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/manon/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/manon/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/manon/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/manon/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/manon/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/manon/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/manon/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/manon/classic-supercombo.json"
 }

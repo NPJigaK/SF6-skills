@@ -21,19 +21,19 @@ aliases:
 
 ## 要約
 
-SuperCombo Ingrid raw 取得データからレビュー用の派生 CSV/JSON を作成し、Capcom 公式 Ingrid Classic CSV との候補照合を生成した。これは最終マージではなく、公式 data を正としたまま SuperCombo の `move_id`、range、juggle、notes、画像、hitbox をどの公式 row に紐づけられるか確認するためのレビュー面。
+SuperCombo Ingrid raw 取得データからレビュー用の派生 JSON を作成し、Capcom 公式 Ingrid Classic JSON との候補照合を生成した。これは最終マージではなく、公式 data を正としたまま SuperCombo の `move_id`、range、juggle、notes、画像、hitbox をどの公式 row に紐づけられるか確認するためのレビュー面。
 
 Sun Crest stock level、OD Sun Shot の共有 row、SA1 / SA2 の stock level、Drive Rush など 26 行は人間レビューし、公式値を正とした補助リンクとして accepted にした。この照合を使った補助列付き output は [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] に保存している。
 
 ## 生成ファイル
 
-- `wiki/outputs/data/frame-data/supercombo/ingrid/frames.csv`
 - `wiki/outputs/data/frame-data/supercombo/ingrid/frames.json`
-- `wiki/outputs/data/frame-data/supercombo/ingrid/character.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/frames.json`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/character.json`
 - `wiki/outputs/data/frame-data/supercombo/ingrid/schema.json`
-- `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-official-classic.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-official-classic.json`
 - `wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-summary.json`
-- `wiki/outputs/data/frame-data/supercombo/ingrid/supercombo-unmatched.csv`
+- `wiki/outputs/data/frame-data/supercombo/ingrid/supercombo-unmatched.json`
 
 ## 方針
 
@@ -87,7 +87,7 @@ Sun Crest stock level、OD Sun Shot の共有 row、SA1 / SA2 の stock level、
 
 ## 注意点
 
-- この report はレビュー用であり、`wiki/outputs/data/frame-data/official/ingrid/` の公式 CSV を置き換えない。
+- この report はレビュー用であり、`wiki/outputs/data/frame-data/official/ingrid/` の公式 JSON を置き換えない。
 - Ingrid は imageinfo で face / portrait の 2 件しか解決できていない。SuperCombo の `supercombo_images` / `supercombo_hitboxes` は参照名として保持するが、画像ファイル自体を根拠に使うには追加確認が必要。
 - SuperCombo-only 9 行は公式 frame row と直接照合していない。これらを extra / hidden / community-only data として schema に入れるかは別途判断する。
 

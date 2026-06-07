@@ -10,25 +10,25 @@
     "official_only": 2
   },
   "review_flag_counts": {
-    "basic_field_conflict:active_duration,startup": 1,
+    "basic_field_conflict:startup,active_duration": 1,
     "condition_dependent_supercombo_field:damage": 17,
-    "condition_dependent_supercombo_field:damage,startup": 2,
     "condition_dependent_supercombo_field:recovery": 8,
     "condition_dependent_supercombo_field:startup": 7,
+    "condition_dependent_supercombo_field:startup,damage": 2,
     "manual_match": 24,
     "multiple_candidates": 2,
     "supercombo_row_reused": 11,
     "uncomparable_basic_field:active_duration": 1,
     "uncomparable_basic_field:active_duration,damage": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
-    "uncomparable_basic_field:active_duration,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery,damage": 3,
     "uncomparable_basic_field:damage": 14,
-    "uncomparable_basic_field:damage,recovery": 5,
-    "uncomparable_basic_field:damage,startup": 2,
     "uncomparable_basic_field:recovery": 4,
-    "uncomparable_basic_field:recovery,startup": 1,
-    "uncomparable_basic_field:startup": 8
+    "uncomparable_basic_field:recovery,damage": 5,
+    "uncomparable_basic_field:startup": 8,
+    "uncomparable_basic_field:startup,active_duration": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 4,
+    "uncomparable_basic_field:startup,damage": 2,
+    "uncomparable_basic_field:startup,recovery": 1
   },
   "review_queue_counts": {
     "condition_dependent_field": 34,
@@ -77,8 +77,8 @@
   "supercombo_only_suggested_handling_counts": {
     "supercombo_only_taunt": 4
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/zangief/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/zangief/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/zangief/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/zangief/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/zangief/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/zangief/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.json"
 }

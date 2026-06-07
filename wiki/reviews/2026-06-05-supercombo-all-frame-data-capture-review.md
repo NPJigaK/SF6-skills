@@ -51,7 +51,7 @@ SuperCombo Wiki の Street Fighter 6 frame-data は、30 キャラ分の raw cap
 - SuperCombo Cargo API の `SF6_FrameData` / `SF6_CharacterData` 行数が raw template 件数と一致することを確認した。
 - `Frame_data?action=raw` の Cargo query を保存し、表示ページの DOM table と raw/Cargo 由来の期待値を照合した。
 - 表示 DOM は `General`、`Details`、`Meter`、`Properties`、`Notes` の 5 tab state を保存した。
-- 公式 Classic CSV との crosswalk と、公式列を正として SuperCombo を `supercombo_*` 補助列に入れる enriched output を 30 キャラ分生成した。
+- 公式 Classic JSON との crosswalk と、公式列を正として SuperCombo を `supercombo_*` 補助列に入れる enriched output を 30 キャラ分生成した。
 
 ## 検証中に反映した補正
 
@@ -117,7 +117,7 @@ JP / Ryu / Zangief / Ingrid の既存 accepted decision 69 行は保持した。
 - `imageinfo missing titles` は合計 599 件。フレーム表の数値検証とは別の警告として扱う。
 - Jamie の warning 5 件は Specials table の pagination によるもの。raw/Cargo の 55 rows は保持している。
 - C.Viper には `moveType=air_normal8` の `c.viper_8jhk` が 1 行ある。SuperCombo 表示 query には含まれていない非標準 moveType なので、勝手に `air_normal` と同一扱いにはしない。
-- SuperCombo は community data であり、公式 data と重なる基本フレーム値では Capcom 公式 Classic CSV を正とする。
+- SuperCombo は community data であり、公式 data と重なる基本フレーム値では Capcom 公式 Classic JSON を正とする。
 
 ## 未解決の質問
 

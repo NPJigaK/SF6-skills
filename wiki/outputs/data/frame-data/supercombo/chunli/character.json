@@ -1,0 +1,53 @@
+{
+  "schema_version": "supercombo_character_data/v2",
+  "source_raw_root": "raw/frame-data/supercombo/chunli",
+  "fields": [
+    "row_order",
+    "chara",
+    "name",
+    "hp",
+    "throw_range",
+    "throw_hurtbox",
+    "forward_walk_speed",
+    "back_walk_speed",
+    "forward_dash_speed",
+    "back_dash_speed",
+    "forward_dash_distance",
+    "back_dash_distance",
+    "jump_speed",
+    "jump_apex",
+    "forward_jump_distance",
+    "back_jump_distance",
+    "drive_rush_min",
+    "drive_rush_block",
+    "drive_rush_max",
+    "portrait",
+    "icon"
+  ],
+  "row_count": 1,
+  "rows": [
+    {
+      "row_order": "1",
+      "chara": "Chun-Li",
+      "name": "Chun-Li",
+      "hp": "10000",
+      "throw_range": "0.8",
+      "throw_hurtbox": "0.33",
+      "forward_walk_speed": "0.050",
+      "back_walk_speed": "0.035",
+      "forward_dash_speed": "19",
+      "back_dash_speed": "25",
+      "forward_dash_distance": "1.508",
+      "back_dash_distance": "1.211",
+      "jump_speed": "4+42+3",
+      "jump_apex": "2.247",
+      "forward_jump_distance": "2.10",
+      "back_jump_distance": "1.68",
+      "drive_rush_min": "1.044",
+      "drive_rush_block": "2.222",
+      "drive_rush_max": "3.163",
+      "portrait": "SF6 Chun-Li Portrait.png",
+      "icon": "SF6 Chun-Li Face.png"
+    }
+  ]
+}

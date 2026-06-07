@@ -12,20 +12,20 @@
     "basic_field_conflict:active_duration": 1,
     "basic_field_conflict:recovery": 1,
     "condition_dependent_supercombo_field:damage": 2,
-    "condition_dependent_supercombo_field:damage,recovery": 1,
     "condition_dependent_supercombo_field:recovery": 8,
+    "condition_dependent_supercombo_field:recovery,damage": 1,
     "condition_dependent_supercombo_field:startup": 4,
     "manual_match": 2,
     "multiple_candidates": 19,
     "supercombo_row_reused": 3,
     "uncomparable_basic_field:active_duration": 5,
     "uncomparable_basic_field:active_duration,damage": 8,
-    "uncomparable_basic_field:active_duration,damage,recovery": 4,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 6,
-    "uncomparable_basic_field:active_duration,recovery,startup": 4,
+    "uncomparable_basic_field:active_duration,recovery,damage": 4,
     "uncomparable_basic_field:damage": 3,
-    "uncomparable_basic_field:damage,recovery": 3,
-    "uncomparable_basic_field:recovery": 4
+    "uncomparable_basic_field:recovery": 4,
+    "uncomparable_basic_field:recovery,damage": 3,
+    "uncomparable_basic_field:startup,active_duration,recovery": 4,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 6
   },
   "review_queue_counts": {
     "condition_dependent_field": 15,
@@ -63,8 +63,8 @@
     "supercombo_only": 13,
     "supercombo_only_taunt": 6
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/elena/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/elena/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/elena/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/elena/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/elena/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/elena/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/elena/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/elena/classic-supercombo.json"
 }

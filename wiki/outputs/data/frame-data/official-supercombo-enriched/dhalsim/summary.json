@@ -18,13 +18,13 @@
     "multiple_candidates": 13,
     "supercombo_row_reused": 26,
     "uncomparable_basic_field:active_duration": 5,
-    "uncomparable_basic_field:active_duration,damage,recovery": 9,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
     "uncomparable_basic_field:active_duration,recovery": 12,
-    "uncomparable_basic_field:active_duration,recovery,startup": 6,
+    "uncomparable_basic_field:active_duration,recovery,damage": 9,
     "uncomparable_basic_field:damage": 3,
-    "uncomparable_basic_field:damage,recovery": 3,
-    "uncomparable_basic_field:recovery": 8
+    "uncomparable_basic_field:recovery": 8,
+    "uncomparable_basic_field:recovery,damage": 3,
+    "uncomparable_basic_field:startup,active_duration,recovery": 6,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 3
   },
   "review_queue_counts": {
     "condition_dependent_field": 18,
@@ -69,8 +69,8 @@
     "supercombo_only": 6,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/dhalsim/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/dhalsim/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/dhalsim/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/dhalsim/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/dhalsim/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/dhalsim/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/dhalsim/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/dhalsim/classic-supercombo.json"
 }

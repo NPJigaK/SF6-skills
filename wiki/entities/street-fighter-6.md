@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-07
+updated: 2026-06-08
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -137,7 +137,7 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 ## 関連する主張
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
-- Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 CSV として保持している。
+- Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 JSON output として保持している。
 - Capcom 公式 Battle Change List capture は 2023-07-24 update から 2026-05-28 update までの 20 version を raw HTML / Next.js data JSON として保持し、policy / common / fighter change rows に派生抽出している。
 - SuperCombo 30キャラ分の frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image refs などを後で統合する候補 data を含む。公式 Classic rows を正とする補助列付き output は 30 キャラ分ある。ただし複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き field を持つ行には人間レビュー待ちの補助行が残り、`enrichment_review_queues` で理由を分離している。
 - frame-data raw の取得日 / source revision は path ではなく manifest の `capture_label` / `source_revision` で確認する。

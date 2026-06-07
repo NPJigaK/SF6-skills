@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import sys
 from collections import Counter
@@ -66,7 +65,7 @@ ENRICHMENT_META_FIELDS = [
     "supercombo_match_method",
     "supercombo_candidate_count",
     "supercombo_field_conflicts",
-    "supercombo_field_comparisons_json",
+    "supercombo_field_comparisons",
 ]
 
 HUMAN_REVIEW_FIELDS = [
@@ -541,18 +540,8 @@ SUPERCOMBO_ONLY_LINKS_BY_CHARACTER = {
 }
 
 
-def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open(encoding="utf-8", newline="") as handle:
-        return list(csv.DictReader(handle))
-
-
-def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
-        writer.writeheader()
-        for row in rows:
-            writer.writerow({field: row.get(field, "") for field in fieldnames})
+def read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def write_json(path: Path, value: Any) -> None:
@@ -564,8 +553,7 @@ def repo_path(path: Path) -> str:
     return path.as_posix()
 
 
-def conflict_fields(comparisons_json: str) -> list[str]:
-    comparisons = json.loads(comparisons_json or "{}")
+def conflict_fields(comparisons: dict[str, Any]) -> list[str]:
     return [
         field
         for field, item in comparisons.items()
@@ -573,8 +561,7 @@ def conflict_fields(comparisons_json: str) -> list[str]:
     ]
 
 
-def uncomparable_fields(comparisons_json: str) -> list[str]:
-    comparisons = json.loads(comparisons_json or "{}")
+def uncomparable_fields(comparisons: dict[str, Any]) -> list[str]:
     return [
         field
         for field, item in comparisons.items()
@@ -582,8 +569,7 @@ def uncomparable_fields(comparisons_json: str) -> list[str]:
     ]
 
 
-def condition_dependent_fields(comparisons_json: str) -> list[str]:
-    comparisons = json.loads(comparisons_json or "{}")
+def condition_dependent_fields(comparisons: dict[str, Any]) -> list[str]:
     return [
         field
         for field, item in comparisons.items()
@@ -591,12 +577,14 @@ def condition_dependent_fields(comparisons_json: str) -> list[str]:
     ]
 
 
-def review_flags(crosswalk_row: dict[str, str], reused_move_ids: set[str]) -> list[str]:
+def review_flags(crosswalk_row: dict[str, Any], reused_move_ids: set[str]) -> list[str]:
     flags: list[str] = []
-    comparisons_json = crosswalk_row.get("field_comparisons_json", "{}")
-    conflicts = conflict_fields(comparisons_json)
-    uncomparable = uncomparable_fields(comparisons_json)
-    condition_dependent = condition_dependent_fields(comparisons_json)
+    comparisons = crosswalk_row.get("field_comparisons", {})
+    if not isinstance(comparisons, dict):
+        raise TypeError("crosswalk field_comparisons must be an object")
+    conflicts = conflict_fields(comparisons)
+    uncomparable = uncomparable_fields(comparisons)
+    condition_dependent = condition_dependent_fields(comparisons)
     if crosswalk_row.get("match_status") == "matched_manual":
         flags.append("manual_match")
     if crosswalk_row.get("match_status") == "ambiguous":
@@ -673,11 +661,11 @@ def supplemental_only_link_fields(
 def build_enriched(
     *,
     character_slug: str,
-    official_rows: list[dict[str, str]],
-    supercombo_rows: list[dict[str, str]],
-    crosswalk_rows: list[dict[str, str]],
-    supercombo_only_rows: list[dict[str, str]],
-) -> tuple[list[dict[str, str]], list[dict[str, str]], dict[str, Any]]:
+    official_rows: list[dict[str, Any]],
+    supercombo_rows: list[dict[str, Any]],
+    crosswalk_rows: list[dict[str, Any]],
+    supercombo_only_rows: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
     human_review_decisions = HUMAN_REVIEW_DECISIONS_BY_CHARACTER.get(character_slug, {})
     supercombo_by_id = {row["move_id"]: row for row in supercombo_rows}
     official_by_order = {row.get("row_order", str(index)): row for index, row in enumerate(official_rows, start=1)}
@@ -695,7 +683,7 @@ def build_enriched(
         if count > 1
     }
 
-    enriched_rows: list[dict[str, str]] = []
+    enriched_rows: list[dict[str, Any]] = []
     flag_counts: Counter[str] = Counter()
     queue_counts: Counter[str] = Counter()
     queue_combination_counts: Counter[str] = Counter()
@@ -714,10 +702,13 @@ def build_enriched(
             queue_counts[queue] += 1
         if queues:
             queue_combination_counts[";".join(queues)] += 1
-        conflicts = conflict_fields(crosswalk.get("field_comparisons_json", "{}")) if crosswalk else []
+        comparisons = crosswalk.get("field_comparisons", {}) if crosswalk else {}
+        if not isinstance(comparisons, dict):
+            raise TypeError("crosswalk field_comparisons must be an object")
+        conflicts = conflict_fields(comparisons) if crosswalk else []
         for conflict in conflicts:
             conflict_counts[conflict] += 1
-        uncomparable = uncomparable_fields(crosswalk.get("field_comparisons_json", "{}")) if crosswalk else []
+        uncomparable = uncomparable_fields(comparisons) if crosswalk else []
         for field in uncomparable:
             uncomparable_counts[field] += 1
 
@@ -743,7 +734,7 @@ def build_enriched(
         row["supercombo_match_method"] = crosswalk.get("match_method", "")
         row["supercombo_candidate_count"] = crosswalk.get("candidate_count", "")
         row["supercombo_field_conflicts"] = ",".join(conflicts)
-        row["supercombo_field_comparisons_json"] = crosswalk.get("field_comparisons_json", "{}")
+        row["supercombo_field_comparisons"] = comparisons
         row["human_review_status"] = review_decision.get("status", "")
         row["human_review_decision"] = review_decision.get("decision", "")
         row["human_review_value_policy"] = review_decision.get("value_policy", "")
@@ -751,7 +742,7 @@ def build_enriched(
         status_counts[status] += 1
         enriched_rows.append(row)
 
-    supercombo_only_output: list[dict[str, str]] = []
+    supercombo_only_output: list[dict[str, Any]] = []
     for row in supercombo_only_rows:
         output = dict(row)
         output["suggested_handling"] = supplemental_only_handling(character_slug=character_slug, row=row)
@@ -811,15 +802,20 @@ def main(argv: list[str]) -> int:
         / args.character_slug
     )
 
-    official_csv = official_dir / f"{args.official_mode}.csv"
-    supercombo_csv = supercombo_dir / "frames.csv"
-    crosswalk_csv = supercombo_dir / f"crosswalk-official-{args.official_mode}.csv"
-    supercombo_only_csv = supercombo_dir / "supercombo-unmatched.csv"
+    official_json = official_dir / f"{args.official_mode}.json"
+    supercombo_json = supercombo_dir / "frames.json"
+    crosswalk_json = supercombo_dir / f"crosswalk-official-{args.official_mode}.json"
+    supercombo_only_json = supercombo_dir / "supercombo-unmatched.json"
 
-    official_rows = read_csv(official_csv)
-    supercombo_rows = read_csv(supercombo_csv)
-    crosswalk_rows = read_csv(crosswalk_csv)
-    supercombo_only_rows = read_csv(supercombo_only_csv)
+    official_payload = read_json(official_json)
+    supercombo_payload = read_json(supercombo_json)
+    crosswalk_payload = read_json(crosswalk_json)
+    supercombo_only_payload = read_json(supercombo_only_json)
+
+    official_rows = official_payload["rows"]
+    supercombo_rows = supercombo_payload["rows"]
+    crosswalk_rows = crosswalk_payload["rows"]
+    supercombo_only_rows = supercombo_only_payload["rows"]
 
     enriched_rows, supercombo_only_output, summary = build_enriched(
         character_slug=args.character_slug,
@@ -829,38 +825,52 @@ def main(argv: list[str]) -> int:
         supercombo_only_rows=supercombo_only_rows,
     )
 
-    official_fields = list(official_rows[0].keys()) if official_rows else []
+    official_fields = official_payload.get("fields") or (list(official_rows[0].keys()) if official_rows else [])
     enriched_fields = [
         *official_fields,
         *ENRICHMENT_META_FIELDS,
         *HUMAN_REVIEW_FIELDS,
         *[f"supercombo_{field}" for field in SUPPLEMENTAL_FRAME_FIELDS],
     ]
-    write_csv(output_dir / f"{args.official_mode}-supercombo.csv", enriched_rows, enriched_fields)
     write_json(
         output_dir / f"{args.official_mode}-supercombo.json",
         {
-            "schema_version": "official_supercombo_enriched_frame_data/v1",
+            "schema_version": "official_supercombo_enriched_frame_data/v2",
             "authority": "official_fields_authoritative",
-            "official_csv": repo_path(official_csv),
-            "supercombo_frames_csv": repo_path(supercombo_csv),
-            "crosswalk_csv": repo_path(crosswalk_csv),
+            "sources": {
+                "official_frame_data": repo_path(official_json),
+                "supercombo_frame_data": repo_path(supercombo_json),
+                "crosswalk": repo_path(crosswalk_json),
+            },
+            "fields": enriched_fields,
             "summary": summary,
+            "row_count": len(enriched_rows),
             "rows": enriched_rows,
         },
     )
     supercombo_only_base_fields = list(supercombo_only_rows[0].keys()) if supercombo_only_rows else []
     supercombo_only_fields = [*supercombo_only_base_fields, "suggested_handling", *SUPERCOMBO_ONLY_LINK_FIELDS]
-    write_csv(output_dir / "supercombo-only.csv", supercombo_only_output, supercombo_only_fields)
+    write_json(
+        output_dir / "supercombo-only.json",
+        {
+            "schema_version": "official_supercombo_enriched_supercombo_only/v2",
+            "sources": {
+                "supercombo_unmatched": repo_path(supercombo_only_json),
+                "official_frame_data": repo_path(official_json),
+            },
+            "fields": supercombo_only_fields,
+            "row_count": len(supercombo_only_output),
+            "rows": supercombo_only_output,
+        },
+    )
     write_json(
         output_dir / "schema.json",
         {
-            "schema_version": "official_supercombo_enriched_outputs/v1",
+            "schema_version": "official_supercombo_enriched_outputs/v2",
             "authority": "Capcom official columns are preserved and remain authoritative.",
             "files": {
-                "enriched_csv": f"{args.official_mode}-supercombo.csv",
-                "enriched_json": f"{args.official_mode}-supercombo.json",
-                "supercombo_only_csv": "supercombo-only.csv",
+                "enriched": f"{args.official_mode}-supercombo.json",
+                "supercombo_only": "supercombo-only.json",
                 "summary": "summary.json",
             },
             "official_fields": official_fields,
@@ -874,10 +884,10 @@ def main(argv: list[str]) -> int:
         output_dir / "summary.json",
         {
             **summary,
-            "official_csv": repo_path(official_csv),
-            "supercombo_frames_csv": repo_path(supercombo_csv),
-            "crosswalk_csv": repo_path(crosswalk_csv),
-            "output_csv": repo_path(output_dir / f"{args.official_mode}-supercombo.csv"),
+            "official_frame_data": repo_path(official_json),
+            "supercombo_frame_data": repo_path(supercombo_json),
+            "crosswalk": repo_path(crosswalk_json),
+            "output": repo_path(output_dir / f"{args.official_mode}-supercombo.json"),
         },
     )
     print(json.dumps(summary, ensure_ascii=False, indent=2))

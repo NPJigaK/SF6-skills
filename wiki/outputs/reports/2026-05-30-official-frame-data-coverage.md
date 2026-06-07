@@ -89,7 +89,7 @@ aliases:
 
 - raw snapshots: `raw/frame-data/official/<data-slug>/`
 - provenance: `raw/frame-data/official/<data-slug>/manifest.json` の `capture_label` / `created_at_utc` / `storage_policy`
-- derived CSVs: `wiki/outputs/data/frame-data/official/<data-slug>/`
+- derived JSON: `wiki/outputs/data/frame-data/official/<data-slug>/<control-scheme>.json`
 - batch review: [[reviews/2026-05-30-official-frame-data-roster-capture-review]]
 - raw layout synthesis: [[syntheses/frame-data-raw-layout]]
 
@@ -98,4 +98,4 @@ aliases:
 - `gouki_akuma` と `vega_mbison` は、official site で frame-data table を持つ slug。
 - すべてが同日 capture ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30。
 - capture date は path ではなく manifest の `capture_label` で追う。path は latest mirror の現在位置を示す。
-- 個別技の値は、再利用できる question / synthesis が必要になるまで CSV と raw DOM artifacts に残す。
+- 個別技の値は、再利用できる question / synthesis が必要になるまで派生 JSON と raw DOM artifacts に残す。

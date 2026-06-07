@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import hashlib
 import json
 import re
@@ -11,8 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from tools.frame_data.official.capture import (
-    csv_rows_from_dom,
-    field_meanings_from_dom,
+    frame_data_payload_from_dom,
     unexpected_body_rows,
     validate_mode_tab_state,
 )
@@ -29,11 +27,6 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def sha256_text(value: str) -> str:
     return "sha256:" + hashlib.sha256(value.encode("utf-8")).hexdigest()
-
-
-def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open(encoding="utf-8", newline="") as handle:
-        return list(csv.DictReader(handle))
 
 
 def table_html_from_page(page_html: str) -> str:
@@ -55,14 +48,12 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
     page_html_path = raw_dir / "page.html"
     table_dom_path = raw_dir / "table.dom.json"
     metadata_path = raw_dir / "metadata.json"
-    csv_path = output_dir / f"{mode}.csv"
-    field_meanings_path = output_dir / f"{mode}.field-meanings.json"
+    frame_data_path = output_dir / f"{mode}.json"
 
     page_html = page_html_path.read_text(encoding="utf-8")
     table_dom = json.loads(table_dom_path.read_text(encoding="utf-8"))
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    csv_rows = read_csv(csv_path)
-    field_meanings = json.loads(field_meanings_path.read_text(encoding="utf-8"))
+    frame_data = json.loads(frame_data_path.read_text(encoding="utf-8"))
 
     table_hash_from_html = sha256_text(table_html_from_page(page_html))
     assert_equal(table_hash_from_html, table_dom["table_sha256"], f"{mode} page.html table hash")
@@ -78,9 +69,11 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
         )
         raise AssertionError(f"{mode} raw DOM has unexpected row shapes: {details}")
 
-    expected_rows = csv_rows_from_dom(table_dom)
-    if csv_rows != expected_rows:
-        for row_index, (actual_row, expected_row) in enumerate(zip(csv_rows, expected_rows, strict=False), start=1):
+    expected_frame_data = frame_data_payload_from_dom(table_dom)
+    expected_rows = expected_frame_data["rows"]
+    actual_rows = frame_data.get("rows", [])
+    if actual_rows != expected_rows:
+        for row_index, (actual_row, expected_row) in enumerate(zip(actual_rows, expected_rows, strict=False), start=1):
             if actual_row != expected_row:
                 differing_fields = [
                     field
@@ -88,20 +81,19 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
                     if actual_row.get(field) != expected_row.get(field)
                 ]
                 raise AssertionError(
-                    f"{mode} CSV differs from raw DOM at data row {row_index}; "
+                    f"{mode} JSON rows differ from raw DOM at data row {row_index}; "
                     f"fields: {', '.join(differing_fields)}"
                 )
         raise AssertionError(
-            f"{mode} CSV row count differs from raw DOM: "
-            f"csv={len(csv_rows)}, dom={len(expected_rows)}"
+            f"{mode} JSON row count differs from raw DOM: "
+            f"json={len(actual_rows)}, dom={len(expected_rows)}"
         )
 
-    expected_field_meanings = field_meanings_from_dom(table_dom)
-    assert_equal(field_meanings, expected_field_meanings, f"{mode} field meanings")
+    assert_equal(frame_data, expected_frame_data, f"{mode} frame data JSON")
 
     manifest_count = metadata["artifacts"]["table_dom_json"]["data_row_count"]
-    assert_equal(manifest_count, len(csv_rows), f"{mode} metadata row count")
-    assert_equal(table_dom["data_row_count"], len(csv_rows), f"{mode} table DOM row count")
+    assert_equal(manifest_count, len(actual_rows), f"{mode} metadata row count")
+    assert_equal(table_dom["data_row_count"], len(actual_rows), f"{mode} table DOM row count")
     assert_equal(table_dom.get("unexpected_row_count", 0), 0, f"{mode} unexpected row count")
 
     screenshot = metadata["artifacts"]["screenshot_png"]
@@ -123,9 +115,9 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
 
     return {
         "mode": mode,
-        "row_count": len(csv_rows),
+        "row_count": len(actual_rows),
         "category_row_count": table_dom["category_row_count"],
-        "field_meaning_records": len(field_meanings["records"]),
+        "field_meaning_records": len(frame_data["field_meanings"]["records"]),
         "table_sha256": table_dom["table_sha256"],
         "screenshot_width": screenshot["width"],
         "screenshot_height": screenshot["height"],

@@ -190,17 +190,16 @@ raw/frame-data/official/<character>/<control-scheme>/
 raw/frame-data/official/<character>/manifest.json
 ```
 
-派生CSVも安定したpathに出します。
+派生 output は JSON に統一し、安定した path に出します。`wiki/outputs/data` 配下に
+CSV は置きません。
 
 ```text
-wiki/outputs/data/frame-data/official/<character>/<control-scheme>.csv
-wiki/outputs/data/frame-data/official/<character>/<control-scheme>.field-meanings.json
+wiki/outputs/data/frame-data/official/<character>/<control-scheme>.json
 ```
 
-CSVは技1項目ごとのデータに絞り、publisher、game、locale、source URL、
-character、control scheme、raw pathなどのsource-level metadataは
-`raw/frame-data/official/.../manifest.json`、各 `metadata.json`、wiki source page に残します。
-`*.field-meanings.json` には、表ヘッダの補足説明やtooltip相当の説明を保存します。
+JSON は技1項目ごとの `rows`、`fields`、source metadata、表ヘッダの補足説明を
+`field_meanings` として保持します。LLM エージェントは `jq` で `rows[]` と
+`field_meanings.records[]` を直接参照します。
 
 ツールは `uv` で実行します。
 
@@ -212,9 +211,9 @@ uv run python -m tools.frame_data.official.validate --character-slug jp
 ```
 
 `tools.frame_data.official.validate` は全行について `page.html` 内の表、`table.dom.json`、
-派生CSV、`*.field-meanings.json` の一致を確認します。スクリーンショットは値の正本として
+派生 JSON payload の一致を確認します。スクリーンショットは値の正本として
 OCRするのではなく、表の横幅と高さを覆っていること、Cookieやnavigation overlayが
-残っていないことを確認します。値の正確性は、画像ではなく raw HTML / DOM / CSV の
+残っていないことを確認します。値の正確性は、画像ではなく raw HTML / DOM / JSON の
 全行照合で確認します。
 
 Capcom 公式 capture は Classic / Modern tab の identity と active state も保存・検証します。
@@ -241,11 +240,10 @@ raw/battle-change/official/
     metadata.json
 ```
 
-派生CSV / JSONは安定したpathに出します。
+派生 output は JSON に統一し、安定した path に出します。
 
 ```text
-wiki/outputs/data/battle-change/official/versions.csv
-wiki/outputs/data/battle-change/official/changes.csv
+wiki/outputs/data/battle-change/official/versions.json
 wiki/outputs/data/battle-change/official/changes.json
 wiki/outputs/data/battle-change/official/schema.json
 ```
@@ -262,7 +260,7 @@ uv run python -m tools.battle_change.official.extract
 `tools.battle_change.official.capture` は discovery page の `adjust.versions` から
 全 version を列挙し、各 version の HTML と Next.js `_next/data` JSON を保存します。
 `tools.battle_change.official.validate` は artifact hash、HTML `__NEXT_DATA__` と
-`data.json` の payload 一致、version ID 一致を確認します。`changes.csv` の
+`data.json` の payload 一致、version ID 一致を確認します。`changes.json` の
 `text_html` は公式 HTML fragment を保持し、翻訳・要約・正規化した raw replacement ではありません。
 version title は各 version page 由来の `version_title` と discovery selector 由来の
 `version_selector_title` を別列で保持し、公式 source 内の表記差は `version_title_mismatch`
@@ -289,11 +287,21 @@ raw/frame-data/supercombo/<character>/
   validation.json
 ```
 
-派生データは次に出します。
+派生データは JSON-only で次に出します。
 
 ```text
 wiki/outputs/data/frame-data/supercombo/<character>/
+  frames.json
+  character.json
+  crosswalk-official-classic.json
+  crosswalk-summary.json
+  supercombo-unmatched.json
+  schema.json
 wiki/outputs/data/frame-data/official-supercombo-enriched/<character>/
+  classic-supercombo.json
+  supercombo-only.json
+  summary.json
+  schema.json
 ```
 
 実行順序は capture、validate、extract、必要に応じて enriched build です。

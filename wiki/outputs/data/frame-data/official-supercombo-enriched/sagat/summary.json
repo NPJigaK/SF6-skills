@@ -12,21 +12,21 @@
     "basic_field_conflict:startup": 2,
     "condition_dependent_supercombo_field:damage": 6,
     "condition_dependent_supercombo_field:recovery": 11,
-    "condition_dependent_supercombo_field:recovery,startup": 1,
     "condition_dependent_supercombo_field:startup": 2,
+    "condition_dependent_supercombo_field:startup,recovery": 1,
     "manual_match": 2,
     "multiple_candidates": 17,
     "supercombo_row_reused": 7,
     "uncomparable_basic_field:active_duration": 2,
     "uncomparable_basic_field:active_duration,damage": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 8,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 2,
     "uncomparable_basic_field:active_duration,recovery": 5,
-    "uncomparable_basic_field:active_duration,recovery,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery,damage": 8,
     "uncomparable_basic_field:damage": 7,
-    "uncomparable_basic_field:damage,recovery": 2,
     "uncomparable_basic_field:recovery": 7,
-    "uncomparable_basic_field:startup": 2
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup": 2,
+    "uncomparable_basic_field:startup,active_duration,recovery": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 2
   },
   "review_queue_counts": {
     "condition_dependent_field": 20,
@@ -65,8 +65,8 @@
     "supercombo_only": 12,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/sagat/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/sagat/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/sagat/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/sagat/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/sagat/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/sagat/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/sagat/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/sagat/classic-supercombo.json"
 }

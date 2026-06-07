@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import html
 import json
 import re
@@ -57,7 +56,7 @@ FIELD_MAP = [
     ("notes", "notes"),
 ]
 
-FRAME_CSV_FIELDS = [
+FRAME_FIELDS = [
     "row_order",
     "section",
     "move_type",
@@ -67,7 +66,7 @@ FRAME_CSV_FIELDS = [
     *[display_name for display_name, _raw_name in FIELD_MAP],
 ]
 
-CHARACTER_CSV_FIELDS = [
+CHARACTER_FIELDS = [
     "row_order",
     "chara",
     "name",
@@ -242,15 +241,6 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
-        writer.writeheader()
-        for row in rows:
-            writer.writerow({field: row.get(field, "") for field in fieldnames})
-
-
 def collapse_ws(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
@@ -308,41 +298,23 @@ def section_for(record: dict[str, Any]) -> str:
     return SOURCE_SECTIONS.get(normalized_move_type(record.get("moveType", "")), "")
 
 
-def frame_display_rows(frames: list[dict[str, Any]]) -> list[dict[str, str]]:
-    rows: list[dict[str, str]] = []
+def frame_json_rows(frames: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
     for index, record in enumerate(frames, start=1):
-        row = {
+        display = {display_name: wiki_to_text(record.get(raw_name, ""), field_name=raw_name) for display_name, raw_name in FIELD_MAP}
+        raw = {raw_name: str(record.get(raw_name, "")) for _display_name, raw_name in FIELD_MAP}
+        row: dict[str, Any] = {
             "row_order": str(index),
             "section": section_for(record),
             "move_type": normalized_move_type(record.get("moveType", "")),
             "move_id": str(record.get("moveId", "")),
             "input": str(record.get("input", "")),
             "name": str(record.get("name", "")),
+            **display,
+            "raw": raw,
+            "template_sha256": record.get("_block_sha256", ""),
         }
-        for display_name, raw_name in FIELD_MAP:
-            row[display_name] = wiki_to_text(record.get(raw_name, ""), field_name=raw_name)
         rows.append(row)
-    return rows
-
-
-def frame_json_rows(frames: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    rows: list[dict[str, Any]] = []
-    for index, record in enumerate(frames, start=1):
-        display = {display_name: wiki_to_text(record.get(raw_name, ""), field_name=raw_name) for display_name, raw_name in FIELD_MAP}
-        raw = {raw_name: str(record.get(raw_name, "")) for _display_name, raw_name in FIELD_MAP}
-        rows.append(
-            {
-                "row_order": index,
-                "section": section_for(record),
-                "move_type": normalized_move_type(record.get("moveType", "")),
-                "move_id": str(record.get("moveId", "")),
-                "input": str(record.get("input", "")),
-                "name": str(record.get("name", "")),
-                "display": display,
-                "raw": raw,
-                "template_sha256": record.get("_block_sha256", ""),
-            }
-        )
     return rows
 
 
@@ -356,8 +328,10 @@ def character_rows(records: list[dict[str, Any]]) -> list[dict[str, str]]:
     return rows
 
 
-def token_command_from_official(row: dict[str, str]) -> str:
-    tokens = json.loads(row["input_token_json"])
+def token_command_from_official(row: dict[str, Any]) -> str:
+    tokens = row["input_tokens"]
+    if not isinstance(tokens, list):
+        raise TypeError("official frame-data JSON row input_tokens must be an array")
     raw_parts: list[str] = []
     jump = any(token.get("type") == "text" and "ジャンプ中" in token.get("value", "") for token in tokens)
     for token in tokens:
@@ -523,7 +497,7 @@ def compare_basic_field(field: str, official_raw: str, supercombo_raw: str) -> d
     return result
 
 
-def compare_fields(official: dict[str, str], supercombo: dict[str, str]) -> dict[str, Any]:
+def compare_fields(official: dict[str, Any], supercombo: dict[str, Any]) -> dict[str, Any]:
     raw_fields = {
         "startup": (official["startup"], supercombo["startup"]),
         "active_duration": (official["active"], supercombo["active"]),
@@ -538,7 +512,7 @@ def compare_fields(official: dict[str, str], supercombo: dict[str, str]) -> dict
     return result
 
 
-def candidate_score(official: dict[str, str], candidate: dict[str, str], official_family: str) -> tuple[int, list[str]]:
+def candidate_score(official: dict[str, Any], candidate: dict[str, Any], official_family: str) -> tuple[int, list[str]]:
     score = 0
     reasons: list[str] = []
     if candidate["input"] == official["official_input_signature"]:
@@ -574,7 +548,7 @@ def build_crosswalk(
     *,
     character_slug: str,
     official_rows: list[dict[str, str]],
-    supercombo_rows: list[dict[str, str]],
+    supercombo_rows: list[dict[str, Any]],
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
     crosswalk: list[dict[str, Any]] = []
     matched_supercombo: Counter[str] = Counter()
@@ -656,7 +630,7 @@ def build_crosswalk(
                     "official_input_family": family,
                     "match_status": status,
                     "match_method": match_method,
-                    "candidate_count": str(len(scored)),
+                    "candidate_count": len(scored),
                     "supercombo_move_id": best["move_id"],
                     "supercombo_move_type": best["move_type"],
                     "supercombo_input": best["input"],
@@ -668,7 +642,7 @@ def build_crosswalk(
                     "supercombo_block_advantage": best["block_advantage"],
                     "supercombo_cancel": best["cancel"],
                     "supercombo_damage": best["damage"],
-                    "field_comparisons_json": json.dumps(comparisons, ensure_ascii=False, sort_keys=True),
+                    "field_comparisons": comparisons,
                 }
             )
         else:
@@ -678,7 +652,7 @@ def build_crosswalk(
                     "official_input_family": family,
                     "match_status": "unmatched",
                     "match_method": "",
-                    "candidate_count": "0",
+                    "candidate_count": 0,
                     "supercombo_move_id": "",
                     "supercombo_move_type": "",
                     "supercombo_input": "",
@@ -690,7 +664,7 @@ def build_crosswalk(
                     "supercombo_block_advantage": "",
                     "supercombo_cancel": "",
                     "supercombo_damage": "",
-                    "field_comparisons_json": "{}",
+                    "field_comparisons": {},
                 }
             )
 
@@ -734,38 +708,47 @@ def main(argv: list[str]) -> int:
         raise RuntimeError(f"SuperCombo validation is not passed: {validation.get('status')}")
     ensure_supercombo_validation_matches_current_raw(raw_root, validation)
 
-    frame_rows = frame_display_rows(templates["frames"])
+    frame_rows = frame_json_rows(templates["frames"])
     character_display_rows = character_rows(templates["character"])
-    write_csv(output_dir / "frames.csv", frame_rows, FRAME_CSV_FIELDS)
     write_json(
         output_dir / "frames.json",
         {
+            "schema_version": "supercombo_frame_data/v2",
             "source_raw_root": repo_path(raw_root),
+            "fields": FRAME_FIELDS,
             "row_count": len(frame_rows),
-            "rows": frame_json_rows(templates["frames"]),
+            "rows": frame_rows,
         },
     )
-    write_csv(output_dir / "character.csv", character_display_rows, CHARACTER_CSV_FIELDS)
+    write_json(
+        output_dir / "character.json",
+        {
+            "schema_version": "supercombo_character_data/v2",
+            "source_raw_root": repo_path(raw_root),
+            "fields": CHARACTER_FIELDS,
+            "row_count": len(character_display_rows),
+            "rows": character_display_rows,
+        },
+    )
     write_json(
         output_dir / "schema.json",
         {
-            "schema_version": "supercombo_frame_data_outputs/v1",
+            "schema_version": "supercombo_frame_data_outputs/v2",
             "source": "SuperCombo Wiki",
             "raw_root": repo_path(raw_root),
             "files": {
-                "frames_csv": "frames.csv",
-                "frames_json": "frames.json",
-                "character_csv": "character.csv",
-                "crosswalk_csv": "crosswalk-official-classic.csv",
+                "frames": "frames.json",
+                "character": "character.json",
+                "crosswalk": "crosswalk-official-classic.json",
                 "crosswalk_summary": "crosswalk-summary.json",
-                "supercombo_unmatched_csv": "supercombo-unmatched.csv",
+                "supercombo_unmatched": "supercombo-unmatched.json",
             },
-            "frame_csv_fields": FRAME_CSV_FIELDS,
-            "character_csv_fields": CHARACTER_CSV_FIELDS,
+            "frame_fields": FRAME_FIELDS,
+            "character_fields": CHARACTER_FIELDS,
         },
     )
 
-    official_csv = (
+    official_json = (
         args.repo_root
         / "wiki"
         / "outputs"
@@ -773,10 +756,9 @@ def main(argv: list[str]) -> int:
         / "frame-data"
         / "official"
         / args.character_slug
-        / f"{args.official_mode}.csv"
+        / f"{args.official_mode}.json"
     )
-    with official_csv.open(encoding="utf-8", newline="") as handle:
-        official_rows = list(csv.DictReader(handle))
+    official_rows = read_json(official_json)["rows"]
 
     crosswalk_rows, unmatched_supercombo, summary = build_crosswalk(
         character_slug=args.character_slug,
@@ -811,16 +793,35 @@ def main(argv: list[str]) -> int:
         "supercombo_block_advantage",
         "supercombo_cancel",
         "supercombo_damage",
-        "field_comparisons_json",
+        "field_comparisons",
     ]
-    write_csv(output_dir / "crosswalk-official-classic.csv", crosswalk_rows, crosswalk_fields)
-    write_csv(output_dir / "supercombo-unmatched.csv", unmatched_supercombo, FRAME_CSV_FIELDS)
+    write_json(
+        output_dir / f"crosswalk-official-{args.official_mode}.json",
+        {
+            "schema_version": "supercombo_official_crosswalk/v2",
+            "source_raw_root": repo_path(raw_root),
+            "official_frame_data": repo_path(official_json),
+            "fields": crosswalk_fields,
+            "row_count": len(crosswalk_rows),
+            "rows": crosswalk_rows,
+        },
+    )
+    write_json(
+        output_dir / "supercombo-unmatched.json",
+        {
+            "schema_version": "supercombo_unmatched_frame_data/v2",
+            "source_raw_root": repo_path(raw_root),
+            "fields": FRAME_FIELDS,
+            "row_count": len(unmatched_supercombo),
+            "rows": unmatched_supercombo,
+        },
+    )
     write_json(
         output_dir / "crosswalk-summary.json",
         {
             **summary,
             "source_raw_root": repo_path(raw_root),
-            "official_csv": repo_path(official_csv),
+            "official_frame_data": repo_path(official_json),
             "crosswalk_policy": {
                 "authority": "Capcom official fields remain authoritative for overlapping official frame-data fields.",
                 "supercombo_primary_key": "move_id",

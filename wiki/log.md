@@ -2,6 +2,98 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-08] query | JP しゃがみ中P＞キャンセルDR＞しゃがみ強P＞強ストリボーグ＞中トルバラン＞トリグラフの成立理論
+- 質問:
+  - `JPのコンボで、しゃがみ中P＞キャンセルラッシュ＞しゃがみ大P＞強ストリボーグ＞中トルバラン＞トリグラフ　が繋がる理論を具体的に解説してほしい。`
+- 読み込み:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/juggle-system.md`
+  - `wiki/concepts/fighting-game-notation.md`
+  - `wiki/sources/capcom-official-jp-frame-data.md`
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/sources/capcom-official-battle-change-list.md`
+  - `wiki/outputs/data/frame-data/official/jp/classic.json`
+  - `wiki/outputs/data/frame-data/supercombo/jp/frames.json`
+  - `wiki/outputs/data/frame-data/official-supercombo-enriched/jp/classic-supercombo.json`
+  - `wiki/outputs/data/battle-change/official/changes.json`
+- 作成:
+  - `wiki/questions/jp-crouching-medium-p-drc-crouching-heavy-p-heavy-stribog-medium-torbalan-triglav-combo-theory.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - `しゃがみ中P`→`DRしゃがみ強P` は素リンクではなく、`C` からのキャンセルDRとDRC最速攻撃可能9Fで説明した。
+  - `DRしゃがみ強P`→`強 ストリボーグ` は、DR通常技の `+4F` と `C` 必殺技キャンセルで成立する形として説明した。
+  - `強 ストリボーグ` 以降は地上リンクではなく、limited juggle / wall bounce、`中 トルバラン` の空中拾い、`トリグラフ` の `juggle limit 26` で説明した。
+- 未解決事項:
+  - 中央 / 端、最後の `トリグラフ` 強度、先端距離ごとの実戦安定性は未検証。
+
+## [2026-06-08] query | JP しゃがみ弱P＞立ち弱P＞弱ストリボーグの成立理論
+- 質問:
+  - `JPのコンボで、しゃがみ小P＞立ち小P＞弱ストリボーグが繋がる理論を具体的に解説してほしい。`
+- 読み込み:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/fighting-game-notation.md`
+  - `wiki/sources/capcom-official-jp-frame-data.md`
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/outputs/data/frame-data/official/jp/classic.json`
+  - `wiki/outputs/data/frame-data/supercombo/jp/frames.json`
+  - `wiki/outputs/data/frame-data/official-supercombo-enriched/jp/classic-supercombo.json`
+- 作成:
+  - `wiki/questions/jp-crouching-light-p-standing-light-p-light-stribog-combo-theory.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - `しゃがみ弱P`→`立ち弱P` は `+4F` から発生6Fをリンクしているのではなく、連打キャンセル / chain として説明した。
+  - `立ち弱P`→`弱 ストリボーグ` は `C` の必殺技キャンセルであり、出し切り後のリンクではないと明記した。
+- 未解決事項:
+  - このルートの距離別安定性、先端ヒット時の可否、Modern入力での実戦差は未検証。
+
+## [2026-06-08] review-fix | query-facing JSON-only references
+- 変更:
+  - `wiki/questions/` と `wiki/entities/` に残っていた削除済み CSV output path、`*.field-meanings.json`、旧 field 名 `input_token_json` の現在形参照を JSON-only contract に更新した。
+  - 公式 frame-data 参照は `classic.json` / `modern.json` と `rows[]` / `field_meanings.records[]` を読む形に統一した。
+  - enriched output を説明する entity page では `classic-supercombo.json` / `supercombo-only.json` を明示した。
+  - `tests/test_output_data_json_only.py` に query-facing wiki pages の旧 output contract と missing `wiki/outputs/data/...` path を検出する回帰テストを追加した。
+- 更新:
+  - `wiki/entities/`
+  - `wiki/questions/chun-li-standing-medium-p-frame-data.md`
+  - `wiki/questions/chun-li-standing-medium-p-into-crouching-medium-p-link.md`
+  - `wiki/index.md`
+  - `tests/test_output_data_json_only.py`
+- メモ:
+  - `wiki/log.md` と `raw/` 内の historical path は履歴・原本として扱い、query-facing contract の検査対象から外す。
+
+## [2026-06-08] schema | wiki output data JSON-only migration
+- 変更:
+  - `wiki/outputs/data` 配下の canonical output を JSON-only に統一した。
+  - 公式 frame-data は `<control-scheme>.json` に `rows`、`fields`、source metadata、`field_meanings.records` をまとめ、旧 CSV と `*.field-meanings.json` を削除した。
+  - SuperCombo 派生 output は `frames.json`、`character.json`、`crosswalk-official-classic.json`、`supercombo-unmatched.json` を canonical JSON payload とした。
+  - 公式 + SuperCombo enriched output は `classic-supercombo.json` と `supercombo-only.json` のみを canonical output とした。
+  - Battle Change output は `versions.json` と `changes.json` を `fields` + `rows` payload に統一した。
+- 更新:
+  - `tools/frame_data/official/`
+  - `tools/frame_data/supercombo/extract.py`
+  - `tools/frame_data/enriched/`
+  - `tools/battle_change/official/extract.py`
+  - `tests/`
+  - `README.md`
+  - `wiki/index.md`
+  - `wiki/concepts/frame-data.md`
+  - current output/source/report/review references.
+- メモ:
+  - `raw/` は source-native のまま不変とし、CSV 廃止は wiki output layer に限定した。
+  - 互換 CSV 出力や CSV reader fallback は残していない。必要な一時 export は canonical output とは別の one-off 作業として扱う。
+  - LLM エージェントは `jq` で `rows[]`、`field_meanings.records[]`、`summary`、`schema.json` を直接参照する。
+- 未解決事項:
+  - 既存 raw manifest 内の historical `derived_outputs` path は `raw/` 不変ルールにより書き換えない。将来の raw manifest schema で historical field として明示するかは別途判断する。
+
 ## [2026-06-07] schema | tool layout migration
 - 変更:
   - `tools/` の flat scripts を data family first の package layout に移動した。

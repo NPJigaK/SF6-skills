@@ -2,7 +2,7 @@
 type: entity
 entity_type: character
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-08
 status: active
 sources:
   - "[[sources/capcom-official-mai-frame-data]]"
@@ -27,13 +27,13 @@ Mai（不知火舞） は、この wiki で Capcom 公式フレームデータ c
 
 | 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-30 | 公式 frame-data page を Classic / Modern の raw snapshot として保存し、CSV / field-meaning JSON を派生生成した。 | [[sources/capcom-official-mai-frame-data]] |
+| 2026-05-30 | 公式 frame-data page を Classic / Modern の raw snapshot として保存し、JSON output を派生生成した。 | [[sources/capcom-official-mai-frame-data]] |
 
 ## 関連する主張
 
 - 公式 capture は Classic 90 行、Modern 85 行の frame-data rows を持つ。
-- 入力 icon や Modern control token は `input_token_json` に raw token として保持されている。
-- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/official/mai/` の CSV と raw DOM を source-preserving data として参照する。
+- 入力 icon や Modern control token は `input_tokens` に raw token sequence として保持されている。
+- 個別技の値は entity page では要約せず、`wiki/outputs/data/frame-data/official/mai/classic.json` / `wiki/outputs/data/frame-data/official/mai/modern.json` の公式 JSON output と raw DOM を source-preserving data として参照する。
 - この capture は自動検証済みだが、人間レビューは未完了。
 
 ## 関連概念

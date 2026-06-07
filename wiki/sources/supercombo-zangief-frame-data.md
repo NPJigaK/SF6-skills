@@ -46,7 +46,7 @@ SuperCombo Wiki の Zangief フレームデータを、`Data?action=raw` の生 
 7. `6HPHK` と `720+P` は同じ input を持つ複数 row があるため、SuperCombo raw の行識別には `moveId` を使う。input は表示・検索用であり、主キーにはしない。
 8. Zangief は 360 / 720 motion、近距離/中距離/遠距離版、hold 版、CA 版の対応があるため、公式 Classic との照合では Zangief 専用の name override を使って `move_id` に対応させている。
 9. この source は community data なので、公式 Capcom data と重なる基本フレーム値では公式を正とする。SuperCombo は公式にない range、juggle、hitbox image、notes などを後で追加統合する候補として扱う。
-10. レビュー用の派生 CSV/JSON と公式 Zangief Classic との照合結果は `wiki/outputs/data/frame-data/supercombo/zangief/` と [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]] に保存している。
+10. レビュー用の派生 JSON と公式 Zangief Classic との照合結果は `wiki/outputs/data/frame-data/supercombo/zangief/` と [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]] に保存している。
 11. 公式列を保持した補助列付き output は `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/` と [[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] に保存している。
 
 ## 重要な主張

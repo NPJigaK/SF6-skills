@@ -18,12 +18,12 @@
     "supercombo_row_reused": 5,
     "uncomparable_basic_field:active_duration": 2,
     "uncomparable_basic_field:active_duration,damage": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 5,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 8,
     "uncomparable_basic_field:active_duration,recovery": 9,
+    "uncomparable_basic_field:active_duration,recovery,damage": 5,
     "uncomparable_basic_field:damage": 12,
-    "uncomparable_basic_field:damage,recovery": 3,
-    "uncomparable_basic_field:recovery": 5
+    "uncomparable_basic_field:recovery": 5,
+    "uncomparable_basic_field:recovery,damage": 3,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 8
   },
   "review_queue_counts": {
     "condition_dependent_field": 29,
@@ -71,8 +71,8 @@
     "supercombo_only_taunt": 4,
     "supercombo_only": 9
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/ingrid/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/ingrid/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/ingrid/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/ingrid/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/ingrid/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.json"
 }

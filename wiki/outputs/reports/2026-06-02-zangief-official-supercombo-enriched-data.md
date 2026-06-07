@@ -20,13 +20,13 @@ aliases:
 
 ## 要約
 
-Capcom 公式 Zangief Classic CSV を正として保持したまま、SuperCombo Zangief の `move_id`、range、juggle、notes、画像、hitbox などを `supercombo_*` 列で付与した補助列付き output。公式 row を置き換えず、SuperCombo-only row は別 CSV に分離している。2026-06-02 にレビュー対象 25 行を人間レビュー済みにし、すべて `accepted` とした。
+Capcom 公式 Zangief Classic JSON を正として保持したまま、SuperCombo Zangief の `move_id`、range、juggle、notes、画像、hitbox などを `supercombo_*` 列で付与した補助列付き output。公式 row を置き換えず、SuperCombo-only row は別 JSON に分離している。2026-06-02 にレビュー対象 25 行を人間レビュー済みにし、すべて `accepted` とした。
 
 ## 生成ファイル
 
-- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.csv`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.json`
-- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/supercombo-only.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/supercombo-only.json`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/schema.json`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/summary.json`
 
@@ -34,11 +34,11 @@ Capcom 公式 Zangief Classic CSV を正として保持したまま、SuperCombo
 
 | 項目 | 方針 |
 |---|---|
-| 公式列 | `wiki/outputs/data/frame-data/official/zangief/classic.csv` の列をそのまま保持する。 |
+| 公式列 | `wiki/outputs/data/frame-data/official/zangief/classic.json` の列をそのまま保持する。 |
 | SuperCombo 補助列 | すべて `supercombo_*` prefix で追加し、公式値を上書きしない。 |
 | レビュー flag | manual match、基本値 conflict、多候補、SuperCombo row 再利用を `enrichment_review_flags` に残す。 |
 | 人間レビュー | Zangief のレビュー対象 25 行は人間レビュー済み。公式値を正とし、SuperCombo は補助情報として扱う。 |
-| SuperCombo-only row | 公式 row に直接紐づけず、`supercombo-only.csv` に分離する。 |
+| SuperCombo-only row | 公式 row に直接紐づけず、`supercombo-only.json` に分離する。 |
 
 ## サマリー
 
@@ -111,11 +111,11 @@ Capcom 公式 Zangief Classic CSV を正として保持したまま、SuperCombo
 
 ## 注意点
 
-- この補助列付き output は「公式 + 補助情報」であり、公式 CSV を置き換えるものではない。
+- この補助列付き output は「公式 + 補助情報」であり、公式 JSON を置き換えるものではない。
 - 公式列と補助列付き output の公式由来列は全行一致する。SuperCombo の数値は `supercombo_*` 補助列にのみ入れる。
 - Zangief 専用 name override 24 件は人間レビュー済みで accepted。公式値を正とし、SuperCombo は補助情報として扱う。
 - `ツンドラストーム` は公式と SuperCombo の単純比較で startup / active duration が異なるため、公式値を正としつつ conflict 付き補助情報として保持する。
-- `前方ステップ` / `後方ステップ` は official only。SuperCombo 側の movement data は `character.csv` の dash fields を確認する。
+- `前方ステップ` / `後方ステップ` は official only。SuperCombo 側の movement data は `character.json` の dash fields を確認する。
 
 ## 根拠
 
@@ -123,4 +123,4 @@ Capcom 公式 Zangief Classic CSV を正として保持したまま、SuperCombo
 - SuperCombo source（根拠）: [[sources/supercombo-zangief-frame-data]]
 - 候補照合: [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]
 - 補助列付き summary: `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/summary.json`
-- Human review decisions: `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.csv` の `human_review_*` 列
+- Human review decisions: `wiki/outputs/data/frame-data/official-supercombo-enriched/zangief/classic-supercombo.json` の `human_review_*` 列

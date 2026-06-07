@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import sys
 from dataclasses import dataclass
@@ -42,13 +41,13 @@ COLUMN_KEYS = [
     "notes",
 ]
 
-CSV_FIELDS = [
+FRAME_FIELDS = [
     "category_order",
     "category",
     "row_order",
     "move_name",
     "input_raw_display",
-    "input_token_json",
+    "input_tokens",
     "startup",
     "active",
     "recovery",
@@ -461,7 +460,7 @@ def unexpected_body_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return unexpected
 
 
-def csv_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, str]]:
+def frame_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, Any]]:
     records = []
     category = ""
     category_order = 0
@@ -488,7 +487,7 @@ def csv_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, str]]:
                 "row_order": str(row_order),
                 "move_name": move_name_from_cell(mapped["move"]),
                 "input_raw_display": input_raw_display(mapped["move"]),
-                "input_token_json": json.dumps(mapped["move"].get("token_stream", []), ensure_ascii=False),
+                "input_tokens": mapped["move"].get("token_stream", []),
                 "startup": mapped["startup"]["text"],
                 "active": mapped["active"]["text"],
                 "recovery": mapped["recovery"]["text"],
@@ -506,6 +505,27 @@ def csv_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, str]]:
             }
         )
     return records
+
+
+def frame_data_payload_from_dom(table_dom: dict[str, Any]) -> dict[str, Any]:
+    rows = frame_rows_from_dom(table_dom)
+    return {
+        "schema_version": "capcom_official_frame_data/v2",
+        "source": {
+            "source_raw_root": f"raw/frame-data/official/{table_dom['character_slug']}/{table_dom['control_scheme']}",
+            "source_captured_at_utc": table_dom.get("captured_at_utc"),
+            "publisher": table_dom.get("publisher", "Capcom"),
+            "game": table_dom.get("game", "Street Fighter 6"),
+            "locale": table_dom.get("locale", "ja-jp"),
+            "source_url": table_dom["source_url"],
+            "character_slug": table_dom["character_slug"],
+            "control_scheme": table_dom["control_scheme"],
+        },
+        "fields": FRAME_FIELDS,
+        "row_count": len(rows),
+        "rows": rows,
+        "field_meanings": field_meanings_from_dom(table_dom),
+    }
 
 
 def field_meanings_from_dom(table_dom: dict[str, Any]) -> dict[str, Any]:
@@ -547,14 +567,6 @@ def field_meanings_from_dom(table_dom: dict[str, Any]) -> dict[str, Any]:
         "control_scheme": table_dom["control_scheme"],
         "records": records,
     }
-
-
-def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(rows)
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -678,7 +690,7 @@ def main(argv: list[str]) -> int:
             f"--source-url must match --character-slug; expected URL containing {expected_path!r}, got {args.source_url!r}"
         )
     captures: list[RawModeCapture] = []
-    csv_rows_by_mode: dict[str, list[dict[str, str]]] = {}
+    payloads_by_mode: dict[str, dict[str, Any]] = {}
 
     def action(page: Any) -> None:
         page.set_viewport_size({"width": args.viewport_width, "height": args.viewport_height})
@@ -698,7 +710,7 @@ def main(argv: list[str]) -> int:
             )
             captures.append(capture)
             table_dom = json.loads(capture.table_dom_path.read_text(encoding="utf-8"))
-            csv_rows_by_mode[mode] = csv_rows_from_dom(table_dom)
+            payloads_by_mode[mode] = frame_data_payload_from_dom(table_dom)
 
     DynamicFetcher.fetch(
         args.source_url,
@@ -712,24 +724,8 @@ def main(argv: list[str]) -> int:
 
     output_data_dir = args.output_root / "wiki" / "outputs" / "data"
     official_output_dir = output_data_dir / "frame-data" / "official" / args.character_slug
-    for mode, rows in csv_rows_by_mode.items():
-        write_csv(official_output_dir / f"{mode}.csv", rows)
-        table_dom_path = (
-            args.output_root
-            / "raw"
-            / "frame-data"
-            / "official"
-            / args.character_slug
-            / mode
-            / "table.dom.json"
-        )
-        table_dom = json.loads(
-            table_dom_path.read_text(encoding="utf-8")
-        )
-        write_json(
-            official_output_dir / f"{mode}.field-meanings.json",
-            field_meanings_from_dom(table_dom),
-        )
+    for mode, payload in payloads_by_mode.items():
+        write_json(official_output_dir / f"{mode}.json", payload)
 
     manifest = {
         "manifest_schema_version": "capcom_frame_raw_capture_manifest/v1",
@@ -758,11 +754,8 @@ def main(argv: list[str]) -> int:
             for capture in captures
         ],
         "derived_outputs": [
-            f"wiki/outputs/data/frame-data/official/{args.character_slug}/{mode}.csv"
-            for mode in csv_rows_by_mode
-        ] + [
-            f"wiki/outputs/data/frame-data/official/{args.character_slug}/{mode}.field-meanings.json"
-            for mode in csv_rows_by_mode
+            f"wiki/outputs/data/frame-data/official/{args.character_slug}/{mode}.json"
+            for mode in payloads_by_mode
         ],
         "tool": "tools/frame_data/official/capture.py",
     }

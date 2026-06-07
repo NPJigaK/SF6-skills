@@ -20,13 +20,13 @@ aliases:
 
 ## 要約
 
-Capcom 公式 Ryu Classic CSV を正として保持したまま、SuperCombo Ryu の `move_id`、range、juggle、notes、画像、hitbox などを `supercombo_*` 列で付与した enriched output。公式 row を置き換えず、SuperCombo-only rows は別 CSV に分離している。
+Capcom 公式 Ryu Classic JSON を正として保持したまま、SuperCombo Ryu の `move_id`、range、juggle、notes、画像、hitbox などを `supercombo_*` 列で付与した enriched output。公式 row を置き換えず、SuperCombo-only rows は別 JSON に分離している。
 
 ## 生成ファイル
 
-- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.csv`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.json`
-- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/supercombo-only.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/supercombo-only.json`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/schema.json`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/summary.json`
 
@@ -34,11 +34,11 @@ Capcom 公式 Ryu Classic CSV を正として保持したまま、SuperCombo Ryu
 
 | 項目 | 方針 |
 |---|---|
-| 公式列 | `wiki/outputs/data/frame-data/official/ryu/classic.csv` の列をそのまま保持する。 |
+| 公式列 | `wiki/outputs/data/frame-data/official/ryu/classic.json` の列をそのまま保持する。 |
 | SuperCombo 補助列 | すべて `supercombo_*` prefix で追加し、公式値を上書きしない。 |
 | review flag | ambiguous match、manual match、基本値 conflict、多候補、SuperCombo row reuse を `enrichment_review_flags` に残す。 |
 | 人間レビュー | Ryu の review 対象 13件は人間レビュー済み。公式値を正としたまま補助リンクとして採用する。 |
-| SuperCombo-only rows | 公式 row に直接紐づけず、`supercombo-only.csv` に分離する。 |
+| SuperCombo-only rows | 公式 row に直接紐づけず、`supercombo-only.json` に分離する。 |
 
 ## サマリー
 
@@ -93,7 +93,7 @@ Capcom 公式 Ryu Classic CSV を正として保持したまま、SuperCombo Ryu
 
 ## 注意点
 
-- この enriched output は「公式 + 補助情報」であり、公式 CSV を置き換えるものではない。
+- この enriched output は「公式 + 補助情報」であり、公式 JSON を置き換えるものではない。
 - 公式列と enriched output の公式由来列は全行一致する。SuperCombo の数値は `supercombo_*` 補助列にのみ入れる。
 - Denjin / hold level の対応は `move_id` で明示し、同じ input の別 variant を混同しない。
 - `6HK~214K` / `6HK~214KK` は SuperCombo-only に残したまま、primary official row と enabled-by row を分けて記録する。`旋風脚` 本体の数値と空中竜巻派生の数値は合算・上書きしない。

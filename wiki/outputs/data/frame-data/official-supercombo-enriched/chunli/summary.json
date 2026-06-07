@@ -9,9 +9,9 @@
     "official_only": 18
   },
   "review_flag_counts": {
-    "basic_field_conflict:active_duration,damage,recovery,startup": 2,
-    "basic_field_conflict:active_duration,damage,startup": 4,
     "basic_field_conflict:recovery": 1,
+    "basic_field_conflict:startup,active_duration,damage": 4,
+    "basic_field_conflict:startup,active_duration,recovery,damage": 2,
     "condition_dependent_supercombo_field:damage": 7,
     "condition_dependent_supercombo_field:recovery": 5,
     "condition_dependent_supercombo_field:startup": 1,
@@ -19,11 +19,11 @@
     "supercombo_row_reused": 15,
     "uncomparable_basic_field:active_duration": 2,
     "uncomparable_basic_field:active_duration,damage": 11,
-    "uncomparable_basic_field:active_duration,damage,recovery": 9,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery,damage": 9,
     "uncomparable_basic_field:damage": 5,
-    "uncomparable_basic_field:damage,recovery": 1,
-    "uncomparable_basic_field:recovery": 8
+    "uncomparable_basic_field:recovery": 8,
+    "uncomparable_basic_field:recovery,damage": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 1
   },
   "review_queue_counts": {
     "condition_dependent_field": 13,
@@ -68,8 +68,8 @@
     "supercombo_only": 24,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/chunli/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/chunli/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/chunli/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/chunli/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/chunli/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/chunli/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/chunli/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/chunli/classic-supercombo.json"
 }

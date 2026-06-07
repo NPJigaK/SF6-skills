@@ -9,27 +9,27 @@
     "official_only": 5
   },
   "review_flag_counts": {
-    "basic_field_conflict:active_duration,damage,recovery,startup": 2,
-    "basic_field_conflict:active_duration,damage,startup": 4,
     "basic_field_conflict:active_duration,recovery": 1,
-    "basic_field_conflict:damage,recovery": 2,
-    "basic_field_conflict:damage,recovery,startup": 2,
     "basic_field_conflict:recovery": 5,
+    "basic_field_conflict:recovery,damage": 2,
     "basic_field_conflict:startup": 1,
+    "basic_field_conflict:startup,active_duration,damage": 4,
+    "basic_field_conflict:startup,active_duration,recovery,damage": 2,
+    "basic_field_conflict:startup,recovery,damage": 2,
     "condition_dependent_supercombo_field:damage": 8,
     "condition_dependent_supercombo_field:recovery": 4,
-    "condition_dependent_supercombo_field:recovery,startup": 3,
+    "condition_dependent_supercombo_field:startup,recovery": 3,
     "manual_match": 2,
     "multiple_candidates": 23,
     "supercombo_row_reused": 26,
     "uncomparable_basic_field:active_duration": 13,
     "uncomparable_basic_field:active_duration,damage": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 4,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
+    "uncomparable_basic_field:active_duration,recovery,damage": 4,
     "uncomparable_basic_field:damage": 7,
-    "uncomparable_basic_field:damage,recovery": 2,
     "uncomparable_basic_field:recovery": 8,
-    "uncomparable_basic_field:startup": 2
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup": 2,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 4
   },
   "review_queue_counts": {
     "condition_dependent_field": 15,
@@ -80,8 +80,8 @@
     "supercombo_only": 17,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/lily/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/lily/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/lily/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/lily/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/lily/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/lily/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/lily/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/lily/classic-supercombo.json"
 }

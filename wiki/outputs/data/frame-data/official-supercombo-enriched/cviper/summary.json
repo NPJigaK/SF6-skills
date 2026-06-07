@@ -9,17 +9,17 @@
     "official_only": 14
   },
   "review_flag_counts": {
-    "basic_field_conflict:damage,startup": 1,
+    "basic_field_conflict:startup,damage": 1,
     "condition_dependent_supercombo_field:damage": 2,
     "condition_dependent_supercombo_field:recovery": 4,
     "multiple_candidates": 13,
     "supercombo_row_reused": 14,
     "uncomparable_basic_field:active_duration": 2,
-    "uncomparable_basic_field:active_duration,damage,recovery": 5,
-    "uncomparable_basic_field:active_duration,damage,startup": 6,
+    "uncomparable_basic_field:active_duration,recovery,damage": 5,
     "uncomparable_basic_field:damage": 2,
-    "uncomparable_basic_field:damage,recovery": 2,
-    "uncomparable_basic_field:recovery": 10
+    "uncomparable_basic_field:recovery": 10,
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup,active_duration,damage": 6
   },
   "review_queue_counts": {
     "condition_dependent_field": 6,
@@ -58,8 +58,8 @@
     "supercombo_only": 15,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/cviper/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/cviper/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/cviper/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/cviper/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/cviper/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/cviper/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/cviper/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/cviper/classic-supercombo.json"
 }

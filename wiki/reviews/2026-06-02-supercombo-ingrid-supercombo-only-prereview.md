@@ -37,9 +37,9 @@ tags:
 
 ## 位置づけ
 
-これは accept ではない。`supercombo-only.csv` にある公式 row 非対応の 9 行について、外部 web evidence も使って事前レビューした記録である。`human_review_status`、`human_review_decision`、公式 row への照合、補助列付き output の accepted 判定は変更しない。
+これは accept ではない。`supercombo-only.json` にある公式 row 非対応の 9 行について、外部 web evidence も使って事前レビューした記録である。`human_review_status`、`human_review_decision`、公式 row への照合、補助列付き output の accepted 判定は変更しない。
 
-対象は `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/supercombo-only.csv` のうち、`suggested_handling` が `supercombo_only` の 9 行。4 件の taunt row は対象外だが、`ingrid_4pppkkk` Back Taunt は Monoid と Shin Ingrid の enable condition として参照する。
+対象は `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/supercombo-only.json` のうち、`suggested_handling` が `supercombo_only` の 9 行。4 件の taunt row は対象外だが、`ingrid_4pppkkk` Back Taunt は Monoid と Shin Ingrid の enable condition として参照する。
 
 この repo の現段階では、domain-specific な answer policy field や新しい community-extra schema は導入しない。通常の Ingrid frame-data への質問では、Capcom 公式 row と公式 row に紐づく補助列付き output を優先し、この 9 行は「特殊隠しコマンド / taunt-summon が明示された質問」でだけ参照する補足 evidence として扱う。
 
@@ -48,7 +48,7 @@ tags:
 - [[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] では、公式 Classic 75 rows を正として保持し、SuperCombo row は 83 rows。公式に照合できない `supercombo_only` は 9 行、`supercombo_only_taunt` は 4 行。
 - [[sources/capcom-official-ingrid-frame-data]] の公式 Classic row には、Monoid 関連、Big Laser?、Burnout Attack?、Sun Octopus? に相当する row は見当たらない。
 - [[sources/supercombo-ingrid-frame-data]] 由来の Back Taunt note は、Monoid 召喚、Monoid 操作、`LP~LP~4~LK~HK` による Shin Ingrid 変身、`22PPP` / `214214K` / `360+KK` の追加技を説明している。
-- したがって、9 行は公式フレーム表の通常 move row ではなく、hidden-command / taunt-summon / community-only data として既存の `supercombo-only.csv` に隔離して扱うのが現時点の安全な読み。
+- したがって、9 行は公式フレーム表の通常 move row ではなく、hidden-command / taunt-summon / community-only data として既存の `supercombo-only.json` に隔離して扱うのが現時点の安全な読み。
 
 ## Web evidence
 
@@ -81,12 +81,12 @@ tags:
 
 推奨は次の通り。
 
-1. 9 行は `supercombo-only.csv` に隔離したまま維持する。
+1. 9 行は `supercombo-only.json` に隔離したまま維持する。
 2. `human_review_status: accepted` にはしない。
 3. 公式 Ingrid Classic enriched rows へ統合しない。
 4. 通常の frame-data 質問では回答に混ぜない。ユーザーが hidden / Dark / Shin Ingrid / Monoid / taunt-summon / SuperCombo-only を明示した場合だけ参照する。
 5. 読者向けに出す場合は `SuperCombo-only / hidden-command / taunt-summon / prereview` と明示し、公式値ではないことを表示する。
-6. 現段階では新 schema を作らず、既存の `supercombo-only.csv` と `suggested_handling`、この review note の tags / 説明で分離する。より強い分類が必要になった場合だけ、後続の domain design step として検討する。
+6. 現段階では新 schema を作らず、既存の `supercombo-only.json` と `suggested_handling`、この review note の tags / 説明で分離する。より強い分類が必要になった場合だけ、後続の domain design step として検討する。
 
 ## 人間判断が必要な点
 

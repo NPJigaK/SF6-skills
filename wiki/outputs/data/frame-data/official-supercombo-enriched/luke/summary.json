@@ -10,22 +10,22 @@
   },
   "review_flag_counts": {
     "basic_field_conflict:active_duration,damage": 1,
-    "basic_field_conflict:active_duration,damage,recovery,startup": 7,
-    "basic_field_conflict:active_duration,damage,startup": 1,
+    "basic_field_conflict:startup,active_duration,damage": 1,
+    "basic_field_conflict:startup,active_duration,recovery,damage": 7,
     "condition_dependent_supercombo_field:damage": 10,
     "condition_dependent_supercombo_field:recovery": 10,
-    "condition_dependent_supercombo_field:recovery,startup": 2,
+    "condition_dependent_supercombo_field:startup,recovery": 2,
     "manual_match": 2,
     "multiple_candidates": 19,
     "supercombo_row_reused": 16,
     "uncomparable_basic_field:active_duration,damage": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 4,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
     "uncomparable_basic_field:active_duration,recovery": 4,
+    "uncomparable_basic_field:active_duration,recovery,damage": 4,
     "uncomparable_basic_field:damage": 10,
-    "uncomparable_basic_field:damage,recovery": 2,
     "uncomparable_basic_field:recovery": 8,
-    "uncomparable_basic_field:recovery,startup": 2
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 4,
+    "uncomparable_basic_field:startup,recovery": 2
   },
   "review_queue_counts": {
     "condition_dependent_field": 22,
@@ -70,8 +70,8 @@
     "supercombo_only": 14,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/luke/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/luke/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/luke/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/luke/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/luke/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/luke/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/luke/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/luke/classic-supercombo.json"
 }

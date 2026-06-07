@@ -1,10 +1,9 @@
 {
-  "schema_version": "official_supercombo_enriched_outputs/v1",
+  "schema_version": "official_supercombo_enriched_outputs/v2",
   "authority": "Capcom official columns are preserved and remain authoritative.",
   "files": {
-    "enriched_csv": "classic-supercombo.csv",
-    "enriched_json": "classic-supercombo.json",
-    "supercombo_only_csv": "supercombo-only.csv",
+    "enriched": "classic-supercombo.json",
+    "supercombo_only": "supercombo-only.json",
     "summary": "summary.json"
   },
   "official_fields": [
@@ -13,7 +12,7 @@
     "row_order",
     "move_name",
     "input_raw_display",
-    "input_token_json",
+    "input_tokens",
     "startup",
     "active",
     "recovery",
@@ -37,7 +36,7 @@
     "supercombo_match_method",
     "supercombo_candidate_count",
     "supercombo_field_conflicts",
-    "supercombo_field_comparisons_json"
+    "supercombo_field_comparisons"
   ],
   "human_review_fields": [
     "human_review_status",

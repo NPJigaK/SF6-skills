@@ -31,10 +31,10 @@ Zangief（ザンギエフ） の Capcom 公式 frame-data raw snapshot と派生
 - `raw/official/frame-data/2026-05-27/zangief/classic/metadata.json`
 - `raw/official/frame-data/2026-05-27/zangief/modern/metadata.json`
 - `raw/official/frame-data/2026-05-27/zangief/manifest.json`
-- `wiki/outputs/data/frame-data/official/zangief/classic.csv`
-- `wiki/outputs/data/frame-data/official/zangief/modern.csv`
-- `wiki/outputs/data/frame-data/official/zangief/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/official/zangief/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/zangief/classic.json`
+- `wiki/outputs/data/frame-data/official/zangief/modern.json`
+- `wiki/outputs/data/frame-data/official/zangief/classic.json`
+- `wiki/outputs/data/frame-data/official/zangief/modern.json`
 
 ## 確認内容
 
@@ -43,7 +43,7 @@ Zangief（ザンギエフ） の Capcom 公式 frame-data raw snapshot と派生
 - Classic と Modern は別 capture として保存されている。
 - DOM capture は技名、入力 icon、frame values、cancel values、damage、notes、関連 fields を保持している。
 - Classic は 72 rows、Modern は 66 rows。
-- field-meaning JSON は table header 由来の説明を保持している。
+- `field_meanings.records` は table header 由来の説明を保持している。
 
 ## 最終判断
 

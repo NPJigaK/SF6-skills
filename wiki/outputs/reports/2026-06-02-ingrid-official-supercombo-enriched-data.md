@@ -20,15 +20,15 @@ aliases:
 
 ## 要約
 
-Capcom 公式 Ingrid Classic CSV を正として保持したまま、SuperCombo Ingrid の `move_id`、range、juggle、notes、画像、hitbox などを `supercombo_*` 列で付与した補助列付き output。公式 row を置き換えず、SuperCombo-only row は別 CSV に分離している。2026-06-02 にレビュー対象 26 行を人間レビュー済みにし、すべて `accepted` とした。
+Capcom 公式 Ingrid Classic JSON を正として保持したまま、SuperCombo Ingrid の `move_id`、range、juggle、notes、画像、hitbox などを `supercombo_*` 列で付与した補助列付き output。公式 row を置き換えず、SuperCombo-only row は別 JSON に分離している。2026-06-02 にレビュー対象 26 行を人間レビュー済みにし、すべて `accepted` とした。
 
 SuperCombo-only 13 行のうち 9 行は、特殊隠しコマンド / Monoid 操作に関係する通常利用外の row である。通常の Ingrid frame-data 質問では公式 row と公式 row に紐づく補助列付き output を優先し、hidden / Dark / Shin Ingrid / Monoid / taunt-summon / SuperCombo-only が明示された場合だけ参照する。
 
 ## 生成ファイル
 
-- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.csv`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.json`
-- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/supercombo-only.csv`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.json`
+- `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/supercombo-only.json`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/schema.json`
 - `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/summary.json`
 
@@ -36,11 +36,11 @@ SuperCombo-only 13 行のうち 9 行は、特殊隠しコマンド / Monoid 操
 
 | 項目 | 方針 |
 |---|---|
-| 公式列 | `wiki/outputs/data/frame-data/official/ingrid/classic.csv` の列をそのまま保持する。 |
+| 公式列 | `wiki/outputs/data/frame-data/official/ingrid/classic.json` の列をそのまま保持する。 |
 | SuperCombo 補助列 | すべて `supercombo_*` prefix で追加し、公式値を上書きしない。 |
 | レビュー flag | manual match、多候補、SuperCombo row 再利用を `enrichment_review_flags` に残す。 |
 | 人間レビュー | Ingrid のレビュー対象 26 行は人間レビュー済み。公式値を正とし、SuperCombo は補助情報として扱う。 |
-| SuperCombo-only row | 公式 row に直接紐づけず、`supercombo-only.csv` に分離する。 |
+| SuperCombo-only row | 公式 row に直接紐づけず、`supercombo-only.json` に分離する。 |
 | 特殊隠しコマンド / Monoid row | 通常の Ingrid frame-data 回答には混ぜず、hidden / Dark / Shin Ingrid / Monoid / taunt-summon / SuperCombo-only が明示された質問でだけ参照する。 |
 
 ## サマリー
@@ -115,11 +115,11 @@ SuperCombo-only 13 行のうち 9 行は、特殊隠しコマンド / Monoid 操
 
 ## 注意点
 
-- この補助列付き output は「公式 + 補助情報」であり、公式 CSV を置き換えるものではない。
+- この補助列付き output は「公式 + 補助情報」であり、公式 JSON を置き換えるものではない。
 - 公式列と補助列付き output の公式由来列は全行一致する。SuperCombo の数値は `supercombo_*` 補助列にのみ入れる。
 - SuperCombo-only 9 行は特殊隠しコマンド / Monoid 操作に関係するため、通常の Ingrid frame-data 回答には混ぜない。
 - Ingrid 専用 name override 26 件は人間レビュー済みで accepted。公式値を正とし、SuperCombo は補助情報として扱う。
-- `前方ステップ` / `後方ステップ` は official only。SuperCombo 側の movement data は `character.csv` の dash fields を確認する。
+- `前方ステップ` / `後方ステップ` は official only。SuperCombo 側の movement data は `character.json` の dash fields を確認する。
 - Ingrid は imageinfo missing 156 件が残るため、hitbox / move 画像の利用には追加確認が必要。
 
 ## 根拠
@@ -128,4 +128,4 @@ SuperCombo-only 13 行のうち 9 行は、特殊隠しコマンド / Monoid 操
 - SuperCombo source（根拠）: [[sources/supercombo-ingrid-frame-data]]
 - 候補照合: [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]
 - 補助列付き summary: `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/summary.json`
-- Human review decisions: `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.csv` の `human_review_*` 列
+- Human review decisions: `wiki/outputs/data/frame-data/official-supercombo-enriched/ingrid/classic-supercombo.json` の `human_review_*` 列

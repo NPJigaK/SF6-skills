@@ -31,10 +31,10 @@ Chun-Li（春麗） の Capcom 公式 frame-data raw snapshot と派生 outputs 
 - `raw/official/frame-data/2026-05-27/chunli/classic/metadata.json`
 - `raw/official/frame-data/2026-05-27/chunli/modern/metadata.json`
 - `raw/official/frame-data/2026-05-27/chunli/manifest.json`
-- `wiki/outputs/data/frame-data/official/chunli/classic.csv`
-- `wiki/outputs/data/frame-data/official/chunli/modern.csv`
-- `wiki/outputs/data/frame-data/official/chunli/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/official/chunli/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/classic.json`
+- `wiki/outputs/data/frame-data/official/chunli/modern.json`
+- `wiki/outputs/data/frame-data/official/chunli/classic.json`
+- `wiki/outputs/data/frame-data/official/chunli/modern.json`
 
 ## 確認内容
 
@@ -43,7 +43,7 @@ Chun-Li（春麗） の Capcom 公式 frame-data raw snapshot と派生 outputs 
 - Classic と Modern は別 capture として保存されている。
 - DOM capture は技名、入力 icon、frame values、cancel values、damage、notes、関連 fields を保持している。
 - Classic は 78 rows、Modern は 72 rows。
-- field-meaning JSON は table header 由来の説明を保持している。
+- `field_meanings.records` は table header 由来の説明を保持している。
 
 ## 最終判断
 

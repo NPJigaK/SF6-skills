@@ -11,23 +11,23 @@
   "review_flag_counts": {
     "basic_field_conflict:active_duration": 1,
     "basic_field_conflict:active_duration,damage": 2,
-    "basic_field_conflict:active_duration,damage,recovery,startup": 2,
-    "basic_field_conflict:active_duration,damage,startup": 1,
     "basic_field_conflict:damage": 1,
-    "basic_field_conflict:damage,recovery,startup": 2,
+    "basic_field_conflict:startup,active_duration,damage": 1,
+    "basic_field_conflict:startup,active_duration,recovery,damage": 2,
+    "basic_field_conflict:startup,recovery,damage": 2,
     "condition_dependent_supercombo_field:damage": 12,
     "condition_dependent_supercombo_field:recovery": 7,
     "manual_match": 2,
     "multiple_candidates": 14,
     "supercombo_row_reused": 22,
     "uncomparable_basic_field:active_duration,damage": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 2,
     "uncomparable_basic_field:active_duration,recovery": 1,
-    "uncomparable_basic_field:active_duration,recovery,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery,damage": 3,
     "uncomparable_basic_field:damage": 12,
-    "uncomparable_basic_field:damage,recovery": 2,
-    "uncomparable_basic_field:recovery": 7
+    "uncomparable_basic_field:recovery": 7,
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup,active_duration,recovery": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 2
   },
   "review_queue_counts": {
     "condition_dependent_field": 19,
@@ -76,8 +76,8 @@
     "supercombo_only": 22,
     "supercombo_only_taunt": 6
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/alex/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/alex/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/alex/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/alex/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/alex/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/alex/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/alex/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/alex/classic-supercombo.json"
 }

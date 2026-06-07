@@ -6,7 +6,7 @@ import json
 import sys
 from pathlib import Path
 
-from tools.frame_data.official.capture import csv_rows_from_dom, field_meanings_from_dom, write_csv, write_json
+from tools.frame_data.official.capture import frame_data_payload_from_dom, write_json
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
@@ -35,10 +35,9 @@ def main(argv: list[str]) -> int:
         if not table_dom_path.exists():
             raise FileNotFoundError(table_dom_path)
         table_dom = json.loads(table_dom_path.read_text(encoding="utf-8"))
-        rows = csv_rows_from_dom(table_dom)
-        write_csv(output_dir / f"{mode}.csv", rows)
-        write_json(output_dir / f"{mode}.field-meanings.json", field_meanings_from_dom(table_dom))
-        print(f"{mode}: wrote {len(rows)} rows")
+        payload = frame_data_payload_from_dom(table_dom)
+        write_json(output_dir / f"{mode}.json", payload)
+        print(f"{mode}: wrote {payload['row_count']} rows")
     return 0
 
 

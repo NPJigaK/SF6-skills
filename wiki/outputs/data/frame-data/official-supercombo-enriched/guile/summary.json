@@ -17,12 +17,12 @@
     "multiple_candidates": 5,
     "supercombo_row_reused": 6,
     "uncomparable_basic_field:active_duration": 1,
-    "uncomparable_basic_field:active_duration,damage,recovery": 5,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
     "uncomparable_basic_field:active_duration,recovery": 5,
+    "uncomparable_basic_field:active_duration,recovery,damage": 5,
     "uncomparable_basic_field:damage": 6,
-    "uncomparable_basic_field:damage,recovery": 2,
-    "uncomparable_basic_field:recovery": 1
+    "uncomparable_basic_field:recovery": 1,
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 3
   },
   "review_queue_counts": {
     "condition_dependent_field": 11,
@@ -59,8 +59,8 @@
     "supercombo_only": 19,
     "supercombo_only_taunt": 4
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/guile/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/guile/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/guile/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/guile/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/guile/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/guile/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/guile/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/guile/classic-supercombo.json"
 }

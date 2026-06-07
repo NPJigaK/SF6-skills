@@ -45,7 +45,7 @@ SuperCombo Wiki の JP フレームデータを、`Data?action=raw` の生 wikit
 6. 画像参照は 143 件、distinct filename は 134 件。MediaWiki `imageinfo` で 123 件を解決し、123 件を `raw/frame-data/supercombo/jp/images/files/` に保存した。
 7. `6HPHK` と `236236K` は同じ input を持つ複数 row があるため、SuperCombo raw の行識別には `moveId` を使う。input は表示・検索用であり、主キーにはしない。
 8. この source は community data なので、公式 Capcom data と重なる基本フレーム値では公式を正とする。SuperCombo は公式にない range、juggle、hitbox image、notes などを後で追加統合する候補として扱う。
-9. Review 用の派生 CSV/JSON と公式 JP Classic との候補 crosswalk は `wiki/outputs/data/frame-data/supercombo/jp/` と [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]] に保存している。
+9. Review 用の派生 JSON と公式 JP Classic との候補 crosswalk は `wiki/outputs/data/frame-data/supercombo/jp/` と [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]] に保存している。
 10. 公式列を保持した enriched output は `wiki/outputs/data/frame-data/official-supercombo-enriched/jp/` と [[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] に保存している。
 
 ## 重要な主張
@@ -81,7 +81,7 @@ SuperCombo Wiki の JP フレームデータを、`Data?action=raw` の生 wikit
 
 - 人間レビュー済みの5件を正式 merge policy として他 character に一般化できるか。多対一対応 rows と SuperCombo-only rows の扱いをどう確定するか。
 - `imageinfo` で missing になった 11 件の画像参照を、SuperCombo 側の削除済み/未作成ファイルとして扱うか、filename 正規化で再解決できるか。
-- SuperCombo の HTML 装飾付き frame advantage を、公式 CSV と比較可能な値へ正規化する schema をいつ作るか。
+- SuperCombo の HTML 装飾付き frame advantage を、公式 JSON と比較可能な値へ正規化する schema をいつ作るか。
 
 ## ソースメモ
 

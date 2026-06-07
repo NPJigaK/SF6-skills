@@ -16,10 +16,10 @@
     "multiple_candidates": 15,
     "supercombo_row_reused": 11,
     "uncomparable_basic_field:active_duration,damage": 6,
-    "uncomparable_basic_field:active_duration,damage,recovery": 10,
+    "uncomparable_basic_field:active_duration,recovery,damage": 10,
     "uncomparable_basic_field:damage": 2,
-    "uncomparable_basic_field:damage,recovery": 2,
     "uncomparable_basic_field:recovery": 2,
+    "uncomparable_basic_field:recovery,damage": 2,
     "uncomparable_basic_field:startup": 2
   },
   "review_queue_counts": {
@@ -56,8 +56,8 @@
     "supercombo_only": 28,
     "supercombo_only_taunt": 6
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/vega_mbison/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/vega_mbison/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/vega_mbison/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/vega_mbison/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/vega_mbison/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/vega_mbison/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/vega_mbison/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/vega_mbison/classic-supercombo.json"
 }

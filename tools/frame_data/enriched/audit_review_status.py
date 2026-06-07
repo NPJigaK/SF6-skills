@@ -2,11 +2,11 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import re
 import sys
 from pathlib import Path
+from typing import Any
 
 
 RISK_FLAG_PREFIXES = (
@@ -20,9 +20,8 @@ RISK_FLAG_PREFIXES = (
 )
 
 
-def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open(encoding="utf-8", newline="") as handle:
-        return list(csv.DictReader(handle))
+def read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def has_risky_flag(flags: str) -> bool:
@@ -33,8 +32,7 @@ def has_risky_flag(flags: str) -> bool:
     )
 
 
-def condition_parenthetical_fields(comparisons_json: str) -> list[str]:
-    comparisons = json.loads(comparisons_json or "{}")
+def condition_parenthetical_fields(comparisons: dict[str, Any]) -> list[str]:
     fields: list[str] = []
     for field, comparison in comparisons.items():
         if field not in {"damage", "startup", "recovery"}:
@@ -55,9 +53,9 @@ def audit(repo_root: Path) -> dict[str, object]:
     failures: list[dict[str, str]] = []
     rows_checked = 0
 
-    for csv_path in sorted(root.glob("*/classic-supercombo.csv")):
-        slug = csv_path.parent.name
-        for row in read_csv(csv_path):
+    for data_path in sorted(root.glob("*/classic-supercombo.json")):
+        slug = data_path.parent.name
+        for row in read_json(data_path)["rows"]:
             rows_checked += 1
             status = row.get("enrichment_status", "")
             flags = row.get("enrichment_review_flags", "")
@@ -74,9 +72,10 @@ def audit(repo_root: Path) -> dict[str, object]:
                 )
 
             if status == "enriched":
-                parenthetical_fields = condition_parenthetical_fields(
-                    row.get("supercombo_field_comparisons_json", "{}")
-                )
+                comparisons = row.get("supercombo_field_comparisons", {})
+                if not isinstance(comparisons, dict):
+                    raise TypeError("supercombo_field_comparisons must be an object")
+                parenthetical_fields = condition_parenthetical_fields(comparisons)
                 if parenthetical_fields:
                     failures.append(
                         {

@@ -46,7 +46,7 @@ SuperCombo Wiki の Ingrid フレームデータを、`Data?action=raw` の生 w
 7. `6HPHK` と `236236P` は同じ input を持つ複数 row があるため、SuperCombo raw の行識別には `moveId` を使う。input は表示・検索用であり、主キーにはしない。
 8. `moveType` には `Special` / `Super` の大文字表記が混じるため、後続の派生処理や section 照合では小文字正規化が必要になる可能性がある。
 9. この source は community data なので、公式 Capcom data と重なる基本フレーム値では公式を正とする。SuperCombo は公式にない range、juggle、hitbox image、notes などを後で追加統合する候補として扱う。
-10. 2026-06-02 に SuperCombo 派生 frame-data CSV/JSON、公式 Classic との crosswalk、補助列付き output を作成した。公式値は Capcom 公式 Classic CSV を正とし、SuperCombo は `supercombo_*` 補助列として扱う。
+10. 2026-06-02 に SuperCombo 派生 frame-data JSON、公式 Classic との crosswalk、補助列付き output を作成した。公式値は Capcom 公式 Classic JSON を正とし、SuperCombo は `supercombo_*` 補助列として扱う。
 11. SuperCombo-only 9 行（Big Laser?、Burnout Attack?、Sun Octopus?、Monoid 関連）は特殊隠しコマンド / Monoid 操作に関係する通常利用外の row なので、通常の Ingrid frame-data 回答には混ぜず、hidden / Dark / Shin Ingrid / Monoid / taunt-summon / SuperCombo-only が明示された質問でだけ参照する。
 
 ## 重要な主張
@@ -82,7 +82,7 @@ SuperCombo Wiki の Ingrid フレームデータを、`Data?action=raw` の生 w
 - `taunt` move type は raw/Cargo に含まれるが、表示ページの 4 section x 5 tab validation 対象には入っていない。
 - Ingrid では face / portrait 以外の move / hitbox 画像がほぼ解決できていないため、画像付き hitbox analysis の根拠としては現時点で使えない。
 - 公式 Classic との照合では Sun Crest stock level、OD Sun Shot 共有 row、SA1 / SA2 stock level、Drive Rush など 26 行を人間レビューし、公式値を正とする補助リンクとして accepted にした。
-- 公式 row に直接照合しなかった SuperCombo-only 9 行は、特殊隠しコマンド / Monoid 操作に関係する通常利用外の row として `supercombo-only.csv` に隔離する。通常の frame-data 質問では公式 row と公式 row に紐づく補助列付き output を優先する。
+- 公式 row に直接照合しなかった SuperCombo-only 9 行は、特殊隠しコマンド / Monoid 操作に関係する通常利用外の row として `supercombo-only.json` に隔離する。通常の frame-data 質問では公式 row と公式 row に紐づく補助列付き output を優先する。
 
 ## 未解決の質問
 

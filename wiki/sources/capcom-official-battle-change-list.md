@@ -31,7 +31,7 @@ related_entities:
 
 ## 1行要約
 
-Capcom 公式 Buckler's Boot Camp の Street Fighter 6 Battle Change List を、20 update version 分の raw HTML、Next.js data JSON、metadata、manifest として保存し、wiki 化しやすい flat CSV / JSON に派生抽出した source page。
+Capcom 公式 Buckler's Boot Camp の Street Fighter 6 Battle Change List を、20 update version 分の raw HTML、Next.js data JSON、metadata、manifest として保存し、wiki 化しやすい flat JSON に派生抽出した source page。
 
 ## 重要ポイント
 
@@ -49,8 +49,8 @@ Capcom 公式 Buckler's Boot Camp の Street Fighter 6 Battle Change List を、
 | publisher は Capcom で、source URL は公式 Buckler's Boot Camp の Battle Change List。 | `raw/battle-change/official/manifest.json`; `raw/battle-change/official/discovery/metadata.json` | high | metadata が publisher、game、locale、source type、source URL を記録している。 |
 | Battle Change List は 20 update version を列挙する。 | `raw/battle-change/official/manifest.json` | high | `versions` は `20260528` から `20230724` まで。 |
 | raw capture は各 version の HTML と Next.js data JSON を保持する。 | `raw/battle-change/official/versions/<version>/page.html`; `raw/battle-change/official/versions/<version>/data.json` | high | JSON は `_next/data/<buildId>/ja-jp/battle_change/<version>.json` の response。 |
-| 派生 output は 1820 change rows。 | `wiki/outputs/data/battle-change/official/changes.csv`; `wiki/outputs/data/battle-change/official/changes.json`; [[reviews/2026-06-07-official-battle-change-capture-review]] | high | `text_html` は公式 HTML fragment を保持し、翻訳・正規化した置き換えではない。 |
-| `20231201` は page title と selector title が異なる。 | `wiki/outputs/data/battle-change/official/versions.csv`; `wiki/outputs/data/battle-change/official/schema.json` | high | `version_title` は `2023.12.1 update`、`version_selector_title` は `2023.12.01 update`。公式由来の表記差なので正規化せず、`version_title_mismatch` で示す。 |
+| 派生 output は 1820 change rows。 | `wiki/outputs/data/battle-change/official/changes.json`; [[reviews/2026-06-07-official-battle-change-capture-review]] | high | `text_html` は公式 HTML fragment を保持し、翻訳・正規化した置き換えではない。 |
+| `20231201` は page title と selector title が異なる。 | `wiki/outputs/data/battle-change/official/versions.json`; `wiki/outputs/data/battle-change/official/schema.json` | high | `version_title` は `2023.12.1 update`、`version_selector_title` は `2023.12.01 update`。公式由来の表記差なので正規化せず、`version_title_mismatch` で示す。 |
 
 ## 関連概念
 
@@ -64,7 +64,7 @@ Capcom 公式 Buckler's Boot Camp の Street Fighter 6 Battle Change List を、
 ## 既存 wiki との矛盾または更新
 
 - 以前の未解決事項だった「frame-data の version change を説明する公式 update-history source」は、この source capture で raw layer まで追加された。ただし個別の調整内容を character / concept page へ昇格する作業は未実施。
-- Battle Change List の本文は公式 HTML fragment を含む。`wiki/outputs/data/battle-change/official/changes.csv` の `text_html` は、改行や注意書きの `<span>` を保持するため、読者向け要約では Markdown 化または plain text 化の方針を別途決める必要がある。
+- Battle Change List の本文は公式 HTML fragment を含む。`wiki/outputs/data/battle-change/official/changes.json` の `rows[].text_html` は、改行や注意書きの `<span>` を保持するため、読者向け要約では Markdown 化または plain text 化の方針を別途決める必要がある。
 - version title は公式 source 内でも page title と selector title が一致しない場合がある。後続の wiki 化では `version_title_mismatch` を確認し、日付の正規化を推測で行わない。
 
 ## 未解決の質問
@@ -78,8 +78,7 @@ Capcom 公式 Buckler's Boot Camp の Street Fighter 6 Battle Change List を、
 - Raw manifest: `raw/battle-change/official/manifest.json`
 - Discovery raw capture: `raw/battle-change/official/discovery/`
 - Version raw captures: `raw/battle-change/official/versions/<version>/`
-- Derived changes CSV: `wiki/outputs/data/battle-change/official/changes.csv`
 - Derived changes JSON: `wiki/outputs/data/battle-change/official/changes.json`
-- Derived versions CSV: `wiki/outputs/data/battle-change/official/versions.csv`
+- Derived versions JSON: `wiki/outputs/data/battle-change/official/versions.json`
 - Derived schema: `wiki/outputs/data/battle-change/official/schema.json`
 - Capture review: [[reviews/2026-06-07-official-battle-change-capture-review]]

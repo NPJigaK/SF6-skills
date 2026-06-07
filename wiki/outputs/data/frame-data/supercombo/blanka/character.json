@@ -1,0 +1,53 @@
+{
+  "schema_version": "supercombo_character_data/v2",
+  "source_raw_root": "raw/frame-data/supercombo/blanka",
+  "fields": [
+    "row_order",
+    "chara",
+    "name",
+    "hp",
+    "throw_range",
+    "throw_hurtbox",
+    "forward_walk_speed",
+    "back_walk_speed",
+    "forward_dash_speed",
+    "back_dash_speed",
+    "forward_dash_distance",
+    "back_dash_distance",
+    "jump_speed",
+    "jump_apex",
+    "forward_jump_distance",
+    "back_jump_distance",
+    "drive_rush_min",
+    "drive_rush_block",
+    "drive_rush_max",
+    "portrait",
+    "icon"
+  ],
+  "row_count": 1,
+  "rows": [
+    {
+      "row_order": "1",
+      "chara": "Blanka",
+      "name": "Blanka",
+      "hp": "10000",
+      "throw_range": "0.9",
+      "throw_hurtbox": "0.43",
+      "forward_walk_speed": "0.047",
+      "back_walk_speed": "0.032",
+      "forward_dash_speed": "19",
+      "back_dash_speed": "23",
+      "forward_dash_distance": "1.578",
+      "back_dash_distance": "1.169",
+      "jump_speed": "4+38+3",
+      "jump_apex": "2.115",
+      "forward_jump_distance": "1.90",
+      "back_jump_distance": "1.52",
+      "drive_rush_min": "0.476",
+      "drive_rush_block": "2.082",
+      "drive_rush_max": "2.867",
+      "portrait": "SF6 Blanka Portrait.png",
+      "icon": "SF6 Blanka Face.png"
+    }
+  ]
+}

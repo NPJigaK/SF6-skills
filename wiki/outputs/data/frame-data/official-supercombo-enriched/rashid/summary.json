@@ -9,13 +9,13 @@
     "official_only": 11
   },
   "review_flag_counts": {
-    "basic_field_conflict:active_duration,damage,startup": 2,
-    "basic_field_conflict:active_duration,startup": 1,
     "basic_field_conflict:damage": 6,
-    "basic_field_conflict:damage,startup": 2,
     "basic_field_conflict:recovery": 2,
-    "basic_field_conflict:recovery,startup": 2,
     "basic_field_conflict:startup": 2,
+    "basic_field_conflict:startup,active_duration": 1,
+    "basic_field_conflict:startup,active_duration,damage": 2,
+    "basic_field_conflict:startup,damage": 2,
+    "basic_field_conflict:startup,recovery": 2,
     "condition_dependent_supercombo_field:damage": 4,
     "condition_dependent_supercombo_field:recovery": 14,
     "condition_dependent_supercombo_field:startup": 5,
@@ -24,15 +24,15 @@
     "supercombo_row_reused": 30,
     "uncomparable_basic_field:active_duration": 1,
     "uncomparable_basic_field:active_duration,damage": 4,
-    "uncomparable_basic_field:active_duration,damage,recovery": 7,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 2,
     "uncomparable_basic_field:active_duration,recovery": 7,
-    "uncomparable_basic_field:active_duration,recovery,startup": 9,
-    "uncomparable_basic_field:active_duration,startup": 1,
+    "uncomparable_basic_field:active_duration,recovery,damage": 7,
     "uncomparable_basic_field:damage": 2,
-    "uncomparable_basic_field:damage,recovery": 4,
     "uncomparable_basic_field:recovery": 12,
-    "uncomparable_basic_field:startup": 4
+    "uncomparable_basic_field:recovery,damage": 4,
+    "uncomparable_basic_field:startup": 4,
+    "uncomparable_basic_field:startup,active_duration": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery": 9,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 2
   },
   "review_queue_counts": {
     "condition_dependent_field": 23,
@@ -82,8 +82,8 @@
     "supercombo_only": 21,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/rashid/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/rashid/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/rashid/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/rashid/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/rashid/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/rashid/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/rashid/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/rashid/classic-supercombo.json"
 }

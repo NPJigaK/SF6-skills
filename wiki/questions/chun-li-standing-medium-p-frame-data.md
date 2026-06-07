@@ -1,7 +1,7 @@
 ---
 type: question
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-08
 status: active
 question: "春麗の立ち中Pは、発生・ヒット時・ガード時・キャンセル可否・ダメージはいくつですか？"
 sources:
@@ -33,13 +33,12 @@ SA でキャンセル可能。
 ## 根拠
 
 - [[sources/capcom-official-chun-li-frame-data]]
-- `wiki/outputs/data/frame-data/official/chunli/classic.csv`
-- `wiki/outputs/data/frame-data/official/chunli/modern.csv`
-- `wiki/outputs/data/frame-data/official/chunli/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/official/chunli/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/classic.json`
+- `wiki/outputs/data/frame-data/official/chunli/modern.json`
+- `classic.json` / `modern.json` 内の `rows[]` と `field_meanings.records[]`
 
 ## Limits / uncertainty
 
 - この答えは 2026-05-27 に保存された Chun-Li 公式フレームデータ capture に基づく。
-- 個別技の値は公式CSVの該当行をそのまま読む。別日付の再captureが追加された場合は、
+- 個別技の値は公式 JSON output の `rows[]` の該当行をそのまま読む。別日付の再captureが追加された場合は、
   その時点の source date を確認する必要がある。

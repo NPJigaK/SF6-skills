@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from tools.frame_data.official.capture import COLUMN_KEYS, csv_rows_from_dom, validate_mode_tab_state
+from tools.frame_data.official.capture import COLUMN_KEYS, frame_rows_from_dom, validate_mode_tab_state
 
 
 def cell(text: str) -> dict[str, object]:
@@ -23,7 +23,7 @@ def test_unknown_body_row_shape_is_rejected() -> None:
     }
 
     try:
-        csv_rows_from_dom(table_dom)
+        frame_rows_from_dom(table_dom)
     except ValueError as exc:
         assert "unexpected Capcom frame-data row shape" in str(exc)
         assert "row_index=2" in str(exc)

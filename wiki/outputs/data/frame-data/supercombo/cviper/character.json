@@ -1,0 +1,53 @@
+{
+  "schema_version": "supercombo_character_data/v2",
+  "source_raw_root": "raw/frame-data/supercombo/cviper",
+  "fields": [
+    "row_order",
+    "chara",
+    "name",
+    "hp",
+    "throw_range",
+    "throw_hurtbox",
+    "forward_walk_speed",
+    "back_walk_speed",
+    "forward_dash_speed",
+    "back_dash_speed",
+    "forward_dash_distance",
+    "back_dash_distance",
+    "jump_speed",
+    "jump_apex",
+    "forward_jump_distance",
+    "back_jump_distance",
+    "drive_rush_min",
+    "drive_rush_block",
+    "drive_rush_max",
+    "portrait",
+    "icon"
+  ],
+  "row_count": 1,
+  "rows": [
+    {
+      "row_order": "1",
+      "chara": "C.Viper",
+      "name": "C. Viper",
+      "hp": "10000",
+      "throw_range": "0.8",
+      "throw_hurtbox": "0.33",
+      "forward_walk_speed": "0.0452",
+      "back_walk_speed": "0.031",
+      "forward_dash_speed": "21",
+      "back_dash_speed": "23",
+      "forward_dash_distance": "1.50",
+      "back_dash_distance": "0.80",
+      "jump_speed": "4+38+3 (6+40+3)",
+      "jump_apex": "2.11 (2.195)",
+      "forward_jump_distance": "1.90 (3.00)",
+      "back_jump_distance": "1.52",
+      "drive_rush_min": "0.374",
+      "drive_rush_block": "1.756",
+      "drive_rush_max": "3.355",
+      "portrait": "SF6 Cviper Portrait.png",
+      "icon": "SF6 Cviper Face.png"
+    }
+  ]
+}

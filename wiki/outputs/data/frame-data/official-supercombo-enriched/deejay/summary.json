@@ -16,12 +16,12 @@
     "supercombo_row_reused": 3,
     "uncomparable_basic_field:active_duration": 1,
     "uncomparable_basic_field:active_duration,damage": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 3,
+    "uncomparable_basic_field:active_duration,recovery,damage": 3,
     "uncomparable_basic_field:damage": 13,
-    "uncomparable_basic_field:damage,recovery": 2,
     "uncomparable_basic_field:recovery": 4,
-    "uncomparable_basic_field:startup": 1
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 3
   },
   "review_queue_counts": {
     "condition_dependent_field": 20,
@@ -51,8 +51,8 @@
     "supercombo_only": 44,
     "supercombo_only_taunt": 3
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/deejay/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/deejay/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/deejay/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/deejay/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/deejay/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/deejay/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/deejay/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/deejay/classic-supercombo.json"
 }

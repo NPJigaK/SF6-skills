@@ -1,6 +1,10 @@
 {
-  "schema_version": "capcom_battle_change_derived_outputs/v1",
+  "schema_version": "capcom_battle_change_derived_outputs/v2",
   "source_manifest": "raw/battle-change/official/manifest.json",
+  "files": {
+    "versions": "versions.json",
+    "changes": "changes.json"
+  },
   "changes_fields": [
     "version_order",
     "version_id",

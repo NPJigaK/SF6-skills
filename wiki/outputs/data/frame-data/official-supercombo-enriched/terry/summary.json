@@ -11,25 +11,25 @@
   "review_flag_counts": {
     "ambiguous_match": 1,
     "basic_field_conflict:active_duration,damage": 2,
-    "basic_field_conflict:recovery,startup": 1,
+    "basic_field_conflict:startup,recovery": 1,
     "condition_dependent_supercombo_field:damage": 6,
-    "condition_dependent_supercombo_field:damage,startup": 2,
     "condition_dependent_supercombo_field:recovery": 9,
     "condition_dependent_supercombo_field:startup": 5,
+    "condition_dependent_supercombo_field:startup,damage": 2,
     "manual_match": 2,
     "multiple_candidates": 20,
     "supercombo_row_reused": 5,
     "uncomparable_basic_field:active_duration": 1,
     "uncomparable_basic_field:active_duration,damage": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery": 3,
-    "uncomparable_basic_field:active_duration,damage,recovery,startup": 4,
-    "uncomparable_basic_field:active_duration,damage,startup": 1,
     "uncomparable_basic_field:active_duration,recovery": 6,
+    "uncomparable_basic_field:active_duration,recovery,damage": 3,
     "uncomparable_basic_field:damage": 5,
-    "uncomparable_basic_field:damage,recovery": 2,
-    "uncomparable_basic_field:damage,recovery,startup": 2,
     "uncomparable_basic_field:recovery": 5,
-    "uncomparable_basic_field:recovery,startup": 2
+    "uncomparable_basic_field:recovery,damage": 2,
+    "uncomparable_basic_field:startup,active_duration,damage": 1,
+    "uncomparable_basic_field:startup,active_duration,recovery,damage": 4,
+    "uncomparable_basic_field:startup,recovery": 2,
+    "uncomparable_basic_field:startup,recovery,damage": 2
   },
   "review_queue_counts": {
     "condition_dependent_field": 22,
@@ -71,8 +71,8 @@
     "supercombo_only": 4,
     "supercombo_only_taunt": 4
   },
-  "official_csv": "wiki/outputs/data/frame-data/official/terry/classic.csv",
-  "supercombo_frames_csv": "wiki/outputs/data/frame-data/supercombo/terry/frames.csv",
-  "crosswalk_csv": "wiki/outputs/data/frame-data/supercombo/terry/crosswalk-official-classic.csv",
-  "output_csv": "wiki/outputs/data/frame-data/official-supercombo-enriched/terry/classic-supercombo.csv"
+  "official_frame_data": "wiki/outputs/data/frame-data/official/terry/classic.json",
+  "supercombo_frame_data": "wiki/outputs/data/frame-data/supercombo/terry/frames.json",
+  "crosswalk": "wiki/outputs/data/frame-data/supercombo/terry/crosswalk-official-classic.json",
+  "output": "wiki/outputs/data/frame-data/official-supercombo-enriched/terry/classic-supercombo.json"
 }

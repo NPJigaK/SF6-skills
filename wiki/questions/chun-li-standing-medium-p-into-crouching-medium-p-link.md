@@ -1,7 +1,7 @@
 ---
 type: question
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-08
 status: active
 question: "春麗の立ち中Pが通常ヒットしたあと、発生6Fのしゃがみ中Pは理論上つながる？理由もフレームで説明して。"
 sources:
@@ -51,12 +51,11 @@ tags:
 ## 根拠
 
 - [[sources/capcom-official-chun-li-frame-data]]
-- `wiki/outputs/data/frame-data/official/chunli/classic.csv`
-- `wiki/outputs/data/frame-data/official/chunli/modern.csv`
-- `wiki/outputs/data/frame-data/official/chunli/classic.field-meanings.json`
-- `wiki/outputs/data/frame-data/official/chunli/modern.field-meanings.json`
+- `wiki/outputs/data/frame-data/official/chunli/classic.json`
+- `wiki/outputs/data/frame-data/official/chunli/modern.json`
+- `classic.json` / `modern.json` 内の `rows[]` と `field_meanings.records[]`
 
-確認した公式CSV値:
+確認した公式 JSON output の値:
 
 | 操作タイプ | 立ち中P ヒット時 | しゃがみ中P 発生 | しゃがみ中P 持続 |
 |---|---:|---:|---|

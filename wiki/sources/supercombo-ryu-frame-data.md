@@ -45,7 +45,7 @@ SuperCombo Wiki の Ryu フレームデータを、`Data?action=raw` の生 wiki
 6. 画像参照は 173 件、distinct filename は 134 件。MediaWiki `imageinfo` で 133 件を解決し、133 件を `raw/frame-data/supercombo/ryu/images/files/` に保存した。
 7. `6HPHK`、`236HP`、`236PP`、`214HP`、`214PP`、`236236P`、`214214P`、`214214P (Hold Lv.2)`、`214214P (Hold Lv.3)`、`236236K` は duplicate input を持つため、SuperCombo raw の行識別には `moveId` を使う。
 8. この source は community data なので、公式 Capcom data と重なる基本フレーム値では公式を正とする。SuperCombo は公式にない range、juggle、hitbox image、notes などを後で追加統合する候補として扱う。
-9. Review 用の派生 CSV/JSON と公式 Ryu Classic との crosswalk は `wiki/outputs/data/frame-data/supercombo/ryu/` と [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]] に保存している。Denjin / hold-level / Drive Rush の 10 行は人間レビュー済み name override を反映している。
+9. Review 用の派生 JSON と公式 Ryu Classic との crosswalk は `wiki/outputs/data/frame-data/supercombo/ryu/` と [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]] に保存している。Denjin / hold-level / Drive Rush の 10 行は人間レビュー済み name override を反映している。
 10. 公式列を保持した enriched output は `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/` と [[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] に保存している。review 対象 13 行は accepted 済みで、公式数値を上書きせず補助リンクとして扱う。
 11. `6HK~214K` / `6HK~214KK` は、primary official row を `空中竜巻旋風脚` / `OD 空中竜巻旋風脚`、enabled-by row を `旋風脚` とする conditional variant link として SuperCombo-only 側に保持する。
 
@@ -61,8 +61,8 @@ SuperCombo Wiki の Ryu フレームデータを、`Data?action=raw` の生 wiki
 | `SF6_FrameData` は move type として ground_normal 20、air_normal 6、drive 6、throw 2、special 29、super 10、taunt 4 を含む。 | `raw/frame-data/supercombo/ryu/validation.json` | high | validator では `Special` / `Super` の表記ゆれを小文字正規化して集計する。 |
 | duplicate input が 10 種類ある。 | `raw/frame-data/supercombo/ryu/validation.json`; `raw/frame-data/supercombo/ryu/data.templates.json` | high | Denjin / hold level / CA などの variant が同じ input を共有するため、input は主キーにしない。 |
 | Data page の最新 revision は 2026-05-30T01:26:46Z、Frame data 表示ページの revision は 2024-10-19T05:06:40Z。 | `raw/frame-data/supercombo/ryu/api/page-metadata.json` | high | Data page は pageid 65938 / revid 365005、Frame data page は pageid 68275 / revid 310359。 |
-| 公式 Ryu enriched output は、review 対象 13 行を `enriched_reviewed` として保持する。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/summary.json`; `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.csv` | high | 公式由来列は公式 Classic CSV と全行一致。SuperCombo の damage / startup / active などは `supercombo_*` 補助列として保持する。 |
-| `6HK~214K` / `6HK~214KK` は conditional variant link として保持する。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/supercombo-only.csv`; `wiki/outputs/data/frame-data/official/ryu/classic.csv` | high | row 23 `旋風脚` からキャンセル可能な空中竜巻派生であり、row 23 の数値とは混ぜない。 |
+| 公式 Ryu enriched output は、review 対象 13 行を `enriched_reviewed` として保持する。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/summary.json`; `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/classic-supercombo.json` | high | 公式由来列は公式 Classic JSON と全行一致。SuperCombo の damage / startup / active などは `supercombo_*` 補助列として保持する。 |
+| `6HK~214K` / `6HK~214KK` は conditional variant link として保持する。 | `wiki/outputs/data/frame-data/official-supercombo-enriched/ryu/supercombo-only.json`; `wiki/outputs/data/frame-data/official/ryu/classic.json` | high | row 23 `旋風脚` からキャンセル可能な空中竜巻派生であり、row 23 の数値とは混ぜない。 |
 
 ## データ構造メモ
 

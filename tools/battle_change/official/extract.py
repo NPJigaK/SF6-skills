@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import sys
 from pathlib import Path
@@ -11,7 +10,7 @@ from typing import Any
 from tools.battle_change.official.capture import adjust_from_payload, validate_adjust_payload
 
 
-CSV_FIELDS = [
+CHANGE_FIELDS = [
     "version_order",
     "version_id",
     "version_title",
@@ -135,14 +134,6 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
 
-def write_csv(path: Path, rows: list[dict[str, str]], fieldnames: list[str]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(rows)
-
-
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -191,9 +182,13 @@ def extract_all(repo_root: Path) -> dict[str, Any]:
         )
 
     schema = {
-        "schema_version": "capcom_battle_change_derived_outputs/v1",
+        "schema_version": "capcom_battle_change_derived_outputs/v2",
         "source_manifest": "raw/battle-change/official/manifest.json",
-        "changes_fields": CSV_FIELDS,
+        "files": {
+            "versions": "versions.json",
+            "changes": "changes.json",
+        },
+        "changes_fields": CHANGE_FIELDS,
         "version_fields": list(version_rows[0].keys()) if version_rows else [],
         "notes": [
             "`version_title` is the per-version page title from that version's data JSON.",
@@ -204,9 +199,26 @@ def extract_all(repo_root: Path) -> dict[str, Any]:
         ],
     }
 
-    write_csv(output_dir / "versions.csv", version_rows, list(version_rows[0].keys()) if version_rows else [])
-    write_csv(output_dir / "changes.csv", change_rows, CSV_FIELDS)
-    write_json(output_dir / "changes.json", change_rows)
+    write_json(
+        output_dir / "versions.json",
+        {
+            "schema_version": "capcom_battle_change_versions/v2",
+            "source_manifest": "raw/battle-change/official/manifest.json",
+            "fields": list(version_rows[0].keys()) if version_rows else [],
+            "row_count": len(version_rows),
+            "rows": version_rows,
+        },
+    )
+    write_json(
+        output_dir / "changes.json",
+        {
+            "schema_version": "capcom_battle_change_changes/v2",
+            "source_manifest": "raw/battle-change/official/manifest.json",
+            "fields": CHANGE_FIELDS,
+            "row_count": len(change_rows),
+            "rows": change_rows,
+        },
+    )
     write_json(output_dir / "schema.json", schema)
     return {
         "output_dir": output_dir.relative_to(repo_root).as_posix(),

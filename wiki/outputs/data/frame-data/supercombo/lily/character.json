@@ -1,0 +1,53 @@
+{
+  "schema_version": "supercombo_character_data/v2",
+  "source_raw_root": "raw/frame-data/supercombo/lily",
+  "fields": [
+    "row_order",
+    "chara",
+    "name",
+    "hp",
+    "throw_range",
+    "throw_hurtbox",
+    "forward_walk_speed",
+    "back_walk_speed",
+    "forward_dash_speed",
+    "back_dash_speed",
+    "forward_dash_distance",
+    "back_dash_distance",
+    "jump_speed",
+    "jump_apex",
+    "forward_jump_distance",
+    "back_jump_distance",
+    "drive_rush_min",
+    "drive_rush_block",
+    "drive_rush_max",
+    "portrait",
+    "icon"
+  ],
+  "row_count": 1,
+  "rows": [
+    {
+      "row_order": "1",
+      "chara": "Lily",
+      "name": "Lily",
+      "hp": "10000",
+      "throw_range": "0.8",
+      "throw_hurtbox": "0.33",
+      "forward_walk_speed": "0.042",
+      "back_walk_speed": "0.027",
+      "forward_dash_speed": "21",
+      "back_dash_speed": "24",
+      "forward_dash_distance": "1.261",
+      "back_dash_distance": "0.940",
+      "jump_speed": "5+39+3",
+      "jump_apex": "2.139",
+      "forward_jump_distance": "1.95",
+      "back_jump_distance": "1.56",
+      "drive_rush_min": "0.434",
+      "drive_rush_block": "1.900",
+      "drive_rush_max": "3.044",
+      "portrait": "SF6 Lily Portrait.png",
+      "icon": "SF6 Lily Face.png"
+    }
+  ]
+}
