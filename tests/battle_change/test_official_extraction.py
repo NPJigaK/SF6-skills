@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from extract_capcom_battle_change import flatten_adjust
+from tools.battle_change.official.extract import flatten_adjust
 
 
 def test_flatten_adjust_preserves_policy_common_and_fighter_order() -> None:

@@ -6,7 +6,7 @@ import json
 import sys
 from pathlib import Path
 
-from capture_capcom_frame_data import csv_rows_from_dom, field_meanings_from_dom, write_csv, write_json
+from tools.frame_data.official.capture import csv_rows_from_dom, field_meanings_from_dom, write_csv, write_json
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:

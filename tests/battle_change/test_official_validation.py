@@ -5,7 +5,7 @@ import tempfile
 from hashlib import sha256
 from pathlib import Path
 
-from validate_capcom_battle_change import validate_raw_capture
+from tools.battle_change.official.validate import validate_raw_capture
 
 
 def sha256_text(value: str) -> str:

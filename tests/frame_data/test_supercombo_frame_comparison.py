@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-from extract_supercombo_frame_data import candidate_score, compare_basic_field
+from tools.frame_data.supercombo.extract import candidate_score, compare_basic_field
 
 
 def assert_equal(actual: object, expected: object, message: str) -> None:

@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from capture_capcom_frame_data import (
+from tools.frame_data.official.capture import (
     csv_rows_from_dom,
     field_meanings_from_dom,
     unexpected_body_rows,

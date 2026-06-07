@@ -49,9 +49,9 @@ This repository is still early enough that old output paths should not be preser
 
 ## Verification
 
-- `python -m pytest tools/test_supercombo_frame_comparison.py tools/test_supercombo_enrichment_review.py tools/test_supercombo_validation_integrity.py tools/test_capcom_capture_guards.py tools/test_battle_change_validation.py`
-- `python tools/validate_capcom_frame_data.py --character-slug ryu`
-- `python tools/extract_capcom_frame_data.py --character-slug ryu`
-- `python tools/extract_supercombo_frame_data.py --character-slug ryu`
-- `python tools/build_official_supercombo_enriched_data.py --character-slug ryu`
+- `python -m pytest tests/frame_data tests/battle_change`
+- `python -m tools.frame_data.official.validate --character-slug ryu`
+- `python -m tools.frame_data.official.extract --character-slug ryu`
+- `python -m tools.frame_data.supercombo.extract --character-slug ryu`
+- `python -m tools.frame_data.enriched.build --character-slug ryu`
 - `rg "wiki/outputs/data/(supercombo/frame-data|enriched/frame-data|frame-data/[a-z0-9_]+/)" README.md tools wiki`

@@ -5,8 +5,8 @@ from pathlib import Path
 
 import pytest
 
-from audit_supercombo_enriched_review_status import audit
-from build_official_supercombo_enriched_data import review_queues_from_flags
+from tools.frame_data.enriched.audit_review_status import audit
+from tools.frame_data.enriched.build import review_queues_from_flags
 
 
 def assert_equal(actual: object, expected: object, message: str) -> None:

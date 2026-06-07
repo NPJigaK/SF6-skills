@@ -4,7 +4,7 @@ import json
 import tempfile
 from pathlib import Path
 
-from frame_data_integrity import (
+from tools.frame_data.integrity import (
     ensure_supercombo_validation_matches_current_raw,
     invalidate_supercombo_validation,
     supercombo_raw_fingerprint,

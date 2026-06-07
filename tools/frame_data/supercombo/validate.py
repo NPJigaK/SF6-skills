@@ -11,8 +11,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from capture_supercombo_frame_data import cargo_records, sha256_file, write_json
-from frame_data_integrity import supercombo_raw_fingerprint
+from tools.frame_data.integrity import supercombo_raw_fingerprint
+from tools.frame_data.supercombo.capture import cargo_records, sha256_file, write_json
 
 
 DISPLAY_TABLES = {

@@ -402,7 +402,7 @@ def capture_all(repo_root: Path, *, timeout: int, delay_seconds: float, dry_run:
             }
             for capture in captures
         ],
-        "tool": "tools/capture_capcom_battle_change.py",
+        "tool": "tools/battle_change/official/capture.py",
     }
     write_json(raw_root / "manifest.json", manifest)
     return {

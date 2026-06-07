@@ -2,6 +2,18 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-07] schema | tool layout migration
+- 変更:
+  - `tools/` の flat scripts を data family first の package layout に移動した。
+  - frame-data tools は `tools/frame_data/official/`、`tools/frame_data/supercombo/`、`tools/frame_data/enriched/` に分けた。
+  - Battle Change tools は `tools/battle_change/official/` に分けた。
+  - tooling tests は CLI tools から分離し、`tests/frame_data/` と `tests/battle_change/` に移動した。
+- メモ:
+  - 個人用 repo のため旧 `tools/*.py` wrapper は残さず、実行入口は `python -m tools...` に切り替えた。
+  - `raw/` は不変なので、既存 raw manifest 内の過去 tool path は書き換えない。
+- 未解決事項:
+  - 今後の新規 source family で、source 固有 helper を `tools/<data_family>/<source>/` と `tools/<data_family>/<variant>/` のどちらに置くかは個別に判断する。
+
 ## [2026-06-07] schema | output data layout migration
 - 変更:
   - `wiki/outputs/data/frame-data/<character>/` を `wiki/outputs/data/frame-data/official/<character>/` に移動。

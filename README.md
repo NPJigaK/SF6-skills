@@ -206,12 +206,12 @@ character、control scheme、raw pathなどのsource-level metadataは
 
 ```bash
 uv sync
-uv run python tools/capture_capcom_frame_data.py --character-slug jp
-uv run python tools/extract_capcom_frame_data.py --character-slug jp
-uv run python tools/validate_capcom_frame_data.py --character-slug jp
+uv run python -m tools.frame_data.official.capture --character-slug jp
+uv run python -m tools.frame_data.official.extract --character-slug jp
+uv run python -m tools.frame_data.official.validate --character-slug jp
 ```
 
-`validate_capcom_frame_data.py` は全行について `page.html` 内の表、`table.dom.json`、
+`tools.frame_data.official.validate` は全行について `page.html` 内の表、`table.dom.json`、
 派生CSV、`*.field-meanings.json` の一致を確認します。スクリーンショットは値の正本として
 OCRするのではなく、表の横幅と高さを覆っていること、Cookieやnavigation overlayが
 残っていないことを確認します。値の正確性は、画像ではなく raw HTML / DOM / CSV の
@@ -253,15 +253,15 @@ wiki/outputs/data/battle-change/official/schema.json
 ツールは次の順で実行します。
 
 ```bash
-python tools/capture_capcom_battle_change.py --dry-run
-python tools/capture_capcom_battle_change.py
-python tools/validate_capcom_battle_change.py
-python tools/extract_capcom_battle_change.py
+uv run python -m tools.battle_change.official.capture --dry-run
+uv run python -m tools.battle_change.official.capture
+uv run python -m tools.battle_change.official.validate
+uv run python -m tools.battle_change.official.extract
 ```
 
-`capture_capcom_battle_change.py` は discovery page の `adjust.versions` から
+`tools.battle_change.official.capture` は discovery page の `adjust.versions` から
 全 version を列挙し、各 version の HTML と Next.js `_next/data` JSON を保存します。
-`validate_capcom_battle_change.py` は artifact hash、HTML `__NEXT_DATA__` と
+`tools.battle_change.official.validate` は artifact hash、HTML `__NEXT_DATA__` と
 `data.json` の payload 一致、version ID 一致を確認します。`changes.csv` の
 `text_html` は公式 HTML fragment を保持し、翻訳・要約・正規化した raw replacement ではありません。
 version title は各 version page 由来の `version_title` と discovery selector 由来の
@@ -299,15 +299,15 @@ wiki/outputs/data/frame-data/official-supercombo-enriched/<character>/
 実行順序は capture、validate、extract、必要に応じて enriched build です。
 
 ```bash
-uv run python tools/capture_supercombo_frame_data.py --character JP --character-slug jp
-uv run python tools/validate_supercombo_frame_data.py --character-slug jp
-uv run python tools/extract_supercombo_frame_data.py --character-slug jp
-uv run python tools/build_official_supercombo_enriched_data.py --character-slug jp
+uv run python -m tools.frame_data.supercombo.capture --character JP --character-slug jp
+uv run python -m tools.frame_data.supercombo.validate --character-slug jp
+uv run python -m tools.frame_data.supercombo.extract --character-slug jp
+uv run python -m tools.frame_data.enriched.build --character-slug jp
 ```
 
-`capture_supercombo_frame_data.py` は古い `validation.json` を削除します。
-`validate_supercombo_frame_data.py` は現在の raw metadata と実ファイル artifact hash から `raw_fingerprint` を作り、
-`validation.json` に保存します。`extract_supercombo_frame_data.py` は `status: passed` だけでなく
+`tools.frame_data.supercombo.capture` は古い `validation.json` を削除します。
+`tools.frame_data.supercombo.validate` は現在の raw metadata と実ファイル artifact hash から `raw_fingerprint` を作り、
+`validation.json` に保存します。`tools.frame_data.supercombo.extract` は `status: passed` だけでなく
 `raw_fingerprint` が現在の raw と一致することを要求するため、再取得後に古い validation だけが
 残っている状態では派生データを生成しません。
 

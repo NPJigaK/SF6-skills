@@ -17,7 +17,7 @@ from urllib.parse import urlencode
 
 from scrapling.fetchers import StealthySession
 
-from frame_data_integrity import invalidate_supercombo_validation
+from tools.frame_data.integrity import invalidate_supercombo_validation
 
 
 BASE_URL = "https://wiki.supercombo.gg"

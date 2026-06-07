@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from capture_capcom_battle_change import adjust_from_payload, validate_adjust_payload
+from tools.battle_change.official.capture import adjust_from_payload, validate_adjust_payload
 
 
 CSV_FIELDS = [

@@ -764,7 +764,7 @@ def main(argv: list[str]) -> int:
             f"wiki/outputs/data/frame-data/official/{args.character_slug}/{mode}.field-meanings.json"
             for mode in csv_rows_by_mode
         ],
-        "tool": "tools/capture_capcom_frame_data.py",
+        "tool": "tools/frame_data/official/capture.py",
     }
     manifest_path = (
         args.output_root

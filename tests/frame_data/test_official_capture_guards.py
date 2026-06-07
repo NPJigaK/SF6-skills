@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from capture_capcom_frame_data import COLUMN_KEYS, csv_rows_from_dom, validate_mode_tab_state
+from tools.frame_data.official.capture import COLUMN_KEYS, csv_rows_from_dom, validate_mode_tab_state
 
 
 def cell(text: str) -> dict[str, object]:

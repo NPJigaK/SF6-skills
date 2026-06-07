@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from capture_capcom_battle_change import (
+from tools.battle_change.official.capture import (
     adjust_from_payload,
     extract_next_data,
     sha256_file,

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from capture_capcom_battle_change import (
+from tools.battle_change.official.capture import (
     adjust_from_payload,
     build_data_url,
     extract_next_data,
