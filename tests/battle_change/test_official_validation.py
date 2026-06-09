@@ -65,6 +65,8 @@ def write_minimal_capture(repo_root: Path) -> None:
             "current_version": "20260415",
             "validation_summary": {
                 "version_id": "20260415",
+                "battle_version": "20260415",
+                "battle_version_basis": "adjust.current_version",
                 "title": "2026.04.15 update",
                 "policy_count": 0,
                 "common_section_count": 1,
@@ -93,6 +95,8 @@ def write_minimal_capture(repo_root: Path) -> None:
             "title": "2026.04.15 update",
             "validation_summary": {
                 "version_id": "20260415",
+                "battle_version": "20260415",
+                "battle_version_basis": "adjust.current_version",
                 "title": "2026.04.15 update",
                 "policy_count": 0,
                 "common_section_count": 1,

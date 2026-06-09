@@ -4,23 +4,23 @@
 
 ## Frame-data Raw Layout
 
-現在の frame-data raw entrypoint は latest mirror 固定パスです。capture date や source revision は path ではなく manifest で確認します。派生 output は JSON-only とし、`wiki/outputs/data/frame-data/<variant>/<character>/` に置きます。詳細は [[syntheses/frame-data-raw-layout]]。
+現在の frame-data raw entrypoint は latest mirror 固定パスです。source freshness、capture date、source revision は path ではなく manifest で確認します。SuperCombo では `source_updated_at` を source freshness、`captured_at_utc` を raw 取得時刻として分けて扱います。派生 output は JSON-only とし、`wiki/outputs/data/frame-data/<variant>/<character>/` に置きます。詳細は [[syntheses/frame-data-raw-layout]]。
 
 | Source family | Raw entrypoint | Provenance | Main outputs |
 |---|---|---|---|
 | Capcom official | `raw/frame-data/official/<data-slug>/manifest.json`、`classic/`、`modern/` | manifest の `capture_label` / `created_at_utc` / `storage_policy` | `wiki/outputs/data/frame-data/official/<data-slug>/`、[[outputs/reports/2026-05-30-official-frame-data-coverage]] |
-| SuperCombo JP | `raw/frame-data/supercombo/jp/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]]、[[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] |
-| SuperCombo Ryu | `raw/frame-data/supercombo/ryu/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]、[[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] |
-| SuperCombo Zangief | `raw/frame-data/supercombo/zangief/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]、[[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] |
-| SuperCombo Ingrid | `raw/frame-data/supercombo/ingrid/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]、[[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
-| SuperCombo all characters | `raw/frame-data/supercombo/<character_slug>/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | 各 manifest の `capture_label` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]、`wiki/outputs/data/frame-data/supercombo/<character_slug>/`、`wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/` |
+| SuperCombo JP | `raw/frame-data/supercombo/jp/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `source_updated_at` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-jp-official-crosswalk]]、[[outputs/reports/2026-05-31-jp-official-supercombo-enriched-data]] |
+| SuperCombo Ryu | `raw/frame-data/supercombo/ryu/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `source_updated_at` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-05-31-supercombo-ryu-official-crosswalk]]、[[outputs/reports/2026-05-31-ryu-official-supercombo-enriched-data]] |
+| SuperCombo Zangief | `raw/frame-data/supercombo/zangief/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `source_updated_at` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]、[[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]] |
+| SuperCombo Ingrid | `raw/frame-data/supercombo/ingrid/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | manifest の `source_updated_at` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-02-supercombo-ingrid-official-crosswalk]]、[[outputs/reports/2026-06-02-ingrid-official-supercombo-enriched-data]] |
+| SuperCombo all characters | `raw/frame-data/supercombo/<character_slug>/manifest.json`、`data.raw.wikitext`、`cargo/`、`rendered/tables.dom.json` | 各 manifest の `source_updated_at` / `captured_at_utc` / `source_revision` | [[outputs/reports/2026-06-05-supercombo-all-frame-data-coverage]]、`wiki/outputs/data/frame-data/supercombo/<character_slug>/`、`wiki/outputs/data/frame-data/official-supercombo-enriched/<character_slug>/` |
 
 ## Sources
 
 | Page | Summary | Source date | Source type | Status |
 |---|---|---:|---|---|
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。Drive System、frame data、juggle、notation 用語を含む community source。 | 2026-05-26 | wiki_page | active |
-| [[sources/supercombo-street-fighter-6-frame-data-batch]] | SuperCombo Wiki の Street Fighter 6 frame-data 30キャラ batch capture。raw wikitext、Cargo API、DOM、5タブ screenshot、公式 Classic との派生 output を含む。 | 2026-06-05 | community_frame_data | active |
+| [[sources/supercombo-street-fighter-6-frame-data-batch]] | SuperCombo Wiki の Street Fighter 6 frame-data 30キャラ batch capture。raw wikitext、Cargo API、DOM、5タブ screenshot、公式 Classic との派生 output を含む。Source freshness は各 manifest の `source_updated_at` で 2026-05-30 から 2026-06-02 に分布する。 | 2026-05-30..2026-06-02 | community_frame_data | active |
 | [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/jp/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 123 件を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/ryu/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 133 件、conditional variant link を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-zangief-frame-data]] | SuperCombo Wiki の Zangief frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/zangief/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 165 件、360/720 と近距離/中距離/遠距離 override を含む community source。 | 2026-06-01 | community_frame_data | active |
@@ -108,7 +108,7 @@
 
 | Page | Summary | Updated |
 |---|---|---:|
-| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `capture_label` / `source_revision` で由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と data-family first output layout を整理する。 | 2026-06-07 |
+| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `source_updated_at` / `captured_at_utc` / `source_revision` を分けて由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と data-family first output layout を整理する。 | 2026-06-09 |
 
 ## Questions
 

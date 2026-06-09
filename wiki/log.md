@@ -2,6 +2,26 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-09] wiki-update | frame-data source freshness metadata
+- 読み込み:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `raw/frame-data/supercombo/<character_slug>/manifest.json`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+- メモ:
+  - SuperCombo frame-data の source freshness は `source_updated_at` を優先し、`captured_at_utc` は raw 取得時刻として分離する方針を明記した。
+  - 30キャラ batch は単一の代表日ではなく、`source_updated_at` の範囲 2026-05-30T01:24:06Z から 2026-06-02T03:14:40Z として扱う。
+  - 現在の SuperCombo frame-data manifests には `source_published_at` がないため、初版日や公開日は推測しない。
+- 未解決事項:
+  - Capcom official source の source freshness と取得時刻を wiki 上でどこまで分けて表現するか。
+
 ## [2026-06-08] query | JP しゃがみ中P＞キャンセルDR＞しゃがみ強P＞強ストリボーグ＞中トルバラン＞トリグラフの成立理論
 - 質問:
   - `JPのコンボで、しゃがみ中P＞キャンセルラッシュ＞しゃがみ大P＞強ストリボーグ＞中トルバラン＞トリグラフ　が繋がる理論を具体的に解説してほしい。`

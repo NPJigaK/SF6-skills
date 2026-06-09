@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
+import re
 import sys
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -103,6 +105,7 @@ class RawModeCapture:
     metadata_path: Path
     row_count: int
     table_hash: str
+    source_revision: dict[str, str] | None
 
 
 def sha256_file(path: Path) -> str:
@@ -115,6 +118,28 @@ def sha256_file(path: Path) -> str:
 
 def sha256_text(value: str) -> str:
     return "sha256:" + sha256(value.encode("utf-8")).hexdigest()
+
+
+def next_build_id_from_html(page_html: str) -> str | None:
+    match = re.search(
+        r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
+        page_html,
+        flags=re.DOTALL,
+    )
+    if not match:
+        return None
+    try:
+        payload = json.loads(html.unescape(match.group(1)))
+    except json.JSONDecodeError:
+        return None
+    build_id = payload.get("buildId")
+    return build_id if isinstance(build_id, str) and build_id else None
+
+
+def nextjs_source_revision(build_id: str | None) -> dict[str, str] | None:
+    if not build_id:
+        return None
+    return {"type": "nextjs_build_id", "build_id": build_id}
 
 
 def png_dimensions(path: Path) -> dict[str, int]:
@@ -287,7 +312,14 @@ def validate_mode_tab_state(mode: str, tab_state: dict[str, Any]) -> None:
             raise ValueError(f"expected {mode} tab to be active, got {active!r}")
 
 
-def table_dom_payload(page: Any, *, source_url: str, character_slug: str, mode: str) -> dict[str, Any]:
+def table_dom_payload(
+    page: Any,
+    *,
+    source_url: str,
+    character_slug: str,
+    mode: str,
+    source_revision: dict[str, str] | None = None,
+) -> dict[str, Any]:
     payload = page.evaluate(
         """
         () => {
@@ -400,7 +432,7 @@ def table_dom_payload(page: Any, *, source_url: str, character_slug: str, mode: 
     )
     rows = payload["rows"]
     unexpected_rows = unexpected_body_rows(rows)
-    return {
+    result = {
         "artifact_schema_version": "capcom_frame_table_dom/v1",
         "captured_at_utc": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "publisher": "Capcom",
@@ -420,6 +452,9 @@ def table_dom_payload(page: Any, *, source_url: str, character_slug: str, mode: 
         "unexpected_row_count": len(unexpected_rows),
         "unexpected_rows": unexpected_rows,
     }
+    if source_revision:
+        result["source_revision"] = source_revision
+    return result
 
 
 def input_raw_display(move_cell: dict[str, Any]) -> str:
@@ -509,18 +544,21 @@ def frame_rows_from_dom(table_dom: dict[str, Any]) -> list[dict[str, Any]]:
 
 def frame_data_payload_from_dom(table_dom: dict[str, Any]) -> dict[str, Any]:
     rows = frame_rows_from_dom(table_dom)
+    source = {
+        "source_raw_root": f"raw/frame-data/official/{table_dom['character_slug']}/{table_dom['control_scheme']}",
+        "source_captured_at_utc": table_dom.get("captured_at_utc"),
+        "publisher": table_dom.get("publisher", "Capcom"),
+        "game": table_dom.get("game", "Street Fighter 6"),
+        "locale": table_dom.get("locale", "ja-jp"),
+        "source_url": table_dom["source_url"],
+        "character_slug": table_dom["character_slug"],
+        "control_scheme": table_dom["control_scheme"],
+    }
+    if table_dom.get("source_revision"):
+        source["source_revision"] = table_dom["source_revision"]
     return {
         "schema_version": "capcom_official_frame_data/v2",
-        "source": {
-            "source_raw_root": f"raw/frame-data/official/{table_dom['character_slug']}/{table_dom['control_scheme']}",
-            "source_captured_at_utc": table_dom.get("captured_at_utc"),
-            "publisher": table_dom.get("publisher", "Capcom"),
-            "game": table_dom.get("game", "Street Fighter 6"),
-            "locale": table_dom.get("locale", "ja-jp"),
-            "source_url": table_dom["source_url"],
-            "character_slug": table_dom["character_slug"],
-            "control_scheme": table_dom["control_scheme"],
-        },
+        "source": source,
         "fields": FRAME_FIELDS,
         "row_count": len(rows),
         "rows": rows,
@@ -605,8 +643,15 @@ def capture_mode(
     metadata_path = raw_dir / "metadata.json"
 
     page_html = page.content()
+    source_revision = nextjs_source_revision(next_build_id_from_html(page_html))
     page_html_path.write_text(page_html, encoding="utf-8")
-    table_dom = table_dom_payload(page, source_url=source_url, character_slug=character_slug, mode=mode)
+    table_dom = table_dom_payload(
+        page,
+        source_url=source_url,
+        character_slug=character_slug,
+        mode=mode,
+        source_revision=source_revision,
+    )
     write_json(table_dom_path, table_dom)
     page.screenshot(path=str(screenshot_path), full_page=True, scale="css")
 
@@ -657,6 +702,8 @@ def capture_mode(
             },
         },
     }
+    if source_revision:
+        metadata["source_revision"] = source_revision
     write_json(metadata_path, metadata)
     return RawModeCapture(
         mode=mode,
@@ -667,6 +714,7 @@ def capture_mode(
         metadata_path=metadata_path,
         row_count=table_dom["data_row_count"],
         table_hash=table_dom["table_sha256"],
+        source_revision=source_revision,
     )
 
 
@@ -750,6 +798,7 @@ def main(argv: list[str]) -> int:
                 "metadata_json": capture.metadata_path.relative_to(args.output_root).as_posix(),
                 "row_count": capture.row_count,
                 "table_sha256": capture.table_hash,
+                **({"source_revision": capture.source_revision} if capture.source_revision else {}),
             }
             for capture in captures
         ],
@@ -759,6 +808,9 @@ def main(argv: list[str]) -> int:
         ],
         "tool": "tools/frame_data/official/capture.py",
     }
+    source_revisions = [capture.source_revision for capture in captures if capture.source_revision]
+    if source_revisions and all(revision == source_revisions[0] for revision in source_revisions):
+        manifest["source_revision"] = source_revisions[0]
     manifest_path = (
         args.output_root
         / "raw"

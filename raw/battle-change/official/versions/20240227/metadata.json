@@ -23,7 +23,9 @@
     "fighter_detail_count": 43,
     "fighter_change_count": 43,
     "version_count": 20,
-    "fighter_list_count": 30
+    "fighter_list_count": 30,
+    "battle_version": "20240227",
+    "battle_version_basis": "adjust.current_version"
   },
   "responses": {
     "page_html": {
@@ -52,5 +54,11 @@
       "sha256": "sha256:0d635f7aed20768cf88a6fb6d7e76e53c938b2b8ebcab956fa6a44ffac7992f3",
       "byte_count": 51729
     }
+  },
+  "battle_version": "20240227",
+  "battle_version_basis": "adjust.current_version",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "JRgr9jaW-XektPBHKodsS"
   }
 }

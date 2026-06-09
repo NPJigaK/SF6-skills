@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-06T08:09:01Z",
+  "validated_at_utc": "2026-06-09T12:06:45Z",
   "raw_root": "raw\\frame-data\\supercombo\\juri",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -24,10 +24,11 @@
       }
     ]
   },
+  "source_updated_at": "2026-06-01T07:38:18Z",
   "storage_policy": "latest_frame_data_mirror",
   "raw_fingerprint": {
     "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
-    "metadata_sha256": "sha256:5ca985387ae63fd257d52952e471bef6c36eedc60f5ae0abe45be97ba8a6adb9",
+    "metadata_sha256": "sha256:37d3a4df2d702e354c9625ff691ca3c085afef631fc7e46c6b0a9dc0cb37fc51",
     "capture_label": "2026-06-01",
     "source_revision": {
       "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
@@ -154,12 +155,12 @@
         "sha256": "sha256:21a26b2a0028bffdf8758c8e998875f78b6d9a963ee1957350be02bcc1f744bc"
       },
       "manifest.json": {
-        "byte_count": 1594,
-        "sha256": "sha256:ec7207c71e77fc295026e8f527ecbdfa848f4aaf649d12c5f6e992e98fddda71"
+        "byte_count": 1592,
+        "sha256": "sha256:de03bbc4029a8b32fa5e7666b3666f585ad3e0c3d9490b9fd8eb2c45a30b7336"
       },
       "metadata.json": {
-        "byte_count": 4671,
-        "sha256": "sha256:5ca985387ae63fd257d52952e471bef6c36eedc60f5ae0abe45be97ba8a6adb9"
+        "byte_count": 4590,
+        "sha256": "sha256:37d3a4df2d702e354c9625ff691ca3c085afef631fc7e46c6b0a9dc0cb37fc51"
       },
       "rendered/page.html": {
         "byte_count": 536589,

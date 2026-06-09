@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-06T08:09:02Z",
+  "validated_at_utc": "2026-06-09T12:06:46Z",
   "raw_root": "raw\\frame-data\\supercombo\\luke",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -24,10 +24,11 @@
       }
     ]
   },
+  "source_updated_at": "2026-06-01T07:40:21Z",
   "storage_policy": "latest_frame_data_mirror",
   "raw_fingerprint": {
     "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
-    "metadata_sha256": "sha256:3d580148a4d7ea4f161137faf09c12f5fb36636f7a8bfb8354d5a04b1173e2e8",
+    "metadata_sha256": "sha256:08860521cdbe6611b0483c92e8191edde3ba9cf8db7eeabe8cfbfdc0bf938041",
     "capture_label": "2026-06-01",
     "source_revision": {
       "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
@@ -154,12 +155,12 @@
         "sha256": "sha256:b153906059e1ebeffc100fc4f4e982bbd0738a2410df322a20c1cbb3042f92e8"
       },
       "manifest.json": {
-        "byte_count": 1564,
-        "sha256": "sha256:c26ec3f1077770b1f4fc90be89444a45a583ead7810b585aac0c525a208e06bc"
+        "byte_count": 1563,
+        "sha256": "sha256:40aa8d13736bc8347df52920487f011832ba1bd2a602a6d9ec054d97766308b2"
       },
       "metadata.json": {
-        "byte_count": 4640,
-        "sha256": "sha256:3d580148a4d7ea4f161137faf09c12f5fb36636f7a8bfb8354d5a04b1173e2e8"
+        "byte_count": 4560,
+        "sha256": "sha256:08860521cdbe6611b0483c92e8191edde3ba9cf8db7eeabe8cfbfdc0bf938041"
       },
       "rendered/page.html": {
         "byte_count": 511064,

@@ -18,7 +18,11 @@
       "screenshot_png": "raw/frame-data/official/gouki_akuma/classic/screenshot.png",
       "metadata_json": "raw/frame-data/official/gouki_akuma/classic/metadata.json",
       "row_count": 91,
-      "table_sha256": "sha256:7781b6893f1cc3f467c435d897496df0828e9f10d4db4271b3cdefa50e4080b8"
+      "table_sha256": "sha256:7781b6893f1cc3f467c435d897496df0828e9f10d4db4271b3cdefa50e4080b8",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "T9XzODAo0aieduT8i2pav"
+      }
     },
     {
       "mode": "modern",
@@ -28,7 +32,11 @@
       "screenshot_png": "raw/frame-data/official/gouki_akuma/modern/screenshot.png",
       "metadata_json": "raw/frame-data/official/gouki_akuma/modern/metadata.json",
       "row_count": 83,
-      "table_sha256": "sha256:2d245552032e18e1ca9e00a4fb34e9885751946f04807f113ed0b2d061a28544"
+      "table_sha256": "sha256:2d245552032e18e1ca9e00a4fb34e9885751946f04807f113ed0b2d061a28544",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "T9XzODAo0aieduT8i2pav"
+      }
     }
   ],
   "derived_outputs": [
@@ -39,5 +47,9 @@
   ],
   "tool": "tools/capture_capcom_frame_data.py",
   "capture_label": "2026-05-30",
-  "storage_policy": "latest_frame_data_mirror"
+  "storage_policy": "latest_frame_data_mirror",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "T9XzODAo0aieduT8i2pav"
+  }
 }

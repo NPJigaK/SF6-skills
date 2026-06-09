@@ -18,7 +18,11 @@
       "screenshot_png": "raw/frame-data/official/vega_mbison/classic/screenshot.png",
       "metadata_json": "raw/frame-data/official/vega_mbison/classic/metadata.json",
       "row_count": 72,
-      "table_sha256": "sha256:c52d112bd199d2c18997fc1b0e66905bbae6d749809cb1733706eef3846b3c57"
+      "table_sha256": "sha256:c52d112bd199d2c18997fc1b0e66905bbae6d749809cb1733706eef3846b3c57",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "T9XzODAo0aieduT8i2pav"
+      }
     },
     {
       "mode": "modern",
@@ -28,7 +32,11 @@
       "screenshot_png": "raw/frame-data/official/vega_mbison/modern/screenshot.png",
       "metadata_json": "raw/frame-data/official/vega_mbison/modern/metadata.json",
       "row_count": 69,
-      "table_sha256": "sha256:fbe801c77a96497a87199b2e75ad3cb326e9df407f504bc6e019e2a223a71910"
+      "table_sha256": "sha256:fbe801c77a96497a87199b2e75ad3cb326e9df407f504bc6e019e2a223a71910",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "T9XzODAo0aieduT8i2pav"
+      }
     }
   ],
   "derived_outputs": [
@@ -39,5 +47,9 @@
   ],
   "tool": "tools/capture_capcom_frame_data.py",
   "capture_label": "2026-05-30",
-  "storage_policy": "latest_frame_data_mirror"
+  "storage_policy": "latest_frame_data_mirror",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "T9XzODAo0aieduT8i2pav"
+  }
 }

@@ -18,7 +18,11 @@
       "screenshot_png": "raw/frame-data/official/manon/classic/screenshot.png",
       "metadata_json": "raw/frame-data/official/manon/classic/metadata.json",
       "row_count": 59,
-      "table_sha256": "sha256:bc6178bf47e0c4d6ab070523570b64e7401916f72f67b98b326f254613bfe920"
+      "table_sha256": "sha256:bc6178bf47e0c4d6ab070523570b64e7401916f72f67b98b326f254613bfe920",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "T9XzODAo0aieduT8i2pav"
+      }
     },
     {
       "mode": "modern",
@@ -28,7 +32,11 @@
       "screenshot_png": "raw/frame-data/official/manon/modern/screenshot.png",
       "metadata_json": "raw/frame-data/official/manon/modern/metadata.json",
       "row_count": 53,
-      "table_sha256": "sha256:fa190491cb9bef5ddfe2158220d640ce103539d16e1b79f2a93892f16545a624"
+      "table_sha256": "sha256:fa190491cb9bef5ddfe2158220d640ce103539d16e1b79f2a93892f16545a624",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "T9XzODAo0aieduT8i2pav"
+      }
     }
   ],
   "derived_outputs": [
@@ -39,5 +47,9 @@
   ],
   "tool": "tools/capture_capcom_frame_data.py",
   "capture_label": "2026-05-30",
-  "storage_policy": "latest_frame_data_mirror"
+  "storage_policy": "latest_frame_data_mirror",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "T9XzODAo0aieduT8i2pav"
+  }
 }

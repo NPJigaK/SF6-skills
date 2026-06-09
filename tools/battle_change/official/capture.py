@@ -113,6 +113,10 @@ def build_public_url(version_id: str | None = None) -> str:
     return PUBLIC_BASE_URL
 
 
+def nextjs_source_revision(build_id: str) -> dict[str, str]:
+    return {"type": "nextjs_build_id", "build_id": build_id}
+
+
 def require_list(value: Any, field_name: str) -> list[Any]:
     if not isinstance(value, list):
         raise ValueError(f"adjust.{field_name} must be a list")
@@ -196,6 +200,8 @@ def validate_adjust_payload(adjust: dict[str, Any], *, expected_version: str | N
 
     return {
         "version_id": current_version,
+        "battle_version": current_version,
+        "battle_version_basis": "adjust.current_version",
         "title": title,
         "policy_count": len(policy),
         "common_section_count": len(common),
@@ -227,6 +233,7 @@ def capture_one_version(raw_root: Path, version_id: str, build_id: str, *, timeo
     if html_adjust != data_adjust:
         raise ValueError(f"HTML __NEXT_DATA__ adjust does not match data JSON for {version_id}")
     summary = validate_adjust_payload(data_adjust, expected_version=version_id)
+    source_revision = nextjs_source_revision(build_id)
 
     raw_dir = raw_root / "versions" / version_id
     page_html_path = raw_dir / "page.html"
@@ -247,6 +254,9 @@ def capture_one_version(raw_root: Path, version_id: str, build_id: str, *, timeo
         "source_url": public_url,
         "data_url": data_url,
         "build_id": build_id,
+        "source_revision": source_revision,
+        "battle_version": summary["battle_version"],
+        "battle_version_basis": summary["battle_version_basis"],
         "raw_review_status": "pending_human_review",
         "repository_scope": "repo_raw_capture",
         "capture_method": "scrapling_fetcher_chrome_impersonation",
@@ -293,6 +303,7 @@ def capture_discovery(raw_root: Path, *, timeout: int) -> tuple[dict[str, Any], 
     if html_adjust != data_adjust:
         raise ValueError("discovery HTML __NEXT_DATA__ adjust does not match discovery data JSON")
     summary = validate_adjust_payload(data_adjust, expected_version=data_adjust.get("current_version"))
+    source_revision = nextjs_source_revision(build_id)
 
     raw_dir = raw_root / "discovery"
     page_html_path = raw_dir / "page.html"
@@ -310,7 +321,10 @@ def capture_discovery(raw_root: Path, *, timeout: int) -> tuple[dict[str, Any], 
         "source_url": build_public_url(),
         "data_url": data_url,
         "build_id": build_id,
+        "source_revision": source_revision,
         "current_version": summary["version_id"],
+        "battle_version": summary["battle_version"],
+        "battle_version_basis": summary["battle_version_basis"],
         "raw_review_status": "pending_human_review",
         "repository_scope": "repo_raw_capture",
         "capture_method": "scrapling_fetcher_chrome_impersonation",
@@ -345,18 +359,23 @@ def capture_all(repo_root: Path, *, timeout: int, delay_seconds: float, dry_run:
     if dry_run:
         page_html, _ = read_text_response(build_public_url(), timeout=timeout)
         next_payload = extract_next_data(page_html)
+        build_id = require_string(next_payload.get("buildId"), "__NEXT_DATA__.buildId")
         adjust = adjust_from_payload(next_payload)
         summary = validate_adjust_payload(adjust, expected_version=adjust.get("current_version"))
         return {
             "dry_run": True,
-            "build_id": next_payload.get("buildId"),
+            "build_id": build_id,
+            "source_revision": nextjs_source_revision(build_id),
             "current_version": summary["version_id"],
+            "battle_version": summary["battle_version"],
+            "battle_version_basis": summary["battle_version_basis"],
             "versions": version_items(adjust),
             "summary": summary,
         }
 
     next_payload, discovery_metadata = capture_discovery(raw_root, timeout=timeout)
     build_id = require_string(next_payload.get("buildId"), "__NEXT_DATA__.buildId")
+    source_revision = nextjs_source_revision(build_id)
     discovery_adjust = adjust_from_payload(next_payload)
     versions = version_items(discovery_adjust)
     captures: list[VersionCapture] = []
@@ -376,7 +395,10 @@ def capture_all(repo_root: Path, *, timeout: int, delay_seconds: float, dry_run:
         "source_url": build_public_url(),
         "data_url": build_discovery_data_url(build_id),
         "build_id": build_id,
+        "source_revision": source_revision,
         "current_version": discovery_metadata["current_version"],
+        "battle_version": discovery_metadata["battle_version"],
+        "battle_version_basis": discovery_metadata["battle_version_basis"],
         "raw_review_status": "pending_human_review",
         "repository_scope": "repo_raw_capture",
         "storage_policy": "latest_battle_change_mirror",
@@ -388,6 +410,9 @@ def capture_all(repo_root: Path, *, timeout: int, delay_seconds: float, dry_run:
             "page_html": relative(raw_root / "discovery" / "page.html", repo_root),
             "data_json": relative(raw_root / "discovery" / "data.json", repo_root),
             "metadata_json": relative(raw_root / "discovery" / "metadata.json", repo_root),
+            "source_revision": source_revision,
+            "battle_version": discovery_metadata["battle_version"],
+            "battle_version_basis": discovery_metadata["battle_version_basis"],
             "summary": discovery_metadata["validation_summary"],
         },
         "captures": [
@@ -398,6 +423,9 @@ def capture_all(repo_root: Path, *, timeout: int, delay_seconds: float, dry_run:
                 "page_html": relative(capture.page_html, repo_root),
                 "data_json": relative(capture.data_json, repo_root),
                 "metadata_json": relative(capture.metadata_json, repo_root),
+                "source_revision": source_revision,
+                "battle_version": capture.summary["battle_version"],
+                "battle_version_basis": capture.summary["battle_version_basis"],
                 "summary": capture.summary,
             }
             for capture in captures

@@ -427,6 +427,11 @@ def validate_capture(root: Path, *, expected_frame_count: int | None) -> dict[st
         "raw_root": str(root),
         "capture_label": manifest.get("capture_label"),
         "source_revision": manifest.get("source_revision"),
+        **{
+            key: manifest[key]
+            for key in ("source_published_at", "source_updated_at")
+            if key in manifest
+        },
         "storage_policy": manifest.get("storage_policy", "latest_frame_data_mirror"),
         "raw_fingerprint": raw_fingerprint,
         "status": "passed" if not failures else "failed",

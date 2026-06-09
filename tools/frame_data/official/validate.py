@@ -41,6 +41,26 @@ def assert_equal(actual: Any, expected: Any, message: str) -> None:
         raise AssertionError(f"{message}: expected {expected!r}, got {actual!r}")
 
 
+def expected_frame_data_for_comparison(actual: dict[str, Any], expected: dict[str, Any]) -> dict[str, Any]:
+    actual_source = actual.get("source")
+    expected_source = expected.get("source")
+    if (
+        isinstance(actual_source, dict)
+        and isinstance(expected_source, dict)
+        and "source_revision" not in actual_source
+        and "source_revision" in expected_source
+    ):
+        return {
+            **expected,
+            "source": {
+                key: value
+                for key, value in expected_source.items()
+                if key != "source_revision"
+            },
+        }
+    return expected
+
+
 def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, Any]:
     raw_dir = repo_root / "raw" / "frame-data" / "official" / character_slug / mode
     output_dir = repo_root / "wiki" / "outputs" / "data" / "frame-data" / "official" / character_slug
@@ -89,7 +109,8 @@ def validate_mode(repo_root: Path, character_slug: str, mode: str) -> dict[str, 
             f"json={len(actual_rows)}, dom={len(expected_rows)}"
         )
 
-    assert_equal(frame_data, expected_frame_data, f"{mode} frame data JSON")
+    comparable_expected_frame_data = expected_frame_data_for_comparison(frame_data, expected_frame_data)
+    assert_equal(frame_data, comparable_expected_frame_data, f"{mode} frame data JSON")
 
     manifest_count = metadata["artifacts"]["table_dom_json"]["data_row_count"]
     assert_equal(manifest_count, len(actual_rows), f"{mode} metadata row count")

@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-06T08:09:00Z",
+  "validated_at_utc": "2026-06-09T12:06:45Z",
   "raw_root": "raw\\frame-data\\supercombo\\jp",
   "capture_label": "2026-05-30",
   "source_revision": {
@@ -24,10 +24,11 @@
       }
     ]
   },
+  "source_updated_at": "2026-05-30T01:25:44Z",
   "storage_policy": "latest_frame_data_mirror",
   "raw_fingerprint": {
     "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
-    "metadata_sha256": "sha256:0d631fa6f007d0661453e51b3d8a75d7c1feb7664caeea4d139f55c487e9285a",
+    "metadata_sha256": "sha256:735012f221a90de5abde95b3a79d9ad8ce8a076caa7879652bfa42cec56487da",
     "capture_label": "2026-05-30",
     "source_revision": {
       "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
@@ -1142,12 +1143,12 @@
         "sha256": "sha256:3e5748dff68b4a7b72c2d1392b68b821a1b6b71ab7dd86c23e95dfa0616107fd"
       },
       "manifest.json": {
-        "byte_count": 6529,
-        "sha256": "sha256:4b1e4c0d98bd9f7a60d09831beacd243626516ce3d4e46e4ed892aec2ef54f73"
+        "byte_count": 6576,
+        "sha256": "sha256:7436760cf80aca5e4cd940a1b301c8e9ecb76b818cda1e6b8add9343771118da"
       },
       "metadata.json": {
-        "byte_count": 25390,
-        "sha256": "sha256:0d631fa6f007d0661453e51b3d8a75d7c1feb7664caeea4d139f55c487e9285a"
+        "byte_count": 25437,
+        "sha256": "sha256:735012f221a90de5abde95b3a79d9ad8ce8a076caa7879652bfa42cec56487da"
       },
       "rendered/page.html": {
         "byte_count": 498720,

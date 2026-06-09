@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-06T08:09:05Z",
+  "validated_at_utc": "2026-06-09T12:06:46Z",
   "raw_root": "raw\\frame-data\\supercombo\\vega_mbison",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -24,10 +24,11 @@
       }
     ]
   },
+  "source_updated_at": "2026-06-01T07:37:44Z",
   "storage_policy": "latest_frame_data_mirror",
   "raw_fingerprint": {
     "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
-    "metadata_sha256": "sha256:d1bf2dbad094c215f7f773b8609a8aab3ffd180da481943fd1afe9aa75e9c99a",
+    "metadata_sha256": "sha256:d5166ee2bb1c7a70b9b6796bfc8b591fbb8c95607064efcfa082971aaa4b8fc7",
     "capture_label": "2026-06-01",
     "source_revision": {
       "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
@@ -154,12 +155,12 @@
         "sha256": "sha256:e6eab21ba794829370904d7c98ecea9ef9ebcbb30e176d8286f62349f62c1831"
       },
       "manifest.json": {
-        "byte_count": 1620,
-        "sha256": "sha256:ead7320530264404cec5bb60c325d33aab67c8ce353bf135e04cb735f2a64804"
+        "byte_count": 1618,
+        "sha256": "sha256:c8e390103ac2b11e549e3bf58268282dca9d23b73ee6f9b400c41a89ac82069e"
       },
       "metadata.json": {
-        "byte_count": 4699,
-        "sha256": "sha256:d1bf2dbad094c215f7f773b8609a8aab3ffd180da481943fd1afe9aa75e9c99a"
+        "byte_count": 4618,
+        "sha256": "sha256:d5166ee2bb1c7a70b9b6796bfc8b591fbb8c95607064efcfa082971aaa4b8fc7"
       },
       "rendered/page.html": {
         "byte_count": 516398,

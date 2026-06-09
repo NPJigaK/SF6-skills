@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-06T08:08:58Z",
+  "validated_at_utc": "2026-06-09T12:06:45Z",
   "raw_root": "raw\\frame-data\\supercombo\\ehonda",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -24,10 +24,11 @@
       }
     ]
   },
+  "source_updated_at": "2026-06-01T07:33:14Z",
   "storage_policy": "latest_frame_data_mirror",
   "raw_fingerprint": {
     "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
-    "metadata_sha256": "sha256:5bf51b391d9cdf3c28fa8a1f4946c0f4525f04c54bf3fcef1372d179840ee7ba",
+    "metadata_sha256": "sha256:60182703de059609d47df7de80cf907cb766da467d16db0cde015387e32fc9f2",
     "capture_label": "2026-06-01",
     "source_revision": {
       "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
@@ -154,12 +155,12 @@
         "sha256": "sha256:91fa04fb85c9793a29861afdd47a84996da2dc60dabdb0504b66c3719f6240b9"
       },
       "manifest.json": {
-        "byte_count": 1610,
-        "sha256": "sha256:3305011e1cd934d3acdf900f0f39608a8577fcbee954f6e96cf4005ca9942745"
+        "byte_count": 1608,
+        "sha256": "sha256:25277224b192538e1285a16f406c53d02c46551e5618118719af1411dde883df"
       },
       "metadata.json": {
-        "byte_count": 4693,
-        "sha256": "sha256:5bf51b391d9cdf3c28fa8a1f4946c0f4525f04c54bf3fcef1372d179840ee7ba"
+        "byte_count": 4612,
+        "sha256": "sha256:60182703de059609d47df7de80cf907cb766da467d16db0cde015387e32fc9f2"
       },
       "rendered/page.html": {
         "byte_count": 502162,

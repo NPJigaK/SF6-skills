@@ -207,7 +207,7 @@ def fetch_json(session: StealthySession, url: str, *, timeout_ms: int) -> Any:
 def fetch_page_metadata(session: StealthySession, titles: list[str], *, timeout_ms: int) -> dict[str, Any]:
     pages: list[dict[str, Any]] = []
     for title in titles:
-        payload = fetch_json(
+        latest_payload = fetch_json(
             session,
             api_url(
                 {
@@ -222,9 +222,36 @@ def fetch_page_metadata(session: StealthySession, titles: list[str], *, timeout_
             ),
             timeout_ms=timeout_ms,
         )
-        if payload.get("error"):
-            return payload
-        pages.extend(payload.get("query", {}).get("pages", []))
+        if latest_payload.get("error"):
+            return latest_payload
+        first_payload = fetch_json(
+            session,
+            api_url(
+                {
+                    "action": "query",
+                    "prop": "revisions",
+                    "titles": title,
+                    "rvprop": "ids|timestamp|user|comment|size",
+                    "rvlimit": "1",
+                    "rvdir": "newer",
+                    "format": "json",
+                    "formatversion": "2",
+                }
+            ),
+            timeout_ms=timeout_ms,
+        )
+        if first_payload.get("error"):
+            return first_payload
+        first_pages = first_payload.get("query", {}).get("pages", [])
+        first_revision_by_title = {
+            page.get("title"): (page.get("revisions") or [{}])[0]
+            for page in first_pages
+        }
+        for page in latest_payload.get("query", {}).get("pages", []):
+            first_revision = first_revision_by_title.get(page.get("title"))
+            if first_revision:
+                page["first_revision"] = first_revision
+            pages.append(page)
     return {
         "batchcomplete": True,
         "query": {
@@ -238,23 +265,48 @@ def source_revision_metadata(page_metadata: dict[str, Any]) -> dict[str, Any]:
     for page in page_metadata.get("query", {}).get("pages", []):
         revision = (page.get("revisions") or [{}])[0]
         timestamp = revision.get("timestamp") or page.get("touched")
+        first_revision = page.get("first_revision") or {}
+        first_revision_timestamp = first_revision.get("timestamp")
         pages.append(
             {
                 "title": page.get("title"),
                 "pageid": page.get("pageid"),
                 "lastrevid": page.get("lastrevid"),
                 "revision_timestamp": timestamp,
+                **(
+                    {"first_revision_timestamp": first_revision_timestamp}
+                    if first_revision_timestamp
+                    else {}
+                ),
                 "touched": page.get("touched"),
             }
         )
     timestamps = [page["revision_timestamp"] for page in pages if page.get("revision_timestamp")]
+    first_timestamps = [
+        page["first_revision_timestamp"]
+        for page in pages
+        if page.get("first_revision_timestamp")
+    ]
     latest_timestamp = max(timestamps) if timestamps else None
+    first_timestamp = min(first_timestamps) if first_timestamps else None
     return {
         "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
         "label": latest_timestamp[:10] if latest_timestamp else None,
         "latest_revision_timestamp": latest_timestamp,
+        **({"first_revision_timestamp": first_timestamp} if first_timestamp else {}),
         "pages": pages,
     }
+
+
+def source_freshness_metadata(source_revision: dict[str, Any]) -> dict[str, str]:
+    result: dict[str, str] = {}
+    first_revision_timestamp = source_revision.get("first_revision_timestamp")
+    latest_revision_timestamp = source_revision.get("latest_revision_timestamp")
+    if isinstance(first_revision_timestamp, str) and first_revision_timestamp:
+        result["source_published_at"] = first_revision_timestamp
+    if isinstance(latest_revision_timestamp, str) and latest_revision_timestamp:
+        result["source_updated_at"] = latest_revision_timestamp
+    return result
 
 
 def split_top_level(value: str, separator: str = "|") -> list[str]:
@@ -895,6 +947,7 @@ def main(argv: list[str]) -> int:
         )
         write_json(paths.api_dir / "page-metadata.json", page_metadata)
         source_revision = source_revision_metadata(page_metadata)
+        source_freshness = source_freshness_metadata(source_revision)
 
         frame_cargo = fetch_json(
             session,
@@ -1015,6 +1068,7 @@ def main(argv: list[str]) -> int:
         "character_slug": args.character_slug,
         "capture_label": source_revision.get("label") or args.date_label,
         "source_revision": source_revision,
+        **source_freshness,
         "storage_policy": "latest_frame_data_mirror",
         "source_urls": {
             "frame_data_page": frame_page_url,
@@ -1054,6 +1108,7 @@ def main(argv: list[str]) -> int:
             "character_slug": args.character_slug,
             "capture_label": source_revision.get("label") or args.date_label,
             "source_revision": source_revision,
+            **source_freshness,
             "storage_policy": "latest_frame_data_mirror",
             "raw_root": str(root),
             "metadata": "metadata.json",

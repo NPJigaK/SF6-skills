@@ -1,6 +1,6 @@
 {
   "validation_schema_version": "supercombo_frame_capture_validation/v1",
-  "validated_at_utc": "2026-06-06T08:08:56Z",
+  "validated_at_utc": "2026-06-09T12:06:45Z",
   "raw_root": "raw\\frame-data\\supercombo\\chunli",
   "capture_label": "2026-06-01",
   "source_revision": {
@@ -24,10 +24,11 @@
       }
     ]
   },
+  "source_updated_at": "2026-06-01T07:33:04Z",
   "storage_policy": "latest_frame_data_mirror",
   "raw_fingerprint": {
     "fingerprint_schema_version": "supercombo_frame_raw_fingerprint/v1",
-    "metadata_sha256": "sha256:c3697a4c0ed46fda130b2147fea4e0e58df3491d5746deae7c44f06b8d11e50e",
+    "metadata_sha256": "sha256:e02e0b821f6742ed278865fbda85e809a0bb19a83087ee10958e7865b25fe65e",
     "capture_label": "2026-06-01",
     "source_revision": {
       "label_basis": "latest_revision_timestamp_across_data_and_frame_pages",
@@ -154,12 +155,12 @@
         "sha256": "sha256:93e0bbda0b1a2bf203127eeca0cff7db8d1326b890a5f84748581a2b3b3c8da2"
       },
       "manifest.json": {
-        "byte_count": 1577,
-        "sha256": "sha256:4369bea2d50b14419e72173d6a9c9dadb1ba2a6862068199ca149a6dd7de12c6"
+        "byte_count": 1576,
+        "sha256": "sha256:f7ba09fa696574c83bafbfe22dc6ec235db2176656da653184763065178db320"
       },
       "metadata.json": {
-        "byte_count": 4661,
-        "sha256": "sha256:c3697a4c0ed46fda130b2147fea4e0e58df3491d5746deae7c44f06b8d11e50e"
+        "byte_count": 4581,
+        "sha256": "sha256:e02e0b821f6742ed278865fbda85e809a0bb19a83087ee10958e7865b25fe65e"
       },
       "rendered/page.html": {
         "byte_count": 524632,

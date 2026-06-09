@@ -18,7 +18,11 @@
       "screenshot_png": "raw/frame-data/official/chunli/classic/screenshot.png",
       "metadata_json": "raw/frame-data/official/chunli/classic/metadata.json",
       "row_count": 78,
-      "table_sha256": "sha256:c5ae807bd3086555f09eeac3bdaf3fecd70971227b33a2b13b95807116b8e5ee"
+      "table_sha256": "sha256:c5ae807bd3086555f09eeac3bdaf3fecd70971227b33a2b13b95807116b8e5ee",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "TMLbTwi1sg2Tubb94xdQe"
+      }
     },
     {
       "mode": "modern",
@@ -28,7 +32,11 @@
       "screenshot_png": "raw/frame-data/official/chunli/modern/screenshot.png",
       "metadata_json": "raw/frame-data/official/chunli/modern/metadata.json",
       "row_count": 72,
-      "table_sha256": "sha256:8fa22b4bfa179dd20e31370f6c38058d3235a1890e8d8050fe57335c2ae5d17b"
+      "table_sha256": "sha256:8fa22b4bfa179dd20e31370f6c38058d3235a1890e8d8050fe57335c2ae5d17b",
+      "source_revision": {
+        "type": "nextjs_build_id",
+        "build_id": "TMLbTwi1sg2Tubb94xdQe"
+      }
     }
   ],
   "derived_outputs": [
@@ -39,5 +47,9 @@
   ],
   "tool": "tools/capture_capcom_frame_data.py",
   "capture_label": "2026-05-27",
-  "storage_policy": "latest_frame_data_mirror"
+  "storage_policy": "latest_frame_data_mirror",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "TMLbTwi1sg2Tubb94xdQe"
+  }
 }

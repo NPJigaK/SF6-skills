@@ -9,6 +9,7 @@ from tools.frame_data.integrity import (
     invalidate_supercombo_validation,
     supercombo_raw_fingerprint,
 )
+from tools.frame_data.supercombo.capture import source_freshness_metadata, source_revision_metadata
 
 
 def write_json(path: Path, value: object) -> None:
@@ -97,11 +98,68 @@ def test_capture_invalidation_removes_stale_validation() -> None:
         assert not (root / "validation.json").exists()
 
 
+def test_source_freshness_metadata_uses_only_explicit_revision_dates() -> None:
+    source_revision = {
+        "latest_revision_timestamp": "2026-06-02T02:19:35Z",
+        "pages": [
+            {
+                "title": "Street Fighter 6/Test/Data",
+                "revision_timestamp": "2026-06-02T02:19:35Z",
+            }
+        ],
+    }
+
+    assert source_freshness_metadata(source_revision) == {
+        "source_updated_at": "2026-06-02T02:19:35Z",
+    }
+
+
+def test_source_freshness_metadata_adds_published_at_only_when_first_revision_exists() -> None:
+    source_revision = {
+        "latest_revision_timestamp": "2026-06-02T02:19:35Z",
+        "first_revision_timestamp": "2023-06-02T00:00:00Z",
+    }
+
+    assert source_freshness_metadata(source_revision) == {
+        "source_published_at": "2023-06-02T00:00:00Z",
+        "source_updated_at": "2026-06-02T02:19:35Z",
+    }
+
+
+def test_source_revision_metadata_keeps_first_revision_timestamp_when_available() -> None:
+    page_metadata = {
+        "query": {
+            "pages": [
+                {
+                    "title": "Street Fighter 6/Test/Data",
+                    "pageid": 123,
+                    "lastrevid": 456,
+                    "touched": "2026-06-02T02:19:36Z",
+                    "revisions": [{"timestamp": "2026-06-02T02:19:35Z"}],
+                    "first_revision": {"timestamp": "2023-06-02T00:00:00Z"},
+                }
+            ]
+        }
+    }
+
+    source_revision = source_revision_metadata(page_metadata)
+
+    assert source_revision["first_revision_timestamp"] == "2023-06-02T00:00:00Z"
+    assert source_revision["pages"][0]["first_revision_timestamp"] == "2023-06-02T00:00:00Z"
+    assert source_freshness_metadata(source_revision) == {
+        "source_published_at": "2023-06-02T00:00:00Z",
+        "source_updated_at": "2026-06-02T02:19:35Z",
+    }
+
+
 def main() -> int:
     test_validation_fingerprint_must_match_current_raw_metadata()
     test_validation_without_fingerprint_is_rejected()
     test_validation_fingerprint_must_match_actual_raw_files()
     test_capture_invalidation_removes_stale_validation()
+    test_source_freshness_metadata_uses_only_explicit_revision_dates()
+    test_source_freshness_metadata_adds_published_at_only_when_first_revision_exists()
+    test_source_revision_metadata_keeps_first_revision_timestamp_when_available()
     return 0
 
 

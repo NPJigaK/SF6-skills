@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-08
+updated: 2026-06-09
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -140,7 +140,7 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 frame-data
 - Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 JSON output として保持している。
 - Capcom 公式 Battle Change List capture は 2023-07-24 update から 2026-05-28 update までの 20 version を raw HTML / Next.js data JSON として保持し、policy / common / fighter change rows に派生抽出している。
 - SuperCombo 30キャラ分の frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image refs などを後で統合する候補 data を含む。公式 Classic rows を正とする補助列付き output は 30 キャラ分ある。ただし複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き field を持つ行には人間レビュー待ちの補助行が残り、`enrichment_review_queues` で理由を分離している。
-- frame-data raw の取得日 / source revision は path ではなく manifest の `capture_label` / `source_revision` で確認する。
+- SuperCombo frame-data raw の source freshness / 取得時刻 / source revision は path ではなく manifest の `source_updated_at` / `captured_at_utc` / `source_revision` で分けて確認する。Capcom official raw の取得時点は manifest の `capture_label` / `created_at_utc` を参照する。
 - 30 character data slugs の coverage は単一日付 snapshot ではない。JP は 2026-05-26、Ryu / Chun-Li / Zangief は 2026-05-27、残り 26 characters は 2026-05-30 の capture。
 
 ## 関連概念
