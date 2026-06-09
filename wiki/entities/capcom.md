@@ -99,6 +99,7 @@ Capcom は、この wiki に保存されている Street Fighter 6 公式 eSport
 - 公式 frame-data source の metadata は publisher を Capcom と記録している。
 - 公式 eSports BASE source は、CPT / SFL 観戦向けの Street Fighter 6 用語 23 語を重要度 3 段階で説明し、この wiki では [[concepts/terms/index]] 配下の term pages に昇格している。
 - 公式 Fighting Ground Battle System source は publisher を Capcom と記録し、Drive Gauge と Common System の公式説明を保持する。
+- 公式 Fighting Ground source は、[[concepts/terms/burnout]]、[[concepts/terms/drive-impact]]、[[concepts/terms/drive-parry]]、[[concepts/terms/drive-reversal]]、[[concepts/terms/drive-rush-cancel]]、[[concepts/terms/overdrive]]、[[concepts/terms/super-art]] などの term page の high confidence source になっている。
 - source URL は `https://www.streetfighter.com/6/ja-jp/character/<character>/frame` 系列にある。
 - `gouki_akuma` と `vega_mbison` は、公式 site で table を持つ frame-data slug として扱う。
 - この wiki は 30 character data slugs の Classic / Modern 公式 frame-data outputs を持つ。

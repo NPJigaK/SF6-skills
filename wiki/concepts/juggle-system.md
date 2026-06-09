@@ -2,13 +2,15 @@
 type: concept
 title: "Juggle System"
 created: 2026-05-26
-updated: 2026-05-30
+updated: 2026-06-10
 status: active
 confidence: medium
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
 related:
   - "[[concepts/frame-data]]"
+  - "[[concepts/terms/air-reset]]"
+  - "[[concepts/terms/wall-bounce]]"
   - "[[entities/street-fighter-6]]"
 aliases:
   - "ジャグルシステム"
@@ -22,7 +24,7 @@ tags:
 
 ## 要約
 
-SuperCombo glossary は、Free Juggle / Limited Juggle と Juggle Count、Juggle Start、Juggle Increase、Juggle Limit を使って SF6 の juggle system を説明している。
+SuperCombo glossary は、Free Juggle / Limited Juggle と Juggle Count、Juggle Start、Juggle Increase、Juggle Limit を使って SF6 の juggle system を説明している。Free Juggle は [[concepts/terms/air-reset|Air Reset]] または Air Knockdown を起こし得るため、空中追撃の説明では Air Reset / wall bounce / wall splat などの hit reaction wording を source ごとに確認する。
 
 ## 定義
 
@@ -48,6 +50,8 @@ juggle terminology は、combo route、airborne hit、forced knockdown、follow-
 ## 関連
 
 - [[concepts/frame-data]]
+- [[concepts/terms/air-reset]]
+- [[concepts/terms/wall-bounce]]
 - [[entities/street-fighter-6]]
 
 ## 矛盾 / 注意点

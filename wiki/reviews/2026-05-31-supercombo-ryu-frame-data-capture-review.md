@@ -44,6 +44,10 @@ SuperCombo Wiki Ryu フレームデータの raw capture は、自動検証で p
 - `raw/supercombo/frame-data/2026-05-31/ryu/validation.json`
 - `raw/supercombo/frame-data/2026-05-31/ryu/manifest.json`
 
+## 履歴上の raw path 注記
+
+この review page の date-based raw path は 2026-05-31 時点の履歴表記。現在の raw entrypoint は `raw/frame-data/supercombo/ryu/manifest.json` の latest mirror 固定パスで、source freshness は `source_updated_at` / `source_revision`、raw 取得時刻は `captured_at_utc` で確認する。
+
 ## 確認内容
 
 - Scrapling `StealthySession` で SuperCombo から直接取得した。Jina などの第三者 cache/API は使っていない。

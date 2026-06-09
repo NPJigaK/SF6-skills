@@ -1,7 +1,7 @@
 ---
 type: question
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-10
 status: active
 question: "JPのしゃがみ弱P＞立ち弱P＞弱ストリボーグは、なぜ理論上つながる？"
 sources:
@@ -11,6 +11,9 @@ related:
   - "[[entities/jp]]"
   - "[[concepts/frame-data]]"
   - "[[concepts/fighting-game-notation]]"
+  - "[[concepts/terms/chain]]"
+  - "[[concepts/terms/cancel]]"
+  - "[[concepts/terms/frame-advantage]]"
 tags:
   - sf6
   - frame-data

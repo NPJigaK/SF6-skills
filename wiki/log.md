@@ -2,6 +2,79 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-10] wiki-maintenance | Health check follow-up
+- 更新:
+  - `raw/frame-data/official/ryu/manifest.json`
+  - `raw/frame-data/official/chunli/manifest.json`
+  - `raw/frame-data/official/zangief/manifest.json`
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/fighting-game-notation.md`
+  - `wiki/concepts/juggle-system.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/entities/jp.md`
+  - `wiki/entities/ryu.md`
+  - `wiki/entities/chun-li.md`
+  - `wiki/entities/zangief.md`
+  - `wiki/questions/*.md` の関連 backlink 一部
+  - `wiki/reviews/2026-05-26-official-jp-frame-data-capture-review.md`
+  - `wiki/reviews/2026-05-27-official-ryu-frame-data-capture-review.md`
+  - `wiki/reviews/2026-05-27-official-chun-li-frame-data-capture-review.md`
+  - `wiki/reviews/2026-05-27-official-zangief-frame-data-capture-review.md`
+  - `wiki/reviews/2026-05-30-official-frame-data-roster-capture-review.md`
+  - `wiki/reviews/2026-05-31-supercombo-jp-frame-data-capture-review.md`
+  - `wiki/reviews/2026-05-31-supercombo-ryu-frame-data-capture-review.md`
+  - `wiki/index.md`
+  - `wiki/outputs/lint/2026-06-10-health-check.md`
+- 作成:
+  - `wiki/concepts/terms/burnout.md`
+  - `wiki/concepts/terms/drive-parry.md`
+  - `wiki/concepts/terms/drive-reversal.md`
+  - `wiki/concepts/terms/drive-impact.md`
+  - `wiki/concepts/terms/drive-rush-cancel.md`
+  - `wiki/concepts/terms/overdrive.md`
+  - `wiki/concepts/terms/super-art.md`
+  - `wiki/concepts/terms/critical-art.md`
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/concepts/terms/wall-bounce.md`
+  - `wiki/concepts/terms/air-reset.md`
+  - `wiki/concepts/terms/chain.md`
+  - `wiki/concepts/terms/cancel.md`
+- メモ:
+  - ユーザー確認済みに従い、Ryu / Chun-Li / Zangief の公式 raw manifest `raw_review_status` を既存 accepted review と同期した。
+  - 個別 term pages は `wiki/index.md` に direct row を持たせ、詳細な claim 統合は [[concepts/terms/index]] に集約する運用にした。
+  - 古い review pages の date-based raw path は履歴文書として保持し、現在の latest mirror entrypoint を注記した。
+  - SuperCombo 補助列レビューは `field_conflict`、`manual_or_ambiguous_match`、query-demand character batch の順に進める方針を [[concepts/frame-data]] に記録した。
+  - Question pages から term pages への backlink は、本文に自然に出る重要語は本文リンク、補助的な探索性は frontmatter `related:` に寄せる。
+- 未解決事項:
+  - `hitbox` / `hurtbox` は source confidence と imageinfo 欠損 policy を含むため、次の term page 化では追加 source 確認が必要。
+  - SuperCombo-only 620 行を通常回答から分離すべき row と補助情報として使える row に分類する必要がある。
+
+## [2026-06-10] lint | Wiki health check
+- 作成:
+  - `wiki/outputs/lint/2026-06-10-health-check.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 確認:
+  - Markdown graph、frontmatter、direct index coverage、orphan-like pages、broken wikilinks。
+  - `wiki/outputs/**/*.json` 363 files の JSON parse。
+  - `raw/**/validation.json` 33 files の validation status。
+  - 公式 frame-data 30 character source pages の row count と派生 JSON row count。
+  - 公式 Battle Change List / update notice の quick web search による data-gap 確認。
+- 所見:
+  - Real page の broken wikilink と missing frontmatter は見つからなかった。
+  - Ryu / Chun-Li / Zangief は wiki review/source 側で accepted とされるが、raw manifest の `raw_review_status` は `pending_human_review` のまま。review-needed として記録した。
+  - 個別 term page 23 件は `concepts/terms/index` から到達可能だが、`wiki/index.md` direct entry はない。運用判断が必要。
+  - Question pages 7 件と `2026-06-06-supercombo-field-conflict-queue-prereview` は index/log を除く inbound backlink が薄い。
+- 未解決事項:
+  - Ryu / Chun-Li / Zangief の manifest status を同期するか。
+  - 古い review page に残る date-based raw path へ historical note を足すか。
+  - Term page と question page の backlink 基準をどうするか。
+
 ## [2026-06-10] wiki-update | SF6 term pages for CAPCOM eSports BASE terms
 - 作成:
   - `wiki/concepts/terms/index.md`

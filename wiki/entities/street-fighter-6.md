@@ -92,7 +92,7 @@ tags:
 
 ## 要約
 
-Street Fighter 6 は、この wiki が扱う glossary source、公式 eSports BASE 用語解説、公式 Fighting Ground Battle System source、公式 frame-data source、公式 Battle Change List、SuperCombo community frame-data 取得データの game context。現在、community glossary concepts、Capcom 公式 eSports BASE scoped capture、Capcom 公式 Battle System scoped capture、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、Capcom 公式 Battle Change List 20 version 分、SuperCombo raw 取得データ 30 キャラ分がある。公式 Classic + SuperCombo 補助データも 30 キャラ分作成済み。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
+Street Fighter 6 は、この wiki が扱う glossary source、公式 eSports BASE 用語解説、公式 Fighting Ground Battle System source、公式 frame-data source、公式 Battle Change List、SuperCombo community frame-data 取得データの game context。現在、36 個別 term pages、Capcom 公式 eSports BASE scoped capture、Capcom 公式 Battle System scoped capture、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、Capcom 公式 Battle Change List 20 version 分、SuperCombo raw 取得データ 30 キャラ分がある。公式 Classic + SuperCombo 補助データも 30 キャラ分作成済み。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
 
 ## 年表
 
@@ -138,12 +138,14 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 eSports BA
 | 2026-06-07 | Capcom 公式 Battle Change List を 20 update version 分 raw capture し、1820 行の派生 change output を作成した。 | [[sources/capcom-official-battle-change-list]], [[reviews/2026-06-07-official-battle-change-capture-review]] |
 | 2026-06-10 | Capcom 公式 Fighting Ground ページから Battle System 範囲だけを scoped raw capture として保存した。 | [[sources/capcom-official-fightingground-battle-system]] |
 | 2026-06-10 | Capcom 公式 eSports BASE から、CPT / SFL 観戦向けの `実況ワード解説` 23 語を scoped raw capture として保存した。 | [[sources/capcom-esports-base-terms]] |
+| 2026-06-10 | Capcom eSports BASE、Capcom Fighting Ground、SuperCombo glossary 由来の 36 個別 term pages を [[concepts/terms/index]] に集約した。 | [[concepts/terms/index]] |
 
 ## 関連する主張
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
 - Capcom 公式 eSports BASE scoped capture は、CPT / SFL 観戦向けの `実況ワード解説` として、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/anti-air|対空]]、[[concepts/terms/corner|画面端]]、[[concepts/terms/cross-up|めくり]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/punish-counter|パニッシュカウンター]]、[[concepts/terms/frame-advantage|有利フレーム]]、[[concepts/terms/hit-confirm|ヒット確認]]など 23 語を保持する。
 - Capcom 公式 Fighting Ground Battle System scoped capture は Drive Gauge、Drive Impact、Drive Parry、Overdrive、Drive Rush、Drive Reversal、ゲーム画面 UI 説明を公式 source として保持する。
+- [[concepts/terms/index]] は eSports BASE 由来 23 語に加えて、Burnout、Drive Parry、Drive Reversal、Drive Impact、Drive Rush Cancel、Overdrive、Super Art、Critical Art、damage scaling、wall bounce、air reset、chain、cancel を個別 term page として保持する。
 - Capcom 公式 frame-data captures は Classic / Modern の技データを raw snapshot と派生 JSON output として保持している。
 - Capcom 公式 Battle Change List capture は 2023-07-24 update から 2026-05-28 update までの 20 version を raw HTML / Next.js data JSON として保持し、policy / common / fighter change rows に派生抽出している。
 - SuperCombo 30キャラ分の frame-data 取得データは community source であり、公式にない range、juggle、notes、hitbox image refs などを後で統合する候補 data を含む。公式 Classic rows を正とする補助列付き output は 30 キャラ分ある。ただし複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き field を持つ行には人間レビュー待ちの補助行が残り、`enrichment_review_queues` で理由を分離している。

@@ -25,7 +25,7 @@ tags:
 
 ## 要約
 
-SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source と、30 キャラ分の frame-data community raw 取得データの掲載元。現在の SuperCombo frame-data raw entrypoint は `raw/frame-data/supercombo/<character>/`。公式 Classic data を正とする SuperCombo 補助列付き output も 30 キャラ分作成済み。
+SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source と、30 キャラ分の frame-data community raw 取得データの掲載元。glossary は Drive System、notation、juggle、frame-data terms の補助 source として [[concepts/terms/index]] に統合されている。現在の SuperCombo frame-data raw entrypoint は `raw/frame-data/supercombo/<character>/`。公式 Classic data を正とする SuperCombo 補助列付き output も 30 キャラ分作成済み。
 
 ## 年表
 
@@ -43,6 +43,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 
 - 現在の wiki には SuperCombo Wiki 由来の glossary source、個別 frame-data source pages、30キャラ batch source summary がある。
 - SuperCombo Wiki は community wiki source として扱い、公式 Capcom source より低い confidence で使う。
+- SuperCombo glossary は [[concepts/terms/air-reset]]、[[concepts/terms/cancel]]、[[concepts/terms/chain]]、[[concepts/terms/damage-scaling]]、[[concepts/terms/wall-bounce]] などの term page に community source claim を提供する。
 - 30キャラ分の SuperCombo frame-data 取得データは official data と重なる基本フレーム値の正とはせず、公式にない notes、range、juggle、hitbox image refs などの補助 source として保持する。公式 + SuperCombo 補助 output では公式列を正とし、SuperCombo は `supercombo_*` 列に入れる。
 - SuperCombo frame-data raw は latest mirror 固定パスに保存し、source revision は各 manifest の `source_revision` で追う。
 - JP / Ryu / Zangief / Ingrid には既存の人間レビュー済み補助行がある。2026-06-06 の fail-closed policy 以降は accepted 69 行を保持し、複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field を持つ未レビュー補助行 1295 行を review queue に残している。

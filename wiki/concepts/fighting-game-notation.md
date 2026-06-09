@@ -11,6 +11,8 @@ sources:
   - "[[reviews/2026-06-09-supercombo-glossary-web-page-capture-review]]"
 related:
   - "[[concepts/frame-data]]"
+  - "[[concepts/terms/cancel]]"
+  - "[[concepts/terms/chain]]"
 aliases:
   - "格闘ゲーム表記"
   - "コマンド表記"
@@ -24,16 +26,16 @@ tags:
 
 ## 要約
 
-Fighting-game notation は、link、cancel、hold/release、chain、hit state、air action、delay、tiger-knee input、whiff、directional input などを短く表すための表記体系。
+Fighting-game notation は、link、[[concepts/terms/cancel|cancel]]、hold/release、[[concepts/terms/chain|chain]]、hit state、air action、delay、tiger-knee input、whiff、directional input などを短く表すための表記体系。
 
 ## 定義
 
 SuperCombo glossary の page wikitext は Notation Glossary を `{{ComboLegend-SF6}}` テンプレートとして呼び出している。展開後の `rendered/tables.dom.json` は次のような例を保持している。template 本文は `raw/web-pages/wiki.supercombo.gg/glossary/templates/combo-legend-sf6.raw.wikitext` に保存され、manifest では revid `283225` / timestamp `2023-12-11T18:45:25Z` の依存として記録されている。
 
 - `A,B`: A の recovery 後に B を link する。
-- `A > B`: A の animation 中に B へ cancel する。
+- `A > B`: A の animation 中に B へ [[concepts/terms/cancel|cancel]] する。
 - `(N)`: multi-hit move の一部 hit だけを使う。
-- `xN`: chained normal を繰り返す。
+- `xN`: [[concepts/terms/chain|chained]] normal を繰り返す。
 - `[X]`: input を hold する。
 - `]X[`: input を release する。
 - `X~Y`: 入力を素早く連続して行う。
@@ -56,6 +58,8 @@ notation は、source wording を保ちながら combo や input を簡潔に説
 ## 関連
 
 - [[concepts/frame-data]]
+- [[concepts/terms/cancel]]
+- [[concepts/terms/chain]]
 
 ## 矛盾 / 注意点
 

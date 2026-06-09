@@ -2,13 +2,16 @@
 type: entity
 entity_type: character
 created: 2026-05-27
-updated: 2026-06-08
+updated: 2026-06-10
 status: active
 sources:
   - "[[sources/capcom-official-chun-li-frame-data]]"
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+  - "[[questions/chun-li-modern-vs-classic-frame-data-moves-and-inputs]]"
+  - "[[questions/chun-li-standing-medium-p-frame-data]]"
+  - "[[questions/chun-li-standing-medium-p-into-crouching-medium-p-link]]"
 aliases:
   - "Chun-Li"
   - "春麗"
@@ -40,6 +43,12 @@ Chun-Li（春麗） は、この wiki で Capcom 公式フレームデータ cap
 
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
+
+## 関連質問
+
+- [[questions/chun-li-modern-vs-classic-frame-data-moves-and-inputs]]
+- [[questions/chun-li-standing-medium-p-frame-data]]
+- [[questions/chun-li-standing-medium-p-into-crouching-medium-p-link]]
 
 ## 未解決の質問
 

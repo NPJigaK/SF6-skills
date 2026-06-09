@@ -10,6 +10,7 @@ sources:
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+  - "[[questions/zangief-modern-vs-classic-frame-data-moves-and-inputs]]"
   - "[[outputs/reports/2026-06-02-supercombo-zangief-official-crosswalk]]"
   - "[[outputs/reports/2026-06-02-zangief-official-supercombo-enriched-data]]"
 aliases:
@@ -47,6 +48,10 @@ Zangief（ザンギエフ） は、この wiki で Capcom 公式フレームデ�
 
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
+
+## 関連質問
+
+- [[questions/zangief-modern-vs-classic-frame-data-moves-and-inputs]]
 
 ## 未解決の質問
 

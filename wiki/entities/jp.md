@@ -2,7 +2,7 @@
 type: entity
 entity_type: character
 created: 2026-05-26
-updated: 2026-06-01
+updated: 2026-06-10
 status: active
 sources:
   - "[[sources/capcom-official-jp-frame-data]]"
@@ -10,6 +10,9 @@ sources:
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+  - "[[questions/jp-modern-vs-classic-frame-data-moves-and-inputs]]"
+  - "[[questions/jp-crouching-light-p-standing-light-p-light-stribog-combo-theory]]"
+  - "[[questions/jp-crouching-medium-p-drc-crouching-heavy-p-heavy-stribog-medium-torbalan-triglav-combo-theory]]"
   - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "JP"
@@ -48,6 +51,12 @@ JP は、この wiki で Capcom 公式フレームデータ capture と SuperCom
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
 - [[syntheses/frame-data-raw-layout]]
+
+## 関連質問
+
+- [[questions/jp-modern-vs-classic-frame-data-moves-and-inputs]]
+- [[questions/jp-crouching-light-p-standing-light-p-light-stribog-combo-theory]]
+- [[questions/jp-crouching-medium-p-drc-crouching-heavy-p-heavy-stribog-medium-torbalan-triglav-combo-theory]]
 
 ## 未解決の質問
 

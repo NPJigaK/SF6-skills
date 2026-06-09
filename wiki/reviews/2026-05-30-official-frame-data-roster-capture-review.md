@@ -98,6 +98,10 @@ tags:
 - screenshot metadata は full table coverage と Cookiebot/navigation overlay removal を示す。
 - 既存 accepted の JP、Ryu、Chun-Li、Zangief captures も batch 後に再検証された。
 
+## 履歴上の raw path 注記
+
+この review page の date-based raw path は 2026-05-30 時点の履歴表記。現在の raw entrypoint は `raw/frame-data/official/<data-slug>/manifest.json` の latest mirror 固定パスで、capture date / source revision は manifest fields で確認する。
+
 ## slug に関する注意
 
 - official character links では `gouki` と `vega` が見えるが、table を持つ frame-data pages は `gouki_akuma` と `vega_mbison`。

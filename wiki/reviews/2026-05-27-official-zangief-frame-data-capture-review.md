@@ -36,6 +36,10 @@ Zangief（ザンギエフ） の Capcom 公式 frame-data raw snapshot と派生
 - `wiki/outputs/data/frame-data/official/zangief/classic.json`
 - `wiki/outputs/data/frame-data/official/zangief/modern.json`
 
+## 履歴上の raw path 注記
+
+この review page の date-based raw path は 2026-05-27 時点の履歴表記。現在の raw entrypoint は `raw/frame-data/official/zangief/manifest.json` の latest mirror 固定パスで、capture date / source revision は manifest fields で確認する。
+
 ## 確認内容
 
 - raw snapshot は `raw/official/frame-data/<date>/<data-slug>/<classic|modern>/` の convention に従っている。

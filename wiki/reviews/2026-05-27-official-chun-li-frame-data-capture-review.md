@@ -36,6 +36,10 @@ Chun-Li（春麗） の Capcom 公式 frame-data raw snapshot と派生 outputs 
 - `wiki/outputs/data/frame-data/official/chunli/classic.json`
 - `wiki/outputs/data/frame-data/official/chunli/modern.json`
 
+## 履歴上の raw path 注記
+
+この review page の date-based raw path は 2026-05-27 時点の履歴表記。現在の raw entrypoint は `raw/frame-data/official/chunli/manifest.json` の latest mirror 固定パスで、capture date / source revision は manifest fields で確認する。
+
 ## 確認内容
 
 - raw snapshot は `raw/official/frame-data/<date>/<data-slug>/<classic|modern>/` の convention に従っている。

@@ -1,7 +1,7 @@
 ---
 type: question
 created: 2026-05-30
-updated: 2026-06-08
+updated: 2026-06-10
 status: active
 question: "春麗の立ち中Pが通常ヒットしたあと、発生6Fのしゃがみ中Pは理論上つながる？理由もフレームで説明して。"
 sources:
@@ -9,6 +9,9 @@ sources:
 related:
   - "[[entities/chun-li]]"
   - "[[concepts/frame-data]]"
+  - "[[concepts/terms/frame-advantage]]"
+  - "[[concepts/terms/punish-counter]]"
+  - "[[concepts/drive-system]]"
   - "[[questions/chun-li-standing-medium-p-frame-data]]"
 tags:
   - sf6

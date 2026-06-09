@@ -1,7 +1,7 @@
 ---
 type: question
 created: 2026-05-30
-updated: 2026-06-08
+updated: 2026-06-10
 status: active
 question: "春麗の立ち中Pは、発生・ヒット時・ガード時・キャンセル可否・ダメージはいくつですか？"
 sources:
@@ -9,6 +9,10 @@ sources:
 related:
   - "[[entities/chun-li]]"
   - "[[concepts/frame-data]]"
+  - "[[concepts/terms/cancel]]"
+  - "[[concepts/terms/drive-impact]]"
+  - "[[concepts/terms/drive-rush-cancel]]"
+  - "[[concepts/terms/super-art]]"
 tags:
   - sf6
   - frame-data

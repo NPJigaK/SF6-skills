@@ -1,7 +1,7 @@
 ---
 type: question
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-10
 status: active
 question: "JPのしゃがみ中P＞キャンセルラッシュ＞しゃがみ強P＞強ストリボーグ＞中トルバラン＞トリグラフは、なぜ理論上つながる？"
 sources:
@@ -15,6 +15,11 @@ related:
   - "[[concepts/drive-system]]"
   - "[[concepts/juggle-system]]"
   - "[[concepts/fighting-game-notation]]"
+  - "[[concepts/terms/drive-rush-cancel]]"
+  - "[[concepts/terms/cancel]]"
+  - "[[concepts/terms/frame-advantage]]"
+  - "[[concepts/terms/wall-bounce]]"
+  - "[[concepts/terms/damage-scaling]]"
 tags:
   - sf6
   - frame-data

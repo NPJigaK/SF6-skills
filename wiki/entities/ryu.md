@@ -2,7 +2,7 @@
 type: entity
 entity_type: character
 created: 2026-05-27
-updated: 2026-06-01
+updated: 2026-06-10
 status: active
 sources:
   - "[[sources/capcom-official-ryu-frame-data]]"
@@ -10,6 +10,7 @@ sources:
 related:
   - "[[entities/street-fighter-6]]"
   - "[[concepts/frame-data]]"
+  - "[[questions/ryu-modern-vs-classic-frame-data-moves-and-inputs]]"
   - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "Ryu"
@@ -47,6 +48,10 @@ Ryu（リュウ） は、この wiki で Capcom 公式フレームデータ capt
 - [[concepts/frame-data]]
 - [[concepts/fighting-game-notation]]
 - [[syntheses/frame-data-raw-layout]]
+
+## 関連質問
+
+- [[questions/ryu-modern-vs-classic-frame-data-moves-and-inputs]]
 
 ## 未解決の質問
 
