@@ -1,0 +1,167 @@
+{
+  "manifest_schema_version": "capcom_fightingground_battle_system_manifest/v1",
+  "raw_root": "raw/web-pages/www.streetfighter.com/fightingground-battle-system",
+  "source_family": "web_page",
+  "source_slug": "www.streetfighter.com/fightingground-battle-system",
+  "domain": "www.streetfighter.com",
+  "page_slug": "fightingground-battle-system",
+  "publisher": "Capcom",
+  "platform": "Next.js",
+  "page_title": "Fighting Ground Battle System scope",
+  "source_type": "official_scoped_web_page_capture",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+  "data_url": "https://www.streetfighter.com/6/_next/data/8PI3Oj_9ikUinAmp3j_yf/ja-jp/mode/fightingground.json",
+  "page_chunk_url": "https://www.streetfighter.com/6/_next/static/chunks/pages/mode/fightingground-a658895db0cb13de.js",
+  "captured_at_utc": "2026-06-09T17:13:40Z",
+  "capture_label": "2026-06-09-8PI3Oj_9ikUinAmp3j_yf",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "8PI3Oj_9ikUinAmp3j_yf"
+  },
+  "canonical_source_artifacts": [
+    "api/source-text.scoped.json",
+    "rendered/battle-system-design.dom.json",
+    "rendered/drive-gauge.dom.json",
+    "rendered/common-system.dom.json",
+    "rendered/simple-operation-modal.dom.json"
+  ],
+  "display_evidence_artifacts": [
+    "screenshots/battle-system-design.png",
+    "screenshots/drive-gauge.png",
+    "screenshots/common-system.png",
+    "screenshots/simple-operation-modal.png"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "asset_manifest": "assets/manifest.json",
+  "scope_policy": {
+    "id": "fightingground_battle_system_only",
+    "included_sections": [
+      "BATTLE SYSTEM DESIGN",
+      "DRIVE GAUGE",
+      "COMMON SYSTEM",
+      "simpleOperationImage modal"
+    ],
+    "excluded_sections": [
+      "SOUND ACCESSIBILITY",
+      "CHARACTER DAMAGE",
+      "Real Time Commentary",
+      "CONTROL TYPE",
+      "BATTLE CONTENTS"
+    ],
+    "full_source_artifacts_intentionally_not_stored": [
+      "page.html",
+      "data.json",
+      "page-chunk.js"
+    ]
+  },
+  "artifact_hashes": {
+    "api/source-text.scoped.json": {
+      "sha256": "sha256:95a48ebcdccdc0f711ef7f6a12ddee22cf566d9ec4ae8c9f7a457b1e40427faa",
+      "bytes": 7141
+    },
+    "assets/images/mode/fg/ds_01_s.jpg": {
+      "sha256": "sha256:de1456f75fb3297739caba4ba328f71b3f2b52720e5afcbbc9971a9f2f3bba3b",
+      "bytes": 300451
+    },
+    "assets/images/mode/fg/ds_02.jpg": {
+      "sha256": "sha256:361229d6d6f9b8390f20d3a602dd93545577591b24a05067551a06909b9e10c4",
+      "bytes": 36574
+    },
+    "assets/images/mode/fg/ds_03_1.jpg": {
+      "sha256": "sha256:ca87906029d4f56a59825c1361b44d180d2f1638df5b9bcf393577fb222bebf8",
+      "bytes": 196358
+    },
+    "assets/images/mode/fg/ds_03_2.jpg": {
+      "sha256": "sha256:43a0fe27448bdb58ff03d8c2fb89095d3e61e20f87c1fea0d7a6ae20bf50ca90",
+      "bytes": 165726
+    },
+    "assets/images/mode/fg/ds_03_3.jpg": {
+      "sha256": "sha256:392307c243f8d049567a58df184420870d88e19c00deebd1da0b9ca3eb2695b5",
+      "bytes": 151042
+    },
+    "assets/images/mode/fg/ds_03_4.jpg": {
+      "sha256": "sha256:fd6d82279fa7ec19b539677a4b69cb25753fec90d32cf4c173fec28174357c49",
+      "bytes": 139868
+    },
+    "assets/images/mode/fg/ds_03_5.jpg": {
+      "sha256": "sha256:da6d33be7fc21a3727c7e44fcb7fefe00e01f422a7c12a7952de790ee1a44176",
+      "bytes": 175386
+    },
+    "assets/images/mode/fg/game_screen.jpg": {
+      "sha256": "sha256:2f89b3020aa9616bd6da79c9f9e3df5e562298770e0a55f90031c09e03d219e5",
+      "bytes": 402094
+    },
+    "assets/images/mode/fg/num_1.jpg": {
+      "sha256": "sha256:a25d95cff7fba869bc161c1cea4dd142e4d4bc91274a43d5bcdc846339c25657",
+      "bytes": 2233
+    },
+    "assets/images/mode/fg/num_2.jpg": {
+      "sha256": "sha256:ae0dea9c809001e41d8550a05dcd9ec24f23899c9ee3fcf767b23d0c9c652f9f",
+      "bytes": 2797
+    },
+    "assets/images/mode/fg/num_3.jpg": {
+      "sha256": "sha256:f8044149d09e4665d6f1b09dbf12d89599c562f9c35dcc7df9f59c527d9b3d1a",
+      "bytes": 2774
+    },
+    "assets/images/mode/fg/num_4.jpg": {
+      "sha256": "sha256:eac1179d272a85b37626ce43c87e0eec176df2b22aaa3c63b2f2eb4979806f32",
+      "bytes": 2662
+    },
+    "assets/images/mode/fg/num_5.jpg": {
+      "sha256": "sha256:2639860d896fb4578e529e6d3b429fd3c9b96e9ac2a9c586fa524d557680671c",
+      "bytes": 2632
+    },
+    "assets/images/mode/fg/num_6.jpg": {
+      "sha256": "sha256:9c5d6897a697a81fedf9df4946b017c070dcf003f336fb873c4d083370c0cf18",
+      "bytes": 2807
+    },
+    "metadata.json": {
+      "sha256": "sha256:15610f563f02da41be4fcf8caa77d9cff9d1efaa94e56bf44f9cfb9df8c9369e",
+      "bytes": 2429
+    },
+    "rendered/battle-system-design.dom.json": {
+      "sha256": "sha256:919412c60cf3158ed06ae7406510ea7e436e0131d98ad0c0b4e87744a62d344b",
+      "bytes": 3973
+    },
+    "rendered/common-system.dom.json": {
+      "sha256": "sha256:289996e6ace71788ff531aae80137e54b00e976359b8733f22b074a149824da6",
+      "bytes": 105638
+    },
+    "rendered/drive-gauge.dom.json": {
+      "sha256": "sha256:262c50f8944aca6ad8d78cb6d9bd3b67c1713bd4e39c72dcaea9c99aba342f78",
+      "bytes": 4284
+    },
+    "rendered/simple-operation-modal.dom.json": {
+      "sha256": "sha256:c802bb2469c5b524d4cfdb06dbb3b9ea4ceef2f6d20cc95d7b8e12fdde633aa4",
+      "bytes": 16824
+    },
+    "screenshots/battle-system-design.png": {
+      "sha256": "sha256:b567015e2587cdeaa234fb074607061416acfe363ac69ed1ef022949eb31d54f",
+      "bytes": 1062444
+    },
+    "screenshots/common-system.png": {
+      "sha256": "sha256:b46bfd88ba671bfbc248b8ebb13485d1a64ccfff4af2d8f59ee020dc09333f3d",
+      "bytes": 1062312
+    },
+    "screenshots/drive-gauge.png": {
+      "sha256": "sha256:dfa1fb92e3d050a9a6c067e68012b1a27b7e58236c1c9fe5b57dbeb526bd30d1",
+      "bytes": 232669
+    },
+    "screenshots/simple-operation-modal.png": {
+      "sha256": "sha256:beb4c469aff422e03d682b4d0cfbaf7dfc92671fe3dc3d3b0bf9d94e937b183b",
+      "bytes": 1403613
+    },
+    "source-provenance.json": {
+      "sha256": "sha256:3b128c6574744072e1fc155420b92314c8d3137890f091e95403c072cd1a4bc7",
+      "bytes": 3990
+    },
+    "validation.json": {
+      "sha256": "sha256:686d74d55611170965d1792d6b13e1851d79954c7dd8c3a4882ffa4c2b9800c1",
+      "bytes": 1545
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "tool": "tools/web_pages/capcom_fightingground_battle_system.py"
+}

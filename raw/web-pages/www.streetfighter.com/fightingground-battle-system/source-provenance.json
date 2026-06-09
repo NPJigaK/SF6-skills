@@ -1,0 +1,87 @@
+{
+  "provenance_schema_version": "capcom_fightingground_battle_system_source_provenance/v1",
+  "captured_at_utc": "2026-06-09T17:13:40Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_scoped_web_page_capture",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+  "data_url": "https://www.streetfighter.com/6/_next/data/8PI3Oj_9ikUinAmp3j_yf/ja-jp/mode/fightingground.json",
+  "page_chunk_url": "https://www.streetfighter.com/6/_next/static/chunks/pages/mode/fightingground-a658895db0cb13de.js",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "8PI3Oj_9ikUinAmp3j_yf"
+  },
+  "scope_policy": "fightingground_battle_system_only",
+  "full_source_not_stored": {
+    "page_html": true,
+    "next_data_json": true,
+    "page_chunk_js": true,
+    "reason": "The user-selected raw scope excludes unrelated Fighting Ground sections."
+  },
+  "responses": {
+    "page_html": {
+      "url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+      "final_url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "date": "Tue, 09 Jun 2026 11:54:46 GMT",
+        "content-encoding": "gzip",
+        "x-nextjs-cache": "HIT",
+        "cache-control": "s-maxage=31536000",
+        "x-powered-by": "Next.js",
+        "etag": "\"jv566l7n9vaqvl\"",
+        "vary": "Accept-Encoding",
+        "x-cache": "Hit from cloudfront",
+        "via": "1.1 8b9ec68d0eb4c160094e388b8b5faae0.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "NRT12-P2",
+        "x-amz-cf-id": "_SBxj2YlqrZP0PaTDkDyp7m83nZJnGBUH01NhSz-m_TS8UF3CUSgzA==",
+        "age": "19134"
+      },
+      "byte_count": 522194,
+      "sha256": "sha256:f65ee0af40b5541e6e331ecd48b216c696b3cae64c5b9ee357b2aecb667d3878"
+    },
+    "next_data_json": {
+      "url": "https://www.streetfighter.com/6/_next/data/8PI3Oj_9ikUinAmp3j_yf/ja-jp/mode/fightingground.json",
+      "final_url": "https://www.streetfighter.com/6/_next/data/8PI3Oj_9ikUinAmp3j_yf/ja-jp/mode/fightingground.json",
+      "status": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 09 Jun 2026 17:13:40 GMT",
+        "content-encoding": "gzip",
+        "x-nextjs-cache": "HIT",
+        "cache-control": "s-maxage=31536000",
+        "vary": "Accept-Encoding",
+        "x-cache": "Miss from cloudfront",
+        "via": "1.1 382a6fa0d87776c7b7e3c6f3a487c884.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "NRT12-P2",
+        "x-amz-cf-id": "4jweZALXT-1s95-wZgMG5Qv0CNXR2yBkd-eC-oD9eIOzlgx0189sAg=="
+      },
+      "byte_count": 29107,
+      "sha256": "sha256:fc7ae9548dc261ea294eddc80abb4ce3d027e3c3bb867d893cd4add55a22cc74"
+    },
+    "page_chunk_js": {
+      "url": "https://www.streetfighter.com/6/_next/static/chunks/pages/mode/fightingground-a658895db0cb13de.js",
+      "final_url": "https://www.streetfighter.com/6/_next/static/chunks/pages/mode/fightingground-a658895db0cb13de.js",
+      "status": 200,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "date": "Tue, 09 Jun 2026 04:03:37 GMT",
+        "content-encoding": "gzip",
+        "cache-control": "public, max-age=31536000, immutable",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 05 Jun 2026 23:31:27 GMT",
+        "etag": "W/\"1c6ef-19e9a209498\"",
+        "vary": "Accept-Encoding",
+        "x-cache": "Hit from cloudfront",
+        "via": "1.1 6f7c8435839079dcf3520d9610241c08.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "NRT12-P2",
+        "x-amz-cf-id": "xc6jRdsWaCo4DWrM5ayytVsn82Q6TJPUd_dRZ1ImkjKCcjIT4yR1ug==",
+        "age": "47403"
+      },
+      "byte_count": 116463,
+      "sha256": "sha256:79475a2205bafdfbc2197d7e58b059fd4cacdf74a51004b817bab8e39c83ca44"
+    }
+  }
+}

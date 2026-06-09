@@ -1,0 +1,62 @@
+{
+  "metadata_schema_version": "capcom_fightingground_battle_system_metadata/v1",
+  "captured_at_utc": "2026-06-09T17:13:40Z",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "source_type": "official_scoped_web_page_capture",
+  "source_url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+  "data_url": "https://www.streetfighter.com/6/_next/data/8PI3Oj_9ikUinAmp3j_yf/ja-jp/mode/fightingground.json",
+  "page_chunk_url": "https://www.streetfighter.com/6/_next/static/chunks/pages/mode/fightingground-a658895db0cb13de.js",
+  "source_revision": {
+    "type": "nextjs_build_id",
+    "build_id": "8PI3Oj_9ikUinAmp3j_yf"
+  },
+  "storage_policy": "updateable_web_page_capture",
+  "scope_policy": "fightingground_battle_system_only",
+  "raw_review_status": "pending_human_review",
+  "repository_scope": "repo_raw_capture",
+  "capture_method": "scrapling_fetcher_for_provenance_and_assets_and_playwright_chromium_for_scoped_dom",
+  "included_sections": [
+    "BATTLE SYSTEM DESIGN",
+    "DRIVE GAUGE",
+    "COMMON SYSTEM",
+    "simpleOperationImage modal"
+  ],
+  "excluded_sections": [
+    "SOUND ACCESSIBILITY",
+    "CHARACTER DAMAGE",
+    "Real Time Commentary",
+    "CONTROL TYPE",
+    "BATTLE CONTENTS"
+  ],
+  "artifacts": {
+    "source_provenance": "source-provenance.json",
+    "scoped_text": "api/source-text.scoped.json",
+    "asset_manifest": "assets/manifest.json",
+    "rendered_sections": {
+      "battle-system-design": "rendered/battle-system-design.dom.json",
+      "drive-gauge": "rendered/drive-gauge.dom.json",
+      "common-system": "rendered/common-system.dom.json",
+      "simple-operation-modal": "rendered/simple-operation-modal.dom.json"
+    },
+    "screenshots": {
+      "battle-system-design": "screenshots/battle-system-design.png",
+      "drive-gauge": "screenshots/drive-gauge.png",
+      "common-system": "screenshots/common-system.png",
+      "simple-operation-modal": "screenshots/simple-operation-modal.png"
+    }
+  },
+  "counts": {
+    "kept_text_keys": 34,
+    "downloaded_assets": 14,
+    "omitted_asset_refs": 3
+  },
+  "render_fetch": {
+    "method": "playwright_chromium",
+    "url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+    "final_url": "https://www.streetfighter.com/6/ja-jp/mode/fightingground",
+    "status": 200,
+    "captured_at_utc": "2026-06-09T17:13:40Z"
+  }
+}

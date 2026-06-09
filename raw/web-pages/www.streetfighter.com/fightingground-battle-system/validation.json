@@ -1,0 +1,39 @@
+{
+  "validation_schema_version": "capcom_fightingground_battle_system_validation/v1",
+  "created_at_utc": "2026-06-09T17:13:47Z",
+  "status": "passed",
+  "checks": {
+    "no_full_page_html_saved": true,
+    "no_full_next_data_json_saved": true,
+    "no_full_page_chunk_saved": true,
+    "all_expected_text_keys_present": true,
+    "excluded_prefixes_not_in_scoped_text": true,
+    "battle-system-design_dom_exists": true,
+    "battle-system-design_contains_expected_text": true,
+    "battle-system-design_has_outer_html": true,
+    "drive-gauge_dom_exists": true,
+    "drive-gauge_contains_expected_text": true,
+    "drive-gauge_has_outer_html": true,
+    "common-system_dom_exists": true,
+    "common-system_contains_expected_text": true,
+    "common-system_has_outer_html": true,
+    "simple-operation-modal_dom_exists": true,
+    "simple-operation-modal_contains_expected_text": true,
+    "simple-operation-modal_has_outer_html": true,
+    "simple_operation_modal_state": true,
+    "simple_operation_modal_has_six_items": true,
+    "simple_operation_modal_has_game_screen_image": true,
+    "screenshots_exist": true,
+    "asset_downloads_ok": true,
+    "assets_exclude_known_unwanted_families": true
+  },
+  "summary": {
+    "kept_text_key_count": 34,
+    "downloaded_asset_count": 14,
+    "omitted_asset_ref_count": 3,
+    "scope_policy": "fightingground_battle_system_only"
+  },
+  "notes": [
+    "Scoped raw capture passed. Full page HTML and full Next.js data JSON were intentionally not stored."
+  ]
+}

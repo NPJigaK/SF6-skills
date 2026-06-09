@@ -2,6 +2,35 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-10] ingest | Capcom Fighting Ground Battle System scoped raw capture
+- 原本:
+  - `https://www.streetfighter.com/6/ja-jp/mode/fightingground`
+- 作成:
+  - `raw/web-pages/www.streetfighter.com/fightingground-battle-system/`
+  - `tools/web_pages/__init__.py`
+  - `tools/web_pages/capcom_fightingground_battle_system.py`
+  - `wiki/sources/capcom-official-fightingground-battle-system.md`
+  - `wiki/reviews/2026-06-10-capcom-fightingground-battle-system-capture-review.md`
+- 更新:
+  - `wiki/concepts/drive-system.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Fighting Ground ページ全体ではなく、Battle System に関係する `BATTLE SYSTEM DESIGN`、`DRIVE GAUGE`、`COMMON SYSTEM`、`simpleOperationImage` modal だけを scoped raw として保存した。
+  - `SOUND ACCESSIBILITY`、`CHARACTER DAMAGE`、`Real Time Commentary`、`CONTROL TYPE`、`BATTLE CONTENTS` は保存対象から外した。
+  - full page HTML、full Next.js data JSON、page chunk JS は保存せず、`source-provenance.json` に response metadata と hash だけを残した。
+  - Canonical raw は `api/source-text.scoped.json` と `rendered/*.dom.json`。表示証拠として `screenshots/*.png`、必要な画像 asset と `assets/manifest.json` を保存した。
+  - Next.js build ID は `8PI3Oj_9ikUinAmp3j_yf`。source の公開更新日時は未取得なので、`captured_at_utc` と build ID を由来情報として扱う。
+- 検証:
+  - `python -m tools.web_pages.capcom_fightingground_battle_system --repo-root .`
+  - `validation.json` は `passed`。期待 text key 34 件、4 件の scoped DOM、4 枚の screenshot、14 件の asset download を確認した。
+  - modal screenshot を目視確認し、ゲーム画面画像と 6 件の UI 説明が表示されていることを確認した。
+- 未解決事項:
+  - Web page capture で scoped raw を作る場合、除外 section 名を manifest policy に残すだけで十分か。
+  - `COMMON SYSTEM` の command icon refs を binary asset として保存しない運用でよいか。
+
 ## [2026-06-10] raw/schema | SuperCombo glossary Web page raw と更新可能 raw 方針
 - 原本:
   - `https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary`
