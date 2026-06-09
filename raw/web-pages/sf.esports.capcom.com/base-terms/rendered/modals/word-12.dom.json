@@ -1,0 +1,58 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "無敵技 【むてきわざ】 「ここで無敵技のぶっぱなし！窮地を脱出した！！」 相手の攻撃を受け付けない無敵時間が付与される技のこと。 不利な状況を切り返すのに有用だが、当たらなかった場合は相手に大きな隙を晒すことになる。 運に頼った無敵技はぶっぱなし・パナすとも呼ばれる。 攻撃を一切受けない完全無敵以外にも、打撃無敵、投げ無敵、飛び道具無敵など特定の属性にのみ無敵が付与されている技もある。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">無敵技</p>\n            <p class=\"word__kana\">【むてきわざ】</p>\n          </div>\n          <video src=\"./assets/mp4/word12.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「ここで無敵技のぶっぱなし！窮地を脱出した！！」</p>\n          </div>\n          <p class=\"description\">\n                    相手の攻撃を受け付けない<span>無敵時間</span>が付与される技のこと。<br>\n                    不利な状況を切り返すのに有用だが、当たらなかった場合は相手に大きな隙を晒すことになる。<br>\n                    運に頼った無敵技は<span>ぶっぱなし・パナす</span>とも呼ばれる。<br>\n                    攻撃を一切受けない<span>完全無敵</span>以外にも、<span>打撃無敵、投げ無敵、飛び道具無敵</span>など特定の属性にのみ無敵が付与されている技もある。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "無敵技",
+  "kana_text": "【むてきわざ】",
+  "usage_text": "「ここで無敵技のぶっぱなし！窮地を脱出した！！」",
+  "description_text": "相手の攻撃を受け付けない無敵時間が付与される技のこと。 不利な状況を切り返すのに有用だが、当たらなかった場合は相手に大きな隙を晒すことになる。 運に頼った無敵技はぶっぱなし・パナすとも呼ばれる。 攻撃を一切受けない完全無敵以外にも、打撃無敵、投げ無敵、飛び道具無敵など特定の属性にのみ無敵が付与されている技もある。",
+  "description_highlight_texts": [
+    "無敵時間",
+    "ぶっぱなし・パナす",
+    "完全無敵",
+    "打撃無敵、投げ無敵、飛び道具無敵"
+  ],
+  "video": {
+    "src": "./assets/mp4/word12.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word12.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-12",
+  "term_index": 12,
+  "expected_word_text": "無敵技",
+  "expected_modal_video": "word12.mp4",
+  "captured_at_utc": "2026-06-09T17:48:25Z",
+  "text_sha256": "sha256:2cd13e44386920605ac118720ac66427b5534e1a7c5cd4d3fd199823a63c47a3",
+  "outer_html_sha256": "sha256:385057472545ed616bf0b7a97e305d551fbf437fc823b876e339408a6ff47168"
+}

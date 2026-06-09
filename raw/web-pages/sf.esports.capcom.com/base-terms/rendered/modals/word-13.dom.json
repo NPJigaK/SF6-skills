@@ -1,0 +1,59 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "有利フレーム 【ゆうりふれーむ】 「有利フレームを活かして固めていくっ！」 フレームとは時間の単位のことで、1フレームは60分の1秒。 有利フレーム(＋)とは相手に攻撃をヒットやガードさせた時に、自分が先に動き出せる時間のこと。 相手が先に動ける時間は不利フレーム(－)と呼ぶ。 すべての技に個別にフレームが設定されているが、ドライブラッシュからの通常技は有利フレーム(＋)が増えるので、非常に強力だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">有利フレーム</p>\n            <p class=\"word__kana\">【ゆうりふれーむ】</p>\n          </div>\n          <video src=\"./assets/mp4/word13.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「有利フレームを活かして固めていくっ！」</p>\n          </div>\n          <p class=\"description\">\n                    フレームとは時間の単位のことで、1フレームは<span>60分の1秒。</span><br>\n                    <span>有利フレーム(＋)</span>とは相手に攻撃をヒットやガードさせた時に、自分が<span>先に動き出せる時間</span>のこと。<br>\n                    相手が先に動ける時間は<span>不利フレーム(－)</span>と呼ぶ。<br>\n                    すべての技に個別にフレームが設定されているが、ドライブラッシュからの通常技は<span>有利フレーム(＋)が増える</span>ので、非常に強力だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "有利フレーム",
+  "kana_text": "【ゆうりふれーむ】",
+  "usage_text": "「有利フレームを活かして固めていくっ！」",
+  "description_text": "フレームとは時間の単位のことで、1フレームは60分の1秒。 有利フレーム(＋)とは相手に攻撃をヒットやガードさせた時に、自分が先に動き出せる時間のこと。 相手が先に動ける時間は不利フレーム(－)と呼ぶ。 すべての技に個別にフレームが設定されているが、ドライブラッシュからの通常技は有利フレーム(＋)が増えるので、非常に強力だ。",
+  "description_highlight_texts": [
+    "60分の1秒。",
+    "有利フレーム(＋)",
+    "先に動き出せる時間",
+    "不利フレーム(－)",
+    "有利フレーム(＋)が増える"
+  ],
+  "video": {
+    "src": "./assets/mp4/word13.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word13.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-13",
+  "term_index": 13,
+  "expected_word_text": "有利フレーム",
+  "expected_modal_video": "word13.mp4",
+  "captured_at_utc": "2026-06-09T17:48:26Z",
+  "text_sha256": "sha256:1f8473ef57cde955116a2089d698211d69ca891b37874281ea536446c14fd2a5",
+  "outer_html_sha256": "sha256:0324f8d7b4cf91c828d72d672c0ba590a84e5b7f5dd8eea9eb1a4253a2286f76"
+}

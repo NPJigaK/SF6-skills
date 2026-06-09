@@ -1,0 +1,58 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "パニッシュカウンター 【ぱにっしゅかうんたー】 「お仕置きパニッシュカウンター！高火力コンボに繋いでいく！！」 技の発生前（出掛かり）にヒットするとカウンター、 技の発生後（戻り際）にヒットするとパニッシュカウンター、通称パニカンとなる。 両者共に通常ヒットよりダメージが1.2倍となる上に、 カウンターで+2、パニカンで+4と有利フレームが増えるため通常では繋がらないコンボも可能になる。 さらにパニカンはヒットさせると相手のドライブゲージも削ることが出来るぞ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">パニッシュカウンター</p>\n            <p class=\"word__kana\">【ぱにっしゅかうんたー】</p>\n          </div>\n          <video src=\"./assets/mp4/word10.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>\n                      「お仕置きパニッシュカウンター！高火力コンボに繋いでいく！！」\n                    </p>\n          </div>\n          <p class=\"description\">\n                    技の発生前（出掛かり）にヒットすると<span>カウンター</span>、\n                    技の発生後（戻り際）にヒットすると<span>パニッシュカウンター</span>、通称<span>パニカン</span>となる。<br>\n                    両者共に通常ヒットより<span>ダメージが1.2倍</span>となる上に、\n                    カウンターで+2、パニカンで+4と有利フレームが増えるため通常では繋がらないコンボも可能になる。<br>\n                    さらにパニカンはヒットさせると相手のドライブゲージも削ることが出来るぞ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "パニッシュカウンター",
+  "kana_text": "【ぱにっしゅかうんたー】",
+  "usage_text": "「お仕置きパニッシュカウンター！高火力コンボに繋いでいく！！」",
+  "description_text": "技の発生前（出掛かり）にヒットするとカウンター、 技の発生後（戻り際）にヒットするとパニッシュカウンター、通称パニカンとなる。 両者共に通常ヒットよりダメージが1.2倍となる上に、 カウンターで+2、パニカンで+4と有利フレームが増えるため通常では繋がらないコンボも可能になる。 さらにパニカンはヒットさせると相手のドライブゲージも削ることが出来るぞ。",
+  "description_highlight_texts": [
+    "カウンター",
+    "パニッシュカウンター",
+    "パニカン",
+    "ダメージが1.2倍"
+  ],
+  "video": {
+    "src": "./assets/mp4/word10.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word10.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-10",
+  "term_index": 10,
+  "expected_word_text": "パニッシュカウンター",
+  "expected_modal_video": "word10.mp4",
+  "captured_at_utc": "2026-06-09T17:48:24Z",
+  "text_sha256": "sha256:bd6ed10049902e1e980b31849312233433da3789b5c51aedf03ce492aa9aac67",
+  "outer_html_sha256": "sha256:8ccfcaa434b50a6099b6b0ccbb2eac5026cb41d1154debf2523ea8499ad71e15"
+}

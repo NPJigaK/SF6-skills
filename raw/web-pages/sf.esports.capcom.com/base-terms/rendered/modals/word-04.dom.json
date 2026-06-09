@@ -1,0 +1,59 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "めくり 【めくり】 「この跳びはめくりになっているぞ！崩し成功！！」 主にジャンプ攻撃時に相手の背中付近を狙い、ガード方向を惑わせるテクニックのこと。 ガードを逆方向に入れなければならない状況を作り出す、強力な崩し手段のひとつ。 成功した場合は画面にCROSS UPと表記が出るぞ。 めくりへの対抗策のひとつとして、ドライブパリィを駆使することで表ガードでも逆ガードでも両対応することが可能。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">めくり</p>\n            <p class=\"word__kana\">【めくり】</p>\n          </div>\n          <video src=\"./assets/mp4/word4.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「この跳びはめくりになっているぞ！崩し成功！！」</p>\n          </div>\n          <p class=\"description\">\n                    主にジャンプ攻撃時に相手の背中付近を狙い、ガード方向を惑わせるテクニックのこと。<br>\n                    <span>ガードを逆方向に入れなければならない</span>状況を作り出す、強力な崩し手段のひとつ。<br>\n                    成功した場合は画面に<span>CROSS UP</span>と表記が出るぞ。<br>\n                    めくりへの対抗策のひとつとして、<span>ドライブパリィ</span>を駆使することで<span>表ガード</span>でも<span>逆ガード</span>でも両対応することが可能。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "めくり",
+  "kana_text": "【めくり】",
+  "usage_text": "「この跳びはめくりになっているぞ！崩し成功！！」",
+  "description_text": "主にジャンプ攻撃時に相手の背中付近を狙い、ガード方向を惑わせるテクニックのこと。 ガードを逆方向に入れなければならない状況を作り出す、強力な崩し手段のひとつ。 成功した場合は画面にCROSS UPと表記が出るぞ。 めくりへの対抗策のひとつとして、ドライブパリィを駆使することで表ガードでも逆ガードでも両対応することが可能。",
+  "description_highlight_texts": [
+    "ガードを逆方向に入れなければならない",
+    "CROSS UP",
+    "ドライブパリィ",
+    "表ガード",
+    "逆ガード"
+  ],
+  "video": {
+    "src": "./assets/mp4/word4.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word4.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-04",
+  "term_index": 4,
+  "expected_word_text": "めくり",
+  "expected_modal_video": "word4.mp4",
+  "captured_at_utc": "2026-06-09T17:48:20Z",
+  "text_sha256": "sha256:93b7a78f9020afeaf8baf0a26ac1938d3c86d835dae492059d9ba323438160c8",
+  "outer_html_sha256": "sha256:81aad9c6c4d5473adc3284fc57f467ad16d88a3e8fd283a0fdfef07ebe3ef73f"
+}

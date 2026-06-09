@@ -1,0 +1,60 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "補正切り 【ほせいぎり】 「まさかの補正切り！欲張りさんっ！」 コンボを長く繋げるほどダメージに補正がかかり、一発のダメージが減少していく仕組みのことをコンボ補正という。 あえて一度コンボを止めることでコンボ補正をリセットする行為を補正切りと呼ぶ。ダブルアップとも呼ばれる。 コンボミスしてしまった際に相手の暴れを意図せず潰して補正切りの形になることもある。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">補正切り</p>\n            <p class=\"word__kana\">【ほせいぎり】</p>\n          </div>\n          <video src=\"./assets/mp4/word22.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「まさかの補正切り！欲張りさんっ！」</p>\n          </div>\n          <p class=\"description\">\n                    コンボを長く繋げるほどダメージに補正がかかり、<span>一発のダメージが減少していく</span>仕組みのことを<span>コンボ補正</span>という。<br>\n                    あえて一度コンボを止めることでコンボ補正を<span>リセット</span>する行為を<span>補正切り</span>と呼ぶ。<span>ダブルアップ</span>とも呼ばれる。<br>\n                    コンボミスしてしまった際に相手の暴れを意図せず潰して<span>補正切りの形</span>になることもある。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "補正切り",
+  "kana_text": "【ほせいぎり】",
+  "usage_text": "「まさかの補正切り！欲張りさんっ！」",
+  "description_text": "コンボを長く繋げるほどダメージに補正がかかり、一発のダメージが減少していく仕組みのことをコンボ補正という。 あえて一度コンボを止めることでコンボ補正をリセットする行為を補正切りと呼ぶ。ダブルアップとも呼ばれる。 コンボミスしてしまった際に相手の暴れを意図せず潰して補正切りの形になることもある。",
+  "description_highlight_texts": [
+    "一発のダメージが減少していく",
+    "コンボ補正",
+    "リセット",
+    "補正切り",
+    "ダブルアップ",
+    "補正切りの形"
+  ],
+  "video": {
+    "src": "./assets/mp4/word22.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word22.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-22",
+  "term_index": 22,
+  "expected_word_text": "補正切り",
+  "expected_modal_video": "word22.mp4",
+  "captured_at_utc": "2026-06-09T17:48:31Z",
+  "text_sha256": "sha256:11908e0f400b1d183f181b11cf8f5269413b5d911029ffcf54c2686dad5ec400",
+  "outer_html_sha256": "sha256:a6dc26adf81bee64fa0048a4a6e8aabfe0f36ca5ab2623a330b94a5d2b10db24"
+}

@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "スタン 【すたん】 「ここでスターン！大ダメージ確定だ！！」 ピヨるとも呼ばれる、無防備な状態のこと。 相手がバーンアウト状態時にドライブインパクトをガードさせてふっ飛ばし画面端に到達した時にスタン状態にすることが出来る。 スタンした相手にはコンボで大ダメージのチャンスだ。 スタン後はバーンアウト状態が解除されるぞ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">スタン</p>\n            <p class=\"word__kana\">【すたん】</p>\n          </div>\n          <video src=\"./assets/mp4/word1.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「ここでスターン！大ダメージ確定だ！！」</p>\n          </div>\n          <p class=\"description\">\n                    <span>ピヨる</span>とも呼ばれる、無防備な状態のこと。<br>\n                    相手がバーンアウト状態時に<span>ドライブインパクトをガード</span>させてふっ飛ばし<span>画面端に到達した時に</span>スタン状態にすることが出来る。<br>\n                    スタンした相手にはコンボで大ダメージのチャンスだ。<br>\n                    スタン後はバーンアウト状態が解除されるぞ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "スタン",
+  "kana_text": "【すたん】",
+  "usage_text": "「ここでスターン！大ダメージ確定だ！！」",
+  "description_text": "ピヨるとも呼ばれる、無防備な状態のこと。 相手がバーンアウト状態時にドライブインパクトをガードさせてふっ飛ばし画面端に到達した時にスタン状態にすることが出来る。 スタンした相手にはコンボで大ダメージのチャンスだ。 スタン後はバーンアウト状態が解除されるぞ。",
+  "description_highlight_texts": [
+    "ピヨる",
+    "ドライブインパクトをガード",
+    "画面端に到達した時に"
+  ],
+  "video": {
+    "src": "./assets/mp4/word1.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word1.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-01",
+  "term_index": 1,
+  "expected_word_text": "スタン",
+  "expected_modal_video": "word1.mp4",
+  "captured_at_utc": "2026-06-09T17:48:19Z",
+  "text_sha256": "sha256:01e0c87c25d1412473cf0ceb7ca9880a5700b42233dfe1d73609df65eff1cbcd",
+  "outer_html_sha256": "sha256:7ab543bf0d3207814731a84412caef92a84e08e350a3e4343e8c320ae3e98d4c"
+}

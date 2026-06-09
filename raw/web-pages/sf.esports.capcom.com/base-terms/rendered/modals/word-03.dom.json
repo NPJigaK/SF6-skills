@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "画面端 【がめんはし】 「画面端に到達！逃げ場は無いっ！！」 画面端は逃げ場がなく、コンボの火力もアップするとても危険な場所。 ドライブインパクトをガードした際に画面端に到達した場合は壁やられ状態になり追撃を食らってしまう。 さらにバーンアウト状態だった場合はスタン状態に陥ってしまう。 安易に画面端に行かないようにラインを上げるのは対戦における重要項目だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">画面端</p>\n            <p class=\"word__kana\">【がめんはし】</p>\n          </div>\n          <video src=\"./assets/mp4/word3.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「画面端に到達！逃げ場は無いっ！！」</p>\n          </div>\n          <p class=\"description\">\n                    画面端は逃げ場がなく、コンボの火力もアップするとても危険な場所。<br>\n                    ドライブインパクトをガードした際に画面端に到達した場合は<span>壁やられ状態</span>になり追撃を食らってしまう。<br>\n                    さらにバーンアウト状態だった場合は<span>スタン状態</span>に陥ってしまう。<br>\n                    安易に画面端に行かないように<span>ラインを上げる</span>のは対戦における重要項目だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "画面端",
+  "kana_text": "【がめんはし】",
+  "usage_text": "「画面端に到達！逃げ場は無いっ！！」",
+  "description_text": "画面端は逃げ場がなく、コンボの火力もアップするとても危険な場所。 ドライブインパクトをガードした際に画面端に到達した場合は壁やられ状態になり追撃を食らってしまう。 さらにバーンアウト状態だった場合はスタン状態に陥ってしまう。 安易に画面端に行かないようにラインを上げるのは対戦における重要項目だ。",
+  "description_highlight_texts": [
+    "壁やられ状態",
+    "スタン状態",
+    "ラインを上げる"
+  ],
+  "video": {
+    "src": "./assets/mp4/word3.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word3.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 854,
+    "height": 480
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-03",
+  "term_index": 3,
+  "expected_word_text": "画面端",
+  "expected_modal_video": "word3.mp4",
+  "captured_at_utc": "2026-06-09T17:48:20Z",
+  "text_sha256": "sha256:0b71dc67345dd62195cf57518a9d5fdf738b9600a21534aa062d67bde2683325",
+  "outer_html_sha256": "sha256:bbf32addadc3934cef2a10e9040f927fedb2167589763617a688a0279912ff3a"
+}

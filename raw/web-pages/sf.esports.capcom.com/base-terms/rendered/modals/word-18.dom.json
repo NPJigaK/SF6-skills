@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "ヒット確認 【ひっとかくにん】 「ヒット確認の精度が高すぎるっ！！」 繰り出した通常技がヒットしているのを確認して、ヒット時のみキャンセル必殺技に繋ぐことでコンボにすること。 ヒットかガードかを一瞬で見極める必要のある高難度テクニック。 ヒットの際の演出で判断せずに直前の相手の動きを見て確認する状況確認や、ヒットを信じてボタンを押すヒット確信などという派生語もある。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">ヒット確認</p>\n            <p class=\"word__kana\">【ひっとかくにん】</p>\n          </div>\n          <video src=\"./assets/mp4/word18.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「ヒット確認の精度が高すぎるっ！！」</p>\n          </div>\n          <p class=\"description\">\n                    繰り出した通常技がヒットしているのを確認して、<span>ヒット時のみキャンセル必殺技に繋ぐ</span>ことでコンボにすること。<br>\n                    ヒットかガードかを一瞬で見極める必要のある高難度テクニック。<br>\n                    ヒットの際の演出で判断せずに直前の相手の動きを見て確認する<span>状況確認</span>や、ヒットを信じてボタンを押す<span>ヒット確信</span>などという派生語もある。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "ヒット確認",
+  "kana_text": "【ひっとかくにん】",
+  "usage_text": "「ヒット確認の精度が高すぎるっ！！」",
+  "description_text": "繰り出した通常技がヒットしているのを確認して、ヒット時のみキャンセル必殺技に繋ぐことでコンボにすること。 ヒットかガードかを一瞬で見極める必要のある高難度テクニック。 ヒットの際の演出で判断せずに直前の相手の動きを見て確認する状況確認や、ヒットを信じてボタンを押すヒット確信などという派生語もある。",
+  "description_highlight_texts": [
+    "ヒット時のみキャンセル必殺技に繋ぐ",
+    "状況確認",
+    "ヒット確信"
+  ],
+  "video": {
+    "src": "./assets/mp4/word18.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word18.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-18",
+  "term_index": 18,
+  "expected_word_text": "ヒット確認",
+  "expected_modal_video": "word18.mp4",
+  "captured_at_utc": "2026-06-09T17:48:29Z",
+  "text_sha256": "sha256:13698614ef60fffe587b75fe2f706b6bd0c190ac0f72c8b7d6e358f5e880462b",
+  "outer_html_sha256": "sha256:009abaeb67a203d152a2bb6a2b9ce722d840093a6dc803d0b7ce118fe329e77b"
+}

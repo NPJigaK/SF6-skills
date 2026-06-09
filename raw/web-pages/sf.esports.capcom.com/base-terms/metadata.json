@@ -1,0 +1,77 @@
+{
+  "metadata_schema_version": "capcom_esports_base_terms_metadata/v1",
+  "created_at_utc": "2026-06-09T17:48:40Z",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "publisher": "Capcom",
+  "game": "Street Fighter 6",
+  "locale": "ja-jp",
+  "page_title": "CPT/SFLがもっと楽しくなる！ CAPCOM eSports BASE | CAPCOM",
+  "term_count": 23,
+  "groups": [
+    {
+      "group_index": 0,
+      "priority_label": "重要度 ★★★",
+      "priority_stars": 3,
+      "title_html": "絶対に覚えておきたいワード",
+      "title_text": "絶対に覚えておきたいワード",
+      "term_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "group_index": 1,
+      "priority_label": "重要度 ★★",
+      "priority_stars": 2,
+      "title_html": "試合がさらに面白くなるワード！",
+      "title_text": "試合がさらに面白くなるワード！",
+      "term_indices": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "group_index": 2,
+      "priority_label": "重要度 ★",
+      "priority_stars": 1,
+      "title_html": "試合をより深く楽しむためのワード！",
+      "title_text": "試合をより深く楽しむためのワード！",
+      "term_indices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    }
+  ],
+  "asset_policy": {
+    "included": [
+      "assets/img/thumb_word*.jpg",
+      "assets/img/icon_mic.png",
+      "assets/mp4/word*.mp4"
+    ],
+    "excluded": [
+      "movie list assets",
+      "consult assets",
+      "logos",
+      "page chrome",
+      "full page CSS and JS"
+    ]
+  }
+}

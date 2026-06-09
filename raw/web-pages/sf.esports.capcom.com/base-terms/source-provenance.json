@@ -1,0 +1,272 @@
+{
+  "provenance_schema_version": "capcom_esports_base_terms_provenance/v1",
+  "created_at_utc": "2026-06-09T17:48:40Z",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "page_js_url": "https://sf.esports.capcom.com/base/assets/js/page.js",
+  "source_scope": "capcom_esports_base_words_only",
+  "fetcher": {
+    "static": "scrapling.fetchers.Fetcher",
+    "rendered": "scrapling.fetchers.DynamicFetcher",
+    "asset": "scrapling.fetchers.Fetcher"
+  },
+  "responses": {
+    "page": {
+      "url": "https://sf.esports.capcom.com/base/",
+      "final_url": "https://sf.esports.capcom.com/base/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html",
+        "date": "Tue, 09 Jun 2026 15:41:13 GMT",
+        "last-modified": "Tue, 11 Nov 2025 06:17:24 GMT",
+        "server": "AmazonS3",
+        "x-amz-server-side-encryption": "AES256",
+        "content-encoding": "gzip",
+        "etag": "W/\"e1bc2bbd4e610686ddf9d6e362d5aef4\"",
+        "vary": "Accept-Encoding",
+        "x-cache": "Hit from cloudfront",
+        "via": "1.1 0faeaf783ed8eff257a8ebce44c8928a.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "NRT57-P1",
+        "x-amz-cf-id": "CFvWGMBUS15oFUFx12K7ptwltflxkY6cFunQHvmJdt0TjUr4si3zMQ==",
+        "age": "7622"
+      },
+      "byte_count": 75848,
+      "sha256": "sha256:08ea39206cd428066ad086375d1fbcdb5a6c29ce884db29588740667c9f7a8c5"
+    },
+    "page_js": {
+      "url": "https://sf.esports.capcom.com/base/assets/js/page.js",
+      "final_url": "https://sf.esports.capcom.com/base/assets/js/page.js",
+      "status": 200,
+      "headers": {
+        "content-type": "application/javascript",
+        "date": "Tue, 09 Jun 2026 02:16:58 GMT",
+        "last-modified": "Tue, 11 Nov 2025 06:17:24 GMT",
+        "server": "AmazonS3",
+        "x-amz-server-side-encryption": "AES256",
+        "content-encoding": "gzip",
+        "etag": "W/\"a58ad63f03c94455031b750cacb32c62\"",
+        "vary": "Accept-Encoding",
+        "x-cache": "Hit from cloudfront",
+        "via": "1.1 7637a60a07b64cdf45697b2f5cacacee.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "NRT57-P1",
+        "x-amz-cf-id": "rG-4KlLjD7Z3nKcBsTIQh0oWLkDm5RUo8EadvAbzmi3uFpeYiYBhHQ==",
+        "age": "55877"
+      },
+      "byte_count": 44394,
+      "sha256": "sha256:bfe12bf6df16767917310881e391d2fb0e7ecf90b54a2949b74d7f0b4df4fd02"
+    },
+    "rendered_fetch": {
+      "url": "https://sf.esports.capcom.com/base/",
+      "final_url": "https://sf.esports.capcom.com/base/",
+      "status": 200,
+      "headers": {
+        "age": "7623",
+        "content-encoding": "gzip",
+        "content-type": "text/html",
+        "date": "Tue, 09 Jun 2026 15:41:13 GMT",
+        "etag": "W/\"e1bc2bbd4e610686ddf9d6e362d5aef4\"",
+        "last-modified": "Tue, 11 Nov 2025 06:17:24 GMT",
+        "server": "AmazonS3",
+        "vary": "Accept-Encoding",
+        "via": "1.1 ed660413ff270347fb9b6515f92c8576.cloudfront.net (CloudFront)",
+        "x-amz-cf-id": "WDtjeDZXbIz4a-iKL6piRANogF_5PXlEzBDPq7W-Z6ISbMcZvf6i9w==",
+        "x-amz-cf-pop": "NRT57-P1",
+        "x-amz-server-side-encryption": "AES256",
+        "x-cache": "Hit from cloudfront"
+      },
+      "byte_count": 216158
+    }
+  },
+  "source_artifacts": {
+    "word_section_raw_html": "source/word-section.raw.html",
+    "modal_open_close_raw_js": "source/modal-open-close.raw.js",
+    "terms_raw_json": "api/terms.raw.json"
+  },
+  "rendered_artifacts": {
+    "word_section": {
+      "word-section": "rendered/word-section.dom.json"
+    },
+    "modals": [
+      {
+        "term_id": "word-00",
+        "term_index": 0,
+        "path": "rendered/modals/word-00.dom.json",
+        "word_text": "削り",
+        "video_src": "./assets/mp4/word0.mp4"
+      },
+      {
+        "term_id": "word-01",
+        "term_index": 1,
+        "path": "rendered/modals/word-01.dom.json",
+        "word_text": "スタン",
+        "video_src": "./assets/mp4/word1.mp4"
+      },
+      {
+        "term_id": "word-02",
+        "term_index": 2,
+        "path": "rendered/modals/word-02.dom.json",
+        "word_text": "対空",
+        "video_src": "./assets/mp4/word2.mp4"
+      },
+      {
+        "term_id": "word-03",
+        "term_index": 3,
+        "path": "rendered/modals/word-03.dom.json",
+        "word_text": "画面端",
+        "video_src": "./assets/mp4/word3.mp4"
+      },
+      {
+        "term_id": "word-04",
+        "term_index": 4,
+        "path": "rendered/modals/word-04.dom.json",
+        "word_text": "めくり",
+        "video_src": "./assets/mp4/word4.mp4"
+      },
+      {
+        "term_id": "word-05",
+        "term_index": 5,
+        "path": "rendered/modals/word-05.dom.json",
+        "word_text": "コマ投げ",
+        "video_src": "./assets/mp4/word5.mp4"
+      },
+      {
+        "term_id": "word-06",
+        "term_index": 6,
+        "path": "rendered/modals/word-06.dom.json",
+        "word_text": "生ラッシュ",
+        "video_src": "./assets/mp4/word6.mp4"
+      },
+      {
+        "term_id": "word-07",
+        "term_index": 7,
+        "path": "rendered/modals/word-07.dom.json",
+        "word_text": "インパクト返し",
+        "video_src": "./assets/mp4/word7.mp4"
+      },
+      {
+        "term_id": "word-08",
+        "term_index": 8,
+        "path": "rendered/modals/word-08.dom.json",
+        "word_text": "ジャストパリィ",
+        "video_src": "./assets/mp4/word8.mp4"
+      },
+      {
+        "term_id": "word-09",
+        "term_index": 9,
+        "path": "rendered/modals/word-09.dom.json",
+        "word_text": "起き攻め",
+        "video_src": "./assets/mp4/word9.mp4"
+      },
+      {
+        "term_id": "word-10",
+        "term_index": 10,
+        "path": "rendered/modals/word-10.dom.json",
+        "word_text": "パニッシュカウンター",
+        "video_src": "./assets/mp4/word10.mp4"
+      },
+      {
+        "term_id": "word-11",
+        "term_index": 11,
+        "path": "rendered/modals/word-11.dom.json",
+        "word_text": "差し返し",
+        "video_src": "./assets/mp4/word11.mp4"
+      },
+      {
+        "term_id": "word-12",
+        "term_index": 12,
+        "path": "rendered/modals/word-12.dom.json",
+        "word_text": "無敵技",
+        "video_src": "./assets/mp4/word12.mp4"
+      },
+      {
+        "term_id": "word-13",
+        "term_index": 13,
+        "path": "rendered/modals/word-13.dom.json",
+        "word_text": "有利フレーム",
+        "video_src": "./assets/mp4/word13.mp4"
+      },
+      {
+        "term_id": "word-14",
+        "term_index": 14,
+        "path": "rendered/modals/word-14.dom.json",
+        "word_text": "重ね",
+        "video_src": "./assets/mp4/word14.mp4"
+      },
+      {
+        "term_id": "word-15",
+        "term_index": 15,
+        "path": "rendered/modals/word-15.dom.json",
+        "word_text": "リーサル",
+        "video_src": "./assets/mp4/word15.mp4"
+      },
+      {
+        "term_id": "word-16",
+        "term_index": 16,
+        "path": "rendered/modals/word-16.dom.json",
+        "word_text": "仕込み",
+        "video_src": "./assets/mp4/word16.mp4"
+      },
+      {
+        "term_id": "word-17",
+        "term_index": 17,
+        "path": "rendered/modals/word-17.dom.json",
+        "word_text": "確定反撃",
+        "video_src": "./assets/mp4/word17.mp4"
+      },
+      {
+        "term_id": "word-18",
+        "term_index": 18,
+        "path": "rendered/modals/word-18.dom.json",
+        "word_text": "ヒット確認",
+        "video_src": "./assets/mp4/word18.mp4"
+      },
+      {
+        "term_id": "word-19",
+        "term_index": 19,
+        "path": "rendered/modals/word-19.dom.json",
+        "word_text": "シミー",
+        "video_src": "./assets/mp4/word19.mp4"
+      },
+      {
+        "term_id": "word-20",
+        "term_index": 20,
+        "path": "rendered/modals/word-20.dom.json",
+        "word_text": "セットプレイ",
+        "video_src": "./assets/mp4/word20.mp4"
+      },
+      {
+        "term_id": "word-21",
+        "term_index": 21,
+        "path": "rendered/modals/word-21.dom.json",
+        "word_text": "暴れ",
+        "video_src": "./assets/mp4/word21.mp4"
+      },
+      {
+        "term_id": "word-22",
+        "term_index": 22,
+        "path": "rendered/modals/word-22.dom.json",
+        "word_text": "補正切り",
+        "video_src": "./assets/mp4/word22.mp4"
+      }
+    ],
+    "screenshots": {
+      "word-section": {
+        "path": "screenshots/word-section.png",
+        "sha256": "sha256:285655bcb43a2260842715448306320c188aff5147c3a8d8233f9c09836cc8f6",
+        "byte_count": 1088296,
+        "width": 2560,
+        "height": 6788
+      },
+      "modal-word-00": {
+        "path": "screenshots/modal-word-00.png",
+        "sha256": "sha256:a5e6f629f8b91976ba907fb2ab618d03ed0539fd4bcfaec18f2694cab0bb79a6",
+        "byte_count": 1205822,
+        "width": 2560,
+        "height": 1440
+      }
+    }
+  },
+  "scope_notes": [
+    "The page HTML and page.js were fetched only to extract the scoped word section and modal video rule.",
+    "The fetched full page and full JavaScript source were not stored as raw artifacts to avoid unrelated page data."
+  ]
+}

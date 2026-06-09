@@ -1,0 +1,60 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "重ね 【かさね】 「起き攻め！しっかりと重なっている！」 相手のダウン起き上がり時に、起き上がるタイミングに合わせて投げ（投げ重ね）や打撃（打撃重ね）を出すこと。埋めるとも言う。 噛み合えば、相手の起き上がりの選択肢をいくつか潰すことが出来る。 また技によっては良いタイミングで重ねることで持続当てとなってガード後に通常よりも有利フレームを得ることも出来る。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">重ね</p>\n            <p class=\"word__kana\">【かさね】</p>\n          </div>\n          <video src=\"./assets/mp4/word14.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「起き攻め！しっかりと重なっている！」</p>\n          </div>\n          <p class=\"description\">\n                    相手のダウン起き上がり時に、<span>起き上がるタイミングに合わせて</span>投げ（<span>投げ重ね</span>）や打撃（<span>打撃重ね</span>）を出すこと。<span>埋める</span>とも言う。<br>\n                    噛み合えば、相手の起き上がりの選択肢をいくつか潰すことが出来る。<br>\n                    また技によっては良いタイミングで重ねることで<span>持続当て</span>となってガード後に通常よりも<span>有利フレーム</span>を得ることも出来る。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "重ね",
+  "kana_text": "【かさね】",
+  "usage_text": "「起き攻め！しっかりと重なっている！」",
+  "description_text": "相手のダウン起き上がり時に、起き上がるタイミングに合わせて投げ（投げ重ね）や打撃（打撃重ね）を出すこと。埋めるとも言う。 噛み合えば、相手の起き上がりの選択肢をいくつか潰すことが出来る。 また技によっては良いタイミングで重ねることで持続当てとなってガード後に通常よりも有利フレームを得ることも出来る。",
+  "description_highlight_texts": [
+    "起き上がるタイミングに合わせて",
+    "投げ重ね",
+    "打撃重ね",
+    "埋める",
+    "持続当て",
+    "有利フレーム"
+  ],
+  "video": {
+    "src": "./assets/mp4/word14.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word14.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-14",
+  "term_index": 14,
+  "expected_word_text": "重ね",
+  "expected_modal_video": "word14.mp4",
+  "captured_at_utc": "2026-06-09T17:48:26Z",
+  "text_sha256": "sha256:e3a09251453eb0082c93451eec7fc21e6b96ce9409e14f1ada001d58f272943e",
+  "outer_html_sha256": "sha256:80c325894ee020f48d7aa3e93b856a3b21dda035a8bb8a6b4a712d7cf4e30556"
+}

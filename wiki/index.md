@@ -22,6 +22,7 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 |---|---|---|---|
 | SuperCombo glossary | `raw/web-pages/wiki.supercombo.gg/glossary/manifest.json` | `page.raw.wikitext`; 表示証拠は `page.html`、`rendered/tables.dom.json`; notation template は `templates/combo-legend-sf6.raw.wikitext` | `storage_policy: updateable_web_page_capture`; page revid `351898`; `Template:ComboLegend-SF6` revid `283225`; `source_updated_at` 2026-01-31T11:22:26Z; `captured_at_utc` 2026-06-09T13:47:52Z |
 | Capcom Fighting Ground Battle System | `raw/web-pages/www.streetfighter.com/fightingground-battle-system/manifest.json` | `api/source-text.scoped.json`; `rendered/battle-system-design.dom.json`, `rendered/drive-gauge.dom.json`, `rendered/common-system.dom.json`, `rendered/simple-operation-modal.dom.json`; 表示証拠は `screenshots/*.png` | `storage_policy: updateable_web_page_capture`; scoped source `fightingground_battle_system_only`; Next.js build ID `8PI3Oj_9ikUinAmp3j_yf`; `captured_at_utc` 2026-06-09T17:13:40Z |
+| Capcom eSports BASE terms | `raw/web-pages/sf.esports.capcom.com/base-terms/manifest.json` | `source/word-section.raw.html`; `source/modal-open-close.raw.js`; `api/terms.raw.json`; `rendered/word-section.dom.json`; `rendered/modals/`; thumbnail と modal mp4 assets | `storage_policy: updateable_web_page_capture`; scoped source `capcom_esports_base_words_only`; page HTML / JS Last-Modified `2025-11-11T06:17:24Z`; `captured_at_utc` 2026-06-09T17:48:14Z |
 
 ## Frame-data Raw 配置
 
@@ -42,6 +43,7 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 |---|---|---:|---|---|
 | [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。`raw/web-pages/` capture は MediaWiki wikitext、HTML、rendered DOM、Notation Glossary の template 依存を保持する。旧 Obsidian clipping は削除済み。 | 2026-01-31 | wiki_page | active |
 | [[sources/capcom-official-fightingground-battle-system]] | Capcom 公式 Fighting Ground ページの Battle System scoped capture。Drive Gauge、Common System、ゲーム画面説明 modal を保持し、accessibility / damage / commentary / control type / battle contents は保存しない。 | 2026-06-09 | official_scoped_web_page_capture | active |
+| [[sources/capcom-esports-base-terms]] | Capcom 公式 CAPCOM eSports BASE の CPT/SFL 観戦向け用語解説 scoped capture。実況ワード解説 23 語、3段階重要度、thumbnail / modal mp4 / modal DOM を保持し、page 全体は保存しない。 | 2025-11-11 | official_scoped_web_page_capture | active |
 | [[sources/supercombo-street-fighter-6-frame-data-batch]] | SuperCombo Wiki の Street Fighter 6 frame-data 30キャラ batch capture。raw wikitext、Cargo API、DOM、5タブ screenshot、公式 Classic との派生 output を含む。Source freshness は各 manifest の `source_updated_at` で 2026-05-30 から 2026-06-02 に分布する。 | 2026-05-30..2026-06-02 | community_frame_data | active |
 | [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/jp/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 123 件を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/ryu/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 133 件、conditional variant link を含む community source。 | 2026-05-30 | community_frame_data | active |
@@ -83,8 +85,9 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 
 | Page | Summary | Related |
 |---|---|---|
-| [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。Capcom 公式 Fighting Ground source で Battle System 範囲の根拠を追加した。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo 30キャラ community raw 取得データ、公式 + SuperCombo 補助列付き output、最新ミラー raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
+| [[concepts/terms/index]] | SF6 用語の統合 index。Capcom eSports BASE 由来の 23 語を個別 term page に昇格し、今後の公式 / community source claims を用語ごとに集約する。 | [[concepts/drive-system]], [[concepts/frame-data]], [[entities/street-fighter-6]] |
+| [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。Capcom 公式 Fighting Ground source と eSports BASE 用語解説で Battle System / 観戦用語の根拠を追加した。 | [[concepts/terms/index]], [[concepts/frame-data]], [[entities/street-fighter-6]] |
+| [[concepts/frame-data]] | 技の timing/property vocabulary、Capcom 公式 eSports BASE の frame / counter / hit confirm 観戦用語、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo 30キャラ community raw 取得データ、公式 + SuperCombo 補助列付き output、最新ミラー raw 配置方針。 | [[concepts/terms/index]], [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit などの community terms。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。SuperCombo glossary では `ComboLegend-SF6` template に由来する。 | [[concepts/frame-data]] |
 
@@ -92,9 +95,9 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary、公式 Fighting Ground Battle System、公式 frame-data sources、公式 Battle Change List、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
+| [[entities/street-fighter-6]] | glossary、公式 CAPCOM eSports BASE 用語解説、23 term pages、公式 Fighting Ground Battle System、公式 frame-data sources、公式 Battle Change List、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
 | [[entities/supercombo-wiki]] | glossary と 30キャラ分の SuperCombo frame-data raw 取得データ、公式補助 output の source である community wiki。 | other |
-| [[entities/capcom]] | 公式 Street Fighter 6 Fighting Ground Battle System、frame-data sources、Battle Change List の publisher。 | company |
+| [[entities/capcom]] | 公式 Street Fighter 6 eSports BASE 用語解説、Fighting Ground Battle System、frame-data sources、Battle Change List の publisher。 | company |
 | [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
 | [[entities/luke]] | Luke（ルーク）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
 | [[entities/jamie]] | Jamie（ジェイミー）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
@@ -221,3 +224,4 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 | [[reviews/2026-06-07-official-battle-change-capture-review]] | capture_validation | Capcom 公式 Battle Change List 20 update version capture の自動検証レビュー。raw HTML / Next.js data JSON は artifact hash と payload 一致を通過し、派生 change rows は 1820 行。 | open |
 | [[reviews/2026-06-09-supercombo-glossary-web-page-capture-review]] | capture_validation | SuperCombo glossary を `raw/web-pages/` 試験 layout で取得。MediaWiki wikitext を canonical raw 取得物、HTML / rendered DOM を表示構造の証拠として保存した。 | open |
 | [[reviews/2026-06-10-capcom-fightingground-battle-system-capture-review]] | capture_validation | Capcom 公式 Fighting Ground ページから Battle System 範囲だけを scoped raw capture。validation は passed、full HTML / full Next.js data / page chunk は保存しない。 | open |
+| [[reviews/2026-06-10-capcom-esports-base-terms-capture-review]] | capture_validation | Capcom 公式 CAPCOM eSports BASE から実況ワード解説 23 語だけを scoped raw capture。validation は passed、full page HTML / JS は保存しない。 | open |

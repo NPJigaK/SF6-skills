@@ -1,0 +1,39 @@
+{
+  "validation_schema_version": "capcom_esports_base_terms_validation/v1",
+  "created_at_utc": "2026-06-09T17:48:40Z",
+  "status": "passed",
+  "checks": {
+    "no_full_page_html_saved": true,
+    "no_full_page_js_saved": true,
+    "word_section_raw_html_exists": true,
+    "modal_js_snippet_exists": true,
+    "modal_js_contains_generated_video_rule": true,
+    "term_count_23": true,
+    "term_indices_contiguous": true,
+    "all_terms_have_core_text": true,
+    "all_terms_have_thumbnail_and_video_paths": true,
+    "groups_cover_all_terms": true,
+    "downloaded_assets_expected_count": true,
+    "asset_downloads_ok": true,
+    "assets_exist": true,
+    "assets_exclude_unwanted_page_families": true,
+    "modal_dom_count_23": true,
+    "modal_words_match_terms": true,
+    "modal_video_srcs_match_indices": true,
+    "rendered_section_dom_exists": true,
+    "word_section_screenshot_exists": true,
+    "first_modal_screenshot_exists": true
+  },
+  "summary": {
+    "term_count": 23,
+    "group_count": 3,
+    "downloaded_asset_count": 47,
+    "asset_failure_count": 0,
+    "modal_dom_count": 23,
+    "scope_policy": "capcom_esports_base_words_only"
+  },
+  "notes": [
+    "Scoped raw capture covers only the CAPCOM eSports BASE word explanation section.",
+    "Full page HTML, full page JavaScript, movie list assets, consult assets, logos, and unrelated page chrome were intentionally not stored."
+  ]
+}

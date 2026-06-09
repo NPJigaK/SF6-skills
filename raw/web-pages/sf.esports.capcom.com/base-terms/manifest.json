@@ -1,0 +1,386 @@
+{
+  "manifest_schema_version": "capcom_esports_base_terms_manifest/v1",
+  "raw_root": "raw/web-pages/sf.esports.capcom.com/base-terms",
+  "source_family": "web_page",
+  "source_slug": "sf.esports.capcom.com/base-terms",
+  "domain": "sf.esports.capcom.com",
+  "page_slug": "base-terms",
+  "publisher": "Capcom",
+  "platform": "static_html_javascript",
+  "page_title": "CPT/SFLがもっと楽しくなる！ CAPCOM eSports BASE | CAPCOM",
+  "source_type": "official_scoped_web_page_capture",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "page_js_url": "https://sf.esports.capcom.com/base/assets/js/page.js",
+  "captured_at_utc": "2026-06-09T17:48:14Z",
+  "capture_label": "2026-06-09",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "http_capture_hashes",
+    "page_html_sha256": "sha256:08ea39206cd428066ad086375d1fbcdb5a6c29ce884db29588740667c9f7a8c5",
+    "page_js_sha256": "sha256:bfe12bf6df16767917310881e391d2fb0e7ecf90b54a2949b74d7f0b4df4fd02",
+    "page_html_last_modified": "Tue, 11 Nov 2025 06:17:24 GMT",
+    "page_js_last_modified": "Tue, 11 Nov 2025 06:17:24 GMT"
+  },
+  "canonical_source_artifacts": [
+    "source/word-section.raw.html",
+    "source/modal-open-close.raw.js",
+    "api/terms.raw.json",
+    "rendered/word-section.dom.json",
+    "rendered/modals/"
+  ],
+  "display_evidence_artifacts": [
+    "screenshots/word-section.png",
+    "screenshots/modal-word-00.png"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "asset_manifest": "assets/manifest.json",
+  "scope_policy": {
+    "id": "capcom_esports_base_words_only",
+    "included_sections": [
+      "実況ワード解説 / word explanation section",
+      "word card source HTML",
+      "clicked word modal DOM for each term",
+      "word thumbnails",
+      "word modal mp4 files",
+      "microphone icon used by term usage text"
+    ],
+    "excluded_sections": [
+      "top page hero",
+      "news and external links",
+      "movie list outside the word section",
+      "consult / coaching content",
+      "logos, page chrome, and unrelated images"
+    ],
+    "full_source_artifacts_intentionally_not_stored": [
+      "page.html",
+      "source/page.raw.js",
+      "full CSS"
+    ]
+  },
+  "artifact_hashes": {
+    "api/terms.raw.json": {
+      "sha256": "sha256:af0424ab96bb5dd953fafac67cd59954ac025b3162b8f6f5f09812539918e2db",
+      "bytes": 96953
+    },
+    "assets/img/icon_mic.png": {
+      "sha256": "sha256:d5d7dd5992818b484babeeb2016eceeeeab9bf08456bc36a685d65b4f5011002",
+      "bytes": 3243
+    },
+    "assets/img/thumb_word0.jpg": {
+      "sha256": "sha256:ce56f05d8000a2f8ab9d0405bb9b8a0442a84fbb6e10c1e86232447bd64e76c3",
+      "bytes": 120548
+    },
+    "assets/img/thumb_word1.jpg": {
+      "sha256": "sha256:4375d7796a510ff3d2f7f7fea475d5c65261dfc2c8c1e09f14b3c5b5a6e91671",
+      "bytes": 122543
+    },
+    "assets/img/thumb_word10.jpg": {
+      "sha256": "sha256:beded948fc54e53350956a110fd844e86ffc561a4cc33af62fdf030319099091",
+      "bytes": 113109
+    },
+    "assets/img/thumb_word11.jpg": {
+      "sha256": "sha256:1fdb6ec30052b774fa6efebf9912a68923c8906685561eed5a51ba104fee60f1",
+      "bytes": 107943
+    },
+    "assets/img/thumb_word12.jpg": {
+      "sha256": "sha256:066203c9807aae8cd60afbe792b08e88b7c2110b84dc01ef06db6f388776d938",
+      "bytes": 120011
+    },
+    "assets/img/thumb_word13.jpg": {
+      "sha256": "sha256:f178542fec7e878df5a62060e6a42f432449ca5f4abeab71eabc78e4836de77c",
+      "bytes": 151305
+    },
+    "assets/img/thumb_word14.jpg": {
+      "sha256": "sha256:865691c6de568059f7665a24efaa92d32ce30e4fd89d30a80453aa3f5c06cb50",
+      "bytes": 137498
+    },
+    "assets/img/thumb_word15.jpg": {
+      "sha256": "sha256:a3172b6ef72456e6b6a68882679841da3e771dfd3b0401abba72f7c96c477cc1",
+      "bytes": 120030
+    },
+    "assets/img/thumb_word16.jpg": {
+      "sha256": "sha256:6d5cd18e91fd536724607bb5dd3941393f2a8f681bf5880f627026788b7e7778",
+      "bytes": 119734
+    },
+    "assets/img/thumb_word17.jpg": {
+      "sha256": "sha256:883f202c6d9cf5ed748ce9f2040aac4efca19e9c6a3443fc2365da0db3aeb231",
+      "bytes": 136036
+    },
+    "assets/img/thumb_word18.jpg": {
+      "sha256": "sha256:7231d16d51dae3028bc4a058d5e207682de87292b25320403d87077ea088d728",
+      "bytes": 108573
+    },
+    "assets/img/thumb_word19.jpg": {
+      "sha256": "sha256:5f851d91fa76628f6b1390aca2ae16b8decffc1a2fc15834ec0cd4df1ba024db",
+      "bytes": 119231
+    },
+    "assets/img/thumb_word2.jpg": {
+      "sha256": "sha256:a999c7e2e6f6e6290b39878fc1b02bff0caf86f2750f496203e741e6c827f01d",
+      "bytes": 93566
+    },
+    "assets/img/thumb_word20.jpg": {
+      "sha256": "sha256:ca494f5ab9154678f1a6f0ee168fb7977da32e7c762736b997811fd00af35ef4",
+      "bytes": 136804
+    },
+    "assets/img/thumb_word21.jpg": {
+      "sha256": "sha256:3966a3627567dd070a632a80f38321124015c2b0357ae990249977a5dcb008bd",
+      "bytes": 138460
+    },
+    "assets/img/thumb_word22.jpg": {
+      "sha256": "sha256:a21029a83d6c2ed3b4652324fca43131289d51dbae12fd06071a29f16991ef09",
+      "bytes": 147358
+    },
+    "assets/img/thumb_word3.jpg": {
+      "sha256": "sha256:b88540ae46c0c7968bb141a5b7faccb49703880463e01904ea127261601410f2",
+      "bytes": 126232
+    },
+    "assets/img/thumb_word4.jpg": {
+      "sha256": "sha256:502005e398f300b85574cc5f3c4a947e8c64f38558afc875e167a5623a5886a1",
+      "bytes": 113934
+    },
+    "assets/img/thumb_word5.jpg": {
+      "sha256": "sha256:dd2b690ee803fea328693e26063e3c141891913c7ec738fb70e245731d9dbd38",
+      "bytes": 93384
+    },
+    "assets/img/thumb_word6.jpg": {
+      "sha256": "sha256:c35bc67c396300fb1a5e0026c3b3db650fc024de9fbe08db519d38b592280f13",
+      "bytes": 119261
+    },
+    "assets/img/thumb_word7.jpg": {
+      "sha256": "sha256:8a6887e2aaa4c9ef17405ea2d89c84dfa9cbc49e92fda41956dbf5ec31317dd7",
+      "bytes": 142168
+    },
+    "assets/img/thumb_word8.jpg": {
+      "sha256": "sha256:bdac1365d5a031dce0df3757b79170ce14553f1e424ddeeb36e94713cc4f9192",
+      "bytes": 110791
+    },
+    "assets/img/thumb_word9.jpg": {
+      "sha256": "sha256:23437a0f201903ece9ff76641f9c4eb358ae9426366b1243d24923ede4662295",
+      "bytes": 125720
+    },
+    "assets/manifest.json": {
+      "sha256": "sha256:df883c35965c6c16824f9cf2d06054cbc34d5b76a18af68f6a1647411c81208f",
+      "bytes": 61316
+    },
+    "assets/mp4/word0.mp4": {
+      "sha256": "sha256:ed49e42a2bc2448a2d4fb3f5b66c58ff730a0835f18e3f58ad0e3d12a7c923fe",
+      "bytes": 1710493
+    },
+    "assets/mp4/word1.mp4": {
+      "sha256": "sha256:7add7c6de4fcce70b75195ddeb2a957e0b55eb214c32602249f264bc5a81f40a",
+      "bytes": 2073473
+    },
+    "assets/mp4/word10.mp4": {
+      "sha256": "sha256:761891a73457e33802565a061a25dcb97033eac14b2825d599e616c7d029ec7f",
+      "bytes": 2314146
+    },
+    "assets/mp4/word11.mp4": {
+      "sha256": "sha256:57d75b7f0ae9946a4135ac13a572fd66bdf33b3b13a4e243c7a054ca3b829dac",
+      "bytes": 1918259
+    },
+    "assets/mp4/word12.mp4": {
+      "sha256": "sha256:31c185614dd4a6247effe60da696a04589730270bcb3e69a7b01e2f74000709f",
+      "bytes": 2530406
+    },
+    "assets/mp4/word13.mp4": {
+      "sha256": "sha256:fdb9b7e321f7eb1b8a28c8dc75dc46567853315e0c42705b6d52f0b8cabaf704",
+      "bytes": 3117119
+    },
+    "assets/mp4/word14.mp4": {
+      "sha256": "sha256:79da5401002b8152a97bff99d7cbba2d1d3b9a1185894ffc46597fb9a3438700",
+      "bytes": 2979898
+    },
+    "assets/mp4/word15.mp4": {
+      "sha256": "sha256:13e567ea070b80dcf3b48d39980c9d0d8b10661e5e3edf1bedadba0001458ba8",
+      "bytes": 2580577
+    },
+    "assets/mp4/word16.mp4": {
+      "sha256": "sha256:476c4bd40c070aa7217a03dcce41336fae7fbfb8c2ddf8a8c7d3c181309ee756",
+      "bytes": 2939473
+    },
+    "assets/mp4/word17.mp4": {
+      "sha256": "sha256:0aa2f28b8775bfe763764cc6cb2143dc7ad3298dbc8f1d8c1abe06cf42878966",
+      "bytes": 2478266
+    },
+    "assets/mp4/word18.mp4": {
+      "sha256": "sha256:fa02f742ef7f12f249d994cf51b24abb4f65c4b8b86adce3c8b1528cf5fad4ba",
+      "bytes": 1883673
+    },
+    "assets/mp4/word19.mp4": {
+      "sha256": "sha256:4ada6a14cbee6dc4fc26f105f350701ea85ed234bf0629ebec0a446d424b7133",
+      "bytes": 2736170
+    },
+    "assets/mp4/word2.mp4": {
+      "sha256": "sha256:d68a8446106d453de1818c3718bf9c3f7a6b431d39f6e0a71f9acef9d28c2c66",
+      "bytes": 1992018
+    },
+    "assets/mp4/word20.mp4": {
+      "sha256": "sha256:c041cb299fd56ef19a11614f6372e962455d9e1a7ce183c17effb42f05468f27",
+      "bytes": 2665538
+    },
+    "assets/mp4/word21.mp4": {
+      "sha256": "sha256:9032075b3f55837269353056b992a008da9c24503b265866138a31fad3325d94",
+      "bytes": 3332058
+    },
+    "assets/mp4/word22.mp4": {
+      "sha256": "sha256:e72413c0ccb07b8c198d32ee0644b0e60b61322e698392fa2854d825068985d5",
+      "bytes": 3488219
+    },
+    "assets/mp4/word3.mp4": {
+      "sha256": "sha256:2296deaa542003dd0b86229884f5f9144ddf441f540c41d7756a529e57acd77f",
+      "bytes": 2752679
+    },
+    "assets/mp4/word4.mp4": {
+      "sha256": "sha256:be563c5325c36e45d08525b1779cef94385dd78ca12be3c3aee212d8222b5d1a",
+      "bytes": 1503606
+    },
+    "assets/mp4/word5.mp4": {
+      "sha256": "sha256:5d5f415441c43ef9e6b2dda5ea023ca68740d4ced381dd4989afbcfd18b5c9f5",
+      "bytes": 1486361
+    },
+    "assets/mp4/word6.mp4": {
+      "sha256": "sha256:a5f4f56325299a1d6942187683b4be29e084d66f80b57c14445c1c1e9355a495",
+      "bytes": 1801293
+    },
+    "assets/mp4/word7.mp4": {
+      "sha256": "sha256:f20a29594b14b2e8bbd59daeba682d9e979c6b4d541f30ebb013e26b82418a92",
+      "bytes": 1729303
+    },
+    "assets/mp4/word8.mp4": {
+      "sha256": "sha256:074de6abf2aa0ed7c9959c651715208cb62b533a30a9332b0e5726d924dd7042",
+      "bytes": 1576177
+    },
+    "assets/mp4/word9.mp4": {
+      "sha256": "sha256:0e3ad5f7c2fe40de8ca144c5752a0514b71f78c28cea0540e5a4668ee2559a1d",
+      "bytes": 1791806
+    },
+    "metadata.json": {
+      "sha256": "sha256:d862577d0c8417cd958a7f73e4a9c5495042e0158e17f9d2797f19a599b63e41",
+      "bytes": 1884
+    },
+    "rendered/modals/word-00.dom.json": {
+      "sha256": "sha256:966b8afcd71a1fc9611bfa8036196009ddc3ff30417f4c6b392e3963ec8615b8",
+      "bytes": 4038
+    },
+    "rendered/modals/word-01.dom.json": {
+      "sha256": "sha256:176c577021f1e932e0794630aa0e759bab3c2ba38fd4005ac2df71dd3ce4d416",
+      "bytes": 3981
+    },
+    "rendered/modals/word-02.dom.json": {
+      "sha256": "sha256:9a373b4d36338f3c04e1615b0fc4a25d691e8da2b029146f8d52c029a0c65b7c",
+      "bytes": 4012
+    },
+    "rendered/modals/word-03.dom.json": {
+      "sha256": "sha256:d26495678c346fe61b2226d0c6b9d9dde9878b02b42e7faa3c4f1c98012dbdbb",
+      "bytes": 4136
+    },
+    "rendered/modals/word-04.dom.json": {
+      "sha256": "sha256:4dd0b1f460ee39c7fe1aeccfde2d3befe2c90197f8f15913ac027548f3c77ca6",
+      "bytes": 4339
+    },
+    "rendered/modals/word-05.dom.json": {
+      "sha256": "sha256:22af41d032cafde9936389ef78909ac98ea1e0c2b63a61fee0754e55414c5d4a",
+      "bytes": 4143
+    },
+    "rendered/modals/word-06.dom.json": {
+      "sha256": "sha256:491cf9b4db7138a7954dba3a7f578804b69719f00a11cf733bd89ba24c79304f",
+      "bytes": 4093
+    },
+    "rendered/modals/word-07.dom.json": {
+      "sha256": "sha256:846f7366a80e06eb4f66b64de42e7ce02f8e5bb602e92f70e9b2838c57ceb0b7",
+      "bytes": 4159
+    },
+    "rendered/modals/word-08.dom.json": {
+      "sha256": "sha256:95ffa4f18d075f9aab15edd38d1a34caa4507ed81c4b31fceb75591e4f1a91c6",
+      "bytes": 4345
+    },
+    "rendered/modals/word-09.dom.json": {
+      "sha256": "sha256:5442b4c85812773d8d346773f3400a2c8e7d7cfd0d50d1183d607de01f0d2db7",
+      "bytes": 4228
+    },
+    "rendered/modals/word-10.dom.json": {
+      "sha256": "sha256:62885c4b3063e5cd804f314494c3244b6f99c66118c13c942d31a3a1e399f4cf",
+      "bytes": 4701
+    },
+    "rendered/modals/word-11.dom.json": {
+      "sha256": "sha256:1b77c7087a4dbf369d6ed063dd18234f1f122dec9e96d8ac7b532295e7d5b622",
+      "bytes": 4310
+    },
+    "rendered/modals/word-12.dom.json": {
+      "sha256": "sha256:7ab4fd0dd6c3633756702715bfb8dd67055e87cae321603ddb0d86c477c4f4f8",
+      "bytes": 4344
+    },
+    "rendered/modals/word-13.dom.json": {
+      "sha256": "sha256:302c6a51ada26e85884b41f7ef5a043c3b2c924e7db01bc5270181581d43bbbe",
+      "bytes": 4402
+    },
+    "rendered/modals/word-14.dom.json": {
+      "sha256": "sha256:c97e67cdb86d758fe64fd318f4b7bd37fcdea1671fed233ed7729b7a23380812",
+      "bytes": 4240
+    },
+    "rendered/modals/word-15.dom.json": {
+      "sha256": "sha256:55eecd9e6f817e132098d1676f32562cb8ecdf539e5f9a355e6377d6bda12f86",
+      "bytes": 4202
+    },
+    "rendered/modals/word-16.dom.json": {
+      "sha256": "sha256:3a69d34f35f76ae7add839497e84280eef75a71e4e0005001966c447d7f1ec65",
+      "bytes": 4440
+    },
+    "rendered/modals/word-17.dom.json": {
+      "sha256": "sha256:6afdbfc83e1a440bfeeacb3eb4bc8367e1df10fcde05ad078dcd626fea13fb7f",
+      "bytes": 3783
+    },
+    "rendered/modals/word-18.dom.json": {
+      "sha256": "sha256:3c86215e2dca41e06e93c7d2245e8a50c6fecb201dda9eb91d8243127d60e8ef",
+      "bytes": 4198
+    },
+    "rendered/modals/word-19.dom.json": {
+      "sha256": "sha256:02b7a1a6088e87c62fc18325ad8c56c85301e4e74c4964f010ce4d5aa0bfe093",
+      "bytes": 3967
+    },
+    "rendered/modals/word-20.dom.json": {
+      "sha256": "sha256:5f45193569ce4d98ae46e5c57b268395b13d84e4b5caa7e0cbd266e239ddd789",
+      "bytes": 4149
+    },
+    "rendered/modals/word-21.dom.json": {
+      "sha256": "sha256:07508308f3e39d47f958937512a7cc2086958b630d146ce557b89a8c72edf363",
+      "bytes": 3974
+    },
+    "rendered/modals/word-22.dom.json": {
+      "sha256": "sha256:ac268cff8a4e87fffc3c7b45e3523e887bec86f0af3bd9ffcc36e7ec78620fd2",
+      "bytes": 4255
+    },
+    "rendered/word-section.dom.json": {
+      "sha256": "sha256:14d9fe8608b9c38696cf542d2670c4edec97a30ca599c01e478a3d3c908d6942",
+      "bytes": 50387
+    },
+    "screenshots/modal-word-00.png": {
+      "sha256": "sha256:a5e6f629f8b91976ba907fb2ab618d03ed0539fd4bcfaec18f2694cab0bb79a6",
+      "bytes": 1205822
+    },
+    "screenshots/word-section.png": {
+      "sha256": "sha256:285655bcb43a2260842715448306320c188aff5147c3a8d8233f9c09836cc8f6",
+      "bytes": 1088296
+    },
+    "source/modal-open-close.raw.js": {
+      "sha256": "sha256:62706ef2506a8c2c121fe2f8f5b71e9e05cdd8ac5d7cf14d2bb8e430894c4d14",
+      "bytes": 963
+    },
+    "source/word-section.raw.html": {
+      "sha256": "sha256:7ccb4b9cea5acee6178196b4fe7b518b0f44d90ccf5e64c3002976f1d89c15ae",
+      "bytes": 39421
+    },
+    "source-provenance.json": {
+      "sha256": "sha256:0827c79f5f5dc02f2dc56ac226fbed9519c77fdbf86fc611551579c96108f58b",
+      "bytes": 9384
+    },
+    "validation.json": {
+      "sha256": "sha256:6e17c595f684017ec44bb4fb44568933b55073dae9787cfa653abc1e583c9f22",
+      "bytes": 1446
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "validation_status": "passed",
+  "tool": "tools/web_pages/capcom_esports_base_terms.py"
+}

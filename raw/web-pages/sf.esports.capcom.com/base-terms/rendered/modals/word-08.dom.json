@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "ジャストパリィ 【じゃすとぱりぃ】 「この連携をジャストパリィ！！反撃の狼煙が上がった～！！」 相手の攻撃をタイミングよくパリィで受け止めると発生するのがジャストパリィだ。 その猶予はわずか2フレーム（0.03秒）。 成功するとスロー演出となり反撃に向け有利な時間が増加する。 決まれば攻守交代に有用だが、ジャストパリィ後はダメージ補正が50％乗ってしまうので、その後のコンボの威力は落ちてしまう。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">ジャストパリィ</p>\n            <p class=\"word__kana\">【じゃすとぱりぃ】</p>\n          </div>\n          <video src=\"./assets/mp4/word8.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>\n                      「この連携をジャストパリィ！！反撃の狼煙が上がった～！！」\n                    </p>\n          </div>\n          <p class=\"description\">\n                    相手の攻撃をタイミングよく<span>パリィ</span>で受け止めると発生するのがジャストパリィだ。<br>\n                    その猶予はわずか<span>2フレーム</span>（0.03秒）。<br>\n                    成功するとスロー演出となり反撃に向け有利な時間が増加する。<br>\n                    決まれば攻守交代に有用だが、ジャストパリィ後は<span>ダメージ補正が50％乗ってしまう</span>ので、その後のコンボの威力は落ちてしまう。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "ジャストパリィ",
+  "kana_text": "【じゃすとぱりぃ】",
+  "usage_text": "「この連携をジャストパリィ！！反撃の狼煙が上がった～！！」",
+  "description_text": "相手の攻撃をタイミングよくパリィで受け止めると発生するのがジャストパリィだ。 その猶予はわずか2フレーム（0.03秒）。 成功するとスロー演出となり反撃に向け有利な時間が増加する。 決まれば攻守交代に有用だが、ジャストパリィ後はダメージ補正が50％乗ってしまうので、その後のコンボの威力は落ちてしまう。",
+  "description_highlight_texts": [
+    "パリィ",
+    "2フレーム",
+    "ダメージ補正が50％乗ってしまう"
+  ],
+  "video": {
+    "src": "./assets/mp4/word8.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word8.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-08",
+  "term_index": 8,
+  "expected_word_text": "ジャストパリィ",
+  "expected_modal_video": "word8.mp4",
+  "captured_at_utc": "2026-06-09T17:48:23Z",
+  "text_sha256": "sha256:884358842aadd9aec1a1cadc554c3197db18c7f4ee1d44649c9bb531f86bc55f",
+  "outer_html_sha256": "sha256:d0596a7b5ee29c5a67f952f235ee010dc3596a062f51d85f94778d95113cee7f"
+}

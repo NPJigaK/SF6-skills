@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "コマ投げ 【こまなげ】 「太い選択肢！コマ投げを通していく！！」 コマンド投げのこと。 特定のキャラが持っている必殺技投げのこと。 通常投げに対しては投げ抜けが有効だが、コマンド投げは投げ抜けすることが出来ない。 ダメージも大きいため非常に強力だが、読み切られたら垂直跳びやバックステップなどで回避され、フルコンボを食らってしまう覚悟が必要な諸刃の剣だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">コマ投げ</p>\n            <p class=\"word__kana\">【こまなげ】</p>\n          </div>\n          <video src=\"./assets/mp4/word5.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「太い選択肢！コマ投げを通していく！！」</p>\n          </div>\n          <p class=\"description\">\n                    <span>コマンド投げ</span>のこと。<br>\n                    特定のキャラが持っている<span>必殺技投げ</span>のこと。<br>\n                    通常投げに対しては投げ抜けが有効だが、コマンド投げは<span>投げ抜けすることが出来ない。</span><br>\n                    ダメージも大きいため非常に強力だが、読み切られたら垂直跳びやバックステップなどで回避され、フルコンボを食らってしまう覚悟が必要な諸刃の剣だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "コマ投げ",
+  "kana_text": "【こまなげ】",
+  "usage_text": "「太い選択肢！コマ投げを通していく！！」",
+  "description_text": "コマンド投げのこと。 特定のキャラが持っている必殺技投げのこと。 通常投げに対しては投げ抜けが有効だが、コマンド投げは投げ抜けすることが出来ない。 ダメージも大きいため非常に強力だが、読み切られたら垂直跳びやバックステップなどで回避され、フルコンボを食らってしまう覚悟が必要な諸刃の剣だ。",
+  "description_highlight_texts": [
+    "コマンド投げ",
+    "必殺技投げ",
+    "投げ抜けすることが出来ない。"
+  ],
+  "video": {
+    "src": "./assets/mp4/word5.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word5.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-05",
+  "term_index": 5,
+  "expected_word_text": "コマ投げ",
+  "expected_modal_video": "word5.mp4",
+  "captured_at_utc": "2026-06-09T17:48:21Z",
+  "text_sha256": "sha256:bc44d98803dae4ecd1c2dd3b3a97a489f5d9c624e5b882d6eee17cbe55b532c2",
+  "outer_html_sha256": "sha256:5f17022ed694d808c3465e9d79637969069c515d5c97ac5e8b073fa5e4049bc6"
+}

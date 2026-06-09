@@ -1,0 +1,59 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "仕込み 【しこみ】 「小技にはドライブラッシュが仕込まれていたーっ！」 キャンセル可能な通常技を相手に届かない間合いで振り（置き技）、モーション中に必殺技コマンドを入力しておくことで、相手に通常技が届いた場合のみ必殺技が出るテクニック。 キャンセルで出せる行動であれば必殺技以外も仕込むことが可能。 相手の仕込みに対しては、歩きガードなどで間合いをコントロールし、仕込み漏れを誘発するのも有効な対策だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">仕込み</p>\n            <p class=\"word__kana\">【しこみ】</p>\n          </div>\n          <video src=\"./assets/mp4/word16.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「小技にはドライブラッシュが仕込まれていたーっ！」</p>\n          </div>\n          <p class=\"description\">\n                    キャンセル可能な通常技を相手に届かない間合いで振り（<span>置き技</span>）、モーション中に<span>必殺技コマンドを入力</span>しておくことで、<span>相手に通常技が届いた場合のみ必殺技が出る</span>テクニック。<br>\n                    キャンセルで出せる行動であれば必殺技以外も仕込むことが可能。<br>\n                    相手の仕込みに対しては、<span>歩きガード</span>などで間合いをコントロールし、<span>仕込み漏れ</span>を誘発するのも有効な対策だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "仕込み",
+  "kana_text": "【しこみ】",
+  "usage_text": "「小技にはドライブラッシュが仕込まれていたーっ！」",
+  "description_text": "キャンセル可能な通常技を相手に届かない間合いで振り（置き技）、モーション中に必殺技コマンドを入力しておくことで、相手に通常技が届いた場合のみ必殺技が出るテクニック。 キャンセルで出せる行動であれば必殺技以外も仕込むことが可能。 相手の仕込みに対しては、歩きガードなどで間合いをコントロールし、仕込み漏れを誘発するのも有効な対策だ。",
+  "description_highlight_texts": [
+    "置き技",
+    "必殺技コマンドを入力",
+    "相手に通常技が届いた場合のみ必殺技が出る",
+    "歩きガード",
+    "仕込み漏れ"
+  ],
+  "video": {
+    "src": "./assets/mp4/word16.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word16.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-16",
+  "term_index": 16,
+  "expected_word_text": "仕込み",
+  "expected_modal_video": "word16.mp4",
+  "captured_at_utc": "2026-06-09T17:48:28Z",
+  "text_sha256": "sha256:9aed5cdfd0908ffe769dc5236d971984821dadefc55a5b085e54cb173c0eff3b",
+  "outer_html_sha256": "sha256:58a6a06e60b40075c403a796b6f441b29c7b9c92a78188a8cb8e2c82536c6bb3"
+}

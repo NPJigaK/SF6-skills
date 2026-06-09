@@ -5,6 +5,7 @@ created: 2026-05-26
 updated: 2026-06-10
 status: active
 sources:
+  - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/capcom-official-fightingground-battle-system]]"
   - "[[sources/capcom-official-ryu-frame-data]]"
   - "[[sources/capcom-official-luke-frame-data]]"
@@ -39,6 +40,7 @@ sources:
   - "[[sources/capcom-official-battle-change-list]]"
 related:
   - "[[entities/street-fighter-6]]"
+  - "[[concepts/terms/index]]"
   - "[[concepts/frame-data]]"
 aliases:
   - "カプコン"
@@ -52,7 +54,7 @@ tags:
 
 ## 要約
 
-Capcom は、この wiki に保存されている Street Fighter 6 公式 Fighting Ground Battle System source、公式フレームデータ source、公式 Battle Change List source の publisher。
+Capcom は、この wiki に保存されている Street Fighter 6 公式 eSports BASE 用語解説、公式 Fighting Ground Battle System source、公式フレームデータ source、公式 Battle Change List source の publisher。
 
 ## 年表
 
@@ -90,10 +92,12 @@ Capcom は、この wiki に保存されている Street Fighter 6 公式 Fighti
 | 2026-05-30 | Ingrid（イングリッド） の公式 frame-data page を raw snapshot として保存した。 | [[sources/capcom-official-ingrid-frame-data]] |
 | 2026-06-07 | Buckler's Boot Camp の公式 Battle Change List を 20 update version 分 raw capture した。 | [[sources/capcom-official-battle-change-list]] |
 | 2026-06-10 | 公式 Fighting Ground ページの Battle System 範囲を scoped raw capture として保存した。 | [[sources/capcom-official-fightingground-battle-system]] |
+| 2026-06-10 | CAPCOM eSports BASE の `実況ワード解説` セクションを scoped raw capture として保存した。 | [[sources/capcom-esports-base-terms]] |
 
 ## 関連する主張
 
 - 公式 frame-data source の metadata は publisher を Capcom と記録している。
+- 公式 eSports BASE source は、CPT / SFL 観戦向けの Street Fighter 6 用語 23 語を重要度 3 段階で説明し、この wiki では [[concepts/terms/index]] 配下の term pages に昇格している。
 - 公式 Fighting Ground Battle System source は publisher を Capcom と記録し、Drive Gauge と Common System の公式説明を保持する。
 - source URL は `https://www.streetfighter.com/6/ja-jp/character/<character>/frame` 系列にある。
 - `gouki_akuma` と `vega_mbison` は、公式 site で table を持つ frame-data slug として扱う。
@@ -103,6 +107,7 @@ Capcom は、この wiki に保存されている Street Fighter 6 公式 Fighti
 ## 関連概念
 
 - [[concepts/frame-data]]
+- [[concepts/terms/index]]
 
 ## 未解決の質問
 

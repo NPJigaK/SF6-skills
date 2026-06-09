@@ -1,0 +1,58 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "削り 【けずり】 「バーンアウトからの削りK.O.～っ！！」 相手の攻撃をガードすると攻守の要であるドライブゲージが少しずつ削られていく。 さらにドライブゲージが0になったバーンアウト状態時に必殺技をガードしてしまうとドライブゲージの代わりに体力ゲージが削られていくぞ。 バーンアウト時は削りK.O.も可能になるので非常に危険な状態だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">削り</p>\n            <p class=\"word__kana\">【けずり】</p>\n          </div>\n          <video src=\"./assets/mp4/word0.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「バーンアウトからの削りK.O.～っ！！」</p>\n          </div>\n          <p class=\"description\">\n                    相手の攻撃をガードすると攻守の要である<span>ドライブゲージが少しずつ削られ</span>ていく。<br>\n                    さらにドライブゲージが0になった<span>バーンアウト状態時</span>に必殺技をガードしてしまうとドライブゲージの代わりに<span>体力ゲージが削られ</span>ていくぞ。<br>\n                    バーンアウト時は<span>削りK.O.</span>も可能になるので非常に危険な状態だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "削り",
+  "kana_text": "【けずり】",
+  "usage_text": "「バーンアウトからの削りK.O.～っ！！」",
+  "description_text": "相手の攻撃をガードすると攻守の要であるドライブゲージが少しずつ削られていく。 さらにドライブゲージが0になったバーンアウト状態時に必殺技をガードしてしまうとドライブゲージの代わりに体力ゲージが削られていくぞ。 バーンアウト時は削りK.O.も可能になるので非常に危険な状態だ。",
+  "description_highlight_texts": [
+    "ドライブゲージが少しずつ削られ",
+    "バーンアウト状態時",
+    "体力ゲージが削られ",
+    "削りK.O."
+  ],
+  "video": {
+    "src": "./assets/mp4/word0.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word0.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 854,
+    "height": 480
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-00",
+  "term_index": 0,
+  "expected_word_text": "削り",
+  "expected_modal_video": "word0.mp4",
+  "captured_at_utc": "2026-06-09T17:48:18Z",
+  "text_sha256": "sha256:ef2fa720cfa2485c9e97326daed2c662958b7e749cb2569d4145a9f7ea708aeb",
+  "outer_html_sha256": "sha256:dc6ed951615e8fd694f048ef93654e34730135eb4cf8458a51029c7bfd1f15a1"
+}

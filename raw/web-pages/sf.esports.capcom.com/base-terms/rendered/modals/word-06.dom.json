@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "生ラッシュ 【なまらっしゅ】 「生ラッシュで畳み掛ける～っ！！」 ドライブラッシュには発動状況が2種類あり、通常技をキャンセルして繰り出すキャンセルラッシュ（Dゲージ3消費）と、ドライブパリィの構えをキャンセルして出す生ラッシュ（Dゲージ1消費）がある。 ドライブラッシュ中は通常技の性能もアップするため、間合いを一気に詰めつつ繰り出される連携は非常に強力。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">生ラッシュ</p>\n            <p class=\"word__kana\">【なまらっしゅ】</p>\n          </div>\n          <video src=\"./assets/mp4/word6.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「生ラッシュで畳み掛ける～っ！！」</p>\n          </div>\n          <p class=\"description\">\n                    ドライブラッシュには発動状況が2種類あり、通常技をキャンセルして繰り出す<span>キャンセルラッシュ</span>（Dゲージ3消費）と、ドライブパリィの構えをキャンセルして出す<span>生ラッシュ</span>（Dゲージ1消費）がある。<br>\n                    ドライブラッシュ中は<span>通常技の性能もアップ</span>するため、間合いを一気に詰めつつ繰り出される連携は非常に強力。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "生ラッシュ",
+  "kana_text": "【なまらっしゅ】",
+  "usage_text": "「生ラッシュで畳み掛ける～っ！！」",
+  "description_text": "ドライブラッシュには発動状況が2種類あり、通常技をキャンセルして繰り出すキャンセルラッシュ（Dゲージ3消費）と、ドライブパリィの構えをキャンセルして出す生ラッシュ（Dゲージ1消費）がある。 ドライブラッシュ中は通常技の性能もアップするため、間合いを一気に詰めつつ繰り出される連携は非常に強力。",
+  "description_highlight_texts": [
+    "キャンセルラッシュ",
+    "生ラッシュ",
+    "通常技の性能もアップ"
+  ],
+  "video": {
+    "src": "./assets/mp4/word6.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word6.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-06",
+  "term_index": 6,
+  "expected_word_text": "生ラッシュ",
+  "expected_modal_video": "word6.mp4",
+  "captured_at_utc": "2026-06-09T17:48:22Z",
+  "text_sha256": "sha256:58f55555f6f75e812925693ce3fd7b1f924f78e8f7e2f4ff77da35365c5a1bd6",
+  "outer_html_sha256": "sha256:637763f1401a0f24ba6f95c37ca5e15f720fd54de6336f884b801925262543b0"
+}

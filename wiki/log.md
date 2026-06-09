@@ -2,6 +2,77 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-10] wiki-update | SF6 term pages for CAPCOM eSports BASE terms
+- 作成:
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/terms/chip-damage.md`
+  - `wiki/concepts/terms/stun.md`
+  - `wiki/concepts/terms/anti-air.md`
+  - `wiki/concepts/terms/corner.md`
+  - `wiki/concepts/terms/cross-up.md`
+  - `wiki/concepts/terms/command-throw.md`
+  - `wiki/concepts/terms/raw-drive-rush.md`
+  - `wiki/concepts/terms/drive-impact-counter.md`
+  - `wiki/concepts/terms/perfect-parry.md`
+  - `wiki/concepts/terms/oki.md`
+  - `wiki/concepts/terms/punish-counter.md`
+  - `wiki/concepts/terms/whiff-punish.md`
+  - `wiki/concepts/terms/invincible-move.md`
+  - `wiki/concepts/terms/frame-advantage.md`
+  - `wiki/concepts/terms/meaty.md`
+  - `wiki/concepts/terms/lethal.md`
+  - `wiki/concepts/terms/shikomi.md`
+  - `wiki/concepts/terms/guaranteed-punish.md`
+  - `wiki/concepts/terms/hit-confirm.md`
+  - `wiki/concepts/terms/shimmy.md`
+  - `wiki/concepts/terms/setplay.md`
+  - `wiki/concepts/terms/abare.md`
+  - `wiki/concepts/terms/scaling-reset.md`
+- 更新:
+  - `wiki/sources/capcom-esports-base-terms.md`
+  - `wiki/reviews/2026-06-10-capcom-esports-base-terms-capture-review.md`
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Capcom eSports BASE 由来の 23 語を `wiki/concepts/terms/` 配下の個別 term page に昇格した。
+  - `wiki/concepts/terms/index.md` を用語カタログとし、今後の公式 / community source claims を用語ごとに集約する方針を明記した。
+  - 英語で意味が安定している用語は `punish-counter` などの English slug、英語に置き換えると意味がずれやすい用語は `shikomi` / `abare` のような romaji slug を使った。
+  - `sources/capcom-esports-base-terms.md` の用語一覧を term page への入口に更新した。
+- 未解決事項:
+  - SuperCombo glossary などを term pages に追加統合する時、source page と term page の claim 粒度をどう分けるか。
+  - 個別 frame-data row や question page から term pages へ backlink を張る基準をどうするか。
+
+## [2026-06-10] ingest | CAPCOM eSports BASE terms scoped raw capture
+- 原本:
+  - `raw/web-pages/sf.esports.capcom.com/base-terms/manifest.json`
+  - `raw/web-pages/sf.esports.capcom.com/base-terms/api/terms.raw.json`
+- 作成:
+  - `wiki/sources/capcom-esports-base-terms.md`
+  - `wiki/reviews/2026-06-10-capcom-esports-base-terms-capture-review.md`
+- 更新:
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/capcom.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Capcom 公式 `CAPCOM eSports BASE` の `実況ワード解説` セクションだけを scoped raw として wiki に ingest した。raw 本体は既存取得物を読み、今回の wiki ingest では変更していない。
+  - Source は CPT / SFL 観戦向けの Street Fighter 6 用語 23 語を、重要度 3 段階で説明する。重要度 3 は削り、スタン、対空、画面端、めくり、コマ投げ、生ラッシュ、インパクト返し、ジャストパリィ。
+  - Canonical raw は `source/word-section.raw.html`、`source/modal-open-close.raw.js`、`api/terms.raw.json`、`rendered/word-section.dom.json`、`rendered/modals/`。表示証拠として `screenshots/word-section.png` と `screenshots/modal-word-00.png` がある。
+  - Full page HTML、full page JavaScript、movie list assets、consult / coaching assets、logos、page chrome、unrelated images は保存対象から外れている。
+  - Page HTML / page JS の HTTP `Last-Modified` は `2025-11-11T06:17:24Z`、raw 取得時刻は `2026-06-09T17:48:14Z`。
+- 検証:
+  - `validation.json` は `passed`。23 terms、3 groups、47 downloaded assets、23 modal DOM、2 screenshots を確認している。
+- 未解決事項:
+  - HTTP `Last-Modified` を source freshness として表示し続けるか、artifact metadata としてのみ扱うか。
+  - 23 語を個別 concept page に昇格する基準をどうするか。
+  - SuperCombo glossary の community terms と対応表を作るか。
+
 ## [2026-06-10] ingest | Capcom Fighting Ground Battle System scoped raw capture
 - 原本:
   - `https://www.streetfighter.com/6/ja-jp/mode/fightingground`

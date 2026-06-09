@@ -1,0 +1,58 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "起き攻め 【おきぜめ】 「画面端の起き攻めがループしてるぞ！！」 相手がダウンから起き上がるタイミングに合わせて攻撃を仕掛けること。 有利な状況から相手に選択肢を迫る強力なテクニック。 技を重ねて攻めを継続するもよし、投げと打撃の二択を迫っていくもよし、ジャンプ攻撃からガードの表裏を惑わせるもよし。 ダウンを奪うのは、起き攻めの権利を手に入れるためにも非常に重要だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">起き攻め</p>\n            <p class=\"word__kana\">【おきぜめ】</p>\n          </div>\n          <video src=\"./assets/mp4/word9.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「画面端の起き攻めがループしてるぞ！！」</p>\n          </div>\n          <p class=\"description\">\n                    相手がダウンから起き上がるタイミングに合わせて攻撃を仕掛けること。<br>\n                    有利な状況から相手に選択肢を迫る強力なテクニック。<br>\n                    <span>技を重ねて</span>攻めを継続するもよし、<span>投げと打撃の二択</span>を迫っていくもよし、ジャンプ攻撃から<span>ガードの表裏</span>を惑わせるもよし。<br>\n                    <span>ダウンを奪う</span>のは、起き攻めの権利を手に入れるためにも非常に重要だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "起き攻め",
+  "kana_text": "【おきぜめ】",
+  "usage_text": "「画面端の起き攻めがループしてるぞ！！」",
+  "description_text": "相手がダウンから起き上がるタイミングに合わせて攻撃を仕掛けること。 有利な状況から相手に選択肢を迫る強力なテクニック。 技を重ねて攻めを継続するもよし、投げと打撃の二択を迫っていくもよし、ジャンプ攻撃からガードの表裏を惑わせるもよし。 ダウンを奪うのは、起き攻めの権利を手に入れるためにも非常に重要だ。",
+  "description_highlight_texts": [
+    "技を重ねて",
+    "投げと打撃の二択",
+    "ガードの表裏",
+    "ダウンを奪う"
+  ],
+  "video": {
+    "src": "./assets/mp4/word9.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word9.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-09",
+  "term_index": 9,
+  "expected_word_text": "起き攻め",
+  "expected_modal_video": "word9.mp4",
+  "captured_at_utc": "2026-06-09T17:48:23Z",
+  "text_sha256": "sha256:bfe8a5472bfb57ac343c37f386a495f7cd6f1864b118db645ca043a20c415191",
+  "outer_html_sha256": "sha256:f76de6ca46397a899ee71fcf008f257ff6924b1b36bb6fac24c278527ed03563"
+}

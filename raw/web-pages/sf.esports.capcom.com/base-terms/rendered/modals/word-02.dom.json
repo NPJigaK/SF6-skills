@@ -1,0 +1,59 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "対空 【たいくう】 「対空キッチリ！上は見えているっ！！」 空中の相手を迎撃する攻撃。ジャンプ攻撃をキッチリ落とすことで相手は安易に跳べなくなる。 昇龍拳が代表的な対空必殺技だが、通常技対空、空対空などキャラ・状況によって種類が豊富。 相手の攻撃をパリィで受け止めて有利な状況を作るパリィ対空も場合によっては強力な選択肢だ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">対空</p>\n            <p class=\"word__kana\">【たいくう】</p>\n          </div>\n          <video src=\"./assets/mp4/word2.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「対空キッチリ！上は見えているっ！！」</p>\n          </div>\n          <p class=\"description\">\n                    空中の相手を<span>迎撃</span>する攻撃。ジャンプ攻撃をキッチリ落とすことで相手は安易に跳べなくなる。<br>\n                    昇龍拳が代表的な<span>対空必殺技</span>だが、<span>通常技対空</span>、<span>空対空</span>などキャラ・状況によって種類が豊富。<br>\n                    相手の攻撃をパリィで受け止めて有利な状況を作る<span>パリィ対空</span>も場合によっては強力な選択肢だ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "対空",
+  "kana_text": "【たいくう】",
+  "usage_text": "「対空キッチリ！上は見えているっ！！」",
+  "description_text": "空中の相手を迎撃する攻撃。ジャンプ攻撃をキッチリ落とすことで相手は安易に跳べなくなる。 昇龍拳が代表的な対空必殺技だが、通常技対空、空対空などキャラ・状況によって種類が豊富。 相手の攻撃をパリィで受け止めて有利な状況を作るパリィ対空も場合によっては強力な選択肢だ。",
+  "description_highlight_texts": [
+    "迎撃",
+    "対空必殺技",
+    "通常技対空",
+    "空対空",
+    "パリィ対空"
+  ],
+  "video": {
+    "src": "./assets/mp4/word2.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word2.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-02",
+  "term_index": 2,
+  "expected_word_text": "対空",
+  "expected_modal_video": "word2.mp4",
+  "captured_at_utc": "2026-06-09T17:48:19Z",
+  "text_sha256": "sha256:e813cc00586cd283b1a908b510fa36e6245d9540462e345c94426f4c40cb7680",
+  "outer_html_sha256": "sha256:ce714ac37e4a29012e0bfe9a052176f535ff9f96d5c47471cfa7475d4f7c18e6"
+}

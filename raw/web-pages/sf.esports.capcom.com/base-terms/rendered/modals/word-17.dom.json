@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "確定反撃 【かくていはんげき】 「確反キッチリ！見逃さないっ！！」 確反や確定と略される。 相手の攻撃をガードした後の隙に、相手に確実にヒットさせられる攻撃のこと。 様々な技のガード後の隙=不利フレームを把握するのが重要。 的確な確定反撃を決めることでダメージレースに有利になる。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">確定反撃</p>\n            <p class=\"word__kana\">【かくていはんげき】</p>\n          </div>\n          <video src=\"./assets/mp4/word17.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「確反キッチリ！見逃さないっ！！」</p>\n          </div>\n          <p class=\"description\">\n                    <span>確反</span>や<span>確定</span>と略される。<br>\n                    相手の攻撃をガードした後の隙に、相手に確実にヒットさせられる攻撃のこと。<br>\n                    様々な技の<span>ガード後の隙=不利フレーム</span>を把握するのが重要。<br>\n                    的確な確定反撃を決めることでダメージレースに有利になる。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "確定反撃",
+  "kana_text": "【かくていはんげき】",
+  "usage_text": "「確反キッチリ！見逃さないっ！！」",
+  "description_text": "確反や確定と略される。 相手の攻撃をガードした後の隙に、相手に確実にヒットさせられる攻撃のこと。 様々な技のガード後の隙=不利フレームを把握するのが重要。 的確な確定反撃を決めることでダメージレースに有利になる。",
+  "description_highlight_texts": [
+    "確反",
+    "確定",
+    "ガード後の隙=不利フレーム"
+  ],
+  "video": {
+    "src": "./assets/mp4/word17.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word17.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-17",
+  "term_index": 17,
+  "expected_word_text": "確定反撃",
+  "expected_modal_video": "word17.mp4",
+  "captured_at_utc": "2026-06-09T17:48:28Z",
+  "text_sha256": "sha256:cd921394a65a9b1ff82416dbb8078ca63f31882259955e37fdc6347ea7694cea",
+  "outer_html_sha256": "sha256:b570c3e860723db338f575a9ca507803b189e24dd3d3e04626fc0e9459bb9e8c"
+}

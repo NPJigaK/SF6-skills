@@ -1,0 +1,55 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "セットプレイ 【せっとぷれい】 「このセットプレイは非常に強力！見えない～っ！！」 相手の行動不能時間を利用した、一連のパターン化された起き攻めのこと。 主にダウンを奪った後や、浮かせた後に行われることが多い。 セットプレイを確実に仕掛けるために、特定の技を空振り（フレーム消費）して、タイミングを調整することも。 フレームを活かしたセットプレイは非常に強力なテクニックだ。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">セットプレイ</p>\n            <p class=\"word__kana\">【せっとぷれい】</p>\n          </div>\n          <video src=\"./assets/mp4/word20.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「このセットプレイは非常に強力！見えない～っ！！」</p>\n          </div>\n          <p class=\"description\">\n                    相手の行動不能時間を利用した、一連のパターン化された起き攻めのこと。<br>\n                    主にダウンを奪った後や、浮かせた後に行われることが多い。<br>\n                    セットプレイを確実に仕掛けるために、特定の技を空振り（フレーム消費）して、<span>タイミングを調整</span>することも。<br>\n                    フレームを活かしたセットプレイは非常に強力なテクニックだ。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "セットプレイ",
+  "kana_text": "【せっとぷれい】",
+  "usage_text": "「このセットプレイは非常に強力！見えない～っ！！」",
+  "description_text": "相手の行動不能時間を利用した、一連のパターン化された起き攻めのこと。 主にダウンを奪った後や、浮かせた後に行われることが多い。 セットプレイを確実に仕掛けるために、特定の技を空振り（フレーム消費）して、タイミングを調整することも。 フレームを活かしたセットプレイは非常に強力なテクニックだ。",
+  "description_highlight_texts": [
+    "タイミングを調整"
+  ],
+  "video": {
+    "src": "./assets/mp4/word20.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word20.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-20",
+  "term_index": 20,
+  "expected_word_text": "セットプレイ",
+  "expected_modal_video": "word20.mp4",
+  "captured_at_utc": "2026-06-09T17:48:30Z",
+  "text_sha256": "sha256:4b518612e4420f87311f07c63249974260e68ea02a341350e018140dd6d89b1d",
+  "outer_html_sha256": "sha256:6e8dc3823dc3aa0d2d1f1e039b6510bc48571041c94ec185bf4a68642bab1233"
+}

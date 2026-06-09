@@ -1,0 +1,57 @@
+{
+  "artifact_schema_version": "capcom_esports_base_term_modal_dom/v1",
+  "source_url": "https://sf.esports.capcom.com/base/",
+  "source_scope": "capcom_esports_base_words_only",
+  "found": true,
+  "selector": "#wordModal",
+  "body_class": "top noScroll",
+  "modal_toggle_checked": true,
+  "tag_name": "article",
+  "id": "wordModal",
+  "class_name": "content__modal",
+  "text": "暴れ 【あばれ】 「暴れが通った～っ！ピンチがチャンスに変わるぞ！」 相手の連携、攻撃の隙間に発生の早い技や無敵技を出して、相手の攻撃を迎撃すること。 暴れを通すことで相手のターンを奪うことが出来る。 基本的に不利な状況での行動なので、リスクの高い選択肢でもある。 対策として暴れつぶしと呼ばれる暴れを狩るテクニックがある。",
+  "outer_html": "<article id=\"wordModal\" class=\"content__modal\" style=\"overflow-y: hidden;\">\n        <div class=\"video\">\n          <div class=\"word\">\n            <p class=\"word__main\">暴れ</p>\n            <p class=\"word__kana\">【あばれ】</p>\n          </div>\n          <video src=\"./assets/mp4/word21.mp4\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\"></video>\n          <div class=\"use\">\n            <img loading=\"lazy\" src=\"./assets/img/icon_mic.png\" alt=\"\" width=\"59\" height=\"90\">\n            <p>「暴れが通った～っ！ピンチがチャンスに変わるぞ！」</p>\n          </div>\n          <p class=\"description\">\n                    相手の連携、攻撃の隙間に<span>発生の早い技</span>や<span>無敵技</span>を出して、相手の攻撃を迎撃すること。<br>\n                    暴れを通すことで相手のターンを奪うことが出来る。<br>\n                    基本的に不利な状況での行動なので、リスクの高い選択肢でもある。<br>\n                    対策として<span>暴れつぶし</span>と呼ばれる暴れを狩るテクニックがある。\n                  </p>\n        </div>\n        <div class=\"close close__btn\">\n          <label for=\"modal-toggle\"></label>\n        </div>\n        <label for=\"modal-toggle\" class=\"close close__back\" style=\"width: 100%;\"></label>\n      </article>",
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720
+  },
+  "word_text": "暴れ",
+  "kana_text": "【あばれ】",
+  "usage_text": "「暴れが通った～っ！ピンチがチャンスに変わるぞ！」",
+  "description_text": "相手の連携、攻撃の隙間に発生の早い技や無敵技を出して、相手の攻撃を迎撃すること。 暴れを通すことで相手のターンを奪うことが出来る。 基本的に不利な状況での行動なので、リスクの高い選択肢でもある。 対策として暴れつぶしと呼ばれる暴れを狩るテクニックがある。",
+  "description_highlight_texts": [
+    "発生の早い技",
+    "無敵技",
+    "暴れつぶし"
+  ],
+  "video": {
+    "src": "./assets/mp4/word21.mp4",
+    "resolved_src": "https://sf.esports.capcom.com/base/assets/mp4/word21.mp4",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "plays_inline": true,
+    "width": 1280,
+    "height": 720
+  },
+  "images": [
+    {
+      "index": 0,
+      "src": "./assets/img/icon_mic.png",
+      "resolved_src": "https://sf.esports.capcom.com/base/assets/img/icon_mic.png",
+      "alt": "",
+      "width": 88,
+      "height": 135,
+      "class_name": ""
+    }
+  ],
+  "term_id": "word-21",
+  "term_index": 21,
+  "expected_word_text": "暴れ",
+  "expected_modal_video": "word21.mp4",
+  "captured_at_utc": "2026-06-09T17:48:31Z",
+  "text_sha256": "sha256:fca4091afc06bdf03868b33210176fb85fe36dead05d1d1262843cfe09d571f2",
+  "outer_html_sha256": "sha256:621e55386e0dbc7f6f8ed5c58f554f1fb7eb15dfe3eca281bff2f0c148423a8a"
+}
