@@ -13,7 +13,7 @@ LLM は wiki を書き、リンクし、保守します。
 
 ## レイヤー
 
-- `raw/`: 不変のソース素材。`raw/` 配下のファイルは絶対に編集しない。
+- `raw/`: 原則として不変の、原文・元データを保つソース素材。例外として、manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式（例: `raw/frame-data/`, `raw/battle-change/`, `raw/web-pages/`）は、再取得、取得物の差し替え、manifest / metadata / validation / hash 更新を許す。
 - `wiki/`: LLM が生成・保守する Markdown wiki。
 - `wiki/index.md`: 内容指向のカタログであり、最初のナビゲーション面。
 - `wiki/log.md`: 時系列の追記専用アクティビティログ。
@@ -56,12 +56,14 @@ outputs、reviews、source summary の本文は日本語を優先してくださ
   日本語 source は日本語のまま保存する。
 - `raw/` に翻訳・要約・正規化した置き換え版を作らない。翻訳、要約、説明、統合は
   `wiki/` layer で行い、raw source または source page に citation を戻す。
+- 更新可能な raw 一式でも、置けるのは原文・元データを保つ取得物
+  （HTML、wikitext、DOM、API response、screenshots、metadata、manifest、validation など）に限る。
 - 既存ページを続けて編集する場合は、そのページの既存言語に従う。ただし読者の使いやすさが
   明確に上がる場合は、日本語へ寄せてよい。
 
 ## 絶対ルール
 
-1. `raw/` 配下のファイルは絶対に変更しない。翻訳・要約・正規化した派生物も `raw/` に置かない。
+1. `raw/` 配下のファイルは原則変更しない。ただし manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は更新可能。翻訳・要約・正規化した派生物は更新可能な raw 一式も含めて `raw/` に置かない。
 2. 重複ページを作るより、既存 wiki ページの更新を優先する。
 3. 重要な主張はすべて raw source または wiki source page へ辿れるようにする。
 4. 不確実性は明示する。
@@ -80,7 +82,7 @@ outputs、reviews、source summary の本文は日本語を優先してくださ
 2. `wiki/index.md` を読む。
 3. `wiki/log.md` の最近のエントリを読む。
 4. 指定された raw source を読む。
-5. `raw/` は編集しない。翻訳・要約・正規化もしない。
+5. `raw/` は原則編集しない。例外として、指定 source が更新可能な raw 一式（例: frame-data 最新ミラー、battle-change 最新ミラー、web-page capture）に属する場合は、取得、再取得、manifest 補正として該当する raw 一式を更新してよい。翻訳・要約・正規化はしない。
 6. `wiki/sources/` に 1 つのページを作るか更新する。
 7. 関連する concept、entity、synthesis ページを更新する。
 8. 新規ページは、有用で重複でない場合にだけ作る。
@@ -145,7 +147,7 @@ skill として `.agents/skills/obsidian-markdown/SKILL.md` に配置した
 `$obsidian-markdown` として呼び出し、暗黙的には task が skill の `description` に
 合う場合に選択されます。
 
-ただし、このリポジトリの正本ルールはこのファイルに従います。`raw/` 不変、
+ただし、このリポジトリの正本ルールはこのファイルに従います。`raw/` 原則不変と更新可能な raw 一式、
 source traceability、`wiki/index.md` / `wiki/log.md` 更新、言語ポリシー、
 page type、workflow は skill ではなく `AGENTS.md` / `CLAUDE.md` を優先します。
 

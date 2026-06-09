@@ -1,2 +1,5 @@
 # Keep generated artifacts and validation output stable across Windows and Unix.
 * text=auto eol=lf
+
+# Raw HTML captures preserve upstream whitespace; keep whitespace checks on authored docs/code.
+raw/**/*.html -whitespace

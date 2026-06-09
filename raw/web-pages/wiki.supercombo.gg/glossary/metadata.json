@@ -1,0 +1,119 @@
+{
+  "source_family": "web_page",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Glossary",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary",
+  "wikitext_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary?action=raw",
+  "api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&titles=Street+Fighter+6%2FGlossary&prop=revisions%7Cinfo&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&inprop=url",
+  "captured_at_utc": "2026-06-09T13:47:52Z",
+  "capture_method": {
+    "tool": "scrapling",
+    "session": "StealthySession",
+    "headless": true,
+    "solve_cloudflare": true,
+    "network_idle": true,
+    "note": "MediaWiki API and action=raw were fetched in the same stealth session after Cloudflare challenge resolution."
+  },
+  "http_status": {
+    "page_html": 200,
+    "page_raw_wikitext": 200,
+    "api_query": 200
+  },
+  "response_headers": {
+    "page_html": {
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-mitigated": "challenge",
+      "cf-ray": "a090973a1d832f96-NRT",
+      "content-encoding": "zstd",
+      "content-security-policy": "default-src 'none'; script-src 'nonce-J5gCq5VnylLJdeFXcEEo9f' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'",
+      "content-type": "text/html; charset=UTF-8",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "date": "Tue, 09 Jun 2026 13:47:53 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+      "priority": "u=0,i",
+      "referrer-policy": "same-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2M0zr%2F1B6r0gXRtPgjUrAWDxoQv1bqwcez%2Fauro4NbrerPVr1%2Bz6efAqyU7EQ%2BuT0gbPzHstjSMl5w0GGyiPjeYvh1i9N%2FVmbI1RNmBzSG0FE6EqoD8JLxN%2FpazrANSWe8G9gRligoO05g%2FbsfCDphA%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "chlray;desc=\"a090973a1d832f96\"\ncfExtPri",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    },
+    "page_raw_wikitext": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, s-maxage=0, max-age=18000",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a0909807de01c9ef-NRT",
+      "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+      "content-type": "text/x-wiki; charset=UTF-8",
+      "date": "Tue, 09 Jun 2026 13:48:27 GMT",
+      "last-modified": "Sat, 31 Jan 2026 11:22:26 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=0,i",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GwEOHJwO34AvH0DOZ0yFJ%2FeuAGyIIrY2Wm%2FovqT0U97vVlh4bpSrKP8Om0pQB7tbCUyZ3LfMiH1kH2iM9FHJfosMLHAnSk9hcU5Z%2B9W8HQdN6sJPtGGc1ISjj1N2IG6s6dIhL7951oJXZEVtM8jAkYY%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=7,cfOrigin;dur=822, cfExtPri",
+      "vary": "Accept-Encoding,Cookie",
+      "x-content-type-options": "nosniff",
+      "x-request-id": "52c6c4bf8db84e51a8f36b08"
+    },
+    "api_query": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "private, must-revalidate, max-age=0",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a09098155f41c9ef-NRT",
+      "content-disposition": "inline; filename=api-result.json",
+      "content-encoding": "zstd",
+      "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Tue, 09 Jun 2026 13:48:28 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=0,i",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=6dCjOoTmgtzzjgAZntsqIXWPrFARwRso1TszC7NOVWj%2B7SqolON8s3coJDEwyy6JJaBy3C1aW%2B7nQzBvxbl2aEkGSuswGEm2kk36Mk6r3gfNuQgwJOPzzGXmFLLlVMr5JRPHVPBitURBPoTWg5uqAW8%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=7,cfOrigin;dur=300, cfExtPri",
+      "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-request-id": "20aaebf1e7f8c84b7ee0105b"
+    }
+  },
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "pageid": 58424,
+    "lastrevid": 351898,
+    "revision_id": 351898,
+    "revision_timestamp": "2026-01-31T11:22:26Z",
+    "touched": "2026-06-04T23:13:48Z",
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki"
+  },
+  "artifact_hashes": {
+    "page.html": {
+      "sha256": "88997998583ebb76ecdd1e5039af5f7758e32fc09714f0af87e72146e69dbf9f",
+      "bytes": 213386
+    },
+    "page.raw.wikitext": {
+      "sha256": "b38aee318526a4bd8a8095577a9dfa1874e123241bddb67479db447d99891ad1",
+      "bytes": 14605
+    },
+    "api/query.json": {
+      "sha256": "54d3eb10d2b073a6037c3de10aeeefc9652950f85a85837d5499db36b13d27b0",
+      "bytes": 15870
+    },
+    "rendered/main.dom.json": {
+      "sha256": "c564c9c8402eb8f0be317d0081dec00cf3ce325e9ea1e7da87d101169ef4415d",
+      "bytes": 24814
+    },
+    "rendered/tables.dom.json": {
+      "sha256": "1993c977210a55c569efc26958aa7084155cf87119a62039cd68fbbbb007a38e",
+      "bytes": 74743
+    }
+  }
+}

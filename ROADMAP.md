@@ -90,7 +90,8 @@ wiki は persistent で compounding な artifact です。
 3. The schema
 ```
 
-`raw/` は immutable source of truth です。LLM は raw files を読みますが、変更しません。
+`raw/` は原則として不変の正本です。LLM は raw files を読みますが、通常は変更しません。
+例外として、manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は、原文・元データを保つ取得物の再取得、差し替え、manifest / metadata / validation / hash 更新を許す更新可能領域とします。
 
 `wiki/` は LLM-generated Markdown files のディレクトリです。LLM はこの layer を所有し、
 ページ作成、ページ更新、cross-reference の保守、wiki の一貫性維持を行います。
@@ -262,14 +263,18 @@ raw/images/
 raw/assets/
 raw/transcripts/
 raw/notes/
+raw/web-pages/
+raw/<source-package>/
 ```
 
 ルール:
 
-- LLM は `raw/` 配下のファイルを編集してはいけない。
+- LLM は `raw/` 配下のファイルを原則編集してはいけない。
+- 例外として、manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は、
+  原文・元データを保つ取得物（HTML、wikitext、DOM、API response、screenshots、metadata、manifest、validation など）に限り更新してよい。
 - `raw/` は原本保存層なので、元ソースの言語と内容を維持する。
 - 英語 source は英語のまま、日本語 source は日本語のまま保存する。
-- 翻訳・要約・正規化した置き換え版を `raw/` に作らない。
+- 翻訳・要約・正規化した置き換え版を `raw/` に作らない。これは更新可能な raw 一式にも適用する。
 - 日本語化、要約、説明、統合は `wiki/` layer で行い、raw source または source page に citation を戻す。
 - raw filename は date、source、topic が十分に分かる形にする。
 - 重要な画像はローカル保存する。
@@ -357,14 +362,14 @@ LLM は wiki を書き、保守します。
 
 ## レイヤー
 
-- `raw/`: 不変の source material。`raw/` 配下は絶対に編集しない。
+- `raw/`: 原則不変の source material。manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は更新可能。
 - `wiki/`: LLM-generated、LLM-maintained の Markdown wiki。
 - `wiki/index.md`: 内容指向の catalog。
 - `wiki/log.md`: 時系列の追記専用 activity log。
 
 ## 絶対ルール
 
-1. `raw/` を絶対に変更しない。
+1. `raw/` を原則変更しない。manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は更新可能。
 2. 重複ページより既存 wiki ページの更新を優先する。
 3. 重要な主張はすべて source へ traceable にする。
 4. 不確実性を明示する。
@@ -774,7 +779,7 @@ aliases: []
 
 手順:
 
-1. Human が `raw/` に source を 1 つ追加する。
+1. Human が `raw/` に source を 1 つ追加する。更新可能な raw 一式の場合は LLM が該当する raw 一式を作成または更新してよい。
 2. LLM が `AGENTS.md` または `CLAUDE.md` を読む。
 3. LLM が `wiki/index.md` を読む。
 4. LLM が最近の `wiki/log.md` entries を読む。
@@ -801,7 +806,7 @@ raw/<path>
 AGENTS.md に厳密に従ってください。
 
 要件:
-- raw/ を編集しない。
+- raw/ を原則編集しない。ただし更新可能な raw 一式の場合は該当する raw 一式を更新してよい。
 - 最初に wiki/index.md を読む。
 - wiki/log.md の最近の entries を読む。
 - wiki/sources/ に source summary を作る。
@@ -1222,7 +1227,7 @@ find raw wiki -maxdepth 3 -type f | sort
 
 受け入れ条件:
 
-- schema files は `raw/` 編集を禁止する。
+- schema files は通常の `raw/` 編集を禁止し、manifest の `storage_policy` で更新可能と示された raw 一式だけ再取得・補正を許す。
 - schema files は query 時に最初に `wiki/index.md` を読むことを要求する。
 - schema files は meaningful work 後に `wiki/log.md` へ追記することを要求する。
 - schema files は useful answers を wiki へ file back することを要求する。
@@ -1371,7 +1376,7 @@ python tools/kb_lint.py
 
 | Item | Decision | Basis |
 |---|---:|---|
-| `raw/` | required | immutable source layer |
+| `raw/` | required | 通常は不変の source layer。最新ミラーまたは更新可能な取得一式として示された raw 一式は更新可能 |
 | `wiki/` | required | LLM-generated compiled Markdown wiki |
 | `AGENTS.md` | required | Codex schema |
 | `CLAUDE.md` | recommended | Claude Code schema |
@@ -1393,7 +1398,7 @@ python tools/kb_lint.py
 
 base pattern は次を満たした時に complete です。
 
-- `raw/` が存在し、immutable として扱われている。
+- `raw/` が存在し、通常は不変として扱われている。
 - `wiki/` が存在し、LLM-maintained である。
 - `AGENTS.md` が存在する。
 - `CLAUDE.md` が存在する、または明示的に deferred されている。

@@ -2,7 +2,7 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-06
+updated: 2026-06-10
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
@@ -31,7 +31,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 
 | 日付 | 出来事 | ソース |
 |---|---|---|
-| 2026-05-26 | Street Fighter 6 glossary page を Obsidian Web Clipper で `raw/articles/` に保存した。 | [[sources/supercombo-street-fighter-6-glossary]] |
+| 2026-06-09 | Street Fighter 6 glossary page を `raw/web-pages/wiki.supercombo.gg/glossary/` の updateable MediaWiki wikitext、HTML、表示 DOM 取得物として保存し、Notation Glossary の `ComboLegend-SF6` template 依存も保存した。旧 `raw/articles/` clipping は削除した。 | [[sources/supercombo-street-fighter-6-glossary]], [[reviews/2026-06-09-supercombo-glossary-web-page-capture-review]] |
 | 2026-05-31 | JP frame-data page を Scrapling で raw wikitext、Cargo API、表示 DOM、タブ別スクリーンショット、画像として保存した。 | [[sources/supercombo-jp-frame-data]] |
 | 2026-05-31 | Ryu frame-data page を Scrapling で raw wikitext、Cargo API、表示 DOM、タブ別スクリーンショット、画像として保存した。 | [[sources/supercombo-ryu-frame-data]] |
 | 2026-06-02 | Zangief frame-data page を Scrapling で raw wikitext、Cargo API、表示 DOM、タブ別スクリーンショット、画像として保存した。 | [[sources/supercombo-zangief-frame-data]] |

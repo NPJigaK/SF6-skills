@@ -2,12 +2,13 @@
 type: concept
 title: "Fighting Game Notation"
 created: 2026-05-26
-updated: 2026-05-30
+updated: 2026-06-10
 status: active
 confidence: medium
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
   - "[[reviews/2026-05-27-health-check]]"
+  - "[[reviews/2026-06-09-supercombo-glossary-web-page-capture-review]]"
 related:
   - "[[concepts/frame-data]]"
 aliases:
@@ -27,7 +28,7 @@ Fighting-game notation は、link、cancel、hold/release、chain、hit state、
 
 ## 定義
 
-SuperCombo glossary は次のような例を定義している。
+SuperCombo glossary の page wikitext は Notation Glossary を `{{ComboLegend-SF6}}` テンプレートとして呼び出している。展開後の `rendered/tables.dom.json` は次のような例を保持している。template 本文は `raw/web-pages/wiki.supercombo.gg/glossary/templates/combo-legend-sf6.raw.wikitext` に保存され、manifest では revid `283225` / timestamp `2023-12-11T18:45:25Z` の依存として記録されている。
 
 - `A,B`: A の recovery 後に B を link する。
 - `A > B`: A の animation 中に B へ cancel する。
@@ -58,7 +59,7 @@ notation は、source wording を保ちながら combo や input を簡潔に説
 
 ## 矛盾 / 注意点
 
-- clipped source の numpad-direction table は malformed に見えるため、その部分に強く依存する前に recapture が必要。
+- 2026-06-09 の web-page capture では、Notation Glossary の直接 wikitext は `{{ComboLegend-SF6}}` であり、展開後の表は `rendered/tables.dom.json` に保存されている。directional notation に依存する場合は、表示 DOM 取得物と `Template:ComboLegend-SF6` の raw wikitext / revision の両方を参照する。
 - raw input tokens は引き続き source-preserving data として扱う。
 
 ## 未解決の質問

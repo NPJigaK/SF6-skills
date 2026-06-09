@@ -2,9 +2,29 @@
 
 このファイルは LLM-maintained wiki の内容指向カタログです。質問に答える時や、読むべき wiki page を決める時は最初にこのファイルを見ます。
 
-## Frame-data Raw Layout
+## Raw 保存方針
 
-現在の frame-data raw entrypoint は latest mirror 固定パスです。source freshness、capture date、source revision は path ではなく manifest で確認します。SuperCombo では `source_updated_at` を source freshness、`captured_at_utc` を raw 取得時刻として分けて扱います。派生 output は JSON-only とし、`wiki/outputs/data/frame-data/<variant>/<character>/` に置きます。詳細は [[syntheses/frame-data-raw-layout]]。
+`raw/` は原則として、原文・元データを保つ原本保存層です。ただし manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は、path を固定したまま再取得、取得物の差し替え、manifest / metadata / validation / hash 更新を行える。日付や revision は path ではなく manifest の由来を示す項目で確認する。
+
+| Raw 一式 | 現在の `storage_policy` | 入口 |
+|---|---|---|
+| Frame data | `latest_frame_data_mirror` | `raw/frame-data/official/<data-slug>/manifest.json`, `raw/frame-data/supercombo/<character_slug>/manifest.json` |
+| Battle change list | `latest_battle_change_mirror` | `raw/battle-change/official/manifest.json` |
+| Web page 取得 | `updateable_web_page_capture` | `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json` |
+
+翻訳、要約、正規化した置き換え版は更新可能な raw 一式にも置かず、wiki layer か derived output layer に置く。
+
+## Web-page Raw 取得
+
+Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json` を entrypoint とする。この repo は Street Fighter 6 専用なので、raw path の page slug では game prefix を省いてよい。
+
+| Source family | Raw entrypoint | Canonical raw 取得物 | 由来 |
+|---|---|---|---|
+| SuperCombo glossary | `raw/web-pages/wiki.supercombo.gg/glossary/manifest.json` | `page.raw.wikitext`; 表示証拠は `page.html`、`rendered/tables.dom.json`; notation template は `templates/combo-legend-sf6.raw.wikitext` | `storage_policy: updateable_web_page_capture`; page revid `351898`; `Template:ComboLegend-SF6` revid `283225`; `source_updated_at` 2026-01-31T11:22:26Z; `captured_at_utc` 2026-06-09T13:47:52Z |
+
+## Frame-data Raw 配置
+
+現在の frame-data raw の入口は最新ミラー固定パスです。source freshness、capture date、source revision は path ではなく manifest で確認します。SuperCombo では `source_updated_at` を source freshness、`captured_at_utc` を raw 取得時刻として分けて扱います。派生 output は JSON-only とし、`wiki/outputs/data/frame-data/<variant>/<character>/` に置きます。詳細は [[syntheses/frame-data-raw-layout]]。
 
 | Source family | Raw entrypoint | Provenance | Main outputs |
 |---|---|---|---|
@@ -19,7 +39,7 @@
 
 | Page | Summary | Source date | Source type | Status |
 |---|---|---:|---|---|
-| [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。Drive System、frame data、juggle、notation 用語を含む community source。 | 2026-05-26 | wiki_page | active |
+| [[sources/supercombo-street-fighter-6-glossary]] | SuperCombo Wiki の Street Fighter 6 glossary。`raw/web-pages/` capture は MediaWiki wikitext、HTML、rendered DOM、Notation Glossary の template 依存を保持する。旧 Obsidian clipping は削除済み。 | 2026-01-31 | wiki_page | active |
 | [[sources/supercombo-street-fighter-6-frame-data-batch]] | SuperCombo Wiki の Street Fighter 6 frame-data 30キャラ batch capture。raw wikitext、Cargo API、DOM、5タブ screenshot、公式 Classic との派生 output を含む。Source freshness は各 manifest の `source_updated_at` で 2026-05-30 から 2026-06-02 に分布する。 | 2026-05-30..2026-06-02 | community_frame_data | active |
 | [[sources/supercombo-jp-frame-data]] | SuperCombo Wiki の JP frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/jp/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 123 件を含む community source。 | 2026-05-30 | community_frame_data | active |
 | [[sources/supercombo-ryu-frame-data]] | SuperCombo Wiki の Ryu frame-data raw 取得データ。新 raw path は `raw/frame-data/supercombo/ryu/`。Data wikitext、Cargo API、DOM、5タブのスクリーンショット、画像 133 件、conditional variant link を含む community source。 | 2026-05-30 | community_frame_data | active |
@@ -62,9 +82,9 @@
 | Page | Summary | Related |
 |---|---|---|
 | [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo 30キャラ community raw 取得データ、公式 + SuperCombo 補助列付き output、latest mirror raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
+| [[concepts/frame-data]] | 技の timing/property vocabulary、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo 30キャラ community raw 取得データ、公式 + SuperCombo 補助列付き output、最新ミラー raw 配置方針。 | [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit などの community terms。 | [[concepts/frame-data]], [[entities/street-fighter-6]] |
-| [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。 | [[concepts/frame-data]] |
+| [[concepts/fighting-game-notation]] | link、cancel、hold/release、chain、hit state、air action、delay、directional input などの notation。SuperCombo glossary では `ComboLegend-SF6` template に由来する。 | [[concepts/frame-data]] |
 
 ## Entities
 
@@ -108,7 +128,7 @@
 
 | Page | Summary | Updated |
 |---|---|---:|
-| [[syntheses/frame-data-raw-layout]] | frame-data raw を latest mirror 固定パスに置き、manifest の `source_updated_at` / `captured_at_utc` / `source_revision` を分けて由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と data-family first output layout を整理する。 | 2026-06-09 |
+| [[syntheses/frame-data-raw-layout]] | frame-data raw を最新ミラー固定パスに置き、manifest の `source_updated_at` / `captured_at_utc` / `source_revision` を分けて由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と data-family first output layout を整理する。 | 2026-06-09 |
 
 ## Questions
 
@@ -197,3 +217,4 @@
 | [[reviews/2026-06-05-supercombo-all-frame-data-capture-review]] | capture_validation | SuperCombo frame-data 30キャラ分の batch capture review。raw capture は 30/30 passed、未レビュー補助行 1295 行と SuperCombo-only 620 行が残り、review queue で理由を分離している。 | open |
 | [[reviews/2026-06-06-supercombo-field-conflict-queue-prereview]] | prereview | SuperCombo `field_conflict` 単独 11 行の事前レビュー。Jamie 酔いLv damage、Terry jMP/jMK 入れ替わり疑い、通常 source conflict を分離し、追加 accept はしていない。 | open |
 | [[reviews/2026-06-07-official-battle-change-capture-review]] | capture_validation | Capcom 公式 Battle Change List 20 update version capture の自動検証レビュー。raw HTML / Next.js data JSON は artifact hash と payload 一致を通過し、派生 change rows は 1820 行。 | open |
+| [[reviews/2026-06-09-supercombo-glossary-web-page-capture-review]] | capture_validation | SuperCombo glossary を `raw/web-pages/` 試験 layout で取得。MediaWiki wikitext を canonical raw 取得物、HTML / rendered DOM を表示構造の証拠として保存した。 | open |

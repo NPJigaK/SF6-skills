@@ -2,6 +2,42 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-10] raw/schema | SuperCombo glossary Web page raw と更新可能 raw 方針
+- 原本:
+  - `https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary`
+- 作成・削除:
+  - `raw/web-pages/wiki.supercombo.gg/glossary/`
+  - `wiki/reviews/2026-06-09-supercombo-glossary-web-page-capture-review.md`
+  - 削除: `raw/articles/2026-05-26-supercombo-street-fighter-6-glossary.md`
+- 更新:
+  - `.gitattributes`
+  - `README.md`
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - `ROADMAP.md`
+  - `raw/web-pages/wiki.supercombo.gg/glossary/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/glossary/validation.json`
+  - `wiki/index.md`
+  - `wiki/sources/supercombo-street-fighter-6-glossary.md`
+  - `wiki/concepts/fighting-game-notation.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/syntheses/frame-data-raw-layout.md`
+  - `wiki/log.md`
+- メモ:
+  - SuperCombo glossary は MediaWiki source なので、`page.raw.wikitext` を canonical raw 取得物とし、`page.html` と `rendered/*.dom.json` を表示構造の証拠として保存した。
+  - MediaWiki revid `351898`、revision timestamp `2026-01-31T11:22:26Z`、`captured_at_utc` `2026-06-09T13:47:52Z` を manifest に記録した。
+  - Notation Glossary の `{{ComboLegend-SF6}}` 依存を追加で保存した。template 一覧は `api/templates.json`、`ComboLegend-SF6` 本文は `templates/combo-legend-sf6.raw.wikitext`、revision は revid `283225` / timestamp `2023-12-11T18:45:25Z`。
+  - `raw/` は通常は不変とし、manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は更新可能とする方針に整理した。
+  - README / ROADMAP の古い「raw を絶対に編集しない」文言を、通常 raw と更新可能 raw 一式を分ける説明に直した。
+  - 古い Obsidian Web Clipper raw は削除し、新 raw から wiki を再点検した。Drive System、Frame Data、Juggles の意味内容は変わらず、Notation Glossary は `{{ComboLegend-SF6}}` 展開後の table を `rendered/tables.dom.json` へ辿る形に直した。
+- 検証:
+  - `validation.json` は `passed`。API の revision wikitext と `action=raw` の wikitext は一致した。
+  - template 依存の validation は存在確認と API/raw wikitext 一致だけに留め、template 内容の意味検証や再帰的な展開は追加しなかった。
+  - `raw/frame-data/` は `latest_frame_data_mirror`、`raw/battle-change/official/` は `latest_battle_change_mirror`、`raw/web-pages/` は `updateable_web_page_capture` として扱うことを確認した。
+- 未解決事項:
+  - Web page capture で screenshot を常時保存するか、必要時だけにするか。
+  - 最新ミラーの再取得時に旧ミラーをどこまで外部保管物として保持するか。
+
 ## [2026-06-09] wiki-update | frame-data source freshness metadata
 - 読み込み:
   - `wiki/index.md`

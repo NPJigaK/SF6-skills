@@ -1,0 +1,142 @@
+{
+  "manifest_schema_version": "web_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/glossary",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/glossary",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "glossary",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Glossary",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary",
+  "captured_at_utc": "2026-06-09T13:47:52Z",
+  "capture_label": "2026-06-09-rev351898",
+  "storage_policy": "updateable_web_page_capture",
+  "raw_update_policy": {
+    "updateable": true,
+    "scope": "raw/web-pages 配下の同一取得一式",
+    "allowed_updates": [
+      "原文・元データを保つ Web 取得物を再取得する",
+      "取得一式のディレクトリ構成を補正する",
+      "manifest、metadata、validation、artifact hash を更新する",
+      "由来を記録したうえで古い Web 取得物を新しい取得物に差し替える"
+    ],
+    "disallowed_updates": [
+      "翻訳を raw 上の置き換え版として保存する",
+      "要約を raw 上の置き換え版として保存する",
+      "source wording を正規化した置き換え版を raw に保存する"
+    ]
+  },
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "pageid": 58424,
+    "lastrevid": 351898,
+    "revision_id": 351898,
+    "revision_timestamp": "2026-01-31T11:22:26Z",
+    "touched": "2026-06-04T23:13:48Z",
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki"
+  },
+  "source_updated_at": "2026-01-31T11:22:26Z",
+  "canonical_source_artifact": "page.raw.wikitext",
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/tables.dom.json"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": {
+    "page_html": "page.html",
+    "page_raw_wikitext": "page.raw.wikitext",
+    "api_query": "api/query.json",
+    "metadata": "metadata.json",
+    "rendered_main_dom": "rendered/main.dom.json",
+    "rendered_tables_dom": "rendered/tables.dom.json",
+    "validation": "validation.json",
+    "api_templates": "api/templates.json",
+    "api_template_combo_legend_sf6": "api/template-combo-legend-sf6.json",
+    "template_combo_legend_sf6_raw_wikitext": "templates/combo-legend-sf6.raw.wikitext"
+  },
+  "artifact_hashes": {
+    "page.html": {
+      "sha256": "88997998583ebb76ecdd1e5039af5f7758e32fc09714f0af87e72146e69dbf9f",
+      "bytes": 213386
+    },
+    "page.raw.wikitext": {
+      "sha256": "b38aee318526a4bd8a8095577a9dfa1874e123241bddb67479db447d99891ad1",
+      "bytes": 14605
+    },
+    "api/query.json": {
+      "sha256": "54d3eb10d2b073a6037c3de10aeeefc9652950f85a85837d5499db36b13d27b0",
+      "bytes": 15870
+    },
+    "metadata.json": {
+      "sha256": "c626d01a297bdbc7c0e7680b305aa0c660abdac69992513bad079647b7b9b984",
+      "bytes": 6897
+    },
+    "rendered/main.dom.json": {
+      "sha256": "c564c9c8402eb8f0be317d0081dec00cf3ce325e9ea1e7da87d101169ef4415d",
+      "bytes": 24814
+    },
+    "rendered/tables.dom.json": {
+      "sha256": "1993c977210a55c569efc26958aa7084155cf87119a62039cd68fbbbb007a38e",
+      "bytes": 74743
+    },
+    "validation.json": {
+      "sha256": "ed03eabaf577b816dbd949287185abb8d0235a0e0f119603bfe23a671140227c",
+      "bytes": 1905
+    },
+    "api/templates.json": {
+      "sha256": "94135894a2726ab2149016acd5517ae4e3082f4864d1bc40e62f8902b7e02886",
+      "bytes": 1271
+    },
+    "api/template-combo-legend-sf6.json": {
+      "sha256": "e2989ddb4d4674c7200dd8e1a55ea656deac1c6fa9dea3eb4497dbb435d8742f",
+      "bytes": 4075
+    },
+    "templates/combo-legend-sf6.raw.wikitext": {
+      "sha256": "d516c775107ad587e24707a1621634aa72027861b1d7c94e73666771406aa713",
+      "bytes": 2932
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "package_updated_at_utc": "2026-06-09T16:13:19Z",
+  "template_dependency_policy": {
+    "scope": "MediaWiki API の prop=templates が返した直接・展開依存 template を記録する。",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [
+      "Template:ComboLegend-SF6"
+    ],
+    "recursive_capture": false,
+    "notes": [
+      "Notation Glossary の rendered table は ComboLegend-SF6 に依存するため、この template 本文だけを raw として保存する。",
+      "その他の template は api/templates.json で title を記録し、将来の wiki claim が必要とするまで本文は展開しない。"
+    ]
+  },
+  "template_dependencies": [
+    {
+      "title": "Template:ComboLegend-SF6",
+      "pageid": 58423,
+      "lastrevid": 283225,
+      "revision_id": 283225,
+      "revision_timestamp": "2023-12-11T18:45:25Z",
+      "touched": "2023-12-11T18:45:25Z",
+      "length": 2932,
+      "contentmodel": "wikitext",
+      "contentformat": "text/x-wiki",
+      "sha1": "8ed18ad031306a4efd28284b9aaea2335931e062",
+      "raw_wikitext_artifact": "templates/combo-legend-sf6.raw.wikitext",
+      "api_query_artifact": "api/template-combo-legend-sf6.json",
+      "used_by_artifacts": [
+        "rendered/tables.dom.json"
+      ],
+      "reason": "Notation Glossary の表記テーブルが page wikitext では template 呼び出しとして保存されるため。"
+    }
+  ],
+  "rendered_evidence_dependencies": {
+    "rendered/tables.dom.json": [
+      "Template:ComboLegend-SF6"
+    ]
+  }
+}
