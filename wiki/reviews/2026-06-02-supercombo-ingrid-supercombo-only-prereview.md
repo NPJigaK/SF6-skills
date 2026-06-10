@@ -18,7 +18,6 @@ external_sources:
   - "https://streetfighter.fandom.com/wiki/Monoid"
   - "https://steamcommunity.com/app/1364780/allnews/"
   - "https://news.capcomusa.com/go/network/media"
-  - "https://ultimateframedata.com/sf6/ingrid"
 aliases:
   - "SuperCombo Ingrid SuperCombo-only prereview"
   - "Ingrid SuperCombo-only 事前レビュー"
@@ -59,7 +58,6 @@ tags:
 | [Reddit r/StreetFighter](https://www.reddit.com/r/StreetFighter/comments/1trzius/play_as_dark_ingrid_see_description_for/) | プレイヤー投稿として、Monoid 召喚後の手順、`22+PPP`、`214214+K`、`412369+KK`、およびコメントで `LP > LP > 4 > LK > HK` や 360 系入力の補足がある。 | 発見経路と入力差分の参考。一次検証ではなく、accept には使わない。 |
 | [Street Fighter Wiki - Dark Ingrid](https://streetfighter.fandom.com/wiki/Dark_Ingrid) | community wiki として、Dark Ingrid、Avatar Arcade boss、Sun Octopus、Burnout 付与 special、強化 Sun Flare などを説明している。 | 名称・存在の補強候補。ただし community wiki なので公式扱いしない。 |
 | [Street Fighter Wiki - Monoid](https://streetfighter.fandom.com/wiki/Monoid) | Monoid が SF6 の Ingrid 周辺に登場する存在であることを説明している。 | Monoid 行を Back Taunt 周辺の extra action と見る補助根拠。フレーム値の根拠にはしない。 |
-| [Ultimate Frame Data - Ingrid](https://ultimateframedata.com/sf6/ingrid) | Ingrid frame data と hitbox が公開されているが、調査時点のページ検索では Monoid / Laser / Burnout / Octopus / Taunt に相当する項目は見つからなかった。 | 別 community frame-data site でも通常掲載範囲から外れている可能性を示す弱い negative evidence。 |
 
 ## 行別事前レビュー
 
