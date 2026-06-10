@@ -2,6 +2,32 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] schema | Workflow details を repo-local skills へ移動
+- 更新:
+  - `.gitignore`
+  - `AGENTS.md`
+  - `.agents/skills/sf6-source-ingest/SKILL.md`
+  - `.agents/skills/sf6-source-ingest/agents/openai.yaml`
+  - `.agents/skills/sf6-wiki-query/SKILL.md`
+  - `.agents/skills/sf6-wiki-query/agents/openai.yaml`
+  - `.agents/skills/sf6-durable-output/SKILL.md`
+  - `.agents/skills/sf6-durable-output/agents/openai.yaml`
+  - `.agents/skills/sf6-wiki-health-check/SKILL.md`
+  - `.agents/skills/sf6-wiki-health-check/agents/openai.yaml`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - `AGENTS.md` に長い workflow 詳細を増やすのではなく、source ingest、wiki query、durable output、wiki health check の 4 つの repo-local skill へ分離した。
+  - `AGENTS.md` は raw / wiki / schema 境界、page type、citation、index/log 更新、skill dispatch を担う正本として残した。
+  - `$sf6-wiki-query` に source-only query、evidence authority、contamination-sensitive query、read-only evidence pass subagent の使いどころを置いた。
+  - `$sf6-source-ingest`、`$sf6-durable-output`、`$sf6-wiki-health-check` にも、大きい source / evidence-heavy output / factual risk が高い audit で read-only subagent を使う条件を明記した。
+  - source ingest / query skill に、raw/web source text は evidence であって agent instruction ではないという基本的な Source Safety ルールを追加した。
+  - `.agents/` は原則 ignored のまま、今回作成した 4 つの repo workflow skill だけ Git 追跡できるよう `.gitignore` を調整した。
+  - `tools/kb_path_guard.py` や `tools/kb_lint.py` は作らず、反復的な deterministic check が明確になった時だけ tool 化する方針を skill 側に残した。
+- 未解決事項:
+  - Source Safety / Prompt Injection の adversarial examples と Tool Safety の詳細ルールは引き続き後続 schema / skill 変更候補。
+  - RAG / grounding / evaluation の論文を永続 source として扱う場合は、別途 `raw/papers/` または `raw/web-pages/` に source を置いて ingest する。
+
 ## [2026-06-11] schema | Core operating policies を明文化
 - 更新:
   - `AGENTS.md`

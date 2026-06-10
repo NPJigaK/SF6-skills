@@ -2,6 +2,16 @@
 
 このファイルは LLM-maintained wiki の内容指向カタログです。質問に答える時や、読むべき wiki page を決める時は最初にこのファイルを見ます。
 
+## Schema / 運用ルール
+
+| File | Summary | Updated |
+|---|---|---:|
+| `AGENTS.md` | raw / wiki / schema 境界、page type、citation、index/log 更新、workflow skill dispatch を定義する agent-facing 正本。 | 2026-06-11 |
+| `.agents/skills/sf6-source-ingest/SKILL.md` | source ingest / re-ingest の詳細 workflow。raw package 確認、source authority 分類、source summary、関連 wiki 更新、index/log 更新を扱う。 | 2026-06-11 |
+| `.agents/skills/sf6-wiki-query/SKILL.md` | wiki-based query の詳細 workflow。source-only query、evidence authority、contamination-sensitive query、file-back 判断を扱う。 | 2026-06-11 |
+| `.agents/skills/sf6-durable-output/SKILL.md` | durable output / file-back の詳細 workflow。`wiki/questions/`、`wiki/syntheses/`、`wiki/outputs/`、`wiki/reviews/` の使い分けを扱う。 | 2026-06-11 |
+| `.agents/skills/sf6-wiki-health-check/SKILL.md` | wiki lint / health check の詳細 workflow。P0-P3 severity、safe fix、review note、lint report を扱う。 | 2026-06-11 |
+
 ## Raw 保存方針
 
 `raw/` は原則として、原文・元データを保つ原本保存層です。ただし manifest の `storage_policy` で最新ミラーまたは更新可能な取得一式と示されている raw 一式は、path を固定したまま再取得、取得物の差し替え、manifest / metadata / validation / hash 更新を行える。日付や revision は path ではなく manifest の由来を示す項目で確認する。

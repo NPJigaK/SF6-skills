@@ -74,6 +74,24 @@ manifest がない通常の raw source は immutable とみなします。raw pa
 - `wiki/reviews/`: 個別の review finding、矛盾、古い主張、capture review、人間レビュー notes。
 - `wiki/templates/`: 再利用するページテンプレート。
 
+## Workflow Skill Dispatch
+
+長い workflow 詳細は repo-local skill に置き、`AGENTS.md` には dispatch と境界ルールだけを置きます。
+次の作業では該当 skill を使ってください。
+
+- source ingest / re-ingest / raw package integration: `$sf6-source-ingest`
+  (`.agents/skills/sf6-source-ingest/SKILL.md`)
+- wiki-based question answering / source-only query / contamination-sensitive answer: `$sf6-wiki-query`
+  (`.agents/skills/sf6-wiki-query/SKILL.md`)
+- durable output / report / file-back to `wiki/questions/`, `wiki/syntheses/`, or `wiki/outputs/`: `$sf6-durable-output`
+  (`.agents/skills/sf6-durable-output/SKILL.md`)
+- wiki lint / health check / contradiction or stale-claim review: `$sf6-wiki-health-check`
+  (`.agents/skills/sf6-wiki-health-check/SKILL.md`)
+
+skill はこのファイルの正本ルールを上書きしません。`raw/` 境界、source traceability、
+`wiki/index.md` / `wiki/log.md` 更新、言語ポリシー、page type、Git diff review は
+常にこのファイルを優先します。
+
 ## Lint Report Placement
 
 wiki 全体の health check report や lint report は `wiki/outputs/lint/` に置いてよいです。
@@ -235,67 +253,29 @@ outputs、reviews、source summary の本文は日本語を優先してくださ
 
 ソースの ingest を依頼されたら:
 
-1. このファイルを読む。
-2. `wiki/index.md` を読む。
-3. `wiki/log.md` の最近のエントリを読む。
-4. 指定された raw source を読む。
-5. `raw/` は原則編集しない。例外として、指定 source が更新可能な raw 一式（例: frame-data 最新ミラー、battle-change 最新ミラー、web-page capture）に属する場合は、取得、再取得、manifest 補正として該当する raw 一式を更新してよい。翻訳・要約・正規化はしない。
-6. `wiki/sources/` に 1 つのページを作るか更新する。
-7. 関連する concept、entity、synthesis ページを更新する。
-8. 新規ページは、有用で重複でない場合にだけ作る。
-9. backlink と source reference を追加する。
-10. 矛盾、古い主張、不確実性を明示する。
-11. `wiki/index.md` を更新する。
-12. `wiki/log.md` に追記する。
-13. 変更ファイルと open questions を報告する。
+`$sf6-source-ingest` skill を使ってください。skill には raw package 確認、source summary、
+関連 wiki 更新、index/log 更新、open questions 報告の詳細を置きます。
 
 ## Query ワークフロー
 
 質問への回答を依頼されたら:
 
-1. 最初に `wiki/index.md` を読む。
-2. index だけで不十分な場合のみ wiki を検索する。
-3. 関連する source、concept、entity、synthesis、question、output ページを読む。
-4. wiki page または source page への citation 付きで回答する。
-5. 不確実性と不足している evidence を明確に述べる。
-6. 回答が永続的に有用なら、`wiki/questions/`、`wiki/syntheses/`、または `wiki/outputs/` に保存する。
-7. 保存する question page は再利用可能な回答に集中させる。file-back の詳細や changed files は
-   question page ではなく `wiki/log.md` に置く。
-8. ページを作成または大きく変更した場合は `wiki/index.md` を更新する。
-9. `wiki/log.md` に追記する。
-10. 変更ファイルと未解決の質問を報告する。
+`$sf6-wiki-query` skill を使ってください。skill には source-only query、evidence authority、
+contamination-sensitive query、file-back 判断の詳細を置きます。
 
 ## Output ワークフロー
 
 永続的な output の作成を依頼されたら:
 
-1. `wiki/index.md` を読む。
-2. 関連する wiki page と source page を読む。
-3. 要求された output を `wiki/outputs/` 配下に作成する。
-4. 関連する wiki/source page を citation する。
-5. 可能な限り plain Markdown として読みやすく保つ。
-6. `wiki/index.md` を更新する。
-7. `wiki/log.md` に追記する。
-8. 変更ファイルを報告する。
+`$sf6-durable-output` skill を使ってください。skill には output path、reader-facing 形式、
+citation、file-back、index/log 更新の詳細を置きます。
 
 ## Lint / Health Check ワークフロー
 
 wiki health check を依頼されたら:
 
-1. このファイルを読む。
-2. `wiki/index.md` を読む。
-3. `wiki/log.md` の最近のエントリを読む。
-4. broken wikilinks、orphan pages、duplicate pages、missing index entries、
-   missing frontmatter、missing backlinks、contradictions、stale claims、
-   uncited important claims、weak summaries、missing concept/entity pages、
-   data gaps、suggested next sources/questions を確認する。
-5. 安全に直せる構造上の問題を修正する。
-6. 事実を捏造しない。
-7. 不確実な事実問題は `wiki/reviews/` に review note を作る。
-8. 全体 report を保存する場合は `wiki/outputs/lint/` に `type: output`, `output_type: lint_report` として置く。
-9. `wiki/index.md` を更新する。
-10. `wiki/log.md` に追記する。
-11. 変更ファイルと人間レビューが必要な項目を報告する。
+`$sf6-wiki-health-check` skill を使ってください。skill には lint severity、safe fix、
+review note 作成、全体 report 配置、index/log 更新の詳細を置きます。
 
 ## Obsidian Markdown
 
