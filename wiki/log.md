@@ -2,6 +2,22 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] schema | Core operating policies を明文化
+- 更新:
+  - `AGENTS.md`
+  - `wiki/log.md`
+- メモ:
+  - この repo は base pattern 初期実装を完了済みとみなし、現在は SF6 domain-enabled LLM Wiki として運用することを明記した。
+  - domain-specific tools は source of truth ではなく、raw capture、validation、derived output 生成の補助として扱う境界を記録した。
+  - manifest がない通常 raw は immutable とみなし、更新可能 raw package は許可済み `storage_policy` と親 raw package manifest に従うことを明記した。
+  - `latest_frame_data_mirror`、`latest_battle_change_mirror`、`updateable_web_page_capture` を現在の許可済み更新可能 policy として記録した。
+  - wiki 全体の lint / health check report は `wiki/outputs/lint/`、個別 finding や capture review は `wiki/reviews/` に置く分担を明記した。
+  - lint severity を P0 Integrity、P1 Evidence、P2 Structure、P3 Quality に分け、row count mismatch や validation failure は勝手に事実修正せず review note に回す方針を明記した。
+  - 重要な主張、数値、日付、比較、評価、判断は近くに根拠を置き、`source fact` / `derived fact` / `synthesis` / `inference` / `hypothesis` を意識して書き分ける方針を明記した。
+  - `wiki/index.md` は最初の navigation surface として新規 page / 主要更新時に更新し、`wiki/log.md` は append-only の activity log として entry 形式を揃える方針を明記した。
+- 未解決事項:
+  - Source Safety / Prompt Injection、Tool Safety の詳細ルールは後続 schema 変更で追加する。
+
 ## [2026-06-10] wiki-maintenance | Health check follow-up
 - 更新:
   - `raw/frame-data/official/ryu/manifest.json`
