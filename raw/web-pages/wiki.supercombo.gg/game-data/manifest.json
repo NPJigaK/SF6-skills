@@ -1,0 +1,241 @@
+{
+  "manifest_schema_version": "supercombo_mediawiki_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/game-data",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/game-data",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "game-data",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Game Data",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+  "captured_at_utc": "2026-06-11T13:38:34Z",
+  "capture_label": "2026-06-11-rev365507",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Game Data",
+    "pageid": 65929,
+    "lastrevid": 365507,
+    "revision_id": 365507,
+    "revision_timestamp": "2026-06-04T23:19:26Z",
+    "touched": "2026-06-11T11:02:03Z",
+    "length": 63661,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "ca341f6f9d9c6a941c1f2d39f680572bbfd7f1ef",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data"
+  },
+  "source_updated_at": "2026-06-04T23:19:26Z",
+  "canonical_source_artifacts": [
+    "page.raw.wikitext",
+    "imageinfo.json",
+    "images/manifest.json"
+  ],
+  "media_source_artifacts": [
+    "images/files/",
+    "images/rendered/"
+  ],
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/media.dom.json",
+    "rendered/content.cleaned.html",
+    "rendered/content.scoped.html",
+    "screenshots/page-scoped.png",
+    "screenshots/content-scoped.png",
+    "rendered/tabbers.dom.json"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "image_manifest": "images/manifest.json",
+  "media_raw_policy": {
+    "text": "page.raw.wikitext is canonical for source text.",
+    "images": "Only page semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
+    "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the page media scope.",
+    "screenshots": "Screenshots capture scoped rendered page content after navigation removal and are not used as a replacement for source media files.",
+    "videos": "Video/audio DOM references are recorded in rendered/media.dom.json; large video downloads require an explicit scoped capture."
+  },
+  "template_dependency_policy": {
+    "scope": "Direct MediaWiki prop=templates dependencies are recorded by title only.",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [],
+    "recursive_capture": false
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Sf6-adv"
+    }
+  ],
+  "artifact_hashes": {
+    "api/imageinfo-001.json": {
+      "sha256": "sha256:694936c10135cc81cb2e38a0605ee6b321ac62f30256f5146e650b8cce70cd9e",
+      "bytes": 5300
+    },
+    "api/query.json": {
+      "sha256": "sha256:0368140b40c0ee998850d579b42c495ef45c1c262d1bfdcfa7a2d6a3e215dd14",
+      "bytes": 69570
+    },
+    "api/templates.json": {
+      "sha256": "sha256:1a9b0d31349fb4a9599bc863a07e39a57a84bd774f08bd755113a21fa9959aab",
+      "bytes": 955
+    },
+    "derived/tabber-tables.json": {
+      "sha256": "sha256:9067e143c5de1c2775183f4b1384c40e5a9b2c23224c668e30e39c78b8824d74",
+      "bytes": 195186
+    },
+    "imageinfo.json": {
+      "sha256": "sha256:92babb5b148638a4828bfd76807dd579e6f782cc5b77552d21c2eab6d1ee5d0a",
+      "bytes": 7160
+    },
+    "images/files/FAF_Move_Stages.png": {
+      "sha256": "sha256:a03d8caac22d995ee037b9c4983dd5ab894841e720c601240960d7a41d7e2e6c",
+      "bytes": 156213
+    },
+    "images/files/SF6_Health_Bars_SA3_Scaling.png": {
+      "sha256": "sha256:b5f37d323258d4401f6ec4f9b222dc92d9b111675af40a3585e810d23fe17120",
+      "bytes": 1948178
+    },
+    "images/rendered/4e81d5177592-800px-FAF_Move_Stages.png": {
+      "sha256": "sha256:27a22819e697057b63d1fc0134ae88f0ddae1f9011e43f4b0655ff8a548b0d7b",
+      "bytes": 75697
+    },
+    "metadata.json": {
+      "sha256": "sha256:03292b4be04ea612aa20e916a91ffe7e9dcc1af59c0c8731e0f1dcc2f7fbfe92",
+      "bytes": 19566
+    },
+    "page.html": {
+      "sha256": "sha256:c10575ec8d6f3ca4f21279299401364aba7302aa03490d613f65f89d3512d434",
+      "bytes": 513700
+    },
+    "page.raw.wikitext": {
+      "sha256": "sha256:bd024eea244c6bf6ef86fa8109ffd8c0b8be994ad8a74b6b20088e4e5543e1aa",
+      "bytes": 63661
+    },
+    "rendered/content.cleaned.html": {
+      "sha256": "sha256:2b333f64d113a84fc3b771f215576333f346c48863d866146be0c2cb8161f72d",
+      "bytes": 258754
+    },
+    "rendered/content.scoped.html": {
+      "sha256": "sha256:5b4156632564779954c003b21aa440cdd87eee228c557524f002dd852f5b4807",
+      "bytes": 226847
+    },
+    "rendered/main.dom.json": {
+      "sha256": "sha256:ca574b4d5f5adedc06a8941254831c6a5f645393b7e1fc842406c049aa9d4b4b",
+      "bytes": 968943
+    },
+    "rendered/media.dom.json": {
+      "sha256": "sha256:788ef8e9399a5066f1db6c3d72b89809c9c8b13b4fffbfd1915ba3a425d09a58",
+      "bytes": 51806
+    },
+    "rendered/tabbers.dom.json": {
+      "sha256": "sha256:8babbd8fa31080a2ac0781780269b5338dec0c66fd195a03a7f59cbd40bd8868",
+      "bytes": 52398
+    },
+    "screenshots/content-scoped.png": {
+      "sha256": "sha256:ccfe1c5158c48fe1949cfba1ce8d41b5e9fad1d0336bcec1951da744ec4dca80",
+      "bytes": 8458917
+    },
+    "screenshots/page-scoped.png": {
+      "sha256": "sha256:f5ece56e179b07f447b7332d7a80a96fdca4eafd1c1876b72d6a13ffd8f2829a",
+      "bytes": 3671529
+    },
+    "validation.json": {
+      "sha256": "sha256:f8e605832e9a149e41325a4c780b7cbc7879bb529322c78fd17706a91016319d",
+      "bytes": 2047
+    },
+    "validation.tabbers.json": {
+      "sha256": "sha256:604205f3b23dc086bc6c172c73713b9f031075fdc8e2f38dba34aa7bb1a58152",
+      "bytes": 10467
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "tool": "tools/web_pages/supercombo_page.py",
+  "validation_artifacts": [
+    "validation.json",
+    "validation.tabbers.json"
+  ],
+  "raw_derived_artifacts": [
+    {
+      "path": "raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json",
+      "schema_version": "sf6_supercombo_game_data_tabber_tables/v1",
+      "source_preserving": true
+    }
+  ],
+  "game_data_tabber_pipeline": {
+    "tool": "tools/web_pages/supercombo_page.py",
+    "rendered_tabber_dom": "rendered/tabbers.dom.json",
+    "validation": "validation.tabbers.json",
+    "raw_derived_table_artifact": "raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json"
+  },
+  "tabber_validation": {
+    "path": "validation.tabbers.json",
+    "status": "passed",
+    "created_at_utc": "2026-06-11T13:39:15Z",
+    "summary": {
+      "wikitext_tabber_group_count": 4,
+      "tab_counts_by_group": [
+        30,
+        3,
+        4,
+        9
+      ],
+      "total_tab_count": 46,
+      "source_table_or_cargo_tabs_by_group": [
+        30,
+        3,
+        4,
+        1
+      ],
+      "page_html_tables_by_tabber_group": [
+        30,
+        3,
+        4,
+        1
+      ],
+      "scoped_html_tables_by_tabber_group": [
+        30,
+        3,
+        4,
+        1
+      ],
+      "page_html_table_count": 40,
+      "scoped_html_table_count": 39,
+      "main_dom_table_count": 40,
+      "live_table_count": 40,
+      "live_revision_id": 365507,
+      "live_revision_source": "mediawiki_query",
+      "live_http_status": 200
+    }
+  }
+}

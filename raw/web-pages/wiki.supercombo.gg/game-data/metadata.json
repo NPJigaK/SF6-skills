@@ -1,0 +1,488 @@
+{
+  "metadata_schema_version": "supercombo_mediawiki_page_capture_metadata/v1",
+  "captured_at_utc": "2026-06-11T13:38:34Z",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "game": "Street Fighter 6",
+  "source_family": "web_page",
+  "source_type": "community_wiki_page",
+  "page_title": "Street Fighter 6/Game Data",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+  "wikitext_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data?action=raw",
+  "api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FGame+Data&prop=info%7Crevisions%7Cimages&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment%7Csha1&rvslots=main&imlimit=max",
+  "templates_api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FGame+Data&prop=templates&tllimit=max",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Game Data",
+    "pageid": 65929,
+    "lastrevid": 365507,
+    "revision_id": 365507,
+    "revision_timestamp": "2026-06-04T23:19:26Z",
+    "touched": "2026-06-11T11:02:03Z",
+    "length": 63661,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "ca341f6f9d9c6a941c1f2d39f680572bbfd7f1ef",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data"
+  },
+  "source_updated_at": "2026-06-04T23:19:26Z",
+  "storage_policy": "updateable_web_page_capture",
+  "raw_review_status": "pending_human_review",
+  "capture_method": {
+    "tool": "scrapling",
+    "session": "StealthySession",
+    "headless": true,
+    "solve_cloudflare": true,
+    "block_ads": true,
+    "network_idle": false
+  },
+  "http_status": {
+    "page_html": 200,
+    "page_raw_wikitext": 200,
+    "api_query": 200,
+    "api_templates": 200,
+    "render_fetch": 200
+  },
+  "responses": {
+    "page_html": {
+      "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+      "final_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a0a1045c8a9862e1-NRT",
+        "content-encoding": "zstd",
+        "content-language": "en",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Thu, 11 Jun 2026 13:38:36 GMT",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "last-modified": "Thu, 11 Jun 2026 11:02:24 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mXBdj7QE9svjWCkg66VwJLyc0NtAFxkksAkDUuzQ70x%2BagZKVBJi3NA1BxvlP%2FD2xfrA22PTAHkguGE0qOiN%2FwNBLBWUa9ctpsvFPwazNYRn3XmK7kVh%2Fec6rOVo%2FWLih2OhIU85ViEQI37KrfPRgpM%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=9,cfOrigin;dur=843, cfExtPri",
+        "vary": "Accept-Encoding,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "53ca59bf2d6e2873b5263a70"
+      },
+      "byte_count": 513700,
+      "sha256": "sha256:c10575ec8d6f3ca4f21279299401364aba7302aa03490d613f65f89d3512d434"
+    },
+    "page_raw_wikitext": {
+      "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data?action=raw",
+      "final_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data?action=raw",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, s-maxage=0, max-age=18000",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a0a1048c2ab662e1-NRT",
+        "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+        "content-type": "text/x-wiki; charset=UTF-8",
+        "date": "Thu, 11 Jun 2026 13:38:44 GMT",
+        "last-modified": "Thu, 04 Jun 2026 23:19:26 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WOWWttck%2FRRn0h2gXtSlEwSdULo6%2BVaxL82441QUfpk4kv%2F26lXDomoZGK3M3AsNq%2Fi%2FRFjECrvtpqHjXBxHyRJWlArWVxzf2hhsUclRRU1VSBaiQepluGwy83NWdKHw0R8HfQN2y%2FcstPTgn6q1h8I%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=852, cfExtPri",
+        "vary": "Accept-Encoding,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "18cac20b603328c2620987e0"
+      },
+      "byte_count": 63661,
+      "sha256": "sha256:bd024eea244c6bf6ef86fa8109ffd8c0b8be994ad8a74b6b20088e4e5543e1aa"
+    },
+    "api_query": {
+      "url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FGame+Data&prop=info%7Crevisions%7Cimages&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment%7Csha1&rvslots=main&imlimit=max",
+      "final_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FGame+Data&prop=info%7Crevisions%7Cimages&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment%7Csha1&rvslots=main&imlimit=max",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a0a1049f0d1d62e1-NRT",
+        "content-disposition": "inline; filename=api-result.json",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 11 Jun 2026 13:38:46 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=c%2F4RFg9CbzisEMQ4YWgfbstdQ6fo4vMkBlOewKV1ecEQTLCWl4GE19mtf4rscyBRMdr%2B820zCaMoaKxRi6m6c4B%2BmcMR%2Bv5%2F%2Btd19pV3YbJUPAz6wqu%2Bu0q6ERi9ZLS6balW5LCqWvX7oURsoqwaHOM%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=5,cfOrigin;dur=318, cfExtPri",
+        "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-request-id": "9e4fd19196b5e762dcf4f618"
+      },
+      "byte_count": 67520,
+      "sha256": "sha256:85973ac80b8d660c19fa0eafac2d3cb6e2fa273e7a0f65c6439f62adc4d141ba"
+    },
+    "api_templates": {
+      "url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FGame+Data&prop=templates&tllimit=max",
+      "final_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FGame+Data&prop=templates&tllimit=max",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a0a104ae7f7862e1-NRT",
+        "content-disposition": "inline; filename=api-result.json",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 11 Jun 2026 13:38:49 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XblCVAClpeMWs5WYe3qc4z2FQmuLSpkKV0Dl4sIblqH7qPhGJYvH3M2YNE6mfhQXSaOUnQq2bOGGLHBcBtxg59UlF0YhXwwRxku6KJuiK%2F5L8mS3Sc8p3DOLPE9gRTXVP958KEgw81MtY1lC8CIEWbc%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=303, cfExtPri",
+        "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-request-id": "6eeeab85a74b3ebad647de8b"
+      },
+      "byte_count": 456,
+      "sha256": "sha256:bf37972d58b16badb47d166b8cd070dd95f2f7be6e2d3b2b9708d8326b8deaf7"
+    },
+    "render_fetch": {
+      "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+      "final_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data#tabber-%E2%89%A412F",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a0a104ba699c62e1-NRT",
+        "content-encoding": "zstd",
+        "content-language": "en",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Thu, 11 Jun 2026 13:38:50 GMT",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "last-modified": "Thu, 11 Jun 2026 11:02:24 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aKEZAhYKkx59tcST1vyBUDLaElinXWbj2EN2aOuFf4Aat4hrBhLa0P7hkT%2FawuI2hZ7DcAvYju21m56NLQTEFADoCoyYJFFlYqlo9DggWar21ON1SrySucIbx9qiHUT%2BjozqBAtyR2ATzoyAwI%2BFj4I%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=293, cfExtPri",
+        "vary": "Accept-Encoding,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "71a7ba8806b1cf5360ea8bba"
+      },
+      "byte_count": 459121,
+      "sha256": "sha256:6a5ca2c2e2c9523dc22990a0127b1c0f82e638d41af7fe7b2fcac04a4cd0207a"
+    }
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Sf6-adv"
+    }
+  ],
+  "media_scope_policy": {
+    "included": "Page semantic content media: explicit File links in page.raw.wikitext and rendered File links outside navigation sections.",
+    "excluded": "Images introduced by transcluded navigation/template chrome, including SF6 Navigation character icons.",
+    "api_prop_images_note": "api/query.json preserves MediaWiki prop=images exactly; download scope intentionally uses content_media_titles instead."
+  },
+  "api_page_image_titles": [
+    "File:FAF Move Stages.png",
+    "File:SF6 A.K.I. Icon.png",
+    "File:SF6 Akuma Icon.png",
+    "File:SF6 Alex Icon.png",
+    "File:SF6 Blanka Icon.png",
+    "File:SF6 Cammy Icon.png",
+    "File:SF6 Chun-Li Icon.png",
+    "File:SF6 Cviper Icon.png",
+    "File:SF6 DeeJay Icon.png",
+    "File:SF6 Dhalsim Icon.png",
+    "File:SF6 Ed Icon.png",
+    "File:SF6 Ehonda Icon.png",
+    "File:SF6 Elena Icon.png",
+    "File:SF6 Guile Icon.png",
+    "File:SF6 Health Bars SA3 Scaling.png",
+    "File:SF6 Ingrid Icon.png",
+    "File:SF6 JP Icon.png",
+    "File:SF6 Jamie Icon.png",
+    "File:SF6 Juri Icon.png",
+    "File:SF6 Ken Icon.png",
+    "File:SF6 Kimberly Icon.png",
+    "File:SF6 Lily Icon.png",
+    "File:SF6 Luke Icon.png",
+    "File:SF6 Mai Icon.png",
+    "File:SF6 Manon Icon.png",
+    "File:SF6 Marisa Icon.png",
+    "File:SF6 Mbison Icon.png",
+    "File:SF6 Rashid Icon.png",
+    "File:SF6 Ryu Icon.png",
+    "File:SF6 Sagat Icon.png",
+    "File:SF6 Terry Icon.png",
+    "File:SF6 Zangief Icon.png"
+  ],
+  "content_media_titles": [
+    "File:FAF Move Stages.png",
+    "File:SF6 Health Bars SA3 Scaling.png"
+  ],
+  "excluded_api_image_titles": [
+    {
+      "title": "File:SF6 A.K.I. Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Akuma Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Alex Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Blanka Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Cammy Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Chun-Li Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Cviper Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 DeeJay Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Dhalsim Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Ed Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Ehonda Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Elena Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Guile Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Ingrid Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 JP Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Jamie Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Juri Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Ken Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Kimberly Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Lily Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Luke Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Mai Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Manon Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Marisa Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Mbison Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Rashid Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Ryu Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Sagat Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Terry Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    },
+    {
+      "title": "File:SF6 Zangief Icon.png",
+      "reason": "api_prop_images_from_transcluded_or_navigation_content"
+    }
+  ],
+  "counts": {
+    "wikitext_bytes": 63661,
+    "page_html_bytes": 513700,
+    "heading_count": 19,
+    "link_count": 152,
+    "table_count": 40,
+    "rendered_dom_image_count": 32,
+    "content_media_image_count": 2,
+    "excluded_navigation_image_count": 30,
+    "rendered_dom_video_count": 0,
+    "api_prop_images_count": 32,
+    "imageinfo_requested_count": 2,
+    "excluded_api_images_count": 30,
+    "imageinfo_resolved_count": 2,
+    "downloaded_original_image_count": 2,
+    "downloaded_rendered_image_count": 1,
+    "mediawiki_revision_id": 365507,
+    "mediawiki_revision_timestamp": "2026-06-04T23:19:26Z",
+    "tabber_group_count": 4,
+    "tabber_tab_count": 46,
+    "tabber_table_or_cargo_tab_count": 38
+  },
+  "artifacts": {
+    "page_html": "page.html",
+    "page_raw_wikitext": "page.raw.wikitext",
+    "api_query": "api/query.json",
+    "api_templates": "api/templates.json",
+    "imageinfo": "imageinfo.json",
+    "image_manifest": "images/manifest.json",
+    "rendered_main_dom": "rendered/main.dom.json",
+    "rendered_media_dom": "rendered/media.dom.json",
+    "rendered_cleaned_content_html": "rendered/content.cleaned.html",
+    "rendered_scoped_content_html": "rendered/content.scoped.html",
+    "screenshots": {
+      "page_scoped": {
+        "path": "screenshots/page-scoped.png",
+        "byte_count": 3671529,
+        "sha256": "sha256:f5ece56e179b07f447b7332d7a80a96fdca4eafd1c1876b72d6a13ffd8f2829a",
+        "width": 1600,
+        "height": 11976
+      },
+      "content_scoped": {
+        "path": "screenshots/content-scoped.png",
+        "byte_count": 8458917,
+        "sha256": "sha256:ccfe1c5158c48fe1949cfba1ce8d41b5e9fad1d0336bcec1951da744ec4dca80",
+        "width": 2440,
+        "height": 21078
+      }
+    },
+    "validation": "validation.json",
+    "rendered_tabbers_dom": "rendered/tabbers.dom.json",
+    "tabber_validation": "validation.tabbers.json"
+  },
+  "raw_derived_artifacts": [
+    {
+      "path": "raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json",
+      "schema_version": "sf6_supercombo_game_data_tabber_tables/v1",
+      "source_preserving": true,
+      "status": "generated"
+    }
+  ],
+  "game_data_tabber_pipeline": {
+    "tool": "tools/web_pages/supercombo_page.py",
+    "rendered_tabber_dom": "rendered/tabbers.dom.json",
+    "validation": "validation.tabbers.json",
+    "raw_derived_table_artifact": "raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json"
+  },
+  "tabber_validation": {
+    "path": "validation.tabbers.json",
+    "status": "passed",
+    "created_at_utc": "2026-06-11T13:39:15Z",
+    "summary": {
+      "wikitext_tabber_group_count": 4,
+      "tab_counts_by_group": [
+        30,
+        3,
+        4,
+        9
+      ],
+      "total_tab_count": 46,
+      "source_table_or_cargo_tabs_by_group": [
+        30,
+        3,
+        4,
+        1
+      ],
+      "page_html_tables_by_tabber_group": [
+        30,
+        3,
+        4,
+        1
+      ],
+      "scoped_html_tables_by_tabber_group": [
+        30,
+        3,
+        4,
+        1
+      ],
+      "page_html_table_count": 40,
+      "scoped_html_table_count": 39,
+      "main_dom_table_count": 40,
+      "live_table_count": 40,
+      "live_revision_id": 365507,
+      "live_revision_source": "mediawiki_query",
+      "live_http_status": 200
+    }
+  }
+}

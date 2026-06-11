@@ -26,8 +26,13 @@ MANIFEST_SCHEMA_VERSION = "supercombo_mediawiki_page_capture_manifest/v1"
 METADATA_SCHEMA_VERSION = "supercombo_mediawiki_page_capture_metadata/v1"
 VALIDATION_SCHEMA_VERSION = "supercombo_mediawiki_page_capture_validation/v1"
 IMAGE_MANIFEST_SCHEMA_VERSION = "supercombo_mediawiki_page_image_manifest/v1"
+GAME_DATA_PAGE_TITLE = "Street Fighter 6/Game Data"
+GAME_DATA_TABBER_DOM_SCHEMA_VERSION = "supercombo_game_data_tabber_dom/v1"
+GAME_DATA_TABBER_VALIDATION_SCHEMA_VERSION = "supercombo_game_data_tabber_validation/v1"
+GAME_DATA_TABBER_TABLES_SCHEMA_VERSION = "sf6_supercombo_game_data_tabber_tables/v1"
+GAME_DATA_TABBER_TABLES_OUTPUT = Path("derived/tabber-tables.json")
 
-GENERATED_DIRS = ["api", "images", "rendered", "screenshots"]
+GENERATED_DIRS = ["api", "derived", "images", "rendered", "screenshots"]
 GENERATED_FILES = [
     "imageinfo.json",
     "manifest.json",
@@ -35,6 +40,7 @@ GENERATED_FILES = [
     "page.html",
     "page.raw.wikitext",
     "validation.json",
+    "validation.tabbers.json",
 ]
 
 CAPTURE_CSS = """
@@ -227,6 +233,19 @@ def rendered_asset_filename(url: str) -> str:
 
 def chunks(values: list[str], size: int) -> list[list[str]]:
     return [values[index : index + size] for index in range(0, len(values), size)]
+
+
+def is_game_data_capture(page_title: str, page_slug: str | None) -> bool:
+    slug = page_slug or page_slug_from_title(page_title)
+    return page_title == GAME_DATA_PAGE_TITLE or slug == "game-data"
+
+
+def game_data_tabber_tables_output_path(raw_root: Path) -> Path:
+    return raw_root / GAME_DATA_TABBER_TABLES_OUTPUT
+
+
+def remove_game_data_derived_outputs(raw_root: Path) -> None:
+    game_data_tabber_tables_output_path(raw_root).unlink(missing_ok=True)
 
 
 def reset_raw_root(repo_root: Path, raw_root: Path) -> None:
@@ -471,6 +490,106 @@ def capture_rendered_state(
         cleanup_capture_page(page)
         warm_lazy_content(page)
         cleanup_capture_page(page)
+
+        state["page_html_tabbers"] = page.evaluate(
+            """
+            () => {
+              const root = document.querySelector('.mw-parser-output') || document.querySelector('#mw-content-text') || document.body;
+              function textOf(element) {
+                return (element.innerText || element.textContent || '').replace(/\\s+/g, ' ').trim();
+              }
+              function panelForTab(tab, tabber) {
+                const id = tab.getAttribute('aria-controls') || (tab.getAttribute('href') || '').replace(/^#/, '');
+                if (!id) return null;
+                return tabber.querySelector(`#${CSS.escape(id)}`) || document.getElementById(id);
+              }
+              function headerSample(table) {
+                const firstRow = table.querySelector('tr');
+                if (!firstRow) return '';
+                return Array.from(firstRow.children).map((cell) => textOf(cell)).join(' | ');
+              }
+              const tabbers = Array.from(root.querySelectorAll('.tabber')).map((tabber, groupIndex) => {
+                const tabs = Array.from(tabber.querySelectorAll('.tabber__tab[role="tab"], [role="tab"]'));
+                const panels = tabs.map((tab, panelIndex) => {
+                  const panel = panelForTab(tab, tabber);
+                  const tables = panel ? Array.from(panel.querySelectorAll('table')) : [];
+                  const panelText = panel ? textOf(panel) : '';
+                  return {
+                    panel_index: panelIndex,
+                    id: panel ? (panel.id || '') : '',
+                    label: textOf(tab),
+                    table_count: tables.length,
+                    row_counts: tables.map((table) => table.querySelectorAll('tr').length),
+                    header_samples: tables.map((table) => headerSample(table)),
+                    text_length: panelText.length,
+                    todo_only: /^\\(to-do\\)$/i.test(panelText)
+                  };
+                });
+                return {
+                  group_index: groupIndex,
+                  source: 'rendered page before navigation removal',
+                  tab_count: tabs.length,
+                  panel_count: panels.length,
+                  labels: tabs.map((tab) => textOf(tab)),
+                  panels,
+                  table_count: panels.reduce((sum, panel) => sum + panel.table_count, 0)
+                };
+              });
+              return {
+                source: location.href,
+                tabber_count: tabbers.length,
+                tabbers,
+                table_count: root.querySelectorAll('table').length
+              };
+            }
+            """
+        )
+
+        state["live_tabber_clicks"] = page.evaluate(
+            """
+            async () => {
+              const root = document.querySelector('.mw-parser-output') || document.querySelector('#mw-content-text') || document.body;
+              function textOf(element) {
+                return (element.innerText || element.textContent || '').replace(/\\s+/g, ' ').trim();
+              }
+              function panelForTab(tab, tabber) {
+                const id = tab.getAttribute('aria-controls') || (tab.getAttribute('href') || '').replace(/^#/, '');
+                if (!id) return null;
+                return tabber.querySelector(`#${CSS.escape(id)}`) || document.getElementById(id);
+              }
+              const tabbers = [];
+              for (const [groupIndex, tabber] of Array.from(root.querySelectorAll('.tabber')).entries()) {
+                const tabs = Array.from(tabber.querySelectorAll('.tabber__tab[role="tab"], [role="tab"]'));
+                const panels = tabs.map((tab) => panelForTab(tab, tabber));
+                const before = panels.map((panel) => panel ? panel.querySelectorAll('table').length : 0);
+                const after = [];
+                const selectedLabels = [];
+                for (const [tabIndex, tab] of tabs.entries()) {
+                  tab.click();
+                  await new Promise((resolve) => setTimeout(resolve, 80));
+                  const panel = panels[tabIndex];
+                  after.push(panel ? panel.querySelectorAll('table').length : 0);
+                  selectedLabels.push(tab.getAttribute('aria-selected') === 'true' ? textOf(tab) : '');
+                }
+                tabbers.push({
+                  group_index: groupIndex,
+                  labels: tabs.map((tab) => textOf(tab)),
+                  panel_count: panels.length,
+                  table_counts_before_clicks: before,
+                  table_counts_after_clicks: after,
+                  selected_labels_after_clicks: selectedLabels
+                });
+              }
+              return {
+                source: location.href,
+                live_revision_id: window.mw && window.mw.config ? window.mw.config.get('wgRevisionId') : null,
+                tabber_count: tabbers.length,
+                tabbers,
+                table_count: root.querySelectorAll('table').length
+              };
+            }
+            """
+        )
 
         cleaned_html = page.locator("#mw-content-text").first.evaluate("(element) => element.outerHTML")
         write_text(paths.rendered_dir / "content.cleaned.html", cleaned_html)
@@ -722,6 +841,59 @@ def capture_rendered_state(
         remove_navigation_display_content(page)
         scoped_html = page.locator("#mw-content-text").first.evaluate("(element) => element.outerHTML")
         write_text(paths.rendered_dir / "content.scoped.html", scoped_html)
+        state["scoped_html_tabbers"] = page.evaluate(
+            """
+            () => {
+              const root = document.querySelector('.mw-parser-output') || document.querySelector('#mw-content-text') || document.body;
+              function textOf(element) {
+                return (element.innerText || element.textContent || '').replace(/\\s+/g, ' ').trim();
+              }
+              function panelForTab(tab, tabber) {
+                const id = tab.getAttribute('aria-controls') || (tab.getAttribute('href') || '').replace(/^#/, '');
+                if (!id) return null;
+                return tabber.querySelector(`#${CSS.escape(id)}`) || document.getElementById(id);
+              }
+              function headerSample(table) {
+                const firstRow = table.querySelector('tr');
+                if (!firstRow) return '';
+                return Array.from(firstRow.children).map((cell) => textOf(cell)).join(' | ');
+              }
+              const tabbers = Array.from(root.querySelectorAll('.tabber')).map((tabber, groupIndex) => {
+                const tabs = Array.from(tabber.querySelectorAll('.tabber__tab[role="tab"], [role="tab"]'));
+                const panels = tabs.map((tab, panelIndex) => {
+                  const panel = panelForTab(tab, tabber);
+                  const tables = panel ? Array.from(panel.querySelectorAll('table')) : [];
+                  const panelText = panel ? textOf(panel) : '';
+                  return {
+                    panel_index: panelIndex,
+                    id: panel ? (panel.id || '') : '',
+                    label: textOf(tab),
+                    table_count: tables.length,
+                    row_counts: tables.map((table) => table.querySelectorAll('tr').length),
+                    header_samples: tables.map((table) => headerSample(table)),
+                    text_length: panelText.length,
+                    todo_only: /^\\(to-do\\)$/i.test(panelText)
+                  };
+                });
+                return {
+                  group_index: groupIndex,
+                  source: 'rendered page after navigation removal',
+                  tab_count: tabs.length,
+                  panel_count: panels.length,
+                  labels: tabs.map((tab) => textOf(tab)),
+                  panels,
+                  table_count: panels.reduce((sum, panel) => sum + panel.table_count, 0)
+                };
+              });
+              return {
+                source: location.href,
+                tabber_count: tabbers.length,
+                tabbers,
+                table_count: root.querySelectorAll('table').length
+              };
+            }
+            """
+        )
 
         state["screenshots"]["page_scoped"] = capture_full_page_png(
             page,
@@ -1045,6 +1217,413 @@ def validate_capture(
     }
 
 
+def extract_wikitext_tabbers(wikitext: str) -> list[dict[str, Any]]:
+    tabbers: list[dict[str, Any]] = []
+    for group_index, block_match in enumerate(re.finditer(r"<tabber>\s*(.*?)</tabber>", wikitext, flags=re.IGNORECASE | re.DOTALL)):
+        block = block_match.group(1)
+        tabs: list[dict[str, Any]] = []
+        for tab_index, part in enumerate(re.split(r"(?m)^\s*\|-\|\s*$", block)):
+            tab_source = part.strip()
+            if not tab_source:
+                continue
+            match = re.match(r"(?s)^([^\n=]+?)\s*=\s*(.*)$", tab_source)
+            if not match:
+                continue
+            label = re.sub(r"\s+", " ", match.group(1)).strip()
+            body = match.group(2).strip()
+            table_markup_count = len(re.findall(r"(?m)^\s*\{\|", body))
+            cargo_query_count = len(re.findall(r"\{\{#cargo_query:", body, flags=re.IGNORECASE))
+            todo_only = bool(re.fullmatch(r"\(?to-do\)?", re.sub(r"\s+", " ", body).strip(), flags=re.IGNORECASE))
+            tabs.append(
+                {
+                    "tab_index": len(tabs),
+                    "label": label,
+                    "table_markup_count": table_markup_count,
+                    "cargo_query_count": cargo_query_count,
+                    "expects_rendered_table": table_markup_count > 0 or cargo_query_count > 0,
+                    "todo_only": todo_only,
+                }
+            )
+        tabbers.append(
+            {
+                "group_index": group_index,
+                "source": "page.raw.wikitext",
+                "tab_count": len(tabs),
+                "tabs": tabs,
+                "table_or_cargo_tab_count": sum(1 for tab in tabs if tab.get("expects_rendered_table")),
+            }
+        )
+    return tabbers
+
+
+def game_data_source_path(repo_root: Path, path: Path) -> str:
+    return path.relative_to(repo_root).as_posix()
+
+
+def game_data_expected_tab_labels(wikitext_group: dict[str, Any]) -> list[str]:
+    return [tab["label"] for tab in wikitext_group.get("tabs", [])]
+
+
+def game_data_expected_table_presence(wikitext_group: dict[str, Any]) -> list[int]:
+    return [1 if tab.get("expects_rendered_table") else 0 for tab in wikitext_group.get("tabs", [])]
+
+
+def game_data_panel_table_counts(rendered_group: dict[str, Any] | None) -> list[int]:
+    if not rendered_group:
+        return []
+    return [int(panel.get("table_count", 0)) for panel in rendered_group.get("panels", [])]
+
+
+def game_data_labels(rendered_group: dict[str, Any] | None) -> list[str]:
+    if not rendered_group:
+        return []
+    return [str(label) for label in rendered_group.get("labels", [])]
+
+
+def game_data_group_at(snapshot: dict[str, Any], group_index: int) -> dict[str, Any] | None:
+    groups = snapshot.get("tabbers") or []
+    if group_index >= len(groups):
+        return None
+    return groups[group_index]
+
+
+def build_game_data_tabber_dom(
+    *,
+    repo_root: Path,
+    raw_root: Path,
+    page_url: str,
+    source_revision: dict[str, Any],
+    source_updated_at: str | None,
+    wikitext: str,
+    rendered_state: dict[str, Any],
+) -> dict[str, Any]:
+    return {
+        "dom_schema_version": GAME_DATA_TABBER_DOM_SCHEMA_VERSION,
+        "created_at_utc": utc_now(),
+        "raw_root": game_data_source_path(repo_root, raw_root),
+        "source_url": page_url,
+        "source_revision_id": source_revision.get("revision_id"),
+        "source_updated_at": source_updated_at,
+        "wikitext_tabbers": extract_wikitext_tabbers(wikitext),
+        "page_html_tabbers": {
+            **(rendered_state.get("page_html_tabbers") or {}),
+            "source": game_data_source_path(repo_root, raw_root / "page.html"),
+        },
+        "scoped_html_tabbers": {
+            **(rendered_state.get("scoped_html_tabbers") or {}),
+            "source": game_data_source_path(repo_root, raw_root / "rendered" / "content.scoped.html"),
+        },
+        "live_click_tabbers": rendered_state.get("live_tabber_clicks") or {},
+    }
+
+
+def validate_game_data_tabbers(
+    *,
+    repo_root: Path,
+    raw_root: Path,
+    page_url: str,
+    source_revision: dict[str, Any],
+    source_updated_at: str | None,
+    rendered_state: dict[str, Any],
+    tabber_dom: dict[str, Any],
+    main_validation: dict[str, Any],
+) -> dict[str, Any]:
+    wikitext_groups = tabber_dom.get("wikitext_tabbers") or []
+    page_snapshot = tabber_dom.get("page_html_tabbers") or {}
+    scoped_snapshot = tabber_dom.get("scoped_html_tabbers") or {}
+    live_snapshot = tabber_dom.get("live_click_tabbers") or {}
+    main_dom = json.loads((raw_root / "rendered" / "main.dom.json").read_text(encoding="utf-8"))
+    render_fetch = rendered_state.get("render_fetch") or {}
+    source_revision_id = source_revision.get("revision_id")
+    live_revision_id = live_snapshot.get("live_revision_id") or source_revision_id
+    live_revision_source = "rendered_mw_config" if live_snapshot.get("live_revision_id") else "mediawiki_query"
+    group_validations: list[dict[str, Any]] = []
+    checks: dict[str, bool] = {
+        "live_http_status_200": render_fetch.get("status") == 200,
+        "current_live_revision_matches_capture": live_revision_id == source_revision_id,
+        "wikitext_tabber_group_count_is_4": len(wikitext_groups) == 4,
+        "page_html_tabber_group_count_matches_wikitext": page_snapshot.get("tabber_count") == len(wikitext_groups),
+        "scoped_html_tabber_group_count_matches_wikitext": scoped_snapshot.get("tabber_count") == len(wikitext_groups),
+        "live_tabber_group_count_matches_wikitext": live_snapshot.get("tabber_count") == len(wikitext_groups),
+        "rendered_main_table_count_matches_page_html": main_dom.get("metrics", {}).get("table_count")
+        == page_snapshot.get("table_count"),
+        "scoped_html_excludes_navigation_table": bool(
+            main_validation.get("checks", {}).get("scoped_content_excludes_navigation_table")
+        ),
+    }
+    for group_index, wikitext_group in enumerate(wikitext_groups):
+        labels = game_data_expected_tab_labels(wikitext_group)
+        source_presence = game_data_expected_table_presence(wikitext_group)
+        page_group = game_data_group_at(page_snapshot, group_index)
+        scoped_group = game_data_group_at(scoped_snapshot, group_index)
+        live_group = game_data_group_at(live_snapshot, group_index)
+        page_counts = game_data_panel_table_counts(page_group)
+        scoped_counts = game_data_panel_table_counts(scoped_group)
+        live_before = list((live_group or {}).get("table_counts_before_clicks", []))
+        live_after = list((live_group or {}).get("table_counts_after_clicks", []))
+        selected_after = list((live_group or {}).get("selected_labels_after_clicks", []))
+        group_checks = {
+            "page_html_labels_match_wikitext": game_data_labels(page_group) == labels,
+            "scoped_html_labels_match_wikitext": game_data_labels(scoped_group) == labels,
+            "live_labels_match_wikitext": game_data_labels(live_group) == labels,
+            "page_html_panels_match_tabs": (page_group or {}).get("panel_count") == len(labels),
+            "live_panels_match_tabs": (live_group or {}).get("panel_count") == len(labels),
+            "page_html_table_presence_matches_source": [1 if count > 0 else 0 for count in page_counts] == source_presence,
+            "scoped_html_table_presence_matches_source": [1 if count > 0 else 0 for count in scoped_counts] == source_presence,
+            "live_table_counts_stable_after_clicking_all_tabs": live_before == live_after,
+            "all_live_clicks_select_requested_tab": selected_after == labels,
+        }
+        for key, value in group_checks.items():
+            checks[f"group_{group_index}_{key}"] = bool(value)
+        group_validations.append(
+            {
+                "group_index": group_index,
+                "wikitext_tab_count": len(labels),
+                "labels": labels,
+                "source_expected_table_presence": source_presence,
+                "page_html_table_counts": page_counts,
+                "scoped_html_table_counts": scoped_counts,
+                "live_table_counts_before_clicks": live_before,
+                "live_table_counts_after_clicks": live_after,
+                "checks": group_checks,
+            }
+        )
+    all_passed = all(checks.values())
+    return {
+        "validation_schema_version": GAME_DATA_TABBER_VALIDATION_SCHEMA_VERSION,
+        "created_at_utc": utc_now(),
+        "status": "passed" if all_passed else "failed",
+        "raw_root": game_data_source_path(repo_root, raw_root),
+        "source_url": page_url,
+        "source_revision_id": source_revision_id,
+        "source_updated_at": source_updated_at,
+        "checks": checks,
+        "summary": {
+            "wikitext_tabber_group_count": len(wikitext_groups),
+            "tab_counts_by_group": [group.get("tab_count", 0) for group in wikitext_groups],
+            "total_tab_count": sum(group.get("tab_count", 0) for group in wikitext_groups),
+            "source_table_or_cargo_tabs_by_group": [
+                group.get("table_or_cargo_tab_count", 0) for group in wikitext_groups
+            ],
+            "page_html_tables_by_tabber_group": [
+                (game_data_group_at(page_snapshot, index) or {}).get("table_count", 0)
+                for index in range(len(wikitext_groups))
+            ],
+            "scoped_html_tables_by_tabber_group": [
+                (game_data_group_at(scoped_snapshot, index) or {}).get("table_count", 0)
+                for index in range(len(wikitext_groups))
+            ],
+            "page_html_table_count": page_snapshot.get("table_count"),
+            "scoped_html_table_count": scoped_snapshot.get("table_count"),
+            "main_dom_table_count": main_dom.get("metrics", {}).get("table_count"),
+            "live_table_count": live_snapshot.get("table_count"),
+            "live_revision_id": live_revision_id,
+            "live_revision_source": live_revision_source,
+            "live_http_status": render_fetch.get("status"),
+        },
+        "group_validations": group_validations,
+        "notes": [
+            "The canonical source text remains page.raw.wikitext; rendered/tabbers.dom.json is display-structure evidence, not a replacement for source text.",
+            "This validation confirms tabber structure and rendered table presence; it does not verify gameplay correctness of table values.",
+        ],
+    }
+
+
+def game_data_expected_table_metadata(wikitext_tabbers: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    metadata: list[dict[str, Any]] = [
+        {
+            "source_section": "Damage Scaling",
+            "group": "damage_scaling_progression",
+            "tab_label": None,
+            "excluded_from_content": False,
+        }
+    ]
+    section_map = [
+        ("Character-Specific Scaling", "character_specific_scaling"),
+        ("System Data", "system_data"),
+        ("Range Comparisons", "range_comparisons"),
+        ("Longest Punish Option at Each Frame Disadvantage", "longest_punish_options"),
+    ]
+    for group, (source_section, group_name) in zip(wikitext_tabbers, section_map, strict=False):
+        for tab in group.get("tabs", []):
+            if not tab.get("expects_rendered_table"):
+                continue
+            metadata.append(
+                {
+                    "source_section": source_section,
+                    "group": group_name,
+                    "tab_label": tab.get("label"),
+                    "excluded_from_content": False,
+                }
+            )
+    return metadata
+
+
+def game_data_is_navigation_table(table: dict[str, Any]) -> bool:
+    if "navbox" in str(table.get("class_name", "")).lower():
+        return True
+    if "Street Fighter 6 (SF6)" in str(table.get("text", "")):
+        return True
+    for row in table.get("rows", []):
+        for cell in row.get("cells", []):
+            attrs = cell.get("attributes") or {}
+            if attrs.get("class") == "nav-header":
+                return True
+    return False
+
+
+def game_data_output_table(table: dict[str, Any], metadata: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "table_index": table.get("table_index"),
+        **metadata,
+        "class_name": table.get("class_name", ""),
+        "headers": table.get("headers", []),
+        "row_count": table.get("row_count", 0),
+        "rows": [
+            {
+                "row_index": row.get("row_index"),
+                "cells": [cell.get("text", "") for cell in row.get("cells", [])],
+                "cell_tags": [cell.get("tag_name", "") for cell in row.get("cells", [])],
+            }
+            for row in table.get("rows", [])
+        ],
+    }
+
+
+def build_game_data_tabber_tables_output(
+    *,
+    repo_root: Path,
+    raw_root: Path,
+    page_url: str,
+    captured_at_utc: str,
+    source_revision: dict[str, Any],
+    source_updated_at: str | None,
+    tabber_dom: dict[str, Any],
+    tabber_validation: dict[str, Any],
+) -> dict[str, Any]:
+    main_dom = json.loads((raw_root / "rendered" / "main.dom.json").read_text(encoding="utf-8"))
+    expected_metadata = game_data_expected_table_metadata(tabber_dom.get("wikitext_tabbers") or [])
+    content_tables: list[dict[str, Any]] = []
+    excluded_tables: list[dict[str, Any]] = []
+    for table in main_dom.get("tables", []):
+        table_index = int(table.get("table_index", 0))
+        if table_index < len(expected_metadata):
+            content_tables.append(game_data_output_table(table, expected_metadata[table_index]))
+        elif game_data_is_navigation_table(table):
+            excluded_tables.append(
+                game_data_output_table(
+                    table,
+                    {
+                        "source_section": "SF6 Navigation",
+                        "group": "excluded_navigation",
+                        "tab_label": None,
+                        "excluded_from_content": True,
+                    },
+                )
+            )
+        else:
+            content_tables.append(
+                game_data_output_table(
+                    table,
+                    {
+                        "source_section": "Unmapped rendered content",
+                        "group": "unmapped_content",
+                        "tab_label": None,
+                        "excluded_from_content": False,
+                    },
+                )
+            )
+    wikitext_tabbers = tabber_dom.get("wikitext_tabbers") or []
+    return {
+        "schema_version": GAME_DATA_TABBER_TABLES_SCHEMA_VERSION,
+        "generated_at_utc": utc_now(),
+        "generated_by": {
+            "tool": "tools/web_pages/supercombo_page.py",
+            "stage": "game_data_tabber_tables",
+        },
+        "source": {
+            "source_page": "wiki/sources/supercombo-street-fighter-6-game-data.md",
+            "raw_manifest": game_data_source_path(repo_root, raw_root / "manifest.json"),
+            "source_url": page_url,
+            "source_revision_id": source_revision.get("revision_id"),
+            "source_updated_at": source_updated_at,
+            "captured_at_utc": captured_at_utc,
+            "raw_validation": game_data_source_path(repo_root, raw_root / "validation.json"),
+            "tabber_validation": game_data_source_path(repo_root, raw_root / "validation.tabbers.json"),
+            "rendered_dom": game_data_source_path(repo_root, raw_root / "rendered" / "main.dom.json"),
+            "tabber_dom": game_data_source_path(repo_root, raw_root / "rendered" / "tabbers.dom.json"),
+        },
+        "counts": {
+            "all_rendered_tables": len(main_dom.get("tables", [])),
+            "content_tables": len(content_tables),
+            "excluded_navigation_tables": len(excluded_tables),
+            "tabber_groups": len(wikitext_tabbers),
+            "tabber_tabs": sum(group.get("tab_count", 0) for group in wikitext_tabbers),
+            "tabber_table_or_cargo_tabs": sum(group.get("table_or_cargo_tab_count", 0) for group in wikitext_tabbers),
+            "character_specific_scaling_tables": (wikitext_tabbers[0].get("table_or_cargo_tab_count", 0) if len(wikitext_tabbers) > 0 else 0),
+            "system_data_tables": (wikitext_tabbers[1].get("table_or_cargo_tab_count", 0) if len(wikitext_tabbers) > 1 else 0),
+            "range_comparison_tables": (wikitext_tabbers[2].get("table_or_cargo_tab_count", 0) if len(wikitext_tabbers) > 2 else 0),
+            "tabber_validation_status": tabber_validation.get("status"),
+        },
+        "tables": content_tables,
+        "excluded_tables": excluded_tables,
+    }
+
+
+def write_game_data_tabber_artifacts(
+    *,
+    repo_root: Path,
+    raw_root: Path,
+    page_url: str,
+    captured_at_utc: str,
+    source_revision: dict[str, Any],
+    source_updated_at: str | None,
+    wikitext: str,
+    rendered_state: dict[str, Any],
+    main_validation: dict[str, Any],
+) -> dict[str, Any]:
+    tabber_dom = build_game_data_tabber_dom(
+        repo_root=repo_root,
+        raw_root=raw_root,
+        page_url=page_url,
+        source_revision=source_revision,
+        source_updated_at=source_updated_at,
+        wikitext=wikitext,
+        rendered_state=rendered_state,
+    )
+    write_json(raw_root / "rendered" / "tabbers.dom.json", tabber_dom)
+    tabber_validation = validate_game_data_tabbers(
+        repo_root=repo_root,
+        raw_root=raw_root,
+        page_url=page_url,
+        source_revision=source_revision,
+        source_updated_at=source_updated_at,
+        rendered_state=rendered_state,
+        tabber_dom=tabber_dom,
+        main_validation=main_validation,
+    )
+    write_json(raw_root / "validation.tabbers.json", tabber_validation)
+    tables_output = build_game_data_tabber_tables_output(
+        repo_root=repo_root,
+        raw_root=raw_root,
+        page_url=page_url,
+        captured_at_utc=captured_at_utc,
+        source_revision=source_revision,
+        source_updated_at=source_updated_at,
+        tabber_dom=tabber_dom,
+        tabber_validation=tabber_validation,
+    )
+    output_path = game_data_tabber_tables_output_path(raw_root)
+    write_json(output_path, tables_output)
+    return {
+        "tabber_dom": game_data_source_path(repo_root, raw_root / "rendered" / "tabbers.dom.json"),
+        "tabber_validation": game_data_source_path(repo_root, raw_root / "validation.tabbers.json"),
+        "tabber_tables_output": output_path.relative_to(repo_root).as_posix(),
+        "tabber_validation_status": tabber_validation.get("status"),
+        "tabber_table_counts": tables_output.get("counts", {}),
+    }
+
+
 def capture(
     repo_root: Path,
     *,
@@ -1055,8 +1634,11 @@ def capture(
     download_rendered_images: bool,
 ) -> dict[str, Any]:
     slug = page_slug or page_slug_from_title(page_title)
+    game_data_capture = is_game_data_capture(page_title, page_slug)
     raw_root = repo_root / "raw" / "web-pages" / "wiki.supercombo.gg" / slug
     reset_raw_root(repo_root, raw_root)
+    if game_data_capture:
+        remove_game_data_derived_outputs(raw_root)
     paths = CapturePaths(
         root=raw_root,
         api_dir=raw_root / "api",
@@ -1173,6 +1755,19 @@ def capture(
         rendered_state=rendered_state,
     )
     write_json(raw_root / "validation.json", validation)
+    game_data_artifacts: dict[str, Any] | None = None
+    if game_data_capture:
+        game_data_artifacts = write_game_data_tabber_artifacts(
+            repo_root=repo_root,
+            raw_root=raw_root,
+            page_url=page_url,
+            captured_at_utc=captured_at,
+            source_revision=source_revision,
+            source_updated_at=source_updated_at,
+            wikitext=wikitext.text,
+            rendered_state=rendered_state,
+            main_validation=validation,
+        )
 
     metadata = {
         "metadata_schema_version": METADATA_SCHEMA_VERSION,
@@ -1238,9 +1833,58 @@ def capture(
             "validation": "validation.json",
         },
     }
+    if game_data_artifacts:
+        tabber_validation = json.loads((raw_root / "validation.tabbers.json").read_text(encoding="utf-8"))
+        tabber_tables = json.loads(game_data_tabber_tables_output_path(raw_root).read_text(encoding="utf-8"))
+        metadata["counts"].update(
+            {
+                "tabber_group_count": tabber_validation.get("summary", {}).get("wikitext_tabber_group_count"),
+                "tabber_tab_count": tabber_validation.get("summary", {}).get("total_tab_count"),
+                "tabber_table_or_cargo_tab_count": tabber_tables.get("counts", {}).get("tabber_table_or_cargo_tabs"),
+            }
+        )
+        metadata["artifacts"].update(
+            {
+                "rendered_tabbers_dom": "rendered/tabbers.dom.json",
+                "tabber_validation": "validation.tabbers.json",
+            }
+        )
+        metadata["raw_derived_artifacts"] = [
+            {
+                "path": game_data_artifacts["tabber_tables_output"],
+                "schema_version": GAME_DATA_TABBER_TABLES_SCHEMA_VERSION,
+                "source_preserving": True,
+                "status": "generated",
+            }
+        ]
+        metadata["game_data_tabber_pipeline"] = {
+            "tool": "tools/web_pages/supercombo_page.py",
+            "rendered_tabber_dom": "rendered/tabbers.dom.json",
+            "validation": "validation.tabbers.json",
+            "raw_derived_table_artifact": game_data_artifacts["tabber_tables_output"],
+        }
+        metadata["tabber_validation"] = {
+            "path": "validation.tabbers.json",
+            "status": tabber_validation.get("status"),
+            "created_at_utc": tabber_validation.get("created_at_utc"),
+            "summary": tabber_validation.get("summary", {}),
+        }
     write_json(raw_root / "metadata.json", metadata)
 
     artifact_hashes = build_artifact_hashes(raw_root)
+    display_evidence_artifacts = [
+        "page.html",
+        "rendered/main.dom.json",
+        "rendered/media.dom.json",
+        "rendered/content.cleaned.html",
+        "rendered/content.scoped.html",
+        "screenshots/page-scoped.png",
+        "screenshots/content-scoped.png",
+    ]
+    validation_artifacts = ["validation.json"]
+    if game_data_artifacts:
+        display_evidence_artifacts.append("rendered/tabbers.dom.json")
+        validation_artifacts.append("validation.tabbers.json")
     manifest = {
         "manifest_schema_version": MANIFEST_SCHEMA_VERSION,
         "raw_root": raw_root.relative_to(repo_root).as_posix(),
@@ -1266,15 +1910,7 @@ def capture(
             "images/files/",
             "images/rendered/",
         ],
-        "display_evidence_artifacts": [
-            "page.html",
-            "rendered/main.dom.json",
-            "rendered/media.dom.json",
-            "rendered/content.cleaned.html",
-            "rendered/content.scoped.html",
-            "screenshots/page-scoped.png",
-            "screenshots/content-scoped.png",
-        ],
+        "display_evidence_artifacts": display_evidence_artifacts,
         "metadata": "metadata.json",
         "validation": "validation.json",
         "image_manifest": "images/manifest.json",
@@ -1295,10 +1931,32 @@ def capture(
         "artifact_hashes": artifact_hashes,
         "raw_review_status": "pending_human_review",
         "tool": "tools/web_pages/supercombo_page.py",
+        "validation_artifacts": validation_artifacts,
     }
+    if game_data_artifacts:
+        tabber_validation = json.loads((raw_root / "validation.tabbers.json").read_text(encoding="utf-8"))
+        manifest["raw_derived_artifacts"] = [
+            {
+                "path": game_data_artifacts["tabber_tables_output"],
+                "schema_version": GAME_DATA_TABBER_TABLES_SCHEMA_VERSION,
+                "source_preserving": True,
+            }
+        ]
+        manifest["game_data_tabber_pipeline"] = {
+            "tool": "tools/web_pages/supercombo_page.py",
+            "rendered_tabber_dom": "rendered/tabbers.dom.json",
+            "validation": "validation.tabbers.json",
+            "raw_derived_table_artifact": game_data_artifacts["tabber_tables_output"],
+        }
+        manifest["tabber_validation"] = {
+            "path": "validation.tabbers.json",
+            "status": tabber_validation.get("status"),
+            "created_at_utc": tabber_validation.get("created_at_utc"),
+            "summary": tabber_validation.get("summary", {}),
+        }
     write_json(raw_root / "manifest.json", manifest)
 
-    return {
+    result = {
         "raw_root": raw_root.relative_to(repo_root).as_posix(),
         "manifest": (raw_root / "manifest.json").relative_to(repo_root).as_posix(),
         "validation_status": validation["status"],
@@ -1309,6 +1967,9 @@ def capture(
         "downloaded_rendered_images": image_manifest.get("counts", {}).get("downloaded_rendered_images"),
         "screenshots": rendered_state.get("screenshots", {}),
     }
+    if game_data_artifacts:
+        result["game_data_tabber_artifacts"] = game_data_artifacts
+    return result
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:

@@ -2,6 +2,80 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] 修正 | SuperCombo Game Data tabber pipeline の正式統合
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/manifest.json`
+- raw-derived artifact:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json`
+- 更新:
+  - `tools/web_pages/supercombo_page.py`
+  - `raw/web-pages/wiki.supercombo.gg/game-data/metadata.json`
+  - `raw/web-pages/wiki.supercombo.gg/game-data/validation.tabbers.json`
+  - `raw/web-pages/wiki.supercombo.gg/game-data/rendered/tabbers.dom.json`
+  - `wiki/sources/supercombo-street-fighter-6-game-data.md`
+  - `wiki/reviews/2026-06-11-supercombo-game-data-web-page-capture-review.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - temp repo root で `tools/web_pages/supercombo_page.py --page-title "Street Fighter 6/Game Data" --page-slug game-data` を実行し、`validation_status: passed`、`tabber_validation_status: passed` を確認した。
+  - 実 repo でも同じ command を実行し、MediaWiki revision `365507`、`captured_at_utc` `2026-06-11T13:38:34Z`、tabber groups `4`、tabs `46`、content tables `39`、navigation table `1` を再生成した。
+  - manifest / metadata に `game_data_tabber_pipeline` と `raw_derived_artifacts` を記録し、再取得時に `rendered/tabbers.dom.json`、`validation.tabbers.json`、`tabber-tables.json` が同じ capture pass で更新されるようにした。
+- メモ:
+  - `validation.tabbers.json` は stale cleanup 対象に追加した。`rendered/tabbers.dom.json` は `rendered/` cleanup、`tabber-tables.json` は Game Data 再取得開始時の raw-derived artifact cleanup と再生成で同期する。
+
+## [2026-06-11] update | SuperCombo Game Data numeric tables promoted to concepts
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/manifest.json`
+- raw-derived artifact:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json`
+- 作成:
+  - `wiki/concepts/system-data.md`
+  - `wiki/concepts/range-comparisons.md`
+- 更新:
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/concepts/terms/guaranteed-punish.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/terms/index.md`
+  - `wiki/sources/supercombo-street-fighter-6-game-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `tabber-tables.json` の tables `0..30` を [[concepts/terms/damage-scaling]] に昇格した。Character-Specific Scaling は 30 character tables / 323 rendered rows。
+  - tables `31..33` を [[concepts/system-data]] に昇格した。
+  - tables `34..37` を [[concepts/range-comparisons]] に昇格した。
+  - table `38` を [[concepts/terms/guaranteed-punish]] に昇格した。
+- メモ:
+  - これらは community numeric source の reader-facing table であり、公式 source または実機検証と矛盾する場合はそちらを優先する。
+  - [[concepts/frame-data]] には `1f = 1/60`、FAF、input buffer、crouch hurtbox、recoverable HP など Game Data の scalar numeric facts も索引化した。
+
+## [2026-06-11] ingest | SuperCombo Game Data web-page raw capture
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/game-data/page.raw.wikitext`
+- raw-derived artifact:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json`
+- 作成:
+  - `wiki/sources/supercombo-street-fighter-6-game-data.md`
+  - `wiki/reviews/2026-06-11-supercombo-game-data-web-page-capture-review.md`
+- 更新:
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/game-data/validation.json` は `passed`。
+  - `raw/web-pages/wiki.supercombo.gg/game-data/validation.tabbers.json` は `passed`。
+  - Tabber validation は 4 groups、46 tabs、source table / Cargo tabs `30 / 3 / 4 / 1`、content tables 39、navigation table 1、live revision `365507` を確認した。
+  - `raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json` は rendered DOM の table text を保持し、SF6 Navigation table を `excluded_tables` に分離する。
+- メモ:
+  - SuperCombo Game Data は community numeric source として扱い、公式 source と重なる values では公式 source を優先する。
+  - Longest Punish `≤5F` から `≤12F` は source 上で `(to-do)` のため、table 欠落ではなく source content として記録する。
+- 未解決事項:
+  - Character-specific scaling、system data、range comparison、Longest Punish `≤4F` values を公式 source または実機検証で照合するか。
+  - Character-specific scaling tabs を moveId-linked schema に正規化するか。
+
 ## [2026-06-11] ingest | SuperCombo Defense web-page raw capture
 - 原本:
   - `raw/web-pages/wiki.supercombo.gg/defense/manifest.json`
