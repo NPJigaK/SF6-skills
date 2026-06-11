@@ -26,10 +26,11 @@ question page には changed files、implementation notes、file-back mechanics 
 3. convenience ではなく page type に基づいて保存先を選ぶ。
 4. 既存 template と local page style があれば従う。
 5. 重要 claim の近くに citation を置く。derived value は source page、raw path、manifest/validation、derived JSON path へ戻す。
-6. source fidelity が必要な場合を除き、本文は日本語を優先する。
-7. 新規 page または主要 output 更新があれば `wiki/index.md` を更新する。
-8. `wiki/log.md` に task history を追記する。
-9. 変更ファイルと unresolved evidence gaps を報告する。
+6. derived JSON 由来の数値、件数、比較を output に書く時は `$jq-cli` skill を使い、`jq` で取得・検証した値を使う。
+7. source fidelity が必要な場合を除き、本文は日本語を優先する。
+8. 新規 page または主要 output 更新があれば `wiki/index.md` を更新する。
+9. `wiki/log.md` に task history を追記する。
+10. 変更ファイルと unresolved evidence gaps を報告する。
 
 ## File-Back Decision
 

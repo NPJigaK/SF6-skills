@@ -15,7 +15,8 @@ source を置き換えず、wiki に compile します。`raw/` / `wiki/` / sche
 2. `wiki/index.md` を読む。
 3. `wiki/log.md` の最近の entry を読む。
 4. 指定された raw source、raw package の `manifest.json`、metadata、validation、必要なら derived output を読む。
-5. source authority を `official`、`community`、`paper`、`documentation`、`tool_output`、`review` などに分類する。
+5. manifest / metadata / validation / derived JSON から値、件数、数値を取得・検証する時は `$jq-cli` skill を使い、`jq` で読む。
+6. source authority を `official`、`community`、`paper`、`documentation`、`tool_output`、`review` などに分類する。
 
 ## Workflow
 

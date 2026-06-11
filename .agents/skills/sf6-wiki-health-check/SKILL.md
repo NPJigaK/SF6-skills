@@ -14,7 +14,8 @@ description: Use when SF6 wiki health を確認する時。broken wikilinks、mi
 1. `AGENTS.md` を読む。
 2. `wiki/index.md` を読む。
 3. `wiki/log.md` の最近の entry を読む。
-4. 新しい tool を足す前に、`rg` と単純な file tools を使う。
+4. JSON / JSONL の値、件数、schema-like 条件、validation status を確認する時は `$jq-cli` skill を使い、`jq` / `jq -e` を第一選択にする。
+5. 新しい tool を足す前に、`rg`、`jq`、単純な file tools を使う。
 
 ## Severity
 
@@ -28,10 +29,11 @@ description: Use when SF6 wiki health を確認する時。broken wikilinks、mi
 1. structural issue と evidence issue を分けて確認する。
 2. safe P0 fix を適用する。
 3. P1 issue では disputed claim を消さず、evidence path と human review が必要な点を review note に残す。
-4. wiki 全体 report は `wiki/outputs/lint/` に `type: output`、`output_type: lint_report` として置く。
-5. 新規 report / review または主要 status 変更があれば `wiki/index.md` を更新する。
-6. `wiki/log.md` に追記する。
-7. 変更ファイルと human-review items を報告する。
+4. row count mismatch、validation failure、raw/source/derived mismatch の JSON 側検証は、可能な限り `jq -e` で exit status を使って確認する。
+5. wiki 全体 report は `wiki/outputs/lint/` に `type: output`、`output_type: lint_report` として置く。
+6. 新規 report / review または主要 status 変更があれば `wiki/index.md` を更新する。
+7. `wiki/log.md` に追記する。
+8. 変更ファイルと human-review items を報告する。
 
 ## Subagent Use
 

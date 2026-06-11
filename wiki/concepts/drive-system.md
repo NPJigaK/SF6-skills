@@ -10,6 +10,7 @@ sources:
   - "[[sources/capcom-official-fightingground-battle-system]]"
   - "[[sources/supercombo-street-fighter-6-glossary]]"
   - "[[sources/supercombo-street-fighter-6-hud]]"
+  - "[[sources/supercombo-street-fighter-6-gauges]]"
 related:
   - "[[concepts/terms/index]]"
   - "[[concepts/frame-data]]"
@@ -31,11 +32,11 @@ tags:
 
 ## 要約
 
-Drive System は、Street Fighter 6 の攻撃・防御・移動を横断する共通 system。Capcom 公式 Fighting Ground source では、Drive Gauge はバトル開始時から使用でき、使いすぎると枯渇状態や [[concepts/terms/burnout|バーンアウト]] に関わる resource として説明されている。Capcom 公式 eSports BASE 用語解説は、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]]などの観戦用語として Drive System 周辺の具体例を補う。SuperCombo HUD page は Battle HUD 上の Drive Gauge / Super Art Gauge と、Drive Impact・Burnout に関係する HUD icon の表示証拠を補う。
+Drive System は、Street Fighter 6 の攻撃・防御・移動を横断する共通 system。Capcom 公式 Fighting Ground source では、Drive Gauge はバトル開始時から使用でき、使いすぎると枯渇状態や [[concepts/terms/burnout|バーンアウト]] に関わる resource として説明されている。Capcom 公式 eSports BASE 用語解説は、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]]などの観戦用語として Drive System 周辺の具体例を補う。SuperCombo HUD page は Battle HUD 上の Drive Gauge / Super Art Gauge と、Drive Impact・Burnout に関係する HUD icon の表示証拠を補う。SuperCombo Gauges page は community numeric source として、Drive Gauge の cost、regeneration、cooldown、Drive Impact / Drive Rush の range table などを補う。
 
 ## 定義
 
-Capcom 公式 Fighting Ground source は `DRIVE GAUGE` と `COMMON SYSTEM` として [[concepts/terms/drive-impact|Drive Impact]]、[[concepts/terms/drive-parry|Drive Parry]]、[[concepts/terms/overdrive|Overdrive]]、Drive Rush、[[concepts/terms/drive-reversal|Drive Reversal]] を説明している。Capcom 公式 eSports BASE は観戦用語として、Burnout 中の [[concepts/terms/chip-damage|削り]]、Burnout 中の Drive Impact による [[concepts/terms/stun|stun]]、Drive Parry から出す [[concepts/terms/raw-drive-rush|生ラッシュ]]、Drive Impact への [[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]] を説明している。SuperCombo glossary は community source として Burnout、Drive Impact、Drive Parry、Drive Reversal、Drive Rush、Drive System、Overdrive を列挙している。SuperCombo HUD page は visual/community source として、Battle HUD 上の Drive Gauge と Drive Impact / Burnout 関連 icon の見え方を補助する。
+Capcom 公式 Fighting Ground source は `DRIVE GAUGE` と `COMMON SYSTEM` として [[concepts/terms/drive-impact|Drive Impact]]、[[concepts/terms/drive-parry|Drive Parry]]、[[concepts/terms/overdrive|Overdrive]]、Drive Rush、[[concepts/terms/drive-reversal|Drive Reversal]] を説明している。Capcom 公式 eSports BASE は観戦用語として、Burnout 中の [[concepts/terms/chip-damage|削り]]、Burnout 中の Drive Impact による [[concepts/terms/stun|stun]]、Drive Parry から出す [[concepts/terms/raw-drive-rush|生ラッシュ]]、Drive Impact への [[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]] を説明している。SuperCombo glossary は community source として Burnout、Drive Impact、Drive Parry、Drive Reversal、Drive Rush、Drive System、Overdrive を列挙している。SuperCombo HUD page は visual/community source として、Battle HUD 上の Drive Gauge と Drive Impact / Burnout 関連 icon の見え方を補助する。SuperCombo Gauges page は、1 Bar = 10,000 Drive、Drive action cost、Drive regeneration / cooldown、Drive move の frame / distance / gauge-damage 数値を表で示す。
 
 ## なぜ重要か
 
@@ -48,6 +49,9 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 | Drive Gauge はバトル開始時から使用可能な Drive System の核心として説明されている。 | [[sources/capcom-official-fightingground-battle-system]] | high |
 | Drive Gauge が 0 になると [[concepts/terms/burnout|バーンアウト]] 状態になり、回復するまで Drive System を利用する技は一時的に使用できなくなる。 | [[sources/capcom-official-fightingground-battle-system]] | high |
 | SuperCombo HUD page は Battle HUD 上の Drive Gauge を表示要素として示し、Gauge が空になると Burnout になり、完全回復まで Drive-related techniques が使えないと説明する。 | [[sources/supercombo-street-fighter-6-hud]] | medium |
+| SuperCombo Gauges page は、各 round 開始時の Drive Gauge を 6 bars、1 Bar を 10,000 Drive とし、Drive Gauge は時間経過で受動回復し、guard 時や Drive action 使用時に消費されると説明する。 | [[sources/supercombo-street-fighter-6-gauges]] | medium |
+| SuperCombo Gauges page は、Base Drive Regeneration を 40 Drive/frame（0.24 bars/sec）、Burnout 中の Base Drive Regeneration を 50 Drive/frame（0.3 bars/sec）とし、Hitstun / Jumping / Walking 中の modifier も表で示す。 | [[sources/supercombo-street-fighter-6-gauges]] | medium |
+| SuperCombo Gauges page は、Drive regeneration cooldown を block / Punish Counter / Super hit 90f、OD Special / Drive Impact / Drive Reversal / Drive Rush Cancel 120f、Whiff Parry / Parry Drive Rush 240f、Successful Parry 20f とする。 | [[sources/supercombo-street-fighter-6-gauges]] | medium |
 | Guard 時には Drive Gauge が削られ、Burnout 中に必殺技を guard すると体力が削られ、[[concepts/terms/chip-damage|削り K.O.]] も可能になる。 | [[sources/capcom-esports-base-terms]] | high |
 | Burnout 中に Drive Impact を guard して [[concepts/terms/corner|画面端]] に到達すると [[concepts/terms/stun|stun]] 状態になり、stun 後は Burnout 状態が解除される。 | [[sources/capcom-esports-base-terms]] | high |
 | Drive Rush は [[concepts/terms/drive-parry|Drive Parry]] の構え、または cancel 可能な通常技から出せる。Drive Parry からはコスト 1、通常技からはコスト 3。 | [[sources/capcom-official-fightingground-battle-system]] | high |
@@ -58,6 +62,25 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 | Drive System は universal movement、offense、defense mechanics への gateway となる meter として説明されている。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | Burnout は Drive gauge が空になった時の状態で、Drive-related techniques に制限がかかる。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | Drive Rush は Drive Parry または cancelable normal attack から出せる。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
+| SuperCombo Gauges page は、Drive Impact cost 1、Drive Reversal cost 2、Overdrive Special cost 2、Drive Rush Cancel cost 3、Drive Parry activation 約 1/2 bar を表で示す。Drive Rush from Parry は cost table の 1/2 と section / caption text の 1 Drive Stock が揺れるため、単一値に正規化しない。 | [[sources/supercombo-street-fighter-6-gauges]] | medium |
+
+## 数値索引
+
+この section は回答時に source page と derived JSON へ戻るための入口。値は SuperCombo Gauges の community numeric source fact なので、公式 source または実機検証と重なる場合はそちらを優先する。
+
+| 領域 | 主要値 | 詳細 |
+|---|---|---|
+| Drive Gauge unit | round start `6` bars、`1 Bar = 10,000` Drive | [[sources/supercombo-street-fighter-6-gauges#Drive Gauge overview]]; `normalized_numeric_tables` |
+| Drive action cost | DI `1`, Drive Parry activation `0.5`, DRC `3`, OD `2`, DRev `2` bars | [[sources/supercombo-street-fighter-6-gauges#Drive action costs]]; `drive_action_costs` |
+| Drive Rush from Parry | cost table は `0.5`、section / caption text は `1.0`; `cost_bars: null` で保持 | `drive_action_costs[action=Drive Rush from Parry]` |
+| Burnout | blockstun `+4f`, chip damage 約 `25%`, Drive options は full recovery まで不可 | [[sources/supercombo-street-fighter-6-gauges#Burnout]]; `burnout_values` |
+| Drive regeneration | base `40` Drive/frame、Burnout base `50` Drive/frame、walking frame 11+ は standard `100` / Burnout `120` Drive/frame | [[sources/supercombo-street-fighter-6-gauges#Drive regeneration]]; `drive_regeneration_rates`, `drive_regeneration_walk_forward_formulas` |
+| Drive regeneration cooldown | block / Punish Counter / Super hit `90f`; OD / DI / DRev / DRC `120f`; whiff Parry / Parry Drive Rush `240f`; successful Parry `20f` | [[sources/supercombo-street-fighter-6-gauges#Drive regeneration cooldown]]; `drive_regeneration_cooldowns` |
+| Drive Impact | cost `1`, startup `26(27)`, active `2`, recovery `35`, block `-3`, damage `800`; drain block `0.5`, hit `1`, counter hit `1.2`, punish/crumple `1.5` bars | [[sources/supercombo-street-fighter-6-gauges#Drive Impact frame / drain values]]; `drive_impact_frame_data`, `drive_impact_drive_gauge_drain` |
+| Drive Parry / Perfect Parry | Parry startup `1`, PP window `2f`; activation `5000` Drive、hold `50`/frame、gains `5000` / `10000` / `20000`、PP extra `3000`; PP projectile recovery `11f` | [[sources/supercombo-street-fighter-6-gauges#Drive Parry and Perfect Parry]]; `drive_parry_*`, `perfect_parry_values` |
+| Drive Rush | Parry~DR startup `3+8`, DRC startup `9`, actionable recovery `15`, full recovery `22`, total `37`; screen freeze `10f`, normal bonus `+4`, mid-combo scaling `15%` | [[sources/supercombo-street-fighter-6-gauges#Drive Rush frames and scaling]]; `drive_rush_frame_data`, `drive_rush_values` |
+| Character tables | Drive Impact range と Drive Rush distance は 30 characters 分を source page と JSON に保持 | [[sources/supercombo-street-fighter-6-gauges#Drive Impact range table]], [[sources/supercombo-street-fighter-6-gauges#Drive Rush distance table]]; `drive_impact_range_by_character`, `drive_rush_distance_by_character` |
+| Super Gauge | match start empty、max `3` bars、round carryover、CA threshold `25%`; SA depletion SA1 `0.5`, SA2 `1`, SA3 `1.5`, CA `2` Drive bars | [[sources/supercombo-street-fighter-6-gauges#Super Gauge and Super Art]]; `super_gauge` |
 
 ## 関連
 
@@ -77,7 +100,9 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 - Capcom eSports BASE source は観戦用語の scoped capture であり、`CAPCOM eSports BASE` ページ全体の根拠ではない。
 - SuperCombo glossary は community source なので、公式 source と異なる wording がある場合は公式 source を優先して差異を明示する。
 - SuperCombo HUD page は HUD 表示と icon visual evidence の community source として使い、公式 source と重なる Drive / Burnout mechanics claim では公式 source を優先する。
+- SuperCombo Gauges page は community numeric source として使う。公式 source または検証済み data と重なる cost / frame / damage 値は、公式・実機検証結果を優先し、SuperCombo 値は補助根拠として扱う。
 
 ## 未解決の質問
 
-- Drive Gauge recovery、burnout duration、Drive move の細かな frame / system detail はどの公式 source または派生 data で補うか。
+- Drive Gauge recovery、burnout duration、Drive move の細かな frame / system detail は、公式 source または実機検証でどこまで照合するか。
+- SuperCombo Gauges の `numeric-tables.json` schema を、他の gauge / system numeric source にも使う標準 schema として固定するか。

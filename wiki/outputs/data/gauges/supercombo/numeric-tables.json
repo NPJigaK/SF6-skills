@@ -1,0 +1,1655 @@
+{
+  "schema_version": 1,
+  "output_type": "supercombo_gauges_numeric_tables",
+  "created_at_utc": "2026-06-11T02:00:41Z",
+  "source": {
+    "title": "Street Fighter 6/Gauges",
+    "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges",
+    "source_page": "wiki/sources/supercombo-street-fighter-6-gauges.md",
+    "raw_manifest": "raw/web-pages/wiki.supercombo.gg/gauges/manifest.json",
+    "raw_rendered_dom": "raw/web-pages/wiki.supercombo.gg/gauges/rendered/main.dom.json",
+    "source_revision": {
+      "type": "mediawiki_revision",
+      "title": "Street Fighter 6/Gauges",
+      "pageid": 58419,
+      "lastrevid": 365841,
+      "revision_id": 365841,
+      "revision_timestamp": "2026-06-07T12:31:40Z",
+      "touched": "2026-06-07T12:31:40Z",
+      "length": 45762,
+      "contentmodel": "wikitext",
+      "contentformat": "text/x-wiki",
+      "sha1": "a6a0a9b3089d6227b86f1f3160420822fc336c94",
+      "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges",
+      "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges"
+    },
+    "source_updated_at": "2026-06-07T12:31:40Z",
+    "captured_at_utc": "2026-06-11T01:23:20Z",
+    "validation_status": "passed",
+    "confidence": "medium",
+    "authority_note": "Community wiki numeric source. Prefer official Capcom or lab-verified values when available."
+  },
+  "raw_content_tables": [
+    {
+      "table_index": 0,
+      "headers": [
+        "Drive Move",
+        "Drive Gauge Cost"
+      ],
+      "row_count": 7,
+      "rows": [
+        [
+          "Drive Move",
+          "Drive Gauge Cost"
+        ],
+        [
+          "Drive Impact",
+          ""
+        ],
+        [
+          "Drive Parry",
+          "(Hold)"
+        ],
+        [
+          "Drive Rush (from Parry)",
+          ""
+        ],
+        [
+          "Drive Rush (cancel)",
+          ""
+        ],
+        [
+          "Overdrive Specials",
+          ""
+        ],
+        [
+          "Drive Reversal",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "headers": [
+        "Increases Drive Gauge",
+        "Decreases Drive Gauge"
+      ],
+      "row_count": 5,
+      "rows": [
+        [
+          "Increases Drive Gauge",
+          "Decreases Drive Gauge"
+        ],
+        [
+          "Attacking opponent (Hit/Block/Parry/Armor)",
+          "Blocking attacks"
+        ],
+        [
+          "Passive Regen over time",
+          "Getting hit by Super, Drive Impact, or Punish Counter (Super cinematic also stops passive regeneration)"
+        ],
+        [
+          "Successful Drive Parry (especially useful vs. Supers)",
+          "Using Drive actions"
+        ],
+        [
+          "Walking Forward (stacks with passive regen)",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "headers": [
+        "St",
+        "Act",
+        "Rec",
+        "Blk Adv",
+        "Dmg"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "St",
+          "Act",
+          "Rec",
+          "Blk Adv",
+          "Dmg"
+        ],
+        [
+          "26(27)",
+          "2",
+          "35",
+          "-3",
+          "800"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "headers": [
+        "on Block",
+        "on Hit",
+        "on Counter-hit",
+        "on Punish/Crumple"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "on Block",
+          "on Hit",
+          "on Counter-hit",
+          "on Punish/Crumple"
+        ],
+        [
+          "0.5 Bar",
+          "1 Bar",
+          "1.2 Bars",
+          "1.5 Bars"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "headers": [
+        "Character",
+        "Forward Movement (Startup)",
+        "Maximum Range (2nd Active Frame)"
+      ],
+      "row_count": 31,
+      "rows": [
+        [
+          "Character",
+          "Forward Movement (Startup)",
+          "Maximum Range (2nd Active Frame)"
+        ],
+        [
+          "A.K.I.",
+          "1.400",
+          "2.500"
+        ],
+        [
+          "Akuma",
+          "1.511",
+          "2.561"
+        ],
+        [
+          "Alex",
+          "1.627",
+          "2.477"
+        ],
+        [
+          "Blanka",
+          "1.373",
+          "2.523"
+        ],
+        [
+          "C. Viper",
+          "1.479",
+          "2.549"
+        ],
+        [
+          "Cammy",
+          "1.644",
+          "2.544"
+        ],
+        [
+          "Chun-Li",
+          "1.406",
+          "2.506"
+        ],
+        [
+          "Dee Jay",
+          "1.480",
+          "2.520"
+        ],
+        [
+          "Dhalsim",
+          "1.558",
+          "2.258"
+        ],
+        [
+          "Ed",
+          "1.495",
+          "2.545"
+        ],
+        [
+          "E. Honda",
+          "1.739",
+          "2.539"
+        ],
+        [
+          "Elena",
+          "1.441",
+          "2.541"
+        ],
+        [
+          "Guile",
+          "1.321",
+          "2.481"
+        ],
+        [
+          "Ingrid",
+          "1.433",
+          "2.483"
+        ],
+        [
+          "Jamie",
+          "1.670",
+          "2.490"
+        ],
+        [
+          "JP",
+          "1.455",
+          "2.535"
+        ],
+        [
+          "Juri",
+          "1.461",
+          "2.511"
+        ],
+        [
+          "Ken",
+          "1.390",
+          "2.470"
+        ],
+        [
+          "Kimberly",
+          "1.843",
+          "2.543"
+        ],
+        [
+          "Lily",
+          "1.489",
+          "2.389"
+        ],
+        [
+          "Luke",
+          "1.510",
+          "2.450"
+        ],
+        [
+          "M. Bison",
+          "1.217",
+          "2.537"
+        ],
+        [
+          "Mai",
+          "1.781",
+          "2.541"
+        ],
+        [
+          "Manon",
+          "1.200",
+          "2.500"
+        ],
+        [
+          "Marisa",
+          "1.537",
+          "2.527"
+        ],
+        [
+          "Rashid",
+          "1.419",
+          "2.579"
+        ],
+        [
+          "Ryu",
+          "1.491",
+          "2.541"
+        ],
+        [
+          "Sagat",
+          "1.839",
+          "2.529"
+        ],
+        [
+          "Terry",
+          "1.300",
+          "2.500"
+        ],
+        [
+          "Zangief",
+          "1.606",
+          "2.496"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "headers": [
+        "Startup",
+        "Active",
+        "Recovery",
+        "Damage",
+        "On Hit",
+        "On Block",
+        ""
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "Startup",
+          "Active",
+          "Recovery",
+          "Damage",
+          "On Hit",
+          "On Block",
+          ""
+        ],
+        [
+          "20(18)",
+          "3",
+          "26(31)*",
+          "500 (rec)",
+          "KD +23*",
+          "-6"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "headers": [
+        "St",
+        "Act",
+        "Rec"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "St",
+          "Act",
+          "Rec"
+        ],
+        [
+          "1",
+          "12~ [2]",
+          "33 [1]"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "headers": [
+        "",
+        "Startup",
+        "Recovery (Attack Cancelable)",
+        "Recovery (Fully Cancelable)",
+        "Recovery (Total)",
+        "Parry~DR",
+        "DR Cancel"
+      ],
+      "row_count": 3,
+      "rows": [
+        [
+          "",
+          "Startup",
+          "Recovery (Attack Cancelable)",
+          "Recovery (Fully Cancelable)",
+          "Recovery (Total)"
+        ],
+        [
+          "Parry~DR",
+          "3+8",
+          "15",
+          "22",
+          "37"
+        ],
+        [
+          "DR Cancel",
+          "9",
+          "15",
+          "22",
+          "37"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "headers": [
+        "Character",
+        "Min. Distance (Immediate Throw)",
+        "Min. Distance (Crouch Block)",
+        "Max Distance (No Input)"
+      ],
+      "row_count": 31,
+      "rows": [
+        [
+          "Character",
+          "Min. Distance (Immediate Throw)",
+          "Min. Distance (Crouch Block)",
+          "Max Distance (No Input)"
+        ],
+        [
+          "A.K.I.",
+          "0.907",
+          "2.437",
+          "4.049"
+        ],
+        [
+          "Akuma",
+          "0.880",
+          "2.121",
+          "3.425"
+        ],
+        [
+          "Alex",
+          "0.393",
+          "1.722",
+          "3.530"
+        ],
+        [
+          "Blanka",
+          "0.476",
+          "2.082",
+          "2.867"
+        ],
+        [
+          "C. Viper",
+          "0.374",
+          "1.756",
+          "3.355"
+        ],
+        [
+          "Cammy",
+          "0.603",
+          "2.027",
+          "2.796"
+        ],
+        [
+          "Chun-Li",
+          "1.044",
+          "2.222",
+          "3.163"
+        ],
+        [
+          "Dee Jay",
+          "0.763",
+          "2.535",
+          "2.713"
+        ],
+        [
+          "Dhalsim",
+          "0.471",
+          "1.787",
+          "2.700"
+        ],
+        [
+          "Ed",
+          "0.910",
+          "2.190",
+          "3.374"
+        ],
+        [
+          "E. Honda",
+          "0.213",
+          "1.769",
+          "3.375"
+        ],
+        [
+          "Elena",
+          "0.548",
+          "2.100",
+          "3.011"
+        ],
+        [
+          "Guile",
+          "0.805",
+          "1.898",
+          "3.461"
+        ],
+        [
+          "Ingrid",
+          "0.375",
+          "1.502",
+          "3.083"
+        ],
+        [
+          "Jamie",
+          "0.988",
+          "2.030",
+          "3.002"
+        ],
+        [
+          "JP",
+          "0.525",
+          "1.857",
+          "3.628"
+        ],
+        [
+          "Juri",
+          "0.641",
+          "2.479",
+          "3.999"
+        ],
+        [
+          "Ken",
+          "0.745",
+          "2.449",
+          "3.721"
+        ],
+        [
+          "Kimberly",
+          "0.817",
+          "2.479",
+          "3.565"
+        ],
+        [
+          "Lily",
+          "0.434",
+          "1.900",
+          "3.044"
+        ],
+        [
+          "Luke",
+          "0.817",
+          "2.499",
+          "3.461"
+        ],
+        [
+          "M. Bison",
+          "0.593",
+          "2.650",
+          "4.426"
+        ],
+        [
+          "Mai",
+          "0.669",
+          "2.383",
+          "2.977"
+        ],
+        [
+          "Manon",
+          "0.506",
+          "1.417",
+          "2.347"
+        ],
+        [
+          "Marisa",
+          "0.544",
+          "1.903",
+          "3.081"
+        ],
+        [
+          "Rashid",
+          "0.796",
+          "2.253",
+          "2.998"
+        ],
+        [
+          "Ryu",
+          "0.525",
+          "1.878",
+          "3.628"
+        ],
+        [
+          "Sagat",
+          "0.546",
+          "1.869",
+          "3.156"
+        ],
+        [
+          "Terry",
+          "0.634",
+          "2.416",
+          "3.181"
+        ],
+        [
+          "Zangief",
+          "0.327",
+          "1.455",
+          "3.040"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "headers": [
+        "",
+        "Regen/Frame %Bar/Sec",
+        "Notes",
+        "Base Drive Regen (Passive)",
+        "In Hitstun",
+        "Jumping",
+        "Walking Forward",
+        "Note: if no difference is specified for Burnout, it follows the standard Drive Gain rules"
+      ],
+      "row_count": 6,
+      "rows": [
+        [
+          "",
+          "Regen/Frame %Bar/Sec",
+          "Notes"
+        ],
+        [
+          "Base Drive Regen (Passive)",
+          "40 / 24% [50 / 30%]",
+          "In Burnout, blocking adds to Drive Gauge rather than depleting it"
+        ],
+        [
+          "In Hitstun",
+          "20 / 12% [25 / 15%]",
+          "Applies to any hitstun, including grounded hits, knockdowns, air resets, air juggles, throws, etc. After being knocked down, the Normal Rise and Back Rise animations go back to the Base Drive Regen rate"
+        ],
+        [
+          "Jumping",
+          "20 / 12%",
+          "Includes airborne frames of attacks, such as Chun-Li or Kimberly 6HK Jumping during Burnout is especially detrimental to the Drive Regen rate"
+        ],
+        [
+          "Walking Forward",
+          "+20 / +12% (11f~: Base x2)",
+          "Stacks with Base Drive Regen (Total: 60 Drive/frame); works even during Drive Regen Cooldown Meter build starts on frame 2, so a 2-frame microwalk can enable otherwise impossible combos (e.g. Drive Rush Cancel x3) Applies even during Burnout (Total: 70 Drive/frame), so an offensive playstyle can help to recover more quickly Starting on Frame 11 of Forward Walk, your Base Drive Regen is doubled for every additional walking frame This is a separate bonus from the usual +20/frame from walking forward A character in Drive Regen Cooldown has a Base Drive Regen of 0 which and will not benefit Standard Formula: 40 Regen/Frame x2 + 20 = 100 Drive/Frame, or 0.6 Drive Bars per second Burnout Formula: 50 Regen/Frame x2 + 20 = 120 Drive/Frame, or 0.72 Drive Bars per second Does not help meter build after a DI Stun, as Drive Regen Cooldown lasts too long"
+        ],
+        [
+          "Note: if no difference is specified for Burnout, it follows the standard Drive Gain rules"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "headers": [
+        "",
+        "Cooldown Time (Frames)",
+        "Notes",
+        "Blocking Attacks Getting Punish Countered",
+        "Getting Hit by Super Art",
+        "OD Special Drive Impact Drive Reversal",
+        "Drive Rush Cancel",
+        "Parry (whiff) Parry Drive Rush",
+        "Parry (success)"
+      ],
+      "row_count": 7,
+      "rows": [
+        [
+          "",
+          "Cooldown Time (Frames)",
+          "Notes"
+        ],
+        [
+          "Blocking Attacks Getting Punish Countered",
+          "90",
+          "Cooldown Timer counts down from the start of Blockstun or Punish Hitstun Cooldown is not inflicted upon opponents in Burnout Multi-hit attacks reset the cooldown timer to 90 on each hit In the case Punish Counter, only if the move applies bonus damage/advantage on each hit"
+        ],
+        [
+          "Getting Hit by Super Art",
+          "90",
+          "Cooldown Timer counts down after Super Hitstun ends; resets every time Hitstun is applied Timer freezes at 90 during cinematic periods of a Super, then counts down after the cinematic has ended Some moves appear to be \"Cinematic\" but technically are not If the training mode Frame Meter continues to display the frame count, it is not considered cinematic Supers that have a long non-cinematic recovery period can allow the opponent to resume meter build almost immediately"
+        ],
+        [
+          "OD Special Drive Impact Drive Reversal",
+          "120",
+          "After using any of these moves, the timer counts down after all recovery frames have finished"
+        ],
+        [
+          "Drive Rush Cancel",
+          "120",
+          "Timer starts counting down when the DR dash active frames are canceled DR Cancel also prevents additional Drive regen until combo ends (except Forward Walk) Entering a SA3 cinematic allows passive Drive Regen to resume"
+        ],
+        [
+          "Parry (whiff) Parry Drive Rush",
+          "240",
+          "Timer counts down from the moment Parry recovery ends For Parry Drive Rush, timer starts counting down when the DR dash active frames are canceled A 1-bar Drive Rush used mid-combo prevents additional Drive Regen until combo ends (except Forward Walk)"
+        ],
+        [
+          "Parry (success)",
+          "20",
+          "After parry freeze/blockstun; applies to both Regular and Perfect parries This overwrites the usual 240f cooldown time Continuing to hold Parry will keep the timer locked at 20 until the buttons are released and the Parry animation finishes"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "headers": [
+        "",
+        "on Hit",
+        "on Block",
+        "on Armor Absorb",
+        "Attacker",
+        "Defender"
+      ],
+      "row_count": 3,
+      "rows": [
+        [
+          "",
+          "on Hit",
+          "on Block",
+          "on Armor Absorb"
+        ],
+        [
+          "Attacker",
+          "(Base)",
+          "50%",
+          "(Base)"
+        ],
+        [
+          "Defender",
+          "70%",
+          "25%",
+          "35%"
+        ]
+      ]
+    },
+    {
+      "table_index": 12,
+      "headers": [
+        "SA1",
+        "SA2",
+        "SA3",
+        "CA"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "SA1",
+          "SA2",
+          "SA3",
+          "CA"
+        ],
+        [
+          "0.5 Bar",
+          "1 Bar",
+          "1.5 Bar",
+          "2 Bar"
+        ]
+      ]
+    }
+  ],
+  "normalized_numeric_tables": {
+    "drive_action_costs": [
+      {
+        "action": "Drive Impact",
+        "cost_bars": 1.0,
+        "source_value": "1 Drive Stock",
+        "note": "Rendered cost cell is icon-only in table 0; value comes from raw wikitext / source section text."
+      },
+      {
+        "action": "Drive Parry activation",
+        "cost_bars": 0.5,
+        "source_value": "about 1/2 Drive gauge on activation; hold drains continuously",
+        "note": "Detailed raw value in source text: 5000 Drive on frame 2 and 50 Drive/frame from frame 4."
+      },
+      {
+        "action": "Drive Rush from Parry",
+        "cost_bars": null,
+        "raw_table_cost_bars": 0.5,
+        "section_text_cost_bars": 1.0,
+        "is_ambiguous": true,
+        "source_value": "cost table shows 1/2 Drive Stock; Drive Rush section / caption text says 1 Drive Stock",
+        "note": "Source-internal conflict. Do not answer with a single cost_bars value until official / lab verification resolves whether these refer to different cost components."
+      },
+      {
+        "action": "Drive Rush cancel",
+        "cost_bars": 3.0,
+        "source_value": "3 Drive Stocks",
+        "note": ""
+      },
+      {
+        "action": "Overdrive Specials",
+        "cost_bars": 2.0,
+        "source_value": "2 Drive Stocks",
+        "note": ""
+      },
+      {
+        "action": "Drive Reversal",
+        "cost_bars": 2.0,
+        "source_value": "2 Drive Stocks",
+        "note": ""
+      }
+    ],
+    "burnout_values": {
+      "additional_blockstun_frames": 4,
+      "chip_damage_percent_of_normal_damage": 25,
+      "drive_options_unavailable_until_full_recovery": true,
+      "stun_replenishes_drive_gauge": true
+    },
+    "drive_impact_frame_data": {
+      "startup": "26(27)",
+      "active": 2,
+      "recovery": 35,
+      "block_advantage": -3,
+      "damage": 800
+    },
+    "drive_impact_drive_gauge_drain": {
+      "on_block_bars": 0.5,
+      "on_hit_bars": 1.0,
+      "on_counter_hit_bars": 1.2,
+      "on_punish_or_crumple_bars": 1.5
+    },
+    "drive_impact_additional_values": {
+      "armor_hits": 2,
+      "hit_starter_scaling_percent": 20,
+      "block_followup_multiplier_reduction_percent": 20,
+      "dizzy_combo_start_scaling_percent": 80,
+      "dizzy_hit_window_frames": 195,
+      "last_crouch_sized_hurtbox_frames": 7,
+      "projectile_armor_hitfreeze_frames": 6,
+      "startup_delay_after_absorb_frames": 1,
+      "simultaneous_clash_refund_bars": 1.0
+    },
+    "drive_impact_range_by_character": [
+      {
+        "character": "A.K.I.",
+        "forward_movement_startup": 1.4,
+        "maximum_range_second_active_frame": 2.5,
+        "source_values": [
+          "A.K.I.",
+          "1.400",
+          "2.500"
+        ]
+      },
+      {
+        "character": "Akuma",
+        "forward_movement_startup": 1.511,
+        "maximum_range_second_active_frame": 2.561,
+        "source_values": [
+          "Akuma",
+          "1.511",
+          "2.561"
+        ]
+      },
+      {
+        "character": "Alex",
+        "forward_movement_startup": 1.627,
+        "maximum_range_second_active_frame": 2.477,
+        "source_values": [
+          "Alex",
+          "1.627",
+          "2.477"
+        ]
+      },
+      {
+        "character": "Blanka",
+        "forward_movement_startup": 1.373,
+        "maximum_range_second_active_frame": 2.523,
+        "source_values": [
+          "Blanka",
+          "1.373",
+          "2.523"
+        ]
+      },
+      {
+        "character": "C. Viper",
+        "forward_movement_startup": 1.479,
+        "maximum_range_second_active_frame": 2.549,
+        "source_values": [
+          "C. Viper",
+          "1.479",
+          "2.549"
+        ]
+      },
+      {
+        "character": "Cammy",
+        "forward_movement_startup": 1.644,
+        "maximum_range_second_active_frame": 2.544,
+        "source_values": [
+          "Cammy",
+          "1.644",
+          "2.544"
+        ]
+      },
+      {
+        "character": "Chun-Li",
+        "forward_movement_startup": 1.406,
+        "maximum_range_second_active_frame": 2.506,
+        "source_values": [
+          "Chun-Li",
+          "1.406",
+          "2.506"
+        ]
+      },
+      {
+        "character": "Dee Jay",
+        "forward_movement_startup": 1.48,
+        "maximum_range_second_active_frame": 2.52,
+        "source_values": [
+          "Dee Jay",
+          "1.480",
+          "2.520"
+        ]
+      },
+      {
+        "character": "Dhalsim",
+        "forward_movement_startup": 1.558,
+        "maximum_range_second_active_frame": 2.258,
+        "source_values": [
+          "Dhalsim",
+          "1.558",
+          "2.258"
+        ]
+      },
+      {
+        "character": "Ed",
+        "forward_movement_startup": 1.495,
+        "maximum_range_second_active_frame": 2.545,
+        "source_values": [
+          "Ed",
+          "1.495",
+          "2.545"
+        ]
+      },
+      {
+        "character": "E. Honda",
+        "forward_movement_startup": 1.739,
+        "maximum_range_second_active_frame": 2.539,
+        "source_values": [
+          "E. Honda",
+          "1.739",
+          "2.539"
+        ]
+      },
+      {
+        "character": "Elena",
+        "forward_movement_startup": 1.441,
+        "maximum_range_second_active_frame": 2.541,
+        "source_values": [
+          "Elena",
+          "1.441",
+          "2.541"
+        ]
+      },
+      {
+        "character": "Guile",
+        "forward_movement_startup": 1.321,
+        "maximum_range_second_active_frame": 2.481,
+        "source_values": [
+          "Guile",
+          "1.321",
+          "2.481"
+        ]
+      },
+      {
+        "character": "Ingrid",
+        "forward_movement_startup": 1.433,
+        "maximum_range_second_active_frame": 2.483,
+        "source_values": [
+          "Ingrid",
+          "1.433",
+          "2.483"
+        ]
+      },
+      {
+        "character": "Jamie",
+        "forward_movement_startup": 1.67,
+        "maximum_range_second_active_frame": 2.49,
+        "source_values": [
+          "Jamie",
+          "1.670",
+          "2.490"
+        ]
+      },
+      {
+        "character": "JP",
+        "forward_movement_startup": 1.455,
+        "maximum_range_second_active_frame": 2.535,
+        "source_values": [
+          "JP",
+          "1.455",
+          "2.535"
+        ]
+      },
+      {
+        "character": "Juri",
+        "forward_movement_startup": 1.461,
+        "maximum_range_second_active_frame": 2.511,
+        "source_values": [
+          "Juri",
+          "1.461",
+          "2.511"
+        ]
+      },
+      {
+        "character": "Ken",
+        "forward_movement_startup": 1.39,
+        "maximum_range_second_active_frame": 2.47,
+        "source_values": [
+          "Ken",
+          "1.390",
+          "2.470"
+        ]
+      },
+      {
+        "character": "Kimberly",
+        "forward_movement_startup": 1.843,
+        "maximum_range_second_active_frame": 2.543,
+        "source_values": [
+          "Kimberly",
+          "1.843",
+          "2.543"
+        ]
+      },
+      {
+        "character": "Lily",
+        "forward_movement_startup": 1.489,
+        "maximum_range_second_active_frame": 2.389,
+        "source_values": [
+          "Lily",
+          "1.489",
+          "2.389"
+        ]
+      },
+      {
+        "character": "Luke",
+        "forward_movement_startup": 1.51,
+        "maximum_range_second_active_frame": 2.45,
+        "source_values": [
+          "Luke",
+          "1.510",
+          "2.450"
+        ]
+      },
+      {
+        "character": "M. Bison",
+        "forward_movement_startup": 1.217,
+        "maximum_range_second_active_frame": 2.537,
+        "source_values": [
+          "M. Bison",
+          "1.217",
+          "2.537"
+        ]
+      },
+      {
+        "character": "Mai",
+        "forward_movement_startup": 1.781,
+        "maximum_range_second_active_frame": 2.541,
+        "source_values": [
+          "Mai",
+          "1.781",
+          "2.541"
+        ]
+      },
+      {
+        "character": "Manon",
+        "forward_movement_startup": 1.2,
+        "maximum_range_second_active_frame": 2.5,
+        "source_values": [
+          "Manon",
+          "1.200",
+          "2.500"
+        ]
+      },
+      {
+        "character": "Marisa",
+        "forward_movement_startup": 1.537,
+        "maximum_range_second_active_frame": 2.527,
+        "source_values": [
+          "Marisa",
+          "1.537",
+          "2.527"
+        ]
+      },
+      {
+        "character": "Rashid",
+        "forward_movement_startup": 1.419,
+        "maximum_range_second_active_frame": 2.579,
+        "source_values": [
+          "Rashid",
+          "1.419",
+          "2.579"
+        ]
+      },
+      {
+        "character": "Ryu",
+        "forward_movement_startup": 1.491,
+        "maximum_range_second_active_frame": 2.541,
+        "source_values": [
+          "Ryu",
+          "1.491",
+          "2.541"
+        ]
+      },
+      {
+        "character": "Sagat",
+        "forward_movement_startup": 1.839,
+        "maximum_range_second_active_frame": 2.529,
+        "source_values": [
+          "Sagat",
+          "1.839",
+          "2.529"
+        ]
+      },
+      {
+        "character": "Terry",
+        "forward_movement_startup": 1.3,
+        "maximum_range_second_active_frame": 2.5,
+        "source_values": [
+          "Terry",
+          "1.300",
+          "2.500"
+        ]
+      },
+      {
+        "character": "Zangief",
+        "forward_movement_startup": 1.606,
+        "maximum_range_second_active_frame": 2.496,
+        "source_values": [
+          "Zangief",
+          "1.606",
+          "2.496"
+        ]
+      }
+    ],
+    "drive_reversal_frame_data": {
+      "startup": "20(18)",
+      "active": 3,
+      "recovery": "26(31)*",
+      "damage": 500,
+      "damage_type": "recoverable",
+      "on_hit": "KD +23*",
+      "on_block": -6,
+      "recovery_drive_reversal_startup_frames": 18,
+      "blockstun_screen_freeze_after_startup_frame": 6,
+      "blockstun_screen_freeze_frames": 4,
+      "throw_interaction_screen_freeze_frames": 12,
+      "throw_interaction_refund_bars": 1.0
+    },
+    "drive_parry_frame_data": {
+      "startup": 1,
+      "active": "12~ [2]",
+      "recovery": "33 [1]",
+      "perfect_parry_window_frames": 2
+    },
+    "drive_parry_costs_and_gains": {
+      "activation_cost_drive_units": 5000,
+      "activation_cost_frame": 2,
+      "hold_drain_drive_units_per_frame": 50,
+      "hold_drain_starts_frame": 4,
+      "minimum_whiff_cost_drive_units": 5450,
+      "gain_vs_projectile_drive_units": 5000,
+      "gain_vs_normal_special_drive_reversal_drive_units": 10000,
+      "gain_vs_super_critical_drive_impact_drive_units": 20000,
+      "perfect_parry_extra_gain_without_freeze_drive_units": 3000,
+      "throw_punish_parry_drain_bars": 1.0
+    },
+    "perfect_parry_values": {
+      "damage_scaling_percent": 50,
+      "super_gauge_gain_reduction_percent": 20,
+      "attacker_drive_gain_reduction_percent": 50,
+      "defender_drive_damage_reduction_percent": 50,
+      "strike_freeze_frames": 60,
+      "projectile_recovery_frames": 11,
+      "projectile_extra_recovery_frames": 10,
+      "projectile_hold_extra_frames_without_standard_recovery": 13
+    },
+    "drive_rush_frame_data": [
+      {
+        "type": "Parry~DR",
+        "startup": "3+8",
+        "attack_cancelable_recovery": 15,
+        "fully_cancelable_recovery": 22,
+        "total_recovery": 37
+      },
+      {
+        "type": "DR Cancel",
+        "startup": "9",
+        "attack_cancelable_recovery": 15,
+        "fully_cancelable_recovery": 22,
+        "total_recovery": 37
+      }
+    ],
+    "drive_rush_values": {
+      "screen_freeze_frames": 10,
+      "normal_command_normal_advantage_bonus": 4,
+      "mid_combo_damage_scaling_percent": 15,
+      "safe_bait_6f_reversal_knockdown_advantage_frames": 21,
+      "whiff_light_bait_knockdown_advantage_range": "18~20",
+      "directional_movement_transition_extra_recovery_frames": 2,
+      "raw_drive_rush_minimum_drive_bars": 0.5
+    },
+    "drive_rush_distance_by_character": [
+      {
+        "character": "A.K.I.",
+        "min_distance_immediate_throw": 0.907,
+        "min_distance_crouch_block": 2.437,
+        "max_distance_no_input": 4.049,
+        "source_values": [
+          "A.K.I.",
+          "0.907",
+          "2.437",
+          "4.049"
+        ]
+      },
+      {
+        "character": "Akuma",
+        "min_distance_immediate_throw": 0.88,
+        "min_distance_crouch_block": 2.121,
+        "max_distance_no_input": 3.425,
+        "source_values": [
+          "Akuma",
+          "0.880",
+          "2.121",
+          "3.425"
+        ]
+      },
+      {
+        "character": "Alex",
+        "min_distance_immediate_throw": 0.393,
+        "min_distance_crouch_block": 1.722,
+        "max_distance_no_input": 3.53,
+        "source_values": [
+          "Alex",
+          "0.393",
+          "1.722",
+          "3.530"
+        ]
+      },
+      {
+        "character": "Blanka",
+        "min_distance_immediate_throw": 0.476,
+        "min_distance_crouch_block": 2.082,
+        "max_distance_no_input": 2.867,
+        "source_values": [
+          "Blanka",
+          "0.476",
+          "2.082",
+          "2.867"
+        ]
+      },
+      {
+        "character": "C. Viper",
+        "min_distance_immediate_throw": 0.374,
+        "min_distance_crouch_block": 1.756,
+        "max_distance_no_input": 3.355,
+        "source_values": [
+          "C. Viper",
+          "0.374",
+          "1.756",
+          "3.355"
+        ]
+      },
+      {
+        "character": "Cammy",
+        "min_distance_immediate_throw": 0.603,
+        "min_distance_crouch_block": 2.027,
+        "max_distance_no_input": 2.796,
+        "source_values": [
+          "Cammy",
+          "0.603",
+          "2.027",
+          "2.796"
+        ]
+      },
+      {
+        "character": "Chun-Li",
+        "min_distance_immediate_throw": 1.044,
+        "min_distance_crouch_block": 2.222,
+        "max_distance_no_input": 3.163,
+        "source_values": [
+          "Chun-Li",
+          "1.044",
+          "2.222",
+          "3.163"
+        ]
+      },
+      {
+        "character": "Dee Jay",
+        "min_distance_immediate_throw": 0.763,
+        "min_distance_crouch_block": 2.535,
+        "max_distance_no_input": 2.713,
+        "source_values": [
+          "Dee Jay",
+          "0.763",
+          "2.535",
+          "2.713"
+        ]
+      },
+      {
+        "character": "Dhalsim",
+        "min_distance_immediate_throw": 0.471,
+        "min_distance_crouch_block": 1.787,
+        "max_distance_no_input": 2.7,
+        "source_values": [
+          "Dhalsim",
+          "0.471",
+          "1.787",
+          "2.700"
+        ]
+      },
+      {
+        "character": "Ed",
+        "min_distance_immediate_throw": 0.91,
+        "min_distance_crouch_block": 2.19,
+        "max_distance_no_input": 3.374,
+        "source_values": [
+          "Ed",
+          "0.910",
+          "2.190",
+          "3.374"
+        ]
+      },
+      {
+        "character": "E. Honda",
+        "min_distance_immediate_throw": 0.213,
+        "min_distance_crouch_block": 1.769,
+        "max_distance_no_input": 3.375,
+        "source_values": [
+          "E. Honda",
+          "0.213",
+          "1.769",
+          "3.375"
+        ]
+      },
+      {
+        "character": "Elena",
+        "min_distance_immediate_throw": 0.548,
+        "min_distance_crouch_block": 2.1,
+        "max_distance_no_input": 3.011,
+        "source_values": [
+          "Elena",
+          "0.548",
+          "2.100",
+          "3.011"
+        ]
+      },
+      {
+        "character": "Guile",
+        "min_distance_immediate_throw": 0.805,
+        "min_distance_crouch_block": 1.898,
+        "max_distance_no_input": 3.461,
+        "source_values": [
+          "Guile",
+          "0.805",
+          "1.898",
+          "3.461"
+        ]
+      },
+      {
+        "character": "Ingrid",
+        "min_distance_immediate_throw": 0.375,
+        "min_distance_crouch_block": 1.502,
+        "max_distance_no_input": 3.083,
+        "source_values": [
+          "Ingrid",
+          "0.375",
+          "1.502",
+          "3.083"
+        ]
+      },
+      {
+        "character": "Jamie",
+        "min_distance_immediate_throw": 0.988,
+        "min_distance_crouch_block": 2.03,
+        "max_distance_no_input": 3.002,
+        "source_values": [
+          "Jamie",
+          "0.988",
+          "2.030",
+          "3.002"
+        ]
+      },
+      {
+        "character": "JP",
+        "min_distance_immediate_throw": 0.525,
+        "min_distance_crouch_block": 1.857,
+        "max_distance_no_input": 3.628,
+        "source_values": [
+          "JP",
+          "0.525",
+          "1.857",
+          "3.628"
+        ]
+      },
+      {
+        "character": "Juri",
+        "min_distance_immediate_throw": 0.641,
+        "min_distance_crouch_block": 2.479,
+        "max_distance_no_input": 3.999,
+        "source_values": [
+          "Juri",
+          "0.641",
+          "2.479",
+          "3.999"
+        ]
+      },
+      {
+        "character": "Ken",
+        "min_distance_immediate_throw": 0.745,
+        "min_distance_crouch_block": 2.449,
+        "max_distance_no_input": 3.721,
+        "source_values": [
+          "Ken",
+          "0.745",
+          "2.449",
+          "3.721"
+        ]
+      },
+      {
+        "character": "Kimberly",
+        "min_distance_immediate_throw": 0.817,
+        "min_distance_crouch_block": 2.479,
+        "max_distance_no_input": 3.565,
+        "source_values": [
+          "Kimberly",
+          "0.817",
+          "2.479",
+          "3.565"
+        ]
+      },
+      {
+        "character": "Lily",
+        "min_distance_immediate_throw": 0.434,
+        "min_distance_crouch_block": 1.9,
+        "max_distance_no_input": 3.044,
+        "source_values": [
+          "Lily",
+          "0.434",
+          "1.900",
+          "3.044"
+        ]
+      },
+      {
+        "character": "Luke",
+        "min_distance_immediate_throw": 0.817,
+        "min_distance_crouch_block": 2.499,
+        "max_distance_no_input": 3.461,
+        "source_values": [
+          "Luke",
+          "0.817",
+          "2.499",
+          "3.461"
+        ]
+      },
+      {
+        "character": "M. Bison",
+        "min_distance_immediate_throw": 0.593,
+        "min_distance_crouch_block": 2.65,
+        "max_distance_no_input": 4.426,
+        "source_values": [
+          "M. Bison",
+          "0.593",
+          "2.650",
+          "4.426"
+        ]
+      },
+      {
+        "character": "Mai",
+        "min_distance_immediate_throw": 0.669,
+        "min_distance_crouch_block": 2.383,
+        "max_distance_no_input": 2.977,
+        "source_values": [
+          "Mai",
+          "0.669",
+          "2.383",
+          "2.977"
+        ]
+      },
+      {
+        "character": "Manon",
+        "min_distance_immediate_throw": 0.506,
+        "min_distance_crouch_block": 1.417,
+        "max_distance_no_input": 2.347,
+        "source_values": [
+          "Manon",
+          "0.506",
+          "1.417",
+          "2.347"
+        ]
+      },
+      {
+        "character": "Marisa",
+        "min_distance_immediate_throw": 0.544,
+        "min_distance_crouch_block": 1.903,
+        "max_distance_no_input": 3.081,
+        "source_values": [
+          "Marisa",
+          "0.544",
+          "1.903",
+          "3.081"
+        ]
+      },
+      {
+        "character": "Rashid",
+        "min_distance_immediate_throw": 0.796,
+        "min_distance_crouch_block": 2.253,
+        "max_distance_no_input": 2.998,
+        "source_values": [
+          "Rashid",
+          "0.796",
+          "2.253",
+          "2.998"
+        ]
+      },
+      {
+        "character": "Ryu",
+        "min_distance_immediate_throw": 0.525,
+        "min_distance_crouch_block": 1.878,
+        "max_distance_no_input": 3.628,
+        "source_values": [
+          "Ryu",
+          "0.525",
+          "1.878",
+          "3.628"
+        ]
+      },
+      {
+        "character": "Sagat",
+        "min_distance_immediate_throw": 0.546,
+        "min_distance_crouch_block": 1.869,
+        "max_distance_no_input": 3.156,
+        "source_values": [
+          "Sagat",
+          "0.546",
+          "1.869",
+          "3.156"
+        ]
+      },
+      {
+        "character": "Terry",
+        "min_distance_immediate_throw": 0.634,
+        "min_distance_crouch_block": 2.416,
+        "max_distance_no_input": 3.181,
+        "source_values": [
+          "Terry",
+          "0.634",
+          "2.416",
+          "3.181"
+        ]
+      },
+      {
+        "character": "Zangief",
+        "min_distance_immediate_throw": 0.327,
+        "min_distance_crouch_block": 1.455,
+        "max_distance_no_input": 3.04,
+        "source_values": [
+          "Zangief",
+          "0.327",
+          "1.455",
+          "3.040"
+        ]
+      }
+    ],
+    "overdrive_values": {
+      "cost_bars": 2.0,
+      "burnout_if_used_under_bars": 2.0,
+      "input": "2 Punches or 2 Kicks while inputting a special move",
+      "super_cancelable_od_can_cancel_to_level": 2
+    },
+    "drive_regeneration_rates": [
+      {
+        "state": "Base Drive Regen (Passive)",
+        "source_regen_value": "40 / 24% [50 / 30%]",
+        "notes": "In Burnout, blocking adds to Drive Gauge rather than depleting it"
+      },
+      {
+        "state": "In Hitstun",
+        "source_regen_value": "20 / 12% [25 / 15%]",
+        "notes": "Applies to any hitstun, including grounded hits, knockdowns, air resets, air juggles, throws, etc. After being knocked down, the Normal Rise and Back Rise animations go back to the Base Drive Regen rate"
+      },
+      {
+        "state": "Jumping",
+        "source_regen_value": "20 / 12%",
+        "notes": "Includes airborne frames of attacks, such as Chun-Li or Kimberly 6HK Jumping during Burnout is especially detrimental to the Drive Regen rate"
+      },
+      {
+        "state": "Walking Forward",
+        "source_regen_value": "+20 / +12% (11f~: Base x2)",
+        "notes": "Stacks with Base Drive Regen (Total: 60 Drive/frame); works even during Drive Regen Cooldown Meter build starts on frame 2, so a 2-frame microwalk can enable otherwise impossible combos (e.g. Drive Rush Cancel x3) Applies even during Burnout (Total: 70 Drive/frame), so an offensive playstyle can help to recover more quickly Starting on Frame 11 of Forward Walk, your Base Drive Regen is doubled for every additional walking frame This is a separate bonus from the usual +20/frame from walking forward A character in Drive Regen Cooldown has a Base Drive Regen of 0 which and will not benefit Standard Formula: 40 Regen/Frame x2 + 20 = 100 Drive/Frame, or 0.6 Drive Bars per second Burnout Formula: 50 Regen/Frame x2 + 20 = 120 Drive/Frame, or 0.72 Drive Bars per second Does not help meter build after a DI Stun, as Drive Regen Cooldown lasts too long"
+      }
+    ],
+    "drive_regeneration_walk_forward_formulas": {
+      "standard_frame_11_plus_drive_per_frame": 100,
+      "standard_frame_11_plus_drive_bars_per_second": 0.6,
+      "burnout_frame_11_plus_drive_per_frame": 120,
+      "burnout_frame_11_plus_drive_bars_per_second": 0.72
+    },
+    "drive_regeneration_cooldowns": [
+      {
+        "trigger": "Blocking Attacks Getting Punish Countered",
+        "cooldown_frames": 90,
+        "notes": "Cooldown Timer counts down from the start of Blockstun or Punish Hitstun Cooldown is not inflicted upon opponents in Burnout Multi-hit attacks reset the cooldown timer to 90 on each hit In the case Punish Counter, only if the move applies bonus damage/advantage on each hit"
+      },
+      {
+        "trigger": "Getting Hit by Super Art",
+        "cooldown_frames": 90,
+        "notes": "Cooldown Timer counts down after Super Hitstun ends; resets every time Hitstun is applied Timer freezes at 90 during cinematic periods of a Super, then counts down after the cinematic has ended Some moves appear to be \"Cinematic\" but technically are not If the training mode Frame Meter continues to display the frame count, it is not considered cinematic Supers that have a long non-cinematic recovery period can allow the opponent to resume meter build almost immediately"
+      },
+      {
+        "trigger": "OD Special Drive Impact Drive Reversal",
+        "cooldown_frames": 120,
+        "notes": "After using any of these moves, the timer counts down after all recovery frames have finished"
+      },
+      {
+        "trigger": "Drive Rush Cancel",
+        "cooldown_frames": 120,
+        "notes": "Timer starts counting down when the DR dash active frames are canceled DR Cancel also prevents additional Drive regen until combo ends (except Forward Walk) Entering a SA3 cinematic allows passive Drive Regen to resume"
+      },
+      {
+        "trigger": "Parry (whiff) Parry Drive Rush",
+        "cooldown_frames": 240,
+        "notes": "Timer counts down from the moment Parry recovery ends For Parry Drive Rush, timer starts counting down when the DR dash active frames are canceled A 1-bar Drive Rush used mid-combo prevents additional Drive Regen until combo ends (except Forward Walk)"
+      },
+      {
+        "trigger": "Parry (success)",
+        "cooldown_frames": 20,
+        "notes": "After parry freeze/blockstun; applies to both Regular and Perfect parries This overwrites the usual 240f cooldown time Continuing to hold Parry will keep the timer locked at 20 until the buttons are released and the Parry animation finishes"
+      }
+    ],
+    "super_gauge": {
+      "match_start_empty": true,
+      "max_bars": 3,
+      "round_carryover": true,
+      "critical_art_health_threshold_percent": 25,
+      "timer_frozen_during_super_art": true,
+      "build_rules": [
+        {
+          "actor": "Attacker",
+          "on_hit": "(Base)",
+          "on_block_percent": 50.0,
+          "on_armor_absorb": "(Base)"
+        },
+        {
+          "actor": "Defender",
+          "on_hit": "70%",
+          "on_block_percent": 25.0,
+          "on_armor_absorb": "35%"
+        }
+      ],
+      "super_art_drive_gauge_depletion_bars": {
+        "SA1": 0.5,
+        "SA2": 1.0,
+        "SA3": 1.5,
+        "CA": 2.0
+      }
+    }
+  }
+}

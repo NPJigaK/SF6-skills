@@ -1,0 +1,331 @@
+{
+  "manifest_schema_version": "supercombo_mediawiki_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/gauges",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/gauges",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "gauges",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Gauges",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges",
+  "captured_at_utc": "2026-06-11T01:23:20Z",
+  "capture_label": "2026-06-11-rev365841",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Gauges",
+    "pageid": 58419,
+    "lastrevid": 365841,
+    "revision_id": 365841,
+    "revision_timestamp": "2026-06-07T12:31:40Z",
+    "touched": "2026-06-07T12:31:40Z",
+    "length": 45762,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "a6a0a9b3089d6227b86f1f3160420822fc336c94",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges"
+  },
+  "source_updated_at": "2026-06-07T12:31:40Z",
+  "canonical_source_artifacts": [
+    "page.raw.wikitext",
+    "imageinfo.json",
+    "images/manifest.json"
+  ],
+  "media_source_artifacts": [
+    "images/files/",
+    "images/rendered/"
+  ],
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/media.dom.json",
+    "rendered/content.cleaned.html",
+    "rendered/content.scoped.html",
+    "screenshots/page-scoped.png",
+    "screenshots/content-scoped.png"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "image_manifest": "images/manifest.json",
+  "media_raw_policy": {
+    "text": "page.raw.wikitext is canonical for source text.",
+    "images": "Only page semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
+    "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the page media scope.",
+    "screenshots": "Screenshots capture scoped rendered page content after navigation removal and are not used as a replacement for source media files.",
+    "videos": "Video/audio DOM references are recorded in rendered/media.dom.json; large video downloads require an explicit scoped capture."
+  },
+  "template_dependency_policy": {
+    "scope": "Direct MediaWiki prop=templates dependencies are recorded by title only.",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [],
+    "recursive_capture": false
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Drive sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Drivehalf sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:F"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Hk sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Hp sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Mk sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Mp sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Sf6-adv"
+    }
+  ],
+  "artifact_hashes": {
+    "api/imageinfo-001.json": {
+      "sha256": "sha256:e3e419108dbfbae5d9203bd4491745a88e993cb4b34f984e2e06ec3bcba6f4dc",
+      "bytes": 12945
+    },
+    "api/query.json": {
+      "sha256": "sha256:2ec4a82da58908e07edde9318e822cae1787bc0d156e62a9aa885de43fc72dc9",
+      "bytes": 52014
+    },
+    "api/templates.json": {
+      "sha256": "sha256:a5a2c6ea445f4769a35b66c65be30f2b675a4e4e491d5e51b717eb67a6afa573",
+      "bytes": 1559
+    },
+    "imageinfo.json": {
+      "sha256": "sha256:d1428e1b23580ecf18014224810340ef11bf4391c27748cf7ff2db7956fc6f72",
+      "bytes": 14862
+    },
+    "images/files/SF6_Burnout.png": {
+      "sha256": "sha256:12c0eba25b7026618faabf25235ff21e92780c3616c7cdab77ab9c4e29e0a803",
+      "bytes": 291918
+    },
+    "images/files/SF6_DI_Armor_Example.png": {
+      "sha256": "sha256:7760fde13b923f1480677bcd5ed437c233b683028db72ab93ac735689af8f87c",
+      "bytes": 400670
+    },
+    "images/files/SF6_Drive_Gauge.jpg": {
+      "sha256": "sha256:361229d6d6f9b8390f20d3a602dd93545577591b24a05067551a06909b9e10c4",
+      "bytes": 36574
+    },
+    "images/files/SF6_drive_impact.jpg": {
+      "sha256": "sha256:6b7f1afdab8537f1b467578a7fc850ca1530c0bc867cbd2a1850a19ed545a525",
+      "bytes": 73165
+    },
+    "images/files/SF6_drive_overdrive.jpg": {
+      "sha256": "sha256:f7d33b5288998b2abb0896762dbc6b81749f4eaa6ed982762f62eab3b116e619",
+      "bytes": 151042
+    },
+    "images/files/SF6_drive_parry.jpg": {
+      "sha256": "sha256:c249a0111391e5c22c95f22df1d5c12bc63f4911b38011a970233fdeb5c88cc2",
+      "bytes": 165726
+    },
+    "images/files/SF6_drive_reversal.jpg": {
+      "sha256": "sha256:205f117c82c614373d1320d9b380e0d97113a7f8b8bd896e661b3ab13c0651d8",
+      "bytes": 175386
+    },
+    "images/files/SF6_drive_rush.jpg": {
+      "sha256": "sha256:0d14bdc511404a705216947d8196764b717793a566d420da702e66df2eabfd15",
+      "bytes": 139868
+    },
+    "images/rendered/00827a64dae9-500px-SF6_drive_rush.jpg": {
+      "sha256": "sha256:85c96644f6f8b4dda445d088cd334a75374df3515b63c245b5d1ef7ed10b3d77",
+      "bytes": 32995
+    },
+    "images/rendered/078cdd1eb298-200px-SF6_DI_Armor_Example.png": {
+      "sha256": "sha256:d6edebae2eb9086aaa199f157d75ffc0cd848f0952d3a4091ddae551d24f7ac0",
+      "bytes": 14770
+    },
+    "images/rendered/078edf476e8f-44px-SF6_MK.png": {
+      "sha256": "sha256:4786eb7b5af8113c66a5489866e77ceacf8772352063c2720032e70f87aa75af",
+      "bytes": 2247
+    },
+    "images/rendered/11024ea3130c-250px-SF6_drive_parry.jpg": {
+      "sha256": "sha256:b951e4f79635df95eb0dad460bd24c728fd3e852593a03bc96bd7dfca415a896",
+      "bytes": 10211
+    },
+    "images/rendered/12db9444f6ff-150px-SF6_Burnout.png": {
+      "sha256": "sha256:94ebd355b63c13ab2ef07d5351776a2c7e264340c8235aac227ec224c489452b",
+      "bytes": 80524
+    },
+    "images/rendered/233527eafc60-500px-SF6_drive_parry.jpg": {
+      "sha256": "sha256:c7a98457de6678ffe1f528e28f7005fd27af04113e9fa8e8619ff2ad0ab12565",
+      "bytes": 34683
+    },
+    "images/rendered/276102b4c466-44px-SF6_MP.png": {
+      "sha256": "sha256:5c0951356d839238e7e0aa91a1b290f7c5f74546e00d459312c0d177db7f9fe9",
+      "bytes": 3745
+    },
+    "images/rendered/2c59eca446eb-44px-SF6_HP.png": {
+      "sha256": "sha256:5e78c12ef32828c5303d96ea5d082df164fd7ae30f0b8690bbebd10a05b1bd95",
+      "bytes": 3799
+    },
+    "images/rendered/3b0bd2cd32aa-22px-F.png": {
+      "sha256": "sha256:16031f3afabb83b26684143a4be358a432ed8df3f56c7a975247fed81188b162",
+      "bytes": 1618
+    },
+    "images/rendered/403172ef0028-F.png": {
+      "sha256": "sha256:7208339d6613cb8fce6eff41ac10df622d9f388ec170d0b11c9a480a33ed4f28",
+      "bytes": 4371
+    },
+    "images/rendered/40e6bacbfc57-80px-SF6_drive_gauge_half.png": {
+      "sha256": "sha256:9c2c04bb4bd78692eba14791f34637b44c9d794e8d60fef8799aebfc1c50be14",
+      "bytes": 3036
+    },
+    "images/rendered/40e976ec9762-400px-SF6_DI_Armor_Example.png": {
+      "sha256": "sha256:a286812ee606aa4193b9cb7c7705c634b58dcb24035abf0b1459099bc0743eac",
+      "bytes": 43615
+    },
+    "images/rendered/5304d845db80-300px-SF6_Drive_Gauge.jpg": {
+      "sha256": "sha256:7fda8e1b63a41a02235990eac2e18efb6366e72cd90a03e334ab8f930009ddb9",
+      "bytes": 7476
+    },
+    "images/rendered/55d6fad41482-500px-SF6_drive_reversal.jpg": {
+      "sha256": "sha256:33f9df8a56fdd841337b25ee2e56c86b695483a1d8c56922924b26d65db0f516",
+      "bytes": 38294
+    },
+    "images/rendered/5b001e3802f1-80px-SF6_drive_gauge.png": {
+      "sha256": "sha256:d7c8ea82332b6aad6af097d1365034e54047578744a9cf073ae0a2855b279741",
+      "bytes": 2557
+    },
+    "images/rendered/5caf836465a2-250px-SF6_drive_rush.jpg": {
+      "sha256": "sha256:c5246608f63eddfde3b6eb86d6c083db4fd62a382ee018a849ec5e6cbc2f46ac",
+      "bytes": 10319
+    },
+    "images/rendered/5efeb80881f0-200px-SF6_drive_impact.jpg": {
+      "sha256": "sha256:ac5a1da911c7de6b6385877d51257a741b2512cb7f24f4c4f6509e7ba7bd445e",
+      "bytes": 9016
+    },
+    "images/rendered/5fad0b3b9991-250px-SF6_drive_overdrive.jpg": {
+      "sha256": "sha256:b9377f713fa1fb0fab614533221b567d28cdbd2a2bd807bc389ee962e95902bb",
+      "bytes": 10780
+    },
+    "images/rendered/78a8d23ed502-400px-SF6_drive_impact.jpg": {
+      "sha256": "sha256:03e34664aba8a1d88287222f63063b270556c3e0d3676a2c00145458661abee3",
+      "bytes": 28867
+    },
+    "images/rendered/82e92e832627-22px-SF6_HP.png": {
+      "sha256": "sha256:a03cfe6057960c258eba30c2ce4325761d5317ab10861fbff774ee2661571fa2",
+      "bytes": 1584
+    },
+    "images/rendered/8c6a71e9fe7d-500px-SF6_drive_overdrive.jpg": {
+      "sha256": "sha256:62093399612f017bc494829ba257af07e7a551365a35c031fa4d16b66232243a",
+      "bytes": 34773
+    },
+    "images/rendered/8efc9f9a9815-40px-SF6_drive_gauge_half.png": {
+      "sha256": "sha256:735afa348c3e81bae9c7594995427fb81c57bc0576d1241285a3e16f3ad9d6a2",
+      "bytes": 2022
+    },
+    "images/rendered/9270eef36dfe-40px-SF6_drive_gauge.png": {
+      "sha256": "sha256:132cc2c350cb4046545ff72626d35d7f0eb5573549fc43ce5b4eb82950ef19b6",
+      "bytes": 1628
+    },
+    "images/rendered/a3511f96d8c1-22px-SF6_MP.png": {
+      "sha256": "sha256:c86f7541ba46914e97a2f59b5fbf15b365f390c466383da88d2870431fd2c581",
+      "bytes": 1530
+    },
+    "images/rendered/b784a15b63bf-22px-SF6_MK.png": {
+      "sha256": "sha256:632d6605a4c2a9f376437c899e3cea35d7fc1ba3ff65d32d3dfd2be054210e4b",
+      "bytes": 1391
+    },
+    "images/rendered/c01ae0676c8f-22px-SF6_HK.png": {
+      "sha256": "sha256:29f289c0ad4f76e39b3df0d5c59f04d05510e391f715ddac02300a43b80867b9",
+      "bytes": 1394
+    },
+    "images/rendered/cae60560169b-250px-SF6_drive_reversal.jpg": {
+      "sha256": "sha256:02d8b6272039f879c93a4f7d324cbd19eb7507d7c2843fd16a8fb8416c0b16d7",
+      "bytes": 12000
+    },
+    "images/rendered/d40721a1c8de-44px-SF6_HK.png": {
+      "sha256": "sha256:05bbb26833e3d507a099af5bfd44cd67c87d843ff72d62f24f4d38f266eff1f8",
+      "bytes": 2253
+    },
+    "metadata.json": {
+      "sha256": "sha256:aa8373831df8aaf0397911137ff14d2858a386955048cb32a93031fc655b1ff1",
+      "bytes": 19721
+    },
+    "page.html": {
+      "sha256": "sha256:7318d217be63b7c71a451127dff17ff9a378d460adbe3d64a515c207520fba1b",
+      "bytes": 259179
+    },
+    "page.raw.wikitext": {
+      "sha256": "sha256:9f2fd4156a8796df370f1dae7204c0f7f84040a1e21efe1113fa0842a804db0f",
+      "bytes": 45762
+    },
+    "rendered/content.cleaned.html": {
+      "sha256": "sha256:bd25077ac441172093d04d482f7c22d3b464c78c3adbdad0d4d133f054178f6a",
+      "bytes": 121570
+    },
+    "rendered/content.scoped.html": {
+      "sha256": "sha256:6a3a95885d4a7913e349b99136bb155b1054cd9a3f8eb528b83f3241762130fe",
+      "bytes": 89567
+    },
+    "rendered/main.dom.json": {
+      "sha256": "sha256:9564175122cac8b9e005810ab140c2d21d8e6ca8e5ad95728fef35bcc1f7415e",
+      "bytes": 381403
+    },
+    "rendered/media.dom.json": {
+      "sha256": "sha256:3e760bcc4ad9ec4ff8a1d0deae8d368c4cc65ec6511be44126fd3190efc3cd55",
+      "bytes": 99588
+    },
+    "screenshots/content-scoped.png": {
+      "sha256": "sha256:95f120c8ca39e691e4e501a64c663c295763fe2ea35f351563e64223c02817ab",
+      "bytes": 9125645
+    },
+    "screenshots/page-scoped.png": {
+      "sha256": "sha256:31e7f63bb0bc48b31c317d0785e94e59212d8c0bb13e18400203c0665c59508d",
+      "bytes": 3845568
+    },
+    "validation.json": {
+      "sha256": "sha256:f3b84dc349440c68eca15738ea54de9970868421eca6a97e0aba744417d47dad",
+      "bytes": 2049
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "tool": "tools/web_pages/supercombo_page.py"
+}

@@ -1039,7 +1039,7 @@ def validate_capture(
             "page.raw.wikitext is the canonical text artifact for this MediaWiki page.",
             "imageinfo.json plus images/files preserve MediaWiki File originals only for semantic content media.",
             "MediaWiki API prop=images may include transcluded navigation/template images; those are recorded as excluded provenance, not downloaded content media.",
-            "screenshots preserve scoped rendered HUD content for future visual questions, but are display evidence rather than source text.",
+            "screenshots preserve scoped rendered page content for future visual questions, but are display evidence rather than source text.",
             "No wiki source page, index entry, or log entry was created by this raw-only capture.",
         ],
     }
@@ -1215,7 +1215,7 @@ def capture(
         },
         "template_dependencies": template_dependencies(templates_payload),
         "media_scope_policy": {
-            "included": "HUD page semantic content media: explicit File links in page.raw.wikitext and rendered File links outside navigation sections.",
+            "included": "Page semantic content media: explicit File links in page.raw.wikitext and rendered File links outside navigation sections.",
             "excluded": "Images introduced by transcluded navigation/template chrome, including SF6 Navigation character icons.",
             "api_prop_images_note": "api/query.json preserves MediaWiki prop=images exactly; download scope intentionally uses content_media_titles instead.",
         },
@@ -1280,9 +1280,9 @@ def capture(
         "image_manifest": "images/manifest.json",
         "media_raw_policy": {
             "text": "page.raw.wikitext is canonical for source text.",
-            "images": "Only HUD semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
-            "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the HUD media scope.",
-            "screenshots": "Screenshots capture scoped rendered HUD content after navigation removal and are not used as a replacement for source media files.",
+            "images": "Only page semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
+            "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the page media scope.",
+            "screenshots": "Screenshots capture scoped rendered page content after navigation removal and are not used as a replacement for source media files.",
             "videos": "Video/audio DOM references are recorded in rendered/media.dom.json; large video downloads require an explicit scoped capture.",
         },
         "template_dependency_policy": {

@@ -2,6 +2,97 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] workflow | JSON data access uses jq
+- 更新:
+  - `AGENTS.md`
+  - `.agents/skills/sf6-source-ingest/SKILL.md`
+  - `.agents/skills/sf6-wiki-query/SKILL.md`
+  - `.agents/skills/sf6-durable-output/SKILL.md`
+  - `.agents/skills/sf6-wiki-health-check/SKILL.md`
+  - `wiki/log.md`
+- 検証:
+  - `jq --version` は `jq-1.8.1`。
+- メモ:
+  - `wiki/outputs/data/`、raw manifest / metadata / validation、frame-data JSON、numeric derived output から値・件数・数値を読む時は `$jq-cli` skill と `jq` を第一選択にする。
+  - 重要な数値 claim や row count / validation status は、可能な限り `jq -e` の exit status で確認する。
+  - Python は既存 repo tool、複数 file をまたぐ domain-specific 生成・検証、または `jq` だけでは不自然な構造処理に限定する。
+
+## [2026-06-11] wiki-update | SuperCombo Gauges numeric query surface
+- 原本:
+  - `wiki/sources/supercombo-street-fighter-6-gauges.md`
+  - `wiki/outputs/data/gauges/supercombo/numeric-tables.json`
+- 更新:
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/terms/burnout.md`
+  - `wiki/concepts/terms/chip-damage.md`
+  - `wiki/concepts/terms/critical-art.md`
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/concepts/terms/drive-impact.md`
+  - `wiki/concepts/terms/drive-parry.md`
+  - `wiki/concepts/terms/drive-reversal.md`
+  - `wiki/concepts/terms/drive-rush-cancel.md`
+  - `wiki/concepts/terms/overdrive.md`
+  - `wiki/concepts/terms/perfect-parry.md`
+  - `wiki/concepts/terms/raw-drive-rush.md`
+  - `wiki/concepts/terms/stun.md`
+  - `wiki/concepts/terms/super-art.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - 主要 term に `## 数値データ`、`drive-system.md` に横断 `## 数値索引`、`frame-data.md` に system move frame の `## 数値データ` を追加した。
+- メモ:
+  - 30 character の Drive Impact range / Drive Rush distance table は term page に複製せず、source page と `numeric-tables.json` を正とする。
+  - Term page の数値表は回答時の入口であり、公式 source または実機検証と重なる場合はそちらを優先する。
+- 未解決事項:
+  - `numeric-tables.json` の schema を他の gauge / system numeric source にも使う標準 schema として固定するか。
+
+## [2026-06-11] ingest | SuperCombo Gauges web-page raw capture
+- 原本:
+  - `https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges`
+  - `raw/web-pages/wiki.supercombo.gg/gauges/manifest.json`
+- 作成:
+  - `raw/web-pages/wiki.supercombo.gg/gauges/`
+  - `wiki/sources/supercombo-street-fighter-6-gauges.md`
+  - `wiki/reviews/2026-06-11-supercombo-gauges-web-page-capture-review.md`
+  - `wiki/outputs/data/gauges/supercombo/numeric-tables.json`
+- 更新:
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/terms/burnout.md`
+  - `wiki/concepts/terms/chip-damage.md`
+  - `wiki/concepts/terms/critical-art.md`
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/concepts/terms/drive-impact.md`
+  - `wiki/concepts/terms/drive-parry.md`
+  - `wiki/concepts/terms/drive-reversal.md`
+  - `wiki/concepts/terms/drive-rush-cancel.md`
+  - `wiki/concepts/terms/overdrive.md`
+  - `wiki/concepts/terms/perfect-parry.md`
+  - `wiki/concepts/terms/raw-drive-rush.md`
+  - `wiki/concepts/terms/stun.md`
+  - `wiki/concepts/terms/super-art.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/gauges/validation.json` は `passed`。
+  - API の revision wikitext と `action=raw` の wikitext が一致した。
+  - MediaWiki revid は `365841`、source freshness は `2026-06-07T12:31:40Z`、raw 取得時刻は `2026-06-11T01:23:20Z`。
+  - Rendered DOM は heading 18件、table 14件、image refs 64件を記録する。本文 table は 0-12、table 13 は SF6 Navigation。
+  - Content media は 8 original files と 28 rendered image files。`numeric-tables.json` は content table 13件、Drive Impact range 30 rows、Drive Rush distance 30 rows を保持する。
+- メモ:
+  - Canonical raw は `page.raw.wikitext`。Drive / Super Gauge の数値が重要な source なので、source page と numeric JSON の両方に主要数値を保持した。
+  - Drive Impact range と Drive Rush distance の 30 character table は省略せず source page と `numeric-tables.json` に残した。
+  - SuperCombo Gauges は community numeric source として扱い、公式 Capcom source と重なる mechanics claim では公式 source を優先する。
+- 未解決事項:
+  - Drive regeneration、cooldown、Drive Impact range、Drive Rush distance values を公式 source または実機検証で照合するか。
+  - `Drive Rush from Parry` の cost 表記を、cost table の `1/2` と section / caption text の `1 Drive Stock` の component 分解として扱うか、source-internal conflict として保持するか。
+  - `wiki/outputs/data/gauges/supercombo/numeric-tables.json` の schema を、他の gauge / system numeric source にも使う標準 schema として固定するか。
+
 ## [2026-06-11] wiki-update | SuperCombo HUD Icons term pages
 - 原本:
   - `raw/web-pages/wiki.supercombo.gg/hud/page.raw.wikitext`
