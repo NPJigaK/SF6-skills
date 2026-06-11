@@ -10,10 +10,13 @@ sources:
   - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/supercombo-street-fighter-6-hud]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
+  - "[[sources/supercombo-street-fighter-6-offense]]"
 related:
   - "[[concepts/terms/index]]"
   - "[[concepts/drive-system]]"
+  - "[[concepts/offense]]"
   - "[[concepts/terms/corner]]"
+  - "[[concepts/terms/safe-jump]]"
   - "[[entities/street-fighter-6]]"
 aliases:
   - "stun"
@@ -33,7 +36,7 @@ tags:
 
 ## 要約
 
-スタンは、相手が無防備になり大きな combo 機会が生まれる状態。Capcom eSports BASE では、Burnout 中の相手に Drive Impact を guard させ、画面端に到達した時に発生する状態として説明されている。SuperCombo HUD page は `Stun/Dizzy` icon の表示 cue として、Burnout 中の cornered opponent に Drive Impact が connect した時に出ると説明している。SuperCombo Gauges page は stun duration と follow-up scaling を community numeric source として補う。
+スタンは、相手が無防備になり大きな combo 機会が生まれる状態。Capcom eSports BASE では、Burnout 中の相手に Drive Impact を guard させ、画面端に到達した時に発生する状態として説明されている。SuperCombo HUD page は `Stun/Dizzy` icon の表示 cue、SuperCombo Gauges page は stun duration と follow-up scaling、SuperCombo Offense page は corner dizzy 後の jump-in / stock setup examples を補う。
 
 ## Source claims
 
@@ -42,6 +45,7 @@ tags:
 | [[sources/capcom-esports-base-terms]] `word-01` | Burnout 中の相手に Drive Impact を guard させて画面端に到達すると stun にできる。stun した相手には大 damage の機会があり、stun 後は Burnout が解除される。 | high |
 | [[sources/supercombo-street-fighter-6-hud]] | `Stun/Dizzy` icon は、Burnout 中の cornered opponent に Drive Impact が connect し、free combo followup が可能になる時に表示される。 | medium |
 | [[sources/supercombo-street-fighter-6-gauges]] | Burnout 中の corner Drive Impact hit / block は stun を発生させ、follow-up combo は 80% scaling から開始、stun duration は 195f、最後の 7f は crouching hurtbox size になると説明する。 | medium |
+| [[sources/supercombo-street-fighter-6-offense]] | Corner Dizzy 後は相手が地面に落ちる前に jump-in でき、Drive gauge が満タンでなければ前歩きで Drive regeneration を稼ぐ選択や、A.K.I. poison pool、Ryu Denjin、Jamie drink などの character-specific stock / setup choices があると説明する。 | medium |
 
 ## 数値データ
 
@@ -58,11 +62,14 @@ tags:
 - 現時点では SF6 の Burnout / Drive Impact / 画面端に紐づく説明として扱う。旧作一般の stun とは条件が異なる可能性がある。
 - Capcom eSports BASE は Drive Impact を guard させて画面端に到達する条件を説明する。SuperCombo HUD page の `connects` wording は HUD 表示 cue の community source として残し、条件説明では公式 source を優先する。
 - SuperCombo Gauges page の stun duration / hurtbox / scaling 値は community numeric source として扱い、公式 source または実機検証があればそちらを優先する。
+- SuperCombo Offense page の character-specific corner dizzy follow-up は tactical community claim として扱い、patch 変更や character-specific data と照合するまで一般化しない。
 
 ## 関連
 
 - [[concepts/drive-system]]
+- [[concepts/offense]]
 - [[concepts/terms/corner]]
 - [[concepts/terms/burnout]]
 - [[concepts/terms/drive-impact]]
 - [[concepts/terms/drive-impact-counter]]
+- [[concepts/terms/safe-jump]]

@@ -11,14 +11,17 @@ sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
   - "[[sources/supercombo-street-fighter-6-hud]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
+  - "[[sources/supercombo-street-fighter-6-offense]]"
 related:
   - "[[concepts/terms/index]]"
+  - "[[concepts/offense]]"
   - "[[concepts/frame-data]]"
   - "[[concepts/terms/burnout]]"
   - "[[concepts/terms/drive-impact]]"
   - "[[concepts/terms/drive-parry]]"
   - "[[concepts/terms/drive-reversal]]"
   - "[[concepts/terms/drive-rush-cancel]]"
+  - "[[concepts/terms/throw]]"
   - "[[concepts/terms/overdrive]]"
   - "[[entities/street-fighter-6]]"
 aliases:
@@ -32,7 +35,7 @@ tags:
 
 ## 要約
 
-Drive System は、Street Fighter 6 の攻撃・防御・移動を横断する共通 system。Capcom 公式 Fighting Ground source では、Drive Gauge はバトル開始時から使用でき、使いすぎると枯渇状態や [[concepts/terms/burnout|バーンアウト]] に関わる resource として説明されている。Capcom 公式 eSports BASE 用語解説は、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]]などの観戦用語として Drive System 周辺の具体例を補う。SuperCombo HUD page は Battle HUD 上の Drive Gauge / Super Art Gauge と、Drive Impact・Burnout に関係する HUD icon の表示証拠を補う。SuperCombo Gauges page は community numeric source として、Drive Gauge の cost、regeneration、cooldown、Drive Impact / Drive Rush の range table などを補う。
+Drive System は、Street Fighter 6 の攻撃・防御・移動を横断する共通 system。Capcom 公式 Fighting Ground source では、Drive Gauge はバトル開始時から使用でき、使いすぎると枯渇状態や [[concepts/terms/burnout|バーンアウト]] に関わる resource として説明されている。Capcom 公式 eSports BASE 用語解説は、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]]などの観戦用語として Drive System 周辺の具体例を補う。SuperCombo HUD page は Battle HUD 上の Drive Gauge / Super Art Gauge と、Drive Impact・Burnout に関係する HUD icon の表示証拠を補う。SuperCombo Gauges page は community numeric source として、Drive Gauge の cost、regeneration、cooldown、Drive Impact / Drive Rush の range table などを補う。SuperCombo Offense page は、Drive Rush を使った strike/throw mixup、Drive Parry に対する Punish Counter throw、corner dizzy 後の Drive regeneration choice を攻めの文脈で補う。
 
 ## 定義
 
@@ -63,6 +66,7 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 | Burnout は Drive gauge が空になった時の状態で、Drive-related techniques に制限がかかる。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | Drive Rush は Drive Parry または cancelable normal attack から出せる。 | [[sources/supercombo-street-fighter-6-glossary]] | medium |
 | SuperCombo Gauges page は、Drive Impact cost 1、Drive Reversal cost 2、Overdrive Special cost 2、Drive Rush Cancel cost 3、Drive Parry activation 約 1/2 bar を表で示す。Drive Rush from Parry は cost table の 1/2 と section / caption text の 1 Drive Stock が揺れるため、単一値に正規化しない。 | [[sources/supercombo-street-fighter-6-gauges]] | medium |
+| SuperCombo Offense page は、Drive Rush が midscreen でも strike/throw mixup を作れること、Drive Parry に対する throw は常に Punish Counter になり、相手 Drive Gauge `1` bar を drain すること、corner dizzy 後は Drive gauge が満タンでなければ前歩きで regeneration を稼ぐ選択があることを説明する。 | [[sources/supercombo-street-fighter-6-offense]] | medium |
 
 ## 数値索引
 
@@ -85,12 +89,14 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 ## 関連
 
 - [[concepts/frame-data]]
+- [[concepts/offense]]
 - [[concepts/terms/index]]
 - [[concepts/terms/burnout]]
 - [[concepts/terms/drive-impact]]
 - [[concepts/terms/drive-parry]]
 - [[concepts/terms/drive-reversal]]
 - [[concepts/terms/drive-rush-cancel]]
+- [[concepts/terms/throw]]
 - [[concepts/terms/overdrive]]
 - [[entities/street-fighter-6]]
 
@@ -101,6 +107,7 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 - SuperCombo glossary は community source なので、公式 source と異なる wording がある場合は公式 source を優先して差異を明示する。
 - SuperCombo HUD page は HUD 表示と icon visual evidence の community source として使い、公式 source と重なる Drive / Burnout mechanics claim では公式 source を優先する。
 - SuperCombo Gauges page は community numeric source として使う。公式 source または検証済み data と重なる cost / frame / damage 値は、公式・実機検証結果を優先し、SuperCombo 値は補助根拠として扱う。
+- SuperCombo Offense page は Drive System そのものの正本ではなく、Drive Rush / Drive Parry / corner dizzy が攻めに接続する場面の community tactical source として使う。
 
 ## 未解決の質問
 

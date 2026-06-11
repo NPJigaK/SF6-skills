@@ -1,0 +1,155 @@
+{
+  "manifest_schema_version": "supercombo_mediawiki_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/offense",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/offense",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "offense",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Offense",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Offense",
+  "captured_at_utc": "2026-06-11T11:03:16Z",
+  "capture_label": "2026-06-11-rev364971",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Offense",
+    "pageid": 65905,
+    "lastrevid": 364971,
+    "revision_id": 364971,
+    "revision_timestamp": "2026-05-30T00:03:21Z",
+    "touched": "2026-06-04T23:13:48Z",
+    "length": 23300,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "0f21b4dcb92356777e6e545567a744d8c588a9b7",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Offense",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Offense"
+  },
+  "source_updated_at": "2026-05-30T00:03:21Z",
+  "canonical_source_artifacts": [
+    "page.raw.wikitext",
+    "imageinfo.json",
+    "images/manifest.json"
+  ],
+  "media_source_artifacts": [
+    "images/files/",
+    "images/rendered/"
+  ],
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/media.dom.json",
+    "rendered/content.cleaned.html",
+    "rendered/content.scoped.html",
+    "screenshots/page-scoped.png",
+    "screenshots/content-scoped.png"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "image_manifest": "images/manifest.json",
+  "media_raw_policy": {
+    "text": "page.raw.wikitext is canonical for source text.",
+    "images": "Only page semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
+    "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the page media scope.",
+    "screenshots": "Screenshots capture scoped rendered page content after navigation removal and are not used as a replacement for source media files.",
+    "videos": "Video/audio DOM references are recorded in rendered/media.dom.json; large video downloads require an explicit scoped capture."
+  },
+  "template_dependency_policy": {
+    "scope": "Direct MediaWiki prop=templates dependencies are recorded by title only.",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [],
+    "recursive_capture": false
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Sf6-adv"
+    }
+  ],
+  "artifact_hashes": {
+    "api/query.json": {
+      "sha256": "sha256:e226d64ca1ce4cc09cdf21b6bc195ba3e08d56f57365e2b6bb640cc7bb8b800d",
+      "bytes": 27533
+    },
+    "api/templates.json": {
+      "sha256": "sha256:bb4189bc4cbd0777825ba4a1ff643997295acd85a16e3e5461e26c47755cec0f",
+      "bytes": 953
+    },
+    "imageinfo.json": {
+      "sha256": "sha256:3ed6baaaafcb54288d2ba0af4aaf15ec64a3fd0aa6a22701bddfc3ea5acad763",
+      "bytes": 167
+    },
+    "metadata.json": {
+      "sha256": "sha256:4ec3f8c9bdcd399bf2b776712b0fb0b8623e3a4c5ea2da822356f5e0ec10e79e",
+      "bytes": 19052
+    },
+    "page.html": {
+      "sha256": "sha256:062b500202c12e47252b2979a7c826a9c926365549118af1a752a1b6675c7fc0",
+      "bytes": 219847
+    },
+    "page.raw.wikitext": {
+      "sha256": "sha256:4a72581bb9d8211bdec806006263bcf2236be716f801d550d3340bb15bc71f1d",
+      "bytes": 23300
+    },
+    "rendered/content.cleaned.html": {
+      "sha256": "sha256:8cd0ab6406fcc22ec7250f97a4d781acf7699d2609429576d99bdb293a6a5780",
+      "bytes": 70724
+    },
+    "rendered/content.scoped.html": {
+      "sha256": "sha256:57c920908f699c2744290585511ba3729eb63572bc67b6b8db133c495613c558",
+      "bytes": 38816
+    },
+    "rendered/main.dom.json": {
+      "sha256": "sha256:90874e0e983d8214c014982b48f5bad793b22bf1d24585afd89b70d554304da1",
+      "bytes": 173645
+    },
+    "rendered/media.dom.json": {
+      "sha256": "sha256:0324c1eca3bd486460f330bcab8e07b2e5e43e0eef0cd8b35d7ba97643b8e3a0",
+      "bytes": 45976
+    },
+    "screenshots/content-scoped.png": {
+      "sha256": "sha256:6e856019fdbde75ca6de16e26582505446de9ff3bec4084d7a58167d7f07238e",
+      "bytes": 3374902
+    },
+    "screenshots/page-scoped.png": {
+      "sha256": "sha256:d1ee168f430662518ad2fa5ef065795b4c6330d6ed037c70842f5f2126694749",
+      "bytes": 1638238
+    },
+    "validation.json": {
+      "sha256": "sha256:675b759e014215ee9ae30cb8bc71683640922ab5bafa26a377e01ee7dfca0d31",
+      "bytes": 2046
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "tool": "tools/web_pages/supercombo_page.py"
+}

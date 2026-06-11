@@ -2,6 +2,44 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] ingest | SuperCombo Offense web-page raw capture
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/offense/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/offense/page.raw.wikitext`
+- 作成:
+  - `wiki/sources/supercombo-street-fighter-6-offense.md`
+  - `wiki/concepts/offense.md`
+  - `wiki/concepts/terms/throw.md`
+  - `wiki/concepts/terms/throw-loop.md`
+  - `wiki/concepts/terms/safe-jump.md`
+  - `wiki/concepts/terms/empty-jump-mixup.md`
+  - `wiki/concepts/terms/blockstring.md`
+  - `wiki/reviews/2026-06-11-supercombo-offense-web-page-capture-review.md`
+- 更新:
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/terms/counter-hit.md`
+  - `wiki/concepts/terms/punish-counter.md`
+  - `wiki/concepts/terms/stun.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/drive-system.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/offense/validation.json` は `passed`。
+  - MediaWiki page / raw wikitext / API / templates API / render fetch は取得済み。API revision wikitext と `action=raw` wikitext は一致。
+  - Rendered DOM は heading 17 件、table 2 件。本文 table は Throw Ranges 1 件、もう 1 件は SF6 Navigation。
+  - Content media は 0 件。navigation / character icon 30 件は excluded provenance として記録され、download 対象外。
+- メモ:
+  - SuperCombo Offense は community source として扱い、公式 source と重なる Counter / Punish Counter / Drive / Stun mechanics では公式 source を優先する。
+  - Throw range、throw invincibility、safe jump、empty jump、throw loop、blockstring は source page と term pages に戻れる形で集約した。
+  - Throw range table は小規模なため、今回は `wiki/outputs/data/` に derived JSON を作らず source page の数値表に保持した。
+- 未解決事項:
+  - Throw range、throw loop、safe jump values を公式 source または実機検証で照合するか。
+  - Character-specific throw loop notes を character entity / character source page へどの粒度で backlink するか。
+  - Offense / Defense / Movement / Game Data のような system page 由来の小規模 numeric tables を derived JSON にする基準をどうするか。
+
 ## [2026-06-11] review | JP Year1 ODアムネジア 5790 combo calculation model gap
 - 原本:
   - `https://www.youtube.com/shorts/g-m0AFGe4jY` (yt-dlp で metadata / video frame を一時取得して確認)

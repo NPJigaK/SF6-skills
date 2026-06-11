@@ -1,0 +1,165 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 65905,
+        "ns": 0,
+        "title": "Street Fighter 6/Offense",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:13:48Z",
+        "lastrevid": 364971,
+        "length": 23300,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Offense",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Offense&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Offense",
+        "revisions": [
+          {
+            "revid": 364971,
+            "parentid": 364970,
+            "user": "Spabobin",
+            "timestamp": "2026-05-30T00:03:21Z",
+            "size": 23300,
+            "sha1": "0f21b4dcb92356777e6e545567a744d8c588a9b7",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "== Normal Moves ==\nStreet Fighter 6 uses the standard 6-button layout the series is known for: {{clr|L|Light}}/{{clr|M|Medium}}/{{clr|H|Heavy}} for attack strength and Punch/Kick for attack type.\n\nThere is no \"priority system\" for normal attacks like the one found in SF5 or SF3. Any two attacks that collide on the same frame will both count as a {{clr|PC|Counter-hit}}. This can create trade combos if a high-hitstun move trades with a low-hitstun move.\n\nUnlike in previous entries, strikes beat throws when they connect on the same frame. This means that a defensive 4-frame normal is a strong option against tick throws from {{sf6-adv|P|+1}} advantage or worse.\n\nThere are very few normal attacks with frame advantage in SF6. Light normals can still frame trap the opponent by chaining them together, but most of them do not create true blockstrings, so opponents can counter with invincible reversals or parry. An opponent mashing their own fast light normal will beat most blockstrings other than chained light normals.\n<br><br>\n\n== Special Moves ==\nInputting a specific directional command before pressing an attack button results in a special move. Most special moves have different properties depending on which button strength is used, such as Ryu's Hadoken traveling faster or slower, but some moves do not vary between strengths. By inputting the move with 2 buttons, special moves can be powered up into {{clr|OD|Overdrive}} ({{clr|OD|OD}}) moves at the cost of 2 stocks of Drive gauge. {{clr|OD|Overdrive}} moves have improved properties, such as invincibility, multiple hits, better juggle potential, or simply more damage.\n<br><br>\n\n== Throws ==\nYou can throw the opponent by pressing LP+LK at close range, or 4+LP+LK to throw them backwards for a side switch. Throws are universally 5f startup and 3f active, with a total whiff animation of 30f. Some characters also have an Air Throw that makes for an effective air-to-air, and a few characters have unique directional throws, like Dhalsim's crouching throw.\n\nEach throw is different in terms of knockdown frame advantage and separation distance; many forward throws allow for \"Throw Loops\" in the corner where the character lands a throw, then walks or dashes up to the opponent with frame advantage, creating another throw mixup. This is generally impossible midscreen if the opponent Back Rises, but {{clr|DR|Drive Rush}} allows many characters to force a strike/throw mixup even midscreen at the cost of Drive meter.\n\nWhen used as a [[#Punish Counters|{{clr|PC|Punish Counter}}]], throws gain 70% extra damage, become a Hard Knockdown preventing Back Rise, and drain 1 bar of Drive Gauge from the opponent. This is particularly notable against Drive Parry, which are in a {{clr|PC|Punish Counter}} state when thrown.\n\nRegular throws only work on the ground, and will not connect against opponents that are jumping (including pre-jump frames) or using a move with airborne frames. Opponents are also throw invincible during backdashes for the first 15 frames, and some specific attacks can have their own throw invincibility. You cannot throw an opponent if they are in hitstun, blockstun, or knocked down. If a throw and a strike connect on the same frame, the strike will take priority (unlike in previous Street Fighter titles). This also applies to air throws vs. airborne strikes.\n\n''Note: it is possible to combo into a throw during a {{clr|DR|Drive Impact}} crumple state, after a Stun, or after some specific wall splats like Zangief {{clr|PC|Punish Counter}} {{clr|H|3HK}} or Jamie {{clr|PC|Punish Counter}} {{clr|OD|214PP}}.''\n\n\nSee the [[Street_Fighter_6/Defense#Throw_Escape|Defense]] page for information about defending against Throws.\n<br><br>\n\n=== Throw Ranges ===\nMost throws have identical range, but a few characters can throw from farther away. \n\n{| class=\"wikitable\"\n! Character !! Throw Range !! Throw Hurtbox !! Relative Throw Range\n|-\n| Zangief || 1.02 || 0.49 || 0.53\n|-\n| Marisa || 0.90 || 0.38 || 0.52\n|-\n| Blanka / E. Honda || 0.90 || 0.43 || 0.47\n|-\n| Alex / Sagat || 0.85 || 0.38 || 0.47\n|-\n| Everyone Else || 0.80 || 0.33 || 0.47\n|}\n\nA wider throw hurtbox makes a character more susceptible to throw loops, sometimes even against characters who normally do not normally have one. A character's '''Relative Throw Range''' is the difference between their throw range and the width of their throw hurtbox. For example, Zangief has a wide throw hurtbox, but the extra distance on his throw range means he can throw an opponent at a range where he cannot be thrown back. On the other hand, Blanka and Ryu can both throw each other from the exact same range, as Blanka's extra throw range is counteracted by his wider throw hurtbox. There are still some benefits to this type of throw, like punishing moves at a longer range or intercepting an incoming {{clr|DR|Drive Impact}} from farther away.\n\n''Note: As of Season 3, Zangief's throw hurtbox was expanded, bringing his relative throw range more in line with the rest of the cast.''\n<br><br>\n\n=== Throw Invincibility ===\n* Opponents cannot be thrown during pre-jump frames, or while airborne (except for Air Throws).\n* Opponents cannot be thrown while knocked down. There is 1 frame of throw invincibility after a grounded wakeup, so inputting a throw at {{sf6-adv|VP|+5}} on a downed opponent can connect.\n* Opponents cannot be thrown while in hitstun or blockstun (including Parry blockstun). There are 2 frames of throw invulnerability after exiting hitstun and blockstun, so inputting a throw at {{sf6-adv|VP|+4}} can lead to a successful tick throw.\n* Opponents cannot be thrown during the 2 landing recovery frames after an air reset (when the opponent flips out of the air and lands without a knockdown). The opponent can still block, tech, or perform an attack on these frames. \n<br><br>\n\n=== Throw Loop ===\nA term coined by the community to describe throws that provide enough frame advantage that you can attempt a second meaty throw on the opponent's wakeup. This throw would {{clr|PC|Counter-hit}} the opponent if they attempted a non-invulnerable attack, forcing them into the throw knockdown once again, hence the term \"throw ''loop''\".\n\nThrow loops typically only work in the corner, as a midscreen opponent can easily [[Street_Fighter_6/Defense#Wake-up|Back Rise]] too far to remain in throw distance. The exception to this is when a throw lands as a {{clr|PC|Punish Counter}}, giving a Hard Knockdown that disables the opponent's Back Rise. This can reasonably occur if you throw an opponent's attempt to use Drive Parry on wakeup. While some Back Throws may allow for strike/throw oki when cornering the opponent, these are not usually considered \"throw loops\" because it can only be done once.\n\nSince every character's throw is different in terms of frame advantage and the distance it leaves the opponent at, there are many variations of how characters may (or may not) throw loop:\n\n* Most characters can walk and/or forward dash to perform a meterless corner throw loop. Some are very precise, like [[Street Fighter 6/Ken|Ken]] who requires a frame-perfect forward walk; others are extremely lenient. If the knockdown advantage is high enough, whiffing a normal can set up automatic timing to perform the next throw without risk of mistiming it.\n* [[Street Fighter 6/Rashid|Rashid]] has a lenient throw loop with {{clr|DR|Drive Rush}}, but can also use his Run mechanic for a meterless loop. Holding forward during his dash input for 18-20 frames, then letting go before quickly inputting Throw, will result in a throw loop with a bit more executional demand than other characters (pressing Throw before letting go of forward will perform an attack follow-up). Against '''Blanka''', '''E. Honda''', and '''Zangief''', this is 1f more lenient (can Run for 17-20 frames); these characters can also be looped with a standard Dash + Walk setup (1f timing for '''Blanka'''/'''E. Honda''', 3f timing for '''Zangief''').\n* [[Street Fighter 6/Marisa|Marisa]] can throw loop with {{clr|DR|Drive Rush}}, though it requires a 2-frame timing window against standard characters. She can also choose safely block an invincible reversal out of the {{clr|DR|Drive Rush}}.\n* [[Street Fighter 6/Alex|Alex]] and [[Street Fighter 6/Sagat|Sagat]] can throw loop with {{clr|DR|Drive Rush}} with a lenient 4-frame timing window against standard characters. They can also choose safely block a 6-frame invincible reversal out of the {{clr|DR|Drive Rush}}.\n** [[Street Fighter 6/Alex|Alex]] also gets a real walking throw loop with his [[Street_Fighter_6/Alex#Hyper_Takedown_(2PP~LPLK)|Stance Throw]], though it requires some timing and execution to perform properly.\n* [[Street Fighter 6/Guile|Guile]] and [[Street Fighter 6/Lily|Lily]] can throw loop with {{clr|DR|Drive Rush}}, but cannot safely block a standard 6-frame {{clr|OD|OD}} reversal during the {{clr|DR|DR}} startup; this allows the opponent to react to the green flash with a guaranteed punish. They can also walk to perform a precise throw loop against '''Blanka''' and '''E. Honda''' (1f timing) and '''Zangief''' (3f timing) due to their wider throw hurtbox.\n* [[Street Fighter 6/Elena|Elena]] and [[Street Fighter 6/Ed|Ed]] can throw loop all characters with {{clr|DR|Drive Rush}}; the timing is frame-perfect for Elena but a fairly easy 4-frame window for Ed. Both characters have enough advantage to block reversals after the {{clr|DR|DR}} freeze as well. Against '''Zangief''' specifically, these characters can perform a frame-perfect meterless throw loop with a Forward Dash followed by a microwalk. Ed must walk exactly 3 frames, while Elena must walk exactly 2 frames.\n* [[Street Fighter 6/Ingrid|Ingrid]] lacks a true throw loop, but can dash to become +1 or threaten with a slightly-late {{clr|DR|Drive Rush}} throw. She can also maintain corner pressure effectively with Sun Shot, mitigating this slight weakness.\n* [[Street Fighter 6/Chun-Li|Chun-Li]] lacks a standard throw loop, and cannot use {{clr|DR|Drive Rush}} to force any pressure; her fastest button will trade with 4f normals if she attempts this. However, like Guile and Lily, she can walk to perform a precise throw loop against '''Blanka''' and '''E. Honda''' (1f timing) and '''Zangief''' (3f timing).\n* [[Street Fighter 6/E.Honda|E. Honda]] lacks any throw loop, even with {{clr|DR|Drive Rush}} or against wide characters. Unlike Chun-Li, he can use {{clr|DR|Drive Rush}} to threaten with a meaty normal with 9f or less startup. This can set up a tick throw while beating reversal normals, but is easily defended against with a delayed throw tech, and it loses to invincible reversals.\n* Only [[Street Fighter 6/Zangief|Zangief's]] 3LPLK grants a genuine throw loop against midscreen Back Rise, though it requires {{clr|DR|Drive Rush}} and a 2-frame timing window against standard characters. A decent portion of the cast (such as Ken, Ryu, Luke, and Cammy) can use {{clr|DR|Drive Rush}} to land a meaty normal, setting up a tick throw. Unlike a true throw loop, this is susceptible to Perfect Parry. Additionally, not all of these characters can block an invincible reversal out of the midscreen {{clr|DR|Drive Rush}}.\n\nThrow loops are a powerful offensive ability and are a core part of some characters' strike/throw offense. If your character lacks a throw loop, then your throws are weaker in general as they lead to less potent follow-up pressure.\n<br><br>\n\n== Counters ==\n=== Counter-hits ===\nA {{clr|PC|Counter-hit}} ({{clr|PC|CH}}) occurs when you strike your opponent during their startup or active frames. Attacks that trade with each other both land as a Counter-hit. A yellow \"Counter Hit\" icon appears on either the P1 or P2 side of the screen, depending on who landed the hit. {{clr|PC|Counter-hits}} add {{sf6-adv|P|+2}} to the frame advantage of the move, and deal an additional 20% damage. {{clr|PC|Counter-hits}} that cause a knockdown usually do not gain any extra knockdown frame advantage.\n<br><br>\n\n=== Punish Counters ===\nA {{clr|PC|Punish Counter}} ({{clr|PC|PC}}) occurs when you attack your opponent during their recovery frames. When this occurs, it will display an orange \"{{clr|PC|Punish Counter}}\" icon on the side of the screen. {{clr|PC|Punish Counters}} add {{sf6-adv|VP|+4}} to the frame advantage of the move, deal 20% more damage, and depletes some of the opponent's {{clr|DR|Drive}} meter. Specific moves, often heavy normals, can gain extra properties when connecting as a {{clr|PC|Punish Counter}}, such as extra frame advantage, crumples, tumbling knockdowns, or spinning air juggles. Sweeps (low-hitting knockdowns, usually input with {{clr|H|2HK}}) become a Hard Knockdown and keep the opponent downed for a longer time, making it much easier to pressure or switch sides afterward.\n\nThe {{clr|PC|Punish Counter}} system causes the optimal punish route for most characters to deviate significantly from their standard confirm combo route, and makes \"barely punishable\" moves vulnerable to much larger punishes than in previous Street Fighter titles.\n\nAll normal Throws (including Air Throws) can land as a {{clr|PC|Punish Counter}}, gaining a 70% damage boost, Hard Knockdown status, and draining an entire {{clr|DR|Drive}} bar from the opponent. Throws will always land as a {{clr|PC|Punish Counter}} against Drive Parry. {{clr|SA|Super Arts}} can technically hit as a {{clr|PC|Counter-hit}} or {{clr|PC|Punish Counter}}, but do not gain any additional damage, {{clr|DR|Drive}} depletion, or knockdown advantage except in very rare cases.\n<br><br>\n\n== Corner Dizzy ==\nAs mentioned in the [[Street_Fighter_6/Gauges#Burnout|Burnout]] section, you can get a free stun combo after landing a {{clr|H|Drive Impact}} on a cornered opponent in Burnout. If your Drive gauge is not full, it's a good idea to walk forward for a second or two to maximize your Drive regeneration unless there is something more important to set up.\n\nWhile the opponent appears to stumble out of the corner, you can always jump forward and safely use your strongest air normal without fear of whiffing or crossing up. If you wait too long, the opponent will fall to the ground, where they can no longer be punished. Some characters can take advantage of the dizzy time to stock up on certain effects that are normally unsafe to use freely, such as:\n* '''A.K.I.:''' Can set up a {{clr|M|214MP}} poison pool to maximize poison damage\n* '''Blanka:''' Can set up a Blanka-chan doll and activate it with ideal timing/spacing\n* '''E. Honda:''' Can get a Sumo Spirit stock before a full jump-in or {{clr|DR|Drive Rush}} starter\n* '''Ingrid:''' Can get 1 Sun Crest into {{clr|H|j.HP}}/{{clr|H|j.HK}}, or 2 Sun Crests into a grounded combo starter\n** Can also get all 4 Sun Crests, but sacrifices the punish entirely\n* '''Jamie:''' Can get 1 Drink, then {{clr|H|j.HP}}; 2 Drinks can be followed by a grounded combo, but no jump-in\n** Can also get all 4 Drinks to reach max level, but sacrifices the punish entirely\n* '''Juri:''' Can jump back, whiff 1 {{clr|L|LK Fuha Store}}, then {{clr|H|j.HK}}; whiffing 2 {{clr|L|LK Fuha Stores}} allows a {{clr|H|6HP}} into grounded combo\n** Backdashing also works, but Juri may be left too close and the Fuha Store can hit the opponent\n** If Juri landed the {{clr|DR|Drive Impact}} from far enough outside the corner, she may be able to whiff 2 Fuha Stores immediately, then {{clr|H|j.HK}}\n* '''Kimberly:''' Can reload a Spraycan, then jump-in (or throw the spraycan to set up a powerful mid-combo juggle)\n** example: {{clr|H|22HP}} (spraycan), immediate {{clr|H|2HP}} > {{clr|M|236MP}} (explosion) ...\n* '''Lily:''' Can get 1 Windclad stock into a jump-in, or 2 Windclad stocks into a heavy grounded starter\n* '''Mai:''' If farther from the corner, can whiff {{clr|SA|SA1}} to build Flame stocks\n** If starting with full meter, it's possible for the follow-up combo to build up to {{clr|SA|SA3}} again \n* '''Ryu:''' Can stock Denjin charge, then {{clr|H|j.HP}}/{{clr|H|j.HK}}\n<br><br>\n\n== Combos and Blockstrings ==\nLinking, chaining, or canceling attacks together so that they connect before the opponent recovers from hitstun will create a '''combo'''. Combos are essential for increasing your damage output, and will allow you to win in fewer openings than simply landing stray hits. As the length of a combo increases, the damage of each hit steadily decreases; this is known as [[Street_Fighter_6/Game_Data#Damage_Scaling|Damage Scaling]], and exists to create a healthy balance between the damage output of single hits and extended combo sequences. It also forces players to consider their use of Drive gauge and Super meter more carefully, as the marginal reward decreases when more resources are spent in a combo.\n\nWhen the opponent is guarding your attacks, you can instead lock them down with a '''blockstring'''. This is essentially the same concept as a combo, but is used to apply offensive pressure to create an opening rather than securing guaranteed damage. A blockstring that cannot be escaped even with invincible moves is colloquially known as a \"true\" or \"airtight\" blockstring, but any sequence of attacks that cannot be easily escaped with mashed 4f normals can still be generally referred to as a blockstring. In SF6, most blockstrings involved chained light normals or starters enhanced with {{clr|DR|Drive Rush}}; most characters cannot easily lock down the opponent with just medium/heavy normals or special moves.\n\nSF6 has an '''input buffer''' to make it easier to time button sequences. This buffer is generally 4 frames, so the tightest possible links have a 5 frame input timing. See [[Street_Fighter_6/Game_Data#Input_Buffer|Game Data]] page for more details.\n<br><br>\n\n== Safe Jumps ==\nWith the right knockdown timing, you can time a jump attack on the opponent's wakeup so that it will connect on hit or block, while allowing you to safely block a reversal after landing. For most characters with a standard 45-frame jump, this requires a +42 knockdown to beat 5-frame anti-air (common with moves like {{clr|L|LP Shoryuken}}), or +41 to beat a 6-frame reversal (applies to most invincible {{clr|OD|OD}} reversals). Characters with a slower jump like A.K.I., Chun-Li, Lily, and Zangief require slightly more advantage to set up their safe jumps.\n\nWhen done correctly, you will always get the maximum frame advantage on your jump-in attack, giving you extra time to decide how to follow up. It also forces charge characters like Guile and Dee Jay to stand up if they want to block, eliminating their down charge. It's worth noting that a perfect safe jump setup does not allow you to empty jump into a guaranteed strike/throw mixup. If the opponent times a quick light normal right after you would land, they will safely block a safe jump while interrupting any strike or throw on the ground. This is much easier to time properly if the defender has a standing 4-frame light normal.\n\nThere are a few defensive options that the opponent can use to mix things up for the attacker:\n* '''Perfect Parry''' - Since the attack timing is always the same, it's fairly easy to time this on wakeup. The attacker is left at {{sf6-adv|M|-2}} on a perfect setup. The attacker can bait this out with an empty jump + throw, but this runs the risk of losing your offensive momentum.\n* '''Armor''' - Some armored moves (notably E. Honda's {{clr|OD|OD Sumo Headbutt}}) have a set amount of hitstop when absorbing a jump-in, while the attacker's hitstop is left unchanged. As a result, medium and heavy normals become unsafe to use in safe jump setups. Light normals still work, but they give much less time to confirm a hit or block, and lead to less damage most of the time.\n* If a charge character performs a normal parry, they can maintain down charge while blocking the safe jump. This allows them to input an immediate reversal, so the attacker's pressure is not guaranteed.\n<br><br>\n\n== Empty Jump Mixups ==\nIf you have a knockdown advantage of +45 (or slightly better), you can jump at the opponent, then land with an immediate Throw or a 5-frame {{clr|L|2LK}} while remaining safe from immediate 4f buttons. Like with safe jump setups, the required knockdown timing changes for characters with slow jumps. Unlike safe jumps, these are not safe from invincible reversals.\n\nThe strongest empty jump setups are ones that look very similar to safe jumps - for instance, if your character's safe jump setup can be manually adjusted in some way to give a +45~48 knockdown instead, it becomes much harder for even well-studied players to recognize the difference and choose the correct defensive option. Midscreen empty jump setups are generally only worthwhile if they cover both Neutral Rise and Back Rise, otherwise you may just be swapping sides for no benefit. \n<br><br>\n\n== Advanced Techniques ==\n=== Kara-Parry at Even Frame Advantage ===\nThis is mostly applicable to Burnout block pressure, but technically applies any time you are {{sf6-adv|E|0 on Hit/Block}}. If you buffer your next normal and the opponent performs a reversal {{clr|SA|Super}}, you can react to the screen freeze by holding Parry. Since your normal will only be in its first startup frame, it can kara-cancel into the Parry once the freeze ends.\n\nAs an example, Kimberly's {{clr|L|236LP Elbow}} is {{sf6-adv|VM|-4 on Block}}, but becomes {{sf6-adv|E|0 oB}} in Burnout. If Kimberly uses an immediate {{clr|L|2LP}} and the opponent tries a reversal {{clr|SA|Super}}, she can kara-Parry and punish the opponent heavily. Most characters can only attempt to trade with their own 4-frame normal, but Kimberly can easily start this loop again from any blocked normal, and they may not have the health to spare these trades.\n\nIf the opponent is aware of this scenario, they can intentionally delay the {{clr|SA|Super}} input so that it's no longer a reversal. This will put the attacker past their kara-cancelable window. They can also use command grab {{clr|SA|Supers}} (Lily, Manon, Zangief) as these have more startup frames before the screen freeze occurs (and would beat Parry regardless). It's also important to be aware of your own health when performing this due to the likelihood of a 4-frame trade.\n<br><br>\n\n=== Kara-DP/Super - +11 into Drive Rush ===\nIf you leave yourself at a Knockdown Advantage of +11 and immediately perform a {{clr|DR|Drive Rush}} button, the first frame of the normal will occur on the frame the opponent can first perform an action. This means that if they wake up with a reversal {{clr|SA|Super}}, you can react by kara-canceling your normal into an invincible DP or {{clr|SA|Super}} yourself. Note that you cannot kara-cancel into Parry like in the above example. Be sure to test how your character's {{clr|SA|Supers}} interact with others, as you may end up wasting meter if the opponent has more invincibility.\n\nThis also works when you are {{sf6-adv|VP|+11 on Hit/Block}}, though this is rarely achievable without a setup into a deep jumping attack. This would mostly be worthwhile only if your blocked {{sf6-adv|VP|+11}} attack leaves you too far away to push any kind of strike/throw mixup.\n\nNote: This does not work against command grab {{clr|SA|Supers}} (Lily, Manon, Zangief) as mentioned in the previous section.\n<br><br>\n\n{{Navbox-SF6}}"
+              }
+            },
+            "comment": "/* Corner Dizzy */"
+          }
+        ],
+        "images": [
+          {
+            "ns": 6,
+            "title": "File:SF6 A.K.I. Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Akuma Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Alex Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Blanka Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Cammy Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Chun-Li Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Cviper Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 DeeJay Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Dhalsim Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ed Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ehonda Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Elena Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Guile Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ingrid Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 JP Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Jamie Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Juri Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ken Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Kimberly Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Lily Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Luke Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Mai Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Manon Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Marisa Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Mbison Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Rashid Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ryu Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Sagat Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Terry Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Zangief Icon.png"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

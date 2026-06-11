@@ -9,6 +9,7 @@ sources:
   - "[[sources/supercombo-street-fighter-6-controls]]"
   - "[[sources/supercombo-street-fighter-6-hud]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
+  - "[[sources/supercombo-street-fighter-6-offense]]"
   - "[[sources/supercombo-street-fighter-6-patch-notes]]"
   - "[[sources/supercombo-jp-frame-data]]"
   - "[[sources/supercombo-ryu-frame-data]]"
@@ -17,6 +18,7 @@ sources:
   - "[[sources/supercombo-street-fighter-6-frame-data-batch]]"
 related:
   - "[[entities/street-fighter-6]]"
+  - "[[concepts/offense]]"
   - "[[syntheses/frame-data-raw-layout]]"
 aliases:
   - "SuperCombo Wiki"
@@ -29,12 +31,13 @@ tags:
 
 ## 要約
 
-SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source、controls source、HUD source、Gauges source、Patch Notes source、30 キャラ分の frame-data community source の掲載元。glossary は Drive System、notation、juggle、frame-data terms の補助 source として [[concepts/terms/index]] に統合され、controls は numpad notation、Classic / Modern control type、button notation の補助 source として [[concepts/fighting-game-notation]] に統合されている。HUD は Battle HUD、HUD icon、Health Bar Reference の community / visual source として保持し、HUD Icons section は term pages の display cue claim として集約している。Gauges は Drive / Super Gauge の cost、regeneration、cooldown、character distance table の community numeric source として保持する。Patch Notes は 17 version detail page の community change detail source として保持し、公式 Battle Change との対応は crosswalk JSON、detail 本文の検索入口は community `change-events.json` / `move-change-index.json` で分ける。公式 Classic data を正とする SuperCombo 補助列付き output も 30 キャラ分作成済み。
+SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source、controls source、HUD source、Gauges source、Offense source、Patch Notes source、30 キャラ分の frame-data community source の掲載元。glossary は Drive System、notation、juggle、frame-data terms の補助 source として [[concepts/terms/index]] に統合され、controls は numpad notation、Classic / Modern control type、button notation の補助 source として [[concepts/fighting-game-notation]] に統合されている。HUD は Battle HUD、HUD icon、Health Bar Reference の community / visual source として保持し、HUD Icons section は term pages の display cue claim として集約している。Gauges は Drive / Super Gauge の cost、regeneration、cooldown、character distance table の community numeric source として保持する。Offense は throw range、throw invincibility、throw loop、safe jump、empty jump、blockstring の community tactical source として保持する。Patch Notes は 17 version detail page の community change detail source として保持し、公式 Battle Change との対応は crosswalk JSON、detail 本文の検索入口は community `change-events.json` / `move-change-index.json` で分ける。公式 Classic data を正とする SuperCombo 補助列付き output も 30 キャラ分作成済み。
 
 ## 年表
 
 | 日付 | 出来事 | ソース |
 |---|---|---|
+| 2026-06-11 | Street Fighter 6 Offense page を web-page capture として wiki ingest し、throw / safe jump / blockstring 系 term pages へ source claim を集約した。 | [[sources/supercombo-street-fighter-6-offense]], [[reviews/2026-06-11-supercombo-offense-web-page-capture-review]] |
 | 2026-06-11 | Street Fighter 6 Patch Notes の 17 version detail pages から community change-event index 1374 events / 1118 targets を作成した。 | [[sources/supercombo-street-fighter-6-patch-notes]] |
 | 2026-06-11 | Street Fighter 6 Patch Notes page と 17 件の Version detail page を web-page capture として保存し、Capcom 公式 Battle Change List との crosswalk を作成した。 | [[sources/supercombo-street-fighter-6-patch-notes]], [[reviews/2026-06-11-supercombo-patch-notes-web-page-capture-review]] |
 | 2026-06-11 | Street Fighter 6 Gauges page を web-page capture として保存し、Drive / Super Gauge の数値表を source page と `wiki/outputs/data/gauges/supercombo/numeric-tables.json` に集約した。 | [[sources/supercombo-street-fighter-6-gauges]], [[reviews/2026-06-11-supercombo-gauges-web-page-capture-review]] |
@@ -57,6 +60,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 - SuperCombo controls は [[concepts/fighting-game-notation]] に、numpad notation、Classic notation、button nickname、Classic / Modern control type の community source claim を提供する。
 - SuperCombo HUD は [[concepts/drive-system]]、[[concepts/frame-data]]、[[concepts/terms/index]] に、Battle HUD の表示要素と HUD icon の community / visual source claim を提供する。ただし character navigation icon は source content ではなく、raw media download から除外した。
 - SuperCombo Gauges は [[concepts/drive-system]]、[[concepts/frame-data]]、[[concepts/terms/index]] に、Drive / Super Gauge の cost、regeneration、cooldown、Drive Impact / Drive Rush distance table の community numeric source claim を提供する。
+- SuperCombo Offense は [[concepts/offense]]、[[concepts/frame-data]]、[[concepts/terms/index]] に、通常投げ、throw loop、safe jump、empty jump、blockstring、corner dizzy follow-up の community tactical source claim を提供する。
 - SuperCombo Patch Notes は 17 version detail pages を community change detail source として提供する。Capcom 公式 Battle Change List と重なる update は `official-battle-change-crosswalk.json` で明示 link を保持し、detail 本文は `change-events.json` 1374 events / `move-change-index.json` 1118 targets に派生する。公式 source と重なる変更説明では公式を優先する。
 - 30キャラ分の SuperCombo frame-data 取得データは official data と重なる基本フレーム値の正とはせず、公式にない notes、range、juggle、hitbox image refs などの補助 source として保持する。公式 + SuperCombo 補助 output では公式列を正とし、SuperCombo は `supercombo_*` 列に入れる。
 - SuperCombo frame-data raw は latest mirror 固定パスに保存し、source revision は各 manifest の `source_revision` で追う。
@@ -66,6 +70,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 ## 関連概念
 
 - [[concepts/drive-system]]
+- [[concepts/offense]]
 - [[concepts/frame-data]]
 - [[syntheses/frame-data-raw-layout]]
 - [[concepts/fighting-game-notation]]
@@ -77,6 +82,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 - Capcom 公式 controls / control type source を追加 ingest して、SuperCombo controls の Modern Controls claim を照合するべきか。
 - Capcom 公式 HUD / game screen source を追加 ingest して、SuperCombo HUD の visual claim と照合するべきか。
 - Drive / Super Gauge の数値を公式 source または実機検証で照合し、community numeric source の confidence policy をさらに細分化するべきか。
+- Offense の throw range、throw loop、safe jump values を公式 source または実機検証で照合し、community tactical source の confidence policy を細分化するべきか。
 - Patch Notes の community change events を character 別または version 別 synthesis へ昇格する粒度をどうするか。
 - Zangief / Ingrid の SuperCombo name override と review flags を標準 policy として採用できるか。
 - imageinfo missing 599 件を、source 側の欠損として扱うか、filename 正規化で再解決するか。
