@@ -11,9 +11,12 @@ sources:
   - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/supercombo-street-fighter-6-glossary]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
+  - "[[sources/supercombo-street-fighter-6-defense]]"
 related:
   - "[[concepts/terms/index]]"
+  - "[[concepts/defense]]"
   - "[[concepts/drive-system]]"
+  - "[[concepts/terms/blocking]]"
   - "[[concepts/terms/perfect-parry]]"
   - "[[concepts/terms/raw-drive-rush]]"
   - "[[entities/street-fighter-6]]"
@@ -31,7 +34,7 @@ tags:
 
 ## 要約
 
-ドライブパリィは、相手の攻撃を自動で guard し、成功時に Drive Gauge を回復する防御手段。タイミングよく受け止めると [[concepts/terms/perfect-parry|ジャストパリィ]] が発生する。SuperCombo Gauges page は Parry の cost、gain、Perfect Parry window を community numeric source として補う。
+ドライブパリィは、相手の攻撃を自動で guard し、成功時に Drive Gauge を回復する防御手段。タイミングよく受け止めると [[concepts/terms/perfect-parry|ジャストパリィ]] が発生する。SuperCombo Gauges page は Parry の cost、gain、Perfect Parry window を community numeric source として補い、SuperCombo Defense page は high/low と left/right をまとめて受ける defensive use case を補う。
 
 ## Source claims
 
@@ -41,6 +44,8 @@ tags:
 | [[sources/capcom-esports-base-terms]] | めくりに対して、Drive Parry は表裏両方に対応し得る対抗策として説明される。 | high |
 | [[sources/supercombo-street-fighter-6-glossary]] | Opponent attack を repel し、成功時に Drive を replenish する。Perfect Parry は攻撃が当たる直前に parry すると発生する。 | medium |
 | [[sources/supercombo-street-fighter-6-gauges]] | Frame data は startup `1`、active `12~ [2]`、recovery `33 [1]`。Activation cost は frame 2 に 5,000 Drive、frame 4 以降 hold は 50 Drive/frame、最小 whiff cost は 5,450 Drive と説明する。 | medium |
+| [[sources/supercombo-street-fighter-6-defense]] | Drive Parry は `MP+MK` hold で行い、buttons を hold している間 high/low と left/right を parry でき、block と同じ frame advantage になる。 | medium |
+| [[sources/supercombo-street-fighter-6-defense]] | Wake-up Super Art を bait した時は、block ではなく Parry hold で Drive を大きく refill できる場合がある。Perfect Parry は buffer ではなく precise timing が必要。 | medium |
 
 ## 数値データ
 
@@ -61,9 +66,12 @@ tags:
 - 公式 Fighting Ground source は Drive Gauge 回復と Perfect Parry を中心に説明する。
 - eSports BASE source は観戦用語として、めくり対策の文脈で使っている。
 - SuperCombo Gauges page は successful parry の Drive gain を projectile `5,000`、Normal / Special / Drive Reversal `10,000`、Super Art / Critical Art / Drive Impact `20,000` とし、freeze のない Perfect Parry timing では extra gain `3,000` も記録する。community numeric source なので公式 source または実機検証があればそちらを優先する。
+- SuperCombo Defense page は defensive option としての Parry hold を説明する。Perfect Parry の timing / scaling / freeze は [[concepts/terms/perfect-parry]] と Gauges source を優先する。
 
 ## 関連
 
+- [[concepts/defense]]
+- [[concepts/terms/blocking]]
 - [[concepts/terms/perfect-parry]]
 - [[concepts/terms/raw-drive-rush]]
 - [[concepts/terms/cross-up]]

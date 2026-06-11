@@ -1,0 +1,1441 @@
+{
+  "captured_at_utc": "2026-06-11T11:36:00Z",
+  "title": "Street Fighter 6/Defense - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Defense",
+  "content_text": "Blocking Blocking is performed by holding away from the opponent ( or ) and will guard against the opponent's attacks. Blocking cannot be performed while airborne or during the recovery of your own attacks. Most attacks can be blocked standing or crouching (/). Overhead/High attacks must be blocked standing , while Low attacks must be blocked crouching . Cross-up attacks occur when a move hits behind an opponent, usually during a jump-in (usually j.LK or j.MK). These must be blocked by holding forward () as though attempting to walk underneath the opponent. Cross-ups cannot connect on a fully cornered opponent, and will instead be blocked in either direction. If a cornered character blocks by holding back, the jumping character will land in front; if blocked by holding forward, they will land behind the opponent in the corner. For this same reason, a corner jump-in that lacks a cross-up hitbox will whiff if the opponent walks forward even slightly before it connects. Auto Guard / Absolute Guard: when a character is stuck in a \"true blockstring\" (never exiting blockstun between attacks), they will automatically block mid and overhead attacks even without inputting a block direction. Low attacks must still be blocked low, and overheads will not be successfully auto-guarded if the player holds crouch block. True blockstrings are rare except when the blocking character is in Burnout, as even chained light normals have a gap between hits when blocked. Proximity Guard: holding back during the startup of an opponent's attack will cause the defending character to enter a blocking animation before the move actually connects. Compared to previous SF games, it has been severely toned down; in general, proximity guard will usually not be triggered from outside the attack's maximum range. Projectiles also have reduced proximity guard activation range, making slow fireballs less effective at controlling the opponent's positioning. Proximity guard still has an impact in neutral, making it harder to walk back out of an opponent's poke range at the last possible moment. Slow, long-range attacks like Drive Impact and some heavy command normals are still very effective at preventing the opponent's back walk during startup. One notable exception to the rule is JP's Amnesia bombs, which lock the opponent into proximity guard before they detonate. This makes it much harder to escape JP's pressure after a successful Amnesia activation. Throw Escape By pressing + (LP+LK) shortly after a throw connecting, you can escape (or \"tech\") a throw. This only works against grounded normal throws; command grabs and air throws cannot be defended against in this way. Escaping a throw causes you to push the opponent away, preventing any damage and returning both players to neutral. This is especially important in the corner, as it allows the defender to create some space and work their way back to midscreen. It also builds 5000 Drive Gauge (1/2 bar) for the defender, making it easier to escape additional pressure after a successful defense. The downside to attempting a Throw Escape is the long whiff animation if the opponent baits it. This is usually done by walking up as if intending to throw, then walking back out of throw range (colloquially known as a \"shimmy\"). Many characters can also backdash or neutral jump to achieve the same result with slightly more risk. A baited Throw Escape opens you up to a massive Punish combo, which usually loops into the same strike/throw/shimmy mixup. All variables (health, meter, screen position, opponent's tendencies) should be considered when deciding whether or not to attempt a Throw Escape. The input window for a Throw Escape lasts until the 9th frame of being thrown (including the frame that the Throw connects). Throws that connect when the other character is unable to throw, such as when landing as a punish during an attack's recovery frames, cannot be escaped (unless it lands during another throw's startup or active frames, in which case it is automatically escaped). While throws can be performed during a Drive Rush, any throw that connects during the DR movement frames is considered a Counter-hit and can no longer be escaped. In order to prevent option selects, a Throw Escape can not be performed if any input that would prevent a grounded throw from being performed in neutral is done during the 9 frame window (for example, 236LP+LK with Ryu would result in his 236LP special move in neutral instead of a throw, so it would not allow a Throw Escape if it was input in that window). The only known exception to this rule is a Forward Dash (66). The \"Throw Escape\" message will appear on the side of the player who performed their throw input last, with their character playing a voice line. If performed simultaneously, the game will randomly decide which player teched the throw (and who will gain the extra meter). This allows players to determine the opponent's throw tech timing when it would otherwise be impossible to see. For example, if you bait opponent's wakeup reversal and then input a slightly delayed throw, one of two things can occur: You tech the throw (the opponent input an early Throw Escape) The opponent techs the throw (the opponent is significantly delaying their Throw Escape) Drive Parry Drive Parry can be used to parry opponents attacks at the cost of drive resource. Drive parry can be done by Holding + (MP+MK). Parries can block high/low and left/right while the buttons are held, and results in the same frame advantage as blocking the attack. You also build significant Drive gauge; if you bait the opponent's wakeup Super Art, you can refill your Drive almost entirely just by holding Parry instead of blocking. If perfectly timed, a parry will become a Perfect Parry, allowing for powerful punishes. More details about Drive Parry can be found here Wake-up There are two types of wakeups in Street Fighter 6: Normal Rise and Back Rise. There is no difference in the knockdown frame advantage, so meaty setups are unaffected as long as the opponent remains close enough to attack. Holding or inputting 2 buttons upon landing will result in a Back Rise — otherwise, a Normal Rise occurs. Hard Knockdowns (such as a Throw that connects as a Punish Counter) prevent Back Rise entirely. A character is considered to be in a standing state when rising from a knockdown. The crouching animation incurs 4 frames of forced standing before the hurtbox shrinks on frame 5, just like it would when crouching from a neutral state. After landing from an air reset, there are only 2 forced standing frames (not counting the landing frame itself). This transition period can be skipped by waking up with a crouching attack, or by triggering crouching proximity guard. Some attacks whiff on crouching opponents, either because they have a \"cannot hit crouching\" flag or because the hitbox is simply too high to connect. Examples include: Cammy's Fatal Leg Twister (Hooligan Throw) - cannot interact with any character in a crouching state regardless of their hurtbox height M. Bison's 5HK - the close-range hitbox works normally, but the longer-range hitbox on his foot cannot interact with a crouching opponent Ryu's 5HK - can only hit crouchers if they extend a tall vertical hurtbox, like an anti-air 2HP or the landing recovery of Jamie's Divekick These attacks still whiff when used meaty on the opponent's wakeup, as the proximity guard is triggered first before the hitbox can interact with the forced standing frames. However, some attacks have a hitbox that extends slightly beyond the proximity guard box; by performing these attacks from near max range, they can hit meaty on crouch blocking opponents even if they would usually whiff. Waking up with a crouching normal will still force an immediate crouching state to punish these meaty attacks. Note: setting the Training Mode dummy to Crouch + Block does not accurately reflect a wakeup crouch block. To properly test these scenarios, make a recording of the dummy holding Down+Back and set the Wakeup Reversal to that recording. Be sure that both Down and Back are being input on the first recording frame. Reversals Inputting an attack right before wakeup or before exiting hitstun/blockstun allows the move to be buffered as a Reversal. This makes the move easier to time defensively. The most useful reversals are moves with invincibility, as they can beat attacks that are hitting \"meaty\". Only OD Special Moves and Supers can have true invincibility on startup, but not all of them do. Fast attacks like 4-frame jabs are also useful in case the opponent mistimes their meaty pressure, or attempts to overextend their offense without sufficient frame advantage. There is a 10 frame buffer when performing a reversal move on wakeup, or 4 frames after hitstun, blockstun, or air reset. After including the true reversal frame, this makes the total timing window 11 frames on wakeup or 5 frames in any other defensive scenario. If you have negative edge enabled, the timing is even more lenient for special moves and Supers, though this increases the chance of performing an accidental attack as well. Using this input buffer with Drive Parry will not allow you to get a Perfect Parry; they must be timed precisely as the attack connects. The buffer window for Dashes is intended to be 7 frames in all scenarios, but some appear to still be bugged (e.g. after Ryu 5MP on block, the reversal dash buffer is only 4 frames). Armor Drive Impacts and some special moves (e.g. Luke 236KK) can absorb attacks with a property known as \"armor\". This only works against strikes and projectiles; any Throw will beat an armored move. Some moves, like Super Arts and Drive Reversals, also have an Armor Break property that prevent armor absorption. When absorbing an attack, the character takes 50% of a moves normal damage as recoverable damage (represented by part of the health bar turning gray). This means that armor is not useful when at low health, since a KO will occur. Many players will instinctually try to counter a Drive Impact with a DI of their own, not realizing that they don't have enough health to survive the armored hit. While these weaknesses makes it a bit weaker than true invincibility, armored moves can still be a useful tool in your defensive playbook. Anti-Airs An Anti-Air is an attack used to interrupt an opponent's jump attack. This is usually done with a normal, special, or Super that hits upwards like an uppercut. Many specials like Ryu/Ken's Shoryuken, Guile's Somersault Kick, or Juri's Tensenrin have Air Invincibility frames against airborne attacks, making them particularly useful as anti-airs. These Air Invuln moves also work against airborne attacks like Chun-Li's 6HK or Cammy's SA3, but many attacks that appear airborne, like Guile's 6HK, are considered fully grounded. Not all characters have useful anti-airs at every range. Other techniques for countering air attacks include jumping with a quick air attack of your own (known as \"air-to-air). This is most effective when done with a fast light normal, an air normal that causes a knockdown, or an Air Throw. Against close jumps, walking under the opponent may cause their attack to whiff, which can open them up to a Punish Counter during their landing recovery frames. It is also possible to Low Profile some air attacks by using a move that shifts your hurtbox very low to the ground. Some air attacks can alter the trajectory of a jump-in, making the character more difficult to anti-air consistently. In general, attacks like this are put into a \"Forced Knockdown\" state if they are hit while airborne, which makes it more rewarding to interrupt these attacks. Punishes When practicing punish combo routes, it's important to remember that your first attack will have 4 extra frames of hit advantage. This can potentially open up far stronger combo routes than are normally possible. In many cases, light normals are designed to only combo into weaker versions of special moves or a low-damage Target Combo. By linking or canceling into stronger attacks, the damage potential can be much higher. SF6 Navigation Street Fighter 6 (SF6) General FAQ • Controls • HUD • Glossary • Movement • Offense • Defense • Gauges • Game Data • Patch Notes • Links Characters A.K.I. Akuma Alex Blanka C. Viper Cammy Chun-Li Dee Jay Dhalsim Ed E. Honda Elena Guile Ingrid Jamie JP Juri Ken Kimberly Lily Luke M. Bison Mai Manon Marisa Rashid Ryu Sagat Terry Zangief Data A.K.I. • Akuma • Alex • Blanka • C. Viper • Cammy • Chun-Li • Dee Jay • Dhalsim • Ed • E. Honda • Elena • Guile • Ingrid • Jamie • JP • Juri • Ken • Kimberly • Lily • Luke • M. Bison • Mai • Manon • Marisa • Rashid • Ryu • Sagat • Terry • Zangief",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Blocking",
+      "text": "Blocking",
+      "html": "Blocking"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Throw_Escape",
+      "text": "Throw Escape",
+      "html": "Throw Escape"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Drive_Parry",
+      "text": "Drive Parry",
+      "html": "Drive Parry"
+    },
+    {
+      "index": 3,
+      "level": 2,
+      "id": "Wake-up",
+      "text": "Wake-up",
+      "html": "Wake-up"
+    },
+    {
+      "index": 4,
+      "level": 2,
+      "id": "Reversals",
+      "text": "Reversals",
+      "html": "Reversals"
+    },
+    {
+      "index": 5,
+      "level": 2,
+      "id": "Armor",
+      "text": "Armor",
+      "html": "Armor"
+    },
+    {
+      "index": 6,
+      "level": 2,
+      "id": "Anti-Airs",
+      "text": "Anti-Airs",
+      "html": "Anti-Airs"
+    },
+    {
+      "index": 7,
+      "level": 2,
+      "id": "Punishes",
+      "text": "Punishes",
+      "html": "Punishes"
+    },
+    {
+      "index": 8,
+      "level": 2,
+      "id": "SF6_Navigation",
+      "text": "SF6 Navigation",
+      "html": "SF6 Navigation"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "Blocking is performed by holding away from the opponent ( or ) and will guard against the opponent's attacks. Blocking cannot be performed while airborne or during the recovery of your own attacks.",
+      "html": "Blocking is performed by holding away from the opponent (<span typeof=\"mw:File\"><span><img src=\"/images/thumb/5/57/B.png/22px-B.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/5/57/B.png/33px-B.png 1.5x, /images/5/57/B.png 2x\"></span></span> or <span typeof=\"mw:File\"><span><img src=\"/images/thumb/3/3b/Db.png/22px-Db.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/3/3b/Db.png/33px-Db.png 1.5x, /images/3/3b/Db.png 2x\"></span></span>) and will guard against the opponent's attacks. Blocking cannot be performed while airborne or during the recovery of your own attacks.\n"
+    },
+    {
+      "index": 1,
+      "text": "Most attacks can be blocked standing or crouching (/). Overhead/High attacks must be blocked standing , while Low attacks must be blocked crouching .",
+      "html": "Most attacks can be blocked standing or crouching (<span typeof=\"mw:File\"><span><img src=\"/images/thumb/5/57/B.png/22px-B.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/5/57/B.png/33px-B.png 1.5x, /images/5/57/B.png 2x\"></span></span>/<span typeof=\"mw:File\"><span><img src=\"/images/thumb/3/3b/Db.png/22px-Db.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/3/3b/Db.png/33px-Db.png 1.5x, /images/3/3b/Db.png 2x\"></span></span>). <b>Overhead</b>/<b>High</b> attacks must be blocked standing <span typeof=\"mw:File\"><span><img src=\"/images/thumb/5/57/B.png/22px-B.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/5/57/B.png/33px-B.png 1.5x, /images/5/57/B.png 2x\"></span></span>, while <b>Low</b> attacks must be blocked crouching <span typeof=\"mw:File\"><span><img src=\"/images/thumb/3/3b/Db.png/22px-Db.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/3/3b/Db.png/33px-Db.png 1.5x, /images/3/3b/Db.png 2x\"></span></span>.\n"
+    },
+    {
+      "index": 2,
+      "text": "Cross-up attacks occur when a move hits behind an opponent, usually during a jump-in (usually j.LK or j.MK). These must be blocked by holding forward () as though attempting to walk underneath the opponent. Cross-ups cannot connect on a fully cornered opponent, and will instead be blocked in either direction. If a cornered character blocks by holding back, the jumping character will land in front; if blocked by holding forward, they will land behind the opponent in the corner. For this same reason, a corner jump-in that lacks a cross-up hitbox will whiff if the opponent walks forward even slightly before it connects.",
+      "html": "<b>Cross-up</b> attacks occur when a move hits behind an opponent, usually during a jump-in (usually <style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--7\">j.LK</span> or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">j.MK</span>). These must be blocked by holding forward (<span typeof=\"mw:File\"><span><img src=\"/images/thumb/3/3d/F.png/22px-F.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/3/3d/F.png/33px-F.png 1.5x, /images/3/3d/F.png 2x\"></span></span>) as though attempting to walk underneath the opponent. Cross-ups cannot connect on a fully cornered opponent, and will instead be blocked in either direction. If a cornered character blocks by holding back, the jumping character will land in front; if blocked by holding forward, they will land behind the opponent in the corner. For this same reason, a corner jump-in that lacks a cross-up hitbox will whiff if the opponent walks forward even slightly before it connects.\n"
+    },
+    {
+      "index": 3,
+      "text": "Auto Guard / Absolute Guard: when a character is stuck in a \"true blockstring\" (never exiting blockstun between attacks), they will automatically block mid and overhead attacks even without inputting a block direction. Low attacks must still be blocked low, and overheads will not be successfully auto-guarded if the player holds crouch block. True blockstrings are rare except when the blocking character is in Burnout, as even chained light normals have a gap between hits when blocked.",
+      "html": "<b>Auto Guard / Absolute Guard:</b> when a character is stuck in a \"true blockstring\" (never exiting blockstun between attacks), they will automatically block mid and overhead attacks even without inputting a block direction. Low attacks must still be blocked low, and overheads will not be successfully auto-guarded if the player holds crouch block. True blockstrings are rare except when the blocking character is in Burnout, as even chained light normals have a gap between hits when blocked.\n"
+    },
+    {
+      "index": 4,
+      "text": "Proximity Guard: holding back during the startup of an opponent's attack will cause the defending character to enter a blocking animation before the move actually connects. Compared to previous SF games, it has been severely toned down; in general, proximity guard will usually not be triggered from outside the attack's maximum range. Projectiles also have reduced proximity guard activation range, making slow fireballs less effective at controlling the opponent's positioning. Proximity guard still has an impact in neutral, making it harder to walk back out of an opponent's poke range at the last possible moment. Slow, long-range attacks like Drive Impact and some heavy command normals are still very effective at preventing the opponent's back walk during startup.",
+      "html": "<b>Proximity Guard:</b> holding back during the startup of an opponent's attack will cause the defending character to enter a blocking animation before the move actually connects. Compared to previous SF games, it has been severely toned down; in general, proximity guard will usually not be triggered from outside the attack's maximum range. Projectiles also have reduced proximity guard activation range, making slow fireballs less effective at controlling the opponent's positioning. Proximity guard still has an impact in neutral, making it harder to walk back out of an opponent's poke range at the last possible moment. Slow, long-range attacks like <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span> and some heavy command normals are still very effective at preventing the opponent's back walk during startup.\n"
+    },
+    {
+      "index": 5,
+      "text": "One notable exception to the rule is JP's Amnesia bombs, which lock the opponent into proximity guard before they detonate. This makes it much harder to escape JP's pressure after a successful Amnesia activation.",
+      "html": "One notable exception to the rule is JP's Amnesia bombs, which lock the opponent into proximity guard before they detonate. This makes it much harder to escape JP's pressure after a successful Amnesia activation.\n<br><br>\n"
+    },
+    {
+      "index": 6,
+      "text": "By pressing + (LP+LK) shortly after a throw connecting, you can escape (or \"tech\") a throw. This only works against grounded normal throws; command grabs and air throws cannot be defended against in this way. Escaping a throw causes you to push the opponent away, preventing any damage and returning both players to neutral. This is especially important in the corner, as it allows the defender to create some space and work their way back to midscreen. It also builds 5000 Drive Gauge (1/2 bar) for the defender, making it easier to escape additional pressure after a successful defense.",
+      "html": "By pressing <span typeof=\"mw:File\"><span><img src=\"/images/thumb/0/00/SF6_LP.png/22px-SF6_LP.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/0/00/SF6_LP.png/33px-SF6_LP.png 1.5x, /images/thumb/0/00/SF6_LP.png/44px-SF6_LP.png 2x\"></span></span>+<span typeof=\"mw:File\"><span><img src=\"/images/thumb/a/a5/SF6_LK.png/22px-SF6_LK.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/a/a5/SF6_LK.png/33px-SF6_LK.png 1.5x, /images/thumb/a/a5/SF6_LK.png/44px-SF6_LK.png 2x\"></span></span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span>) shortly after a throw connecting, you can escape (or \"tech\") a throw. This only works against grounded normal throws; command grabs and air throws cannot be defended against in this way. Escaping a throw causes you to push the opponent away, preventing any damage and returning both players to neutral. This is especially important in the corner, as it allows the defender to create some space and work their way back to midscreen. It also builds <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">5000 Drive Gauge (1/2 bar)</span> for the defender, making it easier to escape additional pressure after a successful defense.\n"
+    },
+    {
+      "index": 7,
+      "text": "The downside to attempting a Throw Escape is the long whiff animation if the opponent baits it. This is usually done by walking up as if intending to throw, then walking back out of throw range (colloquially known as a \"shimmy\"). Many characters can also backdash or neutral jump to achieve the same result with slightly more risk. A baited Throw Escape opens you up to a massive Punish combo, which usually loops into the same strike/throw/shimmy mixup. All variables (health, meter, screen position, opponent's tendencies) should be considered when deciding whether or not to attempt a Throw Escape.",
+      "html": "The downside to attempting a Throw Escape is the long whiff animation if the opponent baits it. This is usually done by walking up as if intending to throw, then walking back out of throw range (colloquially known as a \"shimmy\"). Many characters can also backdash or neutral jump to achieve the same result with slightly more risk. A baited Throw Escape opens you up to a massive Punish combo, which usually loops into the same strike/throw/shimmy mixup. All variables (health, meter, screen position, opponent's tendencies) should be considered when deciding whether or not to attempt a Throw Escape.\n"
+    },
+    {
+      "index": 8,
+      "text": "The input window for a Throw Escape lasts until the 9th frame of being thrown (including the frame that the Throw connects). Throws that connect when the other character is unable to throw, such as when landing as a punish during an attack's recovery frames, cannot be escaped (unless it lands during another throw's startup or active frames, in which case it is automatically escaped). While throws can be performed during a Drive Rush, any throw that connects during the DR movement frames is considered a Counter-hit and can no longer be escaped. In order to prevent option selects, a Throw Escape can not be performed if any input that would prevent a grounded throw from being performed in neutral is done during the 9 frame window (for example, 236LP+LK with Ryu would result in his 236LP special move in neutral instead of a throw, so it would not allow a Throw Escape if it was input in that window). The only known exception to this rule is a Forward Dash (66).",
+      "html": "The input window for a Throw Escape lasts until the 9th frame of being thrown (including the frame that the Throw connects). Throws that connect when the other character is unable to throw, such as when landing as a punish during an attack's recovery frames, cannot be escaped (unless it lands during another throw's startup or active frames, in which case it is automatically escaped). While throws can be performed during a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span>, any throw that connects during the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR</span> movement frames is considered a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Counter-hit</span> and can no longer be escaped. In order to prevent option selects, a Throw Escape can not be performed if any input that would prevent a grounded throw from being performed in neutral is done during the 9 frame window (for example, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span> with Ryu would result in his <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LP</span> special move in neutral instead of a throw, so it would not allow a Throw Escape if it was input in that window). The only known exception to this rule is a Forward Dash (66).\n"
+    },
+    {
+      "index": 9,
+      "text": "The \"Throw Escape\" message will appear on the side of the player who performed their throw input last, with their character playing a voice line. If performed simultaneously, the game will randomly decide which player teched the throw (and who will gain the extra meter). This allows players to determine the opponent's throw tech timing when it would otherwise be impossible to see. For example, if you bait opponent's wakeup reversal and then input a slightly delayed throw, one of two things can occur:",
+      "html": "The \"Throw Escape\" message will appear on the side of the player who performed their throw input last, with their character playing a voice line. If performed simultaneously, the game will randomly decide which player teched the throw (and who will gain the extra meter). This allows players to determine the opponent's throw tech timing when it would otherwise be impossible to see. For example, if you bait opponent's wakeup reversal and then input a slightly delayed throw, one of two things can occur:\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br><br>\n"
+    },
+    {
+      "index": 11,
+      "text": "Drive Parry can be used to parry opponents attacks at the cost of drive resource. Drive parry can be done by Holding + (MP+MK). Parries can block high/low and left/right while the buttons are held, and results in the same frame advantage as blocking the attack. You also build significant Drive gauge; if you bait the opponent's wakeup Super Art, you can refill your Drive almost entirely just by holding Parry instead of blocking. If perfectly timed, a parry will become a Perfect Parry, allowing for powerful punishes.",
+      "html": "Drive Parry can be used to parry opponents attacks at the cost of drive resource. Drive parry can be done by Holding <span typeof=\"mw:File\"><span><img src=\"/images/thumb/9/9b/SF6_MP.png/22px-SF6_MP.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/9/9b/SF6_MP.png/33px-SF6_MP.png 1.5x, /images/thumb/9/9b/SF6_MP.png/44px-SF6_MP.png 2x\"></span></span>+<span typeof=\"mw:File\"><span><img src=\"/images/thumb/1/15/SF6_MK.png/22px-SF6_MK.png\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"/images/thumb/1/15/SF6_MK.png/33px-SF6_MK.png 1.5x, /images/thumb/1/15/SF6_MK.png/44px-SF6_MK.png 2x\"></span></span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>). Parries can block high/low and left/right while the buttons are held, and results in the same frame advantage as blocking the attack. You also build significant Drive gauge; if you bait the opponent's wakeup <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Art</span>, you can refill your Drive almost entirely just by holding Parry instead of blocking. If perfectly timed, a parry will become a Perfect Parry, allowing for powerful punishes.\n"
+    },
+    {
+      "index": 12,
+      "text": "More details about Drive Parry can be found here",
+      "html": "More details about Drive Parry can be found <a href=\"/w/Street_Fighter_6/Gauges#Drive_Parry\" title=\"Street Fighter 6/Gauges\">here</a>\n<br><br>\n"
+    },
+    {
+      "index": 13,
+      "text": "There are two types of wakeups in Street Fighter 6: Normal Rise and Back Rise. There is no difference in the knockdown frame advantage, so meaty setups are unaffected as long as the opponent remains close enough to attack. Holding or inputting 2 buttons upon landing will result in a Back Rise — otherwise, a Normal Rise occurs. Hard Knockdowns (such as a Throw that connects as a Punish Counter) prevent Back Rise entirely.",
+      "html": "There are two types of wakeups in Street Fighter 6: Normal Rise and Back Rise. There is no difference in the knockdown frame advantage, so meaty setups are unaffected as long as the opponent remains close enough to attack. Holding or inputting 2 buttons upon landing will result in a Back Rise — otherwise, a Normal Rise occurs. Hard Knockdowns (such as a Throw that connects as a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span>) prevent Back Rise entirely.\n"
+    },
+    {
+      "index": 14,
+      "text": "A character is considered to be in a standing state when rising from a knockdown. The crouching animation incurs 4 frames of forced standing before the hurtbox shrinks on frame 5, just like it would when crouching from a neutral state. After landing from an air reset, there are only 2 forced standing frames (not counting the landing frame itself). This transition period can be skipped by waking up with a crouching attack, or by triggering crouching proximity guard.",
+      "html": "A character is considered to be in a standing state when rising from a knockdown. The crouching animation incurs 4 frames of forced standing before the hurtbox shrinks on frame 5, just like it would when crouching from a neutral state. After landing from an air reset, there are only 2 forced standing frames (not counting the landing frame itself). This transition period can be skipped by waking up with a crouching attack, or by triggering crouching <a rel=\"nofollow\" class=\"external text\" href=\"https://glossary.infil.net/?t=Proximity%20Block\">proximity guard</a>.\n"
+    },
+    {
+      "index": 15,
+      "text": "Some attacks whiff on crouching opponents, either because they have a \"cannot hit crouching\" flag or because the hitbox is simply too high to connect. Examples include:",
+      "html": "Some attacks whiff on crouching opponents, either because they have a \"cannot hit crouching\" flag or because the hitbox is simply too high to connect. Examples include:\n"
+    },
+    {
+      "index": 16,
+      "text": "These attacks still whiff when used meaty on the opponent's wakeup, as the proximity guard is triggered first before the hitbox can interact with the forced standing frames. However, some attacks have a hitbox that extends slightly beyond the proximity guard box; by performing these attacks from near max range, they can hit meaty on crouch blocking opponents even if they would usually whiff. Waking up with a crouching normal will still force an immediate crouching state to punish these meaty attacks.",
+      "html": "These attacks still whiff when used meaty on the opponent's wakeup, as the proximity guard is triggered first before the hitbox can interact with the forced standing frames. However, some attacks have a hitbox that extends slightly beyond the proximity guard box; by performing these attacks from near max range, they can hit meaty on crouch blocking opponents even if they would usually whiff. Waking up with a crouching normal will still force an immediate crouching state to punish these meaty attacks.\n"
+    },
+    {
+      "index": 17,
+      "text": "Note: setting the Training Mode dummy to Crouch + Block does not accurately reflect a wakeup crouch block. To properly test these scenarios, make a recording of the dummy holding Down+Back and set the Wakeup Reversal to that recording. Be sure that both Down and Back are being input on the first recording frame.",
+      "html": "<i>Note: setting the Training Mode dummy to Crouch + Block does not accurately reflect a wakeup crouch block. To properly test these scenarios, make a recording of the dummy holding Down+Back and set the Wakeup Reversal to that recording. Be sure that both Down and Back are being input on the first recording frame.</i>\n<br><br>\n"
+    },
+    {
+      "index": 18,
+      "text": "Inputting an attack right before wakeup or before exiting hitstun/blockstun allows the move to be buffered as a Reversal. This makes the move easier to time defensively. The most useful reversals are moves with invincibility, as they can beat attacks that are hitting \"meaty\". Only OD Special Moves and Supers can have true invincibility on startup, but not all of them do. Fast attacks like 4-frame jabs are also useful in case the opponent mistimes their meaty pressure, or attempts to overextend their offense without sufficient frame advantage.",
+      "html": "Inputting an attack right before wakeup or before exiting hitstun/blockstun allows the move to be buffered as a Reversal. This makes the move easier to time defensively. The most useful reversals are moves with invincibility, as they can beat attacks that are hitting <a rel=\"nofollow\" class=\"external text\" href=\"https://glossary.infil.net/?t=Meaty\">\"meaty\"</a>. Only <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Special Moves</span> and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> can have true invincibility on startup, but not all of them do. Fast attacks like 4-frame jabs are also useful in case the opponent mistimes their meaty pressure, or attempts to overextend their offense without sufficient frame advantage.\n"
+    },
+    {
+      "index": 19,
+      "text": "There is a 10 frame buffer when performing a reversal move on wakeup, or 4 frames after hitstun, blockstun, or air reset. After including the true reversal frame, this makes the total timing window 11 frames on wakeup or 5 frames in any other defensive scenario. If you have negative edge enabled, the timing is even more lenient for special moves and Supers, though this increases the chance of performing an accidental attack as well.",
+      "html": "There is a 10 frame buffer when performing a reversal move on wakeup, or 4 frames after hitstun, blockstun, or air reset. After including the true reversal frame, this makes the total timing window 11 frames on wakeup or 5 frames in any other defensive scenario. If you have <a rel=\"nofollow\" class=\"external text\" href=\"https://glossary.infil.net/?t=Negative%20Edge\">negative edge</a> enabled, the timing is even more lenient for special moves and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span>, though this increases the chance of performing an accidental attack as well.\n"
+    },
+    {
+      "index": 20,
+      "text": "Using this input buffer with Drive Parry will not allow you to get a Perfect Parry; they must be timed precisely as the attack connects. The buffer window for Dashes is intended to be 7 frames in all scenarios, but some appear to still be bugged (e.g. after Ryu 5MP on block, the reversal dash buffer is only 4 frames).",
+      "html": "Using this input buffer with Drive Parry will not allow you to get a Perfect Parry; they must be timed precisely as the attack connects. The buffer window for Dashes is intended to be 7 frames in all scenarios, but some appear to still be bugged (e.g. after Ryu <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span> on block, the reversal dash buffer is only 4 frames).\n<br><br>\n"
+    },
+    {
+      "index": 21,
+      "text": "Drive Impacts and some special moves (e.g. Luke 236KK) can absorb attacks with a property known as \"armor\". This only works against strikes and projectiles; any Throw will beat an armored move. Some moves, like Super Arts and Drive Reversals, also have an Armor Break property that prevent armor absorption.",
+      "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impacts</span> and some special moves (e.g. Luke <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>) can absorb attacks with a property known as \"armor\". This only works against strikes and projectiles; any Throw will beat an armored move. Some moves, like <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Arts</span> and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversals</span>, also have an Armor Break property that prevent armor absorption.\n"
+    },
+    {
+      "index": 22,
+      "text": "When absorbing an attack, the character takes 50% of a moves normal damage as recoverable damage (represented by part of the health bar turning gray). This means that armor is not useful when at low health, since a KO will occur. Many players will instinctually try to counter a Drive Impact with a DI of their own, not realizing that they don't have enough health to survive the armored hit. While these weaknesses makes it a bit weaker than true invincibility, armored moves can still be a useful tool in your defensive playbook.",
+      "html": "When absorbing an attack, the character takes 50% of a moves normal damage as recoverable damage (represented by part of the health bar turning gray). This means that armor is not useful when at low health, since a KO will occur. Many players will instinctually try to counter a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span> with a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI</span> of their own, not realizing that they don't have enough health to survive the armored hit. While these weaknesses makes it a bit weaker than true invincibility, armored moves can still be a useful tool in your defensive playbook.\n<br><br>\n"
+    },
+    {
+      "index": 23,
+      "text": "An Anti-Air is an attack used to interrupt an opponent's jump attack. This is usually done with a normal, special, or Super that hits upwards like an uppercut. Many specials like Ryu/Ken's Shoryuken, Guile's Somersault Kick, or Juri's Tensenrin have Air Invincibility frames against airborne attacks, making them particularly useful as anti-airs. These Air Invuln moves also work against airborne attacks like Chun-Li's 6HK or Cammy's SA3, but many attacks that appear airborne, like Guile's 6HK, are considered fully grounded.",
+      "html": "An Anti-Air is an attack used to interrupt an opponent's jump attack. This is usually done with a normal, special, or Super that hits upwards like an uppercut. Many specials like Ryu/Ken's Shoryuken, Guile's Somersault Kick, or Juri's Tensenrin have Air Invincibility frames against airborne attacks, making them particularly useful as anti-airs. These Air Invuln moves also work against airborne attacks like Chun-Li's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HK</span> or Cammy's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span>, but many attacks that appear airborne, like Guile's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HK</span>, are considered fully grounded.\n"
+    },
+    {
+      "index": 24,
+      "text": "Not all characters have useful anti-airs at every range. Other techniques for countering air attacks include jumping with a quick air attack of your own (known as \"air-to-air). This is most effective when done with a fast light normal, an air normal that causes a knockdown, or an Air Throw.",
+      "html": "Not all characters have useful anti-airs at every range. Other techniques for countering air attacks include jumping with a quick air attack of your own (known as \"air-to-air). This is most effective when done with a fast light normal, an air normal that causes a knockdown, or an Air Throw.\n"
+    },
+    {
+      "index": 25,
+      "text": "Against close jumps, walking under the opponent may cause their attack to whiff, which can open them up to a Punish Counter during their landing recovery frames. It is also possible to Low Profile some air attacks by using a move that shifts your hurtbox very low to the ground.",
+      "html": "Against close jumps, walking under the opponent may cause their attack to whiff, which can open them up to a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> during their landing recovery frames. It is also possible to <a rel=\"nofollow\" class=\"external text\" href=\"https://glossary.infil.net/?t=Low%20Profile\">Low Profile</a> some air attacks by using a move that shifts your hurtbox very low to the ground.\n"
+    },
+    {
+      "index": 26,
+      "text": "Some air attacks can alter the trajectory of a jump-in, making the character more difficult to anti-air consistently. In general, attacks like this are put into a \"Forced Knockdown\" state if they are hit while airborne, which makes it more rewarding to interrupt these attacks.",
+      "html": "Some air attacks can alter the trajectory of a jump-in, making the character more difficult to anti-air consistently. In general, attacks like this are put into a \"Forced Knockdown\" state if they are hit while airborne, which makes it more rewarding to interrupt these attacks.\n<br><br>\n"
+    },
+    {
+      "index": 27,
+      "text": "When practicing punish combo routes, it's important to remember that your first attack will have 4 extra frames of hit advantage. This can potentially open up far stronger combo routes than are normally possible. In many cases, light normals are designed to only combo into weaker versions of special moves or a low-damage Target Combo. By linking or canceling into stronger attacks, the damage potential can be much higher.",
+      "html": "When practicing punish combo routes, it's important to remember that your first attack will have 4 extra frames of hit advantage. This can potentially open up far stronger combo routes than are normally possible. In many cases, light normals are designed to only combo into weaker versions of special moves or a low-damage Target Combo. By linking or canceling into stronger attacks, the damage potential can be much higher.\n<br><br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "You tech the throw (the opponent input an early Throw Escape) The opponent techs the throw (the opponent is significantly delaying their Throw Escape)",
+      "items": [
+        {
+          "index": 0,
+          "text": "You tech the throw (the opponent input an early Throw Escape)",
+          "html": "You tech the throw (the opponent input an early Throw Escape)"
+        },
+        {
+          "index": 1,
+          "text": "The opponent techs the throw (the opponent is significantly delaying their Throw Escape)",
+          "html": "The opponent techs the throw (the opponent is significantly delaying their Throw Escape)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Cammy's Fatal Leg Twister (Hooligan Throw) - cannot interact with any character in a crouching state regardless of their hurtbox height M. Bison's 5HK - the close-range hitbox works normally, but the longer-range hitbox on his foot cannot interact with a crouching opponent Ryu's 5HK - can only hit crouchers if they extend a tall vertical hurtbox, like an anti-air 2HP or the landing recovery of Jamie's Divekick",
+      "items": [
+        {
+          "index": 0,
+          "text": "Cammy's Fatal Leg Twister (Hooligan Throw) - cannot interact with any character in a crouching state regardless of their hurtbox height",
+          "html": "Cammy's Fatal Leg Twister (Hooligan Throw) - cannot interact with any character in a crouching state regardless of their hurtbox height"
+        },
+        {
+          "index": 1,
+          "text": "M. Bison's 5HK - the close-range hitbox works normally, but the longer-range hitbox on his foot cannot interact with a crouching opponent",
+          "html": "M. Bison's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HK</span> - the close-range hitbox works normally, but the longer-range hitbox on his foot cannot interact with a crouching opponent"
+        },
+        {
+          "index": 2,
+          "text": "Ryu's 5HK - can only hit crouchers if they extend a tall vertical hurtbox, like an anti-air 2HP or the landing recovery of Jamie's Divekick",
+          "html": "Ryu's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HK</span> - can only hit crouchers if they extend a tall vertical hurtbox, like an anti-air <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HP</span> or the landing recovery of Jamie's Divekick"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "rounded-table noprint",
+      "attributes": {
+        "class": "rounded-table noprint",
+        "style": "clear: both; width: 100%; margin: auto; margin-top:0.5em;"
+      },
+      "text": "Street Fighter 6 (SF6) General FAQ • Controls • HUD • Glossary • Movement • Offense • Defense • Gauges • Game Data • Patch Notes • Links Characters A.K.I. Akuma Alex Blanka C. Viper Cammy Chun-Li Dee Jay Dhalsim Ed E. Honda Elena Guile Ingrid Jamie JP Juri Ken Kimberly Lily Luke M. Bison Mai Manon Marisa Rashid Ryu Sagat Terry Zangief Data A.K.I. • Akuma • Alex • Blanka • C. Viper • Cammy • Chun-Li • Dee Jay • Dhalsim • Ed • E. Honda • Elena • Guile • Ingrid • Jamie • JP • Juri • Ken • Kimberly • Lily • Luke • M. Bison • Mai • Manon • Marisa • Rashid • Ryu • Sagat • Terry • Zangief",
+      "headers": [],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "class": "nav-header"
+              },
+              "text": "Street Fighter 6 (SF6)",
+              "html": "<a href=\"/w/Street_Fighter_6\" title=\"Street Fighter 6\">Street Fighter 6 (SF6) </a>\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "padding: 0.2em 0.5em;"
+              },
+              "text": "General",
+              "html": "<b>General</b>\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "FAQ • Controls • HUD • Glossary • Movement • Offense • Defense • Gauges • Game Data • Patch Notes • Links",
+              "html": "<span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/FAQ\" title=\"Street Fighter 6/FAQ\"> FAQ</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Controls\" title=\"Street Fighter 6/Controls\"> Controls</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/HUD\" title=\"Street Fighter 6/HUD\"> HUD</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Glossary\" title=\"Street Fighter 6/Glossary\"> Glossary</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Movement\" title=\"Street Fighter 6/Movement\"> Movement</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Offense\" title=\"Street Fighter 6/Offense\"> Offense</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a class=\"mw-selflink selflink\"> Defense</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Gauges\" title=\"Street Fighter 6/Gauges\"> Gauges</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Game_Data\" title=\"Street Fighter 6/Game Data\"> Game Data</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Patch_Notes\" title=\"Street Fighter 6/Patch Notes\"> Patch Notes</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Links\" title=\"Street Fighter 6/Links\"> Links</a> </div></span>\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "padding: 0.2em 0.5em;"
+              },
+              "text": "Characters",
+              "html": "<b>Characters</b>\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "A.K.I. Akuma Alex Blanka C. Viper Cammy Chun-Li Dee Jay Dhalsim Ed E. Honda Elena Guile Ingrid Jamie JP Juri Ken Kimberly Lily Luke M. Bison Mai Manon Marisa Rashid Ryu Sagat Terry Zangief",
+              "html": "<span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/A.K.I.\" title=\"A.K.I.\"><img alt=\"A.K.I.\" src=\"/images/thumb/b/bf/SF6_A.K.I._Icon.png/64px-SF6_A.K.I._Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/b/bf/SF6_A.K.I._Icon.png/96px-SF6_A.K.I._Icon.png 1.5x, /images/thumb/b/bf/SF6_A.K.I._Icon.png/128px-SF6_A.K.I._Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/A.K.I.\" title=\"Street Fighter 6/A.K.I.\"> A.K.I.</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Akuma\" title=\"Akuma\"><img alt=\"Akuma\" src=\"/images/thumb/0/07/SF6_Akuma_Icon.png/64px-SF6_Akuma_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/0/07/SF6_Akuma_Icon.png/96px-SF6_Akuma_Icon.png 1.5x, /images/thumb/0/07/SF6_Akuma_Icon.png/128px-SF6_Akuma_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Akuma\" title=\"Street Fighter 6/Akuma\"> Akuma</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Alex\" title=\"Alex\"><img alt=\"Alex\" src=\"/images/thumb/5/58/SF6_Alex_Icon.png/64px-SF6_Alex_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/5/58/SF6_Alex_Icon.png/96px-SF6_Alex_Icon.png 1.5x, /images/thumb/5/58/SF6_Alex_Icon.png/128px-SF6_Alex_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Alex\" title=\"Street Fighter 6/Alex\"> Alex</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Blanka\" title=\"Blanka\"><img alt=\"Blanka\" src=\"/images/thumb/9/9a/SF6_Blanka_Icon.png/64px-SF6_Blanka_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/9/9a/SF6_Blanka_Icon.png/96px-SF6_Blanka_Icon.png 1.5x, /images/thumb/9/9a/SF6_Blanka_Icon.png/128px-SF6_Blanka_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Blanka\" title=\"Street Fighter 6/Blanka\"> Blanka</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/C._Viper\" title=\"C. Viper\"><img alt=\"C. Viper\" src=\"/images/thumb/1/15/SF6_Cviper_Icon.png/64px-SF6_Cviper_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/1/15/SF6_Cviper_Icon.png/96px-SF6_Cviper_Icon.png 1.5x, /images/thumb/1/15/SF6_Cviper_Icon.png/128px-SF6_Cviper_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/C._Viper\" class=\"mw-redirect\" title=\"Street Fighter 6/C. Viper\"> C. Viper</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Cammy\" title=\"Cammy\"><img alt=\"Cammy\" src=\"/images/thumb/6/61/SF6_Cammy_Icon.png/64px-SF6_Cammy_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/6/61/SF6_Cammy_Icon.png/96px-SF6_Cammy_Icon.png 1.5x, /images/thumb/6/61/SF6_Cammy_Icon.png/128px-SF6_Cammy_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Cammy\" title=\"Street Fighter 6/Cammy\"> Cammy</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Chun-Li\" title=\"Chun-Li\"><img alt=\"Chun-Li\" src=\"/images/thumb/1/1c/SF6_Chun-Li_Icon.png/64px-SF6_Chun-Li_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/1/1c/SF6_Chun-Li_Icon.png/96px-SF6_Chun-Li_Icon.png 1.5x, /images/thumb/1/1c/SF6_Chun-Li_Icon.png/128px-SF6_Chun-Li_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Chun-Li\" title=\"Street Fighter 6/Chun-Li\"> Chun-Li</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Dee_Jay\" title=\"Dee Jay\"><img alt=\"Dee Jay\" src=\"/images/thumb/4/4d/SF6_DeeJay_Icon.png/64px-SF6_DeeJay_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/4/4d/SF6_DeeJay_Icon.png/96px-SF6_DeeJay_Icon.png 1.5x, /images/thumb/4/4d/SF6_DeeJay_Icon.png/128px-SF6_DeeJay_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Dee_Jay\" title=\"Street Fighter 6/Dee Jay\"> Dee Jay</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Dhalsim\" title=\"Dhalsim\"><img alt=\"Dhalsim\" src=\"/images/thumb/a/a8/SF6_Dhalsim_Icon.png/64px-SF6_Dhalsim_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/a/a8/SF6_Dhalsim_Icon.png/96px-SF6_Dhalsim_Icon.png 1.5x, /images/thumb/a/a8/SF6_Dhalsim_Icon.png/128px-SF6_Dhalsim_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Dhalsim\" title=\"Street Fighter 6/Dhalsim\"> Dhalsim</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Ed\" title=\"Ed\"><img alt=\"Ed\" src=\"/images/thumb/d/d7/SF6_Ed_Icon.png/64px-SF6_Ed_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/d/d7/SF6_Ed_Icon.png/96px-SF6_Ed_Icon.png 1.5x, /images/thumb/d/d7/SF6_Ed_Icon.png/128px-SF6_Ed_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Ed\" title=\"Street Fighter 6/Ed\"> Ed</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/E._Honda\" title=\"E. Honda\"><img alt=\"E. Honda\" src=\"/images/thumb/6/69/SF6_Ehonda_Icon.png/64px-SF6_Ehonda_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/6/69/SF6_Ehonda_Icon.png/96px-SF6_Ehonda_Icon.png 1.5x, /images/thumb/6/69/SF6_Ehonda_Icon.png/128px-SF6_Ehonda_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/E._Honda\" class=\"mw-redirect\" title=\"Street Fighter 6/E. Honda\"> E. Honda</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Elena\" title=\"Elena\"><img alt=\"Elena\" src=\"/images/thumb/4/4f/SF6_Elena_Icon.png/64px-SF6_Elena_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/4/4f/SF6_Elena_Icon.png/96px-SF6_Elena_Icon.png 1.5x, /images/thumb/4/4f/SF6_Elena_Icon.png/128px-SF6_Elena_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Elena\" title=\"Street Fighter 6/Elena\"> Elena</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Guile\" title=\"Guile\"><img alt=\"Guile\" src=\"/images/thumb/e/ea/SF6_Guile_Icon.png/64px-SF6_Guile_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/e/ea/SF6_Guile_Icon.png/96px-SF6_Guile_Icon.png 1.5x, /images/thumb/e/ea/SF6_Guile_Icon.png/128px-SF6_Guile_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Guile\" title=\"Street Fighter 6/Guile\"> Guile</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Ingrid\" title=\"Ingrid\"><img alt=\"Ingrid\" src=\"/images/thumb/d/d7/SF6_Ingrid_Icon.png/64px-SF6_Ingrid_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/d/d7/SF6_Ingrid_Icon.png/96px-SF6_Ingrid_Icon.png 1.5x, /images/thumb/d/d7/SF6_Ingrid_Icon.png/128px-SF6_Ingrid_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Ingrid\" title=\"Street Fighter 6/Ingrid\"> Ingrid</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Jamie\" title=\"Jamie\"><img alt=\"Jamie\" src=\"/images/thumb/2/29/SF6_Jamie_Icon.png/64px-SF6_Jamie_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/2/29/SF6_Jamie_Icon.png/96px-SF6_Jamie_Icon.png 1.5x, /images/thumb/2/29/SF6_Jamie_Icon.png/128px-SF6_Jamie_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Jamie\" title=\"Street Fighter 6/Jamie\"> Jamie</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/JP\" title=\"JP\"><img alt=\"JP\" src=\"/images/thumb/4/4e/SF6_JP_Icon.png/64px-SF6_JP_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/4/4e/SF6_JP_Icon.png/96px-SF6_JP_Icon.png 1.5x, /images/thumb/4/4e/SF6_JP_Icon.png/128px-SF6_JP_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/JP\" title=\"Street Fighter 6/JP\"> JP</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Juri\" title=\"Juri\"><img alt=\"Juri\" src=\"/images/thumb/7/72/SF6_Juri_Icon.png/64px-SF6_Juri_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/7/72/SF6_Juri_Icon.png/96px-SF6_Juri_Icon.png 1.5x, /images/thumb/7/72/SF6_Juri_Icon.png/128px-SF6_Juri_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Juri\" title=\"Street Fighter 6/Juri\"> Juri</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Ken\" title=\"Ken\"><img alt=\"Ken\" src=\"/images/thumb/5/53/SF6_Ken_Icon.png/64px-SF6_Ken_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/5/53/SF6_Ken_Icon.png/96px-SF6_Ken_Icon.png 1.5x, /images/thumb/5/53/SF6_Ken_Icon.png/128px-SF6_Ken_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Ken\" title=\"Street Fighter 6/Ken\"> Ken</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Kimberly\" title=\"Kimberly\"><img alt=\"Kimberly\" src=\"/images/thumb/8/8f/SF6_Kimberly_Icon.png/64px-SF6_Kimberly_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/8/8f/SF6_Kimberly_Icon.png/96px-SF6_Kimberly_Icon.png 1.5x, /images/thumb/8/8f/SF6_Kimberly_Icon.png/128px-SF6_Kimberly_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Kimberly\" title=\"Street Fighter 6/Kimberly\"> Kimberly</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Lily\" title=\"Lily\"><img alt=\"Lily\" src=\"/images/thumb/2/2b/SF6_Lily_Icon.png/64px-SF6_Lily_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/2/2b/SF6_Lily_Icon.png/96px-SF6_Lily_Icon.png 1.5x, /images/thumb/2/2b/SF6_Lily_Icon.png/128px-SF6_Lily_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Lily\" title=\"Street Fighter 6/Lily\"> Lily</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Luke\" title=\"Luke\"><img alt=\"Luke\" src=\"/images/thumb/8/8c/SF6_Luke_Icon.png/64px-SF6_Luke_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/8/8c/SF6_Luke_Icon.png/96px-SF6_Luke_Icon.png 1.5x, /images/thumb/8/8c/SF6_Luke_Icon.png/128px-SF6_Luke_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Luke\" title=\"Street Fighter 6/Luke\"> Luke</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/M._Bison\" title=\"M. Bison\"><img alt=\"M. Bison\" src=\"/images/thumb/3/3c/SF6_Mbison_Icon.png/64px-SF6_Mbison_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/3/3c/SF6_Mbison_Icon.png/96px-SF6_Mbison_Icon.png 1.5x, /images/thumb/3/3c/SF6_Mbison_Icon.png/128px-SF6_Mbison_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/M._Bison\" class=\"mw-redirect\" title=\"Street Fighter 6/M. Bison\"> M. Bison</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Mai\" title=\"Mai\"><img alt=\"Mai\" src=\"/images/thumb/e/ee/SF6_Mai_Icon.png/64px-SF6_Mai_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/e/ee/SF6_Mai_Icon.png/96px-SF6_Mai_Icon.png 1.5x, /images/thumb/e/ee/SF6_Mai_Icon.png/128px-SF6_Mai_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Mai\" title=\"Street Fighter 6/Mai\"> Mai</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Manon\" title=\"Manon\"><img alt=\"Manon\" src=\"/images/thumb/c/ca/SF6_Manon_Icon.png/64px-SF6_Manon_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/c/ca/SF6_Manon_Icon.png/96px-SF6_Manon_Icon.png 1.5x, /images/thumb/c/ca/SF6_Manon_Icon.png/128px-SF6_Manon_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Manon\" title=\"Street Fighter 6/Manon\"> Manon</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Marisa\" title=\"Marisa\"><img alt=\"Marisa\" src=\"/images/thumb/5/54/SF6_Marisa_Icon.png/64px-SF6_Marisa_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/5/54/SF6_Marisa_Icon.png/96px-SF6_Marisa_Icon.png 1.5x, /images/thumb/5/54/SF6_Marisa_Icon.png/128px-SF6_Marisa_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Marisa\" title=\"Street Fighter 6/Marisa\"> Marisa</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Rashid\" title=\"Rashid\"><img alt=\"Rashid\" src=\"/images/thumb/4/49/SF6_Rashid_Icon.png/64px-SF6_Rashid_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/4/49/SF6_Rashid_Icon.png/96px-SF6_Rashid_Icon.png 1.5x, /images/thumb/4/49/SF6_Rashid_Icon.png/128px-SF6_Rashid_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Rashid\" title=\"Street Fighter 6/Rashid\"> Rashid</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Ryu\" title=\"Ryu\"><img alt=\"Ryu\" src=\"/images/thumb/b/be/SF6_Ryu_Icon.png/64px-SF6_Ryu_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/b/be/SF6_Ryu_Icon.png/96px-SF6_Ryu_Icon.png 1.5x, /images/thumb/b/be/SF6_Ryu_Icon.png/128px-SF6_Ryu_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Ryu\" title=\"Street Fighter 6/Ryu\"> Ryu</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Sagat\" title=\"Sagat\"><img alt=\"Sagat\" src=\"/images/thumb/1/10/SF6_Sagat_Icon.png/64px-SF6_Sagat_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/1/10/SF6_Sagat_Icon.png/96px-SF6_Sagat_Icon.png 1.5x, /images/thumb/1/10/SF6_Sagat_Icon.png/128px-SF6_Sagat_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Sagat\" title=\"Street Fighter 6/Sagat\"> Sagat</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Terry\" title=\"Terry\"><img alt=\"Terry\" src=\"/images/thumb/b/b4/SF6_Terry_Icon.png/64px-SF6_Terry_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/b/b4/SF6_Terry_Icon.png/96px-SF6_Terry_Icon.png 1.5x, /images/thumb/b/b4/SF6_Terry_Icon.png/128px-SF6_Terry_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Terry\" title=\"Street Fighter 6/Terry\"> Terry</a></div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-top: 5px; margin-right: 1px;\"><div><span typeof=\"mw:File\"><a href=\"/w/Street_Fighter_6/Zangief\" title=\"Zangief\"><img alt=\"Zangief\" src=\"/images/thumb/4/4b/SF6_Zangief_Icon.png/64px-SF6_Zangief_Icon.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"/images/thumb/4/4b/SF6_Zangief_Icon.png/96px-SF6_Zangief_Icon.png 1.5x, /images/thumb/4/4b/SF6_Zangief_Icon.png/128px-SF6_Zangief_Icon.png 2x\"></a></span></div><div style=\"line-height:1; text-align:center; font-size:1.0em; width:64px; height:2.2em; margin:auto\"><a href=\"/w/Street_Fighter_6/Zangief\" title=\"Street Fighter 6/Zangief\"> Zangief</a></div></span>\n",
+              "images": [
+                {
+                  "image_index": 0,
+                  "src": "/images/thumb/b/bf/SF6_A.K.I._Icon.png/64px-SF6_A.K.I._Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/b/bf/SF6_A.K.I._Icon.png/128px-SF6_A.K.I._Icon.png",
+                  "alt": "A.K.I.",
+                  "title": ""
+                },
+                {
+                  "image_index": 1,
+                  "src": "/images/thumb/0/07/SF6_Akuma_Icon.png/64px-SF6_Akuma_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/0/07/SF6_Akuma_Icon.png/128px-SF6_Akuma_Icon.png",
+                  "alt": "Akuma",
+                  "title": ""
+                },
+                {
+                  "image_index": 2,
+                  "src": "/images/thumb/5/58/SF6_Alex_Icon.png/64px-SF6_Alex_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/5/58/SF6_Alex_Icon.png/128px-SF6_Alex_Icon.png",
+                  "alt": "Alex",
+                  "title": ""
+                },
+                {
+                  "image_index": 3,
+                  "src": "/images/thumb/9/9a/SF6_Blanka_Icon.png/64px-SF6_Blanka_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/9/9a/SF6_Blanka_Icon.png/128px-SF6_Blanka_Icon.png",
+                  "alt": "Blanka",
+                  "title": ""
+                },
+                {
+                  "image_index": 4,
+                  "src": "/images/thumb/1/15/SF6_Cviper_Icon.png/64px-SF6_Cviper_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/1/15/SF6_Cviper_Icon.png/128px-SF6_Cviper_Icon.png",
+                  "alt": "C. Viper",
+                  "title": ""
+                },
+                {
+                  "image_index": 5,
+                  "src": "/images/thumb/6/61/SF6_Cammy_Icon.png/64px-SF6_Cammy_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/6/61/SF6_Cammy_Icon.png/128px-SF6_Cammy_Icon.png",
+                  "alt": "Cammy",
+                  "title": ""
+                },
+                {
+                  "image_index": 6,
+                  "src": "/images/thumb/1/1c/SF6_Chun-Li_Icon.png/64px-SF6_Chun-Li_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/1/1c/SF6_Chun-Li_Icon.png/128px-SF6_Chun-Li_Icon.png",
+                  "alt": "Chun-Li",
+                  "title": ""
+                },
+                {
+                  "image_index": 7,
+                  "src": "/images/thumb/4/4d/SF6_DeeJay_Icon.png/64px-SF6_DeeJay_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/4/4d/SF6_DeeJay_Icon.png/128px-SF6_DeeJay_Icon.png",
+                  "alt": "Dee Jay",
+                  "title": ""
+                },
+                {
+                  "image_index": 8,
+                  "src": "/images/thumb/a/a8/SF6_Dhalsim_Icon.png/64px-SF6_Dhalsim_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/a/a8/SF6_Dhalsim_Icon.png/128px-SF6_Dhalsim_Icon.png",
+                  "alt": "Dhalsim",
+                  "title": ""
+                },
+                {
+                  "image_index": 9,
+                  "src": "/images/thumb/d/d7/SF6_Ed_Icon.png/64px-SF6_Ed_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/d/d7/SF6_Ed_Icon.png/128px-SF6_Ed_Icon.png",
+                  "alt": "Ed",
+                  "title": ""
+                },
+                {
+                  "image_index": 10,
+                  "src": "/images/thumb/6/69/SF6_Ehonda_Icon.png/64px-SF6_Ehonda_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/6/69/SF6_Ehonda_Icon.png/128px-SF6_Ehonda_Icon.png",
+                  "alt": "E. Honda",
+                  "title": ""
+                },
+                {
+                  "image_index": 11,
+                  "src": "/images/thumb/4/4f/SF6_Elena_Icon.png/64px-SF6_Elena_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/4/4f/SF6_Elena_Icon.png/128px-SF6_Elena_Icon.png",
+                  "alt": "Elena",
+                  "title": ""
+                },
+                {
+                  "image_index": 12,
+                  "src": "/images/thumb/e/ea/SF6_Guile_Icon.png/64px-SF6_Guile_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/e/ea/SF6_Guile_Icon.png/128px-SF6_Guile_Icon.png",
+                  "alt": "Guile",
+                  "title": ""
+                },
+                {
+                  "image_index": 13,
+                  "src": "/images/thumb/d/d7/SF6_Ingrid_Icon.png/64px-SF6_Ingrid_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/d/d7/SF6_Ingrid_Icon.png/128px-SF6_Ingrid_Icon.png",
+                  "alt": "Ingrid",
+                  "title": ""
+                },
+                {
+                  "image_index": 14,
+                  "src": "/images/thumb/2/29/SF6_Jamie_Icon.png/64px-SF6_Jamie_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/2/29/SF6_Jamie_Icon.png/128px-SF6_Jamie_Icon.png",
+                  "alt": "Jamie",
+                  "title": ""
+                },
+                {
+                  "image_index": 15,
+                  "src": "/images/thumb/4/4e/SF6_JP_Icon.png/64px-SF6_JP_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/4/4e/SF6_JP_Icon.png/128px-SF6_JP_Icon.png",
+                  "alt": "JP",
+                  "title": ""
+                },
+                {
+                  "image_index": 16,
+                  "src": "/images/thumb/7/72/SF6_Juri_Icon.png/64px-SF6_Juri_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/7/72/SF6_Juri_Icon.png/128px-SF6_Juri_Icon.png",
+                  "alt": "Juri",
+                  "title": ""
+                },
+                {
+                  "image_index": 17,
+                  "src": "/images/thumb/5/53/SF6_Ken_Icon.png/64px-SF6_Ken_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/5/53/SF6_Ken_Icon.png/128px-SF6_Ken_Icon.png",
+                  "alt": "Ken",
+                  "title": ""
+                },
+                {
+                  "image_index": 18,
+                  "src": "/images/thumb/8/8f/SF6_Kimberly_Icon.png/64px-SF6_Kimberly_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/8/8f/SF6_Kimberly_Icon.png/128px-SF6_Kimberly_Icon.png",
+                  "alt": "Kimberly",
+                  "title": ""
+                },
+                {
+                  "image_index": 19,
+                  "src": "/images/thumb/2/2b/SF6_Lily_Icon.png/64px-SF6_Lily_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/2/2b/SF6_Lily_Icon.png/128px-SF6_Lily_Icon.png",
+                  "alt": "Lily",
+                  "title": ""
+                },
+                {
+                  "image_index": 20,
+                  "src": "/images/thumb/8/8c/SF6_Luke_Icon.png/64px-SF6_Luke_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/8/8c/SF6_Luke_Icon.png/128px-SF6_Luke_Icon.png",
+                  "alt": "Luke",
+                  "title": ""
+                },
+                {
+                  "image_index": 21,
+                  "src": "/images/thumb/3/3c/SF6_Mbison_Icon.png/64px-SF6_Mbison_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/3/3c/SF6_Mbison_Icon.png/128px-SF6_Mbison_Icon.png",
+                  "alt": "M. Bison",
+                  "title": ""
+                },
+                {
+                  "image_index": 22,
+                  "src": "/images/thumb/e/ee/SF6_Mai_Icon.png/64px-SF6_Mai_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/e/ee/SF6_Mai_Icon.png/128px-SF6_Mai_Icon.png",
+                  "alt": "Mai",
+                  "title": ""
+                },
+                {
+                  "image_index": 23,
+                  "src": "/images/thumb/c/ca/SF6_Manon_Icon.png/64px-SF6_Manon_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/c/ca/SF6_Manon_Icon.png/128px-SF6_Manon_Icon.png",
+                  "alt": "Manon",
+                  "title": ""
+                },
+                {
+                  "image_index": 24,
+                  "src": "/images/thumb/5/54/SF6_Marisa_Icon.png/64px-SF6_Marisa_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/5/54/SF6_Marisa_Icon.png/128px-SF6_Marisa_Icon.png",
+                  "alt": "Marisa",
+                  "title": ""
+                },
+                {
+                  "image_index": 25,
+                  "src": "/images/thumb/4/49/SF6_Rashid_Icon.png/64px-SF6_Rashid_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/4/49/SF6_Rashid_Icon.png/128px-SF6_Rashid_Icon.png",
+                  "alt": "Rashid",
+                  "title": ""
+                },
+                {
+                  "image_index": 26,
+                  "src": "/images/thumb/b/be/SF6_Ryu_Icon.png/64px-SF6_Ryu_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/b/be/SF6_Ryu_Icon.png/128px-SF6_Ryu_Icon.png",
+                  "alt": "Ryu",
+                  "title": ""
+                },
+                {
+                  "image_index": 27,
+                  "src": "/images/thumb/1/10/SF6_Sagat_Icon.png/64px-SF6_Sagat_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/1/10/SF6_Sagat_Icon.png/128px-SF6_Sagat_Icon.png",
+                  "alt": "Sagat",
+                  "title": ""
+                },
+                {
+                  "image_index": 28,
+                  "src": "/images/thumb/b/b4/SF6_Terry_Icon.png/64px-SF6_Terry_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/b/b4/SF6_Terry_Icon.png/128px-SF6_Terry_Icon.png",
+                  "alt": "Terry",
+                  "title": ""
+                },
+                {
+                  "image_index": 29,
+                  "src": "/images/thumb/4/4b/SF6_Zangief_Icon.png/64px-SF6_Zangief_Icon.png",
+                  "current_src": "https://wiki.supercombo.gg/images/thumb/4/4b/SF6_Zangief_Icon.png/128px-SF6_Zangief_Icon.png",
+                  "alt": "Zangief",
+                  "title": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row_index": 5,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "padding: 0.2em 0.5em;"
+              },
+              "text": "Data",
+              "html": "<b>Data</b>\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 6,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "A.K.I. • Akuma • Alex • Blanka • C. Viper • Cammy • Chun-Li • Dee Jay • Dhalsim • Ed • E. Honda • Elena • Guile • Ingrid • Jamie • JP • Juri • Ken • Kimberly • Lily • Luke • M. Bison • Mai • Manon • Marisa • Rashid • Ryu • Sagat • Terry • Zangief",
+              "html": "<span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/A.K.I./Data\" title=\"Street Fighter 6/A.K.I./Data\"> A.K.I.</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Akuma/Data\" title=\"Street Fighter 6/Akuma/Data\"> Akuma</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Alex/Data\" title=\"Street Fighter 6/Alex/Data\"> Alex</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Blanka/Data\" title=\"Street Fighter 6/Blanka/Data\"> Blanka</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/C.Viper/Data\" title=\"Street Fighter 6/C.Viper/Data\"> C. Viper</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Cammy/Data\" title=\"Street Fighter 6/Cammy/Data\"> Cammy</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Chun-Li/Data\" title=\"Street Fighter 6/Chun-Li/Data\"> Chun-Li</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Dee_Jay/Data\" title=\"Street Fighter 6/Dee Jay/Data\"> Dee Jay</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Dhalsim/Data\" title=\"Street Fighter 6/Dhalsim/Data\"> Dhalsim</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Ed/Data\" title=\"Street Fighter 6/Ed/Data\"> Ed</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/E.Honda/Data\" title=\"Street Fighter 6/E.Honda/Data\"> E. Honda</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Elena/Data\" title=\"Street Fighter 6/Elena/Data\"> Elena</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Guile/Data\" title=\"Street Fighter 6/Guile/Data\"> Guile</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Ingrid/Data\" title=\"Street Fighter 6/Ingrid/Data\"> Ingrid</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Jamie/Data\" title=\"Street Fighter 6/Jamie/Data\"> Jamie</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/JP/Data\" title=\"Street Fighter 6/JP/Data\"> JP</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Juri/Data\" title=\"Street Fighter 6/Juri/Data\"> Juri</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Ken/Data\" title=\"Street Fighter 6/Ken/Data\"> Ken</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Kimberly/Data\" title=\"Street Fighter 6/Kimberly/Data\"> Kimberly</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Lily/Data\" title=\"Street Fighter 6/Lily/Data\"> Lily</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Luke/Data\" title=\"Street Fighter 6/Luke/Data\"> Luke</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/M.Bison/Data\" title=\"Street Fighter 6/M.Bison/Data\"> M. Bison</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Mai/Data\" title=\"Street Fighter 6/Mai/Data\"> Mai</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Manon/Data\" title=\"Street Fighter 6/Manon/Data\"> Manon</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Marisa/Data\" title=\"Street Fighter 6/Marisa/Data\"> Marisa</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Rashid/Data\" title=\"Street Fighter 6/Rashid/Data\"> Rashid</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Ryu/Data\" title=\"Street Fighter 6/Ryu/Data\"> Ryu</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Sagat/Data\" title=\"Street Fighter 6/Sagat/Data\"> Sagat</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Terry/Data\" title=\"Street Fighter 6/Terry/Data\"> Terry</a> •</div></span>\n  <span style=\"text-align:center; float:left; overflow:hidden; margin-left:1px; margin-right:1px; font-size:1.0\"><div><a href=\"/w/Street_Fighter_6/Zangief/Data\" title=\"Street Fighter 6/Zangief/Data\"> Zangief</a> </div></span>\n",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 7
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "here",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges#Drive_Parry",
+      "raw_href": "/w/Street_Fighter_6/Gauges#Drive_Parry",
+      "title": "Street Fighter 6/Gauges",
+      "class_name": ""
+    },
+    {
+      "index": 1,
+      "text": "proximity guard",
+      "href": "https://glossary.infil.net/?t=Proximity%20Block",
+      "raw_href": "https://glossary.infil.net/?t=Proximity%20Block",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 2,
+      "text": "\"meaty\"",
+      "href": "https://glossary.infil.net/?t=Meaty",
+      "raw_href": "https://glossary.infil.net/?t=Meaty",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 3,
+      "text": "negative edge",
+      "href": "https://glossary.infil.net/?t=Negative%20Edge",
+      "raw_href": "https://glossary.infil.net/?t=Negative%20Edge",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 4,
+      "text": "Low Profile",
+      "href": "https://glossary.infil.net/?t=Low%20Profile",
+      "raw_href": "https://glossary.infil.net/?t=Low%20Profile",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 5,
+      "text": "Street Fighter 6 (SF6)",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6",
+      "raw_href": "/w/Street_Fighter_6",
+      "title": "Street Fighter 6",
+      "class_name": ""
+    },
+    {
+      "index": 6,
+      "text": "FAQ",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/FAQ",
+      "raw_href": "/w/Street_Fighter_6/FAQ",
+      "title": "Street Fighter 6/FAQ",
+      "class_name": ""
+    },
+    {
+      "index": 7,
+      "text": "Controls",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls",
+      "raw_href": "/w/Street_Fighter_6/Controls",
+      "title": "Street Fighter 6/Controls",
+      "class_name": ""
+    },
+    {
+      "index": 8,
+      "text": "HUD",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/HUD",
+      "raw_href": "/w/Street_Fighter_6/HUD",
+      "title": "Street Fighter 6/HUD",
+      "class_name": ""
+    },
+    {
+      "index": 9,
+      "text": "Glossary",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary",
+      "raw_href": "/w/Street_Fighter_6/Glossary",
+      "title": "Street Fighter 6/Glossary",
+      "class_name": ""
+    },
+    {
+      "index": 10,
+      "text": "Movement",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Movement",
+      "raw_href": "/w/Street_Fighter_6/Movement",
+      "title": "Street Fighter 6/Movement",
+      "class_name": ""
+    },
+    {
+      "index": 11,
+      "text": "Offense",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Offense",
+      "raw_href": "/w/Street_Fighter_6/Offense",
+      "title": "Street Fighter 6/Offense",
+      "class_name": ""
+    },
+    {
+      "index": 12,
+      "text": "Gauges",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Gauges",
+      "raw_href": "/w/Street_Fighter_6/Gauges",
+      "title": "Street Fighter 6/Gauges",
+      "class_name": ""
+    },
+    {
+      "index": 13,
+      "text": "Game Data",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Game_Data",
+      "raw_href": "/w/Street_Fighter_6/Game_Data",
+      "title": "Street Fighter 6/Game Data",
+      "class_name": ""
+    },
+    {
+      "index": 14,
+      "text": "Patch Notes",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Patch_Notes",
+      "raw_href": "/w/Street_Fighter_6/Patch_Notes",
+      "title": "Street Fighter 6/Patch Notes",
+      "class_name": ""
+    },
+    {
+      "index": 15,
+      "text": "Links",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Links",
+      "raw_href": "/w/Street_Fighter_6/Links",
+      "title": "Street Fighter 6/Links",
+      "class_name": ""
+    },
+    {
+      "index": 16,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/A.K.I.",
+      "raw_href": "/w/Street_Fighter_6/A.K.I.",
+      "title": "A.K.I.",
+      "class_name": ""
+    },
+    {
+      "index": 17,
+      "text": "A.K.I.",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/A.K.I.",
+      "raw_href": "/w/Street_Fighter_6/A.K.I.",
+      "title": "Street Fighter 6/A.K.I.",
+      "class_name": ""
+    },
+    {
+      "index": 18,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Akuma",
+      "raw_href": "/w/Street_Fighter_6/Akuma",
+      "title": "Akuma",
+      "class_name": ""
+    },
+    {
+      "index": 19,
+      "text": "Akuma",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Akuma",
+      "raw_href": "/w/Street_Fighter_6/Akuma",
+      "title": "Street Fighter 6/Akuma",
+      "class_name": ""
+    },
+    {
+      "index": 20,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex",
+      "raw_href": "/w/Street_Fighter_6/Alex",
+      "title": "Alex",
+      "class_name": ""
+    },
+    {
+      "index": 21,
+      "text": "Alex",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex",
+      "raw_href": "/w/Street_Fighter_6/Alex",
+      "title": "Street Fighter 6/Alex",
+      "class_name": ""
+    },
+    {
+      "index": 22,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Blanka",
+      "raw_href": "/w/Street_Fighter_6/Blanka",
+      "title": "Blanka",
+      "class_name": ""
+    },
+    {
+      "index": 23,
+      "text": "Blanka",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Blanka",
+      "raw_href": "/w/Street_Fighter_6/Blanka",
+      "title": "Street Fighter 6/Blanka",
+      "class_name": ""
+    },
+    {
+      "index": 24,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/C._Viper",
+      "raw_href": "/w/Street_Fighter_6/C._Viper",
+      "title": "C. Viper",
+      "class_name": ""
+    },
+    {
+      "index": 25,
+      "text": "C. Viper",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/C._Viper",
+      "raw_href": "/w/Street_Fighter_6/C._Viper",
+      "title": "Street Fighter 6/C. Viper",
+      "class_name": "mw-redirect"
+    },
+    {
+      "index": 26,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Cammy",
+      "raw_href": "/w/Street_Fighter_6/Cammy",
+      "title": "Cammy",
+      "class_name": ""
+    },
+    {
+      "index": 27,
+      "text": "Cammy",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Cammy",
+      "raw_href": "/w/Street_Fighter_6/Cammy",
+      "title": "Street Fighter 6/Cammy",
+      "class_name": ""
+    },
+    {
+      "index": 28,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Chun-Li",
+      "raw_href": "/w/Street_Fighter_6/Chun-Li",
+      "title": "Chun-Li",
+      "class_name": ""
+    },
+    {
+      "index": 29,
+      "text": "Chun-Li",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Chun-Li",
+      "raw_href": "/w/Street_Fighter_6/Chun-Li",
+      "title": "Street Fighter 6/Chun-Li",
+      "class_name": ""
+    },
+    {
+      "index": 30,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dee_Jay",
+      "raw_href": "/w/Street_Fighter_6/Dee_Jay",
+      "title": "Dee Jay",
+      "class_name": ""
+    },
+    {
+      "index": 31,
+      "text": "Dee Jay",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dee_Jay",
+      "raw_href": "/w/Street_Fighter_6/Dee_Jay",
+      "title": "Street Fighter 6/Dee Jay",
+      "class_name": ""
+    },
+    {
+      "index": 32,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dhalsim",
+      "raw_href": "/w/Street_Fighter_6/Dhalsim",
+      "title": "Dhalsim",
+      "class_name": ""
+    },
+    {
+      "index": 33,
+      "text": "Dhalsim",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dhalsim",
+      "raw_href": "/w/Street_Fighter_6/Dhalsim",
+      "title": "Street Fighter 6/Dhalsim",
+      "class_name": ""
+    },
+    {
+      "index": 34,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ed",
+      "raw_href": "/w/Street_Fighter_6/Ed",
+      "title": "Ed",
+      "class_name": ""
+    },
+    {
+      "index": 35,
+      "text": "Ed",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ed",
+      "raw_href": "/w/Street_Fighter_6/Ed",
+      "title": "Street Fighter 6/Ed",
+      "class_name": ""
+    },
+    {
+      "index": 36,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/E._Honda",
+      "raw_href": "/w/Street_Fighter_6/E._Honda",
+      "title": "E. Honda",
+      "class_name": ""
+    },
+    {
+      "index": 37,
+      "text": "E. Honda",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/E._Honda",
+      "raw_href": "/w/Street_Fighter_6/E._Honda",
+      "title": "Street Fighter 6/E. Honda",
+      "class_name": "mw-redirect"
+    },
+    {
+      "index": 38,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Elena",
+      "raw_href": "/w/Street_Fighter_6/Elena",
+      "title": "Elena",
+      "class_name": ""
+    },
+    {
+      "index": 39,
+      "text": "Elena",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Elena",
+      "raw_href": "/w/Street_Fighter_6/Elena",
+      "title": "Street Fighter 6/Elena",
+      "class_name": ""
+    },
+    {
+      "index": 40,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Guile",
+      "raw_href": "/w/Street_Fighter_6/Guile",
+      "title": "Guile",
+      "class_name": ""
+    },
+    {
+      "index": 41,
+      "text": "Guile",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Guile",
+      "raw_href": "/w/Street_Fighter_6/Guile",
+      "title": "Street Fighter 6/Guile",
+      "class_name": ""
+    },
+    {
+      "index": 42,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ingrid",
+      "raw_href": "/w/Street_Fighter_6/Ingrid",
+      "title": "Ingrid",
+      "class_name": ""
+    },
+    {
+      "index": 43,
+      "text": "Ingrid",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ingrid",
+      "raw_href": "/w/Street_Fighter_6/Ingrid",
+      "title": "Street Fighter 6/Ingrid",
+      "class_name": ""
+    },
+    {
+      "index": 44,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Jamie",
+      "raw_href": "/w/Street_Fighter_6/Jamie",
+      "title": "Jamie",
+      "class_name": ""
+    },
+    {
+      "index": 45,
+      "text": "Jamie",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Jamie",
+      "raw_href": "/w/Street_Fighter_6/Jamie",
+      "title": "Street Fighter 6/Jamie",
+      "class_name": ""
+    },
+    {
+      "index": 46,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/JP",
+      "raw_href": "/w/Street_Fighter_6/JP",
+      "title": "JP",
+      "class_name": ""
+    },
+    {
+      "index": 47,
+      "text": "JP",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/JP",
+      "raw_href": "/w/Street_Fighter_6/JP",
+      "title": "Street Fighter 6/JP",
+      "class_name": ""
+    },
+    {
+      "index": 48,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Juri",
+      "raw_href": "/w/Street_Fighter_6/Juri",
+      "title": "Juri",
+      "class_name": ""
+    },
+    {
+      "index": 49,
+      "text": "Juri",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Juri",
+      "raw_href": "/w/Street_Fighter_6/Juri",
+      "title": "Street Fighter 6/Juri",
+      "class_name": ""
+    },
+    {
+      "index": 50,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ken",
+      "raw_href": "/w/Street_Fighter_6/Ken",
+      "title": "Ken",
+      "class_name": ""
+    },
+    {
+      "index": 51,
+      "text": "Ken",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ken",
+      "raw_href": "/w/Street_Fighter_6/Ken",
+      "title": "Street Fighter 6/Ken",
+      "class_name": ""
+    },
+    {
+      "index": 52,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Kimberly",
+      "raw_href": "/w/Street_Fighter_6/Kimberly",
+      "title": "Kimberly",
+      "class_name": ""
+    },
+    {
+      "index": 53,
+      "text": "Kimberly",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Kimberly",
+      "raw_href": "/w/Street_Fighter_6/Kimberly",
+      "title": "Street Fighter 6/Kimberly",
+      "class_name": ""
+    },
+    {
+      "index": 54,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Lily",
+      "raw_href": "/w/Street_Fighter_6/Lily",
+      "title": "Lily",
+      "class_name": ""
+    },
+    {
+      "index": 55,
+      "text": "Lily",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Lily",
+      "raw_href": "/w/Street_Fighter_6/Lily",
+      "title": "Street Fighter 6/Lily",
+      "class_name": ""
+    },
+    {
+      "index": 56,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Luke",
+      "raw_href": "/w/Street_Fighter_6/Luke",
+      "title": "Luke",
+      "class_name": ""
+    },
+    {
+      "index": 57,
+      "text": "Luke",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Luke",
+      "raw_href": "/w/Street_Fighter_6/Luke",
+      "title": "Street Fighter 6/Luke",
+      "class_name": ""
+    },
+    {
+      "index": 58,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/M._Bison",
+      "raw_href": "/w/Street_Fighter_6/M._Bison",
+      "title": "M. Bison",
+      "class_name": ""
+    },
+    {
+      "index": 59,
+      "text": "M. Bison",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/M._Bison",
+      "raw_href": "/w/Street_Fighter_6/M._Bison",
+      "title": "Street Fighter 6/M. Bison",
+      "class_name": "mw-redirect"
+    },
+    {
+      "index": 60,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Mai",
+      "raw_href": "/w/Street_Fighter_6/Mai",
+      "title": "Mai",
+      "class_name": ""
+    },
+    {
+      "index": 61,
+      "text": "Mai",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Mai",
+      "raw_href": "/w/Street_Fighter_6/Mai",
+      "title": "Street Fighter 6/Mai",
+      "class_name": ""
+    },
+    {
+      "index": 62,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Manon",
+      "raw_href": "/w/Street_Fighter_6/Manon",
+      "title": "Manon",
+      "class_name": ""
+    },
+    {
+      "index": 63,
+      "text": "Manon",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Manon",
+      "raw_href": "/w/Street_Fighter_6/Manon",
+      "title": "Street Fighter 6/Manon",
+      "class_name": ""
+    },
+    {
+      "index": 64,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Marisa",
+      "raw_href": "/w/Street_Fighter_6/Marisa",
+      "title": "Marisa",
+      "class_name": ""
+    },
+    {
+      "index": 65,
+      "text": "Marisa",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Marisa",
+      "raw_href": "/w/Street_Fighter_6/Marisa",
+      "title": "Street Fighter 6/Marisa",
+      "class_name": ""
+    },
+    {
+      "index": 66,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Rashid",
+      "raw_href": "/w/Street_Fighter_6/Rashid",
+      "title": "Rashid",
+      "class_name": ""
+    },
+    {
+      "index": 67,
+      "text": "Rashid",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Rashid",
+      "raw_href": "/w/Street_Fighter_6/Rashid",
+      "title": "Street Fighter 6/Rashid",
+      "class_name": ""
+    },
+    {
+      "index": 68,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu",
+      "raw_href": "/w/Street_Fighter_6/Ryu",
+      "title": "Ryu",
+      "class_name": ""
+    },
+    {
+      "index": 69,
+      "text": "Ryu",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu",
+      "raw_href": "/w/Street_Fighter_6/Ryu",
+      "title": "Street Fighter 6/Ryu",
+      "class_name": ""
+    },
+    {
+      "index": 70,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Sagat",
+      "raw_href": "/w/Street_Fighter_6/Sagat",
+      "title": "Sagat",
+      "class_name": ""
+    },
+    {
+      "index": 71,
+      "text": "Sagat",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Sagat",
+      "raw_href": "/w/Street_Fighter_6/Sagat",
+      "title": "Street Fighter 6/Sagat",
+      "class_name": ""
+    },
+    {
+      "index": 72,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Terry",
+      "raw_href": "/w/Street_Fighter_6/Terry",
+      "title": "Terry",
+      "class_name": ""
+    },
+    {
+      "index": 73,
+      "text": "Terry",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Terry",
+      "raw_href": "/w/Street_Fighter_6/Terry",
+      "title": "Street Fighter 6/Terry",
+      "class_name": ""
+    },
+    {
+      "index": 74,
+      "text": "",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Zangief",
+      "raw_href": "/w/Street_Fighter_6/Zangief",
+      "title": "Zangief",
+      "class_name": ""
+    },
+    {
+      "index": 75,
+      "text": "Zangief",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Zangief",
+      "raw_href": "/w/Street_Fighter_6/Zangief",
+      "title": "Street Fighter 6/Zangief",
+      "class_name": ""
+    },
+    {
+      "index": 76,
+      "text": "A.K.I.",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/A.K.I./Data",
+      "raw_href": "/w/Street_Fighter_6/A.K.I./Data",
+      "title": "Street Fighter 6/A.K.I./Data",
+      "class_name": ""
+    },
+    {
+      "index": 77,
+      "text": "Akuma",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Akuma/Data",
+      "raw_href": "/w/Street_Fighter_6/Akuma/Data",
+      "title": "Street Fighter 6/Akuma/Data",
+      "class_name": ""
+    },
+    {
+      "index": 78,
+      "text": "Alex",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex/Data",
+      "raw_href": "/w/Street_Fighter_6/Alex/Data",
+      "title": "Street Fighter 6/Alex/Data",
+      "class_name": ""
+    },
+    {
+      "index": 79,
+      "text": "Blanka",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Blanka/Data",
+      "raw_href": "/w/Street_Fighter_6/Blanka/Data",
+      "title": "Street Fighter 6/Blanka/Data",
+      "class_name": ""
+    },
+    {
+      "index": 80,
+      "text": "C. Viper",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/C.Viper/Data",
+      "raw_href": "/w/Street_Fighter_6/C.Viper/Data",
+      "title": "Street Fighter 6/C.Viper/Data",
+      "class_name": ""
+    },
+    {
+      "index": 81,
+      "text": "Cammy",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Cammy/Data",
+      "raw_href": "/w/Street_Fighter_6/Cammy/Data",
+      "title": "Street Fighter 6/Cammy/Data",
+      "class_name": ""
+    },
+    {
+      "index": 82,
+      "text": "Chun-Li",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Chun-Li/Data",
+      "raw_href": "/w/Street_Fighter_6/Chun-Li/Data",
+      "title": "Street Fighter 6/Chun-Li/Data",
+      "class_name": ""
+    },
+    {
+      "index": 83,
+      "text": "Dee Jay",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dee_Jay/Data",
+      "raw_href": "/w/Street_Fighter_6/Dee_Jay/Data",
+      "title": "Street Fighter 6/Dee Jay/Data",
+      "class_name": ""
+    },
+    {
+      "index": 84,
+      "text": "Dhalsim",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dhalsim/Data",
+      "raw_href": "/w/Street_Fighter_6/Dhalsim/Data",
+      "title": "Street Fighter 6/Dhalsim/Data",
+      "class_name": ""
+    },
+    {
+      "index": 85,
+      "text": "Ed",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ed/Data",
+      "raw_href": "/w/Street_Fighter_6/Ed/Data",
+      "title": "Street Fighter 6/Ed/Data",
+      "class_name": ""
+    },
+    {
+      "index": 86,
+      "text": "E. Honda",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/E.Honda/Data",
+      "raw_href": "/w/Street_Fighter_6/E.Honda/Data",
+      "title": "Street Fighter 6/E.Honda/Data",
+      "class_name": ""
+    },
+    {
+      "index": 87,
+      "text": "Elena",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Elena/Data",
+      "raw_href": "/w/Street_Fighter_6/Elena/Data",
+      "title": "Street Fighter 6/Elena/Data",
+      "class_name": ""
+    },
+    {
+      "index": 88,
+      "text": "Guile",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Guile/Data",
+      "raw_href": "/w/Street_Fighter_6/Guile/Data",
+      "title": "Street Fighter 6/Guile/Data",
+      "class_name": ""
+    },
+    {
+      "index": 89,
+      "text": "Ingrid",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ingrid/Data",
+      "raw_href": "/w/Street_Fighter_6/Ingrid/Data",
+      "title": "Street Fighter 6/Ingrid/Data",
+      "class_name": ""
+    },
+    {
+      "index": 90,
+      "text": "Jamie",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Jamie/Data",
+      "raw_href": "/w/Street_Fighter_6/Jamie/Data",
+      "title": "Street Fighter 6/Jamie/Data",
+      "class_name": ""
+    },
+    {
+      "index": 91,
+      "text": "JP",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/JP/Data",
+      "raw_href": "/w/Street_Fighter_6/JP/Data",
+      "title": "Street Fighter 6/JP/Data",
+      "class_name": ""
+    },
+    {
+      "index": 92,
+      "text": "Juri",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Juri/Data",
+      "raw_href": "/w/Street_Fighter_6/Juri/Data",
+      "title": "Street Fighter 6/Juri/Data",
+      "class_name": ""
+    },
+    {
+      "index": 93,
+      "text": "Ken",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ken/Data",
+      "raw_href": "/w/Street_Fighter_6/Ken/Data",
+      "title": "Street Fighter 6/Ken/Data",
+      "class_name": ""
+    },
+    {
+      "index": 94,
+      "text": "Kimberly",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Kimberly/Data",
+      "raw_href": "/w/Street_Fighter_6/Kimberly/Data",
+      "title": "Street Fighter 6/Kimberly/Data",
+      "class_name": ""
+    },
+    {
+      "index": 95,
+      "text": "Lily",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Lily/Data",
+      "raw_href": "/w/Street_Fighter_6/Lily/Data",
+      "title": "Street Fighter 6/Lily/Data",
+      "class_name": ""
+    },
+    {
+      "index": 96,
+      "text": "Luke",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Luke/Data",
+      "raw_href": "/w/Street_Fighter_6/Luke/Data",
+      "title": "Street Fighter 6/Luke/Data",
+      "class_name": ""
+    },
+    {
+      "index": 97,
+      "text": "M. Bison",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/M.Bison/Data",
+      "raw_href": "/w/Street_Fighter_6/M.Bison/Data",
+      "title": "Street Fighter 6/M.Bison/Data",
+      "class_name": ""
+    },
+    {
+      "index": 98,
+      "text": "Mai",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Mai/Data",
+      "raw_href": "/w/Street_Fighter_6/Mai/Data",
+      "title": "Street Fighter 6/Mai/Data",
+      "class_name": ""
+    },
+    {
+      "index": 99,
+      "text": "Manon",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Manon/Data",
+      "raw_href": "/w/Street_Fighter_6/Manon/Data",
+      "title": "Street Fighter 6/Manon/Data",
+      "class_name": ""
+    },
+    {
+      "index": 100,
+      "text": "Marisa",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Marisa/Data",
+      "raw_href": "/w/Street_Fighter_6/Marisa/Data",
+      "title": "Street Fighter 6/Marisa/Data",
+      "class_name": ""
+    },
+    {
+      "index": 101,
+      "text": "Rashid",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Rashid/Data",
+      "raw_href": "/w/Street_Fighter_6/Rashid/Data",
+      "title": "Street Fighter 6/Rashid/Data",
+      "class_name": ""
+    },
+    {
+      "index": 102,
+      "text": "Ryu",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu/Data",
+      "raw_href": "/w/Street_Fighter_6/Ryu/Data",
+      "title": "Street Fighter 6/Ryu/Data",
+      "class_name": ""
+    },
+    {
+      "index": 103,
+      "text": "Sagat",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Sagat/Data",
+      "raw_href": "/w/Street_Fighter_6/Sagat/Data",
+      "title": "Street Fighter 6/Sagat/Data",
+      "class_name": ""
+    },
+    {
+      "index": 104,
+      "text": "Terry",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Terry/Data",
+      "raw_href": "/w/Street_Fighter_6/Terry/Data",
+      "title": "Street Fighter 6/Terry/Data",
+      "class_name": ""
+    },
+    {
+      "index": 105,
+      "text": "Zangief",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Zangief/Data",
+      "raw_href": "/w/Street_Fighter_6/Zangief/Data",
+      "title": "Street Fighter 6/Zangief/Data",
+      "class_name": ""
+    }
+  ],
+  "metrics": {
+    "heading_count": 9,
+    "paragraph_count": 28,
+    "link_count": 106,
+    "image_count": 41,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 5152,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "manifest_schema_version": "supercombo_mediawiki_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/defense",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/defense",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "defense",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Defense",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Defense",
+  "captured_at_utc": "2026-06-11T11:35:33Z",
+  "capture_label": "2026-06-11-rev364973",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Defense",
+    "pageid": 65899,
+    "lastrevid": 364973,
+    "revision_id": 364973,
+    "revision_timestamp": "2026-05-30T00:09:39Z",
+    "touched": "2026-06-04T23:13:48Z",
+    "length": 13021,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "e5733392bba42f9a3994a1946427ef2a13cfd72c",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Defense",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Defense"
+  },
+  "source_updated_at": "2026-05-30T00:09:39Z",
+  "canonical_source_artifacts": [
+    "page.raw.wikitext",
+    "imageinfo.json",
+    "images/manifest.json"
+  ],
+  "media_source_artifacts": [
+    "images/files/",
+    "images/rendered/"
+  ],
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/media.dom.json",
+    "rendered/content.cleaned.html",
+    "rendered/content.scoped.html",
+    "screenshots/page-scoped.png",
+    "screenshots/content-scoped.png"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "image_manifest": "images/manifest.json",
+  "media_raw_policy": {
+    "text": "page.raw.wikitext is canonical for source text.",
+    "images": "Only page semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
+    "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the page media scope.",
+    "screenshots": "Screenshots capture scoped rendered page content after navigation removal and are not used as a replacement for source media files.",
+    "videos": "Video/audio DOM references are recorded in rendered/media.dom.json; large video downloads require an explicit scoped capture."
+  },
+  "template_dependency_policy": {
+    "scope": "Direct MediaWiki prop=templates dependencies are recorded by title only.",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [],
+    "recursive_capture": false
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:B"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Db"
+    },
+    {
+      "ns": 10,
+      "title": "Template:F"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Lk sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Lp sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Mk sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Mp sf6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    }
+  ],
+  "artifact_hashes": {
+    "api/query.json": {
+      "sha256": "sha256:f1251d0208592fa12487361e8bb696a7ccb1b9ffdec24ab3a35af5b83c6c08c0",
+      "bytes": 17750
+    },
+    "api/templates.json": {
+      "sha256": "sha256:bcf5b9f480c2747a05677995e830e6d1083b52b83b78fa6dd7b3ae048942e88a",
+      "bytes": 1454
+    },
+    "imageinfo.json": {
+      "sha256": "sha256:3ed6baaaafcb54288d2ba0af4aaf15ec64a3fd0aa6a22701bddfc3ea5acad763",
+      "bytes": 167
+    },
+    "images/rendered/078edf476e8f-44px-SF6_MK.png": {
+      "sha256": "sha256:4786eb7b5af8113c66a5489866e77ceacf8772352063c2720032e70f87aa75af",
+      "bytes": 2247
+    },
+    "images/rendered/276102b4c466-44px-SF6_MP.png": {
+      "sha256": "sha256:5c0951356d839238e7e0aa91a1b290f7c5f74546e00d459312c0d177db7f9fe9",
+      "bytes": 3745
+    },
+    "images/rendered/380c83d7f69e-44px-SF6_LK.png": {
+      "sha256": "sha256:751a21e2a8ef1e6716288353edd4eeb652e8fdb0f51561e4750ef142807ce4ac",
+      "bytes": 2256
+    },
+    "images/rendered/3b0bd2cd32aa-22px-F.png": {
+      "sha256": "sha256:16031f3afabb83b26684143a4be358a432ed8df3f56c7a975247fed81188b162",
+      "bytes": 1618
+    },
+    "images/rendered/403172ef0028-F.png": {
+      "sha256": "sha256:7208339d6613cb8fce6eff41ac10df622d9f388ec170d0b11c9a480a33ed4f28",
+      "bytes": 4371
+    },
+    "images/rendered/48f98ff1009f-22px-Db.png": {
+      "sha256": "sha256:384a522ecf4fcfebb8c4dbf2c98cfa2e6b0d736ef219ae0dbcab3cd5736ddfb6",
+      "bytes": 1675
+    },
+    "images/rendered/4a2ab8c31896-B.png": {
+      "sha256": "sha256:d5445d6b188ea14254f39511590c1ca08a89db43be50470a381732c84a521419",
+      "bytes": 4395
+    },
+    "images/rendered/966f90d32ad7-22px-SF6_LP.png": {
+      "sha256": "sha256:fb4e83d49b631f1847b9ffebe0927d0a4ea42fe2a3cdf4b717f228e952f0291b",
+      "bytes": 1600
+    },
+    "images/rendered/a3511f96d8c1-22px-SF6_MP.png": {
+      "sha256": "sha256:c86f7541ba46914e97a2f59b5fbf15b365f390c466383da88d2870431fd2c581",
+      "bytes": 1530
+    },
+    "images/rendered/aa2db8ef3f26-22px-B.png": {
+      "sha256": "sha256:9df30beda1eda25bbb7b21f0d1c5fb8ad00ff03723f58a9886f20c38d71ffb8a",
+      "bytes": 1619
+    },
+    "images/rendered/b784a15b63bf-22px-SF6_MK.png": {
+      "sha256": "sha256:632d6605a4c2a9f376437c899e3cea35d7fc1ba3ff65d32d3dfd2be054210e4b",
+      "bytes": 1391
+    },
+    "images/rendered/bde0a6477c36-22px-SF6_LK.png": {
+      "sha256": "sha256:7e9f59b66bee0ae7d483b3ecd742dcf02e06f8d882475304555ce8ffe531b8c0",
+      "bytes": 1390
+    },
+    "images/rendered/cbb11861b82a-Db.png": {
+      "sha256": "sha256:7fecd3ebcb8e89b61d5e3ab35ae8c893dd6e79be8d188961f0aa46a861baef53",
+      "bytes": 4393
+    },
+    "images/rendered/d3a40719e582-44px-SF6_LP.png": {
+      "sha256": "sha256:d587d7d766f1b6afbcd0fd60887d5960f22ab884f3415336a584645e0bb39ff2",
+      "bytes": 2662
+    },
+    "metadata.json": {
+      "sha256": "sha256:01095010ea8f3991bf1004f4574ca710899963a8a3b2d7ce3b8e6e86a7b95d85",
+      "bytes": 20386
+    },
+    "page.html": {
+      "sha256": "sha256:9d661fe4794db3338416261f882f56fd603e3f5ebb5350fededd0f3883ecb39d",
+      "bytes": 187514
+    },
+    "page.raw.wikitext": {
+      "sha256": "sha256:b833d725512086c4c04576d531ab29cb4da34e7400c27838061d5d2f2023333c",
+      "bytes": 13021
+    },
+    "rendered/content.cleaned.html": {
+      "sha256": "sha256:af14bdeb1fe6d885261fecb2bb26bf9809bca193fb956cf01cf5d7cb3eeb59dd",
+      "bytes": 54662
+    },
+    "rendered/content.scoped.html": {
+      "sha256": "sha256:f283fd862eb4a0be3285e6295f822ebc5c30314cf34068460772fa628bbd2794",
+      "bytes": 22676
+    },
+    "rendered/main.dom.json": {
+      "sha256": "sha256:37306bd2b15a4e58c178f831518f879f06a49d36e1f21a84d50dcdfa9b918554",
+      "bytes": 120796
+    },
+    "rendered/media.dom.json": {
+      "sha256": "sha256:4fe9eb0c54616baea090c4765772ef7ea069a557d4463b38a8c40c95fcdd73bd",
+      "bytes": 62550
+    },
+    "screenshots/content-scoped.png": {
+      "sha256": "sha256:1ef814df89b76aac54f3e4d671aea3b765301f6312c142c1b965950ed22f161d",
+      "bytes": 1818737
+    },
+    "screenshots/page-scoped.png": {
+      "sha256": "sha256:01dc246a292f7101b547be1e9cf4960c009c8b4ece8ef0add6cc2d580b5ab71a",
+      "bytes": 935289
+    },
+    "validation.json": {
+      "sha256": "sha256:d29077762be42119667eba51873cf60e21793b44cc5ad77bcb0be6cc4d8efe43",
+      "bytes": 2047
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "tool": "tools/web_pages/supercombo_page.py"
+}

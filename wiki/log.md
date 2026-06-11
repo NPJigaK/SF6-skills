@@ -2,6 +2,47 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] ingest | SuperCombo Defense web-page raw capture
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/defense/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/defense/page.raw.wikitext`
+- 作成:
+  - `wiki/sources/supercombo-street-fighter-6-defense.md`
+  - `wiki/concepts/defense.md`
+  - `wiki/concepts/terms/blocking.md`
+  - `wiki/concepts/terms/wake-up.md`
+  - `wiki/concepts/terms/armor.md`
+  - `wiki/reviews/2026-06-11-supercombo-defense-web-page-capture-review.md`
+- 更新:
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/terms/throw-escape.md`
+  - `wiki/concepts/terms/drive-parry.md`
+  - `wiki/concepts/terms/reversal.md`
+  - `wiki/concepts/terms/anti-air.md`
+  - `wiki/concepts/terms/cross-up.md`
+  - `wiki/concepts/terms/blockstring.md`
+  - `wiki/concepts/terms/invincible-move.md`
+  - `wiki/concepts/terms/guaranteed-punish.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/concepts/drive-system.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/defense/validation.json` は `passed`。
+  - MediaWiki page / raw wikitext / API / templates API / render fetch は取得済み。API revision wikitext と `action=raw` wikitext は一致。
+  - Rendered DOM は heading 9 件、table 1 件。table は SF6 Navigation で、本文数値表ではない。
+  - Rendered button / direction media は 14 件保存。navigation / character icon 30 件は excluded provenance として記録され、original media download 対象外。
+- メモ:
+  - SuperCombo Defense は community source として扱い、公式 source と重なる Drive / invincibility / anti-air mechanics では公式 source を優先する。
+  - Blocking、throw escape、wake-up、reversal buffer、armor、anti-air、punish route は source page と term pages に戻れる形で集約した。
+  - Defense page の table は navigation table のみなので、今回は `wiki/outputs/data/` に derived JSON を作らず source page の数値索引に保持した。
+- 未解決事項:
+  - Throw escape window、reversal buffer、wake-up forced standing frames、armor damage を公式 source または実機検証で照合するか。
+  - Defense と Offense を横断して、strike / throw / shimmy / reversal / parry の defensive decision tree を synthesis にするか。
+  - Offense / Defense / Movement / Game Data のような system page 由来の小規模 numeric facts を derived JSON にする基準をどうするか。
+
 ## [2026-06-11] ingest | SuperCombo Offense web-page raw capture
 - 原本:
   - `raw/web-pages/wiki.supercombo.gg/offense/manifest.json`

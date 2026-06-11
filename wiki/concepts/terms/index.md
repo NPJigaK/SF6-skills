@@ -13,8 +13,10 @@ sources:
   - "[[sources/supercombo-street-fighter-6-hud]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
   - "[[sources/supercombo-street-fighter-6-offense]]"
+  - "[[sources/supercombo-street-fighter-6-defense]]"
 related:
   - "[[concepts/drive-system]]"
+  - "[[concepts/defense]]"
   - "[[concepts/offense]]"
   - "[[concepts/frame-data]]"
   - "[[concepts/fighting-game-notation]]"
@@ -34,7 +36,7 @@ tags:
 
 ## 要約
 
-Street Fighter 6 の用語を、source ごとの説明を残しながら統合するための index。個別 term page は `wiki/concepts/terms/` 配下に置き、公式 source、community source、HUD 表示 cue、質問回答、派生 output からの追加根拠を同じ用語へ集約する。SuperCombo Gauges page 由来の Drive / Super Gauge 数値は、source page と `wiki/outputs/data/gauges/supercombo/numeric-tables.json` に戻れる形で該当 term page へ接続する。SuperCombo Offense page 由来の throw / safe jump / blockstring 系用語は community tactical source として扱い、公式 source と重なる一般 mechanics では公式 source を優先する。Query ではまずこの index から該当 term page を探し、用語ページの source claim から source page へ戻る。
+Street Fighter 6 の用語を、source ごとの説明を残しながら統合するための index。個別 term page は `wiki/concepts/terms/` 配下に置き、公式 source、community source、HUD 表示 cue、質問回答、派生 output からの追加根拠を同じ用語へ集約する。SuperCombo Gauges page 由来の Drive / Super Gauge 数値は、source page と `wiki/outputs/data/gauges/supercombo/numeric-tables.json` に戻れる形で該当 term page へ接続する。SuperCombo Offense page 由来の throw / safe jump / blockstring 系用語は community tactical source として扱い、公式 source と重なる一般 mechanics では公式 source を優先する。SuperCombo Defense page 由来の blocking / throw escape / wake-up / reversal / armor 系用語は defensive timing source として扱い、公式 source と重なる Drive / invincibility mechanics では公式 source を優先する。Query ではまずこの index から該当 term page を探し、用語ページの source claim から source page へ戻る。
 
 ## 方針
 
@@ -45,6 +47,7 @@ Street Fighter 6 の用語を、source ごとの説明を残しながら統合�
 - SuperCombo Gauges 由来の数値は community numeric source として扱う。公式 source または実機検証と重なる cost / frame / damage / range 値では公式・検証済み data を優先し、Gauges 値は補助根拠として残す。
 - Drive / Super Gauge 系 term page の `数値データ` section は query 用の索引であり、巨大表の正本ではない。30 character range / distance table や機械計算に使う全値は [[sources/supercombo-street-fighter-6-gauges]] と `wiki/outputs/data/gauges/supercombo/numeric-tables.json` に戻る。
 - SuperCombo Offense 由来の throw range、safe jump、empty jump、throw loop、blockstring claim は community tactical source として扱う。公式 source または実機検証と重なる場合はそちらを優先し、character-specific throw loop notes は stale risk を明示する。
+- SuperCombo Defense 由来の throw escape window、wake-up forced standing、reversal buffer、armor damage、punish route claim は community tactical source として扱う。公式 source または実機検証と重なる場合はそちらを優先し、dash buffer bug note のような lab claim は未検証として読む。
 - Slug は English / ASCII を使う。英語へ置き換えると意味がずれやすい用語は romaji を使う。
 - `wiki/index.md` は個別 term page の direct catalog を持ち、用語の詳細な集約はこの page が担う。
 - Question pages から term pages への backlink は、本文に自然に出る重要語だけを本文リンクし、補助的な発見性は frontmatter `related:` に集約する。
@@ -83,7 +86,8 @@ Street Fighter 6 の用語を、source ごとの説明を残しながら統合�
 |---|---|---|---|
 | [[concepts/terms/burnout]] | バーンアウト | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/drive-system]], [[concepts/terms/chip-damage]], [[concepts/terms/stun]] |
 | [[concepts/terms/drive-impact]] | ドライブインパクト / Drive Impact | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-hud]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/drive-system]], [[concepts/terms/drive-impact-counter]], [[concepts/terms/wall-bounce]], [[concepts/terms/armor-break]], [[concepts/terms/crush]], [[concepts/terms/lock]] |
-| [[concepts/terms/drive-parry]] | ドライブパリィ / Drive Parry | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/drive-system]], [[concepts/terms/perfect-parry]], [[concepts/terms/raw-drive-rush]] |
+| [[concepts/terms/armor]] | Armor / アーマー | [[sources/supercombo-street-fighter-6-defense]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/defense]], [[concepts/drive-system]], [[concepts/terms/drive-impact]], [[concepts/terms/armor-break]] |
+| [[concepts/terms/drive-parry]] | ドライブパリィ / Drive Parry | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-gauges]], [[sources/supercombo-street-fighter-6-defense]] | [[concepts/drive-system]], [[concepts/defense]], [[concepts/terms/perfect-parry]], [[concepts/terms/raw-drive-rush]] |
 | [[concepts/terms/drive-reversal]] | ドライブリバーサル / Drive Reversal | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/drive-system]], [[concepts/terms/invincible-move]] |
 | [[concepts/terms/drive-rush-cancel]] | キャンセルドライブラッシュ / DRC | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/terms/raw-drive-rush]], [[concepts/terms/cancel]], [[concepts/terms/frame-advantage]] |
 | [[concepts/terms/overdrive]] | オーバードライブ / OD | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/drive-system]], [[concepts/terms/burnout]] |
@@ -107,6 +111,21 @@ Offense page 由来の用語は、攻めの timing / pressure / tactical context
 | [[concepts/terms/empty-jump-mixup]] | Empty Jump Mixup / 空ジャンプ択 | [[sources/supercombo-street-fighter-6-offense]] | [[concepts/offense]], [[concepts/terms/safe-jump]], [[concepts/terms/throw]], [[concepts/terms/oki]] |
 | [[concepts/terms/blockstring]] | Blockstring / 固め | [[sources/supercombo-street-fighter-6-offense]] | [[concepts/offense]], [[concepts/frame-data]], [[concepts/terms/chain]], [[concepts/terms/cancel]] |
 
+## SuperCombo Defense 由来の追加用語
+
+Defense page 由来の用語は、守りの timing / defensive option / tactical context として source claim を保持する。公式 source と重なる Drive / invincibility / anti-air mechanics は公式 source または既存 source を優先し、Defense source は input window、wake-up state、armor / punish route の補助根拠として使う。
+
+| Term page | 表記 | 主な source | 主な関連 |
+|---|---|---|---|
+| [[concepts/terms/blocking]] | Blocking / ガード | [[sources/supercombo-street-fighter-6-defense]] | [[concepts/defense]], [[concepts/terms/blockstring]], [[concepts/terms/cross-up]], [[concepts/terms/drive-parry]] |
+| [[concepts/terms/throw-escape]] | Throw Escape / Throw Tech | [[sources/supercombo-street-fighter-6-hud]], [[sources/supercombo-street-fighter-6-defense]] | [[concepts/defense]], [[concepts/terms/throw]], [[concepts/terms/shimmy]] |
+| [[concepts/terms/drive-parry]] | Drive Parry / ドライブパリィ | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-gauges]], [[sources/supercombo-street-fighter-6-defense]] | [[concepts/drive-system]], [[concepts/defense]], [[concepts/terms/blocking]], [[concepts/terms/perfect-parry]] |
+| [[concepts/terms/wake-up]] | Wake-up / 起き上がり | [[sources/supercombo-street-fighter-6-defense]], [[sources/supercombo-street-fighter-6-hud]] | [[concepts/defense]], [[concepts/offense]], [[concepts/terms/oki]], [[concepts/terms/reversal]] |
+| [[concepts/terms/reversal]] | Reversal / リバーサル | [[sources/supercombo-street-fighter-6-hud]], [[sources/supercombo-street-fighter-6-defense]] | [[concepts/defense]], [[concepts/frame-data]], [[concepts/terms/wake-up]], [[concepts/terms/invincible-move]] |
+| [[concepts/terms/armor]] | Armor / アーマー | [[sources/supercombo-street-fighter-6-defense]], [[sources/supercombo-street-fighter-6-gauges]] | [[concepts/defense]], [[concepts/drive-system]], [[concepts/terms/drive-impact]], [[concepts/terms/armor-break]] |
+| [[concepts/terms/anti-air]] | 対空 / anti-air | [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-defense]] | [[concepts/defense]], [[concepts/terms/cross-up]], [[concepts/drive-system]] |
+| [[concepts/terms/guaranteed-punish]] | 確定反撃 / punish route | [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-defense]] | [[concepts/defense]], [[concepts/frame-data]], [[concepts/terms/punish-counter]] |
+
 ## SuperCombo HUD icon 由来の追加用語
 
 HUD icon 由来の用語は、画面上の表示 cue として source claim を保持する。公式 source と重なる mechanics は公式 source を優先し、HUD source は visual/community evidence として扱う。
@@ -128,6 +147,6 @@ HUD icon 由来の用語は、画面上の表示 cue として source claim を�
 
 ## 未解決の質問
 
-- SuperCombo glossary / HUD / Gauges / Offense など community source を追加した時、どの用語で意味差分が出るか。
+- SuperCombo glossary / HUD / Gauges / Offense / Defense など community source を追加した時、どの用語で意味差分が出るか。
 - Term page から個別の frame-data row や question page へ、どの粒度で backlink を張るか。
 - SuperCombo Gauges の `numeric-tables.json` schema を、他の gauge / system numeric source の標準 output にするか。

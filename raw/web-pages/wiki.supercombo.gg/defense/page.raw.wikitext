@@ -1,0 +1,76 @@
+== Blocking ==
+Blocking is performed by holding away from the opponent ({{b}} or {{db}}) and will guard against the opponent's attacks. Blocking cannot be performed while airborne or during the recovery of your own attacks.
+
+Most attacks can be blocked standing or crouching ({{b}}/{{db}}). '''Overhead'''/'''High''' attacks must be blocked standing {{b}}, while '''Low''' attacks must be blocked crouching {{db}}.
+
+'''Cross-up''' attacks occur when a move hits behind an opponent, usually during a jump-in (usually {{clr|L|j.LK}} or {{clr|M|j.MK}}). These must be blocked by holding forward ({{f}}) as though attempting to walk underneath the opponent. Cross-ups cannot connect on a fully cornered opponent, and will instead be blocked in either direction. If a cornered character blocks by holding back, the jumping character will land in front; if blocked by holding forward, they will land behind the opponent in the corner. For this same reason, a corner jump-in that lacks a cross-up hitbox will whiff if the opponent walks forward even slightly before it connects.
+
+'''Auto Guard / Absolute Guard:''' when a character is stuck in a "true blockstring" (never exiting blockstun between attacks), they will automatically block mid and overhead attacks even without inputting a block direction. Low attacks must still be blocked low, and overheads will not be successfully auto-guarded if the player holds crouch block. True blockstrings are rare except when the blocking character is in Burnout, as even chained light normals have a gap between hits when blocked.
+
+'''Proximity Guard:''' holding back during the startup of an opponent's attack will cause the defending character to enter a blocking animation before the move actually connects. Compared to previous SF games, it has been severely toned down; in general, proximity guard will usually not be triggered from outside the attack's maximum range. Projectiles also have reduced proximity guard activation range, making slow fireballs less effective at controlling the opponent's positioning. Proximity guard still has an impact in neutral, making it harder to walk back out of an opponent's poke range at the last possible moment. Slow, long-range attacks like {{clr|DR|Drive Impact}} and some heavy command normals are still very effective at preventing the opponent's back walk during startup.
+
+One notable exception to the rule is JP's Amnesia bombs, which lock the opponent into proximity guard before they detonate. This makes it much harder to escape JP's pressure after a successful Amnesia activation.
+<br><br>
+
+== Throw Escape ==
+By pressing {{lp sf6}}+{{lk sf6}} ({{clr|L|LP}}+{{clr|L|LK}}) shortly after a throw connecting, you can escape (or "tech") a throw. This only works against grounded normal throws; command grabs and air throws cannot be defended against in this way. Escaping a throw causes you to push the opponent away, preventing any damage and returning both players to neutral. This is especially important in the corner, as it allows the defender to create some space and work their way back to midscreen. It also builds {{clr|DR|5000 Drive Gauge (1/2 bar)}} for the defender, making it easier to escape additional pressure after a successful defense.
+
+The downside to attempting a Throw Escape is the long whiff animation if the opponent baits it. This is usually done by walking up as if intending to throw, then walking back out of throw range (colloquially known as a "shimmy"). Many characters can also backdash or neutral jump to achieve the same result with slightly more risk. A baited Throw Escape opens you up to a massive Punish combo, which usually loops into the same strike/throw/shimmy mixup. All variables (health, meter, screen position, opponent's tendencies) should be considered when deciding whether or not to attempt a Throw Escape.
+
+The input window for a Throw Escape lasts until the 9th frame of being thrown (including the frame that the Throw connects). Throws that connect when the other character is unable to throw, such as when landing as a punish during an attack's recovery frames, cannot be escaped (unless it lands during another throw's startup or active frames, in which case it is automatically escaped). While throws can be performed during a {{clr|DR|Drive Rush}}, any throw that connects during the {{clr|DR|DR}} movement frames is considered a {{clr|PC|Counter-hit}} and can no longer be escaped. In order to prevent option selects, a Throw Escape can not be performed if any input that would prevent a grounded throw from being performed in neutral is done during the 9 frame window (for example, {{clr|L|236LP}}+{{clr|L|LK}} with Ryu would result in his {{clr|L|236LP}} special move in neutral instead of a throw, so it would not allow a Throw Escape if it was input in that window). The only known exception to this rule is a Forward Dash (66).
+
+The "Throw Escape" message will appear on the side of the player who performed their throw input last, with their character playing a voice line. If performed simultaneously, the game will randomly decide which player teched the throw (and who will gain the extra meter). This allows players to determine the opponent's throw tech timing when it would otherwise be impossible to see. For example, if you bait opponent's wakeup reversal and then input a slightly delayed throw, one of two things can occur:
+* You tech the throw (the opponent input an early Throw Escape)
+* The opponent techs the throw (the opponent is significantly delaying their Throw Escape)
+<br><br>
+
+== Drive Parry ==
+Drive Parry can be used to parry opponents attacks at the cost of drive resource. Drive parry can be done by Holding {{mp sf6}}+{{mk sf6}} ({{clr|M|MP}}+{{clr|M|MK}}). Parries can block high/low and left/right while the buttons are held, and results in the same frame advantage as blocking the attack. You also build significant Drive gauge; if you bait the opponent's wakeup {{clr|SA|Super Art}}, you can refill your Drive almost entirely just by holding Parry instead of blocking. If perfectly timed, a parry will become a Perfect Parry, allowing for powerful punishes.
+
+More details about Drive Parry can be found [[Street_Fighter_6/Gauges#Drive_Parry|here]]
+<br><br>
+
+== Wake-up ==
+There are two types of wakeups in Street Fighter 6: Normal Rise and Back Rise. There is no difference in the knockdown frame advantage, so meaty setups are unaffected as long as the opponent remains close enough to attack. Holding or inputting 2 buttons upon landing will result in a Back Rise — otherwise, a Normal Rise occurs. Hard Knockdowns (such as a Throw that connects as a {{clr|PC|Punish Counter}}) prevent Back Rise entirely.
+
+A character is considered to be in a standing state when rising from a knockdown. The crouching animation incurs 4 frames of forced standing before the hurtbox shrinks on frame 5, just like it would when crouching from a neutral state. After landing from an air reset, there are only 2 forced standing frames (not counting the landing frame itself). This transition period can be skipped by waking up with a crouching attack, or by triggering crouching [https://glossary.infil.net/?t=Proximity%20Block proximity guard].
+
+Some attacks whiff on crouching opponents, either because they have a "cannot hit crouching" flag or because the hitbox is simply too high to connect. Examples include:
+* Cammy's Fatal Leg Twister (Hooligan Throw) - cannot interact with any character in a crouching state regardless of their hurtbox height
+* M. Bison's {{clr|H|5HK}} - the close-range hitbox works normally, but the longer-range hitbox on his foot cannot interact with a crouching opponent
+* Ryu's {{clr|H|5HK}} - can only hit crouchers if they extend a tall vertical hurtbox, like an anti-air {{clr|H|2HP}} or the landing recovery of Jamie's Divekick
+
+These attacks still whiff when used meaty on the opponent's wakeup, as the proximity guard is triggered first before the hitbox can interact with the forced standing frames. However, some attacks have a hitbox that extends slightly beyond the proximity guard box; by performing these attacks from near max range, they can hit meaty on crouch blocking opponents even if they would usually whiff. Waking up with a crouching normal will still force an immediate crouching state to punish these meaty attacks.
+
+''Note: setting the Training Mode dummy to Crouch + Block does not accurately reflect a wakeup crouch block. To properly test these scenarios, make a recording of the dummy holding Down+Back and set the Wakeup Reversal to that recording. Be sure that both Down and Back are being input on the first recording frame.''
+<br><br>
+
+== Reversals ==
+Inputting an attack right before wakeup or before exiting hitstun/blockstun allows the move to be buffered as a Reversal. This makes the move easier to time defensively. The most useful reversals are moves with invincibility, as they can beat attacks that are hitting [https://glossary.infil.net/?t=Meaty "meaty"]. Only {{clr|OD|OD Special Moves}} and {{clr|SA|Supers}} can have true invincibility on startup, but not all of them do. Fast attacks like 4-frame jabs are also useful in case the opponent mistimes their meaty pressure, or attempts to overextend their offense without sufficient frame advantage.
+
+There is a 10 frame buffer when performing a reversal move on wakeup, or 4 frames after hitstun, blockstun, or air reset. After including the true reversal frame, this makes the total timing window 11 frames on wakeup or 5 frames in any other defensive scenario. If you have [https://glossary.infil.net/?t=Negative%20Edge negative edge] enabled, the timing is even more lenient for special moves and {{clr|SA|Supers}}, though this increases the chance of performing an accidental attack as well.
+
+Using this input buffer with Drive Parry will not allow you to get a Perfect Parry; they must be timed precisely as the attack connects. The buffer window for Dashes is intended to be 7 frames in all scenarios, but some appear to still be bugged (e.g. after Ryu {{clr|M|5MP}} on block, the reversal dash buffer is only 4 frames).
+<br><br>
+
+== Armor ==
+{{clr|DR|Drive Impacts}} and some special moves (e.g. Luke {{clr|OD|236KK}}) can absorb attacks with a property known as "armor". This only works against strikes and projectiles; any Throw will beat an armored move. Some moves, like {{clr|SA|Super Arts}} and {{clr|DR|Drive Reversals}}, also have an Armor Break property that prevent armor absorption.
+
+When absorbing an attack, the character takes 50% of a moves normal damage as recoverable damage (represented by part of the health bar turning gray). This means that armor is not useful when at low health, since a KO will occur. Many players will instinctually try to counter a {{clr|DR|Drive Impact}} with a {{clr|DR|DI}} of their own, not realizing that they don't have enough health to survive the armored hit. While these weaknesses makes it a bit weaker than true invincibility, armored moves can still be a useful tool in your defensive playbook.
+<br><br>
+
+== Anti-Airs ==
+An Anti-Air is an attack used to interrupt an opponent's jump attack. This is usually done with a normal, special, or Super that hits upwards like an uppercut. Many specials like Ryu/Ken's Shoryuken, Guile's Somersault Kick, or Juri's Tensenrin have Air Invincibility frames against airborne attacks, making them particularly useful as anti-airs. These Air Invuln moves also work against airborne attacks like Chun-Li's {{clr|H|6HK}} or Cammy's {{clr|SA|SA3}}, but many attacks that appear airborne, like Guile's {{clr|H|6HK}}, are considered fully grounded.
+
+Not all characters have useful anti-airs at every range. Other techniques for countering air attacks include jumping with a quick air attack of your own (known as "air-to-air). This is most effective when done with a fast light normal, an air normal that causes a knockdown, or an Air Throw.
+
+Against close jumps, walking under the opponent may cause their attack to whiff, which can open them up to a {{clr|PC|Punish Counter}} during their landing recovery frames. It is also possible to [https://glossary.infil.net/?t=Low%20Profile Low Profile] some air attacks by using a move that shifts your hurtbox very low to the ground.
+
+Some air attacks can alter the trajectory of a jump-in, making the character more difficult to anti-air consistently. In general, attacks like this are put into a "Forced Knockdown" state if they are hit while airborne, which makes it more rewarding to interrupt these attacks.
+<br><br>
+
+== Punishes ==
+When practicing punish combo routes, it's important to remember that your first attack will have 4 extra frames of hit advantage. This can potentially open up far stronger combo routes than are normally possible. In many cases, light normals are designed to only combo into weaker versions of special moves or a low-damage Target Combo. By linking or canceling into stronger attacks, the damage potential can be much higher.
+<br><br>
+
+{{Navbox-SF6}}
