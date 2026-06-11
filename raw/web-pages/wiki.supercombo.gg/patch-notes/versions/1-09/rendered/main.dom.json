@@ -1,0 +1,787 @@
+{
+  "captured_at_utc": "2026-06-11T03:33:40Z",
+  "title": "Street Fighter 6/Version/1.09 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.09",
+  "content_text": "Version 1.09 Game Version 1.09 date February 5, 2025 Summary Mai Release. Minor bug fixes. Links Patch Notes Mai Patch Mai released Universal Changes Perfect Parry vs. Multi-hit Attacks Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry This most notably effects Drive Impact punishes against moves like M. Bison's OD Psycho Crusher and Lily's Windclad OD Condor Spire Drive Impact Fixed issue where the input buffer time after recovery was shorter than usual if the DI whiffed after absorbing an attack Character Adjustments Akuma Forward Ashura Senku (6KKK) Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent Blanka Drive Reversal No longer moves backward on the first frame Cammy SA2 / Air SA2 (214214P / j.214214P) Fixed issue where move would not K.O. the opponent when trading hits Chun-Li 2LK Fixed issue where move could not be canceled into a special when parried by the opponent Tenku Kick (Modern Controls: 214X~2H) Fixed issue where Modern control version had a different jump cancel timing on hit Dee Jay Threebeat Combo (5LP~MK~MK) Second attack can now come out while holding a downward direction Ed Psycho Knuckle Lv.1 (5[HP]) Fixed issue where opponents could not move backwards after being hit late during this move's active frames Kimberly Drive Reversal No longer moves backward on the first frame SA1 (236236K) Fixed issue where move would not K.O. the opponent when trading hits SA2 / Air SA2 (214214P / j.214214P) Fixed issue where move would not K.O. the opponent when trading hits M. Bison Drive Impact Forward movement now begins on frame 2 instead of frame 13 Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before Manon Rond-point (236K/KK) Fixed issue where the move could not be canceled into a Super when parried by the opponent Marisa OD Dimachaerus (214PP) Super cancel buffer window shifted forward from frame 2 → frame 10 Less likely to get accidental SA2 cancel when inputting 6P follow-up Rashid SA1 (236236K) Fixed issue where move would not K.O. the opponent when trading hits Fixed issue where knockdown time was much shorter when trading hits Terry Forward Walk Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change) Zangief Back Walk Fixed issue where the first frame moved forward during Burnout",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Mai_Patch",
+      "text": "Mai Patch",
+      "html": "Mai Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Character_Adjustments",
+      "text": "Character Adjustments",
+      "html": "<b>Character Adjustments</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "Akuma",
+      "text": "Akuma",
+      "html": "<b>Akuma</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Blanka",
+      "text": "Blanka",
+      "html": "<b>Blanka</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Cammy",
+      "text": "Cammy",
+      "html": "<b>Cammy</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Dee_Jay",
+      "text": "Dee Jay",
+      "html": "<b>Dee Jay</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "Ed",
+      "text": "Ed",
+      "html": "<b>Ed</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "Kimberly",
+      "text": "Kimberly",
+      "html": "<b>Kimberly</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "M._Bison",
+      "text": "M. Bison",
+      "html": "<b>M. Bison</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Manon",
+      "text": "Manon",
+      "html": "<b>Manon</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Marisa",
+      "text": "Marisa",
+      "html": "<b>Marisa</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "Rashid",
+      "text": "Rashid",
+      "html": "<b>Rashid</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Terry",
+      "text": "Terry",
+      "html": "<b>Terry</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Mai released",
+      "items": [
+        {
+          "index": 0,
+          "text": "Mai released",
+          "html": "Mai released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Perfect Parry vs. Multi-hit Attacks Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry This most notably effects Drive Impact punishes against moves like M. Bison's OD Psycho Crusher and Lily's Windclad OD Condor Spire Drive Impact Fixed issue where the input buffer time after recovery was shorter than usual if the DI whiffed after absorbing an attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Perfect Parry vs. Multi-hit Attacks Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry This most notably effects Drive Impact punishes against moves like M. Bison's OD Psycho Crusher and Lily's Windclad OD Condor Spire",
+          "html": "<b>Perfect Parry vs. Multi-hit Attacks</b>\n<ul><li>Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry</li>\n<li>This most notably effects <style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Drive Impact</span> punishes against moves like M. Bison's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Crusher</span> and Lily's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">Windclad OD Condor Spire</span></li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Drive Impact Fixed issue where the input buffer time after recovery was shorter than usual if the DI whiffed after absorbing an attack",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the input buffer time after recovery was shorter than usual if the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI</span> whiffed after absorbing an attack</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry This most notably effects Drive Impact punishes against moves like M. Bison's OD Psycho Crusher and Lily's Windclad OD Condor Spire",
+      "items": [
+        {
+          "index": 0,
+          "text": "Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry",
+          "html": "Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry"
+        },
+        {
+          "index": 1,
+          "text": "This most notably effects Drive Impact punishes against moves like M. Bison's OD Psycho Crusher and Lily's Windclad OD Condor Spire",
+          "html": "This most notably effects <style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Drive Impact</span> punishes against moves like M. Bison's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Crusher</span> and Lily's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">Windclad OD Condor Spire</span>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Fixed issue where the input buffer time after recovery was shorter than usual if the DI whiffed after absorbing an attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the input buffer time after recovery was shorter than usual if the DI whiffed after absorbing an attack",
+          "html": "Fixed issue where the input buffer time after recovery was shorter than usual if the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI</span> whiffed after absorbing an attack"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Forward Ashura Senku (6KKK) Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Forward Ashura Senku (6KKK) Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent",
+          "html": "Forward Ashura Senku (6KKK)\n<ul><li>Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent",
+          "html": "Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Drive Reversal No longer moves backward on the first frame",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Reversal No longer moves backward on the first frame",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span>\n<ul><li>No longer moves backward on the first frame</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "No longer moves backward on the first frame",
+      "items": [
+        {
+          "index": 0,
+          "text": "No longer moves backward on the first frame",
+          "html": "No longer moves backward on the first frame"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "SA2 / Air SA2 (214214P / j.214214P) Fixed issue where move would not K.O. the opponent when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA2 / Air SA2 (214214P / j.214214P) Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Air SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214P</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">j.214214P</span>)\n<ul><li>Fixed issue where move would not K.O. the opponent when trading hits</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "Fixed issue where move would not K.O. the opponent when trading hits"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "2LK Fixed issue where move could not be canceled into a special when parried by the opponent Tenku Kick (Modern Controls: 214X~2H) Fixed issue where Modern control version had a different jump cancel timing on hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LK Fixed issue where move could not be canceled into a special when parried by the opponent",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>\n<ul><li>Fixed issue where move could not be canceled into a special when parried by the opponent</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Tenku Kick (Modern Controls: 214X~2H) Fixed issue where Modern control version had a different jump cancel timing on hit",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Tenku Kick</span> (Modern Controls: 214X~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2H</span>)\n<ul><li>Fixed issue where Modern control version had a different jump cancel timing on hit</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Fixed issue where move could not be canceled into a special when parried by the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where move could not be canceled into a special when parried by the opponent",
+          "html": "Fixed issue where move could not be canceled into a special when parried by the opponent"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "Fixed issue where Modern control version had a different jump cancel timing on hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Modern control version had a different jump cancel timing on hit",
+          "html": "Fixed issue where Modern control version had a different jump cancel timing on hit"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Threebeat Combo (5LP~MK~MK) Second attack can now come out while holding a downward direction",
+      "items": [
+        {
+          "index": 0,
+          "text": "Threebeat Combo (5LP~MK~MK) Second attack can now come out while holding a downward direction",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Threebeat Combo</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>Second attack can now come out while holding a downward direction</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Second attack can now come out while holding a downward direction",
+      "items": [
+        {
+          "index": 0,
+          "text": "Second attack can now come out while holding a downward direction",
+          "html": "Second attack can now come out while holding a downward direction"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Psycho Knuckle Lv.1 (5[HP]) Fixed issue where opponents could not move backwards after being hit late during this move's active frames",
+      "items": [
+        {
+          "index": 0,
+          "text": "Psycho Knuckle Lv.1 (5[HP]) Fixed issue where opponents could not move backwards after being hit late during this move's active frames",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Psycho Knuckle Lv.1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5[HP]</span>)\n<ul><li>Fixed issue where opponents could not move backwards after being hit late during this move's active frames</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "Fixed issue where opponents could not move backwards after being hit late during this move's active frames",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where opponents could not move backwards after being hit late during this move's active frames",
+          "html": "Fixed issue where opponents could not move backwards after being hit late during this move's active frames"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Drive Reversal No longer moves backward on the first frame SA1 (236236K) Fixed issue where move would not K.O. the opponent when trading hits SA2 / Air SA2 (214214P / j.214214P) Fixed issue where move would not K.O. the opponent when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Reversal No longer moves backward on the first frame",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span>\n<ul><li>No longer moves backward on the first frame</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "SA1 (236236K) Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed issue where move would not K.O. the opponent when trading hits</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "SA2 / Air SA2 (214214P / j.214214P) Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Air SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214P</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">j.214214P</span>)\n<ul><li>Fixed issue where move would not K.O. the opponent when trading hits</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "No longer moves backward on the first frame",
+      "items": [
+        {
+          "index": 0,
+          "text": "No longer moves backward on the first frame",
+          "html": "No longer moves backward on the first frame"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "Fixed issue where move would not K.O. the opponent when trading hits"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "Fixed issue where move would not K.O. the opponent when trading hits"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "Drive Impact Forward movement now begins on frame 2 instead of frame 13 Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Forward movement now begins on frame 2 instead of frame 13 Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Forward movement now begins on frame 2 instead of frame 13</li>\n<li>Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Forward movement now begins on frame 2 instead of frame 13 Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before",
+      "items": [
+        {
+          "index": 0,
+          "text": "Forward movement now begins on frame 2 instead of frame 13",
+          "html": "Forward movement now begins on frame 2 instead of frame 13"
+        },
+        {
+          "index": 1,
+          "text": "Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before",
+          "html": "Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "Rond-point (236K/KK) Fixed issue where the move could not be canceled into a Super when parried by the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Rond-point (236K/KK) Fixed issue where the move could not be canceled into a Super when parried by the opponent",
+          "html": "Rond-point (236K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>)\n<ul><li>Fixed issue where the move could not be canceled into a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> when parried by the opponent</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "Fixed issue where the move could not be canceled into a Super when parried by the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the move could not be canceled into a Super when parried by the opponent",
+          "html": "Fixed issue where the move could not be canceled into a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> when parried by the opponent"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "OD Dimachaerus (214PP) Super cancel buffer window shifted forward from frame 2 → frame 10 Less likely to get accidental SA2 cancel when inputting 6P follow-up",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Dimachaerus (214PP) Super cancel buffer window shifted forward from frame 2 → frame 10 Less likely to get accidental SA2 cancel when inputting 6P follow-up",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Dimachaerus</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span>)\n<ul><li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> cancel buffer window shifted forward from frame 2 → frame 10</li>\n<li>Less likely to get accidental <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> cancel when inputting 6P follow-up</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "Super cancel buffer window shifted forward from frame 2 → frame 10 Less likely to get accidental SA2 cancel when inputting 6P follow-up",
+      "items": [
+        {
+          "index": 0,
+          "text": "Super cancel buffer window shifted forward from frame 2 → frame 10",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> cancel buffer window shifted forward from frame 2 → frame 10"
+        },
+        {
+          "index": 1,
+          "text": "Less likely to get accidental SA2 cancel when inputting 6P follow-up",
+          "html": "Less likely to get accidental <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> cancel when inputting 6P follow-up"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "SA1 (236236K) Fixed issue where move would not K.O. the opponent when trading hits Fixed issue where knockdown time was much shorter when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA1 (236236K) Fixed issue where move would not K.O. the opponent when trading hits Fixed issue where knockdown time was much shorter when trading hits",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed issue where move would not K.O. the opponent when trading hits</li>\n<li>Fixed issue where knockdown time was much shorter when trading hits</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "tag_name": "ul",
+      "text": "Fixed issue where move would not K.O. the opponent when trading hits Fixed issue where knockdown time was much shorter when trading hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where move would not K.O. the opponent when trading hits",
+          "html": "Fixed issue where move would not K.O. the opponent when trading hits"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where knockdown time was much shorter when trading hits",
+          "html": "Fixed issue where knockdown time was much shorter when trading hits"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "tag_name": "ul",
+      "text": "Forward Walk Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Forward Walk Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)",
+          "html": "Forward Walk\n<ul><li>Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "tag_name": "ul",
+      "text": "Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)",
+          "html": "Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "tag_name": "ul",
+      "text": "Back Walk Fixed issue where the first frame moved forward during Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Back Walk Fixed issue where the first frame moved forward during Burnout",
+          "html": "Back Walk\n<ul><li>Fixed issue where the first frame moved forward during Burnout</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "tag_name": "ul",
+      "text": "Fixed issue where the first frame moved forward during Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the first frame moved forward during Burnout",
+          "html": "Fixed issue where the first frame moved forward during Burnout"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 1.09 Game Version 1.09 date February 5, 2025 Summary Mai Release. Minor bug fixes. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.09",
+              "html": "<a class=\"mw-selflink selflink\">1.09</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.09",
+              "html": "1.09",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "February 5, 2025",
+              "html": "February 5, 2025",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Mai Release. Minor bug fixes.",
+              "html": "<b>Mai Release</b>. Minor bug fixes.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20250205\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20250205",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20250205",
+      "title": "",
+      "class_name": "external text"
+    }
+  ],
+  "metrics": {
+    "heading_count": 16,
+    "paragraph_count": 16,
+    "link_count": 1,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 4206,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

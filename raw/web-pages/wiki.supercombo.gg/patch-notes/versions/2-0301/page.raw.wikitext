@@ -1,0 +1,126 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/2.0301|2.0301]]
+|gameversion=2.0301
+|date=May 28, 2026
+|summary='''Ingrid Release'''. Minor system changes and bug fixes.
+|links=[https://www.streetfighter.com/6/buckler/battle_change/20260528 Patch Notes]  
+}}
+<!--Full Version name: 2.0301.000-->
+
+== Ingrid Patch ==
+* Ingrid released
+<br>
+
+== '''Universal Changes''' ==
+* '''{{clr|DR|Wakeup Drive Reversal}}'''
+** When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds {{clr|DR|1 Drive bar}} on hit
+** This does not prevent Burnout from occurring before the meter is gained, but it makes {{clr|DR|Drive Reversal}} a more cost-effective defensive tool against throw loops
+** As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's {{clr|DR|Wakeup Drive Reversal}} to be punishable if she attempts a throw
+* '''{{clr|PC|Punish Counter}} Throws'''
+** The opponent no longer gains double the usual amount of {{clr|SA|Super Gauge}} (no change to attacker's meter gain)
+** This makes {{clr|PC|Punish Counter}} Throws a more desirable option to finish a round while building meter without also benefiting the opponent
+* '''Throw Escapes'''
+** Defender's Drive Gain reduced 10000 → 5000
+** Defender's Super Gain reduced 1000 → 0
+* '''{{clr|SA|Super}} Projectile Clashes'''
+** Changed the behavior of clashing multi-hit projectile {{clr|SA|Supers}} to ensure consistent results
+* '''{{clr|SA|Super Art}} Command Inputs'''
+** Fixed issue where holding a specific direction would cause some {{clr|SA|Supers}} not to be performed
+** Affected {{clr|SA|Supers}}: 
+*** Akuma {{clr|SA|SA2}} (Modern + Manual, while holding Up)
+*** C. Viper {{clr|SA|SA1}} (Modern + Manual, while holding Down or Back)
+*** Chun-Li {{clr|SA|SA1/SA2/SA3}} (Modern + Manual, while holding Up)
+*** Ed {{clr|SA|SA3}} (Classic, while holding Back)
+*** Mai {{clr|SA|SA1/SA2/SA3}} (Modern + Manual, while holding Up)
+*** Ryu {{clr|SA|SA2}} (Modern + Manual, while holding Up or Down)
+<br>
+
+== '''Character Changes''' ==
+
+=== '''Alex''' ===
+* {{clr|M|Assist Combo 2}}
+** Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another {{clr|M|Assist Combo 2}}
+** Input buffer for the 2nd hit shifted from frame 2 → 7
+* {{clr|H|Twisted Drop}} (Modern Controls: {{clr|L|2L}}~{{clr|H|2H}})
+** Fixed issue where 2nd attack would not be performed while holding the Assist button
+* {{clr|M|Palm Strikes}} (Modern Controls: {{clr|M|5M}}~{{clr|M|M}})
+** Fixed issue where 2nd attack would not be performed while holding the Assist button
+* Dangerous Armbar (Modern Controls: 2{{clr|M|M}}{{clr|H|H}}~2{{clr|L|L}}{{clr|M|M}})
+** Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of {{clr|L|L}}{{clr|M|M}}
+* Hyper Takedown (2PP~2{{clr|L|LPLK}})
+** 20% Immediate scaling added to match other normal throws
+<br>
+
+=== '''C. Viper''' ===
+* {{clr|H|Assist Combo 3}}
+** Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit
+<br>
+
+=== '''Chun-Li''' ===
+* {{clr|M|Snake Strike}} (Modern Controls: 214X~{{clr|M|5M}})
+** Fixed issue where the {{clr|PC|Punish Counter}} state was extended by 1 frame when holding Up after being Perfect Parries
+<br>
+
+=== '''Dhalsim''' ===
+* Aerial Yoga Teleport Forward (j.6PPP)
+** Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered
+<br>
+
+=== '''Ed''' ===
+* {{clr|H|Low Smash Combination}} ({{clr|H|2HK}}~{{clr|H|HP}})
+** Startup of 2nd hit reduced 12 → 10
+** Total animation decreased 35 → 33
+** This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted {{clr|H|2HK}} punish)
+* {{clr|OD|OD Psycho Shoot}} ({{clr|OD|236PP}}~6P)
+** Fixed issue where the projectile clash from {{clr|OD|OD Psycho Spark}} could remain after shooting the projectile
+<br>
+
+=== '''Elena''' ===
+* {{clr|M|Starling Beak}} (Modern Controls: {{clr|M|5M}}~{{clr|M|M}})
+** Fixed issue where 2nd attack would not be performed while holding the Assist button
+<br>
+
+=== '''Guile''' ===
+* {{clr|OD|OD Sonic Blade}} ({{clr|OD|214PP}})
+** Fixed issue where the {{clr|L|L}}+{{clr|M|M}} and {{clr|M|M}}+{{clr|H|H}} versions would not come out with a negative edge (button release) input
+<br>
+
+=== '''Jamie''' ===
+* {{clr|M|Full Moon Kick}} ({{clr|M|6MK}}~{{clr|M|MK}})
+** Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit
+*** This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)
+** Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie
+<br>
+
+=== '''JP''' ===
+* {{clr|SA|SA3}} ({{clr|SA|236236K}})
+** Fixed issue where the attack could whiff through opponents that were moving forward quickly
+<br>
+
+=== '''Juri''' ===
+* {{clr|M|Senkai Kick}} ({{clr|M|6MK}})
+** Increased pushback on block to ensure Juri is always out of throw range after {{clr|DR|DR~}}{{clr|M|6MK}}
+<br>
+
+=== '''Kimberly''' ===
+* {{clr|SA|SA1}} ({{clr|SA|236236K}})
+** Fixed issue where it was difficult to Back Rise after being hit by the 0-can version
+<br>
+
+=== '''Mai''' ===
+* {{clr|H|Hien Ren Kyaku}} (Modern Controls: {{clr|L|5L}}~{{clr|L|L}}~{{clr|L|L}})
+** Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button
+* {{clr|H|Hoshi Kujaku}} (Modern Controls: {{clr|H|4H}}~{{clr|H|H}})
+** Fixed issue where 2nd attack would not be performed while holding the Assist button
+<br>
+
+=== '''Marisa''' ===
+* {{clr|H|Malleus Breaker}} ({{clr|H|3HP}}~{{clr|H|3HP}})
+** Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range)
+** This fixes the unintended issue where the 2nd hit would whiff after a blocked {{clr|H|3HP}} as a result of the patch that increased the pushback of blocked overheads
+<br>
+
+=== '''Sagat''' ===
+* {{clr|OD|OD Low Tiger Shot}} ({{clr|OD|236}}{{clr|L|LP}}{{clr|M|MP}} or {{clr|OD|236}}{{clr|L|LP}}{{clr|H|HP}})
+** Fixed issue where inputting {{clr|OD|236}}{{clr|L|LP}}{{clr|M|MP}} while holding down the {{clr|H|HP}} button would result in a {{clr|M|MP High Tiger Shot}}
+<br>

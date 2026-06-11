@@ -1,0 +1,733 @@
+{
+  "captured_at_utc": "2026-06-11T03:31:05Z",
+  "title": "Street Fighter 6/Version/2.00 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.00",
+  "content_text": "Version 2.00 Game Version 2.00 date August 5, 2025 Summary Sagat Release. Minor bug fixes and adjustments (mostly related to Tiger Shot interactions). Links Patch Notes Sagat Patch Sagat released Character Changes A.K.I. Venomous Fang (2PP~P) shifted the projectile invincible hurtbox downward immediately after startup (to ensure it's possible to attack through a Low Tiger Shot) Akuma Adamant Flame Follow-up (214P~6P) fixed an issue where the attack could not be performed while a projectile was on the screen Demon Gou Rasen (236KK~j.214K) fixed an issue where the attack could not be performed while a projectile was on the screen SA1 / Air SA1 changed the amount of Drive Gauge gained on Perfect Parry is the same as other Super Arts (20000) Blanka Backstep Rolling Attack (63214K/KK) fixed an issue where holding forward/back would steer Blanka a different distance depending on whether he was facing left or right Cammy Spiral Arrow (236K/KK) hurtbox expanded upward at the start and during later active frames (to ensure it cannot easily pass under High Tiger Shot) 236LK: frames 1-2, 14-21 236MK: frames 1-2, 14-23 236HK: frames 1-5, 23-32 236KK: frames 1-4, 19-29 SA1 (236236K) upper hurtbox on frames 1-5 that is vulnerable to projectiles expanded upward This ensures that the early startup frames cannot duck under a High Tiger Shot Chun-Li Critical Art (214214K) fixed an issue where the opponent would gain less Drive Gauge when parrying the attack compared to other Super Arts Dhalsim 2LK projectile invincible hurtbox shifted downward (to ensure it's possible to slide under Low Tiger Shot with good timing) Ed LP Psycho Uppercut (623LP) fixed an issue where Ed could cancel the final 4 recovery frames into another action on whiff E. Honda Neko Damashi (22P) fixed an issue where buffering a SA3/CA input would not work Elena Round Arch (4HK) fixed an issue where Elena would slide forward when performed out of Drive Rush when not inputting a direction Critical Art (214214K) fixed an issue where the damage value was increased by 1000 when landing a K.O. against the opponent Kimberly OD Sprint (236KK) Modern Controls (A[6S]) fixed an issue where Down+Forward / Down+Back + Attack would perform Neck Hunter / Emergency Stop instead of Shadow Slide Luke OD Avenger (236KK) armored head hurtbox shifted downward (to prevent interference with High Tiger Shot) M. Bison Drive Impact fixed an issue where the armor could absorb 3 or more hits depending on which part of the body they interacted with Manon Temps Lié (5HP~HP) fixed an issue where Manon could Parry on the final recovery frame on block Marisa 2MP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) 2MK upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) 2HK upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) Rashid 2HP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) Note: the official patch notes incorrectly attributed this change to 2HK Terry 214LPHP input changed from OD Burning Knuckle to OD Quick Burn SA3/CA (236236P) fixed an issue where the opponent would gain less Drive Gauge compared to other Super Arts on parry or Perfect Parry Zangief Parry hurtbox from frame 3 onward expanded forward This is to match the hurtbox expansion Zangief received in the June 2025 update 2MP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) Tundra Storm (22HK) counter hitbox expanded upward (allowing it to work against Sagat's 5HK/6HK) Double Lariat (Modern Controls: M+H) reverted the change that allowed L+M+H to perform Double Lariat instead of Throw while in Burnout This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Sagat_Patch",
+      "text": "Sagat Patch",
+      "html": "Sagat Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Character_Changes",
+      "text": "Character Changes",
+      "html": "<b>Character Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 3,
+      "id": "A.K.I.",
+      "text": "A.K.I.",
+      "html": "<b>A.K.I.</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "Akuma",
+      "text": "Akuma",
+      "html": "<b>Akuma</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Blanka",
+      "text": "Blanka",
+      "html": "<b>Blanka</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Cammy",
+      "text": "Cammy",
+      "html": "<b>Cammy</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Dhalsim",
+      "text": "Dhalsim",
+      "html": "<b>Dhalsim</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "Ed",
+      "text": "Ed",
+      "html": "<b>Ed</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "E._Honda",
+      "text": "E. Honda",
+      "html": "<b>E. Honda</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "Elena",
+      "text": "Elena",
+      "html": "<b>Elena</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Kimberly",
+      "text": "Kimberly",
+      "html": "<b>Kimberly</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Luke",
+      "text": "Luke",
+      "html": "<b>Luke</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "M._Bison",
+      "text": "M. Bison",
+      "html": "<b>M. Bison</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Manon",
+      "text": "Manon",
+      "html": "<b>Manon</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Marisa",
+      "text": "Marisa",
+      "html": "<b>Marisa</b>"
+    },
+    {
+      "index": 16,
+      "level": 3,
+      "id": "Rashid",
+      "text": "Rashid",
+      "html": "<b>Rashid</b>"
+    },
+    {
+      "index": 17,
+      "level": 3,
+      "id": "Terry",
+      "text": "Terry",
+      "html": "<b>Terry</b>"
+    },
+    {
+      "index": 18,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 16,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 17,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 18,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 19,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Sagat released",
+      "items": [
+        {
+          "index": 0,
+          "text": "Sagat released",
+          "html": "Sagat released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Venomous Fang (2PP~P) shifted the projectile invincible hurtbox downward immediately after startup (to ensure it's possible to attack through a Low Tiger Shot)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Venomous Fang (2PP~P) shifted the projectile invincible hurtbox downward immediately after startup (to ensure it's possible to attack through a Low Tiger Shot)",
+          "html": "Venomous Fang (2PP~P) shifted the projectile invincible hurtbox downward immediately after startup (to ensure it's possible to attack through a Low Tiger Shot)"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "Adamant Flame Follow-up (214P~6P) fixed an issue where the attack could not be performed while a projectile was on the screen Demon Gou Rasen (236KK~j.214K) fixed an issue where the attack could not be performed while a projectile was on the screen SA1 / Air SA1 changed the amount of Drive Gauge gained on Perfect Parry is the same as other Super Arts (20000)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Adamant Flame Follow-up (214P~6P) fixed an issue where the attack could not be performed while a projectile was on the screen",
+          "html": "Adamant Flame Follow-up (214P~6P) fixed an issue where the attack could not be performed while a projectile was on the screen"
+        },
+        {
+          "index": 1,
+          "text": "Demon Gou Rasen (236KK~j.214K) fixed an issue where the attack could not be performed while a projectile was on the screen",
+          "html": "<style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--10\">Demon Gou Rasen</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">j.214K</span>) fixed an issue where the attack could not be performed while a projectile was on the screen"
+        },
+        {
+          "index": 2,
+          "text": "SA1 / Air SA1 changed the amount of Drive Gauge gained on Perfect Parry is the same as other Super Arts (20000)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Air SA1</span> changed the amount of Drive Gauge gained on Perfect Parry is the same as other Super Arts (20000)"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Backstep Rolling Attack (63214K/KK) fixed an issue where holding forward/back would steer Blanka a different distance depending on whether he was facing left or right",
+      "items": [
+        {
+          "index": 0,
+          "text": "Backstep Rolling Attack (63214K/KK) fixed an issue where holding forward/back would steer Blanka a different distance depending on whether he was facing left or right",
+          "html": "Backstep Rolling Attack (63214K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>) fixed an issue where holding forward/back would steer Blanka a different distance depending on whether he was facing left or right"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Spiral Arrow (236K/KK) hurtbox expanded upward at the start and during later active frames (to ensure it cannot easily pass under High Tiger Shot) 236LK: frames 1-2, 14-21 236MK: frames 1-2, 14-23 236HK: frames 1-5, 23-32 236KK: frames 1-4, 19-29 SA1 (236236K) upper hurtbox on frames 1-5 that is vulnerable to projectiles expanded upward This ensures that the early startup frames cannot duck under a High Tiger Shot",
+      "items": [
+        {
+          "index": 0,
+          "text": "Spiral Arrow (236K/KK) hurtbox expanded upward at the start and during later active frames (to ensure it cannot easily pass under High Tiger Shot) 236LK: frames 1-2, 14-21 236MK: frames 1-2, 14-23 236HK: frames 1-5, 23-32 236KK: frames 1-4, 19-29",
+          "html": "Spiral Arrow (236K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>) hurtbox expanded upward at the start and during later active frames (to ensure it cannot easily pass under High Tiger Shot)\n<ul><li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span>: frames 1-2, 14-21</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">236MK</span>: frames 1-2, 14-23</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">236HK</span>: frames 1-5, 23-32</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>: frames 1-4, 19-29</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "SA1 (236236K) upper hurtbox on frames 1-5 that is vulnerable to projectiles expanded upward This ensures that the early startup frames cannot duck under a High Tiger Shot",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>) upper hurtbox on frames 1-5 that is vulnerable to projectiles expanded upward\n<ul><li>This ensures that the early startup frames cannot duck under a High Tiger Shot</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "236LK: frames 1-2, 14-21 236MK: frames 1-2, 14-23 236HK: frames 1-5, 23-32 236KK: frames 1-4, 19-29",
+      "items": [
+        {
+          "index": 0,
+          "text": "236LK: frames 1-2, 14-21",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span>: frames 1-2, 14-21"
+        },
+        {
+          "index": 1,
+          "text": "236MK: frames 1-2, 14-23",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">236MK</span>: frames 1-2, 14-23"
+        },
+        {
+          "index": 2,
+          "text": "236HK: frames 1-5, 23-32",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">236HK</span>: frames 1-5, 23-32"
+        },
+        {
+          "index": 3,
+          "text": "236KK: frames 1-4, 19-29",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>: frames 1-4, 19-29"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "This ensures that the early startup frames cannot duck under a High Tiger Shot",
+      "items": [
+        {
+          "index": 0,
+          "text": "This ensures that the early startup frames cannot duck under a High Tiger Shot",
+          "html": "This ensures that the early startup frames cannot duck under a High Tiger Shot"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "Critical Art (214214K) fixed an issue where the opponent would gain less Drive Gauge when parrying the attack compared to other Super Arts",
+      "items": [
+        {
+          "index": 0,
+          "text": "Critical Art (214214K) fixed an issue where the opponent would gain less Drive Gauge when parrying the attack compared to other Super Arts",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Critical Art</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214K</span>) fixed an issue where the opponent would gain less Drive Gauge when parrying the attack compared to other Super Arts"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "2LK projectile invincible hurtbox shifted downward (to ensure it's possible to slide under Low Tiger Shot with good timing)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LK projectile invincible hurtbox shifted downward (to ensure it's possible to slide under Low Tiger Shot with good timing)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> projectile invincible hurtbox shifted downward (to ensure it's possible to slide under Low Tiger Shot with good timing)"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "LP Psycho Uppercut (623LP) fixed an issue where Ed could cancel the final 4 recovery frames into another action on whiff",
+      "items": [
+        {
+          "index": 0,
+          "text": "LP Psycho Uppercut (623LP) fixed an issue where Ed could cancel the final 4 recovery frames into another action on whiff",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP Psycho Uppercut</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">623LP</span>) fixed an issue where Ed could cancel the final 4 recovery frames into another action on whiff"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "Neko Damashi (22P) fixed an issue where buffering a SA3/CA input would not work",
+      "items": [
+        {
+          "index": 0,
+          "text": "Neko Damashi (22P) fixed an issue where buffering a SA3/CA input would not work",
+          "html": "Neko Damashi (22P) fixed an issue where buffering a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> input would not work"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Round Arch (4HK) fixed an issue where Elena would slide forward when performed out of Drive Rush when not inputting a direction Critical Art (214214K) fixed an issue where the damage value was increased by 1000 when landing a K.O. against the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Round Arch (4HK) fixed an issue where Elena would slide forward when performed out of Drive Rush when not inputting a direction",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Round Arch</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4HK</span>) fixed an issue where Elena would slide forward when performed out of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span> when not inputting a direction"
+        },
+        {
+          "index": 1,
+          "text": "Critical Art (214214K) fixed an issue where the damage value was increased by 1000 when landing a K.O. against the opponent",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Critical Art</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214K</span>) fixed an issue where the damage value was increased by 1000 when landing a K.O. against the opponent"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "OD Sprint (236KK) Modern Controls (A[6S]) fixed an issue where Down+Forward / Down+Back + Attack would perform Neck Hunter / Emergency Stop instead of Shadow Slide",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Sprint (236KK) Modern Controls (A[6S]) fixed an issue where Down+Forward / Down+Back + Attack would perform Neck Hunter / Emergency Stop instead of Shadow Slide",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Sprint</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>) Modern Controls (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">A[6S]</span>) fixed an issue where Down+Forward / Down+Back + Attack would perform Neck Hunter / Emergency Stop instead of Shadow Slide"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "OD Avenger (236KK) armored head hurtbox shifted downward (to prevent interference with High Tiger Shot)",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Avenger (236KK) armored head hurtbox shifted downward (to prevent interference with High Tiger Shot)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Avenger</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>) armored head hurtbox shifted downward (to prevent interference with High Tiger Shot)"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Drive Impact fixed an issue where the armor could absorb 3 or more hits depending on which part of the body they interacted with",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact fixed an issue where the armor could absorb 3 or more hits depending on which part of the body they interacted with",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span> fixed an issue where the armor could absorb 3 or more hits depending on which part of the body they interacted with"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Temps Lié (5HP~HP) fixed an issue where Manon could Parry on the final recovery frame on block",
+      "items": [
+        {
+          "index": 0,
+          "text": "Temps Lié (5HP~HP) fixed an issue where Manon could Parry on the final recovery frame on block",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Temps Lié</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>) fixed an issue where Manon could Parry on the final recovery frame on block"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "2MP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) 2MK upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) 2HK upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2MP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span> upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)"
+        },
+        {
+          "index": 1,
+          "text": "2MK upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MK</span> upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)"
+        },
+        {
+          "index": 2,
+          "text": "2HK upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span> upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "2HP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) Note: the official patch notes incorrectly attributed this change to 2HK",
+      "items": [
+        {
+          "index": 0,
+          "text": "2HP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) Note: the official patch notes incorrectly attributed this change to 2HK",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HP</span> upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)\n<ul><li><i>Note: the official patch notes incorrectly attributed this change to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span></i></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Note: the official patch notes incorrectly attributed this change to 2HK",
+      "items": [
+        {
+          "index": 0,
+          "text": "Note: the official patch notes incorrectly attributed this change to 2HK",
+          "html": "<i>Note: the official patch notes incorrectly attributed this change to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span></i>"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "214LPHP input changed from OD Burning Knuckle to OD Quick Burn SA3/CA (236236P) fixed an issue where the opponent would gain less Drive Gauge compared to other Super Arts on parry or Perfect Parry",
+      "items": [
+        {
+          "index": 0,
+          "text": "214LPHP input changed from OD Burning Knuckle to OD Quick Burn",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> input changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Burning Knuckle</span> to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Quick Burn</span>"
+        },
+        {
+          "index": 1,
+          "text": "SA3/CA (236236P) fixed an issue where the opponent would gain less Drive Gauge compared to other Super Arts on parry or Perfect Parry",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236P</span>) fixed an issue where the opponent would gain less Drive Gauge compared to other Super Arts on parry or Perfect Parry"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Parry hurtbox from frame 3 onward expanded forward This is to match the hurtbox expansion Zangief received in the June 2025 update 2MP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot) Tundra Storm (22HK) counter hitbox expanded upward (allowing it to work against Sagat's 5HK/6HK) Double Lariat (Modern Controls: M+H) reverted the change that allowed L+M+H to perform Double Lariat instead of Throw while in Burnout This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.",
+      "items": [
+        {
+          "index": 0,
+          "text": "Parry hurtbox from frame 3 onward expanded forward This is to match the hurtbox expansion Zangief received in the June 2025 update",
+          "html": "Parry hurtbox from frame 3 onward expanded forward\n<ul><li>This is to match the hurtbox expansion Zangief received in the June 2025 update</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "2MP upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span> upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)"
+        },
+        {
+          "index": 2,
+          "text": "Tundra Storm (22HK) counter hitbox expanded upward (allowing it to work against Sagat's 5HK/6HK)",
+          "html": "Tundra Storm (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">22HK</span>) counter hitbox expanded upward (allowing it to work against Sagat's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HK</span>)"
+        },
+        {
+          "index": 3,
+          "text": "Double Lariat (Modern Controls: M+H) reverted the change that allowed L+M+H to perform Double Lariat instead of Throw while in Burnout This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.",
+          "html": "Double Lariat (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>) reverted the change that allowed <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span> to perform Double Lariat instead of Throw while in Burnout\n<ul><li>This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "This is to match the hurtbox expansion Zangief received in the June 2025 update",
+      "items": [
+        {
+          "index": 0,
+          "text": "This is to match the hurtbox expansion Zangief received in the June 2025 update",
+          "html": "This is to match the hurtbox expansion Zangief received in the June 2025 update"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.",
+      "items": [
+        {
+          "index": 0,
+          "text": "This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.",
+          "html": "This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented."
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 2.00 Game Version 2.00 date August 5, 2025 Summary Sagat Release. Minor bug fixes and adjustments (mostly related to Tiger Shot interactions). Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.00",
+              "html": "<a class=\"mw-selflink selflink\">2.00</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.00",
+              "html": "2.00",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "August 5, 2025",
+              "html": "August 5, 2025",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Sagat Release. Minor bug fixes and adjustments (mostly related to Tiger Shot interactions).",
+              "html": "<b>Sagat Release</b>. Minor bug fixes and adjustments (mostly related to Tiger Shot interactions).",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20250805\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20250805",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20250805",
+      "title": "",
+      "class_name": "external text"
+    }
+  ],
+  "metrics": {
+    "heading_count": 19,
+    "paragraph_count": 20,
+    "link_count": 1,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 4356,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

@@ -1,0 +1,392 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/2.02|2.02]]
+|gameversion=2.02
+|date=March 17, 2026
+|summary='''Alex Release'''. Balance changes for all characters.
+|links=[https://www.streetfighter.com/6/buckler/battle_change/20260317 Patch Notes]  
+}}
+<!--Full Version name: 2.0200.000-->
+
+== Alex Patch ==
+* Alex released
+<br>
+
+== '''Universal Changes''' ==
+* '''{{clr|DR|Drive Rush}} Overheads:''' now universally {{sf6-adv|P|+1 on Block}} ({{sf6-adv|M|-3}} normally) with enough block pushback to prevent an immediate Throw or low-hitting light chain (e.g. {{clr|L|2LK}}~{{clr|L|2LP}})
+** Only applies to standard overhead command normals that can lead to grounded combos on hit
+** Frame Data changes affect A.K.I., Akuma, Chun-Li, Elena, Ryu, Sagat, Terry
+** Pushback changes affect Blanka, C. Viper, E. Honda, Guile, Jamie, JP, Juri, Kimberly, Lily, Luke, M. Bison, Mai, Marisa, Rashid, Sagat, Terry
+* '''{{clr|DR|Drive Rush}} Screen Freeze:''' pressing an Up input during the freeze will now buffer a jump after the screen freeze ends
+** Still subject to move priority, like special moves canceling the prejump frames
+** Neutral jumps during the freeze will become forward/back jumps if the left/right direction is held after the Up direction
+** Only applies if the character is in neutral during the screen freeze (will not be buffered on wakeup or during a move's recovery)
+* '''Wakeup Input Buffer:''' extended by 3 frames (7f → 10f)
+<br>
+
+== '''Character Changes''' ==
+
+=== '''A.K.I.''' ===
+* {{clr|OD|Toxic Blossom}} builds an additional 2000 Drive meter every time it triggers (unless {{clr|DR|Drive Rush}} is used during the combo)
+** {{clr|L|236LP}} / {{clr|M|236MP}} / 2PP~P: 2000 → 4000
+** {{clr|H|236HP}}: 2500 → 4500
+** {{clr|H|5HP}}~{{clr|H|HP}} / {{clr|L|214LP}}~{{clr|L|6P}}: 3000 → 5000
+** {{clr|OD|236PP}} / {{clr|OD|214PP}}~{{clr|OD|6P}}: 0 → 2000
+* {{clr|L|5LP}} is now chainable into or out of {{clr|L|2LP}}/{{clr|L|2LK}}
+* {{clr|M|Pu Lao}} ({{clr|M|3MP}}) blockstun 19 → 18; Block Advantage {{sf6-adv|M|-2}} → {{sf6-adv|M|-3}}
+* {{clr|L|Hun Dun}} ({{clr|L|5LP}}~{{clr|L|LP}}) hitstun increased 17 → 18, blockstun increased 15 → 16, recovery increased 14 → 15 (hit/whiff) and 16 → 17 (block); {{clr|DR|Drive Rush}} cancel occurs 1f later
+** No change to Hit/Block advantage or {{clr|DR|DRC}} advantage; indirectly decreases Perfect Parry advantage {{sf6-adv|VM|-16}} → {{sf6-adv|VM|-17}} and Sinister Slide cancel advantage {{sf6-adv|VP|+5}}/{{sf6-adv|P|+3}} → {{sf6-adv|VP|+6}}/{{sf6-adv|VP|+4}}
+** These changes allow {{clr|L|214LP}} to combo from the Target Combo except near max range
+* {{clr|OD|OD Nightshade Pulse}} ({{clr|OD|214PP}}) 2nd hit Juggle Increase value decreased 3 → 2 (more lenient after juggling on airborne opponents)
+<br>
+
+=== '''Akuma''' ===
+* {{clr|M|5MP}} whiff recovery increased 11 → 13; extended hurtbox lasts until end of recovery
+* {{clr|M|2MK}} hitstun reduced 23 → 22; Hit Advantage {{sf6-adv|P|+1}} → {{sf6-adv|E|0}}; {{clr|DR|DRC}} Hit Advantage {{sf6-adv|VP|+11}} → {{sf6-adv|VP|+10}}
+** Can no longer combo naturally into {{clr|OD|OD Adamant Flame}} ({{clr|OD|214PP}})
+* {{clr|H|2HP}} hitstun increased 27 → 28 on the first 3 active frames; Hit Advantage {{sf6-adv|E|0}} → {{sf6-adv|P|+1}}; {{clr|DR|DRC}} Hit Advantage {{sf6-adv|VP|+17}} → {{sf6-adv|VP|+18}}
+* {{clr|M|Skull Splitter}} ({{clr|M|6MP}}) 2nd hit blockstun 20 → 18; Block Advantage {{sf6-adv|M|-1}} → {{sf6-adv|M|-3}}
+* {{clr|M|MK Tatsumaki Zanku-kyaku}} ({{clr|M|214MK}}) 2nd hit active frames increased 2 → 3 (and removed 1 airborne recovery frame to compensate)
+** More consistent in juggles where opponent is launched higher up
+* {{clr|OD|OD Adamant Flame}} ({{clr|OD|214PP}}) startup when canceled from {{clr|M|2MK}} increased 18 → 20 to prevent it from comboing
+* Lv.3 Gou Hadoken (236[P]/{{clr|OD|[PP]}}) hits increased 3 → 4; damage increased 1200 (300x2,600) → 1350 (250x3,600); total chip damage 300 → 336
+** Recovery reduced 28 → 21 (hit/block) / 26 (whiff); total frames are 77(82) meterless / 52(57) {{clr|OD|OD}}; "whiff" means the projectile does not make contact within the first 21 active frames
+** Hit Advantage KD +57 → KD +69; Block Advantage {{sf6-adv|VP|+5}} → {{sf6-adv|VP|+20}}; Perfect Parry Advantage {{sf6-adv|VP|+4}} → {{sf6-adv|VP|+22}}; total blockstun 34 → 42
+** Drive Damage increased 3000 → 4000 (Block) / 7000 → 9000 ({{clr|PC|Punish Counter}}); Drive Gain (meterless version) increased 1000 → 4000; {{clr|SA|Super}} Gain 600 → 800
+
+<br>
+
+=== '''Blanka''' ===
+* {{clr|M|5MK}} hitstun 24 → 25; Hit Advantage {{sf6-adv|VP|+4}} → {{sf6-adv|VP|+5}}; {{clr|DR|DRC}} Hit Advantage {{sf6-adv|VP|+14}} → {{sf6-adv|VP|+15}}
+** Can now combo into Wild Lift (2PP~P) on {{clr|PC|Counter-hit}}; reduced pushback so that {{clr|OD|OD Backstep Roll}} combos more consistently
+* {{clr|H|2HP}} now knocks down on {{clr|PC|Counter-hit}}, {{sf6-adv|P|+2}} → (KD +40); can only juggle on airborne connect
+* {{clr|M|Rock Crusher}} ({{clr|M|6MP}}) increased pushback on block
+* {{clr|H|Wild Nail}} ({{clr|H|6HP}}) KD Advantage increased KD +23 → KD +30; now KD +2 after ending with Coward Crouch ~ Forward Hop
+* Surprise Forward Hop throw invincibility on frames 12-22 removed
+* {{clr|SA|SA2-Enhanced}} Rolling Attack ([4]6P) Drive damage on Block reduced; {{clr|L|LP}}/{{clr|M|MP}} 7500 → 4000, {{clr|H|HP}} 10000 → 6000
+* Blanka-chan Bomb now disappears if Blanka is hit after activating them
+<br>
+
+=== '''C. Viper''' ===
+* {{clr|M|2MP}} active frames 3 → 4 (recovery 17 → 16 to compensate); reduced forward hurtbox on arms during active frames
+* {{clr|H|5HP}} blockstun 21 → 22; Block Advantage {{sf6-adv|M|-3}} → {{sf6-adv|M|-2}}; High Jump > {{clr|H|214HP Feint}} Block Advantage {{sf6-adv|E|0}} → {{sf6-adv|P|+1}}
+* {{clr|H|5HK}} increased OTG bounce time and reduced horizontal knockback on airborne opponents
+** Now juggles into corner {{clr|OD|OD Thunder Dash}} and is more consistent into {{clr|OD|OD Burning Kick}} / {{clr|SA|SA1}} in some routes
+* {{clr|M|Viper Elbow}} ({{clr|M|6MP}}) increased pushback on block
+* {{clr|H|HP Thunder Dash}} ({{clr|H|214HP}}) expanded collision box upward to make it harder for opponents to pass behind C. Viper
+* Aerial Burning Kick (j.236K) blockstun increased 21 → 22 (normal jump) / 20 → 21 (High Jump); landing recovery when cross-up is blocked increased 13 → 14
+** Min/Max Block Advantage increased by +1f when hitting same-side (highly variable); cross-up block advantages are unchanged
+** As a result, High Jump > {{clr|M|Air MK Burning Kick}} is now {{sf6-adv|P|+1 on Block}} when used at the earliest timing (powerful approach tool)
+* {{clr|SA|SA1}} expanded hitbox upward on the 1st and 2nd hits
+** Install Timer now causes {{clr|OD|Tracer Combination}} / {{clr|OD|Knuckled Pursuit}} / {{clr|OD|Double Burn}} to build 3000 Drive gauge on hit/block
+* {{clr|SA|SA2}} collision box expanded upward (less likely to whiff under opponent)
+** Input shortcuts no longer apply when using {{clr|H|HP}} button or after High Jump in order to avoid conflict with {{clr|H|214HP Feint}} execution
+** Also shortened the input buffer window in these scenarios and prevents kara-canceling a normal/special into {{clr|SA|SA2}} unless the full {{clr|SA|214214P}} command is properly input
+<br>
+
+=== '''Cammy''' ===
+* {{clr|H|Delayed Ripper}} ({{clr|H|6HK}}) recovery on hit reduced 25 → 20; Juggle Start value reduced 3 → 1; increased juggle height on {{clr|PC|Punish Counter}} (KD +48 → +52)
+** Allows new juggle routes, like {{clr|H|6HK}} > {{clr|DR|DRC~}}{{clr|H|5HP}}~{{clr|H|HK}}, or {{clr|PC|PC}} {{clr|H|6HK}} > {{clr|L|214LP}}, {{clr|SA|SA1}}
+* {{clr|H|HK Cannon Spike}} ({{clr|H|623HK}}) increased forward movement on startup (easier to connect the higher-damage early active frames in juggles)
+* Cannon Strike (j.214K/{{clr|OD|KK}}) hitstun/blockstun increased by 2f when connecting on the final 2 active frames before landing (causing a screen shake and reduced pushback)
+** Screen shake guarantees a minimum advantage of {{sf6-adv|VP|+10 oH}} / {{sf6-adv|VP|+4 oB}} (or {{sf6-adv|VP|+6 oB}} for {{clr|OD|OD}})
+* {{clr|SA|SA1}} active frames on 1st hit increased 3 → 4 (no difference to total frame count)
+<br>
+
+=== '''Chun-Li''' ===
+* {{clr|H|Water Lotus Fist}} ({{clr|H|3HP}}) blockstun 16 → 15; Block Advantage {{sf6-adv|M|-2}} → {{sf6-adv|M|-3}}
+** Stance Cancel on Block: {{sf6-adv|M|-1}} → {{sf6-adv|M|-2}} into follow-up, {{sf6-adv|VM|-9}}  {{sf6-adv|VM|-10}} into block
+* {{clr|M|Snake Strike}} ({{clr|M|Stance MP}}) startup reduced 7 → 6; active frames increased 11 → 12; added 1f extra knockdown time on hit (can now combo from {{clr|H|5HP}})
+** If the first active frame connects, this makes it 1f more unsafe on block ({{sf6-adv|VM|-15}}) while keeping the same knockdown advantage
+** Modern Controls: can now hold Up or Down to remain in Serenity Stream stance after recovery
+* {{clr|L|Forward Strike}} ({{clr|L|Stance LK}}) hitbox expanded forward 0.05 units; Range 1.469(1.443) → 1.519(1.493)
+* {{clr|OD|Lightning Kick Barrage}} ({{clr|OD|236KK}}~{{clr|OD|KK}}) no longer has separate damage scaling applied after {{clr|OD|236KK}} hits
+* {{clr|L|LK Hazanshu}} ({{clr|L|214LK}}) damage reduced 1000 → 700 and chip damage 250 → 175; active frames increased 2 → 3; recovery reduced 21 → 20 (no change to total duration)
+** Reduced horizontal range; removed lower body projectile invincibility on frames 7-18; Juggle Limit increased 1 → 5 (best juggle potential of all her meterless specials)
+** Blockstun increased 14 → 18; Block Advantage {{sf6-adv|VM|-9}} → {{sf6-adv|VM|-5}}; increased pushback on block (safe vs. Burnout and can be spaced safely depending on opponent's 5f punish range)
+** Hit effect changed from {{sf6-adv|E|0 oH}} → KD +21 (grounded) and gives a very short ground bounce when juggled on airborne opponents 
+** Cancel into {{clr|SA|SA3}} no longer combos due to the knockdown (even with juggled ground bounce); can still be useful for chip damage or for reacting to {{clr|DR|DI}} armor
+* {{clr|H|HK}}/{{clr|OD|OD}} Hazanshu (214{{clr|H|HK}}/{{clr|OD|KK}}) chip damage corrected 250 → 300
+<br>
+
+=== '''Dee Jay''' ===
+* {{clr|L|2LK}} projectile invincibility added to the hurtbox above Dee Jay's foot
+* {{clr|M|2MP}} hitstun 22 → 23; Hit Advantage {{sf6-adv|VP|+4}} → {{sf6-adv|VP|+5}}; {{clr|DR|DRC}} Hit Advantage {{sf6-adv|VP|+12}} → {{sf6-adv|VP|+13}}
+** Now links to {{clr|L|5LK}} and combos when canceled into {{clr|M|MP Machine Gun Uppercut}} ({{clr|M|214MP}}); {{clr|DR|DR~}}{{clr|M|2MP}} links to {{clr|H|5HP}} on crouching opponents
+** Whiff recovery increased 14 → 15; extended hurtbox lasts until the end of recovery
+* {{clr|H|2HP}} expanded the front hurtbox during recovery
+* {{clr|H|HP Machine Gun Uppercut}} ({{clr|H|214HP}}) Super Gain on hit increased 2100 → 2500 and increased the input buffer at the end of recovery
+* {{clr|OD|OD Machine Gun Uppercut}} ({{clr|OD|214PP}}) startup reduced 28 → 26; can now combo from {{clr|H|5HP}} or {{clr|H|4HK}} (1st hit) as well as {{clr|PC|PC}}/{{clr|DR|DR}} {{clr|M|2MP}}
+* {{clr|OD|OD Waning Moon}} ({{clr|OD|214KK}}~{{clr|M|MK}}) no longer hits standing opponents on the first active frame (gives consistent {{sf6-adv|VP|+6}} advantage on tall characters)
+* Juggling Sway (214K/{{clr|OD|KK}}~6P~4P) can now cancel the backdash into {{clr|L|~LK}} / {{clr|M|~MK}} / {{clr|H|~HK}} follow-ups for more mixup potential
+** Reduced the forward hurtbox on frames 5-17 (normal) / 5-13 ({{clr|OD|OD}}); moves backward earlier on the {{clr|OD|OD}} version
+<br>
+
+=== '''Dhalsim''' ===
+* Fixed bug where Drive Parry would drain twice as fast after being held for 30 frames
+* {{clr|M|j.MP}} now puts airborne opponents into a {{sf6-jug|limited juggle}} state when juggled into (but not as an air-to-air)
+** Reduced air knockback; Juggle Increase value 1 → 2 (only when juggled into)
+** Now cancelable into Drill Kick (j.2K) / Yoga Mummy ({{clr|L|j.2LP}}) on hit (can air-to-air more safely and extend juggle routes after {{clr|OD|OD Yoga Flame}})
+** Increased Juggle Limit 1 → 4 on {{clr|H|j.HP}} / {{clr|H|j.HK}}, 0 → 4 on Drill Kick (j.2K), and 1 → 3 on Yoga Mummy ({{clr|L|j.2LP}}) to capitalize on these juggle conversions
+* {{clr|M|MP Yoga Flame}} ({{clr|M|63214MP}}) expanded the forward hitbox; Drive Gain increased 2400 → 3000
+* {{clr|H|HP Yoga Flame}} ({{clr|H|63214HP}}) expanded the forward hitbox; Drive Gain increased 2700 → 4000
+* {{clr|OD|OD Yoga Flame}} ({{clr|OD|63214PP}}) recovery on hit reduced 24 → 19; reduced air knockdown time by 4f (results in KD Advantage +50 → +51)
+** Allows Dhalsim to juggle into an immediate {{clr|M|j.MP}}
+* {{clr|OD|OD Yoga Comet}} ({{clr|OD|j.63214PP}}) Juggle Limit 2,2 → 3,4; Juggle Increase 1,1 → 0,1 (easier to juggle into and more lenient juggle state after comboing into it)
+** Increased the input buffer window after landing
+<br>
+
+=== '''Ed''' ===
+* {{clr|L|2LK}} projectile invincibility added to the hurtbox near Ed's head
+* {{clr|M|2MK}} whiff recovery increased 17 → 19; extended hurtbox lasts until the end of recovery
+** Forward range reduced on the hitbox that connects on crouching opponents (no difference to max range vs. standing)
+* {{clr|H|2HK}} hit/block recovery 17 → 19; whiff recovery 17 → 21; Hit Advantage reduced {{sf6-adv|P|+1}} → {{sf6-adv|M|-1}}; Block Advantage reduced {{sf6-adv|VM|-4}} → {{sf6-adv|VM|-6}}
+** Proximity guard box starts later, frame 6 → 9
+* {{clr|H|Low Smash Combination}} ({{clr|H|2HK}}~{{clr|H|HP}}) can be canceled into Kill Rush (6KK/4KK) on hit only; KD Advantage increased +34 → +38 with higher launch
+* {{clr|OD|OD Psycho Flicker}} ({{clr|OD|236KK}}) combo scaling 15% → 20% (e.g. counts as 2 hits of scaling for next attack)
+* {{clr|SA|SA2}} scaling on {{clr|SA|Super Gain}} 80% → 50% for all further hits of the combo
+<br>
+
+=== '''E. Honda''' ===
+* {{clr|H|Power Stomp}} ({{clr|H|3HK}}) increased pushback on block
+* Sumo Spirit enhanced Hundred Hand Slap (214P) now performs the final hit on block for all versions, increasing Block Advantage by 4 frames and Drive Damage on block by 3000
+* {{clr|L|Enhanced LP Hundred Hand Slap}} ({{clr|L|214LP}}) Block Advantage increased {{sf6-adv|VM|-4}} → {{sf6-adv|E|0}}; blockstun 30 → 42; Drive Damage on Block 3000 → 6000
+* {{clr|M|MP Hundred Hand Slap}} ({{clr|M|214MP}}, Normal/Enhanced) startup reduced 18 → 16 (combos from lights); expanded combo-only hitbox forward from 2nd hit onward for juggle consistency
+** Normal version only: increased hit pushback for the final hit
+** Enhanced version only: Block Advantage increased {{sf6-adv|VM|-8}} → {{sf6-adv|VM|-4}}; blockstun 41 → 53; Drive Damage on Block 4000 → 7000
+* {{clr|H|HP Hundred Hand Slap}} ({{clr|H|214HP}}, Normal/Enhanced) startup reduced 21 → 19; expanded combo-only hitbox forward from 2nd hit onward for juggle consistency
+** Enhanced version only: Block Advantage increased {{sf6-adv|VM|-8}} → {{sf6-adv|VM|-4}}; blockstun 53 → 65; Drive Damage on Block 5000 → 8000
+* {{clr|OD|Enhanced OD Hundred Hand Slap}} ({{clr|OD|214PP}}) Block Advantage increased {{sf6-adv|M|-3}} → {{sf6-adv|P|+1}}; blockstun 52 → 60; Drive Damage on Block 5000 → 8000
+<br>
+
+=== '''Elena''' ===
+* {{clr|M|Handstand Whip 1}} ({{clr|M|6MK}}) blockstun 20 → 19; Block Advantage {{sf6-adv|M|-2}} → {{sf6-adv|M|-3}}
+* {{clr|H|HK Rhino Horn}} ({{clr|H|236HK}}) launches opponent higher; KD +39 → KD +40
+** Allows corner juggle into {{clr|H|HK Scratch Wheel}} and better midscreen oki (KD +2 after {{clr|H|HP Roll}})
+* {{clr|SA|SA1}} launches opponent higher; KD +42 → KD +44; can now juggle {{clr|OD|OD Rhino Horn}} off a grounded hit
+* {{clr|SA|SA2 (Healing)}} health recovery increased 1300 → 1600; now recovers 10000 Drive gauge (1 bar)
+<br>
+
+=== '''Guile''' ===
+* {{clr|H|2HP}} can now be canceled on the 1st active frame; Hitconfirm Window: 15f
+** {{clr|DR|DRC}} Advantage {{sf6-adv|VP|+15}} oH / {{sf6-adv|VP|+6}} oB; {{clr|SA|SA2}} Cancel Advantage {{sf6-adv|VP|+18}} oH / {{sf6-adv|VP|+9}} oB
+* {{clr|M|Full Bullet Magnum}} ({{clr|M|6MP}}) increased pushback on block
+* {{clr|H|Spinning Back Knuckle}} ({{clr|H|6HP}}) Super Gain increased 500 → 1200
+* {{clr|M|Drake Fang}} ({{clr|M|2MK}}~{{clr|M|6MP}}) now maintains the {{clr|PC|Counter-hit/Punish Counter}} property of the initial {{clr|M|2MK}} (deals Drive damage for both {{clr|PC|Punish Counter}} hits)
+** {{clr|PC|Counter-hit/Punish Counter}} now causes a limited juggle OTG bounce on hit (KD +47); Drive Damage on {{clr|PC|Punish Counter}} reduced 4000 → 2000
+* {{clr|OD|OD Sonic Blade}} ({{clr|OD|214PP}}) now has 3 versions depending on button strength that affect the projectile movement speed; added a proximity guard hitbox until end of active frames
+** {{clr|L|LP}}+{{clr|M|MP}} Slow / {{clr|L|LP}}+{{clr|H|HP}} Medium / {{clr|M|MP}}+{{clr|H|HP}} Fast
+* {{clr|SA|SA1}} expanded projectile collision box upward to collide with Sagat's High Tiger Shot
+<br>
+
+=== '''Jamie''' ===
+* {{clr|L|2LK}} hitstun 14 → 16; Hit Advantage {{sf6-adv|P|+1}} → {{sf6-adv|P|+3}}; now combos into {{clr|M|2MK}} out of {{clr|DR|Drive Rush}}
+* {{clr|M|2MK}} hitbox expanded forward; Range 1.42 → 1.46
+* {{clr|H|5HP}} 2nd hit reduced air knockback; 3rd hit increased air knockback time and expanded the combo-only hitbox upward (more consistent in certain juggle routes)
+* {{clr|M|Falling Star Kick}} ({{clr|M|6MK}}) increased pushback on block
+* {{clr|H|Ransui Haze Headbutt}} (DL4 {{clr|H|6HK}}~{{clr|H|4HK}}~P) attack startup reduced 15 → 14; active frames 4 → 5; Block Advantage {{sf6-adv|VM|-12}} → {{sf6-adv|VM|-13}}; KD Advantage +32 → +31
+** Cancels from the backstep 1f earlier; combined with faster startup, it now frame traps 4-frame buttons after blocked {{clr|H|6HK}}
+* DL4 Freeflow Strikes 2nd hit (236P/{{clr|OD|PP}}~6P) added an extended combo-only hitbox and adjusted pushback to ensure the combo does not drop after the initial hit connects
+* {{clr|OD|OD Bakkai}} ({{clr|OD|236KK}}) startup reduced 21 → 18; 1st hit active frames increased 3 → 6; recovery decreased 62 → 59
+** Block Advantage {{sf6-adv|VM|-46}} → {{sf6-adv|VM|-43}}; final hit launches opponent higher, KD Advantage +12 → +23; Hitconfirm window 74 → 77
+<br>
+
+=== '''JP''' ===
+* Forward Throw distance from opponent increased in the corner; KD Advantage reduced +24 → +23
+** Corner throw loop is now much weaker; still +1 after dashing or can use {{clr|DR|Drive Rush}}
+* {{clr|M|2MP}} extended hurtbox lasts until the end of recovery
+* {{clr|H|5HK}} Drive Damage on Block reduced 6000 → 4000
+* {{clr|M|Guillotinna}} ({{clr|M|6MK}}) increased pushback on block
+* {{clr|H|Zilant}} ({{clr|H|5HK}}~{{clr|H|HP}}) Drive Damage on Block reduced 2500 → 2000
+** Combined with the {{clr|H|5HK}} change, this TC drains 0.25 Drive bars less than before
+* {{clr|M|MK}}/{{clr|H|HK}}/{{clr|OD|OD}} Torbalan (236{{clr|M|MK}}/{{clr|H|HK}}/{{clr|OD|KK}}) extended the vertical detection range for the projectile to transition into its attack to prevent whiffing in juggles
+* Departure: Shadow (214P/{{clr|OD|PP}}~{{clr|H|214HP}}) can now be canceled into from {{clr|L|2LK}} / {{clr|M|5MP}} / {{clr|M|2MK}} / {{clr|H|5HK}}
+** Hitconfirm windows: {{clr|M|5MP}} 15f / {{clr|M|2MK}} 15f / {{clr|H|5HK}} 18f; no combo from {{clr|L|2LK}}
+** The portal can be slightly farther off-screen while allowing the spike projectile to be activated
+<br>
+
+=== '''Juri''' ===
+
+* {{clr|M|Kyosesho}} ({{clr|M|6MP}}) now knocks down when juggled into on airborne opponents (no difference when not mid-combo)
+** Juggle Increase value 1 → 2 on juggled version; can still only connect in {{sf6-jug|free juggle}} states (e.g. after {{clr|OD|214KK}})
+* {{clr|M|Senkai Kick}} ({{clr|M|6MK}}) increased pushback on block
+* {{clr|H|Renko Kicks}} ({{clr|H|6HP}}) whiff recovery increased 20 → 23; extended foot hurtbox lasts until the end of recovery
+** Applies to regular and {{clr|SA|FSE}} version
+* {{clr|L|LP Tensenrin}} ({{clr|L|623LP}}) 1st hit has a shorter upward launch; 2nd hit has a higher upward launch on airborne opponents
+** Added larger combo-only hitbox on 2nd hit; increased 2nd hit {{clr|SA|SA3}} cancel window by 4 frames; total Hitconfirm window 17 → 21
+** These changes make it easier to juggle into both hits of {{clr|L|623LP}} and relaxes the execution requirement for canceling into {{clr|SA|SA3}}
+* {{clr|OD|OD Fuhajin}} ({{clr|OD|214KK}}) Juggle Start value 2 → 0 ({{sf6-jug|free juggle}} state); reduced horizontal knockback; added 2-hit combo scaling
+** Allows more combo freedom, notably juggling into {{clr|M|6MP}} which also continues the juggle
+* Ankensatsu ({{clr|M|236MK}} / {{clr|OD|236}}{{clr|L|LK}}{{clr|H|HK}}) blockstun 13 → 15; Block Advantage {{sf6-adv|VM|-10}} → {{sf6-adv|VM|-8}}; reduced forward recovery hurtbox on hit/block
+** Hitbox expands forward gradually to make it easier to connect on late active frames; max range 2.23 → 2.35
+** {{clr|M|Regular 236MK}} only: proximity guard box starts much earlier, 17f → 5f; increased pushback on block; active frames 2-4 result in a knockdown (KD +24~26)
+** {{clr|M|1-Stock 236MK}} only: causes {{sf6-jug|limited juggle}} OTG bounce on airborne opponents (mostly useful for canceling to {{clr|SA|SA3}} in juggle routes)
+* Go Ohsatsu ({{clr|H|236HK}} / {{clr|OD|236}}{{clr|M|MK}}{{clr|H|HK}}) expanded the collision box upward to make it less likely to whiff under opponents in juggles
+** Applies to all boosted or non-boosted versions
+* {{clr|SA|SA3}} combo-only hitbox expanded upward
+* Assist Combo 2 (Modern Controls) updated to:
+** {{clr|M|2MP}} > {{clr|OD|214KK}}, {{clr|M|6MP}} > {{clr|SA|SA1}} (with Drive meter and at least 1 {{clr|SA|Super}} gauge)
+** {{clr|M|2MP}} > {{clr|OD|214KK}}, {{clr|M|6MP}} > {{clr|H|623HP}} (with Drive meter and no {{clr|SA|Super}} gauge)
+<br>
+
+=== '''Ken''' ===
+* {{clr|M|5MK}} can now be canceled into {{clr|SA|Supers}}; Super Hitconfirm Window 15f; removed 20% Starter scaling
+* {{clr|H|2HP}} blockstun increased 18 → 21; Block Advantage {{sf6-adv|VM|-10}} → {{sf6-adv|VM|-7}}
+** {{clr|DR|DRC}} Block Advantage {{sf6-adv|VP|+8}} → {{sf6-adv|VP|+11}}; Run~Stop Block Advantage {{sf6-adv|VM|-10}} → {{sf6-adv|VM|-7}}; Drive Damage on Block increased 5000 → 6000
+** {{clr|H|2HP}} > {{clr|H|HK Jinrai}} is now only a 5 frame gap on block and is {{clr|DR|DI-safe}}
+* Run~Shoryuken (KK~623P) 1st hit Juggle Start / Juggle Increase values 1 → 0; 2nd hit Juggle Start 1 → 2 and Juggle Increase 1 → 2
+** Makes it less likely for the 2nd hit to whiff in a juggle when the 1st hit connects
+* {{clr|L|Kazekama Shin Kick}} (236K~{{clr|L|6LK}}) damage increased 500 → 600; {{clr|PC|Counter-hit/Punish Counter}} KD Advantage increased +28 → +32 and now causes a Hard Knockdown
+* {{clr|OD|OD Senka Snap Kick}} ({{clr|OD|236KK}}~{{clr|H|6HK}}) active frames increased 4 → 6; recovery reduced 20 → 18 (no change to total duration)
+** More consistent in juggles when the opponent is launched high from the initial {{clr|OD|236KK}}
+* {{clr|SA|SA2}} now benefits from +20% {{clr|PC|Counter-hit/Punish Counter}} damage boost, 2800 → 3360; much stronger as a raw punish
+<br>
+
+=== '''Kimberly''' ===
+* {{clr|H|Windmill Kick}} ({{clr|H|4HK}}) increased pushback on block
+* Hidden Variable / Teleport (214P): normals used after reappearing now gain +3 Juggle Limit and cause an air knockdown
+** Gives extended juggles similar to {{clr|DR|Drive Rush}} without meter cost, and can give stronger Forced Knockdown punishes
+** Does not apply to {{clr|H|2HK}} or Command Normals
+<br>
+
+=== '''Lily''' ===
+* {{clr|H|5HP}} startup reduced 11 → 10; head hurtbox invincibility shifted back 1 frame to match (10-35 → 9-34)
+** Allows a much more consistent combo from {{clr|PC|PC}} {{clr|L|5LP}} where other moves would whiff or reach the opponent on late active frames
+* {{clr|H|Ridge Thrust}} ({{clr|H|3HP}}) increased pushback on block
+* {{clr|OD|OD Condor Spire}} ({{clr|OD|236KK}}, Regular/{{clr|6|Windclad}}) now has two possible travel distances depending on the button combination
+** Far: {{clr|M|MK}}+{{clr|H|HK}} / Modern: A[{{clr|DR|3S}}]
+** Short: {{clr|L|LK}}+{{clr|M|MK}} or {{clr|L|LK}}+{{clr|H|HK}} / Modern: A[{{clr|DR|1S}}] or A[{{clr|DR|2S}}]
+*** Can be more easily spaced on later active frames for improved advantage or to remain safe from {{clr|DR|Drive Reversal}}
+*** The new Short {{clr|6|Windclad}} version has 8f less KD Advantage compared to the original Far version
+** Regular version: recovery reduced 16 → 13; blockstun 21 → 18 (Block Advantage unaffected); KD Advantage +42(54) → +43(55); Perfect Parry Advantage {{sf6-adv|VM|-27(-15)}} → {{sf6-adv|VM|-24(-12)}}
+* {{clr|6|Windclad}} Condor Dive ({{clr|6|W.}}j.PP/{{clr|OD|PPP}}) can now spend a {{clr|6|Windclad}} stock to perform a follow-up Condor Dive on the hit/block rebound
+** Can only be performed once per jump; useful to extend combo damage, or punish the opponent trying to dash or {{clr|DR|Drive Rush}} to punish the initial Dive
+** The {{clr|OD|OD}} version only costs 1 additional Drive bar regardless of which Condor Dive starter was used; grants a Hard Knockdown on hit for great oki anywhere on screen
+<br>
+
+=== '''Luke''' ===
+* {{clr|H|5HP}} recovery on block reduced 23 → 22; Block Advantage {{sf6-adv|VM|-6}} → {{sf6-adv|VM|-5}}; Perfect Parry Advantage {{sf6-adv|VM|-24}} → {{sf6-adv|VM|-23}}
+** Does not affect blockstring gaps when canceled into specials/{{clr|DR|DR}}
+* {{clr|M|Rawhide}} ({{clr|M|6MP}}) increased pushback on block
+* {{clr|H|Double Impact}} ({{clr|H|6HP}}~{{clr|H|HP}}) 2nd hit results in a staggered tailspin (Forces Stand) when the 1st hit connects as a {{clr|PC|Punish Counter}}
+** Advantage on {{clr|PC|Punish Counter}}: {{sf6-adv|P|+2}} ({{sf6-adv|VP|+37}} on the cancel frame, allowing a cancel into any fully charged Flash Knuckle); also {{sf6-adv|VP|+28}} after {{clr|DR|DR Cancel}}
+** {{clr|PC|Punish Counter}} version does not incur the usual 2-hit damage scaling when comboed into
+* {{clr|L|LP Flash Knuckle}} ({{clr|L|214LP}}) recovery reduced 31 → 27; KD Advantage increased +32 → +36; blockstun increased 16 → 18; Block Advantage {{sf6-adv|VM|-18}} → {{sf6-adv|VM|-12}}; Perfect Parry Advantage {{sf6-adv|VM|-32}} → {{sf6-adv|VM|-28}}
+** Reduced horizontal knockback on grounded opponents; the final 2 recovery frames on Hit are special/{{clr|SA|Super}} cancelable (allows corner juggle into {{clr|L|623LP}} or {{clr|SA|SA2}})
+** Reduced knockdown advantage on airborne opponents (to prevent unintended combo routes alongside the other changes)
+* {{clr|H|Held HP Flash Knuckle}} ({{clr|H|214[HP]}}) decreased pushback on block for both regular/perfect versions
+** On close range hit, Luke is in range for {{clr|L|2LK}}~{{clr|L|2LP}} confirm or a 1-frame microwalk throw (longer microwalk if the opponent walks back)
+<br>
+
+=== '''M. Bison''' ===
+* {{clr|H|Psycho Hammer}} ({{clr|H|6HP}}) increased pushback on block
+* Psycho Mine Backfist Combo (214P) meterless versions blockstun increased by 3f on all versions; Block Advantage {{sf6-adv|VP|+6}} → {{sf6-adv|VP|+9}}
+** {{clr|M|Psycho Mine MP Backfist Combo}} ({{clr|M|214MP}}) launches the opponent higher (KD +42 → KD +44); can now juggle into {{clr|H|2HK}} / {{clr|SA|SA1}} / {{clr|SA|SA3}} anywhere on-screen
+* Devil Reverse ([2]8K~P) forward movement speed reduced when activated in front of the opponent
+* {{clr|SA|SA2}} startup reduced 26 → 24; full invincibility reduced 1-32 → 1-30; expanded combo-only hitbox upward
+** Holding back causes shorter horizontal movement, allowing M. Bison to remain on the same side or hit close range opponents more consistently
+** Can now combo from {{clr|H|4HK}} on the ground
+<br>
+
+=== '''Mai''' ===
+* {{clr|M|Senkotsu Uchi}} ({{clr|M|6MP}}) increased pushback on block
+* {{clr|OD|Falling Kachousen Fan}} (after {{clr|OD|236PP}} / {{clr|3|F.}}{{clr|OD|236PP}} / 236[P] / {{clr|3|F.}}236[P]) hitstun reduced 30 → 25 and blockstun reduced 26 → 21
+** Less time to land combos/mixups/pressure when the bouncing fan connects
+** Does not affect the falling fans after {{clr|3|F.}}{{clr|OD|236[PP]}} or {{clr|OD|Midare Kachousen}}
+* Held Kachousen (236[P]) recovery increased 30 → 32 and total 62 → 64; 1st hit blockstun reduced 30 → 28
+** 1st Hit Block Advantage {{sf6-adv|M|-1}} → {{sf6-adv|VM|-5}}; Hit Advantage {{sf6-adv|P|+1}} → {{sf6-adv|M|-1}}; Perfect Parry Advantage {{sf6-adv|VM|-20}} → {{sf6-adv|VM|-22}}
+** Can now punish Mai before the bouncing fan connects if used at close range; especially important in corner setups where point blank 236[P] is throw punishable
+** At ranges where only a 5-frame normal punishes, canceling into a forward-moving special can avoid the falling fan (character-specific)
+*** The blockstun change also increases the blockstring gap between the 1st fan and bouncing fan; normal-size characters can Throw to punish a close range {{clr|L|236[LP]}}, but tall characters (Dee Jay, JP, Marisa, Sagat, Zangief) will still get {{clr|PC|Counter-hit}} by the bouncing fan; they can instead input a crouching {{clr|M|Medium}}/{{clr|H|Heavy}} normal so that Mai is in hitstun/blockstun while the bouncing fan connects, preventing her from getting a combo and pushing her away
+* {{clr|OD|OD Kachouesen}} ({{clr|OD|236PP}}) 1st hit blockstun reduced 28 → 26; Block Advantage (1st hit) {{sf6-adv|M|-3}} → {{sf6-adv|VM|-5}}
+** Can now punish Mai before the bouncing fan connects if used at close range; especially important in corner setups where point blank {{clr|OD|236PP}} is throw punishable
+** At ranges where only a 5-frame normal punishes, canceling into a forward-moving special can avoid the falling fan (character-specific)
+* {{clr|L|LP Ryuuenbu}} ({{clr|L|214LP}}, Normal/{{clr|3|Flame}}) expanded hitbox / projectile clash box / proximity guard box forward; now causes Low Crush 7-14f; extends a forward hurtbox on whiff until end of recovery
+** Drive Damage on Block increased 2000 → 4000; Drive Damage on {{clr|PC|Punish Counter}} increased 2500 → 6000
+** Makes it a much stronger midrange poking tool overall to compensate for Kachousen nerfs
+* {{clr|H|HP Ryuuenbu}} ({{clr|H|214HP}}, Normal/{{clr|3|Flame}}) 2nd hit launches airborne opponents higher for better juggle follow-ups (e.g. {{clr|PC|PC}} {{clr|H|5HK}}, Dash + {{clr|L|2LP}} > {{clr|H|214HP}}, {{clr|L|236LK}}, corner {{clr|M|623MK}})
+** {{clr|3|Flame Version}}: startup reduced 15 → 14 and first hit active frames increased 3 → 4 to allow combo from {{clr|L|5LP}} (no change to total duration); 1st active frame only connects on grounded opponents
+* Hissatsu Shinobi Bachi (236K) slightly reduced forward movement on hit/block (less corner carry)
+* Musasabi no Mai (j.214P/{{clr|OD|PP}}, Normal/{{clr|3|Flame}}) expanded the combo-only hitbox forward on the 7th active frame onward for juggle consistency
+<br>
+
+=== '''Manon''' ===
+* {{clr|L|2LK}} projectile invincibility added to the hurtbox near Manon's head
+* {{clr|H|5HP}} Juggle Limit increased 0 → 1; now works in more juggle routes into {{clr|H|5HP}}~{{clr|H|HP}} or {{clr|SA|SA2}}
+** e.g. air-to-air {{clr|M|j.MP}}, midscreen 236P~K, corner {{clr|OD|236KK}}, corner {{clr|OD|236PP}}~{{clr|OD|K}} > {{clr|H|4HP}}
+* {{clr|H|5HK}} proximity guard box starts much later (2f → 12f), allowing opponents to walk back out of range more easily
+* {{clr|M|En Haut}} ({{clr|M|4MK}}~{{clr|M|MK}}) now maintains the {{clr|PC|Counter-hit/Punish Counter}} property of the initial {{clr|M|4MK}} (deals Drive damage for both {{clr|PC|Punish Counter}} hits)
+** Can now combo the full TC into {{clr|L|236LP}} on {{clr|PC|Counter-hit}} and {{clr|OD|214KK}} on {{clr|PC|Punish Counter}}
+** {{clr|DR|Drive Rush}} bonus advantage does not carry though both hits
+* {{clr|H|Temps Lié}} ({{clr|H|5HP}}~{{clr|H|HP}}) active frames increased 2 → 5 (easier to connect in juggles alongside the {{clr|H|5HP}} change)
+* {{clr|L|LK Rond-point}} ({{clr|L|236LK}}) no longer pushes back on a cornered hit vs. airborne opponents
+* {{clr|L|LK Dégagé}} ({{clr|L|214LK}}) expanded 2nd hit combo-only hitbox for juggle consistency
+* {{clr|H|HK Dégagé}} ({{clr|H|214HK}}) reduced pushback on hit for more consistent {{clr|PC|Counter-hit/Punish Counter}} links
+<br>
+
+=== '''Marisa''' ===
+* {{clr|M|2MK}} hitstun increased 24 → 25; hit recovery decreased 18 → 17; Hit Advantage {{sf6-adv|P|+3}} → {{sf6-adv|VP|+5}}
+** Can now combo out of {{clr|DR|Drive Rush}} into {{clr|H|4HP}} or {{clr|M|5MP}}~{{clr|M|MP}} (close) / {{clr|M|2MP}} (mid) / {{clr|M|6MP}} (far)
+** The mid-range link to {{clr|M|2MP}} has inconsistent spacing for cancels; {{clr|L|236LK}} / {{clr|OD|236PP}} / {{clr|SA|Supers}} are the best ender
+* {{clr|H|5HK}}/{{clr|H|5[HK]}} expanded the forward hurtbox during recovery (easier to whiff punish)
+* {{clr|M|Novacula 1}} ({{clr|M|6MP}}) startup decreased 10 → 9; total animation 31 → 30
+** Now links after {{clr|DR|DR~}}{{clr|M|2MK}} from much farther away than Marisa's other link options
+* {{clr|H|Malleus Breaker 1}} ({{clr|H|3HP}}) increased pushback on block
+** As a result, {{clr|H|Malleus Breaker 2}} ({{clr|H|3HP}}~{{clr|H|3HP}}) whiffs when the first hit is not charged (likely unintentional)
+* {{clr|L|LP Dimachaerus}} ({{clr|L|214LP}}) added a combo-only hitbox to the 1st active frame for combo consistency (can still whiff from long range cancels)
+* Phalanx (623P) blockstun increased 23 → 24; Block Advantage increased {{sf6-adv|P|+2(+3)}} → {{sf6-adv|P|+3}}{{sf6-adv|VP|(+4)}}; {{clr|H|623HP}} pushback on block reduced
+** After blocked {{clr|M|MP}}/{{clr|H|HP}} versions, this improves:
+*** Frame traps with {{clr|L|5LP}}~{{clr|L|LP}}
+*** Pressure with {{clr|M|5MP}}~{{clr|M|MP}} (no longer causes air reset if opponent jumps)
+*** Trade combos vs. 4f normals; use {{clr|M|5MP}} after stand block or {{clr|H|4HP}} after crouch block for trade setup
+* {{clr|OD|OD Phalanx}} ({{clr|OD|623PP}}) armor box expanded downward; armor time increased 6-12 → 6-17; pushback on block reduced
+** Marisa is in command throw range (214K/{{clr|OD|KK}}~{{clr|L|LPLK}}) against stationary opponents, but cannot convert after {{clr|L|2LK}}/{{clr|M|2MK}} to threaten a back walk
+<br>
+
+=== '''Rashid''' ===
+<section begin=2.02 Rashid/>* {{clr|H|5HK}} Juggle Start value on {{clr|PC|Punish Counter}} reduced 5 → 3; can now juggle into moves like {{clr|M|6MP}} or {{clr|L|214LK}}
+* {{clr|H|Beak Assault}} ({{clr|H|6HP}}) increased pushback on block
+* {{clr|M|MP Spinning Mixer}} ({{clr|M|236MP}}) Anti-Air Invincibility increased 6-10 → 6-14 (end of 2nd hit's active frames)
+* {{clr|OD|OD Whirlwind Shot}} ({{clr|OD|236KK}}) reduced horizontal blowback distance when hitting a grounded opponent
+** Easier to juggle afterward midscreen (can even pick up {{clr|DR|DR}} extensions)
+* {{clr|OD|Held OD Whirlwind Shot}} ({{clr|OD|236[KK]}}) startup reduced 41 → 38; total animation 76 → 73
+** Can now be canceled into Arabian Cyclone follow-ups: Wing Stroke (4K) / Rolling Assault (6K) on frame 55 (can buffer the input as early as frame 37)
+** Roll cancel is {{sf6-adv|VM|-4 oB}} at point blank, massively {{sf6-adv|VP|+ oB}} from farther; also useful to avoid being punished by a jump-in
+** 3rd hit launches higher when connecting on airborne opponents (easier to juggle follow-ups if opponent lands into the projectile)
+<section end=2.02 Rashid/>
+<br>
+
+=== '''Ryu''' ===
+* {{clr|M|5MP}} whiff recovery increased 11 → 13; extended arm/body hurtbox lasts until the end of recovery
+* {{clr|H|2HP}} 1st active frame extends a combo-only hitbox to have the same range as 2nd active frame (ensures it will be cancelable in grounded combos)
+* {{clr|M|Collarbone Breaker}} ({{clr|M|6MP}}) 2nd hit blockstun 21 → 19; Block Advantage {{sf6-adv|M|-1}} → {{sf6-adv|M|-3}}
+* {{clr|H|Solar Plexus Strike}} ({{clr|H|6HP}}) proximity guard box starts much later (3f → 17f), allowing opponents to walk back out of range more easily
+* {{clr|H|High Double Strike}} ({{clr|H|5HP}}~{{clr|H|HK}}) launches the opponent higher (KD +36 → KD +39); can juggle into {{clr|M|MP}}/{{clr|OD|OD}} Shoryuken in the corner
+** Denjin Charge cancel KD +7 → KD +10
+** If the {{clr|H|HK}} hits as a {{clr|PC|Punish Counter}} (e.g. after Luke's {{clr|OD|236KK}} absorbs the {{clr|H|5HP}}), Ryu is still KD +37 (very rare scenario)
+* {{clr|L|LP Hashogeki}} ({{clr|L|214LP}}) Drive Damage on Block reduced 4000 → 2000; increased pushback on block vs. Burnout
+* {{clr|OD|OD Shoryuken}} ({{clr|OD|623PP}}) 1st active frame extends a combo-only hitbox for combo consistency
+<br>
+
+=== '''Sagat''' ===
+* {{clr|L|5LK}} reduced pushback on hit for combo consistency
+* {{clr|M|2MP}} whiff recovery increased 17 → 19
+* {{clr|M|Tiger Heavy Elbow}} ({{clr|M|6MP}}) blockstun 20 → 19; Block Advantage {{sf6-adv|M|-2}} → {{sf6-adv|M|-3}}; increased pushback on block
+<br>
+
+=== '''Terry''' ===
+* {{clr|M|2MP}} whiff recovery increased 14 → 15
+* {{clr|H|Hammer Punch}} ({{clr|H|6HP}}) blockstun  → ; Block Advantage {{sf6-adv|M|-2}} → {{sf6-adv|M|-3}}; increased pushback on block
+* {{clr|L|LK Crack Shoot}} ({{clr|L|214LK}}) increased pushback on block vs. Burnout (weaker looping pressure)
+* {{clr|H|HP Round Wave}} ({{clr|H|236HP}}) decreased pushback on hit
+* {{clr|OD|OD Power Charge}} ({{clr|OD|236KK}}) can now cancel into other special moves on hit similar to the {{clr|H|HK}} version
+** Especially useful in the corner where {{clr|H|214HK}} can stop opponent from bouncing over his head
+* {{clr|SA|SA1}} now causes both players to become fully invincible immediately on contact to prevent unintended projectile interactions
+* {{clr|SA|SA3/CA}} startup decreased 3 → 2 when canceled from Rising Tackle, Quick Burn, or Burning Knuckle
+<br>
+
+=== '''Zangief''' ===
+* {{clr|H|Smetana Dropkick}} ({{clr|H|3HK}}) lower body hurtbox reduced during from frame 5 onward (stronger Low Crush)
+* {{clr|OD|OD Double Lariat}} ({{clr|OD|PPP}}) 4th hit expanded downward with increased pushback on block vs. Burnout; 2nd hit blockstun reduced 17 → 14 with reduced pushback on block
+** This allows 3 hits to connect vs. Burnout crouch block for better chip damage, and it can be spaced safely against most punishes due to pushback
+** Does not form a true blockstring between the last 2 hits if the opponent crouch blocks outside of Burnout
+<br>

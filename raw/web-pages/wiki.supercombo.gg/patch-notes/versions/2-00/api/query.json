@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 88857,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/2.00",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:14:12Z",
+        "lastrevid": 365192,
+        "length": 5105,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.00",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/2.00&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.00",
+        "revisions": [
+          {
+            "revid": 365192,
+            "parentid": 360449,
+            "user": "Triplicity",
+            "timestamp": "2026-06-01T00:59:48Z",
+            "size": 5105,
+            "sha1": "e19d28a4919e833b0a516904e8432cd4d8cf9125",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/2.00|2.00]]\n|gameversion=2.00\n|date=August 5, 2025\n|summary='''Sagat Release'''. Minor bug fixes and adjustments (mostly related to Tiger Shot interactions).\n|links=[https://www.streetfighter.com/6/buckler/battle_change/20250805 Patch Notes]  \n}}\n<!--Full Version name: 2.0000.000-->\n\n== Sagat Patch ==\n* Sagat released\n<br>\n\n== '''Character Changes''' ==\n\n=== '''A.K.I.''' ===\n* Venomous Fang (2PP~P) shifted the projectile invincible hurtbox downward immediately after startup (to ensure it's possible to attack through a Low Tiger Shot)\n<br>\n\n=== '''Akuma''' ===\n* Adamant Flame Follow-up (214P~6P) fixed an issue where the attack could not be performed while a projectile was on the screen\n* {{clr|OD|Demon Gou Rasen}} ({{clr|OD|236KK}}~{{clr|OD|j.214K}}) fixed an issue where the attack could not be performed while a projectile was on the screen\n* {{clr|SA|SA1}} / {{clr|SA|Air SA1}} changed the amount of Drive Gauge gained on Perfect Parry is the same as other Super Arts (20000)\n<br>\n\n=== '''Blanka''' ===\n* Backstep Rolling Attack (63214K/{{clr|OD|KK}}) fixed an issue where holding forward/back would steer Blanka a different distance depending on whether he was facing left or right\n<br>\n\n=== '''Cammy''' ===\n* Spiral Arrow (236K/{{clr|OD|KK}}) hurtbox expanded upward at the start and during later active frames (to ensure it cannot easily pass under High Tiger Shot)\n** {{clr|L|236LK}}: frames 1-2, 14-21\n** {{clr|M|236MK}}: frames 1-2, 14-23\n** {{clr|H|236HK}}: frames 1-5, 23-32\n** {{clr|OD|236KK}}: frames 1-4, 19-29\n* {{clr|SA|SA1}} ({{clr|SA|236236K}}) upper hurtbox on frames 1-5 that is vulnerable to projectiles expanded upward\n** This ensures that the early startup frames cannot duck under a High Tiger Shot\n<br>\n\n=== '''Chun-Li''' ===\n* {{clr|SA|Critical Art}} ({{clr|SA|214214K}}) fixed an issue where the opponent would gain less Drive Gauge when parrying the attack compared to other Super Arts\n<br>\n\n=== '''Dhalsim''' ===\n* {{clr|L|2LK}} projectile invincible hurtbox shifted downward (to ensure it's possible to slide under Low Tiger Shot with good timing)\n<br>\n\n=== '''Ed''' ===\n* {{clr|L|LP Psycho Uppercut}} ({{clr|L|623LP}}) fixed an issue where Ed could cancel the final 4 recovery frames into another action on whiff\n<br>\n\n=== '''E. Honda''' ===\n* Neko Damashi (22P) fixed an issue where buffering a {{clr|SA|SA3/CA}} input would not work\n<br>\n\n=== '''Elena''' ===\n* {{clr|H|Round Arch}} ({{clr|H|4HK}}) fixed an issue where Elena would slide forward when performed out of {{clr|DR|Drive Rush}} when not inputting a direction\n* {{clr|SA|Critical Art}} ({{clr|SA|214214K}}) fixed an issue where the damage value was increased by 1000 when landing a K.O. against the opponent\n<br>\n\n=== '''Kimberly''' ===\n* {{clr|OD|OD Sprint}} ({{clr|OD|236KK}}) Modern Controls ({{clr|DR|A[6S]}}) fixed an issue where Down+Forward / Down+Back + Attack would perform Neck Hunter / Emergency Stop instead of Shadow Slide\n<br>\n\n=== '''Luke''' ===\n* {{clr|OD|OD Avenger}} ({{clr|OD|236KK}}) armored head hurtbox shifted downward (to prevent interference with High Tiger Shot)\n<br>\n\n=== '''M. Bison''' ===\n* {{clr|DR|Drive Impact}} fixed an issue where the armor could absorb 3 or more hits depending on which part of the body they interacted with\n<br>\n\n=== '''Manon''' ===\n* {{clr|H|Temps Lié}} ({{clr|H|5HP}}~{{clr|H|HP}}) fixed an issue where Manon could Parry on the final recovery frame on block\n<br>\n\n=== '''Marisa''' ===\n* {{clr|M|2MP}} upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)\n* {{clr|M|2MK}} upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)\n* {{clr|H|2HK}} upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)\n<br>\n\n=== '''Rashid''' ===\n<section begin=2.00 Rashid />\n* {{clr|H|2HP}} upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)\n** ''Note: the official patch notes incorrectly attributed this change to {{clr|H|2HK}}''\n<br>\n<section end=2.00 Rashid />\n\n=== '''Terry''' ===\n* {{clr|OD|214}}{{clr|L|LP}}{{clr|H|HP}} input changed from {{clr|OD|OD Burning Knuckle}} to {{clr|OD|OD Quick Burn}}\n* {{clr|SA|SA3/CA}} ({{clr|SA|236236P}}) fixed an issue where the opponent would gain less Drive Gauge compared to other Super Arts on parry or Perfect Parry\n<br>\n\n=== '''Zangief''' ===\n* Parry hurtbox from frame 3 onward expanded forward\n** This is to match the hurtbox expansion Zangief received in the June 2025 update\n* {{clr|M|2MP}} upper hurtboxes made projectile invincible (to prevent interference with High Tiger Shot)\n* Tundra Storm ({{clr|H|22HK}}) counter hitbox expanded upward (allowing it to work against Sagat's {{clr|H|5HK}}/{{clr|H|6HK}})\n* Double Lariat (Modern Controls: {{clr|M|M}}+{{clr|H|H}}) reverted the change that allowed {{clr|L|L}}+{{clr|M|M}}+{{clr|H|H}} to perform Double Lariat instead of Throw while in Burnout\n** This is due to a bug that caused the move to come out in unintended situations, and is planned to be reimplemented.  \n<br>"
+              }
+            },
+            "comment": "/* Rashid */ Test labeled section transclusion"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

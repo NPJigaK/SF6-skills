@@ -1,0 +1,822 @@
+{
+  "captured_at_utc": "2026-06-11T03:29:08Z",
+  "title": "Street Fighter 6/Version/2.0111 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.0111",
+  "content_text": "Version 2.0111 Game Version 2.0111 date December 16, 2025 Summary Bug fixes and minor adjustments, primarily for Elena, Mai, and Sagat. Links Patch Notes Universal Changes Drive Gauge Appearance: if any amount of Drive gauge remains over the threshold (0/10000/20000/30000/40000/50000), the entire block of gauge will change color to make it easier to distinguish from an empty block Command Throw SA3/CA (Lily, Manon, Zangief): removed unnecessary block idle hitbox that allowed opponents to avoid the throw when landing from a jump 2LK (all characters): extended foot hurtbox that appears before active frames is now invincible to cross-up attacks Character Changes C. Viper j.LP / j.HP no longer Force Stand when hitting a crouching opponent Lv.3 Focus Force (214[K]/[KK]) now deals +4 additional hitstun on Punish Counter like the uncharged versions Now KD +77, and crumple is +29 before opponent falls to the ground Chun-Li Serenity Stream > LP / LK / MK on Perfect Parry: removed some recovery frames immediately before her forced Stance Exit This reduces the total recovery on PP by 2f (LP) / 5f (LK) / 6f (MK) and affects Perfect Parry disadvantage by the same amount This was done because despite being in a Punish Counter state, Chun-Li could block in the middle of her recovery animation on these frames. Dhalsim CA fixed a bug where the Drive Damage and Chip Damage were set to SA3 levels when canceled into Drive Damage on Block: 7500 → 10000 Chip Damage: 1000 → 1250 Elena Leopard Snap (236P~6LK) Super Art gain 600 → 1000 Boosted Leopard Snap (236P~6P~6LK or 236PP~6LK) pushback on block reduced, and normalized the distance on block when used midscreen or in the corner 1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles Moon Glider (214P~6P) 2nd attack hitbox expanded forward OD Moon Glider (214PP) pushback on hit reduced, increased forward movement after the backwards sway More effective as a shimmy tool, leading to more consistent Punish Counter follow-ups SA1 startup reduced 9f → 7f; total animation 96f → 94f; can now build Super gauge after landing this in a combo All airborne and air invuln frames shifted 2f earlier to compensate Mai Forward Throw leaves Mai closer to a cornered opponent (can no longer walk back to shimmy after a dash) 5HP Drive Damage reduced 5000 → 4000 Kachousen (236P) - Charged / Charged OD / Flame versions build more Drive gauge for the defender when Parried and/or Perfect Parried Kachousen (Fan) Drive Gain (on Parry) Drive Gain (on Perfect Parry) 236[P] 2500x2 → 5000,2500 2500x2 → 5000x2 236[PP] 1400x2 → 2500x2 236[PP]~6P -- 1st/2nd: 1200x2 → 2500x2 3rd/4th: 1150x2 → 5000x2 F.236P 2500x2 → 3000x2 F.236[P] 1250x2,2500 → 2500x3 1250x2,2500 → 2500x2,5000 F.236[PP] 1st/2nd: 1200x2 → 2500x2 1st/2nd: 1200x2 → 2500x2 3rd/4th: 750x2 → 2500x2 F.236[PP]~6P -- 1st/2nd: 1050x2 → 2500x2 3rd/4th: 750x2 → 2500x2 Sagat 2LK pushback reduced on hit/block for more consistent hitconfirms 2MK Hit Advantage +4 → +5; hitstun 25 → 26 Gives a natural link to 5LP, a CH link to 5LK/2MP, and a DR/PC link to itself at farther ranges Tiger Monolith (4HP) 1st hit active frames increased 2 → 3 (more consistent juggle tool, does not affect anti-air frames) Charged HP Tiger Uppercut (623[HP]) now gives the stronger cinematic hit up to the 3rd active frame instead of only frames 1-2; collision box expanded upward on active frames 1-2 This slightly increases the max range of the strong hit and makes it more consistent in some high juggles HK Tiger Knee (236HK) expanded combo-only hitbox of 2nd hit upward to prevent it from whiffing when 1st hit connects (does not apply to \"sweet spot\" connect) LK/MK Tiger Nexus (214LK/214MK) increased pushback on hit; increased forward movement during startup; increased horizontal blowback on airborne hit Total range 1.56 → 1.66 (214LK) / 1.86 → 1.96 (214MK) More consistent in grounded confirms (e.g. 3 lights > 214LK), while keeping juggle scenarios intact Mighty Tiger (214K/KK~6LK) increased pushback on hit; increased horizontal blowback on airborne hit If 214LK~6LK is used from a 2-light confirm, opponent is in range for Throw or 2LK~5LP mixup; does not work from new 3-light confirm Greedy Tiger (214K/KK~6MK) Drive Damage increased 6000 → 8000 Nova Tiger (214K/KK~6HK) reduced pushback on block Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Character_Changes",
+      "text": "Character Changes",
+      "html": "<b>Character Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 3,
+      "id": "C._Viper",
+      "text": "C. Viper",
+      "html": "<b>C. Viper</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Dhalsim",
+      "text": "Dhalsim",
+      "html": "<b>Dhalsim</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Elena",
+      "text": "Elena",
+      "html": "<b>Elena</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Mai",
+      "text": "Mai",
+      "html": "<b>Mai</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Sagat",
+      "text": "Sagat",
+      "html": "<b>Sagat</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Drive Gauge Appearance: if any amount of Drive gauge remains over the threshold (0/10000/20000/30000/40000/50000), the entire block of gauge will change color to make it easier to distinguish from an empty block Command Throw SA3/CA (Lily, Manon, Zangief): removed unnecessary block idle hitbox that allowed opponents to avoid the throw when landing from a jump 2LK (all characters): extended foot hurtbox that appears before active frames is now invincible to cross-up attacks",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Gauge Appearance: if any amount of Drive gauge remains over the threshold (0/10000/20000/30000/40000/50000), the entire block of gauge will change color to make it easier to distinguish from an empty block",
+          "html": "<b><style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Drive Gauge</span> Appearance:</b> if any amount of Drive gauge remains over the threshold (0/10000/20000/30000/40000/50000), the entire block of gauge will change color to make it easier to distinguish from an empty block"
+        },
+        {
+          "index": 1,
+          "text": "Command Throw SA3/CA (Lily, Manon, Zangief): removed unnecessary block idle hitbox that allowed opponents to avoid the throw when landing from a jump",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Command Throw SA3/CA</span></b> (Lily, Manon, Zangief): removed unnecessary block idle hitbox that allowed opponents to avoid the throw when landing from a jump"
+        },
+        {
+          "index": 2,
+          "text": "2LK (all characters): extended foot hurtbox that appears before active frames is now invincible to cross-up attacks",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span></b> (all characters): extended foot hurtbox that appears before active frames is now invincible to cross-up attacks"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "j.LP / j.HP no longer Force Stand when hitting a crouching opponent Lv.3 Focus Force (214[K]/[KK]) now deals +4 additional hitstun on Punish Counter like the uncharged versions Now KD +77, and crumple is +29 before opponent falls to the ground",
+      "items": [
+        {
+          "index": 0,
+          "text": "j.LP / j.HP no longer Force Stand when hitting a crouching opponent",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">j.LP</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.HP</span> no longer Force Stand when hitting a crouching opponent"
+        },
+        {
+          "index": 1,
+          "text": "Lv.3 Focus Force (214[K]/[KK]) now deals +4 additional hitstun on Punish Counter like the uncharged versions Now KD +77, and crumple is +29 before opponent falls to the ground",
+          "html": "Lv.3 Focus Force (214[K]/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">[KK]</span>) now deals +4 additional hitstun on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> like the uncharged versions\n<ul><li>Now KD +77, and crumple is +29 before opponent falls to the ground</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "Now KD +77, and crumple is +29 before opponent falls to the ground",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now KD +77, and crumple is +29 before opponent falls to the ground",
+          "html": "Now KD +77, and crumple is +29 before opponent falls to the ground"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Serenity Stream > LP / LK / MK on Perfect Parry: removed some recovery frames immediately before her forced Stance Exit This reduces the total recovery on PP by 2f (LP) / 5f (LK) / 6f (MK) and affects Perfect Parry disadvantage by the same amount This was done because despite being in a Punish Counter state, Chun-Li could block in the middle of her recovery animation on these frames.",
+      "items": [
+        {
+          "index": 0,
+          "text": "Serenity Stream > LP / LK / MK on Perfect Parry: removed some recovery frames immediately before her forced Stance Exit This reduces the total recovery on PP by 2f (LP) / 5f (LK) / 6f (MK) and affects Perfect Parry disadvantage by the same amount This was done because despite being in a Punish Counter state, Chun-Li could block in the middle of her recovery animation on these frames.",
+          "html": "Serenity Stream &gt; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> on Perfect Parry: removed some recovery frames immediately before her forced Stance Exit\n<ul><li>This reduces the total recovery on PP by 2f <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">(LP)</span> / 5f <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">(LK)</span> / 6f <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">(MK)</span> and affects Perfect Parry disadvantage by the same amount</li>\n<li>This was done because despite being in a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> state, Chun-Li could block in the middle of her recovery animation on these frames.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "This reduces the total recovery on PP by 2f (LP) / 5f (LK) / 6f (MK) and affects Perfect Parry disadvantage by the same amount This was done because despite being in a Punish Counter state, Chun-Li could block in the middle of her recovery animation on these frames.",
+      "items": [
+        {
+          "index": 0,
+          "text": "This reduces the total recovery on PP by 2f (LP) / 5f (LK) / 6f (MK) and affects Perfect Parry disadvantage by the same amount",
+          "html": "This reduces the total recovery on PP by 2f <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">(LP)</span> / 5f <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">(LK)</span> / 6f <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">(MK)</span> and affects Perfect Parry disadvantage by the same amount"
+        },
+        {
+          "index": 1,
+          "text": "This was done because despite being in a Punish Counter state, Chun-Li could block in the middle of her recovery animation on these frames.",
+          "html": "This was done because despite being in a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> state, Chun-Li could block in the middle of her recovery animation on these frames."
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "CA fixed a bug where the Drive Damage and Chip Damage were set to SA3 levels when canceled into Drive Damage on Block: 7500 → 10000 Chip Damage: 1000 → 1250",
+      "items": [
+        {
+          "index": 0,
+          "text": "CA fixed a bug where the Drive Damage and Chip Damage were set to SA3 levels when canceled into Drive Damage on Block: 7500 → 10000 Chip Damage: 1000 → 1250",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">CA</span> fixed a bug where the Drive Damage and Chip Damage were set to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> levels when canceled into\n<ul><li>Drive Damage on Block: 7500 → 10000</li>\n<li>Chip Damage: 1000 → 1250</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Drive Damage on Block: 7500 → 10000 Chip Damage: 1000 → 1250",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Damage on Block: 7500 → 10000",
+          "html": "Drive Damage on Block: 7500 → 10000"
+        },
+        {
+          "index": 1,
+          "text": "Chip Damage: 1000 → 1250",
+          "html": "Chip Damage: 1000 → 1250"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "Leopard Snap (236P~6LK) Super Art gain 600 → 1000 Boosted Leopard Snap (236P~6P~6LK or 236PP~6LK) pushback on block reduced, and normalized the distance on block when used midscreen or in the corner 1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles Moon Glider (214P~6P) 2nd attack hitbox expanded forward OD Moon Glider (214PP) pushback on hit reduced, increased forward movement after the backwards sway More effective as a shimmy tool, leading to more consistent Punish Counter follow-ups SA1 startup reduced 9f → 7f; total animation 96f → 94f; can now build Super gauge after landing this in a combo All airborne and air invuln frames shifted 2f earlier to compensate",
+      "items": [
+        {
+          "index": 0,
+          "text": "Leopard Snap (236P~6LK) Super Art gain 600 → 1000",
+          "html": "Leopard Snap (236P~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span>) Super Art gain 600 → 1000"
+        },
+        {
+          "index": 1,
+          "text": "Boosted Leopard Snap (236P~6P~6LK or 236PP~6LK) pushback on block reduced, and normalized the distance on block when used midscreen or in the corner 1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles",
+          "html": "Boosted Leopard Snap (236P~6P~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span> or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236PP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span>) pushback on block reduced, and normalized the distance on block when used midscreen or in the corner\n<ul><li>1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Moon Glider (214P~6P) 2nd attack hitbox expanded forward",
+          "html": "Moon Glider (214P~6P) 2nd attack hitbox expanded forward"
+        },
+        {
+          "index": 3,
+          "text": "OD Moon Glider (214PP) pushback on hit reduced, increased forward movement after the backwards sway More effective as a shimmy tool, leading to more consistent Punish Counter follow-ups",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Moon Glider</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span>) pushback on hit reduced, increased forward movement after the backwards sway\n<ul><li>More effective as a shimmy tool, leading to more consistent <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> follow-ups</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "SA1 startup reduced 9f → 7f; total animation 96f → 94f; can now build Super gauge after landing this in a combo All airborne and air invuln frames shifted 2f earlier to compensate",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> startup reduced 9f → 7f; total animation 96f → 94f; can now build <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge after landing this in a combo\n<ul><li>All airborne and air invuln frames shifted 2f earlier to compensate</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles",
+      "items": [
+        {
+          "index": 0,
+          "text": "1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles",
+          "html": "1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "More effective as a shimmy tool, leading to more consistent Punish Counter follow-ups",
+      "items": [
+        {
+          "index": 0,
+          "text": "More effective as a shimmy tool, leading to more consistent Punish Counter follow-ups",
+          "html": "More effective as a shimmy tool, leading to more consistent <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> follow-ups"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "All airborne and air invuln frames shifted 2f earlier to compensate",
+      "items": [
+        {
+          "index": 0,
+          "text": "All airborne and air invuln frames shifted 2f earlier to compensate",
+          "html": "All airborne and air invuln frames shifted 2f earlier to compensate"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Forward Throw leaves Mai closer to a cornered opponent (can no longer walk back to shimmy after a dash) 5HP Drive Damage reduced 5000 → 4000 Kachousen (236P) - Charged / Charged OD / Flame versions build more Drive gauge for the defender when Parried and/or Perfect Parried",
+      "items": [
+        {
+          "index": 0,
+          "text": "Forward Throw leaves Mai closer to a cornered opponent (can no longer walk back to shimmy after a dash)",
+          "html": "Forward Throw leaves Mai closer to a cornered opponent (can no longer walk back to shimmy after a dash)"
+        },
+        {
+          "index": 1,
+          "text": "5HP Drive Damage reduced 5000 → 4000",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span> Drive Damage reduced 5000 → 4000"
+        },
+        {
+          "index": 2,
+          "text": "Kachousen (236P) - Charged / Charged OD / Flame versions build more Drive gauge for the defender when Parried and/or Perfect Parried",
+          "html": "Kachousen (236P) - Charged / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">Charged OD</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">Flame</span> versions build more Drive gauge for the defender when Parried and/or Perfect Parried"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "2LK pushback reduced on hit/block for more consistent hitconfirms 2MK Hit Advantage +4 → +5; hitstun 25 → 26 Gives a natural link to 5LP, a CH link to 5LK/2MP, and a DR/PC link to itself at farther ranges Tiger Monolith (4HP) 1st hit active frames increased 2 → 3 (more consistent juggle tool, does not affect anti-air frames) Charged HP Tiger Uppercut (623[HP]) now gives the stronger cinematic hit up to the 3rd active frame instead of only frames 1-2; collision box expanded upward on active frames 1-2 This slightly increases the max range of the strong hit and makes it more consistent in some high juggles HK Tiger Knee (236HK) expanded combo-only hitbox of 2nd hit upward to prevent it from whiffing when 1st hit connects (does not apply to \"sweet spot\" connect) LK/MK Tiger Nexus (214LK/214MK) increased pushback on hit; increased forward movement during startup; increased horizontal blowback on airborne hit Total range 1.56 → 1.66 (214LK) / 1.86 → 1.96 (214MK) More consistent in grounded confirms (e.g. 3 lights > 214LK), while keeping juggle scenarios intact Mighty Tiger (214K/KK~6LK) increased pushback on hit; increased horizontal blowback on airborne hit If 214LK~6LK is used from a 2-light confirm, opponent is in range for Throw or 2LK~5LP mixup; does not work from new 3-light confirm Greedy Tiger (214K/KK~6MK) Drive Damage increased 6000 → 8000 Nova Tiger (214K/KK~6HK) reduced pushback on block Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LK pushback reduced on hit/block for more consistent hitconfirms",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> pushback reduced on hit/block for more consistent hitconfirms"
+        },
+        {
+          "index": 1,
+          "text": "2MK Hit Advantage +4 → +5; hitstun 25 → 26 Gives a natural link to 5LP, a CH link to 5LK/2MP, and a DR/PC link to itself at farther ranges",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MK</span> Hit Advantage <span style=\"color: #30D5B8;\"><b>+4</b></span> → <span style=\"color: #30D5B8;\"><b>+5</b></span>; hitstun 25 → 26\n<ul><li>Gives a natural link to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>, a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">CH</span> link to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span>, and a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">PC</span> link to itself at farther ranges</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Tiger Monolith (4HP) 1st hit active frames increased 2 → 3 (more consistent juggle tool, does not affect anti-air frames)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Tiger Monolith</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4HP</span>) 1st hit active frames increased 2 → 3 (more consistent juggle tool, does not affect anti-air frames)"
+        },
+        {
+          "index": 3,
+          "text": "Charged HP Tiger Uppercut (623[HP]) now gives the stronger cinematic hit up to the 3rd active frame instead of only frames 1-2; collision box expanded upward on active frames 1-2 This slightly increases the max range of the strong hit and makes it more consistent in some high juggles",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Charged HP Tiger Uppercut</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">623[HP]</span>) now gives the stronger cinematic hit up to the 3rd active frame instead of only frames 1-2; collision box expanded upward on active frames 1-2\n<ul><li>This slightly increases the max range of the strong hit and makes it more consistent in some high juggles</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "HK Tiger Knee (236HK) expanded combo-only hitbox of 2nd hit upward to prevent it from whiffing when 1st hit connects (does not apply to \"sweet spot\" connect)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK Tiger Knee</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">236HK</span>) expanded combo-only hitbox of 2nd hit upward to prevent it from whiffing when 1st hit connects (does not apply to \"sweet spot\" connect)"
+        },
+        {
+          "index": 5,
+          "text": "LK/MK Tiger Nexus (214LK/214MK) increased pushback on hit; increased forward movement during startup; increased horizontal blowback on airborne hit Total range 1.56 → 1.66 (214LK) / 1.86 → 1.96 (214MK) More consistent in grounded confirms (e.g. 3 lights > 214LK), while keeping juggle scenarios intact",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> Tiger Nexus (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span>) increased pushback on hit; increased forward movement during startup; increased horizontal blowback on airborne hit\n<ul><li>Total range 1.56 → 1.66 (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>) / 1.86 → 1.96 (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span>)</li>\n<li>More consistent in grounded confirms (e.g. 3 lights &gt; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>), while keeping juggle scenarios intact</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "Mighty Tiger (214K/KK~6LK) increased pushback on hit; increased horizontal blowback on airborne hit If 214LK~6LK is used from a 2-light confirm, opponent is in range for Throw or 2LK~5LP mixup; does not work from new 3-light confirm",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Mighty Tiger</span> (214K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span>) increased pushback on hit; increased horizontal blowback on airborne hit\n<ul><li>If <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span> is used from a 2-light confirm, opponent is in range for Throw or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span> mixup; does not work from new 3-light confirm</li></ul>"
+        },
+        {
+          "index": 7,
+          "text": "Greedy Tiger (214K/KK~6MK) Drive Damage increased 6000 → 8000",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Greedy Tiger</span> (214K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">6MK</span>) Drive Damage increased 6000 → 8000"
+        },
+        {
+          "index": 8,
+          "text": "Nova Tiger (214K/KK~6HK) reduced pushback on block Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Nova Tiger</span> (214K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HK</span>) reduced pushback on block\n<ul><li>Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Gives a natural link to 5LP, a CH link to 5LK/2MP, and a DR/PC link to itself at farther ranges",
+      "items": [
+        {
+          "index": 0,
+          "text": "Gives a natural link to 5LP, a CH link to 5LK/2MP, and a DR/PC link to itself at farther ranges",
+          "html": "Gives a natural link to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>, a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">CH</span> link to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span>, and a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">PC</span> link to itself at farther ranges"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "This slightly increases the max range of the strong hit and makes it more consistent in some high juggles",
+      "items": [
+        {
+          "index": 0,
+          "text": "This slightly increases the max range of the strong hit and makes it more consistent in some high juggles",
+          "html": "This slightly increases the max range of the strong hit and makes it more consistent in some high juggles"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Total range 1.56 → 1.66 (214LK) / 1.86 → 1.96 (214MK) More consistent in grounded confirms (e.g. 3 lights > 214LK), while keeping juggle scenarios intact",
+      "items": [
+        {
+          "index": 0,
+          "text": "Total range 1.56 → 1.66 (214LK) / 1.86 → 1.96 (214MK)",
+          "html": "Total range 1.56 → 1.66 (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>) / 1.86 → 1.96 (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span>)"
+        },
+        {
+          "index": 1,
+          "text": "More consistent in grounded confirms (e.g. 3 lights > 214LK), while keeping juggle scenarios intact",
+          "html": "More consistent in grounded confirms (e.g. 3 lights &gt; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>), while keeping juggle scenarios intact"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "If 214LK~6LK is used from a 2-light confirm, opponent is in range for Throw or 2LK~5LP mixup; does not work from new 3-light confirm",
+      "items": [
+        {
+          "index": 0,
+          "text": "If 214LK~6LK is used from a 2-light confirm, opponent is in range for Throw or 2LK~5LP mixup; does not work from new 3-light confirm",
+          "html": "If <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span> is used from a 2-light confirm, opponent is in range for Throw or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span> mixup; does not work from new 3-light confirm"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f",
+      "items": [
+        {
+          "index": 0,
+          "text": "Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f",
+          "html": "Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 2.0111 Game Version 2.0111 date December 16, 2025 Summary Bug fixes and minor adjustments, primarily for Elena, Mai, and Sagat. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.0111",
+              "html": "<a class=\"mw-selflink selflink\">2.0111</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.0111",
+              "html": "2.0111",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "December 16, 2025",
+              "html": "December 16, 2025",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Bug fixes and minor adjustments, primarily for Elena, Mai, and Sagat.",
+              "html": "Bug fixes and minor adjustments, primarily for Elena, Mai, and Sagat.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20251216\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    },
+    {
+      "table_index": 1,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable",
+        "style": "text-align: center;"
+      },
+      "text": "Kachousen (Fan) Drive Gain (on Parry) Drive Gain (on Perfect Parry) 236[P] 2500x2 → 5000,2500 2500x2 → 5000x2 236[PP] 1400x2 → 2500x2 236[PP]~6P -- 1st/2nd: 1200x2 → 2500x2 3rd/4th: 1150x2 → 5000x2 F.236P 2500x2 → 3000x2 F.236[P] 1250x2,2500 → 2500x3 1250x2,2500 → 2500x2,5000 F.236[PP] 1st/2nd: 1200x2 → 2500x2 1st/2nd: 1200x2 → 2500x2 3rd/4th: 750x2 → 2500x2 F.236[PP]~6P -- 1st/2nd: 1050x2 → 2500x2 3rd/4th: 750x2 → 2500x2",
+      "headers": [
+        "Kachousen (Fan)",
+        "Drive Gain (on Parry)",
+        "Drive Gain (on Perfect Parry)"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Kachousen (Fan)",
+              "html": "Kachousen (Fan)",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Drive Gain (on Parry)",
+              "html": "Drive Gain<br>(on Parry)",
+              "images": []
+            },
+            {
+              "cell_index": 2,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Drive Gain (on Perfect Parry)",
+              "html": "Drive Gain<br>(on Perfect Parry)\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "236[P]",
+              "html": "236[P]",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2500x2 → 5000,2500",
+              "html": "2500x2 → 5000,2500",
+              "images": []
+            },
+            {
+              "cell_index": 2,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2500x2 → 5000x2",
+              "html": "2500x2 → 5000x2\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "236[PP]",
+              "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236[PP]</span>",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {
+                "colspan": "2"
+              },
+              "text": "1400x2 → 2500x2",
+              "html": "1400x2 → 2500x2\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "236[PP]~6P",
+              "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236[PP]</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">6P</span>",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "--",
+              "html": "--",
+              "images": []
+            },
+            {
+              "cell_index": 2,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1st/2nd: 1200x2 → 2500x2 3rd/4th: 1150x2 → 5000x2",
+              "html": "1st/2nd: 1200x2 → 2500x2<br>3rd/4th: 1150x2 → 5000x2\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "F.236P",
+              "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">F.</span>236P",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {
+                "colspan": "2"
+              },
+              "text": "2500x2 → 3000x2",
+              "html": "2500x2 → 3000x2\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 5,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "F.236[P]",
+              "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">F.</span>236[P]",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1250x2,2500 → 2500x3",
+              "html": "1250x2,2500 → 2500x3",
+              "images": []
+            },
+            {
+              "cell_index": 2,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1250x2,2500 → 2500x2,5000",
+              "html": "1250x2,2500 → 2500x2,5000\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 6,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "F.236[PP]",
+              "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">F.</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236[PP]</span>",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1st/2nd: 1200x2 → 2500x2",
+              "html": "1st/2nd: 1200x2 → 2500x2",
+              "images": []
+            },
+            {
+              "cell_index": 2,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1st/2nd: 1200x2 → 2500x2 3rd/4th: 750x2 → 2500x2",
+              "html": "1st/2nd: 1200x2 → 2500x2<br>3rd/4th: 750x2 → 2500x2\n",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 7,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "td",
+              "attributes": {
+                "style": "text-align: left;"
+              },
+              "text": "F.236[PP]~6P",
+              "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">F.</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236[PP]</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">6P</span>",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "--",
+              "html": "--",
+              "images": []
+            },
+            {
+              "cell_index": 2,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1st/2nd: 1050x2 → 2500x2 3rd/4th: 750x2 → 2500x2",
+              "html": "1st/2nd: 1050x2 → 2500x2<br>3rd/4th: 750x2 → 2500x2\n",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 8
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20251216",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20251216",
+      "title": "",
+      "class_name": "external text"
+    }
+  ],
+  "metrics": {
+    "heading_count": 8,
+    "paragraph_count": 8,
+    "link_count": 1,
+    "image_count": 0,
+    "table_count": 2,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 3760,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

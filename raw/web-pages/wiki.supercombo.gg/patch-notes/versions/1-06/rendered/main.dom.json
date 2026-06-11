@@ -1,0 +1,1198 @@
+{
+  "captured_at_utc": "2026-06-11T03:37:22Z",
+  "title": "Street Fighter 6/Version/1.06 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.06",
+  "content_text": "Version 1.06 Game Version 1.06 date June 26, 2024 Summary M. Bison Release. Minor balance changes and bug fixes. Links Patch Notes M. Bison Patch M. Bison released Universal Changes Perfect Parry vs. Projectiles No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6MPMK~6 input Drive Reversal Fixed bug where a trade could cause a KO at low health Drive Parry Fixed issue where moves that cause a screen shake would not trigger it when parried Taunts Modern Controls input changed from L+M+H+SP → L+M+H+SP+DP+Assist Back Rise (Wakeup) Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup Key Character Changes A.K.I. 5MP Expanded collision box upward to prevent unintended side switches in juggles Akuma Tenmaku Blade Kick (j.2MK) Fixed bug where combo scaling was reduced when it hit immediately before landing Viscera Piercer (5MP~MP) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel) Bone Crusher Axe Kick (5MK~HK) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) Block Recovery of Various Attacks Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions Applies to 6HP~6HP, 214LK, and 214LP~6P Gou Shoryuken (623P) Fixed bug where Drive Gain on Perfect Parry was less than intended Tatsumaki Zanku-Kyaku (214K) Fixed bug where Drive Gain on Perfect Parry was less than intended Zanku Hadoken (j.236P/PP) Hurtbox expanded forward Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials) Ashura Senku (6KKK/4KKK) Hurtbox expanded during Teleport movement Will no longer completely overlap with a cornered opponent These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent Shun Goku Satsu (CA) (LP~LP~6LK~HP) Fixed issue where the opponent's charge timing would be reset during the cinematic side switch Blanka 2MK Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while SA2 was active Raid Jump (Modern Controls: 2MH~M/H) Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button Rolling Attack / Vertical Rolling Attack ([4]6P / [2]8K) Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding Dee Jay Threebeat Combo 1 (5LP~MK) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel) MK/HK Jackknife Maximum ([2]8MK/HK) Now throw invuln on frames 5-6 Ed Assist Combo 3 Fixed issue where the input buffer did not work if stopped after the initial 5H (5HP) and then restarted again Body Blow Combination (5MP~HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) Hitman Combination 1 (5MK~MK) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel) Low Smash Combination (2HK~HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) E. Honda OD Sumo Smash ([2]8KK) Now throw invuln on frames 5-13 Jamie SA1 (236236K) Drive Damage on Block reduced by 200 Opponent's Drive Gain on Parry reduced by 2000 Version 1.05 caused SA1 to gain an extra hit, so these changes restore the values to their previous version JP Assist Combo 2 Now activates SA2 when OD Stribog is blocked or absorbed by armor Juri Death Crest 1 (5MP~4HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) OD Fuhajin (214KK) Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup Fuha stock obtained 14f → 12f Projectile clash hitbox appears 12f → 10f Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox Ken Quick Dash (KK) Now only takes priority over OD kick specials when all 3 Kick buttons are pressed In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move Kimberly OD Sprint (236KK) Fixed bug that would cause sound effect not to play Bushin Senpukyaku (214K) Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version 214LK now throw invuln on frames 7-11 214MK now throw invuln on frames 8-12 214HK now throw invuln on frames 9-13 214KK now throw invuln on frames 7-11 Luke Assist Combo 1 Input is now accepted during the chain cancel window Marisa Assist Combo 1 Input is now accepted during the chain cancel window Rashid HP Spinning Mixer (236HP Regular/Enhanced) Now throw invuln on frames 8-10 Zangief 5MK Attack hitbox reverted to its pre-1.05 version, slightly reducing its range Tundra Storm (Modern Controls: 22H) Fixed issue where a previous input leniency adjustment was not applied to Modern controls",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "M._Bison_Patch",
+      "text": "M. Bison Patch",
+      "html": "M. Bison Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Key_Character_Changes",
+      "text": "Key Character Changes",
+      "html": "<b>Key Character Changes</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "A.K.I.",
+      "text": "A.K.I.",
+      "html": "<b>A.K.I.</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Akuma",
+      "text": "Akuma",
+      "html": "<b>Akuma</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Blanka",
+      "text": "Blanka",
+      "html": "<b>Blanka</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Dee_Jay",
+      "text": "Dee Jay",
+      "html": "<b>Dee Jay</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Ed",
+      "text": "Ed",
+      "html": "<b>Ed</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "E._Honda",
+      "text": "E. Honda",
+      "html": "<b>E. Honda</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "Jamie",
+      "text": "Jamie",
+      "html": "<b>Jamie</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "JP",
+      "text": "JP",
+      "html": "<b>JP</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Juri",
+      "text": "Juri",
+      "html": "<b>Juri</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Ken",
+      "text": "Ken",
+      "html": "<b>Ken</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "Kimberly",
+      "text": "Kimberly",
+      "html": "<b>Kimberly</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Luke",
+      "text": "Luke",
+      "html": "<b>Luke</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Marisa",
+      "text": "Marisa",
+      "html": "<b>Marisa</b>"
+    },
+    {
+      "index": 16,
+      "level": 3,
+      "id": "Rashid",
+      "text": "Rashid",
+      "html": "<b>Rashid</b>"
+    },
+    {
+      "index": 17,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 16,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 17,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "M. Bison released",
+      "items": [
+        {
+          "index": 0,
+          "text": "M. Bison released",
+          "html": "M. Bison released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Perfect Parry vs. Projectiles No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6MPMK~6 input Drive Reversal Fixed bug where a trade could cause a KO at low health Drive Parry Fixed issue where moves that cause a screen shake would not trigger it when parried Taunts Modern Controls input changed from L+M+H+SP → L+M+H+SP+DP+Assist Back Rise (Wakeup) Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup",
+      "items": [
+        {
+          "index": 0,
+          "text": "Perfect Parry vs. Projectiles No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6MPMK~6 input",
+          "html": "<b>Perfect Parry vs. Projectiles</b>\n<ul><li>No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6<style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--8\">MPMK</span>~6 input</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Drive Reversal Fixed bug where a trade could cause a KO at low health",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span></b>\n<ul><li>Fixed bug where a trade could cause a KO at low health</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Drive Parry Fixed issue where moves that cause a screen shake would not trigger it when parried",
+          "html": "<b>Drive Parry</b>\n<ul><li>Fixed issue where moves that cause a screen shake would not trigger it when parried</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Taunts Modern Controls input changed from L+M+H+SP → L+M+H+SP+DP+Assist",
+          "html": "<b>Taunts</b>\n<ul><li>Modern Controls input changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">SP</span> → <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">SP</span>+DP+Assist</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Back Rise (Wakeup) Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup",
+          "html": "<b>Back Rise (Wakeup)</b>\n<ul><li>Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6MPMK~6 input",
+      "items": [
+        {
+          "index": 0,
+          "text": "No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6MPMK~6 input",
+          "html": "No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6<style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--8\">MPMK</span>~6 input"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Fixed bug where a trade could cause a KO at low health",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed bug where a trade could cause a KO at low health",
+          "html": "Fixed bug where a trade could cause a KO at low health"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Fixed issue where moves that cause a screen shake would not trigger it when parried",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where moves that cause a screen shake would not trigger it when parried",
+          "html": "Fixed issue where moves that cause a screen shake would not trigger it when parried"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Modern Controls input changed from L+M+H+SP → L+M+H+SP+DP+Assist",
+      "items": [
+        {
+          "index": 0,
+          "text": "Modern Controls input changed from L+M+H+SP → L+M+H+SP+DP+Assist",
+          "html": "Modern Controls input changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">SP</span> → <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">SP</span>+DP+Assist"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup",
+          "html": "Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "5MP Expanded collision box upward to prevent unintended side switches in juggles",
+      "items": [
+        {
+          "index": 0,
+          "text": "5MP Expanded collision box upward to prevent unintended side switches in juggles",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>\n<ul><li>Expanded collision box upward to prevent unintended side switches in juggles</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "Expanded collision box upward to prevent unintended side switches in juggles",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded collision box upward to prevent unintended side switches in juggles",
+          "html": "Expanded collision box upward to prevent unintended side switches in juggles"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Tenmaku Blade Kick (j.2MK) Fixed bug where combo scaling was reduced when it hit immediately before landing Viscera Piercer (5MP~MP) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel) Bone Crusher Axe Kick (5MK~HK) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) Block Recovery of Various Attacks Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions Applies to 6HP~6HP, 214LK, and 214LP~6P Gou Shoryuken (623P) Fixed bug where Drive Gain on Perfect Parry was less than intended Tatsumaki Zanku-Kyaku (214K) Fixed bug where Drive Gain on Perfect Parry was less than intended Zanku Hadoken (j.236P/PP) Hurtbox expanded forward Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials) Ashura Senku (6KKK/4KKK) Hurtbox expanded during Teleport movement Will no longer completely overlap with a cornered opponent These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent Shun Goku Satsu (CA) (LP~LP~6LK~HP) Fixed issue where the opponent's charge timing would be reset during the cinematic side switch",
+      "items": [
+        {
+          "index": 0,
+          "text": "Tenmaku Blade Kick (j.2MK) Fixed bug where combo scaling was reduced when it hit immediately before landing",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Tenmaku Blade Kick</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">j.2MK</span>)\n<ul><li>Fixed bug where combo scaling was reduced when it hit immediately before landing</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Viscera Piercer (5MP~MP) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Viscera Piercer</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span>)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Bone Crusher Axe Kick (5MK~HK) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Bone Crusher Axe Kick</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Block Recovery of Various Attacks Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions Applies to 6HP~6HP, 214LK, and 214LP~6P",
+          "html": "Block Recovery of Various Attacks\n<ul><li>Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions</li>\n<li>Applies to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HP</span>, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>, and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6P</span></li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Gou Shoryuken (623P) Fixed bug where Drive Gain on Perfect Parry was less than intended",
+          "html": "Gou Shoryuken (623P)\n<ul><li>Fixed bug where Drive Gain on Perfect Parry was less than intended</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "Tatsumaki Zanku-Kyaku (214K) Fixed bug where Drive Gain on Perfect Parry was less than intended",
+          "html": "Tatsumaki Zanku-Kyaku (214K)\n<ul><li>Fixed bug where Drive Gain on Perfect Parry was less than intended</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "Zanku Hadoken (j.236P/PP) Hurtbox expanded forward Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials)",
+          "html": "Zanku Hadoken (j.236P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span>)\n<ul><li>Hurtbox expanded forward</li>\n<li>Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials)</li></ul>"
+        },
+        {
+          "index": 7,
+          "text": "Ashura Senku (6KKK/4KKK) Hurtbox expanded during Teleport movement Will no longer completely overlap with a cornered opponent These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent",
+          "html": "Ashura Senku (6KKK/4KKK)\n<ul><li>Hurtbox expanded during Teleport movement</li>\n<li>Will no longer completely overlap with a cornered opponent</li>\n<li>These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent</li></ul>"
+        },
+        {
+          "index": 8,
+          "text": "Shun Goku Satsu (CA) (LP~LP~6LK~HP) Fixed issue where the opponent's charge timing would be reset during the cinematic side switch",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Shun Goku Satsu (CA)</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>)\n<ul><li>Fixed issue where the opponent's charge timing would be reset during the cinematic side switch</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "Fixed bug where combo scaling was reduced when it hit immediately before landing",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed bug where combo scaling was reduced when it hit immediately before landing",
+          "html": "Fixed bug where combo scaling was reduced when it hit immediately before landing"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions Applies to 6HP~6HP, 214LK, and 214LP~6P",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions",
+          "html": "Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions"
+        },
+        {
+          "index": 1,
+          "text": "Applies to 6HP~6HP, 214LK, and 214LP~6P",
+          "html": "Applies to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HP</span>, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span>, and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">6P</span>"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Fixed bug where Drive Gain on Perfect Parry was less than intended",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed bug where Drive Gain on Perfect Parry was less than intended",
+          "html": "Fixed bug where Drive Gain on Perfect Parry was less than intended"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Fixed bug where Drive Gain on Perfect Parry was less than intended",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed bug where Drive Gain on Perfect Parry was less than intended",
+          "html": "Fixed bug where Drive Gain on Perfect Parry was less than intended"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "Hurtbox expanded forward Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hurtbox expanded forward",
+          "html": "Hurtbox expanded forward"
+        },
+        {
+          "index": 1,
+          "text": "Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials)",
+          "html": "Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials)"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Hurtbox expanded during Teleport movement Will no longer completely overlap with a cornered opponent These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hurtbox expanded during Teleport movement",
+          "html": "Hurtbox expanded during Teleport movement"
+        },
+        {
+          "index": 1,
+          "text": "Will no longer completely overlap with a cornered opponent",
+          "html": "Will no longer completely overlap with a cornered opponent"
+        },
+        {
+          "index": 2,
+          "text": "These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent",
+          "html": "These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Fixed issue where the opponent's charge timing would be reset during the cinematic side switch",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the opponent's charge timing would be reset during the cinematic side switch",
+          "html": "Fixed issue where the opponent's charge timing would be reset during the cinematic side switch"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "2MK Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while SA2 was active Raid Jump (Modern Controls: 2MH~M/H) Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button Rolling Attack / Vertical Rolling Attack ([4]6P / [2]8K) Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding",
+      "items": [
+        {
+          "index": 0,
+          "text": "2MK Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while SA2 was active",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MK</span>\n<ul><li>Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> was active</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Raid Jump (Modern Controls: 2MH~M/H) Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button",
+          "html": "Raid Jump (Modern Controls: 2<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>)\n<ul><li>Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Rolling Attack / Vertical Rolling Attack ([4]6P / [2]8K) Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding",
+          "html": "Rolling Attack / Vertical Rolling Attack ([4]6P / [2]8K)\n<ul><li>Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while SA2 was active",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while SA2 was active",
+          "html": "Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> was active"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button",
+          "html": "Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding",
+          "html": "Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "Threebeat Combo 1 (5LP~MK) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel) MK/HK Jackknife Maximum ([2]8MK/HK) Now throw invuln on frames 5-6",
+      "items": [
+        {
+          "index": 0,
+          "text": "Threebeat Combo 1 (5LP~MK) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Threebeat Combo 1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span>)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "MK/HK Jackknife Maximum ([2]8MK/HK) Now throw invuln on frames 5-6",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> Jackknife Maximum ([2]8<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span>)\n<ul><li>Now throw invuln on frames 5-6</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "Now throw invuln on frames 5-6",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now throw invuln on frames 5-6",
+          "html": "Now throw invuln on frames 5-6"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "Assist Combo 3 Fixed issue where the input buffer did not work if stopped after the initial 5H (5HP) and then restarted again Body Blow Combination (5MP~HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) Hitman Combination 1 (5MK~MK) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel) Low Smash Combination (2HK~HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 3 Fixed issue where the input buffer did not work if stopped after the initial 5H (5HP) and then restarted again",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Assist Combo 3</span>\n<ul><li>Fixed issue where the input buffer did not work if stopped after the initial <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5H</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span>) and then restarted again</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Body Blow Combination (5MP~HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Body Blow Combination</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Hitman Combination 1 (5MK~MK) 2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Hitman Combination 1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span>)</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Low Smash Combination (2HK~HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Low Smash Combination</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "Fixed issue where the input buffer did not work if stopped after the initial 5H (5HP) and then restarted again",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the input buffer did not work if stopped after the initial 5H (5HP) and then restarted again",
+          "html": "Fixed issue where the input buffer did not work if stopped after the initial <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5H</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span>) and then restarted again"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both MP+MK (to prevent accidental TC when attempting a DR Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "tag_name": "ul",
+      "text": "OD Sumo Smash ([2]8KK) Now throw invuln on frames 5-13",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Sumo Smash ([2]8KK) Now throw invuln on frames 5-13",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Sumo Smash</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">[2]8KK</span>)\n<ul><li>Now throw invuln on frames 5-13</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "tag_name": "ul",
+      "text": "Now throw invuln on frames 5-13",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now throw invuln on frames 5-13",
+          "html": "Now throw invuln on frames 5-13"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "tag_name": "ul",
+      "text": "SA1 (236236K) Drive Damage on Block reduced by 200 Opponent's Drive Gain on Parry reduced by 2000 Version 1.05 caused SA1 to gain an extra hit, so these changes restore the values to their previous version",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA1 (236236K) Drive Damage on Block reduced by 200 Opponent's Drive Gain on Parry reduced by 2000 Version 1.05 caused SA1 to gain an extra hit, so these changes restore the values to their previous version",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Drive Damage on Block reduced by 200</li>\n<li>Opponent's Drive Gain on Parry reduced by 2000</li>\n<li>Version 1.05 caused <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> to gain an extra hit, so these changes restore the values to their previous version</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "tag_name": "ul",
+      "text": "Drive Damage on Block reduced by 200 Opponent's Drive Gain on Parry reduced by 2000 Version 1.05 caused SA1 to gain an extra hit, so these changes restore the values to their previous version",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Damage on Block reduced by 200",
+          "html": "Drive Damage on Block reduced by 200"
+        },
+        {
+          "index": 1,
+          "text": "Opponent's Drive Gain on Parry reduced by 2000",
+          "html": "Opponent's Drive Gain on Parry reduced by 2000"
+        },
+        {
+          "index": 2,
+          "text": "Version 1.05 caused SA1 to gain an extra hit, so these changes restore the values to their previous version",
+          "html": "Version 1.05 caused <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> to gain an extra hit, so these changes restore the values to their previous version"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "tag_name": "ul",
+      "text": "Assist Combo 2 Now activates SA2 when OD Stribog is blocked or absorbed by armor",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 2 Now activates SA2 when OD Stribog is blocked or absorbed by armor",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>\n<ul><li>Now activates <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> when <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Stribog</span> is blocked or absorbed by armor</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "tag_name": "ul",
+      "text": "Now activates SA2 when OD Stribog is blocked or absorbed by armor",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now activates SA2 when OD Stribog is blocked or absorbed by armor",
+          "html": "Now activates <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> when <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Stribog</span> is blocked or absorbed by armor"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "tag_name": "ul",
+      "text": "Death Crest 1 (5MP~4HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel) OD Fuhajin (214KK) Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup Fuha stock obtained 14f → 12f Projectile clash hitbox appears 12f → 10f Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox",
+      "items": [
+        {
+          "index": 0,
+          "text": "Death Crest 1 (5MP~4HP) 2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Death Crest 1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4HP</span>)\n<ul><li>2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Fuhajin (214KK) Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup Fuha stock obtained 14f → 12f Projectile clash hitbox appears 12f → 10f Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Fuhajin</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span>)\n<ul><li>Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup</li>\n<li>Fuha stock obtained 14f → 12f</li>\n<li>Projectile clash hitbox appears 12f → 10f</li>\n<li>Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "tag_name": "ul",
+      "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit can no longer be performed when inputting both HP+HK (to prevent accidental TC when attempting a DI Cancel)",
+          "html": "2nd hit can no longer be performed when inputting both <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> (to prevent accidental TC when attempting a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI Cancel</span>)"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "tag_name": "ul",
+      "text": "Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup Fuha stock obtained 14f → 12f Projectile clash hitbox appears 12f → 10f Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox",
+      "items": [
+        {
+          "index": 0,
+          "text": "Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup",
+          "html": "Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup"
+        },
+        {
+          "index": 1,
+          "text": "Fuha stock obtained 14f → 12f",
+          "html": "Fuha stock obtained 14f → 12f"
+        },
+        {
+          "index": 2,
+          "text": "Projectile clash hitbox appears 12f → 10f",
+          "html": "Projectile clash hitbox appears 12f → 10f"
+        },
+        {
+          "index": 3,
+          "text": "Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox",
+          "html": "Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "tag_name": "ul",
+      "text": "Quick Dash (KK) Now only takes priority over OD kick specials when all 3 Kick buttons are pressed In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move",
+      "items": [
+        {
+          "index": 0,
+          "text": "Quick Dash (KK) Now only takes priority over OD kick specials when all 3 Kick buttons are pressed In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move",
+          "html": "Quick Dash (KK)\n<ul><li>Now only takes priority over <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> kick specials when all 3 Kick buttons are pressed</li>\n<li>In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "tag_name": "ul",
+      "text": "Now only takes priority over OD kick specials when all 3 Kick buttons are pressed In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now only takes priority over OD kick specials when all 3 Kick buttons are pressed",
+          "html": "Now only takes priority over <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> kick specials when all 3 Kick buttons are pressed"
+        },
+        {
+          "index": 1,
+          "text": "In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move",
+          "html": "In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "tag_name": "ul",
+      "text": "OD Sprint (236KK) Fixed bug that would cause sound effect not to play Bushin Senpukyaku (214K) Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version 214LK now throw invuln on frames 7-11 214MK now throw invuln on frames 8-12 214HK now throw invuln on frames 9-13 214KK now throw invuln on frames 7-11",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Sprint (236KK) Fixed bug that would cause sound effect not to play",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Sprint</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>)\n<ul><li>Fixed bug that would cause sound effect not to play</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Bushin Senpukyaku (214K) Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version 214LK now throw invuln on frames 7-11 214MK now throw invuln on frames 8-12 214HK now throw invuln on frames 9-13 214KK now throw invuln on frames 7-11",
+          "html": "Bushin Senpukyaku (214K)\n<ul><li>Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span> now throw invuln on frames 7-11</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span> now throw invuln on frames 8-12</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">214HK</span> now throw invuln on frames 9-13</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span> now throw invuln on frames 7-11</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "tag_name": "ul",
+      "text": "Fixed bug that would cause sound effect not to play",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed bug that would cause sound effect not to play",
+          "html": "Fixed bug that would cause sound effect not to play"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "tag_name": "ul",
+      "text": "Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version 214LK now throw invuln on frames 7-11 214MK now throw invuln on frames 8-12 214HK now throw invuln on frames 9-13 214KK now throw invuln on frames 7-11",
+      "items": [
+        {
+          "index": 0,
+          "text": "Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version",
+          "html": "Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version"
+        },
+        {
+          "index": 1,
+          "text": "214LK now throw invuln on frames 7-11",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LK</span> now throw invuln on frames 7-11"
+        },
+        {
+          "index": 2,
+          "text": "214MK now throw invuln on frames 8-12",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span> now throw invuln on frames 8-12"
+        },
+        {
+          "index": 3,
+          "text": "214HK now throw invuln on frames 9-13",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">214HK</span> now throw invuln on frames 9-13"
+        },
+        {
+          "index": 4,
+          "text": "214KK now throw invuln on frames 7-11",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span> now throw invuln on frames 7-11"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "tag_name": "ul",
+      "text": "Assist Combo 1 Input is now accepted during the chain cancel window",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 1 Input is now accepted during the chain cancel window",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Assist Combo 1</span>\n<ul><li>Input is now accepted during the chain cancel window</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "tag_name": "ul",
+      "text": "Input is now accepted during the chain cancel window",
+      "items": [
+        {
+          "index": 0,
+          "text": "Input is now accepted during the chain cancel window",
+          "html": "Input is now accepted during the chain cancel window"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "tag_name": "ul",
+      "text": "Assist Combo 1 Input is now accepted during the chain cancel window",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 1 Input is now accepted during the chain cancel window",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Assist Combo 1</span>\n<ul><li>Input is now accepted during the chain cancel window</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "tag_name": "ul",
+      "text": "Input is now accepted during the chain cancel window",
+      "items": [
+        {
+          "index": 0,
+          "text": "Input is now accepted during the chain cancel window",
+          "html": "Input is now accepted during the chain cancel window"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "tag_name": "ul",
+      "text": "HP Spinning Mixer (236HP Regular/Enhanced) Now throw invuln on frames 8-10",
+      "items": [
+        {
+          "index": 0,
+          "text": "HP Spinning Mixer (236HP Regular/Enhanced) Now throw invuln on frames 8-10",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP Spinning Mixer</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">236HP</span> Regular/Enhanced)\n<ul><li>Now throw invuln on frames 8-10</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "tag_name": "ul",
+      "text": "Now throw invuln on frames 8-10",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now throw invuln on frames 8-10",
+          "html": "Now throw invuln on frames 8-10"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "tag_name": "ul",
+      "text": "5MK Attack hitbox reverted to its pre-1.05 version, slightly reducing its range Tundra Storm (Modern Controls: 22H) Fixed issue where a previous input leniency adjustment was not applied to Modern controls",
+      "items": [
+        {
+          "index": 0,
+          "text": "5MK Attack hitbox reverted to its pre-1.05 version, slightly reducing its range",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MK</span>\n<ul><li>Attack hitbox reverted to its pre-1.05 version, slightly reducing its range</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Tundra Storm (Modern Controls: 22H) Fixed issue where a previous input leniency adjustment was not applied to Modern controls",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Tundra Storm</span> (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">22H</span>)\n<ul><li>Fixed issue where a previous input leniency adjustment was not applied to Modern controls</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "tag_name": "ul",
+      "text": "Attack hitbox reverted to its pre-1.05 version, slightly reducing its range",
+      "items": [
+        {
+          "index": 0,
+          "text": "Attack hitbox reverted to its pre-1.05 version, slightly reducing its range",
+          "html": "Attack hitbox reverted to its pre-1.05 version, slightly reducing its range"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "tag_name": "ul",
+      "text": "Fixed issue where a previous input leniency adjustment was not applied to Modern controls",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where a previous input leniency adjustment was not applied to Modern controls",
+          "html": "Fixed issue where a previous input leniency adjustment was not applied to Modern controls"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 1.06 Game Version 1.06 date June 26, 2024 Summary M. Bison Release. Minor balance changes and bug fixes. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.06",
+              "html": "<a class=\"mw-selflink selflink\">1.06</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.06",
+              "html": "1.06",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "June 26, 2024",
+              "html": "June 26, 2024",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "M. Bison Release. Minor balance changes and bug fixes.",
+              "html": "<b>M. Bison Release</b>. Minor balance changes and bug fixes.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20240626\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20240626",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20240626",
+      "title": "",
+      "class_name": "external text"
+    }
+  ],
+  "metrics": {
+    "heading_count": 18,
+    "paragraph_count": 18,
+    "link_count": 1,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 5782,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

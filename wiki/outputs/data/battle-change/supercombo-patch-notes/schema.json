@@ -1,0 +1,85 @@
+{
+  "schema_version": "supercombo_patch_notes_output_schema/v1",
+  "outputs": {
+    "versions_json": {
+      "path": "wiki/outputs/data/battle-change/supercombo-patch-notes/versions.json",
+      "description": "One row per SuperCombo Patch Notes table version row, with raw capture pointers and detail page counts.",
+      "row_key": "version",
+      "source_authority": "community"
+    },
+    "official_battle_change_crosswalk_json": {
+      "path": "wiki/outputs/data/battle-change/supercombo-patch-notes/official-battle-change-crosswalk.json",
+      "description": "Explicit mapping from SuperCombo version pages to Capcom official battle_change version IDs when linked by SuperCombo.",
+      "row_key": "supercombo_version"
+    },
+    "change_events_json": {
+      "path": "wiki/outputs/data/battle-change/supercombo-patch-notes/change-events.json",
+      "description": "Top-level SuperCombo Patch Notes bullets with nested detail bullets and table text preserved as community change events.",
+      "row_key": "event_id",
+      "source_authority": "community"
+    },
+    "move_change_index_json": {
+      "path": "wiki/outputs/data/battle-change/supercombo-patch-notes/move-change-index.json",
+      "description": "Community change events grouped by fighter/system scope and target title for cause-finding queries.",
+      "row_key": "normalized_target_key",
+      "source_authority": "community"
+    }
+  },
+  "key_fields": {
+    "version": "SuperCombo SF6_Versions.version display value from rendered Cargo table.",
+    "gameversion": "SuperCombo SF6_Versions.gameversion from rendered Cargo table and version template.",
+    "official_battle_change_id_from_link": "Date/version ID parsed from the external Capcom battle_change URL in the SuperCombo Patch Notes links column.",
+    "capture_validation_status": "Status from each raw detail page validation.json."
+  },
+  "authority_policy": "Capcom official battle_change remains official source for official update text. SuperCombo change-events and move-change-index are community source indexes that preserve SuperCombo wording, explanatory notes, and explicit links to official Battle Change IDs when present.",
+  "change_event_fields": [
+    "event_id",
+    "source_authority",
+    "source_family",
+    "version",
+    "gameversion",
+    "date",
+    "summary",
+    "official_battle_change_id_from_link",
+    "supercombo_version_url",
+    "section_order",
+    "section_title",
+    "section_level",
+    "scope",
+    "fighter_display_name",
+    "fighter_key",
+    "character_slug",
+    "event_order",
+    "line_number",
+    "target_title",
+    "normalized_target_key",
+    "change_types",
+    "confidence",
+    "value_changes",
+    "top_line",
+    "detail_lines",
+    "table_text_blocks",
+    "raw_top_line",
+    "raw_detail_lines",
+    "raw_table_blocks",
+    "text_plain",
+    "raw_wikitext_path"
+  ],
+  "move_change_index_fields": [
+    "normalized_target_key",
+    "scope",
+    "fighter_display_name",
+    "fighter_key",
+    "character_slug",
+    "target_title",
+    "event_count",
+    "numeric_explicit_event_count",
+    "versions",
+    "official_battle_change_ids_from_links",
+    "event_ids",
+    "source_authorities",
+    "source_families",
+    "raw_wikitext_paths",
+    "change_types"
+  ]
+}

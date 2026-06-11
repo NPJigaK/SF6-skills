@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 73484,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/1.01",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:13:46Z",
+        "lastrevid": 360718,
+        "length": 5737,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.01",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.01&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.01",
+        "revisions": [
+          {
+            "revid": 360718,
+            "parentid": 360441,
+            "user": "Spabobin",
+            "timestamp": "2026-04-05T06:26:15Z",
+            "size": 5737,
+            "sha1": "d7c9238cc220da647eaab85e3fe6b1e96bc7d620",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/1.01|1.01]]\n|gameversion=1.01\n|date=July 24, 2023\n|summary='''Rashid Release'''. Bug fixes with some minor balance changes mainly for Modern controls.\n|links=[https://www.streetfighter.com/6/buckler/en/battle_change/20230724 Patch Notes]  \n}}\n<!--Full Version name: 1.0100.001-->\n\n== Rashid Patch ==\n* Rashid released\n<br>\n\n== '''Universal Changes''' ==\n* '''{{clr|DR|Drive Rush Cancel}}'''\n** Can now be performed with {{clr|M|MP}}+{{clr|M|MK}} (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward\n** {{clr|L|Light}} normals are now cancelable into {{clr|DR|DRC}} even on whiff due to the low risk of these easier inputs\n* '''Drive Parry'''\n** Fixed issue where {{clr|M|MK}} would come out if Parry was buffered during a screen freeze and then released before the Parry occurred\n* '''Install {{clr|SA|Supers}}'''\n** Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired\n* '''Assist Combos (Modern)'''\n** Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input\n* '''{{clr|OD|OD Special Moves}} (Modern)'''\n** Fixed issue where some moves could not be manually input while holding the Assist button.\n<br>\n\n== '''Key Character Changes''' ==\n\n=== '''Blanka''' ===\n* '''Charge Special Moves - Modern Controls''' (Rolling Attack, Aerial Rolling Attack, Vertical Rolling Attack) \n** Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input\n** Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f\n* {{clr|M|j.MP}}\n** Fixed issue where special cancel could not be performed if the move was parried\n* Back Throw ({{clr|L|4LPLK}})\n** Fixed issue where {{clr|PC|Punish Counter}} built the same amount of {{clr|SA|Super}} gauge is a standard throw\n* {{clr|H|HP Aerial Rolling Attack}} ({{clr|H|j.[4]6HP}})\n** Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout\n<br>\n\n=== '''Cammy''' ===\n* {{clr|H|HK Cannon Strike}} ({{clr|H|j.214HK}})\n** Fixed issue where {{clr|H|j.HK}} would come out instead if input at earliest timing\n* {{clr|OD|OD Quick Spin Knuckle}} ({{clr|OD|214PP}})\n** Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch\n<br>\n\n=== '''Chun-Li''' ===\n* '''Charge Special Moves - Modern Controls''' (Kikoken)\n** Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f\n** Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f\n* Forward/Back/Air Throw ({{clr|L|LPLK}}/{{clr|L|4LPLK}}/{{clr|L|j.LPLK}})\n** Fixed issue where Charge timing would be reset during the successful throw animations\n* Serenity Stream (214P)\n** Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)\n<br>\n\n=== '''Dee Jay''' ===\n* {{clr|H|Face Breaker}} ({{clr|H|4HK}})\n** Fixed issue where {{clr|PC|Punish Counter}} Drive Damage was higher vs. airborne opponents\n* Back Throw ({{clr|L|4LPLK}})\n** Fixed issue where {{clr|PC|Punish Counter}} built the same amount of {{clr|SA|Super}} gauge is a standard throw\n<br>\n\n=== '''Dhalsim''' ===\n* {{clr|L|Agile Kick}} ({{clr|L|1LK}})\n** Chain cancel version no longer works with {{clr|L|2LK}} input (Classic controls only; no change to Modern)\n* {{clr|OD|OD Yoga Arch}} ({{clr|OD|236KK}})\n** Fixed issue where the projectile would reappear after the {{clr|SA|SA3/CA}} cinematic\n* {{clr|OD|OD Yoga Comet}} ({{clr|OD|j.63214PP}})\n** Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent\n<br>\n\n=== '''E. Honda''' ===\n* {{clr|L|2LP}}\n** Fixed issue where the chained version could be kara-canceled on startup\n* {{clr|SA|SA3/CA}} ({{clr|SA|214214P}})\n** Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters\n<br>\n\n=== '''Jamie''' ===\n* Modern {{clr|L|2L}}\n** Changed from {{clr|L|2LK}} → {{clr|L|2LP}} so that he has access to a 4-frame attack\n<br>\n\n=== '''Juri''' ===\n* 1-Stock Enhanced {{clr|L|Saihasho}} / {{clr|M|Ankensatsu}} / {{clr|H|Go Ohatsu}} ({{clr|L|236LK}}/{{clr|M|236MK}}/{{clr|H|236HK}})\n** Fixed issue where the 1st frame could be kara-canceled into {{clr|SA|SA3/CA}} (allowing unintended combo routes with 2 stocks)\n<br>\n\n=== '''Kimberly''' ===\n* {{clr|SA|SA3/CA}} ({{clr|SA|236233P}})\n** Fixed issue where it could hit cross-up (behind Kimberly)\n<br>\n\n=== '''Lily''' ===\n* {{clr|OD|OD Condor Dive}} ({{clr|OD|j.PPP}})\n** Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P)\n* {{clr|SA|Air SA2}} ({{clr|SA|j.236236K}})\n** Fixed issue where Lily could not perform this from a back jump if the inputs where plinked\n** Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air\n<br>\n\n=== '''Marisa''' ===\n* Scutum (Modern {{clr|DR|6S}})\n** Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the {{clr|DR|S}} button, making it difficult to perform Enfold ({{clr|DR|6S}}~{{clr|DR|2S}})\n<br>\n\n=== '''Ryu''' ===\n* {{clr|DR|Drive Impact}}\n** Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage\n<br>\n\n=== '''Zangief''' ===\n* Fixed issue where Drive gauge recovery during Burnout was slower than other characters\n* {{clr|SA|SA1}} ({{clr|SA|236236K}})\n** Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual\n<br>"
+              }
+            },
+            "comment": "/* Dhalsim */"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

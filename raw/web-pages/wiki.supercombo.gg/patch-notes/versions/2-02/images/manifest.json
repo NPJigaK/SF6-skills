@@ -1,0 +1,31 @@
+{
+  "image_manifest_schema_version": "supercombo_mediawiki_page_image_manifest/v1",
+  "captured_at_utc": "2026-06-11T03:28:11Z",
+  "source": "SuperCombo Wiki",
+  "page_media_policy": {
+    "mediawiki_originals": "Download original File: artifacts only for semantic page content media, not navigation/template chrome.",
+    "rendered_image_src": "Download rendered page img src/currentSrc URLs for semantic content media when they differ from originals.",
+    "video_policy": "Record video/audio DOM references but do not download large video artifacts without an explicit scoped request."
+  },
+  "requested_titles": [],
+  "missing_titles": [],
+  "rendered_images": [],
+  "rendered_videos": [],
+  "downloads": {
+    "mediawiki_originals": [],
+    "rendered_image_src": []
+  },
+  "counts": {
+    "requested_titles": 0,
+    "imageinfo_resolved": 0,
+    "imageinfo_missing": 0,
+    "downloaded_originals": 0,
+    "failed_originals": 0,
+    "downloaded_rendered_images": 0,
+    "failed_rendered_images": 0,
+    "rendered_dom_images": 0,
+    "rendered_dom_videos": 0,
+    "failures": 0
+  },
+  "failures": []
+}

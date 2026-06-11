@@ -269,6 +269,48 @@ version title は各 version page 由来の `version_title` と discovery select
 `version_selector_title` を別列で保持し、公式 source 内の表記差は `version_title_mismatch`
 で明示します。
 
+## SuperCombo Patch Notesの置き方
+
+SuperCombo Patch Notes は community detail source として扱います。Capcom 公式 Battle Change の
+置き換えではなく、combo、juggle、blockstring、bug fix などの説明や community terminology を
+探すための補助 index です。
+
+```text
+raw/web-pages/wiki.supercombo.gg/patch-notes/
+  manifest.json
+  page.raw.wikitext
+  rendered/main.dom.json
+  version-captures.json
+  validation.batch.json
+  versions/<version-slug>/
+    manifest.json
+    page.raw.wikitext
+    rendered/main.dom.json
+    validation.json
+```
+
+派生 output は Battle Change 配下にまとめます。
+
+```text
+wiki/outputs/data/battle-change/supercombo-patch-notes/
+  versions.json
+  official-battle-change-crosswalk.json
+  change-events.json
+  move-change-index.json
+  schema.json
+```
+
+再生成は次の入口を使います。
+
+```bash
+uv run python -m tools.battle_change.supercombo.extract
+```
+
+`versions.json` と `official-battle-change-crosswalk.json` は Patch Notes root の rendered table と
+detail page manifests から再生成します。`change-events.json` と `move-change-index.json` は
+detail page の `page.raw.wikitext` を source text として作ります。公式 Battle Change との対応は
+SuperCombo table の明示 link がある row だけを crosswalk として扱い、全 version の 1:1 対応は仮定しません。
+
 ## SuperComboフレームデータの置き方
 
 SuperCombo も fixed latest mirror として保存します。source revision は path ではなく、

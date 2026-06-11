@@ -1,0 +1,636 @@
+<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><section id="citizen-section-0" class="citizen-section"><div class="citizen-overflow-wrapper"><div class="citizen-overflow-nav"><button class="citizen-overflow-navButton citizen-overflow-navButton-left citizen-ui-icon mw-ui-icon-wikimedia-collapse" aria-hidden="true" tabindex="-1"></button><button class="citizen-overflow-navButton citizen-overflow-navButton-right citizen-ui-icon mw-ui-icon-wikimedia-collapse" aria-hidden="true" tabindex="-1"></button></div><div class="citizen-overflow-content"><table class="wikitable">
+<tbody><tr><th>Version</th><td><a class="mw-selflink selflink">1.08</a></td></tr>
+<tr><th>Game Version</th><td>1.08</td></tr>
+<tr><th>date</th><td>December 2, 2024</td></tr>
+<tr><th>Summary</th><td>Minor balance changes for all characters.</td></tr>
+<tr><th>Links</th><td><a rel="nofollow" class="external text" href="https://www.streetfighter.com/6/buckler/battle_change/20241202">Patch Notes</a></td></tr>
+</tbody></table></div></div>
+<p><br>
+</p>
+<meta property="mw:PageProp/toc">
+</section><div class="mw-heading mw-heading2 citizen-section-heading"><span class="citizen-section-indicator citizen-ui-icon mw-ui-icon-wikimedia-collapse"></span><h2 id="Universal_Changes"><b>Universal Changes</b></h2></div><section id="citizen-section-1" class="citizen-section">
+<ul><li><b>Jump Cancels</b>
+<ul><li>Canceling a character's prejump frames into a special move can no longer be used to escape normal Throws as a defensive option</li>
+<li>Active frames of a normal Throw are extended when they make contact with throw invuln prejump frames, ensuring a jump canceled special will be thrown immediately</li>
+<li>This is especially impactful for Zangief and Lily, who have a longer prejump time that could be canceled into a command throw</li></ul></li>
+<li><b>Sweeps</b>
+<ul><li>Several <style data-mw-deduplicate="TemplateStyles:r298166">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class="text-color--9">2HK</span> sweeps has their pushback or recovery adjusted to ensure that opponents can consistently punish them on block</li>
+<li>Some perfectly spaced sweeps may still be safe in specific matchups when spaced perfectly</li>
+<li>Applied to Akuma, Cammy, Ken, Jamie, and M. Bison</li></ul></li>
+<li><b>Perfect Parry vs. Multi-hit Attacks</b>
+<ul><li>After a Perfect Parry, it is no longer possible to cancel the later hits of an attack</li>
+<li>This was already true on block, but now applies on hit and armor as well</li>
+<li>This change allows characters to punish more attacks with <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span>, such as M. Bison's <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Psycho Crusher</span> and Lily's <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--6">Windclad</span> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Condor Spire</span>
+<ul><li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=aOqaB9rCgqQ">Video example of how the cancel used to work</a></li>
+<li><i>Note: this change was temporarily reverted due to a bug, but was re-applied in Version 1.09</i></li></ul></li></ul></li>
+<li><b><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Overdrive Specials</span></b>
+<ul><li>The visual effects of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span> moves now take priority over Burnout recovery effects when performed immediately after Burnout ends</li></ul></li>
+<li><b>Super Armor</b>
+<ul><li>Fixed issue where an attack could be absorbed by armor even when connecting with a non-armored hurtbox, if it connected during the hitstop of another attack that was armor absorbed</li>
+<li>Hypothetical example: Marisa absorbs a projectile with Gladius (upper-body armor), then a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span> connects immediately afterward during the armor hitstop, leading to it being absorbed when it should go under the armor hurtbox</li></ul></li>
+<li><b>Collision Box Behavior</b>
+<ul><li>Fixed issue where cornered characters would shift a greater distance when switching sides with an airborne opponent</li></ul></li></ul>
+<p><br>
+</p>
+</section><div class="mw-heading mw-heading2 citizen-section-heading"><span class="citizen-section-indicator citizen-ui-icon mw-ui-icon-wikimedia-collapse"></span><h2 id="Key_Character_Changes"><b>Key Character Changes</b></h2></div><section id="citizen-section-2" class="citizen-section">
+<div class="mw-heading mw-heading3"><h3 id="A.K.I."><b>A.K.I.</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Drive Gain increased 2000 → 3000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP Serpent Lash</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HP</span>)
+<ul><li>Juggle Increase value when triggering <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Toxic Blossom</span> decreased 5 → 2</li>
+<li>Gives more lenient combo routes when comboing into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HP</span> on a poisoned opponent</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Cruel Fate</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">214HK</span>)
+<ul><li>Increased KD Advantage when the final hit connects on an airborne opponent</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Akuma"><b>Akuma</b></h3></div>
+<ul><li>Back Walk Speed reduced 0.036 → 0.035</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Assist Combo 2</span>
+<ul><li>Fixed issue where buffering attacks after Adamant Flame would result in simple-input damage scaling</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span>
+<ul><li>Can now cancel to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span> 2f earlier (on the first active frame)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Pushback on block reduced for both Akuma and the opponent; easier for many characters to punish</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Resso Snap Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span>)
+<ul><li>Whiff recovery increased 18 → 19 and extended the whiff hurtbox</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Tenmaku Blade Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">j.2MK</span>)
+<ul><li>Drive Gain increased 2000 → 3000</li></ul></li>
+<li>Gou Hadoken (236P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>)
+<ul><li>Forward hurtbox extended from the 3rd active frame onward</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Gou Shoryuken</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">623PP</span>)
+<ul><li>Total damage decreased 1900 → 1700</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Tatsumaki Zanku-kyaku</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214KK</span>)
+<ul><li>KD Advantage increased +46 → +47</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK Demon Raid</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">236LK</span>)
+<ul><li>Movement speed after crossing over the opponent increased 0.02 → 0.04</li>
+<li>Now matches the movement speed of the other strengths</li></ul></li>
+<li>Demon Swoop (236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~[2])
+<ul><li>5f extra landing recovery when crossing over opponent</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Blanka"><b>Blanka</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>
+<ul><li>Drive Gain increased 3000 → 4000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Double Knee Bombs</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span>)
+<ul><li>Foot hurtbox raised upwards on frame 9 onward, making it a more effective low crush</li>
+<li>1st hit now causes free juggle state vs. airborne, allowing both hits to connect
+<ul><li>Also causes shorter blowback time and distance for both 1st and 2nd hits on airborne opponents</li></ul></li>
+<li>Fixed issue where Blanka would get pushed back when the 2nd hit connected on a cornered airborne opponent</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Wild Nail</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>)
+<ul><li>KD Advantage increased by 2 frames on grounded hit (+18 → +20) and by 5 frames on airborne hit</li>
+<li>Ensures Blanka is always plus after a Forward Dash; no change to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> version</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Cammy"><b>Cammy</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span>
+<ul><li>Whiff recovery increased 14 → 17 and extended the whiff hurtbox for entire recovery</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Pushback on block reduced</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Cannon Spike</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">623KK</span>)
+<ul><li>No longer switches sides on hit</li>
+<li>KD Advantage increased +16 → +19</li>
+<li>Damage distribution changed 1100,100x4 → 600,100x3,600</li>
+<li>More rewarding if only the late active frames connect</li>
+<li>Active frames for 1st hit's full animation reduced by 1 (frames 1-4 → 1-3)</li>
+<li>Extends a wider combo-only hitbox on active frames 3-4</li></ul></li>
+<li>Cannon Strike (j.214K)
+<ul><li>Drive Gain increased 1000 → 2500</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Cannon Strike</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">j.214KK</span>)
+<ul><li>When input on the way up, frame advantage is now fixed when the first active frame connects: <span style="color: #bcbd0c;">0 on Hit</span> / <span style="color: #ff6347;">-2 on Block</span></li>
+<li>Weakens its use as a corner throw escape; can no longer link to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">4MP</span> for a corner side switch even on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span></li></ul></li>
+<li>Razor's Edge Slicer (236P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>~No Input)
+<ul><li>Hurtbox extended upward while sliding on the ground</li>
+<li>Previously, Cammy could low profile under Blanka/Chun-Li/Jamie <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Reversals</span>, Marisa <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Scutum Counter</span>, Akuma/Luke/Rashid/Ryu <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, and Luke <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li>
+<li>Can still low profile Dhalsim <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> like most crouching attacks</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Chun-Li"><b>Chun-Li</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Drive Gain increased 3000 → 4000</li></ul></li>
+<li>Serenity Stream (Modern Controls) can now use all 6 follow-ups
+<ul><li>Kick followups (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Forward Strike</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Senpu Kick</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Tenku Kick</span>) are performed using <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2L</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2M</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2H</span></li>
+<li>Punch followups (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Orchid Palm</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Snake Strike</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Lotus Fist</span>) are performed using <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5L</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5M</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5H</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Snake Strike</span> (214P~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>)
+<ul><li>Startup reduced 11 → 7</li>
+<li>Active frames increased 7 → 11 (total frame count unchanged)</li>
+<li>These new early active frames result in a worse Knockdown / Block / Perfect Parry advantage (up to 4f worse at close range)</li>
+<li>Drive Gain increased 500 → 2000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Senpu Kick</span> (214P~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>)
+<ul><li>Hitstun increased 22 → 24 (now combos into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Spinning Bird Kick</span>)</li>
+<li>Hit Advantage increased <span style="color: #b70c0b;"><b>-5(-29)</b></span> → <span style="color: #ff6347;">-3</span><span style="color: #b70c0b;"><b>(-27)</b></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DRC</span> Hit Advantage increased <span style="color: #30D5B8;"><b>+9</b></span> → <span style="color: #30D5B8;"><b>+11</b></span> (allows link to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Spinning Bird Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[2]8HK</span>)
+<ul><li>Startup reduced 21 → 20 (now combos from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Stance MK</span>)</li>
+<li>Total animation time decreased 95 → 94</li>
+<li>Airborne frames shifted 1f earlier to compensate (19-73 → 18-72)</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Dee_Jay"><b>Dee Jay</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Knee Shot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">j.2LK</span>)
+<ul><li>Drive Gain increased 500 → 2000</li></ul></li>
+<li>Funky Dance Feint (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HP</span>)
+<ul><li>Total Recovery decreased 23 → 22</li>
+<li>Hit Advantage increased <span style="color: #b70c0b;"><b>-4</b></span> → <span style="color: #ff6347;">-3</span></li>
+<li>Block Advantage increased <span style="color: #b70c0b;"><b>-6</b></span> → <span style="color: #b70c0b;"><b>-5</b></span></li>
+<li>Dee Jay is now safe from 4-frame normals on hit and 6f reversals on block, making the mixup more effective</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK Jackknife Maximum</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">[2]8MK</span>)
+<ul><li>Active frames increased <b>3(10)</b>4 → <b>4(9)</b>4 (no change to total duration)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Jackknife Maximum</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[2]8HK</span>)
+<ul><li>Active frames increased <b>4(8)</b>5(8)4 → <b>5(7)</b>5(8)4 (no change to total duration)</li>
+<li>Extended the air-only hitbox upward, making it a more consistent anti-air</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Waning Moon</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">214K~MK</span>)
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> causes a longer ground bounce time</li>
+<li>Now guarantees a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span> juggle if 2nd active frame connects (always occurs vs. crouching)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Waning Moon</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>)
+<ul><li>Juggle Start/Increase reduced 14 → 4</li>
+<li>Much more lenient juggles after ground bounce, including <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Jackknife</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span> Sobat</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Dhalsim"><b>Dhalsim</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LP</span>
+<ul><li>Chain timing into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LP</span> is 1f faster, now frame traps vs. 4-frame normals</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Drive Gain increased 2500 → 4000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>
+<ul><li>Drive Gain increased 2500 → 3500</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Agile Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">1LK</span>)
+<ul><li>Chain timing into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LP</span> is 1f faster, now frame traps vs. 4-frame normals</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Yoga Arch</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>)
+<ul><li>Can now be slightly farther off-screen without disappearing (midscreen only)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Yoga Fire</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>Reduced pushback on 2nd hit</li>
+<li>This change ensures that the following combo is still possible despite the faster <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Light</span> chain timing: <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LP</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">LP SA1</span></li></ul></li>
+<li>Aerial Yoga Teleport (j.6PPP/j.6KKK/j.4PPP/j.4KKK)
+<ul><li>Collision box comes out 1 frame faster after reappearing</li>
+<li>Fixes issue where Dhalsim would face the wrong direction when opponent tries to teleport behind a cornered opponent</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Ed"><b>Ed</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LK</span>
+<ul><li>Recovery increased 11 → 12</li>
+<li>Hit Advantage decreased <span style="color: #32CD32;">+3</span> → <span style="color: #32CD32;">+2</span> (no longer links to itself on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-hit</span>)</li>
+<li>Blockstun increased 9 → 10</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR Cancel</span> Block Advantage increased <span style="color: #ff6347;">-2</span> → <span style="color: #ff6347;">-1</span></li>
+<li>Perfect Parry Advantage decreased <span style="color: #b70c0b;"><b>-11</b></span> → <span style="color: #b70c0b;"><b>-12</b></span></li>
+<li>Wider hurtbox now applies to the final recovery frame, making it easier to counterpoke</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MK</span>
+<ul><li>Whiff recovery increased 18 → 20 and extends a wide hurtbox until the final recovery frame</li>
+<li>The attack already had 2f extra whiff recovery, so this brings the total to 4f extra whiff recovery</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span>
+<ul><li>Whiff recovery increased 16 → 17 and extends a wide hurtbox until 15th recovery frame</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Cobra Punch</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>)
+<ul><li>Drive Gain increased 3000 → 4000</li></ul></li>
+<li>Psycho Flicker (236K)
+<ul><li>Extends a forward hurtbox on frame 1 until the end of recovery (applies to all meterless versions)</li>
+<li>This hurtbox is projectile invuln until the active frames (makes it easier to counterpoke Ed on startup)</li></ul></li>
+<li>Kill Rush Backward (236[K]~4KK)
+<ul><li>Extends a wide forward hurtbox during recovery</li>
+<li>This leaves Ed vulnerable to counters like <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span> if charging Flicker too close to the opponent</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Psycho Blitz</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214PP</span>)
+<ul><li>Blockstun decreased 49 → 48</li>
+<li>Block Advantage decreased <span style="color: #ff6347;">-3</span> → <span style="color: #b70c0b;"><b>-4</b></span></li>
+<li>Reduced pushback on block (4-frame punishes are practically always guaranteed)</li>
+<li>Moves forward more during startup (Range on 1st active frame: 1.581 → 1.671)</li>
+<li>Makes it more consistent when canceled from ranged lights, but also makes it more consistent to punish or interrupt on startup</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214P</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP</span> version only)
+<ul><li>Drive Damage now only occurs on the final hit rather than being spread across all hits</li>
+<li>This allows the opponent to recover some Drive gauge during long sequences while Ed is building up his own meter</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="E._Honda"><b>E. Honda</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Hitstun increased 25 → 27</li>
+<li>Hit Advantage increased <span style="color: #ff6347;">-1</span> → <span style="color: #32CD32;">+1</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR Cancel</span> Hit Advantage increased <span style="color: #30D5B8;"><b>+15</b></span> → <span style="color: #30D5B8;"><b>+17</b></span></li>
+<li>Allows a natural combo into Taiho Cannon Lift (236K~2P), giving Honda a much more consistent and damaging launch starter</li></ul></li>
+<li>Teppo Triple Slaps (236K~P)
+<ul><li>Drive Gain increased 1000x2 → 2000x2</li>
+<li>Increased pushback on block (ends outside of throw range when spaced well)</li>
+<li>Massively extended the attack hitbox and reduced arm/foot hurtbox</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Teppo Triple Slaps</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK~P</span>)
+<ul><li>Blockstun (2nd hit) increased 22 → 23</li>
+<li>Block Advantage increased <span style="color: #32CD32;">+2</span> → <span style="color: #32CD32;">+3</span></li>
+<li>Reduced pushback on block (always in Oicho range if both hits connect)</li>
+<li>Massively extended the attack hitbox and reduced arm/foot hurtbox</li></ul></li>
+<li>Oicho Throw (63214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>)
+<ul><li>Startup reduced 7 → 6</li>
+<li>Active frames increased 3 → 4</li>
+<li>Now acts as E. Honda's primary <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Reversal</span> punish</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">[4]646K</span>)
+<ul><li>Now projectile invincible for the entire animation on hit</li>
+<li>Can now consistently punish slow projectiles like A.K.I. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">214LP</span>, or even Rashid <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> from fullscreen</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Guile"><b>Guile</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Spinning Back Knuckle</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>)
+<ul><li>Drive Gain increased 3000 → 5000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Sonic Cross</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214PP~6PP</span>)
+<ul><li>Wallsplat lasts 3f longer for more lenient juggle follow-ups (can now juggle <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR~</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>)</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Jamie"><b>Jamie</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Gauge</span> is replenished with Drinks even at DL0 ~ DL3 (1 Drive bar = 10000 units of Drive)
+<ul><li>+2500 Drive (50% of DL4 gain): The Devil Inside (22P Drink)</li>
+<li>+2500 Drive (25% of DL4 gain): <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Phantom Sway</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK~HK~P</span>)</li>
+<li>+5000 Drive (50% of DL4 gain): Forward Throw + Drink, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Full Moon Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">DL2 6MK~MK~P</span>), Freeflow Kicks (236P~6K~6K), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1 Drink Ender</span></li>
+<li>+10000 Drive (33.3% of DL4 gain): <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2 Activation</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>
+<ul><li>Removed the extended hurtbox on frames 5-8, making it easier to use as a ranged approach</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Reduced pushback when spaced so that only the 2nd hit is blocked</li>
+<li>Jamie is actually safer when connecting with the 1st hit's maximum range</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.HK</span>
+<ul><li>Now causes juggle state on both hits without <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">CH/PC</span>, making it a more rewarding air-to-air</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Ransui Haze Headbutt</span> (Close <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK~4HK~P</span>, DL4)
+<ul><li>Increased forward movement during startup (Range: 1.649 → 1.935)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Freeflow Strikes</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>DL4 version juggles the opponent higher on each hit</li>
+<li>This makes a cancel into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> more consistent</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK Bakkai</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236MK</span>, DL2)
+<ul><li>Extended combo-only hitbox upward on 4th hit to prevent it from dropping in juggles</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236P</span>)
+<ul><li>Extended combo-only hitbox upward on 1st hit to ensure juggles will connect properly</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">CA</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236P</span>)
+<ul><li>Extended the input buffer at the end of the cinematic</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="JP"><b>JP</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>
+<ul><li>Drive Gain increased 2000 → 3000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Torbalan</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>)
+<ul><li>Now only plays out the 1st hit of the projectile attack after colliding with 1-hit <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span> projectiles</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214P</span>)
+<ul><li>Projectiles now remain on screen to combo after a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> Throw (improves his mixup game vs. Parry)</li>
+<li>2 projectiles will connect if thrown immediately, and 1 will connect if thrown after the first is blocked</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236K</span>)
+<ul><li>Combo-only hitbox extended upwards (less likely to drop on high juggled opponents)</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Juri"><b>Juri</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>
+<ul><li>Drive Gain increased 3000 → 4000 (regular) / 750 → 1000 (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">FSE chained</span> version)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>
+<ul><li>Airborne <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> now causes a spinning <a href="/w/Street_Fighter_6/Glossary#Juggles" title="Street Fighter 6/Glossary">free juggle</a> state</li>
+<li>Very rewarding as a late-timed anti-air or as a punish on airborne attacks</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Korenzan</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>)
+<ul><li>Drive Gain increased 1500 → 3500 (regular) / 375 → 875 (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">FSE chained</span> version)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Fuhajin</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">214HK</span>)
+<ul><li>Active frames increased 4 → 5</li>
+<li>Recovery reduced 20(22) → 19(21) (no change to total duration)</li>
+<li>Makes Juri's new anti-air <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span> juggles more consistent</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Ken"><b>Ken</b></h3></div>
+<ul><li>Back Throw (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">4LPLK</span>)
+<ul><li>Increased distance from the opponent after a corner side switch</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Reduced pushback on block, making it much harder to space safely</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Shoryuken</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">623PP</span>)
+<ul><li>KD Advantage reduced +29 → +22 (much weaker follow-up pressure)</li>
+<li>Can still safely approach with <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span> while blocking reversals, but no guaranteed midscreen oki</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Jinrai Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span>)
+<ul><li>Drive Gain increased 2000 → 3000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Forward Step Kick</span> (KK~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>)
+<ul><li>Starter scaling 20% added (weaker <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-Hit</span> conversions)</li>
+<li>Drive Gain increased 2000 → 3000</li>
+<li>Extends a forward hurtbox during recovery, making it easy to punish at closer ranges (still safe if spaced)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214K</span>)
+<ul><li>KD Advantage reduced +35 → +9 (no follow-up pressure is possible)</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Kimberly"><b>Kimberly</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LP</span>
+<ul><li>Blockstun increased 8 → 9</li>
+<li>Block Advantage increased <span style="color: #ff6347;">-2</span> → <span style="color: #ff6347;">-1</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR Cancel</span> Block Advantage increased <span style="color: #ff6347;">-2</span> → <span style="color: #ff6347;">-1</span></li>
+<li>Gains much better pressure after <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span> starter or vs. Burnout</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LK</span>
+<ul><li>Hitstun increased 12 → 14</li>
+<li>Hit Advantage increased <span style="color: #32CD32;">+2</span> → <span style="color: #30D5B8;"><b>+4</b></span></li>
+<li>Can now link to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MK</span> from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span> or into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span> on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-hit</span></li>
+<li>When spaced out, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR~</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LK</span> can be up to <span style="color: #30D5B8;"><b>+10</b></span>, linking to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Increased forward movement during startup (Range: 1.26 → 1.41)</li>
+<li>The edge of the hitbox was raised to make low-profile attacks effective against it</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>
+<ul><li>Proximity guard box now matches the attack hitbox (bug fix)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Water Slicer Slide</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">3MK</span>)
+<ul><li>The first 4 active frames have set recovery; always <span style="color: #32CD32;">+1 oH</span> / <span style="color: #b70c0b;"><b>-5 oB</b></span> at worst spacing</li>
+<li>These 4 frames also cause a knockdown on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> (KD +37), greatly enhancing its use as a whiff punish</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Hisen Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>)
+<ul><li>Foot hitbox extended forward and hurtbox reduced</li>
+<li>Drive Gain increased 1200 → 3000</li>
+<li>On hit, 1f longer hitconfirm window for <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">CH/PC</span> combo extensions</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Elbow Drop</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">j.2MP</span>)
+<ul><li>Can now be buffered when input early in the jump arc</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP Vagabond Edge</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">236LP</span>)
+<ul><li>Blockstun increased 19 → 20</li>
+<li>Block Advantage increased <span style="color: #b70c0b;"><b>-5</b></span><span style="color: #ff6347;">(-3)</span> → <span style="color: #b70c0b;"><b>-4</b></span><span style="color: #ff6347;">(-2)</span></li>
+<li>Less pushback on hit, and a different knockback animation occurs when connecting with final active frame</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Torso Cleaver</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK</span>)
+<ul><li>Combo-only hitbox expanded upward (more consistent 2-hit juggles)</li></ul></li>
+<li>Arc Step (cl.236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>)
+<ul><li>Startup reduced 8f → 6f after Sprint</li>
+<li>All medium normals can now combo into both versions naturally</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span> now frame trap into Arc step, and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span> frame trap into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Arc Step</span></li>
+<li>The faster startup causes the opponent to be juggled slightly higher when canceled from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>, allowing for new midscreen juggles:
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span> &gt; cl.236K, juggle <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">cl.236KK</span>, juggle <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">236LP</span> (cannot cancel into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span> midscreen)</li></ul></li>
+<li>Kimberly's <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> state changed from after the 2nd hit → after the 1st hit</li></ul></li>
+<li>Bushin Hojin Kick (cl.236K~K)
+<ul><li>Knockdown time increased by 1f on airborne hit</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Bushin Hojin Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">cl.236KK~K</span>)
+<ul><li>1st hit has reduced knockback distance vs. grounded opponents and increased knockback distance vs. airborne opponents</li>
+<li>2nd hit has increased knockback distance vs. airborne opponents</li>
+<li>Combined with the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Arc Step</span> changes, Kimberly no longer gets a KD +42 corner knockdown on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">cl.236KK~K</span> &gt; Spraycan</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">j.214214P</span>)
+<ul><li>Startup reduced 13f → 2f when canceled from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span> specials</li>
+<li>More consistent in combos, and allows a combo when canceled from midscreen <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Bushin Hojin Kick</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Lily"><b>Lily</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LP</span>
+<ul><li>Hitstun increased 16 → 17</li>
+<li>Hit Advantage increased <span style="color: #30D5B8;"><b>+5</b></span> → <span style="color: #30D5B8;"><b>+6</b></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR Cancel</span> Block Advantage decreased <span style="color: #bcbd0c;">0</span> → <span style="color: #ff6347;">-1</span> (cancel is delayed until after 2nd active frame)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Desert Storm 1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>)
+<ul><li>Hitstun increased 27 → 28</li>
+<li>Hit Advantage increased <span style="color: #32CD32;">+1</span> → <span style="color: #32CD32;">+2</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR Cancel</span> Hit Advantage increased <span style="color: #30D5B8;"><b>+17</b></span> → <span style="color: #30D5B8;"><b>+18</b></span></li>
+<li>Drive Gain increased 2000 → 3000</li>
+<li>Juggle Limit increased 0 → 1 (more juggle routes, particularly after crumples)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Desert Storm 2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP~HP</span>)
+<ul><li>Extended hitbox upward and forward</li>
+<li>Juggle Limit increased 1 → 2</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Desert Storm 3</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP~HP~HP</span>)
+<ul><li>Damage increased 500 → 800</li>
+<li>Extended the hitbox forward</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--6">Windclad</span> Tomahawk Buster (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--6">W.</span>623P)
+<ul><li>2nd hit launches the opponent higher when connecting on grounded opponents (standing only)</li>
+<li>This increases the KD Advantage of this late hit; all versions can get follow-up juggles near the corner</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP</span> version leaves opponent closer to Lily, allowing follow-up juggles even midscreen like <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1/SA2</span>, or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span> that can be canceled for an air reset mixup</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Luke"><b>Luke</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Collision box expanded upward to prevent it from whiffing in juggles</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>
+<ul><li>Drive Gain increased 3000 → 4000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Double Impact</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>)
+<ul><li>Increased forward movement (Range: 1.80 → 1.90) and increased the proximity guard hitbox to match the new range</li>
+<li>Reduced pushback on hit</li></ul></li>
+<li>Nose Breaker (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>)
+<ul><li>Hitstun increased 29 → 30</li>
+<li>Hit Advantage increased <span style="color: #32CD32;">+1</span> → <span style="color: #32CD32;">+2</span></li>
+<li>Can now force a true strike/throw mixup against reversal 4-frame normals</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Sand Blast</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>Upper body hurtbox expands 5 frames later (14f → 19f), making it better in projectile wars</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Fatal Shot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP~PP</span>)
+<ul><li>Now causes a short wallsplat on hit</li>
+<li>Juggle Increase value decreased 2 → 0
+<ul><li>Juggle follow-ups are possible near the corner; from midscreen, can whiff 236K~P to become <span style="color: #30D5B8;"><b>+4</b></span> at close range</li></ul></li>
+<li>Increased hitstop when the base of the attack connects</li>
+<li>Increased the buffer window at the end of recovery</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Charged/Perfect LP Flash Knuckle</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">214[LP]</span>)
+<ul><li>2nd hit expands the hitbox upward when the 1st hit connects to ensure juggle consistency</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP Flash Knuckle</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">214MP</span>)
+<ul><li>Blockstun increased 20 → 22</li>
+<li>Block Advantage increased <span style="color: #b70c0b;"><b>-10</b></span> → <span style="color: #b70c0b;"><b>-8</b></span></li>
+<li>Reduced hurtbox during recovery</li>
+<li>Reduced pushback on hit (still outside throw range, but can throw with a very short microwalk)
+<ul><li>Because it is now <span style="color: #b70c0b;"><b>-4</b></span> against Burnout, characters may struggle to punish at certain spacings, creating a new pressure loop</li></ul></li>
+<li>Increased the buffer window at the end of recovery</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Perfect MP Flash Knuckle</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">pf.214[MP]</span>)
+<ul><li>2nd hit no longer adds an extra hit of damage scaling</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214P</span>)
+<ul><li>Travels much farther forward on cinematic hit (improved corner carry)</li>
+<li>Reduced horizontal knockback on airborne opponents for more consistent juggles into the full animation</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="M._Bison"><b>M. Bison</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Blockstun decreased 18 → 17</li>
+<li>Block Advantage decreased <span style="color: #b70c0b;"><b>-11</b></span> → <span style="color: #b70c0b;"><b>-12</b></span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">j.LK</span>
+<ul><li>Cross-up hitbox extended backwards to match <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">j.MK</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Evil Knee</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>)
+<ul><li>Drive Damage on Block decreased 5000 → 3000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Double Knee Press</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>)
+<ul><li>Now counts as 2 hits of scaling when comboed into</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP Psycho Crusher</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">[4]6MP</span>)
+<ul><li>Drive Gain increased 2500 → 3500 (regular) / 4500 → 5500 (Mine Detonation)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP Psycho Crusher</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[4]6HP</span>)
+<ul><li>Drive Gain increased 3000 → 5000 (regular) / 5000 → 7000 (Mine Detonation)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Psycho Crusher</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">[4]6PP</span>)
+<ul><li>Damage on Mine Detonation decreased 2000 → 1600 (no change to Chip damage)</li>
+<li>Drive Damage on Block decreased 10000 → 5000 (regular) / 13000 → 8000 (Mine Detonation)</li></ul></li>
+<li>Shadow Rise ([2]8K)
+<ul><li>New hurtbox around M. Bison's feet added to meterless versions (invincible to projectiles)</li></ul></li>
+<li>Devil Reverse ([2]8K~P)
+<ul><li>Downward hitbox reduced</li>
+<li>Arm hurtbox is expanded forward on frame 9~ and forward/downward during active frames</li></ul></li>
+<li>Devil Reverse + Psycho Mine ([2]8K~P + Mine)
+<ul><li>Blockstun increased 76 → 80 (total)</li>
+<li>Landing recovery reduced 10 → 8
+<ul><li>These combined changes improve the Block Advantage by 6f and the KD Advantage by 2f</li></ul></li>
+<li>Fixed bug where Psycho Mine would not detonate at the lowest height</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Manon"><b>Manon</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>
+<ul><li>Hit Recovery reduced 26 → 23</li>
+<li>Hit Advantage increased <span style="color: #ff6347;">-2</span> → <span style="color: #32CD32;">+1</span></li>
+<li>No change to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> advantage</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">À Terre</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>)
+<ul><li>2nd hit Drive Gain increased 1000 → 2500</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Dégagé</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">214HK</span>)
+<ul><li>Drive Gain increased 2000 → 3000</li></ul></li>
+<li>Manège Doré (63214P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>)
+<ul><li>Higher Medal Levels now build more <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Super</span> gauge</li>
+<li>Level 3/4: 3000 → 4000</li>
+<li>Level 5: 3000 → 5000</li></ul></li>
+<li>Renversé (236P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>)
+<ul><li>Higher Medal Levels now build more <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Super</span> gauge (only for full animation; no change when canceled into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span>)</li>
+<li>Level 3/4: 2150 → 3150</li>
+<li>Level 5: 2150 → 4150</li></ul></li>
+<li>Grand Fouetté (236P~K)
+<ul><li>Launches opponents closer to Manon for juggle consistency</li></ul></li>
+<li>Renversé Feint (236[P]/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">[PP]</span>)
+<ul><li>Recovery reduced by 2f for all versions</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP</span>: 33 → 31</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>: 34 → 32</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>: 35 → 33</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span>: 34 → 32</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Marisa"><b>Marisa</b></h3></div>
+<ul><li>Prejump Frames
+<ul><li>Head hurtbox increased to match the normal standing height</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Charged 5[HP]</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5[HK]</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2[HK]</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">3[HP]</span>
+<ul><li>Startup reduced by 3f</li>
+<li>Total animation time is 3f shorter as a result</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP/5[HP]</span>
+<ul><li>Hitbox extended forward</li>
+<li>1st active frame extended downward to match 2nd active frame</li>
+<li>Charged version juggles the opponent closer vs. airborne opponents</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP/2[HP]</span>
+<ul><li>Increased launch height on grounded <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span></li>
+<li>Can now buffer follow-up inputs 9f before end of recovery</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Charged 2[HP]</span> only:
+<ul><li>Extended the forward hitbox on 2nd active frame</li>
+<li>Throwable hurtbox does not extend before the active frames, making it much better as a shimmy tool just outside of throw range</li></ul></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK/2[HK]</span>
+<ul><li>Extended the combo-only hitbox upward to make it easier to juggle into</li>
+<li>Extended the proximity guard hitbox on both versions to the full attack range of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2[HK]</span> (makes it harder to walk back out of range)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Charged Falx Crusher</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6[HK]</span>)
+<ul><li>Increased forward movement during startup (Range: 2.122 → 2.212)</li>
+<li>Pushback on block decreased</li>
+<li>Much better follow-up pressure; leaves Marisa in throw range unless used near max distance</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Heavy Two Hitter</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP~HP</span>)
+<ul><li>Juggle Limit increased 1 → 2</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Malleus Breaker</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">3HP~3HP</span>)
+<ul><li>2nd hit now knocks down even on grounded opponents (KD +29)</li>
+<li>Knockdown time extended by 10 frames (compared to the previous juggle knockdown)</li></ul></li>
+<li>Charged Gladius (236[P])
+<ul><li>Extended the follow-up hitbox upward when hitting mid-air opponents</li>
+<li>Less likely to drop the cinematic hit as an anti-air or in juggles</li></ul></li>
+<li>Phalanx (623P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>)
+<ul><li>Active frames increased 3 → 6</li>
+<li>Recovery reduced 18 → 15 to compensate; as a result, all recovery frames are now considered grounded</li>
+<li>Extended hitbox forward</li>
+<li>Drive Gain increased 2000 → 3000 on meterless versions</li>
+<li>Airborne time is extended by 1 frame for all versions</li></ul></li>
+<li>Scutum (214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>)
+<ul><li>Armored counter hitbox extended downward to catch more low-angled attacks</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Rashid"><b>Rashid</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>
+<ul><li>Drive Gain increased 3000 → 4000</li></ul></li>
+<li>Backup (6[6]~6P)
+<ul><li>Starter scaling 20% added</li></ul></li>
+<li>Side Flip (6KK)
+<ul><li>Collision box disappears 2 frames later (6f → 8f)</li>
+<li>Will no longer completely overlap with a cornered opponent</li>
+<li>Can no longer avoid immediate <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Reversal</span> after canceling a normal into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Spinning Mixer</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>KD Advantage reduced +25 → +9 and shorter knockback distance when final hit connects
+<ul><li>This severely weakens oki, corner carry, and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> setup potential</li></ul></li>
+<li>5f extra knockdown advantage if the final hit does not connect</li>
+<li>Wind Enhanced version: KD Advantage decreased +47 → +42 (not mentioned in patch notes)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236K</span>)
+<ul><li>Cinematic version KD Advantage reduced +11 → +1</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Ryu"><b>Ryu</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span>
+<ul><li>Cancel window for special moves and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span> shifted 2f earlier</li>
+<li>Can now always cancel an armor-absorbed <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span> for a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">counter-DI</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span> Hadoken is no longer punishable by <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DI</span>, and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP Hadoken</span> is always a true blockstring</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Axe Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>)
+<ul><li>Drive Gain increased 1500 (750x2) → 3500 (1500,2000)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Whirlwind Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>)
+<ul><li>Can now be canceled into meterless Air Tatsu</li>
+<li>This version is <span style="color: #b70c0b;"><b>-16 on Block</b></span>, and all landing recovery is in a standing state</li>
+<li>Juggle Limit increased 0 → 1
+<ul><li>Can now be used in juggles like <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD High Blade Kick</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span> &gt; Air Tatsu or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">PC</span> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DI</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">nj.HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span> &gt; Air Tatsu</li></ul></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK High Blade Kick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span>)
+<ul><li>Startup reduced 29 → 27</li>
+<li>Recovery reduced 16 → 15</li>
+<li>Blockstun increased 20 → 21</li>
+<li>Block Advantage increased <span style="color: #b70c0b;"><b>-5</b></span> → <span style="color: #ff6347;">-3</span></li>
+<li>Drive Damage on Block increased 8000 → 10000</li>
+<li>Knockdown time increased by 1f to remain KD +45, and the recovery change allows a juggle into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span> Shoryuken in the corner</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Denjin OD Hadoken</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>Juggle Increase value decreased 1,1,2 → 1,1,1 (more lenient juggle follow-ups)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Hashogeki</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214PP</span>)
+<ul><li>Damage increased 900 → 1100</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Terry"><b>Terry</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Assist Combo 1</span>
+<ul><li>Fixed issue where the 3rd hit would not be performed if the 2nd hit was absorbed by armor</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span>
+<ul><li>Reduced pushback on hit</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Block Recovery decreased 18 → 16</li>
+<li>Block Advantage increased <span style="color: #ff6347;">-1</span> → <span style="color: #32CD32;">+1</span> (no change to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR Cancel</span> data)</li>
+<li>When the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span> version is blocked, Terry can microwalk + throw to beat 4f normals</li>
+<li>Increased input buffer on hit by 2f to make follow-ups easier</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Hitbox connects lower on grounded opponents, preventing upper-body armor from absorbing it</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP Power Wave</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236MP</span>)
+<ul><li>Hurtbox expansion starts 2f later (16f → 18f), making it harder to counterpoke in neutral</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP Round Wave</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HP</span>)
+<ul><li>Recovery reduced 16 → 14</li>
+<li>Total animation reduced 53 → 51</li>
+<li>Hitstun decreased 33 → 31</li>
+<li>Blockstun decreased 30 → 28</li>
+<li>Perfect Parry Advantage increased <span style="color: #b70c0b;"><b>-23</b></span> → <span style="color: #b70c0b;"><b>-21</b></span> (Hit/Block Advantage unchanged)</li>
+<li>Drive Damage on Block increased 5000 → 7000</li>
+<li>These changes give Terry an extra 2 frames for follow-up juggles on airborne opponents, and the blockstring gap is no longer punishable by <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span> when canceled from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span> or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DR~</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK Power Charge</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">236LK</span>)
+<ul><li>Reduced forward hitbox of 1st active frame</li>
+<li>Allows meaty mid-combo hit despite <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span> pushback reduction</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK Crack Shoot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">214LK</span>)
+<ul><li>Drive Damage on Block increased 2000 → 2500</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK Crack Shoot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">214MK</span>)
+<ul><li>Hitstun increased 21 → 23</li>
+<li>Hit Advantage increased <span style="color: #32CD32;">+1</span> → <span style="color: #32CD32;">+3</span></li>
+<li>Grounded <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-hit</span> changed to a Hard Knockdown (HKD +28, identical to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span>)</li>
+<li>Fixed issue where hitstun was longer than intended when the 5th active frame connected on a grounded opponent</li>
+<li>Drive Damage on Block increased 2500 → 3500</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK Crack Shoot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">214HK</span>)
+<ul><li>Drive Damage on Block increased 2000x2 → 2000,3000</li>
+<li>Drive Gain (final hit) increased 2000 → 3000 vs. grounded opponents</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Crack Shoot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214KK</span>)
+<ul><li>Keeps the opponent closer to Terry during the ground bounce</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Burning Knuckle</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214PP</span>)
+<ul><li>Drive Damage on Block increased 6000 → 8000</li>
+<li>Juggles airborne opponents closer to Terry (follow-ups like <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> cancel are more consistent)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214P</span>)
+<ul><li>Expanded combo-only hitbox for consistency in juggles</li>
+<li>Juggles opponents closer to Terry, and expanded the Twin Geyser follow-up hitbox to ensure it connects</li>
+<li>Alternate version (21416MK+HP) inputs made stricter; previously could be performed without the initial 214 input</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Zangief"><b>Zangief</b></h3></div>
+<ul><li>Russian Drop (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">1LPLK</span>) / Brainbuster (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LPLK</span>) / German Suplex (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">6LPLK</span>)
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Super Gain</span> on Hit increased 2000 → 3000 / on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> increased 4000 → 6000</li></ul></li>
+<li>Power Stomps (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">22MK~MK~MK</span>)
+<ul><li>Drive Gain increased 1000x3 → 1500x3</li>
+<li>Can now be used with Modern controls using the input <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">22M</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">M</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">M</span></li></ul></li>
+<li>Siberian Express (63214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>)
+<ul><li>Fixed issue that caused the different mid/far versions to come out when activated at the same range</li></ul></li></ul>
+<p><br>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260606031443
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.235 seconds
+Real time usage: 0.238 seconds
+Preprocessor visited node count: 21407/1000000
+Revision size: 34144/4194304 bytes
+Post‐expand include size: 64955/4194304 bytes
+Template argument size: 4090/4194304 bytes
+Highest expansion depth: 6/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 276733/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  171.117      1 -total
+ 78.62%  134.536    413 Template:Clr
+  7.52%   12.872      1 Template:SF6-Version
+  3.71%    6.356     65 Template:Sf6-adv
+  0.96%    1.646      1 Template:Sf6-jug
+-->
+
+<!-- Saved in parser cache with key supercombo_wiki-mw_:pcache:84324:|#|:idhash:canonical and timestamp 20260606031443 and revision id 361832. Rendering was triggered because: page_view
+ -->
+</section></div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.08&amp;oldid=361832">https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.08&amp;oldid=361832</a>"</div></div>

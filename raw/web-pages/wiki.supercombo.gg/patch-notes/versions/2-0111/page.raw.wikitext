@@ -1,0 +1,86 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/2.0111|2.0111]]
+|gameversion=2.0111
+|date=December 16, 2025
+|summary=Bug fixes and minor adjustments, primarily for Elena, Mai, and Sagat.
+|links=[https://www.streetfighter.com/6/buckler/battle_change/20251216 Patch Notes]  
+}}
+<!--Full Version name: 2.0111.000-->
+
+== '''Universal Changes''' ==
+* '''{{clr|DR|Drive Gauge}} Appearance:''' if any amount of Drive gauge remains over the threshold (0/10000/20000/30000/40000/50000), the entire block of gauge will change color to make it easier to distinguish from an empty block
+* '''{{clr|SA|Command Throw SA3/CA}}''' (Lily, Manon, Zangief): removed unnecessary block idle hitbox that allowed opponents to avoid the throw when landing from a jump
+* '''{{clr|L|2LK}}''' (all characters): extended foot hurtbox that appears before active frames is now invincible to cross-up attacks
+<br>
+
+== '''Character Changes''' ==
+
+=== '''C. Viper''' ===
+* {{clr|L|j.LP}} / {{clr|H|j.HP}} no longer Force Stand when hitting a crouching opponent
+* Lv.3 Focus Force (214[K]/{{clr|OD|[KK]}}) now deals +4 additional hitstun on {{clr|PC|Punish Counter}} like the uncharged versions
+** Now KD +77, and crumple is +29 before opponent falls to the ground
+<br>
+
+=== '''Chun-Li''' ===
+* Serenity Stream > {{clr|L|LP}} / {{clr|L|LK}} / {{clr|M|MK}} on Perfect Parry: removed some recovery frames immediately before her forced Stance Exit
+** This reduces the total recovery on PP by 2f {{clr|L|(LP)}} / 5f {{clr|L|(LK)}} / 6f {{clr|M|(MK)}} and affects Perfect Parry disadvantage by the same amount
+** This was done because despite being in a {{clr|PC|Punish Counter}} state, Chun-Li could block in the middle of her recovery animation on these frames. 
+<br>
+
+=== '''Dhalsim''' ===
+* {{clr|SA|CA}} fixed a bug where the Drive Damage and Chip Damage were set to {{clr|SA|SA3}} levels when canceled into
+** Drive Damage on Block: 7500 → 10000
+** Chip Damage: 1000 → 1250
+<br>
+
+=== '''Elena''' ===
+* Leopard Snap (236P~{{clr|L|6LK}}) Super Art gain 600 → 1000
+* Boosted Leopard Snap (236P~6P~{{clr|L|6LK}} or {{clr|OD|236PP}}~{{clr|L|6LK}}) pushback on block reduced, and normalized the distance on block when used midscreen or in the corner
+** 1st hit has less blowback on airborne opponents to make the 2nd hit more consistent in juggles
+* Moon Glider (214P~6P) 2nd attack hitbox expanded forward
+* {{clr|OD|OD Moon Glider}} ({{clr|OD|214PP}}) pushback on hit reduced, increased forward movement after the backwards sway
+** More effective as a shimmy tool, leading to more consistent {{clr|PC|Punish Counter}} follow-ups
+* {{clr|SA|SA1}} startup reduced 9f → 7f; total animation 96f → 94f; can now build {{clr|SA|Super}} gauge after landing this in a combo
+** All airborne and air invuln frames shifted 2f earlier to compensate
+<br>
+
+=== '''Mai''' ===
+* Forward Throw leaves Mai closer to a cornered opponent (can no longer walk back to shimmy after a dash)
+* {{clr|H|5HP}} Drive Damage reduced 5000 → 4000
+* Kachousen (236P) - Charged / {{clr|OD|Charged OD}} / {{clr|3|Flame}} versions build more Drive gauge for the defender when Parried and/or Perfect Parried
+{| class="wikitable" style="text-align: center;"
+! Kachousen (Fan) !! Drive Gain<br>(on Parry) !! Drive Gain<br>(on Perfect Parry)
+|-
+| style="text-align: left;" | 236[P] || 2500x2 → 5000,2500 || 2500x2 → 5000x2
+|-
+| style="text-align: left;" | {{clr|OD|236[PP]}} || colspan="2" | 1400x2 → 2500x2
+|-
+| style="text-align: left;" | {{clr|OD|236[PP]}}~{{clr|OD|6P}} || -- || 1st/2nd: 1200x2 → 2500x2<br>3rd/4th: 1150x2 → 5000x2
+|-
+| style="text-align: left;" | {{clr|3|F.}}236P || colspan="2" | 2500x2 → 3000x2
+|-
+| style="text-align: left;" | {{clr|3|F.}}236[P] || 1250x2,2500 → 2500x3 || 1250x2,2500 → 2500x2,5000
+|-
+| style="text-align: left;" | {{clr|3|F.}}{{clr|OD|236[PP]}} || 1st/2nd: 1200x2 → 2500x2 || 1st/2nd: 1200x2 → 2500x2<br>3rd/4th: 750x2 → 2500x2
+|-
+| style="text-align: left;" | {{clr|3|F.}}{{clr|OD|236[PP]}}~{{clr|OD|6P}} || -- || 1st/2nd: 1050x2 → 2500x2<br>3rd/4th: 750x2 → 2500x2
+|}
+<br>
+
+=== '''Sagat''' ===
+* {{clr|L|2LK}} pushback reduced on hit/block for more consistent hitconfirms
+* {{clr|M|2MK}} Hit Advantage {{sf6-adv|VP|+4}} → {{sf6-adv|VP|+5}}; hitstun 25 → 26
+** Gives a natural link to {{clr|L|5LP}}, a {{clr|PC|CH}} link to {{clr|L|5LK}}/{{clr|M|2MP}}, and a {{clr|DR|DR}}/{{clr|PC|PC}} link to itself at farther ranges
+* {{clr|H|Tiger Monolith}} ({{clr|H|4HP}}) 1st hit active frames increased 2 → 3 (more consistent juggle tool, does not affect anti-air frames)
+* {{clr|H|Charged HP Tiger Uppercut}} ({{clr|H|623[HP]}}) now gives the stronger cinematic hit up to the 3rd active frame instead of only frames 1-2; collision box expanded upward on active frames 1-2
+** This slightly increases the max range of the strong hit and makes it more consistent in some high juggles
+* {{clr|H|HK Tiger Knee}} ({{clr|H|236HK}}) expanded combo-only hitbox of 2nd hit upward to prevent it from whiffing when 1st hit connects (does not apply to "sweet spot" connect)
+* {{clr|L|LK}}/{{clr|M|MK}} Tiger Nexus ({{clr|L|214LK}}/{{clr|M|214MK}}) increased pushback on hit; increased forward movement during startup; increased horizontal blowback on airborne hit
+** Total range 1.56 → 1.66 ({{clr|L|214LK}}) / 1.86 → 1.96 ({{clr|M|214MK}})
+** More consistent in grounded confirms (e.g. 3 lights > {{clr|L|214LK}}), while keeping juggle scenarios intact
+* {{clr|L|Mighty Tiger}} (214K/{{clr|OD|KK}}~{{clr|L|6LK}}) increased pushback on hit; increased horizontal blowback on airborne hit
+** If {{clr|L|214LK}}~{{clr|L|6LK}} is used from a 2-light confirm, opponent is in range for Throw or {{clr|L|2LK}}~{{clr|L|5LP}} mixup; does not work from new 3-light confirm
+* {{clr|M|Greedy Tiger}} (214K/{{clr|OD|KK}}~{{clr|M|6MK}}) Drive Damage increased 6000 → 8000
+* {{clr|H|Nova Tiger}} (214K/{{clr|OD|KK}}~{{clr|H|6HK}}) reduced pushback on block
+** Can now throw opponents who back walk, but can no longer shimmy unless opponent delays throw tech at least 3f
+<br>

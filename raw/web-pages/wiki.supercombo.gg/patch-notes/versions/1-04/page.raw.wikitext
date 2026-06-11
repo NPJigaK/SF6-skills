@@ -1,0 +1,151 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/1.04|1.04]]
+|gameversion=1.04
+|date=February 27, 2024
+|summary='''Ed Release'''. Several balance changes and bug fixes.
+|links=[https://www.streetfighter.com/6/buckler/en/battle_change/20240227 Patch Notes]  
+}}
+<!--Full Version name: 1.0400.000-->
+
+== Ed Patch ==
+* Ed released
+<br>
+
+== '''Universal Changes''' ==
+* {{clr|DR|Drive Rush}}
+** Simultaneous activation no longer randomly gives the frame advantage to one player
+* Perfect Parry
+** Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame
+* Armor Break
+** Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack
+* Input Buffers
+** Fixed issue where input buffer after blocking an attack was not set correctly for {{clr|DR|Drive Reversal}} and some other attacks
+* Modern Controls'''
+** Fixed issue where {{clr|DR|S}} button would not result in damage scaling if a special was input during a {{clr|DR|Drive Rush}} screen freeze
+<br>
+
+== '''Character Changes''' ==
+
+=== '''A.K.I.''' ===
+* {{clr|L|2LP}}
+** Range increased 0.94 → 0.96
+* {{clr|M|5MP}}
+** Active frames increased 3 → 5 (better meaty setups, stronger in neutral)
+<br>
+
+=== '''Chun-Li''' ===
+* {{clr|L|5LP}}
+** Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)
+* Aerial Lightning Kicks (j.236K)
+** 20% Starter scaling added (less rewarding on {{clr|PC|Punish Counter}} when used against throws)
+<br>
+
+=== '''Dee Jay''' ===
+* {{clr|L|Funky Slicer}} ({{clr|L|214K~LK}})
+** Less pushback on block
+** Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)
+<br>
+
+=== '''Dhalsim''' ===
+* {{clr|H|HP Yoga Flame}} ({{clr|H|63214HP}})
+** Fixed issue where 2nd hit dealt normal damage on {{clr|PC|Counter-hit/Punish Counter}}
+<br>
+
+=== '''Jamie''' ===
+* Forward Throw ({{clr|L|LPLK}})
+** Can now hold {{clr|L|LP}}+{{clr|L|LK}} to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)
+* {{clr|SA|SA1}} ({{clr|SA|236236K}})
+** Damage increased by 100 on both the regular version and Drink ender
+** Reduced pushback on Hit in the corner
+** KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)
+* {{clr|SA|SA2}} ({{clr|SA|214214P}})
+** After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)
+<br>
+
+=== '''JP''' ===
+* {{clr|H|5HP}}
+** Expanded foot/torso hurtbox during active and recovery frames
+* {{clr|H|2HP}}
+** Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)
+* Departure (214P/{{clr|OD|PP}})
+** 20% Starter scaling added
+** Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 ({{clr|OD|OD}})
+* Amnesia (22K/{{clr|OD|KK}}), successful counter
+** JP no longer builds {{clr|SA|Super}} meter while bombs are active or until combo ends
+** Bombs no longer dissipate {{clr|SA|Super}}-priority projectiles
+** Starter scaling (when Bomb starts the combo) increased 15% → 50%
+** Immediate scaling (when comboing into Bomb) increased 15% → 60%
+** Canceling an attack into {{clr|SA|SA3/CA}} now detonates the Bombs immediately to prevent bypassing this damage scaling
+<br>
+
+=== '''Ken''' ===
+* Forward Throw ({{clr|L|LPLK}})
+** More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)
+* {{clr|L|5LP}}
+** Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)
+* {{clr|OD|OD Air Tatsu}} ({{clr|OD|j.214KK}})
+** Landing recovery on whiff increased 14 → 21 (harder to escape the corner)
+** Collision box expanded so opponents are less likely to jump over this move
+<br>
+
+=== '''Luke''' ===
+* {{clr|M|2MP}}
+** Whiff recovery increased 14 → 17 with a larger hurtbox
+* Aerial Flash Knuckle (j.214P)
+** When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20
+** Larger feet hurtbox on frame 16 until end of recovery
+* {{clr|SA|SA1}} ({{clr|SA|236236P}})
+** Wider projectile-vulnerable hurtbox on startup frames 1-5
+<br>
+
+=== '''Manon''' ===
+* {{clr|M|En Haut 1}} ({{clr|M|4MK}})
+** Retains greater momentum out of {{clr|DR|Drive Rush}}
+* {{clr|SA|SA2}} ({{clr|SA|214214K}})
+** Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)
+<br>
+
+=== '''Rashid''' ===
+* {{clr|L|5LP}}
+** Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)
+* {{clr|OD|OD Spinning Mixer}} ({{clr|OD|236PP}})
+** Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out
+* Wall Jump
+** Fixed issue where performing certain moves would not put Rashid into a {{FKD}} state
+<br>
+
+=== '''Ryu''' ===
+* {{clr|H|Solar Plexus Strike}} ({{clr|H|6HP}})
+** Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)
+* Hadoken (236P)
+** Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)
+* {{clr|OD|OD Shoryuken}} ({{clr|OD|623PP}})
+** First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs
+* {{clr|L|LP Hashogeki}} ({{clr|L|214LP}})
+** Block Advantage {{sf6-adv|VM|-4}} → {{sf6-adv|M|-3}} with reduced pushback on block
+** Increased pushback on block vs. Burnout
+* {{clr|M|MP Hashogeki}} ({{clr|M|214MP}})
+** Expanded the attack and projectile clash hitbox forward
+* {{clr|H|HP Hashogeki}} ({{clr|H|214HP}})
+** Reduced pushback on block
+** Expanded the attack and projectile clash hitbox forward
+* {{clr|OD|OD Hashogeki}} ({{clr|OD|214PP}})
+** Reduced pushback on hit/block
+** Expanded the attack and projectile clash hitbox forward
+* Denjin Hashogeki (Denjin 214P/{{clr|OD|PP}})
+** Reduced pushback on block
+** Expanded the attack and projectile clash hitbox forward
+** {{clr|OD|Denjin OD}} version damage increased 600 → 1000
+* {{clr|SA|SA1}} ({{clr|SA|236236P}})
+** Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)
+<br>
+
+=== '''Zangief''' ===
+* {{clr|OD|OD Double Lariat}} ({{clr|OD|PPP}})
+** 1st hit combos into {{clr|SA|SA3/CA}} when canceled (causes a brief crumple state on grounded opponents)
+** Faster horizontal movement on startup
+** 2nd hit connects vs. grounded opponents 1f earlier (for combo consistency)
+** 1st hit reduced knockback distance vs. airborne opponents
+* {{clr|SA|SA1}} ({{clr|SA|236236K}})
+** Hitbox extended downward (can juggle and anti-air more consistently)
+<br>

@@ -1,0 +1,32 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/2.0202|2.0202]]
+|gameversion=2.0202
+|date=April 15, 2026
+|summary=Bug fixes for the game system as well as JP and M. Bison.
+|links=[https://www.streetfighter.com/6/buckler/battle_change/20260415 Patch Notes]  
+}}
+<!--Full Version name: 2.0202.000-->
+
+== '''Universal Changes''' ==
+* '''Drive Parry'''
+** Fixed issue where {{clr|DR|Drive Rush}} could not be performed at certain timings after parrying an attack, causing the player to be locked into their parry recovery animation when attempting a punish
+* '''Input Buffer'''
+** If the opponent's {{clr|DR|Drive Rush}} freeze overlaps with a downed character's wakeup input buffer window, the buffer timing will be reduced from 10f → 7f
+** This change was made due to issues caused by the previous patch [[Street_Fighter_6/Version/2.02|(Version 2.02)]] which increased the wakeup input buffer by 3 frames
+* '''Modern Controls'''
+** Fixed issue where after certain airborne moves (e.g. Dhalsim's Yoga Float, Rashid's Wing Stroke), if the opponent activated {{clr|DR|Drive Rush}}, the airborne character could not use air normals with the Auto button for a short time
+<br>
+
+== '''Character Changes''' ==
+
+=== '''JP''' ===
+* {{clr|H|Departure: Shadow}} (214P/{{clr|OD|PP}}~{{clr|H|214HP}})
+** Fixed issue where the startup was 1 frame faster when canceled into from {{clr|L|2LK}}, {{clr|M|5MP}}, {{clr|M|2MK}}, or {{clr|H|5HK}}
+<br>
+
+=== '''M. Bison''' ===
+* Devil Reverse + Psycho Mine ([2]8K~P + Mine)
+** Fixed issue where the Psycho Mine would stay embedded if a {{clr|DR|Drive Reversal}} was performed after blocking the 2nd hit
+* Devil Reverse + Psycho Mine ([2]8K/{{clr|OD|KK}}~P + Mine) / Somersault Skull Diver ([2]8K/{{clr|OD|KK}}~K~P + Mine)
+** Fixed issue where the attack could not hit from behind under some circumstances, causing M. Bison to whiff through the opponent's body
+<br>

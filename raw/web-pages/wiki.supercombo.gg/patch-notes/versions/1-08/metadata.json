@@ -1,0 +1,264 @@
+{
+  "metadata_schema_version": "supercombo_mediawiki_page_capture_metadata/v1",
+  "captured_at_utc": "2026-06-11T03:33:42Z",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "game": "Street Fighter 6",
+  "source_family": "web_page",
+  "source_type": "community_wiki_page",
+  "page_title": "Street Fighter 6/Version/1.08",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08",
+  "wikitext_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08?action=raw",
+  "api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FVersion%2F1.08&prop=info%7Crevisions%7Cimages&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment%7Csha1&rvslots=main&imlimit=max",
+  "templates_api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FVersion%2F1.08&prop=templates&tllimit=max",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Version/1.08",
+    "pageid": 84324,
+    "lastrevid": 361832,
+    "revision_id": 361832,
+    "revision_timestamp": "2026-04-21T05:55:04Z",
+    "touched": "2026-06-04T23:13:55Z",
+    "length": 34144,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "cb4cf2ada231921cdcc9867732530ccba5412e2e",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08"
+  },
+  "source_updated_at": "2026-04-21T05:55:04Z",
+  "storage_policy": "updateable_web_page_capture",
+  "raw_review_status": "pending_human_review",
+  "capture_method": {
+    "tool": "scrapling",
+    "session": "StealthySession",
+    "headless": true,
+    "solve_cloudflare": true,
+    "block_ads": true,
+    "network_idle": false
+  },
+  "http_status": {
+    "page_html": 200,
+    "page_raw_wikitext": 200,
+    "api_query": 200,
+    "api_templates": 200,
+    "render_fetch": 200
+  },
+  "responses": {
+    "page_html": {
+      "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08",
+      "final_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08",
+      "status": 200,
+      "headers": {
+        "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cf-mitigated": "challenge",
+        "cf-ray": "a09d8e51a960817d-NRT",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'none'; script-src 'nonce-DtuYKXTR0DMX1YnALnGooG' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'",
+        "content-type": "text/html; charset=UTF-8",
+        "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+        "cross-origin-embedder-policy": "require-corp",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Thu, 11 Jun 2026 03:33:43 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "origin-agent-cluster": "?1",
+        "permissions-policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+        "priority": "u=0,i",
+        "referrer-policy": "same-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=j8ScpTtdMX9ns7T5QuOFe0XAvi5mdxKWHENQVg0NWcDzwbtEO7ds0aR9N04taT4NsrniFFs1afxARgrMsx2NEusqag2pcRhaQ0lzDgNzuc%2FhSW5M5GA5gBLbguOkHYJT33Zb2You1YgT%2Bq%2BLUDJpF2I%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "chlray;desc=\"a09d8e51a960817d\"\ncfExtPri",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "byte_count": 238359,
+      "sha256": "sha256:84e0440cfe94a6fdc646a474e084f5145b6f6844f00b1ea55b9e634f6ce53089"
+    },
+    "page_raw_wikitext": {
+      "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08?action=raw",
+      "final_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08?action=raw",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, s-maxage=0, max-age=18000",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a09d901cdbdef3d2-NRT",
+        "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+        "content-type": "text/x-wiki; charset=UTF-8",
+        "date": "Thu, 11 Jun 2026 03:34:57 GMT",
+        "last-modified": "Tue, 21 Apr 2026 05:55:04 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=KbL07RRvzdlRMWg5ftC29Ffrk%2FkiPY0mNK8R%2FJOJb%2F91G4jdZ8WbZvEhKESuv4epOrDsuZcpmYOKRB71giTFVwUviOpLIQduCoSks%2FVL01ycZT%2B6Y5xRzjLcIHLfKh3%2FO0ISXGKeLWNXqUqiZ3kwy9s%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=7,cfOrigin;dur=843, cfExtPri",
+        "vary": "Accept-Encoding,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "775da204153331076b593ff9"
+      },
+      "byte_count": 34144,
+      "sha256": "sha256:33622fdd384786d962aef0903b94e74030de19f2d451850738cdd7eb143450fc"
+    },
+    "api_query": {
+      "url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FVersion%2F1.08&prop=info%7Crevisions%7Cimages&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment%7Csha1&rvslots=main&imlimit=max",
+      "final_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FVersion%2F1.08&prop=info%7Crevisions%7Cimages&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment%7Csha1&rvslots=main&imlimit=max",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a09d902dad87f3d2-NRT",
+        "content-disposition": "inline; filename=api-result.json",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 11 Jun 2026 03:34:59 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sWmE4ZZJsANF0LOeS4KBI6MWn%2FrFKniafVffgvt%2Br6QkkPdQjoKyY9elT5YunjnLE4C3mduRhU2txjbfszqfsT9INsAepeSlDhW4HmulDyvJg9Dmre4%2FAuoVlo32bR%2FuyoNHGOPDHDoAVH%2Bhmwt5FO4%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=294, cfExtPri",
+        "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-request-id": "5ce0348d8917cc10f23af9e7"
+      },
+      "byte_count": 35564,
+      "sha256": "sha256:a3efb1a9a7fd4b7fd01dbfdedeb1c1a21a02c76fc9fcdc577039baa1f90f3471"
+    },
+    "api_templates": {
+      "url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FVersion%2F1.08&prop=templates&tllimit=max",
+      "final_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FVersion%2F1.08&prop=templates&tllimit=max",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a09d903b2f03f3d2-NRT",
+        "content-disposition": "inline; filename=api-result.json",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 11 Jun 2026 03:35:01 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pzjBjKGh2HqxIYGv2HnOJaFKJ5U5zyqD1Hc22VlwgZmjkTmdLkAdPmCs8xdlwmCW94P69vVaHZthBXUDFx%2BkSRteQWNz4tZCrK0mq4z2FvEX3Nrpg3rM1W8%2BnPYJe0jsPNbe8bDwo%2BbcYEexEClF7r0%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=3,cfOrigin;dur=301, cfExtPri",
+        "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-request-id": "a29c759f26d121764e83ad0b"
+      },
+      "byte_count": 339,
+      "sha256": "sha256:d53550df0444ced10f4bdc7875120b638efd925db23f08db9d5da754f456f171"
+    },
+    "render_fetch": {
+      "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08",
+      "final_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.08",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "a09d90470859f3d2-NRT",
+        "content-encoding": "zstd",
+        "content-language": "en",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Thu, 11 Jun 2026 03:35:03 GMT",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "last-modified": "Sat, 06 Jun 2026 03:14:43 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "priority": "u=0,i",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mGPId30CDsEDJPQG5%2BUMphgrojj7uFJ5wiZ4LeSp3MCg1bNEHgotzo3MMQogVSWOOg7DcHM4%2F0MbYi6lTRbg4DGd0YzA00te5Z12Lr%2FMjNNFvSe67fltcH%2BXCP97M4UpJliSZ5q0w2BqdzYSyxOR4JU%3D\"}]}",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=290, cfExtPri",
+        "vary": "Accept-Encoding,Cookie",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "44b0db3957dd8e6b22540864"
+      },
+      "byte_count": 205447,
+      "sha256": "sha256:049f8228473e3354bfaea74e9db912d0d8920b64b0ab392923939c56781c7716"
+    }
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:SF6-Version"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Sf6-adv"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Sf6-jug"
+    }
+  ],
+  "media_scope_policy": {
+    "included": "Page semantic content media: explicit File links in page.raw.wikitext and rendered File links outside navigation sections.",
+    "excluded": "Images introduced by transcluded navigation/template chrome, including SF6 Navigation character icons.",
+    "api_prop_images_note": "api/query.json preserves MediaWiki prop=images exactly; download scope intentionally uses content_media_titles instead."
+  },
+  "api_page_image_titles": [],
+  "content_media_titles": [],
+  "excluded_api_image_titles": [],
+  "counts": {
+    "wikitext_bytes": 34144,
+    "page_html_bytes": 238359,
+    "heading_count": 26,
+    "link_count": 3,
+    "table_count": 1,
+    "rendered_dom_image_count": 0,
+    "content_media_image_count": 0,
+    "excluded_navigation_image_count": 0,
+    "rendered_dom_video_count": 0,
+    "api_prop_images_count": 0,
+    "imageinfo_requested_count": 0,
+    "excluded_api_images_count": 0,
+    "imageinfo_resolved_count": 0,
+    "downloaded_original_image_count": 0,
+    "downloaded_rendered_image_count": 0,
+    "mediawiki_revision_id": 361832,
+    "mediawiki_revision_timestamp": "2026-04-21T05:55:04Z"
+  },
+  "artifacts": {
+    "page_html": "page.html",
+    "page_raw_wikitext": "page.raw.wikitext",
+    "api_query": "api/query.json",
+    "api_templates": "api/templates.json",
+    "imageinfo": "imageinfo.json",
+    "image_manifest": "images/manifest.json",
+    "rendered_main_dom": "rendered/main.dom.json",
+    "rendered_media_dom": "rendered/media.dom.json",
+    "rendered_cleaned_content_html": "rendered/content.cleaned.html",
+    "rendered_scoped_content_html": "rendered/content.scoped.html",
+    "screenshots": {
+      "page_scoped": {
+        "path": "screenshots/page-scoped.png",
+        "byte_count": 3039344,
+        "sha256": "sha256:589988f4ed61809ebcf81d4065cbb0ba742acfbc6a8564df84980e269b6abc4b",
+        "width": 1600,
+        "height": 18888
+      },
+      "content_scoped": {
+        "path": "screenshots/content-scoped.png",
+        "byte_count": 6393046,
+        "sha256": "sha256:bc2328ca7c8c0c7de6ad79ba83d84a75783e1b87d7302a18e1702cec0f709f42",
+        "width": 2440,
+        "height": 34904
+      }
+    },
+    "validation": "validation.json"
+  }
+}

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -66,3 +67,67 @@ def test_wiki_output_data_paths_in_query_facing_pages_exist() -> None:
                     missing_paths.append(f"{markdown_path.as_posix()}: {output_path}")
 
     assert missing_paths == []
+
+
+def test_battle_change_move_index_version_ids_are_unique() -> None:
+    paths = [
+        Path("wiki") / "outputs" / "data" / "battle-change" / "official" / "move-change-index.json",
+        Path("wiki") / "outputs" / "data" / "battle-change" / "supercombo-patch-notes" / "move-change-index.json",
+    ]
+
+    offenders: list[str] = []
+    for path in paths:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        version_field = "version_ids" if "official" in path.parts else "versions"
+        for row in payload["rows"]:
+            versions = row[version_field]
+            if len(versions) != len(set(versions)):
+                offenders.append(f"{path.as_posix()}: {row['normalized_target_key']}")
+
+    assert offenders == []
+
+
+def test_battle_change_json_fields_cover_row_keys() -> None:
+    output_root = Path("wiki") / "outputs" / "data" / "battle-change"
+
+    offenders: list[str] = []
+    for path in sorted(output_root.rglob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        rows = payload.get("rows")
+        if not isinstance(rows, list):
+            continue
+        fields = payload.get("fields")
+        if not isinstance(fields, list):
+            offenders.append(f"{path.as_posix()}: missing fields")
+            continue
+        for index, row in enumerate(rows):
+            if not isinstance(row, dict):
+                continue
+            missing = sorted(set(row) - set(fields))
+            if missing:
+                offenders.append(f"{path.as_posix()} row {index}: missing fields {missing}")
+
+    assert offenders == []
+
+
+def test_battle_change_fighter_indexes_use_frame_data_character_slugs() -> None:
+    paths = [
+        Path("wiki") / "outputs" / "data" / "battle-change" / "official" / "move-change-index.json",
+        Path("wiki") / "outputs" / "data" / "battle-change" / "supercombo-patch-notes" / "move-change-index.json",
+    ]
+    frame_data_root = Path("wiki") / "outputs" / "data" / "frame-data" / "official"
+
+    offenders: list[str] = []
+    for path in paths:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        for row in payload["rows"]:
+            if row["scope"] != "fighter":
+                continue
+            character_slug = row.get("character_slug", "")
+            if not character_slug:
+                offenders.append(f"{path.as_posix()}: {row['normalized_target_key']} has no character_slug")
+                continue
+            if not (frame_data_root / character_slug).exists():
+                offenders.append(f"{path.as_posix()}: {character_slug} has no official frame-data output")
+
+    assert offenders == []

@@ -1,0 +1,165 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 71001,
+        "ns": 0,
+        "title": "Street Fighter 6/Patch Notes",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-02T03:12:40Z",
+        "lastrevid": 276775,
+        "length": 771,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Patch_Notes",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Patch_Notes&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Patch_Notes",
+        "revisions": [
+          {
+            "revid": 276775,
+            "parentid": 259200,
+            "user": "Matosh",
+            "timestamp": "2023-09-27T14:23:05Z",
+            "size": 771,
+            "sha1": "120f9c60a5b2844d60e63bedceb530236267a469",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "* Officially documented gameplay changes will be prioritized for these pages. Language and terminology might be changed from the source for clarity or to match the wiki's own terminology.\n* Version IDs and release dates were taken from the PC/Steam release. Consoles might include additional updates focused on improving game performance and stability, or minor bug fixes.\n\n{{#cargo_query:\ntables=SF6_Versions\n|fields=SF6_Versions.version, SF6_Versions.gameversion, SF6_Versions.date, SF6_Versions.summary, SF6_Versions.links\n|order by=SF6_Versions.date DESC\n|format=table\n}}\n\n<!--\nHow to find data page\nhttps://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.00\nhttps://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.01\n-->\n{{Navbox-SF6}}\n[[Category: Street Fighter 6]]"
+              }
+            },
+            "comment": "add comment which shows how to make new versions"
+          }
+        ],
+        "images": [
+          {
+            "ns": 6,
+            "title": "File:SF6 A.K.I. Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Akuma Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Alex Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Blanka Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Cammy Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Chun-Li Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Cviper Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 DeeJay Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Dhalsim Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ed Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ehonda Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Elena Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Guile Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ingrid Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 JP Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Jamie Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Juri Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ken Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Kimberly Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Lily Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Luke Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Mai Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Manon Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Marisa Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Mbison Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Rashid Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Ryu Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Sagat Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Terry Icon.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:SF6 Zangief Icon.png"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

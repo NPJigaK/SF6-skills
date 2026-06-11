@@ -1,0 +1,50 @@
+{
+  "validation_schema_version": "supercombo_mediawiki_page_capture_validation/v1",
+  "created_at_utc": "2026-06-11T03:29:10Z",
+  "status": "passed",
+  "checks": {
+    "page_status_200": true,
+    "wikitext_status_200": true,
+    "api_status_200": true,
+    "templates_api_status_200": true,
+    "not_cloudflare_challenge_html": true,
+    "wikitext_nonempty": true,
+    "api_wikitext_matches_action_raw": true,
+    "rendered_title_mentions_page": true,
+    "content_dom_recorded": true,
+    "media_dom_recorded": true,
+    "imageinfo_requested_for_content_media": true,
+    "excluded_api_images_not_downloaded": true,
+    "image_downloads_ok": true,
+    "content_scoped_screenshot_exists": true,
+    "page_scoped_screenshot_exists": true,
+    "scoped_content_excludes_navigation_table": true,
+    "render_fetch_status_200": true
+  },
+  "summary": {
+    "wikitext_bytes": 6058,
+    "page_html_bytes": 161045,
+    "heading_count": 8,
+    "link_count": 1,
+    "table_count": 2,
+    "rendered_dom_image_count": 0,
+    "content_media_image_count": 0,
+    "excluded_navigation_image_count": 0,
+    "rendered_dom_video_count": 0,
+    "api_prop_images_count": 0,
+    "imageinfo_requested_count": 0,
+    "excluded_api_images_count": 0,
+    "imageinfo_resolved_count": 0,
+    "downloaded_original_image_count": 0,
+    "downloaded_rendered_image_count": 0,
+    "mediawiki_revision_id": 360451,
+    "mediawiki_revision_timestamp": "2026-04-02T09:17:38Z"
+  },
+  "notes": [
+    "page.raw.wikitext is the canonical text artifact for this MediaWiki page.",
+    "imageinfo.json plus images/files preserve MediaWiki File originals only for semantic content media.",
+    "MediaWiki API prop=images may include transcluded navigation/template images; those are recorded as excluded provenance, not downloaded content media.",
+    "screenshots preserve scoped rendered page content for future visual questions, but are display evidence rather than source text.",
+    "No wiki source page, index entry, or log entry was created by this raw-only capture."
+  ]
+}

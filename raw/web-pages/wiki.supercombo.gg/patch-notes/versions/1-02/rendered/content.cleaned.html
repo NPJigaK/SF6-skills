@@ -1,0 +1,415 @@
+<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><section id="citizen-section-0" class="citizen-section"><div class="citizen-overflow-wrapper"><div class="citizen-overflow-nav"><button class="citizen-overflow-navButton citizen-overflow-navButton-left citizen-ui-icon mw-ui-icon-wikimedia-collapse" aria-hidden="true" tabindex="-1"></button><button class="citizen-overflow-navButton citizen-overflow-navButton-right citizen-ui-icon mw-ui-icon-wikimedia-collapse" aria-hidden="true" tabindex="-1"></button></div><div class="citizen-overflow-content"><table class="wikitable">
+<tbody><tr><th>Version</th><td><a class="mw-selflink selflink">1.02</a></td></tr>
+<tr><th>Game Version</th><td>1.02</td></tr>
+<tr><th>date</th><td>September 27, 2023</td></tr>
+<tr><th>Summary</th><td><b>A.K.I. Release</b>. Bug fixes with some minor changes due to bugs</td></tr>
+<tr><th>Links</th><td><a rel="nofollow" class="external text" href="https://www.streetfighter.com/6/buckler/en/battle_change/20230927">Patch Notes</a></td></tr>
+</tbody></table></div></div>
+<p><br>
+</p>
+<meta property="mw:PageProp/toc">
+</section><div class="mw-heading mw-heading2 citizen-section-heading"><span class="citizen-section-indicator citizen-ui-icon mw-ui-icon-wikimedia-collapse"></span><h2 id="A.K.I._Patch">A.K.I. Patch</h2></div><section id="citizen-section-1" class="citizen-section">
+<ul><li>A.K.I. released</li></ul>
+<p><br>
+</p>
+</section><div class="mw-heading mw-heading2 citizen-section-heading"><span class="citizen-section-indicator citizen-ui-icon mw-ui-icon-wikimedia-collapse"></span><h2 id="Universal_Changes"><b>Universal Changes</b></h2></div><section id="citizen-section-2" class="citizen-section">
+<ul><li><b>Forward/Back Dash</b>
+<ul><li>Input buffer window increased 4 → 7 frames (easier to get a dash with reversal timing)</li></ul></li>
+<li><b><style data-mw-deduplicate="TemplateStyles:r298166">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class="text-color--11">Super Arts</span></b>
+<ul><li>Input recognition window reduced to 9 frames between inputs (less likely to come out accidentally)</li></ul></li>
+<li><b>Drive Gain / Chip Damage vs. Burnout</b>
+<ul><li>Several attacks unintentionally built less Drive gauge or did incorrect Chip damage when the opponent blocked while in Burnout and have been adjusted to the standard values</li></ul></li>
+<li><b><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span></b>
+<ul><li>Fixed issue where a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DI Clash</span> would occur in specific situations after an attack was absorbed by armor (canceling each other out)</li>
+<li>e.g. a cancelable poke is absorbed on the first <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DI</span> armor frame and immediately canceled into a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">counter-DI</span></li></ul></li>
+<li><b>Drive Parry</b>
+<ul><li>Fixed issue where performing Parry from a crouching position would cost more Drive meter than from a standing position</li>
+<li>Also fixed issue where Dee Jay, E. Honda, Guile, Kimberly, Luke, Rashid, and Zangief would spend extra Drive meter to initiate a crouching Parry</li></ul></li>
+<li><b>Perfect Parry</b>
+<ul><li>Drive Gain when parrying multi-hit projectiles adjusted to prevent the defender from consuming more Drive meter than they spent</li>
+<li>Fixed an issue where inputting any upward direction after Perfect Parrying a projectile would buffer a jump input after the parry recovery ends</li>
+<li>Fixed an issue where after a jump normal was Perfect Parried, the timing to input an attack after landing was 1 frame later than usual</li></ul></li>
+<li><b>Attacks hitting backwards</b>
+<ul><li>Many attacks could unintentionally hit opponents behind the player and have been adjusted to only hit in front</li></ul></li>
+<li><b>Assist Combos (Modern)</b>
+<ul><li>Adjusted the timing that inputs are accepted and fixed buffer window issues</li>
+<li>Can no longer chain into a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Light</span> normal while holding the Assist button (allows <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Light Assist Combo</span> to take priority)</li></ul></li></ul>
+<p><br>
+</p>
+</section><div class="mw-heading mw-heading2 citizen-section-heading"><span class="citizen-section-indicator citizen-ui-icon mw-ui-icon-wikimedia-collapse"></span><h2 id="Key_Character_Changes"><b>Key Character Changes</b></h2></div><section id="citizen-section-3" class="citizen-section">
+<div class="mw-heading mw-heading3"><h3 id="Blanka"><b>Blanka</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>
+<ul><li>Super Gain on Block decreased 600 → 500 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Rock Crusher</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span>)
+<ul><li>Super Gain on Block decreased 250,250 → 125,125 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Double Knee Bombs</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span>)
+<ul><li>Super Gain on Block decreased 250,250 → 125,125 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Aerial Rolling Attack</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">j.[4]6PP</span>)
+<ul><li>Super Gain on Block for the 1st hit decreased 650 → 450 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Backstep Rolling Attack</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">63214KK</span>)
+<ul><li>Increased opponent's Drive Gain on Parry 5000 → 10000 (1st attack) / 2500 → 5000 (2nd/3rd attacks)</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">63214KK</span> (1st hit), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">[4]6LP</span> (during <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">63214KK</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Cammy"><b>Cammy</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Lift Uppercut</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">4MP</span>)
+<ul><li>Later active frames will no longer connect on crouch blocking opponents when timed meaty on the opponent's wakeup</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214P</span> Ground/Air)
+<ul><li>Decreased the Drive Damage on a cinematic hit 11000 → 10000</li>
+<li>Increased the Drive Damage on the final non-cinematic airborne hit 3000 → 3700 (can now match the cinematic version if all hits connect)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA2</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span>
+<ul><li>Fixed issue where a stunned opponent would recover from Burnout mid-combo if a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Super</span> connected while their Drive gauge was full</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>, 236P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>~No Input, 236P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>~2K</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li>236<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[HK]</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, 236<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[HK]</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~No Input, 236<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[HK]</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~2K, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Chun-Li"><b>Chun-Li</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Assist Combo 2</span>
+<ul><li>Fixed issue where after performing <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, the next hit would not come out at if input at a specific timing</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.HP</span>
+<ul><li>Corrected the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-hit/Punish Counter</span> damage vs. airborne opponents 960 → 600 (was using the damage value for grounded opponents)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Lotus Punch</span> (214P~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>)
+<ul><li>Removed unintended invincibility on head hurtbox on frames 3-28</li>
+<li>2nd hit is now properly considered an overhead if the 1st hit whiffs</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Tenko Kicks</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">22KK</span>)
+<ul><li>Fixed issue where Chun-Li would move after landing if the opponent switched sides on the 2nd hit of the attack</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236P</span>)
+<ul><li>Fixed issue where only the final hit could KO against an airborne opponent</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214K</span>)
+<ul><li>The distribution of the Drive Damage on Block has been adjusted</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span>: 7500,0,0 → 6500,500,500</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">CA</span>: 10000,0,0 → 9000,500,500</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li>236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, 214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, [2]8K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li>
+<li><b>Universal Adjustments - Chip Damage vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">[2]8MK</span></li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li>214P~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>, 214P~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, j.236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, [2]8K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Reversal</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Dee_Jay"><b>Dee Jay</b></h3></div>
+<ul><li>Modern Controls
+<ul><li>Air Slasher shortcut (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">[4]S</span>) will now only come out while still holding Back (4) or Up-Back (7)</li>
+<li>The short period where charge time is retained after letting go of the backward input no longer applies except when manually inputting Air Slasher</li>
+<li>This prevents overlap issues with Rolling Sobat and Jus Cool, as the Air Slasher would take priority for a short while after releasing charge</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Assist Combo 1</span>
+<ul><li>Fixed issue where Dee Jay could not perform <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236MK</span> by inputting it as A[<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">L</span>] &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--S">6S</span></li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Assist Combo 3</span>
+<ul><li>Fixed issue where the 3rd hit of the combo would have extra damage scaling if input late</li></ul></li>
+<li>Speedy Maracas (22P)
+<ul><li>Now in a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> state when transitioned into from Air Slasher (to avoid confusion when punishing the projectile)</li>
+<li>Can no longer transition from Air Slasher into Speedy Maracas when the projectile hits as a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-hit/Punish Counter</span>, is parried, or is absorbed by armor</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Reversal</span>
+<ul><li>Updated the hurtbox to match the visuals more closely</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span>, 214P (1st hit), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li>
+<li><b>Universal Adjustments - Chip Damage vs. Burnout</b>
+<ul><li>214P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">[2]8MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">[2]8HK</span></li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li>214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK</span>, 214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>,</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">M</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">H</span> versions)</li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Dhalsim"><b>Dhalsim</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MK</span>
+<ul><li>Super Gain on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> decreased 700 → 500 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">j.MK</span>
+<ul><li>Corrected the tip of the hitbox so that it must be blocked as an Overhead instead of both Low / High</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.HP</span>
+<ul><li>Fixed issue where opponents in Burnout did not incur 4 extra frames of blockstun</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP Yoga Flame</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">63214HP</span>)
+<ul><li>Fixed issue where only 2 projectile clash hits would occur instead of 3</li></ul></li>
+<li>Yoga Arch (236K)
+<ul><li>Fixed issue where Starter / Combo Scaling would be applied when the stationary hitbox connected (after the projectile hits the ground)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Yoga Comet</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">j.63214PP</span>)
+<ul><li>Fixed issue where activating the move with plinked inputs (P~P) would prevent Dhalsim from using other airborne specials after recovery</li></ul></li>
+<li>Aerial Yoga Teleport (4 or 6 + j.PPP/j.KKK)
+<ul><li>Fixed issue where Dhalsim would gain Super gauge when activated</li>
+<li>Fixed issue where the PPP version would take 1 frame longer to land than the KKK version if nothing was input mid-air</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214K</span>)
+<ul><li>Fixed issue where the projectile became invisible if only the final hit did not connect</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">63214PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Reversal</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="E._Honda"><b>E. Honda</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>
+<ul><li>Fixed issue where <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span> + Sumo Spirit enhancement traveled a much farther distance than usual</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>
+<ul><li>Fixed issue where <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Rush</span> + Sumo Spirit enhancement traveled a much shorter distance than usual</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">3HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">3HK</span>, [2]8K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span> (2nd hit)</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li>214P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">[4]6PP</span>, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~P, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~2P, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Guile"><b>Guile</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2LK</span>
+<ul><li>Fixed issue where it could not be chain canceled when absorbed by armor</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Double Shot</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MP</span>)
+<ul><li>Fixed issue where the extra Block Advantage vs. Burnout was +5 instead of +4</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Sonic Cross</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214PP</span>)
+<ul><li>Decreased opponent's Drive Gain on Parry 5100 → 5000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">[4]646P</span>)
+<ul><li>Decreased opponent's Drive Damage on Block 2520 → 2500</li>
+<li>Fixed issue where <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span> version's projectile clash did not match the visuals</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">[4]646K</span>)
+<ul><li>Fixed issue where a stunned opponent would recover from Burnout mid-combo if <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> connected while their Drive gauge was full</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">[2]8KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Jamie"><b>Jamie</b></h3></div>
+<ul><li>Forward/Back Walk
+<ul><li>Fixed issue where Jamie would not move on the first frame during Drink Lv.4</li></ul></li>
+<li>Tensei Kick (2KK)
+<ul><li>Fixed issue where startup was 1 frame slower while <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2 Install</span> is active</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Ransui Haze Drink</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>~P Far)
+<ul><li>Fixed issue where Jamie's damage scaling would not increase properly when the drink occurs after <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2 Install</span> runs out</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span> (chained), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>~P (Close), 236P (DL4), 236K, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="JP"><b>JP</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Embrace</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214KK</span>)
+<ul><li>Fixed issue where JP could move freely if the throw connected at the same time he was hit by a projectile</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP Stribog</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HP</span>, 1st hit)
+<ul><li>Fixed issue where JP would only gain half the usual amount of Drive Gauge on block when the opponent is in Burnout</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236P</span>)
+<ul><li>When both hits are parried, Drive Gain on Parry distribution changed from 0,20000 → 10000,10000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214P</span>)
+<ul><li>Fixed an issue where the final projectile would come out if JP was hit by an attack with short hitstun</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236K</span>)
+<ul><li>Fixed issue where a stunned opponent would recover from Burnout mid-combo if <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3/CA</span> connected while their Drive gauge was full</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span>, 236P</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Juri"><b>Juri</b></h3></div>
+<ul><li>Modern Controls
+<ul><li>Fixed issue where performing <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">2L</span> &gt; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Assist Combo 1</span> would result in a chained light normal during <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">FSE</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2 Install</span>)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Assist Combo 3</span>
+<ul><li>Fixed issue where the transition from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Ankensatsu</span> to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Go Ohsatsu</span> would cost 2 Drive bars instead of 1</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">FSE</span> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span>
+<ul><li>Fixed issue where Drive Gauge values were not scaled like other <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">FSE</span>-chained attacks</li>
+<li>Drive Gain on Hit 500 → 375</li>
+<li>Drive Damage on Block 1250 → 625</li>
+<li>Drive Damage on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> 2000 → 1250</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (initial hit)</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>, 623P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">236HK</span> (1-stock), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Ken"><b>Ken</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Reversal</span>
+<ul><li>Fixed issue where Ken's invincibility lasted longer on hit than other characters</li></ul></li>
+<li>Run~Shoryuken (KK~623P)
+<ul><li>Super Gain on Block decreased 300 → 200 for the 1st/2nd hits (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Hadoken</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>Drive Damage on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> adjusted 5000,0 → 2500,2500</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li>KK~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>, KK~214K (forward hitboxes), 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">214MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">214HK</span>, 623K</li></ul></li>
+<li><b>Universal Adjustments - Chip Damage vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">623LK</span></li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li>KK~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">6LK</span>, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MK</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li>623<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, KK~623P, 214<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, KK~214K, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Kimberly"><b>Kimberly</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Bushin Prism Strikes 1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>)
+<ul><li>Super Gain on Block increased 150 → 200 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span> Vagabond Edge (236<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>)
+<ul><li>Corrected the Drive Damage on Block 2000 → 4000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Super Arts</span> (all)
+<ul><li>Fixed issue where a stunned opponent would recover from Burnout mid-combo if a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Super</span> connected while their Drive gauge was full</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li>236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li>j.214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, 236K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span> (Close), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Lily"><b>Lily</b></h3></div>
+<ul><li>Prejump Frames
+<ul><li>Fixed issue where Lily could cancel prejump frames into special moves 1 frame longer than intended (except for 360+P command throws)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236K</span> / <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">j.236236K</span>)
+<ul><li>Increased the Drive Gain on Parry for the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--6">Windclad</span> versions to match the regular versions</li>
+<li>Expanded a combo-only hitbox upward for juggle consistency</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.2HP</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">623PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--6">W.</span>623P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">j.PPP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--6">W.</span>j.PP/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PPP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Air SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Luke"><b>Luke</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD No Chaser</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236KK~P</span>)
+<ul><li>Super Gain on Block increased 500 → 600 (corrected to standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span>
+<ul><li>Fixed issue that would cause the opponent to take no damage when being hit in certain circumstances</li></ul></li>
+<li><b>Universal Adjustments - Chip Damage vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">pf.214[LP]</span> (2nd hit)</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">pf.214[LP]</span> (2nd hit), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li>214[P] (Perfect/non-Perfect), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">623PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Manon"><b>Manon</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span>
+<ul><li>Fixed issue where <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">DI Clash</span> would occur even if activated 1 frame later than the opponent</li></ul></li>
+<li>Rond-point (236K)
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span> version 2nd hit <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> damage corrected 600 → 480</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD</span> version 2nd hit recovery no longer cancelable early on block</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Renversé</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span>)
+<ul><li>Fixed issue where recovery was 1 frame slower at Medal Lv.3 or Lv.4</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236K</span>)
+<ul><li>Fixed issue where Manon could pass through some moves while both are active</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">214LK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">214MK</span>, 236K, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Marisa"><b>Marisa</b></h3></div>
+<ul><li>Modern Controls
+<ul><li>Fixed issue where normals could not be canceled into Gladius using <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">6S</span> input</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">6S</span> is normally Scutum (214K) which cannot be canceled into from normals, so the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">6S</span> acts like a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">5S</span> in this context</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Caelum Arc</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">nj.2HP</span>)
+<ul><li>Fixed issue where the recovery was much longer if it connected as a cross-up; Hit Recovery 27 → 19; Block Recovery 23 → 15</li>
+<li>Fixed issue where the opponent would turn the wrong way if blocked cross-up during Burnout</li>
+<li>Fixed issue where the landing recovery could be canceled into with another move</li></ul></li>
+<li>Dimachaerus (214P)
+<ul><li>Fixed issue where Super Gain on Block was not half of the standard Hit value</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">Held SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236[P]</span>)
+<ul><li>Fixed issue where the damage increased on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Counter-hit/Punish Counter</span> on active frames 5-6</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li>236P, 623P, 236K</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2[HK]</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.[HP]</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.[HK]</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">nj.2[HP]</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Rashid"><b>Rashid</b></h3></div>
+<ul><li>Forward Dash
+<ul><li>Adjusted the beginning of the animation to be more visually apparent</li>
+<li>Fixed issue where the total dash duration would change depending on how the move was input</li>
+<li>Fixed issue where Rashid could not input a Throw Escape after the dash recovery frames had ended</li></ul></li>
+<li>Air Throw (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">j.LPLK</span>)
+<ul><li>Drive Gain on Hit increased 1600 → 2000</li></ul></li>
+<li>Enhanced Tempest Moon (6[6]~6K Air)
+<ul><li>Drive Gain on Parry adjusted 10000,5000,5000 → 5000,2500,2500</li>
+<li>Previously would build 2 bars for the opponent instead of the standard 1 bar</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--4">Drive Impact</span>
+<ul><li>Fixed issue that would cause the opponent to take no damage when being hit in certain circumstances</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">Enhanced LP Spinning Mixer</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">236LP</span> Air)
+<ul><li>Drive Gain on Block adjusted 2000 → 900 to match the value on Hit</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Enhanced MP Spinning Mixer</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236MP</span> Air)
+<ul><li>Damage on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> corrected to the standard +20% bonus: 2880 (360x2,240x8,240) → 1680 (240x2,120x8,240)</li>
+<li>Drive Gain on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> corrected to match the value on Hit: 0x2,200x8,200 → 150x10,500</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Enhanced OD Spinning Mixer</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">236PP</span> Air)
+<ul><li>Damage on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> corrected to the standard +20% bonus: 2880 (360x2,240x8,240) → 1680 (240x2,120x8,240)</li>
+<li>Super Gain on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> for 3rd hit adjusted 100 → 50 (corrected to standard value)</li>
+<li>Drive Gain on Parry 12000 → 10000</li>
+<li>Fixed issue where Rashid would gain Drive meter on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> from the 4th hit onward</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Enhanced OD Eagle Spike</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214KK</span> Air)
+<ul><li>Fixed issue where Rashid would whiff through a grounded character if <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> was placed behind the opponent</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Arabian Skyhigh</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">j.214KK</span>)
+<ul><li>Fixed issue where Rashid would gain Drive meter when blocked</li></ul></li>
+<li><b>Super Gain on Block</b> (corrected to be 1/2 the standard value on Hit)
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span>, 6[6]~6K, Enhanced 236<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">Enhanced 236MP</span> (vs. stand block), 214<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214KK</span> (vs. Burnout), Enhanced 214<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>, 214P, 214P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>~6K~K, j.214K/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span></li></ul></li>
+<li><b>Universal Adjustments - Chip Damage vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Enhanced 236HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">Enhanced 236PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">236[MK]</span> (1st hit), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">214PP</span>, 214P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>~6K~K, j.214K</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">j.HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span>, 6[6]~6K, 236<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MP</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, 214P/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Ryu"><b>Ryu</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">2HP</span>
+<ul><li>Fixed issue where Ryu would move backwards if the 2nd active frame connected on hit</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Fuwa Triple Strike</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>)
+<ul><li>Fixed issue where 2nd hit would increase the opponent's Drive gauge on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span>; now decreases it by 2000 instead</li>
+<li>3rd hit Drive Damage on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> increased 0 → 10000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">High Double Strike</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">5HP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>)
+<ul><li>2nd hit Drive Damage on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> increased 0 → 10000</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2 Lv.2/3</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">214214[P]</span>)
+<ul><li>Hitbox expanded inwards; collision box expanded upwards from button release until the end of active frames</li>
+<li>Only applies mid-combo to prevent the attack from whiffing under an opponent</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">5MP</span>~<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">LK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span> (final hit)</li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">j.MP</span> (2nd hit), <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span> (2nd hit)</li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">j.MP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">6MP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">6HP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">4HK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">623P</span>, 214<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">MK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">HK</span>/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">KK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA3</span></li></ul></li></ul>
+<p><br>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Zangief"><b>Zangief</b></h3></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">Smetana Dropkick</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">3HK</span>)
+<ul><li>Drive Damage on Block increased 3000 → 6000</li></ul></li>
+<li>Borscht Dynamite (j.360+K)
+<ul><li>Input Recognition Time: 20f → 12f (less likely to come out accidentally mid-air)</li>
+<li>Super Gain on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--12">Punish Counter</span> increased by 150 (corrected to match the standard value)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">OD Double Lariat</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PPP</span>)
+<ul><li>Super Gain on Hit decreased 300 → 250 (2nd hit onward)</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236K</span>)
+<ul><li>Fixed issue where Drive Damage on Hit was 60 less when input with Modern shortcut</li>
+<li>Fixed issue where a stunned opponent would recover from Burnout mid-combo if <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA1</span> connected while their Drive gauge was full</li></ul></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">236236P</span>)
+<ul><li>2nd hit onward: expanded the collision box and hitboxes vertically on a successful hit to prevent a juggle from dropping</li>
+<li>Fixed issue where the suction effect would persist when interrupted on startup</li></ul></li>
+<li><b>Universal Adjustments - Attacks Hitting Behind</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--7">5LK</span></li></ul></li>
+<li><b>Universal Adjustments - Drive Gain vs. Burnout</b>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--8">2MK</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--9">3HK</span></li></ul></li>
+<li><b>Universal Adjustments - Perfect Parry Drive Gain</b>
+<ul><li>PP/<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--10">PPP</span>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r298166"><span class="text-color--11">SA2</span></li></ul></li></ul>
+<p><br>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260605002629
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.210 seconds
+Real time usage: 0.211 seconds
+Preprocessor visited node count: 20051/1000000
+Revision size: 23412/4194304 bytes
+Post‐expand include size: 54159/4194304 bytes
+Template argument size: 2898/4194304 bytes
+Highest expansion depth: 6/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 266730/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  156.954      1 -total
+ 83.67%  131.320    398 Template:Clr
+  7.95%   12.477      1 Template:SF6-Version
+-->
+
+<!-- Saved in parser cache with key supercombo_wiki-mw_:pcache:75188:|#|:idhash:canonical and timestamp 20260605002629 and revision id 361853. Rendering was triggered because: page_view
+ -->
+</section></div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.02&amp;oldid=361853">https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.02&amp;oldid=361853</a>"</div></div>

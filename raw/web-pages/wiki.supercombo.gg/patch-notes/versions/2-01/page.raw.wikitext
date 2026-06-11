@@ -1,0 +1,109 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/2.01|2.01]]
+|gameversion=2.01
+|date=October 15, 2025
+|summary='''C. Viper Release'''. Minor bug fixes and adjustments for some characters.
+|links=[https://www.streetfighter.com/6/buckler/battle_change/20251015 Patch Notes]  
+}}
+<!--Full Version name: 2.0100.000-->
+
+== C. Viper Patch ==
+* C. Viper released
+<br>
+
+== '''Universal Changes''' ==
+* '''Whiffed {{clr|L|Lights}} > {{clr|DR|Drive Rush}}:''' fixed an issue where some normals would not cancel near the end of the whiff animation but would cancel on hit/block, allowing players to option select the {{clr|DR|DR}} cancel. Applies to:
+** A.K.I. {{clr|L|5LK}}
+** Chun-Li {{clr|L|2LK}}
+** Ed {{clr|L|2LK}}
+** Elena {{clr|L|5LK}}
+** Mai {{clr|L|5LK}}
+** Sagat {{clr|L|5LK}}
+<br>
+
+* '''{{clr|DR|Drive Rush Cancel}} overlap with Special Move commands:''' fixed an issue where some normals would cancel into a special move when input with the Parry buttons, rather than canceling into {{clr|DR|Drive Rush}}. Applies to:
+** A.K.I. {{clr|L|5LK}}
+** Akuma {{clr|L|2LP}}
+** Elena {{clr|L|5LP}}
+** M. Bison {{clr|L|5LP}}
+** Marisa {{clr|L|2LP}}
+** Sagat {{clr|L|2LP}}, {{clr|M|2MP}}~{{clr|H|HP}}
+<br>
+
+* '''{{clr|SA|Super Art}} affecting opponent's Drive Gauge recovery:''' fixed an issue where certain {{clr|SA|Supers}} with a lock-in animation would stop a burned out opponent's passive Drive Gauge regeneration during the animation. Applies to:
+** Akuma {{clr|SA|SA2}}
+** Cammy {{clr|SA|SA2}} (ground/air)
+** E. Honda {{clr|SA|SA2}}
+** Elena {{clr|SA|SA2}}
+** Kimberly {{clr|SA|SA2}} (ground/air)
+** M. Bison {{clr|SA|SA2}}
+** Marisa {{clr|SA|Held SA1}}, {{clr|SA|SA2}} (cinematic hit)
+** Sagat {{clr|SA|SA2}} (all variations)
+<br>
+
+* '''{{clr|SA|Super Art}} gauge scaling:''' fixed an issue where some {{clr|SA|Supers}} that incur scaling penalties to their meter gain (Chun-Li/Dee Jay {{clr|SA|SA2}}) would have follow-up hits scaled even further if landed in a combo with 16 or more hits
+<br>
+
+== '''Character Changes''' ==
+
+=== '''Cammy''' ===
+* {{clr|L|LK Spiral Arrow}} ({{clr|L|236LK}}) active frame 6~ increased juggle time vs. airborne opponents
+** Ensures that {{clr|H|5HP}}~{{clr|H|HK}} > {{clr|L|236LK}} can always juggle into 623K near the corner
+<br>
+
+=== '''Chun-Li''' ===
+* {{clr|OD|OD Tensho Kicks}} ({{clr|OD|22KK}}) expanded collision box upward and expanded final hitbox forward
+** Fixes an issue where the 2nd attack could go in the wrong direction at some distances
+<br>
+
+=== '''Dee Jay''' ===
+* {{clr|OD|OD Waning Moon}} ({{clr|OD|214KK}}~{{clr|M|MK}}) expanded the collision box upward on frames 16-19
+** Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents
+<br>
+
+=== '''Elena''' ===
+* Moon Glider (214P/{{clr|OD|PP}}~6P) hitstop on block increased 11 → 13 to match the on-hit version
+** This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it
+<br>
+
+=== '''Guile''' ===
+* {{clr|L|2LK}} fixed issue where Guile had a {{clr|PC|Punish Counter}} hurtbox 1f after the end of recovery
+** Fixed issue where a chained {{clr|L|5LP}}/{{clr|L|2LP}}/{{clr|L|2LK}} would come out when trying to buffer a technique that uses {{clr|L|LP}} or {{clr|L|LK}} buttons
+<br>
+
+=== '''Jamie''' ===
+* Freeflow Strikes Drink Lv.4 (236P) expanded collision box upward when first attack hits to prevent later hits from whiffing under the opponent
+<br>
+
+=== '''JP''' ===
+* {{clr|OD|OD Torbalan}} ({{clr|OD|236KK}}) added a combo-only hitbox to prevent whiffing on midair opponents
+<br>
+
+=== '''M. Bison''' ===
+* Throw Escape now functions properly when inputs overlap with [[Street_Fighter_6/M.Bison#Hidden_Arts|special moves]] exclusive to SiRN Bison
+* Head Press ([2]8K~K) no longer bounces back when triggering counter moves (JP's Amnesia, Marisa's {{clr|SA|Held SA1}}) making it no longer able to avoid punishment
+<br>
+
+=== '''Manon''' ===
+* Modern Control inputs for Renversé (236P) follow-ups (Feint and Grand Fouetté kick) changed to fix input overlap issues when canceling into {{clr|SA|SA3}}
+** Renversé Feint changed from {{clr|DR|2[S]}} to {{clr|DR|2S}}~{{clr|L|[L]}} 
+** Grand Fouetté changed from {{clr|DR|2S}}~X to {{clr|DR|2S}}~{{clr|M|M}} 
+<br>
+
+=== '''Mai''' ===
+* {{clr|M|MP Ryuuenbu}} ({{clr|M|214MP}}) no longer applies 20% starter scaling and 2-hit combo scaling when only the 2nd hit connects
+* {{clr|3|Flame}} {{clr|M|MP Ryuuenbu}} ({{clr|3|F}}.{{clr|M|214MP}}) no longer applies 20% starter scaling when only the 2nd hit connects
+<br>
+
+=== '''Ryu''' ===
+* {{clr|OD|OD Denjin Hashogeki}} ({{clr|OD|214PP}}) chip damage corrected from 400 → 200
+<br>
+
+=== '''Terry''' ===
+* {{clr|OD|OD Quick Burn}} ({{clr|OD|214}}{{clr|L|LP}}{{clr|M|MP}}) cancel window into {{clr|SA|SA2/SA3}} now comes out on the 2nd active frame of the 2nd hit
+** Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed
+<br>
+
+=== '''Zangief''' ===
+* Double Lariat (Modern Controls: {{clr|M|M}}+{{clr|H|H}}) now comes out properly instead of a Throw when inputting {{clr|L|L}}+{{clr|M|M}}+{{clr|H|H}} during Burnout
+<br>

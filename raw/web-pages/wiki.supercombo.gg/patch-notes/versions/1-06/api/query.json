@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 79716,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/1.06",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:13:55Z",
+        "lastrevid": 361140,
+        "length": 6984,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.06",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.06&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.06",
+        "revisions": [
+          {
+            "revid": 361140,
+            "parentid": 361139,
+            "user": "Spabobin",
+            "timestamp": "2026-04-11T02:50:56Z",
+            "size": 6984,
+            "sha1": "f473ce12afbfb3d5ff3e9a70c7f2abed440b1a94",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/1.06|1.06]]\n|gameversion=1.06\n|date=June 26, 2024\n|summary='''M. Bison Release'''. Minor balance changes and bug fixes.\n|links=[https://www.streetfighter.com/6/buckler/battle_change/20240626 Patch Notes]  \n}}\n<!--Full Version name: 1.0600.000-->\n\n== M. Bison Patch ==\n* M. Bison released\n<br>\n\n== '''Universal Changes''' ==\n* '''Perfect Parry vs. Projectiles'''\n** No longer resets the player's Dash input, allowing for immediate Perfect Parry ~ Forward Dash with a 6{{clr|M|MPMK}}~6 input\n* '''{{clr|DR|Drive Reversal}}'''\n** Fixed bug where a trade could cause a KO at low health\n* '''Drive Parry'''\n** Fixed issue where moves that cause a screen shake would not trigger it when parried\n* '''Taunts'''\n** Modern Controls input changed from {{clr|L|L}}+{{clr|M|M}}+{{clr|H|H}}+{{clr|DR|SP}} → {{clr|L|L}}+{{clr|M|M}}+{{clr|H|H}}+{{clr|DR|SP}}+DP+Assist\n* '''Back Rise (Wakeup)'''\n** Fixed issue where holding 2 buttons before a knockdown occurred could result in an unintentional Back Rise on wakeup\n<br>\n\n== '''Key Character Changes''' ==\n\n=== '''A.K.I.''' ===\n* {{clr|M|5MP}} \n** Expanded collision box upward to prevent unintended side switches in juggles\n<br>\n\n=== '''Akuma''' ===\n* {{clr|M|Tenmaku Blade Kick}} ({{clr|M|j.2MK}})\n** Fixed bug where combo scaling was reduced when it hit immediately before landing\n* {{clr|M|Viscera Piercer}} ({{clr|M|5MP}}~{{clr|M|MP}})\n** 2nd hit can no longer be performed when inputting both {{clr|M|MP}}+{{clr|M|MK}} (to prevent accidental TC when attempting a {{clr|DR|DR Cancel}})\n* {{clr|H|Bone Crusher Axe Kick}} ({{clr|M|5MK}}~{{clr|H|HK}})\n** 2nd hit can no longer be performed when inputting both {{clr|H|HP}}+{{clr|H|HK}} (to prevent accidental TC when attempting a {{clr|DR|DI Cancel}})\n* Block Recovery of Various Attacks\n** Fixed issue where Akuma could cancel his recovery on Block earlier than intended with certain actions\n** Applies to {{clr|H|6HP}}~{{clr|H|6HP}}, {{clr|L|214LK}}, and {{clr|L|214LP}}~{{clr|L|6P}}\n* Gou Shoryuken (623P)\n** Fixed bug where Drive Gain on Perfect Parry was less than intended\n* Tatsumaki Zanku-Kyaku (214K)\n** Fixed bug where Drive Gain on Perfect Parry was less than intended\n* Zanku Hadoken (j.236P/{{clr|OD|PP}})\n** Hurtbox expanded forward\n** Upper half of hitbox changed to combo-only hitbox (easier to jump over or counter with anti-air specials)\n* Ashura Senku (6KKK/4KKK)\n** Hurtbox expanded during Teleport movement\n** Will no longer completely overlap with a cornered opponent\n** These changes make it harder for a Teleport to avoid attacks when Akuma has not fully passed through the opponent\n* {{clr|SA|Shun Goku Satsu (CA)}} ({{clr|L|LP}}~{{clr|L|LP}}~{{clr|L|6LK}}~{{clr|H|HP}})\n** Fixed issue where the opponent's charge timing would be reset during the cinematic side switch\n<br>\n\n=== '''Blanka''' ===\n* {{clr|M|2MK}}\n** Fixed issue where the extra whiff recovery and expanded hurtbox from Version 1.05 did not apply while {{clr|SA|SA2}} was active\n* Raid Jump (Modern Controls: 2{{clr|M|M}}{{clr|H|H}}~{{clr|M|M}}/{{clr|H|H}})\n** Fixed issue where Modern Blanka could not perform an Air Throw using the Throw button\n* Rolling Attack / Vertical Rolling Attack ([4]6P / [2]8K)\n** Fixed issue where the opponent would not be pushed back on block while Blanka is rebounding\n<br>\n\n=== '''Dee Jay''' ===\n* {{clr|M|Threebeat Combo 1}} ({{clr|L|5LP}}~{{clr|M|MK}})\n** 2nd hit can no longer be performed when inputting both {{clr|M|MP}}+{{clr|M|MK}} (to prevent accidental TC when attempting a {{clr|DR|DR Cancel}})\n* {{clr|M|MK}}/{{clr|H|HK}} Jackknife Maximum ([2]8{{clr|M|MK}}/{{clr|H|HK}})\n** Now throw invuln on frames 5-6\n<br>\n\n=== '''Ed''' ===\n* {{clr|H|Assist Combo 3}}\n** Fixed issue where the input buffer did not work if stopped after the initial {{clr|H|5H}} ({{clr|H|5HP}}) and then restarted again\n* {{clr|H|Body Blow Combination}} ({{clr|M|5MP}}~{{clr|H|HP}})\n** 2nd hit can no longer be performed when inputting both {{clr|H|HP}}+{{clr|H|HK}} (to prevent accidental TC when attempting a {{clr|DR|DI Cancel}})\n* {{clr|M|Hitman Combination 1}} ({{clr|M|5MK}}~{{clr|M|MK}})\n** 2nd hit can no longer be performed when inputting both {{clr|M|MP}}+{{clr|M|MK}} (to prevent accidental TC when attempting a {{clr|DR|DR Cancel}})\n* {{clr|H|Low Smash Combination}} ({{clr|H|2HK}}~{{clr|H|HP}})\n** 2nd hit can no longer be performed when inputting both {{clr|H|HP}}+{{clr|H|HK}} (to prevent accidental TC when attempting a {{clr|DR|DI Cancel}})\n<br>\n\n=== '''E. Honda''' ===\n* {{clr|OD|OD Sumo Smash}} ({{clr|OD|[2]8KK}})\n** Now throw invuln on frames 5-13\n<br>\n\n=== '''Jamie''' ===\n* {{clr|SA|SA1}} ({{clr|SA|236236K}})\n** Drive Damage on Block reduced by 200\n** Opponent's Drive Gain on Parry reduced by 2000\n** Version 1.05 caused {{clr|SA|SA1}} to gain an extra hit, so these changes restore the values to their previous version\n<br>\n\n=== '''JP''' ===\n* {{clr|M|Assist Combo 2}}\n** Now activates {{clr|SA|SA2}} when {{clr|OD|OD Stribog}} is blocked or absorbed by armor\n<br>\n\n=== '''Juri''' ===\n* {{clr|H|Death Crest 1}} ({{clr|M|5MP}}~{{clr|H|4HP}})\n** 2nd hit can no longer be performed when inputting both {{clr|H|HP}}+{{clr|H|HK}} (to prevent accidental TC when attempting a {{clr|DR|DI Cancel}})\n* {{clr|OD|OD Fuhajin}} ({{clr|OD|214KK}})\n** Version 1.05 reduced the startup time, but failed to adjust various properties (Fuha Stock timing, projectile clash, proximity guard) to match the faster startup\n** Fuha stock obtained 14f → 12f\n** Projectile clash hitbox appears 12f → 10f\n** Proximity guard hitbox starts 7f → 5f and expanded to match the full range of the attack hitbox\n<br>\n\n=== '''Ken''' ===\n* Quick Dash (KK)\n** Now only takes priority over {{clr|OD|OD}} kick specials when all 3 Kick buttons are pressed\n** In Version 1.05, any 5KK input would cause Quick Dash to take priority, even after inputting the command for a special move\n<br>\n\n=== '''Kimberly''' ===\n* {{clr|OD|OD Sprint}} ({{clr|OD|236KK}})\n** Fixed bug that would cause sound effect not to play\n* Bushin Senpukyaku (214K)\n** Added Throw Invuln to the 1st hit, starting on the 2nd active frame for each version\n** {{clr|L|214LK}} now throw invuln on frames 7-11\n** {{clr|M|214MK}} now throw invuln on frames 8-12\n** {{clr|H|214HK}} now throw invuln on frames 9-13\n** {{clr|OD|214KK}} now throw invuln on frames 7-11\n<br>\n\n=== '''Luke''' ===\n* {{clr|L|Assist Combo 1}}\n** Input is now accepted during the chain cancel window\n<br>\n\n=== '''Marisa''' ===\n* {{clr|L|Assist Combo 1}}\n** Input is now accepted during the chain cancel window\n<br>\n\n=== '''Rashid''' ===\n* {{clr|H|HP Spinning Mixer}} ({{clr|H|236HP}} Regular/Enhanced)\n** Now throw invuln on frames 8-10\n<br>\n\n=== '''Zangief''' ===\n* {{clr|M|5MK}}\n** Attack hitbox reverted to its pre-1.05 version, slightly reducing its range\n* {{clr|H|Tundra Storm}} (Modern Controls: {{clr|H|22H}})\n** Fixed issue where a previous input leniency adjustment was not applied to Modern controls\n<br>"
+              }
+            },
+            "comment": ""
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

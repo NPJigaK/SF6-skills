@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 77870,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/1.04",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:13:55Z",
+        "lastrevid": 360495,
+        "length": 6641,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.04",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.04&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.04",
+        "revisions": [
+          {
+            "revid": 360495,
+            "parentid": 360453,
+            "user": "Spabobin",
+            "timestamp": "2026-04-02T13:33:33Z",
+            "size": 6641,
+            "sha1": "f63079e4844f144461766f980f5824f20ac60296",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/1.04|1.04]]\n|gameversion=1.04\n|date=February 27, 2024\n|summary='''Ed Release'''. Several balance changes and bug fixes.\n|links=[https://www.streetfighter.com/6/buckler/en/battle_change/20240227 Patch Notes]  \n}}\n<!--Full Version name: 1.0400.000-->\n\n== Ed Patch ==\n* Ed released\n<br>\n\n== '''Universal Changes''' ==\n* {{clr|DR|Drive Rush}}\n** Simultaneous activation no longer randomly gives the frame advantage to one player\n* Perfect Parry\n** Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame\n* Armor Break\n** Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack\n* Input Buffers\n** Fixed issue where input buffer after blocking an attack was not set correctly for {{clr|DR|Drive Reversal}} and some other attacks\n* Modern Controls'''\n** Fixed issue where {{clr|DR|S}} button would not result in damage scaling if a special was input during a {{clr|DR|Drive Rush}} screen freeze\n<br>\n\n== '''Character Changes''' ==\n\n=== '''A.K.I.''' ===\n* {{clr|L|2LP}}\n** Range increased 0.94 → 0.96\n* {{clr|M|5MP}}\n** Active frames increased 3 → 5 (better meaty setups, stronger in neutral)\n<br>\n\n=== '''Chun-Li''' ===\n* {{clr|L|5LP}}\n** Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)\n* Aerial Lightning Kicks (j.236K)\n** 20% Starter scaling added (less rewarding on {{clr|PC|Punish Counter}} when used against throws)\n<br>\n\n=== '''Dee Jay''' ===\n* {{clr|L|Funky Slicer}} ({{clr|L|214K~LK}})\n** Less pushback on block\n** Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)\n<br>\n\n=== '''Dhalsim''' ===\n* {{clr|H|HP Yoga Flame}} ({{clr|H|63214HP}})\n** Fixed issue where 2nd hit dealt normal damage on {{clr|PC|Counter-hit/Punish Counter}}\n<br>\n\n=== '''Jamie''' ===\n* Forward Throw ({{clr|L|LPLK}})\n** Can now hold {{clr|L|LP}}+{{clr|L|LK}} to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)\n* {{clr|SA|SA1}} ({{clr|SA|236236K}})\n** Damage increased by 100 on both the regular version and Drink ender\n** Reduced pushback on Hit in the corner\n** KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)\n* {{clr|SA|SA2}} ({{clr|SA|214214P}})\n** After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)\n<br>\n\n=== '''JP''' ===\n* {{clr|H|5HP}}\n** Expanded foot/torso hurtbox during active and recovery frames\n* {{clr|H|2HP}}\n** Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)\n* Departure (214P/{{clr|OD|PP}})\n** 20% Starter scaling added\n** Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 ({{clr|OD|OD}})\n* Amnesia (22K/{{clr|OD|KK}}), successful counter\n** JP no longer builds {{clr|SA|Super}} meter while bombs are active or until combo ends\n** Bombs no longer dissipate {{clr|SA|Super}}-priority projectiles\n** Starter scaling (when Bomb starts the combo) increased 15% → 50%\n** Immediate scaling (when comboing into Bomb) increased 15% → 60%\n** Canceling an attack into {{clr|SA|SA3/CA}} now detonates the Bombs immediately to prevent bypassing this damage scaling\n<br>\n\n=== '''Ken''' ===\n* Forward Throw ({{clr|L|LPLK}})\n** More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)\n* {{clr|L|5LP}}\n** Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)\n* {{clr|OD|OD Air Tatsu}} ({{clr|OD|j.214KK}})\n** Landing recovery on whiff increased 14 → 21 (harder to escape the corner)\n** Collision box expanded so opponents are less likely to jump over this move\n<br>\n\n=== '''Luke''' ===\n* {{clr|M|2MP}}\n** Whiff recovery increased 14 → 17 with a larger hurtbox\n* Aerial Flash Knuckle (j.214P)\n** When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20\n** Larger feet hurtbox on frame 16 until end of recovery\n* {{clr|SA|SA1}} ({{clr|SA|236236P}})\n** Wider projectile-vulnerable hurtbox on startup frames 1-5\n<br>\n\n=== '''Manon''' ===\n* {{clr|M|En Haut 1}} ({{clr|M|4MK}})\n** Retains greater momentum out of {{clr|DR|Drive Rush}}\n* {{clr|SA|SA2}} ({{clr|SA|214214K}})\n** Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)\n<br>\n\n=== '''Rashid''' ===\n* {{clr|L|5LP}}\n** Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)\n* {{clr|OD|OD Spinning Mixer}} ({{clr|OD|236PP}})\n** Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out\n* Wall Jump\n** Fixed issue where performing certain moves would not put Rashid into a {{FKD}} state\n<br>\n\n=== '''Ryu''' ===\n* {{clr|H|Solar Plexus Strike}} ({{clr|H|6HP}})\n** Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)\n* Hadoken (236P)\n** Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)\n* {{clr|OD|OD Shoryuken}} ({{clr|OD|623PP}})\n** First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs\n* {{clr|L|LP Hashogeki}} ({{clr|L|214LP}})\n** Block Advantage {{sf6-adv|VM|-4}} → {{sf6-adv|M|-3}} with reduced pushback on block\n** Increased pushback on block vs. Burnout\n* {{clr|M|MP Hashogeki}} ({{clr|M|214MP}})\n** Expanded the attack and projectile clash hitbox forward\n* {{clr|H|HP Hashogeki}} ({{clr|H|214HP}})\n** Reduced pushback on block\n** Expanded the attack and projectile clash hitbox forward\n* {{clr|OD|OD Hashogeki}} ({{clr|OD|214PP}})\n** Reduced pushback on hit/block\n** Expanded the attack and projectile clash hitbox forward\n* Denjin Hashogeki (Denjin 214P/{{clr|OD|PP}})\n** Reduced pushback on block\n** Expanded the attack and projectile clash hitbox forward\n** {{clr|OD|Denjin OD}} version damage increased 600 → 1000\n* {{clr|SA|SA1}} ({{clr|SA|236236P}})\n** Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)\n<br>\n\n=== '''Zangief''' ===\n* {{clr|OD|OD Double Lariat}} ({{clr|OD|PPP}})\n** 1st hit combos into {{clr|SA|SA3/CA}} when canceled (causes a brief crumple state on grounded opponents)\n** Faster horizontal movement on startup\n** 2nd hit connects vs. grounded opponents 1f earlier (for combo consistency)\n** 1st hit reduced knockback distance vs. airborne opponents\n* {{clr|SA|SA1}} ({{clr|SA|236236K}})\n** Hitbox extended downward (can juggle and anti-air more consistently)\n<br>"
+              }
+            },
+            "comment": ""
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

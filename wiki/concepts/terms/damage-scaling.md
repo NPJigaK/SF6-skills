@@ -59,6 +59,17 @@ tags:
 - 個別 move の補正値は raw / official-supercombo enriched data を確認する。
 - SuperCombo Gauges page の system-specific scaling 値は community numeric source なので、公式・実機検証と矛盾する場合はそちらを優先する。
 
+## Exact combo damage の計算注意
+
+Exact damage を問う combo query では、route text をそのまま足し算しない。必ず damaging hit ledger を作る。
+
+- `ODアムネジア`、罠、爆弾、設置、portal、projectile のような delayed hit は、route text で1語しか書かれていなくても複数 hit に展開する。
+- `Year1`、`初期`、`patch前` のような version 指定がある場合、current frame-data だけでなく Battle Change の before/after から当時の補正値に戻す。
+- Punish Counter、Perfect Parry、Modern damage、Drive Rush、starter / immediate / multiplier scaling、Super Art minimum scaling は別々の column として扱う。
+- exact damage を出す前に、`base_damage * condition_multiplier * effective_scaling` と cumulative total を hit ごとに検算する。
+
+事例: [[outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation]] は、JP Year1 初期 `ODアムネジア` route を `立中K Punish Counter`、`OD Amnesia Bomb` x2、`中トルバラン`、`強トリグラフ`、`ヴィーハト爆発`、`ODトリグラフ` 500x2、SA3 minimum 50% に分解し、5790 damage を再計算する。
+
 ## 関連
 
 - [[concepts/terms/scaling-reset]]

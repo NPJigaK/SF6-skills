@@ -1,0 +1,2190 @@
+{
+  "captured_at_utc": "2026-06-11T03:36:17Z",
+  "title": "Street Fighter 6/Version/1.07 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.07",
+  "content_text": "Version 1.07 Game Version 1.07 date September 24, 2024 Summary Terry Release. Minor balance changes and bug fixes. Links Patch Notes Terry Patch Terry released Universal Changes Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke) Fixed issues where absorbing an attack would affect the DI properties for some characters Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual Dee Jay: attack hitbox range became shorter than usual Kimberly: proximity guard hitbox would disappear on frames 1-17 Drive Reversal Expanded the throw hurtbox to ensure all characters can punish with a throw at close range Because some characters lacked strong punish options at -6 due to Light normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion Perfect Parry Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P) Modern Controls Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. Super freeze) Assist Combos Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out Applies to Assist Combo 2 for Dhalsim, Juri, Luke, Kimberly, and Manon; Assist Combo 3 for JP, Juri, and Manon Key Character Changes A.K.I. Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range OD Serpent Lash (236PP) Now applies Punish Counter advantage to Toxic Blossom crumple (+9 before opponent becomes airborne) Akuma Gou Hadoken (236P) Fixed issue where regular projectiles could be performed while an OD projectile was still on-screen Blanka Drive Impact Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual OD Electric Thunder (214PP during SA2) Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than OD priority Chun-Li Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range OD Kikoken (Modern [4]6XX) Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used HK Tensho Kicks (22HK) Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits) Dee Jay Face Breaker (4HK) Collision box changed to make OD Jus Cool juggles more consistent (specials should no longer come out in the wrong direction) Threebeat Combo 1 (5LP~MK) Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup) Recovery increased 18 → 20 Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage) Hitconfirm window is 2f more lenient, making it possible to confirm a successful MK after blocked 5LP Now applies 20% Starter scaling (e.g. blocked 5LP that frame traps into MK) No longer forces stand on hit Threebeat Combo 2 (5LP~MK~MK) Recovery decreased 21 → 19 Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage) Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes) Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual Jackknife Maximum ([2]8K) Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K) Waning Moon (214K~MK) Drive Damage on Block increased 4000 → 6000 Punish Counter now causes a ground bounce 30% Starter scaling applied OD Waning Moon (214KK~MK) Now causes ground bounce vs. airborne opponents (can juggle into Supers) SA1 (236236K) Juggle Limit increased 13 → 19 Now causes a sliding Hard Knockdown vs. airborne opponents Dhalsim Assist Combo 2 With less than 2 bars of Super Gauge, changed to 4MK ~ 63214PP ~ 2HK 5MP Hit Advantage increased -2 → 0 5HK Punish Counter Advantage increased +21 → +24 j.MP The tip of the arm hurtbox can no longer be hit by cross-up attacks Nirvana Punch (1HP) Reduced knockback vs. airborne opponents, allowing for stronger juggle routes Charged Yoga Fire (236[P]) Block Advantage increased -3 → -1 The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball) OD Yoga Fire (236PP) 1st hit deals more hitstun and less pushback, ensuring both will combo Reduced body hurtbox during startup and recovery OD Yoga Flame (63214PP) Expanded the attack hitbox of 1st hit Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects OD Yoga Comet (j.63214PP) Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air) SA1 (236236P) Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040 Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout LP/MP version Recovery decreased 20f → 15f; Block Advantage -15 → -10 with increased pushback (usually safe if spaced) These changes give Dhalsim a way to safely buffer SA1 in neutral while chipping away at the opponent's health/Drive gauge if blocked HP version hurtbox is now crouching height until 3rd active frame (better anti-air) Ed 5HK Blockstun increased 18 → 19 Block Advantage increased +3 → +4 DR Cancel Block Advantage increased +7 → +8 Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable j.HP Active Frames increased 4 → 5, making it easier to time as a jump-in j.HK Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier LP Psycho Blitz (214LP) Increased pushback when blocked in the corner, making punish routes potentially more restrictive LK Psycho Flicker (236LK) Punish Counter juggle follow-up timing is 1 frame more lenient SA2 (214214P) Now applies 20% scaling on Super gauge build until the end of the combo E. Honda SA2 ([4]646K) Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the Super whiffs Guile Sonic Boom ([4]6P) Reduced Super and Drive gauge build LP/HP versions: Super Art gain 600 → 300, Drive gain 1000 → 500 MP version: Super Art gain 600 → 450, Drive gain 1000 → 500 Jamie SA1 (236236K) Fixed issue where the damage would increase when the 1st or 2nd hit landed as a Counter-hit JP 5MK Hitstun increased 23 → 25 Hit Advantage increased +1 → +3 DR Cancel Hit Advantage increased +11 → +13 Improved combo routes, particularly when canceled into SA2 2HP Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from Version 1.04) Bylina (6HK) Increased Juggle Limit; reduced the Juggle Increase value on 1st hit Triglav (22P) On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame No change to the total knockdown advantage Stribog (236P/PP) 2nd hit has more range when 1st hit connects, ensuring both hits will reach Torbalan (236K/KK) Removed projectile collision box after the active frames have ended Embrace (214K/KK) Immediate scaling reduced from 25% → 10% when comboed into Juri Assist Combo 2 With less than 1 bar of Super Gauge, changed to 2MP ~ 214KK ~ 623HP Kimberly Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17 Shuriken Bomb (22P) Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only Luke 2LP / 2LK Reduced pushback on hit and block 2MP Reduced pushback on block Can now pressure with blocked DR~2MP into 2LK~2LP to frame trap and punish back walk Outlaw Kick (4HK) Retains more Drive Rush momentum for combo consistency Triple Impact (5LP~MP~HP) Removed 10% immediate scaling on MP Increased base damage on HP 600 → 800 Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range M. Bison Fixed issue where Psycho Mine could remain embedded after detonation, allowing two activations in one combo Applied to OD Psycho Crusher Attack and Regular/OD Devil Reverse Drive Reversal Reduced horizontal range of the attack hitbox and proximity guard hitbox Double Knee Press (236K) Reduced pushback on block and reduced the recovery hurtbox width by the same amount No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect This also makes it harder for M. Bison to set up a spacing trap afterwards Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version Psycho Crusher Attack ([4]6P/PP) Fixed issue where the hurtbox after passing through the opponent was different while in Burnout Psycho Crusher Attack + Psycho Mine ([4]6P + Mine) Can now only be canceled into SA3 after connecting with the opponent This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3 Now must connect with the opponent before the SA3 cancel can occur Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent OD Psycho Crusher Attack + Psycho Mine ([4]6PP + Mine) After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected Backfist Combo + Psycho Mine (214P + Mine) Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed OD Backfist Combo + Psycho Mine (214PP + Mine) Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen) Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor OD Devil Reverse / Devil Reverse + Psycho Mine ([2]8K~PP or [2]8K~P/PP + Mine) Expanded collision box downward after the 1st hit connects Fixed issue that caused later hits to occur on the wrong side of the opponent SA1 (236236K) Fixed issue where the timer would not stop during the attack SA2 (214214K) Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit This also affects other elements like Drive Gauge recovery Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic Manon Assist Combo 2 With less than 1 bar of Super Gauge, changed to 5MK ~ 236KK ~ 214MK Marisa Hurtbox (during Ground Bounce) Changed to match other large characters for juggle consistency Rashid Backdash Fixed issue where Rashid's collision box was smaller on frames 1-15 2LP Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air) Nail Assault (Modern Controls: 214X~6X~6X) Input adjusted to require holding forward for the final attack in order to prevent overlap issues Now easier to perform Assault Roll into an immediate attack Assist Combo 2 In Burnout, changed to 5MP~HK ~ 214HP~6X~6X Ryu Denjin Hashogeki (D.214HP) Fixed issue where a regular HP Hashogeki would come out if performed while a Hadoken was on-screen Zangief Knee Hammer (6MK) Blockstun reduced 17 → 16 Block Advantage decreased -3(+3) → -4(+2) Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox) Adjusted Zangief's center axis on frames 2-6 to match visuals more closely Headbutt (6HP) Hitstun increased 27 → 28 Hit Advantage increased +7 → +8 DR Cancel Hit Advantage increased +15 → +16 Now incurs 25% Starter scaling and 2-hit Combo scaling",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Terry_Patch",
+      "text": "Terry Patch",
+      "html": "Terry Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Key_Character_Changes",
+      "text": "Key Character Changes",
+      "html": "<b>Key Character Changes</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "A.K.I.",
+      "text": "A.K.I.",
+      "html": "<b>A.K.I.</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Akuma",
+      "text": "Akuma",
+      "html": "<b>Akuma</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Blanka",
+      "text": "Blanka",
+      "html": "<b>Blanka</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Dee_Jay",
+      "text": "Dee Jay",
+      "html": "<b>Dee Jay</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "Dhalsim",
+      "text": "Dhalsim",
+      "html": "<b>Dhalsim</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "Ed",
+      "text": "Ed",
+      "html": "<b>Ed</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "E._Honda",
+      "text": "E. Honda",
+      "html": "<b>E. Honda</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Guile",
+      "text": "Guile",
+      "html": "<b>Guile</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Jamie",
+      "text": "Jamie",
+      "html": "<b>Jamie</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "JP",
+      "text": "JP",
+      "html": "<b>JP</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Juri",
+      "text": "Juri",
+      "html": "<b>Juri</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Kimberly",
+      "text": "Kimberly",
+      "html": "<b>Kimberly</b>"
+    },
+    {
+      "index": 16,
+      "level": 3,
+      "id": "Luke",
+      "text": "Luke",
+      "html": "<b>Luke</b>"
+    },
+    {
+      "index": 17,
+      "level": 3,
+      "id": "M._Bison",
+      "text": "M. Bison",
+      "html": "<b>M. Bison</b>"
+    },
+    {
+      "index": 18,
+      "level": 3,
+      "id": "Manon",
+      "text": "Manon",
+      "html": "<b>Manon</b>"
+    },
+    {
+      "index": 19,
+      "level": 3,
+      "id": "Marisa",
+      "text": "Marisa",
+      "html": "<b>Marisa</b>"
+    },
+    {
+      "index": 20,
+      "level": 3,
+      "id": "Rashid",
+      "text": "Rashid",
+      "html": "<b>Rashid</b>"
+    },
+    {
+      "index": 21,
+      "level": 3,
+      "id": "Ryu",
+      "text": "Ryu",
+      "html": "<b>Ryu</b>"
+    },
+    {
+      "index": 22,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 16,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 17,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 18,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 19,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 20,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 21,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 22,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Terry released",
+      "items": [
+        {
+          "index": 0,
+          "text": "Terry released",
+          "html": "Terry released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke) Fixed issues where absorbing an attack would affect the DI properties for some characters Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual Dee Jay: attack hitbox range became shorter than usual Kimberly: proximity guard hitbox would disappear on frames 1-17 Drive Reversal Expanded the throw hurtbox to ensure all characters can punish with a throw at close range Because some characters lacked strong punish options at -6 due to Light normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion Perfect Parry Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P) Modern Controls Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. Super freeze) Assist Combos Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out Applies to Assist Combo 2 for Dhalsim, Juri, Luke, Kimberly, and Manon; Assist Combo 3 for JP, Juri, and Manon",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke) Fixed issues where absorbing an attack would affect the DI properties for some characters Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual Dee Jay: attack hitbox range became shorter than usual Kimberly: proximity guard hitbox would disappear on frames 1-17",
+          "html": "<style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke)</li>\n<li>Fixed issues where absorbing an attack would affect the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI</span> properties for some characters\n<ul><li>Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual</li>\n<li>Dee Jay: attack hitbox range became shorter than usual</li>\n<li>Kimberly: proximity guard hitbox would disappear on frames 1-17</li></ul></li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Drive Reversal Expanded the throw hurtbox to ensure all characters can punish with a throw at close range Because some characters lacked strong punish options at -6 due to Light normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span>\n<ul><li>Expanded the throw hurtbox to ensure all characters can punish with a throw at close range</li>\n<li>Because some characters lacked strong punish options at <span style=\"color: #b70c0b;\"><b>-6</b></span> due to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Light</span> normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Perfect Parry Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P)",
+          "html": "Perfect Parry\n<ul><li>Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry</li>\n<li>Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P)</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Modern Controls Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. Super freeze)",
+          "html": "Modern Controls\n<ul><li>Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> freeze)</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Assist Combos Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out Applies to Assist Combo 2 for Dhalsim, Juri, Luke, Kimberly, and Manon; Assist Combo 3 for JP, Juri, and Manon",
+          "html": "Assist Combos\n<ul><li>Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out</li>\n<li>Applies to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span> for Dhalsim, Juri, Luke, Kimberly, and Manon; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Assist Combo 3</span> for JP, Juri, and Manon</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke) Fixed issues where absorbing an attack would affect the DI properties for some characters Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual Dee Jay: attack hitbox range became shorter than usual Kimberly: proximity guard hitbox would disappear on frames 1-17",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke)",
+          "html": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke)"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issues where absorbing an attack would affect the DI properties for some characters Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual Dee Jay: attack hitbox range became shorter than usual Kimberly: proximity guard hitbox would disappear on frames 1-17",
+          "html": "Fixed issues where absorbing an attack would affect the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DI</span> properties for some characters\n<ul><li>Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual</li>\n<li>Dee Jay: attack hitbox range became shorter than usual</li>\n<li>Kimberly: proximity guard hitbox would disappear on frames 1-17</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual Dee Jay: attack hitbox range became shorter than usual Kimberly: proximity guard hitbox would disappear on frames 1-17",
+      "items": [
+        {
+          "index": 0,
+          "text": "Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual",
+          "html": "Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual"
+        },
+        {
+          "index": 1,
+          "text": "Dee Jay: attack hitbox range became shorter than usual",
+          "html": "Dee Jay: attack hitbox range became shorter than usual"
+        },
+        {
+          "index": 2,
+          "text": "Kimberly: proximity guard hitbox would disappear on frames 1-17",
+          "html": "Kimberly: proximity guard hitbox would disappear on frames 1-17"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Expanded the throw hurtbox to ensure all characters can punish with a throw at close range Because some characters lacked strong punish options at -6 due to Light normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded the throw hurtbox to ensure all characters can punish with a throw at close range",
+          "html": "Expanded the throw hurtbox to ensure all characters can punish with a throw at close range"
+        },
+        {
+          "index": 1,
+          "text": "Because some characters lacked strong punish options at -6 due to Light normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion",
+          "html": "Because some characters lacked strong punish options at <span style=\"color: #b70c0b;\"><b>-6</b></span> due to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Light</span> normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry",
+          "html": "Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry"
+        },
+        {
+          "index": 1,
+          "text": "Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P)",
+          "html": "Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P)"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. Super freeze)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. Super freeze)",
+          "html": "Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> freeze)"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out Applies to Assist Combo 2 for Dhalsim, Juri, Luke, Kimberly, and Manon; Assist Combo 3 for JP, Juri, and Manon",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out",
+          "html": "Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out"
+        },
+        {
+          "index": 1,
+          "text": "Applies to Assist Combo 2 for Dhalsim, Juri, Luke, Kimberly, and Manon; Assist Combo 3 for JP, Juri, and Manon",
+          "html": "Applies to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span> for Dhalsim, Juri, Luke, Kimberly, and Manon; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Assist Combo 3</span> for JP, Juri, and Manon"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range OD Serpent Lash (236PP) Now applies Punish Counter advantage to Toxic Blossom crumple (+9 before opponent becomes airborne)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the proximity guard hitbox did not match the full attack hitbox range</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Serpent Lash (236PP) Now applies Punish Counter advantage to Toxic Blossom crumple (+9 before opponent becomes airborne)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Serpent Lash</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236PP</span>)\n<ul><li>Now applies <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> advantage to Toxic Blossom crumple (<span style=\"color: #30D5B8;\"><b>+9</b></span> before opponent becomes airborne)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "Now applies Punish Counter advantage to Toxic Blossom crumple (+9 before opponent becomes airborne)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now applies Punish Counter advantage to Toxic Blossom crumple (+9 before opponent becomes airborne)",
+          "html": "Now applies <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> advantage to Toxic Blossom crumple (<span style=\"color: #30D5B8;\"><b>+9</b></span> before opponent becomes airborne)"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Gou Hadoken (236P) Fixed issue where regular projectiles could be performed while an OD projectile was still on-screen",
+      "items": [
+        {
+          "index": 0,
+          "text": "Gou Hadoken (236P) Fixed issue where regular projectiles could be performed while an OD projectile was still on-screen",
+          "html": "Gou Hadoken (236P)\n<ul><li>Fixed issue where regular projectiles could be performed while an <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> projectile was still on-screen</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "Fixed issue where regular projectiles could be performed while an OD projectile was still on-screen",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where regular projectiles could be performed while an OD projectile was still on-screen",
+          "html": "Fixed issue where regular projectiles could be performed while an <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> projectile was still on-screen"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Drive Impact Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual OD Electric Thunder (214PP during SA2) Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than OD priority",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Electric Thunder (214PP during SA2) Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than OD priority",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Electric Thunder</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span> during <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>)\n<ul><li>Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> priority</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual",
+          "html": "Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than OD priority",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than OD priority",
+          "html": "Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> priority"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range OD Kikoken (Modern [4]6XX) Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used HK Tensho Kicks (22HK) Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the proximity guard hitbox did not match the full attack hitbox range</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Kikoken (Modern [4]6XX) Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Kikoken</span> (Modern <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">[4]6XX</span>)\n<ul><li>Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "HK Tensho Kicks (22HK) Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK Tensho Kicks</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">22HK</span>)\n<ul><li>Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used",
+          "html": "Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)",
+          "html": "Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Face Breaker (4HK) Collision box changed to make OD Jus Cool juggles more consistent (specials should no longer come out in the wrong direction) Threebeat Combo 1 (5LP~MK) Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup) Recovery increased 18 → 20 Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage) Hitconfirm window is 2f more lenient, making it possible to confirm a successful MK after blocked 5LP Now applies 20% Starter scaling (e.g. blocked 5LP that frame traps into MK) No longer forces stand on hit Threebeat Combo 2 (5LP~MK~MK) Recovery decreased 21 → 19 Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage) Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes) Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual Jackknife Maximum ([2]8K) Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K) Waning Moon (214K~MK) Drive Damage on Block increased 4000 → 6000 Punish Counter now causes a ground bounce 30% Starter scaling applied OD Waning Moon (214KK~MK) Now causes ground bounce vs. airborne opponents (can juggle into Supers) SA1 (236236K) Juggle Limit increased 13 → 19 Now causes a sliding Hard Knockdown vs. airborne opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "Face Breaker (4HK) Collision box changed to make OD Jus Cool juggles more consistent (specials should no longer come out in the wrong direction)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Face Breaker</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4HK</span>)\n<ul><li>Collision box changed to make <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Jus Cool</span> juggles more consistent (specials should no longer come out in the wrong direction)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Threebeat Combo 1 (5LP~MK) Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup) Recovery increased 18 → 20 Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage) Hitconfirm window is 2f more lenient, making it possible to confirm a successful MK after blocked 5LP Now applies 20% Starter scaling (e.g. blocked 5LP that frame traps into MK) No longer forces stand on hit",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Threebeat Combo 1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup)</li>\n<li>Recovery increased 18 → 20</li>\n<li>Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage)</li>\n<li>Hitconfirm window is 2f more lenient, making it possible to confirm a successful <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> after blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span></li>\n<li>Now applies 20% Starter scaling (e.g. blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span> that frame traps into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)</li>\n<li>No longer forces stand on hit</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Threebeat Combo 2 (5LP~MK~MK) Recovery decreased 21 → 19 Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage) Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Threebeat Combo 2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>Recovery decreased 21 → 19</li>\n<li>Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage)</li>\n<li>Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes)</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the proximity guard hitbox did not match the full attack hitbox range</li>\n<li>Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Jackknife Maximum ([2]8K) Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K)",
+          "html": "Jackknife Maximum ([2]8K)\n<ul><li>Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K)</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "Waning Moon (214K~MK) Drive Damage on Block increased 4000 → 6000 Punish Counter now causes a ground bounce 30% Starter scaling applied",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Waning Moon</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214K~MK</span>)\n<ul><li>Drive Damage on Block increased 4000 → 6000</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> now causes a ground bounce</li>\n<li>30% Starter scaling applied</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "OD Waning Moon (214KK~MK) Now causes ground bounce vs. airborne opponents (can juggle into Supers)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Waning Moon</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>Now causes ground bounce vs. airborne opponents (can juggle into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span>)</li></ul>"
+        },
+        {
+          "index": 7,
+          "text": "SA1 (236236K) Juggle Limit increased 13 → 19 Now causes a sliding Hard Knockdown vs. airborne opponents",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Juggle Limit increased 13 → 19</li>\n<li>Now causes a sliding Hard Knockdown vs. airborne opponents</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "Collision box changed to make OD Jus Cool juggles more consistent (specials should no longer come out in the wrong direction)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Collision box changed to make OD Jus Cool juggles more consistent (specials should no longer come out in the wrong direction)",
+          "html": "Collision box changed to make <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Jus Cool</span> juggles more consistent (specials should no longer come out in the wrong direction)"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup) Recovery increased 18 → 20 Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage) Hitconfirm window is 2f more lenient, making it possible to confirm a successful MK after blocked 5LP Now applies 20% Starter scaling (e.g. blocked 5LP that frame traps into MK) No longer forces stand on hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup)",
+          "html": "Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup)"
+        },
+        {
+          "index": 1,
+          "text": "Recovery increased 18 → 20",
+          "html": "Recovery increased 18 → 20"
+        },
+        {
+          "index": 2,
+          "text": "Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage)",
+          "html": "Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage)"
+        },
+        {
+          "index": 3,
+          "text": "Hitconfirm window is 2f more lenient, making it possible to confirm a successful MK after blocked 5LP",
+          "html": "Hitconfirm window is 2f more lenient, making it possible to confirm a successful <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> after blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>"
+        },
+        {
+          "index": 4,
+          "text": "Now applies 20% Starter scaling (e.g. blocked 5LP that frame traps into MK)",
+          "html": "Now applies 20% Starter scaling (e.g. blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span> that frame traps into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)"
+        },
+        {
+          "index": 5,
+          "text": "No longer forces stand on hit",
+          "html": "No longer forces stand on hit"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "Recovery decreased 21 → 19 Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage) Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Recovery decreased 21 → 19",
+          "html": "Recovery decreased 21 → 19"
+        },
+        {
+          "index": 1,
+          "text": "Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage)",
+          "html": "Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage)"
+        },
+        {
+          "index": 2,
+          "text": "Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes)",
+          "html": "Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes)"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual",
+          "html": "Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K)",
+          "html": "Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K)"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "Drive Damage on Block increased 4000 → 6000 Punish Counter now causes a ground bounce 30% Starter scaling applied",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Damage on Block increased 4000 → 6000",
+          "html": "Drive Damage on Block increased 4000 → 6000"
+        },
+        {
+          "index": 1,
+          "text": "Punish Counter now causes a ground bounce",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> now causes a ground bounce"
+        },
+        {
+          "index": 2,
+          "text": "30% Starter scaling applied",
+          "html": "30% Starter scaling applied"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "Now causes ground bounce vs. airborne opponents (can juggle into Supers)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now causes ground bounce vs. airborne opponents (can juggle into Supers)",
+          "html": "Now causes ground bounce vs. airborne opponents (can juggle into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span>)"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "tag_name": "ul",
+      "text": "Juggle Limit increased 13 → 19 Now causes a sliding Hard Knockdown vs. airborne opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "Juggle Limit increased 13 → 19",
+          "html": "Juggle Limit increased 13 → 19"
+        },
+        {
+          "index": 1,
+          "text": "Now causes a sliding Hard Knockdown vs. airborne opponents",
+          "html": "Now causes a sliding Hard Knockdown vs. airborne opponents"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "tag_name": "ul",
+      "text": "Assist Combo 2 With less than 2 bars of Super Gauge, changed to 4MK ~ 63214PP ~ 2HK 5MP Hit Advantage increased -2 → 0 5HK Punish Counter Advantage increased +21 → +24 j.MP The tip of the arm hurtbox can no longer be hit by cross-up attacks Nirvana Punch (1HP) Reduced knockback vs. airborne opponents, allowing for stronger juggle routes Charged Yoga Fire (236[P]) Block Advantage increased -3 → -1 The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball) OD Yoga Fire (236PP) 1st hit deals more hitstun and less pushback, ensuring both will combo Reduced body hurtbox during startup and recovery OD Yoga Flame (63214PP) Expanded the attack hitbox of 1st hit Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects OD Yoga Comet (j.63214PP) Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air) SA1 (236236P) Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040 Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout LP/MP version Recovery decreased 20f → 15f; Block Advantage -15 → -10 with increased pushback (usually safe if spaced) These changes give Dhalsim a way to safely buffer SA1 in neutral while chipping away at the opponent's health/Drive gauge if blocked HP version hurtbox is now crouching height until 3rd active frame (better anti-air)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 2 With less than 2 bars of Super Gauge, changed to 4MK ~ 63214PP ~ 2HK",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>\n<ul><li>With less than 2 bars of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Gauge, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">4MK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">63214PP</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span></li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "5MP Hit Advantage increased -2 → 0",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>\n<ul><li>Hit Advantage increased <span style=\"color: #ff6347;\">-2</span> → <span style=\"color: #bcbd0c;\">0</span></li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "5HK Punish Counter Advantage increased +21 → +24",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HK</span>\n<ul><li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Advantage increased <span style=\"color: #30D5B8;\"><b>+21</b></span> → <span style=\"color: #30D5B8;\"><b>+24</b></span></li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "j.MP The tip of the arm hurtbox can no longer be hit by cross-up attacks",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">j.MP</span>\n<ul><li>The tip of the arm hurtbox can no longer be hit by cross-up attacks</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Nirvana Punch (1HP) Reduced knockback vs. airborne opponents, allowing for stronger juggle routes",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Nirvana Punch</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">1HP</span>)\n<ul><li>Reduced knockback vs. airborne opponents, allowing for stronger juggle routes</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "Charged Yoga Fire (236[P]) Block Advantage increased -3 → -1 The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball)",
+          "html": "Charged Yoga Fire (236[P])\n<ul><li>Block Advantage increased <span style=\"color: #ff6347;\">-3</span> → <span style=\"color: #ff6347;\">-1</span></li>\n<li>The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball)</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "OD Yoga Fire (236PP) 1st hit deals more hitstun and less pushback, ensuring both will combo Reduced body hurtbox during startup and recovery",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Yoga Fire</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236PP</span>)\n<ul><li>1st hit deals more hitstun and less pushback, ensuring both will combo</li>\n<li>Reduced body hurtbox during startup and recovery</li></ul>"
+        },
+        {
+          "index": 7,
+          "text": "OD Yoga Flame (63214PP) Expanded the attack hitbox of 1st hit Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Yoga Flame</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">63214PP</span>)\n<ul><li>Expanded the attack hitbox of 1st hit</li>\n<li>Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects</li></ul>"
+        },
+        {
+          "index": 8,
+          "text": "OD Yoga Comet (j.63214PP) Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Yoga Comet</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">j.63214PP</span>)\n<ul><li>Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air)</li></ul>"
+        },
+        {
+          "index": 9,
+          "text": "SA1 (236236P) Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040 Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout LP/MP version Recovery decreased 20f → 15f; Block Advantage -15 → -10 with increased pushback (usually safe if spaced) These changes give Dhalsim a way to safely buffer SA1 in neutral while chipping away at the opponent's health/Drive gauge if blocked HP version hurtbox is now crouching height until 3rd active frame (better anti-air)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236P</span>)\n<ul><li>Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040</li>\n<li>Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> version Recovery decreased 20f → 15f; Block Advantage <span style=\"color: #b70c0b;\"><b>-15</b></span> → <span style=\"color: #b70c0b;\"><b>-10</b></span> with increased pushback (usually safe if spaced)</li>\n<li>These changes give Dhalsim a way to safely buffer <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> in neutral while chipping away at the opponent's health/Drive gauge if blocked</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> version hurtbox is now crouching height until 3rd active frame (better anti-air)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "tag_name": "ul",
+      "text": "With less than 2 bars of Super Gauge, changed to 4MK ~ 63214PP ~ 2HK",
+      "items": [
+        {
+          "index": 0,
+          "text": "With less than 2 bars of Super Gauge, changed to 4MK ~ 63214PP ~ 2HK",
+          "html": "With less than 2 bars of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Gauge, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">4MK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">63214PP</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span>"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "tag_name": "ul",
+      "text": "Hit Advantage increased -2 → 0",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hit Advantage increased -2 → 0",
+          "html": "Hit Advantage increased <span style=\"color: #ff6347;\">-2</span> → <span style=\"color: #bcbd0c;\">0</span>"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "tag_name": "ul",
+      "text": "Punish Counter Advantage increased +21 → +24",
+      "items": [
+        {
+          "index": 0,
+          "text": "Punish Counter Advantage increased +21 → +24",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Advantage increased <span style=\"color: #30D5B8;\"><b>+21</b></span> → <span style=\"color: #30D5B8;\"><b>+24</b></span>"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "tag_name": "ul",
+      "text": "The tip of the arm hurtbox can no longer be hit by cross-up attacks",
+      "items": [
+        {
+          "index": 0,
+          "text": "The tip of the arm hurtbox can no longer be hit by cross-up attacks",
+          "html": "The tip of the arm hurtbox can no longer be hit by cross-up attacks"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "tag_name": "ul",
+      "text": "Reduced knockback vs. airborne opponents, allowing for stronger juggle routes",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced knockback vs. airborne opponents, allowing for stronger juggle routes",
+          "html": "Reduced knockback vs. airborne opponents, allowing for stronger juggle routes"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "tag_name": "ul",
+      "text": "Block Advantage increased -3 → -1 The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Block Advantage increased -3 → -1",
+          "html": "Block Advantage increased <span style=\"color: #ff6347;\">-3</span> → <span style=\"color: #ff6347;\">-1</span>"
+        },
+        {
+          "index": 1,
+          "text": "The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball)",
+          "html": "The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball)"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "tag_name": "ul",
+      "text": "1st hit deals more hitstun and less pushback, ensuring both will combo Reduced body hurtbox during startup and recovery",
+      "items": [
+        {
+          "index": 0,
+          "text": "1st hit deals more hitstun and less pushback, ensuring both will combo",
+          "html": "1st hit deals more hitstun and less pushback, ensuring both will combo"
+        },
+        {
+          "index": 1,
+          "text": "Reduced body hurtbox during startup and recovery",
+          "html": "Reduced body hurtbox during startup and recovery"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "tag_name": "ul",
+      "text": "Expanded the attack hitbox of 1st hit Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded the attack hitbox of 1st hit",
+          "html": "Expanded the attack hitbox of 1st hit"
+        },
+        {
+          "index": 1,
+          "text": "Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects",
+          "html": "Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "tag_name": "ul",
+      "text": "Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air)",
+          "html": "Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air)"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "tag_name": "ul",
+      "text": "Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040 Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout LP/MP version Recovery decreased 20f → 15f; Block Advantage -15 → -10 with increased pushback (usually safe if spaced) These changes give Dhalsim a way to safely buffer SA1 in neutral while chipping away at the opponent's health/Drive gauge if blocked HP version hurtbox is now crouching height until 3rd active frame (better anti-air)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040",
+          "html": "Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040"
+        },
+        {
+          "index": 1,
+          "text": "Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout",
+          "html": "Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout"
+        },
+        {
+          "index": 2,
+          "text": "LP/MP version Recovery decreased 20f → 15f; Block Advantage -15 → -10 with increased pushback (usually safe if spaced)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> version Recovery decreased 20f → 15f; Block Advantage <span style=\"color: #b70c0b;\"><b>-15</b></span> → <span style=\"color: #b70c0b;\"><b>-10</b></span> with increased pushback (usually safe if spaced)"
+        },
+        {
+          "index": 3,
+          "text": "These changes give Dhalsim a way to safely buffer SA1 in neutral while chipping away at the opponent's health/Drive gauge if blocked",
+          "html": "These changes give Dhalsim a way to safely buffer <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> in neutral while chipping away at the opponent's health/Drive gauge if blocked"
+        },
+        {
+          "index": 4,
+          "text": "HP version hurtbox is now crouching height until 3rd active frame (better anti-air)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> version hurtbox is now crouching height until 3rd active frame (better anti-air)"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "tag_name": "ul",
+      "text": "5HK Blockstun increased 18 → 19 Block Advantage increased +3 → +4 DR Cancel Block Advantage increased +7 → +8 Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable j.HP Active Frames increased 4 → 5, making it easier to time as a jump-in j.HK Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier LP Psycho Blitz (214LP) Increased pushback when blocked in the corner, making punish routes potentially more restrictive LK Psycho Flicker (236LK) Punish Counter juggle follow-up timing is 1 frame more lenient SA2 (214214P) Now applies 20% scaling on Super gauge build until the end of the combo",
+      "items": [
+        {
+          "index": 0,
+          "text": "5HK Blockstun increased 18 → 19 Block Advantage increased +3 → +4 DR Cancel Block Advantage increased +7 → +8 Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HK</span>\n<ul><li>Blockstun increased 18 → 19</li>\n<li>Block Advantage increased <span style=\"color: #32CD32;\">+3</span> → <span style=\"color: #30D5B8;\"><b>+4</b></span></li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span> Block Advantage increased <span style=\"color: #30D5B8;\"><b>+7</b></span> → <span style=\"color: #30D5B8;\"><b>+8</b></span></li>\n<li>Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "j.HP Active Frames increased 4 → 5, making it easier to time as a jump-in",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.HP</span>\n<ul><li>Active Frames increased 4 → 5, making it easier to time as a jump-in</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "j.HK Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.HK</span>\n<ul><li>Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "LP Psycho Blitz (214LP) Increased pushback when blocked in the corner, making punish routes potentially more restrictive",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP Psycho Blitz</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LP</span>)\n<ul><li>Increased pushback when blocked in the corner, making punish routes potentially more restrictive</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "LK Psycho Flicker (236LK) Punish Counter juggle follow-up timing is 1 frame more lenient",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK Psycho Flicker</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span>)\n<ul><li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> juggle follow-up timing is 1 frame more lenient</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "SA2 (214214P) Now applies 20% scaling on Super gauge build until the end of the combo",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214P</span>)\n<ul><li>Now applies 20% scaling on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge build until the end of the combo</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "tag_name": "ul",
+      "text": "Blockstun increased 18 → 19 Block Advantage increased +3 → +4 DR Cancel Block Advantage increased +7 → +8 Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable",
+      "items": [
+        {
+          "index": 0,
+          "text": "Blockstun increased 18 → 19",
+          "html": "Blockstun increased 18 → 19"
+        },
+        {
+          "index": 1,
+          "text": "Block Advantage increased +3 → +4",
+          "html": "Block Advantage increased <span style=\"color: #32CD32;\">+3</span> → <span style=\"color: #30D5B8;\"><b>+4</b></span>"
+        },
+        {
+          "index": 2,
+          "text": "DR Cancel Block Advantage increased +7 → +8",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span> Block Advantage increased <span style=\"color: #30D5B8;\"><b>+7</b></span> → <span style=\"color: #30D5B8;\"><b>+8</b></span>"
+        },
+        {
+          "index": 3,
+          "text": "Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable",
+          "html": "Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "tag_name": "ul",
+      "text": "Active Frames increased 4 → 5, making it easier to time as a jump-in",
+      "items": [
+        {
+          "index": 0,
+          "text": "Active Frames increased 4 → 5, making it easier to time as a jump-in",
+          "html": "Active Frames increased 4 → 5, making it easier to time as a jump-in"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "tag_name": "ul",
+      "text": "Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier",
+      "items": [
+        {
+          "index": 0,
+          "text": "Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier",
+          "html": "Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "tag_name": "ul",
+      "text": "Increased pushback when blocked in the corner, making punish routes potentially more restrictive",
+      "items": [
+        {
+          "index": 0,
+          "text": "Increased pushback when blocked in the corner, making punish routes potentially more restrictive",
+          "html": "Increased pushback when blocked in the corner, making punish routes potentially more restrictive"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "tag_name": "ul",
+      "text": "Punish Counter juggle follow-up timing is 1 frame more lenient",
+      "items": [
+        {
+          "index": 0,
+          "text": "Punish Counter juggle follow-up timing is 1 frame more lenient",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> juggle follow-up timing is 1 frame more lenient"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "tag_name": "ul",
+      "text": "Now applies 20% scaling on Super gauge build until the end of the combo",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now applies 20% scaling on Super gauge build until the end of the combo",
+          "html": "Now applies 20% scaling on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge build until the end of the combo"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "tag_name": "ul",
+      "text": "SA2 ([4]646K) Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the Super whiffs",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA2 ([4]646K) Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the Super whiffs",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">[4]646K</span>)\n<ul><li>Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo</li>\n<li>Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> whiffs</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "tag_name": "ul",
+      "text": "Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the Super whiffs",
+      "items": [
+        {
+          "index": 0,
+          "text": "Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo",
+          "html": "Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo"
+        },
+        {
+          "index": 1,
+          "text": "Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the Super whiffs",
+          "html": "Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> whiffs"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "tag_name": "ul",
+      "text": "Sonic Boom ([4]6P) Reduced Super and Drive gauge build LP/HP versions: Super Art gain 600 → 300, Drive gain 1000 → 500 MP version: Super Art gain 600 → 450, Drive gain 1000 → 500",
+      "items": [
+        {
+          "index": 0,
+          "text": "Sonic Boom ([4]6P) Reduced Super and Drive gauge build LP/HP versions: Super Art gain 600 → 300, Drive gain 1000 → 500 MP version: Super Art gain 600 → 450, Drive gain 1000 → 500",
+          "html": "Sonic Boom ([4]6P)\n<ul><li>Reduced Super and Drive gauge build</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> versions: Super Art gain 600 → 300, Drive gain 1000 → 500</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> version: Super Art gain 600 → 450, Drive gain 1000 → 500</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "tag_name": "ul",
+      "text": "Reduced Super and Drive gauge build LP/HP versions: Super Art gain 600 → 300, Drive gain 1000 → 500 MP version: Super Art gain 600 → 450, Drive gain 1000 → 500",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced Super and Drive gauge build",
+          "html": "Reduced Super and Drive gauge build"
+        },
+        {
+          "index": 1,
+          "text": "LP/HP versions: Super Art gain 600 → 300, Drive gain 1000 → 500",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> versions: Super Art gain 600 → 300, Drive gain 1000 → 500"
+        },
+        {
+          "index": 2,
+          "text": "MP version: Super Art gain 600 → 450, Drive gain 1000 → 500",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> version: Super Art gain 600 → 450, Drive gain 1000 → 500"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "tag_name": "ul",
+      "text": "SA1 (236236K) Fixed issue where the damage would increase when the 1st or 2nd hit landed as a Counter-hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA1 (236236K) Fixed issue where the damage would increase when the 1st or 2nd hit landed as a Counter-hit",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed issue where the damage would increase when the 1st or 2nd hit landed as a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Counter-hit</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "tag_name": "ul",
+      "text": "Fixed issue where the damage would increase when the 1st or 2nd hit landed as a Counter-hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the damage would increase when the 1st or 2nd hit landed as a Counter-hit",
+          "html": "Fixed issue where the damage would increase when the 1st or 2nd hit landed as a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Counter-hit</span>"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "tag_name": "ul",
+      "text": "5MK Hitstun increased 23 → 25 Hit Advantage increased +1 → +3 DR Cancel Hit Advantage increased +11 → +13 Improved combo routes, particularly when canceled into SA2 2HP Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from Version 1.04) Bylina (6HK) Increased Juggle Limit; reduced the Juggle Increase value on 1st hit Triglav (22P) On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame No change to the total knockdown advantage Stribog (236P/PP) 2nd hit has more range when 1st hit connects, ensuring both hits will reach Torbalan (236K/KK) Removed projectile collision box after the active frames have ended Embrace (214K/KK) Immediate scaling reduced from 25% → 10% when comboed into",
+      "items": [
+        {
+          "index": 0,
+          "text": "5MK Hitstun increased 23 → 25 Hit Advantage increased +1 → +3 DR Cancel Hit Advantage increased +11 → +13 Improved combo routes, particularly when canceled into SA2",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MK</span>\n<ul><li>Hitstun increased 23 → 25</li>\n<li>Hit Advantage increased <span style=\"color: #32CD32;\">+1</span> → <span style=\"color: #32CD32;\">+3</span></li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span> Hit Advantage increased <span style=\"color: #30D5B8;\"><b>+11</b></span> → <span style=\"color: #30D5B8;\"><b>+13</b></span></li>\n<li>Improved combo routes, particularly when canceled into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span></li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "2HP Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from Version 1.04)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HP</span>\n<ul><li>Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from <a href=\"/w/Street_Fighter_6/Version/1.04\" title=\"Street Fighter 6/Version/1.04\">Version 1.04</a>)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Bylina (6HK) Increased Juggle Limit; reduced the Juggle Increase value on 1st hit",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Bylina</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HK</span>)\n<ul><li>Increased Juggle Limit; reduced the Juggle Increase value on 1st hit</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Triglav (22P) On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame No change to the total knockdown advantage",
+          "html": "Triglav (22P)\n<ul><li>On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame</li>\n<li>No change to the total knockdown advantage</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Stribog (236P/PP) 2nd hit has more range when 1st hit connects, ensuring both hits will reach",
+          "html": "Stribog (236P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span>)\n<ul><li>2nd hit has more range when 1st hit connects, ensuring both hits will reach</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "Torbalan (236K/KK) Removed projectile collision box after the active frames have ended",
+          "html": "Torbalan (236K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>)\n<ul><li>Removed projectile collision box after the active frames have ended</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "Embrace (214K/KK) Immediate scaling reduced from 25% → 10% when comboed into",
+          "html": "Embrace (214K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>)\n<ul><li>Immediate scaling reduced from 25% → 10% when comboed into</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "tag_name": "ul",
+      "text": "Hitstun increased 23 → 25 Hit Advantage increased +1 → +3 DR Cancel Hit Advantage increased +11 → +13 Improved combo routes, particularly when canceled into SA2",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hitstun increased 23 → 25",
+          "html": "Hitstun increased 23 → 25"
+        },
+        {
+          "index": 1,
+          "text": "Hit Advantage increased +1 → +3",
+          "html": "Hit Advantage increased <span style=\"color: #32CD32;\">+1</span> → <span style=\"color: #32CD32;\">+3</span>"
+        },
+        {
+          "index": 2,
+          "text": "DR Cancel Hit Advantage increased +11 → +13",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span> Hit Advantage increased <span style=\"color: #30D5B8;\"><b>+11</b></span> → <span style=\"color: #30D5B8;\"><b>+13</b></span>"
+        },
+        {
+          "index": 3,
+          "text": "Improved combo routes, particularly when canceled into SA2",
+          "html": "Improved combo routes, particularly when canceled into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>"
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "tag_name": "ul",
+      "text": "Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from Version 1.04)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from Version 1.04)",
+          "html": "Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from <a href=\"/w/Street_Fighter_6/Version/1.04\" title=\"Street Fighter 6/Version/1.04\">Version 1.04</a>)"
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "tag_name": "ul",
+      "text": "Increased Juggle Limit; reduced the Juggle Increase value on 1st hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "Increased Juggle Limit; reduced the Juggle Increase value on 1st hit",
+          "html": "Increased Juggle Limit; reduced the Juggle Increase value on 1st hit"
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "tag_name": "ul",
+      "text": "On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame No change to the total knockdown advantage",
+      "items": [
+        {
+          "index": 0,
+          "text": "On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame",
+          "html": "On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame"
+        },
+        {
+          "index": 1,
+          "text": "No change to the total knockdown advantage",
+          "html": "No change to the total knockdown advantage"
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "tag_name": "ul",
+      "text": "2nd hit has more range when 1st hit connects, ensuring both hits will reach",
+      "items": [
+        {
+          "index": 0,
+          "text": "2nd hit has more range when 1st hit connects, ensuring both hits will reach",
+          "html": "2nd hit has more range when 1st hit connects, ensuring both hits will reach"
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "tag_name": "ul",
+      "text": "Removed projectile collision box after the active frames have ended",
+      "items": [
+        {
+          "index": 0,
+          "text": "Removed projectile collision box after the active frames have ended",
+          "html": "Removed projectile collision box after the active frames have ended"
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "tag_name": "ul",
+      "text": "Immediate scaling reduced from 25% → 10% when comboed into",
+      "items": [
+        {
+          "index": 0,
+          "text": "Immediate scaling reduced from 25% → 10% when comboed into",
+          "html": "Immediate scaling reduced from 25% → 10% when comboed into"
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "tag_name": "ul",
+      "text": "Assist Combo 2 With less than 1 bar of Super Gauge, changed to 2MP ~ 214KK ~ 623HP",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 2 With less than 1 bar of Super Gauge, changed to 2MP ~ 214KK ~ 623HP",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>\n<ul><li>With less than 1 bar of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Gauge, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">623HP</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "tag_name": "ul",
+      "text": "With less than 1 bar of Super Gauge, changed to 2MP ~ 214KK ~ 623HP",
+      "items": [
+        {
+          "index": 0,
+          "text": "With less than 1 bar of Super Gauge, changed to 2MP ~ 214KK ~ 623HP",
+          "html": "With less than 1 bar of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Gauge, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">623HP</span>"
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "tag_name": "ul",
+      "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17 Shuriken Bomb (22P) Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the proximity guard hitbox did not match the full attack hitbox range</li>\n<li>Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Shuriken Bomb (22P) Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only",
+          "html": "Shuriken Bomb (22P)\n<ul><li>Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "tag_name": "ul",
+      "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17",
+          "html": "Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17"
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "tag_name": "ul",
+      "text": "Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only",
+      "items": [
+        {
+          "index": 0,
+          "text": "Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only",
+          "html": "Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only"
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "tag_name": "ul",
+      "text": "2LP / 2LK Reduced pushback on hit and block 2MP Reduced pushback on block Can now pressure with blocked DR~2MP into 2LK~2LP to frame trap and punish back walk Outlaw Kick (4HK) Retains more Drive Rush momentum for combo consistency Triple Impact (5LP~MP~HP) Removed 10% immediate scaling on MP Increased base damage on HP 600 → 800 Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LP / 2LK Reduced pushback on hit and block",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>\n<ul><li>Reduced pushback on hit and block</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "2MP Reduced pushback on block Can now pressure with blocked DR~2MP into 2LK~2LP to frame trap and punish back walk",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span>\n<ul><li>Reduced pushback on block</li>\n<li>Can now pressure with blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR~</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span> into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span> to frame trap and punish back walk</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Outlaw Kick (4HK) Retains more Drive Rush momentum for combo consistency",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Outlaw Kick</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4HK</span>)\n<ul><li>Retains more <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span> momentum for combo consistency</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Triple Impact (5LP~MP~HP) Removed 10% immediate scaling on MP Increased base damage on HP 600 → 800",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Triple Impact</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>)\n<ul><li>Removed 10% immediate scaling on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span></li>\n<li>Increased base damage on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> 600 → 800</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Drive Impact Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where the proximity guard hitbox did not match the full attack hitbox range</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "tag_name": "ul",
+      "text": "Reduced pushback on hit and block",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on hit and block",
+          "html": "Reduced pushback on hit and block"
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "tag_name": "ul",
+      "text": "Reduced pushback on block Can now pressure with blocked DR~2MP into 2LK~2LP to frame trap and punish back walk",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on block",
+          "html": "Reduced pushback on block"
+        },
+        {
+          "index": 1,
+          "text": "Can now pressure with blocked DR~2MP into 2LK~2LP to frame trap and punish back walk",
+          "html": "Can now pressure with blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR~</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span> into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span> to frame trap and punish back walk"
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "tag_name": "ul",
+      "text": "Retains more Drive Rush momentum for combo consistency",
+      "items": [
+        {
+          "index": 0,
+          "text": "Retains more Drive Rush momentum for combo consistency",
+          "html": "Retains more <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span> momentum for combo consistency"
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "tag_name": "ul",
+      "text": "Removed 10% immediate scaling on MP Increased base damage on HP 600 → 800",
+      "items": [
+        {
+          "index": 0,
+          "text": "Removed 10% immediate scaling on MP",
+          "html": "Removed 10% immediate scaling on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>"
+        },
+        {
+          "index": 1,
+          "text": "Increased base damage on HP 600 → 800",
+          "html": "Increased base damage on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> 600 → 800"
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "tag_name": "ul",
+      "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range",
+          "html": "Fixed issue where the proximity guard hitbox did not match the full attack hitbox range"
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "tag_name": "ul",
+      "text": "Fixed issue where Psycho Mine could remain embedded after detonation, allowing two activations in one combo Applied to OD Psycho Crusher Attack and Regular/OD Devil Reverse Drive Reversal Reduced horizontal range of the attack hitbox and proximity guard hitbox Double Knee Press (236K) Reduced pushback on block and reduced the recovery hurtbox width by the same amount No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect This also makes it harder for M. Bison to set up a spacing trap afterwards Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version Psycho Crusher Attack ([4]6P/PP) Fixed issue where the hurtbox after passing through the opponent was different while in Burnout Psycho Crusher Attack + Psycho Mine ([4]6P + Mine) Can now only be canceled into SA3 after connecting with the opponent This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3 Now must connect with the opponent before the SA3 cancel can occur Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent OD Psycho Crusher Attack + Psycho Mine ([4]6PP + Mine) After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected Backfist Combo + Psycho Mine (214P + Mine) Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed OD Backfist Combo + Psycho Mine (214PP + Mine) Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen) Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor OD Devil Reverse / Devil Reverse + Psycho Mine ([2]8K~PP or [2]8K~P/PP + Mine) Expanded collision box downward after the 1st hit connects Fixed issue that caused later hits to occur on the wrong side of the opponent SA1 (236236K) Fixed issue where the timer would not stop during the attack SA2 (214214K) Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit This also affects other elements like Drive Gauge recovery Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Psycho Mine could remain embedded after detonation, allowing two activations in one combo Applied to OD Psycho Crusher Attack and Regular/OD Devil Reverse",
+          "html": "Fixed issue where Psycho Mine could remain embedded after detonation, allowing two activations in one combo\n<ul><li>Applied to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Crusher Attack</span> and Regular/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> Devil Reverse</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Drive Reversal Reduced horizontal range of the attack hitbox and proximity guard hitbox",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span>\n<ul><li>Reduced horizontal range of the attack hitbox and proximity guard hitbox</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Double Knee Press (236K) Reduced pushback on block and reduced the recovery hurtbox width by the same amount No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect This also makes it harder for M. Bison to set up a spacing trap afterwards Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version",
+          "html": "Double Knee Press (236K)\n<ul><li>Reduced pushback on block and reduced the recovery hurtbox width by the same amount</li>\n<li>No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect\n<ul><li>This also makes it harder for M. Bison to set up a spacing trap afterwards</li></ul></li>\n<li>Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Psycho Crusher Attack ([4]6P/PP) Fixed issue where the hurtbox after passing through the opponent was different while in Burnout",
+          "html": "Psycho Crusher Attack ([4]6P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span>)\n<ul><li>Fixed issue where the hurtbox after passing through the opponent was different while in Burnout</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Psycho Crusher Attack + Psycho Mine ([4]6P + Mine) Can now only be canceled into SA3 after connecting with the opponent This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3 Now must connect with the opponent before the SA3 cancel can occur Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent",
+          "html": "Psycho Crusher Attack + Psycho Mine ([4]6P + Mine)\n<ul><li>Can now only be canceled into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> after connecting with the opponent\n<ul><li>This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span></li>\n<li>Now must connect with the opponent before the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> cancel can occur</li></ul></li>\n<li>Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "OD Psycho Crusher Attack + Psycho Mine ([4]6PP + Mine) After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Crusher Attack + Psycho Mine</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">[4]6PP + Mine</span>)\n<ul><li>After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit</li>\n<li>Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "Backfist Combo + Psycho Mine (214P + Mine) Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed",
+          "html": "Backfist Combo + Psycho Mine (214P + Mine)\n<ul><li>Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed</li></ul>"
+        },
+        {
+          "index": 7,
+          "text": "OD Backfist Combo + Psycho Mine (214PP + Mine) Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen) Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Backfist Combo + Psycho Mine</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP + Mine</span>)\n<ul><li>Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen)</li>\n<li>Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed\n<ul><li>The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor</li></ul></li></ul>"
+        },
+        {
+          "index": 8,
+          "text": "OD Devil Reverse / Devil Reverse + Psycho Mine ([2]8K~PP or [2]8K~P/PP + Mine) Expanded collision box downward after the 1st hit connects Fixed issue that caused later hits to occur on the wrong side of the opponent",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Devil Reverse</span> / Devil Reverse + Psycho Mine ([2]8K~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span> or [2]8K~P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span> + Mine)\n<ul><li>Expanded collision box downward after the 1st hit connects</li>\n<li>Fixed issue that caused later hits to occur on the wrong side of the opponent</li></ul>"
+        },
+        {
+          "index": 9,
+          "text": "SA1 (236236K) Fixed issue where the timer would not stop during the attack",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed issue where the timer would not stop during the attack</li></ul>"
+        },
+        {
+          "index": 10,
+          "text": "SA2 (214214K) Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit This also affects other elements like Drive Gauge recovery Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214K</span>)\n<ul><li>Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit</li>\n<li>This also affects other elements like Drive Gauge recovery</li>\n<li>Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "tag_name": "ul",
+      "text": "Applied to OD Psycho Crusher Attack and Regular/OD Devil Reverse",
+      "items": [
+        {
+          "index": 0,
+          "text": "Applied to OD Psycho Crusher Attack and Regular/OD Devil Reverse",
+          "html": "Applied to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Crusher Attack</span> and Regular/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span> Devil Reverse"
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "tag_name": "ul",
+      "text": "Reduced horizontal range of the attack hitbox and proximity guard hitbox",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced horizontal range of the attack hitbox and proximity guard hitbox",
+          "html": "Reduced horizontal range of the attack hitbox and proximity guard hitbox"
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "tag_name": "ul",
+      "text": "Reduced pushback on block and reduced the recovery hurtbox width by the same amount No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect This also makes it harder for M. Bison to set up a spacing trap afterwards Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on block and reduced the recovery hurtbox width by the same amount",
+          "html": "Reduced pushback on block and reduced the recovery hurtbox width by the same amount"
+        },
+        {
+          "index": 1,
+          "text": "No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect This also makes it harder for M. Bison to set up a spacing trap afterwards",
+          "html": "No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect\n<ul><li>This also makes it harder for M. Bison to set up a spacing trap afterwards</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version",
+          "html": "Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version"
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "tag_name": "ul",
+      "text": "This also makes it harder for M. Bison to set up a spacing trap afterwards",
+      "items": [
+        {
+          "index": 0,
+          "text": "This also makes it harder for M. Bison to set up a spacing trap afterwards",
+          "html": "This also makes it harder for M. Bison to set up a spacing trap afterwards"
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "tag_name": "ul",
+      "text": "Fixed issue where the hurtbox after passing through the opponent was different while in Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the hurtbox after passing through the opponent was different while in Burnout",
+          "html": "Fixed issue where the hurtbox after passing through the opponent was different while in Burnout"
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "tag_name": "ul",
+      "text": "Can now only be canceled into SA3 after connecting with the opponent This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3 Now must connect with the opponent before the SA3 cancel can occur Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Can now only be canceled into SA3 after connecting with the opponent This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3 Now must connect with the opponent before the SA3 cancel can occur",
+          "html": "Can now only be canceled into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> after connecting with the opponent\n<ul><li>This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span></li>\n<li>Now must connect with the opponent before the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> cancel can occur</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent",
+          "html": "Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent"
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "tag_name": "ul",
+      "text": "This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3 Now must connect with the opponent before the SA3 cancel can occur",
+      "items": [
+        {
+          "index": 0,
+          "text": "This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the SA3",
+          "html": "This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span>"
+        },
+        {
+          "index": 1,
+          "text": "Now must connect with the opponent before the SA3 cancel can occur",
+          "html": "Now must connect with the opponent before the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> cancel can occur"
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "tag_name": "ul",
+      "text": "After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected",
+      "items": [
+        {
+          "index": 0,
+          "text": "After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit",
+          "html": "After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected",
+          "html": "Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected"
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "tag_name": "ul",
+      "text": "Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed",
+          "html": "Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed"
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "tag_name": "ul",
+      "text": "Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen) Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor",
+      "items": [
+        {
+          "index": 0,
+          "text": "Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen)",
+          "html": "Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen)"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor",
+          "html": "Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed\n<ul><li>The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "tag_name": "ul",
+      "text": "The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor",
+      "items": [
+        {
+          "index": 0,
+          "text": "The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor",
+          "html": "The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor"
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "tag_name": "ul",
+      "text": "Expanded collision box downward after the 1st hit connects Fixed issue that caused later hits to occur on the wrong side of the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded collision box downward after the 1st hit connects",
+          "html": "Expanded collision box downward after the 1st hit connects"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue that caused later hits to occur on the wrong side of the opponent",
+          "html": "Fixed issue that caused later hits to occur on the wrong side of the opponent"
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "tag_name": "ul",
+      "text": "Fixed issue where the timer would not stop during the attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the timer would not stop during the attack",
+          "html": "Fixed issue where the timer would not stop during the attack"
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "tag_name": "ul",
+      "text": "Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit This also affects other elements like Drive Gauge recovery Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit",
+          "html": "Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit"
+        },
+        {
+          "index": 1,
+          "text": "This also affects other elements like Drive Gauge recovery",
+          "html": "This also affects other elements like Drive Gauge recovery"
+        },
+        {
+          "index": 2,
+          "text": "Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic",
+          "html": "Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic"
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "tag_name": "ul",
+      "text": "Assist Combo 2 With less than 1 bar of Super Gauge, changed to 5MK ~ 236KK ~ 214MK",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 2 With less than 1 bar of Super Gauge, changed to 5MK ~ 236KK ~ 214MK",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>\n<ul><li>With less than 1 bar of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Gauge, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "tag_name": "ul",
+      "text": "With less than 1 bar of Super Gauge, changed to 5MK ~ 236KK ~ 214MK",
+      "items": [
+        {
+          "index": 0,
+          "text": "With less than 1 bar of Super Gauge, changed to 5MK ~ 236KK ~ 214MK",
+          "html": "With less than 1 bar of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Gauge, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MK</span>"
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "tag_name": "ul",
+      "text": "Hurtbox (during Ground Bounce) Changed to match other large characters for juggle consistency",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hurtbox (during Ground Bounce) Changed to match other large characters for juggle consistency",
+          "html": "Hurtbox (during Ground Bounce)\n<ul><li>Changed to match other large characters for juggle consistency</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "tag_name": "ul",
+      "text": "Changed to match other large characters for juggle consistency",
+      "items": [
+        {
+          "index": 0,
+          "text": "Changed to match other large characters for juggle consistency",
+          "html": "Changed to match other large characters for juggle consistency"
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "tag_name": "ul",
+      "text": "Backdash Fixed issue where Rashid's collision box was smaller on frames 1-15 2LP Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air) Nail Assault (Modern Controls: 214X~6X~6X) Input adjusted to require holding forward for the final attack in order to prevent overlap issues Now easier to perform Assault Roll into an immediate attack Assist Combo 2 In Burnout, changed to 5MP~HK ~ 214HP~6X~6X",
+      "items": [
+        {
+          "index": 0,
+          "text": "Backdash Fixed issue where Rashid's collision box was smaller on frames 1-15",
+          "html": "Backdash\n<ul><li>Fixed issue where Rashid's collision box was smaller on frames 1-15</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "2LP Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>\n<ul><li>Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Nail Assault (Modern Controls: 214X~6X~6X) Input adjusted to require holding forward for the final attack in order to prevent overlap issues Now easier to perform Assault Roll into an immediate attack",
+          "html": "Nail Assault (Modern Controls: 214X~6X~6X)\n<ul><li>Input adjusted to require holding forward for the final attack in order to prevent overlap issues</li>\n<li>Now easier to perform Assault Roll into an immediate attack</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Assist Combo 2 In Burnout, changed to 5MP~HK ~ 214HP~6X~6X",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>\n<ul><li>In Burnout, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">214HP</span>~6X~6X</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "tag_name": "ul",
+      "text": "Fixed issue where Rashid's collision box was smaller on frames 1-15",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Rashid's collision box was smaller on frames 1-15",
+          "html": "Fixed issue where Rashid's collision box was smaller on frames 1-15"
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "tag_name": "ul",
+      "text": "Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air)",
+          "html": "Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air)"
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "tag_name": "ul",
+      "text": "Input adjusted to require holding forward for the final attack in order to prevent overlap issues Now easier to perform Assault Roll into an immediate attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Input adjusted to require holding forward for the final attack in order to prevent overlap issues",
+          "html": "Input adjusted to require holding forward for the final attack in order to prevent overlap issues"
+        },
+        {
+          "index": 1,
+          "text": "Now easier to perform Assault Roll into an immediate attack",
+          "html": "Now easier to perform Assault Roll into an immediate attack"
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "tag_name": "ul",
+      "text": "In Burnout, changed to 5MP~HK ~ 214HP~6X~6X",
+      "items": [
+        {
+          "index": 0,
+          "text": "In Burnout, changed to 5MP~HK ~ 214HP~6X~6X",
+          "html": "In Burnout, changed to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> ~ <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">214HP</span>~6X~6X"
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "tag_name": "ul",
+      "text": "Denjin Hashogeki (D.214HP) Fixed issue where a regular HP Hashogeki would come out if performed while a Hadoken was on-screen",
+      "items": [
+        {
+          "index": 0,
+          "text": "Denjin Hashogeki (D.214HP) Fixed issue where a regular HP Hashogeki would come out if performed while a Hadoken was on-screen",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Denjin Hashogeki</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">D.214HP</span>)\n<ul><li>Fixed issue where a regular <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP Hashogeki</span> would come out if performed while a Hadoken was on-screen</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "tag_name": "ul",
+      "text": "Fixed issue where a regular HP Hashogeki would come out if performed while a Hadoken was on-screen",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where a regular HP Hashogeki would come out if performed while a Hadoken was on-screen",
+          "html": "Fixed issue where a regular <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP Hashogeki</span> would come out if performed while a Hadoken was on-screen"
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "tag_name": "ul",
+      "text": "Knee Hammer (6MK) Blockstun reduced 17 → 16 Block Advantage decreased -3(+3) → -4(+2) Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox) Adjusted Zangief's center axis on frames 2-6 to match visuals more closely Headbutt (6HP) Hitstun increased 27 → 28 Hit Advantage increased +7 → +8 DR Cancel Hit Advantage increased +15 → +16 Now incurs 25% Starter scaling and 2-hit Combo scaling",
+      "items": [
+        {
+          "index": 0,
+          "text": "Knee Hammer (6MK) Blockstun reduced 17 → 16 Block Advantage decreased -3(+3) → -4(+2) Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox) Adjusted Zangief's center axis on frames 2-6 to match visuals more closely",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Knee Hammer</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">6MK</span>)\n<ul><li>Blockstun reduced 17 → 16</li>\n<li>Block Advantage decreased <span style=\"color: #ff6347;\">-3</span><span style=\"color: #32CD32;\">(+3)</span> → <span style=\"color: #b70c0b;\"><b>-4</b></span><span style=\"color: #32CD32;\">(+2)</span></li>\n<li>Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox)</li>\n<li>Adjusted Zangief's center axis on frames 2-6 to match visuals more closely</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Headbutt (6HP) Hitstun increased 27 → 28 Hit Advantage increased +7 → +8 DR Cancel Hit Advantage increased +15 → +16 Now incurs 25% Starter scaling and 2-hit Combo scaling",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Headbutt</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HP</span>)\n<ul><li>Hitstun increased 27 → 28</li>\n<li>Hit Advantage increased <span style=\"color: #30D5B8;\"><b>+7</b></span> → <span style=\"color: #30D5B8;\"><b>+8</b></span></li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span> Hit Advantage increased <span style=\"color: #30D5B8;\"><b>+15</b></span> → <span style=\"color: #30D5B8;\"><b>+16</b></span></li>\n<li>Now incurs 25% Starter scaling and 2-hit Combo scaling</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "tag_name": "ul",
+      "text": "Blockstun reduced 17 → 16 Block Advantage decreased -3(+3) → -4(+2) Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox) Adjusted Zangief's center axis on frames 2-6 to match visuals more closely",
+      "items": [
+        {
+          "index": 0,
+          "text": "Blockstun reduced 17 → 16",
+          "html": "Blockstun reduced 17 → 16"
+        },
+        {
+          "index": 1,
+          "text": "Block Advantage decreased -3(+3) → -4(+2)",
+          "html": "Block Advantage decreased <span style=\"color: #ff6347;\">-3</span><span style=\"color: #32CD32;\">(+3)</span> → <span style=\"color: #b70c0b;\"><b>-4</b></span><span style=\"color: #32CD32;\">(+2)</span>"
+        },
+        {
+          "index": 2,
+          "text": "Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox)",
+          "html": "Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox)"
+        },
+        {
+          "index": 3,
+          "text": "Adjusted Zangief's center axis on frames 2-6 to match visuals more closely",
+          "html": "Adjusted Zangief's center axis on frames 2-6 to match visuals more closely"
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "tag_name": "ul",
+      "text": "Hitstun increased 27 → 28 Hit Advantage increased +7 → +8 DR Cancel Hit Advantage increased +15 → +16 Now incurs 25% Starter scaling and 2-hit Combo scaling",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hitstun increased 27 → 28",
+          "html": "Hitstun increased 27 → 28"
+        },
+        {
+          "index": 1,
+          "text": "Hit Advantage increased +7 → +8",
+          "html": "Hit Advantage increased <span style=\"color: #30D5B8;\"><b>+7</b></span> → <span style=\"color: #30D5B8;\"><b>+8</b></span>"
+        },
+        {
+          "index": 2,
+          "text": "DR Cancel Hit Advantage increased +15 → +16",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR Cancel</span> Hit Advantage increased <span style=\"color: #30D5B8;\"><b>+15</b></span> → <span style=\"color: #30D5B8;\"><b>+16</b></span>"
+        },
+        {
+          "index": 3,
+          "text": "Now incurs 25% Starter scaling and 2-hit Combo scaling",
+          "html": "Now incurs 25% Starter scaling and 2-hit Combo scaling"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 1.07 Game Version 1.07 date September 24, 2024 Summary Terry Release. Minor balance changes and bug fixes. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.07",
+              "html": "<a class=\"mw-selflink selflink\">1.07</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.07",
+              "html": "1.07",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "September 24, 2024",
+              "html": "September 24, 2024",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Terry Release. Minor balance changes and bug fixes.",
+              "html": "<b>Terry Release</b>. Minor balance changes and bug fixes.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20240924\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20240924",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20240924",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 1,
+      "text": "Version 1.04",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.04",
+      "raw_href": "/w/Street_Fighter_6/Version/1.04",
+      "title": "Street Fighter 6/Version/1.04",
+      "class_name": ""
+    }
+  ],
+  "metrics": {
+    "heading_count": 23,
+    "paragraph_count": 23,
+    "link_count": 2,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 9696,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

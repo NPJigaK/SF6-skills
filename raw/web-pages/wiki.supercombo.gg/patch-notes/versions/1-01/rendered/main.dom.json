@@ -1,0 +1,979 @@
+{
+  "captured_at_utc": "2026-06-11T03:45:55Z",
+  "title": "Street Fighter 6/Version/1.01 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.01",
+  "content_text": "Version 1.01 Game Version 1.01 date July 24, 2023 Summary Rashid Release. Bug fixes with some minor balance changes mainly for Modern controls. Links Patch Notes Rashid Patch Rashid released Universal Changes Drive Rush Cancel Can now be performed with MP+MK (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward Light normals are now cancelable into DRC even on whiff due to the low risk of these easier inputs Drive Parry Fixed issue where MK would come out if Parry was buffered during a screen freeze and then released before the Parry occurred Install Supers Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired Assist Combos (Modern) Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input OD Special Moves (Modern) Fixed issue where some moves could not be manually input while holding the Assist button. Key Character Changes Blanka Charge Special Moves - Modern Controls (Rolling Attack, Aerial Rolling Attack, Vertical Rolling Attack) Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f j.MP Fixed issue where special cancel could not be performed if the move was parried Back Throw (4LPLK) Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw HP Aerial Rolling Attack (j.[4]6HP) Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout Cammy HK Cannon Strike (j.214HK) Fixed issue where j.HK would come out instead if input at earliest timing OD Quick Spin Knuckle (214PP) Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch Chun-Li Charge Special Moves - Modern Controls (Kikoken) Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f Forward/Back/Air Throw (LPLK/4LPLK/j.LPLK) Fixed issue where Charge timing would be reset during the successful throw animations Serenity Stream (214P) Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K) Dee Jay Face Breaker (4HK) Fixed issue where Punish Counter Drive Damage was higher vs. airborne opponents Back Throw (4LPLK) Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw Dhalsim Agile Kick (1LK) Chain cancel version no longer works with 2LK input (Classic controls only; no change to Modern) OD Yoga Arch (236KK) Fixed issue where the projectile would reappear after the SA3/CA cinematic OD Yoga Comet (j.63214PP) Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent E. Honda 2LP Fixed issue where the chained version could be kara-canceled on startup SA3/CA (214214P) Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters Jamie Modern 2L Changed from 2LK → 2LP so that he has access to a 4-frame attack Juri 1-Stock Enhanced Saihasho / Ankensatsu / Go Ohatsu (236LK/236MK/236HK) Fixed issue where the 1st frame could be kara-canceled into SA3/CA (allowing unintended combo routes with 2 stocks) Kimberly SA3/CA (236233P) Fixed issue where it could hit cross-up (behind Kimberly) Lily OD Condor Dive (j.PPP) Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P) Air SA2 (j.236236K) Fixed issue where Lily could not perform this from a back jump if the inputs where plinked Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air Marisa Scutum (Modern 6S) Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the S button, making it difficult to perform Enfold (6S~2S) Ryu Drive Impact Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage Zangief Fixed issue where Drive gauge recovery during Burnout was slower than other characters SA1 (236236K) Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Rashid_Patch",
+      "text": "Rashid Patch",
+      "html": "Rashid Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Key_Character_Changes",
+      "text": "Key Character Changes",
+      "html": "<b>Key Character Changes</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "Blanka",
+      "text": "Blanka",
+      "html": "<b>Blanka</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Cammy",
+      "text": "Cammy",
+      "html": "<b>Cammy</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Dee_Jay",
+      "text": "Dee Jay",
+      "html": "<b>Dee Jay</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Dhalsim",
+      "text": "Dhalsim",
+      "html": "<b>Dhalsim</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "E._Honda",
+      "text": "E. Honda",
+      "html": "<b>E. Honda</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "Jamie",
+      "text": "Jamie",
+      "html": "<b>Jamie</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "Juri",
+      "text": "Juri",
+      "html": "<b>Juri</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Kimberly",
+      "text": "Kimberly",
+      "html": "<b>Kimberly</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Lily",
+      "text": "Lily",
+      "html": "<b>Lily</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "Marisa",
+      "text": "Marisa",
+      "html": "<b>Marisa</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Ryu",
+      "text": "Ryu",
+      "html": "<b>Ryu</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Rashid released",
+      "items": [
+        {
+          "index": 0,
+          "text": "Rashid released",
+          "html": "Rashid released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Drive Rush Cancel Can now be performed with MP+MK (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward Light normals are now cancelable into DRC even on whiff due to the low risk of these easier inputs Drive Parry Fixed issue where MK would come out if Parry was buffered during a screen freeze and then released before the Parry occurred Install Supers Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired Assist Combos (Modern) Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input OD Special Moves (Modern) Fixed issue where some moves could not be manually input while holding the Assist button.",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Rush Cancel Can now be performed with MP+MK (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward Light normals are now cancelable into DRC even on whiff due to the low risk of these easier inputs",
+          "html": "<b><style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Drive Rush Cancel</span></b>\n<ul><li>Can now be performed with <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Light</span> normals are now cancelable into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DRC</span> even on whiff due to the low risk of these easier inputs</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Drive Parry Fixed issue where MK would come out if Parry was buffered during a screen freeze and then released before the Parry occurred",
+          "html": "<b>Drive Parry</b>\n<ul><li>Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> would come out if Parry was buffered during a screen freeze and then released before the Parry occurred</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Install Supers Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired",
+          "html": "<b>Install <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span></b>\n<ul><li>Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Assist Combos (Modern) Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input",
+          "html": "<b>Assist Combos (Modern)</b>\n<ul><li>Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "OD Special Moves (Modern) Fixed issue where some moves could not be manually input while holding the Assist button.",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Special Moves</span> (Modern)</b>\n<ul><li>Fixed issue where some moves could not be manually input while holding the Assist button.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "Can now be performed with MP+MK (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward Light normals are now cancelable into DRC even on whiff due to the low risk of these easier inputs",
+      "items": [
+        {
+          "index": 0,
+          "text": "Can now be performed with MP+MK (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward",
+          "html": "Can now be performed with <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> (Classic) or Drive Parry button (Modern), only while holding Neutral or Forward"
+        },
+        {
+          "index": 1,
+          "text": "Light normals are now cancelable into DRC even on whiff due to the low risk of these easier inputs",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Light</span> normals are now cancelable into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DRC</span> even on whiff due to the low risk of these easier inputs"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Fixed issue where MK would come out if Parry was buffered during a screen freeze and then released before the Parry occurred",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where MK would come out if Parry was buffered during a screen freeze and then released before the Parry occurred",
+          "html": "Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span> would come out if Parry was buffered during a screen freeze and then released before the Parry occurred"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired",
+          "html": "Fixed issue where unintended behavior would occur if hit by an attack on the exact frame the install timer expired"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input",
+          "html": "Fixed issue where Assist Combo inputs were not properly buffered, and where the 2nd attack of an Assist Combo would be performed even with only 1 input"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Fixed issue where some moves could not be manually input while holding the Assist button.",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where some moves could not be manually input while holding the Assist button.",
+          "html": "Fixed issue where some moves could not be manually input while holding the Assist button."
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "Charge Special Moves - Modern Controls (Rolling Attack, Aerial Rolling Attack, Vertical Rolling Attack) Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f j.MP Fixed issue where special cancel could not be performed if the move was parried Back Throw (4LPLK) Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw HP Aerial Rolling Attack (j.[4]6HP) Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Charge Special Moves - Modern Controls (Rolling Attack, Aerial Rolling Attack, Vertical Rolling Attack) Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f",
+          "html": "<b>Charge Special Moves - Modern Controls</b> (Rolling Attack, Aerial Rolling Attack, Vertical Rolling Attack)\n<ul><li>Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input</li>\n<li>Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "j.MP Fixed issue where special cancel could not be performed if the move was parried",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">j.MP</span>\n<ul><li>Fixed issue where special cancel could not be performed if the move was parried</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Back Throw (4LPLK) Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+          "html": "Back Throw (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">4LPLK</span>)\n<ul><li>Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> built the same amount of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge is a standard throw</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "HP Aerial Rolling Attack (j.[4]6HP) Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP Aerial Rolling Attack</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.[4]6HP</span>)\n<ul><li>Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input",
+          "html": "Fixed issue where charge time was unintentionally 10 frames longer and input was not recognized for the usual 10 frames after the Forward or Up input"
+        },
+        {
+          "index": 1,
+          "text": "Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f",
+          "html": "Charge Time: 50f → 40f; Input Recognition Time: 0f → 10f"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Fixed issue where special cancel could not be performed if the move was parried",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where special cancel could not be performed if the move was parried",
+          "html": "Fixed issue where special cancel could not be performed if the move was parried"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+          "html": "Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> built the same amount of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge is a standard throw"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout",
+          "html": "Fixed issue where Blanka's recovery changed if the opponent blocked while in Burnout"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "HK Cannon Strike (j.214HK) Fixed issue where j.HK would come out instead if input at earliest timing OD Quick Spin Knuckle (214PP) Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch",
+      "items": [
+        {
+          "index": 0,
+          "text": "HK Cannon Strike (j.214HK) Fixed issue where j.HK would come out instead if input at earliest timing",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK Cannon Strike</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.214HK</span>)\n<ul><li>Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.HK</span> would come out instead if input at earliest timing</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Quick Spin Knuckle (214PP) Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Quick Spin Knuckle</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span>)\n<ul><li>Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Fixed issue where j.HK would come out instead if input at earliest timing",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where j.HK would come out instead if input at earliest timing",
+          "html": "Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">j.HK</span> would come out instead if input at earliest timing"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch",
+          "html": "Fixed issue where opponent's attack could come out in the wrong direction if input during the side switch"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Charge Special Moves - Modern Controls (Kikoken) Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f Forward/Back/Air Throw (LPLK/4LPLK/j.LPLK) Fixed issue where Charge timing would be reset during the successful throw animations Serenity Stream (214P) Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Charge Special Moves - Modern Controls (Kikoken) Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f",
+          "html": "<b>Charge Special Moves - Modern Controls</b> (Kikoken)\n<ul><li>Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f</li>\n<li>Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Forward/Back/Air Throw (LPLK/4LPLK/j.LPLK) Fixed issue where Charge timing would be reset during the successful throw animations",
+          "html": "Forward/Back/Air Throw (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LPLK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">4LPLK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">j.LPLK</span>)\n<ul><li>Fixed issue where Charge timing would be reset during the successful throw animations</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Serenity Stream (214P) Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)",
+          "html": "Serenity Stream (214P)\n<ul><li>Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f",
+          "html": "Fixed issue where meterless version charge time was unintentionally 5 frames shorter; Charge Time: 45f → 50f"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f",
+          "html": "Fixed issue where input was not recognized for the usual 10 frames after the Forward input (all versions); Input Recognition Time: 0f → 10f"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Fixed issue where Charge timing would be reset during the successful throw animations",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Charge timing would be reset during the successful throw animations",
+          "html": "Fixed issue where Charge timing would be reset during the successful throw animations"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)",
+          "html": "Fixed issue where canceling attacks into 214P~K would result in Hazanshu (214K)"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "Face Breaker (4HK) Fixed issue where Punish Counter Drive Damage was higher vs. airborne opponents Back Throw (4LPLK) Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+      "items": [
+        {
+          "index": 0,
+          "text": "Face Breaker (4HK) Fixed issue where Punish Counter Drive Damage was higher vs. airborne opponents",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Face Breaker</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4HK</span>)\n<ul><li>Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Drive Damage was higher vs. airborne opponents</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Back Throw (4LPLK) Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+          "html": "Back Throw (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">4LPLK</span>)\n<ul><li>Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> built the same amount of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge is a standard throw</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Fixed issue where Punish Counter Drive Damage was higher vs. airborne opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Punish Counter Drive Damage was higher vs. airborne opponents",
+          "html": "Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Drive Damage was higher vs. airborne opponents"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Punish Counter built the same amount of Super gauge is a standard throw",
+          "html": "Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> built the same amount of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> gauge is a standard throw"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Agile Kick (1LK) Chain cancel version no longer works with 2LK input (Classic controls only; no change to Modern) OD Yoga Arch (236KK) Fixed issue where the projectile would reappear after the SA3/CA cinematic OD Yoga Comet (j.63214PP) Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Agile Kick (1LK) Chain cancel version no longer works with 2LK input (Classic controls only; no change to Modern)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Agile Kick</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">1LK</span>)\n<ul><li>Chain cancel version no longer works with <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> input (Classic controls only; no change to Modern)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Yoga Arch (236KK) Fixed issue where the projectile would reappear after the SA3/CA cinematic",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Yoga Arch</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>)\n<ul><li>Fixed issue where the projectile would reappear after the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> cinematic</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "OD Yoga Comet (j.63214PP) Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Yoga Comet</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">j.63214PP</span>)\n<ul><li>Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "Chain cancel version no longer works with 2LK input (Classic controls only; no change to Modern)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Chain cancel version no longer works with 2LK input (Classic controls only; no change to Modern)",
+          "html": "Chain cancel version no longer works with <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> input (Classic controls only; no change to Modern)"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "Fixed issue where the projectile would reappear after the SA3/CA cinematic",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the projectile would reappear after the SA3/CA cinematic",
+          "html": "Fixed issue where the projectile would reappear after the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> cinematic"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent",
+          "html": "Fixed issue where Dhalsim could no longer perform mid-air moves when parried by the opponent"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "2LP Fixed issue where the chained version could be kara-canceled on startup SA3/CA (214214P) Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LP Fixed issue where the chained version could be kara-canceled on startup",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>\n<ul><li>Fixed issue where the chained version could be kara-canceled on startup</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "SA3/CA (214214P) Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214P</span>)\n<ul><li>Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "Fixed issue where the chained version could be kara-canceled on startup",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the chained version could be kara-canceled on startup",
+          "html": "Fixed issue where the chained version could be kara-canceled on startup"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "tag_name": "ul",
+      "text": "Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters",
+          "html": "Fixed issue where E. Honda would gain much more Drive gauge when parried than other characters"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "tag_name": "ul",
+      "text": "Modern 2L Changed from 2LK → 2LP so that he has access to a 4-frame attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Modern 2L Changed from 2LK → 2LP so that he has access to a 4-frame attack",
+          "html": "Modern <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2L</span>\n<ul><li>Changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> → <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span> so that he has access to a 4-frame attack</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "tag_name": "ul",
+      "text": "Changed from 2LK → 2LP so that he has access to a 4-frame attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Changed from 2LK → 2LP so that he has access to a 4-frame attack",
+          "html": "Changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> → <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span> so that he has access to a 4-frame attack"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "tag_name": "ul",
+      "text": "1-Stock Enhanced Saihasho / Ankensatsu / Go Ohatsu (236LK/236MK/236HK) Fixed issue where the 1st frame could be kara-canceled into SA3/CA (allowing unintended combo routes with 2 stocks)",
+      "items": [
+        {
+          "index": 0,
+          "text": "1-Stock Enhanced Saihasho / Ankensatsu / Go Ohatsu (236LK/236MK/236HK) Fixed issue where the 1st frame could be kara-canceled into SA3/CA (allowing unintended combo routes with 2 stocks)",
+          "html": "1-Stock Enhanced <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Saihasho</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Ankensatsu</span> / <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Go Ohatsu</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">236MK</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">236HK</span>)\n<ul><li>Fixed issue where the 1st frame could be kara-canceled into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> (allowing unintended combo routes with 2 stocks)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "tag_name": "ul",
+      "text": "Fixed issue where the 1st frame could be kara-canceled into SA3/CA (allowing unintended combo routes with 2 stocks)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the 1st frame could be kara-canceled into SA3/CA (allowing unintended combo routes with 2 stocks)",
+          "html": "Fixed issue where the 1st frame could be kara-canceled into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> (allowing unintended combo routes with 2 stocks)"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "tag_name": "ul",
+      "text": "SA3/CA (236233P) Fixed issue where it could hit cross-up (behind Kimberly)",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA3/CA (236233P) Fixed issue where it could hit cross-up (behind Kimberly)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236233P</span>)\n<ul><li>Fixed issue where it could hit cross-up (behind Kimberly)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "tag_name": "ul",
+      "text": "Fixed issue where it could hit cross-up (behind Kimberly)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where it could hit cross-up (behind Kimberly)",
+          "html": "Fixed issue where it could hit cross-up (behind Kimberly)"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "tag_name": "ul",
+      "text": "OD Condor Dive (j.PPP) Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P) Air SA2 (j.236236K) Fixed issue where Lily could not perform this from a back jump if the inputs where plinked Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Condor Dive (j.PPP) Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Condor Dive</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">j.PPP</span>)\n<ul><li>Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Air SA2 (j.236236K) Fixed issue where Lily could not perform this from a back jump if the inputs where plinked Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Air SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">j.236236K</span>)\n<ul><li>Fixed issue where Lily could not perform this from a back jump if the inputs where plinked</li>\n<li>Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "tag_name": "ul",
+      "text": "Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P)",
+          "html": "Fixed issue where Lily could perform this from a back jump by plinking the inputs (j.PP~P)"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "tag_name": "ul",
+      "text": "Fixed issue where Lily could not perform this from a back jump if the inputs where plinked Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Lily could not perform this from a back jump if the inputs where plinked",
+          "html": "Fixed issue where Lily could not perform this from a back jump if the inputs where plinked"
+        },
+        {
+          "index": 1,
+          "text": "Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air",
+          "html": "Fixed issue where the opponent would not be KO'd if the 2nd hit connected mid-air"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "tag_name": "ul",
+      "text": "Scutum (Modern 6S) Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the S button, making it difficult to perform Enfold (6S~2S)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Scutum (Modern 6S) Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the S button, making it difficult to perform Enfold (6S~2S)",
+          "html": "Scutum (Modern <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">6S</span>)\n<ul><li>Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">S</span> button, making it difficult to perform Enfold (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">6S</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "tag_name": "ul",
+      "text": "Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the S button, making it difficult to perform Enfold (6S~2S)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the S button, making it difficult to perform Enfold (6S~2S)",
+          "html": "Fixed issue where after a counter-attack, a Down input would cause Marisa to exit the stance even while holding the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">S</span> button, making it difficult to perform Enfold (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">6S</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>)"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "tag_name": "ul",
+      "text": "Drive Impact Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Impact Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Impact</span>\n<ul><li>Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "tag_name": "ul",
+      "text": "Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage",
+          "html": "Fixed issue where extra combo scaling would sometimes be applied, resulting in lower damage"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "tag_name": "ul",
+      "text": "Fixed issue where Drive gauge recovery during Burnout was slower than other characters SA1 (236236K) Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Drive gauge recovery during Burnout was slower than other characters",
+          "html": "Fixed issue where Drive gauge recovery during Burnout was slower than other characters"
+        },
+        {
+          "index": 1,
+          "text": "SA1 (236236K) Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "tag_name": "ul",
+      "text": "Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual",
+          "html": "Fixed bug where Zangief was considered airborne during the successful throw animation, resulting in less Drive gauge build than usual"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 1.01 Game Version 1.01 date July 24, 2023 Summary Rashid Release. Bug fixes with some minor balance changes mainly for Modern controls. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.01",
+              "html": "<a class=\"mw-selflink selflink\">1.01</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.01",
+              "html": "1.01",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "July 24, 2023",
+              "html": "July 24, 2023",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Rashid Release. Bug fixes with some minor balance changes mainly for Modern controls.",
+              "html": "<b>Rashid Release</b>. Bug fixes with some minor balance changes mainly for Modern controls.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/en/battle_change/20230724\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/en/battle_change/20230724",
+      "raw_href": "https://www.streetfighter.com/6/buckler/en/battle_change/20230724",
+      "title": "",
+      "class_name": "external text"
+    }
+  ],
+  "metrics": {
+    "heading_count": 16,
+    "paragraph_count": 16,
+    "link_count": 1,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 4918,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

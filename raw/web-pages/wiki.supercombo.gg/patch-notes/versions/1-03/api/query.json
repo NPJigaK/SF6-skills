@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 76803,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/1.03",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:13:46Z",
+        "lastrevid": 360776,
+        "length": 6464,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.03",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.03&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.03",
+        "revisions": [
+          {
+            "revid": 360776,
+            "parentid": 360767,
+            "user": "Spabobin",
+            "timestamp": "2026-04-05T16:45:09Z",
+            "size": 6464,
+            "sha1": "61aa98754086f9e6bffc20772a958e2c07f705ec",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/1.03|1.03]]\n|gameversion=1.03\n|date=December 1, 2023\n|summary=Costume 3 release. Minor bug fixes.\n|links=[https://www.streetfighter.com/6/buckler/en/battle_change/20231201 Patch Notes]  \n}}\n<!--Full Version name: 1.0300.001-->\n\n== Costume 3 Patch ==\n* Costume 3 released for the original 18 characters\n<br>\n\n== '''Universal Changes''' ==\n* '''Wakeup Input Buffer'''\n** Increased 4f → 7f\n** Fixed an issue related to buffered inputs that occur immediately after the screen freeze of the opponent's {{clr|SA|Super Art}}\n* '''Perfect Parry'''\n** Fixed issue where certain actions would shorten the invincibility window on a successful Perfect Parry\n* '''Assist Combos (Modern)'''\n** Fixed issue that caused the start of the input buffer to occur 1 frame later than intended\n** Also fixes issue where Chun-Li and Kimberly could not perform a jump cancel during Assist Combos if a button was input on the same frame\n* '''Taunts'''\n** Can no longer kara-cancel a special move into a taunt (e.g. PPP~KKK on consecutive frames)\n<br>\n\n== '''Key Character Changes''' ==\n\n=== '''A.K.I.''' ===\n* {{clr|H|2HK}}\n** No longer hits low on active frames 2-5\n* {{clr|H|Chi Wen}} ({{clr|H|6HP}})\n** Fixed issue where recovery was 1 frame longer on Perfect Parry\n* {{clr|L|LP Serpent Lash}} ({{clr|L|236LP}})\n** Fixed issue where recovery was 6 frames longer on Perfect Parry\n* {{clr|OD|OD Cruel Fate}} ({{clr|OD|214KK}})\n** Fixed issue where command inputs would swap directions immediately after jumping over the opponent\n* Modern Controls:\n** {{clr|M|MP Serpent Lash}} ({{clr|M|236M}}): Fixed issue where inputting Down after a successful command input would prevent the move from coming out\n** {{clr|M|MK Snake Step}} ({{clr|DR|5S}}): Fixed issue where this move would be performed with more shortcut commands besides {{clr|DR|5S}}\n** {{clr|OD|OD Snake Step}} (A[{{clr|DR|5S}}]): After regular/{{clr|OD|OD}} Nightshade Pulse, the dash no longer comes out while holding any Back/Down/Forward direction\n*** Allows A.K.I. to input Modern shortcut moves during the projectile recovery without buffering an accidental {{clr|OD|OD Snake Step}}\n<br> \n\n=== '''Blanka''' ===\n* {{clr|H|5HP}}\n** Fixed issue where recovery was 5 frames longer on Parry / Perfect Parry / Armor absorb\n* {{clr|M|Rock Crusher}} ({{clr|M|6MP}})\n** When the opponent is in Burnout, opponent's Drive Gain on Block adjusted 1250,1250 → 1250,625\n** Only applies when both hits connect; 2nd hit only builds 1250 Drive gauge for opponent on block during Burnout\n* {{clr|SA|SA2}} ({{clr|SA|214214P}})\n** Fixed issue where Drive Gauge recovery was different while the install timer was active\n** On Ground, Drive Regen per Frame: 50 → 40\n** Airborne + Burnout, Drive Regen per Frame: 10 → 20\n* {{clr|SA|SA2 Install}} Bug Fixes\n** {{clr|L|5LK}} / {{clr|L|2LP}}: fixed issue where front hurtbox during startup was vulnerable to the opponent's cross-up attacks\n** {{clr|M|5MK}} / {{clr|H|5HP}}: fixed issue where the special cancel buffer timing was earlier than usual\n** {{clr|M|2MP}}: fixed issue where foot hurtbox was smaller than usual\n** {{clr|M|j.MP}}: fixed issue where collision box would not expand on hit\n** {{clr|OD|[4]6PP}} / [2]8K/{{clr|OD|KK}}: fixed issue where the input buffer for {{clr|SA|Rolling Cannon}} follow-ups did not work\n** {{clr|H|[4]6HP}}: fixed issue where bounce-back distance was shorter on Perfect Parry\n** {{clr|OD|63214KK}}: fixed issue where the first hit's active frames were 2 frames shorter than usual\n<br>\n\n=== '''Chun-Li''' ===\n* {{clr|M|j.MP}}\n** Fixed issue where active frames 3-4 of the first hit were not considered an Overhead\n* {{clr|H|Lotus Fist}} (214P~{{clr|H|HP}})\n** When the opponent is in Burnout, opponent's Drive Gain on Block for 2nd hit only adjusted 1250 → 2500\n** No change when both hits are blocked (2500,1250)\n<br>\n\n=== '''Dee Jay''' ===\n* Speedy Maracas (22PP)\n** Fixed issue where plinking the button input (e.g. 22P~P) caused the move to be recognized as a canceled activation even while holding the buttons\n** Fixed issue where the move would not end upon button release with under 1 bar of {{clr|SA|Super}} gauge\n** Modern Controls: fixed issue where the move could not be performed when plinking the buttons as 22{{clr|M|M}}~{{clr|H|H}}\n** Modern Controls: fixed issue where a different button was required to continue the Held version depending on the amount of {{clr|SA|Super}} gauge stocked\n<br>\n\n=== '''E. Honda''' ===\n* Modern Controls: {{clr|SA|SA2}} ({{clr|SA|[4]}}{{clr|H|H}}{{clr|DR|S}}) fixed issue where the charge time was 5 frames longer when using the shortcut\n<br>\n\n=== '''Guile''' ===\n* {{clr|SA|SA2}} ({{clr|SA|214214P}})\n** Fixed issue where Drive Gauge recovery was different while the install timer was active\n** On Ground, Drive Regen per Frame: 50 → 40\n** Airborne + Burnout, Drive Regen per Frame: 10 → 20\n<br>\n\n=== '''Jamie''' ===\n* Tensei Kick (2KK)\n** Can no longer be kara-canceled into Taunt on the first startup frame\n<br>\n\n=== '''JP''' ===\n* Air Throw ({{clr|L|j.LPLK}})\n** Fixed issue where JP would not have a {{FKD}} or {{clr|PC|Punish Counter}} property applied when performed after a Departure: Window teleport\n* {{clr|H|Bylina}} ({{clr|H|6HK}})\n** Fixed issue where the attack could not be canceled if the 2nd attack was blocked crouching\n* Embrace (214K/{{clr|OD|KK}})\n** Fixed issue where the throw would not hit an opponent facing backwards\n<br>\n\n=== '''Juri''' ===\n* {{clr|SA|SA2}} ({{clr|SA|214214P}})\n** Fixed issue where Drive Gauge recovery was different while the install timer was active\n** On Ground, Drive Regen per Frame: 50 → 40\n** Airborne + Burnout, Drive Regen per Frame: 10 → 20\n<br>\n\n=== '''Marisa''' ===\n* {{clr|SA|SA2}} ({{clr|SA|214214P}})\n** Fixed issue where the startup was 1 frame faster when the button was released at a specific timing\n<br>\n\n=== '''Rashid''' ===\n* {{clr|SA|SA2}} ({{clr|SA|214214K}})\n** Fixed issue where if you performed an enhanced special move using the final Air Current, you could not use another enhanced special afterwards\n** Fixed issue where if you kicked the tornado at its final state with Arabian Cyclone, it would move the same speed as before it was kicked\n<br>\n\n=== '''Ryu''' ===\n* {{clr|M|Collarbone Breaker}} ({{clr|M|6MP}})\n** When the opponent is in Burnout, opponent's Drive Gain on Block for 2nd hit only adjusted 625 → 1250\n** No change when both hits are blocked (1250,625)\n<br>"
+              }
+            },
+            "comment": "/* JP */"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

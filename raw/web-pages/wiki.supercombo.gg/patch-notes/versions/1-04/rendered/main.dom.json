@@ -1,0 +1,1220 @@
+{
+  "captured_at_utc": "2026-06-11T03:39:24Z",
+  "title": "Street Fighter 6/Version/1.04 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.04",
+  "content_text": "Version 1.04 Game Version 1.04 date February 27, 2024 Summary Ed Release. Several balance changes and bug fixes. Links Patch Notes Ed Patch Ed released Universal Changes Drive Rush Simultaneous activation no longer randomly gives the frame advantage to one player Perfect Parry Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame Armor Break Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack Input Buffers Fixed issue where input buffer after blocking an attack was not set correctly for Drive Reversal and some other attacks Modern Controls Fixed issue where S button would not result in damage scaling if a special was input during a Drive Rush screen freeze Character Changes A.K.I. 2LP Range increased 0.94 → 0.96 5MP Active frames increased 3 → 5 (better meaty setups, stronger in neutral) Chun-Li 5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks) Aerial Lightning Kicks (j.236K) 20% Starter scaling added (less rewarding on Punish Counter when used against throws) Dee Jay Funky Slicer (214K~LK) Less pushback on block Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish) Dhalsim HP Yoga Flame (63214HP) Fixed issue where 2nd hit dealt normal damage on Counter-hit/Punish Counter Jamie Forward Throw (LPLK) Can now hold LP+LK to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7) SA1 (236236K) Damage increased by 100 on both the regular version and Drink ender Reduced pushback on Hit in the corner KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki) SA2 (214214P) After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0) JP 5HP Expanded foot/torso hurtbox during active and recovery frames 2HP Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts) Departure (214P/PP) 20% Starter scaling added Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (OD) Amnesia (22K/KK), successful counter JP no longer builds Super meter while bombs are active or until combo ends Bombs no longer dissipate Super-priority projectiles Starter scaling (when Bomb starts the combo) increased 15% → 50% Immediate scaling (when comboing into Bomb) increased 15% → 60% Canceling an attack into SA3/CA now detonates the Bombs immediately to prevent bypassing this damage scaling Ken Forward Throw (LPLK) More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window) 5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks) OD Air Tatsu (j.214KK) Landing recovery on whiff increased 14 → 21 (harder to escape the corner) Collision box expanded so opponents are less likely to jump over this move Luke 2MP Whiff recovery increased 14 → 17 with a larger hurtbox Aerial Flash Knuckle (j.214P) When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20 Larger feet hurtbox on frame 16 until end of recovery SA1 (236236P) Wider projectile-vulnerable hurtbox on startup frames 1-5 Manon En Haut 1 (4MK) Retains greater momentum out of Drive Rush SA2 (214214K) Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished) Rashid 5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks) OD Spinning Mixer (236PP) Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out Wall Jump Fixed issue where performing certain moves would not put Rashid into a Forced Knockdown state Ryu Solar Plexus Strike (6HP) Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure) Hadoken (236P) Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks) OD Shoryuken (623PP) First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs LP Hashogeki (214LP) Block Advantage -4 → -3 with reduced pushback on block Increased pushback on block vs. Burnout MP Hashogeki (214MP) Expanded the attack and projectile clash hitbox forward HP Hashogeki (214HP) Reduced pushback on block Expanded the attack and projectile clash hitbox forward OD Hashogeki (214PP) Reduced pushback on hit/block Expanded the attack and projectile clash hitbox forward Denjin Hashogeki (Denjin 214P/PP) Reduced pushback on block Expanded the attack and projectile clash hitbox forward Denjin OD version damage increased 600 → 1000 SA1 (236236P) Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles) Zangief OD Double Lariat (PPP) 1st hit combos into SA3/CA when canceled (causes a brief crumple state on grounded opponents) Faster horizontal movement on startup 2nd hit connects vs. grounded opponents 1f earlier (for combo consistency) 1st hit reduced knockback distance vs. airborne opponents SA1 (236236K) Hitbox extended downward (can juggle and anti-air more consistently)",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Ed_Patch",
+      "text": "Ed Patch",
+      "html": "Ed Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Character_Changes",
+      "text": "Character Changes",
+      "html": "<b>Character Changes</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "A.K.I.",
+      "text": "A.K.I.",
+      "html": "<b>A.K.I.</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Dee_Jay",
+      "text": "Dee Jay",
+      "html": "<b>Dee Jay</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Dhalsim",
+      "text": "Dhalsim",
+      "html": "<b>Dhalsim</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Jamie",
+      "text": "Jamie",
+      "html": "<b>Jamie</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "JP",
+      "text": "JP",
+      "html": "<b>JP</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "Ken",
+      "text": "Ken",
+      "html": "<b>Ken</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "Luke",
+      "text": "Luke",
+      "html": "<b>Luke</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Manon",
+      "text": "Manon",
+      "html": "<b>Manon</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Rashid",
+      "text": "Rashid",
+      "html": "<b>Rashid</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "Ryu",
+      "text": "Ryu",
+      "html": "<b>Ryu</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Ed released",
+      "items": [
+        {
+          "index": 0,
+          "text": "Ed released",
+          "html": "Ed released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Drive Rush Simultaneous activation no longer randomly gives the frame advantage to one player Perfect Parry Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame Armor Break Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack Input Buffers Fixed issue where input buffer after blocking an attack was not set correctly for Drive Reversal and some other attacks Modern Controls Fixed issue where S button would not result in damage scaling if a special was input during a Drive Rush screen freeze",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Rush Simultaneous activation no longer randomly gives the frame advantage to one player",
+          "html": "<style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Drive Rush</span>\n<ul><li>Simultaneous activation no longer randomly gives the frame advantage to one player</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Perfect Parry Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame",
+          "html": "Perfect Parry\n<ul><li>Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Armor Break Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack",
+          "html": "Armor Break\n<ul><li>Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Input Buffers Fixed issue where input buffer after blocking an attack was not set correctly for Drive Reversal and some other attacks",
+          "html": "Input Buffers\n<ul><li>Fixed issue where input buffer after blocking an attack was not set correctly for <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span> and some other attacks</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Modern Controls Fixed issue where S button would not result in damage scaling if a special was input during a Drive Rush screen freeze",
+          "html": "Modern Controls<b></b>\n<ul><li>Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">S</span> button would not result in damage scaling if a special was input during a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span> screen freeze</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "Simultaneous activation no longer randomly gives the frame advantage to one player",
+      "items": [
+        {
+          "index": 0,
+          "text": "Simultaneous activation no longer randomly gives the frame advantage to one player",
+          "html": "Simultaneous activation no longer randomly gives the frame advantage to one player"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame",
+          "html": "Fixed issue where a Perfect Parry could occur when absorbing a hit on the 3rd startup frame"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack",
+          "html": "Fixed issue where Armor Break would not occur properly if the defender was in armor hitstop from another attack"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Fixed issue where input buffer after blocking an attack was not set correctly for Drive Reversal and some other attacks",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where input buffer after blocking an attack was not set correctly for Drive Reversal and some other attacks",
+          "html": "Fixed issue where input buffer after blocking an attack was not set correctly for <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span> and some other attacks"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Fixed issue where S button would not result in damage scaling if a special was input during a Drive Rush screen freeze",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where S button would not result in damage scaling if a special was input during a Drive Rush screen freeze",
+          "html": "Fixed issue where <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">S</span> button would not result in damage scaling if a special was input during a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span> screen freeze"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "2LP Range increased 0.94 → 0.96 5MP Active frames increased 3 → 5 (better meaty setups, stronger in neutral)",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LP Range increased 0.94 → 0.96",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>\n<ul><li>Range increased 0.94 → 0.96</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "5MP Active frames increased 3 → 5 (better meaty setups, stronger in neutral)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5MP</span>\n<ul><li>Active frames increased 3 → 5 (better meaty setups, stronger in neutral)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "Range increased 0.94 → 0.96",
+      "items": [
+        {
+          "index": 0,
+          "text": "Range increased 0.94 → 0.96",
+          "html": "Range increased 0.94 → 0.96"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Active frames increased 3 → 5 (better meaty setups, stronger in neutral)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Active frames increased 3 → 5 (better meaty setups, stronger in neutral)",
+          "html": "Active frames increased 3 → 5 (better meaty setups, stronger in neutral)"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks) Aerial Lightning Kicks (j.236K) 20% Starter scaling added (less rewarding on Punish Counter when used against throws)",
+      "items": [
+        {
+          "index": 0,
+          "text": "5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>\n<ul><li>Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Aerial Lightning Kicks (j.236K) 20% Starter scaling added (less rewarding on Punish Counter when used against throws)",
+          "html": "Aerial Lightning Kicks (j.236K)\n<ul><li>20% Starter scaling added (less rewarding on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> when used against throws)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+          "html": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "20% Starter scaling added (less rewarding on Punish Counter when used against throws)",
+      "items": [
+        {
+          "index": 0,
+          "text": "20% Starter scaling added (less rewarding on Punish Counter when used against throws)",
+          "html": "20% Starter scaling added (less rewarding on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> when used against throws)"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Funky Slicer (214K~LK) Less pushback on block Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Funky Slicer (214K~LK) Less pushback on block Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">Funky Slicer</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214K~LK</span>)\n<ul><li>Less pushback on block</li>\n<li>Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Less pushback on block Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Less pushback on block",
+          "html": "Less pushback on block"
+        },
+        {
+          "index": 1,
+          "text": "Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)",
+          "html": "Larger hurtbox during recovery (easier to pressure Dee Jay or whiff punish)"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "HP Yoga Flame (63214HP) Fixed issue where 2nd hit dealt normal damage on Counter-hit/Punish Counter",
+      "items": [
+        {
+          "index": 0,
+          "text": "HP Yoga Flame (63214HP) Fixed issue where 2nd hit dealt normal damage on Counter-hit/Punish Counter",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP Yoga Flame</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">63214HP</span>)\n<ul><li>Fixed issue where 2nd hit dealt normal damage on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Counter-hit/Punish Counter</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "Fixed issue where 2nd hit dealt normal damage on Counter-hit/Punish Counter",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 2nd hit dealt normal damage on Counter-hit/Punish Counter",
+          "html": "Fixed issue where 2nd hit dealt normal damage on <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Counter-hit/Punish Counter</span>"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Forward Throw (LPLK) Can now hold LP+LK to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7) SA1 (236236K) Damage increased by 100 on both the regular version and Drink ender Reduced pushback on Hit in the corner KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki) SA2 (214214P) After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Forward Throw (LPLK) Can now hold LP+LK to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)",
+          "html": "Forward Throw (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LPLK</span>)\n<ul><li>Can now hold <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span> to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "SA1 (236236K) Damage increased by 100 on both the regular version and Drink ender Reduced pushback on Hit in the corner KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Damage increased by 100 on both the regular version and Drink ender</li>\n<li>Reduced pushback on Hit in the corner</li>\n<li>KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "SA2 (214214P) After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214P</span>)\n<ul><li>After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Can now hold LP+LK to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Can now hold LP+LK to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)",
+          "html": "Can now hold <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span> to gain 1 Drink Level (prevents throw loop, but Jamie is still KD +7)"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "Damage increased by 100 on both the regular version and Drink ender Reduced pushback on Hit in the corner KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Damage increased by 100 on both the regular version and Drink ender",
+          "html": "Damage increased by 100 on both the regular version and Drink ender"
+        },
+        {
+          "index": 1,
+          "text": "Reduced pushback on Hit in the corner",
+          "html": "Reduced pushback on Hit in the corner"
+        },
+        {
+          "index": 2,
+          "text": "KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)",
+          "html": "KD Advantage increased by 5 frames (allows Jamie to use Drink ender while maintaining oki)"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)",
+      "items": [
+        {
+          "index": 0,
+          "text": "After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)",
+          "html": "After the install timer ends, Jamie retains his previous Drink Level (no longer resets to DL0)"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "5HP Expanded foot/torso hurtbox during active and recovery frames 2HP Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts) Departure (214P/PP) 20% Starter scaling added Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (OD) Amnesia (22K/KK), successful counter JP no longer builds Super meter while bombs are active or until combo ends Bombs no longer dissipate Super-priority projectiles Starter scaling (when Bomb starts the combo) increased 15% → 50% Immediate scaling (when comboing into Bomb) increased 15% → 60% Canceling an attack into SA3/CA now detonates the Bombs immediately to prevent bypassing this damage scaling",
+      "items": [
+        {
+          "index": 0,
+          "text": "5HP Expanded foot/torso hurtbox during active and recovery frames",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span>\n<ul><li>Expanded foot/torso hurtbox during active and recovery frames</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "2HP Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HP</span>\n<ul><li>Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Departure (214P/PP) 20% Starter scaling added Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (OD)",
+          "html": "Departure (214P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span>)\n<ul><li>20% Starter scaling added</li>\n<li>Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span>)</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Amnesia (22K/KK), successful counter JP no longer builds Super meter while bombs are active or until combo ends Bombs no longer dissipate Super-priority projectiles Starter scaling (when Bomb starts the combo) increased 15% → 50% Immediate scaling (when comboing into Bomb) increased 15% → 60% Canceling an attack into SA3/CA now detonates the Bombs immediately to prevent bypassing this damage scaling",
+          "html": "Amnesia (22K/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">KK</span>), successful counter\n<ul><li>JP no longer builds <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> meter while bombs are active or until combo ends</li>\n<li>Bombs no longer dissipate <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span>-priority projectiles</li>\n<li>Starter scaling (when Bomb starts the combo) increased 15% → 50%</li>\n<li>Immediate scaling (when comboing into Bomb) increased 15% → 60%</li>\n<li>Canceling an attack into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> now detonates the Bombs immediately to prevent bypassing this damage scaling</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Expanded foot/torso hurtbox during active and recovery frames",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded foot/torso hurtbox during active and recovery frames",
+          "html": "Expanded foot/torso hurtbox during active and recovery frames"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)",
+          "html": "Arm hurtbox is no longer anti-air invincible (more susceptible to trading on late anti-air attempts)"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "20% Starter scaling added Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (OD)",
+      "items": [
+        {
+          "index": 0,
+          "text": "20% Starter scaling added",
+          "html": "20% Starter scaling added"
+        },
+        {
+          "index": 1,
+          "text": "Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (OD)",
+          "html": "Increased opponent's Drive gauge recovery on Parry: 5000 → 7500 (regular) / 2500x2 → 3500x2 (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD</span>)"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "JP no longer builds Super meter while bombs are active or until combo ends Bombs no longer dissipate Super-priority projectiles Starter scaling (when Bomb starts the combo) increased 15% → 50% Immediate scaling (when comboing into Bomb) increased 15% → 60% Canceling an attack into SA3/CA now detonates the Bombs immediately to prevent bypassing this damage scaling",
+      "items": [
+        {
+          "index": 0,
+          "text": "JP no longer builds Super meter while bombs are active or until combo ends",
+          "html": "JP no longer builds <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> meter while bombs are active or until combo ends"
+        },
+        {
+          "index": 1,
+          "text": "Bombs no longer dissipate Super-priority projectiles",
+          "html": "Bombs no longer dissipate <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span>-priority projectiles"
+        },
+        {
+          "index": 2,
+          "text": "Starter scaling (when Bomb starts the combo) increased 15% → 50%",
+          "html": "Starter scaling (when Bomb starts the combo) increased 15% → 50%"
+        },
+        {
+          "index": 3,
+          "text": "Immediate scaling (when comboing into Bomb) increased 15% → 60%",
+          "html": "Immediate scaling (when comboing into Bomb) increased 15% → 60%"
+        },
+        {
+          "index": 4,
+          "text": "Canceling an attack into SA3/CA now detonates the Bombs immediately to prevent bypassing this damage scaling",
+          "html": "Canceling an attack into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> now detonates the Bombs immediately to prevent bypassing this damage scaling"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "Forward Throw (LPLK) More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window) 5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks) OD Air Tatsu (j.214KK) Landing recovery on whiff increased 14 → 21 (harder to escape the corner) Collision box expanded so opponents are less likely to jump over this move",
+      "items": [
+        {
+          "index": 0,
+          "text": "Forward Throw (LPLK) More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)",
+          "html": "Forward Throw (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LPLK</span>)\n<ul><li>More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>\n<ul><li>Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "OD Air Tatsu (j.214KK) Landing recovery on whiff increased 14 → 21 (harder to escape the corner) Collision box expanded so opponents are less likely to jump over this move",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Air Tatsu</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">j.214KK</span>)\n<ul><li>Landing recovery on whiff increased 14 → 21 (harder to escape the corner)</li>\n<li>Collision box expanded so opponents are less likely to jump over this move</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)",
+      "items": [
+        {
+          "index": 0,
+          "text": "More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)",
+          "html": "More pushback against cornered opponents (can still walk for a throw loop with ~3f timing window)"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "tag_name": "ul",
+      "text": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+          "html": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "tag_name": "ul",
+      "text": "Landing recovery on whiff increased 14 → 21 (harder to escape the corner) Collision box expanded so opponents are less likely to jump over this move",
+      "items": [
+        {
+          "index": 0,
+          "text": "Landing recovery on whiff increased 14 → 21 (harder to escape the corner)",
+          "html": "Landing recovery on whiff increased 14 → 21 (harder to escape the corner)"
+        },
+        {
+          "index": 1,
+          "text": "Collision box expanded so opponents are less likely to jump over this move",
+          "html": "Collision box expanded so opponents are less likely to jump over this move"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "tag_name": "ul",
+      "text": "2MP Whiff recovery increased 14 → 17 with a larger hurtbox Aerial Flash Knuckle (j.214P) When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20 Larger feet hurtbox on frame 16 until end of recovery SA1 (236236P) Wider projectile-vulnerable hurtbox on startup frames 1-5",
+      "items": [
+        {
+          "index": 0,
+          "text": "2MP Whiff recovery increased 14 → 17 with a larger hurtbox",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span>\n<ul><li>Whiff recovery increased 14 → 17 with a larger hurtbox</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Aerial Flash Knuckle (j.214P) When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20 Larger feet hurtbox on frame 16 until end of recovery",
+          "html": "Aerial Flash Knuckle (j.214P)\n<ul><li>When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20</li>\n<li>Larger feet hurtbox on frame 16 until end of recovery</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "SA1 (236236P) Wider projectile-vulnerable hurtbox on startup frames 1-5",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236P</span>)\n<ul><li>Wider projectile-vulnerable hurtbox on startup frames 1-5</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "tag_name": "ul",
+      "text": "Whiff recovery increased 14 → 17 with a larger hurtbox",
+      "items": [
+        {
+          "index": 0,
+          "text": "Whiff recovery increased 14 → 17 with a larger hurtbox",
+          "html": "Whiff recovery increased 14 → 17 with a larger hurtbox"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "tag_name": "ul",
+      "text": "When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20 Larger feet hurtbox on frame 16 until end of recovery",
+      "items": [
+        {
+          "index": 0,
+          "text": "When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20",
+          "html": "When performed near the jump apex, has a shorter trajectory and landing recovery on whiff increased 13 → 20"
+        },
+        {
+          "index": 1,
+          "text": "Larger feet hurtbox on frame 16 until end of recovery",
+          "html": "Larger feet hurtbox on frame 16 until end of recovery"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "tag_name": "ul",
+      "text": "Wider projectile-vulnerable hurtbox on startup frames 1-5",
+      "items": [
+        {
+          "index": 0,
+          "text": "Wider projectile-vulnerable hurtbox on startup frames 1-5",
+          "html": "Wider projectile-vulnerable hurtbox on startup frames 1-5"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "tag_name": "ul",
+      "text": "En Haut 1 (4MK) Retains greater momentum out of Drive Rush SA2 (214214K) Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)",
+      "items": [
+        {
+          "index": 0,
+          "text": "En Haut 1 (4MK) Retains greater momentum out of Drive Rush",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">En Haut 1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">4MK</span>)\n<ul><li>Retains greater momentum out of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span></li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "SA2 (214214K) Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">214214K</span>)\n<ul><li>Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "tag_name": "ul",
+      "text": "Retains greater momentum out of Drive Rush",
+      "items": [
+        {
+          "index": 0,
+          "text": "Retains greater momentum out of Drive Rush",
+          "html": "Retains greater momentum out of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span>"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "tag_name": "ul",
+      "text": "Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)",
+          "html": "Juggles more consistently; if opponent drops out, their knockdown period is extended (less likely for Manon to be punished)"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "tag_name": "ul",
+      "text": "5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks) OD Spinning Mixer (236PP) Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out Wall Jump Fixed issue where performing certain moves would not put Rashid into a Forced Knockdown state",
+      "items": [
+        {
+          "index": 0,
+          "text": "5LP Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>\n<ul><li>Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Spinning Mixer (236PP) Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Spinning Mixer</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236PP</span>)\n<ul><li>Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Wall Jump Fixed issue where performing certain moves would not put Rashid into a Forced Knockdown state",
+          "html": "Wall Jump\n<ul><li>Fixed issue where performing certain moves would not put Rashid into a <a href=\"/w/Street_Fighter_6/Glossary#Forced_Knockdown\" title=\"Street Fighter 6/Glossary\">Forced Knockdown</a> state</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "tag_name": "ul",
+      "text": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)",
+          "html": "Hurtbox expanded downward on startup (more easily counterpoked by low-angled attacks)"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "tag_name": "ul",
+      "text": "Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out",
+      "items": [
+        {
+          "index": 0,
+          "text": "Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out",
+          "html": "Now has 5 frames of Anti-Air Invuln (9-13f) after Full Invuln frames run out"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "tag_name": "ul",
+      "text": "Fixed issue where performing certain moves would not put Rashid into a Forced Knockdown state",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where performing certain moves would not put Rashid into a Forced Knockdown state",
+          "html": "Fixed issue where performing certain moves would not put Rashid into a <a href=\"/w/Street_Fighter_6/Glossary#Forced_Knockdown\" title=\"Street Fighter 6/Glossary\">Forced Knockdown</a> state"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "tag_name": "ul",
+      "text": "Solar Plexus Strike (6HP) Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure) Hadoken (236P) Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks) OD Shoryuken (623PP) First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs LP Hashogeki (214LP) Block Advantage -4 → -3 with reduced pushback on block Increased pushback on block vs. Burnout MP Hashogeki (214MP) Expanded the attack and projectile clash hitbox forward HP Hashogeki (214HP) Reduced pushback on block Expanded the attack and projectile clash hitbox forward OD Hashogeki (214PP) Reduced pushback on hit/block Expanded the attack and projectile clash hitbox forward Denjin Hashogeki (Denjin 214P/PP) Reduced pushback on block Expanded the attack and projectile clash hitbox forward Denjin OD version damage increased 600 → 1000 SA1 (236236P) Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Solar Plexus Strike (6HP) Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Solar Plexus Strike</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">6HP</span>)\n<ul><li>Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Hadoken (236P) Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)",
+          "html": "Hadoken (236P)\n<ul><li>Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "OD Shoryuken (623PP) First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Shoryuken</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">623PP</span>)\n<ul><li>First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "LP Hashogeki (214LP) Block Advantage -4 → -3 with reduced pushback on block Increased pushback on block vs. Burnout",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP Hashogeki</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">214LP</span>)\n<ul><li>Block Advantage <span style=\"color: #b70c0b;\"><b>-4</b></span> → <span style=\"color: #ff6347;\">-3</span> with reduced pushback on block</li>\n<li>Increased pushback on block vs. Burnout</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "MP Hashogeki (214MP) Expanded the attack and projectile clash hitbox forward",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP Hashogeki</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MP</span>)\n<ul><li>Expanded the attack and projectile clash hitbox forward</li></ul>"
+        },
+        {
+          "index": 5,
+          "text": "HP Hashogeki (214HP) Reduced pushback on block Expanded the attack and projectile clash hitbox forward",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP Hashogeki</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">214HP</span>)\n<ul><li>Reduced pushback on block</li>\n<li>Expanded the attack and projectile clash hitbox forward</li></ul>"
+        },
+        {
+          "index": 6,
+          "text": "OD Hashogeki (214PP) Reduced pushback on hit/block Expanded the attack and projectile clash hitbox forward",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Hashogeki</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span>)\n<ul><li>Reduced pushback on hit/block</li>\n<li>Expanded the attack and projectile clash hitbox forward</li></ul>"
+        },
+        {
+          "index": 7,
+          "text": "Denjin Hashogeki (Denjin 214P/PP) Reduced pushback on block Expanded the attack and projectile clash hitbox forward Denjin OD version damage increased 600 → 1000",
+          "html": "Denjin Hashogeki (Denjin 214P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span>)\n<ul><li>Reduced pushback on block</li>\n<li>Expanded the attack and projectile clash hitbox forward</li>\n<li><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">Denjin OD</span> version damage increased 600 → 1000</li></ul>"
+        },
+        {
+          "index": 8,
+          "text": "SA1 (236236P) Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236P</span>)\n<ul><li>Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "tag_name": "ul",
+      "text": "Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)",
+          "html": "Proximity guard hitbox now reaches the full length of the move's range on frame 2 (much harder for the opponent to walk out of pressure)"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "tag_name": "ul",
+      "text": "Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)",
+          "html": "Reduced the extended arm hurtbox (harder to jump over, counter-poke, or punish with invincible attacks)"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "tag_name": "ul",
+      "text": "First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs",
+      "items": [
+        {
+          "index": 0,
+          "text": "First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs",
+          "html": "First hit now knocks down to prevent Ryu from being punished when the 2nd hit whiffs"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "tag_name": "ul",
+      "text": "Block Advantage -4 → -3 with reduced pushback on block Increased pushback on block vs. Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Block Advantage -4 → -3 with reduced pushback on block",
+          "html": "Block Advantage <span style=\"color: #b70c0b;\"><b>-4</b></span> → <span style=\"color: #ff6347;\">-3</span> with reduced pushback on block"
+        },
+        {
+          "index": 1,
+          "text": "Increased pushback on block vs. Burnout",
+          "html": "Increased pushback on block vs. Burnout"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "tag_name": "ul",
+      "text": "Expanded the attack and projectile clash hitbox forward",
+      "items": [
+        {
+          "index": 0,
+          "text": "Expanded the attack and projectile clash hitbox forward",
+          "html": "Expanded the attack and projectile clash hitbox forward"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "tag_name": "ul",
+      "text": "Reduced pushback on block Expanded the attack and projectile clash hitbox forward",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on block",
+          "html": "Reduced pushback on block"
+        },
+        {
+          "index": 1,
+          "text": "Expanded the attack and projectile clash hitbox forward",
+          "html": "Expanded the attack and projectile clash hitbox forward"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "tag_name": "ul",
+      "text": "Reduced pushback on hit/block Expanded the attack and projectile clash hitbox forward",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on hit/block",
+          "html": "Reduced pushback on hit/block"
+        },
+        {
+          "index": 1,
+          "text": "Expanded the attack and projectile clash hitbox forward",
+          "html": "Expanded the attack and projectile clash hitbox forward"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "tag_name": "ul",
+      "text": "Reduced pushback on block Expanded the attack and projectile clash hitbox forward Denjin OD version damage increased 600 → 1000",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced pushback on block",
+          "html": "Reduced pushback on block"
+        },
+        {
+          "index": 1,
+          "text": "Expanded the attack and projectile clash hitbox forward",
+          "html": "Expanded the attack and projectile clash hitbox forward"
+        },
+        {
+          "index": 2,
+          "text": "Denjin OD version damage increased 600 → 1000",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">Denjin OD</span> version damage increased 600 → 1000"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "tag_name": "ul",
+      "text": "Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)",
+          "html": "Reduced the extended arm hurtbox (harder to jump over or punish with invincible attacks, and more effective against other projectiles)"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "tag_name": "ul",
+      "text": "OD Double Lariat (PPP) 1st hit combos into SA3/CA when canceled (causes a brief crumple state on grounded opponents) Faster horizontal movement on startup 2nd hit connects vs. grounded opponents 1f earlier (for combo consistency) 1st hit reduced knockback distance vs. airborne opponents SA1 (236236K) Hitbox extended downward (can juggle and anti-air more consistently)",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Double Lariat (PPP) 1st hit combos into SA3/CA when canceled (causes a brief crumple state on grounded opponents) Faster horizontal movement on startup 2nd hit connects vs. grounded opponents 1f earlier (for combo consistency) 1st hit reduced knockback distance vs. airborne opponents",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Double Lariat</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PPP</span>)\n<ul><li>1st hit combos into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> when canceled (causes a brief crumple state on grounded opponents)</li>\n<li>Faster horizontal movement on startup</li>\n<li>2nd hit connects vs. grounded opponents 1f earlier (for combo consistency)</li>\n<li>1st hit reduced knockback distance vs. airborne opponents</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "SA1 (236236K) Hitbox extended downward (can juggle and anti-air more consistently)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Hitbox extended downward (can juggle and anti-air more consistently)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "tag_name": "ul",
+      "text": "1st hit combos into SA3/CA when canceled (causes a brief crumple state on grounded opponents) Faster horizontal movement on startup 2nd hit connects vs. grounded opponents 1f earlier (for combo consistency) 1st hit reduced knockback distance vs. airborne opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "1st hit combos into SA3/CA when canceled (causes a brief crumple state on grounded opponents)",
+          "html": "1st hit combos into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3/CA</span> when canceled (causes a brief crumple state on grounded opponents)"
+        },
+        {
+          "index": 1,
+          "text": "Faster horizontal movement on startup",
+          "html": "Faster horizontal movement on startup"
+        },
+        {
+          "index": 2,
+          "text": "2nd hit connects vs. grounded opponents 1f earlier (for combo consistency)",
+          "html": "2nd hit connects vs. grounded opponents 1f earlier (for combo consistency)"
+        },
+        {
+          "index": 3,
+          "text": "1st hit reduced knockback distance vs. airborne opponents",
+          "html": "1st hit reduced knockback distance vs. airborne opponents"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "tag_name": "ul",
+      "text": "Hitbox extended downward (can juggle and anti-air more consistently)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hitbox extended downward (can juggle and anti-air more consistently)",
+          "html": "Hitbox extended downward (can juggle and anti-air more consistently)"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 1.04 Game Version 1.04 date February 27, 2024 Summary Ed Release. Several balance changes and bug fixes. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.04",
+              "html": "<a class=\"mw-selflink selflink\">1.04</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "1.04",
+              "html": "1.04",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "February 27, 2024",
+              "html": "February 27, 2024",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Ed Release. Several balance changes and bug fixes.",
+              "html": "<b>Ed Release</b>. Several balance changes and bug fixes.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/en/battle_change/20240227\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/en/battle_change/20240227",
+      "raw_href": "https://www.streetfighter.com/6/buckler/en/battle_change/20240227",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 1,
+      "text": "Forced Knockdown",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/Glossary#Forced_Knockdown",
+      "raw_href": "/w/Street_Fighter_6/Glossary#Forced_Knockdown",
+      "title": "Street Fighter 6/Glossary",
+      "class_name": ""
+    }
+  ],
+  "metrics": {
+    "heading_count": 15,
+    "paragraph_count": 15,
+    "link_count": 2,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 5802,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

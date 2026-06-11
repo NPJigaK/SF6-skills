@@ -2,6 +2,151 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] review | JP Year1 ODアムネジア 5790 combo calculation model gap
+- 原本:
+  - `https://www.youtube.com/shorts/g-m0AFGe4jY` (yt-dlp で metadata / video frame を一時取得して確認)
+- 作成:
+  - `wiki/reviews/2026-06-11-jp-year1-od-amnesia-combo-damage-calculation-model-gap.md`
+  - `wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md`
+- 更新:
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `yt-dlp 2026.06.09` で YouTube Short metadata と 1080x1920/60fps video を一時取得した。
+  - `ffmpeg` で 0.1s / 0.5s 刻みの gameplay crop を作り、`720/510/510/650/440/360/350/125/125/SA3 2000` の hit ledger と `16 HITS / 5790` を確認した。
+  - `jq` で JP official / SuperCombo frame-data と 2024-02-27 Battle Change を確認し、`jq -n '[720,510,510,650,440,360,350,125,125,2000] | add'` が `5790` を返すことを確認した。
+- メモ:
+  - 前回の `evidence_gap` 見立ては不正確だった。このケースは source 不足ではなく、delayed OD Amnesia Bomb、2024-02-27 前の即時補正15%、Punish Counter、SA3 minimum scaling を統合する計算手順が不足していた。
+  - exact combo damage query では、route text だけでなく damaging hit ledger を作ってから答える。
+- 未解決事項:
+  - 通常 combo hit scaling の基礎表を、どの source を正として wiki に取り込むか。
+  - YouTube / community video evidence の raw capture policy と review 基準を定義するか。
+
+## [2026-06-11] output-fix | Battle Change canonical character slugs and SuperCombo upstream regeneration
+- 原本:
+  - `raw/battle-change/official/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/rendered/main.dom.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/versions/<version-slug>/manifest.json`
+- 更新:
+  - `tools/battle_change/characters.py`
+  - `tools/battle_change/official/extract.py`
+  - `tools/battle_change/supercombo/extract.py`
+  - `tests/battle_change/test_official_extraction.py`
+  - `tests/battle_change/test_supercombo_extraction.py`
+  - `tests/test_output_data_json_only.py`
+  - `wiki/outputs/data/battle-change/official/change-events.json`
+  - `wiki/outputs/data/battle-change/official/move-change-index.json`
+  - `wiki/outputs/data/battle-change/official/schema.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/versions.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/official-battle-change-crosswalk.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/change-events.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/move-change-index.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/schema.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/version-captures.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/validation.batch.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/manifest.json`
+  - `wiki/sources/capcom-official-battle-change-list.md`
+  - `wiki/sources/supercombo-street-fighter-6-patch-notes.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `python -m pytest tests/battle_change/test_official_extraction.py tests/battle_change/test_supercombo_extraction.py tests/test_output_data_json_only.py -q`
+  - `python -m tools.battle_change.official.extract --repo-root .`
+  - `python -m tools.battle_change.supercombo.extract --repo-root .`
+- メモ:
+  - `fighter_tool_name` / `fighter_key` は source-local key として保持し、frame-data output との join には `character_slug` を使う。`gouki` / `honda` / `vega` は `gouki_akuma` / `ehonda` / `vega_mbison` に対応させた。
+  - SuperCombo upstream derived artifacts は `tools.battle_change.supercombo.extract` で root DOM table と detail manifests から再生成する。`versions.json` の `fields` も row keys と同期する。
+- 未解決事項:
+  - `target_title` の技名正規化はまだ source text ベースの機械抽出。よく使う character / move から人間レビューで補正する。
+
+## [2026-06-11] output | SuperCombo Patch Notes community change-event index
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/versions/<version-slug>/page.raw.wikitext`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/versions.json`
+- 作成:
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/change-events.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/move-change-index.json`
+  - `tools/battle_change/supercombo/__init__.py`
+  - `tools/battle_change/supercombo/extract.py`
+  - `tests/battle_change/test_supercombo_extraction.py`
+- 更新:
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/schema.json`
+  - `wiki/sources/supercombo-street-fighter-6-patch-notes.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `python -m pytest tests/battle_change/test_supercombo_extraction.py`
+  - `python -m tools.battle_change.supercombo.extract --repo-root .`
+  - `change-events.json` は 1374 community events、`move-change-index.json` は 1118 targets、明示 before/after 数値変更を持つ event は 556 件。
+  - `source_authority` は `community`、`source_family` は `supercombo-patch-notes`、raw path は `raw/web-pages/wiki.supercombo.gg/patch-notes/versions/` 配下に限定。
+- メモ:
+  - top-level bullet を 1 event とし、nested bullet と wikitext table text を同じ event に保持する。SuperCombo の説明は公式 source の置き換えではなく、combo / juggle / blockstring への影響や community terminology を探す補助 index として扱う。
+  - 公式 Battle Change id は SuperCombo page の明示 link から来た `official_battle_change_id_from_link` として保持し、公式 event との同一性は仮定しない。
+- 未解決事項:
+  - `target_title` と `change_types` は機械抽出なので、よく使う character / move から人間レビューで refinement する。
+
+## [2026-06-11] output | Battle Change change-event index
+- 原本:
+  - `raw/battle-change/official/manifest.json`
+  - `wiki/outputs/data/battle-change/official/changes.json`
+- 作成:
+  - `wiki/outputs/data/battle-change/official/change-events.json`
+  - `wiki/outputs/data/battle-change/official/move-change-index.json`
+- 更新:
+  - `tools/battle_change/official/extract.py`
+  - `tests/battle_change/test_official_extraction.py`
+  - `wiki/outputs/data/battle-change/official/schema.json`
+  - `wiki/sources/capcom-official-battle-change-list.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `python -m pytest tests/battle_change/test_official_extraction.py`
+  - `python -m tools.battle_change.official.extract --repo-root .`
+  - `change-events.json` は 1820 events、`move-change-index.json` は 1419 targets。
+- メモ:
+  - `change-events.json` は公式 change rows の検索補助。`change_types`、明示的な before/after、`confidence` を付けるが、公式本文を置き換える正規化版ではない。
+  - combo / frame-data query では、現在値は frame-data output、過去変更の原因候補は Battle Change index、最終根拠は公式 `text_html` と raw source に戻す。
+- 未解決事項:
+  - `change_types` の機械分類は query 実績に合わせて調整する。非数値 bugfix / hitbox / behavior 変更は数値計算ではなく原因候補として扱う。
+
+## [2026-06-11] ingest | SuperCombo Patch Notes web-page raw capture
+- 原本:
+  - `https://wiki.supercombo.gg/w/Street_Fighter_6/Patch_Notes`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/manifest.json`
+- 作成:
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/versions/<version-slug>/`
+  - `wiki/sources/supercombo-street-fighter-6-patch-notes.md`
+  - `wiki/reviews/2026-06-11-supercombo-patch-notes-web-page-capture-review.md`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/versions.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/official-battle-change-crosswalk.json`
+  - `wiki/outputs/data/battle-change/supercombo-patch-notes/schema.json`
+- 更新:
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/validation.batch.json` は `passed`。
+  - Patch Notes table は 17 version rows、detail page capture は 17/17、detail validation は 17/17 passed。
+  - SuperCombo row から Capcom 公式 Battle Change id へ明示 link できるものは 16 rows。`1.00` は launch version で official battle_change id なし。
+  - 公式 Battle Change 側の `20251113`、`20251022`、`20250901`、`20230808` は SuperCombo Patch Notes table から直接リンクされていない。
+- メモ:
+  - Patch Notes 本体の wikitext は Cargo query だけなので、version 一覧は rendered DOM と derived output を入口にする。
+  - 各 version の詳細本文は `versions/<version-slug>/page.raw.wikitext` を正本にする。
+  - Capcom 公式 Battle Change List と SuperCombo Patch Notes は authority を分け、公式 source と重なる変更説明では公式を優先する。
+- 未解決事項:
+  - SuperCombo detail page の character 変更を、version 別 synthesis、character 別 synthesis、または official Battle Change の補助列としてどの粒度で昇格するか。
+  - Official-only update 4 件を SuperCombo timeline gap として扱うか、公式 hotfix-only update として分けるか。
+
 ## [2026-06-11] workflow | JSON data access uses jq
 - 更新:
   - `AGENTS.md`

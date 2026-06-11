@@ -1,0 +1,17 @@
+* Officially documented gameplay changes will be prioritized for these pages. Language and terminology might be changed from the source for clarity or to match the wiki's own terminology.
+* Version IDs and release dates were taken from the PC/Steam release. Consoles might include additional updates focused on improving game performance and stability, or minor bug fixes.
+
+{{#cargo_query:
+tables=SF6_Versions
+|fields=SF6_Versions.version, SF6_Versions.gameversion, SF6_Versions.date, SF6_Versions.summary, SF6_Versions.links
+|order by=SF6_Versions.date DESC
+|format=table
+}}
+
+<!--
+How to find data page
+https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.00
+https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.01
+-->
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]

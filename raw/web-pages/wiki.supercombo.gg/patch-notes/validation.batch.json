@@ -1,0 +1,28 @@
+{
+  "validation_schema_version": "supercombo_patch_notes_batch_validation/v1",
+  "created_at_utc": "2026-06-11T03:49:56Z",
+  "status": "passed",
+  "summary": {
+    "patch_notes_table_version_rows": 17,
+    "captured_version_detail_pages": 17,
+    "version_detail_validations_passed": 17,
+    "official_battle_change_matched_rows": 16,
+    "supercombo_rows_without_official_battle_change_link": 1,
+    "official_battle_change_rows_without_supercombo_link": 4,
+    "largest_wikitext_version": "1.10",
+    "largest_wikitext_bytes": 56996
+  },
+  "checks": {
+    "patch_notes_page_validation_passed": true,
+    "patch_notes_table_has_version_rows": true,
+    "all_version_detail_pages_captured": true,
+    "all_version_detail_validations_passed": true,
+    "all_version_rows_have_raw_wikitext": true,
+    "official_crosswalk_counts_are_consistent": true
+  },
+  "notes": [
+    "Patch Notes page wikitext contains a Cargo query; the rendered table is preserved in rendered/main.dom.json and compiled into wiki/outputs/data/battle-change/supercombo-patch-notes/versions.json.",
+    "Each version detail page has an independent raw web-page capture under versions/<version-slug>/.",
+    "Images were not downloaded for this patch-notes batch because no content media were requested or resolved; page text and rendered DOM are the canonical detail evidence."
+  ]
+}

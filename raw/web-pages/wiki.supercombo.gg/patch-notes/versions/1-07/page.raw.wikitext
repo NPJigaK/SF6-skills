@@ -1,0 +1,284 @@
+{{SF6-Version
+|version=[[Street Fighter 6/Version/1.07|1.07]]
+|gameversion=1.07
+|date=September 24, 2024
+|summary='''Terry Release'''. Minor balance changes and bug fixes.
+|links=[https://www.streetfighter.com/6/buckler/battle_change/20240924 Patch Notes]  
+}}
+<!--Full Version name: 1.0700.000-->
+
+== Terry Patch ==
+* Terry released
+<br>
+
+== '''Universal Changes''' ==
+* {{clr|DR|Drive Impact}}
+** Fixed issue where the proximity guard hitbox did not match the full attack hitbox range (A.K.I., Chun-Li, Dee Jay, Kimberly, Luke)
+** Fixed issues where absorbing an attack would affect the {{clr|DR|DI}} properties for some characters
+*** Blanka: proximity guard hitbox was shorter than usual, and the range on 2nd active frame was longer than usual
+*** Dee Jay: attack hitbox range became shorter than usual
+*** Kimberly: proximity guard hitbox would disappear on frames 1-17
+* {{clr|DR|Drive Reversal}}
+** Expanded the throw hurtbox to ensure all characters can punish with a throw at close range
+** Because some characters lacked strong punish options at {{sf6-adv|VM|-6}} due to {{clr|L|Light}} normal starter scaling, this gives a universal option for meterless damage and Drive gauge depletion
+* Perfect Parry
+** Fixed issue where, against specific projectile attacks with screen freeze properties, the player would incur the 10-frame recovery of a non-freeze Perfect Parry
+** Applies to 2nd hit onward for JP's Stribog (236P) and Rashid's Arabian Cyclone (214P)
+* Modern Controls
+** Fixed issue where 20% shortcut scaling would apply to manually input special moves during a screen freeze (e.g. {{clr|SA|Super}} freeze)
+* Assist Combos
+** Fixed issues when entering Burnout during certain Assist Combos; using the same Assist Combo during the recovery or buffer window of the previous move would prevent the 2nd hit of the sequence from coming out
+** Applies to {{clr|M|Assist Combo 2}} for Dhalsim, Juri, Luke, Kimberly, and Manon; {{clr|H|Assist Combo 3}} for JP, Juri, and Manon
+<br>
+
+== '''Key Character Changes''' ==
+
+=== '''A.K.I.''' ===
+* {{clr|DR|Drive Impact}}
+** Fixed issue where the proximity guard hitbox did not match the full attack hitbox range
+* {{clr|OD|OD Serpent Lash}} ({{clr|OD|236PP}})
+** Now applies {{clr|PC|Punish Counter}} advantage to Toxic Blossom crumple ({{sf6-adv|VP|+9}} before opponent becomes airborne)
+<br>
+
+=== '''Akuma''' ===
+* Gou Hadoken (236P)
+** Fixed issue where regular projectiles could be performed while an {{clr|OD|OD}} projectile was still on-screen
+<br>
+
+=== '''Blanka''' ===
+* {{clr|DR|Drive Impact}}
+** Fixed issue where absorbing an attack caused the proximity guard hitbox range to be shorter than usual, and the 2nd active frame hitbox to be longer than usual
+* {{clr|OD|OD Electric Thunder}} ({{clr|OD|214PP}} during {{clr|SA|SA2}})
+** Fixed issue that would cause an activated Blanka-chan doll to detonate with standard projectile priority rather than {{clr|OD|OD}} priority
+<br>
+
+=== '''Chun-Li''' ===
+* {{clr|DR|Drive Impact}}
+** Fixed issue where the proximity guard hitbox did not match the full attack hitbox range
+* {{clr|OD|OD Kikoken}} (Modern {{clr|OD|[4]6XX}})
+** Fixed issue where performing the manual input with Modern controls resulted in a regular Kikoken if any Down input was also used
+* {{clr|H|HK Tensho Kicks}} ({{clr|H|22HK}})
+** Increased knockdown time on the 1st hit (less likely to be punished if the opponent falls out between hits)
+<br>
+
+=== '''Dee Jay''' ===
+* {{clr|H|Face Breaker}} ({{clr|H|4HK}})
+** Collision box changed to make {{clr|OD|OD Jus Cool}} juggles more consistent (specials should no longer come out in the wrong direction)
+* {{clr|M|Threebeat Combo 1}} ({{clr|L|5LP}}~{{clr|M|MK}})
+** Reduced pushback on hit (keeps Dee Jay closer for the 3rd hit of the Target Combo for a strike/throw mixup)
+** Recovery increased 18 → 20
+** Hitstun increased 23 → 25 and Blockstun increased 18 → 20 (no change to overall advantage)
+** Hitconfirm window is 2f more lenient, making it possible to confirm a successful {{clr|M|MK}} after blocked {{clr|L|5LP}}
+** Now applies 20% Starter scaling (e.g. blocked {{clr|L|5LP}} that frame traps into {{clr|M|MK}})
+** No longer forces stand on hit
+* {{clr|M|Threebeat Combo 2}} ({{clr|L|5LP}}~{{clr|M|MK}}~{{clr|M|MK}})
+** Recovery decreased 21 → 19
+** Hitstun decreased 27 → 25 and Blockstun decreased 16 → 14 (no change to overall advantage)
+** Hitstop increased 9 → 11 (keeps the timing consistent for both players after the final hit despite the hitstun/blockstun changes)
+* {{clr|DR|Drive Impact}}
+** Fixed issue where the proximity guard hitbox did not match the full attack hitbox range
+** Fixed issue where absorbing an attack caused the attack hitbox range to be shorter than usual
+* Jackknife Maximum ([2]8K)
+** Initial hitbox expanded downward for consistency against moves with low-profile landing recovery (e.g. Juri's j.214K)
+* {{clr|M|Waning Moon}} ({{clr|M|214K~MK}})
+** Drive Damage on Block increased 4000 → 6000
+** {{clr|PC|Punish Counter}} now causes a ground bounce
+** 30% Starter scaling applied
+* {{clr|OD|OD Waning Moon}} ({{clr|OD|214KK}}~{{clr|M|MK}})
+** Now causes ground bounce vs. airborne opponents (can juggle into {{clr|SA|Supers}})
+* {{clr|SA|SA1}} ({{clr|SA|236236K}})
+** Juggle Limit increased 13 → 19
+** Now causes a sliding Hard Knockdown vs. airborne opponents
+<br>
+
+=== '''Dhalsim''' ===
+* {{clr|M|Assist Combo 2}}
+** With less than 2 bars of {{clr|SA|Super}} Gauge, changed to {{clr|M|4MK}} ~ {{clr|OD|63214PP}} ~ {{clr|H|2HK}}
+* {{clr|M|5MP}}
+** Hit Advantage increased {{sf6-adv|M|-2}} → {{sf6-adv|E|0}}
+* {{clr|H|5HK}}
+** {{clr|PC|Punish Counter}} Advantage increased {{sf6-adv|VP|+21}} → {{sf6-adv|VP|+24}}
+* {{clr|M|j.MP}}
+** The tip of the arm hurtbox can no longer be hit by cross-up attacks
+* {{clr|H|Nirvana Punch}} ({{clr|H|1HP}})
+** Reduced knockback vs. airborne opponents, allowing for stronger juggle routes
+* Charged Yoga Fire (236[P])
+** Block Advantage increased {{sf6-adv|M|-3}} → {{sf6-adv|M|-1}}
+** The start of the transition from regular to charged version delayed 5f → 7f (can hold the button longer without accidentally slowing down the uncharged fireball)
+* {{clr|OD|OD Yoga Fire}} ({{clr|OD|236PP}})
+** 1st hit deals more hitstun and less pushback, ensuring both will combo
+** Reduced body hurtbox during startup and recovery
+* {{clr|OD|OD Yoga Flame}} ({{clr|OD|63214PP}})
+** Expanded the attack hitbox of 1st hit
+** Expanded the combo-only hitboxes of 2nd hit onward when the 1st hit connects
+* {{clr|OD|OD Yoga Comet}} ({{clr|OD|j.63214PP}})
+** Fixed issue where if the opponent Perfect Parried the projectile, they would incur Perfect Parry scaling until Dhalsim landed (even when he could act while mid-air)
+* {{clr|SA|SA1}} ({{clr|SA|236236P}})
+** Now deals 792 recoverable gray damage on block, and Drive Damage on Block increased 2520 → 5040
+** Deals 492 Chip damage + 300 recoverable gray damage vs. Burnout
+** {{clr|L|LP}}/{{clr|M|MP}} version Recovery decreased 20f → 15f; Block Advantage {{sf6-adv|VM|-15}} → {{sf6-adv|VM|-10}} with increased pushback (usually safe if spaced)
+** These changes give Dhalsim a way to safely buffer {{clr|SA|SA1}} in neutral while chipping away at the opponent's health/Drive gauge if blocked
+** {{clr|H|HP}} version hurtbox is now crouching height until 3rd active frame (better anti-air)
+<br>
+
+=== '''Ed''' ===
+* {{clr|H|5HK}}
+** Blockstun increased 18 → 19
+** Block Advantage increased {{sf6-adv|P|+3}} → {{sf6-adv|VP|+4}}
+** {{clr|DR|DR Cancel}} Block Advantage increased {{sf6-adv|VP|+7}} → {{sf6-adv|VP|+8}}
+** Mostly relevant when forcing the opponent to stand block after a deep jump-in, since the move is crouchable
+* {{clr|H|j.HP}}
+** Active Frames increased 4 → 5, making it easier to time as a jump-in
+* {{clr|H|j.HK}}
+** Floats the opponent higher as an air-to-air and causes Ed to descend more quickly, making follow-up juggles much easier
+* {{clr|L|LP Psycho Blitz}} ({{clr|L|214LP}})
+** Increased pushback when blocked in the corner, making punish routes potentially more restrictive
+* {{clr|L|LK Psycho Flicker}} ({{clr|L|236LK}})
+** {{clr|PC|Punish Counter}} juggle follow-up timing is 1 frame more lenient
+* {{clr|SA|SA2}} ({{clr|SA|214214P}})
+** Now applies 20% scaling on {{clr|SA|Super}} gauge build until the end of the combo
+<br>
+
+=== '''E. Honda''' ===
+* {{clr|SA|SA2}} ({{clr|SA|[4]646K}})
+** Adjusted the pushback of the initial headbutt and the hitbox of the slap animation so that the opponent is less likely to fall out mid-combo
+** Increased knockdown time of the initial headbutt so that he is no longer punishable if the rest of the {{clr|SA|Super}} whiffs
+<br>
+
+=== '''Guile''' ===
+* Sonic Boom ([4]6P)
+** Reduced Super and Drive gauge build
+** {{clr|L|LP}}/{{clr|H|HP}} versions: Super Art gain 600 → 300, Drive gain 1000 → 500
+** {{clr|M|MP}} version: Super Art gain 600 → 450, Drive gain 1000 → 500
+<br>
+
+=== '''Jamie''' ===
+* {{clr|SA|SA1}} ({{clr|SA|236236K}})
+** Fixed issue where the damage would increase when the 1st or 2nd hit landed as a {{clr|PC|Counter-hit}}
+<br>
+
+=== '''JP''' ===
+* {{clr|M|5MK}}
+** Hitstun increased 23 → 25
+** Hit Advantage increased {{sf6-adv|P|+1}} → {{sf6-adv|P|+3}}
+** {{clr|DR|DR Cancel}} Hit Advantage increased {{sf6-adv|VP|+11}} → {{sf6-adv|VP|+13}}
+** Improved combo routes, particularly when canceled into {{clr|SA|SA2}}
+* {{clr|H|2HP}}
+** Arm hurtbox is anti-air invuln from 2nd active frame onward (mostly reverted the nerf from [[Street_Fighter_6/Version/1.04|Version 1.04]])
+* {{clr|H|Bylina}} ({{clr|H|6HK}})
+** Increased Juggle Limit; reduced the Juggle Increase value on 1st hit
+* Triglav (22P)
+** On a grounded hit, reduced the upward launch by 1 frame and extended the knockdown time by 1 frame
+** No change to the total knockdown advantage
+* Stribog (236P/{{clr|OD|PP}})
+** 2nd hit has more range when 1st hit connects, ensuring both hits will reach
+* Torbalan (236K/{{clr|OD|KK}})
+** Removed projectile collision box after the active frames have ended
+* Embrace (214K/{{clr|OD|KK}})
+** Immediate scaling reduced from 25% → 10% when comboed into
+<br>
+
+=== '''Juri''' ===
+* {{clr|M|Assist Combo 2}}
+** With less than 1 bar of {{clr|SA|Super}} Gauge, changed to {{clr|M|2MP}} ~ {{clr|OD|214KK}} ~ {{clr|H|623HP}}
+<br>
+
+=== '''Kimberly''' ===
+* {{clr|DR|Drive Impact}}
+** Fixed issue where the proximity guard hitbox did not match the full attack hitbox range
+** Fixed issue where absorbing an attack caused the proximity guard hitbox to disappear on frames 1-17
+* Shuriken Bomb (22P)
+** Damage scaling reduced from 20% Starter/Combo scaling to 10% Starter scaling only
+<br>
+
+=== '''Luke''' ===
+* {{clr|L|2LP}} / {{clr|L|2LK}}
+** Reduced pushback on hit and block
+* {{clr|M|2MP}}
+** Reduced pushback on block
+** Can now pressure with blocked {{clr|DR|DR~}}{{clr|M|2MP}} into {{clr|L|2LK}}~{{clr|L|2LP}} to frame trap and punish back walk
+* {{clr|H|Outlaw Kick}} ({{clr|H|4HK}})
+** Retains more {{clr|DR|Drive Rush}} momentum for combo consistency
+* {{clr|H|Triple Impact}} ({{clr|L|5LP}}~{{clr|M|MP}}~{{clr|H|HP}})
+** Removed 10% immediate scaling on {{clr|M|MP}}
+** Increased base damage on {{clr|H|HP}} 600 → 800
+* {{clr|DR|Drive Impact}}
+** Fixed issue where the proximity guard hitbox did not match the full attack hitbox range
+<br>
+
+=== '''M. Bison''' ===
+* Fixed issue where Psycho Mine could remain embedded after detonation, allowing two activations in one combo
+** Applied to {{clr|OD|OD Psycho Crusher Attack}} and Regular/{{clr|OD|OD}} Devil Reverse
+* {{clr|DR|Drive Reversal}}
+** Reduced horizontal range of the attack hitbox and proximity guard hitbox
+* Double Knee Press (236K)
+** Reduced pushback on block and reduced the recovery hurtbox width by the same amount
+** No real change to the punishable ranges, but follow-up combos are more consistent when a punish does connect
+*** This also makes it harder for M. Bison to set up a spacing trap afterwards
+** Fixed issue where if only the 1st hit connected, M. Bison would incur 5f extra whiff recovery that was intended for a fully-whiffed version
+* Psycho Crusher Attack ([4]6P/{{clr|OD|PP}})
+** Fixed issue where the hurtbox after passing through the opponent was different while in Burnout
+* Psycho Crusher Attack + Psycho Mine ([4]6P + Mine)
+** Can now only be canceled into {{clr|SA|SA3}} after connecting with the opponent
+*** This fixes an issue where after colliding with a projectile, the Psycho Crusher would whiff along with the {{clr|SA|SA3}}
+*** Now must connect with the opponent before the {{clr|SA|SA3}} cancel can occur
+** Fixed issue where the attack would be canceled mid-animation if it collided with a projectile after hitting the opponent
+* {{clr|OD|OD Psycho Crusher Attack + Psycho Mine}} ({{clr|OD|[4]6PP + Mine}})
+** After the first 2 attacks are Perfect Parried, the 3rd hit will only trigger a Mine detonation on hit
+** Fixed issue where extra combo scaling was applied to follow-ups when only this 3rd hit connected
+* Backfist Combo + Psycho Mine (214P + Mine)
+** Fixed issue where the Mine would detonate when the first hit was Perfect Parried and the 2nd hit whiffed
+* {{clr|OD|OD Backfist Combo + Psycho Mine}} ({{clr|OD|214PP + Mine}})
+** Detonation occurs 2 frames later and tweaked the hitstun/blockstun properties (less likely to whiff when the opponent is launched high on the screen)
+** Fixed issue where the Mine would detonate when any hit was Perfect Parried and later hits whiffed
+*** The Mine will still detonate after a Perfect Parry if any later hits connect on hit, block, parry, or armor
+* {{clr|OD|OD Devil Reverse}} / Devil Reverse + Psycho Mine ([2]8K~{{clr|OD|PP}} or [2]8K~P/{{clr|OD|PP}} + Mine)
+** Expanded collision box downward after the 1st hit connects
+** Fixed issue that caused later hits to occur on the wrong side of the opponent
+* {{clr|SA|SA1}} ({{clr|SA|236236K}})
+** Fixed issue where the timer would not stop during the attack
+* {{clr|SA|SA2}} ({{clr|SA|214214K}})
+** Fixed issue that caused the timer to stop for longer than intended after the cinematic on hit
+** This also affects other elements like Drive Gauge recovery
+** Fixed training mode bug that prevented wake-up reversals from coming out after the cinematic
+<br>
+
+=== '''Manon''' ===
+* {{clr|M|Assist Combo 2}}
+** With less than 1 bar of {{clr|SA|Super}} Gauge, changed to {{clr|M|5MK}} ~ {{clr|OD|236KK}} ~ {{clr|M|214MK}}
+<br>
+
+=== '''Marisa''' ===
+* Hurtbox (during Ground Bounce)
+** Changed to match other large characters for juggle consistency
+<br>
+
+=== '''Rashid''' ===
+* Backdash
+** Fixed issue where Rashid's collision box was smaller on frames 1-15
+* {{clr|L|2LP}}
+** Added a head hurtbox on frames 1-7 that is vulnerable only to air attacks (preventing its use as an anti-air)
+* Nail Assault (Modern Controls: 214X~6X~6X)
+** Input adjusted to require holding forward for the final attack in order to prevent overlap issues
+** Now easier to perform Assault Roll into an immediate attack
+* {{clr|M|Assist Combo 2}}
+** In Burnout, changed to {{clr|M|5MP}}~{{clr|H|HK}} ~ {{clr|H|214HP}}~6X~6X
+<br>
+
+=== '''Ryu''' ===
+* {{clr|H|Denjin Hashogeki}} ({{clr|H|D.214HP}})
+** Fixed issue where a regular {{clr|H|HP Hashogeki}} would come out if performed while a Hadoken was on-screen
+<br>
+
+=== '''Zangief''' ===
+* {{clr|M|Knee Hammer}} ({{clr|M|6MK}})
+** Blockstun reduced 17 → 16
+** Block Advantage decreased {{sf6-adv|M|-3}}{{sf6-adv|P|(+3)}} → {{sf6-adv|VM|-4}}{{sf6-adv|P|(+2)}}
+** Extends a wider body hurtbox from frame 2 onward (no change to leg hurtbox)
+** Adjusted Zangief's center axis on frames 2-6 to match visuals more closely
+* {{clr|H|Headbutt}} ({{clr|H|6HP}})
+** Hitstun increased 27 → 28
+** Hit Advantage increased {{sf6-adv|VP|+7}} → {{sf6-adv|VP|+8}}
+** {{clr|DR|DR Cancel}} Hit Advantage increased {{sf6-adv|VP|+15}} → {{sf6-adv|VP|+16}}
+** Now incurs 25% Starter scaling and 2-hit Combo scaling
+<br>

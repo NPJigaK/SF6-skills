@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 97570,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/2.0202",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:14:06Z",
+        "lastrevid": 361417,
+        "length": 1893,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.0202",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/2.0202&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.0202",
+        "revisions": [
+          {
+            "revid": 361417,
+            "parentid": 361415,
+            "user": "Spabobin",
+            "timestamp": "2026-04-15T07:29:14Z",
+            "size": 1893,
+            "sha1": "3c40346f53712bd7090be776b59511781d050506",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/2.0202|2.0202]]\n|gameversion=2.0202\n|date=April 15, 2026\n|summary=Bug fixes for the game system as well as JP and M. Bison.\n|links=[https://www.streetfighter.com/6/buckler/battle_change/20260415 Patch Notes]  \n}}\n<!--Full Version name: 2.0202.000-->\n\n== '''Universal Changes''' ==\n* '''Drive Parry'''\n** Fixed issue where {{clr|DR|Drive Rush}} could not be performed at certain timings after parrying an attack, causing the player to be locked into their parry recovery animation when attempting a punish\n* '''Input Buffer'''\n** If the opponent's {{clr|DR|Drive Rush}} freeze overlaps with a downed character's wakeup input buffer window, the buffer timing will be reduced from 10f → 7f\n** This change was made due to issues caused by the previous patch [[Street_Fighter_6/Version/2.02|(Version 2.02)]] which increased the wakeup input buffer by 3 frames\n* '''Modern Controls'''\n** Fixed issue where after certain airborne moves (e.g. Dhalsim's Yoga Float, Rashid's Wing Stroke), if the opponent activated {{clr|DR|Drive Rush}}, the airborne character could not use air normals with the Auto button for a short time\n<br>\n\n== '''Character Changes''' ==\n\n=== '''JP''' ===\n* {{clr|H|Departure: Shadow}} (214P/{{clr|OD|PP}}~{{clr|H|214HP}})\n** Fixed issue where the startup was 1 frame faster when canceled into from {{clr|L|2LK}}, {{clr|M|5MP}}, {{clr|M|2MK}}, or {{clr|H|5HK}}\n<br>\n\n=== '''M. Bison''' ===\n* Devil Reverse + Psycho Mine ([2]8K~P + Mine)\n** Fixed issue where the Psycho Mine would stay embedded if a {{clr|DR|Drive Reversal}} was performed after blocking the 2nd hit\n* Devil Reverse + Psycho Mine ([2]8K/{{clr|OD|KK}}~P + Mine) / Somersault Skull Diver ([2]8K/{{clr|OD|KK}}~K~P + Mine)\n** Fixed issue where the attack could not hit from behind under some circumstances, causing M. Bison to whiff through the opponent's body\n<br>"
+              }
+            },
+            "comment": ""
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

@@ -1,0 +1,1004 @@
+{
+  "captured_at_utc": "2026-06-11T03:25:45Z",
+  "title": "Street Fighter 6/Version/2.0301 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.0301",
+  "content_text": "Version 2.0301 Game Version 2.0301 date May 28, 2026 Summary Ingrid Release. Minor system changes and bug fixes. Links Patch Notes Ingrid Patch Ingrid released Universal Changes Wakeup Drive Reversal When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds 1 Drive bar on hit This does not prevent Burnout from occurring before the meter is gained, but it makes Drive Reversal a more cost-effective defensive tool against throw loops As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's Wakeup Drive Reversal to be punishable if she attempts a throw Punish Counter Throws The opponent no longer gains double the usual amount of Super Gauge (no change to attacker's meter gain) This makes Punish Counter Throws a more desirable option to finish a round while building meter without also benefiting the opponent Throw Escapes Defender's Drive Gain reduced 10000 → 5000 Defender's Super Gain reduced 1000 → 0 Super Projectile Clashes Changed the behavior of clashing multi-hit projectile Supers to ensure consistent results Super Art Command Inputs Fixed issue where holding a specific direction would cause some Supers not to be performed Affected Supers: Akuma SA2 (Modern + Manual, while holding Up) C. Viper SA1 (Modern + Manual, while holding Down or Back) Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up) Ed SA3 (Classic, while holding Back) Mai SA1/SA2/SA3 (Modern + Manual, while holding Up) Ryu SA2 (Modern + Manual, while holding Up or Down) Character Changes Alex Assist Combo 2 Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another Assist Combo 2 Input buffer for the 2nd hit shifted from frame 2 → 7 Twisted Drop (Modern Controls: 2L~2H) Fixed issue where 2nd attack would not be performed while holding the Assist button Palm Strikes (Modern Controls: 5M~M) Fixed issue where 2nd attack would not be performed while holding the Assist button Dangerous Armbar (Modern Controls: 2MH~2LM) Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of LM Hyper Takedown (2PP~2LPLK) 20% Immediate scaling added to match other normal throws C. Viper Assist Combo 3 Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit Chun-Li Snake Strike (Modern Controls: 214X~5M) Fixed issue where the Punish Counter state was extended by 1 frame when holding Up after being Perfect Parries Dhalsim Aerial Yoga Teleport Forward (j.6PPP) Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered Ed Low Smash Combination (2HK~HP) Startup of 2nd hit reduced 12 → 10 Total animation decreased 35 → 33 This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted 2HK punish) OD Psycho Shoot (236PP~6P) Fixed issue where the projectile clash from OD Psycho Spark could remain after shooting the projectile Elena Starling Beak (Modern Controls: 5M~M) Fixed issue where 2nd attack would not be performed while holding the Assist button Guile OD Sonic Blade (214PP) Fixed issue where the L+M and M+H versions would not come out with a negative edge (button release) input Jamie Full Moon Kick (6MK~MK) Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads) Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie JP SA3 (236236K) Fixed issue where the attack could whiff through opponents that were moving forward quickly Juri Senkai Kick (6MK) Increased pushback on block to ensure Juri is always out of throw range after DR~6MK Kimberly SA1 (236236K) Fixed issue where it was difficult to Back Rise after being hit by the 0-can version Mai Hien Ren Kyaku (Modern Controls: 5L~L~L) Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button Hoshi Kujaku (Modern Controls: 4H~H) Fixed issue where 2nd attack would not be performed while holding the Assist button Marisa Malleus Breaker (3HP~3HP) Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range) This fixes the unintended issue where the 2nd hit would whiff after a blocked 3HP as a result of the patch that increased the pushback of blocked overheads Sagat OD Low Tiger Shot (236LPMP or 236LPHP) Fixed issue where inputting 236LPMP while holding down the HP button would result in a MP High Tiger Shot",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "Ingrid_Patch",
+      "text": "Ingrid Patch",
+      "html": "Ingrid Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Character_Changes",
+      "text": "Character Changes",
+      "html": "<b>Character Changes</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "Alex",
+      "text": "Alex",
+      "html": "<b>Alex</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "C._Viper",
+      "text": "C. Viper",
+      "html": "<b>C. Viper</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Dhalsim",
+      "text": "Dhalsim",
+      "html": "<b>Dhalsim</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Ed",
+      "text": "Ed",
+      "html": "<b>Ed</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "Elena",
+      "text": "Elena",
+      "html": "<b>Elena</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "Guile",
+      "text": "Guile",
+      "html": "<b>Guile</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "Jamie",
+      "text": "Jamie",
+      "html": "<b>Jamie</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "JP",
+      "text": "JP",
+      "html": "<b>JP</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Juri",
+      "text": "Juri",
+      "html": "<b>Juri</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "Kimberly",
+      "text": "Kimberly",
+      "html": "<b>Kimberly</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Mai",
+      "text": "Mai",
+      "html": "<b>Mai</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Marisa",
+      "text": "Marisa",
+      "html": "<b>Marisa</b>"
+    },
+    {
+      "index": 16,
+      "level": 3,
+      "id": "Sagat",
+      "text": "Sagat",
+      "html": "<b>Sagat</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 16,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "Ingrid released",
+      "items": [
+        {
+          "index": 0,
+          "text": "Ingrid released",
+          "html": "Ingrid released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Wakeup Drive Reversal When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds 1 Drive bar on hit This does not prevent Burnout from occurring before the meter is gained, but it makes Drive Reversal a more cost-effective defensive tool against throw loops As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's Wakeup Drive Reversal to be punishable if she attempts a throw Punish Counter Throws The opponent no longer gains double the usual amount of Super Gauge (no change to attacker's meter gain) This makes Punish Counter Throws a more desirable option to finish a round while building meter without also benefiting the opponent Throw Escapes Defender's Drive Gain reduced 10000 → 5000 Defender's Super Gain reduced 1000 → 0 Super Projectile Clashes Changed the behavior of clashing multi-hit projectile Supers to ensure consistent results Super Art Command Inputs Fixed issue where holding a specific direction would cause some Supers not to be performed Affected Supers: Akuma SA2 (Modern + Manual, while holding Up) C. Viper SA1 (Modern + Manual, while holding Down or Back) Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up) Ed SA3 (Classic, while holding Back) Mai SA1/SA2/SA3 (Modern + Manual, while holding Up) Ryu SA2 (Modern + Manual, while holding Up or Down)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Wakeup Drive Reversal When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds 1 Drive bar on hit This does not prevent Burnout from occurring before the meter is gained, but it makes Drive Reversal a more cost-effective defensive tool against throw loops As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's Wakeup Drive Reversal to be punishable if she attempts a throw",
+          "html": "<b><style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--4\">Wakeup Drive Reversal</span></b>\n<ul><li>When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">1 Drive bar</span> on hit</li>\n<li>This does not prevent Burnout from occurring before the meter is gained, but it makes <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span> a more cost-effective defensive tool against throw loops</li>\n<li>As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Wakeup Drive Reversal</span> to be punishable if she attempts a throw</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Punish Counter Throws The opponent no longer gains double the usual amount of Super Gauge (no change to attacker's meter gain) This makes Punish Counter Throws a more desirable option to finish a round while building meter without also benefiting the opponent",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Throws</b>\n<ul><li>The opponent no longer gains double the usual amount of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Gauge</span> (no change to attacker's meter gain)</li>\n<li>This makes <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Throws a more desirable option to finish a round while building meter without also benefiting the opponent</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Throw Escapes Defender's Drive Gain reduced 10000 → 5000 Defender's Super Gain reduced 1000 → 0",
+          "html": "<b>Throw Escapes</b>\n<ul><li>Defender's Drive Gain reduced 10000 → 5000</li>\n<li>Defender's Super Gain reduced 1000 → 0</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Super Projectile Clashes Changed the behavior of clashing multi-hit projectile Supers to ensure consistent results",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super</span> Projectile Clashes</b>\n<ul><li>Changed the behavior of clashing multi-hit projectile <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> to ensure consistent results</li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Super Art Command Inputs Fixed issue where holding a specific direction would cause some Supers not to be performed Affected Supers: Akuma SA2 (Modern + Manual, while holding Up) C. Viper SA1 (Modern + Manual, while holding Down or Back) Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up) Ed SA3 (Classic, while holding Back) Mai SA1/SA2/SA3 (Modern + Manual, while holding Up) Ryu SA2 (Modern + Manual, while holding Up or Down)",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Art</span> Command Inputs</b>\n<ul><li>Fixed issue where holding a specific direction would cause some <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> not to be performed</li>\n<li>Affected <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span>:\n<ul><li>Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (Modern + Manual, while holding Up)</li>\n<li>C. Viper <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (Modern + Manual, while holding Down or Back)</li>\n<li>Chun-Li <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1/SA2/SA3</span> (Modern + Manual, while holding Up)</li>\n<li>Ed <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> (Classic, while holding Back)</li>\n<li>Mai <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1/SA2/SA3</span> (Modern + Manual, while holding Up)</li>\n<li>Ryu <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (Modern + Manual, while holding Up or Down)</li></ul></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds 1 Drive bar on hit This does not prevent Burnout from occurring before the meter is gained, but it makes Drive Reversal a more cost-effective defensive tool against throw loops As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's Wakeup Drive Reversal to be punishable if she attempts a throw",
+      "items": [
+        {
+          "index": 0,
+          "text": "When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds 1 Drive bar on hit",
+          "html": "When the invincible startup interacts with an opponent's Throw hitbox, a 12f screen freeze now occurs and refunds <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">1 Drive bar</span> on hit"
+        },
+        {
+          "index": 1,
+          "text": "This does not prevent Burnout from occurring before the meter is gained, but it makes Drive Reversal a more cost-effective defensive tool against throw loops",
+          "html": "This does not prevent Burnout from occurring before the meter is gained, but it makes <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Reversal</span> a more cost-effective defensive tool against throw loops"
+        },
+        {
+          "index": 2,
+          "text": "As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's Wakeup Drive Reversal to be punishable if she attempts a throw",
+          "html": "As an unintended consequence, the screen freeze affects Kimberly's spraycan setups, causing the opponent's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Wakeup Drive Reversal</span> to be punishable if she attempts a throw"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "The opponent no longer gains double the usual amount of Super Gauge (no change to attacker's meter gain) This makes Punish Counter Throws a more desirable option to finish a round while building meter without also benefiting the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "The opponent no longer gains double the usual amount of Super Gauge (no change to attacker's meter gain)",
+          "html": "The opponent no longer gains double the usual amount of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Gauge</span> (no change to attacker's meter gain)"
+        },
+        {
+          "index": 1,
+          "text": "This makes Punish Counter Throws a more desirable option to finish a round while building meter without also benefiting the opponent",
+          "html": "This makes <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> Throws a more desirable option to finish a round while building meter without also benefiting the opponent"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "Defender's Drive Gain reduced 10000 → 5000 Defender's Super Gain reduced 1000 → 0",
+      "items": [
+        {
+          "index": 0,
+          "text": "Defender's Drive Gain reduced 10000 → 5000",
+          "html": "Defender's Drive Gain reduced 10000 → 5000"
+        },
+        {
+          "index": 1,
+          "text": "Defender's Super Gain reduced 1000 → 0",
+          "html": "Defender's Super Gain reduced 1000 → 0"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Changed the behavior of clashing multi-hit projectile Supers to ensure consistent results",
+      "items": [
+        {
+          "index": 0,
+          "text": "Changed the behavior of clashing multi-hit projectile Supers to ensure consistent results",
+          "html": "Changed the behavior of clashing multi-hit projectile <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> to ensure consistent results"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Fixed issue where holding a specific direction would cause some Supers not to be performed Affected Supers: Akuma SA2 (Modern + Manual, while holding Up) C. Viper SA1 (Modern + Manual, while holding Down or Back) Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up) Ed SA3 (Classic, while holding Back) Mai SA1/SA2/SA3 (Modern + Manual, while holding Up) Ryu SA2 (Modern + Manual, while holding Up or Down)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where holding a specific direction would cause some Supers not to be performed",
+          "html": "Fixed issue where holding a specific direction would cause some <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> not to be performed"
+        },
+        {
+          "index": 1,
+          "text": "Affected Supers: Akuma SA2 (Modern + Manual, while holding Up) C. Viper SA1 (Modern + Manual, while holding Down or Back) Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up) Ed SA3 (Classic, while holding Back) Mai SA1/SA2/SA3 (Modern + Manual, while holding Up) Ryu SA2 (Modern + Manual, while holding Up or Down)",
+          "html": "Affected <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span>:\n<ul><li>Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (Modern + Manual, while holding Up)</li>\n<li>C. Viper <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (Modern + Manual, while holding Down or Back)</li>\n<li>Chun-Li <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1/SA2/SA3</span> (Modern + Manual, while holding Up)</li>\n<li>Ed <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> (Classic, while holding Back)</li>\n<li>Mai <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1/SA2/SA3</span> (Modern + Manual, while holding Up)</li>\n<li>Ryu <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (Modern + Manual, while holding Up or Down)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "Akuma SA2 (Modern + Manual, while holding Up) C. Viper SA1 (Modern + Manual, while holding Down or Back) Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up) Ed SA3 (Classic, while holding Back) Mai SA1/SA2/SA3 (Modern + Manual, while holding Up) Ryu SA2 (Modern + Manual, while holding Up or Down)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Akuma SA2 (Modern + Manual, while holding Up)",
+          "html": "Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (Modern + Manual, while holding Up)"
+        },
+        {
+          "index": 1,
+          "text": "C. Viper SA1 (Modern + Manual, while holding Down or Back)",
+          "html": "C. Viper <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (Modern + Manual, while holding Down or Back)"
+        },
+        {
+          "index": 2,
+          "text": "Chun-Li SA1/SA2/SA3 (Modern + Manual, while holding Up)",
+          "html": "Chun-Li <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1/SA2/SA3</span> (Modern + Manual, while holding Up)"
+        },
+        {
+          "index": 3,
+          "text": "Ed SA3 (Classic, while holding Back)",
+          "html": "Ed <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> (Classic, while holding Back)"
+        },
+        {
+          "index": 4,
+          "text": "Mai SA1/SA2/SA3 (Modern + Manual, while holding Up)",
+          "html": "Mai <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1/SA2/SA3</span> (Modern + Manual, while holding Up)"
+        },
+        {
+          "index": 5,
+          "text": "Ryu SA2 (Modern + Manual, while holding Up or Down)",
+          "html": "Ryu <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (Modern + Manual, while holding Up or Down)"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "Assist Combo 2 Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another Assist Combo 2 Input buffer for the 2nd hit shifted from frame 2 → 7 Twisted Drop (Modern Controls: 2L~2H) Fixed issue where 2nd attack would not be performed while holding the Assist button Palm Strikes (Modern Controls: 5M~M) Fixed issue where 2nd attack would not be performed while holding the Assist button Dangerous Armbar (Modern Controls: 2MH~2LM) Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of LM Hyper Takedown (2PP~2LPLK) 20% Immediate scaling added to match other normal throws",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 2 Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another Assist Combo 2 Input buffer for the 2nd hit shifted from frame 2 → 7",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>\n<ul><li>Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span></li>\n<li>Input buffer for the 2nd hit shifted from frame 2 → 7</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Twisted Drop (Modern Controls: 2L~2H) Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Twisted Drop</span> (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2L</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2H</span>)\n<ul><li>Fixed issue where 2nd attack would not be performed while holding the Assist button</li></ul>"
+        },
+        {
+          "index": 2,
+          "text": "Palm Strikes (Modern Controls: 5M~M) Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Palm Strikes</span> (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5M</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>)\n<ul><li>Fixed issue where 2nd attack would not be performed while holding the Assist button</li></ul>"
+        },
+        {
+          "index": 3,
+          "text": "Dangerous Armbar (Modern Controls: 2MH~2LM) Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of LM",
+          "html": "Dangerous Armbar (Modern Controls: 2<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>~2<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>)\n<ul><li>Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span></li></ul>"
+        },
+        {
+          "index": 4,
+          "text": "Hyper Takedown (2PP~2LPLK) 20% Immediate scaling added to match other normal throws",
+          "html": "Hyper Takedown (2PP~2<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LPLK</span>)\n<ul><li>20% Immediate scaling added to match other normal throws</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another Assist Combo 2 Input buffer for the 2nd hit shifted from frame 2 → 7",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another Assist Combo 2",
+          "html": "Fixed issue where input buffer would be disabled after the 2nd hit was blocked when attempting to use another <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Assist Combo 2</span>"
+        },
+        {
+          "index": 1,
+          "text": "Input buffer for the 2nd hit shifted from frame 2 → 7",
+          "html": "Input buffer for the 2nd hit shifted from frame 2 → 7"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "Fixed issue where 2nd attack would not be performed while holding the Assist button"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "Fixed issue where 2nd attack would not be performed while holding the Assist button"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of LM",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of LM",
+          "html": "Fixed issue where immediate scaling was unintentionally applied when using the Throw button instead of <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "20% Immediate scaling added to match other normal throws",
+      "items": [
+        {
+          "index": 0,
+          "text": "20% Immediate scaling added to match other normal throws",
+          "html": "20% Immediate scaling added to match other normal throws"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Assist Combo 3 Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "Assist Combo 3 Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Assist Combo 3</span>\n<ul><li>Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit",
+          "html": "Fixed issue where the input buffer for the 2nd attack was faster than expected during the 1st hit"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "Snake Strike (Modern Controls: 214X~5M) Fixed issue where the Punish Counter state was extended by 1 frame when holding Up after being Perfect Parries",
+      "items": [
+        {
+          "index": 0,
+          "text": "Snake Strike (Modern Controls: 214X~5M) Fixed issue where the Punish Counter state was extended by 1 frame when holding Up after being Perfect Parries",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Snake Strike</span> (Modern Controls: 214X~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5M</span>)\n<ul><li>Fixed issue where the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> state was extended by 1 frame when holding Up after being Perfect Parries</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Fixed issue where the Punish Counter state was extended by 1 frame when holding Up after being Perfect Parries",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the Punish Counter state was extended by 1 frame when holding Up after being Perfect Parries",
+          "html": "Fixed issue where the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> state was extended by 1 frame when holding Up after being Perfect Parries"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Aerial Yoga Teleport Forward (j.6PPP) Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered",
+      "items": [
+        {
+          "index": 0,
+          "text": "Aerial Yoga Teleport Forward (j.6PPP) Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered",
+          "html": "Aerial Yoga Teleport Forward (j.6PPP)\n<ul><li>Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered",
+          "html": "Fixed issue where Dhalsim could appear behind the opponent facing the wrong direction if both players were cornered"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Low Smash Combination (2HK~HP) Startup of 2nd hit reduced 12 → 10 Total animation decreased 35 → 33 This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted 2HK punish) OD Psycho Shoot (236PP~6P) Fixed issue where the projectile clash from OD Psycho Spark could remain after shooting the projectile",
+      "items": [
+        {
+          "index": 0,
+          "text": "Low Smash Combination (2HK~HP) Startup of 2nd hit reduced 12 → 10 Total animation decreased 35 → 33 This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted 2HK punish)",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Low Smash Combination</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>)\n<ul><li>Startup of 2nd hit reduced 12 → 10</li>\n<li>Total animation decreased 35 → 33</li>\n<li>This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span> punish)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "OD Psycho Shoot (236PP~6P) Fixed issue where the projectile clash from OD Psycho Spark could remain after shooting the projectile",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Shoot</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236PP</span>~6P)\n<ul><li>Fixed issue where the projectile clash from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Spark</span> could remain after shooting the projectile</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "Startup of 2nd hit reduced 12 → 10 Total animation decreased 35 → 33 This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted 2HK punish)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Startup of 2nd hit reduced 12 → 10",
+          "html": "Startup of 2nd hit reduced 12 → 10"
+        },
+        {
+          "index": 1,
+          "text": "Total animation decreased 35 → 33",
+          "html": "Total animation decreased 35 → 33"
+        },
+        {
+          "index": 2,
+          "text": "This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted 2HK punish)",
+          "html": "This causes the Target Combo to always be a true blockstring even when delayed (can no longer frame trap the opponent's attempted <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">2HK</span> punish)"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Fixed issue where the projectile clash from OD Psycho Spark could remain after shooting the projectile",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the projectile clash from OD Psycho Spark could remain after shooting the projectile",
+          "html": "Fixed issue where the projectile clash from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Psycho Spark</span> could remain after shooting the projectile"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "Starling Beak (Modern Controls: 5M~M) Fixed issue where 2nd attack would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Starling Beak (Modern Controls: 5M~M) Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Starling Beak</span> (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">5M</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>)\n<ul><li>Fixed issue where 2nd attack would not be performed while holding the Assist button</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "Fixed issue where 2nd attack would not be performed while holding the Assist button"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "OD Sonic Blade (214PP) Fixed issue where the L+M and M+H versions would not come out with a negative edge (button release) input",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Sonic Blade (214PP) Fixed issue where the L+M and M+H versions would not come out with a negative edge (button release) input",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Sonic Blade</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span>)\n<ul><li>Fixed issue where the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span> and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span> versions would not come out with a negative edge (button release) input</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "Fixed issue where the L+M and M+H versions would not come out with a negative edge (button release) input",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the L+M and M+H versions would not come out with a negative edge (button release) input",
+          "html": "Fixed issue where the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span> and <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span> versions would not come out with a negative edge (button release) input"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "Full Moon Kick (6MK~MK) Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads) Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie",
+      "items": [
+        {
+          "index": 0,
+          "text": "Full Moon Kick (6MK~MK) Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads) Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Full Moon Kick</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">6MK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>)\n<ul><li>Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit\n<ul><li>This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)</li></ul></li>\n<li>Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "tag_name": "ul",
+      "text": "Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads) Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie",
+      "items": [
+        {
+          "index": 0,
+          "text": "Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)",
+          "html": "Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit\n<ul><li>This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie",
+          "html": "Reduced pushback on hit/block for the 2nd attack to pull the opponent closer to Jamie"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "tag_name": "ul",
+      "text": "This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)",
+      "items": [
+        {
+          "index": 0,
+          "text": "This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)",
+          "html": "This makes it easier for the 2nd attack to connect at more ranges (after the patch that increased the pushback of blocked overheads)"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "tag_name": "ul",
+      "text": "SA3 (236236K) Fixed issue where the attack could whiff through opponents that were moving forward quickly",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA3 (236236K) Fixed issue where the attack could whiff through opponents that were moving forward quickly",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed issue where the attack could whiff through opponents that were moving forward quickly</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "tag_name": "ul",
+      "text": "Fixed issue where the attack could whiff through opponents that were moving forward quickly",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where the attack could whiff through opponents that were moving forward quickly",
+          "html": "Fixed issue where the attack could whiff through opponents that were moving forward quickly"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "tag_name": "ul",
+      "text": "Senkai Kick (6MK) Increased pushback on block to ensure Juri is always out of throw range after DR~6MK",
+      "items": [
+        {
+          "index": 0,
+          "text": "Senkai Kick (6MK) Increased pushback on block to ensure Juri is always out of throw range after DR~6MK",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">Senkai Kick</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">6MK</span>)\n<ul><li>Increased pushback on block to ensure Juri is always out of throw range after <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR~</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">6MK</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "tag_name": "ul",
+      "text": "Increased pushback on block to ensure Juri is always out of throw range after DR~6MK",
+      "items": [
+        {
+          "index": 0,
+          "text": "Increased pushback on block to ensure Juri is always out of throw range after DR~6MK",
+          "html": "Increased pushback on block to ensure Juri is always out of throw range after <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR~</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">6MK</span>"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "tag_name": "ul",
+      "text": "SA1 (236236K) Fixed issue where it was difficult to Back Rise after being hit by the 0-can version",
+      "items": [
+        {
+          "index": 0,
+          "text": "SA1 (236236K) Fixed issue where it was difficult to Back Rise after being hit by the 0-can version",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA1</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">236236K</span>)\n<ul><li>Fixed issue where it was difficult to Back Rise after being hit by the 0-can version</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "tag_name": "ul",
+      "text": "Fixed issue where it was difficult to Back Rise after being hit by the 0-can version",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where it was difficult to Back Rise after being hit by the 0-can version",
+          "html": "Fixed issue where it was difficult to Back Rise after being hit by the 0-can version"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "tag_name": "ul",
+      "text": "Hien Ren Kyaku (Modern Controls: 5L~L~L) Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button Hoshi Kujaku (Modern Controls: 4H~H) Fixed issue where 2nd attack would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Hien Ren Kyaku (Modern Controls: 5L~L~L) Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Hien Ren Kyaku</span> (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5L</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>)\n<ul><li>Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button</li></ul>"
+        },
+        {
+          "index": 1,
+          "text": "Hoshi Kujaku (Modern Controls: 4H~H) Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Hoshi Kujaku</span> (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">4H</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>)\n<ul><li>Fixed issue where 2nd attack would not be performed while holding the Assist button</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "tag_name": "ul",
+      "text": "Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button",
+          "html": "Fixed issue where 2nd/3rd attacks would not be performed while holding the Assist button"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "tag_name": "ul",
+      "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where 2nd attack would not be performed while holding the Assist button",
+          "html": "Fixed issue where 2nd attack would not be performed while holding the Assist button"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "tag_name": "ul",
+      "text": "Malleus Breaker (3HP~3HP) Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range) This fixes the unintended issue where the 2nd hit would whiff after a blocked 3HP as a result of the patch that increased the pushback of blocked overheads",
+      "items": [
+        {
+          "index": 0,
+          "text": "Malleus Breaker (3HP~3HP) Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range) This fixes the unintended issue where the 2nd hit would whiff after a blocked 3HP as a result of the patch that increased the pushback of blocked overheads",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">Malleus Breaker</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">3HP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">3HP</span>)\n<ul><li>Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range)</li>\n<li>This fixes the unintended issue where the 2nd hit would whiff after a blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">3HP</span> as a result of the patch that increased the pushback of blocked overheads</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "tag_name": "ul",
+      "text": "Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range) This fixes the unintended issue where the 2nd hit would whiff after a blocked 3HP as a result of the patch that increased the pushback of blocked overheads",
+      "items": [
+        {
+          "index": 0,
+          "text": "Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range)",
+          "html": "Increased forward movement and expanded the attack hitbox and proximity guard hitbox of the 2nd hit (and expanded the hurtbox to match this new range)"
+        },
+        {
+          "index": 1,
+          "text": "This fixes the unintended issue where the 2nd hit would whiff after a blocked 3HP as a result of the patch that increased the pushback of blocked overheads",
+          "html": "This fixes the unintended issue where the 2nd hit would whiff after a blocked <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">3HP</span> as a result of the patch that increased the pushback of blocked overheads"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "tag_name": "ul",
+      "text": "OD Low Tiger Shot (236LPMP or 236LPHP) Fixed issue where inputting 236LPMP while holding down the HP button would result in a MP High Tiger Shot",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Low Tiger Shot (236LPMP or 236LPHP) Fixed issue where inputting 236LPMP while holding down the HP button would result in a MP High Tiger Shot",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Low Tiger Shot</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>)\n<ul><li>Fixed issue where inputting <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> while holding down the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> button would result in a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP High Tiger Shot</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "tag_name": "ul",
+      "text": "Fixed issue where inputting 236LPMP while holding down the HP button would result in a MP High Tiger Shot",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where inputting 236LPMP while holding down the HP button would result in a MP High Tiger Shot",
+          "html": "Fixed issue where inputting <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span> while holding down the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span> button would result in a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP High Tiger Shot</span>"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 2.0301 Game Version 2.0301 date May 28, 2026 Summary Ingrid Release. Minor system changes and bug fixes. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.0301",
+              "html": "<a class=\"mw-selflink selflink\">2.0301</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.0301",
+              "html": "2.0301",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "May 28, 2026",
+              "html": "May 28, 2026",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Ingrid Release. Minor system changes and bug fixes.",
+              "html": "<b>Ingrid Release</b>. Minor system changes and bug fixes.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20260528\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20260528",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20260528",
+      "title": "",
+      "class_name": "external text"
+    }
+  ],
+  "metrics": {
+    "heading_count": 17,
+    "paragraph_count": 17,
+    "link_count": 1,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 5090,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}

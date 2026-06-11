@@ -3,7 +3,9 @@
   "source_manifest": "raw/battle-change/official/manifest.json",
   "files": {
     "versions": "versions.json",
-    "changes": "changes.json"
+    "changes": "changes.json",
+    "change_events": "change-events.json",
+    "move_change_index": "move-change-index.json"
   },
   "changes_fields": [
     "version_order",
@@ -27,6 +29,49 @@
     "text_html",
     "data_json_path"
   ],
+  "change_event_fields": [
+    "event_id",
+    "source_authority",
+    "version_order",
+    "version_id",
+    "version_title",
+    "version_selector_title",
+    "section_type",
+    "scope",
+    "section_order",
+    "body_order",
+    "fighter_order",
+    "fighter_id",
+    "fighter_alpha",
+    "fighter_tool_name",
+    "fighter_url_name",
+    "character_slug",
+    "detail_order",
+    "target_title",
+    "normalized_target_key",
+    "category",
+    "change_types",
+    "confidence",
+    "value_changes",
+    "text_plain",
+    "text_html",
+    "data_json_path"
+  ],
+  "move_change_index_fields": [
+    "normalized_target_key",
+    "scope",
+    "fighter_tool_name",
+    "fighter_alpha",
+    "character_slug",
+    "target_title",
+    "event_count",
+    "numeric_explicit_event_count",
+    "version_ids",
+    "event_ids",
+    "source_authorities",
+    "data_json_paths",
+    "change_types"
+  ],
   "version_fields": [
     "version_order",
     "version_id",
@@ -46,6 +91,10 @@
     "`version_selector_title` is the title from the discovery page version selector.",
     "`version_title_mismatch` is true when those two official title strings differ.",
     "`text_html` preserves official HTML fragments such as <br>, span, and class attributes.",
-    "Rows are derived from raw `_next/data` JSON, not translated or normalized source replacements."
+    "Rows are derived from raw `_next/data` JSON, not translated or normalized source replacements.",
+    "`change-events.json` is a shallow query index over official rows; it preserves official text and adds heuristic `change_types`, extracted explicit numeric before/after values, and confidence labels.",
+    "`fighter_tool_name` preserves the official Battle Change source key. `character_slug` is the canonical frame-data join key, including source-name variants such as `gouki` -> `gouki_akuma`, `honda` -> `ehonda`, and `vega` -> `vega_mbison`.",
+    "`move-change-index.json` groups change events by fighter and target title for cause-finding queries; it is an index, not a replacement for official source text.",
+    "`move-change-index.json` keeps `version_ids` as an insertion-order unique update list; per-event rows are represented by `event_ids`."
   ]
 }

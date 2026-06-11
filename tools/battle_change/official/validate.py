@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from tools.battle_change.paths import repo_relative_path
 from tools.battle_change.official.capture import (
     adjust_from_payload,
     extract_next_data,
@@ -57,7 +58,7 @@ def validate_capture_files(
 
 
 def repo_path(repo_root: Path, relative_path: str) -> Path:
-    return repo_root / relative_path.replace("/", "\\")
+    return repo_relative_path(repo_root, relative_path)
 
 
 def validate_raw_capture(repo_root: Path) -> dict[str, Any]:

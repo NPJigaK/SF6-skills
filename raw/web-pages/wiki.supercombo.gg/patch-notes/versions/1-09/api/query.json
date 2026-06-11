@@ -1,0 +1,43 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 85464,
+        "ns": 0,
+        "title": "Street Fighter 6/Version/1.09",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-04T23:13:55Z",
+        "lastrevid": 361940,
+        "length": 3414,
+        "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.09",
+        "editurl": "https://wiki.supercombo.gg/index.php?title=Street_Fighter_6/Version/1.09&action=edit",
+        "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/1.09",
+        "revisions": [
+          {
+            "revid": 361940,
+            "parentid": 361939,
+            "user": "Spabobin",
+            "timestamp": "2026-04-22T04:48:06Z",
+            "size": 3414,
+            "sha1": "64211323b0afe5e507c14ab3dbfe615c73d0c152",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "{{SF6-Version\n|version=[[Street Fighter 6/Version/1.09|1.09]]\n|gameversion=1.09\n|date=February 5, 2025\n|summary='''Mai Release'''. Minor bug fixes.\n|links=[https://www.streetfighter.com/6/buckler/battle_change/20250205 Patch Notes]  \n}}\n<!--Full Version name: 1.0900.000-->\n\n== Mai Patch ==\n* Mai released\n<br>\n\n== '''Universal Changes''' ==\n* '''Perfect Parry vs. Multi-hit Attacks'''\n** Re-applied a fix that prevents later hits of a multi-hit move from being canceled after a Perfect Parry\n** This most notably effects {{clr|DR|Drive Impact}} punishes against moves like M. Bison's {{clr|OD|OD Psycho Crusher}} and Lily's {{clr|OD|Windclad OD Condor Spire}}\n* {{clr|DR|Drive Impact}}\n** Fixed issue where the input buffer time after recovery was shorter than usual if the {{clr|DR|DI}} whiffed after absorbing an attack\n<br>\n\n== '''Character Adjustments''' ==\n\n=== '''Akuma''' ===\n* Forward Ashura Senku (6KKK)\n** Expanded throw hurtbox backwards to make it harder to avoid throws when passing through opponent\n<br>\n\n=== '''Blanka''' ===\n* {{clr|DR|Drive Reversal}}\n** No longer moves backward on the first frame\n<br>\n\n=== '''Cammy''' ===\n* {{clr|SA|SA2}} / {{clr|SA|Air SA2}} ({{clr|SA|214214P}} / {{clr|SA|j.214214P}})\n** Fixed issue where move would not K.O. the opponent when trading hits\n<br>\n\n=== '''Chun-Li''' ===\n* {{clr|L|2LK}} \n** Fixed issue where move could not be canceled into a special when parried by the opponent\n* {{clr|H|Tenku Kick}} (Modern Controls: 214X~{{clr|H|2H}})\n** Fixed issue where Modern control version had a different jump cancel timing on hit\n<br>\n\n=== '''Dee Jay''' ===\n* {{clr|M|Threebeat Combo}} ({{clr|L|5LP}}~{{clr|M|MK}}~{{clr|M|MK}})\n** Second attack can now come out while holding a downward direction\n<br>\n\n=== '''Ed''' ===\n* {{clr|H|Psycho Knuckle Lv.1}} ({{clr|H|5[HP]}})\n** Fixed issue where opponents could not move backwards after being hit late during this move's active frames\n<br>\n\n=== '''Kimberly''' ===\n* {{clr|DR|Drive Reversal}}\n** No longer moves backward on the first frame\n* {{clr|SA|SA1}} ({{clr|SA|236236K}})\n** Fixed issue where move would not K.O. the opponent when trading hits\n* {{clr|SA|SA2}} / {{clr|SA|Air SA2}} ({{clr|SA|214214P}} / {{clr|SA|j.214214P}})\n** Fixed issue where move would not K.O. the opponent when trading hits\n<br>\n\n=== '''M. Bison''' ===\n* {{clr|DR|Drive Impact}}\n** Forward movement now begins on frame 2 instead of frame 13\n** Hitbox, hurtbox, armor box, and collision box adjusted to keep overall range and properties similar to before\n<br>\n\n=== '''Manon''' ===\n* Rond-point (236K/{{clr|OD|KK}})\n** Fixed issue where the move could not be canceled into a {{clr|SA|Super}} when parried by the opponent\n<br>\n\n=== '''Marisa''' ===\n* {{clr|OD|OD Dimachaerus}} ({{clr|OD|214PP}})\n** {{clr|SA|Super}} cancel buffer window shifted forward from frame 2 → frame 10\n** Less likely to get accidental {{clr|SA|SA2}} cancel when inputting 6P follow-up\n<br>\n\n=== '''Rashid''' ===\n* {{clr|SA|SA1}} ({{clr|SA|236236K}})\n** Fixed issue where move would not K.O. the opponent when trading hits\n** Fixed issue where knockdown time was much shorter when trading hits\n<br>\n\n=== '''Terry''' ===\n* Forward Walk\n** Adjusted animation so that the central axis of the character more closely matches his position (purely a visual change)\n<br>\n\n=== '''Zangief''' ===\n* Back Walk\n** Fixed issue where the first frame moved forward during Burnout\n<br>"
+              }
+            },
+            "comment": "/* Character Adjustments */"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "images": 500
+  }
+}

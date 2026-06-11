@@ -1,0 +1,810 @@
+{
+  "captured_at_utc": "2026-06-11T03:30:14Z",
+  "title": "Street Fighter 6/Version/2.01 - SuperCombo Wiki",
+  "url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Version/2.01",
+  "content_text": "Version 2.01 Game Version 2.01 date October 15, 2025 Summary C. Viper Release. Minor bug fixes and adjustments for some characters. Links Patch Notes C. Viper Patch C. Viper released Universal Changes Whiffed Lights > Drive Rush: fixed an issue where some normals would not cancel near the end of the whiff animation but would cancel on hit/block, allowing players to option select the DR cancel. Applies to: A.K.I. 5LK Chun-Li 2LK Ed 2LK Elena 5LK Mai 5LK Sagat 5LK Drive Rush Cancel overlap with Special Move commands: fixed an issue where some normals would cancel into a special move when input with the Parry buttons, rather than canceling into Drive Rush. Applies to: A.K.I. 5LK Akuma 2LP Elena 5LP M. Bison 5LP Marisa 2LP Sagat 2LP, 2MP~HP Super Art affecting opponent's Drive Gauge recovery: fixed an issue where certain Supers with a lock-in animation would stop a burned out opponent's passive Drive Gauge regeneration during the animation. Applies to: Akuma SA2 Cammy SA2 (ground/air) E. Honda SA2 Elena SA2 Kimberly SA2 (ground/air) M. Bison SA2 Marisa Held SA1, SA2 (cinematic hit) Sagat SA2 (all variations) Super Art gauge scaling: fixed an issue where some Supers that incur scaling penalties to their meter gain (Chun-Li/Dee Jay SA2) would have follow-up hits scaled even further if landed in a combo with 16 or more hits Character Changes Cammy LK Spiral Arrow (236LK) active frame 6~ increased juggle time vs. airborne opponents Ensures that 5HP~HK > 236LK can always juggle into 623K near the corner Chun-Li OD Tensho Kicks (22KK) expanded collision box upward and expanded final hitbox forward Fixes an issue where the 2nd attack could go in the wrong direction at some distances Dee Jay OD Waning Moon (214KK~MK) expanded the collision box upward on frames 16-19 Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents Elena Moon Glider (214P/PP~6P) hitstop on block increased 11 → 13 to match the on-hit version This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it Guile 2LK fixed issue where Guile had a Punish Counter hurtbox 1f after the end of recovery Fixed issue where a chained 5LP/2LP/2LK would come out when trying to buffer a technique that uses LP or LK buttons Jamie Freeflow Strikes Drink Lv.4 (236P) expanded collision box upward when first attack hits to prevent later hits from whiffing under the opponent JP OD Torbalan (236KK) added a combo-only hitbox to prevent whiffing on midair opponents M. Bison Throw Escape now functions properly when inputs overlap with special moves exclusive to SiRN Bison Head Press ([2]8K~K) no longer bounces back when triggering counter moves (JP's Amnesia, Marisa's Held SA1) making it no longer able to avoid punishment Manon Modern Control inputs for Renversé (236P) follow-ups (Feint and Grand Fouetté kick) changed to fix input overlap issues when canceling into SA3 Renversé Feint changed from 2[S] to 2S~[L] Grand Fouetté changed from 2S~X to 2S~M Mai MP Ryuuenbu (214MP) no longer applies 20% starter scaling and 2-hit combo scaling when only the 2nd hit connects Flame MP Ryuuenbu (F.214MP) no longer applies 20% starter scaling when only the 2nd hit connects Ryu OD Denjin Hashogeki (214PP) chip damage corrected from 400 → 200 Terry OD Quick Burn (214LPMP) cancel window into SA2/SA3 now comes out on the 2nd active frame of the 2nd hit Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed Zangief Double Lariat (Modern Controls: M+H) now comes out properly instead of a Throw when inputting L+M+H during Burnout",
+  "headings": [
+    {
+      "index": 0,
+      "level": 2,
+      "id": "C._Viper_Patch",
+      "text": "C. Viper Patch",
+      "html": "C. Viper Patch"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "id": "Universal_Changes",
+      "text": "Universal Changes",
+      "html": "<b>Universal Changes</b>"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "id": "Character_Changes",
+      "text": "Character Changes",
+      "html": "<b>Character Changes</b>"
+    },
+    {
+      "index": 3,
+      "level": 3,
+      "id": "Cammy",
+      "text": "Cammy",
+      "html": "<b>Cammy</b>"
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "id": "Chun-Li",
+      "text": "Chun-Li",
+      "html": "<b>Chun-Li</b>"
+    },
+    {
+      "index": 5,
+      "level": 3,
+      "id": "Dee_Jay",
+      "text": "Dee Jay",
+      "html": "<b>Dee Jay</b>"
+    },
+    {
+      "index": 6,
+      "level": 3,
+      "id": "Elena",
+      "text": "Elena",
+      "html": "<b>Elena</b>"
+    },
+    {
+      "index": 7,
+      "level": 3,
+      "id": "Guile",
+      "text": "Guile",
+      "html": "<b>Guile</b>"
+    },
+    {
+      "index": 8,
+      "level": 3,
+      "id": "Jamie",
+      "text": "Jamie",
+      "html": "<b>Jamie</b>"
+    },
+    {
+      "index": 9,
+      "level": 3,
+      "id": "JP",
+      "text": "JP",
+      "html": "<b>JP</b>"
+    },
+    {
+      "index": 10,
+      "level": 3,
+      "id": "M._Bison",
+      "text": "M. Bison",
+      "html": "<b>M. Bison</b>"
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "id": "Manon",
+      "text": "Manon",
+      "html": "<b>Manon</b>"
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "id": "Mai",
+      "text": "Mai",
+      "html": "<b>Mai</b>"
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "id": "Ryu",
+      "text": "Ryu",
+      "html": "<b>Ryu</b>"
+    },
+    {
+      "index": 14,
+      "level": 3,
+      "id": "Terry",
+      "text": "Terry",
+      "html": "<b>Terry</b>"
+    },
+    {
+      "index": 15,
+      "level": 3,
+      "id": "Zangief",
+      "text": "Zangief",
+      "html": "<b>Zangief</b>"
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 1,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 2,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 3,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 4,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 5,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 7,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 9,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 11,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 13,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 16,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 17,
+      "text": "",
+      "html": "<br>\n"
+    },
+    {
+      "index": 18,
+      "text": "",
+      "html": "<br>\n"
+    }
+  ],
+  "lists": [
+    {
+      "index": 0,
+      "tag_name": "ul",
+      "text": "C. Viper released",
+      "items": [
+        {
+          "index": 0,
+          "text": "C. Viper released",
+          "html": "C. Viper released"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag_name": "ul",
+      "text": "Whiffed Lights > Drive Rush: fixed an issue where some normals would not cancel near the end of the whiff animation but would cancel on hit/block, allowing players to option select the DR cancel. Applies to: A.K.I. 5LK Chun-Li 2LK Ed 2LK Elena 5LK Mai 5LK Sagat 5LK",
+      "items": [
+        {
+          "index": 0,
+          "text": "Whiffed Lights > Drive Rush: fixed an issue where some normals would not cancel near the end of the whiff animation but would cancel on hit/block, allowing players to option select the DR cancel. Applies to: A.K.I. 5LK Chun-Li 2LK Ed 2LK Elena 5LK Mai 5LK Sagat 5LK",
+          "html": "<b>Whiffed <style data-mw-deduplicate=\"TemplateStyles:r298166\">.mw-parser-output .text-color--1{color:#33d9ff}.mw-parser-output .text-color--2{color:#f0e83e}.mw-parser-output .text-color--3{color:#ff5656}.mw-parser-output .text-color--4{color:#2ad35d}.mw-parser-output .text-color--5{color:#8d00a3}.mw-parser-output .text-color--6{color:#00bed0}.mw-parser-output .text-color--7{color:#7dffff}.mw-parser-output .text-color--8{color:#ffff01}.mw-parser-output .text-color--9{color:#ff9899}.mw-parser-output .text-color--10{color:#ee44e0}.mw-parser-output .text-color--11{color:#ee6da8}.mw-parser-output .text-color--12{color:#fa6d0d}</style><span class=\"text-color--7\">Lights</span> &gt; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span>:</b> fixed an issue where some normals would not cancel near the end of the whiff animation but would cancel on hit/block, allowing players to option select the <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">DR</span> cancel. Applies to:\n<ul><li>A.K.I. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span></li>\n<li>Chun-Li <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span></li>\n<li>Ed <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span></li>\n<li>Elena <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span></li>\n<li>Mai <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span></li>\n<li>Sagat <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag_name": "ul",
+      "text": "A.K.I. 5LK Chun-Li 2LK Ed 2LK Elena 5LK Mai 5LK Sagat 5LK",
+      "items": [
+        {
+          "index": 0,
+          "text": "A.K.I. 5LK",
+          "html": "A.K.I. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>"
+        },
+        {
+          "index": 1,
+          "text": "Chun-Li 2LK",
+          "html": "Chun-Li <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>"
+        },
+        {
+          "index": 2,
+          "text": "Ed 2LK",
+          "html": "Ed <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span>"
+        },
+        {
+          "index": 3,
+          "text": "Elena 5LK",
+          "html": "Elena <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>"
+        },
+        {
+          "index": 4,
+          "text": "Mai 5LK",
+          "html": "Mai <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>"
+        },
+        {
+          "index": 5,
+          "text": "Sagat 5LK",
+          "html": "Sagat <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag_name": "ul",
+      "text": "Drive Rush Cancel overlap with Special Move commands: fixed an issue where some normals would cancel into a special move when input with the Parry buttons, rather than canceling into Drive Rush. Applies to: A.K.I. 5LK Akuma 2LP Elena 5LP M. Bison 5LP Marisa 2LP Sagat 2LP, 2MP~HP",
+      "items": [
+        {
+          "index": 0,
+          "text": "Drive Rush Cancel overlap with Special Move commands: fixed an issue where some normals would cancel into a special move when input with the Parry buttons, rather than canceling into Drive Rush. Applies to: A.K.I. 5LK Akuma 2LP Elena 5LP M. Bison 5LP Marisa 2LP Sagat 2LP, 2MP~HP",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush Cancel</span> overlap with Special Move commands:</b> fixed an issue where some normals would cancel into a special move when input with the Parry buttons, rather than canceling into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">Drive Rush</span>. Applies to:\n<ul><li>A.K.I. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span></li>\n<li>Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span></li>\n<li>Elena <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span></li>\n<li>M. Bison <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span></li>\n<li>Marisa <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span></li>\n<li>Sagat <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag_name": "ul",
+      "text": "A.K.I. 5LK Akuma 2LP Elena 5LP M. Bison 5LP Marisa 2LP Sagat 2LP, 2MP~HP",
+      "items": [
+        {
+          "index": 0,
+          "text": "A.K.I. 5LK",
+          "html": "A.K.I. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LK</span>"
+        },
+        {
+          "index": 1,
+          "text": "Akuma 2LP",
+          "html": "Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>"
+        },
+        {
+          "index": 2,
+          "text": "Elena 5LP",
+          "html": "Elena <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>"
+        },
+        {
+          "index": 3,
+          "text": "M. Bison 5LP",
+          "html": "M. Bison <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>"
+        },
+        {
+          "index": 4,
+          "text": "Marisa 2LP",
+          "html": "Marisa <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>"
+        },
+        {
+          "index": 5,
+          "text": "Sagat 2LP, 2MP~HP",
+          "html": "Sagat <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">2MP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HP</span>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag_name": "ul",
+      "text": "Super Art affecting opponent's Drive Gauge recovery: fixed an issue where certain Supers with a lock-in animation would stop a burned out opponent's passive Drive Gauge regeneration during the animation. Applies to: Akuma SA2 Cammy SA2 (ground/air) E. Honda SA2 Elena SA2 Kimberly SA2 (ground/air) M. Bison SA2 Marisa Held SA1, SA2 (cinematic hit) Sagat SA2 (all variations)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Super Art affecting opponent's Drive Gauge recovery: fixed an issue where certain Supers with a lock-in animation would stop a burned out opponent's passive Drive Gauge regeneration during the animation. Applies to: Akuma SA2 Cammy SA2 (ground/air) E. Honda SA2 Elena SA2 Kimberly SA2 (ground/air) M. Bison SA2 Marisa Held SA1, SA2 (cinematic hit) Sagat SA2 (all variations)",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Art</span> affecting opponent's Drive Gauge recovery:</b> fixed an issue where certain <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> with a lock-in animation would stop a burned out opponent's passive Drive Gauge regeneration during the animation. Applies to:\n<ul><li>Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span></li>\n<li>Cammy <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (ground/air)</li>\n<li>E. Honda <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span></li>\n<li>Elena <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span></li>\n<li>Kimberly <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (ground/air)</li>\n<li>M. Bison <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span></li>\n<li>Marisa <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Held SA1</span>, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (cinematic hit)</li>\n<li>Sagat <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (all variations)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag_name": "ul",
+      "text": "Akuma SA2 Cammy SA2 (ground/air) E. Honda SA2 Elena SA2 Kimberly SA2 (ground/air) M. Bison SA2 Marisa Held SA1, SA2 (cinematic hit) Sagat SA2 (all variations)",
+      "items": [
+        {
+          "index": 0,
+          "text": "Akuma SA2",
+          "html": "Akuma <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>"
+        },
+        {
+          "index": 1,
+          "text": "Cammy SA2 (ground/air)",
+          "html": "Cammy <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (ground/air)"
+        },
+        {
+          "index": 2,
+          "text": "E. Honda SA2",
+          "html": "E. Honda <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>"
+        },
+        {
+          "index": 3,
+          "text": "Elena SA2",
+          "html": "Elena <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>"
+        },
+        {
+          "index": 4,
+          "text": "Kimberly SA2 (ground/air)",
+          "html": "Kimberly <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (ground/air)"
+        },
+        {
+          "index": 5,
+          "text": "M. Bison SA2",
+          "html": "M. Bison <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>"
+        },
+        {
+          "index": 6,
+          "text": "Marisa Held SA1, SA2 (cinematic hit)",
+          "html": "Marisa <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Held SA1</span>, <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (cinematic hit)"
+        },
+        {
+          "index": 7,
+          "text": "Sagat SA2 (all variations)",
+          "html": "Sagat <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span> (all variations)"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag_name": "ul",
+      "text": "Super Art gauge scaling: fixed an issue where some Supers that incur scaling penalties to their meter gain (Chun-Li/Dee Jay SA2) would have follow-up hits scaled even further if landed in a combo with 16 or more hits",
+      "items": [
+        {
+          "index": 0,
+          "text": "Super Art gauge scaling: fixed an issue where some Supers that incur scaling penalties to their meter gain (Chun-Li/Dee Jay SA2) would have follow-up hits scaled even further if landed in a combo with 16 or more hits",
+          "html": "<b><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Super Art</span> gauge scaling:</b> fixed an issue where some <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Supers</span> that incur scaling penalties to their meter gain (Chun-Li/Dee Jay <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2</span>) would have follow-up hits scaled even further if landed in a combo with 16 or more hits"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag_name": "ul",
+      "text": "LK Spiral Arrow (236LK) active frame 6~ increased juggle time vs. airborne opponents Ensures that 5HP~HK > 236LK can always juggle into 623K near the corner",
+      "items": [
+        {
+          "index": 0,
+          "text": "LK Spiral Arrow (236LK) active frame 6~ increased juggle time vs. airborne opponents Ensures that 5HP~HK > 236LK can always juggle into 623K near the corner",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK Spiral Arrow</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span>) active frame 6~ increased juggle time vs. airborne opponents\n<ul><li>Ensures that <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> &gt; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span> can always juggle into 623K near the corner</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag_name": "ul",
+      "text": "Ensures that 5HP~HK > 236LK can always juggle into 623K near the corner",
+      "items": [
+        {
+          "index": 0,
+          "text": "Ensures that 5HP~HK > 236LK can always juggle into 623K near the corner",
+          "html": "Ensures that <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">5HP</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">HK</span> &gt; <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">236LK</span> can always juggle into 623K near the corner"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag_name": "ul",
+      "text": "OD Tensho Kicks (22KK) expanded collision box upward and expanded final hitbox forward Fixes an issue where the 2nd attack could go in the wrong direction at some distances",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Tensho Kicks (22KK) expanded collision box upward and expanded final hitbox forward Fixes an issue where the 2nd attack could go in the wrong direction at some distances",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Tensho Kicks</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">22KK</span>) expanded collision box upward and expanded final hitbox forward\n<ul><li>Fixes an issue where the 2nd attack could go in the wrong direction at some distances</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag_name": "ul",
+      "text": "Fixes an issue where the 2nd attack could go in the wrong direction at some distances",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixes an issue where the 2nd attack could go in the wrong direction at some distances",
+          "html": "Fixes an issue where the 2nd attack could go in the wrong direction at some distances"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag_name": "ul",
+      "text": "OD Waning Moon (214KK~MK) expanded the collision box upward on frames 16-19 Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Waning Moon (214KK~MK) expanded the collision box upward on frames 16-19 Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Waning Moon</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214KK</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MK</span>) expanded the collision box upward on frames 16-19\n<ul><li>Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag_name": "ul",
+      "text": "Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents",
+          "html": "Primarily intended to fix issue with Modern controls Assist Combo 3 whiffing under opponents"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag_name": "ul",
+      "text": "Moon Glider (214P/PP~6P) hitstop on block increased 11 → 13 to match the on-hit version This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it",
+      "items": [
+        {
+          "index": 0,
+          "text": "Moon Glider (214P/PP~6P) hitstop on block increased 11 → 13 to match the on-hit version This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it",
+          "html": "Moon Glider (214P/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">PP</span>~6P) hitstop on block increased 11 → 13 to match the on-hit version\n<ul><li>This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag_name": "ul",
+      "text": "This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it",
+      "items": [
+        {
+          "index": 0,
+          "text": "This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it",
+          "html": "This prevents an option select where follow-ups could be performed only on hit, bypassing the need to hitconfirm it"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag_name": "ul",
+      "text": "2LK fixed issue where Guile had a Punish Counter hurtbox 1f after the end of recovery Fixed issue where a chained 5LP/2LP/2LK would come out when trying to buffer a technique that uses LP or LK buttons",
+      "items": [
+        {
+          "index": 0,
+          "text": "2LK fixed issue where Guile had a Punish Counter hurtbox 1f after the end of recovery Fixed issue where a chained 5LP/2LP/2LK would come out when trying to buffer a technique that uses LP or LK buttons",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> fixed issue where Guile had a <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--12\">Punish Counter</span> hurtbox 1f after the end of recovery\n<ul><li>Fixed issue where a chained <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> would come out when trying to buffer a technique that uses <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span> or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span> buttons</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag_name": "ul",
+      "text": "Fixed issue where a chained 5LP/2LP/2LK would come out when trying to buffer a technique that uses LP or LK buttons",
+      "items": [
+        {
+          "index": 0,
+          "text": "Fixed issue where a chained 5LP/2LP/2LK would come out when trying to buffer a technique that uses LP or LK buttons",
+          "html": "Fixed issue where a chained <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">5LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LP</span>/<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">2LK</span> would come out when trying to buffer a technique that uses <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span> or <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LK</span> buttons"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag_name": "ul",
+      "text": "Freeflow Strikes Drink Lv.4 (236P) expanded collision box upward when first attack hits to prevent later hits from whiffing under the opponent",
+      "items": [
+        {
+          "index": 0,
+          "text": "Freeflow Strikes Drink Lv.4 (236P) expanded collision box upward when first attack hits to prevent later hits from whiffing under the opponent",
+          "html": "Freeflow Strikes Drink Lv.4 (236P) expanded collision box upward when first attack hits to prevent later hits from whiffing under the opponent"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag_name": "ul",
+      "text": "OD Torbalan (236KK) added a combo-only hitbox to prevent whiffing on midair opponents",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Torbalan (236KK) added a combo-only hitbox to prevent whiffing on midair opponents",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Torbalan</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">236KK</span>) added a combo-only hitbox to prevent whiffing on midair opponents"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag_name": "ul",
+      "text": "Throw Escape now functions properly when inputs overlap with special moves exclusive to SiRN Bison Head Press ([2]8K~K) no longer bounces back when triggering counter moves (JP's Amnesia, Marisa's Held SA1) making it no longer able to avoid punishment",
+      "items": [
+        {
+          "index": 0,
+          "text": "Throw Escape now functions properly when inputs overlap with special moves exclusive to SiRN Bison",
+          "html": "Throw Escape now functions properly when inputs overlap with <a href=\"/w/Street_Fighter_6/M.Bison#Hidden_Arts\" title=\"Street Fighter 6/M.Bison\">special moves</a> exclusive to SiRN Bison"
+        },
+        {
+          "index": 1,
+          "text": "Head Press ([2]8K~K) no longer bounces back when triggering counter moves (JP's Amnesia, Marisa's Held SA1) making it no longer able to avoid punishment",
+          "html": "Head Press ([2]8K~K) no longer bounces back when triggering counter moves (JP's Amnesia, Marisa's <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">Held SA1</span>) making it no longer able to avoid punishment"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "tag_name": "ul",
+      "text": "Modern Control inputs for Renversé (236P) follow-ups (Feint and Grand Fouetté kick) changed to fix input overlap issues when canceling into SA3 Renversé Feint changed from 2[S] to 2S~[L] Grand Fouetté changed from 2S~X to 2S~M",
+      "items": [
+        {
+          "index": 0,
+          "text": "Modern Control inputs for Renversé (236P) follow-ups (Feint and Grand Fouetté kick) changed to fix input overlap issues when canceling into SA3 Renversé Feint changed from 2[S] to 2S~[L] Grand Fouetté changed from 2S~X to 2S~M",
+          "html": "Modern Control inputs for Renversé (236P) follow-ups (Feint and Grand Fouetté kick) changed to fix input overlap issues when canceling into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA3</span>\n<ul><li>Renversé Feint changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2[S]</span> to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">[L]</span></li>\n<li>Grand Fouetté changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>~X to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "tag_name": "ul",
+      "text": "Renversé Feint changed from 2[S] to 2S~[L] Grand Fouetté changed from 2S~X to 2S~M",
+      "items": [
+        {
+          "index": 0,
+          "text": "Renversé Feint changed from 2[S] to 2S~[L]",
+          "html": "Renversé Feint changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2[S]</span> to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">[L]</span>"
+        },
+        {
+          "index": 1,
+          "text": "Grand Fouetté changed from 2S~X to 2S~M",
+          "html": "Grand Fouetté changed from <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>~X to <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--4\">2S</span>~<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "tag_name": "ul",
+      "text": "MP Ryuuenbu (214MP) no longer applies 20% starter scaling and 2-hit combo scaling when only the 2nd hit connects Flame MP Ryuuenbu (F.214MP) no longer applies 20% starter scaling when only the 2nd hit connects",
+      "items": [
+        {
+          "index": 0,
+          "text": "MP Ryuuenbu (214MP) no longer applies 20% starter scaling and 2-hit combo scaling when only the 2nd hit connects",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP Ryuuenbu</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MP</span>) no longer applies 20% starter scaling and 2-hit combo scaling when only the 2nd hit connects"
+        },
+        {
+          "index": 1,
+          "text": "Flame MP Ryuuenbu (F.214MP) no longer applies 20% starter scaling when only the 2nd hit connects",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">Flame</span> <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP Ryuuenbu</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--3\">F</span>.<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">214MP</span>) no longer applies 20% starter scaling when only the 2nd hit connects"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "tag_name": "ul",
+      "text": "OD Denjin Hashogeki (214PP) chip damage corrected from 400 → 200",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Denjin Hashogeki (214PP) chip damage corrected from 400 → 200",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Denjin Hashogeki</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214PP</span>) chip damage corrected from 400 → 200"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "tag_name": "ul",
+      "text": "OD Quick Burn (214LPMP) cancel window into SA2/SA3 now comes out on the 2nd active frame of the 2nd hit Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed",
+      "items": [
+        {
+          "index": 0,
+          "text": "OD Quick Burn (214LPMP) cancel window into SA2/SA3 now comes out on the 2nd active frame of the 2nd hit Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed",
+          "html": "<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">OD Quick Burn</span> (<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--10\">214</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">LP</span><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">MP</span>) cancel window into <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--11\">SA2/SA3</span> now comes out on the 2nd active frame of the 2nd hit\n<ul><li>Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "tag_name": "ul",
+      "text": "Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed",
+      "items": [
+        {
+          "index": 0,
+          "text": "Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed",
+          "html": "Prevents a combo drop that would occur when the 2nd hit's first active frame whiffed"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "tag_name": "ul",
+      "text": "Double Lariat (Modern Controls: M+H) now comes out properly instead of a Throw when inputting L+M+H during Burnout",
+      "items": [
+        {
+          "index": 0,
+          "text": "Double Lariat (Modern Controls: M+H) now comes out properly instead of a Throw when inputting L+M+H during Burnout",
+          "html": "Double Lariat (Modern Controls: <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span>) now comes out properly instead of a Throw when inputting <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--7\">L</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--8\">M</span>+<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r298166\"><span class=\"text-color--9\">H</span> during Burnout"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "class_name": "wikitable",
+      "attributes": {
+        "class": "wikitable"
+      },
+      "text": "Version 2.01 Game Version 2.01 date October 15, 2025 Summary C. Viper Release. Minor bug fixes and adjustments for some characters. Links Patch Notes",
+      "headers": [
+        "Version",
+        "Game Version",
+        "date",
+        "Summary",
+        "Links"
+      ],
+      "rows": [
+        {
+          "row_index": 0,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Version",
+              "html": "Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.01",
+              "html": "<a class=\"mw-selflink selflink\">2.01</a>",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 1,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Game Version",
+              "html": "Game Version",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "2.01",
+              "html": "2.01",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "date",
+              "html": "date",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "October 15, 2025",
+              "html": "October 15, 2025",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Summary",
+              "html": "Summary",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "C. Viper Release. Minor bug fixes and adjustments for some characters.",
+              "html": "<b>C. Viper Release</b>. Minor bug fixes and adjustments for some characters.",
+              "images": []
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "cells": [
+            {
+              "cell_index": 0,
+              "tag_name": "th",
+              "attributes": {},
+              "text": "Links",
+              "html": "Links",
+              "images": []
+            },
+            {
+              "cell_index": 1,
+              "tag_name": "td",
+              "attributes": {},
+              "text": "Patch Notes",
+              "html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.streetfighter.com/6/buckler/battle_change/20251015\">Patch Notes</a>",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "row_count": 5
+    }
+  ],
+  "links": [
+    {
+      "index": 0,
+      "text": "Patch Notes",
+      "href": "https://www.streetfighter.com/6/buckler/battle_change/20251015",
+      "raw_href": "https://www.streetfighter.com/6/buckler/battle_change/20251015",
+      "title": "",
+      "class_name": "external text"
+    },
+    {
+      "index": 1,
+      "text": "special moves",
+      "href": "https://wiki.supercombo.gg/w/Street_Fighter_6/M.Bison#Hidden_Arts",
+      "raw_href": "/w/Street_Fighter_6/M.Bison#Hidden_Arts",
+      "title": "Street Fighter 6/M.Bison",
+      "class_name": ""
+    }
+  ],
+  "metrics": {
+    "heading_count": 16,
+    "paragraph_count": 19,
+    "link_count": 2,
+    "image_count": 0,
+    "table_count": 1,
+    "video_count": 0,
+    "iframe_count": 0,
+    "body_height": 4618,
+    "viewport_width": 1600,
+    "viewport_height": 1100
+  }
+}
