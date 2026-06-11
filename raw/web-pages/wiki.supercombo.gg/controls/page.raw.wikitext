@@ -1,0 +1,119 @@
+Street Fighter 6 offers a traditional "Classic" control type and a simplified "Modern" control type. '''Throughout this wiki you will primarily find notation intended for Classic''', as Classic represents each character's full base kit that Modern is then based on.
+
+== Classic Controls ==
+[[File:SF6_Classic_Controls.png|300px|right|thumb|The default scheme for Classic control type on an Xbox controller.]]
+
+* '''Regardless of control type:'''
+** Move and jump in 8 directions (cardinals & diagonals) using the D-pad or joystick. 
+** Hold Back to block incoming Overhead and Mid attacks, or Down+Back to block Mid and Low attacks.
+* Punches: Light Punch (LP), Medium Punch (MP), and Heavy Punch (HP) buttons.
+* Kicks: Light Kick (LK), Medium Kick (MK), and Heavy Kick (HK) buttons.
+* LP+LK: Forward Throw. Hold Back during the input to perform a Back Throw instead.
+** Inputting Throw when your opponent is about to Throw you performs a Throw Escape (AKA "throw tech").
+* MP+MK: Drive Parry. Can be held.
+* HP+HK: Drive Impact.
+* LP+MP+HK+LK+MK+HK: Taunt. Holding a direction can change the taunt action.
+* (Check the [[Street Fighter 6/Movement|Movement]], [[Street Fighter 6/Offense|Offense]], [[Street Fighter 6/Defense|Defense]], [[Street Fighter 6/Gauges|Gauges]]), and Character pages for more detailed information.)
+
+== Modern Controls ==
+[[File:SF6_Modern_Controls.png|300px|right|thumb|The default scheme for Modern control type on an Xbox controller.]]
+
+* Attack Strengths: {{clr|L|Light (L)}}, {{clr|M|Medium (M)}}, and {{clr|H|Heavy (H)}} attack buttons.
+** Attacks are not separated by Punch and Kick buttons in Modern. Instead, various Normal attacks and Special Moves from the Classic control scheme are distributed between these {{clr|L|L}}, {{clr|M|M}}, and {{clr|H|H}} buttons.
+** '''Each character has a different selection of their Classic moves available in Modern, with some moves requiring the use of the Assist or {{clr|DR|Special Move}} buttons explained below to access, while other moves or versions of moves are missing entirely'''.
+* A dedicated {{clr|DR|Special Move (SP)}} button is also used. When combined with a directional input (Neutral, Forward, Down, or Back), you can perform various moves without a motion input (AKA "simple input Special Moves").
+** {{clr|H|H}} + {{clr|DR|SP}} + a directional input results in an simple input {{clr|SA|Super Art}}. Each {{clr|SA|Super Art}} is assigned to a different directional input.
+** Motion input Super Arts, as well as many motion input Special Moves, are still available in Modern, distributed across {{clr|L|L}}, {{clr|M|M}}, and {{clr|H|H}}.
+* The Assist button, unique to Modern, is used for various functions.
+** Holding Assist modifies the {{clr|L|L}}, {{clr|M|M}}, and {{clr|H|H}} buttons, resulting in different attacks.
+** Holding Assist also allows the execution of pre-set Assist Combos (AKA "auto combos") by repeatedly tapping {{clr|L|L}}, {{clr|M|M}}, or {{clr|H|H}}.
+** In this way, some moves from Classic are only available in Modern via the Assist Button and Assist Combos.
+** Assist + {{clr|DR|SP}} + a directional input results in the {{clr|OD|Overdrive Arts}} version of that Special Move.
+* Throw is performed with {{clr|L|L}}+{{clr|M|M}}, while Drive Parry and Drive Impact have dedicated buttons.
+* '''Using the {{clr|DR|Special Move}} button to perform a simple input Special Move, {{clr|OD|Overdrive Art}}, or {{clr|SA|Super Art}} applies a 20% damage penalty to that move compared to the motion input version.'''
+** '''Note that this is the only time a damage penalty is applied to Modern Controls. For example, Auto Combos performed using the Assist button do NOT have a damage penalty applied to them, including any {{clr|DR|Special Moves}}, {{clr|OD|Overdrive Arts}}, or {{clr|SA|Super Arts}} that are part of the Auto Combo.'''
+** These simple input moves are one of the greatest strengths of Modern Type, and can be considered as unique moves compared to their motion input counterparts. In exchange for the damage penalty, the skipping of the motion input shaves off as many frames from the fastest possible startup of the move from neutral as there are skipped directional inputs. Furthermore, almost nobody consistently executes all of their motion inputs at the fastest possible timing (exactly 1f per direction). This means that the actual number of motion input frames skipped with an SP simple input is usually higher than that theoretical minimum.
+** This can result in situations where simple input moves can be used freely, but their motion input counterparts would be difficult or even physically impossible to execute in time. They do not just FEEL faster to execute, they are LITERALLY faster to execute '''(from neutral)'''.
+** It bears repeating, however, that this faster minimum startup ONLY applies when a move is performed directly from neutral, and NOT in situations where the move is being canceled into or otherwise buffered. In other words, you can only skip motions in situations where the character can actually move.
+
+== Notation ==
+
+=== Numpad Notation ===
+The modern standard for expressing inputs in text for Fighting Games relies on mapping input directions to numbers, known as "Numpad notation". Street Fighter's attack buttons have 6 distinct abbreviations: LP, MP, HP for Punches & LK, MK, HK for Kicks. '''This is the notation standard for this wiki.'''
+
+Here are the digital directional inputs possible in Street Fighter:
+
+{| class="wikitable" border="1"
+|-
+| ⬁
+| ⇧
+| ⬀
+|-
+| ⇦
+| ｎ
+| ⇨ 
+|-
+| ⬃ 
+| ⇩ 
+| ⬂
+|}
+
+And here are how those same directions correspond to the layout of a number pad. 5 represents the lever neutral position, and 6 always faces the same direction the character is facing for consistency.
+
+{| class="wikitable" border="1"
+|-
+|７ 
+|８
+|９
+|-
+|４
+|５
+|６
+|-
+|１
+|２
+|３
+|}
+
+By representing lever directions with numerals as shown above, any set of lever and button inputs can be represented with a combination of button letters and numbers. For example, a crouching Light Kick is "2LK", while a Quarter Circle Forward and Heavy Punch is 236HP. Additionally, moves are given prefixes to signify certain properties, such a j. for "performed in midair". More information on notation specifics can be found in the [[Street Fighter 6/Glossary#Notation Glossary|Notation Glossary]].
+
+==== Classic Notation ====
+The old standard for expressing inputs in Street Fighter relies on English language abbreviations. You may encounter it very often from veteran players, so here's a basic guide:
+
+''All commands assuming player facing right.''
+
+* "cr." indicates a move performed while crouching i.e. "cr.MK"
+* "st." indicates a move performed while standing i.e. "st.HP"
+* "QCF" means Quarter Circle Forward (236 in Numpad)
+* "QCB" means Quarter Circle Backward (214 in Numpad)
+* "DP" or "SRK" means Dragon Punch motion - Forward, Down, Down-Forward (623 in Numpad)
+** "RDP" or Reverse Dragon Punch is Back, Down, Down-Back (421 in Numpad)
+* "HCF" means Half Circle Forward (41236 in Numpad)
+** "HCB" means Half Circle Backward (63214 in Numpad)
+* "SPD" or "360" means to rotate the joystick in a full circle in any direction.
+** "720" is two rotations of the joystick.
+** 360/720 is still often used as a shortcut in Numpad notation.
+
+=== Nicknames ===
+The buttons have other names they are often referred to. In the arcade days of Street Fighter, the buttons were often referred to by a "name" as opposed to their basic descriptions. So oftentimes, you will hear commentators or read articles or posts about the attacks using different names. Here are corresponding nicknames you will commonly see:
+
+{| class="wikitable"
+! Name !! Nickname !! Notation
+|-
+| Light Punch || Jab || LP
+|-
+| Medium Punch || Strong || MP
+|-
+| Heavy Punch || Fierce || HP
+|-
+| Light Kick || Short || LK
+|-
+| Medium Kick || Forward || MK
+|-
+| Heavy Kick || Roundhouse || HK
+|}
+
+One thing to note is that Medium Kick used to be known as "Forward", which caused a lot of confusion when the direction on the controller was also called "Forward". This is why, for the most part, many people refer to the direction your character is facing as "Towards" instead of "Forward" to avoid that confusion.
+
+{{Navbox-SF6}}
+[[Category: Street Fighter 6]]

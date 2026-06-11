@@ -1,0 +1,139 @@
+{
+  "manifest_schema_version": "web_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/controls",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/controls",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "controls",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Controls",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls",
+  "captured_at_utc": "2026-06-11T00:01:49Z",
+  "capture_label": "2026-06-11-rev365425",
+  "storage_policy": "updateable_web_page_capture",
+  "raw_update_policy": {
+    "updateable": true,
+    "scope": "raw/web-pages 配下の同一取得一式",
+    "allowed_updates": [
+      "原文・元データを保つ Web 取得物を再取得する",
+      "取得一式のディレクトリ構成を補正する",
+      "manifest、metadata、validation、artifact hash を更新する",
+      "由来を記録したうえで古い Web 取得物を新しい取得物に差し替える"
+    ],
+    "disallowed_updates": [
+      "翻訳を raw 上の置き換え版として保存する",
+      "要約を raw 上の置き換え版として保存する",
+      "source wording を正規化した置き換え版を raw に保存する"
+    ]
+  },
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Controls",
+    "pageid": 58422,
+    "lastrevid": 365425,
+    "revision_id": 365425,
+    "revision_timestamp": "2026-06-03T09:40:46Z",
+    "touched": "2026-06-04T23:13:48Z",
+    "length": 8302,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls"
+  },
+  "source_updated_at": "2026-06-03T09:40:46Z",
+  "canonical_source_artifact": "page.raw.wikitext",
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/tables.dom.json"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "artifacts": {
+    "page_html": "page.html",
+    "page_raw_wikitext": "page.raw.wikitext",
+    "api_query": "api/query.json",
+    "api_templates": "api/templates.json",
+    "metadata": "metadata.json",
+    "rendered_main_dom": "rendered/main.dom.json",
+    "rendered_tables_dom": "rendered/tables.dom.json",
+    "validation": "validation.json"
+  },
+  "artifact_hashes": {
+    "api/query.json": {
+      "sha256": "441b812bbba620e0182ab7704206f8185f8d2e9a9574855f0727b5f7fb6bc408",
+      "bytes": 9267
+    },
+    "api/templates.json": {
+      "sha256": "72bbdebeccd055e68bb3a588ad5bc963bd64cca8fdde35d02845dcb3a88be8db",
+      "bytes": 418
+    },
+    "metadata.json": {
+      "sha256": "1eb85c17e9a452e903b548bc6294b3d0a1faac6b85ab1c3a12b0bc04c5d9affc",
+      "bytes": 9221
+    },
+    "page.html": {
+      "sha256": "5dd9cdec3f63d2d42b2c5578a6d194cc33f598ae191c428f71ccc8f35f7e1bd1",
+      "bytes": 188201
+    },
+    "page.raw.wikitext": {
+      "sha256": "9ef16e18a95b37018b33d6f40eca2472ef4f1f16366fc2882f85648391e8ed98",
+      "bytes": 8302
+    },
+    "rendered/main.dom.json": {
+      "sha256": "08e0ae21779cca2f430d6d9398a0efd0dfe4633873a245c1d5a40f6759162e56",
+      "bytes": 22108
+    },
+    "rendered/tables.dom.json": {
+      "sha256": "35035ec6b804a1e1cb515197684891b02c6238e8739fe1affff02a4eda09b03b",
+      "bytes": 42976
+    },
+    "validation.json": {
+      "sha256": "10383d9a2ee37ca42ddff6a0a77696570705fbae6073f8187d7e3166801b03c7",
+      "bytes": 1302
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "package_updated_at_utc": "2026-06-11T00:02:56Z",
+  "template_dependency_policy": {
+    "scope": "MediaWiki API の prop=templates が返した直接 template 依存を記録する。",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [],
+    "recursive_capture": false,
+    "notes": [
+      "Controls page の canonical raw は page.raw.wikitext とする。",
+      "template 本文は、この page の wiki claim が必要とするまで保存しない。"
+    ]
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    }
+  ]
+}

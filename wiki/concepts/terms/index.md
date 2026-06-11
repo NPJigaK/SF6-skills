@@ -3,7 +3,7 @@ type: concept
 concept_type: term_index
 title: "SF6 Terms"
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-11
 status: active
 confidence: high
 sources:
@@ -30,7 +30,7 @@ tags:
 
 ## 要約
 
-Street Fighter 6 の用語を、source ごとの説明を残しながら統合するための index。個別 term page は `wiki/concepts/terms/` 配下に置き、公式 source、community source、質問回答、派生 output からの追加根拠を同じ用語へ集約する。Query ではまずこの index から該当 term page を探し、用語ページの source claim から raw/source page へ戻る。
+Street Fighter 6 の用語を、source ごとの説明を残しながら統合するための index。個別 term page は `wiki/concepts/terms/` 配下に置き、公式 source、community source、質問回答、派生 output からの追加根拠を同じ用語へ集約する。Query ではまずこの index から該当 term page を探し、用語ページの source claim から source page へ戻る。
 
 ## 方針
 

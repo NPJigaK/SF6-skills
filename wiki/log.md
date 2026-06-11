@@ -2,6 +2,31 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] ingest | SuperCombo Controls web-page raw capture
+- 原本:
+  - `https://wiki.supercombo.gg/w/Street_Fighter_6/Controls`
+  - `raw/web-pages/wiki.supercombo.gg/controls/manifest.json`
+- 作成:
+  - `raw/web-pages/wiki.supercombo.gg/controls/`
+  - `wiki/sources/supercombo-street-fighter-6-controls.md`
+  - `wiki/reviews/2026-06-11-supercombo-controls-web-page-capture-review.md`
+- 更新:
+  - `wiki/concepts/fighting-game-notation.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/controls/validation.json` は `passed`。
+  - API の revision wikitext と `action=raw` の wikitext が一致した。
+  - MediaWiki revid は `365425`、source freshness は `2026-06-03T09:40:46Z`、raw 取得時刻は `2026-06-11T00:01:49Z`。
+- メモ:
+  - Canonical raw は `page.raw.wikitext`。表示証拠として `page.html`、`rendered/main.dom.json`、`rendered/tables.dom.json` を保存した。
+  - Direct template dependencies は `Template:Clr` と `Template:Navbox-SF6` 系で、主要本文を template 本文として別保存する必要はないと判断した。
+  - Controls page は Classic / Modern control type、numpad notation、classic notation、button nickname の community source として扱う。
+- 未解決事項:
+  - Capcom 公式 controls / control type source を追加 ingest して、Modern Controls、simple input damage penalty、button mapping の official evidence と照合するか。
+
 ## [2026-06-11] schema | Workflow details を repo-local skills へ移動
 - 更新:
   - `.gitignore`

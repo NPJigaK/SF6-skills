@@ -1,0 +1,35 @@
+{
+  "validation_schema_version": "web_page_capture_validation/v1",
+  "created_at_utc": "2026-06-11T00:01:49Z",
+  "status": "passed",
+  "checks": {
+    "page_status_200": true,
+    "wikitext_status_200": true,
+    "api_status_200": true,
+    "templates_api_status_200": true,
+    "not_cloudflare_challenge_html": true,
+    "wikitext_nonempty": true,
+    "api_wikitext_matches_action_raw": true,
+    "rendered_title_matches_expected": true,
+    "has_content_headings": true,
+    "has_rendered_tables": true,
+    "template_dependency_list_recorded": true
+  },
+  "summary": {
+    "wikitext_bytes": 8302,
+    "page_html_bytes": 188201,
+    "heading_count": 7,
+    "link_count": 109,
+    "image_count": 32,
+    "paragraph_count": 9,
+    "table_count": 4,
+    "mediawiki_revision_id": 365425,
+    "mediawiki_revision_timestamp": "2026-06-03T09:40:46Z",
+    "template_dependency_count": 7
+  },
+  "notes": [
+    "page.raw.wikitext は、この MediaWiki page で最も原文を保つ取得物として扱う。",
+    "page.html と rendered/*.dom.json は、table、link、表示構造を確認するための証拠として保存する。",
+    "api/templates.json は直接 template 依存の一覧を記録する。template 本文は、この page の claim が必要とするまで保存しない。"
+  ]
+}

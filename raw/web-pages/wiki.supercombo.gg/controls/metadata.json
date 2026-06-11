@@ -1,0 +1,183 @@
+{
+  "source_family": "web_page",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/Controls",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls",
+  "wikitext_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls?action=raw",
+  "api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FControls&prop=info%7Crevisions&inprop=url&rvprop=ids%7Ctimestamp%7Ccontent%7Csize%7Cuser%7Ccomment&rvslots=main",
+  "templates_api_url": "https://wiki.supercombo.gg/api.php?action=query&format=json&formatversion=2&titles=Street+Fighter+6%2FControls&prop=templates&tllimit=max",
+  "captured_at_utc": "2026-06-11T00:01:49Z",
+  "capture_method": {
+    "tool": "scrapling",
+    "session": "StealthySession",
+    "headless": true,
+    "solve_cloudflare": true,
+    "network_idle": false,
+    "note": "MediaWiki API and action=raw were fetched in the same stealth session after Cloudflare challenge resolution."
+  },
+  "http_status": {
+    "page_html": 200,
+    "page_raw_wikitext": 200,
+    "api_query": 200,
+    "api_templates": 200
+  },
+  "response_headers": {
+    "page_html": {
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-mitigated": "challenge",
+      "cf-ray": "a09c58087eb668ab-NRT",
+      "content-encoding": "zstd",
+      "content-security-policy": "default-src 'none'; script-src 'nonce-LLZjdsFrnDuej5B2xbM07J' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'",
+      "content-type": "text/html; charset=UTF-8",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "date": "Thu, 11 Jun 2026 00:01:53 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+      "priority": "u=0,i",
+      "referrer-policy": "same-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BrzkN%2Fq6JXssiHESNRl4CVmiOQ1W3E6NjQehSfaSw%2BlrxXt1nI5KnlwSuszmVTmiMb4R0LpCEKKoA2crbiamARWorR%2FqGtIdVEGZchhDvWJk8BcOR5YGjkm4FTtayZENb0bAJmLZybjWlrVnXOdhT9c%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "chlray;desc=\"a09c58087eb668ab\"\ncfExtPri",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    },
+    "page_raw_wikitext": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, s-maxage=0, max-age=18000",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a09c59646f13d497-NRT",
+      "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+      "content-type": "text/x-wiki; charset=UTF-8",
+      "date": "Thu, 11 Jun 2026 00:02:50 GMT",
+      "last-modified": "Wed, 03 Jun 2026 09:40:46 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=0,i",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=phSSHnYR5sHyIj2krgLeLogHSxkLrqnhlR40p%2BBTh6qmhK8II%2FrzBcExyX9m7fAhe6myKmFB19cv%2FEoGBYY3BSO6ikQREI3FFECZi4BG4IqKSvNY%2Bt5QtsCcX23N0sklxJXJWOAX0Aa78lp%2BaWV1%2BNo%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=12,cfOrigin;dur=826, cfExtPri",
+      "vary": "Accept-Encoding,Cookie",
+      "x-content-type-options": "nosniff",
+      "x-request-id": "2843801fe01546c63f9091ce"
+    },
+    "api_query": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "private, must-revalidate, max-age=0",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a09c59739f90d497-NRT",
+      "content-disposition": "inline; filename=api-result.json",
+      "content-encoding": "zstd",
+      "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Thu, 11 Jun 2026 00:02:52 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=0,i",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PlYBAHWBa0b8zv3ywj46oAI0G1PB9ejCQ%2BS9s3Fw5mX%2FRFCdjcz8KM1xIEczouPOlPLxA86oeIe8sREXndaY1zqQ27LvfPpPq2D37IyTuZd%2Fj7NuKEm3%2B2ddIh7u9JuGC0bw8FzH6OKFghOMvddE9fA%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=301, cfExtPri",
+      "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-request-id": "148453297273a9e3219a702a"
+    },
+    "api_templates": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "private, must-revalidate, max-age=0",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a09c597f5857d497-NRT",
+      "content-disposition": "inline; filename=api-result.json",
+      "content-encoding": "zstd",
+      "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Thu, 11 Jun 2026 00:02:54 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=0,i",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=n414mTfGDzrijX0h4D2VfslF2ANjgq9J0KfciSHlJuf%2BGDH9W9fc2lrhidue%2BArDQzm2nKk8BVWimW95o8tlBd5ZYTre3Ody%2Fa3WES32iteV2hvFC7A3KCng1PhAV0ZvTiPdiFFkRUkqU6umGEIKj0k%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=4,cfOrigin;dur=295, cfExtPri",
+      "vary": "Accept-Encoding,Treat-as-Untrusted,Cookie",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-request-id": "c6a33f982847ffcd5002992c"
+    }
+  },
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/Controls",
+    "pageid": 58422,
+    "lastrevid": 365425,
+    "revision_id": 365425,
+    "revision_timestamp": "2026-06-03T09:40:46Z",
+    "touched": "2026-06-04T23:13:48Z",
+    "length": 8302,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Controls"
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Clr"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Clr/styles.css"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    }
+  ],
+  "artifact_hashes": {
+    "api/query.json": {
+      "sha256": "441b812bbba620e0182ab7704206f8185f8d2e9a9574855f0727b5f7fb6bc408",
+      "bytes": 9267
+    },
+    "api/templates.json": {
+      "sha256": "72bbdebeccd055e68bb3a588ad5bc963bd64cca8fdde35d02845dcb3a88be8db",
+      "bytes": 418
+    },
+    "page.html": {
+      "sha256": "5dd9cdec3f63d2d42b2c5578a6d194cc33f598ae191c428f71ccc8f35f7e1bd1",
+      "bytes": 188201
+    },
+    "page.raw.wikitext": {
+      "sha256": "9ef16e18a95b37018b33d6f40eca2472ef4f1f16366fc2882f85648391e8ed98",
+      "bytes": 8302
+    },
+    "rendered/main.dom.json": {
+      "sha256": "08e0ae21779cca2f430d6d9398a0efd0dfe4633873a245c1d5a40f6759162e56",
+      "bytes": 22108
+    },
+    "rendered/tables.dom.json": {
+      "sha256": "35035ec6b804a1e1cb515197684891b02c6238e8739fe1affff02a4eda09b03b",
+      "bytes": 42976
+    },
+    "validation.json": {
+      "sha256": "10383d9a2ee37ca42ddff6a0a77696570705fbae6073f8187d7e3166801b03c7",
+      "bytes": 1302
+    }
+  }
+}

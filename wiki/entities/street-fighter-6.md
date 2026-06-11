@@ -2,10 +2,11 @@
 type: entity
 entity_type: other
 created: 2026-05-26
-updated: 2026-06-10
+updated: 2026-06-11
 status: active
 sources:
   - "[[sources/supercombo-street-fighter-6-glossary]]"
+  - "[[sources/supercombo-street-fighter-6-controls]]"
   - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/capcom-official-fightingground-battle-system]]"
   - "[[sources/supercombo-jp-frame-data]]"
@@ -92,12 +93,13 @@ tags:
 
 ## 要約
 
-Street Fighter 6 は、この wiki が扱う glossary source、公式 eSports BASE 用語解説、公式 Fighting Ground Battle System source、公式 frame-data source、公式 Battle Change List、SuperCombo community frame-data 取得データの game context。現在、36 個別 term pages、Capcom 公式 eSports BASE scoped capture、Capcom 公式 Battle System scoped capture、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、Capcom 公式 Battle Change List 20 version 分、SuperCombo raw 取得データ 30 キャラ分がある。公式 Classic + SuperCombo 補助データも 30 キャラ分作成済み。frame-data raw は `raw/frame-data/official/<data-slug>/` と `raw/frame-data/supercombo/<character>/` の latest mirror 固定パスで参照する。
+Street Fighter 6 は、この wiki が扱う glossary source、controls source、公式 eSports BASE 用語解説、公式 Fighting Ground Battle System source、公式 frame-data source、公式 Battle Change List、SuperCombo community frame-data source の game context。現在、36 個別 term pages、Capcom 公式 eSports BASE scoped capture、Capcom 公式 Battle System scoped capture、SuperCombo controls web-page capture、Capcom 公式 Classic / Modern frame-data outputs 30 character data slugs 分、Capcom 公式 Battle Change List 20 version 分、SuperCombo 30 キャラ分の community frame-data source がある。公式 Classic + SuperCombo 補助データも 30 キャラ分作成済み。frame-data 取得物の配置と freshness は [[syntheses/frame-data-raw-layout]] と各 source page で確認する。
 
 ## 年表
 
 | 日付 | 出来事 | ソース |
 |---|---|---|
+| 2026-06-11 | SuperCombo Wiki の Street Fighter 6 controls page を raw web-page capture として保存した。Classic / Modern control type、numpad notation、classic notation、button nickname を含む community source。 | [[sources/supercombo-street-fighter-6-controls]] |
 | 2026-05-26 | SuperCombo Wiki の Street Fighter 6 glossary を raw source として保存した。 | [[sources/supercombo-street-fighter-6-glossary]] |
 | 2026-05-27 | Ryu（リュウ） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-ryu-frame-data]] |
 | 2026-05-30 | Luke（ルーク） の公式 frame-data page を Classic / Modern controls で保存した。 | [[sources/capcom-official-luke-frame-data]] |
@@ -143,6 +145,7 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 eSports BA
 ## 関連する主張
 
 - SuperCombo glossary は Drive System、frame data、juggle、notation の community terms を説明している。
+- SuperCombo controls は Classic / Modern control type、numpad notation、classic notation、button nickname の community source として保持する。Modern Controls の damage penalty claim は公式確認前なので source fact として扱う。
 - Capcom 公式 eSports BASE scoped capture は、CPT / SFL 観戦向けの `実況ワード解説` として、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/anti-air|対空]]、[[concepts/terms/corner|画面端]]、[[concepts/terms/cross-up|めくり]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/punish-counter|パニッシュカウンター]]、[[concepts/terms/frame-advantage|有利フレーム]]、[[concepts/terms/hit-confirm|ヒット確認]]など 23 語を保持する。
 - Capcom 公式 Fighting Ground Battle System scoped capture は Drive Gauge、Drive Impact、Drive Parry、Overdrive、Drive Rush、Drive Reversal、ゲーム画面 UI 説明を公式 source として保持する。
 - [[concepts/terms/index]] は eSports BASE 由来 23 語に加えて、Burnout、Drive Parry、Drive Reversal、Drive Impact、Drive Rush Cancel、Overdrive、Super Art、Critical Art、damage scaling、wall bounce、air reset、chain、cancel を個別 term page として保持する。
@@ -164,6 +167,7 @@ Street Fighter 6 は、この wiki が扱う glossary source、公式 eSports BA
 ## 未解決の質問
 
 - Battle Change List の 20 version 分を、version 別 source page、character 別 synthesis、または時系列 synthesis のどれへ昇格するか。
+- Capcom 公式 controls / control type source を追加 ingest して、SuperCombo controls の community claim と照合するか。
 - eSports BASE 以外の source を term pages へ統合する時、source ごとの claim 粒度をどこまで細かくするか。
 - 公式 Fighting Ground の scoped capture 範囲を今後拡張するか、この Battle System 範囲に固定するか。
 - SuperCombo frame-data 30キャラ分の `enriched_review_required` 1295 行を、どの順序で人間レビューするか。
