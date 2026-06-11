@@ -10,6 +10,7 @@ sources:
   - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/capcom-official-fightingground-battle-system]]"
   - "[[sources/supercombo-street-fighter-6-glossary]]"
+  - "[[sources/supercombo-street-fighter-6-hud]]"
 related:
   - "[[concepts/drive-system]]"
   - "[[concepts/frame-data]]"
@@ -30,13 +31,14 @@ tags:
 
 ## 要約
 
-Street Fighter 6 の用語を、source ごとの説明を残しながら統合するための index。個別 term page は `wiki/concepts/terms/` 配下に置き、公式 source、community source、質問回答、派生 output からの追加根拠を同じ用語へ集約する。Query ではまずこの index から該当 term page を探し、用語ページの source claim から source page へ戻る。
+Street Fighter 6 の用語を、source ごとの説明を残しながら統合するための index。個別 term page は `wiki/concepts/terms/` 配下に置き、公式 source、community source、HUD 表示 cue、質問回答、派生 output からの追加根拠を同じ用語へ集約する。Query ではまずこの index から該当 term page を探し、用語ページの source claim から source page へ戻る。
 
 ## 方針
 
 - 用語ごとに 1 page を作り、source ごとの claim を追記する。
 - source 間で意味や条件が違う場合は、片方を消さずに `意味差分` として明示する。
 - 個別技の frame value や patch-specific な数値は、公式 frame-data / Battle Change source を優先し、用語 page では根拠 source への入口に留める。
+- HUD icon 由来の用語は display cue として記録し、mechanics / damage / frame value の正本にしない。公式 source と重なる場合は公式 source を優先し、HUD source は visual/community evidence として使う。
 - Slug は English / ASCII を使う。英語へ置き換えると意味がずれやすい用語は romaji を使う。
 - `wiki/index.md` は個別 term page の direct catalog を持ち、用語の詳細な集約はこの page が担う。
 - Question pages から term pages への backlink は、本文に自然に出る重要語だけを本文リンクし、補助的な発見性は frontmatter `related:` に集約する。
@@ -55,7 +57,7 @@ Street Fighter 6 の用語を、source ごとの説明を残しながら統合�
 | 3 | [[concepts/terms/drive-impact-counter]] | インパクト返し | いんぱくとがえし | [[concepts/drive-system]], [[concepts/terms/corner]] |
 | 3 | [[concepts/terms/perfect-parry]] | ジャストパリィ | じゃすとぱりぃ | [[concepts/drive-system]], [[concepts/terms/scaling-reset]] |
 | 2 | [[concepts/terms/oki]] | 起き攻め | おきぜめ | [[concepts/terms/meaty]], [[concepts/terms/setplay]] |
-| 2 | [[concepts/terms/punish-counter]] | パニッシュカウンター | ぱにっしゅかうんたー | [[concepts/terms/frame-advantage]], [[concepts/terms/whiff-punish]] |
+| 2 | [[concepts/terms/punish-counter]] | パニッシュカウンター | ぱにっしゅかうんたー | [[concepts/terms/frame-advantage]], [[concepts/terms/whiff-punish]], [[concepts/terms/counter-hit]] |
 | 2 | [[concepts/terms/whiff-punish]] | 差し返し | さしかえし | [[concepts/terms/punish-counter]] |
 | 2 | [[concepts/terms/invincible-move]] | 無敵技 | むてきわざ | [[concepts/terms/abare]] |
 | 2 | [[concepts/terms/frame-advantage]] | 有利フレーム | ゆうりふれーむ | [[concepts/frame-data]], [[concepts/terms/guaranteed-punish]] |
@@ -74,7 +76,7 @@ Street Fighter 6 の用語を、source ごとの説明を残しながら統合�
 | Term page | 日本語 / 表記 | 主な source | 主な関連 |
 |---|---|---|---|
 | [[concepts/terms/burnout]] | バーンアウト | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/drive-system]], [[concepts/terms/chip-damage]], [[concepts/terms/stun]] |
-| [[concepts/terms/drive-impact]] | ドライブインパクト / Drive Impact | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/drive-system]], [[concepts/terms/drive-impact-counter]], [[concepts/terms/wall-bounce]] |
+| [[concepts/terms/drive-impact]] | ドライブインパクト / Drive Impact | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/supercombo-street-fighter-6-hud]] | [[concepts/drive-system]], [[concepts/terms/drive-impact-counter]], [[concepts/terms/wall-bounce]], [[concepts/terms/armor-break]], [[concepts/terms/crush]], [[concepts/terms/lock]] |
 | [[concepts/terms/drive-parry]] | ドライブパリィ / Drive Parry | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/drive-system]], [[concepts/terms/perfect-parry]], [[concepts/terms/raw-drive-rush]] |
 | [[concepts/terms/drive-reversal]] | ドライブリバーサル / Drive Reversal | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/drive-system]], [[concepts/terms/invincible-move]] |
 | [[concepts/terms/drive-rush-cancel]] | キャンセルドライブラッシュ / DRC | [[sources/capcom-official-fightingground-battle-system]], [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/terms/raw-drive-rush]], [[concepts/terms/cancel]], [[concepts/terms/frame-advantage]] |
@@ -82,12 +84,31 @@ Street Fighter 6 の用語を、source ごとの説明を残しながら統合�
 | [[concepts/terms/super-art]] | スーパーアーツ / SA | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/frame-data]], [[concepts/terms/critical-art]], [[concepts/terms/cancel]] |
 | [[concepts/terms/critical-art]] | クリティカルアーツ / CA | [[sources/capcom-official-zangief-frame-data]], [[sources/supercombo-zangief-frame-data]] | [[concepts/terms/super-art]], [[concepts/frame-data]] |
 | [[concepts/terms/damage-scaling]] | ダメージ補正 / damage scaling | [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/frame-data]], [[concepts/terms/scaling-reset]] |
-| [[concepts/terms/wall-bounce]] | 壁バウンド / 壁やられ | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/capcom-official-zangief-frame-data]] | [[concepts/terms/drive-impact]], [[concepts/terms/corner]], [[concepts/juggle-system]] |
-| [[concepts/terms/air-reset]] | Air Reset / 空中リセット | [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/juggle-system]], [[concepts/terms/wall-bounce]] |
+| [[concepts/terms/wall-bounce]] | 壁バウンド / 壁やられ | [[sources/capcom-official-fightingground-battle-system]], [[sources/supercombo-street-fighter-6-glossary]], [[sources/capcom-official-zangief-frame-data]] | [[concepts/terms/drive-impact]], [[concepts/terms/corner]], [[concepts/juggle-system]], [[concepts/terms/crush]], [[concepts/terms/lock]] |
+| [[concepts/terms/air-reset]] | Air Reset / 空中リセット | [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/juggle-system]], [[concepts/terms/wall-bounce]], [[concepts/terms/forced-knockdown]] |
 | [[concepts/terms/chain]] | Chain / Chn | [[sources/supercombo-street-fighter-6-glossary]] | [[concepts/fighting-game-notation]], [[concepts/terms/cancel]] |
 | [[concepts/terms/cancel]] | Cancel / キャンセル | [[sources/supercombo-street-fighter-6-glossary]], [[sources/capcom-official-fightingground-battle-system]] | [[concepts/fighting-game-notation]], [[concepts/terms/drive-rush-cancel]], [[concepts/terms/chain]] |
 
+## SuperCombo HUD icon 由来の追加用語
+
+HUD icon 由来の用語は、画面上の表示 cue として source claim を保持する。公式 source と重なる mechanics は公式 source を優先し、HUD source は visual/community evidence として扱う。
+
+| Term page | HUD 表記 | 主な source | 主な関連 |
+|---|---|---|---|
+| [[concepts/terms/combo-counter]] | Combo Counter | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/frame-data]], [[concepts/terms/hit-confirm]], [[concepts/terms/damage-scaling]] |
+| [[concepts/terms/counter-hit]] | Counter-hit | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/frame-data]], [[concepts/terms/frame-advantage]], [[concepts/terms/punish-counter]] |
+| [[concepts/terms/punish-counter]] | Punish Counter | [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/counter-hit]], [[concepts/terms/frame-advantage]] |
+| [[concepts/terms/forced-knockdown]] | Forced Knockdown | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/juggle-system]], [[concepts/terms/air-reset]], [[concepts/terms/hard-knockdown]] |
+| [[concepts/terms/cross-up]] | Cross-up | [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/anti-air]], [[concepts/terms/oki]] |
+| [[concepts/terms/hard-knockdown]] | Hard Knockdown / HKD | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/oki]], [[concepts/terms/punish-counter]] |
+| [[concepts/terms/reversal]] | Reversal | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/frame-data]], [[concepts/terms/invincible-move]], [[concepts/terms/drive-reversal]] |
+| [[concepts/terms/throw-escape]] | Throw Escape / Throw Tech | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/shimmy]], [[concepts/terms/punish-counter]] |
+| [[concepts/terms/stun]] | Stun/Dizzy | [[sources/capcom-esports-base-terms]], [[sources/supercombo-street-fighter-6-hud]] | [[concepts/drive-system]], [[concepts/terms/burnout]], [[concepts/terms/drive-impact]] |
+| [[concepts/terms/armor-break]] | Armor Break | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/drive-impact]], [[concepts/terms/drive-reversal]], [[concepts/terms/chain]] |
+| [[concepts/terms/crush]] | Crush | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/drive-impact]], [[concepts/terms/corner]], [[concepts/terms/wall-bounce]] |
+| [[concepts/terms/lock]] | Lock | [[sources/supercombo-street-fighter-6-hud]] | [[concepts/terms/drive-impact]], [[concepts/terms/corner]], [[concepts/terms/crush]] |
+
 ## 未解決の質問
 
-- SuperCombo glossary など community source を追加した時、どの用語で意味差分が出るか。
+- SuperCombo glossary / HUD など community source を追加した時、どの用語で意味差分が出るか。
 - Term page から個別の frame-data row や question page へ、どの粒度で backlink を張るか。

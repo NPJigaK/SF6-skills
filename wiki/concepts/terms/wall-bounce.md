@@ -3,7 +3,7 @@ type: concept
 concept_type: term
 title: "壁バウンド / 壁やられ"
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-11
 status: active
 confidence: medium
 sources:
@@ -15,6 +15,8 @@ related:
   - "[[concepts/terms/drive-impact]]"
   - "[[concepts/terms/corner]]"
   - "[[concepts/juggle-system]]"
+  - "[[concepts/terms/crush]]"
+  - "[[concepts/terms/lock]]"
   - "[[entities/street-fighter-6]]"
 aliases:
   - "wall bounce"
@@ -51,3 +53,5 @@ tags:
 - [[concepts/terms/drive-impact]]
 - [[concepts/terms/corner]]
 - [[concepts/juggle-system]]
+- [[concepts/terms/crush]]
+- [[concepts/terms/lock]]

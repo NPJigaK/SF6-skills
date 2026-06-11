@@ -23,6 +23,7 @@ aliases:
   - "Street Fighter 6 HUD"
   - "ストリートファイター6 HUD"
 related_concepts:
+  - "[[concepts/terms/index]]"
   - "[[concepts/drive-system]]"
   - "[[concepts/frame-data]]"
 related_entities:
@@ -40,7 +41,7 @@ SuperCombo Wiki の Street Fighter 6 HUD page を MediaWiki wikitext、HTML、re
 
 1. Canonical raw capture は `raw/web-pages/wiki.supercombo.gg/hud/manifest.json`。MediaWiki の原文を保つ取得物は `page.raw.wikitext`。
 2. Battle HUD section は Vitality Gauge、Drive Gauge、Timer、Round Count、Attribute Icon、Character Icon、Super Art Gauge の表示要素を説明する。
-3. HUD Icons section は Combo Counter、Counter-hit、Punish Counter、Forced Knockdown、Cross-up、Hard Knockdown、Reversal、Throw Escape、Stun/Dizzy、Armor Break、Crush、Lock の icon と説明を含む。
+3. HUD Icons section は Combo Counter、Counter-hit、Punish Counter、Forced Knockdown、Cross-up、Hard Knockdown、Reversal、Throw Escape、Stun/Dizzy、Armor Break、Crush、Lock の icon と説明を含む。これらは [[concepts/terms/index]] 配下の term pages へ display cue として集約した。
 4. Health Bar Reference section は `SF6_Health_Bars_SA3_Scaling.png` を参照し、標準 10,000 HP opponent に対する SA3 / CA minimum scaling の目安を説明する。
 5. この page は画像情報が重要なので、本文に明示された HUD semantic content media と rendered content media を保存した。`images/files/` には Battle HUD、Health Bar Reference、HUD icon 12 件の計 14 original files を置く。
 6. MediaWiki API の `prop=images` は template transclusion 後の画像を 44 件返すが、HUD 本文外の navigation / character icon 30 件は raw media download の対象外にした。除外一覧は `metadata.json` の `excluded_api_image_titles` で provenance として保持する。
@@ -62,6 +63,7 @@ SuperCombo Wiki の Street Fighter 6 HUD page を MediaWiki wikitext、HTML、re
 
 ## 関連概念
 
+- [[concepts/terms/index]]
 - [[concepts/drive-system]]
 - [[concepts/frame-data]]
 
@@ -75,12 +77,13 @@ SuperCombo Wiki の Street Fighter 6 HUD page を MediaWiki wikitext、HTML、re
 - この source は community wiki であり、公式 Capcom source より低い confidence で扱う。
 - Drive Gauge、Burnout、Super Art Gauge、Drive Impact など、公式 source と重なる mechanics claim は公式 source を優先する。
 - この source は HUD 表示と visual evidence の source として使う。個別 frame value、damage value、advantage、system rule の正本にはしない。
+- HUD Icons section の 12 項目は term pages へ昇格した。`Counter-hit`、`Punish Counter`、`Cross-up`、`Stun/Dizzy` など、公式 source と重なる用語では source ごとの claim を分けて保持する。
 - Character navigation icon は HUD page 本文の source content ではないため、raw media としては保存せず、除外した provenance としてのみ記録する。
 
 ## 未解決の質問
 
 - Capcom 公式の HUD / game screen 説明 source を追加 ingest して、HUD 表示要素と icon 表示の official evidence を補うか。
-- HUD icon ごとに個別 term page へ source claim を追加するか、それとも HUD source page と [[concepts/frame-data]] の補助 claim に留めるか。
+- HUD icon term pages に、公式 source または実機検証由来の条件差分を後で追加するか。
 - 将来の動画・画像質問向けに、scoped screenshots、original media、large video capture の保存基準をどこまで細分化するか。
 
 ## ソースメモ

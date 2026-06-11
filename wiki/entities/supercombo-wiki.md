@@ -27,12 +27,13 @@ tags:
 
 ## 要約
 
-SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source、controls source、HUD source、30 キャラ分の frame-data community source の掲載元。glossary は Drive System、notation、juggle、frame-data terms の補助 source として [[concepts/terms/index]] に統合され、controls は numpad notation、Classic / Modern control type、button notation の補助 source として [[concepts/fighting-game-notation]] に統合されている。HUD は Battle HUD、HUD icon、Health Bar Reference の community / visual source として保持する。公式 Classic data を正とする SuperCombo 補助列付き output も 30 キャラ分作成済み。
+SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 glossary source、controls source、HUD source、30 キャラ分の frame-data community source の掲載元。glossary は Drive System、notation、juggle、frame-data terms の補助 source として [[concepts/terms/index]] に統合され、controls は numpad notation、Classic / Modern control type、button notation の補助 source として [[concepts/fighting-game-notation]] に統合されている。HUD は Battle HUD、HUD icon、Health Bar Reference の community / visual source として保持し、HUD Icons section は term pages の display cue claim として集約している。公式 Classic data を正とする SuperCombo 補助列付き output も 30 キャラ分作成済み。
 
 ## 年表
 
 | 日付 | 出来事 | ソース |
 |---|---|---|
+| 2026-06-11 | Street Fighter 6 HUD page の HUD Icons section を term pages に集約した。新規9件を作成し、既存3件に HUD display cue claim を追記した。 | [[concepts/terms/index]], [[sources/supercombo-street-fighter-6-hud]] |
 | 2026-06-11 | Street Fighter 6 HUD page を web-page capture として保存した。Battle HUD、HUD icon、Health Bar Reference を含む community / visual source として扱う。 | [[sources/supercombo-street-fighter-6-hud]], [[reviews/2026-06-11-supercombo-hud-web-page-capture-review]] |
 | 2026-06-11 | Street Fighter 6 controls page を web-page capture として保存した。Classic / Modern control type、numpad notation、button nickname を含む community source として扱う。 | [[sources/supercombo-street-fighter-6-controls]], [[reviews/2026-06-11-supercombo-controls-web-page-capture-review]] |
 | 2026-06-09 | Street Fighter 6 glossary page を web-page capture として保存し、Notation Glossary の `ComboLegend-SF6` template 依存も記録した。旧 clipping は削除した。 | [[sources/supercombo-street-fighter-6-glossary]], [[reviews/2026-06-09-supercombo-glossary-web-page-capture-review]] |
@@ -49,7 +50,7 @@ SuperCombo Wiki は、この wiki が最初に ingest した Street Fighter 6 gl
 - SuperCombo Wiki は community wiki source として扱い、公式 Capcom source より低い confidence で使う。
 - SuperCombo glossary は [[concepts/terms/air-reset]]、[[concepts/terms/cancel]]、[[concepts/terms/chain]]、[[concepts/terms/damage-scaling]]、[[concepts/terms/wall-bounce]] などの term page に community source claim を提供する。
 - SuperCombo controls は [[concepts/fighting-game-notation]] に、numpad notation、Classic notation、button nickname、Classic / Modern control type の community source claim を提供する。
-- SuperCombo HUD は [[concepts/drive-system]] と [[concepts/frame-data]] に、Battle HUD の表示要素と HUD icon の community / visual source claim を提供する。ただし character navigation icon は source content ではなく、raw media download から除外した。
+- SuperCombo HUD は [[concepts/drive-system]]、[[concepts/frame-data]]、[[concepts/terms/index]] に、Battle HUD の表示要素と HUD icon の community / visual source claim を提供する。ただし character navigation icon は source content ではなく、raw media download から除外した。
 - 30キャラ分の SuperCombo frame-data 取得データは official data と重なる基本フレーム値の正とはせず、公式にない notes、range、juggle、hitbox image refs などの補助 source として保持する。公式 + SuperCombo 補助 output では公式列を正とし、SuperCombo は `supercombo_*` 列に入れる。
 - SuperCombo frame-data raw は latest mirror 固定パスに保存し、source revision は各 manifest の `source_revision` で追う。
 - JP / Ryu / Zangief / Ingrid には既存の人間レビュー済み補助行がある。2026-06-06 の fail-closed policy 以降は accepted 69 行を保持し、複数候補、SuperCombo row 再利用、基本 field conflict、比較不能 field、条件付き SuperCombo field を持つ未レビュー補助行 1295 行を review queue に残している。

@@ -3,7 +3,7 @@ type: concept
 concept_type: term
 title: "Air Reset"
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-11
 status: active
 confidence: medium
 sources:
@@ -12,6 +12,7 @@ related:
   - "[[concepts/terms/index]]"
   - "[[concepts/juggle-system]]"
   - "[[concepts/terms/wall-bounce]]"
+  - "[[concepts/terms/forced-knockdown]]"
   - "[[entities/street-fighter-6]]"
 aliases:
   - "air reset"
@@ -45,3 +46,4 @@ Air Reset は、空中 hit 後に相手が air knockdown ではなく復帰・�
 
 - [[concepts/juggle-system]]
 - [[concepts/terms/wall-bounce]]
+- [[concepts/terms/forced-knockdown]]

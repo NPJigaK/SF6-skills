@@ -2,6 +2,41 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] wiki-update | SuperCombo HUD Icons term pages
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/hud/page.raw.wikitext`
+  - `wiki/sources/supercombo-street-fighter-6-hud.md`
+- 作成:
+  - `wiki/concepts/terms/combo-counter.md`
+  - `wiki/concepts/terms/counter-hit.md`
+  - `wiki/concepts/terms/forced-knockdown.md`
+  - `wiki/concepts/terms/hard-knockdown.md`
+  - `wiki/concepts/terms/reversal.md`
+  - `wiki/concepts/terms/throw-escape.md`
+  - `wiki/concepts/terms/armor-break.md`
+  - `wiki/concepts/terms/crush.md`
+  - `wiki/concepts/terms/lock.md`
+- 更新:
+  - `wiki/concepts/terms/index.md`
+  - `wiki/concepts/terms/punish-counter.md`
+  - `wiki/concepts/terms/cross-up.md`
+  - `wiki/concepts/terms/stun.md`
+  - `wiki/concepts/terms/air-reset.md`
+  - `wiki/concepts/terms/drive-impact.md`
+  - `wiki/concepts/terms/wall-bounce.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/sources/supercombo-street-fighter-6-hud.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - HUD Icons section の 12 項目を display cue として term 化した。新規9件を作成し、Punish Counter / Cross-up / Stun は既存 page に HUD source claim を追加した。
+  - `Crush` と `Lock` は一般語として広げず、SuperCombo HUD の Drive Impact 関連 icon 名に scope を限定した。
+  - HUD source は community visual evidence なので、Counter / Punish Counter の advantage / damage、Stun の system 条件、Drive Impact の mechanics では公式 source を優先する方針を維持した。
+- 未解決事項:
+  - Capcom 公式 HUD / game screen source または実機検証で、HUD icon 表示条件を公式・実測の根拠として補強するか。
+
 ## [2026-06-11] ingest | SuperCombo HUD web-page raw capture
 - 原本:
   - `https://wiki.supercombo.gg/w/Street_Fighter_6/HUD`

@@ -99,7 +99,7 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 
 | Page | Summary | Related |
 |---|---|---|
-| [[concepts/terms/index]] | SF6 用語の統合 index。Capcom eSports BASE、Capcom Fighting Ground、SuperCombo glossary 由来の 36 個別 term pages を集約し、公式 / community source claims を用語ごとに保持する。 | [[concepts/drive-system]], [[concepts/frame-data]], [[concepts/fighting-game-notation]], [[concepts/juggle-system]], [[entities/street-fighter-6]] |
+| [[concepts/terms/index]] | SF6 用語の統合 index。Capcom eSports BASE、Capcom Fighting Ground、SuperCombo glossary、SuperCombo HUD 由来の 45 個別 term pages を集約し、公式 / community / HUD display cue source claims を用語ごとに保持する。 | [[concepts/drive-system]], [[concepts/frame-data]], [[concepts/fighting-game-notation]], [[concepts/juggle-system]], [[entities/street-fighter-6]] |
 | [[concepts/drive-system]] | Drive gauge に紐づく movement、offense、defense、burnout などの共通 system。Capcom 公式 source を mechanics の主根拠にし、SuperCombo HUD を Drive Gauge / Drive Impact 関連 icon の visual source として補う。 | [[concepts/terms/index]], [[concepts/terms/burnout]], [[concepts/terms/drive-impact]], [[concepts/terms/drive-parry]], [[concepts/terms/drive-reversal]], [[concepts/terms/drive-rush-cancel]], [[concepts/frame-data]], [[entities/street-fighter-6]] |
 | [[concepts/frame-data]] | 技の timing/property vocabulary、Capcom 公式 eSports BASE の frame / counter / hit confirm 観戦用語、SuperCombo HUD icon の display cue、30 character data slugs 分の公式 Classic / Modern coverage、SuperCombo 30キャラ community raw 取得データ、公式 + SuperCombo 補助列付き output、最新ミラー raw 配置方針、SuperCombo review queue 優先順。 | [[concepts/terms/index]], [[concepts/drive-system]], [[concepts/juggle-system]], [[concepts/fighting-game-notation]], [[reviews/2026-06-06-supercombo-field-conflict-queue-prereview]], [[entities/street-fighter-6]] |
 | [[concepts/juggle-system]] | Free/Limited Juggle、Juggle Count/Start/Increase/Limit、Air Reset / wall bounce などの community terms。 | [[concepts/frame-data]], [[concepts/terms/air-reset]], [[concepts/terms/wall-bounce]], [[entities/street-fighter-6]] |
@@ -114,45 +114,54 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 | [[concepts/terms/abare]] | 暴れ / abare | Capcom eSports BASE | [[concepts/terms/invincible-move]], [[concepts/terms/meaty]] |
 | [[concepts/terms/air-reset]] | Air Reset / 空中リセット | SuperCombo glossary | [[concepts/juggle-system]], [[concepts/terms/wall-bounce]] |
 | [[concepts/terms/anti-air]] | 対空 / anti-air | Capcom eSports BASE | [[concepts/drive-system]] |
+| [[concepts/terms/armor-break]] | Armor Break / アーマーブレイク | SuperCombo HUD | [[concepts/terms/drive-impact]], [[concepts/terms/drive-reversal]], [[concepts/terms/chain]] |
 | [[concepts/terms/burnout]] | バーンアウト / Burnout | Capcom Fighting Ground, Capcom eSports BASE, SuperCombo glossary | [[concepts/drive-system]], [[concepts/terms/chip-damage]], [[concepts/terms/stun]] |
 | [[concepts/terms/cancel]] | キャンセル / Cancel | Capcom Fighting Ground, SuperCombo glossary | [[concepts/fighting-game-notation]], [[concepts/terms/drive-rush-cancel]], [[concepts/terms/chain]] |
 | [[concepts/terms/chain]] | Chain / Chn | SuperCombo glossary | [[concepts/fighting-game-notation]], [[concepts/terms/cancel]] |
 | [[concepts/terms/chip-damage]] | 削り / chip damage | Capcom eSports BASE | [[concepts/drive-system]], [[concepts/terms/burnout]] |
+| [[concepts/terms/combo-counter]] | Combo Counter / コンボ数表示 | SuperCombo HUD | [[concepts/frame-data]], [[concepts/terms/hit-confirm]] |
 | [[concepts/terms/command-throw]] | コマ投げ / command throw | Capcom eSports BASE | [[concepts/terms/shimmy]] |
 | [[concepts/terms/corner]] | 画面端 / corner | Capcom eSports BASE | [[concepts/terms/stun]], [[concepts/terms/oki]] |
+| [[concepts/terms/counter-hit]] | Counter-hit / カウンターヒット | SuperCombo HUD | [[concepts/frame-data]], [[concepts/terms/frame-advantage]], [[concepts/terms/punish-counter]] |
 | [[concepts/terms/critical-art]] | Critical Art / CA | Official Zangief frame data, SuperCombo Zangief frame data | [[concepts/terms/super-art]], [[concepts/frame-data]] |
-| [[concepts/terms/cross-up]] | めくり / cross-up | Capcom eSports BASE | [[concepts/terms/anti-air]] |
+| [[concepts/terms/cross-up]] | めくり / cross-up | Capcom eSports BASE, SuperCombo HUD | [[concepts/terms/anti-air]], [[concepts/terms/oki]] |
+| [[concepts/terms/crush]] | Crush / Drive Impact corner block cue | SuperCombo HUD | [[concepts/terms/drive-impact]], [[concepts/terms/corner]], [[concepts/terms/wall-bounce]] |
 | [[concepts/terms/damage-scaling]] | ダメージ補正 / damage scaling | Capcom eSports BASE, SuperCombo glossary | [[concepts/frame-data]], [[concepts/terms/scaling-reset]] |
-| [[concepts/terms/drive-impact]] | Drive Impact / ドライブインパクト | Capcom Fighting Ground, Capcom eSports BASE, SuperCombo glossary | [[concepts/drive-system]], [[concepts/terms/drive-impact-counter]], [[concepts/terms/wall-bounce]] |
+| [[concepts/terms/drive-impact]] | Drive Impact / ドライブインパクト | Capcom Fighting Ground, Capcom eSports BASE, SuperCombo glossary, SuperCombo HUD | [[concepts/drive-system]], [[concepts/terms/drive-impact-counter]], [[concepts/terms/wall-bounce]], [[concepts/terms/armor-break]], [[concepts/terms/crush]], [[concepts/terms/lock]] |
 | [[concepts/terms/drive-impact-counter]] | インパクト返し / Drive Impact counter | Capcom eSports BASE | [[concepts/drive-system]], [[concepts/terms/drive-impact]], [[concepts/terms/corner]] |
 | [[concepts/terms/drive-parry]] | Drive Parry / ドライブパリィ | Capcom Fighting Ground, Capcom eSports BASE, SuperCombo glossary | [[concepts/drive-system]], [[concepts/terms/perfect-parry]], [[concepts/terms/raw-drive-rush]] |
 | [[concepts/terms/drive-reversal]] | Drive Reversal / ドライブリバーサル | Capcom Fighting Ground, SuperCombo glossary | [[concepts/drive-system]], [[concepts/terms/invincible-move]] |
 | [[concepts/terms/drive-rush-cancel]] | Drive Rush Cancel / DRC / キャンセルラッシュ | Capcom Fighting Ground, Capcom eSports BASE, SuperCombo glossary | [[concepts/drive-system]], [[concepts/terms/cancel]], [[concepts/terms/frame-advantage]] |
+| [[concepts/terms/forced-knockdown]] | Forced Knockdown / 強制ダウン | SuperCombo HUD | [[concepts/juggle-system]], [[concepts/terms/air-reset]], [[concepts/terms/hard-knockdown]] |
 | [[concepts/terms/frame-advantage]] | 有利 frame / frame advantage | Capcom eSports BASE | [[concepts/frame-data]] |
 | [[concepts/terms/guaranteed-punish]] | 確定反撃 / guaranteed punish | Capcom eSports BASE | [[concepts/terms/frame-advantage]], [[concepts/terms/punish-counter]] |
+| [[concepts/terms/hard-knockdown]] | Hard Knockdown / HKD | SuperCombo HUD | [[concepts/terms/oki]], [[concepts/terms/punish-counter]], [[concepts/terms/forced-knockdown]] |
 | [[concepts/terms/hit-confirm]] | ヒット確認 / hit confirm | Capcom eSports BASE | [[concepts/frame-data]], [[concepts/terms/frame-advantage]] |
 | [[concepts/terms/invincible-move]] | 無敵技 / invincible move | Capcom eSports BASE | [[concepts/terms/abare]], [[concepts/terms/drive-reversal]] |
 | [[concepts/terms/lethal]] | リーサル / lethal | Capcom eSports BASE | [[concepts/terms/hit-confirm]] |
+| [[concepts/terms/lock]] | Lock / true blockstring Drive Impact cue | SuperCombo HUD | [[concepts/terms/drive-impact]], [[concepts/terms/corner]], [[concepts/terms/crush]] |
 | [[concepts/terms/meaty]] | 重ね / meaty | Capcom eSports BASE | [[concepts/terms/oki]], [[concepts/terms/setplay]] |
 | [[concepts/terms/oki]] | 起き攻め / oki | Capcom eSports BASE | [[concepts/terms/meaty]], [[concepts/terms/setplay]] |
 | [[concepts/terms/overdrive]] | Overdrive / OD | Capcom Fighting Ground, SuperCombo glossary | [[concepts/drive-system]], [[concepts/terms/burnout]] |
 | [[concepts/terms/perfect-parry]] | ジャストパリィ / Perfect Parry | Capcom eSports BASE | [[concepts/drive-system]], [[concepts/terms/drive-parry]], [[concepts/terms/damage-scaling]] |
-| [[concepts/terms/punish-counter]] | パニッシュカウンター / Punish Counter | Capcom eSports BASE | [[concepts/frame-data]], [[concepts/terms/guaranteed-punish]] |
+| [[concepts/terms/punish-counter]] | パニッシュカウンター / Punish Counter | Capcom eSports BASE, SuperCombo HUD | [[concepts/frame-data]], [[concepts/terms/guaranteed-punish]], [[concepts/terms/counter-hit]] |
 | [[concepts/terms/raw-drive-rush]] | 生ラッシュ / raw Drive Rush | Capcom eSports BASE | [[concepts/drive-system]], [[concepts/terms/drive-parry]], [[concepts/terms/frame-advantage]] |
+| [[concepts/terms/reversal]] | Reversal / リバーサル | SuperCombo HUD | [[concepts/frame-data]], [[concepts/terms/invincible-move]], [[concepts/terms/drive-reversal]] |
 | [[concepts/terms/scaling-reset]] | 補正切り / scaling reset | Capcom eSports BASE | [[concepts/terms/damage-scaling]], [[concepts/terms/hit-confirm]] |
 | [[concepts/terms/setplay]] | セットプレイ / setplay | Capcom eSports BASE | [[concepts/terms/oki]], [[concepts/terms/meaty]] |
 | [[concepts/terms/shikomi]] | 仕込み / option-select-like input | Capcom eSports BASE | [[concepts/terms/hit-confirm]], [[concepts/terms/whiff-punish]] |
 | [[concepts/terms/shimmy]] | シミー / shimmy | Capcom eSports BASE | [[concepts/terms/command-throw]], [[concepts/terms/whiff-punish]] |
-| [[concepts/terms/stun]] | スタン / stun | Capcom eSports BASE | [[concepts/drive-system]], [[concepts/terms/burnout]], [[concepts/terms/corner]] |
+| [[concepts/terms/stun]] | スタン / Stun/Dizzy | Capcom eSports BASE, SuperCombo HUD | [[concepts/drive-system]], [[concepts/terms/burnout]], [[concepts/terms/corner]], [[concepts/terms/drive-impact]] |
 | [[concepts/terms/super-art]] | Super Art / SA | Capcom Fighting Ground, SuperCombo glossary | [[concepts/frame-data]], [[concepts/terms/critical-art]], [[concepts/terms/cancel]] |
-| [[concepts/terms/wall-bounce]] | wall bounce / 壁バウンド | Capcom Fighting Ground, SuperCombo glossary, official frame data | [[concepts/juggle-system]], [[concepts/terms/drive-impact]], [[concepts/terms/air-reset]] |
+| [[concepts/terms/throw-escape]] | Throw Escape / Throw Tech | SuperCombo HUD | [[concepts/terms/shimmy]], [[concepts/terms/punish-counter]] |
+| [[concepts/terms/wall-bounce]] | wall bounce / 壁バウンド | Capcom Fighting Ground, SuperCombo glossary, official frame data | [[concepts/juggle-system]], [[concepts/terms/drive-impact]], [[concepts/terms/air-reset]], [[concepts/terms/crush]], [[concepts/terms/lock]] |
 | [[concepts/terms/whiff-punish]] | 差し返し / whiff punish | Capcom eSports BASE | [[concepts/terms/shikomi]], [[concepts/terms/punish-counter]] |
 
 ## Entities
 
 | Page | Summary | Type |
 |---|---|---|
-| [[entities/street-fighter-6]] | glossary、SuperCombo controls / HUD、公式 CAPCOM eSports BASE 用語解説、36 term pages、公式 Fighting Ground Battle System、公式 frame-data sources、公式 Battle Change List、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
+| [[entities/street-fighter-6]] | glossary、SuperCombo controls / HUD、公式 CAPCOM eSports BASE 用語解説、45 term pages、公式 Fighting Ground Battle System、公式 frame-data sources、公式 Battle Change List、SuperCombo 30キャラ community frame-data 取得データ、公式 + SuperCombo 補助 output、raw layout の game context。 | other |
 | [[entities/supercombo-wiki]] | glossary、controls、HUD、30キャラ分の SuperCombo frame-data raw 取得データ、公式補助 output の source である community wiki。 | other |
 | [[entities/capcom]] | 公式 Street Fighter 6 eSports BASE 用語解説、Fighting Ground Battle System、frame-data sources、Battle Change List の publisher。 | company |
 | [[entities/ryu]] | Ryu（リュウ）。公式 Classic / Modern frame-data outputs と SuperCombo community frame-data output がある character。 | character |
