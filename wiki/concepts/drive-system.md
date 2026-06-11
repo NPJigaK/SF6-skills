@@ -2,13 +2,14 @@
 type: concept
 title: "Drive System"
 created: 2026-05-26
-updated: 2026-06-10
+updated: 2026-06-11
 status: active
 confidence: high
 sources:
   - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/capcom-official-fightingground-battle-system]]"
   - "[[sources/supercombo-street-fighter-6-glossary]]"
+  - "[[sources/supercombo-street-fighter-6-hud]]"
 related:
   - "[[concepts/terms/index]]"
   - "[[concepts/frame-data]]"
@@ -30,11 +31,11 @@ tags:
 
 ## 要約
 
-Drive System は、Street Fighter 6 の攻撃・防御・移動を横断する共通 system。Capcom 公式 Fighting Ground source では、Drive Gauge はバトル開始時から使用でき、使いすぎると枯渇状態や [[concepts/terms/burnout|バーンアウト]] に関わる resource として説明されている。Capcom 公式 eSports BASE 用語解説は、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]]などの観戦用語として Drive System 周辺の具体例を補う。
+Drive System は、Street Fighter 6 の攻撃・防御・移動を横断する共通 system。Capcom 公式 Fighting Ground source では、Drive Gauge はバトル開始時から使用でき、使いすぎると枯渇状態や [[concepts/terms/burnout|バーンアウト]] に関わる resource として説明されている。Capcom 公式 eSports BASE 用語解説は、[[concepts/terms/chip-damage|削り]]、[[concepts/terms/stun|スタン]]、[[concepts/terms/raw-drive-rush|生ラッシュ]]、[[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]]などの観戦用語として Drive System 周辺の具体例を補う。SuperCombo HUD page は Battle HUD 上の Drive Gauge / Super Art Gauge と、Drive Impact・Burnout に関係する HUD icon の表示証拠を補う。
 
 ## 定義
 
-Capcom 公式 Fighting Ground source は `DRIVE GAUGE` と `COMMON SYSTEM` として [[concepts/terms/drive-impact|Drive Impact]]、[[concepts/terms/drive-parry|Drive Parry]]、[[concepts/terms/overdrive|Overdrive]]、Drive Rush、[[concepts/terms/drive-reversal|Drive Reversal]] を説明している。Capcom 公式 eSports BASE は観戦用語として、Burnout 中の [[concepts/terms/chip-damage|削り]]、Burnout 中の Drive Impact による [[concepts/terms/stun|stun]]、Drive Parry から出す [[concepts/terms/raw-drive-rush|生ラッシュ]]、Drive Impact への [[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]] を説明している。SuperCombo glossary は community source として Burnout、Drive Impact、Drive Parry、Drive Reversal、Drive Rush、Drive System、Overdrive を列挙している。
+Capcom 公式 Fighting Ground source は `DRIVE GAUGE` と `COMMON SYSTEM` として [[concepts/terms/drive-impact|Drive Impact]]、[[concepts/terms/drive-parry|Drive Parry]]、[[concepts/terms/overdrive|Overdrive]]、Drive Rush、[[concepts/terms/drive-reversal|Drive Reversal]] を説明している。Capcom 公式 eSports BASE は観戦用語として、Burnout 中の [[concepts/terms/chip-damage|削り]]、Burnout 中の Drive Impact による [[concepts/terms/stun|stun]]、Drive Parry から出す [[concepts/terms/raw-drive-rush|生ラッシュ]]、Drive Impact への [[concepts/terms/drive-impact-counter|インパクト返し]]、[[concepts/terms/perfect-parry|ジャストパリィ]] を説明している。SuperCombo glossary は community source として Burnout、Drive Impact、Drive Parry、Drive Reversal、Drive Rush、Drive System、Overdrive を列挙している。SuperCombo HUD page は visual/community source として、Battle HUD 上の Drive Gauge と Drive Impact / Burnout 関連 icon の見え方を補助する。
 
 ## なぜ重要か
 
@@ -46,6 +47,7 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 |---|---|---|
 | Drive Gauge はバトル開始時から使用可能な Drive System の核心として説明されている。 | [[sources/capcom-official-fightingground-battle-system]] | high |
 | Drive Gauge が 0 になると [[concepts/terms/burnout|バーンアウト]] 状態になり、回復するまで Drive System を利用する技は一時的に使用できなくなる。 | [[sources/capcom-official-fightingground-battle-system]] | high |
+| SuperCombo HUD page は Battle HUD 上の Drive Gauge を表示要素として示し、Gauge が空になると Burnout になり、完全回復まで Drive-related techniques が使えないと説明する。 | [[sources/supercombo-street-fighter-6-hud]] | medium |
 | Guard 時には Drive Gauge が削られ、Burnout 中に必殺技を guard すると体力が削られ、[[concepts/terms/chip-damage|削り K.O.]] も可能になる。 | [[sources/capcom-esports-base-terms]] | high |
 | Burnout 中に Drive Impact を guard して [[concepts/terms/corner|画面端]] に到達すると [[concepts/terms/stun|stun]] 状態になり、stun 後は Burnout 状態が解除される。 | [[sources/capcom-esports-base-terms]] | high |
 | Drive Rush は [[concepts/terms/drive-parry|Drive Parry]] の構え、または cancel 可能な通常技から出せる。Drive Parry からはコスト 1、通常技からはコスト 3。 | [[sources/capcom-official-fightingground-battle-system]] | high |
@@ -74,6 +76,7 @@ Drive System は movement、offense、defense、resource exhaustion を横断す
 - Capcom 公式 Fighting Ground source は Battle System 範囲の scoped capture であり、Fighting Ground 全体の全 section を保存したものではない。
 - Capcom eSports BASE source は観戦用語の scoped capture であり、`CAPCOM eSports BASE` ページ全体の根拠ではない。
 - SuperCombo glossary は community source なので、公式 source と異なる wording がある場合は公式 source を優先して差異を明示する。
+- SuperCombo HUD page は HUD 表示と icon visual evidence の community source として使い、公式 source と重なる Drive / Burnout mechanics claim では公式 source を優先する。
 
 ## 未解決の質問
 

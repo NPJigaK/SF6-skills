@@ -1,0 +1,251 @@
+{
+  "manifest_schema_version": "supercombo_mediawiki_page_capture_manifest/v1",
+  "raw_root": "raw/web-pages/wiki.supercombo.gg/hud",
+  "source_family": "web_page",
+  "source_slug": "wiki.supercombo.gg/hud",
+  "domain": "wiki.supercombo.gg",
+  "page_slug": "hud",
+  "publisher": "SuperCombo Wiki",
+  "platform": "MediaWiki",
+  "page_title": "Street Fighter 6/HUD",
+  "source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/HUD",
+  "captured_at_utc": "2026-06-11T01:00:31Z",
+  "capture_label": "2026-06-11-rev345794",
+  "storage_policy": "updateable_web_page_capture",
+  "source_revision": {
+    "type": "mediawiki_revision",
+    "title": "Street Fighter 6/HUD",
+    "pageid": 58426,
+    "lastrevid": 345794,
+    "revision_id": 345794,
+    "revision_timestamp": "2026-01-03T12:40:35Z",
+    "touched": "2026-05-29T10:10:35Z",
+    "length": 4291,
+    "contentmodel": "wikitext",
+    "contentformat": "text/x-wiki",
+    "sha1": "4ade1e958431242f0427b33c17a280cc102bab5b",
+    "fullurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/HUD",
+    "canonicalurl": "https://wiki.supercombo.gg/w/Street_Fighter_6/HUD"
+  },
+  "source_updated_at": "2026-01-03T12:40:35Z",
+  "canonical_source_artifacts": [
+    "page.raw.wikitext",
+    "imageinfo.json",
+    "images/manifest.json"
+  ],
+  "media_source_artifacts": [
+    "images/files/",
+    "images/rendered/"
+  ],
+  "display_evidence_artifacts": [
+    "page.html",
+    "rendered/main.dom.json",
+    "rendered/media.dom.json",
+    "rendered/content.cleaned.html",
+    "rendered/content.scoped.html",
+    "screenshots/page-scoped.png",
+    "screenshots/content-scoped.png"
+  ],
+  "metadata": "metadata.json",
+  "validation": "validation.json",
+  "image_manifest": "images/manifest.json",
+  "media_raw_policy": {
+    "text": "page.raw.wikitext is canonical for source text.",
+    "images": "Only HUD semantic content media is stored under images/files and images/rendered. Transcluded navigation/template images are excluded from raw media downloads.",
+    "api_prop_images": "api/query.json may list all MediaWiki images after template transclusion; excluded_api_image_titles in metadata records titles outside the HUD media scope.",
+    "screenshots": "Screenshots capture scoped rendered HUD content after navigation removal and are not used as a replacement for source media files.",
+    "videos": "Video/audio DOM references are recorded in rendered/media.dom.json; large video downloads require an explicit scoped capture."
+  },
+  "template_dependency_policy": {
+    "scope": "Direct MediaWiki prop=templates dependencies are recorded by title only.",
+    "template_list_artifact": "api/templates.json",
+    "captured_template_bodies": [],
+    "recursive_capture": false
+  },
+  "template_dependencies": [
+    {
+      "ns": 10,
+      "title": "Template:Navbox"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox-SF6"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Icon"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Row"
+    },
+    {
+      "ns": 10,
+      "title": "Template:Navbox/Text"
+    }
+  ],
+  "artifact_hashes": {
+    "api/imageinfo-001.json": {
+      "sha256": "sha256:6ccd421ca338ff2ec90f472d47f42e4785749720420af266734c886515d33dff",
+      "bytes": 35170
+    },
+    "api/query.json": {
+      "sha256": "sha256:93f40d5084d0e7dc48c392c807bec77fb894d3475fe74ed22ecaec8b11263a02",
+      "bytes": 9734
+    },
+    "api/templates.json": {
+      "sha256": "sha256:bde43869c9f2567e7088e482ab37c807b63638ae81576b9961fe086292f5a88a",
+      "bytes": 685
+    },
+    "imageinfo.json": {
+      "sha256": "sha256:02d60464c44b2c2d69a1e5d015600cd75f3ea05df6c464590b600f1c1e76efd2",
+      "bytes": 36153
+    },
+    "images/files/SF6_Battle_HUD.jpg": {
+      "sha256": "sha256:0d5f6f66387ab26768d89145193cb655986afeb2fea9a0ee6245acd0c7ecccef",
+      "bytes": 521720
+    },
+    "images/files/SF6_Health_Bars_SA3_Scaling.png": {
+      "sha256": "sha256:b5f37d323258d4401f6ec4f9b222dc92d9b111675af40a3585e810d23fe17120",
+      "bytes": 1948178
+    },
+    "images/files/SF6_icon_armorbreak.png": {
+      "sha256": "sha256:6c7a8b052e7c0e41eac463a0006f2ef3e0044d53a1d8adec36a734b2f7156f09",
+      "bytes": 29479
+    },
+    "images/files/SF6_icon_combocount.png": {
+      "sha256": "sha256:078133efa1e03f6edbc0f8d81d8153a3a9c29c4a83c22d4be88d552454498838",
+      "bytes": 18985
+    },
+    "images/files/SF6_icon_counterhit.png": {
+      "sha256": "sha256:492dd65d2831c5c4917745e5100728e6fa5a179da66004aeb3211aefb24293b3",
+      "bytes": 13106
+    },
+    "images/files/SF6_icon_crossup.png": {
+      "sha256": "sha256:559290c30c7ad9e9e95074686e5bc450f7deb7a8bda3a65759e5c247776a1c62",
+      "bytes": 24897
+    },
+    "images/files/SF6_icon_crush.png": {
+      "sha256": "sha256:61231e990343444a006a004420e692e3e776e4d403082325c760d83f7ccc0851",
+      "bytes": 20985
+    },
+    "images/files/SF6_icon_forcedknockdown.png": {
+      "sha256": "sha256:b13039637be148548b10dfa28408e19b2c03a823cd02958ac08a1e7a48c34051",
+      "bytes": 22172
+    },
+    "images/files/SF6_icon_hkd.png": {
+      "sha256": "sha256:f4dded5c735e3d953edad7ab6721ac81ed6cd2558fddd66a646fe75c539fcc53",
+      "bytes": 33895
+    },
+    "images/files/SF6_icon_lock.png": {
+      "sha256": "sha256:fe79722107353315d806486ca415a5012c182e26daf2357e6b70e0f03eb46c8e",
+      "bytes": 19898
+    },
+    "images/files/SF6_icon_punishcounter.png": {
+      "sha256": "sha256:cf83bf9b0f1d35dad2045a5eaddfd0491ac878c48d563371fdb81c091370d9b5",
+      "bytes": 19535
+    },
+    "images/files/SF6_icon_reversal.png": {
+      "sha256": "sha256:71a7257fb51de8e695427c4d2b98df9d4550ad40cadc537c33730b1442d2ed75",
+      "bytes": 23801
+    },
+    "images/files/SF6_icon_stun.png": {
+      "sha256": "sha256:b9bf2c998167550d1667723c50711169e5340be336ce8174964000545a1005fd",
+      "bytes": 19032
+    },
+    "images/files/SF6_icon_throwescape.png": {
+      "sha256": "sha256:d96b941e941a138db75d726db2a9225b0c0c3a46d316e9a308650303847ebdb9",
+      "bytes": 28945
+    },
+    "images/rendered/116b40c7b32b-289px-SF6_icon_counterhit.png": {
+      "sha256": "sha256:bc7e6eeceef51b5e3284049d609bc2cb11b18a7c8466dbad6325de57d3058e95",
+      "bytes": 11649
+    },
+    "images/rendered/189b6237cf9a-578px-SF6_icon_crossup.png": {
+      "sha256": "sha256:cf5928acfdf1a2de3920a4713d9ab7479c927765c94ef384bbb5bce5d723405e",
+      "bytes": 21861
+    },
+    "images/rendered/3c33caae9efc-264px-SF6_icon_punishcounter.png": {
+      "sha256": "sha256:5faab0311a17c0132d672aeca88d361d4629edf4ca4063cdc344c3d4c1ad62e8",
+      "bytes": 15173
+    },
+    "images/rendered/49950f54430f-578px-SF6_icon_hkd.png": {
+      "sha256": "sha256:8ce9543284f9dc567dec22f1ffcbca173c0b535a20e3028db3f2d2df2d02c68d",
+      "bytes": 30662
+    },
+    "images/rendered/58aa6da50ecc-578px-SF6_icon_crush.png": {
+      "sha256": "sha256:a9d39e29ac7d26f651e3df5717377bcb0a2acdc0b347572a19e91020cf38c2be",
+      "bytes": 18186
+    },
+    "images/rendered/63d449f05f1b-200px-SF6_icon_combocount.png": {
+      "sha256": "sha256:3e59946e2bf6ffe0c05b38c90543c01b403f415ea1f76cf798c6a3f8e2aca4f4",
+      "bytes": 11308
+    },
+    "images/rendered/75e5566b25ad-578px-SF6_icon_lock.png": {
+      "sha256": "sha256:48fbb2cab1ad675102c97145fba9014891f5579eefd03d14f5128d8fbb76d061",
+      "bytes": 17010
+    },
+    "images/rendered/83b6a6136ea0-578px-SF6_icon_throwescape.png": {
+      "sha256": "sha256:ecbcfee03c67d7ed18821f7d68dc6b22ce11bcfb01c4ce5069e03ac849495137",
+      "bytes": 26127
+    },
+    "images/rendered/91c144c63aa0-342px-SF6_icon_forcedknockdown.png": {
+      "sha256": "sha256:04e239aadfcff8ee7652b8b1a3f26027f4278770bbc018dfc3776d7fb5bee571",
+      "bytes": 19558
+    },
+    "images/rendered/b7a9e1720723-578px-SF6_icon_stun.png": {
+      "sha256": "sha256:d14716f4046a18abed49024e5753515bc07ddc6968049b801d613764c1f9291b",
+      "bytes": 16177
+    },
+    "images/rendered/cb531f11c01d-578px-SF6_icon_reversal.png": {
+      "sha256": "sha256:8f52cf22fd4f81bfd499ac7f4ce0c015c3a8ccf16f9c3eab08fbdbb6c67bb5dc",
+      "bytes": 20927
+    },
+    "images/rendered/dc1156569b77-578px-SF6_icon_armorbreak.png": {
+      "sha256": "sha256:2ef2bfeedbd0e1ffb8497eafa50cf9d3442d5da5ee7bb3e15a360998b6059324",
+      "bytes": 26255
+    },
+    "metadata.json": {
+      "sha256": "sha256:e64b91283ac2cd91ef466dc5ffde0cab25cbe84cadbdedb51c84f7177d78e5ed",
+      "bytes": 18453
+    },
+    "page.html": {
+      "sha256": "sha256:7dc0616a01a4ee459ac5648f155533fb14147cdd53fddc9c340d79ce8dd03c19",
+      "bytes": 177658
+    },
+    "page.raw.wikitext": {
+      "sha256": "sha256:251a339059458e69af238e6a17be517530951914fb5fee79d6bacca01a55994a",
+      "bytes": 4291
+    },
+    "rendered/content.cleaned.html": {
+      "sha256": "sha256:cd783914892cd2c37355525cf35b9f3b5bb7a44fb8553af2e9604ff9bff0019c",
+      "bytes": 42248
+    },
+    "rendered/content.scoped.html": {
+      "sha256": "sha256:f2562ffebd32d588a79bdb87e7443264cf69a4509b7e6dbf37a840077799df8b",
+      "bytes": 10416
+    },
+    "rendered/main.dom.json": {
+      "sha256": "sha256:4aed41e8c4b44d3b567cdeeffc4d7115c1e27b58d757e2e56599f68181c96065",
+      "bytes": 103921
+    },
+    "rendered/media.dom.json": {
+      "sha256": "sha256:c828f48ab99274060adfa7e65f30b557d794ed8c00ac6c062faeb22ac249cdd5",
+      "bytes": 71174
+    },
+    "screenshots/content-scoped.png": {
+      "sha256": "sha256:ca6d37d612574910a02a2ee43df2f8e1052f3903369a1c9a167738b19163c004",
+      "bytes": 8817812
+    },
+    "screenshots/page-scoped.png": {
+      "sha256": "sha256:f259ec516db229ede074d6e957898f1c9412a65441a8ee1c8d3109296ceb1b4b",
+      "bytes": 3121521
+    },
+    "validation.json": {
+      "sha256": "sha256:f75dcb8f771d16379e4817c9a1af97668a66199db800564ce117fe760b22b3c2",
+      "bytes": 2048
+    }
+  },
+  "raw_review_status": "pending_human_review",
+  "tool": "tools/web_pages/supercombo_page.py"
+}

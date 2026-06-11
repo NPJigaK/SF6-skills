@@ -2,6 +2,34 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-11] ingest | SuperCombo HUD web-page raw capture
+- 原本:
+  - `https://wiki.supercombo.gg/w/Street_Fighter_6/HUD`
+  - `raw/web-pages/wiki.supercombo.gg/hud/manifest.json`
+- 作成:
+  - `raw/web-pages/wiki.supercombo.gg/hud/`
+  - `wiki/sources/supercombo-street-fighter-6-hud.md`
+  - `wiki/reviews/2026-06-11-supercombo-hud-web-page-capture-review.md`
+- 更新:
+  - `wiki/concepts/drive-system.md`
+  - `wiki/concepts/frame-data.md`
+  - `wiki/entities/street-fighter-6.md`
+  - `wiki/entities/supercombo-wiki.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `raw/web-pages/wiki.supercombo.gg/hud/validation.json` は `passed`。
+  - API の revision wikitext と `action=raw` の wikitext が一致した。
+  - MediaWiki revid は `345794`、source freshness は `2026-01-03T12:40:35Z`、raw 取得時刻は `2026-06-11T01:00:31Z`。
+  - MediaWiki API `prop=images` は 44件を返したが、HUD semantic content media 14件だけを `images/files/` と `images/rendered/` の対象にし、navigation / character icon 30件は除外 provenance として `metadata.json` に記録した。
+- メモ:
+  - Canonical raw は `page.raw.wikitext`。画像情報が重要な source なので、Battle HUD、HUD icon、Health Bar Reference の original media と rendered media、navigation 除去後の scoped screenshots を保存した。
+  - Character navigation icon は HUD page 本文の根拠ではないため、raw media download から除外した。`api/query.json` は MediaWiki response の provenance として保持する。
+  - HUD page は Battle HUD / HUD icon / Health Bar Reference の community visual source として扱い、Drive Gauge、Burnout、Super Art、Counter / Punish Counter など公式 source と重なる mechanics claim では公式 source を優先する。
+- 未解決事項:
+  - Capcom 公式 HUD / game screen source を追加 ingest して、SuperCombo HUD の community / visual claim と照合するか。
+  - 将来の動画・画像質問向けに、scoped screenshots、original media、large video capture の保存基準をどこまで細分化するか。
+
 ## [2026-06-11] ingest | SuperCombo Controls web-page raw capture
 - 原本:
   - `https://wiki.supercombo.gg/w/Street_Fighter_6/Controls`
