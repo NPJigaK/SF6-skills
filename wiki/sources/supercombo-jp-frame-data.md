@@ -7,8 +7,8 @@ publisher: "SuperCombo Wiki"
 raw_path: "raw/frame-data/supercombo/jp/manifest.json"
 original_url: "https://wiki.supercombo.gg/w/Street_Fighter_6/JP/Frame_data"
 created: 2026-05-31
-updated: 2026-06-01
-captured_at_utc: "2026-05-30T21:38:52Z"
+updated: 2026-06-11
+captured_at_utc: "2026-05-30T21:40:27Z"
 status: active
 confidence: medium
 tags:

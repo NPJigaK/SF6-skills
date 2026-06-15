@@ -773,10 +773,12 @@
         "action": "Drive Rush from Parry",
         "cost_bars": null,
         "raw_table_cost_bars": 0.5,
+        "transition_component_cost_bars": 0.5,
         "section_text_cost_bars": 1.0,
-        "is_ambiguous": true,
-        "source_value": "cost table shows 1/2 Drive Stock; Drive Rush section / caption text says 1 Drive Stock",
-        "note": "Source-internal conflict. Do not answer with a single cost_bars value until official / lab verification resolves whether these refer to different cost components."
+        "minimum_total_cost_bars": 1.0,
+        "is_ambiguous": false,
+        "source_value": "cost table shows 1/2 Drive Stock for Drive Rush from Parry; Drive Rush section / caption text says 1 Drive Stock from Parry",
+        "note": "Do not use cost_bars as a single action cost for Drive Rush from Parry. Use transition_component_cost_bars/raw_table_cost_bars as the Drive Rush from Parry transition component, and minimum_total_cost_bars/section_text_cost_bars as the minimum total cost including Drive Parry activation: 0.5 + 0.5 = 1.0."
       },
       {
         "action": "Drive Rush cancel",

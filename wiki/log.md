@@ -2,6 +2,82 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-15] 修正 | PDR cost_bars field 契約の明確化
+- 更新:
+  - `wiki/outputs/data/gauges/supercombo/numeric-tables.json`
+  - `wiki/concepts/terms/raw-drive-rush.md`
+  - `wiki/sources/supercombo-street-fighter-6-gauges.md`
+  - `wiki/outputs/lint/2026-06-11-health-check.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `Drive Rush from Parry` は `cost_bars` を単一 direct cost として使わず、`transition_component_cost_bars: 0.5` と `minimum_total_cost_bars: 1.0` を別 field に分ける方針にした。
+  - `2026-06-11-health-check` の PDR cost 未解決扱いは、2026-06-15 の component / total 整理で superseded と明記した。
+- メモ:
+  - `cost_bars` だけを読む downstream が「PDR cost は 0.5」と誤答しないよう、PDR の `cost_bars` は `null` のまま維持する。
+
+## [2026-06-15] review/update | PDR cost component 解釈の整理
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/gauges/page.raw.wikitext`
+  - `wiki/outputs/data/gauges/supercombo/numeric-tables.json`
+  - `wiki/outputs/data/battle-change/official/change-events.json`
+  - `wiki/outputs/data/frame-data/official/luke/classic.json`
+- 作成:
+  - `wiki/reviews/2026-06-15-pdr-cost-component-video-observation.md`
+- 更新:
+  - `wiki/concepts/terms/raw-drive-rush.md`
+  - `wiki/concepts/drive-system.md`
+  - `wiki/sources/supercombo-street-fighter-6-gauges.md`
+  - `wiki/sources/capcom-official-battle-change-list.md`
+  - `wiki/outputs/data/gauges/supercombo/numeric-tables.json`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Capcom 公式の Drive Parry からの Drive Rush cost `1` は、SuperCombo の Drive Parry activation `0.5` と Drive Rush from Parry transition `0.5` の最小総消費として扱う。
+  - SuperCombo の cost table `1/2` と section / caption `1 Drive Stock` は source conflict ではなく、component と total の粒度差として整理した。
+  - `→, →+Parry` の入力推奨と training 1本設定後の前進回復は、今回の残す情報から外した。
+- 未解決事項:
+  - frame `4` の hold drain が特定入力で何 frame 分乗るか、入力履歴だけでどこまで判定できるかは未確定として残す。
+
+## [2026-06-12] 修正 | Patch Notes freshness と batch raw path pattern の分離
+- 原本:
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/manifest.json`
+  - `raw/web-pages/wiki.supercombo.gg/patch-notes/validation.batch.json`
+  - `raw/frame-data/supercombo/`
+- 更新:
+  - `wiki/sources/supercombo-street-fighter-6-patch-notes.md`
+  - `wiki/sources/supercombo-street-fighter-6-frame-data-batch.md`
+  - `wiki/outputs/lint/2026-06-11-health-check.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - Patch Notes root page の `source_updated_at` は raw manifest の `2023-09-27T14:23:05Z`、detail pages の最新 freshness は `latest_detail_source_updated_at: 2026-06-02T03:12:40Z` として分離した。
+  - `detail_page_count: 17`、`detail_page_validation_status: passed`、`batch_validation_status: passed` を source page frontmatter に明記した。
+  - SuperCombo 30キャラ batch source の `raw_path` を実在する `raw/frame-data/supercombo/` にし、character manifest の pattern は `raw_path_pattern` に分けた。
+- メモ:
+  - `Drive Rush from Parry` cost 表記揺れは内部数値だけでは検証できないため、単一値へ正規化せず unresolved のまま残す。
+  - open review pages の dashboard 化は別 follow-up として扱う。
+
+## [2026-06-11] lint | Wiki health check
+- 作成:
+  - `wiki/outputs/lint/2026-06-11-health-check.md`
+- 更新:
+  - `wiki/sources/supercombo-jp-frame-data.md`
+  - `wiki/sources/supercombo-ryu-frame-data.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - Markdown frontmatter、wikilink、index 掲載、orphan-like page、duplicate title を確認した。
+  - `jq empty` で `wiki/**/*.json` 371 件、`raw/**/*.json` 793 件に parse error がないことを確認した。
+  - `raw/**/validation*.json` 59 件が pass 系 status であることを確認した。
+  - official frame-data 30 source page の Classic / Modern row count と derived JSON `row_count` の一致を確認した。
+  - Battle Change、SuperCombo Patch Notes、Game Data、Gauges の主要 derived count を `jq -e` で確認した。
+- 修正:
+  - SuperCombo JP / Ryu source page の `captured_at_utc` を raw manifest と同期した。
+- 未解決事項:
+  - Patch Notes の root page freshness と detail page 最新 freshness を frontmatter schema 上で分けるか。
+  - `Drive Rush from Parry` cost 表記揺れを component 分解と見るか、source-internal conflict として残すか。
+
 ## [2026-06-11] 修正 | SuperCombo Game Data tabber pipeline の正式統合
 - 原本:
   - `raw/web-pages/wiki.supercombo.gg/game-data/manifest.json`

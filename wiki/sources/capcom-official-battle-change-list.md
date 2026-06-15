@@ -7,7 +7,7 @@ publisher: "Capcom"
 raw_path: "raw/battle-change/official/manifest.json"
 original_url: "https://www.streetfighter.com/6/buckler/ja-jp/battle_change"
 created: 2026-06-07
-updated: 2026-06-11
+updated: 2026-06-15
 captured_at_utc: "2026-06-06T15:22:50Z"
 status: active
 confidence: high
@@ -22,6 +22,8 @@ aliases:
   - "SF6 battle change"
 related_concepts:
   - "[[concepts/frame-data]]"
+  - "[[concepts/drive-system]]"
+  - "[[concepts/terms/raw-drive-rush]]"
 related_entities:
   - "[[entities/capcom]]"
   - "[[entities/street-fighter-6]]"
@@ -50,6 +52,7 @@ Capcom 公式 Buckler's Boot Camp の Street Fighter 6 Battle Change List を、
 |---|---|---|---|
 | publisher は Capcom で、source URL は公式 Buckler's Boot Camp の Battle Change List。 | `raw/battle-change/official/manifest.json`; `raw/battle-change/official/discovery/metadata.json` | high | metadata が publisher、game、locale、source type、source URL を記録している。 |
 | Battle Change List は 20 update version を列挙する。 | `raw/battle-change/official/manifest.json` | high | `versions` は `20260528` から `20230724` まで。 |
+| 2023.09.27 update は、Just Parry の Drive Gauge 増加量について、打撃技は `10000（1ブロック）`、SA は `20000（2ブロック）` と公式本文で表記している。 | `wiki/outputs/data/battle-change/official/change-events.json`; `event_id == "official-battle-change:20230927:common:4:0:1"` | high | PDR cost の直接根拠ではないが、Capcom 公式が Drive Gauge の内部値として `10000 = 1 block` を使う根拠になる。 |
 | raw capture は各 version の HTML と Next.js data JSON を保持する。 | `raw/battle-change/official/versions/<version>/page.html`; `raw/battle-change/official/versions/<version>/data.json` | high | JSON は `_next/data/<buildId>/ja-jp/battle_change/<version>.json` の response。 |
 | 派生 output は 1820 change rows。 | `wiki/outputs/data/battle-change/official/changes.json`; [[reviews/2026-06-07-official-battle-change-capture-review]] | high | `text_html` は公式 HTML fragment を保持し、翻訳・正規化した置き換えではない。 |
 | change event index は 1820 events、move / target index は 1419 rows。 | `wiki/outputs/data/battle-change/official/change-events.json`; `wiki/outputs/data/battle-change/official/move-change-index.json` | medium | `change_types` と `confidence` は検索補助のための機械分類。原因説明では公式 `text_html` と現在 frame-data output へ戻る。 |

@@ -7,8 +7,8 @@ publisher: "SuperCombo Wiki"
 raw_path: "raw/frame-data/supercombo/ryu/manifest.json"
 original_url: "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu/Frame_data"
 created: 2026-05-31
-updated: 2026-06-01
-captured_at_utc: "2026-05-31T06:56:44Z"
+updated: 2026-06-11
+captured_at_utc: "2026-05-31T07:05:25Z"
 status: active
 confidence: medium
 tags:
