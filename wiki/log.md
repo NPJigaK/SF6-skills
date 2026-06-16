@@ -2,6 +2,24 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] schema-review | jq and Obsidian skills made repo-local
+- 作成:
+  - `.agents/skills/jq-cli/`
+  - `.agents/skills/obsidian-markdown/` の tracked repo-local skill 化
+- 更新:
+  - `AGENTS.md`
+  - `.agents/skills/sf6-source-ingest/SKILL.md`
+  - `.agents/skills/sf6-wiki-query/SKILL.md`
+  - `.agents/skills/sf6-durable-output/SKILL.md`
+  - `.agents/skills/sf6-wiki-health-check/SKILL.md`
+  - `.gitignore`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - `jq-cli` を global skill から repo-local skill に取り込み、JSON / JSONL の値・件数・validation では `$jq-cli` skill と `jq` / `jq -e` を明示利用する方針にした。
+  - 既存の `.agents/skills/obsidian-markdown/` を track 対象にし、Obsidian Flavored Markdown では `$obsidian-markdown` skill を明示利用する方針にした。
+  - 直前 entry の `jq-cli` / `obsidian-markdown` optional local skill 扱いの未解決事項は、この方針で superseded とする。
+
 ## [2026-06-16] schema-review | Wiki refactor workflow boundary clarified
 - 更新:
   - `AGENTS.md`

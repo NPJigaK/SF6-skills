@@ -16,7 +16,7 @@ description: Use for SF6 wiki-based query answering from compiled wiki evidence.
 3. index だけで不十分な場合のみ `rg` で wiki を検索する。
 4. 関連する source、concept、entity、synthesis、question、output、review page を読む。
 5. 値、日付、freshness、validation status、source confidence に依存する回答では、raw path、manifest、validation、derived JSON まで戻る。
-6. derived JSON、raw manifest / metadata / validation、frame-data JSON、numeric output から値や件数を取る時は `jq` filter と必要に応じて `jq -e` で確認する。repo-local `$jq-cli` skill が利用可能な場合は使ってよいが、必須依存にはしない。
+6. derived JSON、raw manifest / metadata / validation、frame-data JSON、numeric output から値や件数を取る時は repo-local `$jq-cli` skill を使い、`jq` filter と必要に応じて `jq -e` で確認する。
 
 ## Evidence Authority
 

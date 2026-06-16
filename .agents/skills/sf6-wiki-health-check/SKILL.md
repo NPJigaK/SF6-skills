@@ -14,7 +14,7 @@ description: Use for SF6 wiki health check, lint, structural refactor planning, 
 1. `AGENTS.md` を読む。
 2. `wiki/index.md` を読む。
 3. `wiki/log.md` の最近の entry を読む。
-4. JSON / JSONL の値、件数、schema-like 条件、validation status を確認する時は `jq` / `jq -e` を第一選択にする。repo-local `$jq-cli` skill が利用可能な場合は使ってよいが、必須依存にはしない。
+4. JSON / JSONL の値、件数、schema-like 条件、validation status を確認する時は repo-local `$jq-cli` skill を使い、`jq` / `jq -e` を第一選択にする。
 5. 新しい tool を足す前に、`rg`、`jq`、単純な file tools を使う。
 
 ## Severity

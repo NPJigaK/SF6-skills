@@ -7,6 +7,8 @@
 | File | Summary | Updated |
 |---|---|---:|
 | `AGENTS.md` | raw / wiki / schema 境界、page type、citation、wiki refactor / recompile 方針、index/log 更新、workflow skill dispatch を定義する agent-facing 正本。 | 2026-06-16 |
+| `.agents/skills/jq-cli/SKILL.md` | JSON / JSONL の検査、集計、validation、`jq` filter、shell quoting、`jq -e` exit-status check の repo-local skill。 | 2026-06-16 |
+| `.agents/skills/obsidian-markdown/SKILL.md` | Obsidian Flavored Markdown の repo-local skill。wikilinks、frontmatter、aliases、tags、embeds、callouts を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-source-ingest/SKILL.md` | source ingest / re-ingest の詳細 workflow。既存 raw source を wiki に compile し、関連 concept/entity/synthesis 更新、topology pass、index/log 更新を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-wiki-query/SKILL.md` | wiki-based query の詳細 workflow。source-only query、evidence authority、contamination-sensitive query、file-back 判断、wiki improvement candidates を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-durable-output/SKILL.md` | durable output / file-back の詳細 workflow。`wiki/questions/`、`wiki/syntheses/`、`wiki/outputs/`、`wiki/reviews/` の使い分けと related wiki への compound pass を扱う。 | 2026-06-16 |
