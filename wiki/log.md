@@ -2,6 +2,16 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] schema-review | Wiki refactor workflow boundary clarified
+- 更新:
+  - `AGENTS.md`
+  - `.agents/skills/sf6-wiki-health-check/SKILL.md`
+  - `wiki/log.md`
+- メモ:
+  - raw capture / raw update 専用 skill が未定義であることを明記し、`$sf6-source-ingest` は既存 raw source / raw package を wiki に compile する skill として境界を締めた。
+  - P2 Structure の `structural merge` 表現を締め、page merge / split / rename / directory move は原則 refactor plan first とした。
+  - `$sf6-wiki-refactor` 用の短い `Refactor ワークフロー` section を `AGENTS.md` に追加した。
+
 ## [2026-06-16] schema | Karpathy-style wiki refactor workflow added
 - 作成:
   - `.agents/skills/sf6-wiki-refactor/SKILL.md`

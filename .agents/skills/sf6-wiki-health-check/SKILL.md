@@ -21,7 +21,9 @@ description: Use for SF6 wiki health check, lint, structural refactor planning, 
 
 - P0 Integrity: broken wikilinks、missing frontmatter、missing index entry、log omission、obvious Markdown formatting。安全なら修正する。
 - P1 Evidence: uncited important claims、source conflicts、stale claims、row count mismatch、validation failure、raw/source/derived mismatch。事実を書き換えず、`wiki/reviews/` を作成または更新する。
-- P2 Structure: orphan pages、duplicate concepts、missing backlinks、missing concept/entity pages。小さな局所修正なら直し、大きな semantic merge は review に回す。ただし、source claim を変更しない structural merge / backlink repair / index rebuild / deprecated marker 追加は wiki maintenance として実行または具体的な refactor plan にしてよい。
+- P2 Structure: orphan pages、duplicate concepts、missing backlinks、missing concept/entity pages。小さな局所修正なら直し、大きな semantic merge は review に回す。
+  source claim を変更しない backlink repair、index rebuild、deprecated marker 追加、明らかな duplicate entry 整理は wiki maintenance として実行してよい。
+  page merge / split / rename / directory move は semantic 判断を含みやすいため、明らかな placeholder や完全重複を除き、まず `wiki/reviews/` に refactor plan を作る。
 - P3 Quality: weak summaries、missing aliases/tags、readability issues。低リスクなら改善する。
 
 ## Workflow
