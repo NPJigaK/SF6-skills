@@ -10,6 +10,8 @@ sources:
   - "[[sources/capcom-official-fightingground-battle-system]]"
   - "[[sources/capcom-esports-base-terms]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
+related:
+  - "[[concepts/drive-system]]"
   - "[[concepts/terms/raw-drive-rush]]"
 tags:
   - sf6

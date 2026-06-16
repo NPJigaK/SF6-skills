@@ -105,6 +105,42 @@ Never:
 - use model memory to fill missing facts
 - use subagent prose as evidence
 
+## Review Frontmatter Hygiene
+
+`wiki/reviews/` では、evidence links と navigation links を分けます。
+
+`sources:` には次を置きます。
+
+- `wiki/sources/` pages
+- raw-backed source summary
+- review の直接根拠になる derived-output evidence page
+- evidence として機能している accepted review fixture
+
+`related:` には次を置きます。
+
+- concepts
+- terms
+- entities
+- syntheses
+- outputs
+- questions
+- navigation links
+- navigation 上有用だが直接根拠ではない source page
+
+compiled concept pages を source evidence として扱わないでください。
+
+Review frontmatter cleanup では:
+
+- body claim を変更しない
+- `status` を変更しない
+- source authority を変更しない
+- validation status を変更しない
+- fixture authority を変更しない
+- expected values や route interpretation を変更しない
+- 有用な link は削除せず、適切な field へ移す
+- dashboard queue item を解決する場合は `wiki/reviews/index.md` を更新する
+- 軽微でない cleanup は `wiki/log.md` に追記する
+
 ## Refactor workflow
 
 1. Diagnose the current topology.

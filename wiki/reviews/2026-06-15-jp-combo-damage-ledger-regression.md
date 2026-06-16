@@ -11,11 +11,10 @@ sources:
   - "[[sources/supercombo-jp-frame-data]]"
   - "[[sources/supercombo-street-fighter-6-game-data]]"
   - "[[sources/supercombo-street-fighter-6-gauges]]"
-  - "[[concepts/terms/damage-scaling]]"
-  - "[[concepts/terms/punish-counter]]"
 related:
   - "[[entities/jp]]"
   - "[[concepts/terms/damage-scaling]]"
+  - "[[concepts/terms/punish-counter]]"
 external_sources:
   - title: "これ一本で全てわかるJPコンボ講座【りゅうせい・スト６】"
     url: "https://www.youtube.com/watch?v=nyFNgnzjV3M"

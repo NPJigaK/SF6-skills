@@ -2,6 +2,58 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] skill | Review frontmatter hygiene rule added
+- 更新:
+  - `.agents/skills/sf6-wiki-refactor/SKILL.md`
+  - `wiki/reviews/index.md`
+  - `wiki/log.md`
+- 検証:
+  - PDR / JP / Mai の frontmatter hygiene dogfood で確認した `sources:` / `related:` 分離を `$sf6-wiki-refactor` の rule として追加した。
+  - `wiki/reviews/` では source evidence と navigation links を分け、compiled concept pages を source evidence として扱わない方針を明記した。
+  - review status、source authority、validation status、fixture authority、expected values、route interpretation、review claims は変更していない。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - 今回は `AGENTS.md` には追加せず、wiki-only refactor / maintenance の local skill rule として固定した。
+
+## [2026-06-16] maintenance | Mai combo damage review frontmatter hygiene pass
+- 更新:
+  - `wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md`
+  - `wiki/reviews/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-refactor` の read-only plan と JP pass に従い、Mai combo damage regression review の frontmatter hygiene を 1 件だけ実行した。
+  - `sources:` は source pages に寄せ、`[[concepts/terms/damage-scaling]]`、`[[concepts/terms/counter-hit]]`、`[[concepts/terms/punish-counter]]` は `related:` 側の concept / navigation link として保持した。
+  - review status、source authority、validation status、fixture authority、expected damage totals、route interpretation、scaling claims、external_sources、本文 claim は変更していない。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - PDR / JP / Mai の 3 例が揃ったため、次は Review Frontmatter Hygiene rule を `$sf6-wiki-refactor` へ短く追加するか検討する。
+
+## [2026-06-16] maintenance | JP combo damage review frontmatter hygiene pass
+- 更新:
+  - `wiki/reviews/2026-06-15-jp-combo-damage-ledger-regression.md`
+  - `wiki/reviews/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-refactor` の read-only plan に従い、JP combo damage regression review の frontmatter hygiene を 1 件だけ実行した。
+  - `sources:` は source pages に寄せ、`[[concepts/terms/damage-scaling]]` と `[[concepts/terms/punish-counter]]` は `related:` 側の concept / navigation link として保持した。
+  - review status、source authority、validation status、fixture authority、expected damage totals、route interpretation、scaling claims、external_sources、本文 claim は変更していない。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - Mai combo damage regression review の frontmatter hygiene は別 pass 候補として残す。
+
+## [2026-06-16] maintenance | PDR review frontmatter hygiene pass
+- 更新:
+  - `wiki/reviews/2026-06-15-pdr-cost-component-video-observation.md`
+  - `wiki/reviews/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-refactor` の dashboard dogfood として、Frontmatter hygiene queue から PDR review の低リスク候補を 1 件だけ修正した。
+  - `sources:` は source pages に寄せ、`[[concepts/terms/raw-drive-rush]]` は `related:` 側の concept / navigation link として保持した。
+  - review status、source authority、validation status、本文 claim、raw/derived output は変更していない。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - 次の候補は JP / Mai combo damage regression review の `sources:` / `related:` 整理だが、fixture authority が絡むため read-only plan を先に作る。
+
 ## [2026-06-16] review | Review dashboard added
 - 作成:
   - `wiki/reviews/index.md`
@@ -55,6 +107,18 @@
 - メモ:
   - 今回は actual synthesis page、derived output 再生成、page merge / split / rename / directory move、source authority / validation status / patch fact の変更は行っていない。
   - official-only 4 update、launch row、SuperCombo detail の昇格粒度、community detail を official fact と誤読しない表記は人間レビュー項目として残した。
+
+## [2026-06-16] dogfood | Wiki refactor workflow topology review
+- 更新:
+  - `wiki/reviews/2026-06-15-pdr-cost-component-video-observation.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-refactor` の dogfood として、`wiki/index.md` と最近の `wiki/log.md` から scope-limited topology review を行った。
+  - safe wiki-only refactor として、PDR cost component review に `related:` frontmatter を追加し、Drive System / raw Drive Rush / SuperCombo Gauges への接続性だけを補正した。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - 今回は page merge / split / rename / directory move、事実値、source authority、validation status の変更は行っていない。
+  - 次回候補は、Battle Change / SuperCombo Patch Notes の version timeline synthesis、open review dashboard、または index の hub 化を review plan として検討する。
 
 ## [2026-06-16] schema-review | jq and Obsidian skills made repo-local
 - 作成:

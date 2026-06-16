@@ -83,11 +83,14 @@ tags:
 
 ## Frontmatter hygiene queue
 
-| Candidate | Evidence | Suggested cleanup | Risk |
-|---|---|---|---|
-| [[reviews/2026-06-15-pdr-cost-component-video-observation]] | `sources:` includes source pages and concept/navigation links. | Keep source pages in `sources:` and move concept/navigation links to `related:` without changing review status or body claims. | Low. |
-| [[reviews/2026-06-15-jp-combo-damage-ledger-regression]] / [[reviews/2026-06-15-mai-combo-damage-ledger-regression]] | `sources:` mixes source pages and compiled term/concept pages in active calculation reviews. | Use `sources:` for source-backed evidence and `related:` for term/entity/navigation links; do not change fixture authority, expected damage, or route interpretation. | Medium-low; fixture metadata must stay unchanged. |
-| General review frontmatter hygiene | `sources:` currently mixes source pages and compiled concept pages in a few reviews. | Use `sources:` for source pages / raw-backed evidence; use `related:` for concept / entity / synthesis / navigation links. | Low as a scoped structural cleanup. |
+2026-06-16 pass:
+
+- [[reviews/2026-06-15-pdr-cost-component-video-observation]] は `sources:` から concept link を外し、`related:` に concept / navigation link を残す形に整理済み。review status、source authority、本文 claim は変更していない。
+- [[reviews/2026-06-15-jp-combo-damage-ledger-regression]] は `sources:` から [[concepts/terms/damage-scaling]] / [[concepts/terms/punish-counter]] を外し、`related:` 側に保持する形に整理済み。fixture authority、damage total、route interpretation、本文 claim は変更していない。
+- [[reviews/2026-06-15-mai-combo-damage-ledger-regression]] は `sources:` から [[concepts/terms/damage-scaling]] / [[concepts/terms/counter-hit]] / [[concepts/terms/punish-counter]] を外し、`related:` 側に保持する形に整理済み。fixture authority、damage total、route interpretation、本文 claim は変更していない。
+- Review Frontmatter Hygiene rule は PDR / JP / Mai の 3 例を根拠に、2026-06-16 に `$sf6-wiki-refactor` へ追加済み。
+
+現時点でこの dashboard に残す具体的な frontmatter hygiene candidate はない。
 
 ## Dashboard update policy
 
@@ -101,5 +104,5 @@ tags:
 ## Next maintenance candidates
 
 1. [[syntheses/battle-change-version-timeline]] の human-review items を確認する。
-2. Frontmatter hygiene queue は 1 件ずつ処理し、review status / source authority / body claim を変えない。
+2. Review Frontmatter Hygiene rule の適用状況は、次回 dashboard freshness check で確認する。
 3. `wiki/index.md` の Reviews section を将来 `[[reviews/index]]` へ寄せる hub 化 plan を作る。

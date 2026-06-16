@@ -9,12 +9,11 @@ confidence: medium
 sources:
   - "[[sources/capcom-official-mai-frame-data]]"
   - "[[sources/supercombo-street-fighter-6-game-data]]"
-  - "[[concepts/terms/damage-scaling]]"
-  - "[[concepts/terms/counter-hit]]"
-  - "[[concepts/terms/punish-counter]]"
 related:
   - "[[entities/mai]]"
   - "[[concepts/terms/damage-scaling]]"
+  - "[[concepts/terms/counter-hit]]"
+  - "[[concepts/terms/punish-counter]]"
 external_sources:
   - title: "【スト６】舞　最強コンボ集【解説付き】"
     url: "https://www.youtube.com/watch?v=f78kDhtzHlY"
