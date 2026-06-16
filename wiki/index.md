@@ -225,6 +225,7 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 
 | Page | Summary | Updated |
 |---|---|---:|
+| [[syntheses/battle-change-version-timeline]] | Capcom 公式 Battle Change List と SuperCombo Patch Notes の version timeline、authority model、freshness rules、derived output の使い分けをまとめる draft synthesis。16 matched / 1 launch / 4 official-only を分け、current value query と historical explanation query の読み順を整理する。 | 2026-06-16 |
 | [[syntheses/frame-data-raw-layout]] | frame-data raw を最新ミラー固定パスに置き、manifest の `source_updated_at` / `captured_at_utc` / `source_revision` を分けて由来を追う方針。official 30キャラと SuperCombo 30キャラの raw entrypoint と data-family first output layout を整理する。 | 2026-06-09 |
 
 ## Questions
@@ -332,6 +333,7 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 | [[reviews/2026-06-11-supercombo-game-data-web-page-capture-review]] | capture_validation | SuperCombo Game Data を `raw/web-pages/` layout で取得。4 tabber groups / 46 tabs / 39 content tables を live click validation まで含めて確認し、table text を raw-derived artifact に保持した。 | open |
 | [[reviews/2026-06-11-supercombo-patch-notes-web-page-capture-review]] | capture_validation | SuperCombo Patch Notes と 17 version detail pages を `raw/web-pages/` layout で取得。detail validation 17/17 passed、公式 Battle Change crosswalk は 16 matched / 1 launch / 4 official-only。 | open |
 | [[reviews/2026-06-11-jp-year1-od-amnesia-combo-damage-calculation-model-gap]] | calculation_model_gap | JP Year1 初期 ODアムネジア始動ルートの 5790 damage は useful model-gap observation かつ legacy regression fixture。SA3 は `move_total` segment として保持し、内部 hit split は modeled としない。 | open |
+| [[reviews/2026-06-16-battle-change-version-timeline-refactor-plan]] | refactor_plan | Battle Change / SuperCombo Patch Notes の version timeline synthesis 作成前に、official / community / derived authority、16 matched / 1 launch / 4 official-only の扱い、人間レビュー項目を整理する refactor plan。 | open |
 | [[reviews/2026-06-15-jp-combo-damage-ledger-regression]] | calculation_model_gap | JP Classic combo 2本の damage regression。3178 route は `5HP` starter scaling と mid-combo Drive Rush penalty、3660 route は `SA2 ラヴーシュカ` delayed-hit 中の即時補正と `6HK` partial hit を ledger に明示する fixture を保持する。 | active |
 | [[reviews/2026-06-15-mai-combo-damage-ledger-regression]] | calculation_model_gap | Mai Classic combo 4本の damage regression。`214HP (No Flame)` の extra scaling step、mid-combo Drive Rush、SA3 minimum を ledger に明示する fixture を保持する。 | active |
 | [[reviews/2026-06-15-pdr-cost-component-video-observation]] | mechanics_evidence_review | Drive Rush from Parry の `0.5 + 0.5 = 1.0` component interpretation と、`0.5` threshold 周辺のユーザー実機観察を、追加 hold drain の未解決点と分けて記録する。 | active |

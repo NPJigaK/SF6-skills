@@ -2,6 +2,46 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] synthesis | Battle Change read order quick reference
+- 更新:
+  - `wiki/syntheses/battle-change-version-timeline.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-query` の query-only 検証で見つかった friction を受け、synthesis 冒頭に `Read order quick reference` を追加した。
+  - 追加内容は既存の authority model / query recipes の短縮版に限定し、source authority、validation status、patch fact、frame value は変更していない。
+  - `raw/`、`tools/`、derived output は変更していない。
+- メモ:
+  - `wiki/index.md` の summary は既に version timeline、authority model、freshness rules、derived output、current value / historical explanation の読み分けを含むため、今回は更新していない。
+
+## [2026-06-16] synthesis | Battle Change version timeline draft
+- 作成:
+  - `wiki/syntheses/battle-change-version-timeline.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+  - `wiki/reviews/2026-06-16-battle-change-version-timeline-refactor-plan.md`
+- 検証:
+  - `$sf6-durable-output` と `$sf6-wiki-refactor` の方針に従い、review plan を actual synthesis draft へ昇格した。
+  - `jq` で official versions 20、official change events 1820、official move-index rows 1419、SuperCombo versions 17、SuperCombo events 1374、SuperCombo targets 1118、crosswalk 16 matched / 1 launch / 4 official-only を再確認した。
+  - `raw/`、`tools/`、derived output は変更していない。
+- メモ:
+  - synthesis は `status: review-needed`、`confidence: medium` とし、official-only 4 update、launch row、SuperCombo detail 昇格粒度、community detail と official fact の境界を未解決項目として残した。
+  - source authority、validation status、patch fact、frame value は変更していない。
+
+## [2026-06-16] refactor-plan | Battle Change version timeline synthesis plan
+- 作成:
+  - `wiki/reviews/2026-06-16-battle-change-version-timeline-refactor-plan.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-refactor` の read-only plan で選定した Battle Change / SuperCombo Patch Notes version timeline synthesis 候補を、actual synthesis 作成前の refactor plan として永続化した。
+  - `jq` で official versions 20、official change events 1820、official move-index rows 1419、SuperCombo versions 17、SuperCombo events 1374、SuperCombo targets 1118、crosswalk 16 matched / 1 launch / 4 official-only を確認した。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - 今回は actual synthesis page、derived output 再生成、page merge / split / rename / directory move、source authority / validation status / patch fact の変更は行っていない。
+  - official-only 4 update、launch row、SuperCombo detail の昇格粒度、community detail を official fact と誤読しない表記は人間レビュー項目として残した。
+
 ## [2026-06-16] schema-review | jq and Obsidian skills made repo-local
 - 作成:
   - `.agents/skills/jq-cli/`
