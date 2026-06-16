@@ -1,0 +1,185 @@
+{
+  "input_type": "combo_damage_ledger",
+  "schema_version": 1,
+  "title": "Mai Classic: raw DR 6MP > 2MP > DRC 5HK > 2MP > DRC 5HK > 2MP > 214HP > 236LK > SA3",
+  "source_paths": [
+    "wiki/outputs/data/frame-data/official/mai/classic.json",
+    "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+    "wiki/concepts/terms/damage-scaling.md",
+    "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+  ],
+  "authority": {
+    "authority_type": "regression_fixture",
+    "confidence": "medium",
+    "source_paths": [
+      "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+    ],
+    "validation_status": "human_training_validation",
+    "review_status": "active",
+    "notes": {
+      "base_damage": "Capcom official Mai Classic frame data for total damage; SuperCombo Mai frame data for per-hit split.",
+      "scaling": "SuperCombo Game Data via wiki/concepts/terms/damage-scaling.md. Raw Drive Rush starter has no added damage penalty, mid-combo Drive Rush uses one non-stacking 15% penalty, Mai 214HP (No Flame) advances the next attack by one extra scaling step, and SA3 uses 50% minimum scaling.",
+      "validation": "YouTube video https://www.youtube.com/watch?v=f78kDhtzHlY, title '【スト６】舞　最強コンボ集【解説付き】', upload_date 2026-04-21, and user-provided training-mode screenshot reported 5285 total damage for this route."
+    }
+  },
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "expected_total_damage": 5285,
+  "hits": [
+    {
+      "hit_index": 1,
+      "attack_step": "1st attack",
+      "move": "Raw DR 6MP",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 2,
+      "attack_step": "2nd attack",
+      "move": "2MP",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 3,
+      "attack_step": "3rd attack, mid-combo DRC 68%",
+      "move": "DRC 5HK",
+      "base_damage": 900,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/25",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 4,
+      "attack_step": "4th attack, mid-combo DRC 59%",
+      "move": "2MP",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "59/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 5,
+      "attack_step": "5th attack, mid-combo DRC 51%",
+      "move": "DRC 5HK",
+      "base_damage": 900,
+      "condition_multiplier": "1",
+      "effective_scaling": "51/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 6,
+      "attack_step": "6th attack, mid-combo DRC 42%",
+      "move": "2MP",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "21/50",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 7,
+      "hit_span": "7.1",
+      "attack_step": "7th attack, mid-combo DRC 34%",
+      "scaling_note": "214HP (No Flame) is comboed into and consumes 2 hits of scaling, so the next attack uses 9th-attack scaling.",
+      "move": "214HP Ryuuenbu hit 1",
+      "base_damage": 200,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/50",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+      ]
+    },
+    {
+      "hit_index": 8,
+      "hit_span": "7.2",
+      "attack_step": "7th attack, mid-combo DRC 34%",
+      "scaling_note": "214HP (No Flame) is comboed into and consumes 2 hits of scaling, so the next attack uses 9th-attack scaling.",
+      "move": "214HP Ryuuenbu hit 2",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/50",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+      ]
+    },
+    {
+      "hit_index": 9,
+      "hit_span": "8.1",
+      "attack_step": "9th attack, mid-combo DRC 17%",
+      "scaling_note": "214HP (No Flame) advanced the scaling step for this next attack.",
+      "move": "236LK Hissatsu Shinobi Bachi hit 1",
+      "base_damage": 400,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+      ]
+    },
+    {
+      "hit_index": 10,
+      "hit_span": "8.2",
+      "attack_step": "9th attack, mid-combo DRC 17%",
+      "scaling_note": "214HP (No Flame) advanced the scaling step for this next attack.",
+      "move": "236LK Hissatsu Shinobi Bachi hit 2",
+      "base_damage": 400,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+      ]
+    },
+    {
+      "hit_index": 11,
+      "attack_step": "SA3 minimum 50%",
+      "scaling_note": "Combo scaling is below SA3 minimum; this ledger applies the SA3 50% minimum.",
+      "move": "SA3 Shiranui Ryuu: Enbu Ada Zakura",
+      "base_damage": 4000,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/2",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    }
+  ]
+}

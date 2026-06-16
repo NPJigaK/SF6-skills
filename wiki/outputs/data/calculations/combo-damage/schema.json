@@ -1,0 +1,81 @@
+{
+  "output_type": "combo_damage_calculation_schema",
+  "schema_version": 1,
+  "description": "Schema contract for deterministic source-backed combo damage calculation outputs.",
+  "schema_format": "repo_local_contract_descriptor",
+  "calculator": {
+    "name": "tools.calculations.combo_damage",
+    "version": "combo_damage/v1"
+  },
+  "input_type": "combo_damage_ledger",
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "required_input_fields": [
+    "input_type",
+    "schema_version",
+    "source_paths",
+    "authority",
+    "rounding_policy",
+    "hits"
+  ],
+  "required_hit_fields": [
+    "hit_index",
+    "move",
+    "base_damage",
+    "condition_multiplier",
+    "effective_scaling",
+    "source_paths"
+  ],
+  "required_authority_fields": [
+    "authority_type",
+    "confidence",
+    "source_paths",
+    "validation_status",
+    "review_status"
+  ],
+  "deterministic_authority_types": [
+    "source_backed_ledger",
+    "regression_fixture",
+    "validated_fixture"
+  ],
+  "non_deterministic_authority_types": [
+    "candidate_fixture",
+    "working_hypothesis"
+  ],
+  "optional_hit_trace_fields": [
+    "hit_span",
+    "attack_step",
+    "scaling_note",
+    "damage_granularity",
+    "segment_type"
+  ],
+  "damage_granularity_values": [
+    "per_hit",
+    "damage_segment",
+    "move_total"
+  ],
+  "required_output_fields": [
+    "output_type",
+    "schema_version",
+    "calculator.name",
+    "calculator.version",
+    "calculator.sympy_version",
+    "source.source_paths",
+    "source.input_sha256",
+    "source.authority",
+    "rounding_policy",
+    "formula.id",
+    "rows",
+    "total_damage"
+  ],
+  "notes": [
+    "Only source-backed ledgers are valid input.",
+    "Rational values must be represented as integers or exact rational strings such as 6/5.",
+    "Floating-point input is intentionally rejected.",
+    "Optional attack_step, scaling_note, damage_granularity, and segment_type fields document source-backed scaling progression and calculation granularity; they are trace fields and do not change arithmetic.",
+    "Optional hit_span must identify one damaging hit or one explicit damage segment. Aggregated ranges such as 10-16 are rejected.",
+    "damage_granularity=move_total represents a source-backed full move total such as a Super Art total; segment_type is required for move_total so internal hit split is not implied.",
+    "Human-provided training-mode observations can support regression_fixture ledgers, but do not by themselves create validated_rule authority.",
+    "Candidate fixtures and working hypotheses must stay outside deterministic combo_damage_calculation outputs.",
+    "The calculator does not infer delayed hits, route expansion, patch rollback, juggle state, or distance conditions."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "input_type": "combo_damage_ledger",
+  "schema_version": 1,
+  "title": "Mai Classic counter hit: 5LP CH > 2MK > 236HK",
+  "source_paths": [
+    "wiki/outputs/data/frame-data/official/mai/classic.json",
+    "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+    "wiki/concepts/terms/damage-scaling.md",
+    "wiki/concepts/terms/counter-hit.md",
+    "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+  ],
+  "authority": {
+    "authority_type": "regression_fixture",
+    "confidence": "medium",
+    "source_paths": [
+      "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+    ],
+    "validation_status": "human_training_validation",
+    "review_status": "active",
+    "notes": {
+      "base_damage": "Capcom official Mai Classic frame data for total damage; SuperCombo Mai frame data for per-hit split.",
+      "scaling": "SuperCombo Game Data via wiki/concepts/terms/damage-scaling.md; Counter Hit 1.2x from wiki/concepts/terms/counter-hit.md.",
+      "validation": "YouTube video https://www.youtube.com/watch?v=f78kDhtzHlY, title '【スト６】舞　最強コンボ集【解説付き】', upload_date 2026-04-21, and user-provided observation reported 1460 total damage for this route."
+    }
+  },
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "expected_total_damage": 1460,
+  "hits": [
+    {
+      "hit_index": 1,
+      "attack_step": "1st attack, Light starter",
+      "move": "5LP Counter Hit",
+      "base_damage": 300,
+      "condition_multiplier": "6/5",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/counter-hit.md"
+      ]
+    },
+    {
+      "hit_index": 2,
+      "attack_step": "2nd attack, Light starter 80%",
+      "move": "2MK",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "4/5",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 3,
+      "hit_span": "3.1",
+      "attack_step": "3rd attack, Light starter 70%",
+      "move": "236HK Hissatsu Shinobi Bachi hit 1",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "7/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 4,
+      "hit_span": "3.2",
+      "attack_step": "3rd attack, Light starter 70%",
+      "move": "236HK Hissatsu Shinobi Bachi hit 2",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "7/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    }
+  ]
+}

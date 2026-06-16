@@ -1,0 +1,251 @@
+{
+  "input_type": "combo_damage_ledger",
+  "schema_version": 1,
+  "title": "JP Classic: 5HK > Zilant > SA2 > 5MK > 2HP > 214P > 5HP > 236MK > 6HK > 236HP > 236MK > 22P",
+  "source_paths": [
+    "wiki/outputs/data/frame-data/official/jp/classic.json",
+    "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+    "wiki/concepts/terms/damage-scaling.md",
+    "wiki/sources/supercombo-street-fighter-6-game-data.md",
+    "wiki/reviews/2026-06-15-jp-combo-damage-ledger-regression.md"
+  ],
+  "authority": {
+    "authority_type": "regression_fixture",
+    "confidence": "medium",
+    "source_paths": [
+      "wiki/reviews/2026-06-15-jp-combo-damage-ledger-regression.md"
+    ],
+    "validation_status": "human_training_validation",
+    "review_status": "active",
+    "notes": {
+      "base_damage": "Capcom official JP Classic frame data for total damage; SuperCombo JP frame data for target-combo and multi-hit split details.",
+      "scaling": "Capcom official JP Classic frame data gives SA2 Lovushka 25% immediate scaling and 40% minimum damage. The 2025-10-25 video segment at 12:25 shows the visible training-mode per-hit scaling and cumulative damage for this delayed-hit SA2 route.",
+      "validation": "YouTube video https://www.youtube.com/watch?v=nyFNgnzjV3M&t=745, title 'これ一本で全てわかるJPコンボ講座【りゅうせい・スト６】', upload_date 2025-10-25, and user-provided correction reported 3660 total damage for this route."
+    }
+  },
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "expected_total_damage": 3660,
+  "hits": [
+    {
+      "hit_index": 1,
+      "attack_step": "1st attack",
+      "move": "5HK",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json"
+      ]
+    },
+    {
+      "hit_index": 2,
+      "attack_step": "2nd attack",
+      "move": "5HK~HP Zilant",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 3,
+      "attack_step": "3rd attack",
+      "move": "5MK",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "4/5",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 4,
+      "hit_span": "Lovushka.1",
+      "attack_step": "4th attack, SA2-active immediate scaling; video display 225 (45%)",
+      "move": "SA2 Lovushka projectile 1",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "9/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/sources/supercombo-street-fighter-6-game-data.md"
+      ]
+    },
+    {
+      "hit_index": 5,
+      "hit_span": "Lovushka.2",
+      "attack_step": "Lovushka projectile pair keeps the video-observed 45% scaling",
+      "move": "SA2 Lovushka projectile 2",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "9/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/sources/supercombo-street-fighter-6-game-data.md"
+      ]
+    },
+    {
+      "hit_index": 6,
+      "attack_step": "5th attack, SA2-active immediate scaling; video display 280 (35%)",
+      "scaling_note": "The 35% value is the route-critical correction: treating 2HP as ordinary 50% scaling gives the wrong total.",
+      "move": "2HP",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "7/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/sources/supercombo-street-fighter-6-game-data.md"
+      ]
+    },
+    {
+      "hit_index": 7,
+      "hit_span": "Lovushka.3",
+      "attack_step": "Lovushka projectile, SA2 40% minimum",
+      "move": "SA2 Lovushka projectile 3",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "2/5",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 8,
+      "hit_span": "Lovushka.4",
+      "attack_step": "Lovushka projectile, SA2 40% minimum",
+      "move": "SA2 Lovushka projectile 4",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "2/5",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 9,
+      "attack_step": "SA2-active immediate scaling; video display 200 (25%)",
+      "scaling_note": "JP 5HP's 20% starter scaling is not used mid-combo here; the visible 25% comes from the SA2-active route state.",
+      "move": "5HP",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/4",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/sources/supercombo-street-fighter-6-game-data.md"
+      ]
+    },
+    {
+      "hit_index": 10,
+      "attack_step": "SA2-active immediate scaling; video display 150 (15%)",
+      "move": "236MK Torbalan",
+      "base_damage": 1000,
+      "condition_multiplier": "1",
+      "effective_scaling": "3/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/sources/supercombo-street-fighter-6-game-data.md"
+      ]
+    },
+    {
+      "hit_index": 11,
+      "attack_step": "214P automatic spike after weak Departure, minimum scaling",
+      "move": "214P weak Departure automatic spike",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 12,
+      "hit_span": "6HK.2",
+      "attack_step": "6HK 600-damage segment only; video display 60 (10%)",
+      "scaling_note": "The 300-damage segment of 6HK does not contribute damage in this juggle route.",
+      "move": "6HK Bylina 600-damage segment",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 13,
+      "hit_span": "236HP.1",
+      "attack_step": "minimum scaling",
+      "move": "236HP Stribog hit 1",
+      "base_damage": 300,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 14,
+      "hit_span": "236HP.2",
+      "attack_step": "minimum scaling",
+      "move": "236HP Stribog hit 2",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 15,
+      "attack_step": "minimum scaling",
+      "move": "236MK Torbalan",
+      "base_damage": 1000,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 16,
+      "attack_step": "minimum scaling",
+      "move": "22P Triglav",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    }
+  ]
+}

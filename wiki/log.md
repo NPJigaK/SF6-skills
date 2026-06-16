@@ -2,6 +2,43 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] implementation | Source-backed combo damage calculator and evaluation groundwork
+- 作成:
+  - `tools/calculations/combo_damage/calculate.py`
+  - `tests/calculations/combo_damage/test_calculate.py`
+  - `tests/calculations/combo_damage/fixtures/**/*.ledger.json`
+  - `wiki/outputs/data/calculations/combo-damage/schema.json`
+  - `wiki/concepts/combo-damage-ledger-protocol.md`
+  - `wiki/reviews/2026-06-15-jp-combo-damage-ledger-regression.md`
+  - `wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md`
+  - `wiki/outputs/reports/2026-06-16-calculation-system-future-readiness-review.md`
+  - `docs/superpowers/specs/2026-06-16-combo-prediction-evaluation-loop-design.md`
+- 更新:
+  - `AGENTS.md`
+  - `README.md`
+  - `pyproject.toml`
+  - `uv.lock`
+  - `wiki/concepts/terms/damage-scaling.md`
+  - `wiki/index.md`
+  - `wiki/outputs/lint/2026-06-11-health-check.md`
+  - `wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md`
+  - `wiki/reviews/2026-06-11-jp-year1-od-amnesia-combo-damage-calculation-model-gap.md`
+- 検証:
+  - `$env:PYTHONPATH = (Get-Location).Path; uvx --with sympy --with pytest pytest tests\calculations tests\test_output_data_json_only.py` (`30 passed`)
+  - `jq empty` for `tests/calculations/combo_damage/fixtures/**/*.ledger.json` and `wiki/outputs/data/calculations/combo-damage/schema.json`
+  - `jq` fixture count / numeric `hit_span` range rejection check
+  - `$env:PYTHONPATH = (Get-Location).Path; uvx --with sympy python -m tools.calculations.combo_damage.calculate tests/calculations/combo_damage/fixtures/jp/classic/2025-10-25-5hp-pc-3178.ledger.json | jq -e '.total_damage == 3178 and .matches_expected == true'`
+  - `git diff --check` and `git diff --cached --check`
+- メモ:
+  - `combo_damage` は SymPy `Rational` / `floor` による deterministic hit / segment ledger 算術に限定し、candidate authority、provenance 不足、暗黙 scaling、数値 range の aggregated `hit_span` を拒否する。
+  - regression fixture は `tests/calculations/combo_damage/fixtures/<character>/<control>/` に配置し、filename は `YYYY-MM-DD-<starter>[-condition]-<total_damage>.ledger.json` を基本にした。
+  - JP Year1 ODアムネジア 5790 は legacy regression fixture として保持する。fixture date は gameplay ruleset を代表する `2024-02-24`、動画投稿日は metadata、SA3 は `move_total` segment として扱い内部 hit split は modeled としない。
+  - JP / Mai regression fixture は human/video validation に基づく個別 route の再計算防止であり、個別 route の成功を calculator の `validated_rule` へ自動昇格しない。
+  - prediction / postmortem ループは、prediction hash、authority、fixture promotion、rule promotion を分け、route parser / frame simulator より先に評価記録を安定化する方針にした。
+- 未解決事項:
+  - `combo-evaluation` の prediction / postmortem validator と accuracy report generator はまだ未実装。
+  - 外部動画 / screenshot の raw package policy は未決定。
+
 ## [2026-06-15] 修正 | PDR cost_bars field 契約の明確化
 - 更新:
   - `wiki/outputs/data/gauges/supercombo/numeric-tables.json`

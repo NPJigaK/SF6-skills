@@ -1,0 +1,173 @@
+{
+  "input_type": "combo_damage_ledger",
+  "schema_version": 1,
+  "title": "JP Year1 legacy: OD Amnesia > 5MK PC > 214HP > 236MP > 22HP > 214HP shadow > 236MP > 22PP > SA3",
+  "source_paths": [
+    "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md",
+    "wiki/reviews/2026-06-11-jp-year1-od-amnesia-combo-damage-calculation-model-gap.md",
+    "wiki/outputs/data/frame-data/official/jp/classic.json",
+    "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+    "wiki/outputs/data/battle-change/official/change-events.json"
+  ],
+  "authority": {
+    "authority_type": "regression_fixture",
+    "confidence": "medium",
+    "source_paths": [
+      "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md",
+      "wiki/reviews/2026-06-11-jp-year1-od-amnesia-combo-damage-calculation-model-gap.md"
+    ],
+    "validation_status": "human_training_validation",
+    "review_status": "open",
+    "notes": {
+      "source_type": "mixed_official_community_video_verified",
+      "fixture_date_basis": "The 2024-02-24 filename date is a representative gameplay-ruleset date before the 2024-02-27 OD Amnesia Battle Change, not the video upload date.",
+      "video_upload_date": "2026-04-30",
+      "version_scope": "Legacy Year1 JP before the 2024-02-27 OD Amnesia Battle Change.",
+      "sa3_granularity": "SA3 is represented as a source-backed full move total segment. The internal hit split is intentionally not modeled."
+    }
+  },
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "expected_total_damage": 5790,
+  "hits": [
+    {
+      "hit_index": 1,
+      "damage_granularity": "per_hit",
+      "attack_step": "1st attack, Punish Counter",
+      "move": "5MK Punish Counter",
+      "base_damage": 600,
+      "condition_multiplier": "6/5",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 2,
+      "damage_granularity": "per_hit",
+      "attack_step": "2nd attack, legacy Year1 OD Amnesia immediate 85%",
+      "scaling_note": "2024-02-27 Battle Change says OD Amnesia immediate scaling changed from 15% to 60%; this legacy fixture uses the pre-change 15% immediate route state.",
+      "move": "OD Amnesia Bomb 1",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/outputs/data/battle-change/official/change-events.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 3,
+      "damage_granularity": "per_hit",
+      "attack_step": "3rd attack, legacy Year1 OD Amnesia immediate 85%",
+      "scaling_note": "Second delayed OD Amnesia bomb hit in the same legacy route state.",
+      "move": "OD Amnesia Bomb 2",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/outputs/data/battle-change/official/change-events.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 4,
+      "damage_granularity": "per_hit",
+      "attack_step": "4th attack, 65%",
+      "move": "Medium Torbalan",
+      "base_damage": 1000,
+      "condition_multiplier": "1",
+      "effective_scaling": "13/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 5,
+      "damage_granularity": "per_hit",
+      "attack_step": "5th attack, 55%",
+      "move": "Heavy Triglav",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "11/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 6,
+      "damage_granularity": "per_hit",
+      "attack_step": "6th attack, 45%",
+      "move": "Departure: Shadow explosion",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "9/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 7,
+      "damage_granularity": "per_hit",
+      "attack_step": "7th attack, 35%",
+      "move": "Medium Torbalan",
+      "base_damage": 1000,
+      "condition_multiplier": "1",
+      "effective_scaling": "7/20",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 8,
+      "damage_granularity": "per_hit",
+      "hit_span": "8.1",
+      "attack_step": "8th attack, 25%",
+      "move": "OD Triglav hit 1",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/4",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 9,
+      "damage_granularity": "per_hit",
+      "hit_span": "8.2",
+      "attack_step": "8th attack, 25%",
+      "move": "OD Triglav hit 2",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/4",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    },
+    {
+      "hit_index": 10,
+      "damage_granularity": "move_total",
+      "segment_type": "super_art_full_move_total",
+      "attack_step": "SA3 full move total, 50% minimum",
+      "scaling_note": "JP SA3 full move total is source-backed as 4000 with 50% minimum. The internal hit split is not modeled.",
+      "move": "SA3 Zapret full move total",
+      "base_damage": 4000,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/2",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation.md"
+      ]
+    }
+  ]
+}

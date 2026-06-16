@@ -1,0 +1,139 @@
+{
+  "input_type": "combo_damage_ledger",
+  "schema_version": 1,
+  "title": "JP Classic: 5HP PC > PDR 5HP > 236HP > 236MK > 22PP > 22P",
+  "source_paths": [
+    "wiki/outputs/data/frame-data/official/jp/classic.json",
+    "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+    "wiki/concepts/terms/damage-scaling.md",
+    "wiki/concepts/terms/punish-counter.md",
+    "wiki/sources/supercombo-street-fighter-6-gauges.md",
+    "wiki/outputs/data/battle-change/supercombo-patch-notes/change-events.json",
+    "wiki/reviews/2026-06-15-jp-combo-damage-ledger-regression.md"
+  ],
+  "authority": {
+    "authority_type": "regression_fixture",
+    "confidence": "medium",
+    "source_paths": [
+      "wiki/reviews/2026-06-15-jp-combo-damage-ledger-regression.md"
+    ],
+    "validation_status": "human_training_validation",
+    "review_status": "active",
+    "notes": {
+      "base_damage": "Capcom official JP Classic frame data for total damage; SuperCombo JP frame data for per-hit split on 236HP and 22PP.",
+      "scaling": "SuperCombo Game Data via wiki/concepts/terms/damage-scaling.md. JP 5HP has 20% starter scaling when beginning a combo; mid-combo Drive Rush uses one non-stacking 15% penalty; Punish Counter first hit uses 1.2x damage.",
+      "validation": "YouTube video https://www.youtube.com/watch?v=nyFNgnzjV3M, title 'これ一本で全てわかるJPコンボ講座【りゅうせい・スト６】', upload_date 2025-10-25, and user-provided training-mode screenshot reported 3178 total damage for this route."
+    }
+  },
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "expected_total_damage": 3178,
+  "hits": [
+    {
+      "hit_index": 1,
+      "attack_step": "1st attack, Punish Counter",
+      "move": "5HP Punish Counter",
+      "base_damage": 800,
+      "condition_multiplier": "6/5",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/punish-counter.md"
+      ]
+    },
+    {
+      "hit_index": 2,
+      "attack_step": "2nd attack, 5HP 20% starter plus mid-combo Drive Rush 15% gives 68%",
+      "move": "PDR 5HP",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/25",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md",
+        "wiki/sources/supercombo-street-fighter-6-gauges.md"
+      ]
+    },
+    {
+      "hit_index": 3,
+      "hit_span": "3.1",
+      "attack_step": "3rd attack, 70% times 0.85 floored to 59%",
+      "move": "236HP Stribog hit 1",
+      "base_damage": 300,
+      "condition_multiplier": "1",
+      "effective_scaling": "59/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 4,
+      "hit_span": "3.2",
+      "attack_step": "3rd attack, 70% times 0.85 floored to 59%",
+      "move": "236HP Stribog hit 2",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "59/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 5,
+      "attack_step": "4th attack, 60% times 0.85 floored to 51%",
+      "move": "236MK Torbalan",
+      "base_damage": 1000,
+      "condition_multiplier": "1",
+      "effective_scaling": "51/100",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 6,
+      "hit_span": "5.1",
+      "attack_step": "5th attack, 50% times 0.85 floored to 42%",
+      "move": "22PP OD Triglav hit 1",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "21/50",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 7,
+      "hit_span": "5.2",
+      "attack_step": "5th attack, 50% times 0.85 floored to 42%",
+      "move": "22PP OD Triglav hit 2",
+      "base_damage": 500,
+      "condition_multiplier": "1",
+      "effective_scaling": "21/50",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 8,
+      "attack_step": "6th attack, 40% times 0.85 floored to 34%",
+      "move": "22P Triglav",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "17/50",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/jp/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/jp/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    }
+  ]
+}

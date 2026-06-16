@@ -123,6 +123,42 @@ Karpathy本人のGistでも、これらは初期必須ではありません。
 まずは `raw/`、`wiki/`、`AGENTS.md` / `CLAUDE.md`、`wiki/index.md`、
 `wiki/log.md`、Obsidian、Git、1 sourceずつのmanual ingestを優先します。
 
+## SF6計算toolの方針
+
+frame、damage、gauge、juggle、distance などの計算は、LLM の暗算や推測に任せません。
+ただし、tool 化するのは厳密に確定した source-backed formula だけです。
+
+tool 化する前提:
+
+- 計算式、入力 ledger、適用条件、丸め / floor、minimum、version adjustment の順序が source page、
+  raw、derived JSON、または accepted review に戻れる
+- fixture で再計算できる
+- stale input を検出するために source revision / input hash / calculator version / dependency version を残せる
+- community numeric source の authority / confidence を output に伝播できる
+
+未確定の内部仕様、source にない式、LLM が route text から推測した状態遷移は tool にしません。
+SymPy を使う場合も、`Sympy-Skill` の一時呼び出しではなく、repo 内の deterministic CLI として実装し、
+`pyproject.toml` / lockfile、schema、fixture、rounding policy と一緒に管理します。
+
+最初の実装は `tools.calculations.combo_damage` です。これは人間または LLM が source-backed に作った
+hit ledger JSON だけを入力にし、非明示 hit、route expansion、patch rollback、juggle state、距離条件は推測しません。
+入力 ledger は非空 `source_paths`、共通 `authority` field、hit ごとの明示 `condition_multiplier` /
+`effective_scaling` / `source_paths` を持つ必要があり、candidate fixture や working hypothesis は
+deterministic calculator へ渡しません。
+character-specific scaling や move-specific extra scaling step は、route text から推測せず、
+ledger の `effective_scaling`、`attack_step`、`scaling_note` に明示します。例として Mai `214HP (No Flame)` は
+comboed into された時に次の攻撃へ追加 scaling step を発生させるため、これを fixture で固定しています。
+Super Art などを source-backed full move total として計算する場合は、`damage_granularity: "move_total"` と
+`segment_type` を使い、内部 hit split を modeled と誤読しない trace note を残します。
+
+```bash
+uv run python -m tools.calculations.combo_damage.calculate tests/calculations/combo_damage/fixtures/jp/classic/2025-10-25-5hp-pc-3178.ledger.json
+```
+
+combo damage fixture は `tests/calculations/combo_damage/fixtures/<character>/<control>/` に置き、
+ファイル名は `YYYY-MM-DD-<starter>[-condition]-<total_damage>.ledger.json` を基本にします。
+character や Classic / Modern はディレクトリで分かるため、filename には重複させません。
+
 ## source の置き方
 
 1つずつ追加してください。初期段階では batch ingest しません。

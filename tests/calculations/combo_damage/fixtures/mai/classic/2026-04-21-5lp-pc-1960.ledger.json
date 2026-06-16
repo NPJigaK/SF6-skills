@@ -1,0 +1,116 @@
+{
+  "input_type": "combo_damage_ledger",
+  "schema_version": 1,
+  "title": "Mai Classic punish counter: 5LP PC > 5HP > 214HP > 236LK",
+  "source_paths": [
+    "wiki/outputs/data/frame-data/official/mai/classic.json",
+    "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+    "wiki/concepts/terms/damage-scaling.md",
+    "wiki/concepts/terms/punish-counter.md",
+    "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+  ],
+  "authority": {
+    "authority_type": "regression_fixture",
+    "confidence": "medium",
+    "source_paths": [
+      "wiki/reviews/2026-06-15-mai-combo-damage-ledger-regression.md"
+    ],
+    "validation_status": "human_training_validation",
+    "review_status": "active",
+    "notes": {
+      "base_damage": "Capcom official Mai Classic frame data for total damage; SuperCombo Mai frame data for per-hit split.",
+      "scaling": "SuperCombo Game Data via wiki/concepts/terms/damage-scaling.md. Mai 214HP (No Flame) applies 2 hits of scaling when comboed into, advancing the next attack by one extra scaling step. Punish Counter 1.2x from wiki/concepts/terms/punish-counter.md.",
+      "validation": "YouTube video https://www.youtube.com/watch?v=f78kDhtzHlY, title '【スト６】舞　最強コンボ集【解説付き】', upload_date 2026-04-21, and user-provided screenshot/observation reported 1960 total damage for this route."
+    }
+  },
+  "rounding_policy": "floor_each_hit_after_condition_multiplier_and_effective_scaling",
+  "expected_total_damage": 1960,
+  "hits": [
+    {
+      "hit_index": 1,
+      "attack_step": "1st attack, Light starter",
+      "move": "5LP Punish Counter",
+      "base_damage": 300,
+      "condition_multiplier": "6/5",
+      "effective_scaling": "1",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/punish-counter.md"
+      ]
+    },
+    {
+      "hit_index": 2,
+      "attack_step": "2nd attack, Light starter 80%",
+      "move": "5HP",
+      "base_damage": 800,
+      "condition_multiplier": "1",
+      "effective_scaling": "4/5",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 3,
+      "hit_span": "3.1",
+      "attack_step": "3rd attack, Light starter 70%",
+      "scaling_note": "214HP (No Flame) is comboed into and consumes 2 hits of scaling, so the next attack uses 5th-attack scaling.",
+      "move": "214HP Ryuuenbu hit 1",
+      "base_damage": 200,
+      "condition_multiplier": "1",
+      "effective_scaling": "7/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 4,
+      "hit_span": "3.2",
+      "attack_step": "3rd attack, Light starter 70%",
+      "scaling_note": "214HP (No Flame) is comboed into and consumes 2 hits of scaling, so the next attack uses 5th-attack scaling.",
+      "move": "214HP Ryuuenbu hit 2",
+      "base_damage": 600,
+      "condition_multiplier": "1",
+      "effective_scaling": "7/10",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 5,
+      "hit_span": "4.1",
+      "attack_step": "5th attack, Light starter 50%",
+      "scaling_note": "214HP (No Flame) advanced the scaling step for this next attack.",
+      "move": "236LK Hissatsu Shinobi Bachi hit 1",
+      "base_damage": 400,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/2",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    },
+    {
+      "hit_index": 6,
+      "hit_span": "4.2",
+      "attack_step": "5th attack, Light starter 50%",
+      "scaling_note": "214HP (No Flame) advanced the scaling step for this next attack.",
+      "move": "236LK Hissatsu Shinobi Bachi hit 2",
+      "base_damage": 400,
+      "condition_multiplier": "1",
+      "effective_scaling": "1/2",
+      "source_paths": [
+        "wiki/outputs/data/frame-data/official/mai/classic.json",
+        "wiki/outputs/data/frame-data/supercombo/mai/frames.json",
+        "wiki/concepts/terms/damage-scaling.md"
+      ]
+    }
+  ]
+}

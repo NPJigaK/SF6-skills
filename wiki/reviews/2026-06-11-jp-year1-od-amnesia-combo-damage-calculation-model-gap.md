@@ -2,7 +2,7 @@
 type: review
 review_type: calculation_model_gap
 created: 2026-06-11
-updated: 2026-06-11
+updated: 2026-06-16
 status: open
 severity: P1
 sources:
@@ -33,9 +33,11 @@ tags:
 
 ## 要約
 
-最初の見立てでは、この件を YouTube source 未取り込みによる `evidence_gap` とした。しかし再検証の結果、それは本質ではない。提示された YouTube Short を `yt-dlp` で確認し、repo 内の official / SuperCombo derived JSON と 2024-02-27 Battle Change を使うと、Year1 初期 JP の `ODアムネジア > 立中K > 強ヴィーハト設置 > 中トルバラン > 強トリグラフ > ヴィーハト爆発 > 中トルバラン > OD中強トリグラフ > SA3` は hit-by-hit で 5790 damage まで再計算できる。
+最初の見立てでは、この件を YouTube source 未取り込みによる `evidence_gap` とした。しかし再検証の結果、それは本質ではない。提示された YouTube Short を `yt-dlp` で確認し、repo 内の official / SuperCombo derived JSON と 2024-02-27 Battle Change を使うと、Year1 初期 JP の `ODアムネジア > 立中K > 強ヴィーハト設置 > 中トルバラン > 強トリグラフ > ヴィーハト爆発 > 中トルバラン > OD中強トリグラフ > SA3` は 5790 damage まで照合できる。
 
 問題は source 不足ではなく、combo damage query で delayed hits、patch rollback、Punish Counter multiplier、Super Art minimum scaling を含む hit ledger を作らなかったこと。
+
+2026-06-16 追記: この review は model-gap observation として有用で、legacy regression fixture としても保持する。ただし下の表の SA3 small hits subtotal は、SA3 内部 hit split を modeled とする per-hit ledger ではない。fixture では SA3 を `damage_granularity: "move_total"` / `segment_type: "super_art_full_move_total"` の source-backed full move total として表し、内部 hit split は明示的に未 modeling とする。
 
 詳細計算は [[outputs/reports/2026-06-11-jp-year1-od-amnesia-5790-damage-calculation]] に残す。
 
@@ -81,7 +83,7 @@ tags:
 2. route に `ODアムネジア`、爆弾、設置、罠、追加入力、Super cancel が含まれる場合、非明示の delayed hit を SuperCombo `damage` / `notes` から展開する。
 3. `Year1`、`初期`、`patch前` の指定がある場合、Battle Change の before/after を使って current frame-data をその時点へ戻す。
 4. Super Art を含む場合、minimum scaling を通常 scaling より優先して計算する。
-5. 再発防止として、この route を combo damage calculator の regression fixture にする。汎用 tool 化する場合は、まず手書き hit ledger を入力にする deterministic calculator から始める。
+5. 再発防止として、この route は legacy regression fixture として保持する。ただし SA3 は source-backed full move total segment として扱い、SA3 small hits の source-backed per-hit breakdown が揃うまでは内部 hit split を modeled としない。
 
 ## 未解決の質問
 

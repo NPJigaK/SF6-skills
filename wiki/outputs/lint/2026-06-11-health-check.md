@@ -63,7 +63,7 @@ tags:
 | `wiki` JSON parse errors | 0 / 371 | `jq empty` |
 | `raw` JSON parse errors | 0 / 793 | `jq empty` |
 | Raw validation non-pass | 0 / 59 | `validation.json` / `validation.batch.json` / `validation.tabbers.json` |
-| Schema JSON non-object | 0 / 62 | `wiki/outputs/data/**/schema.json` |
+| Schema JSON non-object | 0 / 62 | `wiki/outputs/data/<family>/schema.json` pattern |
 | Unknown raw `storage_policy` | 0 / 143 | AGENTS.md の許可値内 |
 | Official frame-data row-count mismatch | 0 / 30 | source page の Classic / Modern 件数と JSON `row_count` |
 | Open review pages | 21 | capture review / prereview / calculation model gap |
@@ -72,8 +72,8 @@ tags:
 
 | Family | 結果 | 根拠 |
 |---|---|---|
-| Official Battle Change | 20 versions、1820 change rows、1820 change events、1419 move-index rows。各 `row_count == rows.length`。 | [[sources/capcom-official-battle-change-list]]; `wiki/outputs/data/battle-change/official/*.json` |
-| SuperCombo Patch Notes | 17 version rows、1374 community events、1118 target rows。公式 crosswalk は 16 matched / 1 launch / 4 official-only。 | [[sources/supercombo-street-fighter-6-patch-notes]]; `wiki/outputs/data/battle-change/supercombo-patch-notes/*.json` |
+| Official Battle Change | 20 versions、1820 change rows、1820 change events、1419 move-index rows。各 `row_count == rows.length`。 | [[sources/capcom-official-battle-change-list]]; `wiki/outputs/data/battle-change/official/<json-file>` pattern |
+| SuperCombo Patch Notes | 17 version rows、1374 community events、1118 target rows。公式 crosswalk は 16 matched / 1 launch / 4 official-only。 | [[sources/supercombo-street-fighter-6-patch-notes]]; `wiki/outputs/data/battle-change/supercombo-patch-notes/<json-file>` pattern |
 | SuperCombo Game Data | tabber groups 4、tabs 46、content tables 39、navigation table 1、tabber validation `passed`。 | [[sources/supercombo-street-fighter-6-game-data]]; `raw/web-pages/wiki.supercombo.gg/game-data/derived/tabber-tables.json` |
 | SuperCombo Gauges | raw content tables 13、normalized numeric tables 18。 | [[sources/supercombo-street-fighter-6-gauges]]; `wiki/outputs/data/gauges/supercombo/numeric-tables.json` |
 
