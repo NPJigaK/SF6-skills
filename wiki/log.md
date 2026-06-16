@@ -2,6 +2,20 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] review | Review dashboard added
+- 作成:
+  - `wiki/reviews/index.md`
+- 更新:
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-wiki-refactor` と `$sf6-wiki-health-check` の方針に従い、review backlog 用の軽量 navigation surface を作成した。
+  - review status、severity、source authority、validation status、raw/derived output は変更していない。
+  - `raw/` と `tools/` は変更していない。
+- メモ:
+  - dashboard は source of truth ではなく、review pages への入口として扱う。
+  - 今後は review page 追加時や status 変更時に更新する。
+
 ## [2026-06-16] synthesis | Battle Change read order quick reference
 - 更新:
   - `wiki/syntheses/battle-change-version-timeline.md`

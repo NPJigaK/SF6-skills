@@ -308,6 +308,7 @@ Web page source は `raw/web-pages/<domain>/<repo-local-page-slug>/manifest.json
 
 | Page | Review type | Summary | Status |
 |---|---|---|---|
+| [[reviews/index]] | review_dashboard | open / active / accepted review、capture validation、refactor plans、frontmatter hygiene を追跡する dashboard。 | active |
 | [[reviews/2026-05-26-official-jp-frame-data-capture-review]] | capture_validation | JP 公式 frame-data 取得データの人間レビュー。 | accepted |
 | [[reviews/2026-05-27-official-ryu-frame-data-capture-review]] | capture_validation | Ryu 公式 frame-data 取得データの人間レビュー。 | accepted |
 | [[reviews/2026-05-27-official-chun-li-frame-data-capture-review]] | capture_validation | Chun-Li 公式 frame-data 取得データの人間レビュー。 | accepted |
