@@ -1,6 +1,6 @@
 ---
 name: sf6-wiki-health-check
-description: Use when SF6 wiki health を確認する時。broken wikilinks、missing index/log entries、orphan pages、uncited important claims、stale claims、contradictions、validation mismatches、review-note candidates を含む。
+description: Use for SF6 wiki health check, lint, structural refactor planning, stale-claim review, duplicate/orphan detection, missing backlinks, index/log repair, and evidence validation. Produces safe fixes, review notes, or refactor plans.
 ---
 
 # SF6 Wiki Health Check
@@ -14,14 +14,14 @@ description: Use when SF6 wiki health を確認する時。broken wikilinks、mi
 1. `AGENTS.md` を読む。
 2. `wiki/index.md` を読む。
 3. `wiki/log.md` の最近の entry を読む。
-4. JSON / JSONL の値、件数、schema-like 条件、validation status を確認する時は `$jq-cli` skill を使い、`jq` / `jq -e` を第一選択にする。
+4. JSON / JSONL の値、件数、schema-like 条件、validation status を確認する時は `jq` / `jq -e` を第一選択にする。repo-local `$jq-cli` skill が利用可能な場合は使ってよいが、必須依存にはしない。
 5. 新しい tool を足す前に、`rg`、`jq`、単純な file tools を使う。
 
 ## Severity
 
 - P0 Integrity: broken wikilinks、missing frontmatter、missing index entry、log omission、obvious Markdown formatting。安全なら修正する。
 - P1 Evidence: uncited important claims、source conflicts、stale claims、row count mismatch、validation failure、raw/source/derived mismatch。事実を書き換えず、`wiki/reviews/` を作成または更新する。
-- P2 Structure: orphan pages、duplicate concepts、missing backlinks、missing concept/entity pages。小さな局所修正なら直し、大きな semantic merge は review に回す。
+- P2 Structure: orphan pages、duplicate concepts、missing backlinks、missing concept/entity pages。小さな局所修正なら直し、大きな semantic merge は review に回す。ただし、source claim を変更しない structural merge / backlink repair / index rebuild / deprecated marker 追加は wiki maintenance として実行または具体的な refactor plan にしてよい。
 - P3 Quality: weak summaries、missing aliases/tags、readability issues。低リスクなら改善する。
 
 ## Workflow
@@ -34,6 +34,45 @@ description: Use when SF6 wiki health を確認する時。broken wikilinks、mi
 6. 新規 report / review または主要 status 変更があれば `wiki/index.md` を更新する。
 7. `wiki/log.md` に追記する。
 8. 変更ファイルと human-review items を報告する。
+
+## Refactor-Oriented Health Check
+
+health check は report 作成だけではなく、wiki を再利用しやすく保つための refactor trigger です。
+
+### Required structural review
+
+- duplicate concept を merge できるか
+- concept / entity / synthesis の責務が曖昧でないか
+- source summary が concept / entity / synthesis へ統合されているか
+- repeated query pattern から新しい synthesis / hub page が必要でないか
+- index.md が入口として機能しているか
+- term pages、frame-data pages、battle-change pages のディレクトリ構成が読者と LLM の両方に使いやすいか
+- question/output pages が孤立していないか
+- old lint findings が繰り返し出ているのに構造改善されていない箇所がないか
+
+### Output
+
+health check は scope に応じて次のどちらかを出す。
+
+1. `No structural refactor needed` と根拠
+2. `Refactor candidates` table
+
+| Candidate | Type | Evidence | Suggested action | Risk | Can auto-fix? |
+|---|---|---|---|---|---|
+
+### Auto-fix
+
+低リスクなものは実行してよい。
+
+- missing backlink
+- aliases / tags 追加
+- index summary 更新
+- orphan page に明らかな backlink を追加
+- status / frontmatter 補正
+- duplicate entry の整理
+- obvious related link 追加
+
+大きな意味変更、page merge、rename、directory restructure は `wiki/reviews/` に refactor plan を作る。
 
 ## Subagent Use
 

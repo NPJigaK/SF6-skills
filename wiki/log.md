@@ -2,6 +2,28 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-16] schema | Karpathy-style wiki refactor workflow added
+- 作成:
+  - `.agents/skills/sf6-wiki-refactor/SKILL.md`
+  - `.agents/skills/sf6-wiki-refactor/agents/openai.yaml`
+- 更新:
+  - `AGENTS.md`
+  - `.agents/skills/sf6-source-ingest/SKILL.md`
+  - `.agents/skills/sf6-wiki-query/SKILL.md`
+  - `.agents/skills/sf6-durable-output/SKILL.md`
+  - `.agents/skills/sf6-wiki-health-check/SKILL.md`
+  - `.gitignore`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- メモ:
+  - Karpathy-style の `wiki/` refactor / recompile を一級 workflow として追加した。
+  - `raw/` は source of truth として保護し、`wiki/` は LLM-maintained compiled knowledge として積極的に再編可能にした。
+  - source ingest、query、durable output、health check から wiki improvement / refactor へ戻る feedback loop を追加した。
+  - `sf6-source-ingest` は既存 raw source を wiki に compile する skill とし、raw capture / raw update は別 workflow 扱いに寄せた。
+- 未解決事項:
+  - Calculation Tool Gate / Combo Damage Ledger Preflight の詳細を、将来 `sf6-calculation-grounding` skill または wiki concept へ分離するか。
+  - `jq-cli` / `obsidian-markdown` の optional local skill 扱いを長期的にどうするか。
+
 ## [2026-06-16] implementation | Source-backed combo damage calculator and evaluation groundwork
 - 作成:
   - `tools/calculations/combo_damage/calculate.py`

@@ -6,11 +6,12 @@
 
 | File | Summary | Updated |
 |---|---|---:|
-| `AGENTS.md` | raw / wiki / schema 境界、page type、citation、index/log 更新、workflow skill dispatch を定義する agent-facing 正本。 | 2026-06-11 |
-| `.agents/skills/sf6-source-ingest/SKILL.md` | source ingest / re-ingest の詳細 workflow。raw package 確認、source authority 分類、source summary、関連 wiki 更新、index/log 更新を扱う。 | 2026-06-11 |
-| `.agents/skills/sf6-wiki-query/SKILL.md` | wiki-based query の詳細 workflow。source-only query、evidence authority、contamination-sensitive query、file-back 判断を扱う。 | 2026-06-11 |
-| `.agents/skills/sf6-durable-output/SKILL.md` | durable output / file-back の詳細 workflow。`wiki/questions/`、`wiki/syntheses/`、`wiki/outputs/`、`wiki/reviews/` の使い分けを扱う。 | 2026-06-11 |
-| `.agents/skills/sf6-wiki-health-check/SKILL.md` | wiki lint / health check の詳細 workflow。P0-P3 severity、safe fix、review note、lint report を扱う。 | 2026-06-11 |
+| `AGENTS.md` | raw / wiki / schema 境界、page type、citation、wiki refactor / recompile 方針、index/log 更新、workflow skill dispatch を定義する agent-facing 正本。 | 2026-06-16 |
+| `.agents/skills/sf6-source-ingest/SKILL.md` | source ingest / re-ingest の詳細 workflow。既存 raw source を wiki に compile し、関連 concept/entity/synthesis 更新、topology pass、index/log 更新を扱う。 | 2026-06-16 |
+| `.agents/skills/sf6-wiki-query/SKILL.md` | wiki-based query の詳細 workflow。source-only query、evidence authority、contamination-sensitive query、file-back 判断、wiki improvement candidates を扱う。 | 2026-06-16 |
+| `.agents/skills/sf6-durable-output/SKILL.md` | durable output / file-back の詳細 workflow。`wiki/questions/`、`wiki/syntheses/`、`wiki/outputs/`、`wiki/reviews/` の使い分けと related wiki への compound pass を扱う。 | 2026-06-16 |
+| `.agents/skills/sf6-wiki-health-check/SKILL.md` | wiki lint / health check の詳細 workflow。P0-P3 severity、safe fix、review note、lint report、structural refactor planning を扱う。 | 2026-06-16 |
+| `.agents/skills/sf6-wiki-refactor/SKILL.md` | wiki structure refactor / recompile の詳細 workflow。merge / split / rename / deprecate、hub creation、index redesign、orphan integration、refactor plan を扱う。 | 2026-06-16 |
 
 ## Raw 保存方針
 
