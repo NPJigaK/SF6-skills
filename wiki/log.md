@@ -2,6 +2,57 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-17] review | URL capture skill Japanese readability pass
+- 更新:
+  - `.agents/skills/sf6-url-source-capture/SKILL.md`
+  - `.agents/skills/sf6-url-source-capture/references/examples.md`
+  - `.agents/skills/sf6-url-source-capture/agents/openai.yaml`
+  - `.agents/skills/sf6-raw-capture-review/SKILL.md`
+  - `.agents/skills/sf6-raw-capture-review/references/examples.md`
+  - `.agents/skills/sf6-raw-capture-review/agents/openai.yaml`
+  - `wiki/log.md`
+- 検証:
+  - 日本語メンテナーが読む前提に合わせ、読み手向けの本文、examples、UI prompt を日本語優先に寄せた。
+  - skill `name`、folder、status label、field 名、tool path は機械処理と trigger の安定性のため English / ASCII を維持した。
+  - `raw/`、`tools/`、実際の URL capture、wiki source compile は行っていない。
+
+## [2026-06-17] review | URL capture workflow fat/thin guidance applied
+- 作成:
+  - `.agents/skills/sf6-url-source-capture/references/examples.md`
+  - `.agents/skills/sf6-raw-capture-review/references/examples.md`
+- 更新:
+  - `.agents/skills/sf6-url-source-capture/SKILL.md`
+  - `.agents/skills/sf6-raw-capture-review/SKILL.md`
+  - `docs/codex-operation-menu.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - review 指摘に従い、`docs/codex-operation-menu.md` は thin なまま mode 指定だけを追加した。
+  - URL capture / raw review の判断分岐は skill 側へ寄せ、曖昧な分類・edge case・status 例を `references/examples.md` に分離した。
+  - `AGENTS.md` は変更せず、憲法と dispatch に留めた。
+  - 実際の URL capture、raw artifact 更新、tools 追加、wiki source compile は行っていない。
+
+## [2026-06-17] skill | URL source capture workflow added
+- 作成:
+  - `.agents/skills/sf6-url-source-capture/SKILL.md`
+  - `.agents/skills/sf6-url-source-capture/agents/openai.yaml`
+  - `.agents/skills/sf6-raw-capture-review/SKILL.md`
+  - `.agents/skills/sf6-raw-capture-review/agents/openai.yaml`
+  - `docs/codex-operation-menu.md`
+- 更新:
+  - `AGENTS.md`
+  - `.gitignore`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - raw capture と source ingest を分離し、URL 共有から raw package 化する入口を `$sf6-url-source-capture` として追加した。
+  - capture 済み raw package の manifest / metadata / validation / freshness / ingest readiness review を `$sf6-raw-capture-review` として追加した。
+  - `docs/codex-operation-menu.md` に日常的な短い依頼文をまとめ、`AGENTS.md` には dispatch と参照だけを追加した。
+  - 実際の URL capture、raw artifact 更新、tools 追加、wiki source compile は行っていない。
+- メモ:
+  - 未知 source family は plan-first とし、既存 repo capture tool を優先する。
+  - ingest readiness label は review note の分類として扱い、manifest schema field へ無断で昇格しない。
+
 ## [2026-06-16] skill | Review frontmatter hygiene rule added
 - 更新:
   - `.agents/skills/sf6-wiki-refactor/SKILL.md`

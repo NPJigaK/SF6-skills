@@ -65,14 +65,14 @@ manifest がない通常の raw source は immutable とみなします。raw pa
 
 ### Raw capture / update workflow
 
-現時点では raw capture / raw update 専用 skill は未定義です。
-許可済み `storage_policy` を持つ raw package の再取得・補正は、
-既存の repo tools / README / 人間指示に従って個別タスクとして実行します。
+URL 共有から raw source package を作る場合は `$sf6-url-source-capture` を使います。
+capture 済み raw package の妥当性確認、source freshness、validation、ingest readiness の
+review は `$sf6-raw-capture-review` を使います。
 
 `$sf6-source-ingest` は raw を更新せず、既存 raw source / raw package を
 wiki に compile する skill です。raw が stale、incomplete、invalid、
 recapture-needed に見える場合は、review note または final report に残し、
-capture/update workflow の実行を依頼してください。
+`$sf6-url-source-capture` または `$sf6-raw-capture-review` の実行を依頼してください。
 
 ## ページ種別
 
@@ -90,6 +90,10 @@ capture/update workflow の実行を依頼してください。
 長い workflow 詳細は repo-local skill に置き、`AGENTS.md` には dispatch と境界ルールだけを置きます。
 次の作業では該当 skill を使ってください。
 
+- URL capture / raw source capture / web page raw-data-ize / source mirroring:
+  `$sf6-url-source-capture` (`.agents/skills/sf6-url-source-capture/SKILL.md`)
+- raw package review / capture validation / ingest readiness review:
+  `$sf6-raw-capture-review` (`.agents/skills/sf6-raw-capture-review/SKILL.md`)
 - source ingest / re-ingest / 更新済み raw package からの wiki recompile: `$sf6-source-ingest`
   (`.agents/skills/sf6-source-ingest/SKILL.md`)
 - wiki-based question answering / source-only query / contamination-sensitive answer: `$sf6-wiki-query`
@@ -104,6 +108,8 @@ capture/update workflow の実行を依頼してください。
   `$jq-cli` (`.agents/skills/jq-cli/SKILL.md`)
 - Obsidian-flavored Markdown, wikilinks, frontmatter, aliases, tags, embeds, callouts:
   `$obsidian-markdown` (`.agents/skills/obsidian-markdown/SKILL.md`)
+
+日常的な依頼文の例は `docs/codex-operation-menu.md` を参照してください。
 
 skill はこのファイルの正本ルールを上書きしません。`raw/` 境界、source traceability、
 `wiki/index.md` / `wiki/log.md` 更新、言語ポリシー、page type、Git diff review は
