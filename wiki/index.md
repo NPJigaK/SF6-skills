@@ -17,6 +17,7 @@
 | `.agents/skills/sf6-durable-output/SKILL.md` | durable output / file-back の詳細 workflow。`wiki/questions/`、`wiki/syntheses/`、`wiki/outputs/`、`wiki/reviews/` の使い分けと related wiki への compound pass を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-wiki-health-check/SKILL.md` | wiki lint / health check の詳細 workflow。P0-P3 severity、safe fix、review note、lint report、structural refactor planning を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-wiki-refactor/SKILL.md` | wiki structure refactor / recompile の詳細 workflow。merge / split / rename / deprecate、hub creation、index redesign、orphan integration、refactor plan を扱う。 | 2026-06-16 |
+| `.agents/skills/sf6-calculation-grounding/SKILL.md` | SF6 calculation grounding の詳細 workflow。exact damage / gauge / juggle / distance / timing、source-backed ledger、fixture、prediction / postmortem、validation、authority、rule promotion、tool contract 境界を扱う。 | 2026-06-18 |
 
 ## Raw 保存方針
 

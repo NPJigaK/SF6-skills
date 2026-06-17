@@ -1,6 +1,6 @@
 ---
 name: sf6-wiki-health-check
-description: Use for SF6 wiki health check, lint, structural refactor planning, stale-claim review, duplicate/orphan detection, missing backlinks, index/log repair, and evidence validation. Produces safe fixes, review notes, or refactor plans.
+description: Use for SF6 wiki health check, lint, structural refactor planning, stale-claim review, duplicate/orphan detection, calculation evidence drift, missing backlinks, index/log repair, and evidence validation. Produces safe fixes, review notes, or refactor plans.
 ---
 
 # SF6 Wiki Health Check
@@ -36,6 +36,22 @@ description: Use for SF6 wiki health check, lint, structural refactor planning, 
 6. 新規 report / review または主要 status 変更があれば `wiki/index.md` を更新する。
 7. `wiki/log.md` に追記する。
 8. 変更ファイルと human-review items を報告する。
+
+## Calculation Evidence Health Check
+
+Calculation-related health check では、次を `$sf6-calculation-grounding` の対象として扱う。
+
+- candidate ledger / candidate fixture が deterministic output に混入している
+- human-only validation が general rule / validated_rule に昇格している
+- source-backed でない rule promotion がある
+- community-only numeric source が official / lab-verified value として扱われている
+- validation failure output が source of truth として引用されている
+- calculator output に source path、authority、validation status、review status、calculator version、input hash がない
+- schema / contract descriptor、fixtures、tests、protocol page、reports の間で drift がある
+- route-specific regression fixture が general formula の証拠として使われている
+
+これらは原則 P1 Evidence として扱い、値や結論を黙って修正しない。
+安全な修正は metadata / backlink / index / status の補正までに留め、事実判断は review note または refactor plan に残す。
 
 ## Refactor-Oriented Health Check
 

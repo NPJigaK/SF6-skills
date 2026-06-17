@@ -1,6 +1,6 @@
 ---
 name: sf6-durable-output
-description: Use for durable file-back of SF6 answers, syntheses, reports, comparison tables, lint reports, and wiki-compounding outputs. Saves reader-facing artifacts and integrates reusable findings back into related wiki pages.
+description: Use for durable file-back of SF6 answers, syntheses, reports, comparison tables, calculation reports, fixtures/postmortems, lint reports, and wiki-compounding outputs. Saves reader-facing artifacts and integrates reusable findings back into related wiki pages.
 ---
 
 # SF6 Durable Output
@@ -48,6 +48,29 @@ durable output を保存した後、次の compound pass を行う。
 ## File-Back Decision
 
 回答が再利用されそう、wiki knowledge を修正または明確化する、durable comparison を作る、source conflict を記録する場合は file back する。一回限りの chat control message、status-only reply、evidence 不足の回答は file back しない。ただし、durable artifact が evidence gap の review note である場合は例外。
+
+## Calculation Output Gate
+
+Calculation report、fixture、postmortem、prediction、rule promotion、calculator output を保存する場合は、
+`$sf6-calculation-grounding` の authority / validation / fixture decision / rule promotion decision を確認する。
+
+File-back してよいもの:
+
+- source-backed または validation-backed な exact result
+- candidate ledger と unknowns を明示した review note
+- route-specific regression fixture の根拠と限界
+- prediction / postmortem が protocol、fixture、schema、tool contract へ戻すべき学び
+- rule promotion を拒否した理由と必要 evidence
+
+File-back してはいけないもの:
+
+- route text だけから作った exact value
+- candidate fixture を deterministic output のように見せる report
+- human-only observation を general rule / validated_rule に昇格した claim
+- validation failure を source of truth として扱う output
+
+計算系 output を保存した後は、`wiki/concepts/combo-damage-ledger-protocol.md`、
+関連 review、schema、tests、index/log へ戻す必要があるかを確認する。
 
 ## Subagent Use
 

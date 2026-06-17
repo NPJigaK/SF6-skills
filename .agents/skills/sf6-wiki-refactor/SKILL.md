@@ -1,6 +1,6 @@
 ---
 name: sf6-wiki-refactor
-description: Use when the SF6 LLM Wiki needs restructuring, recompilation, merge/split/rename/deprecate of wiki pages, hub page creation, index redesign, orphan integration, duplicate concept cleanup, synthesis rewrite, or directory reorganization. This skill edits wiki/ only and never edits raw/.
+description: Use when the SF6 LLM Wiki needs restructuring, recompilation, merge/split/rename/deprecate of wiki pages, hub page creation, index redesign, orphan integration, duplicate concept cleanup, synthesis rewrite, calculation protocol/tool-contract refactor, or directory reorganization. This skill edits wiki/ only and never edits raw/.
 ---
 
 # SF6 Wiki Refactor
@@ -43,6 +43,7 @@ Use this skill when any of the following is true:
 - lint finds missing backlinks, stale claims, or missing concept/entity pages
 - ingest touches multiple related pages and reveals a better topology
 - durable outputs or question pages contain reusable knowledge that should be promoted into core wiki pages
+- calculation protocol, damage ledger, prediction / postmortem, fixture lifecycle, or tool contract pages need recompile
 
 ## Good topology heuristics
 
@@ -104,6 +105,17 @@ Never:
 - make large wiki topology changes without updating index/log
 - use model memory to fill missing facts
 - use subagent prose as evidence
+
+## Calculation Protocol Refactor
+
+When refactoring calculation protocol, damage ledger, prediction / postmortem, fixture lifecycle, or tool contract material:
+
+1. Read `$sf6-calculation-grounding` and `wiki/concepts/combo-damage-ledger-protocol.md`.
+2. Preserve the distinction between candidate ledger, candidate fixture, regression fixture, validated fixture, working hypothesis, and validated rule.
+3. Do not move an uncertainty or stop condition out of reader view just to simplify the page.
+4. Do not promote route-specific regression evidence into a general rule.
+5. Keep calculation protocol connected to relevant reviews, reports, schema descriptors, tests, and tool contracts.
+6. If the refactor changes how exact values, fixtures, or rule promotion should be interpreted, create or update a `wiki/reviews/` note instead of silently rewriting conclusions.
 
 ## Review Frontmatter Hygiene
 

@@ -1,6 +1,6 @@
 ---
 name: sf6-wiki-query
-description: Use for SF6 wiki-based query answering from compiled wiki evidence. Reads index first, cites source/raw/derived evidence, separates facts from inference, and reports wiki improvement candidates. Do not use for raw capture or unsupported fact invention.
+description: Use for SF6 wiki-based query answering from compiled wiki evidence, including source-only gameplay facts and calculation-sensitive questions that may need sf6-calculation-grounding. Reads index first, cites source/raw/derived evidence, separates facts from inference, and reports wiki improvement candidates. Do not use for raw capture or unsupported fact invention.
 ---
 
 # SF6 Wiki Query
@@ -40,6 +40,22 @@ paper や official platform docs は、methodology、grounding、retrieval、eva
 5. source conflict がある場合は黙って片方を選ばず、authority の差を説明し、必要なら review follow-up を残す。
 6. 回答が durable なら `$sf6-durable-output` を使うか、その skill の方針に従って file back する。
 7. durable write をしない場合も、変更ファイルなしであることと evidence gap を報告する。
+
+## Calculation Grounding Dispatch
+
+Exact combo damage、damage ledger、scaling、gauge、juggle、distance、timing proof、
+prediction / postmortem、fixture / regression / validation を含む質問では、
+回答前に `$sf6-calculation-grounding` を使う。
+
+特に次の条件では source-only answer に留め、exact value を出さない。
+
+- route text だけで hit order proof がない
+- delayed projectile / install / portal / bomb / multi-hit / juggle / distance dependency がある
+- candidate ledger しかない
+- validation status が missing / failed / disputed / human-only である
+- community-only numeric source を official / validated rule として扱う必要が出る
+
+この場合は、candidate ledger、unknowns、required evidence、必要な review / validation follow-up を返す。
 
 ## Query-to-Wiki Improvement Pass
 

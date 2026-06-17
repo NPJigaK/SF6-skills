@@ -2,6 +2,25 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-18] skill | calculation grounding workflow added
+- 作成:
+  - `.agents/skills/sf6-calculation-grounding/SKILL.md`
+  - `.agents/skills/sf6-calculation-grounding/agents/openai.yaml`
+- 更新:
+  - `AGENTS.md`
+  - `.gitignore`
+  - `.agents/skills/sf6-wiki-query/SKILL.md`
+  - `.agents/skills/sf6-durable-output/SKILL.md`
+  - `.agents/skills/sf6-wiki-health-check/SKILL.md`
+  - `.agents/skills/sf6-wiki-refactor/SKILL.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - `AGENTS.md` の Calculation Tool Gate は、route text から exact value を出さない、candidate を deterministic output に混ぜない、source-backed / validation-backed でない rule を tool 化しない、という赤線を残して短縮した。
+  - `$sf6-calculation-grounding` は calculator improvement ではなく、ledger provenance / authority / validation / fixture / prediction / postmortem / rule promotion の lifecycle skill として追加した。
+  - `$sf6-wiki-query`、`$sf6-durable-output`、`$sf6-wiki-health-check`、`$sf6-wiki-refactor` に calculation grounding の発火条件、停止条件、file-back / review 条件を追加した。
+  - `raw/`、`tools/calculations/`、fixtures、derived calculation output は変更していない。
+
 ## [2026-06-17] review | URL capture skill Japanese readability pass
 - 更新:
   - `.agents/skills/sf6-url-source-capture/SKILL.md`
