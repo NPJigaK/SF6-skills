@@ -9,5 +9,10 @@ dependencies = [
   "yt-dlp>=2026.3.17",
 ]
 
+[dependency-groups]
+dev = [
+  "pytest>=8.3.4",
+]
+
 [tool.uv]
 package = false
