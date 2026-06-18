@@ -52,10 +52,13 @@ prediction / postmortem、fixture / regression / validation を含む質問で�
 - route text だけで hit order proof がない
 - delayed projectile / install / portal / bomb / multi-hit / juggle / distance dependency がある
 - candidate ledger しかない
-- validation status が missing / failed / disputed / human-only である
+- validation status が missing / failed / disputed である
+- human-only validation が unreviewed observation だけで、accepted route-specific review ではない
 - community-only numeric source を official / validated rule として扱う必要が出る
 
 この場合は、candidate ledger、unknowns、required evidence、必要な review / validation follow-up を返す。
+
+Human-only validation は一律に禁止扱いしない。accepted route-specific training display / video review は exact route answer や regression fixture を支えうるが、general rule / validated_rule には昇格しない。unreviewed human-only observation だけなら exact value を出さない。
 
 ## Query-to-Wiki Improvement Pass
 

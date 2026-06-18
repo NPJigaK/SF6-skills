@@ -1,4 +1,4 @@
 interface:
   display_name: "SF6 Calculation Grounding"
   short_description: "Ground source-backed SF6 calculation workflows"
-  default_prompt: "Use $sf6-calculation-grounding to review an exact combo damage ledger before producing a deterministic result."
+  default_prompt: "Use $sf6-calculation-grounding to classify the calculation task, verify evidence/authority/validation, and decide whether exact output, candidate ledger, fixture, postmortem, or rule-promotion handling is allowed."

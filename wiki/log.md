@@ -2,6 +2,18 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-18] skill | calculation grounding decision gates tightened
+- 更新:
+  - `.agents/skills/sf6-calculation-grounding/SKILL.md`
+  - `.agents/skills/sf6-calculation-grounding/agents/openai.yaml`
+  - `.agents/skills/sf6-wiki-query/SKILL.md`
+  - `wiki/log.md`
+- 検証:
+  - `$sf6-calculation-grounding` に Validation Authority Matrix、Allowed Output Matrix、Prediction / Postmortem Integrity Gate、Schema / Contract Format Gate、Test Gate、Write Scope Policy、Family Protocol Gate、Handoff Loop Guard を追加した。
+  - `human-only validation` は一律禁止ではなく、unreviewed observation と accepted route-specific training / video review を分けるようにした。
+  - `agents/openai.yaml` の default prompt を combo damage ledger 専用に見えない calculation grounding 全体の文面へ更新した。
+  - `raw/`、`tools/calculations/`、fixtures、derived calculation output は変更していない。
+
 ## [2026-06-18] skill | calculation grounding workflow added
 - 作成:
   - `.agents/skills/sf6-calculation-grounding/SKILL.md`
