@@ -2,6 +2,22 @@
 
 これは LLM-maintained wiki の時系列・追記専用アクティビティログです。
 
+## [2026-06-18] dry-run | calculation grounding positive fixture follow-up
+- 更新:
+  - `.agents/skills/sf6-calculation-grounding/SKILL.md`
+  - `docs/codex-operation-menu.md`
+  - `wiki/index.md`
+  - `wiki/log.md`
+- 検証:
+  - 既存 fixture dry-run では JP SA2 `3660`、JP Year1 OD Amnesia `5790`、Mai raw DR 6MP `5285` が `uv run python -m tools.calculations.combo_damage.calculate ...` で `matches_expected: true` になった。
+  - `uv run pytest tests/calculations/combo_damage` は `23 passed`。
+  - bare `python -m ...` の SymPy missing は calculator failure ではなく、repo-managed execution environment との不一致として扱う。
+- 判断:
+  - positive fixture verification は、既存の正しい ledger を calculator が再計算できる確認であり、新規 / candidate ledger construction の安全性証明ではない。
+  - route text only、total only、community-only numeric source、historical-as-current question、human validation as validated rule の negative / adversarial dry-run では exact deterministic output を拒否し、unknowns / required evidence / rule promotion block に止めるべきと判定した。
+  - `$sf6-calculation-grounding` に `uv run` 前提の Execution Environment、historical fixture を current answer に誤用しない Current vs Historical Gate、negative / adversarial dry-run checklist / result format、test未実行時の報告項目を追加した。
+  - `docs/codex-operation-menu.md` に calculation grounding dry-run の呼び出し例と `uv run` 実行経路を追加した。
+
 ## [2026-06-18] skill | calculation grounding decision gates tightened
 - 更新:
   - `.agents/skills/sf6-calculation-grounding/SKILL.md`

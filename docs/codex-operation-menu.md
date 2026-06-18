@@ -96,6 +96,26 @@ $sf6-wiki-query を使って答えてください。
 - 編集はしない
 ```
 
+## calculation grounding dry-runを回す
+
+```text
+$sf6-calculation-grounding を使って、以下のcombo damage fixture / candidate routeをread-onlyで検証してください。
+
+対象:
+<fixture path or candidate route>
+
+条件:
+- route textだけからexact deterministic outputを出さない
+- hit order proof / accepted validationがなければcandidate / unknowns / required evidenceで止める
+- historical fixtureをcurrent answerに使わない
+- human training validationをvalidated_ruleに昇格しない
+- 実行が必要な場合はrepo-managed environmentの `uv run` を使う
+
+推奨コマンド:
+- `uv run python -m tools.calculations.combo_damage.calculate <ledger>`
+- `uv run pytest tests/calculations/combo_damage`
+```
+
 ## 回答をwikiへ保存する
 
 ```text

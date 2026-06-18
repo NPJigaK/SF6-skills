@@ -28,6 +28,17 @@ The calculator may be deterministic. The ledger often is not.
 
 Never let deterministic arithmetic disguise uncertain ledger construction.
 
+## Execution Environment
+
+Use the repo-managed environment for calculation tooling.
+
+Preferred commands:
+
+- `uv run python -m tools.calculations.combo_damage.calculate <ledger>`
+- `uv run pytest tests/calculations/combo_damage`
+
+If bare `python -m ...` fails because dependencies such as SymPy are missing outside the managed environment, report it as an environment mismatch and retry with `uv run` before treating it as a calculator failure.
+
 ## Work Classification
 
 Classify the task before acting:
@@ -78,6 +89,15 @@ Apply these in order, stopping when a required input is missing:
 10. **Rule promotion gate**: do not promote route-specific observations into general rules without independent source or accepted review support.
 11. **Wiki feedback gate**: decide whether the outcome should update a review note, durable report, protocol page, concept page, tests, schema, or tool contract.
 
+## Current vs Historical Gate
+
+Before using a fixture or calculation result in an answer, classify the user question as current, historical, or version-specific.
+
+- Historical regression fixtures may support historical reproduction.
+- Do not use a historical fixture as a current gameplay fact unless the version / source gate proves current applicability.
+- If the route predates a Battle Change or patch, answer as historical only and report the current evidence required for a current answer.
+- Fixture filename dates may represent evidence date, ruleset date, or replayed historical ruleset basis. Check fixture metadata and review notes before inferring current applicability.
+
 ## Stop Conditions
 
 If any required evidence is missing, do not produce an exact deterministic value.
@@ -96,6 +116,28 @@ Stop rather than exact-answer when:
 - validation status is missing, failed, disputed, or human-only and a general rule is being inferred
 - delayed projectile, install, portal, bomb, multi-hit, juggle, distance, corner, height, or timing dependency lacks hit order proof
 - a community-only numeric source would be elevated to official, lab-verified, or validated-rule authority
+
+## Negative / Adversarial Dry-Run Checks
+
+When testing calculation grounding behavior, do not rely only on accepted fixtures. Include inputs that should stop:
+
+- route text only for a delayed, non-linear, multi-hit, juggle, or timing-dependent route
+- training-mode total only, without per-hit display or accepted review
+- community-only numeric source used as if it were official or lab-verified
+- historical regression fixture asked as a current gameplay answer
+- human training validation used as if it were a validated rule
+
+Passing means exact deterministic output is refused, unknowns and required evidence are reported, and rule promotion is blocked.
+
+Use this result format so dry-runs are comparable:
+
+| Case | Classification | Exact output allowed? | Stop reason | Required evidence | Rule promotion allowed? | Follow-up |
+|---|---|---:|---|---|---:|---|
+| route text only | `candidate ledger` | no | hit order proof missing | per-hit display / accepted review | no | review note or validation task |
+| total only | `candidate ledger` / `candidate fixture` | no | per-hit ledger missing | per-hit display / source-backed ledger | no | validation task |
+| community-only numeric source | `answer-only` / `candidate ledger` | no official exact | authority too weak | official source / lab validation / accepted source review | no | source review |
+| historical-as-current | `historical regression fixture` | no current answer | version mismatch | current source or current validation | no | current evidence needed |
+| human validation as validated rule | `regression fixture` / `rule promotion` | no rule | human-only validation is route-specific | independent source / accepted rule review | no | block promotion |
 
 ## Validation Authority Matrix
 
@@ -167,10 +209,18 @@ When modifying any of the following, run the relevant calculation tests or expli
 
 Expected command examples:
 
-- `pytest tests/calculations/combo_damage`
+- `uv run pytest tests/calculations/combo_damage`
+- `uv run python -m tools.calculations.combo_damage.calculate <ledger>`
 - targeted fixture validation command if available
 
 Do not mark a calculation tool / fixture / schema change as complete without test status.
+
+If tests cannot be run, report:
+
+- command attempted
+- failure reason
+- whether this is an environment failure or calculator / test failure
+- what remains unverified
 
 ## Write Scope Policy
 

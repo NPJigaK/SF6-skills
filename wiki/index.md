@@ -7,7 +7,7 @@
 | File | Summary | Updated |
 |---|---|---:|
 | `AGENTS.md` | raw / wiki / schema 境界、page type、citation、wiki refactor / recompile 方針、index/log 更新、workflow skill dispatch を定義する agent-facing 正本。 | 2026-06-17 |
-| `docs/codex-operation-menu.md` | 日常的な Codex 依頼文メニュー。URL raw化、raw review、wiki化、query、file-back、refactor、health check の短い prompt 例と mode 指定を置く。 | 2026-06-17 |
+| `docs/codex-operation-menu.md` | 日常的な Codex 依頼文メニュー。URL raw化、raw review、wiki化、query、calculation grounding dry-run、file-back、refactor、health check の短い prompt 例と mode 指定を置く。 | 2026-06-18 |
 | `.agents/skills/jq-cli/SKILL.md` | JSON / JSONL の検査、集計、validation、`jq` filter、shell quoting、`jq -e` exit-status check の repo-local skill。 | 2026-06-16 |
 | `.agents/skills/obsidian-markdown/SKILL.md` | Obsidian Flavored Markdown の repo-local skill。wikilinks、frontmatter、aliases、tags、embeds、callouts を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-url-source-capture/SKILL.md` | URL共有から raw source package を作る capture workflow。source classification、既存 repo tool 選択、manifest / metadata / validation / capture review を扱い、曖昧な判断例は `references/examples.md` に置く。 | 2026-06-17 |
@@ -17,7 +17,7 @@
 | `.agents/skills/sf6-durable-output/SKILL.md` | durable output / file-back の詳細 workflow。`wiki/questions/`、`wiki/syntheses/`、`wiki/outputs/`、`wiki/reviews/` の使い分けと related wiki への compound pass を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-wiki-health-check/SKILL.md` | wiki lint / health check の詳細 workflow。P0-P3 severity、safe fix、review note、lint report、structural refactor planning を扱う。 | 2026-06-16 |
 | `.agents/skills/sf6-wiki-refactor/SKILL.md` | wiki structure refactor / recompile の詳細 workflow。merge / split / rename / deprecate、hub creation、index redesign、orphan integration、refactor plan を扱う。 | 2026-06-16 |
-| `.agents/skills/sf6-calculation-grounding/SKILL.md` | SF6 calculation grounding の詳細 workflow。exact damage / gauge / juggle / distance / timing、source-backed ledger、fixture、prediction / postmortem、validation、authority、rule promotion、tool contract 境界を扱う。 | 2026-06-18 |
+| `.agents/skills/sf6-calculation-grounding/SKILL.md` | SF6 calculation grounding の詳細 workflow。exact damage / gauge / juggle / distance / timing、source-backed ledger、fixture、prediction / postmortem、validation、authority、current vs historical、negative dry-run、rule promotion、tool contract 境界を扱う。 | 2026-06-18 |
 
 ## Raw 保存方針
 
